@@ -30,5 +30,10 @@ for(const k of keys){const c=new Map(TEAMS[k].roster.map(p=>[p.name,0]));let t=0
   for(const e of g.log) if(e.off===0){c.set(e.handler,c.get(e.handler)+1);t++;}}
  o.push(`| ${TEAMS[k].name} | `+[...c.entries()].sort((a,b)=>b[1]-a[1]).map(([n,v])=>`${n.split(' ').slice(-1)[0]} ${(100*v/t).toFixed(0)}%`).join('、')+' |');}
 o.push('');
-fs.writeFileSync('note_body.md',o.join('\n'));
-console.log('written');
+const DOC='docs/隊伍卡表.md';
+const B='<!-- BEGIN GENERATED', E='<!-- END GENERATED -->';
+const doc=fs.readFileSync(DOC,'utf8').split(/\r?\n/);
+const bi=doc.findIndex(l=>l.startsWith(B)), ei=doc.findIndex(l=>l.startsWith(E));
+if(bi<0||ei<0) throw new Error(DOC+' 找不到 BEGIN/END GENERATED 標記');
+fs.writeFileSync(DOC,[...doc.slice(0,bi+1),...o,...doc.slice(ei)].join('\n'));
+console.log(DOC+' 已更新（生成 '+o.length+' 行）');

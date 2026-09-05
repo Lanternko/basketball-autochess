@@ -3,7 +3,8 @@
 籃球自走棋的 possession 機率模型。這個 repo **只做數值層**：十四屬性 → 事件機率 → Monte Carlo。
 沒有商店、卡牌、連鎖、裝備——那些等數值地基固定之後再疊。
 
-設計文件在 Obsidian vault：`遊戲/basketball-autochess-數值模型.md`、`遊戲/basketball-autochess-隊伍卡表.md`、`遊戲/basketball-autochess-卡牌設計.md`
+設計文件在 [`docs/`](docs/)：[數值模型](docs/數值模型.md)、[隊伍卡表](docs/隊伍卡表.md)、[卡牌設計](docs/卡牌設計.md)。
+上游 GDD v0.1（子捷／Eve）不在 repo 裡。
 
 ## 跑起來
 
@@ -15,11 +16,12 @@ node test/calibrate.js      # PR50 對 PR50 是否收斂到聯盟平均
 node test/variance.js       # 賽制對「實力→勝率」的影響
 node test/round_robin.js    # 五隊循環賽
 node test/diagnose.js       # 球權分布、出手區域、防守否決
+node gen_note.mjs           # 重新產生 docs/隊伍卡表.md 的數據區段
 
 python -m http.server 8770  # 然後開 http://127.0.0.1:8770 用計算器 UI
 ```
 
-`src/teams.js` 是自動產生的，要改卡表請改 `gen_teams.mjs` 再重跑 `node gen_teams.mjs`。
+`src/teams.js` 跟 `docs/隊伍卡表.md` 的 GENERATED 區段都是自動產生的，要改卡表請改 `gen_teams.mjs` 再重跑 `node gen_teams.mjs`。
 
 ## 架構
 
@@ -30,6 +32,7 @@ src/simulation_engine.js  possession loop + Monte Carlo
 src/teams.js              五支真實隊 + PR50 基準隊 + 五小/雙塔測試隊（自動產生）
 src/rng.js                種子亂數（可重現）
 gen_teams.mjs             百分位 -> 屬性，產生 teams.js
+gen_note.mjs              跑模擬，寫回 docs/隊伍卡表.md 的 GENERATED 區段
 index.html                計算器 UI
 ```
 

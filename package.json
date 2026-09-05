@@ -1,0 +1,11 @@
+{
+  "name": "basketball-autochess-calc",
+  "version": "0.1.0",
+  "description": "Basketball Autochess — possession probability model & OVR calculator",
+  "type": "module",
+  "scripts": {
+    "test": "node test/run_tests.js",
+    "calibrate": "node test/calibrate.js",
+    "variance": "node test/variance.js"
+  }
+}

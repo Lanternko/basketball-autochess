@@ -11,6 +11,15 @@ python3 reports/impact-rapm/rapm.py --prior reports/ovr-rapm-calibrated-2025-26/
                                                   # 以 box score 預測值為先驗的 RAPM
 ```
 
+四因素 RAPM（哪些防守是可重現的個人能力）：
+
+```
+python3 reports/impact-rapm/four-factors.py --self-test   # 約 20 秒
+python3 reports/impact-rapm/four-factors.py               # 四季，預估 10 分鐘左右
+```
+
+輸出 `four-factors.csv` 與 `four-factors-summary.json`。對手的抄截以外失誤、抄截、每回合出手數、eFG%、籃下出手比例、三分出手比例、罰球率、進攻籃板率，各自解出每位球員的攻守係數。另外把比賽切成兩半各估一次，算出每個因素的個人可靠度。
+
 `--prior` 版會另外輸出 `rapm-prior.csv` 與 `rapm-prior-summary.json`，不覆蓋一般版。說明見 `reports/ovr-rapm-calibrated-2025-26/report.md`。
 
 輸入是 `scripts/prepare_defense_b1.js` 產生的 stint 檔，這份 GitHub 快照沒有收錄：

@@ -1,0 +1,38 @@
+{
+  "method": "empirical-Bayes per-36 shrinkage after position centering; role prior on log minutes per played game; noise = Monte Carlo + kappa/W",
+  "fits": {
+    "v47": {
+      "priorIntercept": -2.7707021810957158,
+      "priorLogMinutesPerGameSlope": 0.8537018696253053,
+      "tau2Per36": 2.1510718292891418,
+      "kappa": 230.51819999959528,
+      "sourceNoiseEqualsSignalAtMinutes": 107.16434331055042
+    },
+    "v41": {
+      "priorIntercept": -4.568111284792462,
+      "priorLogMinutesPerGameSlope": 1.41919770057154,
+      "tau2Per36": 0.9462159154881418,
+      "kappa": 0.0,
+      "sourceNoiseEqualsSignalAtMinutes": 0.0
+    }
+  },
+  "spearmanV41V47": {
+    "centered": 0.5578847673817712,
+    "shrunk": 0.5044098162379497
+  },
+  "spearmanWithMedia": {
+    "centered": 0.40524550059564046,
+    "shrunk": 0.3353868070280505,
+    "matched": 94
+  },
+  "smallSampleUnder20GamesInTop50": {
+    "raw": 12,
+    "centered": 10,
+    "shrunk": 5
+  },
+  "medianShrinkFactor": {
+    "under20Games": 0.1254011562428086,
+    "20PlusGames": 0.32711640190292773
+  },
+  "unchanged": "Ranking still single-replicate Monte Carlo; split-half stability needs the local resample run"
+}

@@ -12,9 +12,11 @@ instead of being set by hand.
            5-fold cross-validation; training players: >= 5000 RAPM possessions and
            >= 500 minutes in 2025-26
   shrink   predictions from small samples are noisy: each rate is treated as a Poisson count,
-           the prediction's sampling variance follows from the fitted weights, and the net
-           prediction is shrunk toward a role prior (log minutes per game) by empirical Bayes,
-           the same routine as reports/ovr-expected-2025-26
+           each side's sampling variance follows from the fitted weights, and offense and
+           defense are shrunk separately toward a role prior (log minutes per game) by
+           empirical Bayes, the same routine as reports/ovr-expected-2025-26. priors.csv
+           holds the shrunk values (an unshrunk prior let 92-possession players reach the
+           top of box-prior RAPM)
   output   ranking.csv (all 582 players), summary.json, priors.csv (box-predicted O and D
            per player, usable as RAPM prior means)
 
@@ -109,10 +111,9 @@ def main():
     for p in every:
         for side, (cols, mu, sd, b) in models.items():
             p['pred' + side] = float(b[0] + ((np.array([p[c] for c in cols]) - mu) / sd) @ b[1:])
-        p['predNet'] = p['predO'] + p['predD']
-        # Sampling variance of the prediction: Var(rate) = count * 1e4 / poss^2 per rate feature.
-        var = 0.0
+        # Sampling variance of each side's prediction: Var(rate) = count * 1e4 / poss^2 per rate feature.
         for side, (cols, mu, sd, b) in models.items():
+            var = 0.0
             for i, c in enumerate(cols):
                 if c == 'height':
                     continue
@@ -120,11 +121,15 @@ def main():
                     var += (b[1 + i] / sd[i]) ** 2 * (p['onoffVar'] if p['onoffVar'] is not None else 0.0)
                 else:
                     var += (b[1 + i] / sd[i]) ** 2 * p[c] * 100 / p['poss']
-        p['predVar'] = var
+            p['pred' + side + 'Var'] = var
         p['mpg'] = p['MIN'] / p['GP']
-    result['shrinkage'] = expected.shrink(every, 'predNet', 'predVar')
+    # Shrink offense and defense separately so priors.csv carries the shrunk values too.
+    result['shrinkage'] = {side: expected.shrink(every, 'pred' + side, 'pred' + side + 'Var') for side in 'OD'}
     for p in every:
-        p['rawNet'] = p['predNet']; p['predNet'] = p['predNetShrunk']
+        p['rawNet'] = p['predO'] + p['predD']
+        p['predO'], p['predD'] = p['predOShrunk'], p['predDShrunk']
+        p['predNet'] = p['predO'] + p['predD']
+        p['predNetB'] = (p['predOB'] + p['predDB']) / 2
     # Net check on held-out players: cross-validated O and D predictions added together.
     yN = np.array([float(rapm[p['playerId']]['pooledNet']) for p in train])
     hand = np.array([0.0] * len(train))
@@ -159,7 +164,7 @@ def main():
     (OUT / 'summary.json').write_text(json.dumps(result, ensure_ascii=False, indent=2), encoding='utf-8')
     with open(OUT / 'ranking.csv', 'w', encoding='utf-8', newline='') as fh:
         wr = csv.writer(fh)
-        wr.writerow(['rank', 'ovr', 'playerId', 'name', 'pos', 'MIN', 'predNet', 'predNetUnshrunk', 'shrinkFactor', 'predO', 'predD', 'rapmNet', 'rapmO', 'rapmD', 'rapmPoss'])
+        wr.writerow(['rank', 'ovr', 'playerId', 'name', 'pos', 'MIN', 'predNet', 'predNetUnshrunk', 'meanShrinkFactor', 'predO', 'predD', 'rapmNet', 'rapmO', 'rapmD', 'rapmPoss'])
         for k, p in enumerate(every):
             r = rapm.get(p['playerId'], {})
             wr.writerow([k + 1, round(p['ovr'], 1), p['playerId'], p['name'], p['pos'], round(p['MIN']), round(p['predNet'], 2), round(p['rawNet'], 2), round(p['predNetB'], 3), round(p['predO'], 2), round(p['predD'], 2),

@@ -65,22 +65,35 @@ box score 看不出外線防守，所以 Herbert Jones、Marcus Smart 這類防�
 
 他們的防守價值在施壓、換防、干擾，這些不會出現在 box score。
 
-## 下一步：以 box score 為先驗的 RAPM（實際球員的最終 OVR）
+## 以 box score 為先驗的 RAPM：第一次結果
 
-`priors.csv` 是每位球員的 box score 預測 O 與 D。在本機執行：
+在本機執行 `rapm.py --prior` 後，預測沒看過的比賽時，加權誤差如下：
+
+| | 一般 RAPM | 先驗版 | 差距 |
+|---|---:|---:|---:|
+| 四季合併 | 4329.26 | 4326.40 | −2.86 |
+| 2025-26 單季 | 4621.92 | 4607.17 | **−14.75** |
+
+**先驗有幫助。** 單季版改善了 14.75，比把一般 RAPM 的正則化強度從最差調到最好的差距（約 36）的三分之一還多。單季樣本少，所以 box score 先驗的幫助比較大。這個比較對先驗略有利，因為 box score 權重是用同一批比賽的 RAPM 擬合的。
+
+**但第一版先驗有錯誤：`priors.csv` 寫入的是收縮前的預測值。** 結果只打 92～123 回合的球員，被未收縮的極端預測推上榜首：Tristen Newton +9.4、Alex Antetokounmpo +8.2、Norchad Omier +6.0。
+
+**已修正：** 進攻和防守分別依各自的抽樣變異收縮，`priors.csv` 改寫入收縮後的值（例如 Newton 從 +9.5 變成 −0.3）。這個錯誤只影響回合數極少的球員；回合數多的球員，結果由比賽資料主導。
+
+**先驗版的排名相關不能拿來比。** `rapm-prior-summary.json` 裡期望產出 OVR 的相關升到 0.61～0.72，但先驗本身就來自 box score，這是循環論證，不代表變準。
+
+**防守專家的評價會下降。** 先驗版的正則化強度從 3000 變成 10000，比較依賴 box score：Herbert Jones 從 +5.30 降到 +2.85、Marcus Smart 從 +4.20 降到 +2.60。這是用「預測沒看過的比賽更準」換來的取捨。
+
+## 最終 OVR（實際球員）
+
+修正後的先驗需要在本機重跑一次：
 
 ```
 python3 reports/impact-rapm/rapm.py --prior reports/ovr-rapm-calibrated-2025-26/priors.csv
+python3 reports/ovr-final-2025-26/build.py
 ```
 
-這會讓 RAPM 往 box score 預測值收縮，而不是往 0 收縮。
-
-- **樣本多的球員**：以真實影響力為主。Herbert Jones 的防守價值會被保留。
-- **樣本少的球員**：以 box score 預測為主。
-
-輸出 `rapm-prior.csv` 與 `rapm-prior-summary.json`，原本的 `rapm.csv` 不會被覆蓋。
-
-驗收方式：`bestHeldOutMSE` 比較「預測沒看過的比賽」的誤差。先驗版比一般版低，就代表先驗有幫助。這個比較對先驗略有利，因為 box score 權重是用同一批比賽的 RAPM 擬合的（約 20 個權重、345 位球員）。
+`build.py` 讀取 `rapm-prior.csv` 的 2025-26 單季先驗版，依 PR1=40、PR50=70、PR99=99 換算成 OVR，輸出 `reports/ovr-final-2025-26/ranking.csv`。也可以加 `--source pooled` 改用四季合併版。
 
 ## 限制
 

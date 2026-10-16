@@ -7,7 +7,11 @@
 ```
 python3 reports/impact-rapm/rapm.py --self-test   # 假資料測試，約 6 秒
 python3 reports/impact-rapm/rapm.py               # 2022-23 到 2025-26 四季
+python3 reports/impact-rapm/rapm.py --prior reports/ovr-rapm-calibrated-2025-26/priors.csv
+                                                  # 以 box score 預測值為先驗的 RAPM
 ```
+
+`--prior` 版會另外輸出 `rapm-prior.csv` 與 `rapm-prior-summary.json`，不覆蓋一般版。說明見 `reports/ovr-rapm-calibrated-2025-26/report.md`。
 
 輸入是 `scripts/prepare_defense_b1.js` 產生的 stint 檔，這份 GitHub 快照沒有收錄：
 
@@ -47,7 +51,7 @@ python3 reports/impact-rapm/rapm.py               # 2022-23 到 2025-26 四季
 
 ## 已做的檢查
 
-- `--self-test`：建立已知真實效果的假聯盟（150 人、1,200 場），RAPM 還原的相關為：進攻 0.88、防守 0.79、淨值 0.86。
+- `--self-test`：建立已知真實效果的假聯盟（150 人、1,200 場），RAPM 還原的相關為：進攻 0.88、防守 0.79、淨值 0.86。加入有參考價值的先驗後，淨值相關提高到 0.91，預測沒看過的比賽時誤差也下降。
 - 在場與不在場統計，以及對照函式，都用小型假資料跑過。
 - 真實資料尚未執行，因為 stint 檔只在本機。
 

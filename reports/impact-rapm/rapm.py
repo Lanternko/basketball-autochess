@@ -2,6 +2,10 @@
 
   python3 reports/impact-rapm/rapm.py                 # 2022-23 .. 2025-26
   python3 reports/impact-rapm/rapm.py --self-test     # synthetic stints with known effects
+  python3 reports/impact-rapm/rapm.py --prior reports/ovr-rapm-calibrated-2025-26/priors.csv
+                                                      # box-prior RAPM: shrink toward box-predicted O/D
+                                                      # instead of 0; writes rapm-prior.csv and
+                                                      # rapm-prior-summary.json, plain outputs untouched
 
 Input: the local stint files written by scripts/prepare_defense_b1.js
   2025-26  reports/defense-b1/stints.jsonl
@@ -94,25 +98,32 @@ def normal_equations(obs, index, n_folds=5):
     return XtX, Xty, yy, wsum
 
 
-def solve(A, b, lam, K):
-    pen = lam * np.eye(A.shape[0]); pen[K, K] = 0  # intercept unpenalised
-    return np.linalg.solve(A + pen, b)
+def solve(A, b, lam, K, mean=None):
+    """Ridge toward `mean` (zeros = ordinary RAPM); the intercept is never penalised."""
+    pen = lam * np.eye(A.shape[0]); pen[K, K] = 0
+    return np.linalg.solve(A + pen, b if mean is None else b + pen @ mean)
 
 
-def fit_rapm(obs, players):
+def fit_rapm(obs, players, prior=None):
     index = {p: i for i, p in enumerate(players)}
     K = 2 * len(players)
     XtX, Xty, yy, wsum = normal_equations(obs, index)
+    mean = None
+    if prior:
+        mean = np.zeros(K + 1)
+        for p, i in index.items():
+            if p in prior:
+                mean[i], mean[len(players) + i] = prior[p]
     cv = {}
     for lam in LAMBDAS:
         sse = 0.0
         for f in range(XtX.shape[0]):
             tr = [g for g in range(XtX.shape[0]) if g != f]
-            b = solve(XtX[tr].sum(0), Xty[tr].sum(0), lam, K)
+            b = solve(XtX[tr].sum(0), Xty[tr].sum(0), lam, K, mean)
             sse += yy[f] - 2 * b @ Xty[f] + b @ XtX[f] @ b  # weighted SSE on the held-out fold
         cv[lam] = float(sse / wsum.sum())
     lam = min(cv, key=cv.get)
-    b = solve(XtX.sum(0), Xty.sum(0), lam, K)
+    b = solve(XtX.sum(0), Xty.sum(0), lam, K, mean)
     poss = np.diag(XtX.sum(0))[:K]
     out = {p: {'O': float(b[i]), 'D': float(b[len(players) + i]), 'poss': float(poss[i] + poss[len(players) + i])} for p, i in index.items()}
     for v in out.values():
@@ -152,6 +163,35 @@ def compare(rapm, names):
             if n in by_name:
                 result.setdefault('players', {}).setdefault(n, {'netRAPM': round(by_name[n]['net'], 2), 'possessions': round(by_name[n]['poss'])})[label] = ranks.get(n)
     return result
+
+
+def run_prior(seasons, path):
+    """Box-prior RAPM next to plain RAPM; the held-out-game error tells whether the prior helps.
+    The box weights were fitted to plain pooled RAPM from these same games, so the comparison
+    carries a small in-sample advantage for the prior (about 20 fitted weights, 345 players)."""
+    prior = {int(r['playerId']): (float(r['priorO']), float(r['priorD'])) for r in csv.DictReader(open(path, encoding='utf-8'))}
+    obs = list(observations(seasons))
+    players = sorted({p for o in obs for p in o[2] + o[3]})
+    league = json.loads((ROOT / 'data/season-league.json').read_text(encoding='utf-8'))
+    names = {p['playerId']: p['name'] for t in league['teams'] for p in t['roster']}
+    last = [o for o in obs if o[0] == seasons[-1]]
+    last_players = sorted({p for o in last for p in o[2] + o[3]})
+    fits = {'pooledPlain': fit_rapm(obs, players), 'pooledPrior': fit_rapm(obs, players, prior),
+            'lastSeasonPlain': fit_rapm(last, last_players), 'lastSeasonPrior': fit_rapm(last, last_players, prior)}
+    with open(OUT / 'rapm-prior.csv', 'w', encoding='utf-8', newline='') as fh:
+        w = csv.writer(fh)
+        w.writerow(['playerId', 'name', 'pooledNet', 'pooledO', 'pooledD', 'pooledPoss', 'lastSeasonNet', 'lastSeasonO', 'lastSeasonD', 'priorO', 'priorD'])
+        pooled, single = fits['pooledPrior'][0], fits['lastSeasonPrior'][0]
+        for p in sorted(pooled, key=lambda p: -pooled[p]['net']):
+            a, s = pooled[p], single.get(p, {})
+            w.writerow([p, names.get(p, ''), round(a['net'], 3), round(a['O'], 3), round(a['D'], 3), round(a['poss']),
+                        round(s.get('net', 0), 3), round(s.get('O', 0), 3), round(s.get('D', 0), 3), *prior.get(p, ('', ''))])
+    summary = {'seasons': seasons, 'priorFile': str(path), 'playersWithPrior': sum(p in prior for p in players),
+               'fits': {k: v[1] for k, v in fits.items()},
+               'bestHeldOutMSE': {k: min(v[1]['cvWeightedMSE'].values()) for k, v in fits.items()},
+               'comparison2025_26': {'pooledPrior': compare(fits['pooledPrior'][0], names), 'lastSeasonPrior': compare(fits['lastSeasonPrior'][0], names)}}
+    (OUT / 'rapm-prior-summary.json').write_text(json.dumps(summary, ensure_ascii=False, indent=2), encoding='utf-8')
+    print(json.dumps({k: summary[k] for k in ['playersWithPrior', 'bestHeldOutMSE']}, indent=1))
 
 
 def run(seasons, reader=None, write=True):
@@ -204,12 +244,21 @@ def self_test():
     estO = np.array([fit[p]['O'] for p in range(P)]); estD = np.array([fit[p]['D'] for p in range(P)])
     r = {'corrO': float(np.corrcoef(estO, trueO)[0, 1]), 'corrD': float(np.corrcoef(estD, trueD)[0, 1]),
          'corrNet': float(np.corrcoef(estO + estD, trueO + trueD)[0, 1]), 'lambda': info['lambda']}
+    # Prior check: a noisy but informative prior must lower held-out error and raise recovery.
+    obs = list(observations(['synthetic'], reader=lambda s: stints))
+    prior = {p: (trueO[p] + rng.normal(0, 1.5), trueD[p] + rng.normal(0, 1.5)) for p in range(P)}
+    pf, pinfo = fit_rapm(obs, list(range(P)), prior)
+    r['corrNetWithPrior'] = float(np.corrcoef([pf[p]['net'] for p in range(P)], trueO + trueD)[0, 1])
+    r['heldOutMSE'] = min(info['cvWeightedMSE'].values()); r['heldOutMSEWithPrior'] = min(pinfo['cvWeightedMSE'].values())
     print(json.dumps(r))
     assert r['corrNet'] > 0.5, 'RAPM failed to recover synthetic effects'
+    assert r['heldOutMSEWithPrior'] < r['heldOutMSE'] and r['corrNetWithPrior'] > r['corrNet'], 'informative prior did not help'
 
 
 if __name__ == '__main__':
     if '--self-test' in sys.argv:
         self_test()
+    elif '--prior' in sys.argv:
+        run_prior(SEASONS, Path(sys.argv[sys.argv.index('--prior') + 1]))
     else:
         run(SEASONS)

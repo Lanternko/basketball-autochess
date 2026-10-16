@@ -1,0 +1,13 @@
+{
+  "registeredAt": "2026-10-13T08:18:31.024Z",
+  "scope": "Presentation syntax only, after scoring; no changed statistics/rules/ranks/intervals",
+  "original": {
+    "file": "reports/defense-tenth/step4-t0/report.mjs",
+    "sha256": "26a6282960553301d695f83e5b037e3fbe0efd92bf715dfe6358d106cf107c2e"
+  },
+  "corrected": {
+    "file": "reports/defense-tenth/step4-t0/report-v2.mjs",
+    "sha256": "b3681a3560d352c7bd47aef0ed6bab9e020d97284499c197c67d87e07bc4cbd1"
+  },
+  "repair": "One mismatched template-string terminator"
+}

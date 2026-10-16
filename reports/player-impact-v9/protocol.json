@@ -1,0 +1,20 @@
+{
+  "version": "source-rate-roundtrip-9",
+  "season": "2025-26",
+  "seed": 20261012,
+  "variants": [
+    "roundtrip-flow",
+    "roundtrip-creation",
+    "roundtrip-space"
+  ],
+  "design": "Fresh observed zone FG with fixed 100-attempt priors, no lossy attr99 clipping and no duplicate shooting fatigue; fixed source baselines preserve attribute sensitivity. Global alpha from 2022-25 fresh-FGA actor choices; global beta from assisted-make passer choices conditional on receiver. Source lineup total demand conserved. No target player names, OVR/on-off ranking fit or positional bonus. Third variant enables source-centered long context. Diagnostic single seed, not adoption.",
+  "hashes": {
+    "reports/player-impact-v9/engine.mjs": "ca499bc8aedab5e09d8b2b49c818d95a6de3559ecab9acde5103a656126ac266",
+    "reports/player-impact-v9/model.mjs": "b19e726bfceff69fe706018cb4a4ee5fc5b4a4f23860a4764e9eb6a3bef0e62d",
+    "reports/player-impact-v9/worker.mjs": "db5be4f30658e2f51194733fccdd9fec08ae85d538a9001b6d48c6bbaebb6f27",
+    "reports/player-impact-v9/input.mjs": "6f165335c865d57b2c9521f7e2305a4fd52605d9368f11f734d882308244805c",
+    "reports/player-impact-v9/ovr-input.mjs": "818ce35cf3f3bbfcb8c69ab6c99303f57a482740d629c15f7006f280165146f9",
+    "reports/player-impact-v9/../player-impact-v8/usage-fit.json": "4ce55df2f01ac960dabfd4ef5afe8d87596c86f9d908bd24ceae05bc03ef9d1e",
+    "reports/player-impact-v9/../player-impact-v8/assist-fit.json": "c62007be8fc2e45aac89690122cf215c191691589d7a8d48cf6c4e5528750b01"
+  }
+}

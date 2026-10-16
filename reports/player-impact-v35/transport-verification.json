@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "sampledLineups": 199,
+  "maxAbsoluteDifferenceToIndependentLogSpaceSolve": 1.0429324071026258e-11,
+  "selfBelowSourceCases": 380,
+  "selfAboveSourceCases": 615,
+  "scope": "Kernel, marginals, positive own support, independent dual numerical solve and feasible alternative objective. Sampled arithmetic audit only, not source roles as causal capabilities. All source-five marginal checks are separate in source-verification.",
+  "hashes": {
+    "reports/player-impact-v35/transport-samples.json": "7bb9cd02b160967d95ba6fcefcc8af6498c1e83fdd8c23399fb68764e7a90ab2",
+    "reports/player-impact-v35/verify-transport.py": "230da247c216e432fb695a4aca8f8aa5f9377904b714f5b5fe89aa45263e6ec7",
+    "reports/player-impact-v35/model.mjs": "751567a008e697bc2612933bdc63e2790e6ec6b7fae8f775b6349ab7c1aa5c8c"
+  }
+}

@@ -1,0 +1,1018 @@
+[
+  {
+    "season": "2022-23",
+    "label": "Post-registration input diagnostic; not used to tune or fit the candidate",
+    "rawShareCorrelation": 0.868252408678162,
+    "posteriorShareCorrelation": 0.8711538092158735,
+    "oldInteriorContestCorrelation": 0.254004855889234,
+    "startingLineupClipping": {
+      "starters": 2460,
+      "lower": 0,
+      "upper": 0
+    },
+    "teams": [
+      {
+        "id": 1610612745,
+        "name": "Houston Rockets",
+        "rawFiveShares": 0.6828948833442988,
+        "posteriorFiveShares": 0.6828161787441537,
+        "oldInteriorContest": 2.7153221438161075,
+        "actualDrebPct": 75.78740157480316
+      },
+      {
+        "id": 1610612746,
+        "name": "LA Clippers",
+        "rawFiveShares": 0.6844961435700962,
+        "posteriorFiveShares": 0.6844944119239975,
+        "oldInteriorContest": 2.4838019495809234,
+        "actualDrebPct": 76.59217877094972
+      },
+      {
+        "id": 1610612747,
+        "name": "Los Angeles Lakers",
+        "rawFiveShares": 0.6854782018403982,
+        "posteriorFiveShares": 0.685521003127939,
+        "oldInteriorContest": 2.4110038775013782,
+        "actualDrebPct": 76.34184471078687
+      },
+      {
+        "id": 1610612748,
+        "name": "Miami Heat",
+        "rawFiveShares": 0.6822953467245381,
+        "posteriorFiveShares": 0.6813124943265377,
+        "oldInteriorContest": 2.165174937472975,
+        "actualDrebPct": 77.65174739423666
+      },
+      {
+        "id": 1610612749,
+        "name": "Milwaukee Bucks",
+        "rawFiveShares": 0.7049452573158427,
+        "posteriorFiveShares": 0.7051276011913478,
+        "oldInteriorContest": 3.059947035383946,
+        "actualDrebPct": 77.7637237541108
+      },
+      {
+        "id": 1610612750,
+        "name": "Minnesota Timberwolves",
+        "rawFiveShares": 0.65650778847608,
+        "posteriorFiveShares": 0.6586714485595705,
+        "oldInteriorContest": 2.7091641384967518,
+        "actualDrebPct": 74.32208079690093
+      },
+      {
+        "id": 1610612751,
+        "name": "Brooklyn Nets",
+        "rawFiveShares": 0.636220470445098,
+        "posteriorFiveShares": 0.6379629890326811,
+        "oldInteriorContest": 2.424722526627253,
+        "actualDrebPct": 73.73990531885269
+      },
+      {
+        "id": 1610612752,
+        "name": "New York Knicks",
+        "rawFiveShares": 0.6832092580532036,
+        "posteriorFiveShares": 0.6840032964985963,
+        "oldInteriorContest": 2.5297424035159013,
+        "actualDrebPct": 77.07182320441989
+      },
+      {
+        "id": 1610612753,
+        "name": "Orlando Magic",
+        "rawFiveShares": 0.6910177795736944,
+        "posteriorFiveShares": 0.6897866896545952,
+        "oldInteriorContest": 3.0590801652891155,
+        "actualDrebPct": 77.69186712485681
+      },
+      {
+        "id": 1610612754,
+        "name": "Indiana Pacers",
+        "rawFiveShares": 0.6470991651909941,
+        "posteriorFiveShares": 0.6477731040392156,
+        "oldInteriorContest": 2.239547779500065,
+        "actualDrebPct": 72.16928251121077
+      },
+      {
+        "id": 1610612755,
+        "name": "Philadelphia 76ers",
+        "rawFiveShares": 0.675278350515464,
+        "posteriorFiveShares": 0.6761552014576815,
+        "oldInteriorContest": 2.3452119333388675,
+        "actualDrebPct": 77.15454279871457
+      },
+      {
+        "id": 1610612737,
+        "name": "Atlanta Hawks",
+        "rawFiveShares": 0.6828328633296402,
+        "posteriorFiveShares": 0.6817530356892576,
+        "oldInteriorContest": 2.409337699044668,
+        "actualDrebPct": 75.84379358437936
+      },
+      {
+        "id": 1610612738,
+        "name": "Boston Celtics",
+        "rawFiveShares": 0.7012012499999999,
+        "posteriorFiveShares": 0.7001990798530074,
+        "oldInteriorContest": 2.4396139212096757,
+        "actualDrebPct": 78.52150537634408
+      },
+      {
+        "id": 1610612739,
+        "name": "Cleveland Cavaliers",
+        "rawFiveShares": 0.6669368622128388,
+        "posteriorFiveShares": 0.6678986973574201,
+        "oldInteriorContest": 2.510319272101001,
+        "actualDrebPct": 76.26666666666667
+      },
+      {
+        "id": 1610612740,
+        "name": "New Orleans Pelicans",
+        "rawFiveShares": 0.6867178377290113,
+        "posteriorFiveShares": 0.6862917136026906,
+        "oldInteriorContest": 2.438793554575208,
+        "actualDrebPct": 77.4294670846395
+      },
+      {
+        "id": 1610612741,
+        "name": "Chicago Bulls",
+        "rawFiveShares": 0.688615071794357,
+        "posteriorFiveShares": 0.6881918664921183,
+        "oldInteriorContest": 2.1330636695933647,
+        "actualDrebPct": 77.84313725490196
+      },
+      {
+        "id": 1610612742,
+        "name": "Dallas Mavericks",
+        "rawFiveShares": 0.6618905160740259,
+        "posteriorFiveShares": 0.6637445050554633,
+        "oldInteriorContest": 2.2383338508513955,
+        "actualDrebPct": 75.4873006497342
+      },
+      {
+        "id": 1610612743,
+        "name": "Denver Nuggets",
+        "rawFiveShares": 0.6864445850202429,
+        "posteriorFiveShares": 0.6858523890046258,
+        "oldInteriorContest": 2.6989180215193334,
+        "actualDrebPct": 76.43726989521382
+      },
+      {
+        "id": 1610612744,
+        "name": "Golden State Warriors",
+        "rawFiveShares": 0.6714262675133557,
+        "posteriorFiveShares": 0.6715560809392743,
+        "oldInteriorContest": 2.0724216702866647,
+        "actualDrebPct": 76.04138306561394
+      },
+      {
+        "id": 1610612756,
+        "name": "Phoenix Suns",
+        "rawFiveShares": 0.6623447212816496,
+        "posteriorFiveShares": 0.6635811860977681,
+        "oldInteriorContest": 2.3843673467298525,
+        "actualDrebPct": 75.97941092364884
+      },
+      {
+        "id": 1610612757,
+        "name": "Portland Trail Blazers",
+        "rawFiveShares": 0.6529659085152728,
+        "posteriorFiveShares": 0.6552616386114538,
+        "oldInteriorContest": 2.1561343169243,
+        "actualDrebPct": 74.85328638497653
+      },
+      {
+        "id": 1610612758,
+        "name": "Sacramento Kings",
+        "rawFiveShares": 0.6912505043373008,
+        "posteriorFiveShares": 0.6917231046416362,
+        "oldInteriorContest": 2.604209595123699,
+        "actualDrebPct": 77.24670864338867
+      },
+      {
+        "id": 1610612759,
+        "name": "San Antonio Spurs",
+        "rawFiveShares": 0.6678424123535032,
+        "posteriorFiveShares": 0.6666119587802758,
+        "oldInteriorContest": 2.413444561750019,
+        "actualDrebPct": 74.9141876430206
+      },
+      {
+        "id": 1610612760,
+        "name": "Oklahoma City Thunder",
+        "rawFiveShares": 0.6549076590177133,
+        "posteriorFiveShares": 0.6553062744104495,
+        "oldInteriorContest": 2.1827793445254446,
+        "actualDrebPct": 72.92528260270196
+      },
+      {
+        "id": 1610612761,
+        "name": "Toronto Raptors",
+        "rawFiveShares": 0.6864628666633008,
+        "posteriorFiveShares": 0.6874213908751412,
+        "oldInteriorContest": 2.5049494339013147,
+        "actualDrebPct": 76.65021591610117
+      },
+      {
+        "id": 1610612762,
+        "name": "Utah Jazz",
+        "rawFiveShares": 0.6625224815600687,
+        "posteriorFiveShares": 0.6630929815565555,
+        "oldInteriorContest": 2.8757507564711147,
+        "actualDrebPct": 75.2491246970105
+      },
+      {
+        "id": 1610612763,
+        "name": "Memphis Grizzlies",
+        "rawFiveShares": 0.6666616146306963,
+        "posteriorFiveShares": 0.6668952617635605,
+        "oldInteriorContest": 2.455813078080305,
+        "actualDrebPct": 75.86299170457586
+      },
+      {
+        "id": 1610612764,
+        "name": "Washington Wizards",
+        "rawFiveShares": 0.6833447979363715,
+        "posteriorFiveShares": 0.6841156316658579,
+        "oldInteriorContest": 2.7851364039585293,
+        "actualDrebPct": 76.05098996474098
+      },
+      {
+        "id": 1610612765,
+        "name": "Detroit Pistons",
+        "rawFiveShares": 0.6523689658654819,
+        "posteriorFiveShares": 0.6530364067335597,
+        "oldInteriorContest": 2.3163529591965895,
+        "actualDrebPct": 73.997113997114
+      },
+      {
+        "id": 1610612766,
+        "name": "Charlotte Hornets",
+        "rawFiveShares": 0.6806539722572509,
+        "posteriorFiveShares": 0.6812824856628429,
+        "oldInteriorContest": 2.7107761607051617,
+        "actualDrebPct": 75.45255074053757
+      }
+    ]
+  },
+  {
+    "season": "2023-24",
+    "label": "Post-registration input diagnostic; not used to tune or fit the candidate",
+    "rawShareCorrelation": 0.9052926133556314,
+    "posteriorShareCorrelation": 0.8991696815211724,
+    "oldInteriorContestCorrelation": 0.23108613909637912,
+    "startingLineupClipping": {
+      "starters": 2460,
+      "lower": 0,
+      "upper": 0
+    },
+    "teams": [
+      {
+        "id": 1610612745,
+        "name": "Houston Rockets",
+        "rawFiveShares": 0.6778309490227683,
+        "posteriorFiveShares": 0.6763464189486883,
+        "oldInteriorContest": 2.598415207073711,
+        "actualDrebPct": 76.04365620736698
+      },
+      {
+        "id": 1610612746,
+        "name": "LA Clippers",
+        "rawFiveShares": 0.6670815984563827,
+        "posteriorFiveShares": 0.6684953372583813,
+        "oldInteriorContest": 2.333666308475823,
+        "actualDrebPct": 74.81994459833795
+      },
+      {
+        "id": 1610612747,
+        "name": "Los Angeles Lakers",
+        "rawFiveShares": 0.6820093693330648,
+        "posteriorFiveShares": 0.6847483709195484,
+        "oldInteriorContest": 2.5143181953806186,
+        "actualDrebPct": 76.19936034115139
+      },
+      {
+        "id": 1610612748,
+        "name": "Miami Heat",
+        "rawFiveShares": 0.6846674596345599,
+        "posteriorFiveShares": 0.685130331364621,
+        "oldInteriorContest": 2.2102537014761268,
+        "actualDrebPct": 78.11506215669269
+      },
+      {
+        "id": 1610612749,
+        "name": "Milwaukee Bucks",
+        "rawFiveShares": 0.6870773812528392,
+        "posteriorFiveShares": 0.6888063311714376,
+        "oldInteriorContest": 2.7833417550008566,
+        "actualDrebPct": 77.17303005686433
+      },
+      {
+        "id": 1610612750,
+        "name": "Minnesota Timberwolves",
+        "rawFiveShares": 0.6884852310022721,
+        "posteriorFiveShares": 0.6887628095627021,
+        "oldInteriorContest": 3.0352174305964783,
+        "actualDrebPct": 76.9041095890411
+      },
+      {
+        "id": 1610612751,
+        "name": "Brooklyn Nets",
+        "rawFiveShares": 0.6619076355923644,
+        "posteriorFiveShares": 0.6609192096136683,
+        "oldInteriorContest": 2.276873718050027,
+        "actualDrebPct": 76.03752131893121
+      },
+      {
+        "id": 1610612752,
+        "name": "New York Knicks",
+        "rawFiveShares": 0.6900874480381223,
+        "posteriorFiveShares": 0.6905940839432352,
+        "oldInteriorContest": 2.349538943029955,
+        "actualDrebPct": 76.05593607305936
+      },
+      {
+        "id": 1610612753,
+        "name": "Orlando Magic",
+        "rawFiveShares": 0.6838679006726344,
+        "posteriorFiveShares": 0.6842534050325023,
+        "oldInteriorContest": 3.007074320164202,
+        "actualDrebPct": 78.10721772985924
+      },
+      {
+        "id": 1610612754,
+        "name": "Indiana Pacers",
+        "rawFiveShares": 0.6453061224489796,
+        "posteriorFiveShares": 0.6456587750900329,
+        "oldInteriorContest": 2.3738699454589107,
+        "actualDrebPct": 74.1017533774073
+      },
+      {
+        "id": 1610612755,
+        "name": "Philadelphia 76ers",
+        "rawFiveShares": 0.6592777356583268,
+        "posteriorFiveShares": 0.6611603020223419,
+        "oldInteriorContest": 2.37109423011961,
+        "actualDrebPct": 74.33930093776641
+      },
+      {
+        "id": 1610612737,
+        "name": "Atlanta Hawks",
+        "rawFiveShares": 0.66897758186398,
+        "posteriorFiveShares": 0.669959046707655,
+        "oldInteriorContest": 2.280052158319704,
+        "actualDrebPct": 75.20661157024793
+      },
+      {
+        "id": 1610612738,
+        "name": "Boston Celtics",
+        "rawFiveShares": 0.6834265046879725,
+        "posteriorFiveShares": 0.6831251539203363,
+        "oldInteriorContest": 2.612402236175954,
+        "actualDrebPct": 76.31853785900783
+      },
+      {
+        "id": 1610612739,
+        "name": "Cleveland Cavaliers",
+        "rawFiveShares": 0.6789816402703519,
+        "posteriorFiveShares": 0.679158195275205,
+        "oldInteriorContest": 2.4172124378668305,
+        "actualDrebPct": 76.91444600280505
+      },
+      {
+        "id": 1610612740,
+        "name": "New Orleans Pelicans",
+        "rawFiveShares": 0.6855798204230712,
+        "posteriorFiveShares": 0.6855985989957735,
+        "oldInteriorContest": 2.3516067914687024,
+        "actualDrebPct": 76.92092763341715
+      },
+      {
+        "id": 1610612741,
+        "name": "Chicago Bulls",
+        "rawFiveShares": 0.6762855927538408,
+        "posteriorFiveShares": 0.6759205569386347,
+        "oldInteriorContest": 2.1754189666171744,
+        "actualDrebPct": 76.35482030804336
+      },
+      {
+        "id": 1610612742,
+        "name": "Dallas Mavericks",
+        "rawFiveShares": 0.6668775054549144,
+        "posteriorFiveShares": 0.6681141456679949,
+        "oldInteriorContest": 2.2568736077566696,
+        "actualDrebPct": 75.2486187845304
+      },
+      {
+        "id": 1610612743,
+        "name": "Denver Nuggets",
+        "rawFiveShares": 0.6755760941224199,
+        "posteriorFiveShares": 0.6759559766974786,
+        "oldInteriorContest": 2.7788362481735303,
+        "actualDrebPct": 75.55373256767842
+      },
+      {
+        "id": 1610612744,
+        "name": "Golden State Warriors",
+        "rawFiveShares": 0.6806850005036768,
+        "posteriorFiveShares": 0.6807419607736621,
+        "oldInteriorContest": 2.114874704832274,
+        "actualDrebPct": 76.0601180891036
+      },
+      {
+        "id": 1610612756,
+        "name": "Phoenix Suns",
+        "rawFiveShares": 0.6701525946137132,
+        "posteriorFiveShares": 0.670605986988281,
+        "oldInteriorContest": 2.8164679981447978,
+        "actualDrebPct": 75.60445531105678
+      },
+      {
+        "id": 1610612757,
+        "name": "Portland Trail Blazers",
+        "rawFiveShares": 0.6442091105636282,
+        "posteriorFiveShares": 0.6446966557221347,
+        "oldInteriorContest": 2.330934449275025,
+        "actualDrebPct": 73.98861252622116
+      },
+      {
+        "id": 1610612758,
+        "name": "Sacramento Kings",
+        "rawFiveShares": 0.701630396453579,
+        "posteriorFiveShares": 0.7010943920733941,
+        "oldInteriorContest": 2.3940447134039187,
+        "actualDrebPct": 78.44777841892672
+      },
+      {
+        "id": 1610612759,
+        "name": "San Antonio Spurs",
+        "rawFiveShares": 0.6834018253327956,
+        "posteriorFiveShares": 0.6828911277180129,
+        "oldInteriorContest": 2.534130489671685,
+        "actualDrebPct": 76.36063771302913
+      },
+      {
+        "id": 1610612760,
+        "name": "Oklahoma City Thunder",
+        "rawFiveShares": 0.6497274791824377,
+        "posteriorFiveShares": 0.6505071862739912,
+        "oldInteriorContest": 2.20010613527649,
+        "actualDrebPct": 73.78824803682643
+      },
+      {
+        "id": 1610612761,
+        "name": "Toronto Raptors",
+        "rawFiveShares": 0.6568667373095166,
+        "posteriorFiveShares": 0.6578979953475563,
+        "oldInteriorContest": 2.339987987757005,
+        "actualDrebPct": 73.93647192285876
+      },
+      {
+        "id": 1610612762,
+        "name": "Utah Jazz",
+        "rawFiveShares": 0.6700633838383837,
+        "posteriorFiveShares": 0.6693408039691909,
+        "oldInteriorContest": 2.8920560328978855,
+        "actualDrebPct": 75.17241379310344
+      },
+      {
+        "id": 1610612763,
+        "name": "Memphis Grizzlies",
+        "rawFiveShares": 0.6549742255015919,
+        "posteriorFiveShares": 0.6559500627682742,
+        "oldInteriorContest": 2.449410902989203,
+        "actualDrebPct": 74.82718894009217
+      },
+      {
+        "id": 1610612764,
+        "name": "Washington Wizards",
+        "rawFiveShares": 0.6341275150777965,
+        "posteriorFiveShares": 0.6357817438163319,
+        "oldInteriorContest": 2.428808178918851,
+        "actualDrebPct": 72.46256239600666
+      },
+      {
+        "id": 1610612765,
+        "name": "Detroit Pistons",
+        "rawFiveShares": 0.680895820684072,
+        "posteriorFiveShares": 0.6828357467520976,
+        "oldInteriorContest": 2.2560205855079305,
+        "actualDrebPct": 77.28969279356876
+      },
+      {
+        "id": 1610612766,
+        "name": "Charlotte Hornets",
+        "rawFiveShares": 0.6646669368319743,
+        "posteriorFiveShares": 0.666635096042981,
+        "oldInteriorContest": 2.392389966615363,
+        "actualDrebPct": 74.53744493392071
+      }
+    ]
+  },
+  {
+    "season": "2024-25",
+    "label": "Post-registration input diagnostic; not used to tune or fit the candidate",
+    "rawShareCorrelation": 0.9200231775511176,
+    "posteriorShareCorrelation": 0.9186897659336993,
+    "oldInteriorContestCorrelation": 0.20242272533815964,
+    "startingLineupClipping": {
+      "starters": 2460,
+      "lower": 0,
+      "upper": 0
+    },
+    "teams": [
+      {
+        "id": 1610612746,
+        "name": "LA Clippers",
+        "rawFiveShares": 0.6891694872442534,
+        "posteriorFiveShares": 0.6885750525387907,
+        "oldInteriorContest": 2.438757219361488,
+        "actualDrebPct": 77.50845546786923
+      },
+      {
+        "id": 1610612747,
+        "name": "Los Angeles Lakers",
+        "rawFiveShares": 0.6633223500785725,
+        "posteriorFiveShares": 0.6632431114070624,
+        "oldInteriorContest": 2.5719059241712507,
+        "actualDrebPct": 74.5146977260122
+      },
+      {
+        "id": 1610612748,
+        "name": "Miami Heat",
+        "rawFiveShares": 0.6781258460767109,
+        "posteriorFiveShares": 0.6778160634692422,
+        "oldInteriorContest": 2.429691041015241,
+        "actualDrebPct": 75.82417582417582
+      },
+      {
+        "id": 1610612749,
+        "name": "Milwaukee Bucks",
+        "rawFiveShares": 0.6782424365071333,
+        "posteriorFiveShares": 0.6781017742883638,
+        "oldInteriorContest": 2.710169957127815,
+        "actualDrebPct": 76.20306716023268
+      },
+      {
+        "id": 1610612750,
+        "name": "Minnesota Timberwolves",
+        "rawFiveShares": 0.6632914484286863,
+        "posteriorFiveShares": 0.6644588066767122,
+        "oldInteriorContest": 2.8728230526606087,
+        "actualDrebPct": 75.05506607929516
+      },
+      {
+        "id": 1610612751,
+        "name": "Brooklyn Nets",
+        "rawFiveShares": 0.6522269672006873,
+        "posteriorFiveShares": 0.6535752776546713,
+        "oldInteriorContest": 2.512629894501673,
+        "actualDrebPct": 75.04515352197471
+      },
+      {
+        "id": 1610612752,
+        "name": "New York Knicks",
+        "rawFiveShares": 0.6628644707065628,
+        "posteriorFiveShares": 0.6630527490210337,
+        "oldInteriorContest": 2.2826971390472544,
+        "actualDrebPct": 74.48571428571428
+      },
+      {
+        "id": 1610612753,
+        "name": "Orlando Magic",
+        "rawFiveShares": 0.6716239164596746,
+        "posteriorFiveShares": 0.6721301217668855,
+        "oldInteriorContest": 2.741032637955493,
+        "actualDrebPct": 77.01958384332926
+      },
+      {
+        "id": 1610612754,
+        "name": "Indiana Pacers",
+        "rawFiveShares": 0.6583169014084507,
+        "posteriorFiveShares": 0.6577329183268333,
+        "oldInteriorContest": 2.458954024963748,
+        "actualDrebPct": 74.47163515016685
+      },
+      {
+        "id": 1610612755,
+        "name": "Philadelphia 76ers",
+        "rawFiveShares": 0.6266817218409366,
+        "posteriorFiveShares": 0.6281717849200922,
+        "oldInteriorContest": 2.137015549682787,
+        "actualDrebPct": 71.82007745010426
+      },
+      {
+        "id": 1610612756,
+        "name": "Phoenix Suns",
+        "rawFiveShares": 0.6511847612324139,
+        "posteriorFiveShares": 0.6511038714185019,
+        "oldInteriorContest": 2.629518841283312,
+        "actualDrebPct": 74.08118486012069
+      },
+      {
+        "id": 1610612737,
+        "name": "Atlanta Hawks",
+        "rawFiveShares": 0.6718213527449195,
+        "posteriorFiveShares": 0.6708753990821362,
+        "oldInteriorContest": 2.3762384766410563,
+        "actualDrebPct": 75.99431818181819
+      },
+      {
+        "id": 1610612738,
+        "name": "Boston Celtics",
+        "rawFiveShares": 0.6637992135907648,
+        "posteriorFiveShares": 0.663427995366796,
+        "oldInteriorContest": 2.615193882271585,
+        "actualDrebPct": 76.01748156241464
+      },
+      {
+        "id": 1610612739,
+        "name": "Cleveland Cavaliers",
+        "rawFiveShares": 0.6539477679927117,
+        "posteriorFiveShares": 0.6547009839108233,
+        "oldInteriorContest": 2.452753214095759,
+        "actualDrebPct": 74.76685318411937
+      },
+      {
+        "id": 1610612740,
+        "name": "New Orleans Pelicans",
+        "rawFiveShares": 0.644718064124608,
+        "posteriorFiveShares": 0.6455573193231661,
+        "oldInteriorContest": 2.3097285437939585,
+        "actualDrebPct": 72.65822784810126
+      },
+      {
+        "id": 1610612741,
+        "name": "Chicago Bulls",
+        "rawFiveShares": 0.6719845608706657,
+        "posteriorFiveShares": 0.6731074446419603,
+        "oldInteriorContest": 2.4142814236487333,
+        "actualDrebPct": 76.55190401669275
+      },
+      {
+        "id": 1610612742,
+        "name": "Dallas Mavericks",
+        "rawFiveShares": 0.6355296502787635,
+        "posteriorFiveShares": 0.6362515835055994,
+        "oldInteriorContest": 2.1479690644185436,
+        "actualDrebPct": 73.06652244456463
+      },
+      {
+        "id": 1610612743,
+        "name": "Denver Nuggets",
+        "rawFiveShares": 0.6634369650589064,
+        "posteriorFiveShares": 0.6636012532469281,
+        "oldInteriorContest": 2.7971478464778685,
+        "actualDrebPct": 74.62450592885375
+      },
+      {
+        "id": 1610612744,
+        "name": "Golden State Warriors",
+        "rawFiveShares": 0.6676338449070557,
+        "posteriorFiveShares": 0.6667728149272192,
+        "oldInteriorContest": 2.110820485350466,
+        "actualDrebPct": 75.59674248806515
+      },
+      {
+        "id": 1610612745,
+        "name": "Houston Rockets",
+        "rawFiveShares": 0.6719120173842732,
+        "posteriorFiveShares": 0.6722346368103984,
+        "oldInteriorContest": 2.682964429152449,
+        "actualDrebPct": 76.1878604778907
+      },
+      {
+        "id": 1610612757,
+        "name": "Portland Trail Blazers",
+        "rawFiveShares": 0.6416257265605256,
+        "posteriorFiveShares": 0.6422235376223324,
+        "oldInteriorContest": 2.658450614057405,
+        "actualDrebPct": 72.48171074845244
+      },
+      {
+        "id": 1610612758,
+        "name": "Sacramento Kings",
+        "rawFiveShares": 0.6845945470094067,
+        "posteriorFiveShares": 0.6850683787773884,
+        "oldInteriorContest": 2.3319840882123377,
+        "actualDrebPct": 76.87747035573122
+      },
+      {
+        "id": 1610612759,
+        "name": "San Antonio Spurs",
+        "rawFiveShares": 0.6465689803782387,
+        "posteriorFiveShares": 0.645756742870748,
+        "oldInteriorContest": 2.2633257762829357,
+        "actualDrebPct": 73.02148490617351
+      },
+      {
+        "id": 1610612760,
+        "name": "Oklahoma City Thunder",
+        "rawFiveShares": 0.6588682929303175,
+        "posteriorFiveShares": 0.6584576941074958,
+        "oldInteriorContest": 2.1841005080845015,
+        "actualDrebPct": 74.63362643218758
+      },
+      {
+        "id": 1610612761,
+        "name": "Toronto Raptors",
+        "rawFiveShares": 0.6534274030694667,
+        "posteriorFiveShares": 0.6535306527845686,
+        "oldInteriorContest": 2.511121809567198,
+        "actualDrebPct": 73.93233499722685
+      },
+      {
+        "id": 1610612762,
+        "name": "Utah Jazz",
+        "rawFiveShares": 0.6557469319731328,
+        "posteriorFiveShares": 0.6557934467215282,
+        "oldInteriorContest": 2.75599725717315,
+        "actualDrebPct": 74.1211465657112
+      },
+      {
+        "id": 1610612763,
+        "name": "Memphis Grizzlies",
+        "rawFiveShares": 0.655528025995126,
+        "posteriorFiveShares": 0.6556628348748891,
+        "oldInteriorContest": 2.7492196638176862,
+        "actualDrebPct": 74.89373007438894
+      },
+      {
+        "id": 1610612764,
+        "name": "Washington Wizards",
+        "rawFiveShares": 0.6414231431756003,
+        "posteriorFiveShares": 0.6415017488198675,
+        "oldInteriorContest": 2.436250469101717,
+        "actualDrebPct": 71.94701986754967
+      },
+      {
+        "id": 1610612765,
+        "name": "Detroit Pistons",
+        "rawFiveShares": 0.6712469727547932,
+        "posteriorFiveShares": 0.6701594589848604,
+        "oldInteriorContest": 2.1682461770895083,
+        "actualDrebPct": 76.0410882842865
+      },
+      {
+        "id": 1610612766,
+        "name": "Charlotte Hornets",
+        "rawFiveShares": 0.670190049600162,
+        "posteriorFiveShares": 0.6725431068613988,
+        "oldInteriorContest": 2.317135152180018,
+        "actualDrebPct": 74.46280991735537
+      }
+    ]
+  },
+  {
+    "season": "2025-26",
+    "label": "Post-registration input diagnostic; not used to tune or fit the candidate",
+    "rawShareCorrelation": 0.9437682440598445,
+    "posteriorShareCorrelation": 0.9439051757000856,
+    "oldInteriorContestCorrelation": 0.15843311740770466,
+    "startingLineupClipping": {
+      "starters": 2460,
+      "lower": 0,
+      "upper": 0
+    },
+    "teams": [
+      {
+        "id": 1610612737,
+        "name": "Atlanta Hawks",
+        "rawFiveShares": 0.6586092413583685,
+        "posteriorFiveShares": 0.6600718320372468,
+        "oldInteriorContest": 2.574923736545804,
+        "actualDrebPct": 74.49776785714286
+      },
+      {
+        "id": 1610612738,
+        "name": "Boston Celtics",
+        "rawFiveShares": 0.6563244982769108,
+        "posteriorFiveShares": 0.6551729349126179,
+        "oldInteriorContest": 2.3098715473193474,
+        "actualDrebPct": 75.72947913826016
+      },
+      {
+        "id": 1610612739,
+        "name": "Cleveland Cavaliers",
+        "rawFiveShares": 0.6412837496207908,
+        "posteriorFiveShares": 0.6408121857221065,
+        "oldInteriorContest": 2.422307904874926,
+        "actualDrebPct": 74.39667128987517
+      },
+      {
+        "id": 1610612740,
+        "name": "New Orleans Pelicans",
+        "rawFiveShares": 0.6247884372633175,
+        "posteriorFiveShares": 0.6250896267972272,
+        "oldInteriorContest": 2.4842460822264663,
+        "actualDrebPct": 71.3971397139714
+      },
+      {
+        "id": 1610612741,
+        "name": "Chicago Bulls",
+        "rawFiveShares": 0.6677035163167214,
+        "posteriorFiveShares": 0.6676609351371205,
+        "oldInteriorContest": 2.174618373940938,
+        "actualDrebPct": 75.46419098143237
+      },
+      {
+        "id": 1610612742,
+        "name": "Dallas Mavericks",
+        "rawFiveShares": 0.651184528605963,
+        "posteriorFiveShares": 0.6501196154576624,
+        "oldInteriorContest": 2.4155468528096438,
+        "actualDrebPct": 74.09463388844833
+      },
+      {
+        "id": 1610612743,
+        "name": "Denver Nuggets",
+        "rawFiveShares": 0.6613792151746287,
+        "posteriorFiveShares": 0.6609669740351647,
+        "oldInteriorContest": 2.505002252935844,
+        "actualDrebPct": 75.26160450764691
+      },
+      {
+        "id": 1610612744,
+        "name": "Golden State Warriors",
+        "rawFiveShares": 0.6356281850749282,
+        "posteriorFiveShares": 0.6370550430301473,
+        "oldInteriorContest": 2.0041542512499086,
+        "actualDrebPct": 72.90470723306544
+      },
+      {
+        "id": 1610612745,
+        "name": "Houston Rockets",
+        "rawFiveShares": 0.6546659471940569,
+        "posteriorFiveShares": 0.6556304579389867,
+        "oldInteriorContest": 3.372353175189509,
+        "actualDrebPct": 74.51249656687723
+      },
+      {
+        "id": 1610612746,
+        "name": "LA Clippers",
+        "rawFiveShares": 0.6291174537364749,
+        "posteriorFiveShares": 0.6311606935505752,
+        "oldInteriorContest": 2.467013581687483,
+        "actualDrebPct": 72.90174735032942
+      },
+      {
+        "id": 1610612747,
+        "name": "Los Angeles Lakers",
+        "rawFiveShares": 0.65288003245107,
+        "posteriorFiveShares": 0.6550822234507213,
+        "oldInteriorContest": 2.779270987568674,
+        "actualDrebPct": 74.33908045977012
+      },
+      {
+        "id": 1610612748,
+        "name": "Miami Heat",
+        "rawFiveShares": 0.6580118130196715,
+        "posteriorFiveShares": 0.6582574580413528,
+        "oldInteriorContest": 2.2994629158072852,
+        "actualDrebPct": 74.85426603073662
+      },
+      {
+        "id": 1610612749,
+        "name": "Milwaukee Bucks",
+        "rawFiveShares": 0.6392548721842571,
+        "posteriorFiveShares": 0.6406391219823567,
+        "oldInteriorContest": 2.6282251351596573,
+        "actualDrebPct": 74.14772727272727
+      },
+      {
+        "id": 1610612750,
+        "name": "Minnesota Timberwolves",
+        "rawFiveShares": 0.6402683851402579,
+        "posteriorFiveShares": 0.6418908724746126,
+        "oldInteriorContest": 2.8495957088697867,
+        "actualDrebPct": 73.74727668845316
+      },
+      {
+        "id": 1610612751,
+        "name": "Brooklyn Nets",
+        "rawFiveShares": 0.6364670310206973,
+        "posteriorFiveShares": 0.6373657161546825,
+        "oldInteriorContest": 2.7381514590043974,
+        "actualDrebPct": 74.0348692403487
+      },
+      {
+        "id": 1610612752,
+        "name": "New York Knicks",
+        "rawFiveShares": 0.6731096112038021,
+        "posteriorFiveShares": 0.6727042721265065,
+        "oldInteriorContest": 2.5109844321572736,
+        "actualDrebPct": 76.72634271099744
+      },
+      {
+        "id": 1610612753,
+        "name": "Orlando Magic",
+        "rawFiveShares": 0.659111671288127,
+        "posteriorFiveShares": 0.6583126611424848,
+        "oldInteriorContest": 2.8324601815092674,
+        "actualDrebPct": 75.60420813193062
+      },
+      {
+        "id": 1610612754,
+        "name": "Indiana Pacers",
+        "rawFiveShares": 0.6484567307692308,
+        "posteriorFiveShares": 0.6493248832237938,
+        "oldInteriorContest": 2.346758788208857,
+        "actualDrebPct": 74.0855374226224
+      },
+      {
+        "id": 1610612755,
+        "name": "Philadelphia 76ers",
+        "rawFiveShares": 0.6265386549972336,
+        "posteriorFiveShares": 0.6279016806874806,
+        "oldInteriorContest": 2.5254818818692755,
+        "actualDrebPct": 72.49514293644185
+      },
+      {
+        "id": 1610612756,
+        "name": "Phoenix Suns",
+        "rawFiveShares": 0.6241182719546742,
+        "posteriorFiveShares": 0.6256640950447007,
+        "oldInteriorContest": 2.429460676445854,
+        "actualDrebPct": 71.87318208260616
+      },
+      {
+        "id": 1610612757,
+        "name": "Portland Trail Blazers",
+        "rawFiveShares": 0.6363694331983807,
+        "posteriorFiveShares": 0.6374198282895611,
+        "oldInteriorContest": 2.5015358089295794,
+        "actualDrebPct": 72.69187986651835
+      },
+      {
+        "id": 1610612758,
+        "name": "Sacramento Kings",
+        "rawFiveShares": 0.6433589562051177,
+        "posteriorFiveShares": 0.6444689605494343,
+        "oldInteriorContest": 2.2931181472621796,
+        "actualDrebPct": 73.47117064647641
+      },
+      {
+        "id": 1610612759,
+        "name": "San Antonio Spurs",
+        "rawFiveShares": 0.6754436790923827,
+        "posteriorFiveShares": 0.6753746277298058,
+        "oldInteriorContest": 2.5411564783424927,
+        "actualDrebPct": 77.33651045803548
+      },
+      {
+        "id": 1610612760,
+        "name": "Oklahoma City Thunder",
+        "rawFiveShares": 0.656699542092286,
+        "posteriorFiveShares": 0.6563527879981735,
+        "oldInteriorContest": 2.40893951356573,
+        "actualDrebPct": 74.44181770422905
+      },
+      {
+        "id": 1610612761,
+        "name": "Toronto Raptors",
+        "rawFiveShares": 0.6454119490497371,
+        "posteriorFiveShares": 0.6461186991888467,
+        "oldInteriorContest": 2.3319012506816548,
+        "actualDrebPct": 74.00868306801736
+      },
+      {
+        "id": 1610612762,
+        "name": "Utah Jazz",
+        "rawFiveShares": 0.6395993242220989,
+        "posteriorFiveShares": 0.6390701074380278,
+        "oldInteriorContest": 2.7775836803774556,
+        "actualDrebPct": 72.87709497206704
+      },
+      {
+        "id": 1610612763,
+        "name": "Memphis Grizzlies",
+        "rawFiveShares": 0.6106159420289854,
+        "posteriorFiveShares": 0.6124202326334889,
+        "oldInteriorContest": 2.455347695355192,
+        "actualDrebPct": 70.85427135678393
+      },
+      {
+        "id": 1610612764,
+        "name": "Washington Wizards",
+        "rawFiveShares": 0.6215724989874443,
+        "posteriorFiveShares": 0.6217413116402473,
+        "oldInteriorContest": 2.2187826722255797,
+        "actualDrebPct": 70.19097702740105
+      },
+      {
+        "id": 1610612765,
+        "name": "Detroit Pistons",
+        "rawFiveShares": 0.643427179072821,
+        "posteriorFiveShares": 0.6439150974576618,
+        "oldInteriorContest": 2.342540967287462,
+        "actualDrebPct": 74.24031223863953
+      },
+      {
+        "id": 1610612766,
+        "name": "Charlotte Hornets",
+        "rawFiveShares": 0.6756607929515418,
+        "posteriorFiveShares": 0.6740866767156446,
+        "oldInteriorContest": 2.53491473552547,
+        "actualDrebPct": 76.57784011220197
+      }
+    ]
+  }
+]

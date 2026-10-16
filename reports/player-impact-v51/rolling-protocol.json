@@ -1,0 +1,36 @@
+{
+  "version": "v51-joint-rotation-plan",
+  "baseline": "v49",
+  "seasons": [
+    "2022-23",
+    "2023-24",
+    "2024-25"
+  ],
+  "targetSeason": "2025-26",
+  "variants": [
+    "baseline",
+    "rollingPlan"
+  ],
+  "seed": 20261012,
+  "gamesPerSeason": 60,
+  "plan": {
+    "stepSeconds": 30,
+    "slots": 96,
+    "optimizationPasses": 6000,
+    "seed": 51001,
+    "objective": "Squared per-player two-minute-bin occupancy error + v49 pair weight .25 times squared whole-game pair overlap error + existing minimumStint/600 per substitution + short-stint shortfall in minutes. All weights fixed before first simulation. Exact five per slot, rounded per-player slots sum480, official starters at first slot. Deterministic quota-preserving rectangle swaps; game RNG unchanged.",
+    "scope": "Known game minute reconstruction; source profiles exclude entire game fold. No target-game stint sequence, scoring outcome, or player-name overrides. Joint feasibility guarantees apply to the planned grid, not real dead-ball execution or foul-outs.",
+    "replanning": "Crop the source phase distribution to remaining clock, redistribute unreachable minute budgets over available players with per-player remaining-clock caps, enforce five per future grid slot, and optimize residual pair targets. Record repairs. No claim to recover minutes after an already completed disqualification."
+  },
+  "selection": "Same >1% objective, each-season regulation minute <=baseline+0.05 and short-share <=baseline+0.01 on three-seed means. No candidate re-selection or further tuning.",
+  "runtime": "Execute the joint plan coherently: current-time cumulative deficit and source minimum-stint occupancy preference. Historical stint/rest are penalties in the joint planner rather than a second contradictory hard lock. Remove heuristic mandatory G/big coverage for this plan-based policy; the learned full five-player plan supplies composition. Preserve health/foul eligibility, minute exhaustion and protected shooter. This is a separate candidate, not an adopted change.",
+  "gamePresetChanged": false,
+  "abilityChanges": false,
+  "revision": "Joint execution plus hard remaining-minute feasibility: every available player whose remaining budget reaches all remaining clock time must be on court when feasible with protected shooter; preserve valid players in slots when forcing urgent players. Report conflicts instead of claiming impossible budgets are achieved.",
+  "seeds": [
+    20261012,
+    20261013,
+    20261014
+  ],
+  "reason": "A static full-game plan becomes infeasible after foul-outs and accumulated dead-ball delays. Replan at quarter openings and changes to available players from the actual credited minutes. Existing source profiles, pair totals and probability inputs retained. Original three-seed thresholds unchanged."
+}

@@ -1,0 +1,14 @@
+{
+  "headline": "階段 B 完成並凍結v5：c(25)=0.500000、c(41)=0.424513、c(55)=0.000000。兩開發季合併的v5對v4聯合區間判讀：25場的netRMSE／winsMAE：分不出／分不出；41場的netRMSE／winsMAE：分不出／分不出；55場的netRMSE／winsMAE：分不出／分不出。25／41／55場切分的simple斜率超出實測分段對應的可達範圍；只縮進攻殘差的校準機制未達該目標。個人FG門檻未全過，v5只作球隊強度層，不作已驗證球員卡。所有本批成績均為「開發季，已看過答案」；正式基準維持v3。2023–24／2022–23尚未下載，階段C未開始。",
+  "stage": "B",
+  "CStarted": false,
+  "baseline": "nba-defense-v3",
+  "developmentOnly": true,
+  "freeze": "reports/defense-eighth/b/v5-freeze.json",
+  "sources": {
+    "reports/defense-eighth/b/v5-freeze.json": "c21ca1e02c267f8143ed2561729d36f27fa11406c6d44a3682cbd699ce590d98",
+    "reports/defense-eighth/b/assessment.json": "f0806d9cac06f913ea61bb496d1106d2f68d0fe4648be19e13b6db2de1163a06",
+    "reports/defense-eighth/b/players.json": "9b39c0412dbc3912c527bd02a90dcdb5525812fb16cdfc9fa48158f574340f8c",
+    "scripts/report_defense_eighth_b.js": "0597b4acb2b09e067ba1a14c2a00c29b5fc12d0146fb1d051d69aa54f503b8ba"
+  }
+}

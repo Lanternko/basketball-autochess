@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "probePlayers": 10,
+  "probeGames": 9600,
+  "allProbeEstimatesAndPairedIntervalsRecomputed": true,
+  "scope": "Fixed-input paired simulation estimates only; no causal or ranking certification.",
+  "hashes": {
+    "D:/Projects/CODING/basketball-autochess/reports/player-impact-v36/verify-supplement.py": "bf286a3088b48244fc2a28db890adcff33eb5a9b4795c9dc27cc156f2a4f28a3",
+    "reports/player-impact-v36/ovr-probe-protocol.json": "49a220855914bb8f47244790bfa1c83926e293216d7abee13bd90bfb45092220",
+    "reports/player-impact-v36/ovr-probe-checkpoint.json": "599668512591af658c26aaa72a4f9b62e2d66256933e9fa68efddf059a9d6d41",
+    "reports/player-impact-v36/ovr-probe-summary.json": "b353fedaec75a6cc7211da8b10d9ec85cf210bb2f1396a6db37dac84278503fd"
+  }
+}

@@ -1,0 +1,75 @@
+{
+  "passed": true,
+  "allTenGridCellsEachOlderSeasonIndependentlyVerified": true,
+  "targetExcludedFromSelection": true,
+  "referencesRebuiltFromRawPlayerGames": true,
+  "noSelectedFoldRuntimeClampMismatch": true,
+  "legacyRootCauseChecks": [
+    {
+      "season": "2022-23",
+      "rosterEntries": 609,
+      "legacy100PriorAnd56To90PctClampExactlyReproduced": true,
+      "maxError": 1.1102230246251565e-16
+    },
+    {
+      "season": "2023-24",
+      "rosterEntries": 657,
+      "legacy100PriorAnd56To90PctClampExactlyReproduced": true,
+      "maxError": 1.1102230246251565e-16
+    },
+    {
+      "season": "2024-25",
+      "rosterEntries": 654,
+      "legacy100PriorAnd56To90PctClampExactlyReproduced": true,
+      "maxError": 1.1102230246251565e-16
+    },
+    {
+      "season": "2025-26",
+      "rosterEntries": 661,
+      "legacy100PriorAnd56To90PctClampExactlyReproduced": true,
+      "maxError": 1.1102230246251565e-16
+    }
+  ],
+  "crossfitComparison": [
+    {
+      "season": "2022-23",
+      "attempts": 57881,
+      "legacyNllPerAttempt": 0.5101624881286081,
+      "newNllPerAttempt": 0.5085103270765089,
+      "crossfitProbabilityRange": [
+        0.3931200303293327,
+        0.9257301101487764
+      ]
+    },
+    {
+      "season": "2023-24",
+      "attempts": 53430,
+      "legacyNllPerAttempt": 0.5097240028087543,
+      "newNllPerAttempt": 0.5086055627205777,
+      "crossfitProbabilityRange": [
+        0.42378047738650537,
+        0.9283654850989562
+      ]
+    },
+    {
+      "season": "2024-25",
+      "attempts": 53312,
+      "legacyNllPerAttempt": 0.5142169944387402,
+      "newNllPerAttempt": 0.5130371900092328,
+      "crossfitProbabilityRange": [
+        0.460928182174029,
+        0.9338724466960633
+      ]
+    },
+    {
+      "season": "2025-26",
+      "attempts": 57768,
+      "legacyNllPerAttempt": 0.5109294959250412,
+      "newNllPerAttempt": 0.5093984747018321,
+      "crossfitProbabilityRange": [
+        0.4621550545555875,
+        0.9396931921022776
+      ]
+    }
+  ]
+}

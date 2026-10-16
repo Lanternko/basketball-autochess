@@ -1,0 +1,49 @@
+{
+  "completedAt": "2026-10-13T07:24:55.101Z",
+  "issues": [],
+  "protectedFiles": 1015,
+  "originalProtocolSHA": "f25bdaf88acd41735c555d1ff59fe4c443b2805a9885547032e327b279647b61",
+  "supplementSHA": "48a06db9923940b7bd238620c5c79d9c010a129c1b78332cd871f31a262c5543",
+  "verifiedDownloads": 575,
+  "tradingDocuments": 4,
+  "endpointFailures": 0,
+  "strictGames": {
+    "2022-23": 1079,
+    "2023-24": 1063,
+    "2024-25": 1091,
+    "2025-26": 1188
+  },
+  "onOffPlayerTeamChecks": 2580,
+  "verifiedCorrelationPoints": 360,
+  "teamCorrelationCells": 200,
+  "filteredRowsRejected": 0,
+  "splitCountChecks": 876,
+  "splitCountMismatches": 0,
+  "mergedGlobalTrackingRows": [
+    {
+      "season": "2022-23",
+      "team": 0,
+      "kind": "rim",
+      "id": 1628969,
+      "rows": 2,
+      "attempts": 440
+    },
+    {
+      "season": "2022-23",
+      "team": 0,
+      "kind": "three",
+      "id": 1628969,
+      "rows": 2,
+      "attempts": 353
+    }
+  ],
+  "newSimulations": 0,
+  "newCards": 0,
+  "unchanged": [
+    "A",
+    "A2",
+    "T1",
+    "src"
+  ],
+  "stopAt": "T2"
+}

@@ -1,0 +1,111 @@
+{
+  "version": "tenth-t1-rescore-v1",
+  "registeredAt": "2026-10-13T06:34:58.236Z",
+  "scope": "T1 only. Existing outputs, no simulations, no new seasons, no engine/card changes. All four seasons already observed.",
+  "protectedManifestSHA": "03d1acd52152d77318bb2a7483721ad0584bd023c3a27bc6de61b38e5649fe27",
+  "inputHashes": {
+    "reports/defense-tenth/step3-a2/analysis.json": "cfb0b52b9c4df4ba79c608eaee77c6722186caad4cc6184990c5329ef45afa56",
+    "reports/defense-seventh/full-comparison.json": "dac3faed2786eba13e7204aa4818ea1d9177d89c1e728b67e5f690343f4c202c",
+    "reports/defense-tenth/step2/season-analysis.json": "b65745055e6963c03b335fbd36bf3ea6e487c995e57a8390bc8bff67a4495577",
+    "reports/defense-fourth/v1-seeds.json": "a334fae44fa3c48fe62b49d10de636cdb8fe9fb468a4b598715e85eb5ee869b4",
+    "reports/defense-fourth/final-normalized-seeds.json": "503a839c5d431fc44a181f5495182959d349e62fb1755d7d8109f76f973aa659"
+  },
+  "seasons": [
+    "2022-23",
+    "2023-24",
+    "2024-25",
+    "2025-26"
+  ],
+  "seeds": [
+    20261012,
+    20261013,
+    20261014,
+    20261015,
+    20261016,
+    20261017,
+    20261018,
+    20261019,
+    20261020,
+    20261021,
+    20261022,
+    20261023,
+    20261024,
+    20261025,
+    20261026,
+    20261027,
+    20261028,
+    20261029,
+    20261030,
+    20261031
+  ],
+  "eligibility": {
+    "task1": "Full-season same-season cards and full-season schedule only. Calendar holdouts never substituted for full-season. Historical simple has no full-season prediction; do not manufacture answer-copy predictions.",
+    "task2": "Reuse A2 L1/L2. L2 is answer-side newcomer diagnostic, not independent portability test. Known future exposure/soft minute targets, pre-opening schedule remain disclosed."
+  },
+  "ranking": {
+    "axes": [
+      "net",
+      "wins"
+    ],
+    "primary": "net",
+    "actualTop5": "descending actual metric ranks <=5",
+    "actualBottom5": "descending actual metric ranks >=26",
+    "topFailure": "predicted rank >10",
+    "bottomFailure": "predicted rank <=20",
+    "ties": "average tied rank, no jitter",
+    "prediction": "mean of existing 20 seeds before ranking",
+    "pass": "zero failures; explanations do not waive a failure. Combined pass requires both axes. Missing is unevaluated, never pass."
+  },
+  "errors": {
+    "offense": "O = predicted PPG - actual PPG, separately league-centered",
+    "defense": "D = actual opponent PPG - predicted opponent PPG, separately league-centered",
+    "identity": "centered net error = O + D; retain raw values",
+    "direction": "absolute error <=0.25 point/game is near zero; positive overestimates strength; negative underestimates"
+  },
+  "attribution": {
+    "principle": "Observational abnormality alone is not causal attribution. Counterfactual must remove failure on its own axis and reduce absolute error >=50%, with sign agreement. Otherwise unexplained, with anomaly flags reported separately. Never coach/tactics attribution.",
+    "clutch": {
+      "definition": "Fourth quarter and overtime clock <=300 seconds, pre-event absolute lead <=5. Score increments and elapsed time use prior-event scoreboard; only exact final-score/event-score reconciliation games accepted.",
+      "minimumCoverage": 0.85,
+      "minimumMinutes": 40,
+      "minimumRateDifferencePer48": 10,
+      "minimumImpactPerGame": 0.75,
+      "impact": "(clutch net - nonclutch net/minute * clutch minutes)/all season games; coverage >=85%, incomplete game impact extrapolated by GP/validGP. No simulations adjusted.",
+      "counterfactual": "actual net minus impact; rank all 30 again. Only net-axis explanation; wins attribution requires unavailable simulated clutch traces, so never inferred."
+    },
+    "luck": {
+      "close": "final absolute margin <=5",
+      "minimumCloseGames": 15,
+      "closeWinRateDeviation": 0.15,
+      "expectedWins": "GP * PF^14/(PF^14+PA^14), fixed exponent 14 diagnostic convention, not fitted to answers",
+      "minimumWinExcess": 3,
+      "counterfactual": "actual wins replaced by net-based expected wins, rank all 30 again; only wins-axis eligible. This is win conversion anomaly, not proof of random luck and cannot explain net error."
+    },
+    "missingPrior": {
+      "eligible": "L1 only",
+      "minimumActualMinuteShare": 0.1,
+      "effect": "L2-L1 same season, same seed existing outputs; must remove rank failure, reduce absolute corresponding error >=50%, and move prediction toward truth. L2 changes only no-prior cards. Supports this model-input explanation; not biological causal claim."
+    },
+    "unresolved": "No qualifying explanation => 無法解釋. Partial contributions and flags not promoted to explained."
+  },
+  "metrics": [
+    "centered net RMSE",
+    "Spearman net ranking",
+    "win MAE",
+    "win RMSE",
+    "calibration slope",
+    "SD ratio",
+    "failure counts on both axes"
+  ],
+  "uncertainty": "Reuse existing A2 joint franchise+seed intervals where applicable; no seed-only significance claims. Rank threshold audit is deterministic 20-seed mean, not causal inference.",
+  "outputs": [
+    "analysis.json",
+    "coverage.json",
+    "real-diagnostics.json",
+    "failures.md",
+    "team-errors.md",
+    "report.md",
+    "completion-audit.json"
+  ],
+  "freeze": "Rules not modified after scoring. Finish T1 then stop; T2/T3/T4 not started."
+}

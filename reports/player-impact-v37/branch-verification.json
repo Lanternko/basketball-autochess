@@ -1,0 +1,76 @@
+{
+  "passed": true,
+  "seasons": [
+    {
+      "season": "2022-23",
+      "shotStates": 54643,
+      "counts": {
+        "fixed-pass-rows": 54632,
+        "relaxed-source-columns": 11
+      },
+      "restored": {
+        "fixed-pass-rows": 207,
+        "relaxed-source-columns": 4
+      },
+      "maxStrictRowDifference": 2.6245006168323926e-11
+    },
+    {
+      "season": "2023-24",
+      "shotStates": 53450,
+      "counts": {
+        "fixed-pass-rows": 53388,
+        "relaxed-source-columns": 62
+      },
+      "restored": {
+        "fixed-pass-rows": 178,
+        "relaxed-source-columns": 16
+      },
+      "maxStrictRowDifference": 2.705630164356876e-11
+    },
+    {
+      "season": "2024-25",
+      "shotStates": 56213,
+      "counts": {
+        "fixed-pass-rows": 56181,
+        "relaxed-source-columns": 32
+      },
+      "restored": {
+        "fixed-pass-rows": 260,
+        "relaxed-source-columns": 9
+      },
+      "maxStrictRowDifference": 2.5403790182565444e-11
+    },
+    {
+      "season": "2025-26",
+      "shotStates": 64510,
+      "counts": {
+        "fixed-pass-rows": 64470,
+        "relaxed-source-columns": 40
+      },
+      "restored": {
+        "fixed-pass-rows": 205,
+        "relaxed-source-columns": 12
+      },
+      "maxStrictRowDifference": 2.6461610680428294e-11
+    }
+  ],
+  "restoredByFixedPassRows": 850,
+  "restoredByExplicitRelaxation": 41,
+  "hashes": {
+    "reports/player-impact-v33/2022-23-conditional-data.json": "3fc7b9e12bb9f68cd78bd2098d89d5de935f432fac9321b1c105f893254bae14",
+    "reports/player-impact-v37/2022-23-conditional-data.json": "2f9e18516652e487fc0890179dfe816c2e385bedf52e18228c4cbf883ac035b3",
+    "reports/player-impact-v37/2022-23-contexts.json": "46b22fa1893e05d57426a91f59b4e8a12a0bd8aef876705e71ee1e46b757828e",
+    "reports/player-impact-v33/2023-24-conditional-data.json": "4f75541b89e69ff0ca83a6fc165d4f49cd1b6b41bd4c9202d0cb1b4f3071eb97",
+    "reports/player-impact-v37/2023-24-conditional-data.json": "f77218ae63bbe230e44acc1c77315c42d0b61723df4ef7fd8e512cca8b752035",
+    "reports/player-impact-v37/2023-24-contexts.json": "a9ce09b930f4f22d40d850bceeab69e1687c069fbdd2a4c787eb94a878b4a922",
+    "reports/player-impact-v33/2024-25-conditional-data.json": "f2519a3da1f84a328b4dfc4944a4bfcc0d122d1c2a8d583a2c779be929cce8f8",
+    "reports/player-impact-v37/2024-25-conditional-data.json": "2cf4c17a344ab4e0fc9df02b1e6a6aa790e002e57dc9ecda382ef2a8bdfaef59",
+    "reports/player-impact-v37/2024-25-contexts.json": "981d7238f7427724eb7ac1bc6569a4f4d4c3c5bb1ef55f08f5da241aa7f1c6cc",
+    "reports/player-impact-v33/2025-26-conditional-data.json": "349a2738d87afc34b97c390098607fe74c4bb0e2e8685007eab78fa274229d44",
+    "reports/player-impact-v37/2025-26-conditional-data.json": "794c9359b32fb8f848e44445c5c37e350dfab578afed259c350646fb6fa08434",
+    "reports/player-impact-v37/2025-26-contexts.json": "4726386df2b8bd326e159738bfa0b53f9a8b4f29bdbc8707a13cc3d70942547b",
+    "reports/player-impact-v37/verify-branches.mjs": "979a9677bfcfa84ee4a8d411d4e298b643630b8099a2bf16b79d0d6d6b3ae167",
+    "reports/player-impact-v37/model.mjs": "5b9ed01a71a560db6051261cb690f04f0a24c56c067bb2da8c4eb2d3ae0f0c10",
+    "reports/player-impact-diagnostics/pass-row-feasibility-v36/audit.json": "f7be235fef05f2bfc5fe66ecf635e106f144b8be41072bab61a8c05f98fe140f"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "version": "measured-terminal-turnovers-21",
+  "officialModelAdopted": false,
+  "goalComplete": false,
+  "seasons": 4,
+  "fullSeasonSeeds": 3,
+  "strictOnCourtSeeds": 3,
+  "targetPlayers": 582,
+  "teamWinGatesFailed": [
+    "2022-23",
+    "2023-24",
+    "2025-26"
+  ],
+  "ovrSamplePlayers": 31,
+  "ovrFullRanking": false,
+  "sourceGameRowsMatched": true,
+  "cacheExactParityGames": 96,
+  "unknownSkillsStill70": [
+    "offBall",
+    "screen",
+    "handle",
+    "breakDbl"
+  ],
+  "movementSourceFetched": true,
+  "movementUsedAsSkill": false,
+  "next": "Resolve team/on-court regressions and individual source-context allocation; tracking pairs require scope reconciliation before use as mutually exclusive event counts."
+}

@@ -1,0 +1,33 @@
+{
+  "officialModelAdopted": false,
+  "goalComplete": false,
+  "fullOvrThisVersion": false,
+  "latestCompleteOvrVersion": 24,
+  "canonicalRoleInputFixed": true,
+  "sourcePlayerSeasonsTested": 2262,
+  "teamCardsTested": 2581,
+  "repeatedAssemblyTestCount": 5,
+  "actualPlayersAudited": 582,
+  "actualAndOpponentCardsControlled": 732,
+  "probePlayers": 10,
+  "probeGames": 19200,
+  "transports": 2,
+  "scenarios": 40,
+  "withinCanonicalTransportHealthyIntervalsOverlappingZero": 8,
+  "candidateV37FailedWinGateSeasons": [
+    "2022-23",
+    "2023-24",
+    "2024-25",
+    "2025-26"
+  ],
+  "historicalOvrAssembliesWithRepeatedCorrection": [
+    "v29",
+    "v30",
+    "v34",
+    "v35",
+    "v36",
+    "v37"
+  ],
+  "historicalV24SourceRolesCanonical": true,
+  "scope": "OVR input bug repaired in controlled constructor; comparable workload rerun complete. Neither transport adopted and no full OVR ranking."
+}

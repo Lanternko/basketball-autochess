@@ -1,0 +1,15 @@
+import fs from 'node:fs';
+const d='reports/defense-tenth/step3-a2';
+let s=fs.readFileSync('reports/defense-tenth/step3-a/analyze.mjs','utf8');
+const replace=(a,b)=>{if(!s.includes(a))throw Error('Missing analyzer template '+a.slice(0,50));s=s.replace(a,b);};
+replace("const d=process.argv[2]??'reports/defense-tenth/step3-a',p=read(d+'/protocol.json'),versions=['preseason','oracle','simple','shrink'];","const d='reports/defense-tenth/step3-a2',p=read(d+'/protocol.json'),versions=['L1','L2','L3','P3','preseason','simple','shrink'];");
+replace("coverage=read(`${d}/coverage-${target}.json`)","coverage=read(`${p.base}/coverage-${target}.json`)");
+replace("for(const mode of ['preseason','oracle'])data[mode]=p.seeds.map(seed=>{const run=read(`${d}/runs/${target}-${mode}-${seed}.json`);", "for(const mode of ['L1','L2','L3','P3','preseason'])data[mode]=p.seeds.map(seed=>{const run=read(mode==='L1'?`${p.base}/runs/${target}-oracle-${seed}.json`:mode==='preseason'?`${p.base}/runs/${target}-preseason-${seed}.json`:`${d}/runs/${target}-${mode}-${seed}.json`);");
+replace("pre=read(`${d}/bundles/${c.target}-preseason-${p.seeds[0]}.json`),ora=read(`${d}/bundles/${c.target}-oracle-${p.seeds[0]}.json`)","pre=read(`${p.base}/bundles/${c.target}-preseason-${p.seeds[0]}.json`),ora=read(`${p.base}/bundles/${c.target}-oracle-${p.seeds[0]}.json`)");
+replace("out.cells.push({prior:c.prior,target:c.target,shrink:c.c", "out.cells.push({scope:c.target==='2025-26'?'主要：前兩組訓練':'參考，含目標季鄰近資訊',prior:c.prior,target:c.target,shrink:c.c");
+replace("const comparisons=[['preseason','simple'],['preseason','shrink'],['oracle','preseason'],['oracle','simple'],['oracle','shrink']]", "const comparisons=p.comparisons");
+replace("keys=['netRMSE','Spearman','Pearson','winsMAE','winsRMSE','calibrationSlope']", "keys=['netRMSE','Spearman','Pearson','winsMAE','winsRMSE','calibrationSlope','SDRatio']");
+replace("[...datasets.map(c=>c.target),'combined']","datasets.map(c=>c.target)");
+replace("out.combined=out.intervals.combined.versions;","out.combined=null;");
+replace("半盲：三個目標季均已看過答案；規則先封存，未依本次結果調整","L2/L3答案側診斷；P3前季輸入半盲。2025主要，其餘參考，含目標季鄰近資訊。規則先封存。");
+fs.writeFileSync(d+'/analyze.mjs',s);

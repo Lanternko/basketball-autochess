@@ -1,0 +1,4 @@
+{
+  "registeredUTC": "2026-10-14T21:57:54.671947+00:00",
+  "clarification": "Frozen parent turnover CDF has minimum .1 seconds and excludes zero in all four seasons. Preserve its exact support: derive [0,60] real segments but omit <.1, and assert sorted live+dead union exactly equals frozen parent. This prevents source/filter changes from confounding the split."
+}

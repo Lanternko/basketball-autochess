@@ -1,0 +1,47 @@
+{
+  "label": "2025-26-eighth-c-ablation-25-offenseResidual",
+  "extra": {
+    "bundle": "reports/defense-seventh/2025-26/calendar-25/bundle.json",
+    "cutoff": 25,
+    "calendarDate": "2025-12-14",
+    "cardFile": "reports/defense-eighth/c/ablation/2025-26/calendar-25/offenseResidual/pre25-ablation-league.json",
+    "neutralContests": true,
+    "calibration": {
+      "shotDelta": -0.08945094315092618,
+      "options": {
+        "pace": 0.9346827489873333,
+        "foulScale": 0.959967307660237,
+        "passTurnoverScale": 1.4832865670977713,
+        "touchTurnoverScale": 1.0294628435835802,
+        "touchLiveShare": 0.35971557892484607,
+        "clockViolationProbability": 0.007296959232425497
+      }
+    },
+    "options": {}
+  },
+  "files": [
+    {
+      "seed": 20261012,
+      "file": "reports/defense-seventh/runs/2025-26-eighth-c-ablation-25-offenseResidual-seed20261012.json",
+      "sha256": "ab1f0dc5e8957417503180d07cb11681d04de048fb597e250f5f6c1500e3a58c"
+    },
+    {
+      "seed": 20261013,
+      "file": "reports/defense-seventh/runs/2025-26-eighth-c-ablation-25-offenseResidual-seed20261013.json",
+      "sha256": "a48e6df006ce407f8d50fbe024a4998e01274c7fbaad4dc34187ddcf450d6274"
+    },
+    {
+      "seed": 20261014,
+      "file": "reports/defense-seventh/runs/2025-26-eighth-c-ablation-25-offenseResidual-seed20261014.json",
+      "sha256": "7fce4f9293a820e3be4d29fe3db2f82a7c74fdfb5a5a150b56abdddbba90c61f"
+    }
+  ],
+  "seconds": 83.141,
+  "sources": {
+    "src/defense_fifth_game.js": "bddd3f34b93e969513ce79d717b78358dc433c0f15eba3eeffa675177b9dfa86",
+    "src/defense_sixth_season.js": "1c30c6c59fbc3e2a40b08231dddf9be255b11fca386d93daf1eb986a99000bcf",
+    "src/defense_seventh_jobs.js": "ca1501845b601e0b742f601751ac74fba7e9717a6de66d8ab9d7a4d0c4c6d41d",
+    "scripts/run_defense_seventh.js": "0e40923369762bd8b0a0faa1545e704ba0587bc1341ea40058b7766f240f3f01",
+    "reports/defense-eighth/c/ablation/2025-26/calendar-25/offenseResidual/pre25-ablation-league.json": "d3eea430e00c264cf4988e83669e1834ac5defa814d8d102ed5223021906aef7"
+  }
+}

@@ -1,0 +1,14 @@
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import {simEvents,measure,states} from './classify.mjs';
+const e=(type,clock,off=0,extra={})=>({type,clock,off,period:1,...extra});
+const chain=[e('FGX',100),e('OREB',99),e('FOUL',97,1,{kind:'nonShooting'}),e('FGX',92),e('OREB',91),e('FGM',90),e('FGX',80,1),e('DREB',79),e('PERIOD_END',0)];
+const rows=measure(simEvents(chain)).rows;
+assert.deepEqual(rows.find(r=>r[1]===states.indexOf('playerOreb')).slice(2),[2,2,9,'foul']);
+assert.deepEqual(rows.find(r=>r[1]===states.indexOf('foulRetained')).slice(2),[5,6,7,'fg']);
+const andone=simEvents([e('FGM',100),e('FOUL',100,1,{kind:'andOne'}),e('FTM',100,0,{attempt:1,attempts:1}),e('FGM',88,1),e('PERIOD_END',0)]);
+assert.equal(andone[0].state,undefined);assert.equal(andone[2].state,'made');
+assert.deepEqual(measure(andone).rows[0].slice(2),[12,12,12,'fg']);
+const censored=measure(simEvents([e('OREB',1),e('PERIOD_END',0)]));assert.equal(censored.audit.fullCensored,1);
+const result={chronologicalChains:true,andOne:true,periodCensor:true};
+fs.writeFileSync('reports/defense-tenth/step4-rebounds-state-time/check.json',JSON.stringify(result,null,2)+'\n');console.log(result);

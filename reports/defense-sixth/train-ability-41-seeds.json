@@ -1,0 +1,119 @@
+{
+  "label": "train-ability-41",
+  "extra": {
+    "cutoff": 41,
+    "phase": "train",
+    "cardVersion": "role-offense"
+  },
+  "files": [
+    {
+      "seed": 20261012,
+      "file": "reports/defense-sixth/runs/train-ability-41-seed20261012.json",
+      "sha256": "2d4f8fd99054aff6b0b826e25b8fbe465ef79cd0ef7ffaac01a387267f035994"
+    },
+    {
+      "seed": 20261013,
+      "file": "reports/defense-sixth/runs/train-ability-41-seed20261013.json",
+      "sha256": "19b23933ea3212795ad481ab1b2f6067a9e08626483a161e0baab059cc6a84a1"
+    },
+    {
+      "seed": 20261014,
+      "file": "reports/defense-sixth/runs/train-ability-41-seed20261014.json",
+      "sha256": "a02da92737b480d401a54cebf4f43f0b70de2016b57cbc8b637d5003c096e8b8"
+    },
+    {
+      "seed": 20261015,
+      "file": "reports/defense-sixth/runs/train-ability-41-seed20261015.json",
+      "sha256": "8f8dc08c4d133ae99cc436cbfa11d3cdc295f3b9d944ee403f726213c3bf446c"
+    },
+    {
+      "seed": 20261016,
+      "file": "reports/defense-sixth/runs/train-ability-41-seed20261016.json",
+      "sha256": "cfb55c2c516eb8e2d8d43fd29171b4dd62c8676cbdf02f79d14419ded0c30e17"
+    },
+    {
+      "seed": 20261017,
+      "file": "reports/defense-sixth/runs/train-ability-41-seed20261017.json",
+      "sha256": "b260c45b6f6f7a77d3bca38bb88d01dc6c66ebdd68bb1337c9140ae94fd89682"
+    },
+    {
+      "seed": 20261018,
+      "file": "reports/defense-sixth/runs/train-ability-41-seed20261018.json",
+      "sha256": "bb3e3f3a4ad1ccb37591419760e8f408f0eb50a68854da01b8a723835fbd6635"
+    },
+    {
+      "seed": 20261019,
+      "file": "reports/defense-sixth/runs/train-ability-41-seed20261019.json",
+      "sha256": "5ee129ec9305e3a67489fbca0649d9ae5fe7486014a92d0ee52619c54497b784"
+    },
+    {
+      "seed": 20261020,
+      "file": "reports/defense-sixth/runs/train-ability-41-seed20261020.json",
+      "sha256": "6d9ccf3818200e7c0caf6fe628cc5f68945917c525ce2e534943e185c0975a0d"
+    },
+    {
+      "seed": 20261021,
+      "file": "reports/defense-sixth/runs/train-ability-41-seed20261021.json",
+      "sha256": "6cd6abb755484c1d11fc122732377e4993d92c84ca7ccfac0263363ebd429885"
+    },
+    {
+      "seed": 20261022,
+      "file": "reports/defense-sixth/runs/train-ability-41-seed20261022.json",
+      "sha256": "1bea05fbc0f526da0c91cd50fdac851ac21cfb1aa96a817a39bf583186cc21ae"
+    },
+    {
+      "seed": 20261023,
+      "file": "reports/defense-sixth/runs/train-ability-41-seed20261023.json",
+      "sha256": "fab6971ac4027fa8f0e9ad0459cc214bf4fb4afc0c6ab990ad262cd987368c00"
+    },
+    {
+      "seed": 20261024,
+      "file": "reports/defense-sixth/runs/train-ability-41-seed20261024.json",
+      "sha256": "5f0a6a80c49eb92a8ee8e9e4af2acbb68e58d63c8e60cd78a749ba419dac71f8"
+    },
+    {
+      "seed": 20261025,
+      "file": "reports/defense-sixth/runs/train-ability-41-seed20261025.json",
+      "sha256": "47ec3186fb459b7077d10c961b17337dd2cae789e0b49439402b689909e6a633"
+    },
+    {
+      "seed": 20261026,
+      "file": "reports/defense-sixth/runs/train-ability-41-seed20261026.json",
+      "sha256": "09cdebeb8039ff5a1449736f72298b69fbcdcd9b2e668cce334495fde6e823ed"
+    },
+    {
+      "seed": 20261027,
+      "file": "reports/defense-sixth/runs/train-ability-41-seed20261027.json",
+      "sha256": "82a5f80e054ae4e62c5fc44b7457bc1e4c34923611aabfe96c6468a5d04123b3"
+    },
+    {
+      "seed": 20261028,
+      "file": "reports/defense-sixth/runs/train-ability-41-seed20261028.json",
+      "sha256": "bea58f98ce14230fe36d352e000d0756c5f10ff893432b6c09a60db03cd66ee5"
+    },
+    {
+      "seed": 20261029,
+      "file": "reports/defense-sixth/runs/train-ability-41-seed20261029.json",
+      "sha256": "4ad041a858ab6c128cb16263e2bdf6d2457d9d0eaef8d735f5942f997cf89cd9"
+    },
+    {
+      "seed": 20261030,
+      "file": "reports/defense-sixth/runs/train-ability-41-seed20261030.json",
+      "sha256": "1dd1c81e50f13276b2f9fd8cfda41eccd4f220db425c026e81d185a019015fbe"
+    },
+    {
+      "seed": 20261031,
+      "file": "reports/defense-sixth/runs/train-ability-41-seed20261031.json",
+      "sha256": "348559b8f194aaaf7706b942d6007a85880706b3845479426432d2a72bbe13ae"
+    }
+  ],
+  "seconds": 235.182,
+  "code": {
+    "src/defense_fifth_game.js": "bddd3f34b93e969513ce79d717b78358dc433c0f15eba3eeffa675177b9dfa86",
+    "src/defense_sixth_season.js": "1c30c6c59fbc3e2a40b08231dddf9be255b11fca386d93daf1eb986a99000bcf",
+    "src/defense_sixth_jobs.js": "601e75cc23ecc69a7f4e5290d2d848c4bfaed0465fe85fc2a9cd786020db0d19",
+    "src/defense_sixth_pool.js": "49a7eac9245fc3eda22bdf270c0961baf909cf7f85d6f990f1b127cf72da9dc0",
+    "src/defense_fourth_effects.js": "ce90813d1089a8dd400d6051db2b08022a26914a0b1e3672cd7ddf4924a03ff4",
+    "reports/defense-sixth/pre41-role-offense-league.json": "7325bffab46e0ccb60aea2a34891002c937c9c9075af4bdec15342bd03e0eee9"
+  }
+}

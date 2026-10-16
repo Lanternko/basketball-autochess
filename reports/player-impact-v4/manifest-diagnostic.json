@@ -1,0 +1,22 @@
+{
+  "jobs": [
+    {
+      "season": "2025-26",
+      "seed": 20261012,
+      "version": "balanced-flow",
+      "strict": false,
+      "onCourt": false,
+      "file": "reports/player-impact-v4/runs/2025-26-balanced-flow-full-20261012.json",
+      "sha256": "64eb303e620b18ad0af32be7e3a9d7a650acb3e3fc1ffe98b51a00717dd8d07a"
+    },
+    {
+      "season": "2025-26",
+      "seed": 20261012,
+      "version": "balanced-contests",
+      "strict": false,
+      "onCourt": false,
+      "file": "reports/player-impact-v4/runs/2025-26-balanced-contests-full-20261012.json",
+      "sha256": "20984d8738e978211624cd1ee061d024577beeb1dde084fb0eda09027b9414b8"
+    }
+  ]
+}

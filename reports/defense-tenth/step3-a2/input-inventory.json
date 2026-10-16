@@ -1,0 +1,209 @@
+{
+  "generatedAt": "2026-10-13T05:20:42.736Z",
+  "AProtocolHash": "4c9ad5fe4fd2af50cfe4a1f44f3cdf83c980fb4fcdec63eca05bcbc0f9e2c960",
+  "available": [
+    {
+      "season": "2022-23",
+      "players": 539,
+      "bioFields": [
+        "PLAYER_ID",
+        "PLAYER_NAME",
+        "TEAM_ID",
+        "TEAM_ABBREVIATION",
+        "AGE",
+        "PLAYER_HEIGHT",
+        "PLAYER_HEIGHT_INCHES",
+        "PLAYER_WEIGHT",
+        "COLLEGE",
+        "COUNTRY",
+        "DRAFT_YEAR",
+        "DRAFT_ROUND",
+        "DRAFT_NUMBER",
+        "GP",
+        "PTS",
+        "REB",
+        "AST",
+        "NET_RATING",
+        "OREB_PCT",
+        "DREB_PCT",
+        "USG_PCT",
+        "TS_PCT",
+        "AST_PCT"
+      ],
+      "age": 539,
+      "birthday": 0,
+      "trueExperience": 0,
+      "minutesAndGP": 539,
+      "positionAndBody": 539,
+      "missingAge": [],
+      "bioHash": "2b493e0aedcdfc610f9fe570ce0ca975a709753ad63e83fdddc31444d402927f"
+    },
+    {
+      "season": "2023-24",
+      "players": 571,
+      "bioFields": [
+        "PLAYER_ID",
+        "PLAYER_NAME",
+        "TEAM_ID",
+        "TEAM_ABBREVIATION",
+        "AGE",
+        "PLAYER_HEIGHT",
+        "PLAYER_HEIGHT_INCHES",
+        "PLAYER_WEIGHT",
+        "COLLEGE",
+        "COUNTRY",
+        "DRAFT_YEAR",
+        "DRAFT_ROUND",
+        "DRAFT_NUMBER",
+        "GP",
+        "PTS",
+        "REB",
+        "AST",
+        "NET_RATING",
+        "OREB_PCT",
+        "DREB_PCT",
+        "USG_PCT",
+        "TS_PCT",
+        "AST_PCT"
+      ],
+      "age": 571,
+      "birthday": 0,
+      "trueExperience": 0,
+      "minutesAndGP": 571,
+      "positionAndBody": 571,
+      "missingAge": [],
+      "bioHash": "1cb8eb0431bea1aaa43f1209571e39e9b2505a8c85cb14b356fddc54b9dfa1a6"
+    },
+    {
+      "season": "2024-25",
+      "players": 569,
+      "bioFields": [
+        "PLAYER_ID",
+        "PLAYER_NAME",
+        "TEAM_ID",
+        "TEAM_ABBREVIATION",
+        "AGE",
+        "PLAYER_HEIGHT",
+        "PLAYER_HEIGHT_INCHES",
+        "PLAYER_WEIGHT",
+        "COLLEGE",
+        "COUNTRY",
+        "DRAFT_YEAR",
+        "DRAFT_ROUND",
+        "DRAFT_NUMBER",
+        "GP",
+        "PTS",
+        "REB",
+        "AST",
+        "NET_RATING",
+        "OREB_PCT",
+        "DREB_PCT",
+        "USG_PCT",
+        "TS_PCT",
+        "AST_PCT"
+      ],
+      "age": 569,
+      "birthday": 0,
+      "trueExperience": 0,
+      "minutesAndGP": 569,
+      "positionAndBody": 569,
+      "missingAge": [],
+      "bioHash": "945c9d37fb0409b0d023ef7c5514cc492a1805f14fc10a7b0f707fd5ae9881d3"
+    }
+  ],
+  "trainingRetention": [
+    {
+      "prior": "2022-23",
+      "next": "2023-24",
+      "groups": {
+        "23-26": {
+          "all": 207,
+          "noNextAppearance": 28,
+          "nextBelow15GPOr300MIN": 71,
+          "disappearanceShare": 0.13526570048309178,
+          "lowOrMissingShare": 0.34299516908212563
+        },
+        "27-30": {
+          "all": 125,
+          "noNextAppearance": 28,
+          "nextBelow15GPOr300MIN": 39,
+          "disappearanceShare": 0.224,
+          "lowOrMissingShare": 0.312
+        },
+        "<=22": {
+          "all": 115,
+          "noNextAppearance": 12,
+          "nextBelow15GPOr300MIN": 33,
+          "disappearanceShare": 0.10434782608695652,
+          "lowOrMissingShare": 0.28695652173913044
+        },
+        "31-34": {
+          "all": 69,
+          "noNextAppearance": 17,
+          "nextBelow15GPOr300MIN": 21,
+          "disappearanceShare": 0.2463768115942029,
+          "lowOrMissingShare": 0.30434782608695654
+        },
+        "35+": {
+          "all": 23,
+          "noNextAppearance": 5,
+          "nextBelow15GPOr300MIN": 10,
+          "disappearanceShare": 0.21739130434782608,
+          "lowOrMissingShare": 0.43478260869565216
+        }
+      }
+    },
+    {
+      "prior": "2023-24",
+      "next": "2024-25",
+      "groups": {
+        "23-26": {
+          "all": 243,
+          "noNextAppearance": 62,
+          "nextBelow15GPOr300MIN": 105,
+          "disappearanceShare": 0.2551440329218107,
+          "lowOrMissingShare": 0.43209876543209874
+        },
+        "<=22": {
+          "all": 109,
+          "noNextAppearance": 12,
+          "nextBelow15GPOr300MIN": 30,
+          "disappearanceShare": 0.11009174311926606,
+          "lowOrMissingShare": 0.27522935779816515
+        },
+        "31-34": {
+          "all": 66,
+          "noNextAppearance": 13,
+          "nextBelow15GPOr300MIN": 15,
+          "disappearanceShare": 0.19696969696969696,
+          "lowOrMissingShare": 0.22727272727272727
+        },
+        "27-30": {
+          "all": 120,
+          "noNextAppearance": 24,
+          "nextBelow15GPOr300MIN": 30,
+          "disappearanceShare": 0.2,
+          "lowOrMissingShare": 0.25
+        },
+        "35+": {
+          "all": 33,
+          "noNextAppearance": 13,
+          "nextBelow15GPOr300MIN": 18,
+          "disappearanceShare": 0.3939393939393939,
+          "lowOrMissingShare": 0.5454545454545454
+        }
+      }
+    }
+  ],
+  "AFileHashes": {
+    "protocol.json": "4c9ad5fe4fd2af50cfe4a1f44f3cdf83c980fb4fcdec63eca05bcbc0f9e2c960",
+    "protocol.sha256": "e4330133a7a5cdcb1c7c3c544dc5cf92318b266df8df6d44449d193d8232f759",
+    "analysis.json": "3bd2d97698c567f2fad5acf5473f65777fe1c1937e3ebe4ba0416830f79190f1",
+    "report.md": "27681f7283268bb9616918eb723fa9d5982405e782c31b0b00a82279f22aa9c2",
+    "team-predictions.md": "3497a14c7523c008f96ed808d25a881027a953001bf1f80ffbb243b2d5965c28",
+    "input-audit.json": "eea4c6a481decf82a31d18d6467fea40f469cd8da9f66690bf851efbd95cfc28",
+    "completion-audit.json": "04399f6bab1c8bae0fa1c0405db474adb493c978e6a87aa6bef2ddd1320c899e",
+    "run-manifest.json": "0eb1fd5032cfa79c74a83d99234e479431cf79a12948ddc7e45affbb6c1ee4c0"
+  },
+  "changedAOutputs": []
+}

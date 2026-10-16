@@ -1,0 +1,173 @@
+{
+  "seasons": [
+    "2025-26"
+  ],
+  "aggregateDefenseMAE": {
+    "v44": {
+      "onshortFGpct": 1.233199464115546,
+      "onlongFGpct": 1.3347292620964504,
+      "onshortShare": 0.9407668212833739,
+      "onlongShare": 0.8841345779859794,
+      "onFGA48": 2.327245637983991,
+      "deltashortFGpct": 1.800315443994134,
+      "deltalongFGpct": 1.9534264917658601,
+      "deltashortShare": 1.4237790324169821,
+      "deltalongShare": 1.482460951692144
+    },
+    "v45": {
+      "onshortFGpct": 1.4181262959614336,
+      "onlongFGpct": 1.1805643847945482,
+      "onshortShare": 0.964470638164541,
+      "onlongShare": 0.9406818148578938,
+      "onFGA48": 2.297382526102026,
+      "deltashortFGpct": 1.9105485418029953,
+      "deltalongFGpct": 1.8784664930813761,
+      "deltashortShare": 1.4517891821017361,
+      "deltalongShare": 1.4462159362249505
+    },
+    "v46": {
+      "onshortFGpct": 1.0663961874021102,
+      "onlongFGpct": 1.209507025500207,
+      "onshortShare": 1.0232561449603064,
+      "onlongShare": 0.9959801651799036,
+      "onFGA48": 2.3499363289764386,
+      "deltashortFGpct": 1.6733111539027097,
+      "deltalongFGpct": 1.8145979388717175,
+      "deltashortShare": 1.3871280252391094,
+      "deltalongShare": 1.4805000763668696
+    }
+  },
+  "comparisons": [
+    {
+      "season": "2025-26",
+      "baseline": "v44",
+      "metric": "onshortFGpct",
+      "improved": 213,
+      "worsened": 162
+    },
+    {
+      "season": "2025-26",
+      "baseline": "v44",
+      "metric": "onlongFGpct",
+      "improved": 204,
+      "worsened": 171
+    },
+    {
+      "season": "2025-26",
+      "baseline": "v44",
+      "metric": "onshortShare",
+      "improved": 159,
+      "worsened": 216
+    },
+    {
+      "season": "2025-26",
+      "baseline": "v44",
+      "metric": "onlongShare",
+      "improved": 152,
+      "worsened": 223
+    },
+    {
+      "season": "2025-26",
+      "baseline": "v44",
+      "metric": "onFGA48",
+      "improved": 169,
+      "worsened": 206
+    },
+    {
+      "season": "2025-26",
+      "baseline": "v44",
+      "metric": "deltashortFGpct",
+      "improved": 193,
+      "worsened": 182
+    },
+    {
+      "season": "2025-26",
+      "baseline": "v44",
+      "metric": "deltalongFGpct",
+      "improved": 210,
+      "worsened": 165
+    },
+    {
+      "season": "2025-26",
+      "baseline": "v44",
+      "metric": "deltashortShare",
+      "improved": 181,
+      "worsened": 194
+    },
+    {
+      "season": "2025-26",
+      "baseline": "v44",
+      "metric": "deltalongShare",
+      "improved": 186,
+      "worsened": 189
+    },
+    {
+      "season": "2025-26",
+      "baseline": "v45",
+      "metric": "onshortFGpct",
+      "improved": 239,
+      "worsened": 136
+    },
+    {
+      "season": "2025-26",
+      "baseline": "v45",
+      "metric": "onlongFGpct",
+      "improved": 188,
+      "worsened": 187
+    },
+    {
+      "season": "2025-26",
+      "baseline": "v45",
+      "metric": "onshortShare",
+      "improved": 175,
+      "worsened": 200
+    },
+    {
+      "season": "2025-26",
+      "baseline": "v45",
+      "metric": "onlongShare",
+      "improved": 170,
+      "worsened": 205
+    },
+    {
+      "season": "2025-26",
+      "baseline": "v45",
+      "metric": "onFGA48",
+      "improved": 167,
+      "worsened": 208
+    },
+    {
+      "season": "2025-26",
+      "baseline": "v45",
+      "metric": "deltashortFGpct",
+      "improved": 216,
+      "worsened": 159
+    },
+    {
+      "season": "2025-26",
+      "baseline": "v45",
+      "metric": "deltalongFGpct",
+      "improved": 188,
+      "worsened": 187
+    },
+    {
+      "season": "2025-26",
+      "baseline": "v45",
+      "metric": "deltashortShare",
+      "improved": 197,
+      "worsened": 178
+    },
+    {
+      "season": "2025-26",
+      "baseline": "v45",
+      "metric": "deltalongShare",
+      "improved": 180,
+      "worsened": 195
+    }
+  ],
+  "teamPPGMeanMAE": {
+    "v44": 2.168970189701898,
+    "v45": 2.0700542005420046,
+    "v46": 2.309214092140922
+  }
+}

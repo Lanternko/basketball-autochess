@@ -1,0 +1,118 @@
+{
+  "label": "role-offense-25",
+  "extra": {
+    "cutoff": 25,
+    "cardVersion": "role-offense"
+  },
+  "files": [
+    {
+      "seed": 20261012,
+      "file": "reports/defense-sixth/runs/role-offense-25-seed20261012.json",
+      "sha256": "d897d62929ac1f02179e77d5e7ae5c381760d5396a4e6164b86ffb0255857761"
+    },
+    {
+      "seed": 20261013,
+      "file": "reports/defense-sixth/runs/role-offense-25-seed20261013.json",
+      "sha256": "6b92dd1255345c7ace6a5d20131dc67553e1142566b52b96db99d2f1522bc8c2"
+    },
+    {
+      "seed": 20261014,
+      "file": "reports/defense-sixth/runs/role-offense-25-seed20261014.json",
+      "sha256": "57bdc4d0d035c0fb9e84ec21516f89ba6a98f9417535f5cedc452f51b684671b"
+    },
+    {
+      "seed": 20261015,
+      "file": "reports/defense-sixth/runs/role-offense-25-seed20261015.json",
+      "sha256": "b9eed1effa04cada26b5185d581eaa69736d0df0468ecef5fdc9a27d569e8858"
+    },
+    {
+      "seed": 20261016,
+      "file": "reports/defense-sixth/runs/role-offense-25-seed20261016.json",
+      "sha256": "5a0df1f7f88c062965acddddf512fc20c27b941dab807d0b6f96fe5f03e0e675"
+    },
+    {
+      "seed": 20261017,
+      "file": "reports/defense-sixth/runs/role-offense-25-seed20261017.json",
+      "sha256": "fbff89fbbccb18c6c35e946483781c31e0e831f0041da9b433013aa969942e8c"
+    },
+    {
+      "seed": 20261018,
+      "file": "reports/defense-sixth/runs/role-offense-25-seed20261018.json",
+      "sha256": "12acad2cb9535394f5071d3ee702855b4c6ca5497e480172e2d0688aa2bfd720"
+    },
+    {
+      "seed": 20261019,
+      "file": "reports/defense-sixth/runs/role-offense-25-seed20261019.json",
+      "sha256": "71469b724e637e0235db7fb9192e52e208629c3f289d2113929771d7b80d7322"
+    },
+    {
+      "seed": 20261020,
+      "file": "reports/defense-sixth/runs/role-offense-25-seed20261020.json",
+      "sha256": "c0c10c1dee86bbcedc92954b62234074734fc7f6a3e9d64435e0c9a5ba09787d"
+    },
+    {
+      "seed": 20261021,
+      "file": "reports/defense-sixth/runs/role-offense-25-seed20261021.json",
+      "sha256": "adbf98f799ca0855c302dec0bcae433b31e23773911b23c026e1c9b0cd926712"
+    },
+    {
+      "seed": 20261022,
+      "file": "reports/defense-sixth/runs/role-offense-25-seed20261022.json",
+      "sha256": "e14222f69341c38c28897dc3f73ee397a047508f2812ea15c28ee236f286eecd"
+    },
+    {
+      "seed": 20261023,
+      "file": "reports/defense-sixth/runs/role-offense-25-seed20261023.json",
+      "sha256": "4874c8555f56385d5262588d54d608ee4a2a4bbdb34ac09e85f378c99302f630"
+    },
+    {
+      "seed": 20261024,
+      "file": "reports/defense-sixth/runs/role-offense-25-seed20261024.json",
+      "sha256": "b8c0f33006271cd45537595e6e9093062a857a8076d1c4f912150eba3b00066d"
+    },
+    {
+      "seed": 20261025,
+      "file": "reports/defense-sixth/runs/role-offense-25-seed20261025.json",
+      "sha256": "e3e5f9ac5c4c0ae761f896f52226373c2e6da551a413e206826e71a151828b38"
+    },
+    {
+      "seed": 20261026,
+      "file": "reports/defense-sixth/runs/role-offense-25-seed20261026.json",
+      "sha256": "fbf60b293b2ac0426895751e96c8d554e6e8d3f9a9ec4a397536ed65ae7a4ab6"
+    },
+    {
+      "seed": 20261027,
+      "file": "reports/defense-sixth/runs/role-offense-25-seed20261027.json",
+      "sha256": "d26054bb9bffdfccfcbeecfa7e71a64e2594c1c6868c52243d2321dd1a899cc3"
+    },
+    {
+      "seed": 20261028,
+      "file": "reports/defense-sixth/runs/role-offense-25-seed20261028.json",
+      "sha256": "c1e4bf40af2c4f12d78c827c8127c27a7945245399b4403cdabcb4edb177aa8b"
+    },
+    {
+      "seed": 20261029,
+      "file": "reports/defense-sixth/runs/role-offense-25-seed20261029.json",
+      "sha256": "dc519183046d04a69551334381fc65621d26d480c229915cb1588f3dc42877fd"
+    },
+    {
+      "seed": 20261030,
+      "file": "reports/defense-sixth/runs/role-offense-25-seed20261030.json",
+      "sha256": "10121715834ec5d03e64838f7dc4d331ef4006b37339c84205ae6004f5559fc8"
+    },
+    {
+      "seed": 20261031,
+      "file": "reports/defense-sixth/runs/role-offense-25-seed20261031.json",
+      "sha256": "73bca4ea6119ae53c7d021158853a02e850b7e686d1a389b8f487a3d67e7fa56"
+    }
+  ],
+  "seconds": 271.2,
+  "code": {
+    "src/defense_fifth_game.js": "bddd3f34b93e969513ce79d717b78358dc433c0f15eba3eeffa675177b9dfa86",
+    "src/defense_sixth_season.js": "1c30c6c59fbc3e2a40b08231dddf9be255b11fca386d93daf1eb986a99000bcf",
+    "src/defense_sixth_jobs.js": "601e75cc23ecc69a7f4e5290d2d848c4bfaed0465fe85fc2a9cd786020db0d19",
+    "src/defense_sixth_pool.js": "49a7eac9245fc3eda22bdf270c0961baf909cf7f85d6f990f1b127cf72da9dc0",
+    "src/defense_fourth_effects.js": "ce90813d1089a8dd400d6051db2b08022a26914a0b1e3672cd7ddf4924a03ff4",
+    "reports/defense-sixth/pre25-role-offense-league.json": "cddd921ea7d60ac7b8a4bd7233348165eb06f80e73bc260c26d7fc0cb7c4ec6c"
+  }
+}

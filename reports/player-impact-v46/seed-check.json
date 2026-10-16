@@ -1,0 +1,467 @@
+{
+  "scope": "Per-seed Monte Carlo diagnostic; not independent real-world seasons or formal confidence intervals. Main reported errors pool three seeds before calculating rates.",
+  "rows": [
+    {
+      "season": "2022-23",
+      "variant": "v45",
+      "seed": 20261012,
+      "defenseMAE": {
+        "onshortFGpct": 1.6566923869509351,
+        "onlongFGpct": 1.6449392520144974,
+        "onshortShare": 1.0866674346362137,
+        "onlongShare": 1.0597250431958325,
+        "deltashortFGpct": 2.754346337758924,
+        "deltashortShare": 1.6703921275733578
+      },
+      "wemby": null
+    },
+    {
+      "season": "2022-23",
+      "variant": "v45",
+      "seed": 20261013,
+      "defenseMAE": {
+        "onshortFGpct": 1.6841361294948842,
+        "onlongFGpct": 1.6630076223425803,
+        "onshortShare": 1.0785095695389455,
+        "onlongShare": 1.1973600875394619,
+        "deltashortFGpct": 2.81757885620609,
+        "deltashortShare": 1.6990159632637825
+      },
+      "wemby": null
+    },
+    {
+      "season": "2022-23",
+      "variant": "v45",
+      "seed": 20261014,
+      "defenseMAE": {
+        "onshortFGpct": 1.5592141579503893,
+        "onlongFGpct": 1.569159191814167,
+        "onshortShare": 1.0946258935169517,
+        "onlongShare": 1.13719603158355,
+        "deltashortFGpct": 2.6669250934012614,
+        "deltashortShare": 1.7875899753077844
+      },
+      "wemby": null
+    },
+    {
+      "season": "2022-23",
+      "variant": "v46",
+      "seed": 20261012,
+      "defenseMAE": {
+        "onshortFGpct": 1.542669202542834,
+        "onlongFGpct": 1.6710169158731731,
+        "onshortShare": 1.0501157363709004,
+        "onlongShare": 1.0358745116001062,
+        "deltashortFGpct": 2.3406671153221437,
+        "deltashortShare": 1.7906685344242117
+      },
+      "wemby": null
+    },
+    {
+      "season": "2022-23",
+      "variant": "v46",
+      "seed": 20261013,
+      "defenseMAE": {
+        "onshortFGpct": 1.4789903555691402,
+        "onlongFGpct": 1.6527186692368536,
+        "onshortShare": 1.1583946609632423,
+        "onlongShare": 1.194429209113563,
+        "deltashortFGpct": 2.5712807556850885,
+        "deltashortShare": 1.7604290737878738
+      },
+      "wemby": null
+    },
+    {
+      "season": "2022-23",
+      "variant": "v46",
+      "seed": 20261014,
+      "defenseMAE": {
+        "onshortFGpct": 1.3873332155755371,
+        "onlongFGpct": 1.5594919399523222,
+        "onshortShare": 1.0065098572668483,
+        "onlongShare": 1.1124532679940853,
+        "deltashortFGpct": 2.40917053789915,
+        "deltashortShare": 1.8031676167636252
+      },
+      "wemby": null
+    },
+    {
+      "season": "2023-24",
+      "variant": "v45",
+      "seed": 20261012,
+      "defenseMAE": {
+        "onshortFGpct": 1.485727340459413,
+        "onlongFGpct": 1.7311190822023257,
+        "onshortShare": 1.0184703801398065,
+        "onlongShare": 1.0470714830621544,
+        "deltashortFGpct": 2.417014336763949,
+        "deltashortShare": 1.8199400154568133
+      },
+      "wemby": {
+        "onshortFGpct": 54.15918611609815,
+        "onlongFGpct": 39.02985074626866,
+        "onshortShare": 47.31030577576444,
+        "onlongShare": 37.938844847112115,
+        "deltashortFGpct": -6.956768548243616,
+        "deltashortShare": -4.849766984581173
+      }
+    },
+    {
+      "season": "2023-24",
+      "variant": "v45",
+      "seed": 20261013,
+      "defenseMAE": {
+        "onshortFGpct": 1.6513484903585256,
+        "onlongFGpct": 1.5095031434317723,
+        "onshortShare": 1.1776667687399762,
+        "onlongShare": 1.092002798475159,
+        "deltashortFGpct": 2.7082967591618736,
+        "deltashortShare": 1.771547840629942
+      },
+      "wemby": {
+        "onshortFGpct": 55.176402544823596,
+        "onlongFGpct": 37.547892720306514,
+        "onshortShare": 49.3576934056523,
+        "onlongShare": 37.25378247216671,
+        "deltashortFGpct": -9.385331668183007,
+        "deltashortShare": -1.2383962462313463
+      }
+    },
+    {
+      "season": "2023-24",
+      "variant": "v45",
+      "seed": 20261014,
+      "defenseMAE": {
+        "onshortFGpct": 1.5932261413709305,
+        "onlongFGpct": 1.5605686274481156,
+        "onshortShare": 1.001429693373405,
+        "onlongShare": 1.1070259133927602,
+        "deltashortFGpct": 2.567215282611421,
+        "deltashortShare": 1.7223553080824179
+      },
+      "wemby": {
+        "onshortFGpct": 53.699136868064116,
+        "onlongFGpct": 40.825688073394495,
+        "onshortShare": 47.31621936989498,
+        "onlongShare": 38.15635939323221,
+        "deltashortFGpct": -8.86367720228764,
+        "deltashortShare": -5.2597383579782
+      }
+    },
+    {
+      "season": "2023-24",
+      "variant": "v46",
+      "seed": 20261012,
+      "defenseMAE": {
+        "onshortFGpct": 1.362283742323986,
+        "onlongFGpct": 1.6444595124821726,
+        "onshortShare": 0.9887009516185686,
+        "onlongShare": 1.0346306993069716,
+        "deltashortFGpct": 2.327475224868442,
+        "deltashortShare": 1.7833772554354865
+      },
+      "wemby": {
+        "onshortFGpct": 54.487917146144994,
+        "onlongFGpct": 36.700077101002314,
+        "onshortShare": 48.99915421482943,
+        "onlongShare": 36.566112207499295,
+        "deltashortFGpct": -5.606422476496512,
+        "deltashortShare": -0.5798916224016253
+      }
+    },
+    {
+      "season": "2023-24",
+      "variant": "v46",
+      "seed": 20261013,
+      "defenseMAE": {
+        "onshortFGpct": 1.263352899468714,
+        "onlongFGpct": 1.6109509137274034,
+        "onshortShare": 1.1640984331970243,
+        "onlongShare": 1.1346304218824144,
+        "deltashortFGpct": 2.3246332216848176,
+        "deltashortShare": 1.7560181944115316
+      },
+      "wemby": {
+        "onshortFGpct": 55.16826923076923,
+        "onlongFGpct": 38.14055636896047,
+        "onshortShare": 47.21906923950057,
+        "onlongShare": 38.7627695800227,
+        "deltashortFGpct": -4.428659751956296,
+        "deltashortShare": -3.1190950117071594
+      }
+    },
+    {
+      "season": "2023-24",
+      "variant": "v46",
+      "seed": 20261014,
+      "defenseMAE": {
+        "onshortFGpct": 1.3609398330501241,
+        "onlongFGpct": 1.6267402184217603,
+        "onshortShare": 1.033176329408434,
+        "onlongShare": 1.0427032149834632,
+        "deltashortFGpct": 2.284905779071051,
+        "deltashortShare": 1.6141785433959344
+      },
+      "wemby": {
+        "onshortFGpct": 54.98241500586167,
+        "onlongFGpct": 38.78012048192771,
+        "onshortShare": 48.137697516930025,
+        "onlongShare": 37.47178329571106,
+        "deltashortFGpct": -5.553299279852617,
+        "deltashortShare": -2.472334114339745
+      }
+    },
+    {
+      "season": "2024-25",
+      "variant": "v45",
+      "seed": 20261012,
+      "defenseMAE": {
+        "onshortFGpct": 1.7001820713730813,
+        "onlongFGpct": 1.7063622077499103,
+        "onshortShare": 1.0702679213105637,
+        "onlongShare": 0.9877922116184356,
+        "deltashortFGpct": 2.379703605531309,
+        "deltashortShare": 1.8889964676106548
+      },
+      "wemby": {
+        "onshortFGpct": 55.29739776951673,
+        "onlongFGpct": 36.897880539499035,
+        "onshortShare": 44.833333333333336,
+        "onlongShare": 43.25,
+        "deltashortFGpct": -3.7387468087965274,
+        "deltashortShare": -4.237612612612608
+      }
+    },
+    {
+      "season": "2024-25",
+      "variant": "v45",
+      "seed": 20261013,
+      "defenseMAE": {
+        "onshortFGpct": 1.5904706820164187,
+        "onlongFGpct": 1.5524866038064273,
+        "onshortShare": 1.2208974118067604,
+        "onlongShare": 1.1012797330324176,
+        "deltashortFGpct": 2.518014292194276,
+        "deltashortShare": 1.874857375815809
+      },
+      "wemby": {
+        "onshortFGpct": 54.69462169553327,
+        "onlongFGpct": 34.30799220272905,
+        "onshortShare": 44.8304045770331,
+        "onlongShare": 41.92889252145484,
+        "deltashortFGpct": -6.20031993870797,
+        "deltashortShare": -2.8062960717157424
+      }
+    },
+    {
+      "season": "2024-25",
+      "variant": "v45",
+      "seed": 20261014,
+      "defenseMAE": {
+        "onshortFGpct": 1.634802935556906,
+        "onlongFGpct": 1.4565260725759754,
+        "onshortShare": 0.9926119663936529,
+        "onlongShare": 1.036375240384708,
+        "deltashortFGpct": 2.614992620131714,
+        "deltashortShare": 1.7378964941869053
+      },
+      "wemby": {
+        "onshortFGpct": 52.81954887218045,
+        "onlongFGpct": 38.822447102115916,
+        "onshortShare": 43.2520325203252,
+        "onlongShare": 44.1869918699187,
+        "deltashortFGpct": -6.238422142312302,
+        "deltashortShare": -5.511218363067023
+      }
+    },
+    {
+      "season": "2024-25",
+      "variant": "v46",
+      "seed": 20261012,
+      "defenseMAE": {
+        "onshortFGpct": 1.382477721988287,
+        "onlongFGpct": 1.5866808477306251,
+        "onshortShare": 1.0661923602143262,
+        "onlongShare": 1.0254662590537564,
+        "deltashortFGpct": 2.2333879154962046,
+        "deltashortShare": 1.8374334502744507
+      },
+      "wemby": {
+        "onshortFGpct": 55.3475935828877,
+        "onlongFGpct": 37.03358208955224,
+        "onshortShare": 44.701195219123505,
+        "onlongShare": 42.70916334661354,
+        "deltashortFGpct": -6.613190730837793,
+        "deltashortShare": -2.1738047808764946
+      }
+    },
+    {
+      "season": "2024-25",
+      "variant": "v46",
+      "seed": 20261013,
+      "defenseMAE": {
+        "onshortFGpct": 1.318857523226645,
+        "onlongFGpct": 1.5549136070319556,
+        "onshortShare": 1.0700113669865714,
+        "onlongShare": 0.9824074932465275,
+        "deltashortFGpct": 2.3126317620694192,
+        "deltashortShare": 1.8778504864862837
+      },
+      "wemby": {
+        "onshortFGpct": 52.376599634369285,
+        "onlongFGpct": 33.810888252149,
+        "onshortShare": 44.02414486921529,
+        "onlongShare": 42.1327967806841,
+        "deltashortFGpct": -9.253619053503478,
+        "deltashortShare": -1.0879627541030956
+      }
+    },
+    {
+      "season": "2024-25",
+      "variant": "v46",
+      "seed": 20261014,
+      "defenseMAE": {
+        "onshortFGpct": 1.4295640950256066,
+        "onlongFGpct": 1.4596988715292118,
+        "onshortShare": 0.9609173085287721,
+        "onlongShare": 0.9833644748266784,
+        "deltashortFGpct": 2.2632399007347397,
+        "deltashortShare": 1.7223624747452888
+      },
+      "wemby": {
+        "onshortFGpct": 53.85321100917431,
+        "onlongFGpct": 36.25570776255708,
+        "onshortShare": 43.91619661563256,
+        "onlongShare": 44.11764705882353,
+        "deltashortFGpct": -1.9123844539636892,
+        "deltashortShare": -3.741461042025101
+      }
+    },
+    {
+      "season": "2025-26",
+      "variant": "v45",
+      "seed": 20261012,
+      "defenseMAE": {
+        "onshortFGpct": 1.672613005338417,
+        "onlongFGpct": 1.4611311852938897,
+        "onshortShare": 1.1730466665388464,
+        "onlongShare": 1.099793777349834,
+        "deltashortFGpct": 2.384899925114997,
+        "deltashortShare": 1.7532376857737342
+      },
+      "wemby": {
+        "onshortFGpct": 50.76923076923077,
+        "onlongFGpct": 37.243207422133864,
+        "onshortShare": 43.76463700234192,
+        "onlongShare": 44.17447306791569,
+        "deltashortFGpct": -9.210086707501397,
+        "deltashortShare": -3.988449417411168
+      }
+    },
+    {
+      "season": "2025-26",
+      "variant": "v45",
+      "seed": 20261013,
+      "defenseMAE": {
+        "onshortFGpct": 1.5451574411151714,
+        "onlongFGpct": 1.4806909134900033,
+        "onshortShare": 1.1661128040883628,
+        "onlongShare": 1.1091292890766566,
+        "deltashortFGpct": 2.2379410636640706,
+        "deltashortShare": 1.778174870419076
+      },
+      "wemby": {
+        "onshortFGpct": 50.19946808510638,
+        "onlongFGpct": 35.528942115768466,
+        "onshortShare": 43.418013856812934,
+        "onlongShare": 43.3891454965358,
+        "deltashortFGpct": -9.056257105733316,
+        "deltashortShare": -7.406428432226832
+      }
+    },
+    {
+      "season": "2025-26",
+      "variant": "v45",
+      "seed": 20261014,
+      "defenseMAE": {
+        "onshortFGpct": 1.7464202848770618,
+        "onlongFGpct": 1.4926578545505713,
+        "onshortShare": 1.0630328551847799,
+        "onlongShare": 1.0232717166321026,
+        "deltashortFGpct": 2.344433577995306,
+        "deltashortShare": 1.6699178982459075
+      },
+      "wemby": {
+        "onshortFGpct": 50.500333555703804,
+        "onlongFGpct": 35.34136546184739,
+        "onshortShare": 43.28616806237366,
+        "onlongShare": 43.141784579844064,
+        "deltashortFGpct": -7.176014992014039,
+        "deltashortShare": -4.721800065116376
+      }
+    },
+    {
+      "season": "2025-26",
+      "variant": "v46",
+      "seed": 20261012,
+      "defenseMAE": {
+        "onshortFGpct": 1.4826964523171533,
+        "onlongFGpct": 1.4483105589803766,
+        "onshortShare": 1.1594365269350675,
+        "onlongShare": 1.1235560442924675,
+        "deltashortFGpct": 2.147857647906722,
+        "deltashortShare": 1.7149605801021415
+      },
+      "wemby": {
+        "onshortFGpct": 51.34228187919463,
+        "onlongFGpct": 35.55849306014541,
+        "onshortShare": 42.964244521337946,
+        "onlongShare": 43.627450980392155,
+        "deltashortFGpct": -6.797253004526297,
+        "deltashortShare": -4.359417309577509
+      }
+    },
+    {
+      "season": "2025-26",
+      "variant": "v46",
+      "seed": 20261013,
+      "defenseMAE": {
+        "onshortFGpct": 1.3360666378059647,
+        "onlongFGpct": 1.5299413344170085,
+        "onshortShare": 1.2049895620994462,
+        "onlongShare": 1.118359277273662,
+        "deltashortFGpct": 2.07670680842635,
+        "deltashortShare": 1.6920305282695243
+      },
+      "wemby": {
+        "onshortFGpct": 51.69934640522876,
+        "onlongFGpct": 34.39897698209719,
+        "onshortShare": 43.40425531914894,
+        "onlongShare": 44.36879432624114,
+        "deltashortFGpct": -4.718873056468965,
+        "deltashortShare": -5.581545897889605
+      }
+    },
+    {
+      "season": "2025-26",
+      "variant": "v46",
+      "seed": 20261014,
+      "defenseMAE": {
+        "onshortFGpct": 1.3788285449097908,
+        "onlongFGpct": 1.614475086713738,
+        "onshortShare": 1.1409764188740343,
+        "onlongShare": 1.149616313837152,
+        "deltashortFGpct": 2.0964118228592232,
+        "deltashortShare": 1.6947776779524035
+      },
+      "wemby": {
+        "onshortFGpct": 49.154834347532116,
+        "onlongFGpct": 37.507906388361796,
+        "onshortShare": 42.052885982371336,
+        "onlongShare": 44.95308501563833,
+        "deltashortFGpct": -8.443465333658104,
+        "deltashortShare": -5.689376828384624
+      }
+    }
+  ]
+}

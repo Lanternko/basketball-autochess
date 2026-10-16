@@ -1,0 +1,152 @@
+{
+  "label": "已看過答案；四季同季重現",
+  "candidate": "pure-oreb-acquisition-1",
+  "confirmedOrebImprovement": true,
+  "significantHarms": [],
+  "eligibleIndependentCandidate": true,
+  "baselinePromoted": false,
+  "baseline": "T0 remains unchanged; full replacement and portability not established",
+  "thresholds": "OREB improves only if pooled comparison upper joint95 below zero for both centered MAE and RMSE. Retain independent candidate; do not promote T0 if net RMSE, wins MAE or DREB RMSE show significant deterioration. Existing baselines unchanged regardless.",
+  "paired": {
+    "netRMSE": {
+      "point": -0.5202420290528731,
+      "joint95": [
+        -0.8236125327795316,
+        -0.20469108798564167
+      ]
+    },
+    "Pearson": {
+      "point": 0.057933416223038825,
+      "joint95": [
+        0.02379722813466703,
+        0.09584337669134016
+      ]
+    },
+    "Spearman": {
+      "point": 0.05650880171266548,
+      "joint95": [
+        -0.004129873407310467,
+        0.1218156271709299
+      ]
+    },
+    "calibrationSlope": {
+      "point": 0.13190525193522384,
+      "joint95": [
+        0.05133300335507474,
+        0.20576556084939707
+      ]
+    },
+    "SDRatio": {
+      "point": -0.05523893314450923,
+      "joint95": [
+        -0.11544961174561505,
+        0.0005315710346051588
+      ]
+    },
+    "winsMAE": {
+      "point": -0.4924999999999997,
+      "joint95": [
+        -0.9921145833333342,
+        0.005843749999999082
+      ]
+    },
+    "winsRMSE": {
+      "point": -0.4922427105576954,
+      "joint95": [
+        -0.969539978560025,
+        -0.021109135423380606
+      ]
+    },
+    "OREB_MAE": {
+      "point": -1.609494181752765,
+      "joint95": [
+        -1.8981709367656576,
+        -1.2831699789394582
+      ]
+    },
+    "OREB_RMSE": {
+      "point": -2.037105726234754,
+      "joint95": [
+        -2.324120632184407,
+        -1.6375201095061205
+      ]
+    },
+    "OREB_RawMAE": {
+      "point": -1.610042208285984,
+      "joint95": [
+        -1.9128238103576245,
+        -1.2990966190374333
+      ]
+    },
+    "OREB_Correlation": {
+      "point": 0.7421536540189515,
+      "joint95": [
+        0.5723315626436765,
+        0.9191046323693993
+      ]
+    },
+    "OREB_SDRatio": {
+      "point": 0.32538643747931784,
+      "joint95": [
+        0.18418337005417512,
+        0.4272690107805583
+      ]
+    },
+    "DREB_RMSE": {
+      "point": -0.07271111086567816,
+      "joint95": [
+        -0.15663245528918826,
+        0.01153322610735679
+      ]
+    },
+    "DREB_Correlation": {
+      "point": 0.09350751955557657,
+      "joint95": [
+        -0.011951696425384831,
+        0.19896113841866736
+      ]
+    },
+    "DREB_SDRatio": {
+      "point": 0.025849269445213152,
+      "joint95": [
+        -0.027576086933728983,
+        0.07898693679042583
+      ]
+    },
+    "defenseProxyRMSE": {
+      "point": -0.011901125092968812,
+      "joint95": [
+        -0.11977817648816795,
+        0.09570527731955222
+      ]
+    },
+    "defenseCorrelation": {
+      "point": 0.005030365782004331,
+      "joint95": [
+        -0.044075891906395784,
+        0.04944446942455888
+      ]
+    },
+    "defenseSDRatio": {
+      "point": -0.0006468146710310041,
+      "joint95": [
+        -0.04104494323539994,
+        0.03848937267144677
+      ]
+    },
+    "offenseRMSE": {
+      "point": -0.22411510705261728,
+      "joint95": [
+        -0.3761555080559223,
+        -0.06045702902300377
+      ]
+    },
+    "defenseRMSE": {
+      "point": -0.029543421291621907,
+      "joint95": [
+        -0.1493375500496396,
+        0.08967480750919338
+      ]
+    }
+  }
+}

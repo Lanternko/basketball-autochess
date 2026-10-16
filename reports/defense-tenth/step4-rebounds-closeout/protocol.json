@@ -1,0 +1,17 @@
+{
+  "version": "oreb-closeout-1",
+  "registeredUTC": "2026-10-15T10:37:02.077059+00:00",
+  "scope": "既有輸出的收尾與採用清單；不重跑模擬、不下載資料、不新增估計或校準",
+  "baseline": "pure-oreb-turnover-time-1",
+  "retain": [
+    "OREB acquisition",
+    "individual OREB allocation",
+    "putback timing with league clock calibration",
+    "split live/dead turnover timing"
+  ],
+  "optionalClock": "oreb-clock-competing-1; retained as opt-in, default off; no further tuning",
+  "uncertainty": "無顯著差異不代表等效；不新增事後等效門檻，不宣稱勝率完全不受影響",
+  "stopRule": "收尾文件與保護檢查完成即停止；時序與籃板後位置留為已知限制",
+  "noChangesToExistingArtifacts": true,
+  "evidenceLabel": "四季已看過答案；同季重現，不能宣稱換隊或跨季泛化"
+}

@@ -1,0 +1,42 @@
+{
+  "version": "measured-creation-flow-1",
+  "seasons": [
+    "2022-23",
+    "2023-24",
+    "2024-25",
+    "2025-26"
+  ],
+  "seeds": [
+    20261012,
+    20261013,
+    20261014
+  ],
+  "variants": [
+    "control",
+    "creation-flow",
+    "creation-flow-balanced"
+  ],
+  "design": "Handler prior = self-created made-FG production (excluding immediate putback proxy) + AST/min. Own/creation choice uses the same two measured production rates. A completed creation pass terminates with the receiver shot; receiver demand uses assisted-FG production. balanced additionally divides receiving demand by current predicted FG-make probability, avoiding weighting measured makes by efficiency again.",
+  "limits": "Same-season inputs and all four seasons previously seen. Assisted made-FG share is not an observed assisted-attempt probability. This is a measured role prior, not a new measured handle/offBall score. Putbacks remain in the original rebound path. No player-name/ranking adjustments, no use of on/off outcomes to set cards.",
+  "validation": "All-player PTS/AST/REB/STL/BLK/FG/3P; strict matching-game on-court team and teammate FG/3P, OFF only same games in which the player was available. Full-season gameplay guardrails. SGA/Luka/Jokic and guard representation checked on equal-exposure natural-position OVR, never edited directly.",
+  "hashes": {
+    "reports/player-impact-v1/engine.mjs": "2afc4dd044a24862f9683c478a76b5294add7b2dccfed69fecaebcdd15265c7d",
+    "reports/player-impact-v1/input.mjs": "81884844d893739e7a6f6b0938ac27a6efd3a8be5050bc9af17cfb3120b75e7c",
+    "reports/player-impact-v1/worker.mjs": "d3b9d5d38d8388a4559daa4a16ec7e833815bf9517cbe2d8b0272fd29fae0996",
+    "reports/player-impact-v1/on-court.mjs": "26aa50c6d3f700cd22bfc1fb44b0bc5500f1b06cc28823773c98d7ba4054578e",
+    "reports/player-impact-v1/run.mjs": "c505418be2b7f7061ef18cee3e9628f4aba0e254282c79bb980c111b8bdcd45e",
+    "reports/player-impact-v1/prepare.py": "78aa9a40e54b5dc09ea563f13a9b9c47a2a8811c93346bffb3d1a8b2afe70770",
+    "reports/player-impact-v1/2022-23-cards.json": "bd491b82990abf2e1fe673a0f3ee2bb1898a85811b846da9d39153663c22009e",
+    "reports/player-impact-v1/2022-23-on-court-truth.json": "7058fb2ec2cef689f2de6200f9c7913bef799e3a99c037ef10c5b32e6c5ba478",
+    "reports/player-impact-v1/2023-24-cards.json": "47700e859b47221d17dc473802c420cbb11d3c7ce7b365e8d41b67fc2888ace5",
+    "reports/player-impact-v1/2023-24-on-court-truth.json": "b8b39188e1bafd2da8614968aa106bf1c078406705afe7c36e60e53d45a67ff2",
+    "reports/player-impact-v1/2024-25-cards.json": "0130560536777281065fb0d8b8ae088bb0007aeb24c38e88a415b1479ee9c788",
+    "reports/player-impact-v1/2024-25-on-court-truth.json": "3a82da28e5b5071567a022f8721fdb097437ebc7e2714f5d55800fbb32ba999b",
+    "reports/player-impact-v1/2025-26-cards.json": "a52d62d63520a969d58d6494ef967385140ad138f09059a5d3ca4d69bb036624",
+    "reports/player-impact-v1/2025-26-on-court-truth.json": "94c1b79d69ac5b062cf15a10d11dc18dbc317eb5753084958e259e556b3f9c56",
+    "src/shot_creation_model.js": "c61da49a2138e5f9400fd1b515986cad5a580a4c7d617238f388cfd324635c8e",
+    "src/individual_box_allocation.js": "4442171ae4f94911d31e250a462955ce98f4377f4f01d6ff65186b9f48568121",
+    "src/defense_fourth_game.js": "c3611d0c72f49fdd4b855184d7bc79c3e6cc9780c2c6eb836aa10cbf66ad022a",
+    "src/probability_model.js": "13b175efac436d3c560fd39389f3486225ab90bfbc996d6802ee76ce461aad87"
+  }
+}

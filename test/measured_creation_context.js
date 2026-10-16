@@ -1,0 +1,14 @@
+import assert from 'node:assert/strict';
+import * as M from '../src/probability_model.js';
+import {measuredContext,measuredShootingThreat,measuredScoringThreat} from '../src/measured_creation_context.js';
+const base={long:70,mid:70,short:70,drive:70,pass:70,handle:70,breakDbl:70,physique:70,screen:70,offBall:70};
+const measured=(p,spacing,self,creation)=>({...p,creationContextMeasurement:{spacing,self,creation,sourceLong:p.long,sourceMid:p.mid,sourceDouble:M.doubleThreat(p),sourceCreation:M.selfCreation(p)}});
+const catcher=measured({...base,physique:99,short:99},40,40,40),shooter=measured({...base,long:90},99,90,90);
+assert.equal(measuredScoringThreat(catcher),40,'A large receiver must not acquire observed self-scoring gravity from his body alone');
+assert.equal(measuredShootingThreat(catcher),40);
+const ls=[base,base,base,base,catcher],better=[...ls.slice(0,4),shooter];
+assert.ok(measuredContext(better,0).spacing>measuredContext(ls,0).spacing);
+assert.ok(measuredContext(better,0).gravity>measuredContext(ls,0).gravity);
+assert.ok(measuredShootingThreat({...shooter,long:95})>measuredShootingThreat(shooter),'Current shooting improvements must retain value');
+for(const p of [catcher,shooter])for(const k of ['handle','breakDbl','offBall','screen'])assert.equal(p[k],70);
+console.log('Measured volume threat, receiver/self-creation distinction, monotonic shooting and neutral unknown skills passed');

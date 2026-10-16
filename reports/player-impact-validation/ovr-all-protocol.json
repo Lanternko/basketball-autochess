@@ -1,0 +1,24 @@
+{
+  "version": "terminal-flow-all-player-screen-6",
+  "engine": "terminal-flow",
+  "season": "2025-26",
+  "samples": 10,
+  "seed": 20261015,
+  "players": 582,
+  "design": "All 582 players, one natural role, four different positional mean70 teammates, 30 opponents, both seating orders, fixed 14.4 minutes no fatigue/substitutions. Provisional screening; refine ranking contenders before a final Top50. Same ten seed strata across players within each position.",
+  "roleAudit": {
+    "usableStarterTeamGames": 2460,
+    "exactFivePositionTeamGames": 2378,
+    "broadThreePositionTeamGames": 82,
+    "skippedStarterTeamGames": 0,
+    "fallbackPlayers": 133,
+    "lowConfidencePlayers": 248
+  },
+  "sourceHashes": {
+    "reports/player-impact-v6/engine.mjs": "7fcbed5df4a6fc58e2ab7f670da0c9f02b94bd69c0cc1cf0c11fa2756a3ff4fb",
+    "reports/player-impact-v6/model.mjs": "968737c50f3ca29d81238d94e8b328d229033305a049e04f2133643ed36f04b9",
+    "reports/player-impact-v6/ovr-input.mjs": "88511ecb6dacd237eda6d8727beb4a8b99eaffbcb85d4ed3903432624f71ef6c",
+    "reports/player-impact-v6/ovr-worker.mjs": "1ab51da322fc1654c90301df763ba09ef9d96846f51f19251623a7347d6dfb02"
+  },
+  "fingerprint": "2ef610385f2328980fb9b762ad8262925874312bfc7d8bd417e2a72dcae5b221"
+}

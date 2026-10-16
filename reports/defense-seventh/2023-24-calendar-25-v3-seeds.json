@@ -1,0 +1,131 @@
+{
+  "label": "2023-24-calendar-25-v3",
+  "extra": {
+    "bundle": "reports/defense-seventh/2023-24/calendar-25/bundle.json",
+    "cutoff": 25,
+    "calendarDate": "2023-12-17",
+    "cardFile": "reports/defense-seventh/2023-24/calendar-25/v3-league.json",
+    "neutralContests": false,
+    "calibration": {
+      "shotDelta": -0.09219473905270525,
+      "options": {
+        "pace": 0.9372676049810507,
+        "foulScale": 0.9316376843741342,
+        "passTurnoverScale": 1.3928265150750954,
+        "touchTurnoverScale": 0.9740170969140202,
+        "touchLiveShare": 0.3127802870532365,
+        "clockViolationProbability": 0.006627640776248149
+      }
+    }
+  },
+  "files": [
+    {
+      "seed": 20261012,
+      "file": "reports/defense-seventh/runs/2023-24-calendar-25-v3-seed20261012.json",
+      "sha256": "5721d3a7c1645392b03889a6a3417a3ab96ce74bd8cd3fa526bc8618a8fad32b"
+    },
+    {
+      "seed": 20261013,
+      "file": "reports/defense-seventh/runs/2023-24-calendar-25-v3-seed20261013.json",
+      "sha256": "5b96bfb9e5a6068a2e7db6e8fc4e93c8b245fd64aed208ce08d71779c56c3bb8"
+    },
+    {
+      "seed": 20261014,
+      "file": "reports/defense-seventh/runs/2023-24-calendar-25-v3-seed20261014.json",
+      "sha256": "6514bb442bb4f397b5fccaf63d77f0f11ff5c1c3daea2446b820ceddf890d378"
+    },
+    {
+      "seed": 20261015,
+      "file": "reports/defense-seventh/runs/2023-24-calendar-25-v3-seed20261015.json",
+      "sha256": "cc668f0cd619d3374507dc93d83645d4f030301153ce2f8604ca8ecdab02c29b"
+    },
+    {
+      "seed": 20261016,
+      "file": "reports/defense-seventh/runs/2023-24-calendar-25-v3-seed20261016.json",
+      "sha256": "4948f78ec0c020eeba69ad78539afcad2b2925cbf8edaf34fc1ee893536f9154"
+    },
+    {
+      "seed": 20261017,
+      "file": "reports/defense-seventh/runs/2023-24-calendar-25-v3-seed20261017.json",
+      "sha256": "a73e1dd76a0d3c97d73518568bd1fa5545413a98e51ba2a1fbf765c90a23270c"
+    },
+    {
+      "seed": 20261018,
+      "file": "reports/defense-seventh/runs/2023-24-calendar-25-v3-seed20261018.json",
+      "sha256": "67dd1df68bab4500c888a5f0482010c29644ab19a945d10f0bc933d47d72067a"
+    },
+    {
+      "seed": 20261019,
+      "file": "reports/defense-seventh/runs/2023-24-calendar-25-v3-seed20261019.json",
+      "sha256": "891806c4e2e2960c71e043cdbb39ff6195b90a480da6ec2ba34fd2c4f6293ee9"
+    },
+    {
+      "seed": 20261020,
+      "file": "reports/defense-seventh/runs/2023-24-calendar-25-v3-seed20261020.json",
+      "sha256": "7c1105ca03ce754999f3e24ad001a2f47f927e1dba37f700bd01ff8fd5802697"
+    },
+    {
+      "seed": 20261021,
+      "file": "reports/defense-seventh/runs/2023-24-calendar-25-v3-seed20261021.json",
+      "sha256": "6d1bfd508f49b3fbfe972661f1d419e20f811f21c64f05edb7b03cc6565b4efc"
+    },
+    {
+      "seed": 20261022,
+      "file": "reports/defense-seventh/runs/2023-24-calendar-25-v3-seed20261022.json",
+      "sha256": "20feb7df1c30be5c2103c651d08c860d9d05c6dbbfd0ac4fd631d5e5149ef8ed"
+    },
+    {
+      "seed": 20261023,
+      "file": "reports/defense-seventh/runs/2023-24-calendar-25-v3-seed20261023.json",
+      "sha256": "80f679399be77e0a672ed8e836af09d39e1b54661dba6b4e25e5ea7dc3aafdfb"
+    },
+    {
+      "seed": 20261024,
+      "file": "reports/defense-seventh/runs/2023-24-calendar-25-v3-seed20261024.json",
+      "sha256": "d1f6d8d19f1b84c549db80822e911653768653aea5205b4e8a0db3c64384a880"
+    },
+    {
+      "seed": 20261025,
+      "file": "reports/defense-seventh/runs/2023-24-calendar-25-v3-seed20261025.json",
+      "sha256": "afda2958b6a5fb260e545e6711297a15ed5b0f98d0d012d466bfa56f446232d5"
+    },
+    {
+      "seed": 20261026,
+      "file": "reports/defense-seventh/runs/2023-24-calendar-25-v3-seed20261026.json",
+      "sha256": "74fba10ddc68ddb5c7a9097140847fb89e2c162c4ba0e411344f454b0ec2365e"
+    },
+    {
+      "seed": 20261027,
+      "file": "reports/defense-seventh/runs/2023-24-calendar-25-v3-seed20261027.json",
+      "sha256": "6fe4673a1ab9d73a3474a56ea2abf8be724698463f22ca1c23a4cdda08f4b4ed"
+    },
+    {
+      "seed": 20261028,
+      "file": "reports/defense-seventh/runs/2023-24-calendar-25-v3-seed20261028.json",
+      "sha256": "6f58ab338a003ee2178bb95a6a68b7569760a163f63dbd8d80dca3fd34107274"
+    },
+    {
+      "seed": 20261029,
+      "file": "reports/defense-seventh/runs/2023-24-calendar-25-v3-seed20261029.json",
+      "sha256": "2dffc454514a7d89c8a08aa55a55dd3a986047a4dc92c60e597fd7f3d44e2bf3"
+    },
+    {
+      "seed": 20261030,
+      "file": "reports/defense-seventh/runs/2023-24-calendar-25-v3-seed20261030.json",
+      "sha256": "251182ff593eeddabe9180754dc8117df6516c45fd51b15fddb48f6e80956ee3"
+    },
+    {
+      "seed": 20261031,
+      "file": "reports/defense-seventh/runs/2023-24-calendar-25-v3-seed20261031.json",
+      "sha256": "70b8e12476dc6a549dc8fc4029d8ed2ccc9adfbba4e83f1021f73a0d0c549d37"
+    }
+  ],
+  "seconds": 265.321,
+  "sources": {
+    "src/defense_fifth_game.js": "bddd3f34b93e969513ce79d717b78358dc433c0f15eba3eeffa675177b9dfa86",
+    "src/defense_sixth_season.js": "1c30c6c59fbc3e2a40b08231dddf9be255b11fca386d93daf1eb986a99000bcf",
+    "src/defense_seventh_jobs.js": "ca1501845b601e0b742f601751ac74fba7e9717a6de66d8ab9d7a4d0c4c6d41d",
+    "scripts/run_defense_seventh.js": "0e40923369762bd8b0a0faa1545e704ba0587bc1341ea40058b7766f240f3f01",
+    "reports/defense-seventh/2023-24/calendar-25/v3-league.json": "f7e6da39f6670b0025f06393692b94b0a9a430b972bcf127184f998fc6eeae74"
+  }
+}

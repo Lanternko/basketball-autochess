@@ -1,0 +1,20 @@
+import fs from 'node:fs';
+import crypto from 'node:crypto';
+import {Worker} from 'node:worker_threads';
+const root='reports/player-impact-v25',pilot=process.argv.includes('--pilot'),seasons=process.argv.filter(a=>/^202\d-\d\d$/.test(a));
+if(!seasons.length)seasons.push(...(pilot?['2025-26']:['2022-23','2023-24','2024-25','2025-26']));
+const read=f=>JSON.parse(fs.readFileSync(f)),hash=f=>crypto.createHash('sha256').update(fs.readFileSync(f)).digest('hex');
+const inherited=read('reports/player-impact-v24/validation-protocol.json').hashes;
+const files=['model.mjs','input.mjs','engine.mjs','worker.mjs','build-contact-policy.py','fit-contact-recipient.py','contact-recipient-prior.json'].map(f=>root+'/'+f).concat(seasons.flatMap(s=>[root+'/'+s+'-contact-policy.json',root+'/'+s+'-contact-recipient.json']));
+const hashes={...inherited,...read(root+'/contact-recipient-prior.json').sourceHashes,...Object.fromEntries(files.map(f=>[f,hash(f)]))};for(const season of seasons)Object.assign(hashes,read(root+'/'+season+'-contact-policy.json').hashes);
+const verify=()=>{for(const[f,h]of Object.entries(hashes))if(hash(f)!==h)throw Error('Frozen source drift: '+f);};verify();
+const protocol={version:'ordinary-contact-policy-victim-25',seasons,seeds:pilot?[20261012]:[20261012,20261013,20261014],variants:['rotation-space'],design:'Ordinary defensive nonshooting personal contact rate excludes source action-time engine endgame-policy eligibility; conservative source denominator ambiguity bound. Runtime forced endgame policy unchanged, event-time vs pre-touch clock mismatch retained. When ordinary contact occurs, victim chosen from source five-player conditional multinomial strengths, Gaussian prior precision fitted on2022-25 whole-game folds. No skill attributes changed. Existing FT make, bonus, shooting foul, shooting/assist/TOV/rebound/clock/rotation mechanics retained. Technical/unresolved/out-of-scope FTs remain missing/audited. Source style allocation, not causal victim skill or portable cross-team strength. No names, OVR, on/off, wins or simulation residual fit. Experimental, not adopted.',hashes};
+const pf=root+(pilot?'/pilot-protocol-'+seasons.join('_')+'.json':'/validation-protocol.json');
+if(fs.existsSync(pf)){if(JSON.stringify(read(pf))!==JSON.stringify(protocol))throw Error('Protocol drift');}else fs.writeFileSync(pf,JSON.stringify(protocol,null,2));
+fs.mkdirSync(root+'/runs',{recursive:true});
+const all=seasons.flatMap(season=>protocol.seeds.flatMap(seed=>[false,true].map(strict=>({season,seed,version:'rotation-space',strict,onCourt:strict,file:`${root}/runs/${season}-rotation-space-${strict?'strict':'full'}-${seed}.json`}))));
+const jobs=all.filter(j=>!fs.existsSync(j.file));let next=0,done=0;const workers=[];
+try{await new Promise((resolve,reject)=>{if(!jobs.length)return resolve();const dispatch=w=>{if(next<jobs.length)w.postMessage(jobs[next++]);};for(let i=0;i<Math.min(pilot?2:4,jobs.length);i++){
+ const w=new Worker(new URL('./worker.mjs',import.meta.url));workers.push(w);w.on('error',reject);w.on('message',m=>{if(m.error)return reject(Error(m.error));console.log(JSON.stringify({done:++done,total:jobs.length,season:m.job.season,strict:m.job.strict,seed:m.job.seed}));if(done===jobs.length)resolve();else dispatch(w);});dispatch(w);
+}});}finally{await Promise.all(workers.map(w=>w.terminate()));}verify();
+fs.writeFileSync(root+(pilot?'/pilot-manifest-'+seasons.join('_')+'.json':'/validation-manifest.json'),JSON.stringify({jobs:all.map(j=>({...j,sha256:hash(j.file)}))},null,2));

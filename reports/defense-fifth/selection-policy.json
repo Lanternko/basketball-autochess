@@ -1,0 +1,5 @@
+{
+  "scope": "Fifth batch phase1 switches. Main chronological41 test, 20 paired seeds. Policy fixed before neutral and clock accuracy tables are read.",
+  "rule": "Keep a switch only if at least netRMSE or winMAE improves significantly, neither significantly worsens, and |true-on-predicted calibrationSlope -1| does not significantly worsen. This is selection among mechanisms, not parameter fitting. Rotation remains diagnostic only: variance gate <0.3 means no2c implementation; previous3c directional failure remains.",
+  "clock": "Clock forecasts only pre-cutoff league counts, no post-cutoff actual pace; residual forecast bias reported rather than tuned to zero."
+}

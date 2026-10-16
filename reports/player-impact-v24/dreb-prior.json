@@ -1,0 +1,115 @@
+{
+  "l2Precision": 7.447276960243279,
+  "fitSeasons": [
+    "2022-23",
+    "2023-24",
+    "2024-25"
+  ],
+  "excludedFitSeason": "2025-26",
+  "folds": 5,
+  "design": "Conditional multinomial choice P(recipient=i|actual team won individual DREB, actual five)=exp(z_i)/sum(exp(z_j)). Log strengths have independent zero-centered Gaussian prior, L2 precision chosen by whole-game held-out NLL. Only source recipients/lineups are inputs; no same-game held-out counts, team wins, simulated residuals, OVR, names or ON/OFF. Conditional strengths have no identified cross-disconnected-team absolute scale; the zero-centered prior selects that gauge. They describe recipient allocation, not causal team DREB effect, rebound skill or portable cross-team ability. Team DREB-winning probabilities remain unchanged.",
+  "nll": {
+    "fitted": 328441.54183048784,
+    "weakRegularizationPrecision0_1": 328805.21505915385,
+    "uniform": 343178.8366304108
+  },
+  "foldScores": [
+    {
+      "season": "2022-23",
+      "fold": 0,
+      "events": 13803,
+      "nll": 21272.171970005234
+    },
+    {
+      "season": "2022-23",
+      "fold": 1,
+      "events": 14424,
+      "nll": 22207.196425408834
+    },
+    {
+      "season": "2022-23",
+      "fold": 2,
+      "events": 13895,
+      "nll": 21326.994971976088
+    },
+    {
+      "season": "2022-23",
+      "fold": 3,
+      "events": 14269,
+      "nll": 22020.11693604799
+    },
+    {
+      "season": "2022-23",
+      "fold": 4,
+      "events": 14705,
+      "nll": 22735.73418803068
+    },
+    {
+      "season": "2023-24",
+      "fold": 0,
+      "events": 13658,
+      "nll": 21020.418109960665
+    },
+    {
+      "season": "2023-24",
+      "fold": 1,
+      "events": 14352,
+      "nll": 22064.341844398215
+    },
+    {
+      "season": "2023-24",
+      "fold": 2,
+      "events": 13910,
+      "nll": 21506.02553429228
+    },
+    {
+      "season": "2023-24",
+      "fold": 3,
+      "events": 14301,
+      "nll": 22052.243095116122
+    },
+    {
+      "season": "2023-24",
+      "fold": 4,
+      "events": 13812,
+      "nll": 21278.281979972686
+    },
+    {
+      "season": "2024-25",
+      "fold": 0,
+      "events": 14452,
+      "nll": 22248.98040564166
+    },
+    {
+      "season": "2024-25",
+      "fold": 1,
+      "events": 14133,
+      "nll": 21708.896039260057
+    },
+    {
+      "season": "2024-25",
+      "fold": 2,
+      "events": 14458,
+      "nll": 22235.07691300679
+    },
+    {
+      "season": "2024-25",
+      "fold": 3,
+      "events": 14716,
+      "nll": 22653.26371930118
+    },
+    {
+      "season": "2024-25",
+      "fold": 4,
+      "events": 14341,
+      "nll": 22111.799698069342
+    }
+  ],
+  "sourceHashes": {
+    "reports\\player-impact-v24\\2022-23-dreb-risksets.json": "1ee0b05818d2d022e2e45b52efd4f17eb8d978e63433614600b5476238d241af",
+    "reports\\player-impact-v24\\2023-24-dreb-risksets.json": "fa81f44452b2a1d553869a74671ab66c08f9899f9606ffd656857c68183865be",
+    "reports\\player-impact-v24\\2024-25-dreb-risksets.json": "4c81faea19b75ec22139d25195cdd46a896a4594c12dd62d82af979b05cc1c49",
+    "reports\\player-impact-v24\\2025-26-dreb-risksets.json": "de1d18d826c75d8bf6abfba7cfde7dd95e06e31d34d222da28e7ad1608a05b3b"
+  },
+  "codeHash": "6f0e956717384f1409e52e40fd1f1b16b9a24ebaf89e77bb336d5800621e762a"
+}

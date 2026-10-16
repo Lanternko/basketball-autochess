@@ -1,0 +1,22 @@
+{
+  "version": "observed-rotation-centered-context-14",
+  "season": "2025-26",
+  "seed": 20261012,
+  "variants": [
+    "rotation-space"
+  ],
+  "design": "Observed zone FG is source-context centered before reapplying new context; source contexts come from actual lineup exposures and frozen model predictions, not fitted individual residuals. Successful creation supply is conserved subject to terminal capacity and zero self-assist. Receiving propensity is a soft allocation prior rather than a cap on team creation. Global alpha from 2022-25 fresh-FGA actor choices; global beta from assisted-make passer choices conditional on receiver. Source lineup total demand conserved. No target player names, OVR/on-off ranking fit or positional bonus. Third variant enables source-centered long context. Diagnostic single seed, not adoption.",
+  "hashes": {
+    "reports/player-impact-v14/engine.mjs": "e12cbff48c41591f2326fb5d6da58f06c65dda44810fb41f536f1b608952f889",
+    "reports/player-impact-v14/model.mjs": "8f176fe6806790a1f084cf9a6e348b22bf12b43d779d04d97e6e57f3e5869994",
+    "reports/player-impact-v14/../../src/source_rotation_energy.js": "99420ade15190607dabbfa5385fc0916ef6cf31bfc2fe8bc0d499ae33ad8dc5b",
+    "reports/player-impact-v14/../../src/measured_creation_context.js": "ea1b0c93024c7c2a69f8ae737faddac59c410a3173ea8468b0af5c3242e27d7c",
+    "reports/player-impact-v14/input.mjs": "51b9778f3590684814717c97c0f719dd3fc9e4a1f2f2b91271b324ce653f7817",
+    "reports/player-impact-v14/ovr-input.mjs": "141a877bcfb1b5aac42e88129e7812ffaa7aace2c64cc7159083097b9a73d89d",
+    "reports/player-impact-v14/2025-26-contexts.json": "7d0e69ee8cb7ee31ca377e518c92ebc6bc206b2fa7c0f749861fd81306b4d6bf",
+    "reports/player-impact-v14/../../src/opportunity_transport.js": "4bfea350db5ba749a22053daf4d7363c7e04095e516b68cf098318dd054f5721",
+    "reports/player-impact-v14/worker.mjs": "a1bee5af65331c6e92746f00da090af92f23a4a282810edccf6ba31bdc0b2c25",
+    "reports/player-impact-v14/../player-impact-v8/usage-fit.json": "4ce55df2f01ac960dabfd4ef5afe8d87596c86f9d908bd24ceae05bc03ef9d1e",
+    "reports/player-impact-v14/../player-impact-v8/assist-fit.json": "c62007be8fc2e45aac89690122cf215c191691589d7a8d48cf6c4e5528750b01"
+  }
+}

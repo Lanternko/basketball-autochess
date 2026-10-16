@@ -1,0 +1,41 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "season": "2022-23",
+      "players": 609,
+      "sourceAttributesPreserved": true,
+      "oldBaselineDefenseZeroed": true,
+      "sourceMinutesEnergyAttemptsPreserved": true
+    },
+    {
+      "season": "2023-24",
+      "players": 657,
+      "sourceAttributesPreserved": true,
+      "oldBaselineDefenseZeroed": true,
+      "sourceMinutesEnergyAttemptsPreserved": true
+    },
+    {
+      "season": "2024-25",
+      "players": 654,
+      "sourceAttributesPreserved": true,
+      "oldBaselineDefenseZeroed": true,
+      "sourceMinutesEnergyAttemptsPreserved": true
+    },
+    {
+      "season": "2025-26",
+      "players": 661,
+      "sourceAttributesPreserved": true,
+      "oldBaselineDefenseZeroed": true,
+      "sourceMinutesEnergyAttemptsPreserved": true
+    }
+  ],
+  "transferChecks": 12,
+  "distributionChecks": 661,
+  "gameChecks": 10,
+  "observedFreshShots": 1752,
+  "observerScoreAndBoxParity": true,
+  "putbacksUnchanged": true,
+  "fineCollectorGameChecks": 3,
+  "fineCollectorFreshCountAndFivePlayerLedgersPassed": true
+}

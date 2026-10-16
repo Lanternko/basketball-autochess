@@ -1,0 +1,75 @@
+{
+  "finishedAt": "2026-10-13T03:12:17.566Z",
+  "protocolHash": "3bc36c24c3f6888e17aac27f341fb484f4c59410367325977f94588126e16329",
+  "protocolUnchanged": true,
+  "pureSeeds": 240,
+  "allPaired": true,
+  "allFlagsOff": true,
+  "sameReportedConstants": true,
+  "changedStep1Sources": [],
+  "changedStep2Sources": [],
+  "scope": "Only reports/defense-tenth/step2 additions. No engine/card/frozen modifications. Calendar future availability supplied by existing design; no future performance used in card or constants. Style answers never transmitted as inputs to game engine.",
+  "effectiveCardSourceVerification": "Registered adapter calls seventhInputs with unchanged v3 extra; only five flags and side-map are modified afterward. Runtime attributes were not persisted individually; source/adapter provenance verifies this construction.",
+  "styleFullRealPointReconciliation": [
+    {
+      "season": "2022-23",
+      "k": 25,
+      "maxTeamPointDifference": 0
+    },
+    {
+      "season": "2022-23",
+      "k": 41,
+      "maxTeamPointDifference": 0
+    },
+    {
+      "season": "2022-23",
+      "k": 55,
+      "maxTeamPointDifference": 0
+    },
+    {
+      "season": "2023-24",
+      "k": 25,
+      "maxTeamPointDifference": 0
+    },
+    {
+      "season": "2023-24",
+      "k": 41,
+      "maxTeamPointDifference": 0
+    },
+    {
+      "season": "2023-24",
+      "k": 55,
+      "maxTeamPointDifference": 0
+    },
+    {
+      "season": "2024-25",
+      "k": 25,
+      "maxTeamPointDifference": 0
+    },
+    {
+      "season": "2024-25",
+      "k": 41,
+      "maxTeamPointDifference": 0
+    },
+    {
+      "season": "2024-25",
+      "k": 55,
+      "maxTeamPointDifference": 0
+    },
+    {
+      "season": "2025-26",
+      "k": 25,
+      "maxTeamPointDifference": 0
+    },
+    {
+      "season": "2025-26",
+      "k": 41,
+      "maxTeamPointDifference": 0
+    },
+    {
+      "season": "2025-26",
+      "k": 55,
+      "maxTeamPointDifference": 0
+    }
+  ]
+}

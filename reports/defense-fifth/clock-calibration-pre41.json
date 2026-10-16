@@ -1,0 +1,58 @@
+{
+  "cutoff": 41,
+  "seeds": [
+    20261010,
+    20261011
+  ],
+  "target": {
+    "cutoff": 41,
+    "trainingGames": 603,
+    "trainingPace": 103.13751243781094,
+    "futureScheduleMeanDay": 131.75284552845528,
+    "linearCoefficients": [
+      104.45711093892008,
+      -0.031199729303983858
+    ],
+    "chronologicalCV": {
+      "constant": [
+        27.50919615232911,
+        32.592197260943145,
+        30.98686928897346
+      ],
+      "linear": [
+        29.032087993031997,
+        35.661779872490285,
+        28.382202568959038
+      ]
+    },
+    "useTrend": false,
+    "predictedPace": 103.13751243781094,
+    "ratio": 1,
+    "method": "Shared league pace target; only pre-cutoff pair box proxies. Past-only chronological3fold CV constant vs linear calendar trend, fixed before heldout scoring. Future schedule dates only. No future outcomes. This predicts rather than forces actual later pace."
+  },
+  "history": [
+    {
+      "iteration": 0,
+      "pace": 0.9216318039562265,
+      "simulatedPace": 103.43855284552845,
+      "target": 103.13751243781094
+    },
+    {
+      "iteration": 1,
+      "pace": 0.9189495505178712,
+      "simulatedPace": 103.41324390243902,
+      "target": 103.13751243781094
+    },
+    {
+      "iteration": 2,
+      "pace": 0.9164993488229833,
+      "simulatedPace": 103.2080243902439,
+      "target": 103.13751243781094
+    }
+  ],
+  "selected": {
+    "pace": 0.9164993488229833
+  },
+  "switch": "forecastClock",
+  "method": "Only common pace; player effects unchanged. Last of3 measured points, no accuracy objective. Calibration forecasts from pre-cutoff league box counts and unlabeled remaining active-roster schedule, never post-cutoff true pace/results."
+}

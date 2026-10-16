@@ -1,0 +1,162 @@
+{
+  "version": "pure-dreb-rate-1",
+  "registeredAt": "2026-10-14T05:43:58.776Z",
+  "label": "四個已看過答案球季；全季同季重現，不能宣稱盲測或換隊有效",
+  "seasons": [
+    "2022-23",
+    "2023-24",
+    "2024-25",
+    "2025-26"
+  ],
+  "seeds": [
+    20261012,
+    20261013,
+    20261014,
+    20261015,
+    20261016,
+    20261017,
+    20261018,
+    20261019,
+    20261020,
+    20261021,
+    20261022,
+    20261023,
+    20261024,
+    20261025,
+    20261026,
+    20261027,
+    20261028,
+    20261029,
+    20261030,
+    20261031
+  ],
+  "scope": "One defensive rebounding replacement only. No offense, rim, live turnover, zone, foul or rotation mechanism changes. Finish and stop.",
+  "baselines": {
+    "T0": "Immutable existing pure runs; exact same cards/schedule/seeds/minute soft targets.",
+    "pooled": "Pure cards with league-only rebound odds intercept, shooting-logit offset and pace recalibrated independently with the identical algorithm used for the candidate. Separates mean correction from a new defensive card."
+  },
+  "card": {
+    "inputs": [
+      "individual DREB_PCT (official advanced)",
+      "individual DREB count and MIN (official box)"
+    ],
+    "forbidden": [
+      "team net/wins/ranks as inputs or calibration targets",
+      "stint/on-off/team defensive performance",
+      "player/team ID exceptions"
+    ],
+    "opportunity": "N=DREB/DREB_PCT for positive observations; zero-DREB players use pooled sum(N)/sum(MIN) times own MIN. Missing official share falls back to the pooled mean, flagged. All season total individuals, including traded players pooled, not team-filtered.",
+    "shrinkage": "Beta empirical-Bayes method of moments over valid players with at least500 season minutes. mu=sum(DREB)/sum(N), variance=unweighted population variance of individual DREB_PCT; sampling variance=mean(mu*(1-mu)/N); kappa=clip(mu*(1-mu)/max(variance-samplingVariance,1e-6)-1,1,10000). Posterior=(DREB+kappa*mu)/(N+kappa). All computed separately within the supplied season individual data; no outcomes fitted.",
+    "projection": "Sum five posterior DREB shares, clip [.05,.95]. Candidate FG player-OREB logit = logit(old offense versus canonical PG/SG/SF/PF/C neutral defense) - logit(DEFAULT_OREB_SHARE) - logit(sum defensive shares) + leagueOrbLogit. Final FG probability clip [.05,.60], unchanged bounds. Defensive recipient weights .30/5+.70*share/sum. Offensive skills/geometry/recipient weights unchanged. FT team-share and team/out-of-bounds branches unchanged. No change to stamina (old rebound itself is not fatigue-scaled).",
+    "switch": "individualDrebCard; false with leagueOrbLogit=0 must reproduce all 1230 game scores and complete team/player stats for seed20261012 in each season.",
+    "boxout": "Audit only. Hustle BOX_OUT_PLAYER_TEAM_REBS minus BOX_OUT_PLAYER_REBS is already credited to teammate DREB and combines offensive/defensive plays; do not add it again. No identified causal extra recovery probability => no boxout bonus this version. Report coverage and limitation."
+  },
+  "calibration": {
+    "seeds": [
+      20260101,
+      20260102,
+      20260103
+    ],
+    "iterations": 6,
+    "selection": "Last evaluated iteration; early stop only all pooled thresholds met. Never select by team accuracy.",
+    "targets": "Whole-season merged individual credited OREB/(OREB+DREB), league offensive proxy and paired possession proxy. No team net/rank/wins. Team rebound counts unaltered.",
+    "tolerances": {
+      "efficiency": 0.12,
+      "possessions": 0.15,
+      "orebShare": 0.0005
+    },
+    "updates": "additional shotDelta += clip((target efficiency - simulated efficiency)/65,-.08,.08); pace *= target possessions/sim possessions, clipped [.5,2]; leagueOrbLogit += clip(logit(target OREB share)-logit(sim OREB share),-.25,.25). FT/foul/TOV parameters frozen. Identical loops for pooled and dreb.",
+    "acceptanceGuard": "Report evaluation league efficiency and possession biases against ±0.5, TOV/FG%/3P% drift explicitly; failed calibration is not patched after evaluation."
+  },
+  "evaluation": {
+    "primary": "Centered team net RMSE. Secondary centered DREB% RMSE, defensive efficiency RMSE/correlation/SD ratio, net Spearman, SD ratio, calibration slope, wins MAE/RMSE, ranks and T0 failure rules. Report candidate-pooled and candidate-T0 and pooled-T0; do not attribute pooled correction to the card.",
+    "adoption": "Candidate only warrants further mainline work if four-season net RMSE paired joint95 interval is entirely below0 versus pooled, DREB centered RMSE improves (point estimate), and net-rank failure count does not increase. Otherwise retain pure baseline and explicitly mark failure/inconclusive. No changes after seeing results. Statistical success is same-season only; portability still untested.",
+    "rankRules": {
+      "primary": "net",
+      "actualTop5": "descending mean net ranks<=5",
+      "actualBottom5": "ranks>=26",
+      "topFailure": "predicted rank>10",
+      "bottomFailure": "predicted rank<=20",
+      "ties": "average ranks tolerance1e-10",
+      "prediction": "mean of20seeds before ranking",
+      "pass": "zero net-axis failures. Wins rank reference only; explanation never waives failure"
+    },
+    "attribution": {
+      "principle": "Observational abnormality alone is not causal attribution. Counterfactual must remove failure on its own axis and reduce absolute error >=50%, with sign agreement. Otherwise unexplained, with anomaly flags reported separately. Never coach/tactics attribution.",
+      "clutch": {
+        "definition": "Fourth quarter and overtime clock <=300 seconds, pre-event absolute lead <=5. Score increments and elapsed time use prior-event scoreboard; only exact final-score/event-score reconciliation games accepted.",
+        "minimumCoverage": 0.85,
+        "minimumMinutes": 40,
+        "minimumRateDifferencePer48": 10,
+        "minimumImpactPerGame": 0.75,
+        "impact": "(clutch net - nonclutch net/minute * clutch minutes)/all season games; coverage >=85%, incomplete game impact extrapolated by GP/validGP. No simulations adjusted.",
+        "counterfactual": "actual net minus impact; rank all 30 again. Only net-axis explanation; wins attribution requires unavailable simulated clutch traces, so never inferred."
+      },
+      "luck": {
+        "close": "final absolute margin <=5",
+        "minimumCloseGames": 15,
+        "closeWinRateDeviation": 0.15,
+        "expectedWins": "GP * PF^14/(PF^14+PA^14), fixed exponent 14 diagnostic convention, not fitted to answers",
+        "minimumWinExcess": 3,
+        "counterfactual": "actual wins replaced by net-based expected wins, rank all 30 again; only wins-axis eligible. This is win conversion anomaly, not proof of random luck and cannot explain net error."
+      },
+      "missingPrior": {
+        "eligible": "Not applicable to same-season T0"
+      },
+      "unresolved": "No qualifying explanation => 無法解釋. Partial contributions and flags not promoted to explained.",
+      "tanking": {
+        "name": "season-end previous-top5 minute-share marker",
+        "top5": "Previous-season total player minutes within franchise, tie playerID. Only existing prior season logs, no new download. 2022-23 prior missing => unavailable.",
+        "windows": "First20 vs last20 target-season chronological team games",
+        "ratio": "Sum minutes of those five / all current team player minutes; difference final minus initial",
+        "flag": "drop at least10 percentage points",
+        "interpretation": "Descriptive only. Does not explain or waive failures; observed minutes already contain DNP/absences. Departure also lowers marker, no inference of intent."
+      }
+    }
+  },
+  "uncertainty": {
+    "bootstrap": 20000,
+    "seed": 20261041,
+    "scheme": "Resample30 franchises and20 seeds, paired across all versions and seasons; average seed predictions before metrics; center each season and pool seasons equally. Only joint95 intervals used for claims."
+  },
+  "hypotheses": {
+    "expected": "Independent observed DREB shares may repair suppressed defensive rebound differences and remove double-counted size/position proxies. No numeric gain promised.",
+    "failure": "Individual DREB is affected by teammates/opponent misses, linear five-share composition may be poorly transferable; old offensive geometry still biases rebound contests; boxout cooperation not identified."
+  },
+  "protectedManifestSHA": "95997a0c0a51a46d801c7ec09fb582821a533a1b91b15be0c1e2fa0a25d0c120",
+  "inputHashes": {
+    "reports/defense-tenth/step4-t0/2022-23/bundle.json": "b311dcfce6c80b98720784c28a4879b154a205a2ce0cbed61cb0c5014342c213",
+    "reports/defense-tenth/step4-t2/raw/2022-23/0-advanced.json": "5cce624bdcba6e4190c3520986006b5d8a87a0e1c11bdc2f268a7fb3815d3da2",
+    "reports/defense-tenth/step4-t2/raw/2022-23/0-hustle.json": "6f2077f4abf7348c37bcd6e89061cd258f9dc051af4d5666349f6eb56ff9a651",
+    "reports/defense-tenth/step4-t0/2022-23/calibration-v3.json": "5f8cc5179d2dc659c73a4274cc3989ea44a484d94452d4750dc8486f4af8baf6",
+    "data/defense-seventh/2022-23/player-games.json": "f41f7f4b105af8d280381f0c3315219ee074b2329e5d9b5f979b6fc72dbd7f56",
+    "data/defense-seventh/2022-23/team-games.json": "732bbf1991c0ce13e3b70db5f2d7769dd66d5d05d4fabef6306963cff066e020",
+    "reports/defense-tenth/step4-t0/2023-24/bundle.json": "5e17a95310e7cea844b81005fbe214e9ecafe62b54a1ba45aad6aaa839baf971",
+    "reports/defense-tenth/step4-t2/raw/2023-24/0-advanced.json": "2a66adc5f1eccac6b23f60061e75115adfef8152c7b884dba7a940c4a372db23",
+    "reports/defense-tenth/step4-t2/raw/2023-24/0-hustle.json": "bf6e276af8dd0f153f1beb231f40fdd3a24ed4dba6702a49ba256aa21053bc35",
+    "reports/defense-tenth/step4-t0/2023-24/calibration-v3.json": "853f1df493e5d6be7c444d904ed39ed8e95a60d8b257457e8afd09c7ac484f51",
+    "data/defense-seventh/2023-24/player-games.json": "a33074c9c9b1f59e15f160464292b3ab9c791065ae542c20f2ed64f3e170afd5",
+    "data/defense-seventh/2023-24/team-games.json": "befe8941b51e8c2f440df88e2aea79aab63826d389ec258d5fe8e209967586c5",
+    "reports/defense-tenth/step4-t0/2024-25/bundle.json": "001cf3d44b29542c3d202cd375f2378e7c09b712ca958637c28d6538566215f8",
+    "reports/defense-tenth/step4-t2/raw/2024-25/0-advanced.json": "6e97d8807369be5668940b190a901a24439b60b82fe6f393a953c33c8e523508",
+    "reports/defense-tenth/step4-t2/raw/2024-25/0-hustle.json": "e88b8dee6c689aebe1c01c0153a08c620dcefee8ca1f65eba2cd2679a07ad2ad",
+    "reports/defense-tenth/step4-t0/2024-25/calibration-v3.json": "0b9188c7fba1243d5dfc2c181b74a863bc6d1f515c702b1ebe9275d41b7c8a72",
+    "data/defense-seventh/2024-25/player-games.json": "4c3f33c67ffaa1cf88ea01a7acaeef70af088e22f6020c3a02409989f6ad4ffa",
+    "data/defense-seventh/2024-25/team-games.json": "b4da45c024c655c64db220568813922ca1e6d37fbc23650ad7ed43f352b1e470",
+    "reports/defense-tenth/step4-t0/2025-26/bundle.json": "43b5a5141fa667a492a67dfc6aa95eec058aabbe39e9d787b0a92b870d7db051",
+    "reports/defense-tenth/step4-t2/raw/2025-26/0-advanced.json": "182975df662b91cc08fc70f9978952a359604719b13d1a60776595db7e604ad5",
+    "reports/defense-tenth/step4-t2/raw/2025-26/0-hustle.json": "a2103c77db873ae61ca228350f4386571f10a88dd20eea32bbe4f0f1ce19b2da",
+    "data/season-source/player-games.json": "11fc5866b2f61b31e27659e14e4071924b5873ef0d2a4118a585c1a54be04357",
+    "data/season-source/team-games.json": "d5cb1a6dbd26a0ed71b24e7e18fcbc862afdf6d8bd8ea3814c5dadbf1989fb8a"
+  },
+  "codeHashes": {
+    "reports/defense-tenth/step4-rebounds/adapter.mjs": "d371f237c2194f3dd1b9d39b143cb9625946fc7347c15e55023c53c67b048bb9",
+    "reports/defense-tenth/step4-rebounds/calibrate.mjs": "1821a041fd3b8f0170aeb7a46bb36b837eab2d14bb6491a1f9917d8536a28246",
+    "reports/defense-tenth/step4-rebounds/model.mjs": "f28a882c72a2c673e0638beb19d6b2f7ca27a3083a0c72eb973a75cd9a4d8a6e",
+    "reports/defense-tenth/step4-rebounds/parity.mjs": "90edeab6828942759cc5dbe901953994aed04c0c90dc027af4b9f350ca53b67e",
+    "reports/defense-tenth/step4-rebounds/prepare.mjs": "26eafe031cc5dc644f0cce32e74c1fbd2da8256c113d3875349c09fc571a0e34",
+    "reports/defense-tenth/step4-rebounds/register.mjs": "9c03f653071a5fa0728c36711b47615129fbaa7947fbb7888c7ef4c06ce8edbf",
+    "reports/defense-tenth/step4-rebounds/run.mjs": "95d7505f58f8075f0afccfce650fc37bdc15dbf81d827c60022f4d4256f826b6",
+    "reports/defense-tenth/step4-rebounds/worker.mjs": "9434203714843f2ece38ee60f00b542989683be553a320da6d0a2a67fe8e2c27"
+  }
+}

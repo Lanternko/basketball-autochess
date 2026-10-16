@@ -1,0 +1,6 @@
+"""Heldout grouped diagnostic for selected cards; never a card input."""
+from defense_sixth_data import *
+d=Data(41);s=read('reports/defense-sixth/selection.json');p=read(f"reports/defense-sixth/pre41-{s['cardVersion']}-projection.json");values={r['id']:r['after'] for r in p['players']};off=np.array([values[i]['offense'] for i in d.pids]);de=np.array([values[i]['defenseAllowed'] for i in d.pids]);w=np.asarray(d.X[d.train,:d.P].T@d.n[d.train]).ravel();wd=np.asarray(d.X[d.train,d.P:].T@d.n[d.train]).ravel();offset=np.log(np.clip(d.leaguePPP+(d.X[:,:d.P]@(off-np.average(off,weights=w))+d.X[:,d.P:]@(de-np.average(de,weights=wd)))/100,.5,1.8));b,cv=choose(d,d.test,offset);effects=np.column_stack((100*d.leaguePPP*b[1:1+d.P],100*d.leaguePPP*b[1+d.P:]));exposure=np.asarray(d.X[d.test,:d.P].T@d.n[d.test]).ravel();groups=[]
+for lo,hi in [(0,100),(100,400),(400,800),(800,1200),(1200,10000)]:
+ m=(d.minutes>=lo)&(d.minutes<hi)&(exposure>0);w=exposure[m];groups.append(dict(trainMinutes=[lo,hi],players=int(m.sum()),offenseObservedMinusCard=float(w@effects[m,0]/w.sum()),defenseAllowedObservedMinusCard=float(w@effects[m,1]/w.sum()),netObservedMinusCard=float(w@(effects[m,0]-effects[m,1])/w.sum())))
+q=read('reports/defense-sixth/diagnosis.json');q['newCardMinuteGroups']=groups;q['newCardPostDiagnosticCV']=cv;save('diagnosis.json',q);print(groups,flush=True)

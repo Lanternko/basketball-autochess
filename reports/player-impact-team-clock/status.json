@@ -1,0 +1,17 @@
+{
+  "version": "team-only-clock-1",
+  "enabled": true,
+  "changesGameOutcomes": false,
+  "verification": {
+    "games": 240,
+    "clockViolationsReclassified": 393,
+    "scoreAndTeamStatsExactParity": true,
+    "otherPlayerStatsExactParity": true,
+    "definition": "Individual TOV + team clock TOV = team TOV; all cached 2025-26 shot-clock PBP events have personId0."
+  },
+  "hashes": {
+    "src/individual_team_accounting.js": "f6ad522ff4712d5e7202b799ef7b7672057654942694f3d500f3e3d7d4054e09",
+    "reports\\player-impact-team-clock\\engine.mjs": "b0ea36160c204f20ea2e5278964e2d24199acc9c4e2399b987c7fa7e07fc9c9a",
+    "reports\\player-impact-team-clock\\season-source.mjs": "6e189e8908114ba2ae573caa57179eecf5951b3ce2396285eda4f0f6dd390a56"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "version": "observed-opportunity-flow-2",
+  "seasons": [
+    "2022-23",
+    "2023-24",
+    "2024-25",
+    "2025-26"
+  ],
+  "seeds": [
+    20261012,
+    20261013,
+    20261014
+  ],
+  "variants": [
+    "opportunity-flow"
+  ],
+  "design": "Self make-rate / predicted FG-event probability; AST-rate / expected receiver FG-event probability. Each passing opportunity adds observed pass-stolen rate, conditioned on current measured defense pressure. One creation pass ends with receiver shot. A decision is already conditioned on finding a receiver, replacing the extra legacy 70-default open gate. No player-name or ranking offsets.",
+  "limits": "Same-season role inputs, all seasons previously seen. Diagnostic mechanics, not prospective validation. Current model still lacks measured speed, handle/offBall/screen/breakDbl remain 70. No measured miss-level assisted shot labels.",
+  "hashes": {
+    "reports/player-impact-v2/engine.mjs": "04cd748f8a23faf867cb7d0896a6ba0bb3632af1940a5933f27494797939d8d3",
+    "reports/player-impact-v2/model.mjs": "ca10ea2ecb22152113da7694632b07bc4dc174fbeebc2f4fda4d7e96b6ac5a56",
+    "reports/player-impact-v2/input.mjs": "ed81ab761d3b2a5156af4bde993d3f31c8870eee1e65f50cca136c2f108e0e11",
+    "reports/player-impact-v2/worker.mjs": "fb65bfa5faac10c559681b0c8db3291317266b754cb1d34a1e819d1e2bc9fd77",
+    "reports/player-impact-v2/run.mjs": "621fc50288ce99e29e9313c9020714ac93a61e10d69dc295b5177efc3cf8b117",
+    "reports/player-impact-v2/2022-23-risk.json": "0289bce7fa6e8922272c291fde6439f0004067515265b2e7168cd128faca7073",
+    "reports/player-impact-v2/2023-24-risk.json": "0e0b119a5de02561e0d1fc296cd544bd6b8ce4aeba721ddccabcb523ebbe316d",
+    "reports/player-impact-v2/2024-25-risk.json": "826bde481f0d418eb0f3546a3a7f3c2993bdf48555a97173a67d7e8630547a47",
+    "reports/player-impact-v2/2025-26-risk.json": "76001616125a17778b409149994e6d45e9f944520885564ee8867b467be491d9",
+    "reports/player-impact-v1/input.mjs": "81884844d893739e7a6f6b0938ac27a6efd3a8be5050bc9af17cfb3120b75e7c",
+    "src/probability_model.js": "13b175efac436d3c560fd39389f3486225ab90bfbc996d6802ee76ce461aad87",
+    "src/defense_fourth_game.js": "c3611d0c72f49fdd4b855184d7bc79c3e6cc9780c2c6eb836aa10cbf66ad022a"
+  }
+}

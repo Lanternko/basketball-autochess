@@ -1,0 +1,39 @@
+{
+  "version": "oreb-path-diagnostic-1",
+  "registeredUTC": "2026-10-15T00:36:28.370115+00:00",
+  "seasons": [
+    "2022-23",
+    "2023-24",
+    "2024-25",
+    "2025-26"
+  ],
+  "seeds": [
+    20261012,
+    20261013,
+    20261014
+  ],
+  "base": "pure-oreb-turnover-time-1, exact same card/time/constants as full-possession diagnostic",
+  "scope": "measurement and proposal only; no engine change; all four seasons seen answers",
+  "definitions": {
+    "sample": "same valid individual FG OREB anchors, possession boundaries and special-FT exclusions as previous diagnostic; primary only first anchor per possession",
+    "routes": [
+      "fg_short",
+      "fg_mid",
+      "fg_long",
+      "ft_first",
+      "loss_before_attempt",
+      "period_end",
+      "other"
+    ],
+    "route": "first FG, ordinary FT or ownership loss after anchor; fouls without FTs are not terminal; if none, period_end",
+    "FG": "first FG after anchor, whether or not FT precedes it; report zone shares, make rate, direct first FG points and remaining points separately",
+    "recovery": "after first FG miss, first subsequent decisive FG/FT/loss/rebound; only own FG rebound means recovery; separate player/team",
+    "loss": "pass steal, touch steal/turnover, clock violation in sim; any turnover or defensive rebound in real; no literal engine TOV means no unsupported type inference",
+    "decomposition": "symmetric exact identity total delta=sum((p_sim-p_real)*(v_sim+v_real)/2 + (v_sim-v_real)*(p_sim+p_real)/2); arithmetic accounting not causal effect",
+    "uncertainty": "20000 franchise + seed paired cross-season bootstrap, equal season; descriptive only",
+    "parity": "exact same matches/teams and previous fullOreb rows projected to old fields",
+    "retention": "keep individual OREB allocation as independent box-score accuracy improvement"
+  },
+  "bootstrapSeed": 20261017,
+  "bootstrapDraws": 20000
+}

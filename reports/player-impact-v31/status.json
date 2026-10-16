@@ -1,0 +1,35 @@
+{
+  "officialModelAdopted": false,
+  "goalComplete": false,
+  "fullOvrThisVersion": false,
+  "latestCompleteOvrVersion": 24,
+  "failedWinGateSeasons": [
+    "2023-24",
+    "2024-25",
+    "2025-26"
+  ],
+  "targetPlayerColumns": 176,
+  "fullValidationSeasons": 4,
+  "seeds": 3,
+  "games": 28023,
+  "probePlayers": 10,
+  "probeGames": 9600,
+  "sourceRoleCards": 2262,
+  "sourceContextStates": 270090,
+  "sourceSelfRestrictionAdopted": false,
+  "worsenedIndividualMetrics": [
+    "pts36",
+    "ast36",
+    "tov36",
+    "stl36",
+    "blk36",
+    "oreb36",
+    "fga36",
+    "fg3a36",
+    "fta36",
+    "fgPct",
+    "threePct",
+    "tovPer100Uses"
+  ],
+  "scope": "Hypothesis experiment; source self rate is not a demonstrated capability maximum. All 10 paired version-change intervals overlap zero."
+}

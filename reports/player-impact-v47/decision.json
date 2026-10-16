@@ -1,0 +1,54 @@
+{
+  "version": "v47",
+  "adopted": true,
+  "adoptionScope": "Measured NBA offense FT-accuracy development baseline layered on frozen v46 defense; no product preset or OVR change.",
+  "gates": {
+    "everySeasonFTmaeImproved": true,
+    "teamPPGmeanNonRegression": true,
+    "coarseDefenseMeanWithinPredeclared005pp": true,
+    "fitVerified": true,
+    "runtimeVerified": true
+  },
+  "fourSeasonMean": {
+    "individualFTmae_pp": {
+      "v46": 3.143841853833899,
+      "v47": 1.840556880337581
+    },
+    "teamPPGmae": {
+      "v46": 2.4021341463414645,
+      "v47": 2.323170731707317
+    },
+    "defenseMAE": {
+      "onshortFGpct": {
+        "v46": 1.0483650616157285,
+        "v47": 1.0705631933037956
+      },
+      "onlongFGpct": {
+        "v46": 1.238656876499211,
+        "v47": 1.215872219410639
+      },
+      "onshortShare": {
+        "v46": 0.8873528586758742,
+        "v47": 0.906535065930423
+      },
+      "onlongShare": {
+        "v46": 0.9035547412246656,
+        "v47": 0.909109454408672
+      },
+      "onFGA48": {
+        "v46": 2.5149473450812247,
+        "v47": 2.53590707479471
+      }
+    }
+  },
+  "gameDefaultChanged": false,
+  "ovrRecomputed": false,
+  "namedPlayerExceptions": false,
+  "remainingWork": [
+    "Curry teammate two-point accuracy and overall spacing attribution remain unmodified.",
+    "Curry FTA and shot-volume residuals, AST and TOV remain separately tracked.",
+    "Measured gravity, pull-up/catch-and-shoot and rim-only teammate offense need independent source measurement.",
+    "v46 fine-zone defense limitations remain; game default and OVR have not been promoted."
+  ],
+  "scope": "Four already-seen seasons reconstructed using source appearances and minute targets; not future prediction. Source FT count prior chosen without2025-26; runtime adoption evaluated on all four reconstructed seasons."
+}

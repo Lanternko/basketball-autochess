@@ -1,0 +1,167 @@
+{
+  "note": "Seed sensitivity only; three seeds do not constitute a confidence interval or future-game validation.",
+  "rows": [
+    {
+      "version": "v41",
+      "seed": 20261012,
+      "metrics": {
+        "short": {
+          "onFGpct": 55.323076923076925,
+          "offFGpct": 56.27753303964758,
+          "deltaFGpct": -0.954456116570654,
+          "deltaShare": 2.3419302853698554
+        },
+        "long": {
+          "onFGpct": 35.00697350069735,
+          "offFGpct": 38.83388338833883,
+          "deltaFGpct": -3.8269098876414844,
+          "deltaShare": -3.2452164335430354
+        }
+      }
+    },
+    {
+      "version": "v41",
+      "seed": 20261013,
+      "metrics": {
+        "short": {
+          "onFGpct": 54.646153846153844,
+          "offFGpct": 53.23741007194245,
+          "deltaFGpct": 1.4087437742113949,
+          "deltaShare": -1.1078046105691186
+        },
+        "long": {
+          "onFGpct": 36.72354948805461,
+          "offFGpct": 38.97497020262217,
+          "deltaFGpct": -2.2514207145675584,
+          "deltaShare": 0.8884712924672726
+        }
+      }
+    },
+    {
+      "version": "v41",
+      "seed": 20261014,
+      "metrics": {
+        "short": {
+          "onFGpct": 56.07940446650124,
+          "offFGpct": 57.5192096597146,
+          "deltaFGpct": -1.4398051932133598,
+          "deltaShare": 2.186195459484189
+        },
+        "long": {
+          "onFGpct": 38.65425912670007,
+          "offFGpct": 37.91907514450867,
+          "deltaFGpct": 0.7351839821914012,
+          "deltaShare": -1.8618226286780057
+        }
+      }
+    },
+    {
+      "version": "v42",
+      "seed": 20261012,
+      "metrics": {
+        "short": {
+          "onFGpct": 56.662180349932704,
+          "offFGpct": 57.15823466092573,
+          "deltaFGpct": -0.4960543109930242,
+          "deltaShare": -2.3483956325147872
+        },
+        "long": {
+          "onFGpct": 35.18394648829432,
+          "offFGpct": 35.98574821852731,
+          "deltaFGpct": -0.8018017302329952,
+          "deltaShare": 2.2228522411712532
+        }
+      }
+    },
+    {
+      "version": "v42",
+      "seed": 20261013,
+      "metrics": {
+        "short": {
+          "onFGpct": 53.796236210253085,
+          "offFGpct": 53.72507869884575,
+          "deltaFGpct": 0.0711575114073355,
+          "deltaShare": -0.945354003898565
+        },
+        "long": {
+          "onFGpct": 35.047361299052774,
+          "offFGpct": 39.08450704225352,
+          "deltaFGpct": -4.037145743200746,
+          "deltaShare": 2.0433151932597653
+        }
+      }
+    },
+    {
+      "version": "v42",
+      "seed": 20261014,
+      "metrics": {
+        "short": {
+          "onFGpct": 52.94888597640891,
+          "offFGpct": 53.253253253253256,
+          "deltaFGpct": -0.3043672768443457,
+          "deltaShare": -2.8566200390370824
+        },
+        "long": {
+          "onFGpct": 39.37896965419901,
+          "offFGpct": 37.4390243902439,
+          "deltaFGpct": 1.93994526395511,
+          "deltaShare": 2.5027334996023995
+        }
+      }
+    },
+    {
+      "version": "v44",
+      "seed": 20261012,
+      "metrics": {
+        "short": {
+          "onFGpct": 55.309734513274336,
+          "offFGpct": 58.5792349726776,
+          "deltaFGpct": -3.269500459403261,
+          "deltaShare": -2.603936602623591
+        },
+        "long": {
+          "onFGpct": 37.0026525198939,
+          "offFGpct": 38.36477987421384,
+          "deltaFGpct": -1.362127354319938,
+          "deltaShare": 1.4910899904881916
+        }
+      }
+    },
+    {
+      "version": "v44",
+      "seed": 20261013,
+      "metrics": {
+        "short": {
+          "onFGpct": 53.83655645664379,
+          "offFGpct": 53.432494279176204,
+          "deltaFGpct": 0.404062177467587,
+          "deltaShare": 1.3256540124764769
+        },
+        "long": {
+          "onFGpct": 33.90501319261214,
+          "offFGpct": 34.981905910735826,
+          "deltaFGpct": -1.0768927181236876,
+          "deltaShare": 1.131107799847804
+        }
+      }
+    },
+    {
+      "version": "v44",
+      "seed": 20261014,
+      "metrics": {
+        "short": {
+          "onFGpct": 52.493261455525605,
+          "offFGpct": 54.27350427350427,
+          "deltaFGpct": -1.7802428179786673,
+          "deltaShare": -1.9590723480918513
+        },
+        "long": {
+          "onFGpct": 36.78082191780822,
+          "offFGpct": 38.83495145631068,
+          "deltaFGpct": -2.0541295385024583,
+          "deltaShare": 2.8068499460764755
+        }
+      }
+    }
+  ]
+}

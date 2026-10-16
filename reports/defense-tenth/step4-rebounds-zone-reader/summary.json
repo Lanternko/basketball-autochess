@@ -1,0 +1,812 @@
+{
+  "seasons": {
+    "2022-23": {
+      "firstAnchors": 22211,
+      "firstFgEvents": 18586,
+      "oldFirstFgZoneCounts": {
+        "short": 9808,
+        "mid": 3818,
+        "long": 4960
+      },
+      "newFirstFgZoneCounts": {
+        "short": {
+          "n": 12646,
+          "made": 7556
+        },
+        "mid": {
+          "n": 965,
+          "made": 396
+        },
+        "long": {
+          "n": 4960,
+          "made": 1822
+        },
+        "unknown": {
+          "n": 15,
+          "made": 3
+        }
+      },
+      "quickProxy": {
+        "oldQuickProxy": 0.30178740263833237,
+        "quickProxy": 0.4263653144838143,
+        "quickUnknown": 0.0004952501013011571
+      },
+      "allFG": {
+        "n": 217221,
+        "repaired": 3293,
+        "unknown": 169,
+        "transitions": {
+          "mid->mid": 25578,
+          "short->short": 104011,
+          "long->long": 84170,
+          "mid->unknown": 169,
+          "mid->short": 3293
+        }
+      },
+      "unresolvedExamples": [
+        {
+          "id": "0022200001",
+          "actionNumber": 384,
+          "playerId": 1627759,
+          "old": "mid",
+          "zone": "unknown",
+          "reason": "unresolved-mid-conflict",
+          "area": "Mid-Range",
+          "subType": "Layup",
+          "descriptor": "running",
+          "shotDistance": 9.88,
+          "geometryFeet": 9.885450189841118
+        },
+        {
+          "id": "0022200001",
+          "actionNumber": 495,
+          "playerId": 1630178,
+          "old": "mid",
+          "zone": "unknown",
+          "reason": "unresolved-mid-conflict",
+          "area": "Mid-Range",
+          "subType": "Layup",
+          "descriptor": "driving",
+          "shotDistance": 12.67,
+          "geometryFeet": 12.667899819559668
+        },
+        {
+          "id": "0022200001",
+          "actionNumber": 555,
+          "playerId": 1630178,
+          "old": "mid",
+          "zone": "unknown",
+          "reason": "unresolved-mid-conflict",
+          "area": "Mid-Range",
+          "subType": "Layup",
+          "descriptor": "driving",
+          "shotDistance": 9.07,
+          "geometryFeet": 9.06473639644405
+        },
+        {
+          "id": "0022200004",
+          "actionNumber": 90,
+          "playerId": 203078,
+          "old": "mid",
+          "zone": "unknown",
+          "reason": "unresolved-mid-conflict",
+          "area": "Mid-Range",
+          "subType": "Layup",
+          "descriptor": "driving finger roll",
+          "shotDistance": 12.12,
+          "geometryFeet": 12.119088012773856
+        },
+        {
+          "id": "0022200011",
+          "actionNumber": 201,
+          "playerId": 1626179,
+          "old": "mid",
+          "zone": "unknown",
+          "reason": "unresolved-mid-conflict",
+          "area": "Mid-Range",
+          "subType": "Layup",
+          "descriptor": "driving",
+          "shotDistance": 13.11,
+          "geometryFeet": 13.114094687213779
+        },
+        {
+          "id": "0022200017",
+          "actionNumber": 228,
+          "playerId": 202330,
+          "old": "mid",
+          "zone": "unknown",
+          "reason": "unresolved-mid-conflict",
+          "area": "Mid-Range",
+          "subType": "Layup",
+          "descriptor": "driving",
+          "shotDistance": 10.02,
+          "geometryFeet": 10.028488574475821
+        },
+        {
+          "id": "0022200026",
+          "actionNumber": 378,
+          "playerId": 203110,
+          "old": "mid",
+          "zone": "unknown",
+          "reason": "unresolved-mid-conflict",
+          "area": "Mid-Range",
+          "subType": "Layup",
+          "shotDistance": 9.99,
+          "geometryFeet": 9.989498583313788
+        },
+        {
+          "id": "0022200026",
+          "actionNumber": 413,
+          "playerId": 1628971,
+          "old": "mid",
+          "zone": "unknown",
+          "reason": "unresolved-mid-conflict",
+          "area": "Mid-Range",
+          "subType": "Layup",
+          "descriptor": "driving",
+          "shotDistance": 11.01,
+          "geometryFeet": 11.00442254529721
+        },
+        {
+          "id": "0022200026",
+          "actionNumber": 600,
+          "playerId": 201939,
+          "old": "mid",
+          "zone": "unknown",
+          "reason": "unresolved-mid-conflict",
+          "area": "Mid-Range",
+          "subType": "Layup",
+          "shotDistance": 8.54,
+          "geometryFeet": 8.539114060655251
+        },
+        {
+          "id": "0022200033",
+          "actionNumber": 133,
+          "playerId": 1630224,
+          "old": "mid",
+          "zone": "unknown",
+          "reason": "unresolved-mid-conflict",
+          "area": "Mid-Range",
+          "subType": "Layup",
+          "descriptor": "driving",
+          "shotDistance": 12.3,
+          "geometryFeet": 12.297000791075273
+        },
+        {
+          "id": "0022200040",
+          "actionNumber": 271,
+          "playerId": 1631117,
+          "old": "mid",
+          "zone": "unknown",
+          "reason": "unresolved-mid-conflict",
+          "area": "Mid-Range",
+          "subType": "Layup",
+          "descriptor": "driving",
+          "shotDistance": 22.15,
+          "geometryFeet": 22.147386573406354
+        },
+        {
+          "id": "0022200071",
+          "actionNumber": 11,
+          "playerId": 1626162,
+          "old": "mid",
+          "zone": "unknown",
+          "reason": "unresolved-mid-conflict",
+          "area": "Mid-Range",
+          "subType": "Layup",
+          "descriptor": "driving",
+          "shotDistance": 12.2,
+          "geometryFeet": 12.20456921502505
+        }
+      ]
+    },
+    "2023-24": {
+      "firstAnchors": 22459,
+      "firstFgEvents": 18914,
+      "oldFirstFgZoneCounts": {
+        "short": 10172,
+        "mid": 3531,
+        "long": 5211
+      },
+      "newFirstFgZoneCounts": {
+        "short": {
+          "n": 12623,
+          "made": 7441
+        },
+        "mid": {
+          "n": 1057,
+          "made": 437
+        },
+        "long": {
+          "n": 5211,
+          "made": 1973
+        },
+        "unknown": {
+          "n": 23,
+          "made": 10
+        }
+      },
+      "quickProxy": {
+        "oldQuickProxy": 0.31711118037312436,
+        "quickProxy": 0.42374994434302504,
+        "quickUnknown": 0.0006678836991851818
+      },
+      "allFG": {
+        "n": 218693,
+        "repaired": 2870,
+        "unknown": 225,
+        "transitions": {
+          "short->short": 104756,
+          "long->long": 86352,
+          "mid->mid": 24490,
+          "mid->short": 2870,
+          "mid->unknown": 225
+        }
+      },
+      "unresolvedExamples": [
+        {
+          "id": "0022300084",
+          "actionNumber": 175,
+          "playerId": 1630549,
+          "old": "mid",
+          "zone": "unknown",
+          "reason": "unresolved-mid-conflict",
+          "area": "Mid-Range",
+          "subType": "DUNK",
+          "descriptor": "putback",
+          "shotDistance": 10.78,
+          "geometryFeet": 10.778416634188822
+        },
+        {
+          "id": "0022300087",
+          "actionNumber": 465,
+          "playerId": 1630537,
+          "old": "mid",
+          "zone": "unknown",
+          "reason": "unresolved-mid-conflict",
+          "area": "Mid-Range",
+          "subType": "Layup",
+          "descriptor": "running",
+          "shotDistance": 9.62,
+          "geometryFeet": 9.623348500750028
+        },
+        {
+          "id": "0022300088",
+          "actionNumber": 596,
+          "playerId": 203897,
+          "old": "mid",
+          "zone": "unknown",
+          "reason": "unresolved-mid-conflict",
+          "area": "Mid-Range",
+          "subType": "Layup",
+          "descriptor": "driving",
+          "shotDistance": 14.1,
+          "geometryFeet": 14.100490813192824
+        },
+        {
+          "id": "0022300103",
+          "actionNumber": 206,
+          "playerId": 1628398,
+          "old": "mid",
+          "zone": "unknown",
+          "reason": "unresolved-mid-conflict",
+          "area": "Mid-Range",
+          "subType": "Layup",
+          "shotDistance": 10.73,
+          "geometryFeet": 10.72987849020474
+        },
+        {
+          "id": "0022300116",
+          "actionNumber": 333,
+          "playerId": 203507,
+          "old": "mid",
+          "zone": "unknown",
+          "reason": "unresolved-mid-conflict",
+          "area": "Mid-Range",
+          "subType": "Layup",
+          "descriptor": "driving",
+          "shotDistance": 8.18,
+          "geometryFeet": 8.17896118501571
+        },
+        {
+          "id": "0022300118",
+          "actionNumber": 96,
+          "playerId": 1627759,
+          "old": "mid",
+          "zone": "unknown",
+          "reason": "unresolved-mid-conflict",
+          "area": "Mid-Range",
+          "subType": "Layup",
+          "descriptor": "driving",
+          "shotDistance": 8.63,
+          "geometryFeet": 8.626842098629321
+        },
+        {
+          "id": "0022300118",
+          "actionNumber": 172,
+          "playerId": 1628369,
+          "old": "mid",
+          "zone": "unknown",
+          "reason": "unresolved-mid-conflict",
+          "area": "Mid-Range",
+          "subType": "Layup",
+          "descriptor": "driving",
+          "shotDistance": 10.7,
+          "geometryFeet": 10.706861679594457
+        },
+        {
+          "id": "0022300122",
+          "actionNumber": 541,
+          "playerId": 1628415,
+          "old": "mid",
+          "zone": "unknown",
+          "reason": "unresolved-mid-conflict",
+          "area": "Mid-Range",
+          "subType": "Layup",
+          "shotDistance": 9.17,
+          "geometryFeet": 9.166855377042747
+        },
+        {
+          "id": "0022300001",
+          "actionNumber": 74,
+          "playerId": 1630169,
+          "old": "mid",
+          "zone": "unknown",
+          "reason": "unresolved-mid-conflict",
+          "area": "Mid-Range",
+          "subType": "Layup",
+          "descriptor": "driving",
+          "shotDistance": 9.44,
+          "geometryFeet": 9.432341549823857
+        },
+        {
+          "id": "0022300002",
+          "actionNumber": 239,
+          "playerId": 1628973,
+          "old": "mid",
+          "zone": "unknown",
+          "reason": "unresolved-mid-conflict",
+          "area": "Mid-Range",
+          "subType": "Layup",
+          "descriptor": "driving",
+          "shotDistance": 13.03,
+          "geometryFeet": 13.027352651080289
+        },
+        {
+          "id": "0022300135",
+          "actionNumber": 456,
+          "playerId": 1629027,
+          "old": "mid",
+          "zone": "unknown",
+          "reason": "unresolved-mid-conflict",
+          "area": "Mid-Range",
+          "subType": "Layup",
+          "shotDistance": 10.24,
+          "geometryFeet": 10.239549217850897
+        },
+        {
+          "id": "0022300140",
+          "actionNumber": 255,
+          "playerId": 1628960,
+          "old": "mid",
+          "zone": "unknown",
+          "reason": "unresolved-mid-conflict",
+          "area": "Mid-Range",
+          "subType": "Layup",
+          "descriptor": "driving",
+          "shotDistance": 9.91,
+          "geometryFeet": 9.91691716244769
+        }
+      ]
+    },
+    "2024-25": {
+      "firstAnchors": 23443,
+      "firstFgEvents": 19660,
+      "oldFirstFgZoneCounts": {
+        "short": 10844,
+        "mid": 2820,
+        "long": 5996
+      },
+      "newFirstFgZoneCounts": {
+        "short": {
+          "n": 12711,
+          "made": 7357
+        },
+        "mid": {
+          "n": 934,
+          "made": 384
+        },
+        "long": {
+          "n": 5996,
+          "made": 2276
+        },
+        "unknown": {
+          "n": 19,
+          "made": 6
+        }
+      },
+      "quickProxy": {
+        "oldQuickProxy": 0.31783474811244294,
+        "quickProxy": 0.39478735656699226,
+        "quickUnknown": 0.0005118798788550954
+      },
+      "allFG": {
+        "n": 219344,
+        "repaired": 2200,
+        "unknown": 311,
+        "transitions": {
+          "long->long": 92373,
+          "short->short": 103242,
+          "mid->mid": 21218,
+          "mid->short": 2200,
+          "mid->unknown": 311
+        }
+      },
+      "unresolvedExamples": [
+        {
+          "id": "0022400075",
+          "actionNumber": 469,
+          "playerId": 203999,
+          "old": "mid",
+          "zone": "unknown",
+          "reason": "unresolved-mid-conflict",
+          "area": "Mid-Range",
+          "subType": "DUNK",
+          "shotDistance": 9.3,
+          "geometryFeet": 9.302475570349232
+        },
+        {
+          "id": "0022400078",
+          "actionNumber": 752,
+          "playerId": 1642347,
+          "old": "mid",
+          "zone": "unknown",
+          "reason": "unresolved-mid-conflict",
+          "area": "Mid-Range",
+          "subType": "Layup",
+          "descriptor": "driving",
+          "shotDistance": 10.84,
+          "geometryFeet": 10.84254447563323
+        },
+        {
+          "id": "0022400098",
+          "actionNumber": 151,
+          "playerId": 1641730,
+          "old": "mid",
+          "zone": "unknown",
+          "reason": "unresolved-mid-conflict",
+          "area": "Mid-Range",
+          "subType": "Layup",
+          "descriptor": "driving",
+          "shotDistance": 9.76,
+          "geometryFeet": 9.75700062125499
+        },
+        {
+          "id": "0022400101",
+          "actionNumber": 367,
+          "playerId": 1641764,
+          "old": "mid",
+          "zone": "unknown",
+          "reason": "unresolved-mid-conflict",
+          "area": "Mid-Range",
+          "subType": "Layup",
+          "descriptor": "driving finger roll",
+          "shotDistance": 9.19,
+          "geometryFeet": 9.184715729545326
+        },
+        {
+          "id": "0022400111",
+          "actionNumber": 56,
+          "playerId": 203076,
+          "old": "mid",
+          "zone": "unknown",
+          "reason": "unresolved-mid-conflict",
+          "area": "Mid-Range",
+          "subType": "Layup",
+          "descriptor": "alley-oop",
+          "shotDistance": 23.09,
+          "geometryFeet": 23.084467518818627
+        },
+        {
+          "id": "0022400122",
+          "actionNumber": 456,
+          "playerId": 1630696,
+          "old": "mid",
+          "zone": "unknown",
+          "reason": "unresolved-mid-conflict",
+          "area": "Mid-Range",
+          "subType": "Layup",
+          "descriptor": "running",
+          "shotDistance": 11.2,
+          "geometryFeet": 11.19975945748448
+        },
+        {
+          "id": "0022400137",
+          "actionNumber": 172,
+          "playerId": 1629628,
+          "old": "mid",
+          "zone": "unknown",
+          "reason": "unresolved-mid-conflict",
+          "area": "Mid-Range",
+          "subType": "Layup",
+          "descriptor": "driving",
+          "shotDistance": 11.13,
+          "geometryFeet": 11.127127162604792
+        },
+        {
+          "id": "0022400147",
+          "actionNumber": 249,
+          "playerId": 1629639,
+          "old": "mid",
+          "zone": "unknown",
+          "reason": "unrecognized-area",
+          "subType": "Layup",
+          "descriptor": "driving",
+          "shotDistance": 4.29,
+          "geometryFeet": 4.289264049735824
+        },
+        {
+          "id": "0022400153",
+          "actionNumber": 629,
+          "playerId": 1631216,
+          "old": "mid",
+          "zone": "unknown",
+          "reason": "unresolved-mid-conflict",
+          "area": "Mid-Range",
+          "subType": "Layup",
+          "descriptor": "putback",
+          "shotDistance": 9.58,
+          "geometryFeet": 9.576832794620639
+        },
+        {
+          "id": "0022400155",
+          "actionNumber": 198,
+          "playerId": 1631218,
+          "old": "mid",
+          "zone": "unknown",
+          "reason": "unresolved-mid-conflict",
+          "area": "Mid-Range",
+          "subType": "DUNK",
+          "descriptor": "alley-oop",
+          "shotDistance": 9.01,
+          "geometryFeet": 9.002748282153169
+        },
+        {
+          "id": "0022400155",
+          "actionNumber": 585,
+          "playerId": 1642267,
+          "old": "mid",
+          "zone": "unknown",
+          "reason": "unresolved-mid-conflict",
+          "area": "Mid-Range",
+          "subType": "Layup",
+          "descriptor": "driving",
+          "shotDistance": 9.8,
+          "geometryFeet": 9.804464220765013
+        },
+        {
+          "id": "0022400163",
+          "actionNumber": 380,
+          "playerId": 1630532,
+          "old": "mid",
+          "zone": "unknown",
+          "reason": "unresolved-mid-conflict",
+          "area": "Mid-Range",
+          "subType": "Layup",
+          "shotDistance": 10.12,
+          "geometryFeet": 10.121881272421014
+        }
+      ]
+    },
+    "2025-26": {
+      "firstAnchors": 23977,
+      "firstFgEvents": 20111,
+      "oldFirstFgZoneCounts": {
+        "short": 10959,
+        "mid": 3019,
+        "long": 6133
+      },
+      "newFirstFgZoneCounts": {
+        "short": {
+          "n": 13004,
+          "made": 7714
+        },
+        "mid": {
+          "n": 947,
+          "made": 375
+        },
+        "long": {
+          "n": 6133,
+          "made": 2318
+        },
+        "unknown": {
+          "n": 27,
+          "made": 9
+        }
+      },
+      "quickProxy": {
+        "oldQuickProxy": 0.3130082996204696,
+        "quickProxy": 0.39587938441005965,
+        "quickUnknown": 0.0007507194394628185
+      },
+      "allFG": {
+        "n": 218594,
+        "repaired": 2404,
+        "unknown": 264,
+        "transitions": {
+          "long->long": 90741,
+          "short->short": 103349,
+          "mid->mid": 21836,
+          "mid->short": 2404,
+          "mid->unknown": 264
+        }
+      },
+      "unresolvedExamples": [
+        {
+          "id": "0022500080",
+          "actionNumber": 55,
+          "playerId": 1629008,
+          "old": "mid",
+          "zone": "unknown",
+          "reason": "unresolved-mid-conflict",
+          "area": "Mid-Range",
+          "subType": "Layup",
+          "descriptor": "driving",
+          "shotDistance": 10.9,
+          "geometryFeet": 10.89478652141325
+        },
+        {
+          "id": "0022500080",
+          "actionNumber": 547,
+          "playerId": 1630533,
+          "old": "mid",
+          "zone": "unknown",
+          "reason": "unresolved-mid-conflict",
+          "area": "Mid-Range",
+          "subType": "Layup",
+          "descriptor": "running",
+          "shotDistance": 8.64,
+          "geometryFeet": 8.642417029564688
+        },
+        {
+          "id": "0022500083",
+          "actionNumber": 189,
+          "playerId": 1630178,
+          "old": "mid",
+          "zone": "unknown",
+          "reason": "unresolved-mid-conflict",
+          "area": "Mid-Range",
+          "subType": "Layup",
+          "descriptor": "driving",
+          "shotDistance": 9.98,
+          "geometryFeet": 9.98261228714256
+        },
+        {
+          "id": "0022500086",
+          "actionNumber": 456,
+          "playerId": 1628398,
+          "old": "mid",
+          "zone": "unknown",
+          "reason": "unresolved-mid-conflict",
+          "area": "Mid-Range",
+          "subType": "Layup",
+          "descriptor": "driving",
+          "shotDistance": 9.81,
+          "geometryFeet": 9.813215986939278
+        },
+        {
+          "id": "0022500006",
+          "actionNumber": 207,
+          "playerId": 1627750,
+          "old": "mid",
+          "zone": "unknown",
+          "reason": "unresolved-mid-conflict",
+          "area": "Mid-Range",
+          "subType": "Layup",
+          "descriptor": "driving",
+          "shotDistance": 9.2,
+          "geometryFeet": 9.205017353710835
+        },
+        {
+          "id": "0022500006",
+          "actionNumber": 375,
+          "playerId": 201939,
+          "old": "mid",
+          "zone": "unknown",
+          "reason": "unresolved-mid-conflict",
+          "area": "Mid-Range",
+          "subType": "Layup",
+          "descriptor": "driving",
+          "shotDistance": 11.63,
+          "geometryFeet": 11.624142431213821
+        },
+        {
+          "id": "0022500092",
+          "actionNumber": 353,
+          "playerId": 1629628,
+          "old": "mid",
+          "zone": "unknown",
+          "reason": "unresolved-mid-conflict",
+          "area": "Mid-Range",
+          "subType": "Layup",
+          "descriptor": "driving",
+          "shotDistance": 10.54,
+          "geometryFeet": 10.53783373349465
+        },
+        {
+          "id": "0022500093",
+          "actionNumber": 114,
+          "playerId": 1642263,
+          "old": "mid",
+          "zone": "unknown",
+          "reason": "unresolved-mid-conflict",
+          "area": "Mid-Range",
+          "subType": "Layup",
+          "descriptor": "driving finger roll",
+          "shotDistance": 12.72,
+          "geometryFeet": 12.714668828290584
+        },
+        {
+          "id": "0022500101",
+          "actionNumber": 604,
+          "playerId": 1629027,
+          "old": "mid",
+          "zone": "unknown",
+          "reason": "unresolved-mid-conflict",
+          "area": "Mid-Range",
+          "subType": "Layup",
+          "descriptor": "running",
+          "shotDistance": 21.72,
+          "geometryFeet": 21.714219355101697
+        },
+        {
+          "id": "0022500105",
+          "actionNumber": 637,
+          "playerId": 203084,
+          "old": "mid",
+          "zone": "unknown",
+          "reason": "unresolved-mid-conflict",
+          "area": "Mid-Range",
+          "subType": "Layup",
+          "shotDistance": 10.71,
+          "geometryFeet": 10.708035963710923
+        },
+        {
+          "id": "0022500108",
+          "actionNumber": 145,
+          "playerId": 1628973,
+          "old": "mid",
+          "zone": "unknown",
+          "reason": "unresolved-mid-conflict",
+          "area": "Mid-Range",
+          "subType": "Layup",
+          "descriptor": "driving",
+          "shotDistance": 10.64,
+          "geometryFeet": 10.641581235788085
+        },
+        {
+          "id": "0022500119",
+          "actionNumber": 256,
+          "playerId": 1628392,
+          "old": "mid",
+          "zone": "unknown",
+          "reason": "unresolved-mid-conflict",
+          "area": "Mid-Range",
+          "subType": "Layup",
+          "descriptor": "cutting",
+          "shotDistance": 8.42,
+          "geometryFeet": 8.42141914034848
+        }
+      ]
+    }
+  },
+  "pooled": {
+    "quickProxy": {
+      "oldQuickProxy": 0.31243540768609235,
+      "quickProxy": 0.4101954999509728,
+      "quickUnknown": 0.0006064332797010632
+    },
+    "unknownFirstFgShare": 0.0010830169205712148,
+    "sourceQualityOnlyNotSimulationPerformance": true
+  }
+}

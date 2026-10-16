@@ -1,0 +1,49 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import {pathToFileURL} from 'node:url';
+const url=f=>pathToFileURL(path.resolve(f)).href;
+const encode=s=>'data:text/javascript;base64,'+Buffer.from(s).toString('base64');
+const link=(s,base,map={})=>s.replace(/from\s+(['"])(\.\.?\/[^'"]+)\1/g,(_,q,f)=>`from ${q}${map[f]??url(path.resolve(base,f))}${q}`);
+export function splitTurnoverSource(g){
+ g=g.replaceAll("\r\n","\n");
+ const dead="origin=opt.splitTurnoverTiming?'deadTurnover':'turnover';";
+ if(g.split("origin='turnover';").length!==5)throw Error('Turnover source count drift');
+ g=g.replaceAll("origin='turnover';",dead);
+ const pass="emit('STEAL',1-off,interceptor,{from:shooter,kind:'pass'});"+dead;
+ if(g.split(pass).length!==2)throw Error('Pass steal anchor drift');
+ g=g.replace(pass,"emit('STEAL',1-off,interceptor,{from:shooter,kind:'pass'});origin=opt.splitTurnoverTiming?'liveTurnover':'turnover';");
+ const touch='// A transition-state model is a separate future intervention.\n      '+dead;
+ if(g.split(touch).length!==2)throw Error('Touch turnover anchor drift');
+ return g.replace(touch,'// A transition-state model is a separate future intervention.\n      '+"origin=opt.splitTurnoverTiming?(live?'liveTurnover':'deadTurnover'):'turnover';");
+}
+let cached;
+export async function experimentalSeason(){
+  if(cached)return cached;
+  let g=fs.readFileSync('src/defense_fourth_game.js','utf8');
+  const anchor='    const offensive=rng()<chance, side=';
+  if(g.split(anchor).length!==2)throw Error('Rebound instrumentation anchor drift');
+  g=g.replace(anchor,`    if(!freeThrow&&(opt.individualOrebCard||opt.leagueOrbLogit))chance=reboundChance(os,ds,{zone,shooterIndex:slot,oldChance:chance,options:opt});\n${anchor}`);
+  const weights='opportunityReboundWeights(ls[side],{zone,side:offensive?\'offense\':\'defense\',shooterIndex:offensive?slot:-1})';
+  if(g.split(weights).length!==2)throw Error('Rebound recipient anchor drift');
+  g=g.replace(weights,"reboundWeights(ls[side],{zone,side:offensive?'offense':'defense',shooterIndex:offensive?slot:-1,freeThrow},opt)");
+  const ret='    return {end:!offensive,dead:false,putback:offensive && !freeThrow && rng()<M.putbackRate(ls[side][index],M.helpDefense(ds))?player:null};';
+  if(g.split(ret).length!==2)throw Error('Putback trace anchor drift');
+  g=g.replace(ret,`    if(opt.allocationObserver){const cfg={zone,side:'offense',shooterIndex:slot,freeThrow};const ow=opportunityReboundWeights(os,cfg),nw=reboundWeights(os,cfg,{individualOrebAllocation:true}),h=M.helpDefense(ds);opt.allocationObserver({offensive,freeThrow,oldExpected:ow.reduce((s,w,i)=>s+w*M.putbackRate(os[i],h),0),newExpected:nw.reduce((s,w,i)=>s+w*M.putbackRate(os[i],h),0),selectedExpected:offensive?M.putbackRate(ls[side][index],h):0});}\n${ret}`);
+  g=g.replace('    if (opt.replay) events.push({ type,', '    if (opt.eventObserver) opt.eventObserver({type,period,clock:clock/10,off:side,player,...extra});\n    if (opt.replay) events.push({ type,');
+  const timingAnchor='    const opportunityDeadline=opt.empiricalTiming?elapsed+empiricalDuration():null;';
+  if(g.split(timingAnchor).length!==2)throw Error('Putback timing anchor drift');
+  g=g.replace(timingAnchor,`    const opportunityDeadline=opt.empiricalTiming?elapsed+(opt.putbackTiming&&putback!==null?putbackDuration(opt.putbackCDF,clock,shotClock,putbackTimeRng):empiricalDuration()):null;\n    if(opt.durationObserver)opt.durationObserver({origin,putback:putback!==null,seconds:(opportunityDeadline-elapsed)/10,limit:Math.min(clock,shotClock)/10,off});`);
+  g=g.replace('  let origin=', '  const putbackTimeRng=makeRng(opt.seed^0x6A8B2341);\n  let origin=');
+  g=splitTurnoverSource(g);
+  const replace=(a,b)=>{if(g.split(a).length!==2)throw Error('Post OREB turnover anchor drift: '+a);g=g.replace(a,b);};
+  replace('  let origin=', '  let afterPlayerFgOreb=false;\n  let origin=');
+  replace('  const emit = (type, side=off, player=null, extra={}) => {', `  const emit = (type, side=off, player=null, extra={}) => {
+    if(['POSSESSION','PERIOD_START','PERIOD_END','FGM','FGX','FTM','FTX','STEAL','TOV','SHOT_CLOCK','DREB','TEAM_DREB','GAME_END','OVERTIME_LIMIT'].includes(type))afterPlayerFgOreb=false;
+    if(type==='OREB'&&!extra.freeThrow)afterPlayerFgOreb=true;`);
+  replace('if(rng()<Math.min(.95,p.pTovTouch*(opt.turnoverCategories?opt.touchTurnoverScale:1)*touchMultiplier)){','if(rng()<Math.min(.95,p.pTovTouch*(opt.turnoverCategories?opt.touchTurnoverScale:1)*touchMultiplier*(opt.postOrebTurnoverRisk&&afterPlayerFgOreb?opt.postOrebTouchMultiplier:1))){');
+
+  g=`import {putbackDuration} from '${url('reports/defense-tenth/step4-rebounds-putback-time/timing.mjs')}';\n`+g;
+  g=`import {reboundChance,reboundWeights} from '${url('reports/defense-tenth/step4-rebounds-allocation/model.mjs')}';\n`+link(g,'src');
+  const gu=encode(g),s=link(fs.readFileSync('src/defense_fourth_season.js','utf8'),'src',{'./defense_fourth_game.js':gu});
+  cached=(await import(encode(s))).runDefenseSeason;return cached;
+}

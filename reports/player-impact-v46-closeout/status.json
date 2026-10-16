@@ -1,0 +1,48 @@
+{
+  "version": "v46",
+  "stage": "defense",
+  "status": "closed-accepted",
+  "scope": "Accepted measured NBA defense development baseline; not a claim that the whole system meets a global accuracy standard. Product preset and published OVR are unchanged.",
+  "verification": {
+    "passed": true,
+    "jobs": 24,
+    "matches": 28023,
+    "allFrozenSourceAndOutputHashesPassed": true,
+    "selectionTargetExcludedAndMinimumPassed": true,
+    "onlyPaintCoefficientsChangedAndVerified": true,
+    "baselineScoreParityPassed": true,
+    "teamPlayerCoarseFineLedgersPassed": true,
+    "reportSHA256": "d39e1722269c7521d43113bb3c98961a87a3cdc46c05bb24ad81f6293f10e730",
+    "scoresSHA256": "69947a3a05f19b3d1dd24e49c9ae3aaed9a429265569f95369f2e5f8eef8db64",
+    "fineScoresSHA256": "dc3f1962670c49257d9cc9e74b1c0ca03d6d7c839d2fb7d93582ffee153340ce",
+    "decisionSHA256": "d4ca36e1cb9c77573b0c53cc4c6946e772b04eda8800633cac29ec71ad85b926"
+  },
+  "evidenceSHA256": {
+    "reports/player-impact-v46/report.md": "d39e1722269c7521d43113bb3c98961a87a3cdc46c05bb24ad81f6293f10e730",
+    "reports/player-impact-v46/decision.json": "d4ca36e1cb9c77573b0c53cc4c6946e772b04eda8800633cac29ec71ad85b926",
+    "reports/player-impact-v46/results-verification.json": "12aab227e9d2466890ceab19d306896e34f7d2198790af9d9b0324e4ed0951db",
+    "reports/player-impact-v46/protocol.json": "51f20154fd1de3a5b6e9d10de7f16d2c02bf9aecee2df41d9dfbfbf0f55b7c92",
+    "reports/player-impact-v46/candidate-run-protocol.json": "342a58a0ac0cf79186a1ebd041ef26e23c08e677fa9f821fe55bdfb2037b9a0a",
+    "reports/player-impact-v46/candidate-run-verification.json": "3c36511227a75cf75e15d99f1a4acc8b20b8a74842ffd27014a04fb16c1caeb1",
+    "reports/player-impact-v46/fit-verification.json": "a2423c6f6e902b28987aae12f1aa638baec825aba5305896f7846a3fb216fa93",
+    "reports/player-impact-v46/scores.json": "69947a3a05f19b3d1dd24e49c9ae3aaed9a429265569f95369f2e5f8eef8db64",
+    "reports/player-impact-v46/fine-scores.json": "dc3f1962670c49257d9cc9e74b1c0ca03d6d7c839d2fb7d93582ffee153340ce",
+    "reports/player-impact-v46/make-fit.json": "ecc912e3fd0d32f9b86cf9b77e148fc3e2f44c125a448695c3dbf9ef0a82dfc7",
+    "reports/player-impact-v46/selection.json": "d98948177999a1ee75a4b27c7985ea283d010d26c449a1b6c090225b180a5ab5",
+    "reports/player-impact-v46/seed-check.json": "f705835a424ccd32394b8fc53da9bbe267b851782db92e793a20cf59333ac4b0",
+    "reports/player-impact-v46/input.mjs": "3ca94e3390987535fbd3f62da585868ec64209301b8e7b8011be922a26b176e4",
+    "reports/player-impact-v46/worker.mjs": "2c41d571b8ef8074181a844bbe71876fdd0fb63d3e83fe5363eb643b3241e24d",
+    "reports/player-impact-v46/run.mjs": "d33fd906fbd02feb19d9ee90a27f6d48301ce847b93e3e76e93bc10114dfef29",
+    "reports/player-impact-defense-current.json": "fb1648356b882c43f90bfd3b595062ca6f0b750ba9740e07464e3f854f6f74d1"
+  },
+  "nextVersion": "v47",
+  "nextTask": "Curry offense diagnosis using v46 unchanged; generic mechanisms only; report all-player/team and defense regressions.",
+  "remainingIssues": [
+    "Calibrate team scoring after retaining the improved defense basis.",
+    "Refine other-paint deterrence and individual fine-zone attribution, with both subzones and the combined zone reported.",
+    "Independently measure total-attempt-rate deterrence; current source choice models primarily estimate relative shot mix.",
+    "Fine-zone foul and rebound geometry remain unimplemented.",
+    "Healthy-ability OVR remains separate; this round did not recompute its ranking."
+  ],
+  "individualFineZoneCaution": "Restricted-area make on/off is still too strong and other-paint make on/off too weak; these partly cancel in combined paint. Other-paint shot deterrence also remains too weak. Do not describe the fine-zone Wembanyama problem as fully solved."
+}

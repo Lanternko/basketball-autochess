@@ -1,0 +1,183 @@
+{
+  "files": 24,
+  "games": 28023,
+  "playerTeamSeasons": 15486,
+  "changedPlayerTeamSeasons": 13516,
+  "allMatchesAndTeamStatsExact": true,
+  "onCourtFgLedgersExact": true,
+  "putbackAuditExact": true,
+  "allPersonalNonDrebCountersExact": true,
+  "rows": [
+    {
+      "season": "2022-23",
+      "seed": 20261012,
+      "strict": false,
+      "games": 1230,
+      "changedPlayerTeamSeasons": 536
+    },
+    {
+      "season": "2022-23",
+      "seed": 20261012,
+      "strict": true,
+      "games": 1079,
+      "changedPlayerTeamSeasons": 526
+    },
+    {
+      "season": "2022-23",
+      "seed": 20261013,
+      "strict": false,
+      "games": 1230,
+      "changedPlayerTeamSeasons": 543
+    },
+    {
+      "season": "2022-23",
+      "seed": 20261013,
+      "strict": true,
+      "games": 1079,
+      "changedPlayerTeamSeasons": 529
+    },
+    {
+      "season": "2022-23",
+      "seed": 20261014,
+      "strict": false,
+      "games": 1230,
+      "changedPlayerTeamSeasons": 533
+    },
+    {
+      "season": "2022-23",
+      "seed": 20261014,
+      "strict": true,
+      "games": 1079,
+      "changedPlayerTeamSeasons": 526
+    },
+    {
+      "season": "2023-24",
+      "seed": 20261012,
+      "strict": false,
+      "games": 1230,
+      "changedPlayerTeamSeasons": 569
+    },
+    {
+      "season": "2023-24",
+      "seed": 20261012,
+      "strict": true,
+      "games": 1063,
+      "changedPlayerTeamSeasons": 564
+    },
+    {
+      "season": "2023-24",
+      "seed": 20261013,
+      "strict": false,
+      "games": 1230,
+      "changedPlayerTeamSeasons": 558
+    },
+    {
+      "season": "2023-24",
+      "seed": 20261013,
+      "strict": true,
+      "games": 1063,
+      "changedPlayerTeamSeasons": 548
+    },
+    {
+      "season": "2023-24",
+      "seed": 20261014,
+      "strict": false,
+      "games": 1230,
+      "changedPlayerTeamSeasons": 563
+    },
+    {
+      "season": "2023-24",
+      "seed": 20261014,
+      "strict": true,
+      "games": 1063,
+      "changedPlayerTeamSeasons": 561
+    },
+    {
+      "season": "2024-25",
+      "seed": 20261012,
+      "strict": false,
+      "games": 1230,
+      "changedPlayerTeamSeasons": 576
+    },
+    {
+      "season": "2024-25",
+      "seed": 20261012,
+      "strict": true,
+      "games": 1091,
+      "changedPlayerTeamSeasons": 578
+    },
+    {
+      "season": "2024-25",
+      "seed": 20261013,
+      "strict": false,
+      "games": 1230,
+      "changedPlayerTeamSeasons": 572
+    },
+    {
+      "season": "2024-25",
+      "seed": 20261013,
+      "strict": true,
+      "games": 1091,
+      "changedPlayerTeamSeasons": 563
+    },
+    {
+      "season": "2024-25",
+      "seed": 20261014,
+      "strict": false,
+      "games": 1230,
+      "changedPlayerTeamSeasons": 581
+    },
+    {
+      "season": "2024-25",
+      "seed": 20261014,
+      "strict": true,
+      "games": 1091,
+      "changedPlayerTeamSeasons": 571
+    },
+    {
+      "season": "2025-26",
+      "seed": 20261012,
+      "strict": false,
+      "games": 1230,
+      "changedPlayerTeamSeasons": 591
+    },
+    {
+      "season": "2025-26",
+      "seed": 20261012,
+      "strict": true,
+      "games": 1188,
+      "changedPlayerTeamSeasons": 591
+    },
+    {
+      "season": "2025-26",
+      "seed": 20261013,
+      "strict": false,
+      "games": 1230,
+      "changedPlayerTeamSeasons": 586
+    },
+    {
+      "season": "2025-26",
+      "seed": 20261013,
+      "strict": true,
+      "games": 1188,
+      "changedPlayerTeamSeasons": 586
+    },
+    {
+      "season": "2025-26",
+      "seed": 20261014,
+      "strict": false,
+      "games": 1230,
+      "changedPlayerTeamSeasons": 583
+    },
+    {
+      "season": "2025-26",
+      "seed": 20261014,
+      "strict": true,
+      "games": 1188,
+      "changedPlayerTeamSeasons": 582
+    }
+  ],
+  "hashes": {
+    "reports/player-impact-v24/verify-season-parity.mjs": "5ac6b83d10ef590ee14a1e024c36abb63b4a4a3e3f0dab736b830231603193a2"
+  }
+}

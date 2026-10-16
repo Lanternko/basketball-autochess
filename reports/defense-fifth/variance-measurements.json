@@ -1,0 +1,1075 @@
+{
+  "summary": {
+    "games": {
+      "real": 1227,
+      "v3": 1227.0,
+      "v3Mean95": [
+        1227.0,
+        1227.0
+      ]
+    },
+    "meanPairPossessions": {
+      "real": 100.67726161369193,
+      "v3": 99.99777913610431,
+      "v3Mean95": [
+        99.96425631621841,
+        100.03237673186634
+      ]
+    },
+    "pairPossessionVariance": {
+      "real": 24.948814669129586,
+      "v3": 12.654082119972447,
+      "v3Mean95": [
+        12.415241572480502,
+        12.924821957929739
+      ]
+    },
+    "teamPaceFitVariance": {
+      "real": 9.29756774200654,
+      "v3": 0.6158403231885614,
+      "v3Mean95": [
+        0.5494315755418733,
+        0.6915530497525254
+      ]
+    },
+    "sameGameRemainderVariance": {
+      "real": 15.651246927123003,
+      "v3": 12.03824179678389,
+      "v3Mean95": [
+        11.81798229637358,
+        12.26819025907026
+      ]
+    },
+    "teamPaceRawShare": {
+      "real": 0.37266571038787205,
+      "v3": 0.048495217911831826,
+      "v3Mean95": [
+        0.04369059118653828,
+        0.054097312181710794
+      ]
+    },
+    "teamPaceNoiseCorrectedVariance": {
+      "real": 8.918381308517345,
+      "v3": 0.32418701315787407,
+      "v3Mean95": [
+        0.2610463665425389,
+        0.3992765265420691
+      ]
+    },
+    "teamPaceNoiseCorrectedShare": {
+      "real": 0.3574671352844872,
+      "v3": 0.025442888187055823,
+      "v3Mean95": [
+        0.020319239896679546,
+        0.030563932048024118
+      ]
+    },
+    "fgCorrelation": {
+      "real": -0.011406274067703025,
+      "v3": -0.0465398988023712,
+      "v3Mean95": [
+        -0.05916817767940579,
+        -0.03252943199269262
+      ]
+    },
+    "ftaCorrelation": {
+      "real": 0.22714591072837928,
+      "v3": 0.010667752465096913,
+      "v3Mean95": [
+        0.0015224526944728597,
+        0.019278035585425745
+      ]
+    },
+    "teamCenteredFGCorrelation": {
+      "real": 0.05100076000888758,
+      "v3": -0.03559047284248658,
+      "v3Mean95": [
+        -0.04606875859016406,
+        -0.025059809734853885
+      ]
+    },
+    "teamCenteredFTACorrelation": {
+      "real": 0.2214284543694666,
+      "v3": -0.018772918457487936,
+      "v3Mean95": [
+        -0.03050842469043917,
+        -0.00744809996134768
+      ]
+    }
+  },
+  "cells": {
+    "0:-5..5": {
+      "real": {
+        "time": 0,
+        "lead": "-5..5",
+        "n": 43059,
+        "points": 49506,
+        "duration": 609960.8,
+        "expectedPoints": 49216.08830929233,
+        "ppp": 1.1497247962098516,
+        "controlledPPP": 1.149239633383969,
+        "pppResidual": 0.006732894184901361,
+        "durationMean": 14.165698228012728
+      },
+      "v3": {
+        "n": 42551.55,
+        "ppp": 1.1588841007177242,
+        "controlledPPP": 1.1583863915621608,
+        "pppResidual": 0.00615278604603719,
+        "durationMean": 14.667650378970908
+      }
+    },
+    "1:-5..5": {
+      "real": {
+        "time": 1,
+        "lead": "-5..5",
+        "n": 25498,
+        "points": 28960,
+        "duration": 363617.20000000007,
+        "expectedPoints": 29164.562002925482,
+        "ppp": 1.1357753549297984,
+        "controlledPPP": 1.1344840706397499,
+        "pppResidual": -0.008022668559317686,
+        "durationMean": 14.260616518942665
+      },
+      "v3": {
+        "n": 24135.9,
+        "ppp": 1.157564940841875,
+        "controlledPPP": 1.1569659140420296,
+        "pppResidual": 0.004732308525906049,
+        "durationMean": 14.406143631824552
+      }
+    },
+    "1:-9..-6": {
+      "real": {
+        "time": 1,
+        "lead": "-9..-6",
+        "n": 7514,
+        "points": 8615,
+        "duration": 108600.4999999999,
+        "expectedPoints": 8497.373541112675,
+        "ppp": 1.1465264838967262,
+        "controlledPPP": 1.1581610456786158,
+        "pppResidual": 0.015654306479548245,
+        "durationMean": 14.453087569869563
+      },
+      "v3": {
+        "n": 7380.25,
+        "ppp": 1.140173257801679,
+        "controlledPPP": 1.1470474446981362,
+        "pppResidual": -0.005186160817987303,
+        "durationMean": 14.525346159743284
+      }
+    },
+    "1:6..9": {
+      "real": {
+        "time": 1,
+        "lead": "6..9",
+        "n": 6860,
+        "points": 7835,
+        "duration": 95794.20000000003,
+        "expectedPoints": 7919.435763997681,
+        "ppp": 1.1421282798833818,
+        "controlledPPP": 1.1301983187912423,
+        "pppResidual": -0.012308420407825163,
+        "durationMean": 13.964169096209917
+      },
+      "v3": {
+        "n": 6864.05,
+        "ppp": 1.1679134318609887,
+        "controlledPPP": 1.1603146479190045,
+        "pppResidual": 0.008081042402880954,
+        "durationMean": 14.179443314202114
+      }
+    },
+    "1:-19..-10": {
+      "real": {
+        "time": 1,
+        "lead": "-19..-10",
+        "n": 9655,
+        "points": 10912,
+        "duration": 139450.8,
+        "expectedPoints": 10839.684384412683,
+        "ppp": 1.1301916105644743,
+        "controlledPPP": 1.1499967045628496,
+        "pppResidual": 0.007489965363782148,
+        "durationMean": 14.443376488865871
+      },
+      "v3": {
+        "n": 10055.05,
+        "ppp": 1.1360288944713806,
+        "controlledPPP": 1.1484919170126118,
+        "pppResidual": -0.0037416885035117383,
+        "durationMean": 14.556847278364918
+      }
+    },
+    "2:6..9": {
+      "real": {
+        "time": 2,
+        "lead": "6..9",
+        "n": 5974,
+        "points": 6931,
+        "duration": 85420.80000000003,
+        "expectedPoints": 6897.844779527439,
+        "ppp": 1.1601941747572815,
+        "controlledPPP": 1.1480566589299952,
+        "pppResidual": 0.0055499197309275645,
+        "durationMean": 14.298761298962175
+      },
+      "v3": {
+        "n": 5831.85,
+        "ppp": 1.1606952590155506,
+        "controlledPPP": 1.153850576803595,
+        "pppResidual": 0.0016169712874712979,
+        "durationMean": 14.27777605820491
+      }
+    },
+    "2:-9..-6": {
+      "real": {
+        "time": 2,
+        "lead": "-9..-6",
+        "n": 6267,
+        "points": 7318,
+        "duration": 90227.49999999997,
+        "expectedPoints": 7117.703215354644,
+        "ppp": 1.1677038455401307,
+        "controlledPPP": 1.174467292038601,
+        "pppResidual": 0.031960552839533383,
+        "durationMean": 14.397239508536776
+      },
+      "v3": {
+        "n": 6108.95,
+        "ppp": 1.14629391071094,
+        "controlledPPP": 1.15238619286594,
+        "pppResidual": 0.00015258734981649812,
+        "durationMean": 14.48525792620938
+      }
+    },
+    "2:-19..-10": {
+      "real": {
+        "time": 2,
+        "lead": "-19..-10",
+        "n": 10576,
+        "points": 12159,
+        "duration": 149529.79999999996,
+        "expectedPoints": 11873.676312256404,
+        "ppp": 1.149678517397882,
+        "controlledPPP": 1.169485151428984,
+        "pppResidual": 0.02697841222991638,
+        "durationMean": 14.138596822995458
+      },
+      "v3": {
+        "n": 10696.3,
+        "ppp": 1.1350475561128477,
+        "controlledPPP": 1.1470327314725766,
+        "pppResidual": -0.005200874043546764,
+        "durationMean": 14.520440549317314
+      }
+    },
+    "2:10..19": {
+      "real": {
+        "time": 2,
+        "lead": "10..19",
+        "n": 9761,
+        "points": 11280,
+        "duration": 139714.40000000014,
+        "expectedPoints": 11348.920320247355,
+        "ppp": 1.1556193013010962,
+        "controlledPPP": 1.1354459544180662,
+        "pppResidual": -0.007060784781001387,
+        "durationMean": 14.31353344944167
+      },
+      "v3": {
+        "n": 9880.3,
+        "ppp": 1.1713551124363923,
+        "controlledPPP": 1.1583061761551405,
+        "pppResidual": 0.00607257063901691,
+        "durationMean": 14.127794520007166
+      }
+    },
+    "2:-5..5": {
+      "real": {
+        "time": 2,
+        "lead": "-5..5",
+        "n": 19565,
+        "points": 22745,
+        "duration": 282105.10000000003,
+        "expectedPoints": 22369.551374337803,
+        "ppp": 1.1625351392793253,
+        "controlledPPP": 1.161696548841909,
+        "pppResidual": 0.019189809642841643,
+        "durationMean": 14.418865320725788
+      },
+      "v3": {
+        "n": 18268.9,
+        "ppp": 1.1538865477542621,
+        "controlledPPP": 1.153384764330713,
+        "pppResidual": 0.00115115881458926,
+        "durationMean": 14.381957616761255
+      }
+    },
+    "3:-5..5": {
+      "real": {
+        "time": 3,
+        "lead": "-5..5",
+        "n": 7740,
+        "points": 8763,
+        "duration": 120387,
+        "expectedPoints": 8854.866695571416,
+        "ppp": 1.132170542635659,
+        "controlledPPP": 1.1306376570838974,
+        "pppResidual": -0.011869082115170043,
+        "durationMean": 15.553875968992248
+      },
+      "v3": {
+        "n": 7278.2,
+        "ppp": 1.1685485485914746,
+        "controlledPPP": 1.1682278583258965,
+        "pppResidual": 0.01599425280977277,
+        "durationMean": 15.074924240565782
+      }
+    },
+    "3:-9..-6": {
+      "real": {
+        "time": 3,
+        "lead": "-9..-6",
+        "n": 2552,
+        "points": 2950,
+        "duration": 38170,
+        "expectedPoints": 2893.01539675091,
+        "ppp": 1.1559561128526645,
+        "controlledPPP": 1.1648361291869556,
+        "pppResidual": 0.022329389987887936,
+        "durationMean": 14.956896551724139
+      },
+      "v3": {
+        "n": 2503.95,
+        "ppp": 1.1632340823787284,
+        "controlledPPP": 1.1698363178827746,
+        "pppResidual": 0.017602712366651077,
+        "durationMean": 15.152236093665229
+      }
+    },
+    "3:6..9": {
+      "real": {
+        "time": 3,
+        "lead": "6..9",
+        "n": 2466,
+        "points": 2854,
+        "duration": 38445,
+        "expectedPoints": 2844.59362562021,
+        "ppp": 1.1573398215733983,
+        "controlledPPP": 1.1463211651438323,
+        "pppResidual": 0.0038144259447648507,
+        "durationMean": 15.590024330900244
+      },
+      "v3": {
+        "n": 2429.35,
+        "ppp": 1.1697819964769622,
+        "controlledPPP": 1.1621596309285418,
+        "pppResidual": 0.009926025412418072,
+        "durationMean": 15.000420644492412
+      }
+    },
+    "4:-9..-6": {
+      "real": {
+        "time": 4,
+        "lead": "-9..-6",
+        "n": 1587,
+        "points": 1958,
+        "duration": 22776,
+        "expectedPoints": 1790.8681595220542,
+        "ppp": 1.2337744171392564,
+        "controlledPPP": 1.2478198081832805,
+        "pppResidual": 0.10531306898421289,
+        "durationMean": 14.351606805293006
+      },
+      "v3": {
+        "n": 1615.85,
+        "ppp": 1.1600318067794453,
+        "controlledPPP": 1.1667616958735674,
+        "pppResidual": 0.014528090357443898,
+        "durationMean": 14.984238047473076
+      }
+    },
+    "4:6..9": {
+      "real": {
+        "time": 4,
+        "lead": "6..9",
+        "n": 1518,
+        "points": 1714,
+        "duration": 26250,
+        "expectedPoints": 1755.8010754446536,
+        "ppp": 1.1291172595520422,
+        "controlledPPP": 1.114969798853446,
+        "pppResidual": -0.02753694034562163,
+        "durationMean": 17.292490118577074
+      },
+      "v3": {
+        "n": 1574.75,
+        "ppp": 1.1767909757015118,
+        "controlledPPP": 1.1691111935782126,
+        "pppResidual": 0.01687758806208886,
+        "durationMean": 14.86665541703645
+      }
+    },
+    "4:-5..5": {
+      "real": {
+        "time": 4,
+        "lead": "-5..5",
+        "n": 5092,
+        "points": 5841,
+        "duration": 82475,
+        "expectedPoints": 5821.947692997893,
+        "ppp": 1.1470934799685781,
+        "controlledPPP": 1.146248354871123,
+        "pppResidual": 0.003741615672055622,
+        "durationMean": 16.196975648075412
+      },
+      "v3": {
+        "n": 4730.2,
+        "ppp": 1.1650111140022674,
+        "controlledPPP": 1.1647736186995403,
+        "pppResidual": 0.01254001318341652,
+        "durationMean": 14.970151580085922
+      }
+    },
+    "5:-5..5": {
+      "real": {
+        "time": 5,
+        "lead": "-5..5",
+        "n": 3405,
+        "points": 3800,
+        "duration": 38748.700000000004,
+        "expectedPoints": 3895.10986905381,
+        "ppp": 1.1160058737151248,
+        "controlledPPP": 1.1145743253800338,
+        "pppResidual": -0.027932413819033816,
+        "durationMean": 11.379941262848753
+      },
+      "v3": {
+        "n": 3008.4,
+        "ppp": 1.1741196221574821,
+        "controlledPPP": 1.1734413568257804,
+        "pppResidual": 0.02120775130965698,
+        "durationMean": 10.287070652269765
+      }
+    },
+    "0:-9..-6": {
+      "real": {
+        "time": 0,
+        "lead": "-9..-6",
+        "n": 7458,
+        "points": 8547,
+        "duration": 109337.59999999992,
+        "expectedPoints": 8428.596298898705,
+        "ppp": 1.1460176991150441,
+        "controlledPPP": 1.1583828053161627,
+        "pppResidual": 0.015876066117095085,
+        "durationMean": 14.660445159560194
+      },
+      "v3": {
+        "n": 7083.45,
+        "ppp": 1.1434249340032014,
+        "controlledPPP": 1.150339366328963,
+        "pppResidual": -0.0018942391871607435,
+        "durationMean": 14.715816872800854
+      }
+    },
+    "0:6..9": {
+      "real": {
+        "time": 0,
+        "lead": "6..9",
+        "n": 5753,
+        "points": 6436,
+        "duration": 76536.00000000001,
+        "expectedPoints": 6652.976393148651,
+        "ppp": 1.1187206674778376,
+        "controlledPPP": 1.1047913918761663,
+        "pppResidual": -0.037715347322901334,
+        "durationMean": 13.303667651660007
+      },
+      "v3": {
+        "n": 5538.7,
+        "ppp": 1.160706791542262,
+        "controlledPPP": 1.1529194677042667,
+        "pppResidual": 0.0006858621881431158,
+        "durationMean": 13.496335018271974
+      }
+    },
+    "3:-19..-10": {
+      "real": {
+        "time": 3,
+        "lead": "-19..-10",
+        "n": 4750,
+        "points": 5397,
+        "duration": 69583,
+        "expectedPoints": 5335.595462643201,
+        "ppp": 1.1362105263157896,
+        "controlledPPP": 1.1554340102215515,
+        "pppResidual": 0.01292727102248395,
+        "durationMean": 14.649052631578947
+      },
+      "v3": {
+        "n": 4786.25,
+        "ppp": 1.1515471358228457,
+        "controlledPPP": 1.1632173134289197,
+        "pppResidual": 0.010983707912796088,
+        "durationMean": 15.24168238034008
+      }
+    },
+    "3:10..19": {
+      "real": {
+        "time": 3,
+        "lead": "10..19",
+        "n": 4533,
+        "points": 5464,
+        "duration": 70192,
+        "expectedPoints": 5271.310491601958,
+        "ppp": 1.2053827487315243,
+        "controlledPPP": 1.1850149034165927,
+        "pppResidual": 0.04250816421752518,
+        "durationMean": 15.484667990293405
+      },
+      "v3": {
+        "n": 4520.65,
+        "ppp": 1.1788895500173548,
+        "controlledPPP": 1.1659519879236677,
+        "pppResidual": 0.013718382407544066,
+        "durationMean": 14.921973414483881
+      }
+    },
+    "4:-19..-10": {
+      "real": {
+        "time": 4,
+        "lead": "-19..-10",
+        "n": 3025,
+        "points": 3587,
+        "duration": 40968,
+        "expectedPoints": 3402.5790227829407,
+        "ppp": 1.1857851239669421,
+        "controlledPPP": 1.2034723515022276,
+        "pppResidual": 0.060965612303160104,
+        "durationMean": 13.54314049586777
+      },
+      "v3": {
+        "n": 3213.05,
+        "ppp": 1.153782365046644,
+        "controlledPPP": 1.1651507691228606,
+        "pppResidual": 0.0129171636067371,
+        "durationMean": 15.088091941378945
+      }
+    },
+    "4:10..19": {
+      "real": {
+        "time": 4,
+        "lead": "10..19",
+        "n": 2906,
+        "points": 3344,
+        "duration": 49442,
+        "expectedPoints": 3382.775874713106,
+        "ppp": 1.1507226428079835,
+        "controlledPPP": 1.1291633549206415,
+        "pppResidual": -0.013343384278426042,
+        "durationMean": 17.01376462491397
+      },
+      "v3": {
+        "n": 3043.35,
+        "ppp": 1.182493695065802,
+        "controlledPPP": 1.1697819253673232,
+        "pppResidual": 0.017548319851199368,
+        "durationMean": 14.856856034441112
+      }
+    },
+    "5:6..9": {
+      "real": {
+        "time": 5,
+        "lead": "6..9",
+        "n": 946,
+        "points": 989,
+        "duration": 11802.599999999995,
+        "expectedPoints": 1095.4548513645684,
+        "ppp": 1.0454545454545454,
+        "controlledPPP": 1.0299751838454012,
+        "pppResidual": -0.1125315553536664,
+        "durationMean": 12.476321353065535
+      },
+      "v3": {
+        "n": 918.65,
+        "ppp": 0.9875828913273172,
+        "controlledPPP": 0.9806943270047412,
+        "pppResidual": -0.17153927851138237,
+        "durationMean": 12.034927886333131
+      }
+    },
+    "5:-9..-6": {
+      "real": {
+        "time": 5,
+        "lead": "-9..-6",
+        "n": 999,
+        "points": 1103,
+        "duration": 8529.99999999999,
+        "expectedPoints": 1127.7815615389527,
+        "ppp": 1.1041041041041042,
+        "controlledPPP": 1.117700371292208,
+        "pppResidual": -0.02480636790685956,
+        "durationMean": 8.53853853853853
+      },
+      "v3": {
+        "n": 991.8,
+        "ppp": 1.0968857782713617,
+        "controlledPPP": 1.1027705652775874,
+        "pppResidual": -0.049463040238536066,
+        "durationMean": 11.78183270515083
+      }
+    },
+    "5:-19..-10": {
+      "real": {
+        "time": 5,
+        "lead": "-19..-10",
+        "n": 1718,
+        "points": 1788,
+        "duration": 17838.499999999993,
+        "expectedPoints": 1931.5272031107982,
+        "ppp": 1.0407450523864958,
+        "controlledPPP": 1.0589635476328287,
+        "pppResidual": -0.08354319156623874,
+        "durationMean": 10.383294528521532
+      },
+      "v3": {
+        "n": 1527.1,
+        "ppp": 1.1544447644951923,
+        "controlledPPP": 1.1655561825877794,
+        "pppResidual": 0.013322577071655784,
+        "durationMean": 13.831106364099261
+      }
+    },
+    "5:10..19": {
+      "real": {
+        "time": 5,
+        "lead": "10..19",
+        "n": 1575,
+        "points": 1328,
+        "duration": 25222.499999999993,
+        "expectedPoints": 1831.0233372362318,
+        "ppp": 0.8431746031746031,
+        "controlledPPP": 0.8231268425411427,
+        "pppResidual": -0.31937989665792493,
+        "durationMean": 16.01428571428571
+      },
+      "v3": {
+        "n": 1625.2,
+        "ppp": 0.9292905137497437,
+        "controlledPPP": 0.9170632739769733,
+        "pppResidual": -0.2351703315391504,
+        "durationMean": 13.408366153272542
+      }
+    },
+    "0:-19..-10": {
+      "real": {
+        "time": 0,
+        "lead": "-19..-10",
+        "n": 4264,
+        "points": 4776,
+        "duration": 62554.40000000005,
+        "expectedPoints": 4791.737950503022,
+        "ppp": 1.1200750469043153,
+        "controlledPPP": 1.138815850244325,
+        "pppResidual": -0.00369088895474253,
+        "durationMean": 14.67035647279551
+      },
+      "v3": {
+        "n": 4223.45,
+        "ppp": 1.116941674010222,
+        "controlledPPP": 1.130314470214377,
+        "pppResidual": -0.02191913530174658,
+        "durationMean": 14.098890613541503
+      }
+    },
+    "0:10..19": {
+      "real": {
+        "time": 0,
+        "lead": "10..19",
+        "n": 3164,
+        "points": 3649,
+        "duration": 41682.0,
+        "expectedPoints": 3682.382355778274,
+        "ppp": 1.1532869785082174,
+        "controlledPPP": 1.1319560578532162,
+        "pppResidual": -0.010550681345851423,
+        "durationMean": 13.173830594184576
+      },
+      "v3": {
+        "n": 3127.05,
+        "ppp": 1.1584966470763098,
+        "controlledPPP": 1.1448819629121008,
+        "pppResidual": -0.0073516426040229396,
+        "durationMean": 12.792524680818616
+      }
+    },
+    "1:10..19": {
+      "real": {
+        "time": 1,
+        "lead": "10..19",
+        "n": 8429,
+        "points": 9542,
+        "duration": 116481.6,
+        "expectedPoints": 9795.663487795337,
+        "ppp": 1.1320441333491518,
+        "controlledPPP": 1.1124126013659512,
+        "pppResidual": -0.03009413783311621,
+        "durationMean": 13.819148178906158
+      },
+      "v3": {
+        "n": 8782.6,
+        "ppp": 1.1679736604656843,
+        "controlledPPP": 1.1542945966001004,
+        "pppResidual": 0.0020609910839768093,
+        "durationMean": 13.922430958230848
+      }
+    },
+    "2:<=-20": {
+      "real": {
+        "time": 2,
+        "lead": "<=-20",
+        "n": 5253,
+        "points": 5973,
+        "duration": 73864.40000000004,
+        "expectedPoints": 5816.526609864311,
+        "ppp": 1.1370645345516848,
+        "controlledPPP": 1.1722941730722236,
+        "pppResidual": 0.029787433873156185,
+        "durationMean": 14.061374452693705
+      },
+      "v3": {
+        "n": 5862.0,
+        "ppp": 1.1199641937555567,
+        "controlledPPP": 1.143341509253276,
+        "pppResidual": -0.008892096262847971,
+        "durationMean": 14.484244897562439
+      }
+    },
+    "2:>=20": {
+      "real": {
+        "time": 2,
+        "lead": ">=20",
+        "n": 4515,
+        "points": 5261,
+        "duration": 62815.99999999999,
+        "expectedPoints": 5319.0538671163185,
+        "ppp": 1.1652270210409745,
+        "controlledPPP": 1.1296487398377566,
+        "pppResidual": -0.012857999361310862,
+        "durationMean": 13.912735326688814
+      },
+      "v3": {
+        "n": 5024.35,
+        "ppp": 1.1909581823511624,
+        "controlledPPP": 1.1667317430776518,
+        "pppResidual": 0.014498137561528176,
+        "durationMean": 13.759740393823364
+      }
+    },
+    "3:<=-20": {
+      "real": {
+        "time": 3,
+        "lead": "<=-20",
+        "n": 3452,
+        "points": 4039,
+        "duration": 50474,
+        "expectedPoints": 3818.7634469461923,
+        "ppp": 1.1700463499420626,
+        "controlledPPP": 1.2063064359122215,
+        "pppResidual": 0.06379969671315402,
+        "durationMean": 14.621668597914253
+      },
+      "v3": {
+        "n": 3671.7,
+        "ppp": 1.1339505012216713,
+        "controlledPPP": 1.1577154983614932,
+        "pppResidual": 0.005481892845369342,
+        "durationMean": 15.372671808457216
+      }
+    },
+    "3:>=20": {
+      "real": {
+        "time": 3,
+        "lead": ">=20",
+        "n": 3000,
+        "points": 3501,
+        "duration": 44250,
+        "expectedPoints": 3531.107374678637,
+        "ppp": 1.167,
+        "controlledPPP": 1.1324709476395218,
+        "pppResidual": -0.010035791559545638,
+        "durationMean": 14.75
+      },
+      "v3": {
+        "n": 3269.75,
+        "ppp": 1.1912751452895083,
+        "controlledPPP": 1.166948552560639,
+        "pppResidual": 0.014714947044515175,
+        "durationMean": 14.778007804777065
+      }
+    },
+    "4:>=20": {
+      "real": {
+        "time": 4,
+        "lead": ">=20",
+        "n": 2338,
+        "points": 2518,
+        "duration": 35923,
+        "expectedPoints": 2753.0260033293494,
+        "ppp": 1.076988879384089,
+        "controlledPPP": 1.0419823579632466,
+        "pppResidual": -0.10052438123582094,
+        "durationMean": 15.364841745081266
+      },
+      "v3": {
+        "n": 2579.95,
+        "ppp": 1.1987899466838736,
+        "controlledPPP": 1.1743263707672154,
+        "pppResidual": 0.02209276525109178,
+        "durationMean": 14.66276887488523
+      }
+    },
+    "4:<=-20": {
+      "real": {
+        "time": 4,
+        "lead": "<=-20",
+        "n": 2600,
+        "points": 3057,
+        "duration": 36267,
+        "expectedPoints": 2878.6766414182543,
+        "ppp": 1.1757692307692307,
+        "controlledPPP": 1.2110926463458929,
+        "pppResidual": 0.06858590714682525,
+        "durationMean": 13.948846153846153
+      },
+      "v3": {
+        "n": 2858.7,
+        "ppp": 1.131091841744819,
+        "controlledPPP": 1.1550461675959673,
+        "pppResidual": 0.002812562079843664,
+        "durationMean": 15.269154884524985
+      }
+    },
+    "5:>=20": {
+      "real": {
+        "time": 5,
+        "lead": ">=20",
+        "n": 1207,
+        "points": 1055,
+        "duration": 17197.699999999997,
+        "expectedPoints": 1422.4032159247165,
+        "ppp": 0.8740679370339686,
+        "controlledPPP": 0.8381130226085816,
+        "pppResidual": -0.3043937165904859,
+        "durationMean": 14.248301574150785
+      },
+      "v3": {
+        "n": 1498.7,
+        "ppp": 0.9389701002229964,
+        "controlledPPP": 0.9140807622611089,
+        "pppResidual": -0.23815284325501498,
+        "durationMean": 13.264525940331316
+      }
+    },
+    "5:<=-20": {
+      "real": {
+        "time": 5,
+        "lead": "<=-20",
+        "n": 1358,
+        "points": 1459,
+        "duration": 15540.000000000007,
+        "expectedPoints": 1502.7832981543165,
+        "ppp": 1.0743740795287187,
+        "controlledPPP": 1.110265724357892,
+        "pppResidual": -0.03224101484117565,
+        "durationMean": 11.44329896907217
+      },
+      "v3": {
+        "n": 1473.2,
+        "ppp": 1.123588593862772,
+        "controlledPPP": 1.1477070611020417,
+        "pppResidual": -0.004526544414082038,
+        "durationMean": 13.932161915880604
+      }
+    },
+    "1:<=-20": {
+      "real": {
+        "time": 1,
+        "lead": "<=-20",
+        "n": 2382,
+        "points": 2663,
+        "duration": 34063.40000000001,
+        "expectedPoints": 2644.9475319347207,
+        "ppp": 1.117968094038623,
+        "controlledPPP": 1.1500854411576231,
+        "pppResidual": 0.0075787019585555416,
+        "durationMean": 14.300335852225025
+      },
+      "v3": {
+        "n": 2507.45,
+        "ppp": 1.1128139832145876,
+        "controlledPPP": 1.1362277387694433,
+        "pppResidual": -0.016005866746680173,
+        "durationMean": 14.319621031552344
+      }
+    },
+    "1:>=20": {
+      "real": {
+        "time": 1,
+        "lead": ">=20",
+        "n": 1880,
+        "points": 2157,
+        "duration": 25305.999999999993,
+        "expectedPoints": 2218.411281057462,
+        "ppp": 1.1473404255319148,
+        "controlledPPP": 1.1098411641685026,
+        "pppResidual": -0.03266557503056491,
+        "durationMean": 13.460638297872336
+      },
+      "v3": {
+        "n": 2001.05,
+        "ppp": 1.1685397753843916,
+        "controlledPPP": 1.145600983378583,
+        "pppResidual": -0.006632622137540627,
+        "durationMean": 13.327806324605245
+      }
+    },
+    "0:<=-20": {
+      "real": {
+        "time": 0,
+        "lead": "<=-20",
+        "n": 279,
+        "points": 296,
+        "duration": 3883.2000000000003,
+        "expectedPoints": 310.19596046790053,
+        "ppp": 1.060931899641577,
+        "controlledPPP": 1.0916251604610727,
+        "pppResidual": -0.050881578737994745,
+        "durationMean": 13.918279569892475
+      },
+      "v3": {
+        "n": 214.8,
+        "ppp": 1.0749100157704126,
+        "controlledPPP": 1.0992419976000896,
+        "pppResidual": -0.052991607916034036,
+        "durationMean": 12.745423755971952
+      }
+    },
+    "0:>=20": {
+      "real": {
+        "time": 0,
+        "lead": ">=20",
+        "n": 189,
+        "points": 200,
+        "duration": 2331.9999999999995,
+        "expectedPoints": 223.65795956660182,
+        "ppp": 1.0582010582010581,
+        "controlledPPP": 1.017332349957788,
+        "pppResidual": -0.12517438924127947,
+        "durationMean": 12.338624338624337
+      },
+      "v3": {
+        "n": 137.8,
+        "ppp": 1.137348129893701,
+        "controlledPPP": 1.1152460134267135,
+        "pppResidual": -0.036987592089410264,
+        "durationMean": 11.344714941839914
+      }
+    }
+  },
+  "timeRemainingEdges": [
+    2160,
+    1440,
+    720,
+    360,
+    120,
+    0
+  ],
+  "method": "Regulation actual possessions, common real/sim aggregation. PPP adjusted for own offense and opponent allowance = team PPP + opponent allowed PPP - league PPP. Team IDs used for observational adjustment only. Pair pace OLS uses half-weight sum of two team intercepts; fitted variance + residual variance equals total. Raw and degrees-of-freedom noise-corrected shares reported. Box FG/FTA correlations include OT in both real/sim (regulation count analysis does not); additionally centered by team mean. No engine parameter learned.",
+  "varianceGate": {
+    "final-normalized": {
+      "sigmaCurrent": 16.93482784063226,
+      "sigmaIdeal": 14.027452283006898,
+      "normalCurrent": {
+        "netRMSE": 2.554838082035998,
+        "netCorrelation": 0.9114453301562578,
+        "netSDRatio": 0.838152290381952,
+        "calibrationSlope": 1.0874459696827954,
+        "winMAE": 5.368605902988174,
+        "winRMSE": 6.5516302435556355
+      },
+      "normalIdeal": {
+        "netRMSE": 2.554838082035998,
+        "netCorrelation": 0.9114453301562578,
+        "netSDRatio": 0.838152290381952,
+        "calibrationSlope": 1.0874459696827954,
+        "winMAE": 4.63817674191363,
+        "winRMSE": 5.858468860786509
+      },
+      "actualEngineWins": {
+        "winMAE": 5.070000000000001,
+        "winRMSE": 6.197311244940557
+      },
+      "idealMinusNormalCurrent95": {
+        "winMAE": [
+          -0.7755963005789078,
+          -0.6263372800676607
+        ],
+        "winRMSE": [
+          -0.7190794878685643,
+          -0.5979838325172779
+        ]
+      },
+      "MAEGain": 0.7304291610745439,
+      "MAEGainVersusActualEngine": 0.43182325808637145,
+      "scope": "Mean of 20 per-fixture simulated margins held fixed; Gaussian residual with observed regulation SD. All team means therefore unchanged. Finite-seed fixture means include sampling error, availability variation and OT; this is a hypothetical variance scenario, not a mathematical upper bound or adoptable score patch."
+    },
+    "holdout-normalized": {
+      "sigmaCurrent": 16.735568333505086,
+      "sigmaIdeal": 14.027452283006898,
+      "normalCurrent": {
+        "netRMSE": 5.615301118915258,
+        "netCorrelation": 0.6490950217411913,
+        "netSDRatio": 0.6375727661575581,
+        "calibrationSlope": 1.0180720636062832,
+        "winMAE": 5.219168810711168,
+        "winRMSE": 5.95991406384766
+      },
+      "normalIdeal": {
+        "netRMSE": 5.615301118915258,
+        "netCorrelation": 0.6490950217411913,
+        "netSDRatio": 0.6375727661575581,
+        "calibrationSlope": 1.0180720636062832,
+        "winMAE": 5.086431807234138,
+        "winRMSE": 5.844332568392686
+      },
+      "actualEngineWins": {
+        "winMAE": 5.2716666666666665,
+        "winRMSE": 5.985962746292363
+      },
+      "idealMinusNormalCurrent95": {
+        "winMAE": [
+          -0.17526511119437788,
+          -0.09554246488758891
+        ],
+        "winRMSE": [
+          -0.13577570806727526,
+          -0.08450592250904408
+        ]
+      },
+      "MAEGain": 0.13273700347702988,
+      "MAEGainVersusActualEngine": 0.18523485943252815,
+      "scope": "Mean of 20 per-fixture simulated margins held fixed; Gaussian residual with observed regulation SD. All team means therefore unchanged. Finite-seed fixture means include sampling error, availability variation and OT; this is a hypothetical variance scenario, not a mathematical upper bound or adoptable score patch."
+    }
+  },
+  "implemented2c": false,
+  "reason": "Main heldout fixed-margin ideal SD scenario gain <0.3 winMAE; user2a requires measurement only. Full-season potential is larger but not the primary adoption evidence.",
+  "sources": {
+    "reports/defense-b1/real-games.jsonl": "b9451a56eeb3f7714e10d49abbd5f9846723ceb6551c5f04e179bcf04904fc26",
+    "reports/defense-fifth/v3-diagnostic-seeds.json": "6307d63de0322510f9a88cb6618dc5c53c9e47e3d4bd8b5340a0eb8cf2f044b5"
+  }
+}

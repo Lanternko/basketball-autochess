@@ -1,0 +1,221 @@
+{
+  "status": "post-hoc descriptive; four seasons already seen; no new simulations",
+  "definition": "own credited OREB / (own credited OREB + opponent credited DREB); centered within season",
+  "bootstrap": {
+    "bootstrap": 20000,
+    "seed": 20261041,
+    "scheme": "Resample30 franchises and20 seeds, paired across all versions and seasons; average seed predictions before metrics; center each season and pool seasons equally. Only joint95 intervals used for claims."
+  },
+  "results": {
+    "2022-23": {
+      "versions": {
+        "T0": {
+          "OREB_RMSE_pp": 2.4183002967442726,
+          "OREB_MAE_pp": 2.0111145809236173,
+          "OREB_correlation": 0.3671183523994346
+        },
+        "pooled": {
+          "OREB_RMSE_pp": 2.435635487706328,
+          "OREB_MAE_pp": 2.036321335002401,
+          "OREB_correlation": 0.34639043858077195
+        },
+        "dreb": {
+          "OREB_RMSE_pp": 2.40098952370661,
+          "OREB_MAE_pp": 2.005654327899217,
+          "OREB_correlation": 0.35995978653738053
+        }
+      },
+      "drebMinuspooled": {
+        "OREB_RMSE_pp": {
+          "point": -0.03464596399971809,
+          "joint95": [
+            -0.19407383578860585,
+            0.11645703230963697
+          ]
+        },
+        "OREB_MAE_pp": {
+          "point": -0.03066700710318404,
+          "joint95": [
+            -0.19821778485708932,
+            0.11797213869385904
+          ]
+        },
+        "OREB_correlation": {
+          "point": 0.01356934795660858,
+          "joint95": [
+            -0.09410506424056501,
+            0.12717092810013267
+          ]
+        }
+      }
+    },
+    "2023-24": {
+      "versions": {
+        "T0": {
+          "OREB_RMSE_pp": 2.3793923157354064,
+          "OREB_MAE_pp": 1.8837902625550147,
+          "OREB_correlation": 0.2713789383787543
+        },
+        "pooled": {
+          "OREB_RMSE_pp": 2.350824948401687,
+          "OREB_MAE_pp": 1.8119345453173432,
+          "OREB_correlation": 0.2754319206775105
+        },
+        "dreb": {
+          "OREB_RMSE_pp": 2.3112141446215264,
+          "OREB_MAE_pp": 1.837700566401099,
+          "OREB_correlation": 0.2699492924497692
+        }
+      },
+      "drebMinuspooled": {
+        "OREB_RMSE_pp": {
+          "point": -0.0396108037801608,
+          "joint95": [
+            -0.19033437138098083,
+            0.10808081785436356
+          ]
+        },
+        "OREB_MAE_pp": {
+          "point": 0.025766021083755808,
+          "joint95": [
+            -0.1425173736642581,
+            0.13515666866743473
+          ]
+        },
+        "OREB_correlation": {
+          "point": -0.005482628227741315,
+          "joint95": [
+            -0.09663568736052168,
+            0.09970530642970804
+          ]
+        }
+      }
+    },
+    "2024-25": {
+      "versions": {
+        "T0": {
+          "OREB_RMSE_pp": 2.4246074288527955,
+          "OREB_MAE_pp": 1.922557671926603,
+          "OREB_correlation": 0.30107518881155204
+        },
+        "pooled": {
+          "OREB_RMSE_pp": 2.471831140255064,
+          "OREB_MAE_pp": 1.99423516151994,
+          "OREB_correlation": 0.2539483871011016
+        },
+        "dreb": {
+          "OREB_RMSE_pp": 2.4218419037291943,
+          "OREB_MAE_pp": 1.9466527607202186,
+          "OREB_correlation": 0.28718814649855007
+        }
+      },
+      "drebMinuspooled": {
+        "OREB_RMSE_pp": {
+          "point": -0.04998923652586962,
+          "joint95": [
+            -0.17978850363259813,
+            0.08104911079971376
+          ]
+        },
+        "OREB_MAE_pp": {
+          "point": -0.047582400799721425,
+          "joint95": [
+            -0.17921316229715065,
+            0.08499319978347314
+          ]
+        },
+        "OREB_correlation": {
+          "point": 0.03323975939744844,
+          "joint95": [
+            -0.06183087978099621,
+            0.14240444636731878
+          ]
+        }
+      }
+    },
+    "2025-26": {
+      "versions": {
+        "T0": {
+          "OREB_RMSE_pp": 3.168695697461447,
+          "OREB_MAE_pp": 2.4355885174727243,
+          "OREB_correlation": 0.12250205217502799
+        },
+        "pooled": {
+          "OREB_RMSE_pp": 3.1658673942801205,
+          "OREB_MAE_pp": 2.4356003448345347,
+          "OREB_correlation": 0.13081187792641677
+        },
+        "dreb": {
+          "OREB_RMSE_pp": 3.205404556941584,
+          "OREB_MAE_pp": 2.4626593557528955,
+          "OREB_correlation": 0.07926109048549207
+        }
+      },
+      "drebMinuspooled": {
+        "OREB_RMSE_pp": {
+          "point": 0.039537162661463565,
+          "joint95": [
+            -0.1694307844856911,
+            0.21763713678515567
+          ]
+        },
+        "OREB_MAE_pp": {
+          "point": 0.027059010918360826,
+          "joint95": [
+            -0.15316374548696052,
+            0.19928223833879466
+          ]
+        },
+        "OREB_correlation": {
+          "point": -0.0515507874409247,
+          "joint95": [
+            -0.1960619654029105,
+            0.13231904234449735
+          ]
+        }
+      }
+    },
+    "four-seasons-equal": {
+      "versions": {
+        "T0": {
+          "OREB_RMSE_pp": 2.6186369414531767,
+          "OREB_MAE_pp": 2.06326275821949,
+          "OREB_correlation": 0.257722794845712
+        },
+        "pooled": {
+          "OREB_RMSE_pp": 2.62637410278424,
+          "OREB_MAE_pp": 2.069522846668555,
+          "OREB_correlation": 0.2439581869258737
+        },
+        "dreb": {
+          "OREB_RMSE_pp": 2.6099041215899117,
+          "OREB_MAE_pp": 2.0631667526933577,
+          "OREB_correlation": 0.23918344302203223
+        }
+      },
+      "drebMinuspooled": {
+        "OREB_RMSE_pp": {
+          "point": -0.016469981194328298,
+          "joint95": [
+            -0.10629810599170807,
+            0.07122903185646276
+          ]
+        },
+        "OREB_MAE_pp": {
+          "point": -0.006356093975197208,
+          "joint95": [
+            -0.09688205090322252,
+            0.06301107067252608
+          ]
+        },
+        "OREB_correlation": {
+          "point": -0.004774743903841472,
+          "joint95": [
+            -0.06741034683954224,
+            0.06346755657768773
+          ]
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,107 @@
+{
+  "version": "oreb-components-offline-1",
+  "registeredAt": "2026-10-14T07:34:23.293470+00:00",
+  "scope": "Separated incremental forecasting tests only. No new acquisition, cards, engine, simulations or coefficient adoption. Complete this batch and stop.",
+  "label": "四季已看過答案；回溯的時間資料外診斷，不是新盲測。",
+  "seasons": [
+    "2022-23",
+    "2023-24",
+    "2024-25",
+    "2025-26"
+  ],
+  "timeSplits": {
+    "primary": "Train2022-23->2023-24 and2023-24->2024-25; test2024-25->2025-26.",
+    "replication": "Train2022-23->2023-24; test2023-24->2024-25.",
+    "2023-24": "No fitted evaluation: no earlier training pair available. Descriptive component stability only.",
+    "cutoff": "Every predictor from the source season, never target-season tracking/rates/role/minutes. Known target MIN used only as evaluation weight/count exposure, never a predictor."
+  },
+  "cohort": "Same as prior talent study: source and target observed MIN>=100, valid source official OREB%, valid target outcome; target rate and OREB% in separate tasks. No deletion based on tracking availability. Missing indicators and train-only imputation. Rookie/no-history players not included.",
+  "features": {
+    "chance": "Source tracking OREB_CHANCES / source tracking MIN *36, a realized tracking opportunity rate, not starting location.",
+    "conversion": "Source tracking OREB / OREB_CHANCES, if denominator>0 and numerator in[0,denominator]; otherwise missing and audited.",
+    "adjustedConversion": "Source OREB/(OREB_CHANCES-OREB_CHANCE_DEFER), if denominator>0 and valid; exploratory only. Do not call deferrals box-out assists.",
+    "history": "Source individual box OREB/36, official OREB% and log1p(MIN); OREB% outcome omits source OREB/36 to match previous baseline.",
+    "missingControl": "History plus flags for missing chance and raw conversion only; no availability count containing hidden chance information.",
+    "forbidden": [
+      "player/team identity as features",
+      "target-season predictor",
+      "team net/wins/rank",
+      "stint/on-off",
+      "height,athletic tests,speed,contested share",
+      "AVG_OREB_DIST as pre-shot distance",
+      "position-specific fixed crash bonus"
+    ]
+  },
+  "models": {
+    "persistence": "Raw source box OREB/36 for rate, raw source official OREB% for pct.",
+    "pctOnly": "Source official OREB% and log1p(MIN).",
+    "history": "Unchanged prior talent-study history recipe.",
+    "chance": "history + source chance only.",
+    "conversion": "history + source raw conversion only.",
+    "both": "history + chance + raw conversion.",
+    "adjustedBoth": "history + chance + adjusted conversion; exploratory.",
+    "missingOnly": "history + chance/conversion missing indicators; negative control."
+  },
+  "estimator": {
+    "type": "Linear ridge with unpenalized intercept, training-only median imputation, missing indicators and standardization. Same numeric procedure as prior study.",
+    "grid": [
+      0.1,
+      1,
+      10,
+      100,
+      1000
+    ],
+    "folds": 5,
+    "foldRule": "SHA256(string playerID) modulo5; same person in same fold across all training years. Min weighted CV MSE, larger lambda on exact tie.",
+    "trainWeight": "min(target MIN,1000), normalized mean1; all training targets precede source-season end of test.",
+    "predictionClip": "rate>=0, OREB% in[0,100] percentage points. No test-season scaling or tuning."
+  },
+  "metrics": {
+    "rate": "Target-minute-weighted MAE/RMSE of individual OREB/36; Pearson.",
+    "pct": "Target-minute-weighted MAE/RMSE of official individual OREB%, percentage points; Pearson.",
+    "conditionalCount": "Mean abs(rate prediction * given target MIN/36 - actual OREB); true exposure diagnostic, not minutes forecasting.",
+    "pool": "Two forward-tested target seasons; equal season weights after within-season target-minute weighting. Pooled RMSE=sqrt(mean season MSE); pooled countMAE=mean season countMAE. Not a team-season game metric."
+  },
+  "groups": {
+    "all": "Main cohort",
+    "movers": "Different main team (maximum observed MIN) source vs target; grouping only, not causal trade estimate.",
+    "stayers": "Same main team",
+    "lowSourceMinutes": "100<=source MIN<500",
+    "both500": "Both seasons MIN>=500. Groups with fewer than10 observations not estimated."
+  },
+  "uncertainty": {
+    "replicates": 20000,
+    "seed": 20261056,
+    "scheme": "Paired franchise resampling crossed with player Poisson1 weights; common player/franchise weights across target seasons and all models. Equal-season normalization within each replicate. No simulation seeds exist; not engine adoption uncertainty. Training refit uncertainty excluded.",
+    "levels": [
+      0.95,
+      0.9916666666666667
+    ],
+    "primaryFamily": "Six primary rate-MAE comparisons: chance/conversion/both against each of persistence/history in 2025-26 all-player cohort. Bonferroni99.1667% intervals alongside95%. Other targets/seasons/groups exploratory.",
+    "jointLabel": "球隊＋球員聯合重抽；不是球隊＋模擬seed。"
+  },
+  "decision": {
+    "supportedIncrement": "Development-data candidate only if primary2025 rate MAE Bonferroni interval wholly negative against BOTH persistence and history, rate RMSE not significantly worse at95%; and2024 replication and movers show no significant MAE deterioration at95%. Does not authorize engine adoption.",
+    "failure": "If no primary candidate passes, report no verifiable incremental predictive value in current features. Do not choose adjustedBoth or a subgroup post hoc to evade this rule.",
+    "noCausalClaim": "Chance may encode role/environment and overlaps realized rebounds; good forecast does not identify box-out or participation causal coefficient."
+  },
+  "descriptiveChecks": [
+    "Exact OREB/36 from same tracking sample = chance36 * raw conversion where denominator positive; not additional information.",
+    "Reported raw/adjusted percentages versus count ratios: allow0.000501 rounding, list mismatches; never silently change raw records.",
+    "Missing/negative/invalid counts, duplicate IDs, tracked-minute coverage and per-model same cohort.",
+    "Three adjacent-pair opportunity/conversion/rate/PCT Pearson stability, including movers; >=500MIN sensitivity.",
+    "Track-vs-box OREB counts and MIN differences; no mixing denominators or asserting count identity across samples."
+  ],
+  "inputHashes": {
+    "reports/defense-tenth/step4-rebounds-talent/features.json": "acf3ab5c0d4f11f8dae57098739ef5118aff33424cfbace8366446f5d33e8a3a",
+    "reports/defense-tenth/step4-rebounds-talent/results.json": "0ef42555b9d611c03d43bf02b202810166fadc454349022f72cb7cb2559d2c40",
+    "reports/defense-tenth/step4-rebounds-talent/protocol.json": "b8df053cd6bf08fc3b2886838c92599becf9eb97ee498370f507067adc1ff86b",
+    "reports/defense-tenth/step4-rebounds-talent/completion-audit.json": "887a23f4a820b0eb9e439b3164fa1210a957b2e07c3fe19fcca48627d86b7c88",
+    "reports/defense-tenth/step4-rebounds-talent/raw/tracking/2022-23-Rebounding.json": "c89ca992ba99b981423adbe671fd35bd4d0fa3f62dbd47e78ba5868bbc077df9",
+    "reports/defense-tenth/step4-rebounds-talent/raw/tracking/2023-24-Rebounding.json": "f5338cca6714bb46541d3b439738623e91131daecab078f0071badeb7b91b20f",
+    "reports/defense-tenth/step4-rebounds-talent/raw/tracking/2024-25-Rebounding.json": "739c27b78615767495d15579e4d29489a8ed892b972efac22ef16ec673846e91",
+    "reports/defense-tenth/step4-rebounds-talent/raw/tracking/2025-26-Rebounding.json": "b1d42e679d9f5b88c6c3853386d63008fbb1120344e35b29444c166ac4ee2be4"
+  },
+  "protectedManifestSHA256": "0de15927e22fe2d9aacc4a900cb13d1cf1f29bccffbf204c65c921eb1a91da1f",
+  "registrationCodeSHA256": "b86290f56ea7f2a3fbc4cbaa5d375243eefed1527a53848747520c056497c8b8"
+}

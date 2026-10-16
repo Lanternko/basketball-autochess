@@ -1,0 +1,974 @@
+{
+  "seasons": {
+    "2022-23": {
+      "games": 1230,
+      "real": {
+        "points": 1.2695511233172752,
+        "ftPoints": 0.1723920579892846,
+        "quickProxy": 0.4263653144838143,
+        "earlyLoss": 0.05052026286966046,
+        "lateLoss": 0.028203723986856517,
+        "earlyFg": 0.6118565169769989,
+        "earlyFt": 0.06799926980649872,
+        "earlyNonShootingFoul": 0.020764877692588536,
+        "lossBeforeAttempt": 0.07797937958669128,
+        "firstFgMake": 0.5260411062089745,
+        "quickFgMake": 0.6013727560718057,
+        "otherFgMake": 0.4477841158402808,
+        "putbackShare": null,
+        "putbackLossRate": null,
+        "putbackEarlyLossRate": null,
+        "putbackQuickConversion": null,
+        "restartShare": null,
+        "restartLossRate": null,
+        "restartEarlyLossRate": null,
+        "restartQuickConversion": null,
+        "unknownShare": null,
+        "unknownLossRate": null,
+        "unknownEarlyLossRate": null,
+        "unknownQuickConversion": null
+      },
+      "baseline": {
+        "points": 1.1825625833385711,
+        "ftPoints": 0.2005552278588371,
+        "quickProxy": 0.30464649259655596,
+        "earlyLoss": 0.06639486741175828,
+        "lateLoss": 0.038741420304755664,
+        "earlyFg": 0.48952265593429206,
+        "earlyFt": 0.07162305620524566,
+        "earlyNonShootingFoul": 0.03203707368531797,
+        "lossBeforeAttempt": 0.10430793793223915,
+        "firstFgMake": 0.5012597432493299,
+        "quickFgMake": 0.5602292954333988,
+        "otherFgMake": 0.46435949899802326,
+        "putbackShare": 0.38884785106517655,
+        "putbackLossRate": 0.08764484819896852,
+        "putbackEarlyLossRate": 0.0824602574764291,
+        "putbackQuickConversion": 0.7263603120852836,
+        "restartShare": 0.6067423153231953,
+        "restartLossRate": 0.11574261311839873,
+        "restartEarlyLossRate": 0.05609639407862984,
+        "restartQuickConversion": 0.03658323412879644,
+        "unknownShare": 0.004409833611628126,
+        "unknownLossRate": 0.0,
+        "unknownEarlyLossRate": 0.0,
+        "unknownQuickConversion": 0.0,
+        "counts": {
+          "n": 22759.0,
+          "w": 22294.0
+        }
+      },
+      "candidate": {
+        "points": 1.1805062823306436,
+        "ftPoints": 0.19830804431114804,
+        "quickProxy": 0.30786455538667207,
+        "earlyLoss": 0.06726981331978067,
+        "lateLoss": 0.038383006555061945,
+        "earlyFg": 0.4938247448798761,
+        "earlyFt": 0.07069650801103794,
+        "earlyNonShootingFoul": 0.020920102515856714,
+        "lossBeforeAttempt": 0.10486701650141217,
+        "firstFgMake": 0.5014809235488772,
+        "quickFgMake": 0.5612074507871566,
+        "otherFgMake": 0.46355289720607273,
+        "putbackShare": 0.3884814099945262,
+        "putbackLossRate": 0.08763989867948226,
+        "putbackEarlyLossRate": 0.08358209906552001,
+        "putbackQuickConversion": 0.7355078832035664,
+        "restartShare": 0.607154658856961,
+        "restartLossRate": 0.11664176916513136,
+        "restartEarlyLossRate": 0.05684017805776287,
+        "restartQuickConversion": 0.0364430062343185,
+        "unknownShare": 0.004363931148512842,
+        "unknownLossRate": 0.0,
+        "unknownEarlyLossRate": 0.0,
+        "unknownQuickConversion": 0.0,
+        "counts": {
+          "n": 22771.0,
+          "w": 22304.666666666668
+        }
+      }
+    },
+    "2023-24": {
+      "games": 1230,
+      "real": {
+        "points": 1.2688454517120085,
+        "ftPoints": 0.15784318090743132,
+        "quickProxy": 0.42374994434302504,
+        "earlyLoss": 0.052705139765554555,
+        "lateLoss": 0.0260595130748422,
+        "earlyFg": 0.6137060414788097,
+        "earlyFt": 0.06379621280432822,
+        "earlyNonShootingFoul": 0.02055906221821461,
+        "lossBeforeAttempt": 0.07823144396455764,
+        "firstFgMake": 0.5213598392724965,
+        "quickFgMake": 0.5904171482610067,
+        "otherFgMake": 0.4514206661700543,
+        "putbackShare": null,
+        "putbackLossRate": null,
+        "putbackEarlyLossRate": null,
+        "putbackQuickConversion": null,
+        "restartShare": null,
+        "restartLossRate": null,
+        "restartEarlyLossRate": null,
+        "restartQuickConversion": null,
+        "unknownShare": null,
+        "unknownLossRate": null,
+        "unknownEarlyLossRate": null,
+        "unknownQuickConversion": null
+      },
+      "baseline": {
+        "points": 1.1948798354151435,
+        "ftPoints": 0.19014626230426301,
+        "quickProxy": 0.30360512278586294,
+        "earlyLoss": 0.06451603190983098,
+        "lateLoss": 0.03849992819181567,
+        "earlyFg": 0.49519436116502247,
+        "earlyFt": 0.06837933474927767,
+        "earlyNonShootingFoul": 0.033852368423409496,
+        "lossBeforeAttempt": 0.10223961957954138,
+        "firstFgMake": 0.49951931231565433,
+        "quickFgMake": 0.551472253040906,
+        "otherFgMake": 0.46780300271643477,
+        "putbackShare": 0.3873296779370106,
+        "putbackLossRate": 0.08566385608943335,
+        "putbackEarlyLossRate": 0.08016914809417644,
+        "putbackQuickConversion": 0.7300433268805847,
+        "restartShare": 0.608491405400764,
+        "restartLossRate": 0.11349987906352188,
+        "restartEarlyLossRate": 0.05458556084252969,
+        "restartQuickConversion": 0.03423318505958883,
+        "unknownShare": 0.004178916662225351,
+        "unknownLossRate": 0.0,
+        "unknownEarlyLossRate": 0.0,
+        "unknownQuickConversion": 0.0,
+        "counts": {
+          "n": 23297.333333333332,
+          "w": 22804.666666666668
+        }
+      },
+      "candidate": {
+        "points": 1.1957184989401923,
+        "ftPoints": 0.1870298869864119,
+        "quickProxy": 0.30829973669306315,
+        "earlyLoss": 0.06481910220654344,
+        "lateLoss": 0.038035997303791,
+        "earlyFg": 0.5014251407206349,
+        "earlyFt": 0.0666143527265521,
+        "earlyNonShootingFoul": 0.02165540217775044,
+        "lossBeforeAttempt": 0.10197333972486311,
+        "firstFgMake": 0.5005149654272311,
+        "quickFgMake": 0.5531456304660373,
+        "otherFgMake": 0.4677372861339452,
+        "putbackShare": 0.3867900263937045,
+        "putbackLossRate": 0.08512047001589791,
+        "putbackEarlyLossRate": 0.08099989563433013,
+        "putbackQuickConversion": 0.7419155498249784,
+        "restartShare": 0.608903554294662,
+        "restartLossRate": 0.11340558333471984,
+        "restartEarlyLossRate": 0.054578733148488656,
+        "restartQuickConversion": 0.03503012956117312,
+        "unknownShare": 0.004306419311633443,
+        "unknownLossRate": 0.0,
+        "unknownEarlyLossRate": 0.0,
+        "unknownQuickConversion": 0.0,
+        "counts": {
+          "n": 23378.0,
+          "w": 22873.0
+        }
+      }
+    },
+    "2024-25": {
+      "games": 1229,
+      "real": {
+        "points": 1.247067354860726,
+        "ftPoints": 0.15074862432282557,
+        "quickProxy": 0.39478735656699226,
+        "earlyLoss": 0.05532503457814661,
+        "lateLoss": 0.03125,
+        "earlyFg": 0.5920210926694329,
+        "earlyFt": 0.05886929460580913,
+        "earlyNonShootingFoul": 0.020012102351313968,
+        "lossBeforeAttempt": 0.0856119097385147,
+        "firstFgMake": 0.5098168870803662,
+        "quickFgMake": 0.5837925445705024,
+        "otherFgMake": 0.4440172993753003,
+        "putbackShare": null,
+        "putbackLossRate": null,
+        "putbackEarlyLossRate": null,
+        "putbackQuickConversion": null,
+        "restartShare": null,
+        "restartLossRate": null,
+        "restartEarlyLossRate": null,
+        "restartQuickConversion": null,
+        "unknownShare": null,
+        "unknownLossRate": null,
+        "unknownEarlyLossRate": null,
+        "unknownQuickConversion": null
+      },
+      "baseline": {
+        "points": 1.1823311579962879,
+        "ftPoints": 0.19244710028717338,
+        "quickProxy": 0.3086585873977381,
+        "earlyLoss": 0.06633591762210546,
+        "lateLoss": 0.03931028712689602,
+        "earlyFg": 0.4965912912941071,
+        "earlyFt": 0.06863647958993112,
+        "earlyNonShootingFoul": 0.033403791365498835,
+        "lossBeforeAttempt": 0.1049019554507707,
+        "firstFgMake": 0.4955004156871152,
+        "quickFgMake": 0.5542323561522228,
+        "otherFgMake": 0.45830989763887536,
+        "putbackShare": 0.3955283346848755,
+        "putbackLossRate": 0.08597888845025876,
+        "putbackEarlyLossRate": 0.07916961883268771,
+        "putbackQuickConversion": 0.7271677403535337,
+        "restartShare": 0.6001464457835097,
+        "restartLossRate": 0.11814190079453603,
+        "restartEarlyLossRate": 0.05789054835747141,
+        "restartQuickConversion": 0.03504723350804052,
+        "unknownShare": 0.004325219531614717,
+        "unknownLossRate": 0.0,
+        "unknownEarlyLossRate": 0.0,
+        "unknownQuickConversion": 0.0,
+        "counts": {
+          "n": 23997.333333333332,
+          "w": 23515.666666666668
+        }
+      },
+      "candidate": {
+        "points": 1.184790305666242,
+        "ftPoints": 0.18852747332980901,
+        "quickProxy": 0.3139110575514767,
+        "earlyLoss": 0.06621943931852407,
+        "lateLoss": 0.038803473054335715,
+        "earlyFg": 0.5023425880305007,
+        "earlyFt": 0.06725480694554693,
+        "earlyNonShootingFoul": 0.022475899674622452,
+        "lossBeforeAttempt": 0.10417347278988649,
+        "firstFgMake": 0.4978731829037249,
+        "quickFgMake": 0.5553951994169196,
+        "otherFgMake": 0.4606046649830035,
+        "putbackShare": 0.39596418346260703,
+        "putbackLossRate": 0.08402656436358662,
+        "putbackEarlyLossRate": 0.07831019419797937,
+        "putbackQuickConversion": 0.7390471175068966,
+        "restartShare": 0.5995731174361391,
+        "restartLossRate": 0.11828368935857951,
+        "restartEarlyLossRate": 0.05826355528892948,
+        "restartQuickConversion": 0.03547447629544209,
+        "unknownShare": 0.0044626991012539675,
+        "unknownLossRate": 0.0,
+        "unknownEarlyLossRate": 0.0,
+        "unknownQuickConversion": 0.0,
+        "counts": {
+          "n": 24000.333333333332,
+          "w": 23517.333333333332
+        }
+      }
+    },
+    "2025-26": {
+      "games": 1227,
+      "real": {
+        "points": 1.2838553613879968,
+        "ftPoints": 0.1679943278975685,
+        "quickProxy": 0.39587938441005965,
+        "earlyLoss": 0.05098850963163231,
+        "lateLoss": 0.0288948969246367,
+        "earlyFg": 0.6031176072997634,
+        "earlyFt": 0.06332375802636026,
+        "earlyNonShootingFoul": 0.02010814464346063,
+        "lossBeforeAttempt": 0.07915919422780164,
+        "firstFgMake": 0.5179255134006265,
+        "quickFgMake": 0.5933417614833544,
+        "otherFgMake": 0.45051323100103585,
+        "putbackShare": null,
+        "putbackLossRate": null,
+        "putbackEarlyLossRate": null,
+        "putbackQuickConversion": null,
+        "restartShare": null,
+        "restartLossRate": null,
+        "restartEarlyLossRate": null,
+        "restartQuickConversion": null,
+        "unknownShare": null,
+        "unknownLossRate": null,
+        "unknownEarlyLossRate": null,
+        "unknownQuickConversion": null
+      },
+      "baseline": {
+        "points": 1.2051710438084726,
+        "ftPoints": 0.20580880479273345,
+        "quickProxy": 0.3029554929504635,
+        "earlyLoss": 0.06924884270819816,
+        "lateLoss": 0.04032317874181313,
+        "earlyFg": 0.49169655906794224,
+        "earlyFt": 0.07370604530382947,
+        "earlyNonShootingFoul": 0.03394099509098957,
+        "lossBeforeAttempt": 0.10867426337908764,
+        "firstFgMake": 0.5055305377876047,
+        "quickFgMake": 0.567236055632934,
+        "otherFgMake": 0.4668183560745571,
+        "putbackShare": 0.3915672269007113,
+        "putbackLossRate": 0.08732307818908346,
+        "putbackEarlyLossRate": 0.08167848337414596,
+        "putbackQuickConversion": 0.7188272261964687,
+        "restartShare": 0.604398896701611,
+        "restartLossRate": 0.12323787273218624,
+        "restartEarlyLossRate": 0.06121061888567544,
+        "restartQuickConversion": 0.03555121915185069,
+        "unknownShare": 0.004033876397677685,
+        "unknownLossRate": 0.0,
+        "unknownEarlyLossRate": 0.0,
+        "unknownQuickConversion": 0.0,
+        "counts": {
+          "n": 24462.0,
+          "w": 23972.666666666668
+        }
+      },
+      "candidate": {
+        "points": 1.2092323445768074,
+        "ftPoints": 0.20165996167432398,
+        "quickProxy": 0.3083784701559617,
+        "earlyLoss": 0.06899888202494472,
+        "lateLoss": 0.03919457434557409,
+        "earlyFg": 0.49956123631171906,
+        "earlyFt": 0.071308646051513,
+        "earlyNonShootingFoul": 0.02201050119023767,
+        "lossBeforeAttempt": 0.10739674579138926,
+        "firstFgMake": 0.5058804704023473,
+        "quickFgMake": 0.5693564219336796,
+        "otherFgMake": 0.4652405813681572,
+        "putbackShare": 0.39151298658662803,
+        "putbackLossRate": 0.08607219692274397,
+        "putbackEarlyLossRate": 0.08092689553345771,
+        "putbackQuickConversion": 0.7320909773395735,
+        "restartShare": 0.6044376423824455,
+        "restartLossRate": 0.12193323371156613,
+        "restartEarlyLossRate": 0.06129408715724497,
+        "restartQuickConversion": 0.035992557459910104,
+        "unknownShare": 0.004049371030926527,
+        "unknownLossRate": 0.0,
+        "unknownEarlyLossRate": 0.0,
+        "unknownQuickConversion": 0.0,
+        "counts": {
+          "n": 24453.0,
+          "w": 23959.0
+        }
+      }
+    }
+  },
+  "pooled": {
+    "real": {
+      "points": 1.2673298228195016,
+      "ftPoints": 0.1622445477792775,
+      "quickProxy": 0.4101954999509728,
+      "earlyLoss": 0.052384736711248485,
+      "lateLoss": 0.028602033496583856,
+      "earlyFg": 0.6051753146062513,
+      "earlyFt": 0.06349713381074908,
+      "earlyNonShootingFoul": 0.020361046726394435,
+      "lossBeforeAttempt": 0.08024548187939132,
+      "firstFgMake": 0.5187858364906159,
+      "quickFgMake": 0.5922310525966673,
+      "otherFgMake": 0.4484338280966678,
+      "putbackShare": null,
+      "putbackLossRate": null,
+      "putbackEarlyLossRate": null,
+      "putbackQuickConversion": null,
+      "restartShare": null,
+      "restartLossRate": null,
+      "restartEarlyLossRate": null,
+      "restartQuickConversion": null,
+      "unknownShare": null,
+      "unknownLossRate": null,
+      "unknownEarlyLossRate": null,
+      "unknownQuickConversion": null
+    },
+    "baseline": {
+      "points": 1.1912361551396187,
+      "ftPoints": 0.19723934881075172,
+      "quickProxy": 0.3049664239326551,
+      "earlyLoss": 0.06662391491297322,
+      "lateLoss": 0.03921870359132012,
+      "earlyFg": 0.49325121686534096,
+      "earlyFt": 0.07058622896207098,
+      "earlyNonShootingFoul": 0.03330855714130397,
+      "lossBeforeAttempt": 0.10503094408540972,
+      "firstFgMake": 0.500452502259926,
+      "quickFgMake": 0.5582924900648654,
+      "otherFgMake": 0.46432268885697264,
+      "putbackShare": 0.3908182726469435,
+      "putbackLossRate": 0.08665266773193603,
+      "putbackEarlyLossRate": 0.0808693769443598,
+      "putbackQuickConversion": 0.7255996513789678,
+      "restartShare": 0.60494476580227,
+      "restartLossRate": 0.11765556642716071,
+      "restartEarlyLossRate": 0.057445780541076595,
+      "restartQuickConversion": 0.03535371796206912,
+      "unknownShare": 0.004236961550786469,
+      "unknownLossRate": 0.0,
+      "unknownEarlyLossRate": 0.0,
+      "unknownQuickConversion": 0.0
+    },
+    "candidate": {
+      "points": 1.1925618578784714,
+      "ftPoints": 0.19388134157542325,
+      "quickProxy": 0.30961345494679343,
+      "earlyLoss": 0.06682680921744824,
+      "lateLoss": 0.03860426281469069,
+      "earlyFg": 0.4992884274856827,
+      "earlyFt": 0.06896857843366248,
+      "earlyNonShootingFoul": 0.02176547638961682,
+      "lossBeforeAttempt": 0.10460264370188775,
+      "firstFgMake": 0.5014373855705451,
+      "quickFgMake": 0.5597761756509483,
+      "otherFgMake": 0.4642838574227947,
+      "putbackShare": 0.39068715160936646,
+      "putbackLossRate": 0.08571478249542769,
+      "putbackEarlyLossRate": 0.0809547711078218,
+      "putbackQuickConversion": 0.7371403819687538,
+      "restartShare": 0.6050172432425518,
+      "restartLossRate": 0.11756606889249921,
+      "restartEarlyLossRate": 0.057744138413106494,
+      "restartQuickConversion": 0.035735042387710955,
+      "unknownShare": 0.004295605148081695,
+      "unknownLossRate": 0.0,
+      "unknownEarlyLossRate": 0.0,
+      "unknownQuickConversion": 0.0
+    }
+  },
+  "intervals": {
+    "baseline-real": {
+      "points": {
+        "delta": -0.0760936676798829,
+        "joint95": [
+          -0.0867919263213044,
+          -0.06582748872378141
+        ]
+      },
+      "ftPoints": {
+        "delta": 0.03499480103147423,
+        "joint95": [
+          0.028997613983333496,
+          0.04122229053135317
+        ]
+      },
+      "quickProxy": {
+        "delta": -0.10522907601831771,
+        "joint95": [
+          -0.11831910762591759,
+          -0.09189746975012303
+        ]
+      },
+      "earlyLoss": {
+        "delta": 0.014239178201724732,
+        "joint95": [
+          0.01134790983206371,
+          0.017053369068891835
+        ]
+      },
+      "lateLoss": {
+        "delta": 0.010616670094736262,
+        "joint95": [
+          0.008341114585435844,
+          0.012960548385151734
+        ]
+      },
+      "earlyFg": {
+        "delta": -0.11192409774091033,
+        "joint95": [
+          -0.12243960326051927,
+          -0.1010031698352556
+        ]
+      },
+      "earlyFt": {
+        "delta": 0.007089095151321903,
+        "joint95": [
+          0.004069742654658673,
+          0.010076934876449081
+        ]
+      },
+      "earlyNonShootingFoul": {
+        "delta": 0.012947510414909536,
+        "joint95": [
+          0.01138500516362036,
+          0.014524237199631914
+        ]
+      },
+      "lossBeforeAttempt": {
+        "delta": 0.024785462206018405,
+        "joint95": [
+          0.020947442395517872,
+          0.02853982596624698
+        ]
+      },
+      "firstFgMake": {
+        "delta": -0.018333334230689946,
+        "joint95": [
+          -0.024027612717217386,
+          -0.012608973204508534
+        ]
+      },
+      "quickFgMake": {
+        "delta": -0.03393856253180194,
+        "joint95": [
+          -0.04406038081587196,
+          -0.02399331509270297
+        ]
+      },
+      "otherFgMake": {
+        "delta": 0.015888860760304824,
+        "joint95": [
+          0.007337647520986107,
+          0.02479767560348445
+        ]
+      },
+      "putbackShare": {
+        "status": "not identifiable: real intention unobserved"
+      },
+      "putbackLossRate": {
+        "status": "not identifiable: real intention unobserved"
+      },
+      "putbackEarlyLossRate": {
+        "status": "not identifiable: real intention unobserved"
+      },
+      "putbackQuickConversion": {
+        "status": "not identifiable: real intention unobserved"
+      },
+      "restartShare": {
+        "status": "not identifiable: real intention unobserved"
+      },
+      "restartLossRate": {
+        "status": "not identifiable: real intention unobserved"
+      },
+      "restartEarlyLossRate": {
+        "status": "not identifiable: real intention unobserved"
+      },
+      "restartQuickConversion": {
+        "status": "not identifiable: real intention unobserved"
+      },
+      "unknownShare": {
+        "status": "not identifiable: real intention unobserved"
+      },
+      "unknownLossRate": {
+        "status": "not identifiable: real intention unobserved"
+      },
+      "unknownEarlyLossRate": {
+        "status": "not identifiable: real intention unobserved"
+      },
+      "unknownQuickConversion": {
+        "status": "not identifiable: real intention unobserved"
+      }
+    },
+    "candidate-baseline": {
+      "points": {
+        "delta": 0.0013257027388526854,
+        "joint95": [
+          -0.0016631994547193995,
+          0.004460282003814373
+        ]
+      },
+      "ftPoints": {
+        "delta": -0.003358007235328475,
+        "joint95": [
+          -0.004936340700616502,
+          -0.0017818444627739256
+        ]
+      },
+      "quickProxy": {
+        "delta": 0.004647031014138325,
+        "joint95": [
+          0.0032422429403247766,
+          0.005890380254199582
+        ]
+      },
+      "earlyLoss": {
+        "delta": 0.00020289430447502366,
+        "joint95": [
+          -0.0004664938448159442,
+          0.0008876608986489923
+        ]
+      },
+      "lateLoss": {
+        "delta": -0.0006144407766294283,
+        "joint95": [
+          -0.0011843741477075682,
+          -6.106234159412171e-05
+        ]
+      },
+      "earlyFg": {
+        "delta": 0.0060372106203417375,
+        "joint95": [
+          0.004580703157737199,
+          0.00741494257896541
+        ]
+      },
+      "earlyFt": {
+        "delta": -0.0016176505284084958,
+        "joint95": [
+          -0.002447762956009684,
+          -0.0008339212872893485
+        ]
+      },
+      "earlyNonShootingFoul": {
+        "delta": -0.01154308075168715,
+        "joint95": [
+          -0.012141236237038491,
+          -0.01092362935676321
+        ]
+      },
+      "lossBeforeAttempt": {
+        "delta": -0.00042830038352197064,
+        "joint95": [
+          -0.0012707978022070765,
+          0.00046516258906631
+        ]
+      },
+      "firstFgMake": {
+        "delta": 0.000984883310619078,
+        "joint95": [
+          -0.0003922642881249813,
+          0.0023420887629500117
+        ]
+      },
+      "quickFgMake": {
+        "delta": 0.0014836855860829168,
+        "joint95": [
+          -0.001260831827747396,
+          0.0038963980355635882
+        ]
+      },
+      "otherFgMake": {
+        "delta": -3.883143417793278e-05,
+        "joint95": [
+          -0.002015062646436308,
+          0.0020264490077153263
+        ]
+      },
+      "putbackShare": {
+        "delta": -0.0001311210375770644,
+        "joint95": [
+          -0.001382099357577975,
+          0.001135329589888486
+        ]
+      },
+      "putbackLossRate": {
+        "delta": -0.0009378852365083401,
+        "joint95": [
+          -0.002412990024921134,
+          0.00035261442363365605
+        ]
+      },
+      "putbackEarlyLossRate": {
+        "delta": 8.539416346199646e-05,
+        "joint95": [
+          -0.00112523626812573,
+          0.001240555526489217
+        ]
+      },
+      "putbackQuickConversion": {
+        "delta": 0.011540730589785997,
+        "joint95": [
+          0.00973762604307523,
+          0.013381896375423998
+        ]
+      },
+      "restartShare": {
+        "delta": 7.247744028182623e-05,
+        "joint95": [
+          -0.0011980945525552032,
+          0.0013151407749133776
+        ]
+      },
+      "restartLossRate": {
+        "delta": -8.949753466150345e-05,
+        "joint95": [
+          -0.0012773618443821055,
+          0.0011965884216347806
+        ]
+      },
+      "restartEarlyLossRate": {
+        "delta": 0.0002983578720298988,
+        "joint95": [
+          -0.0006298478715261527,
+          0.0012743489923888994
+        ]
+      },
+      "restartQuickConversion": {
+        "delta": 0.0003813244256418366,
+        "joint95": [
+          -0.0003757492803329712,
+          0.0012101722181251516
+        ]
+      },
+      "unknownShare": {
+        "delta": 5.8643597295226016e-05,
+        "joint95": [
+          -9.405115930529333e-05,
+          0.0002198401069543452
+        ]
+      },
+      "unknownLossRate": {
+        "delta": 0.0,
+        "joint95": [
+          0.0,
+          0.0
+        ]
+      },
+      "unknownEarlyLossRate": {
+        "delta": 0.0,
+        "joint95": [
+          0.0,
+          0.0
+        ]
+      },
+      "unknownQuickConversion": {
+        "delta": 0.0,
+        "joint95": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    "candidate-real": {
+      "points": {
+        "delta": -0.07476796494103022,
+        "joint95": [
+          -0.08659559005889261,
+          -0.06371399769089366
+        ]
+      },
+      "ftPoints": {
+        "delta": 0.03163679379614576,
+        "joint95": [
+          0.025581955826330712,
+          0.037878707150277344
+        ]
+      },
+      "quickProxy": {
+        "delta": -0.10058204500417939,
+        "joint95": [
+          -0.11376620693939489,
+          -0.08725504678584231
+        ]
+      },
+      "earlyLoss": {
+        "delta": 0.014442072506199756,
+        "joint95": [
+          0.011431987253737267,
+          0.01741196690997778
+        ]
+      },
+      "lateLoss": {
+        "delta": 0.010002229318106834,
+        "joint95": [
+          0.007755362483722387,
+          0.012297013599483068
+        ]
+      },
+      "earlyFg": {
+        "delta": -0.1058868871205686,
+        "joint95": [
+          -0.11638495317444217,
+          -0.09502021164578855
+        ]
+      },
+      "earlyFt": {
+        "delta": 0.005471444622913407,
+        "joint95": [
+          0.0023244666178348795,
+          0.008618063428682923
+        ]
+      },
+      "earlyNonShootingFoul": {
+        "delta": 0.0014044296632223854,
+        "joint95": [
+          -0.0002274825260228875,
+          0.003036031387913129
+        ]
+      },
+      "lossBeforeAttempt": {
+        "delta": 0.024357161822496434,
+        "joint95": [
+          0.020582454602091075,
+          0.02811010524302498
+        ]
+      },
+      "firstFgMake": {
+        "delta": -0.017348450920070868,
+        "joint95": [
+          -0.023587442735080098,
+          -0.01114981081991224
+        ]
+      },
+      "quickFgMake": {
+        "delta": -0.032454876945719024,
+        "joint95": [
+          -0.04325452459879431,
+          -0.02206528974338143
+        ]
+      },
+      "otherFgMake": {
+        "delta": 0.01585002932612689,
+        "joint95": [
+          0.007098823228508059,
+          0.024815556680200808
+        ]
+      },
+      "putbackShare": {
+        "status": "not identifiable: real intention unobserved"
+      },
+      "putbackLossRate": {
+        "status": "not identifiable: real intention unobserved"
+      },
+      "putbackEarlyLossRate": {
+        "status": "not identifiable: real intention unobserved"
+      },
+      "putbackQuickConversion": {
+        "status": "not identifiable: real intention unobserved"
+      },
+      "restartShare": {
+        "status": "not identifiable: real intention unobserved"
+      },
+      "restartLossRate": {
+        "status": "not identifiable: real intention unobserved"
+      },
+      "restartEarlyLossRate": {
+        "status": "not identifiable: real intention unobserved"
+      },
+      "restartQuickConversion": {
+        "status": "not identifiable: real intention unobserved"
+      },
+      "unknownShare": {
+        "status": "not identifiable: real intention unobserved"
+      },
+      "unknownLossRate": {
+        "status": "not identifiable: real intention unobserved"
+      },
+      "unknownEarlyLossRate": {
+        "status": "not identifiable: real intention unobserved"
+      },
+      "unknownQuickConversion": {
+        "status": "not identifiable: real intention unobserved"
+      }
+    }
+  },
+  "leagueStats": {
+    "2022-23": {
+      "baseline": {
+        "efficiency": 111.81969321510128,
+        "possessions": 102.3570840108401,
+        "tov": 13.465040650406506,
+        "fg": 47.128158258840934,
+        "three": 36.30701997489654,
+        "fta": 21.627642276422762,
+        "efficiencyBias": -0.2726273721061432,
+        "possessionBias": 0.043409214092122284,
+        "tovBias": -0.6300813008130071
+      },
+      "candidate": {
+        "efficiency": 111.786110654908,
+        "possessions": 102.39698644986449,
+        "tov": 13.497967479674799,
+        "fg": 47.13632972960226,
+        "three": 36.29896387199761,
+        "fta": 21.62317073170732,
+        "efficiencyBias": -0.3062099322994243,
+        "possessionBias": 0.08331165311651034,
+        "tovBias": -0.5971544715447141
+      }
+    },
+    "2023-24": {
+      "baseline": {
+        "efficiency": 112.88872654236086,
+        "possessions": 101.69705149051491,
+        "tov": 12.980081300813007,
+        "fg": 47.10993253587839,
+        "three": 36.88147643561488,
+        "fta": 19.867344173441733,
+        "efficiencyBias": 0.3774537906241022,
+        "possessionBias": 0.18599457994579893,
+        "tovBias": -0.6247967479674816
+      },
+      "candidate": {
+        "efficiency": 112.87928280540952,
+        "possessions": 101.70550677506776,
+        "tov": 12.952574525745257,
+        "fg": 47.08916581563157,
+        "three": 36.87640054401223,
+        "fta": 19.76029810298103,
+        "efficiencyBias": 0.3680100536727622,
+        "possessionBias": 0.19444986449865098,
+        "tovBias": -0.652303523035231
+      }
+    },
+    "2024-25": {
+      "baseline": {
+        "efficiency": 111.65758466174732,
+        "possessions": 101.98858536585367,
+        "tov": 13.706368563685638,
+        "fg": 46.50447965408722,
+        "three": 36.3604421408886,
+        "fta": 20.295257452574525,
+        "efficiencyBias": 0.013204607228530563,
+        "possessionBias": 0.03521951219512687,
+        "tovBias": -0.5920054200541998
+      },
+      "candidate": {
+        "efficiency": 111.72244332484264,
+        "possessions": 102.04022764227642,
+        "tov": 13.706097560975609,
+        "fg": 46.54340630151197,
+        "three": 36.39733981267767,
+        "fta": 20.23739837398374,
+        "efficiencyBias": 0.07806327032385241,
+        "possessionBias": 0.08686178861788107,
+        "tovBias": -0.592276422764229
+      }
+    },
+    "2025-26": {
+      "baseline": {
+        "efficiency": 112.77921247742813,
+        "possessions": 102.65128997289973,
+        "tov": 14.517615176151763,
+        "fg": 47.06083659862711,
+        "three": 36.69603888427951,
+        "fta": 22.25379403794038,
+        "efficiencyBias": 0.05061396588403966,
+        "possessionBias": 0.09725745257452445,
+        "tovBias": 0.007452574525746769
+      },
+      "candidate": {
+        "efficiency": 112.81550322998179,
+        "possessions": 102.65814092140921,
+        "tov": 14.509214092140923,
+        "fg": 47.07642971906299,
+        "three": 36.7099535037277,
+        "fta": 22.148644986449863,
+        "efficiencyBias": 0.08690471843769387,
+        "possessionBias": 0.10410840108400521,
+        "tovBias": -0.0009485094850933962
+      }
+    }
+  },
+  "descriptiveAccuracy": {
+    "baseline": {
+      "netRMSE": 2.816024599838696,
+      "winsMAE": 5.327777777777778,
+      "winsRMSE": 6.710274046399133,
+      "note": "3seed descriptive only; not promotion evidence"
+    },
+    "candidate": {
+      "netRMSE": 2.8402926084266045,
+      "winsMAE": 5.2777777777777795,
+      "winsRMSE": 6.684143758012524,
+      "note": "3seed descriptive only; not promotion evidence"
+    }
+  },
+  "limitations": [
+    "real latent intention is not observed; do not compare simulation mode-specific loss rates to outcome-selected real FG groups",
+    "postOREB first-boundary probability used as gate approximation; intentional fouls retained; no continuous hazard claim",
+    "early risk denominators exclude all <3sec period-remaining anchors",
+    "three seeds and all seasons seen-data; no baseline adoption or new production parameters"
+  ]
+}

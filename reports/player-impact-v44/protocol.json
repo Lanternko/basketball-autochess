@@ -1,0 +1,19 @@
+{
+  "version": "source-logit-make-transfer-44",
+  "seasons": [
+    "2022-23",
+    "2023-24",
+    "2024-25",
+    "2025-26"
+  ],
+  "seeds": [
+    20261012,
+    20261013,
+    20261014
+  ],
+  "design": "Keep frozen v41 source make-fit and v42 shot choice. Transfer the fitted source shooter intercept plus opponent defense on the same logit scale. Center runtime non-defender contextual logit against actual source FGA exposures, instead of adding an empirical percentage residual to another offensive model. Preserve current-minus-source offensive context, fatigue and attribute effects. No simulation/onoff/win residual tuning or named-player overrides.",
+  "priority": "User explicitly permits temporary team scoring regression to prioritize defense on 2026-10-16. Track every team and individual error; no automatic adoption merely for one star.",
+  "context": "Use actual source lineups, actual source rotation energy, fresh recorded FGA weights and recorded-FGA survival. Subtract five fitted defender logits before centering, retaining defender variation. Same frozen 60-minute equivalent FGA smoothing for the neutral context only. Putbacks unchanged.",
+  "validation": "Four already-seen seasons, three seeds, full plus strict schedules. These are same-season reconstruction experiments, not future prediction. Report in/on-off zone shares, FG%, attempts per48, team PPG and existing individual/win metrics. Source fit expectation check separates initial coefficient shrinkage from runtime transfer.",
+  "rejectedPrecursor": "v43 compared Gaussian and convex pseudo-Huber with older-season whole-game folds; no support for heavier-tail rim defense. v44 keeps the original v41 fitted coefficients exactly."
+}

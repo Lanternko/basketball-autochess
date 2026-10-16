@@ -1,0 +1,167 @@
+{
+  "logSelfScale": -0.028076042331856236,
+  "selfScale": 0.9723144269336811,
+  "trainingNllPerAttempt": 1.3321920271176373,
+  "numericalDerivative": -3.808064974464287e-10,
+  "numericalCurvature": 0.09198590777970139,
+  "design": "Equal-season mean exact conditional multinomial NLL per actual fresh FGA; categories unassisted make, assisted make by each other player, miss. Probabilities use frozen v30 centered source contexts, mean-stint fatigue and exact selected own/caught branch with recorded-FGA survival. No probability floor. If an observed event has zero support, report and stop instead of conceal.",
+  "folds": [
+    {
+      "logSelfScale": -0.025966446996904504,
+      "selfScale": 0.9743677820254883,
+      "trainingNllPerAttempt": 1.3324305314574707,
+      "numericalDerivative": -3.8191672047105385e-10,
+      "numericalCurvature": 0.09206777562553725,
+      "fold": 0,
+      "heldoutNllPerAttempt": 1.3315164475155041,
+      "priorOneHeldoutNllPerAttempt": 1.3315757935969736
+    },
+    {
+      "logSelfScale": -0.02549622694114342,
+      "selfScale": 0.9748260570348904,
+      "trainingNllPerAttempt": 1.330397007298977,
+      "numericalDerivative": 1.199040866595169e-10,
+      "numericalCurvature": 0.09183520610633877,
+      "fold": 1,
+      "heldoutNllPerAttempt": 1.3389031297767031,
+      "priorOneHeldoutNllPerAttempt": 1.338963855640593
+    },
+    {
+      "logSelfScale": -0.03296557500254702,
+      "selfScale": 0.9675718676747936,
+      "trainingNllPerAttempt": 1.3324423452503342,
+      "numericalDerivative": -3.6415315207705135e-10,
+      "numericalCurvature": 0.09174105919385056,
+      "fold": 2,
+      "heldoutNllPerAttempt": 1.3312320678728122,
+      "priorOneHeldoutNllPerAttempt": 1.3312032056146423
+    },
+    {
+      "logSelfScale": -0.02763533533098363,
+      "selfScale": 0.9727430271453001,
+      "trainingNllPerAttempt": 1.332506879610735,
+      "numericalDerivative": -2.318145675417327e-09,
+      "numericalCurvature": 0.09220402219511925,
+      "fold": 3,
+      "heldoutNllPerAttempt": 1.3308623407964482,
+      "priorOneHeldoutNllPerAttempt": 1.330903018757116
+    },
+    {
+      "logSelfScale": -0.02832396231181854,
+      "selfScale": 0.9720734006392902,
+      "trainingNllPerAttempt": 1.3331758217214462,
+      "numericalDerivative": -5.995204332975845e-11,
+      "numericalCurvature": 0.09208136475535866,
+      "fold": 4,
+      "heldoutNllPerAttempt": 1.3284289576841941,
+      "priorOneHeldoutNllPerAttempt": 1.3284627585411866
+    }
+  ],
+  "seasons": [
+    {
+      "season": "2022-23",
+      "freshAttempts": 183377,
+      "priorOneNll": 242641.22741864456,
+      "fittedNll": 242632.6274184299,
+      "gainPerAttempt": 4.689792184765896e-05,
+      "sourceSelfMakes": 32119,
+      "sourceAssistedMakes": 54597
+    },
+    {
+      "season": "2023-24",
+      "freshAttempts": 181617,
+      "priorOneNll": 243580.72407473484,
+      "fittedNll": 243572.55496006,
+      "gainPerAttempt": 4.4979900972025e-05,
+      "sourceSelfMakes": 29008,
+      "sourceAssistedMakes": 56724
+    },
+    {
+      "season": "2024-25",
+      "freshAttempts": 186841,
+      "priorOneNll": 248932.86906676152,
+      "fittedNll": 248929.66882328922,
+      "gainPerAttempt": 1.712816497608189e-05,
+      "sourceSelfMakes": 28704,
+      "sourceAssistedMakes": 57968
+    },
+    {
+      "season": "2025-26",
+      "freshAttempts": 203079,
+      "priorOneNll": 272069.48881118913,
+      "fittedNll": 272062.1907283688,
+      "gainPerAttempt": 3.593716150013468e-05,
+      "sourceSelfMakes": 31430,
+      "sourceAssistedMakes": 63532
+    }
+  ],
+  "sourceCoverage": [
+    {
+      "season": "2022-23",
+      "games": 1079,
+      "states": 64514,
+      "zeroShotStates": 9871,
+      "shotStates": 54643,
+      "freshAttempts": 183377,
+      "selfMakes": 32119,
+      "assistedMakes": 54597,
+      "cappedInterceptions": 0,
+      "positiveFgaPlayerStints": 125273,
+      "unsupportedAssistedMarks": []
+    },
+    {
+      "season": "2023-24",
+      "games": 1063,
+      "states": 62360,
+      "zeroShotStates": 8910,
+      "shotStates": 53450,
+      "freshAttempts": 181617,
+      "selfMakes": 29008,
+      "assistedMakes": 56724,
+      "cappedInterceptions": 0,
+      "positiveFgaPlayerStints": 123712,
+      "unsupportedAssistedMarks": []
+    },
+    {
+      "season": "2024-25",
+      "games": 1091,
+      "states": 65970,
+      "zeroShotStates": 9757,
+      "shotStates": 56213,
+      "freshAttempts": 186841,
+      "selfMakes": 28704,
+      "assistedMakes": 57968,
+      "cappedInterceptions": 0,
+      "positiveFgaPlayerStints": 129310,
+      "unsupportedAssistedMarks": []
+    },
+    {
+      "season": "2025-26",
+      "games": 1188,
+      "states": 77246,
+      "zeroShotStates": 12736,
+      "shotStates": 64510,
+      "freshAttempts": 203079,
+      "selfMakes": 31430,
+      "assistedMakes": 63532,
+      "cappedInterceptions": 0,
+      "positiveFgaPlayerStints": 144218,
+      "unsupportedAssistedMarks": []
+    }
+  ],
+  "trainingSeasons": [
+    "2022-23",
+    "2023-24",
+    "2024-25"
+  ],
+  "checkSeason": "2025-26",
+  "limits": "Scale is descriptive conditional mark calibration, not physiological capacity or pure skill. Recentered final mechanism must be rescored, source inputs contain made outcomes; no causal/predictive claim.",
+  "hashes": {
+    "reports/player-impact-v36/marked-protocol.json": "8de10a57560fcbfd72ce58226ff41f323bd4cefa3df845bae601539217528a68",
+    "reports/player-impact-v36/fit-marked.py": "1db47d4353390647f267aca5b7866a809de3568c74dfa2874aee2a065e01adc3",
+    "reports/player-impact-v36/2022-23-marked-data.json": "63af21a9c0a8e127653c8a8986c6b4eeda866c3a5699a4d3b48b34fea4efe7a2",
+    "reports/player-impact-v36/2023-24-marked-data.json": "7ce8ec296e58a69ce9225f435baa97d75c47a39d7b692d48976fb168bb715e6f",
+    "reports/player-impact-v36/2024-25-marked-data.json": "bb1c3908e5b556851a9b36806394414166fc5ef528f0fbfb6506b310e8575034",
+    "reports/player-impact-v36/2025-26-marked-data.json": "02e5f198d3ffbef607f46b6456100fb7039875bb144bfa250ac9e5623f2d6fb7"
+  }
+}

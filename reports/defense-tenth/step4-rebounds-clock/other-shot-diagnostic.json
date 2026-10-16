@@ -1,0 +1,147 @@
+{
+  "definition": "same preregistered otherShot category; not latent putback intent, includes delayed same-player shots; descriptive sensitivity only, no adoption claim",
+  "seasons": {
+    "2022-23": {
+      "real": {
+        "samples": 12850,
+        "meanSeconds": 3.535299610894942,
+        "medianSeconds": 2.599999999999996
+      },
+      "allocation": {
+        "samplesBySeed": [
+          15464,
+          15358,
+          15300
+        ],
+        "meanSeconds": 5.478640634101359,
+        "medianSecondsMean": 4.933333333333327
+      },
+      "putback": {
+        "samplesBySeed": [
+          11715,
+          11532,
+          11735
+        ],
+        "meanSeconds": 4.865198178291219,
+        "medianSecondsMean": 4.0
+      },
+      "calibrated": {
+        "samplesBySeed": [
+          11655,
+          11594,
+          11591
+        ],
+        "meanSeconds": 4.907409498843791,
+        "medianSecondsMean": 4.033333333333332
+      }
+    },
+    "2023-24": {
+      "real": {
+        "samples": 12824,
+        "meanSeconds": 3.627690268247037,
+        "medianSeconds": 3.0
+      },
+      "allocation": {
+        "samplesBySeed": [
+          16073,
+          15907,
+          15838
+        ],
+        "meanSeconds": 5.456788719622736,
+        "medianSecondsMean": 4.866666666666674
+      },
+      "putback": {
+        "samplesBySeed": [
+          12055,
+          12008,
+          12036
+        ],
+        "meanSeconds": 4.835096079943474,
+        "medianSecondsMean": 4.0
+      },
+      "calibrated": {
+        "samplesBySeed": [
+          11986,
+          12090,
+          11969
+        ],
+        "meanSeconds": 4.848919450237261,
+        "medianSecondsMean": 3.966666666666678
+      }
+    },
+    "2024-25": {
+      "real": {
+        "samples": 13311,
+        "meanSeconds": 3.998963263466306,
+        "medianSeconds": 3.0
+      },
+      "allocation": {
+        "samplesBySeed": [
+          16291,
+          16306,
+          16365
+        ],
+        "meanSeconds": 5.475465005327351,
+        "medianSecondsMean": 4.933333333333327
+      },
+      "putback": {
+        "samplesBySeed": [
+          12418,
+          12271,
+          12502
+        ],
+        "meanSeconds": 4.821364705109769,
+        "medianSecondsMean": 3.9333333333333442
+      },
+      "calibrated": {
+        "samplesBySeed": [
+          12444,
+          12111,
+          12462
+        ],
+        "meanSeconds": 4.8760674127013175,
+        "medianSecondsMean": 3.9666666666666686
+      }
+    },
+    "2025-26": {
+      "real": {
+        "samples": 13723,
+        "meanSeconds": 3.85100925453618,
+        "medianSeconds": 3.0
+      },
+      "allocation": {
+        "samplesBySeed": [
+          16114,
+          16455,
+          16660
+        ],
+        "meanSeconds": 5.473154016975472,
+        "medianSecondsMean": 4.899999999999996
+      },
+      "putback": {
+        "samplesBySeed": [
+          12270,
+          12443,
+          12334
+        ],
+        "meanSeconds": 4.798806824445387,
+        "medianSecondsMean": 3.8999999999999964
+      },
+      "calibrated": {
+        "samplesBySeed": [
+          12285,
+          12338,
+          12366
+        ],
+        "meanSeconds": 4.822005288232704,
+        "medianSecondsMean": 3.8999999999999964
+      }
+    }
+  },
+  "equalSeasonMeanSeconds": {
+    "real": 3.753240599286116,
+    "allocation": 5.4710120940067295,
+    "putback": 4.8301164469474624,
+    "calibrated": 4.863600412503768
+  }
+}

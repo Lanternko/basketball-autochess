@@ -1,0 +1,21 @@
+{
+  "scope": "Exploratory source diagnostic of the previous frozen beta; not a change to v36 runtime, not a fitted OVR bonus. Prepared before viewing this conditional identity fit.",
+  "trainingSeasons": [
+    "2022-23",
+    "2023-24",
+    "2024-25"
+  ],
+  "checkSeason": "2025-26",
+  "criterion": "Equal-season conditional assister-choice multinomial NLL per assisted FGM, receiver/stint and made result fixed. Known exact v30-centered source probabilities. A beta change multiplies each passer prior by originalPassRate**(beta-oldBeta); common elastic pass normalization cancels in this conditional choice.",
+  "fit": "One unbounded scalar beta, analytic convex score root. Five whole-game leave-fold-out fits; fixed full-season descriptors mean not blind crossfit. Check season not used for selection.",
+  "limits": "Conditioning on assisted FGM estimates who receives assist credit, not total creation volume, pure pass skill, causal teammate effect or OVR. Engine and source-centering review still required for any future candidate.",
+  "hashes": {
+    "reports/player-impact-v36/passer-choice-inputs.json": "b8d85817f6626526be81e3d325a494092138f117e32540712eb749acf52c62e9",
+    "reports/player-impact-v36/passer-choice-diagnostic.py": "e7509ac9270331ff95f21aab361de7088786a3deaf0bdb808ab7d4d575f3f11e",
+    "reports/player-impact-v36/passer-choice-protocol.py": "ee2d35ca27d4f990b2377400995e586fa83e7a8eae6811b1078e9926f863717d",
+    "reports/player-impact-v36/2022-23-marked-data.json": "63af21a9c0a8e127653c8a8986c6b4eeda866c3a5699a4d3b48b34fea4efe7a2",
+    "reports/player-impact-v36/2023-24-marked-data.json": "7ce8ec296e58a69ce9225f435baa97d75c47a39d7b692d48976fb168bb715e6f",
+    "reports/player-impact-v36/2024-25-marked-data.json": "bb1c3908e5b556851a9b36806394414166fc5ef528f0fbfb6506b310e8575034",
+    "reports/player-impact-v36/2025-26-marked-data.json": "02e5f198d3ffbef607f46b6456100fb7039875bb144bfa250ac9e5623f2d6fb7"
+  }
+}

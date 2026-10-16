@@ -1,0 +1,53 @@
+{
+  "label": "2022-23-eighth-c-ablation-25-defenseSignals",
+  "extra": {
+    "bundle": "reports/defense-seventh/2022-23/calendar-25/bundle.json",
+    "cutoff": 25,
+    "calendarDate": "2022-12-08",
+    "cardFile": "reports/defense-seventh/2022-23/calendar-25/pre25-v4-league.json",
+    "neutralContests": true,
+    "calibration": {
+      "shotDelta": -0.09674293974467914,
+      "options": {
+        "pace": 0.9371888051071083,
+        "foulScale": 0.9121911577152662,
+        "passTurnoverScale": 1.3505953417801926,
+        "touchTurnoverScale": 1.0581586692850777,
+        "touchLiveShare": 0.26504971778457836,
+        "clockViolationProbability": 0.006271537567609091
+      }
+    },
+    "options": {
+      "reboundSignal": false,
+      "rimSignal": false,
+      "liveSignal": false,
+      "zoneSignal": false,
+      "foulSignal": false
+    }
+  },
+  "files": [
+    {
+      "seed": 20261012,
+      "file": "reports/defense-seventh/runs/2022-23-eighth-c-ablation-25-defenseSignals-seed20261012.json",
+      "sha256": "1051a218a58f1233070cea53374b41181a6745f9e1bf887cce2960aae302a64f"
+    },
+    {
+      "seed": 20261013,
+      "file": "reports/defense-seventh/runs/2022-23-eighth-c-ablation-25-defenseSignals-seed20261013.json",
+      "sha256": "1d02cccf5cb0de86b49a83c3062522db6ed15dc3787dcc250b50a0ec53efac78"
+    },
+    {
+      "seed": 20261014,
+      "file": "reports/defense-seventh/runs/2022-23-eighth-c-ablation-25-defenseSignals-seed20261014.json",
+      "sha256": "662ee8ca2f848925ed3621df82d97000652a36952edd60523f12139a06dc35aa"
+    }
+  ],
+  "seconds": 104.333,
+  "sources": {
+    "src/defense_fifth_game.js": "bddd3f34b93e969513ce79d717b78358dc433c0f15eba3eeffa675177b9dfa86",
+    "src/defense_sixth_season.js": "1c30c6c59fbc3e2a40b08231dddf9be255b11fca386d93daf1eb986a99000bcf",
+    "src/defense_seventh_jobs.js": "ca1501845b601e0b742f601751ac74fba7e9717a6de66d8ab9d7a4d0c4c6d41d",
+    "scripts/run_defense_seventh.js": "0e40923369762bd8b0a0faa1545e704ba0587bc1341ea40058b7766f240f3f01",
+    "reports/defense-seventh/2022-23/calendar-25/pre25-v4-league.json": "dd442e5e4d4ff85f244ee09a4d95601a2f0a21b1a032330aa379edd69514e48b"
+  }
+}

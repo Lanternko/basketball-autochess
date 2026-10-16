@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "games": 96,
+  "allGameAndPersonalCountersExactlyV26": true,
+  "scope": "Old inputs without defense source anchors/rebuilt contexts, including clipped source players. No source restoration applied; budget live-refresh tested separately in v27.",
+  "hashes": {
+    "reports/player-impact-v28/engine.mjs": "30e1d66c70df88aef82fa13604175ab67093884534bb3462bd7acb5c114a6f88",
+    "reports/player-impact-v28/model.mjs": "ec8318ad7dd54085c5805ced4b66a6073578ee691d09ed6a29991478c3ae8690",
+    "reports/player-impact-v28/verify-fallback.mjs": "081349627deeb9134ef952acf7b7b73b46cba6f44cf2c6d0a50600e4bcc5c34d"
+  }
+}

@@ -1,0 +1,309 @@
+{
+  "splitDefinition": "seeds 0,1 versus 2,3; both rotation phases, all 30 fixed opponents and two seats retained",
+  "postRunDiagnostic": true,
+  "spearman": 0.3422610227601053,
+  "top20Intersection": 9,
+  "top20Jaccard": 0.2903225806451613,
+  "medianConditional95HalfWidth": 2.3425857100756824,
+  "focus": [
+    {
+      "name": "Shai Gilgeous-Alexander",
+      "fullRank": 1,
+      "halfRanks": [
+        1,
+        3
+      ],
+      "contribution": 5.733333333333333,
+      "ci95": [
+        2.8329515066179716,
+        8.633715160048695
+      ]
+    },
+    {
+      "name": "Cormac Ryan",
+      "fullRank": 2,
+      "halfRanks": [
+        2,
+        8
+      ],
+      "contribution": 4.6125,
+      "ci95": [
+        2.461894480186603,
+        6.763105519813397
+      ]
+    },
+    {
+      "name": "Lauri Markkanen",
+      "fullRank": 3,
+      "halfRanks": [
+        8,
+        6
+      ],
+      "contribution": 4.45,
+      "ci95": [
+        1.6210937004114383,
+        7.278906299588562
+      ]
+    },
+    {
+      "name": "Zach Edey",
+      "fullRank": 4,
+      "halfRanks": [
+        12,
+        4
+      ],
+      "contribution": 4.370833333333334,
+      "ci95": [
+        2.063681343204474,
+        6.6779853234621935
+      ]
+    },
+    {
+      "name": "Victor Wembanyama",
+      "fullRank": 5,
+      "halfRanks": [
+        4,
+        17
+      ],
+      "contribution": 4.129166666666666,
+      "ci95": [
+        1.383502240905774,
+        6.874831092427559
+      ]
+    },
+    {
+      "name": "Charles Bassey",
+      "fullRank": 6,
+      "halfRanks": [
+        7,
+        12
+      ],
+      "contribution": 4.091666666666667,
+      "ci95": [
+        1.969527258742044,
+        6.2138060745912895
+      ]
+    },
+    {
+      "name": "Brandon Miller",
+      "fullRank": 7,
+      "halfRanks": [
+        11,
+        11
+      ],
+      "contribution": 4.045833333333333,
+      "ci95": [
+        1.5612287351609684,
+        6.530437931505698
+      ]
+    },
+    {
+      "name": "Nikola Jokić",
+      "fullRank": 8,
+      "halfRanks": [
+        9,
+        13
+      ],
+      "contribution": 4.020833333333333,
+      "ci95": [
+        1.190587445245685,
+        6.8510792214209815
+      ]
+    },
+    {
+      "name": "Collin Sexton",
+      "fullRank": 9,
+      "halfRanks": [
+        6,
+        33
+      ],
+      "contribution": 3.7083333333333335,
+      "ci95": [
+        1.4956539076729558,
+        5.921012758993712
+      ]
+    },
+    {
+      "name": "Josh Oduro",
+      "fullRank": 10,
+      "halfRanks": [
+        18,
+        10
+      ],
+      "contribution": 3.595833333333333,
+      "ci95": [
+        1.0255812290389645,
+        6.166085437627702
+      ]
+    },
+    {
+      "name": "Giannis Antetokounmpo",
+      "fullRank": 11,
+      "halfRanks": [
+        10,
+        39
+      ],
+      "contribution": 3.475,
+      "ci95": [
+        1.007783454683906,
+        5.942216545316095
+      ]
+    },
+    {
+      "name": "Jalen Duren",
+      "fullRank": 12,
+      "halfRanks": [
+        15,
+        23
+      ],
+      "contribution": 3.404166666666667,
+      "ci95": [
+        0.9093736391792158,
+        5.898959694154118
+      ]
+    },
+    {
+      "name": "Mitchell Robinson",
+      "fullRank": 13,
+      "halfRanks": [
+        124,
+        1
+      ],
+      "contribution": 3.3875,
+      "ci95": [
+        0.7146035217701883,
+        6.060396478229812
+      ]
+    },
+    {
+      "name": "Haywood Highsmith",
+      "fullRank": 14,
+      "halfRanks": [
+        20,
+        32
+      ],
+      "contribution": 3.075,
+      "ci95": [
+        0.9881117041731109,
+        5.1618882958268895
+      ]
+    },
+    {
+      "name": "Jimmy Butler III",
+      "fullRank": 15,
+      "halfRanks": [
+        25,
+        25
+      ],
+      "contribution": 3.0541666666666667,
+      "ci95": [
+        0.07961971859267569,
+        6.028713614740658
+      ]
+    },
+    {
+      "name": "Trey Murphy III",
+      "fullRank": 16,
+      "halfRanks": [
+        31,
+        22
+      ],
+      "contribution": 2.995833333333333,
+      "ci95": [
+        0.42860169096921696,
+        5.563064975697449
+      ]
+    },
+    {
+      "name": "A.J. Lawson",
+      "fullRank": 17,
+      "halfRanks": [
+        5,
+        130
+      ],
+      "contribution": 2.9833333333333334,
+      "ci95": [
+        0.8574363766653086,
+        5.109230290001358
+      ]
+    },
+    {
+      "name": "Evan Mobley",
+      "fullRank": 18,
+      "halfRanks": [
+        14,
+        53
+      ],
+      "contribution": 2.966666666666667,
+      "ci95": [
+        0.559230847746,
+        5.374102485587334
+      ]
+    },
+    {
+      "name": "Walker Kessler",
+      "fullRank": 19,
+      "halfRanks": [
+        177,
+        2
+      ],
+      "contribution": 2.925,
+      "ci95": [
+        0.05359876121882312,
+        5.7964012387811765
+      ]
+    },
+    {
+      "name": "Moses Moody",
+      "fullRank": 20,
+      "halfRanks": [
+        83,
+        7
+      ],
+      "contribution": 2.8916666666666666,
+      "ci95": [
+        0.3574195946110983,
+        5.425913738722235
+      ]
+    },
+    {
+      "name": "Neemias Queta",
+      "fullRank": 58,
+      "halfRanks": [
+        84,
+        71
+      ],
+      "contribution": 1.7416666666666667,
+      "ci95": [
+        -0.6139884792888419,
+        4.097321812622175
+      ]
+    },
+    {
+      "name": "Cade Cunningham",
+      "fullRank": 181,
+      "halfRanks": [
+        58,
+        391
+      ],
+      "contribution": 0.4083333333333333,
+      "ci95": [
+        -2.0854748173856814,
+        2.902141484052348
+      ]
+    },
+    {
+      "name": "Stephen Curry",
+      "fullRank": 194,
+      "halfRanks": [
+        106,
+        333
+      ],
+      "contribution": 0.325,
+      "ci95": [
+        -2.4510661115246437,
+        3.101066111524644
+      ]
+    }
+  ]
+}

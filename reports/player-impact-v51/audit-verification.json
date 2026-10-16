@@ -1,0 +1,68 @@
+{
+  "passed": true,
+  "jobs": 81,
+  "gameExecutions": 5940,
+  "v49V50EvidenceUnchanged": true,
+  "baselineParityFixtures": 180,
+  "confirmationIndependentOfPrior540Fixtures": true,
+  "confirmationMetricsRecomputed": true,
+  "candidateRejected": true,
+  "objective": 1.8002583043582159,
+  "gates": {
+    "objectiveImprovedOverOnePercent": true,
+    "everySeasonMinuteWithin005": false,
+    "everySeasonShortShareWithin001": true
+  },
+  "confirmationCells": [
+    {
+      "season": "2022-23",
+      "variant": "baseline",
+      "phaseMAE": 14.86640734949179,
+      "pairMAE": 3.1919564699340697,
+      "regMinuteMAE": 0.906541568934063,
+      "shortShare": 0.09884013704212302
+    },
+    {
+      "season": "2022-23",
+      "variant": "rollingPlan",
+      "phaseMAE": 13.26728824602554,
+      "pairMAE": 2.893358664089461,
+      "regMinuteMAE": 0.9199726348709929,
+      "shortShare": 0.09485509909799256
+    },
+    {
+      "season": "2023-24",
+      "variant": "baseline",
+      "phaseMAE": 14.845883302784324,
+      "pairMAE": 3.1344581662373074,
+      "regMinuteMAE": 0.9300650257484507,
+      "shortShare": 0.09774681545360389
+    },
+    {
+      "season": "2023-24",
+      "variant": "rollingPlan",
+      "phaseMAE": 13.160617526403072,
+      "pairMAE": 2.8257527952619976,
+      "regMinuteMAE": 0.9419883040935673,
+      "shortShare": 0.09259668707183531
+    },
+    {
+      "season": "2024-25",
+      "variant": "baseline",
+      "phaseMAE": 14.953307123829166,
+      "pairMAE": 3.091366228465094,
+      "regMinuteMAE": 0.8026037638566641,
+      "shortShare": 0.09489299428275454
+    },
+    {
+      "season": "2024-25",
+      "variant": "rollingPlan",
+      "phaseMAE": 13.585330841282119,
+      "pairMAE": 2.7988488418958437,
+      "regMinuteMAE": 0.8843894474520925,
+      "shortShare": 0.08786855621994387
+    }
+  ],
+  "targetSeasonEvaluated": false,
+  "runtimeVerificationSHA256": "80962e640ad1c3ab4f1d1ef9b3561d17451a87c1e287623c1a8b5cebf8cfc673"
+}

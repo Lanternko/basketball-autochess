@@ -1,0 +1,53 @@
+{
+  "label": "2025-26-eighth-c-ablation-41-defenseSignals",
+  "extra": {
+    "bundle": "reports/defense-seventh/2025-26/calendar-41/bundle.json",
+    "cutoff": 41,
+    "calendarDate": "2026-01-16",
+    "cardFile": "reports/defense-seventh/2025-26/calendar-41/pre41-v4-league.json",
+    "neutralContests": true,
+    "calibration": {
+      "shotDelta": -0.08617950581850353,
+      "options": {
+        "pace": 0.9345447404624676,
+        "foulScale": 0.9563872570825447,
+        "passTurnoverScale": 1.4978130535144465,
+        "touchTurnoverScale": 1.007807206314971,
+        "touchLiveShare": 0.3650829966074995,
+        "clockViolationProbability": 0.0069741981231289316
+      }
+    },
+    "options": {
+      "reboundSignal": false,
+      "rimSignal": false,
+      "liveSignal": false,
+      "zoneSignal": false,
+      "foulSignal": false
+    }
+  },
+  "files": [
+    {
+      "seed": 20261012,
+      "file": "reports/defense-seventh/runs/2025-26-eighth-c-ablation-41-defenseSignals-seed20261012.json",
+      "sha256": "025e2fbd960c9f1baf2a9c9b0324af628189d5d576c2408a65639f27f9409c5f"
+    },
+    {
+      "seed": 20261013,
+      "file": "reports/defense-seventh/runs/2025-26-eighth-c-ablation-41-defenseSignals-seed20261013.json",
+      "sha256": "852e37e78c8c477e8b653372fb5a1c44a01b554d37b2b87f46fbf092771351a7"
+    },
+    {
+      "seed": 20261014,
+      "file": "reports/defense-seventh/runs/2025-26-eighth-c-ablation-41-defenseSignals-seed20261014.json",
+      "sha256": "d543443542f755f9b8abe4e896412192274ce086afdad25e53caba17b3a2e7f9"
+    }
+  ],
+  "seconds": 96.849,
+  "sources": {
+    "src/defense_fifth_game.js": "bddd3f34b93e969513ce79d717b78358dc433c0f15eba3eeffa675177b9dfa86",
+    "src/defense_sixth_season.js": "1c30c6c59fbc3e2a40b08231dddf9be255b11fca386d93daf1eb986a99000bcf",
+    "src/defense_seventh_jobs.js": "ca1501845b601e0b742f601751ac74fba7e9717a6de66d8ab9d7a4d0c4c6d41d",
+    "scripts/run_defense_seventh.js": "0e40923369762bd8b0a0faa1545e704ba0587bc1341ea40058b7766f240f3f01",
+    "reports/defense-seventh/2025-26/calendar-41/pre41-v4-league.json": "b6695bc67f743635557d538f789748c29b58591e124987409316a37b3f0d77b7"
+  }
+}

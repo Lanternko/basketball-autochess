@@ -1,0 +1,270 @@
+{
+  "stage": "C0",
+  "registeredAt": "2026-10-12T15:52:26.886Z",
+  "blindDataPresent": false,
+  "checkedAbsentPaths": [
+    "data/defense-seventh/2023-24",
+    "reports/defense-seventh/2023-24",
+    "data/defense-seventh/2022-23",
+    "reports/defense-seventh/2022-23"
+  ],
+  "developmentSeasons": [
+    "2024-25",
+    "2025-26"
+  ],
+  "blindSeasons": [
+    "2023-24",
+    "2022-23"
+  ],
+  "cutoffs": [
+    25,
+    41,
+    55
+  ],
+  "seeds": [
+    20261012,
+    20261013,
+    20261014,
+    20261015,
+    20261016,
+    20261017,
+    20261018,
+    20261019,
+    20261020,
+    20261021,
+    20261022,
+    20261023,
+    20261024,
+    20261025,
+    20261026,
+    20261027,
+    20261028,
+    20261029,
+    20261030,
+    20261031
+  ],
+  "v5FreezeHash": "c21ca1e02c267f8143ed2561729d36f27fa11406c6d44a3682cbd699ce590d98",
+  "developmentAssessmentHash": "f0806d9cac06f913ea61bb496d1106d2f68d0fe4648be19e13b6db2de1163a06",
+  "frozenSources": {
+    "scripts/prepare_defense_eighth_b_rules.js": "c44488e932d3a06e5896def1c09af7d0abc12f04fcc571dc3aa47a36f42ae41d",
+    "scripts/build_defense_eighth_v5_cards.js": "c0295e4476b1af5f7794ef22be22e3443e29a02d812f9d55685fa0196d872585",
+    "scripts/run_defense_eighth_b_point.js": "1c4f62605f04422152211940a98b56e755a84e0546803f0599a5065b330f036b",
+    "scripts/campaign_defense_eighth_b_anchors.js": "dff3c16f767fa002a7f1fcba449e44adb14c1bb2f802c0e15272988ec8709f94",
+    "scripts/select_defense_eighth_v5.js": "31fa4fd3a37f141bce942dc7d04db928ad976310f0a1ba28b981b23a19962e51",
+    "scripts/campaign_defense_eighth_b_final.js": "cb218ba6540150360b1f6990f4ce2d6680fe508119da1edd628ceae00aaaf8bc",
+    "scripts/assess_defense_eighth_b.js": "33a52cd789be066d39a87f6af016aa30cae89159fd28aff8398b75f9714795bb",
+    "scripts/assess_defense_eighth_b_players.js": "445c1f3e77c899abe894187dcb9b2f1e8d7175251cf79d9e1e1fb8df16a7cf5c",
+    "scripts/report_defense_eighth_b.js": "0597b4acb2b09e067ba1a14c2a00c29b5fc12d0146fb1d051d69aa54f503b8ba",
+    "scripts/freeze_defense_eighth_v5.js": "7393f1ef1dac203d5950a8d8764e9a9c63e72eba5e9ddac62e195741f03053a0",
+    "src/defense_eighth_analysis.js": "f2c2e530ba4ef0467667e77b92abf8ef580056243eff4ddd622ece00c36fadd3",
+    "src/defense_eighth_blind_evaluation.js": "b5b8ac0f5e1cbb35d7b41afd3e7109cf5b115888e8993249104a51ca50fd82b5",
+    "test/defense_eighth_b.js": "7c037b1a87d992a5615b30e245e1d14db63154fc0a59f5800e1d520a076d37c9",
+    "reports/defense-eighth/b/development-rules.json": "3c5bb0df8975f733b8864c0b1d0a301010579e406cfd4b10f2ab6de9aaf225d1",
+    "reports/defense-eighth/b/selection.json": "4d961a13e156f2586f8f40b2340b3daf59d6de395ab807e1369e49137f4d5912",
+    "reports/defense-eighth/b/assessment.json": "f0806d9cac06f913ea61bb496d1106d2f68d0fe4648be19e13b6db2de1163a06",
+    "reports/defense-eighth/b/players.json": "9b39c0412dbc3912c527bd02a90dcdb5525812fb16cdfc9fa48158f574340f8c",
+    "reports/defense-seventh/v4-freeze.json": "0e302eb3e2ae4894e3acd8f33d3d41044b9df27a98d998118da8fbebd77b8236",
+    "reports/defense-seventh/v4-execution-fixes.json": "e0c103d8138ad23041fe2f4728e34325a5078b2bb4871d05fd26fa202493d88a",
+    "src/constants.js": "86f968d2a29326d0e4ab8375face0e83f76556464a1caeb8ff00be6797290598",
+    "src/probability_model.js": "13b175efac436d3c560fd39389f3486225ab90bfbc996d6802ee76ce461aad87",
+    "src/defense_fifth_game.js": "bddd3f34b93e969513ce79d717b78358dc433c0f15eba3eeffa675177b9dfa86",
+    "src/defense_fourth_effects.js": "ce90813d1089a8dd400d6051db2b08022a26914a0b1e3672cd7ddf4924a03ff4",
+    "src/defense_probability.js": "e652ede7ebe9753f85105dc657fcb2b39d67f28d1ef92a58df008bddd2de4e48",
+    "src/rebound_block_model.js": "57459f5bb27147410c9f5ada9ae308809e591e5a6a4dfea24f832ab796fb0a92",
+    "src/defense_seventh_season.js": "08851b87a804659812dd02e9874e7e1afe0f27f28cbe4da9114341396c38e01c",
+    "src/defense_seventh_jobs.js": "ca1501845b601e0b742f601751ac74fba7e9717a6de66d8ab9d7a4d0c4c6d41d",
+    "scripts/defense_seventh_worker.js": "47380cbc00c462e9db22827e7b402ddf0282c1251ac84d1a121dcb61d117d715",
+    "scripts/run_defense_seventh.js": "0e40923369762bd8b0a0faa1545e704ba0587bc1341ea40058b7766f240f3f01",
+    "scripts/estimate_defense_fifth.py": "8c0e2c6e007be54b999f9a9617404c9f2755a6298c19de3d09ba85bf842514a8",
+    "scripts/estimate_defense_sixth.py": "8e4d20f6c5d471e764e1949e1359886b0c7c6cebdc1fb649ef2b9ef62df04157",
+    "scripts/defense_seventh_data.py": "9476c80ea0fd687969b1b4f12145148c9a266594ae0a448f9b04b257fef1d089",
+    "scripts/estimate_defense_seventh.py": "113c84f3add3ac9cd95a54c140f94ca5d6c8a5097e279b491d2a871fecb8cc79",
+    "scripts/estimate_defense_seventh_factors.py": "61d2f1874eca120e30d4bcd22b631dfc71ccef2cda15d5427294727ce9110b27",
+    "scripts/build_defense_fifth_holdout.js": "139cd5a1a5e23109118977678b7d96e8df4a39a34ac1668135b0a10da17a6479",
+    "scripts/build_defense_seventh_base.js": "7fe4261470bf69ddaf17f1ac188a3caa2a49e12938a0cd6f48d9ed527135ef9a",
+    "scripts/build_defense_seventh_bundle.js": "f75a4dca9f436b0d105a41edb177df18549249bd6d7a1d895c6aeabca1a957c8",
+    "scripts/build_defense_seventh_cards.js": "d9e15f6f7da5c7556c381afa278168b51de04eef4aab56b960b34d3364953168",
+    "scripts/export_defense_sixth_cards.js": "eef3d5bb04b598471dcb5a4db76514677274fe70f6382545279a29974a72c49c",
+    "scripts/calibrate_defense_seventh_bundle.js": "cbe441c406feeda590a243eb9e3a6401437b4f8966ac542d12a2adfbe665aa09",
+    "scripts/prepare_defense_seventh_calendar.js": "df2702a9488bfccfa727025e921c9abd0eeb14d8c75bc18ee8befcbd98b23204",
+    "scripts/campaign_defense_seventh_calendar.js": "00a6d05a8c2ca98ba7fd43ebd554961c51fa3feb77a0c296e08ad139cc347117",
+    "scripts/fetch_defense_seventh_season.js": "1aa95f02b22537567ff2810e42e6ac13c840ab4c42e35f034496d3e3e769ec19",
+    "scripts/prepare_defense_seventh_season.js": "2620547146d50b914310db3139b9be4aef57a7854bf952c4734c62632121b426",
+    "scripts/prepare_defense_b1.js": "99d4d3d2d1f2a2764847c88256034821669571154c8f1c166f0ea721178b2f45",
+    "scripts/validate_defense_stints.js": "d7c5a9cf267d8e7cf4db856b4c43f02ca15d1f668b3a92a4d3d61bffa1ff773d",
+    "scripts/prepare_defense_stint_zones.js": "d666875624bc435ca53b10942c41087b69479cd74ae092bd9fbc5a10ee643c68",
+    "src/defense_pbp_analysis.js": "9fa9ecacd1b8a649d708098277e2b579be57a83299e094d730c6b92305cc8e00",
+    "src/minute_budget.js": "388258e91afe84696612edab0d02ee88699d37f84683b4f68ef180c8d0f3e7dd",
+    "src/defense_third_minutes.js": "0894e14a649ad63ce96e57b315e090d22f0ac49590b0dd8a031195b0033de4c6",
+    "src/rng.js": "f549b8e5b37591f83ae2d78995f5526faf9c3d9a376502f984e0c9e730486c31"
+  },
+  "outputCalibration": {
+    "m4": {
+      "25": 0.6387301175852882,
+      "41": 0.7466894566409772,
+      "55": 0.7440677569507943
+    },
+    "ms": {
+      "25": 0.6802223285992512,
+      "41": 0.9105736146308521,
+      "55": 1.0256870410055758
+    },
+    "source": "Exact equally weighted development-season actual-vs-predicted slopes; read unrounded pooled values, not displayed decimals.",
+    "formula": "Within each season/K, subtract the30-team mean from the20-seed mean predicted net; multiply by frozen m4[K] or ms[K]. No team/season refit, no new simulation. For joint seed bootstrap scale the re-averaged seed prediction; team resample then recenters for evaluation.",
+    "versions": {
+      "v4cal": "v4 centered net times m4[K]",
+      "simplecal": "simple centered net times ms[K]"
+    },
+    "metrics": [
+      "netRMSE",
+      "netCorrelation",
+      "calibrationSlope",
+      "netSDRatio"
+    ],
+    "undefinedColumns": [
+      "wins MAE",
+      "wins RMSE",
+      "residual single-game SD",
+      "league efficiency bias"
+    ],
+    "undefinedReason": "Output transformation supplies no win/game-event/box forecast. Leave undefined values null, never fabricate wins or treat them as zero."
+  },
+  "comparisons": [
+    {
+      "id": "a",
+      "left": "v3",
+      "right": "v3-signals-off"
+    },
+    {
+      "id": "b",
+      "left": "v4",
+      "right": "v3"
+    },
+    {
+      "id": "c",
+      "left": "v5",
+      "right": "v4"
+    },
+    {
+      "id": "d",
+      "left": "v4",
+      "envelope": [
+        "simple",
+        "shrink"
+      ]
+    },
+    {
+      "id": "e",
+      "left": "v5",
+      "envelope": [
+        "simple",
+        "shrink"
+      ]
+    },
+    {
+      "id": "f",
+      "left": "v4cal",
+      "right": "v4",
+      "netOnly": true
+    },
+    {
+      "id": "g",
+      "left": "simplecal",
+      "right": "simple",
+      "netOnly": true
+    },
+    {
+      "id": "h",
+      "left": "v4cal",
+      "envelope": [
+        "simple",
+        "simplecal"
+      ],
+      "netOnly": true
+    }
+  ],
+  "evaluation": {
+    "interpretation": "All verdicts use joint franchise+seed bootstrap only. No old B1 temporal slope rule and no old C2 two-cutoff pass criterion.",
+    "questions": [
+      "v3 minus v3-signals-off",
+      "v4 minus v3",
+      "v5 minus v4",
+      "v4 minus stronger simple comparator",
+      "v5 minus stronger simple comparator"
+    ],
+    "metrics": [
+      "netRMSE",
+      "netCorrelation",
+      "calibrationSlope",
+      "netSDRatio",
+      "winMAE",
+      "winRMSE"
+    ],
+    "jointBootstrap": {
+      "replicates": 5000,
+      "rngSeed": 20261082,
+      "teams": 30,
+      "seedCount": 20,
+      "franchiseCoupling": "Same franchise sample shared across all seasons and all versions; same paired seed sample shared across seasons. Recenter net within each season. Seasons equally weighted; netRMSE/winRMSE pool MSE then sqrt; other metrics arithmetic mean."
+    },
+    "strongerComparator": "For each K/group and each error metric, evaluation envelope=min(combined simple error,combined shrink error); recompute the envelope within each joint bootstrap draw. Both fixed predictors individually also reported. No choice enters engine forecasts.",
+    "verdict": "At each K using only the two blind seasons combined: 成立 if either primary error (netRMSE or winMAE) has jointCI upper<0. Report any significant worsening of the other error as a tradeoff. 不成立 if neither improves and at least one has jointCI lower>0. 分不出 if both intervals include0, and report both widths. Also report each endpoint verdict. No point-estimate claims when 分不出; no K pooling or new majority threshold.",
+    "primaryReport": "Four-season combined, alongside blind-two-season combined; only blind-two-season combined establishes C4. Single seasons descriptive. No refitting/version changes after seeing blind results.",
+    "C5": "Compute actual-vs-predicted calibration-slope ratios v4/simple and v3/simple in each new season/cutoff, compare descriptively to developer-season values; oracle ratios are never forecast inputs.",
+    "bootstrap": {
+      "replicates": 20000,
+      "rngSeed": 20261082,
+      "ci95": [
+        0.025,
+        0.975
+      ],
+      "ci998": [
+        0.001,
+        0.999
+      ],
+      "percentileIndex": "floor(p*B), with 0-based sorted samples",
+      "coupling": "30 franchises and20 paired seeds sampled with replacement, draws shared across all versions and seasons. Within-season recentering, equal season weight; RMSE and oracle RMSE pool squared errors before sqrt; other metrics average seasonal quantities. Recompute stronger-comparator error envelope in each draw."
+    },
+    "oldB4VerdictsUnchanged": true,
+    "perCutoffVerdict": "For(a)-(e), retain B4 OR rule on netRMSE/winMAE95% intervals; for(f)-(h), use netRMSE alone. 成立 if any applicable primary error upper95<0; 不成立 if none improves and any lower95>0; otherwise 分不出. Significant opposite-endpoint worsening remains an explicit tradeoff.",
+    "confirmation": {
+      "directions": [
+        "improvement",
+        "worsening"
+      ],
+      "perEndpoint": "Cross-season confirmation if same endpoint/direction has95% CI excluding0 at>=2 distinct K, or99.8% CI excluding0 at anyK. One K at95% only is single-point. None is unresolved.",
+      "perComparison": "Retain B4 primary-error OR: for each direction, count distinctK with any applicable primary endpoint in that direction. >=2 suchK OR any endpoint at99.8% gives 跨季確認; exactly1K at95% only gives 單點成立; none gives 分不出. Endpoint-specific grades and all opposite-direction results are also shown.",
+      "singlePointWarning": "30多個檢定中預期約1–2個偶然通過",
+      "primaryTests": 39,
+      "conclusionRestriction": "Only comparisons with improvement direction 跨季確認 may be described as improving. Single-point and unresolved may not use point estimates to claim improvement. Only blind-two-season combined establishes C4; four-season/development tables are descriptive."
+    }
+  },
+  "quality": {
+    "strictMinimumCoverage": 0.85,
+    "denominator": "1230 official regular-season games,30 teams each82. Strict audit excludes missingPbp, lineup failure, possession uncertainty and official counter mismatch.",
+    "belowThreshold": "Still run and mark 覆蓋不足. Also report all-season and blind-only aggregates excluding every season below85%; no silent exclusion or manual fixes.",
+    "inSeasonTournament2023": "Only official Regular Season leaguegamelog schedule is admitted. Tournament group games, quarterfinals and semifinals count; championship game does not. Assert1230 games and82 per team; list excluded finals and tournament schedule checks in audit.",
+    "failures": "Publish complete gameID reasons, team/month counts and cross-tab; minute/counter tolerances remain frozen."
+  },
+  "diagnostics": {
+    "label": "事後探索，不作驗收",
+    "oracle": "Report each of four seasons original v4/simple oracle slopes and their ratios, compare to frozen development values. Never feed blind oracle values into forecasts.",
+    "ablation": {
+      "seeds": [
+        20261012,
+        20261013,
+        20261014
+      ],
+      "base": "v4 workflow at each of four seasons and3 calendar cutoffs; reuse first3 existing v4 seeds as control.",
+      "components": {
+        "offensePrior": "Set role priorOffense to training-minute weighted league mean before frozen projection; retain offenseResidual and all defense.",
+        "offenseResidual": "Set role offenseResidual to zero before frozen projection; retain prior and defense.",
+        "defenseSignals": "Disable learned rebound/rim/live/zone/foul signal switches only; retain all event mechanisms and v4 card projection. Label that this excludes the separately embedded role-defense projection.",
+        "minutes": "Set every player seasonMinutesPerGame to20; existing per-game target normalization gives equal targets among available players; same actual active lists/starters."
+      },
+      "calibration": "Reuse each cutoff v4 training-only calibration unchanged; no re-estimation for ablation and no heldout tuning.",
+      "quantities": "Population variance of30-team mean predicted net. Report V(all)-V(component-off), marginal share relative to V(all), and RMS net change. Marginal shares need not sum to100% because of interactions/covariance and3-seed noise; do not portray them as an additive causal decomposition. Also report a covariance bookkeeping decomposition Cov(net,delta_i)/Var(net) plus residual term so the algebra sums to100%, clearly labelled exploratory rather than causal."
+    }
+  },
+  "stoppingRule": "Complete C0–C5, report facts/speculation/failures, then stop; no next batch. Frozen v1/v3/v4/v5 workflows, m4/ms,c(K) and verdicts may not change after blind downloads. Execution-only adapters and explicitly recorded transport/serialization fixes may not change estimation or prediction rules."
+}

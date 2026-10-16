@@ -1,0 +1,87 @@
+{
+  "stage": "B",
+  "writtenAt": "2026-10-12T14:09:43.300Z",
+  "developmentSeasons": [
+    "2024-25",
+    "2025-26"
+  ],
+  "blindSeasons": [
+    "2023-24",
+    "2022-23"
+  ],
+  "cutoffs": [
+    25,
+    41,
+    55
+  ],
+  "seeds": [
+    20261012,
+    20261013,
+    20261014,
+    20261015,
+    20261016,
+    20261017,
+    20261018,
+    20261019,
+    20261020,
+    20261021,
+    20261022,
+    20261023,
+    20261024,
+    20261025,
+    20261026,
+    20261027,
+    20261028,
+    20261029,
+    20261030,
+    20261031
+  ],
+  "frozenV4": "0e302eb3e2ae4894e3acd8f33d3d41044b9df27a98d998118da8fbebd77b8236",
+  "base": "v4 frozen workflow, untouched",
+  "onlyIntervention": "Multiply the fitted role-model player offenseResidual by c(K), before training-minute centering and existing shooting projection. Same prior, role defense correction, B1, neutral contests, training-only league constants and engine. c=1 must reproduce v4 exactly. Independent switch c=1 bypasses attenuation.",
+  "selection": {
+    "anchors": [
+      0,
+      0.5,
+      1
+    ],
+    "bounds": [
+      0,
+      1
+    ],
+    "objective": "For each K, minimize absolute difference between arithmetic mean of two development-season calibration slopes and arithmetic mean of their simple slopes. Equal season weight matches A2; slope is actual vs predicted on30 equal-weight teams, after averaging20 paired seeds. No RMSE/win/player-error selection.",
+    "mapping": "Piecewise linear interpolation of the centered30-team prediction vectors in c between actual20-seed anchors, separately within season; derive nonlinear calibration slope from interpolated vectors. Search deterministic10001-point c grid within[0,1], then refine the best adjacent grid interval by80 golden-section iterations. Ties choose larger c (minimum intervention). Round finalc to6 decimals, rerun20 seeds per development season once. No after-validation c adjustment, even if achieved slope differs from interpolation.",
+    "nonlinearity": "At c=.5 compare observed centered net vector against midpoint of c=0 and1, report RMS discrepancy, difference relative to endpoint response RMS, and predicted-vs-observed pooled slope. c(K) is not the oracle team-scale ratio. Non-monotonic/unreachable objective is reported, not fixed by team-specific knobs.",
+    "calibration": "Use the exact frozen v4 training-only pooled moment update method separately for each c (3 seeds20260101–03, at most5 evaluated iterations); same estimator/rules, not identical numeric constants. No heldout league correction.",
+    "personalGate": "Development minute-weighted FG percentage-point MAE must be <= v3+0.3 in all six season/cutoff cells to call v5 a player-card estimator; otherwise it is team-strength only. Never adjust c to pass this gate."
+  },
+  "blindEvaluation": {
+    "interpretation": "All verdicts use joint franchise+seed bootstrap only. No old B1 temporal slope rule and no old C2 two-cutoff pass criterion.",
+    "questions": [
+      "v3 minus v3-signals-off",
+      "v4 minus v3",
+      "v5 minus v4",
+      "v4 minus stronger simple comparator",
+      "v5 minus stronger simple comparator"
+    ],
+    "metrics": [
+      "netRMSE",
+      "netCorrelation",
+      "calibrationSlope",
+      "netSDRatio",
+      "winMAE",
+      "winRMSE"
+    ],
+    "jointBootstrap": {
+      "replicates": 5000,
+      "rngSeed": 20261082,
+      "teams": 30,
+      "seedCount": 20,
+      "franchiseCoupling": "Same franchise sample shared across all seasons and all versions; same paired seed sample shared across seasons. Recenter net within each season. Seasons equally weighted; netRMSE/winRMSE pool MSE then sqrt; other metrics arithmetic mean."
+    },
+    "strongerComparator": "For each K/group and each error metric, evaluation envelope=min(combined simple error,combined shrink error); recompute the envelope within each joint bootstrap draw. Both fixed predictors individually also reported. No choice enters engine forecasts.",
+    "verdict": "At each K using only the two blind seasons combined: 成立 if either primary error (netRMSE or winMAE) has jointCI upper<0. Report any significant worsening of the other error as a tradeoff. 不成立 if neither improves and at least one has jointCI lower>0. 分不出 if both intervals include0, and report both widths. Also report each endpoint verdict. No point-estimate claims when 分不出; no K pooling or new majority threshold.",
+    "primaryReport": "Four-season combined, alongside blind-two-season combined; only blind-two-season combined establishes C4. Single seasons descriptive. No refitting/version changes after seeing blind results.",
+    "C5": "Compute actual-vs-predicted calibration-slope ratios v4/simple and v3/simple in each new season/cutoff, compare descriptively to developer-season values; oracle ratios are never forecast inputs."
+  }
+}

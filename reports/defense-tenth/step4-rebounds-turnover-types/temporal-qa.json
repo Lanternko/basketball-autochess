@@ -1,0 +1,44 @@
+{
+  "2022-23": {
+    "rows": 25069,
+    "games": 1230,
+    "failures": [],
+    "negativeFirstTimes": 0
+  },
+  "2023-24": {
+    "rows": 25447,
+    "games": 1230,
+    "failures": [],
+    "negativeFirstTimes": 0
+  },
+  "2024-25": {
+    "rows": 26718,
+    "games": 1229,
+    "failures": [
+      {
+        "id": "0022400072",
+        "reason": "ENOENT: no such file or directory, open 'D:\\Projects\\CODING\\basketball-autochess\\data\\defense-seventh\\2024-25\\pbp\\0022400072.json'"
+      }
+    ],
+    "negativeFirstTimes": 0
+  },
+  "2025-26": {
+    "rows": 27266,
+    "games": 1227,
+    "failures": [
+      {
+        "id": "0022500029",
+        "reason": "ENOENT: no such file or directory, open 'D:\\Projects\\CODING\\basketball-autochess\\data\\defense-a-source\\pbp\\0022500029.json'"
+      },
+      {
+        "id": "0022501229",
+        "reason": "ENOENT: no such file or directory, open 'D:\\Projects\\CODING\\basketball-autochess\\data\\defense-a-source\\pbp\\0022501229.json'"
+      },
+      {
+        "id": "0022501230",
+        "reason": "ENOENT: no such file or directory, open 'D:\\Projects\\CODING\\basketball-autochess\\data\\defense-a-source\\pbp\\0022501230.json'"
+      }
+    ],
+    "negativeFirstTimes": 0
+  }
+}

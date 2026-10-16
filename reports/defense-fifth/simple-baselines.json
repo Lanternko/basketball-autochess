@@ -1,0 +1,1115 @@
+{
+  "splits": {
+    "25": {
+      "cutoff": 25,
+      "shrinkage": 0.8331243671502342,
+      "trainingMeanMargin": 0.07733333333333331,
+      "trainingWithinGameMarginVariance": 200.02288888888887,
+      "pythagoreanExponent": 15.301657190198721,
+      "metrics": {
+        "first_net_and_winrate": {
+          "netRMSE": 4.95535720557543,
+          "netCorrelation": 0.7242824528377353,
+          "netSDRatio": 1.091744955442805,
+          "calibrationSlope": 0.663417265385001,
+          "winMAE": 6.384,
+          "winRMSE": 8.605139549517293
+        },
+        "shrunk_net_and_winrate": {
+          "netRMSE": 4.528220710978435,
+          "netCorrelation": 0.7242824528377353,
+          "netSDRatio": 0.9095593250927476,
+          "calibrationSlope": 0.7963003982877975,
+          "winMAE": 6.384,
+          "winRMSE": 8.605139549517293
+        },
+        "first_net_and_pythagorean": {
+          "netRMSE": 4.95535720557543,
+          "netCorrelation": 0.7242824528377353,
+          "netSDRatio": 1.091744955442805,
+          "calibrationSlope": 0.663417265385001,
+          "winMAE": 6.018358421080411,
+          "winRMSE": 7.464826250918092
+        },
+        "shrunk_net_and_pythagorean": {
+          "netRMSE": 4.528220710978435,
+          "netCorrelation": 0.7242824528377353,
+          "netSDRatio": 0.9095593250927476,
+          "calibrationSlope": 0.7963003982877975,
+          "winMAE": 6.018358421080411,
+          "winRMSE": 7.464826250918092
+        }
+      },
+      "teams": [
+        {
+          "id": 1610612737,
+          "name": "Atlanta Hawks",
+          "trainNet": 1.56,
+          "trueNet": 2.789473684210526,
+          "trueWins": 32.0,
+          "shrunkNet": 1.3125790616947473,
+          "rateWins": 31.92,
+          "pythagoreanWins": 31.390934360936033
+        },
+        {
+          "id": 1610612738,
+          "name": "Boston Celtics",
+          "trainNet": 5.8,
+          "trueNet": 8.526315789473685,
+          "trueWins": 41.0,
+          "shrunkNet": 4.84502637841174,
+          "rateWins": 34.199999999999996,
+          "pythagoreanWins": 39.09271842297726
+        },
+        {
+          "id": 1610612739,
+          "name": "Cleveland Cavaliers",
+          "trainNet": 3.16,
+          "trueNet": 4.526315789473684,
+          "trueWins": 38.0,
+          "shrunkNet": 2.645578049135122,
+          "rateWins": 31.92,
+          "pythagoreanWins": 34.30807101382486
+        },
+        {
+          "id": 1610612740,
+          "name": "New Orleans Pelicans",
+          "trainNet": -10.64,
+          "trueNet": -1.8070175438596492,
+          "trueWins": 23.0,
+          "shrunkNet": -8.85153821753811,
+          "rateWins": 6.84,
+          "pythagoreanWins": 11.489829966597647
+        },
+        {
+          "id": 1610612741,
+          "name": "Chicago Bulls",
+          "trainNet": -5.12,
+          "trueNet": -5.245614035087719,
+          "trueWins": 21.0,
+          "shrunkNet": -4.252691710868818,
+          "rateWins": 22.8,
+          "pythagoreanWins": 19.498284282139423
+        },
+        {
+          "id": 1610612742,
+          "name": "Dallas Mavericks",
+          "trainNet": -4.28,
+          "trueNet": -6.052631578947368,
+          "trueWins": 17.0,
+          "shrunkNet": -3.552867242462621,
+          "rateWins": 20.52,
+          "pythagoreanWins": 20.52935859282174
+        },
+        {
+          "id": 1610612743,
+          "name": "Denver Nuggets",
+          "trainNet": 9.36,
+          "trueNet": 3.2982456140350878,
+          "trueWins": 35.0,
+          "shrunkNet": 7.810949125466574,
+          "rateWins": 43.32,
+          "pythagoreanWins": 43.653613961825734
+        },
+        {
+          "id": 1610612744,
+          "name": "Golden State Warriors",
+          "trainNet": 1.76,
+          "trueNet": -1.5789473684210527,
+          "trueWins": 24.0,
+          "shrunkNet": 1.479203935124794,
+          "rateWins": 29.64,
+          "pythagoreanWins": 31.89213377693603
+        },
+        {
+          "id": 1610612745,
+          "name": "Houston Rockets",
+          "trainNet": 9.24,
+          "trueNet": 3.456140350877193,
+          "trueWins": 35.0,
+          "shrunkNet": 7.710974201408546,
+          "rateWins": 38.760000000000005,
+          "pythagoreanWins": 43.975204863250205
+        },
+        {
+          "id": 1610612746,
+          "name": "LA Clippers",
+          "trainNet": -5.04,
+          "trueNet": 3.8421052631578947,
+          "trueWins": 36.0,
+          "shrunkNet": -4.186041761496798,
+          "rateWins": 13.68,
+          "pythagoreanWins": 19.222197797196863
+        },
+        {
+          "id": 1610612747,
+          "name": "Los Angeles Lakers",
+          "trainNet": 1.56,
+          "trueNet": 1.8421052631578947,
+          "trueWins": 35.0,
+          "shrunkNet": 1.3125790616947473,
+          "rateWins": 41.04,
+          "pythagoreanWins": 31.386045551474382
+        },
+        {
+          "id": 1610612748,
+          "name": "Miami Heat",
+          "trainNet": 3.52,
+          "trueNet": 1.8070175438596492,
+          "trueWins": 29.0,
+          "shrunkNet": 2.9455028213092063,
+          "rateWins": 31.92,
+          "pythagoreanWins": 34.793295975714834
+        },
+        {
+          "id": 1610612749,
+          "name": "Milwaukee Bucks",
+          "trainNet": -2.88,
+          "trueNet": -7.666666666666667,
+          "trueWins": 22.0,
+          "shrunkNet": -2.3864931284522926,
+          "rateWins": 22.8,
+          "pythagoreanWins": 23.17361111135566
+        },
+        {
+          "id": 1610612750,
+          "name": "Minnesota Timberwolves",
+          "trainNet": 4.96,
+          "trueNet": 2.6491228070175437,
+          "trueWins": 33.0,
+          "shrunkNet": 4.145201910005544,
+          "rateWins": 36.480000000000004,
+          "pythagoreanWins": 37.402703497864636
+        },
+        {
+          "id": 1610612751,
+          "name": "Brooklyn Nets",
+          "trainNet": -5.68,
+          "trueNet": -11.87719298245614,
+          "trueWins": 13.0,
+          "shrunkNet": -4.719241356472948,
+          "rateWins": 15.96,
+          "pythagoreanWins": 18.051210921519747
+        },
+        {
+          "id": 1610612752,
+          "name": "New York Knicks",
+          "trainNet": 8.76,
+          "trueNet": 5.2631578947368425,
+          "trueWins": 35.0,
+          "shrunkNet": 7.311074505176434,
+          "rateWins": 41.04,
+          "pythagoreanWins": 43.29146134345485
+        },
+        {
+          "id": 1610612753,
+          "name": "Orlando Magic",
+          "trainNet": 4.44,
+          "trueNet": -1.0350877192982457,
+          "trueWins": 30.0,
+          "shrunkNet": 3.7119772390874215,
+          "rateWins": 34.199999999999996,
+          "pythagoreanWins": 36.64414020180804
+        },
+        {
+          "id": 1610612754,
+          "name": "Indiana Pacers",
+          "trainNet": -7.68,
+          "trueNet": -8.12280701754386,
+          "trueWins": 13.0,
+          "shrunkNet": -6.385490090773416,
+          "rateWins": 13.68,
+          "pythagoreanWins": 15.065628112276753
+        },
+        {
+          "id": 1610612755,
+          "name": "Philadelphia 76ers",
+          "trainNet": 1.0,
+          "trueNet": -0.7017543859649122,
+          "trueWins": 31.0,
+          "shrunkNet": 0.8460294160906161,
+          "rateWins": 31.92,
+          "pythagoreanWins": 30.371550290764223
+        },
+        {
+          "id": 1610612756,
+          "name": "Phoenix Suns",
+          "trainNet": 0.36,
+          "trueNet": 1.9473684210526316,
+          "trueWins": 31.0,
+          "shrunkNet": 0.3128298211144662,
+          "rateWins": 31.92,
+          "pythagoreanWins": 29.184718725940158
+        },
+        {
+          "id": 1610612757,
+          "name": "Portland Trail Blazers",
+          "trainNet": -4.04,
+          "trueNet": 1.3508771929824561,
+          "trueWins": 33.0,
+          "shrunkNet": -3.3529173943465644,
+          "rateWins": 20.52,
+          "pythagoreanWins": 21.28776922578675
+        },
+        {
+          "id": 1610612758,
+          "name": "Sacramento Kings",
+          "trainNet": -11.44,
+          "trueNet": -9.368421052631579,
+          "trueWins": 16.0,
+          "shrunkNet": -9.518037711258296,
+          "rateWins": 13.68,
+          "pythagoreanWins": 10.407647570963377
+        },
+        {
+          "id": 1610612759,
+          "name": "San Antonio Spurs",
+          "trainNet": 4.56,
+          "trueNet": 9.947368421052632,
+          "trueWins": 44.0,
+          "shrunkNet": 3.811952163145449,
+          "rateWins": 41.04,
+          "pythagoreanWins": 36.72687394472638
+        },
+        {
+          "id": 1610612760,
+          "name": "Oklahoma City Thunder",
+          "trainNet": 17.48,
+          "trueNet": 8.368421052631579,
+          "trueWins": 40.0,
+          "shrunkNet": 14.575918986726478,
+          "rateWins": 54.72,
+          "pythagoreanWins": 51.9568447010641
+        },
+        {
+          "id": 1610612761,
+          "name": "Toronto Raptors",
+          "trainNet": 2.6,
+          "trueNet": 2.9298245614035086,
+          "trueWins": 31.0,
+          "shrunkNet": 2.179028403530991,
+          "rateWins": 34.199999999999996,
+          "pythagoreanWins": 33.37891714357199
+        },
+        {
+          "id": 1610612762,
+          "name": "Utah Jazz",
+          "trainNet": -7.12,
+          "trueNet": -9.0,
+          "trueWins": 12.0,
+          "shrunkNet": -5.9189404451692855,
+          "rateWins": 22.8,
+          "pythagoreanWins": 16.602854056173097
+        },
+        {
+          "id": 1610612763,
+          "name": "Memphis Grizzlies",
+          "trainNet": -1.8,
+          "trueNet": -7.859649122807017,
+          "trueWins": 14.0,
+          "shrunkNet": -1.4867188119300396,
+          "rateWins": 25.080000000000002,
+          "pythagoreanWins": 25.102632636112062
+        },
+        {
+          "id": 1610612764,
+          "name": "Washington Wizards",
+          "trainNet": -14.36,
+          "trueNet": -10.929824561403509,
+          "trueWins": 13.0,
+          "shrunkNet": -11.950760863336981,
+          "rateWins": 9.120000000000001,
+          "pythagoreanWins": 7.776186437972345
+        },
+        {
+          "id": 1610612765,
+          "name": "Detroit Pistons",
+          "trainNet": 6.32,
+          "trueNet": 8.964912280701755,
+          "trueWins": 40.0,
+          "shrunkNet": 5.278251049329862,
+          "rateWins": 45.6,
+          "pythagoreanWins": 39.697591271610115
+        },
+        {
+          "id": 1610612766,
+          "name": "Charlotte Hornets",
+          "trainNet": -4.04,
+          "trueNet": 8.719298245614034,
+          "trueWins": 37.0,
+          "shrunkNet": -3.3529173943465644,
+          "rateWins": 15.96,
+          "pythagoreanWins": 21.12243940042735
+        }
+      ]
+    },
+    "41": {
+      "cutoff": 41,
+      "shrinkage": 0.8380723187037746,
+      "trainingMeanMargin": 0.0008130081300812742,
+      "trainingWithinGameMarginVariance": 207.85365853658539,
+      "pythagoreanExponent": 13.538214021203768,
+      "metrics": {
+        "first_net_and_winrate": {
+          "netRMSE": 4.6976476506509295,
+          "netCorrelation": 0.7714204311969384,
+          "netSDRatio": 0.7580899300597661,
+          "calibrationSlope": 1.0175843268833835,
+          "winMAE": 4.266666666666667,
+          "winRMSE": 5.316640543300503
+        },
+        "shrunk_net_and_winrate": {
+          "netRMSE": 4.802821390734851,
+          "netCorrelation": 0.7714204311969383,
+          "netSDRatio": 0.6353341854711705,
+          "calibrationSlope": 1.2141963219322833,
+          "winMAE": 4.266666666666667,
+          "winRMSE": 5.316640543300503
+        },
+        "first_net_and_pythagorean": {
+          "netRMSE": 4.6976476506509295,
+          "netCorrelation": 0.7714204311969384,
+          "netSDRatio": 0.7580899300597661,
+          "calibrationSlope": 1.0175843268833835,
+          "winMAE": 3.956739137849871,
+          "winRMSE": 4.993385509179198
+        },
+        "shrunk_net_and_pythagorean": {
+          "netRMSE": 4.802821390734851,
+          "netCorrelation": 0.7714204311969383,
+          "netSDRatio": 0.6353341854711705,
+          "calibrationSlope": 1.2141963219322833,
+          "winMAE": 3.956739137849871,
+          "winRMSE": 4.993385509179198
+        }
+      },
+      "teams": [
+        {
+          "id": 1610612737,
+          "name": "Atlanta Hawks",
+          "trainNet": 0.0,
+          "trueNet": 4.829268292682927,
+          "trueWins": 26.0,
+          "shrunkNet": 0.0001316485213790407,
+          "rateWins": 20.0,
+          "pythagoreanWins": 20.5
+        },
+        {
+          "id": 1610612738,
+          "name": "Boston Celtics",
+          "trainNet": 6.926829268292683,
+          "trueNet": 8.463414634146341,
+          "trueWins": 30.0,
+          "shrunkNet": 5.805315514664598,
+          "rateWins": 26.0,
+          "pythagoreanWins": 28.514660323354015
+        },
+        {
+          "id": 1610612739,
+          "name": "Cleveland Cavaliers",
+          "trainNet": 2.048780487804878,
+          "trueNet": 6.170731707317073,
+          "trueWins": 30.0,
+          "shrunkNet": 1.7171578624510635,
+          "rateWins": 22.0,
+          "pythagoreanWins": 22.88372321689127
+        },
+        {
+          "id": 1610612740,
+          "name": "New Orleans Pelicans",
+          "trainNet": -7.536585365853658,
+          "trueNet": -1.4634146341463414,
+          "trueWins": 17.0,
+          "shrunkNet": -6.316071924148532,
+          "rateWins": 9.0,
+          "pythagoreanWins": 12.188719841896162
+        },
+        {
+          "id": 1610612741,
+          "name": "Chicago Bulls",
+          "trainNet": -3.4390243902439024,
+          "trueNet": -6.975609756097561,
+          "trueWins": 12.0,
+          "shrunkNet": -2.8820194962891628,
+          "rateWins": 19.0,
+          "pythagoreanWins": 16.539450546797134
+        },
+        {
+          "id": 1610612742,
+          "name": "Dallas Mavericks",
+          "trainNet": -3.975609756097561,
+          "trueNet": -7.048780487804878,
+          "trueWins": 11.0,
+          "shrunkNet": -3.331716838032652,
+          "rateWins": 15.0,
+          "pythagoreanWins": 15.782694217714257
+        },
+        {
+          "id": 1610612743,
+          "name": "Denver Nuggets",
+          "trainNet": 5.341463414634147,
+          "trueNet": 4.951219512195122,
+          "trueWins": 26.0,
+          "shrunkNet": 4.4766642776952,
+          "rateWins": 28.000000000000004,
+          "pythagoreanWins": 26.501389611691803
+        },
+        {
+          "id": 1610612744,
+          "name": "Golden State Warriors",
+          "trainNet": 2.292682926829268,
+          "trueNet": -3.4146341463414633,
+          "trueWins": 15.0,
+          "shrunkNet": 1.92156574506174,
+          "rateWins": 22.0,
+          "pythagoreanWins": 23.264985541679984
+        },
+        {
+          "id": 1610612745,
+          "name": "Houston Rockets",
+          "trainNet": 6.414634146341464,
+          "trueNet": 4.024390243902439,
+          "trueWins": 26.0,
+          "shrunkNet": 5.376058961182178,
+          "rateWins": 26.0,
+          "pythagoreanWins": 27.968377530692266
+        },
+        {
+          "id": 1610612746,
+          "name": "LA Clippers",
+          "trainNet": -0.9024390243902439,
+          "trueNet": 3.1707317073170733,
+          "trueWins": 24.0,
+          "shrunkNet": -0.756177517138125,
+          "rateWins": 18.0,
+          "pythagoreanWins": 19.392020384727836
+        },
+        {
+          "id": 1610612747,
+          "name": "Los Angeles Lakers",
+          "trainNet": -0.3902439024390244,
+          "trueNet": 3.902439024390244,
+          "trueWins": 28.0,
+          "shrunkNet": -0.3269209636557038,
+          "rateWins": 25.0,
+          "pythagoreanWins": 20.035296457820113
+        },
+        {
+          "id": 1610612748,
+          "name": "Miami Heat",
+          "trainNet": 1.5853658536585367,
+          "trueNet": 3.073170731707317,
+          "trueWins": 22.0,
+          "shrunkNet": 1.328782885490778,
+          "rateWins": 21.0,
+          "pythagoreanWins": 22.349581777001966
+        },
+        {
+          "id": 1610612749,
+          "name": "Milwaukee Bucks",
+          "trainNet": -3.341463414634146,
+          "trueNet": -9.073170731707316,
+          "trueWins": 15.0,
+          "shrunkNet": -2.800256343244892,
+          "rateWins": 17.0,
+          "pythagoreanWins": 16.48779118128208
+        },
+        {
+          "id": 1610612750,
+          "name": "Minnesota Timberwolves",
+          "trainNet": 5.780487804878049,
+          "trueNet": 0.926829268292683,
+          "trueWins": 22.0,
+          "shrunkNet": 4.844598466394418,
+          "rateWins": 27.0,
+          "pythagoreanWins": 27.08885685583906
+        },
+        {
+          "id": 1610612751,
+          "name": "Brooklyn Nets",
+          "trainNet": -5.365853658536586,
+          "trueNet": -14.609756097560975,
+          "trueWins": 8.0,
+          "shrunkNet": -4.49684176891351,
+          "rateWins": 12.0,
+          "pythagoreanWins": 14.054637440020283
+        },
+        {
+          "id": 1610612752,
+          "name": "New York Knicks",
+          "trainNet": 3.731707317073171,
+          "trueNet": 8.926829268292684,
+          "trueWins": 28.0,
+          "shrunkNet": 3.1275722524647334,
+          "rateWins": 25.0,
+          "pythagoreanWins": 24.85924310217131
+        },
+        {
+          "id": 1610612753,
+          "name": "Orlando Magic",
+          "trainNet": 1.3658536585365855,
+          "trueNet": -0.0975609756097561,
+          "trueWins": 22.0,
+          "shrunkNet": 1.144815791141169,
+          "rateWins": 23.000000000000004,
+          "pythagoreanWins": 22.136314282906024
+        },
+        {
+          "id": 1610612754,
+          "name": "Indiana Pacers",
+          "trainNet": -7.7317073170731705,
+          "trueNet": -8.24390243902439,
+          "trueWins": 10.0,
+          "shrunkNet": -6.479598230237073,
+          "rateWins": 9.0,
+          "pythagoreanWins": 11.725785283084404
+        },
+        {
+          "id": 1610612755,
+          "name": "Philadelphia 76ers",
+          "trainNet": 1.3414634146341464,
+          "trueNet": -1.7073170731707317,
+          "trueWins": 22.0,
+          "shrunkNet": 1.1243750028801012,
+          "rateWins": 23.000000000000004,
+          "pythagoreanWins": 22.100990242133154
+        },
+        {
+          "id": 1610612756,
+          "name": "Phoenix Suns",
+          "trainNet": 2.5365853658536586,
+          "trueNet": 0.3902439024390244,
+          "trueWins": 21.0,
+          "shrunkNet": 2.1259736276724173,
+          "rateWins": 24.0,
+          "pythagoreanWins": 23.582841057574413
+        },
+        {
+          "id": 1610612757,
+          "name": "Portland Trail Blazers",
+          "trainNet": -3.024390243902439,
+          "trueNet": 2.4390243902439024,
+          "trueWins": 23.0,
+          "shrunkNet": -2.5345260958510125,
+          "rateWins": 19.0,
+          "pythagoreanWins": 16.959051449968264
+        },
+        {
+          "id": 1610612758,
+          "name": "Sacramento Kings",
+          "trainNet": -10.512195121951219,
+          "trueNet": -9.487804878048781,
+          "trueWins": 11.0,
+          "shrunkNet": -8.809848091998788,
+          "rateWins": 11.0,
+          "pythagoreanWins": 9.247992109722775
+        },
+        {
+          "id": 1610612759,
+          "name": "San Antonio Spurs",
+          "trainNet": 5.146341463414634,
+          "trueNet": 11.463414634146341,
+          "trueWins": 34.0,
+          "shrunkNet": 4.3131379716066585,
+          "rateWins": 28.000000000000004,
+          "pythagoreanWins": 26.524635693162082
+        },
+        {
+          "id": 1610612760,
+          "name": "Oklahoma City Thunder",
+          "trainNet": 13.21951219512195,
+          "trueNet": 9.073170731707316,
+          "trueWins": 30.0,
+          "shrunkNet": 11.079038886020058,
+          "rateWins": 34.0,
+          "pythagoreanWins": 33.8899953024701
+        },
+        {
+          "id": 1610612761,
+          "name": "Toronto Raptors",
+          "trainNet": 1.5121951219512195,
+          "trueNet": 4.146341463414634,
+          "trueWins": 22.0,
+          "shrunkNet": 1.2674605207075749,
+          "rateWins": 24.0,
+          "pythagoreanWins": 22.350387417443933
+        },
+        {
+          "id": 1610612762,
+          "name": "Utah Jazz",
+          "trainNet": -8.048780487804878,
+          "trueNet": -8.804878048780488,
+          "trueWins": 8.0,
+          "shrunkNet": -6.745328477630952,
+          "rateWins": 14.000000000000002,
+          "pythagoreanWins": 11.989813262139174
+        },
+        {
+          "id": 1610612763,
+          "name": "Memphis Grizzlies",
+          "trainNet": -0.9512195121951219,
+          "trueNet": -11.073170731707316,
+          "trueWins": 7.0,
+          "shrunkNet": -0.7970590936602602,
+          "rateWins": 18.0,
+          "pythagoreanWins": 19.35906107649651
+        },
+        {
+          "id": 1610612764,
+          "name": "Washington Wizards",
+          "trainNet": -11.195121951219512,
+          "trueNet": -12.75609756097561,
+          "trueWins": 7.0,
+          "shrunkNet": -9.382190163308683,
+          "rateWins": 10.0,
+          "pythagoreanWins": 8.905116513728231
+        },
+        {
+          "id": 1610612765,
+          "name": "Detroit Pistons",
+          "trainNet": 7.2682926829268295,
+          "trueNet": 9.048780487804878,
+          "trueWins": 29.0,
+          "shrunkNet": 6.091486550319546,
+          "rateWins": 31.0,
+          "pythagoreanWins": 28.857616650480857
+        },
+        {
+          "id": 1610612766,
+          "name": "Charlotte Hornets",
+          "trainNet": -0.07317073170731707,
+          "trueNet": 9.731707317073171,
+          "trueWins": 29.0,
+          "shrunkNet": -0.06119071626182397,
+          "rateWins": 15.0,
+          "pythagoreanWins": 20.41293577500396
+        }
+      ]
+    },
+    "55": {
+      "cutoff": 55,
+      "shrinkage": 0.8673044272690369,
+      "trainingMeanMargin": 0.0430303030303028,
+      "trainingWithinGameMarginVariance": 219.83643097643096,
+      "pythagoreanExponent": 12.850987244059564,
+      "metrics": {
+        "first_net_and_winrate": {
+          "netRMSE": 5.124666462201269,
+          "netCorrelation": 0.803038359349911,
+          "netSDRatio": 0.6570804804176038,
+          "calibrationSlope": 1.2221309006768004,
+          "winMAE": 3.0569696969696967,
+          "winRMSE": 3.6000061218190984
+        },
+        "shrunk_net_and_winrate": {
+          "netRMSE": 5.344934048625959,
+          "netCorrelation": 0.8030383593499109,
+          "netSDRatio": 0.5698888097382536,
+          "calibrationSlope": 1.4091141037121637,
+          "winMAE": 3.0569696969696967,
+          "winRMSE": 3.6000061218190984
+        },
+        "first_net_and_pythagorean": {
+          "netRMSE": 5.124666462201269,
+          "netCorrelation": 0.803038359349911,
+          "netSDRatio": 0.6570804804176038,
+          "calibrationSlope": 1.2221309006768004,
+          "winMAE": 2.980056280752318,
+          "winRMSE": 3.6588074385128446
+        },
+        "shrunk_net_and_pythagorean": {
+          "netRMSE": 5.344934048625959,
+          "netCorrelation": 0.8030383593499109,
+          "netSDRatio": 0.5698888097382536,
+          "calibrationSlope": 1.4091141037121637,
+          "winMAE": 2.980056280752318,
+          "winRMSE": 3.6588074385128446
+        }
+      },
+      "teams": [
+        {
+          "id": 1610612737,
+          "name": "Atlanta Hawks",
+          "trainNet": -1.290909090909091,
+          "trueNet": 9.962962962962964,
+          "trueWins": 20.0,
+          "shrunkNet": -1.1139012390419094,
+          "rateWins": 12.763636363636364,
+          "pythagoreanWins": 12.55366744956081
+        },
+        {
+          "id": 1610612738,
+          "name": "Boston Celtics",
+          "trainNet": 6.9818181818181815,
+          "trueNet": 9.148148148148149,
+          "trueWins": 20.0,
+          "shrunkNet": 6.06107175018376,
+          "rateWins": 17.672727272727272,
+          "pythagoreanWins": 18.642429369058387
+        },
+        {
+          "id": 1610612739,
+          "name": "Cleveland Cavaliers",
+          "trainNet": 4.072727272727272,
+          "trueNet": 4.185185185185185,
+          "trueWins": 18.0,
+          "shrunkNet": 3.5380043254011064,
+          "rateWins": 16.69090909090909,
+          "pythagoreanWins": 16.447408109246272
+        },
+        {
+          "id": 1610612740,
+          "name": "New Orleans Pelicans",
+          "trainNet": -5.709090909090909,
+          "trueNet": -2.037037037037037,
+          "trueWins": 11.0,
+          "shrunkNet": -4.945809890430563,
+          "rateWins": 7.363636363636363,
+          "pythagoreanWins": 9.41661697786599
+        },
+        {
+          "id": 1610612741,
+          "name": "Chicago Bulls",
+          "trainNet": -3.8363636363636364,
+          "trueNet": -8.0,
+          "trueWins": 7.0,
+          "shrunkNet": -3.3215852357267304,
+          "rateWins": 11.781818181818181,
+          "pythagoreanWins": 10.735829482878762
+        },
+        {
+          "id": 1610612742,
+          "name": "Dallas Mavericks",
+          "trainNet": -3.6,
+          "trueNet": -9.407407407407407,
+          "trueWins": 7.0,
+          "shrunkNet": -3.1165860074631397,
+          "rateWins": 9.327272727272728,
+          "pythagoreanWins": 10.835942089737989
+        },
+        {
+          "id": 1610612743,
+          "name": "Denver Nuggets",
+          "trainNet": 4.0181818181818185,
+          "trueNet": 7.444444444444445,
+          "trueWins": 19.0,
+          "shrunkNet": 3.4906968111864325,
+          "rateWins": 17.18181818181818,
+          "pythagoreanWins": 16.399423643011502
+        },
+        {
+          "id": 1610612744,
+          "name": "Golden State Warriors",
+          "trainNet": 1.8363636363636364,
+          "trueNet": -5.444444444444445,
+          "trueWins": 8.0,
+          "shrunkNet": 1.5983962425994425,
+          "rateWins": 14.236363636363635,
+          "pythagoreanWins": 14.885027616910438
+        },
+        {
+          "id": 1610612745,
+          "name": "Houston Rockets",
+          "trainNet": 4.872727272727273,
+          "trueNet": 5.925925925925926,
+          "trueWins": 18.0,
+          "shrunkNet": 4.231847867216336,
+          "rateWins": 16.69090909090909,
+          "pythagoreanWins": 17.183131376088962
+        },
+        {
+          "id": 1610612746,
+          "name": "LA Clippers",
+          "trainNet": -0.4,
+          "trueNet": 4.2592592592592595,
+          "trueWins": 15.0,
+          "shrunkNet": -0.34121184020222184,
+          "rateWins": 13.254545454545454,
+          "pythagoreanWins": 13.190705190650226
+        },
+        {
+          "id": 1610612747,
+          "name": "Los Angeles Lakers",
+          "trainNet": 0.03636363636363636,
+          "trueNet": 5.2592592592592595,
+          "trueWins": 19.0,
+          "shrunkNet": 0.03724827351517609,
+          "rateWins": 16.69090909090909,
+          "pythagoreanWins": 13.52715418613931
+        },
+        {
+          "id": 1610612748,
+          "name": "Miami Heat",
+          "trainNet": 2.2363636363636363,
+          "trueNet": 2.5185185185185186,
+          "trueWins": 15.0,
+          "shrunkNet": 1.9453180135070571,
+          "rateWins": 13.745454545454544,
+          "pythagoreanWins": 15.13036822817837
+        },
+        {
+          "id": 1610612749,
+          "name": "Milwaukee Bucks",
+          "trainNet": -3.4,
+          "trueNet": -11.925925925925926,
+          "trueWins": 8.0,
+          "shrunkNet": -2.9431251220093326,
+          "rateWins": 11.781818181818181,
+          "pythagoreanWins": 10.936538071851402
+        },
+        {
+          "id": 1610612750,
+          "name": "Minnesota Timberwolves",
+          "trainNet": 4.581818181818182,
+          "trueNet": 0.8518518518518519,
+          "trueWins": 16.0,
+          "shrunkNet": 3.979541124738071,
+          "rateWins": 16.2,
+          "pythagoreanWins": 16.823494204070872
+        },
+        {
+          "id": 1610612751,
+          "name": "Brooklyn Nets",
+          "trainNet": -7.8545454545454545,
+          "trueNet": -14.333333333333334,
+          "trueWins": 5.0,
+          "shrunkNet": -6.80657211620777,
+          "rateWins": 7.363636363636363,
+          "pythagoreanWins": 7.739716780192725
+        },
+        {
+          "id": 1610612752,
+          "name": "New York Knicks",
+          "trainNet": 6.163636363636364,
+          "trueNet": 6.666666666666667,
+          "trueWins": 18.0,
+          "shrunkNet": 5.351459036963639,
+          "rateWins": 17.18181818181818,
+          "pythagoreanWins": 17.977015425492283
+        },
+        {
+          "id": 1610612753,
+          "name": "Orlando Magic",
+          "trainNet": 0.43636363636363634,
+          "trueNet": 1.037037037037037,
+          "trueWins": 16.0,
+          "shrunkNet": 0.38417004442279085,
+          "rateWins": 14.236363636363635,
+          "pythagoreanWins": 13.828979021239808
+        },
+        {
+          "id": 1610612754,
+          "name": "Indiana Pacers",
+          "trainNet": -7.454545454545454,
+          "trueNet": -9.074074074074074,
+          "trueWins": 4.0,
+          "shrunkNet": -6.459650345300155,
+          "rateWins": 7.363636363636363,
+          "pythagoreanWins": 8.174206818951655
+        },
+        {
+          "id": 1610612755,
+          "name": "Philadelphia 76ers",
+          "trainNet": 0.07272727272727272,
+          "trueNet": -0.7037037037037037,
+          "trueWins": 15.0,
+          "shrunkNet": 0.06878661632495925,
+          "rateWins": 14.727272727272727,
+          "pythagoreanWins": 13.554401816991177
+        },
+        {
+          "id": 1610612756,
+          "name": "Phoenix Suns",
+          "trainNet": 1.7818181818181817,
+          "trueNet": 0.8148148148148148,
+          "trueWins": 13.0,
+          "shrunkNet": 1.5510887283847676,
+          "rateWins": 15.709090909090909,
+          "pythagoreanWins": 14.866450561918285
+        },
+        {
+          "id": 1610612757,
+          "name": "Portland Trail Blazers",
+          "trainNet": -2.290909090909091,
+          "trueNet": 3.7777777777777777,
+          "trueWins": 16.0,
+          "shrunkNet": -1.9812056663109463,
+          "rateWins": 12.763636363636364,
+          "pythagoreanWins": 11.81218183330535
+        },
+        {
+          "id": 1610612758,
+          "name": "Sacramento Kings",
+          "trainNet": -10.163636363636364,
+          "trueNet": -9.666666666666666,
+          "trueWins": 10.0,
+          "shrunkNet": -8.809256884629,
+          "rateWins": 5.890909090909091,
+          "pythagoreanWins": 6.586270782951397
+        },
+        {
+          "id": 1610612759,
+          "name": "San Antonio Spurs",
+          "trainNet": 6.345454545454546,
+          "trueNet": 12.296296296296296,
+          "trueWins": 23.0,
+          "shrunkNet": 5.509150751012554,
+          "rateWins": 19.145454545454545,
+          "pythagoreanWins": 18.096141068414198
+        },
+        {
+          "id": 1610612760,
+          "name": "Oklahoma City Thunder",
+          "trainNet": 12.181818181818182,
+          "trueNet": 9.037037037037036,
+          "trueWins": 22.0,
+          "shrunkNet": 10.571054771982752,
+          "rateWins": 20.618181818181817,
+          "pythagoreanWins": 21.544268450697345
+        },
+        {
+          "id": 1610612761,
+          "name": "Toronto Raptors",
+          "trainNet": 1.5272727272727273,
+          "trueNet": 5.481481481481482,
+          "trueWins": 14.0,
+          "shrunkNet": 1.3303203287162857,
+          "rateWins": 15.709090909090909,
+          "pythagoreanWins": 14.669298966344677
+        },
+        {
+          "id": 1610612762,
+          "name": "Utah Jazz",
+          "trainNet": -7.509090909090909,
+          "trueNet": -10.296296296296296,
+          "trueWins": 4.0,
+          "shrunkNet": -6.506957859514829,
+          "rateWins": 8.836363636363636,
+          "pythagoreanWins": 8.421783191926131
+        },
+        {
+          "id": 1610612763,
+          "name": "Memphis Grizzlies",
+          "trainNet": -2.2545454545454544,
+          "trueNet": -13.666666666666666,
+          "trueWins": 4.0,
+          "shrunkNet": -1.949667323501163,
+          "rateWins": 10.309090909090909,
+          "pythagoreanWins": 11.831521925694567
+        },
+        {
+          "id": 1610612764,
+          "name": "Washington Wizards",
+          "trainNet": -10.218181818181819,
+          "trueNet": -15.555555555555555,
+          "trueWins": 1.0,
+          "shrunkNet": -8.856564398843675,
+          "rateWins": 7.8545454545454545,
+          "pythagoreanWins": 6.655752826512957
+        },
+        {
+          "id": 1610612765,
+          "name": "Detroit Pistons",
+          "trainNet": 8.236363636363636,
+          "trueNet": 8.0,
+          "trueWins": 18.0,
+          "shrunkNet": 7.1491445771212785,
+          "rateWins": 20.618181818181817,
+          "pythagoreanWins": 19.379737034687526
+        },
+        {
+          "id": 1610612766,
+          "name": "Charlotte Hornets",
+          "trainNet": 1.8909090909090909,
+          "trueNet": 10.814814814814815,
+          "trueWins": 18.0,
+          "shrunkNet": 1.6457037568141173,
+          "rateWins": 12.763636363636364,
+          "pythagoreanWins": 14.924184676573766
+        }
+      ]
+    }
+  },
+  "varianceScenarios": {
+    "final-normalized": {
+      "sigmaCurrent": 16.93482784063226,
+      "sigmaIdeal": 14.027452283006898,
+      "normalCurrent": {
+        "netRMSE": 2.554838082035998,
+        "netCorrelation": 0.9114453301562578,
+        "netSDRatio": 0.838152290381952,
+        "calibrationSlope": 1.0874459696827954,
+        "winMAE": 5.368605902988174,
+        "winRMSE": 6.5516302435556355
+      },
+      "normalIdeal": {
+        "netRMSE": 2.554838082035998,
+        "netCorrelation": 0.9114453301562578,
+        "netSDRatio": 0.838152290381952,
+        "calibrationSlope": 1.0874459696827954,
+        "winMAE": 4.63817674191363,
+        "winRMSE": 5.858468860786509
+      },
+      "actualEngineWins": {
+        "winMAE": 5.070000000000001,
+        "winRMSE": 6.197311244940557
+      },
+      "idealMinusNormalCurrent95": {
+        "winMAE": [
+          -0.7755963005789078,
+          -0.6263372800676607
+        ],
+        "winRMSE": [
+          -0.7190794878685643,
+          -0.5979838325172779
+        ]
+      },
+      "MAEGain": 0.7304291610745439,
+      "MAEGainVersusActualEngine": 0.43182325808637145,
+      "scope": "Mean of 20 per-fixture simulated margins held fixed; Gaussian residual with observed regulation SD. All team means therefore unchanged. Finite-seed fixture means include sampling error, availability variation and OT; this is a hypothetical variance scenario, not a mathematical upper bound or adoptable score patch."
+    },
+    "holdout-normalized": {
+      "sigmaCurrent": 16.735568333505086,
+      "sigmaIdeal": 14.027452283006898,
+      "normalCurrent": {
+        "netRMSE": 5.615301118915258,
+        "netCorrelation": 0.6490950217411913,
+        "netSDRatio": 0.6375727661575581,
+        "calibrationSlope": 1.0180720636062832,
+        "winMAE": 5.219168810711168,
+        "winRMSE": 5.95991406384766
+      },
+      "normalIdeal": {
+        "netRMSE": 5.615301118915258,
+        "netCorrelation": 0.6490950217411913,
+        "netSDRatio": 0.6375727661575581,
+        "calibrationSlope": 1.0180720636062832,
+        "winMAE": 5.086431807234138,
+        "winRMSE": 5.844332568392686
+      },
+      "actualEngineWins": {
+        "winMAE": 5.2716666666666665,
+        "winRMSE": 5.985962746292363
+      },
+      "idealMinusNormalCurrent95": {
+        "winMAE": [
+          -0.17526511119437788,
+          -0.09554246488758891
+        ],
+        "winRMSE": [
+          -0.13577570806727526,
+          -0.08450592250904408
+        ]
+      },
+      "MAEGain": 0.13273700347702988,
+      "MAEGainVersusActualEngine": 0.18523485943252815,
+      "scope": "Mean of 20 per-fixture simulated margins held fixed; Gaussian residual with observed regulation SD. All team means therefore unchanged. Finite-seed fixture means include sampling error, availability variation and OT; this is a hypothetical variance scenario, not a mathematical upper bound or adoptable score patch."
+    }
+  },
+  "definition": "Centered net RMSE; population SD; calibration slope = true on predicted with intercept. Shrinkage = max(0,1 - training within-team margin variance / (K * between-team mean variance)), estimated only pre-cutoff. Pythagorean exponent fitted only pre-cutoff. Team identities evaluation joins only.",
+  "sources": {
+    "data/season-league.json": "497725ecb6a2ec181aeb3cf93263f53a81bdfed772a2c4c733ba3a2d65a79bf6",
+    "data/season-source/team-games.json": "d5cb1a6dbd26a0ed71b24e7e18fcbc862afdf6d8bd8ea3814c5dadbf1989fb8a",
+    "scripts/analyze_defense_fifth_baselines.py": "39c0dcc886afeb60c668d771ca76894ddf7675a16ec6d14bd4383058b61e878d"
+  }
+}

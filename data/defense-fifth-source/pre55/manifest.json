@@ -1,0 +1,577 @@
+{
+  "sources": [
+    {
+      "teamId": 1610612737,
+      "zone": "short",
+      "date": "2026-02-09",
+      "file": "data/defense-fifth-source/pre55/1610612737-short-pre55.json",
+      "url": "https://stats.nba.com/stats/leaguedashptdefend?LeagueID=00&Season=2025-26&SeasonType=Regular+Season&PerMode=Totals&MeasureType=Base&TeamID=1610612737&LastNGames=0&Month=0&OpponentTeamID=0&PaceAdjust=N&PlusMinus=N&Rank=N&Period=0&DefenseCategory=Less+Than+6Ft&DateFrom=&DateTo=2026-02-09",
+      "sha256": "692845f5ef54441761135db1a46d004b94cdbc69aa049f7fa6e6f83e1dd367ed",
+      "rows": 21
+    },
+    {
+      "teamId": 1610612737,
+      "zone": "long",
+      "date": "2026-02-09",
+      "file": "data/defense-fifth-source/pre55/1610612737-long-pre55.json",
+      "url": "https://stats.nba.com/stats/leaguedashptdefend?LeagueID=00&Season=2025-26&SeasonType=Regular+Season&PerMode=Totals&MeasureType=Base&TeamID=1610612737&LastNGames=0&Month=0&OpponentTeamID=0&PaceAdjust=N&PlusMinus=N&Rank=N&Period=0&DefenseCategory=3+Pointers&DateFrom=&DateTo=2026-02-09",
+      "sha256": "0d1aae3ef151436eaae013ba43c04f51118462e24f991acca237b8c44c3e7dc7",
+      "rows": 21
+    },
+    {
+      "teamId": 1610612738,
+      "zone": "long",
+      "date": "2026-02-19",
+      "file": "data/defense-fifth-source/pre55/1610612738-long-pre55.json",
+      "url": "https://stats.nba.com/stats/leaguedashptdefend?LeagueID=00&Season=2025-26&SeasonType=Regular+Season&PerMode=Totals&MeasureType=Base&TeamID=1610612738&LastNGames=0&Month=0&OpponentTeamID=0&PaceAdjust=N&PlusMinus=N&Rank=N&Period=0&DefenseCategory=3+Pointers&DateFrom=&DateTo=2026-02-19",
+      "sha256": "2866fb639f5209dace5c9bd86b749370414e416fc9c6f7dd34b7c289bb72b29c",
+      "rows": 17
+    },
+    {
+      "teamId": 1610612739,
+      "zone": "long",
+      "date": "2026-02-11",
+      "file": "data/defense-fifth-source/pre55/1610612739-long-pre55.json",
+      "url": "https://stats.nba.com/stats/leaguedashptdefend?LeagueID=00&Season=2025-26&SeasonType=Regular+Season&PerMode=Totals&MeasureType=Base&TeamID=1610612739&LastNGames=0&Month=0&OpponentTeamID=0&PaceAdjust=N&PlusMinus=N&Rank=N&Period=0&DefenseCategory=3+Pointers&DateFrom=&DateTo=2026-02-11",
+      "sha256": "3d4c305e48fe3ee0d90b33a6b6935714efea891aba403de002b69e1345ab4d58",
+      "rows": 20
+    },
+    {
+      "teamId": 1610612739,
+      "zone": "short",
+      "date": "2026-02-11",
+      "file": "data/defense-fifth-source/pre55/1610612739-short-pre55.json",
+      "url": "https://stats.nba.com/stats/leaguedashptdefend?LeagueID=00&Season=2025-26&SeasonType=Regular+Season&PerMode=Totals&MeasureType=Base&TeamID=1610612739&LastNGames=0&Month=0&OpponentTeamID=0&PaceAdjust=N&PlusMinus=N&Rank=N&Period=0&DefenseCategory=Less+Than+6Ft&DateFrom=&DateTo=2026-02-11",
+      "sha256": "ac1975c6745320cf5b72cc3d83bfb127e875528f72ffd863f0de540b8775b328",
+      "rows": 20
+    },
+    {
+      "teamId": 1610612740,
+      "zone": "long",
+      "date": "2026-02-09",
+      "file": "data/defense-fifth-source/pre55/1610612740-long-pre55.json",
+      "url": "https://stats.nba.com/stats/leaguedashptdefend?LeagueID=00&Season=2025-26&SeasonType=Regular+Season&PerMode=Totals&MeasureType=Base&TeamID=1610612740&LastNGames=0&Month=0&OpponentTeamID=0&PaceAdjust=N&PlusMinus=N&Rank=N&Period=0&DefenseCategory=3+Pointers&DateFrom=&DateTo=2026-02-09",
+      "sha256": "a6720b0cc2a60326004702b63fdd6f18bd98f8d04350490114d17ff180d268b0",
+      "rows": 17
+    },
+    {
+      "teamId": 1610612740,
+      "zone": "short",
+      "date": "2026-02-09",
+      "file": "data/defense-fifth-source/pre55/1610612740-short-pre55.json",
+      "url": "https://stats.nba.com/stats/leaguedashptdefend?LeagueID=00&Season=2025-26&SeasonType=Regular+Season&PerMode=Totals&MeasureType=Base&TeamID=1610612740&LastNGames=0&Month=0&OpponentTeamID=0&PaceAdjust=N&PlusMinus=N&Rank=N&Period=0&DefenseCategory=Less+Than+6Ft&DateFrom=&DateTo=2026-02-09",
+      "sha256": "dbe3542c919bf411f388da798c47f57cb256faa23bbba443f3b891db900f2d3d",
+      "rows": 17
+    },
+    {
+      "teamId": 1610612741,
+      "zone": "long",
+      "date": "2026-02-11",
+      "file": "data/defense-fifth-source/pre55/1610612741-long-pre55.json",
+      "url": "https://stats.nba.com/stats/leaguedashptdefend?LeagueID=00&Season=2025-26&SeasonType=Regular+Season&PerMode=Totals&MeasureType=Base&TeamID=1610612741&LastNGames=0&Month=0&OpponentTeamID=0&PaceAdjust=N&PlusMinus=N&Rank=N&Period=0&DefenseCategory=3+Pointers&DateFrom=&DateTo=2026-02-11",
+      "sha256": "0c0a1d6cc843b708208ef26b98f6f0c30f22a2130fec59afd7ed2bea6979680a",
+      "rows": 25
+    },
+    {
+      "teamId": 1610612741,
+      "zone": "short",
+      "date": "2026-02-11",
+      "file": "data/defense-fifth-source/pre55/1610612741-short-pre55.json",
+      "url": "https://stats.nba.com/stats/leaguedashptdefend?LeagueID=00&Season=2025-26&SeasonType=Regular+Season&PerMode=Totals&MeasureType=Base&TeamID=1610612741&LastNGames=0&Month=0&OpponentTeamID=0&PaceAdjust=N&PlusMinus=N&Rank=N&Period=0&DefenseCategory=Less+Than+6Ft&DateFrom=&DateTo=2026-02-11",
+      "sha256": "a13b24cafe7828d732463af51ff0f9c26fd264f23fb9d3d05963810bf191e004",
+      "rows": 24
+    },
+    {
+      "teamId": 1610612742,
+      "zone": "short",
+      "date": "2026-02-20",
+      "file": "data/defense-fifth-source/pre55/1610612742-short-pre55.json",
+      "url": "https://stats.nba.com/stats/leaguedashptdefend?LeagueID=00&Season=2025-26&SeasonType=Regular+Season&PerMode=Totals&MeasureType=Base&TeamID=1610612742&LastNGames=0&Month=0&OpponentTeamID=0&PaceAdjust=N&PlusMinus=N&Rank=N&Period=0&DefenseCategory=Less+Than+6Ft&DateFrom=&DateTo=2026-02-20",
+      "sha256": "d34012211a459c791e1d477545f8c19de11dd4e78c8d5a8aa1184bda6b198c42",
+      "rows": 21
+    },
+    {
+      "teamId": 1610612742,
+      "zone": "long",
+      "date": "2026-02-20",
+      "file": "data/defense-fifth-source/pre55/1610612742-long-pre55.json",
+      "url": "https://stats.nba.com/stats/leaguedashptdefend?LeagueID=00&Season=2025-26&SeasonType=Regular+Season&PerMode=Totals&MeasureType=Base&TeamID=1610612742&LastNGames=0&Month=0&OpponentTeamID=0&PaceAdjust=N&PlusMinus=N&Rank=N&Period=0&DefenseCategory=3+Pointers&DateFrom=&DateTo=2026-02-20",
+      "sha256": "ba49875e4dbcf6dfb7cb3315a028d822dda8b048ce7f58c0d080319288093860",
+      "rows": 21
+    },
+    {
+      "teamId": 1610612743,
+      "zone": "short",
+      "date": "2026-02-11",
+      "file": "data/defense-fifth-source/pre55/1610612743-short-pre55.json",
+      "url": "https://stats.nba.com/stats/leaguedashptdefend?LeagueID=00&Season=2025-26&SeasonType=Regular+Season&PerMode=Totals&MeasureType=Base&TeamID=1610612743&LastNGames=0&Month=0&OpponentTeamID=0&PaceAdjust=N&PlusMinus=N&Rank=N&Period=0&DefenseCategory=Less+Than+6Ft&DateFrom=&DateTo=2026-02-11",
+      "sha256": "680da5180f1a9755cb5d13414d9c0f229da4c8925563e7d23a426d6a9dd34e1e",
+      "rows": 16
+    },
+    {
+      "teamId": 1610612743,
+      "zone": "long",
+      "date": "2026-02-11",
+      "file": "data/defense-fifth-source/pre55/1610612743-long-pre55.json",
+      "url": "https://stats.nba.com/stats/leaguedashptdefend?LeagueID=00&Season=2025-26&SeasonType=Regular+Season&PerMode=Totals&MeasureType=Base&TeamID=1610612743&LastNGames=0&Month=0&OpponentTeamID=0&PaceAdjust=N&PlusMinus=N&Rank=N&Period=0&DefenseCategory=3+Pointers&DateFrom=&DateTo=2026-02-11",
+      "sha256": "7e2da89ea59ed8f53bd8ce80e9a95092e08a456ccc235386876f28f589b64ee4",
+      "rows": 16
+    },
+    {
+      "teamId": 1610612744,
+      "zone": "long",
+      "date": "2026-02-11",
+      "file": "data/defense-fifth-source/pre55/1610612744-long-pre55.json",
+      "url": "https://stats.nba.com/stats/leaguedashptdefend?LeagueID=00&Season=2025-26&SeasonType=Regular+Season&PerMode=Totals&MeasureType=Base&TeamID=1610612744&LastNGames=0&Month=0&OpponentTeamID=0&PaceAdjust=N&PlusMinus=N&Rank=N&Period=0&DefenseCategory=3+Pointers&DateFrom=&DateTo=2026-02-11",
+      "sha256": "9bb2b2d6e920a607cddb21336e07aa8c995da58ceeb8eb5df636791cb4ad34db",
+      "rows": 18
+    },
+    {
+      "teamId": 1610612744,
+      "zone": "short",
+      "date": "2026-02-11",
+      "file": "data/defense-fifth-source/pre55/1610612744-short-pre55.json",
+      "url": "https://stats.nba.com/stats/leaguedashptdefend?LeagueID=00&Season=2025-26&SeasonType=Regular+Season&PerMode=Totals&MeasureType=Base&TeamID=1610612744&LastNGames=0&Month=0&OpponentTeamID=0&PaceAdjust=N&PlusMinus=N&Rank=N&Period=0&DefenseCategory=Less+Than+6Ft&DateFrom=&DateTo=2026-02-11",
+      "sha256": "5b8559a72ea0eea4e9fe1a8ff6de0816c37186a2fb48f898d18efc47e1ab8242",
+      "rows": 17
+    },
+    {
+      "teamId": 1610612745,
+      "zone": "long",
+      "date": "2026-02-21",
+      "file": "data/defense-fifth-source/pre55/1610612745-long-pre55.json",
+      "url": "https://stats.nba.com/stats/leaguedashptdefend?LeagueID=00&Season=2025-26&SeasonType=Regular+Season&PerMode=Totals&MeasureType=Base&TeamID=1610612745&LastNGames=0&Month=0&OpponentTeamID=0&PaceAdjust=N&PlusMinus=N&Rank=N&Period=0&DefenseCategory=3+Pointers&DateFrom=&DateTo=2026-02-21",
+      "sha256": "af8bf373bdc6fc20cf8f17f112f533351483e2abff749482e1f61e8fda943424",
+      "rows": 15
+    },
+    {
+      "teamId": 1610612745,
+      "zone": "short",
+      "date": "2026-02-21",
+      "file": "data/defense-fifth-source/pre55/1610612745-short-pre55.json",
+      "url": "https://stats.nba.com/stats/leaguedashptdefend?LeagueID=00&Season=2025-26&SeasonType=Regular+Season&PerMode=Totals&MeasureType=Base&TeamID=1610612745&LastNGames=0&Month=0&OpponentTeamID=0&PaceAdjust=N&PlusMinus=N&Rank=N&Period=0&DefenseCategory=Less+Than+6Ft&DateFrom=&DateTo=2026-02-21",
+      "sha256": "494db6b06cb7c1230c54ec961c659058cefd2db30040eaddaa5adcf6bd528634",
+      "rows": 15
+    },
+    {
+      "teamId": 1610612746,
+      "zone": "long",
+      "date": "2026-02-19",
+      "file": "data/defense-fifth-source/pre55/1610612746-long-pre55.json",
+      "url": "https://stats.nba.com/stats/leaguedashptdefend?LeagueID=00&Season=2025-26&SeasonType=Regular+Season&PerMode=Totals&MeasureType=Base&TeamID=1610612746&LastNGames=0&Month=0&OpponentTeamID=0&PaceAdjust=N&PlusMinus=N&Rank=N&Period=0&DefenseCategory=3+Pointers&DateFrom=&DateTo=2026-02-19",
+      "sha256": "bd568f2e8f7203a9ce4d27177fb75303b269425d351e45a80ef7fc31904155a1",
+      "rows": 22
+    },
+    {
+      "teamId": 1610612746,
+      "zone": "short",
+      "date": "2026-02-19",
+      "file": "data/defense-fifth-source/pre55/1610612746-short-pre55.json",
+      "url": "https://stats.nba.com/stats/leaguedashptdefend?LeagueID=00&Season=2025-26&SeasonType=Regular+Season&PerMode=Totals&MeasureType=Base&TeamID=1610612746&LastNGames=0&Month=0&OpponentTeamID=0&PaceAdjust=N&PlusMinus=N&Rank=N&Period=0&DefenseCategory=Less+Than+6Ft&DateFrom=&DateTo=2026-02-19",
+      "sha256": "ae561537b02e3151a964890194677ebf52a3cce72613baa15279f9cb5625ba19",
+      "rows": 22
+    },
+    {
+      "teamId": 1610612747,
+      "zone": "long",
+      "date": "2026-02-20",
+      "file": "data/defense-fifth-source/pre55/1610612747-long-pre55.json",
+      "url": "https://stats.nba.com/stats/leaguedashptdefend?LeagueID=00&Season=2025-26&SeasonType=Regular+Season&PerMode=Totals&MeasureType=Base&TeamID=1610612747&LastNGames=0&Month=0&OpponentTeamID=0&PaceAdjust=N&PlusMinus=N&Rank=N&Period=0&DefenseCategory=3+Pointers&DateFrom=&DateTo=2026-02-20",
+      "sha256": "cb063992ae921ccd4a1c9f038f6e0802fb9ee170b2bd9279fe30b380a2f86368",
+      "rows": 19
+    },
+    {
+      "teamId": 1610612738,
+      "zone": "short",
+      "date": "2026-02-19",
+      "file": "data/defense-fifth-source/pre55/1610612738-short-pre55.json",
+      "url": "https://stats.nba.com/stats/leaguedashptdefend?LeagueID=00&Season=2025-26&SeasonType=Regular+Season&PerMode=Totals&MeasureType=Base&TeamID=1610612738&LastNGames=0&Month=0&OpponentTeamID=0&PaceAdjust=N&PlusMinus=N&Rank=N&Period=0&DefenseCategory=Less+Than+6Ft&DateFrom=&DateTo=2026-02-19",
+      "sha256": "3e72c829b77cb76b9db60cbb5cc8cfa362f35bd5ec57754daa06f08bf7d9b258",
+      "rows": 16
+    },
+    {
+      "teamId": 1610612747,
+      "zone": "short",
+      "date": "2026-02-20",
+      "file": "data/defense-fifth-source/pre55/1610612747-short-pre55.json",
+      "url": "https://stats.nba.com/stats/leaguedashptdefend?LeagueID=00&Season=2025-26&SeasonType=Regular+Season&PerMode=Totals&MeasureType=Base&TeamID=1610612747&LastNGames=0&Month=0&OpponentTeamID=0&PaceAdjust=N&PlusMinus=N&Rank=N&Period=0&DefenseCategory=Less+Than+6Ft&DateFrom=&DateTo=2026-02-20",
+      "sha256": "b3e4381a46470832c419269b7f54d7aead5ff10e671ced4e07f9a70f87ca4583",
+      "rows": 20
+    },
+    {
+      "teamId": 1610612748,
+      "zone": "long",
+      "date": "2026-02-09",
+      "file": "data/defense-fifth-source/pre55/1610612748-long-pre55.json",
+      "url": "https://stats.nba.com/stats/leaguedashptdefend?LeagueID=00&Season=2025-26&SeasonType=Regular+Season&PerMode=Totals&MeasureType=Base&TeamID=1610612748&LastNGames=0&Month=0&OpponentTeamID=0&PaceAdjust=N&PlusMinus=N&Rank=N&Period=0&DefenseCategory=3+Pointers&DateFrom=&DateTo=2026-02-09",
+      "sha256": "ae22198d16c91361976e357866eb2cdf5babbd85f2b9d8d13d911429fc423b26",
+      "rows": 16
+    },
+    {
+      "teamId": 1610612748,
+      "zone": "short",
+      "date": "2026-02-09",
+      "file": "data/defense-fifth-source/pre55/1610612748-short-pre55.json",
+      "url": "https://stats.nba.com/stats/leaguedashptdefend?LeagueID=00&Season=2025-26&SeasonType=Regular+Season&PerMode=Totals&MeasureType=Base&TeamID=1610612748&LastNGames=0&Month=0&OpponentTeamID=0&PaceAdjust=N&PlusMinus=N&Rank=N&Period=0&DefenseCategory=Less+Than+6Ft&DateFrom=&DateTo=2026-02-09",
+      "sha256": "21c7903b9af8eb36ce6e4def4e7fd4c5f1eb396796aaaf57ca400e7810244aee",
+      "rows": 16
+    },
+    {
+      "teamId": 1610612749,
+      "zone": "long",
+      "date": "2026-02-22",
+      "file": "data/defense-fifth-source/pre55/1610612749-long-pre55.json",
+      "url": "https://stats.nba.com/stats/leaguedashptdefend?LeagueID=00&Season=2025-26&SeasonType=Regular+Season&PerMode=Totals&MeasureType=Base&TeamID=1610612749&LastNGames=0&Month=0&OpponentTeamID=0&PaceAdjust=N&PlusMinus=N&Rank=N&Period=0&DefenseCategory=3+Pointers&DateFrom=&DateTo=2026-02-22",
+      "sha256": "6bc0d599f12d51a20bd8172e51e5b9c190a347eb7224d6b355cbd3cc83f0e271",
+      "rows": 19
+    },
+    {
+      "teamId": 1610612750,
+      "zone": "long",
+      "date": "2026-02-09",
+      "file": "data/defense-fifth-source/pre55/1610612750-long-pre55.json",
+      "url": "https://stats.nba.com/stats/leaguedashptdefend?LeagueID=00&Season=2025-26&SeasonType=Regular+Season&PerMode=Totals&MeasureType=Base&TeamID=1610612750&LastNGames=0&Month=0&OpponentTeamID=0&PaceAdjust=N&PlusMinus=N&Rank=N&Period=0&DefenseCategory=3+Pointers&DateFrom=&DateTo=2026-02-09",
+      "sha256": "0ae192cb66bd18106fb9faee767f0c256aaf47ddefa12ee5a4f8d60f803623c0",
+      "rows": 16
+    },
+    {
+      "teamId": 1610612750,
+      "zone": "short",
+      "date": "2026-02-09",
+      "file": "data/defense-fifth-source/pre55/1610612750-short-pre55.json",
+      "url": "https://stats.nba.com/stats/leaguedashptdefend?LeagueID=00&Season=2025-26&SeasonType=Regular+Season&PerMode=Totals&MeasureType=Base&TeamID=1610612750&LastNGames=0&Month=0&OpponentTeamID=0&PaceAdjust=N&PlusMinus=N&Rank=N&Period=0&DefenseCategory=Less+Than+6Ft&DateFrom=&DateTo=2026-02-09",
+      "sha256": "5b74ec956f29bf442b87171d05e1640fa8a86254101b0c5af0edeee8fb982abe",
+      "rows": 17
+    },
+    {
+      "teamId": 1610612751,
+      "zone": "long",
+      "date": "2026-02-20",
+      "file": "data/defense-fifth-source/pre55/1610612751-long-pre55.json",
+      "url": "https://stats.nba.com/stats/leaguedashptdefend?LeagueID=00&Season=2025-26&SeasonType=Regular+Season&PerMode=Totals&MeasureType=Base&TeamID=1610612751&LastNGames=0&Month=0&OpponentTeamID=0&PaceAdjust=N&PlusMinus=N&Rank=N&Period=0&DefenseCategory=3+Pointers&DateFrom=&DateTo=2026-02-20",
+      "sha256": "a64ed6021732d9f2a22ad16de8c8cd0e9d11ad988e16135d00850d1eb42c8002",
+      "rows": 17
+    },
+    {
+      "teamId": 1610612751,
+      "zone": "short",
+      "date": "2026-02-20",
+      "file": "data/defense-fifth-source/pre55/1610612751-short-pre55.json",
+      "url": "https://stats.nba.com/stats/leaguedashptdefend?LeagueID=00&Season=2025-26&SeasonType=Regular+Season&PerMode=Totals&MeasureType=Base&TeamID=1610612751&LastNGames=0&Month=0&OpponentTeamID=0&PaceAdjust=N&PlusMinus=N&Rank=N&Period=0&DefenseCategory=Less+Than+6Ft&DateFrom=&DateTo=2026-02-20",
+      "sha256": "7ce06d2cf70c08cdb4a32b3ec7fbb76c8fc493e81af60c45c870601aaebb8161",
+      "rows": 17
+    },
+    {
+      "teamId": 1610612752,
+      "zone": "long",
+      "date": "2026-02-11",
+      "file": "data/defense-fifth-source/pre55/1610612752-long-pre55.json",
+      "url": "https://stats.nba.com/stats/leaguedashptdefend?LeagueID=00&Season=2025-26&SeasonType=Regular+Season&PerMode=Totals&MeasureType=Base&TeamID=1610612752&LastNGames=0&Month=0&OpponentTeamID=0&PaceAdjust=N&PlusMinus=N&Rank=N&Period=0&DefenseCategory=3+Pointers&DateFrom=&DateTo=2026-02-11",
+      "sha256": "9277f8afcfc80f15f909d9977b571146e4921a595c38b5a6a3215836840851ab",
+      "rows": 19
+    },
+    {
+      "teamId": 1610612752,
+      "zone": "short",
+      "date": "2026-02-11",
+      "file": "data/defense-fifth-source/pre55/1610612752-short-pre55.json",
+      "url": "https://stats.nba.com/stats/leaguedashptdefend?LeagueID=00&Season=2025-26&SeasonType=Regular+Season&PerMode=Totals&MeasureType=Base&TeamID=1610612752&LastNGames=0&Month=0&OpponentTeamID=0&PaceAdjust=N&PlusMinus=N&Rank=N&Period=0&DefenseCategory=Less+Than+6Ft&DateFrom=&DateTo=2026-02-11",
+      "sha256": "6b24c1eeb956a648ce93b1c3dc63d28109e8f56d0e1b4db7a96746e6cd0928b4",
+      "rows": 19
+    },
+    {
+      "teamId": 1610612753,
+      "zone": "long",
+      "date": "2026-02-21",
+      "file": "data/defense-fifth-source/pre55/1610612753-long-pre55.json",
+      "url": "https://stats.nba.com/stats/leaguedashptdefend?LeagueID=00&Season=2025-26&SeasonType=Regular+Season&PerMode=Totals&MeasureType=Base&TeamID=1610612753&LastNGames=0&Month=0&OpponentTeamID=0&PaceAdjust=N&PlusMinus=N&Rank=N&Period=0&DefenseCategory=3+Pointers&DateFrom=&DateTo=2026-02-21",
+      "sha256": "93ea1a9704de545f8ceaaa62adba98032874f6d78dc28bdc1c755d97bbb39d54",
+      "rows": 17
+    },
+    {
+      "teamId": 1610612753,
+      "zone": "short",
+      "date": "2026-02-21",
+      "file": "data/defense-fifth-source/pre55/1610612753-short-pre55.json",
+      "url": "https://stats.nba.com/stats/leaguedashptdefend?LeagueID=00&Season=2025-26&SeasonType=Regular+Season&PerMode=Totals&MeasureType=Base&TeamID=1610612753&LastNGames=0&Month=0&OpponentTeamID=0&PaceAdjust=N&PlusMinus=N&Rank=N&Period=0&DefenseCategory=Less+Than+6Ft&DateFrom=&DateTo=2026-02-21",
+      "sha256": "79b6e0803351216192c9faf5363cf4d6f60b78474d3b0fce5f713d4fc59e134a",
+      "rows": 17
+    },
+    {
+      "teamId": 1610612754,
+      "zone": "short",
+      "date": "2026-02-11",
+      "file": "data/defense-fifth-source/pre55/1610612754-short-pre55.json",
+      "url": "https://stats.nba.com/stats/leaguedashptdefend?LeagueID=00&Season=2025-26&SeasonType=Regular+Season&PerMode=Totals&MeasureType=Base&TeamID=1610612754&LastNGames=0&Month=0&OpponentTeamID=0&PaceAdjust=N&PlusMinus=N&Rank=N&Period=0&DefenseCategory=Less+Than+6Ft&DateFrom=&DateTo=2026-02-11",
+      "sha256": "03f799388bbee17d5931f524d9f08b594c7da38ebfa20ece8dad97347b5a1766",
+      "rows": 25
+    },
+    {
+      "teamId": 1610612754,
+      "zone": "long",
+      "date": "2026-02-11",
+      "file": "data/defense-fifth-source/pre55/1610612754-long-pre55.json",
+      "url": "https://stats.nba.com/stats/leaguedashptdefend?LeagueID=00&Season=2025-26&SeasonType=Regular+Season&PerMode=Totals&MeasureType=Base&TeamID=1610612754&LastNGames=0&Month=0&OpponentTeamID=0&PaceAdjust=N&PlusMinus=N&Rank=N&Period=0&DefenseCategory=3+Pointers&DateFrom=&DateTo=2026-02-11",
+      "sha256": "41f2336d0a96ffe112446c4a3c19d7015868bea3c589acc5e000e70f0e6899aa",
+      "rows": 25
+    },
+    {
+      "teamId": 1610612749,
+      "zone": "short",
+      "date": "2026-02-22",
+      "file": "data/defense-fifth-source/pre55/1610612749-short-pre55.json",
+      "url": "https://stats.nba.com/stats/leaguedashptdefend?LeagueID=00&Season=2025-26&SeasonType=Regular+Season&PerMode=Totals&MeasureType=Base&TeamID=1610612749&LastNGames=0&Month=0&OpponentTeamID=0&PaceAdjust=N&PlusMinus=N&Rank=N&Period=0&DefenseCategory=Less+Than+6Ft&DateFrom=&DateTo=2026-02-22",
+      "sha256": "0fb20c57254297d2ab4858c7948bf2ff0b3674ec21e4cbfd4f7fd5869fc5bc3f",
+      "rows": 19
+    },
+    {
+      "teamId": 1610612755,
+      "zone": "long",
+      "date": "2026-02-19",
+      "file": "data/defense-fifth-source/pre55/1610612755-long-pre55.json",
+      "url": "https://stats.nba.com/stats/leaguedashptdefend?LeagueID=00&Season=2025-26&SeasonType=Regular+Season&PerMode=Totals&MeasureType=Base&TeamID=1610612755&LastNGames=0&Month=0&OpponentTeamID=0&PaceAdjust=N&PlusMinus=N&Rank=N&Period=0&DefenseCategory=3+Pointers&DateFrom=&DateTo=2026-02-19",
+      "sha256": "44dbe3d9109d0d370ac42cce255f78e39bf196b1e1f107d5055f42d706f1a91c",
+      "rows": 20
+    },
+    {
+      "teamId": 1610612755,
+      "zone": "short",
+      "date": "2026-02-19",
+      "file": "data/defense-fifth-source/pre55/1610612755-short-pre55.json",
+      "url": "https://stats.nba.com/stats/leaguedashptdefend?LeagueID=00&Season=2025-26&SeasonType=Regular+Season&PerMode=Totals&MeasureType=Base&TeamID=1610612755&LastNGames=0&Month=0&OpponentTeamID=0&PaceAdjust=N&PlusMinus=N&Rank=N&Period=0&DefenseCategory=Less+Than+6Ft&DateFrom=&DateTo=2026-02-19",
+      "sha256": "775ca28262ce2c622f5a06ef80bd6e80dbb00a5a74b343bce25d65b0afaa6a75",
+      "rows": 21
+    },
+    {
+      "teamId": 1610612756,
+      "zone": "long",
+      "date": "2026-02-11",
+      "file": "data/defense-fifth-source/pre55/1610612756-long-pre55.json",
+      "url": "https://stats.nba.com/stats/leaguedashptdefend?LeagueID=00&Season=2025-26&SeasonType=Regular+Season&PerMode=Totals&MeasureType=Base&TeamID=1610612756&LastNGames=0&Month=0&OpponentTeamID=0&PaceAdjust=N&PlusMinus=N&Rank=N&Period=0&DefenseCategory=3+Pointers&DateFrom=&DateTo=2026-02-11",
+      "sha256": "66a02ccb8780eae8af35e9bad3323110c95dbeabcc3fcad5d8c340801511a97d",
+      "rows": 18
+    },
+    {
+      "teamId": 1610612756,
+      "zone": "short",
+      "date": "2026-02-11",
+      "file": "data/defense-fifth-source/pre55/1610612756-short-pre55.json",
+      "url": "https://stats.nba.com/stats/leaguedashptdefend?LeagueID=00&Season=2025-26&SeasonType=Regular+Season&PerMode=Totals&MeasureType=Base&TeamID=1610612756&LastNGames=0&Month=0&OpponentTeamID=0&PaceAdjust=N&PlusMinus=N&Rank=N&Period=0&DefenseCategory=Less+Than+6Ft&DateFrom=&DateTo=2026-02-11",
+      "sha256": "5409c6e8e739169fb803403707d095c2ee77974dcebad2f68f5669187d9ece32",
+      "rows": 18
+    },
+    {
+      "teamId": 1610612757,
+      "zone": "long",
+      "date": "2026-02-11",
+      "file": "data/defense-fifth-source/pre55/1610612757-long-pre55.json",
+      "url": "https://stats.nba.com/stats/leaguedashptdefend?LeagueID=00&Season=2025-26&SeasonType=Regular+Season&PerMode=Totals&MeasureType=Base&TeamID=1610612757&LastNGames=0&Month=0&OpponentTeamID=0&PaceAdjust=N&PlusMinus=N&Rank=N&Period=0&DefenseCategory=3+Pointers&DateFrom=&DateTo=2026-02-11",
+      "sha256": "ff767c85980962c3477d41fd5b56f484aae303c459c181ab37f8c70d5e6fa485",
+      "rows": 18
+    },
+    {
+      "teamId": 1610612757,
+      "zone": "short",
+      "date": "2026-02-11",
+      "file": "data/defense-fifth-source/pre55/1610612757-short-pre55.json",
+      "url": "https://stats.nba.com/stats/leaguedashptdefend?LeagueID=00&Season=2025-26&SeasonType=Regular+Season&PerMode=Totals&MeasureType=Base&TeamID=1610612757&LastNGames=0&Month=0&OpponentTeamID=0&PaceAdjust=N&PlusMinus=N&Rank=N&Period=0&DefenseCategory=Less+Than+6Ft&DateFrom=&DateTo=2026-02-11",
+      "sha256": "b3806b2053cf292a327e8418413849584008fcf41b8f5f9d80137f55bed013d8",
+      "rows": 17
+    },
+    {
+      "teamId": 1610612758,
+      "zone": "long",
+      "date": "2026-02-09",
+      "file": "data/defense-fifth-source/pre55/1610612758-long-pre55.json",
+      "url": "https://stats.nba.com/stats/leaguedashptdefend?LeagueID=00&Season=2025-26&SeasonType=Regular+Season&PerMode=Totals&MeasureType=Base&TeamID=1610612758&LastNGames=0&Month=0&OpponentTeamID=0&PaceAdjust=N&PlusMinus=N&Rank=N&Period=0&DefenseCategory=3+Pointers&DateFrom=&DateTo=2026-02-09",
+      "sha256": "585d1d4b1c186beae2084646b72b5e7330dff24852372eb3d99d736d2a312975",
+      "rows": 20
+    },
+    {
+      "teamId": 1610612759,
+      "zone": "long",
+      "date": "2026-02-19",
+      "file": "data/defense-fifth-source/pre55/1610612759-long-pre55.json",
+      "url": "https://stats.nba.com/stats/leaguedashptdefend?LeagueID=00&Season=2025-26&SeasonType=Regular+Season&PerMode=Totals&MeasureType=Base&TeamID=1610612759&LastNGames=0&Month=0&OpponentTeamID=0&PaceAdjust=N&PlusMinus=N&Rank=N&Period=0&DefenseCategory=3+Pointers&DateFrom=&DateTo=2026-02-19",
+      "sha256": "c220339fea0eec483c1f7cd5edd2c5cd0b8e8b4d54b997d9aa848b33871668ae",
+      "rows": 17
+    },
+    {
+      "teamId": 1610612758,
+      "zone": "short",
+      "date": "2026-02-09",
+      "file": "data/defense-fifth-source/pre55/1610612758-short-pre55.json",
+      "url": "https://stats.nba.com/stats/leaguedashptdefend?LeagueID=00&Season=2025-26&SeasonType=Regular+Season&PerMode=Totals&MeasureType=Base&TeamID=1610612758&LastNGames=0&Month=0&OpponentTeamID=0&PaceAdjust=N&PlusMinus=N&Rank=N&Period=0&DefenseCategory=Less+Than+6Ft&DateFrom=&DateTo=2026-02-09",
+      "sha256": "f39a85df87b6ed1a82874475cf6100a640b41e5ff9a6bc0d480097b57ffc864c",
+      "rows": 20
+    },
+    {
+      "teamId": 1610612759,
+      "zone": "short",
+      "date": "2026-02-19",
+      "file": "data/defense-fifth-source/pre55/1610612759-short-pre55.json",
+      "url": "https://stats.nba.com/stats/leaguedashptdefend?LeagueID=00&Season=2025-26&SeasonType=Regular+Season&PerMode=Totals&MeasureType=Base&TeamID=1610612759&LastNGames=0&Month=0&OpponentTeamID=0&PaceAdjust=N&PlusMinus=N&Rank=N&Period=0&DefenseCategory=Less+Than+6Ft&DateFrom=&DateTo=2026-02-19",
+      "sha256": "fc6f492047b69ebff0e173f73d74c38c0e04d0abe16e08e118f21be6f7813b09",
+      "rows": 18
+    },
+    {
+      "teamId": 1610612760,
+      "zone": "long",
+      "date": "2026-02-11",
+      "file": "data/defense-fifth-source/pre55/1610612760-long-pre55.json",
+      "url": "https://stats.nba.com/stats/leaguedashptdefend?LeagueID=00&Season=2025-26&SeasonType=Regular+Season&PerMode=Totals&MeasureType=Base&TeamID=1610612760&LastNGames=0&Month=0&OpponentTeamID=0&PaceAdjust=N&PlusMinus=N&Rank=N&Period=0&DefenseCategory=3+Pointers&DateFrom=&DateTo=2026-02-11",
+      "sha256": "9ef130831ca3af4830a71c117bf46b1fcb4cac69155a01f1d376bfaee7c55ab5",
+      "rows": 18
+    },
+    {
+      "teamId": 1610612760,
+      "zone": "short",
+      "date": "2026-02-11",
+      "file": "data/defense-fifth-source/pre55/1610612760-short-pre55.json",
+      "url": "https://stats.nba.com/stats/leaguedashptdefend?LeagueID=00&Season=2025-26&SeasonType=Regular+Season&PerMode=Totals&MeasureType=Base&TeamID=1610612760&LastNGames=0&Month=0&OpponentTeamID=0&PaceAdjust=N&PlusMinus=N&Rank=N&Period=0&DefenseCategory=Less+Than+6Ft&DateFrom=&DateTo=2026-02-11",
+      "sha256": "17cab48c682b877dc966ac248a8291b90b9e2a15bfaa63bb6fef02040b2b087c",
+      "rows": 17
+    },
+    {
+      "teamId": 1610612761,
+      "zone": "long",
+      "date": "2026-02-11",
+      "file": "data/defense-fifth-source/pre55/1610612761-long-pre55.json",
+      "url": "https://stats.nba.com/stats/leaguedashptdefend?LeagueID=00&Season=2025-26&SeasonType=Regular+Season&PerMode=Totals&MeasureType=Base&TeamID=1610612761&LastNGames=0&Month=0&OpponentTeamID=0&PaceAdjust=N&PlusMinus=N&Rank=N&Period=0&DefenseCategory=3+Pointers&DateFrom=&DateTo=2026-02-11",
+      "sha256": "128e1c30ce51fef87c7d0362f16871e00fb7ad64e0dfc5c3ec170e15f4a94b50",
+      "rows": 19
+    },
+    {
+      "teamId": 1610612761,
+      "zone": "short",
+      "date": "2026-02-11",
+      "file": "data/defense-fifth-source/pre55/1610612761-short-pre55.json",
+      "url": "https://stats.nba.com/stats/leaguedashptdefend?LeagueID=00&Season=2025-26&SeasonType=Regular+Season&PerMode=Totals&MeasureType=Base&TeamID=1610612761&LastNGames=0&Month=0&OpponentTeamID=0&PaceAdjust=N&PlusMinus=N&Rank=N&Period=0&DefenseCategory=Less+Than+6Ft&DateFrom=&DateTo=2026-02-11",
+      "sha256": "fe90b0aee63934b154b3069e0d94d3bb31cb9a4e25f3e04c2488ae165a0fb2b6",
+      "rows": 19
+    },
+    {
+      "teamId": 1610612762,
+      "zone": "short",
+      "date": "2026-02-11",
+      "file": "data/defense-fifth-source/pre55/1610612762-short-pre55.json",
+      "url": "https://stats.nba.com/stats/leaguedashptdefend?LeagueID=00&Season=2025-26&SeasonType=Regular+Season&PerMode=Totals&MeasureType=Base&TeamID=1610612762&LastNGames=0&Month=0&OpponentTeamID=0&PaceAdjust=N&PlusMinus=N&Rank=N&Period=0&DefenseCategory=Less+Than+6Ft&DateFrom=&DateTo=2026-02-11",
+      "sha256": "ccb88c77a015c8152f46a9b41375a3a57f66294e06ddc18ce36d506b48993c97",
+      "rows": 19
+    },
+    {
+      "teamId": 1610612762,
+      "zone": "long",
+      "date": "2026-02-11",
+      "file": "data/defense-fifth-source/pre55/1610612762-long-pre55.json",
+      "url": "https://stats.nba.com/stats/leaguedashptdefend?LeagueID=00&Season=2025-26&SeasonType=Regular+Season&PerMode=Totals&MeasureType=Base&TeamID=1610612762&LastNGames=0&Month=0&OpponentTeamID=0&PaceAdjust=N&PlusMinus=N&Rank=N&Period=0&DefenseCategory=3+Pointers&DateFrom=&DateTo=2026-02-11",
+      "sha256": "2f14ffd44f2dcd3507cb11a1827cf929c28bb1670d840be03e335b52e0fc6af5",
+      "rows": 19
+    },
+    {
+      "teamId": 1610612763,
+      "zone": "long",
+      "date": "2026-02-21",
+      "file": "data/defense-fifth-source/pre55/1610612763-long-pre55.json",
+      "url": "https://stats.nba.com/stats/leaguedashptdefend?LeagueID=00&Season=2025-26&SeasonType=Regular+Season&PerMode=Totals&MeasureType=Base&TeamID=1610612763&LastNGames=0&Month=0&OpponentTeamID=0&PaceAdjust=N&PlusMinus=N&Rank=N&Period=0&DefenseCategory=3+Pointers&DateFrom=&DateTo=2026-02-21",
+      "sha256": "d4c960ca38911dc6efe81e7ebdb9f4f4a192f8e43f928d72e290e3f37c010ca7",
+      "rows": 24
+    },
+    {
+      "teamId": 1610612763,
+      "zone": "short",
+      "date": "2026-02-21",
+      "file": "data/defense-fifth-source/pre55/1610612763-short-pre55.json",
+      "url": "https://stats.nba.com/stats/leaguedashptdefend?LeagueID=00&Season=2025-26&SeasonType=Regular+Season&PerMode=Totals&MeasureType=Base&TeamID=1610612763&LastNGames=0&Month=0&OpponentTeamID=0&PaceAdjust=N&PlusMinus=N&Rank=N&Period=0&DefenseCategory=Less+Than+6Ft&DateFrom=&DateTo=2026-02-21",
+      "sha256": "547655f050095b203fafcd6eaafacfc8764fad7b0e031a2bbae9e41cd7b0ebd2",
+      "rows": 25
+    },
+    {
+      "teamId": 1610612764,
+      "zone": "long",
+      "date": "2026-02-20",
+      "file": "data/defense-fifth-source/pre55/1610612764-long-pre55.json",
+      "url": "https://stats.nba.com/stats/leaguedashptdefend?LeagueID=00&Season=2025-26&SeasonType=Regular+Season&PerMode=Totals&MeasureType=Base&TeamID=1610612764&LastNGames=0&Month=0&OpponentTeamID=0&PaceAdjust=N&PlusMinus=N&Rank=N&Period=0&DefenseCategory=3+Pointers&DateFrom=&DateTo=2026-02-20",
+      "sha256": "5a3aa3d1b84fffcd70f57589fa7b425e12f74b7e8010ba696e90bad0ccb3fdd1",
+      "rows": 23
+    },
+    {
+      "teamId": 1610612764,
+      "zone": "short",
+      "date": "2026-02-20",
+      "file": "data/defense-fifth-source/pre55/1610612764-short-pre55.json",
+      "url": "https://stats.nba.com/stats/leaguedashptdefend?LeagueID=00&Season=2025-26&SeasonType=Regular+Season&PerMode=Totals&MeasureType=Base&TeamID=1610612764&LastNGames=0&Month=0&OpponentTeamID=0&PaceAdjust=N&PlusMinus=N&Rank=N&Period=0&DefenseCategory=Less+Than+6Ft&DateFrom=&DateTo=2026-02-20",
+      "sha256": "f5b9bdb77726e554285770319781a6d7747b4f7ea6a5f4a86e06db1d33725e63",
+      "rows": 23
+    },
+    {
+      "teamId": 1610612765,
+      "zone": "long",
+      "date": "2026-02-21",
+      "file": "data/defense-fifth-source/pre55/1610612765-long-pre55.json",
+      "url": "https://stats.nba.com/stats/leaguedashptdefend?LeagueID=00&Season=2025-26&SeasonType=Regular+Season&PerMode=Totals&MeasureType=Base&TeamID=1610612765&LastNGames=0&Month=0&OpponentTeamID=0&PaceAdjust=N&PlusMinus=N&Rank=N&Period=0&DefenseCategory=3+Pointers&DateFrom=&DateTo=2026-02-21",
+      "sha256": "9d5906555df8a163e8b3b93705161200b4b07c49b113f7b51f8d93eaf1d1b59d",
+      "rows": 18
+    },
+    {
+      "teamId": 1610612766,
+      "zone": "long",
+      "date": "2026-02-11",
+      "file": "data/defense-fifth-source/pre55/1610612766-long-pre55.json",
+      "url": "https://stats.nba.com/stats/leaguedashptdefend?LeagueID=00&Season=2025-26&SeasonType=Regular+Season&PerMode=Totals&MeasureType=Base&TeamID=1610612766&LastNGames=0&Month=0&OpponentTeamID=0&PaceAdjust=N&PlusMinus=N&Rank=N&Period=0&DefenseCategory=3+Pointers&DateFrom=&DateTo=2026-02-11",
+      "sha256": "69a991479c8512ebe45574b01ec792eca9f8ffa7f44b38647682581e8a558f5c",
+      "rows": 19
+    },
+    {
+      "teamId": 1610612765,
+      "zone": "short",
+      "date": "2026-02-21",
+      "file": "data/defense-fifth-source/pre55/1610612765-short-pre55.json",
+      "url": "https://stats.nba.com/stats/leaguedashptdefend?LeagueID=00&Season=2025-26&SeasonType=Regular+Season&PerMode=Totals&MeasureType=Base&TeamID=1610612765&LastNGames=0&Month=0&OpponentTeamID=0&PaceAdjust=N&PlusMinus=N&Rank=N&Period=0&DefenseCategory=Less+Than+6Ft&DateFrom=&DateTo=2026-02-21",
+      "sha256": "c70c7d438cb4d87dc64339466bc64891b9cf6c09196c428c88d5b0e63f147d73",
+      "rows": 19
+    },
+    {
+      "teamId": 1610612766,
+      "zone": "short",
+      "date": "2026-02-11",
+      "file": "data/defense-fifth-source/pre55/1610612766-short-pre55.json",
+      "url": "https://stats.nba.com/stats/leaguedashptdefend?LeagueID=00&Season=2025-26&SeasonType=Regular+Season&PerMode=Totals&MeasureType=Base&TeamID=1610612766&LastNGames=0&Month=0&OpponentTeamID=0&PaceAdjust=N&PlusMinus=N&Rank=N&Period=0&DefenseCategory=Less+Than+6Ft&DateFrom=&DateTo=2026-02-11",
+      "sha256": "9b5f58c8539fe5c84fd7ee90f027a7e49e68e954c89c40c1c168d3521d0f6526",
+      "rows": 20
+    }
+  ],
+  "failures": [],
+  "cutoffs": {
+    "1610612737": "2026-02-09",
+    "1610612738": "2026-02-19",
+    "1610612739": "2026-02-11",
+    "1610612740": "2026-02-09",
+    "1610612741": "2026-02-11",
+    "1610612742": "2026-02-20",
+    "1610612743": "2026-02-11",
+    "1610612744": "2026-02-11",
+    "1610612745": "2026-02-21",
+    "1610612746": "2026-02-19",
+    "1610612747": "2026-02-20",
+    "1610612748": "2026-02-09",
+    "1610612749": "2026-02-22",
+    "1610612750": "2026-02-09",
+    "1610612751": "2026-02-20",
+    "1610612752": "2026-02-11",
+    "1610612753": "2026-02-21",
+    "1610612754": "2026-02-11",
+    "1610612755": "2026-02-19",
+    "1610612756": "2026-02-11",
+    "1610612757": "2026-02-11",
+    "1610612758": "2026-02-09",
+    "1610612759": "2026-02-19",
+    "1610612760": "2026-02-11",
+    "1610612761": "2026-02-11",
+    "1610612762": "2026-02-11",
+    "1610612763": "2026-02-21",
+    "1610612764": "2026-02-20",
+    "1610612765": "2026-02-21",
+    "1610612766": "2026-02-11"
+  }
+}

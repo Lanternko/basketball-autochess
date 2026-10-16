@@ -1,0 +1,15 @@
+{
+  "games": 96,
+  "cacheExactParity": true,
+  "disabledIntensityExactPreviousParity": true,
+  "previousInputUnchanged": true,
+  "syntheticAttributesUnchanged": true,
+  "scope": "Fixed-lineup OVR diagnostic probes only. Contact lineup intensity and victim changed; every mechanism matches v25 when measured intensity is disabled. No new all-player ranking.",
+  "hashes": {
+    "reports/player-impact-v26/input.mjs": "764c8aca98fccd7016a6eafc7df5b52ed688b6cb356e5798ef138968a29064da",
+    "reports/player-impact-v26/model.mjs": "435826e09e8111f7ba87bc2ce4ed8a7de5b3c35a25ddbc2070e3438f6bc4830b",
+    "reports/player-impact-v26/engine.mjs": "2e0bc326d786b1d514508e3574f437f35dbf4ad34eaeffdd72aff5fb21951cc2",
+    "reports/player-impact-v26/ovr-input.mjs": "3c2c11546a333900cb045d3f874d356dc6ff43830be6f927cc2ab9336a774f6f",
+    "reports/player-impact-v26/verify-counterfactual.mjs": "60f4de5e460985105ca11b33a636960d4cdff748845f52602f1931994c2a5b00"
+  }
+}

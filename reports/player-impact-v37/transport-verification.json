@@ -1,0 +1,15 @@
+{
+  "passed": true,
+  "sampledLineups": 278,
+  "branchSamples": {
+    "fixed-pass-rows": 199,
+    "relaxed-source-columns": 79
+  },
+  "maxAbsoluteDifferenceToIndependentLogSpaceSolve": 7.632755538722336e-12,
+  "scope": "Independent masked own-pool projection with fixed passer rows, and independent unfitted source-column projection for non-strict inputs. No accuracy certification.",
+  "hashes": {
+    "reports/player-impact-v37/transport-samples.json": "4b2c6671ef1d840c0237039b18d62dce131b557638da9523982bf9428b71c91d",
+    "reports/player-impact-v37/verify-transport.py": "96de7abbe433121704754682e94ea64b6ffe3761677d394dcce0f609f6763580",
+    "reports/player-impact-v37/model.mjs": "5b9ed01a71a560db6051261cb690f04f0a24c56c067bb2da8c4eb2d3ae0f0c10"
+  }
+}

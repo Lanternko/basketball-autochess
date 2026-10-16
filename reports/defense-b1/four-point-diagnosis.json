@@ -1,0 +1,29 @@
+{
+  "seed": 20261012,
+  "realGames": 1227,
+  "simGames": 1230,
+  "real": {
+    "four": 382,
+    "threePlusOne": 314,
+    "twoFTPlusFG": 22,
+    "other": 46
+  },
+  "simulation": {
+    "four": 3154,
+    "threePlusOne": 3053,
+    "twoFTPlusFG": 37,
+    "other": 64
+  },
+  "interpretation": "Event classification only, no engine change. Simulation on same frozen v1 roster/seed. Most four-point possessions from made three plus made and-one FT indicates a foul outcome-frequency issue despite globally aligned recorded FG%.",
+  "provenance": {
+    "sources": {
+      "reports/defense-b1/real-games.jsonl": "b9451a56eeb3f7714e10d49abbd5f9846723ceb6551c5f04e179bcf04904fc26",
+      "data/defense-a-source/manifest.json": "0bb849fc0a3301cd8bff4c3733f0623c24e1328b5c43342dbfb848ce5dd3efed"
+    },
+    "code": {
+      "scripts/diagnose_defense_four_points.js": "f65952f37fd1320642f3353e902bbd6f50ff27cbb1582887245a767f15875886",
+      "src/defense_game.js": "6fc0410c6821c9d26ae8757fe109ed9633a19fbce047edc752ba6ef546b4c34c",
+      "src/defense_probability.js": "e652ede7ebe9753f85105dc657fcb2b39d67f28d1ef92a58df008bddd2de4e48"
+    }
+  }
+}

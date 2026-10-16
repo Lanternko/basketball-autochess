@@ -1,0 +1,701 @@
+{
+  "schemaVersion": 1,
+  "scope": "Existing test teams; same-team same-season regular-season totals",
+  "teams": {
+    "GSW": {
+      "name": "勇士 2016-17",
+      "season": "2016-17",
+      "teamId": 1610612744,
+      "pace": 100.37,
+      "offRtg": 114.8,
+      "defRtg": 103.4,
+      "players": [
+        {
+          "name": "Stephen Curry",
+          "playerId": 201939,
+          "games": 79,
+          "minutes": 2638.555,
+          "usagePct": 28.599999999999998,
+          "totals": {
+            "PTS": 1999,
+            "FGM": 675,
+            "FGA": 1443,
+            "FG3M": 324,
+            "FG3A": 789,
+            "FTM": 325,
+            "FTA": 362,
+            "OREB": 61,
+            "DREB": 292,
+            "REB": 353,
+            "TOV": 239,
+            "STL": 142,
+            "BLK": 17,
+            "AST": 524
+          }
+        },
+        {
+          "name": "Klay Thompson",
+          "playerId": 202691,
+          "games": 78,
+          "minutes": 2649.04,
+          "usagePct": 25.8,
+          "totals": {
+            "PTS": 1742,
+            "FGM": 644,
+            "FGA": 1376,
+            "FG3M": 268,
+            "FG3A": 647,
+            "FTM": 186,
+            "FTA": 218,
+            "OREB": 49,
+            "DREB": 236,
+            "REB": 285,
+            "TOV": 128,
+            "STL": 66,
+            "BLK": 40,
+            "AST": 160
+          }
+        },
+        {
+          "name": "Kevin Durant",
+          "playerId": 201142,
+          "games": 62,
+          "minutes": 2070.36,
+          "usagePct": 27.1,
+          "totals": {
+            "PTS": 1555,
+            "FGM": 551,
+            "FGA": 1026,
+            "FG3M": 117,
+            "FG3A": 312,
+            "FTM": 336,
+            "FTA": 384,
+            "OREB": 39,
+            "DREB": 474,
+            "REB": 513,
+            "TOV": 138,
+            "STL": 66,
+            "BLK": 99,
+            "AST": 300
+          }
+        },
+        {
+          "name": "Draymond Green",
+          "playerId": 203110,
+          "games": 76,
+          "minutes": 2470.8866666666668,
+          "usagePct": 15.9,
+          "totals": {
+            "PTS": 776,
+            "FGM": 272,
+            "FGA": 650,
+            "FG3M": 81,
+            "FG3A": 263,
+            "FTM": 151,
+            "FTA": 213,
+            "OREB": 98,
+            "DREB": 501,
+            "REB": 599,
+            "TOV": 184,
+            "STL": 154,
+            "BLK": 106,
+            "AST": 533
+          }
+        },
+        {
+          "name": "Andre Iguodala",
+          "playerId": 2738,
+          "games": 76,
+          "minutes": 1997.5416666666667,
+          "usagePct": 11.1,
+          "totals": {
+            "PTS": 574,
+            "FGM": 219,
+            "FGA": 415,
+            "FG3M": 64,
+            "FG3A": 177,
+            "FTM": 72,
+            "FTA": 102,
+            "OREB": 51,
+            "DREB": 253,
+            "REB": 304,
+            "TOV": 58,
+            "STL": 76,
+            "BLK": 39,
+            "AST": 261
+          }
+        }
+      ],
+      "sources": {
+        "base": {
+          "url": "https://stats.nba.com/stats/leaguedashplayerstats?LeagueID=00&Season=2016-17&SeasonType=Regular+Season&PerMode=Totals&MeasureType=Base&TeamID=1610612744&LastNGames=0&Month=0&OpponentTeamID=0&PaceAdjust=N&PlusMinus=N&Rank=N&Period=0",
+          "fetchedAt": "2026-09-08T00:04:25.029Z"
+        },
+        "advanced": {
+          "url": "https://stats.nba.com/stats/leaguedashplayerstats?LeagueID=00&Season=2016-17&SeasonType=Regular+Season&PerMode=Totals&MeasureType=Advanced&TeamID=1610612744&LastNGames=0&Month=0&OpponentTeamID=0&PaceAdjust=N&PlusMinus=N&Rank=N&Period=0",
+          "fetchedAt": "2026-09-08T00:04:25.462Z"
+        },
+        "team": {
+          "url": "https://stats.nba.com/stats/leaguedashteamstats?LeagueID=00&Season=2016-17&SeasonType=Regular+Season&PerMode=PerGame&MeasureType=Advanced&TeamID=1610612744&LastNGames=0&Month=0&OpponentTeamID=0&PaceAdjust=N&PlusMinus=N&Rank=N&Period=0",
+          "fetchedAt": "2026-09-08T00:04:25.702Z"
+        }
+      }
+    },
+    "CLE": {
+      "name": "騎士 2015-16",
+      "season": "2015-16",
+      "teamId": 1610612739,
+      "pace": 93.82,
+      "offRtg": 110.2,
+      "defRtg": 103.9,
+      "players": [
+        {
+          "name": "Kyrie Irving",
+          "playerId": 202681,
+          "games": 53,
+          "minutes": 1667.3733333333332,
+          "usagePct": 28.499999999999996,
+          "totals": {
+            "PTS": 1041,
+            "FGM": 394,
+            "FGA": 879,
+            "FG3M": 84,
+            "FG3A": 262,
+            "FTM": 169,
+            "FTA": 191,
+            "OREB": 44,
+            "DREB": 113,
+            "REB": 157,
+            "TOV": 124,
+            "STL": 56,
+            "BLK": 18,
+            "AST": 250
+          }
+        },
+        {
+          "name": "JR Smith",
+          "playerId": 2747,
+          "games": 77,
+          "minutes": 2361.9883333333332,
+          "usagePct": 17.7,
+          "totals": {
+            "PTS": 955,
+            "FGM": 353,
+            "FGA": 850,
+            "FG3M": 204,
+            "FG3A": 510,
+            "FTM": 45,
+            "FTA": 71,
+            "OREB": 43,
+            "DREB": 174,
+            "REB": 217,
+            "TOV": 59,
+            "STL": 81,
+            "BLK": 21,
+            "AST": 130
+          }
+        },
+        {
+          "name": "LeBron James",
+          "playerId": 2544,
+          "games": 76,
+          "minutes": 2708.5783333333334,
+          "usagePct": 30.5,
+          "totals": {
+            "PTS": 1920,
+            "FGM": 737,
+            "FGA": 1416,
+            "FG3M": 87,
+            "FG3A": 282,
+            "FTM": 359,
+            "FTA": 491,
+            "OREB": 111,
+            "DREB": 454,
+            "REB": 565,
+            "TOV": 249,
+            "STL": 104,
+            "BLK": 49,
+            "AST": 514
+          }
+        },
+        {
+          "name": "Kevin Love",
+          "playerId": 201567,
+          "games": 77,
+          "minutes": 2424.395,
+          "usagePct": 23.3,
+          "totals": {
+            "PTS": 1234,
+            "FGM": 409,
+            "FGA": 977,
+            "FG3M": 158,
+            "FG3A": 439,
+            "FTM": 258,
+            "FTA": 314,
+            "OREB": 149,
+            "DREB": 613,
+            "REB": 762,
+            "TOV": 142,
+            "STL": 58,
+            "BLK": 41,
+            "AST": 185
+          }
+        },
+        {
+          "name": "Tristan Thompson",
+          "playerId": 202684,
+          "games": 82,
+          "minutes": 2269.266666666667,
+          "usagePct": 11.4,
+          "totals": {
+            "PTS": 643,
+            "FGM": 247,
+            "FGA": 420,
+            "FG3M": 0,
+            "FG3A": 0,
+            "FTM": 149,
+            "FTA": 242,
+            "OREB": 268,
+            "DREB": 470,
+            "REB": 738,
+            "TOV": 61,
+            "STL": 38,
+            "BLK": 51,
+            "AST": 62
+          }
+        }
+      ],
+      "sources": {
+        "base": {
+          "url": "https://stats.nba.com/stats/leaguedashplayerstats?LeagueID=00&Season=2015-16&SeasonType=Regular+Season&PerMode=Totals&MeasureType=Base&TeamID=1610612739&LastNGames=0&Month=0&OpponentTeamID=0&PaceAdjust=N&PlusMinus=N&Rank=N&Period=0",
+          "fetchedAt": "2026-09-08T00:04:26.702Z"
+        },
+        "advanced": {
+          "url": "https://stats.nba.com/stats/leaguedashplayerstats?LeagueID=00&Season=2015-16&SeasonType=Regular+Season&PerMode=Totals&MeasureType=Advanced&TeamID=1610612739&LastNGames=0&Month=0&OpponentTeamID=0&PaceAdjust=N&PlusMinus=N&Rank=N&Period=0",
+          "fetchedAt": "2026-09-08T00:04:27.246Z"
+        },
+        "team": {
+          "url": "https://stats.nba.com/stats/leaguedashteamstats?LeagueID=00&Season=2015-16&SeasonType=Regular+Season&PerMode=PerGame&MeasureType=Advanced&TeamID=1610612739&LastNGames=0&Month=0&OpponentTeamID=0&PaceAdjust=N&PlusMinus=N&Rank=N&Period=0",
+          "fetchedAt": "2026-09-08T00:04:26.678Z"
+        }
+      }
+    },
+    "OKC": {
+      "name": "雷霆 2025-26",
+      "season": "2025-26",
+      "teamId": 1610612760,
+      "pace": 100.37,
+      "offRtg": 117.6,
+      "defRtg": 106.5,
+      "players": [
+        {
+          "name": "Shai Gilgeous-Alexander",
+          "playerId": 1628983,
+          "games": 68,
+          "minutes": 2258.9466666666667,
+          "usagePct": 32.300000000000004,
+          "totals": {
+            "PTS": 2117,
+            "FGM": 731,
+            "FGA": 1321,
+            "FG3M": 115,
+            "FG3A": 298,
+            "FTM": 540,
+            "FTA": 614,
+            "OREB": 38,
+            "DREB": 254,
+            "REB": 292,
+            "TOV": 151,
+            "STL": 95,
+            "BLK": 52,
+            "AST": 448
+          }
+        },
+        {
+          "name": "Jalen Williams",
+          "playerId": 1631114,
+          "games": 33,
+          "minutes": 935.9633333333334,
+          "usagePct": 25.2,
+          "totals": {
+            "PTS": 563,
+            "FGM": 216,
+            "FGA": 446,
+            "FG3M": 23,
+            "FG3A": 77,
+            "FTM": 108,
+            "FTA": 129,
+            "OREB": 27,
+            "DREB": 126,
+            "REB": 153,
+            "TOV": 63,
+            "STL": 39,
+            "BLK": 9,
+            "AST": 181
+          }
+        },
+        {
+          "name": "Chet Holmgren",
+          "playerId": 1631096,
+          "games": 69,
+          "minutes": 1997.2683333333334,
+          "usagePct": 21.4,
+          "totals": {
+            "PTS": 1181,
+            "FGM": 434,
+            "FGA": 779,
+            "FG3M": 88,
+            "FG3A": 243,
+            "FTM": 225,
+            "FTA": 284,
+            "OREB": 130,
+            "DREB": 484,
+            "REB": 614,
+            "TOV": 107,
+            "STL": 43,
+            "BLK": 131,
+            "AST": 115
+          }
+        },
+        {
+          "name": "Luguentz Dort",
+          "playerId": 1629652,
+          "games": 69,
+          "minutes": 1848.7416666666666,
+          "usagePct": 13.900000000000002,
+          "totals": {
+            "PTS": 576,
+            "FGM": 202,
+            "FGA": 524,
+            "FG3M": 128,
+            "FG3A": 372,
+            "FTM": 44,
+            "FTA": 58,
+            "OREB": 56,
+            "DREB": 189,
+            "REB": 245,
+            "TOV": 54,
+            "STL": 62,
+            "BLK": 27,
+            "AST": 85
+          }
+        },
+        {
+          "name": "Isaiah Hartenstein",
+          "playerId": 1628392,
+          "games": 47,
+          "minutes": 1137.425,
+          "usagePct": 15.299999999999999,
+          "totals": {
+            "PTS": 432,
+            "FGM": 184,
+            "FGA": 296,
+            "FG3M": 0,
+            "FG3A": 7,
+            "FTM": 64,
+            "FTA": 105,
+            "OREB": 149,
+            "DREB": 294,
+            "REB": 443,
+            "TOV": 82,
+            "STL": 48,
+            "BLK": 36,
+            "AST": 166
+          }
+        }
+      ],
+      "sources": {
+        "base": {
+          "url": "https://stats.nba.com/stats/leaguedashplayerstats?LeagueID=00&Season=2025-26&SeasonType=Regular+Season&PerMode=Totals&MeasureType=Base&TeamID=1610612760&LastNGames=0&Month=0&OpponentTeamID=0&PaceAdjust=N&PlusMinus=N&Rank=N&Period=0",
+          "fetchedAt": "2026-09-08T00:04:28.228Z"
+        },
+        "advanced": {
+          "url": "https://stats.nba.com/stats/leaguedashplayerstats?LeagueID=00&Season=2025-26&SeasonType=Regular+Season&PerMode=Totals&MeasureType=Advanced&TeamID=1610612760&LastNGames=0&Month=0&OpponentTeamID=0&PaceAdjust=N&PlusMinus=N&Rank=N&Period=0",
+          "fetchedAt": "2026-09-08T00:04:28.566Z"
+        },
+        "team": {
+          "url": "https://stats.nba.com/stats/leaguedashteamstats?LeagueID=00&Season=2025-26&SeasonType=Regular+Season&PerMode=PerGame&MeasureType=Advanced&TeamID=1610612760&LastNGames=0&Month=0&OpponentTeamID=0&PaceAdjust=N&PlusMinus=N&Rank=N&Period=0",
+          "fetchedAt": "2026-09-08T00:04:28.296Z"
+        }
+      }
+    },
+    "NYK": {
+      "name": "尼克 2025-26",
+      "season": "2025-26",
+      "teamId": 1610612752,
+      "pace": 97.71,
+      "offRtg": 118.7,
+      "defRtg": 112.3,
+      "players": [
+        {
+          "name": "Jalen Brunson",
+          "playerId": 1628973,
+          "games": 74,
+          "minutes": 2589.806666666667,
+          "usagePct": 29.599999999999998,
+          "totals": {
+            "PTS": 1927,
+            "FGM": 689,
+            "FGA": 1475,
+            "FG3M": 195,
+            "FG3A": 528,
+            "FTM": 354,
+            "FTA": 421,
+            "OREB": 31,
+            "DREB": 216,
+            "REB": 247,
+            "TOV": 175,
+            "STL": 57,
+            "BLK": 8,
+            "AST": 503
+          }
+        },
+        {
+          "name": "Mikal Bridges",
+          "playerId": 1628969,
+          "games": 82,
+          "minutes": 2691.935,
+          "usagePct": 17,
+          "totals": {
+            "PTS": 1181,
+            "FGM": 472,
+            "FGA": 963,
+            "FG3M": 156,
+            "FG3A": 420,
+            "FTM": 81,
+            "FTA": 98,
+            "OREB": 79,
+            "DREB": 233,
+            "REB": 312,
+            "TOV": 83,
+            "STL": 107,
+            "BLK": 62,
+            "AST": 304
+          }
+        },
+        {
+          "name": "OG Anunoby",
+          "playerId": 1628384,
+          "games": 67,
+          "minutes": 2223.8716666666664,
+          "usagePct": 19.400000000000002,
+          "totals": {
+            "PTS": 1118,
+            "FGM": 389,
+            "FGA": 804,
+            "FG3M": 157,
+            "FG3A": 407,
+            "FTM": 183,
+            "FTA": 221,
+            "OREB": 85,
+            "DREB": 266,
+            "REB": 351,
+            "TOV": 123,
+            "STL": 104,
+            "BLK": 48,
+            "AST": 145
+          }
+        },
+        {
+          "name": "Karl-Anthony Towns",
+          "playerId": 1626157,
+          "games": 75,
+          "minutes": 2321.7816666666668,
+          "usagePct": 25.1,
+          "totals": {
+            "PTS": 1504,
+            "FGM": 517,
+            "FGA": 1032,
+            "FG3M": 113,
+            "FG3A": 307,
+            "FTM": 357,
+            "FTA": 416,
+            "OREB": 233,
+            "DREB": 656,
+            "REB": 889,
+            "TOV": 187,
+            "STL": 65,
+            "BLK": 40,
+            "AST": 226
+          }
+        },
+        {
+          "name": "Josh Hart",
+          "playerId": 1628404,
+          "games": 66,
+          "minutes": 1993.575,
+          "usagePct": 16.3,
+          "totals": {
+            "PTS": 792,
+            "FGM": 301,
+            "FGA": 592,
+            "FG3M": 100,
+            "FG3A": 242,
+            "FTM": 90,
+            "FTA": 125,
+            "OREB": 93,
+            "DREB": 393,
+            "REB": 486,
+            "TOV": 128,
+            "STL": 75,
+            "BLK": 17,
+            "AST": 317
+          }
+        }
+      ],
+      "sources": {
+        "base": {
+          "url": "https://stats.nba.com/stats/leaguedashplayerstats?LeagueID=00&Season=2025-26&SeasonType=Regular+Season&PerMode=Totals&MeasureType=Base&TeamID=1610612752&LastNGames=0&Month=0&OpponentTeamID=0&PaceAdjust=N&PlusMinus=N&Rank=N&Period=0",
+          "fetchedAt": "2026-09-08T00:04:29.584Z"
+        },
+        "advanced": {
+          "url": "https://stats.nba.com/stats/leaguedashplayerstats?LeagueID=00&Season=2025-26&SeasonType=Regular+Season&PerMode=Totals&MeasureType=Advanced&TeamID=1610612752&LastNGames=0&Month=0&OpponentTeamID=0&PaceAdjust=N&PlusMinus=N&Rank=N&Period=0",
+          "fetchedAt": "2026-09-08T00:04:30.017Z"
+        },
+        "team": {
+          "url": "https://stats.nba.com/stats/leaguedashteamstats?LeagueID=00&Season=2025-26&SeasonType=Regular+Season&PerMode=PerGame&MeasureType=Advanced&TeamID=1610612752&LastNGames=0&Month=0&OpponentTeamID=0&PaceAdjust=N&PlusMinus=N&Rank=N&Period=0",
+          "fetchedAt": "2026-09-08T00:04:29.660Z"
+        }
+      }
+    },
+    "LAL": {
+      "name": "湖人 2001-02",
+      "season": "2001-02",
+      "teamId": 1610612747,
+      "pace": 93.32,
+      "offRtg": 108,
+      "defRtg": 100.4,
+      "players": [
+        {
+          "name": "Shaquille O'Neal",
+          "playerId": 406,
+          "games": 67,
+          "minutes": 2420.661666666667,
+          "usagePct": 31.4,
+          "totals": {
+            "PTS": 1822,
+            "FGM": 712,
+            "FGA": 1229,
+            "FG3M": 0,
+            "FG3A": 1,
+            "FTM": 398,
+            "FTA": 717,
+            "OREB": 235,
+            "DREB": 480,
+            "REB": 715,
+            "TOV": 171,
+            "STL": 41,
+            "BLK": 137,
+            "AST": 200
+          }
+        },
+        {
+          "name": "Kobe Bryant",
+          "playerId": 977,
+          "games": 80,
+          "minutes": 3065.1316666666667,
+          "usagePct": 29.9,
+          "totals": {
+            "PTS": 2019,
+            "FGM": 749,
+            "FGA": 1597,
+            "FG3M": 33,
+            "FG3A": 132,
+            "FTM": 488,
+            "FTA": 589,
+            "OREB": 112,
+            "DREB": 329,
+            "REB": 441,
+            "TOV": 223,
+            "STL": 118,
+            "BLK": 35,
+            "AST": 438
+          }
+        },
+        {
+          "name": "Derek Fisher",
+          "playerId": 965,
+          "games": 70,
+          "minutes": 1974.8133333333333,
+          "usagePct": 17.299999999999997,
+          "totals": {
+            "PTS": 786,
+            "FGM": 274,
+            "FGA": 666,
+            "FG3M": 144,
+            "FG3A": 349,
+            "FTM": 94,
+            "FTA": 111,
+            "OREB": 15,
+            "DREB": 131,
+            "REB": 146,
+            "TOV": 62,
+            "STL": 66,
+            "BLK": 9,
+            "AST": 181
+          }
+        },
+        {
+          "name": "Rick Fox",
+          "playerId": 296,
+          "games": 82,
+          "minutes": 2290.2883333333334,
+          "usagePct": 15,
+          "totals": {
+            "PTS": 645,
+            "FGM": 255,
+            "FGA": 605,
+            "FG3M": 65,
+            "FG3A": 208,
+            "FTM": 70,
+            "FTA": 85,
+            "OREB": 90,
+            "DREB": 299,
+            "REB": 389,
+            "TOV": 132,
+            "STL": 67,
+            "BLK": 21,
+            "AST": 283
+          }
+        },
+        {
+          "name": "Robert Horry",
+          "playerId": 109,
+          "games": 81,
+          "minutes": 2142.695,
+          "usagePct": 12.7,
+          "totals": {
+            "PTS": 550,
+            "FGM": 183,
+            "FGA": 460,
+            "FG3M": 76,
+            "FG3A": 203,
+            "FTM": 108,
+            "FTA": 138,
+            "OREB": 130,
+            "DREB": 349,
+            "REB": 479,
+            "TOV": 88,
+            "STL": 77,
+            "BLK": 89,
+            "AST": 232
+          }
+        }
+      ],
+      "sources": {
+        "base": {
+          "url": "https://stats.nba.com/stats/leaguedashplayerstats?LeagueID=00&Season=2001-02&SeasonType=Regular+Season&PerMode=Totals&MeasureType=Base&TeamID=1610612747&LastNGames=0&Month=0&OpponentTeamID=0&PaceAdjust=N&PlusMinus=N&Rank=N&Period=0",
+          "fetchedAt": "2026-09-08T00:04:31.164Z"
+        },
+        "advanced": {
+          "url": "https://stats.nba.com/stats/leaguedashplayerstats?LeagueID=00&Season=2001-02&SeasonType=Regular+Season&PerMode=Totals&MeasureType=Advanced&TeamID=1610612747&LastNGames=0&Month=0&OpponentTeamID=0&PaceAdjust=N&PlusMinus=N&Rank=N&Period=0",
+          "fetchedAt": "2026-09-08T00:04:31.512Z"
+        },
+        "team": {
+          "url": "https://stats.nba.com/stats/leaguedashteamstats?LeagueID=00&Season=2001-02&SeasonType=Regular+Season&PerMode=PerGame&MeasureType=Advanced&TeamID=1610612747&LastNGames=0&Month=0&OpponentTeamID=0&PaceAdjust=N&PlusMinus=N&Rank=N&Period=0",
+          "fetchedAt": "2026-09-08T00:04:31.137Z"
+        }
+      }
+    }
+  }
+}

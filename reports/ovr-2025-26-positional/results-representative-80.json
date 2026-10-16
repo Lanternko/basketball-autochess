@@ -1,0 +1,1424 @@
+{
+  "generatedAt": "2026-10-15T12:36:53.298Z",
+  "status": "diagnostic-only-unvalidated-player-ability",
+  "protocol": "representative-80",
+  "model": "pure-oreb-turnover-time-1",
+  "totalGames": 302400,
+  "anchors": [
+    {
+      "level": 40,
+      "winRate": 0.317625,
+      "standardError": 0.003010655960807543,
+      "halfWidth95": 0.0059008856831827845,
+      "ci95": [
+        0.3117241143168172,
+        0.3235258856831828
+      ],
+      "conservative95": [
+        0.3052272860741151,
+        0.3300227139258849
+      ],
+      "independentPairs": 12000,
+      "games": 24000
+    },
+    {
+      "level": 70,
+      "winRate": 0.4660833333333331,
+      "standardError": 0.0031406429853555033,
+      "halfWidth95": 0.006155660251296787,
+      "ci95": [
+        0.45992767308203636,
+        0.4722389935846299
+      ],
+      "conservative95": [
+        0.4536856194074482,
+        0.47848104725921803
+      ],
+      "independentPairs": 12000,
+      "games": 24000
+    },
+    {
+      "level": 99,
+      "winRate": 0.7458125,
+      "standardError": 0.002807201212601431,
+      "halfWidth95": 0.005502114376698805,
+      "ci95": [
+        0.7403103856233012,
+        0.7513146143766988
+      ],
+      "conservative95": [
+        0.7334147860741151,
+        0.7582102139258848
+      ],
+      "independentPairs": 12000,
+      "games": 24000
+    }
+  ],
+  "mapping": {
+    "low": 0.317625,
+    "mid": 0.4660833333333331,
+    "high": 0.7458125
+  },
+  "players": [
+    {
+      "playerId": 1629674,
+      "name": "Neemias Queta",
+      "position": "C",
+      "role": {
+        "playerId": 1629674,
+        "name": "Neemias Queta",
+        "position": "C",
+        "slot": 4,
+        "source": "modal-official-starter-role",
+        "starts": 75,
+        "exactStarts": 73,
+        "lowConfidence": false,
+        "secondsBySlot": [
+          0,
+          0,
+          0,
+          0,
+          114117.3
+        ]
+      },
+      "oldFiveSlotWinRate": 0.6159375,
+      "oldFiveSlotOvr": 89,
+      "naturalSlotFlatWinRate": 0.6078124999999999,
+      "naturalSlotPositionalWinRate": 0.5866666666666667,
+      "ci95": [
+        0.5727358693262636,
+        0.6005974640070697
+      ],
+      "profileChange": {
+        "delta": -0.021145833333333308,
+        "ci95": [
+          -0.038125572302746505,
+          -0.004166094363920108
+        ]
+      },
+      "improvementOverPositionBaseline": {
+        "delta": 0.12177083333333338,
+        "ci95": [
+          0.10330744447917235,
+          0.1402342221874944
+        ]
+      },
+      "diagnosticOvr": 83,
+      "diagnosticConditionalOvrCI95": [
+        81,
+        84
+      ],
+      "statsPerGame": {
+        "pts": 38.64729166666667,
+        "allowed": 36.388333333333335,
+        "oreb": 3.656041666666667,
+        "dreb": 10.673541666666667,
+        "tov": 4.120833333333334,
+        "fga": 29.208125,
+        "fta": 7.808541666666667
+      }
+    },
+    {
+      "playerId": 201939,
+      "name": "Stephen Curry",
+      "position": "PG",
+      "role": {
+        "playerId": 201939,
+        "name": "Stephen Curry",
+        "position": "PG",
+        "slot": 0,
+        "source": "modal-official-starter-role",
+        "starts": 41,
+        "exactStarts": 38,
+        "lowConfidence": false,
+        "secondsBySlot": [
+          75017.5,
+          1638,
+          0,
+          0,
+          0
+        ]
+      },
+      "oldFiveSlotWinRate": 0.41208333333333336,
+      "oldFiveSlotOvr": 71,
+      "naturalSlotFlatWinRate": 0.4107291666666667,
+      "naturalSlotPositionalWinRate": 0.4982291666666667,
+      "ci95": [
+        0.48445547568221775,
+        0.5120028576511158
+      ],
+      "profileChange": {
+        "delta": 0.08749999999999991,
+        "ci95": [
+          0.06949786237835442,
+          0.1055021376216454
+        ]
+      },
+      "improvementOverPositionBaseline": {
+        "delta": 0.02604166666666674,
+        "ci95": [
+          0.00964671498974045,
+          0.04243661834359303
+        ]
+      },
+      "diagnosticOvr": 73,
+      "diagnosticConditionalOvrCI95": [
+        72,
+        75
+      ],
+      "statsPerGame": {
+        "pts": 37.921458333333334,
+        "allowed": 37.975,
+        "oreb": 3.3070833333333334,
+        "dreb": 9.930833333333334,
+        "tov": 4.230833333333333,
+        "fga": 29.283333333333335,
+        "fta": 6.795625
+      }
+    },
+    {
+      "playerId": 1628983,
+      "name": "Shai Gilgeous-Alexander",
+      "position": "PG",
+      "role": {
+        "playerId": 1628983,
+        "name": "Shai Gilgeous-Alexander",
+        "position": "PG",
+        "slot": 0,
+        "source": "modal-official-starter-role",
+        "starts": 68,
+        "exactStarts": 65,
+        "lowConfidence": false,
+        "secondsBySlot": [
+          133408.80000000002,
+          2128,
+          0,
+          0,
+          0
+        ]
+      },
+      "oldFiveSlotWinRate": 0.5102083333333334,
+      "oldFiveSlotOvr": 80,
+      "naturalSlotFlatWinRate": 0.5295833333333334,
+      "naturalSlotPositionalWinRate": 0.5827083333333333,
+      "ci95": [
+        0.5689582412897851,
+        0.5964584253768814
+      ],
+      "profileChange": {
+        "delta": 0.05312500000000009,
+        "ci95": [
+          0.035882855661114814,
+          0.07036714433888536
+        ]
+      },
+      "improvementOverPositionBaseline": {
+        "delta": 0.11052083333333318,
+        "ci95": [
+          0.09275459082057455,
+          0.1282870758460918
+        ]
+      },
+      "diagnosticOvr": 82,
+      "diagnosticConditionalOvrCI95": [
+        81,
+        84
+      ],
+      "statsPerGame": {
+        "pts": 39.45520833333333,
+        "allowed": 37.45916666666667,
+        "oreb": 2.9610416666666666,
+        "dreb": 10.089375,
+        "tov": 3.6945833333333336,
+        "fga": 27.970625,
+        "fta": 9.857916666666666
+      }
+    },
+    {
+      "playerId": 203999,
+      "name": "Nikola Jokić",
+      "position": "C",
+      "role": {
+        "playerId": 203999,
+        "name": "Nikola Jokić",
+        "position": "C",
+        "slot": 4,
+        "source": "modal-official-starter-role",
+        "starts": 65,
+        "exactStarts": 62,
+        "lowConfidence": false,
+        "secondsBySlot": [
+          0,
+          0,
+          0,
+          0,
+          135891.5
+        ]
+      },
+      "oldFiveSlotWinRate": 0.5546875,
+      "oldFiveSlotOvr": 84,
+      "naturalSlotFlatWinRate": 0.5744791666666667,
+      "naturalSlotPositionalWinRate": 0.5389583333333333,
+      "ci95": [
+        0.5250992307815522,
+        0.5528174358851144
+      ],
+      "profileChange": {
+        "delta": -0.03552083333333311,
+        "ci95": [
+          -0.05272656862852383,
+          -0.018315098038142397
+        ]
+      },
+      "improvementOverPositionBaseline": {
+        "delta": 0.07406249999999992,
+        "ci95": [
+          0.055610345700681234,
+          0.0925146542993186
+        ]
+      },
+      "diagnosticOvr": 78,
+      "diagnosticConditionalOvrCI95": [
+        76,
+        79
+      ],
+      "statsPerGame": {
+        "pts": 39.10729166666667,
+        "allowed": 38.19979166666667,
+        "oreb": 3.075833333333333,
+        "dreb": 9.832708333333333,
+        "tov": 4.161875,
+        "fga": 28.3525,
+        "fta": 8.3375
+      }
+    },
+    {
+      "playerId": 1641705,
+      "name": "Victor Wembanyama",
+      "position": "C",
+      "role": {
+        "playerId": 1641705,
+        "name": "Victor Wembanyama",
+        "position": "C",
+        "slot": 4,
+        "source": "modal-official-starter-role",
+        "starts": 55,
+        "exactStarts": 52,
+        "lowConfidence": false,
+        "secondsBySlot": [
+          0,
+          0,
+          0,
+          0,
+          99743.7
+        ]
+      },
+      "oldFiveSlotWinRate": 0.626875,
+      "oldFiveSlotOvr": 90,
+      "naturalSlotFlatWinRate": 0.6337499999999999,
+      "naturalSlotPositionalWinRate": 0.6123958333333334,
+      "ci95": [
+        0.5986900001718858,
+        0.6261016664947809
+      ],
+      "profileChange": {
+        "delta": -0.021354166666666674,
+        "ci95": [
+          -0.03873743650520786,
+          -0.003970896828125486
+        ]
+      },
+      "improvementOverPositionBaseline": {
+        "delta": 0.14749999999999996,
+        "ci95": [
+          0.12877896383818802,
+          0.1662210361618119
+        ]
+      },
+      "diagnosticOvr": 85,
+      "diagnosticConditionalOvrCI95": [
+        84,
+        87
+      ],
+      "statsPerGame": {
+        "pts": 38.81104166666667,
+        "allowed": 36.2875,
+        "oreb": 2.88125,
+        "dreb": 10.844166666666666,
+        "tov": 3.969375,
+        "fga": 28.374583333333334,
+        "fta": 8.57625
+      }
+    },
+    {
+      "playerId": 203507,
+      "name": "Giannis Antetokounmpo",
+      "position": "PF",
+      "role": {
+        "playerId": 203507,
+        "name": "Giannis Antetokounmpo",
+        "position": "PF",
+        "slot": 3,
+        "source": "modal-official-starter-role",
+        "starts": 36,
+        "exactStarts": 33,
+        "lowConfidence": false,
+        "secondsBySlot": [
+          0,
+          0,
+          1685,
+          60668.5,
+          0
+        ]
+      },
+      "oldFiveSlotWinRate": 0.5903125,
+      "oldFiveSlotOvr": 87,
+      "naturalSlotFlatWinRate": 0.5854166666666666,
+      "naturalSlotPositionalWinRate": 0.6130208333333333,
+      "ci95": [
+        0.5993515063098617,
+        0.626690160356805
+      ],
+      "profileChange": {
+        "delta": 0.027604166666666652,
+        "ci95": [
+          0.010260158098314941,
+          0.04494817523501836
+        ]
+      },
+      "improvementOverPositionBaseline": {
+        "delta": 0.15406249999999977,
+        "ci95": [
+          0.13527106411000814,
+          0.1728539358899914
+        ]
+      },
+      "diagnosticOvr": 85,
+      "diagnosticConditionalOvrCI95": [
+        84,
+        87
+      ],
+      "statsPerGame": {
+        "pts": 39.67854166666667,
+        "allowed": 37.06104166666667,
+        "oreb": 3.484375,
+        "dreb": 10.518125,
+        "tov": 4.434375,
+        "fga": 26.80645833333333,
+        "fta": 11.959375
+      }
+    },
+    {
+      "playerId": 1629029,
+      "name": "Luka Dončić",
+      "position": "PG",
+      "role": {
+        "playerId": 1629029,
+        "name": "Luka Dončić",
+        "position": "PG",
+        "slot": 0,
+        "source": "modal-official-starter-role",
+        "starts": 64,
+        "exactStarts": 62,
+        "lowConfidence": false,
+        "secondsBySlot": [
+          133271.80000000002,
+          4044.7,
+          0,
+          0,
+          0
+        ]
+      },
+      "oldFiveSlotWinRate": 0.48125,
+      "oldFiveSlotOvr": 77,
+      "naturalSlotFlatWinRate": 0.48874999999999996,
+      "naturalSlotPositionalWinRate": 0.5548958333333335,
+      "ci95": [
+        0.5412116145421196,
+        0.5685800521245473
+      ],
+      "profileChange": {
+        "delta": 0.06614583333333313,
+        "ci95": [
+          0.048387968013352406,
+          0.08390369865331385
+        ]
+      },
+      "improvementOverPositionBaseline": {
+        "delta": 0.08270833333333316,
+        "ci95": [
+          0.0647779434608988,
+          0.10063872320576753
+        ]
+      },
+      "diagnosticOvr": 79,
+      "diagnosticConditionalOvrCI95": [
+        78,
+        81
+      ],
+      "statsPerGame": {
+        "pts": 38.7175,
+        "allowed": 37.32208333333333,
+        "oreb": 3.13125,
+        "dreb": 10.218541666666667,
+        "tov": 4.187291666666667,
+        "fga": 28.20895833333333,
+        "fta": 8.963125
+      }
+    },
+    {
+      "playerId": 1630162,
+      "name": "Anthony Edwards",
+      "position": "SG",
+      "role": {
+        "playerId": 1630162,
+        "name": "Anthony Edwards",
+        "position": "SG",
+        "slot": 1,
+        "source": "modal-official-starter-role",
+        "starts": 60,
+        "exactStarts": 58,
+        "lowConfidence": false,
+        "secondsBySlot": [
+          3295.4,
+          119125.20000000001,
+          4418,
+          0,
+          0
+        ]
+      },
+      "oldFiveSlotWinRate": 0.4421875,
+      "oldFiveSlotOvr": 74,
+      "naturalSlotFlatWinRate": 0.4402083333333333,
+      "naturalSlotPositionalWinRate": 0.4922916666666667,
+      "ci95": [
+        0.4785372006837181,
+        0.5060461326496153
+      ],
+      "profileChange": {
+        "delta": 0.05208333333333304,
+        "ci95": [
+          0.03378871131253233,
+          0.07037795535413374
+        ]
+      },
+      "improvementOverPositionBaseline": {
+        "delta": 0.017916666666666803,
+        "ci95": [
+          0.0006327398746551714,
+          0.03520059345867843
+        ]
+      },
+      "diagnosticOvr": 73,
+      "diagnosticConditionalOvrCI95": [
+        71,
+        74
+      ],
+      "statsPerGame": {
+        "pts": 37.95645833333333,
+        "allowed": 37.87875,
+        "oreb": 3.1575,
+        "dreb": 10.068125,
+        "tov": 4.283541666666666,
+        "fga": 28.600833333333334,
+        "fta": 7.9991666666666665
+      }
+    },
+    {
+      "playerId": 1628378,
+      "name": "Donovan Mitchell",
+      "position": "SG",
+      "role": {
+        "playerId": 1628378,
+        "name": "Donovan Mitchell",
+        "position": "SG",
+        "slot": 1,
+        "source": "modal-official-starter-role",
+        "starts": 70,
+        "exactStarts": 65,
+        "lowConfidence": false,
+        "secondsBySlot": [
+          54440.00000000001,
+          83873.90000000001,
+          2210,
+          0,
+          0
+        ]
+      },
+      "oldFiveSlotWinRate": 0.40572916666666664,
+      "oldFiveSlotOvr": 70,
+      "naturalSlotFlatWinRate": 0.4011458333333334,
+      "naturalSlotPositionalWinRate": 0.4656250000000001,
+      "ci95": [
+        0.4518642057776415,
+        0.4793857942223587
+      ],
+      "profileChange": {
+        "delta": 0.06447916666666664,
+        "ci95": [
+          0.046379733033363554,
+          0.08257860029996973
+        ]
+      },
+      "improvementOverPositionBaseline": {
+        "delta": -0.008749999999999813,
+        "ci95": [
+          -0.024988924143821797,
+          0.00748892414382217
+        ]
+      },
+      "diagnosticOvr": 70,
+      "diagnosticConditionalOvrCI95": [
+        67,
+        71
+      ],
+      "statsPerGame": {
+        "pts": 37.53125,
+        "allowed": 38.225208333333335,
+        "oreb": 3.25125,
+        "dreb": 9.886875,
+        "tov": 4.248958333333333,
+        "fga": 28.841666666666665,
+        "fta": 7.640625
+      }
+    },
+    {
+      "playerId": 1629627,
+      "name": "Zion Williamson",
+      "position": "PF",
+      "role": {
+        "playerId": 1629627,
+        "name": "Zion Williamson",
+        "position": "PF",
+        "slot": 3,
+        "source": "modal-official-starter-role",
+        "starts": 55,
+        "exactStarts": 53,
+        "lowConfidence": false,
+        "secondsBySlot": [
+          0,
+          0,
+          9654.6,
+          90338.7,
+          0
+        ]
+      },
+      "oldFiveSlotWinRate": 0.5048958333333333,
+      "oldFiveSlotOvr": 79,
+      "naturalSlotFlatWinRate": 0.4973958333333332,
+      "naturalSlotPositionalWinRate": 0.5346875000000001,
+      "ci95": [
+        0.5208481138137451,
+        0.5485268861862551
+      ],
+      "profileChange": {
+        "delta": 0.0372916666666665,
+        "ci95": [
+          0.01990935299481896,
+          0.05467398033851404
+        ]
+      },
+      "improvementOverPositionBaseline": {
+        "delta": 0.07572916666666663,
+        "ci95": [
+          0.05757957257503669,
+          0.09387876075829657
+        ]
+      },
+      "diagnosticOvr": 77,
+      "diagnosticConditionalOvrCI95": [
+        76,
+        79
+      ],
+      "statsPerGame": {
+        "pts": 38.81666666666667,
+        "allowed": 37.947291666666665,
+        "oreb": 3.283541666666667,
+        "dreb": 10.0775,
+        "tov": 4.196666666666666,
+        "fga": 27.098958333333332,
+        "fta": 11.404583333333333
+      }
+    },
+    {
+      "playerId": 203991,
+      "name": "Clint Capela",
+      "position": "C",
+      "role": {
+        "playerId": 203991,
+        "name": "Clint Capela",
+        "position": "C",
+        "slot": 4,
+        "source": "modal-official-starter-role",
+        "starts": 3,
+        "exactStarts": 3,
+        "lowConfidence": true,
+        "secondsBySlot": [
+          0,
+          0,
+          0,
+          0,
+          4752.7
+        ]
+      },
+      "oldFiveSlotWinRate": 0.5783333333333334,
+      "oldFiveSlotOvr": 86,
+      "naturalSlotFlatWinRate": 0.5625,
+      "naturalSlotPositionalWinRate": 0.5576041666666668,
+      "ci95": [
+        0.5436986746856354,
+        0.5715096586476982
+      ],
+      "profileChange": {
+        "delta": -0.0048958333333334325,
+        "ci95": [
+          -0.02237173855502397,
+          0.012580071888357105
+        ]
+      },
+      "improvementOverPositionBaseline": {
+        "delta": 0.09270833333333339,
+        "ci95": [
+          0.0749313874277127,
+          0.11048527923895408
+        ]
+      },
+      "diagnosticOvr": 79,
+      "diagnosticConditionalOvrCI95": [
+        78,
+        81
+      ],
+      "statsPerGame": {
+        "pts": 37.615625,
+        "allowed": 36.18125,
+        "oreb": 4.430208333333334,
+        "dreb": 10.700416666666667,
+        "tov": 4.680208333333334,
+        "fga": 29.52375,
+        "fta": 7.752916666666667
+      }
+    },
+    {
+      "playerId": 1628436,
+      "name": "Luke Kornet",
+      "position": "C",
+      "role": {
+        "playerId": 1628436,
+        "name": "Luke Kornet",
+        "position": "C",
+        "slot": 4,
+        "source": "modal-official-starter-role",
+        "starts": 25,
+        "exactStarts": 25,
+        "lowConfidence": false,
+        "secondsBySlot": [
+          0,
+          0,
+          0,
+          0,
+          38690.5
+        ]
+      },
+      "oldFiveSlotWinRate": 0.608125,
+      "oldFiveSlotOvr": 89,
+      "naturalSlotFlatWinRate": 0.6014583333333332,
+      "naturalSlotPositionalWinRate": 0.5798958333333334,
+      "ci95": [
+        0.5661408878363814,
+        0.5936507788302854
+      ],
+      "profileChange": {
+        "delta": -0.021562500000000262,
+        "ci95": [
+          -0.03896952053173383,
+          -0.004155479468266689
+        ]
+      },
+      "improvementOverPositionBaseline": {
+        "delta": 0.11499999999999977,
+        "ci95": [
+          0.09683487354349715,
+          0.1331651264565024
+        ]
+      },
+      "diagnosticOvr": 82,
+      "diagnosticConditionalOvrCI95": [
+        80,
+        83
+      ],
+      "statsPerGame": {
+        "pts": 38.869166666666665,
+        "allowed": 36.86541666666667,
+        "oreb": 3.6614583333333335,
+        "dreb": 10.518333333333333,
+        "tov": 3.9627083333333335,
+        "fga": 29.175625,
+        "fta": 8.155833333333334
+      }
+    },
+    {
+      "playerId": 1628389,
+      "name": "Bam Adebayo",
+      "position": "C",
+      "role": {
+        "playerId": 1628389,
+        "name": "Bam Adebayo",
+        "position": "C",
+        "slot": 4,
+        "source": "modal-official-starter-role",
+        "starts": 73,
+        "exactStarts": 71,
+        "lowConfidence": false,
+        "secondsBySlot": [
+          0,
+          0,
+          2014,
+          47279.1,
+          92589.7
+        ]
+      },
+      "oldFiveSlotWinRate": 0.4703125,
+      "oldFiveSlotOvr": 76,
+      "naturalSlotFlatWinRate": 0.48291666666666677,
+      "naturalSlotPositionalWinRate": 0.46333333333333326,
+      "ci95": [
+        0.4496157825674177,
+        0.47705088409924884
+      ],
+      "profileChange": {
+        "delta": -0.019583333333333397,
+        "ci95": [
+          -0.03744921988917384,
+          -0.001717446777492953
+        ]
+      },
+      "improvementOverPositionBaseline": {
+        "delta": -0.0015625000000001332,
+        "ci95": [
+          -0.01788056215156115,
+          0.014755562151560885
+        ]
+      },
+      "diagnosticOvr": 69,
+      "diagnosticConditionalOvrCI95": [
+        67,
+        71
+      ],
+      "statsPerGame": {
+        "pts": 37.07625,
+        "allowed": 37.89875,
+        "oreb": 2.98125,
+        "dreb": 10.080833333333333,
+        "tov": 3.9520833333333334,
+        "fga": 28.953125,
+        "fta": 7.844166666666666
+      }
+    },
+    {
+      "playerId": 1627759,
+      "name": "Jaylen Brown",
+      "position": "SF",
+      "role": {
+        "playerId": 1627759,
+        "name": "Jaylen Brown",
+        "position": "SF",
+        "slot": 2,
+        "source": "modal-official-starter-role",
+        "starts": 71,
+        "exactStarts": 69,
+        "lowConfidence": false,
+        "secondsBySlot": [
+          0,
+          32935.799999999996,
+          103257.2,
+          10377.6,
+          0
+        ]
+      },
+      "oldFiveSlotWinRate": 0.40697916666666667,
+      "oldFiveSlotOvr": 71,
+      "naturalSlotFlatWinRate": 0.4039583333333334,
+      "naturalSlotPositionalWinRate": 0.46249999999999997,
+      "ci95": [
+        0.44878748907806787,
+        0.47621251092193206
+      ],
+      "profileChange": {
+        "delta": 0.05854166666666649,
+        "ci95": [
+          0.04090052765827586,
+          0.07618280567505711
+        ]
+      },
+      "improvementOverPositionBaseline": {
+        "delta": 0.0024999999999999467,
+        "ci95": [
+          -0.01417341947850501,
+          0.019173419478504903
+        ]
+      },
+      "diagnosticOvr": 69,
+      "diagnosticConditionalOvrCI95": [
+        67,
+        71
+      ],
+      "statsPerGame": {
+        "pts": 37.16020833333334,
+        "allowed": 37.868541666666665,
+        "oreb": 3.2283333333333335,
+        "dreb": 10.039375,
+        "tov": 4.648125,
+        "fga": 28.181041666666665,
+        "fta": 8.295208333333333
+      }
+    },
+    {
+      "playerId": 201142,
+      "name": "Kevin Durant",
+      "position": "SF",
+      "role": {
+        "playerId": 201142,
+        "name": "Kevin Durant",
+        "position": "SF",
+        "slot": 2,
+        "source": "modal-official-starter-role",
+        "starts": 78,
+        "exactStarts": 76,
+        "lowConfidence": false,
+        "secondsBySlot": [
+          0,
+          11501.4,
+          133231.3,
+          25656.5,
+          0
+        ]
+      },
+      "oldFiveSlotWinRate": 0.5042708333333333,
+      "oldFiveSlotOvr": 79,
+      "naturalSlotFlatWinRate": 0.5025000000000001,
+      "naturalSlotPositionalWinRate": 0.5332291666666668,
+      "ci95": [
+        0.5193297472349159,
+        0.5471285860984176
+      ],
+      "profileChange": {
+        "delta": 0.030729166666666474,
+        "ci95": [
+          0.012881349112004881,
+          0.04857698422132807
+        ]
+      },
+      "improvementOverPositionBaseline": {
+        "delta": 0.07322916666666668,
+        "ci95": [
+          0.054888671931161086,
+          0.09156966140217226
+        ]
+      },
+      "diagnosticOvr": 77,
+      "diagnosticConditionalOvrCI95": [
+        76,
+        78
+      ],
+      "statsPerGame": {
+        "pts": 38.16791666666666,
+        "allowed": 37.49979166666667,
+        "oreb": 2.806875,
+        "dreb": 10.249166666666667,
+        "tov": 4.522291666666667,
+        "fga": 27.948125,
+        "fta": 7.892708333333333
+      }
+    },
+    {
+      "playerId": 2544,
+      "name": "LeBron James",
+      "position": "SF",
+      "role": {
+        "playerId": 2544,
+        "name": "LeBron James",
+        "position": "SF",
+        "slot": 2,
+        "source": "modal-official-starter-role",
+        "starts": 60,
+        "exactStarts": 60,
+        "lowConfidence": false,
+        "secondsBySlot": [
+          0,
+          0,
+          105863.4,
+          13479.9,
+          0
+        ]
+      },
+      "oldFiveSlotWinRate": 0.45239583333333333,
+      "oldFiveSlotOvr": 75,
+      "naturalSlotFlatWinRate": 0.44020833333333337,
+      "naturalSlotPositionalWinRate": 0.4917708333333332,
+      "ci95": [
+        0.4777307937297826,
+        0.5058108729368838
+      ],
+      "profileChange": {
+        "delta": 0.051562499999999734,
+        "ci95": [
+          0.03379025923035192,
+          0.06933474076964755
+        ]
+      },
+      "improvementOverPositionBaseline": {
+        "delta": 0.031770833333333526,
+        "ci95": [
+          0.014271634819690068,
+          0.04927003184697698
+        ]
+      },
+      "diagnosticOvr": 73,
+      "diagnosticConditionalOvrCI95": [
+        71,
+        74
+      ],
+      "statsPerGame": {
+        "pts": 37.69,
+        "allowed": 37.91979166666667,
+        "oreb": 2.9741666666666666,
+        "dreb": 10.091875,
+        "tov": 4.517291666666667,
+        "fga": 28.073125,
+        "fta": 8.235416666666667
+      }
+    },
+    {
+      "playerId": 1629008,
+      "name": "Michael Porter Jr.",
+      "position": "SF",
+      "role": {
+        "playerId": 1629008,
+        "name": "Michael Porter Jr.",
+        "position": "SF",
+        "slot": 2,
+        "source": "modal-official-starter-role",
+        "starts": 52,
+        "exactStarts": 49,
+        "lowConfidence": false,
+        "secondsBySlot": [
+          0,
+          0,
+          87618.40000000001,
+          13698.099999999999,
+          0
+        ]
+      },
+      "oldFiveSlotWinRate": 0.44375,
+      "oldFiveSlotOvr": 74,
+      "naturalSlotFlatWinRate": 0.4431250000000001,
+      "naturalSlotPositionalWinRate": 0.49895833333333334,
+      "ci95": [
+        0.4851363246306136,
+        0.512780342036053
+      ],
+      "profileChange": {
+        "delta": 0.0558333333333334,
+        "ci95": [
+          0.037782372535029266,
+          0.07388429413163754
+        ]
+      },
+      "improvementOverPositionBaseline": {
+        "delta": 0.03895833333333343,
+        "ci95": [
+          0.022850100710607616,
+          0.055066565956059244
+        ]
+      },
+      "diagnosticOvr": 73,
+      "diagnosticConditionalOvrCI95": [
+        72,
+        75
+      ],
+      "statsPerGame": {
+        "pts": 37.83895833333333,
+        "allowed": 37.83895833333333,
+        "oreb": 3.4927083333333333,
+        "dreb": 10.092916666666667,
+        "tov": 4.224166666666667,
+        "fga": 29.347083333333334,
+        "fta": 7.029375
+      }
+    },
+    {
+      "playerId": 1626156,
+      "name": "D'Angelo Russell",
+      "position": "PG",
+      "role": {
+        "playerId": 1626156,
+        "name": "D'Angelo Russell",
+        "position": "PG",
+        "slot": 0,
+        "source": "modal-official-starter-role",
+        "starts": 3,
+        "exactStarts": 3,
+        "lowConfidence": true,
+        "secondsBySlot": [
+          3264,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "oldFiveSlotWinRate": 0.353125,
+      "oldFiveSlotOvr": 60,
+      "naturalSlotFlatWinRate": 0.3411458333333333,
+      "naturalSlotPositionalWinRate": 0.4307291666666666,
+      "ci95": [
+        0.41691714415867553,
+        0.4445411891746577
+      ],
+      "profileChange": {
+        "delta": 0.08958333333333357,
+        "ci95": [
+          0.07206055631350483,
+          0.10710611035316231
+        ]
+      },
+      "improvementOverPositionBaseline": {
+        "delta": -0.041458333333333486,
+        "ci95": [
+          -0.057799805461697,
+          -0.02511686120496997
+        ]
+      },
+      "diagnosticOvr": 63,
+      "diagnosticConditionalOvrCI95": [
+        60,
+        66
+      ],
+      "statsPerGame": {
+        "pts": 36.630208333333336,
+        "allowed": 38.041875,
+        "oreb": 3.294583333333333,
+        "dreb": 9.964166666666667,
+        "tov": 4.74375,
+        "fga": 28.731875,
+        "fta": 7.171666666666667
+      }
+    },
+    {
+      "playerId": 1630163,
+      "name": "LaMelo Ball",
+      "position": "PG",
+      "role": {
+        "playerId": 1630163,
+        "name": "LaMelo Ball",
+        "position": "PG",
+        "slot": 0,
+        "source": "modal-official-starter-role",
+        "starts": 69,
+        "exactStarts": 67,
+        "lowConfidence": false,
+        "secondsBySlot": [
+          112882.20000000003,
+          3960,
+          0,
+          0,
+          0
+        ]
+      },
+      "oldFiveSlotWinRate": 0.4005208333333333,
+      "oldFiveSlotOvr": 70,
+      "naturalSlotFlatWinRate": 0.39072916666666674,
+      "naturalSlotPositionalWinRate": 0.4621874999999999,
+      "ci95": [
+        0.44825903224180524,
+        0.4761159677581946
+      ],
+      "profileChange": {
+        "delta": 0.07145833333333318,
+        "ci95": [
+          0.05396460836834953,
+          0.08895205829831683
+        ]
+      },
+      "improvementOverPositionBaseline": {
+        "delta": -0.01000000000000012,
+        "ci95": [
+          -0.02578983943983816,
+          0.005789839439837921
+        ]
+      },
+      "diagnosticOvr": 69,
+      "diagnosticConditionalOvrCI95": [
+        66,
+        71
+      ],
+      "statsPerGame": {
+        "pts": 37.229375,
+        "allowed": 38.02625,
+        "oreb": 3.6425,
+        "dreb": 9.97,
+        "tov": 4.4210416666666665,
+        "fga": 29.532916666666665,
+        "fta": 6.639166666666667
+      }
+    },
+    {
+      "playerId": 1628386,
+      "name": "Jarrett Allen",
+      "position": "C",
+      "role": {
+        "playerId": 1628386,
+        "name": "Jarrett Allen",
+        "position": "C",
+        "slot": 4,
+        "source": "modal-official-starter-role",
+        "starts": 56,
+        "exactStarts": 51,
+        "lowConfidence": false,
+        "secondsBySlot": [
+          0,
+          0,
+          0,
+          0,
+          91148.50000000001
+        ]
+      },
+      "oldFiveSlotWinRate": 0.5753125,
+      "oldFiveSlotOvr": 86,
+      "naturalSlotFlatWinRate": 0.5727083333333333,
+      "naturalSlotPositionalWinRate": 0.5589583333333333,
+      "ci95": [
+        0.5449339927882297,
+        0.5729826738784369
+      ],
+      "profileChange": {
+        "delta": -0.013750000000000151,
+        "ci95": [
+          -0.030722108334620267,
+          0.003222108334619965
+        ]
+      },
+      "improvementOverPositionBaseline": {
+        "delta": 0.09406249999999994,
+        "ci95": [
+          0.07594281662316182,
+          0.11218218337683805
+        ]
+      },
+      "diagnosticOvr": 80,
+      "diagnosticConditionalOvrCI95": [
+        78,
+        81
+      ],
+      "statsPerGame": {
+        "pts": 38.69520833333333,
+        "allowed": 37.30104166666667,
+        "oreb": 3.2372916666666667,
+        "dreb": 10.258125,
+        "tov": 4.0525,
+        "fga": 28.155833333333334,
+        "fta": 9.417708333333334
+      }
+    }
+  ],
+  "sensitivities": [
+    {
+      "playerId": 1629674,
+      "name": "Neemias Queta",
+      "intervention": "physique70",
+      "originalWinRate": 0.5866666666666667,
+      "winRate": 0.5528125,
+      "change": {
+        "delta": -0.03385416666666674,
+        "ci95": [
+          -0.05033634480156976,
+          -0.017371988531763725
+        ]
+      },
+      "marginChange": -0.9618749999999998
+    },
+    {
+      "playerId": 1629674,
+      "name": "Neemias Queta",
+      "intervention": "rebound-neutral",
+      "originalWinRate": 0.5866666666666667,
+      "winRate": 0.5518749999999998,
+      "change": {
+        "delta": -0.03479166666666644,
+        "ci95": [
+          -0.04547689642653109,
+          -0.0241064369068018
+        ]
+      },
+      "marginChange": -0.7664583333333328
+    },
+    {
+      "playerId": 1629674,
+      "name": "Neemias Queta",
+      "intervention": "help70",
+      "originalWinRate": 0.5866666666666667,
+      "winRate": 0.5205208333333332,
+      "change": {
+        "delta": -0.06614583333333324,
+        "ci95": [
+          -0.08387488302380496,
+          -0.04841678364286152
+        ]
+      },
+      "marginChange": -1.6506249999999998
+    },
+    {
+      "playerId": 1629674,
+      "name": "Neemias Queta",
+      "intervention": "short70",
+      "originalWinRate": 0.5866666666666667,
+      "winRate": 0.5564583333333333,
+      "change": {
+        "delta": -0.030208333333333504,
+        "ci95": [
+          -0.04544537278396539,
+          -0.014971293882701618
+        ]
+      },
+      "marginChange": -0.9958333333333333
+    },
+    {
+      "playerId": 201939,
+      "name": "Stephen Curry",
+      "intervention": "physique70",
+      "originalWinRate": 0.4982291666666667,
+      "winRate": 0.5071875000000001,
+      "change": {
+        "delta": 0.00895833333333318,
+        "ci95": [
+          -0.005471630443689564,
+          0.02338829711035592
+        ]
+      },
+      "marginChange": 0.3902083333333334
+    },
+    {
+      "playerId": 201939,
+      "name": "Stephen Curry",
+      "intervention": "rebound-neutral",
+      "originalWinRate": 0.4982291666666667,
+      "winRate": 0.5084375,
+      "change": {
+        "delta": 0.010208333333333375,
+        "ci95": [
+          0.0035490936016146935,
+          0.016867573065052058
+        ]
+      },
+      "marginChange": 0.24437499999999998
+    },
+    {
+      "playerId": 201939,
+      "name": "Stephen Curry",
+      "intervention": "help70",
+      "originalWinRate": 0.4982291666666667,
+      "winRate": 0.5003124999999999,
+      "change": {
+        "delta": 0.002083333333333437,
+        "ci95": [
+          -0.0018398581637137706,
+          0.0060065248303806445
+        ]
+      },
+      "marginChange": 0.02562499999999998
+    },
+    {
+      "playerId": 201939,
+      "name": "Stephen Curry",
+      "intervention": "short70",
+      "originalWinRate": 0.4982291666666667,
+      "winRate": 0.4863541666666667,
+      "change": {
+        "delta": -0.01187500000000008,
+        "ci95": [
+          -0.021056439046283553,
+          -0.0026935609537166068
+        ]
+      },
+      "marginChange": -0.1814583333333333
+    }
+  ],
+  "validation": {
+    "passed": true,
+    "profileMean70": true,
+    "anchorsExactMean": true,
+    "knownPlayerRoles": true,
+    "profilesHaveDistinctRoles": true,
+    "cacheNativeFullOutputParityGames": 48,
+    "roleAudit": {
+      "usableStarterTeamGames": 2460,
+      "exactFivePositionTeamGames": 2378,
+      "broadThreePositionTeamGames": 82,
+      "skippedStarterTeamGames": 0,
+      "fallbackPlayers": 133,
+      "lowConfidencePlayers": 248
+    },
+    "notValidated": [
+      "Individual ability truth",
+      "Counterfactual transfer",
+      "Four unmeasured attributes",
+      "Whole-league player ranking"
+    ]
+  },
+  "adoptionAudit": {
+    "passed": true,
+    "playerTeamStintCardsCompared": 661,
+    "uniquePlayers": 582,
+    "attributesCompared": [
+      "long",
+      "mid",
+      "short",
+      "drive",
+      "tovSkill",
+      "pass",
+      "ft",
+      "rebound",
+      "onBall",
+      "help",
+      "stamina",
+      "physique",
+      "offBall",
+      "screen",
+      "handle",
+      "breakDbl"
+    ],
+    "cardProjectionSameAsAdoptedSeasonWorker": true,
+    "eventOptionsMatch": true,
+    "differences": {
+      "exposure": "OVR disables rotations, fatigue, observed minute targets and overtime; 14.4 rather than 48 regulation minutes.",
+      "candidateVolume": "OVR candidate combines team stints into full-season shot/volume inputs.",
+      "teammates": "Artificial baseline instead of observed NBA game roster.",
+      "positions": "Five-slot average in old OVR; modal natural-role position in this diagnostic."
+    },
+    "unknownAll70": true,
+    "signalFlags": {
+      "oldV3": {
+        "rimSignal": true,
+        "reboundSignal": true,
+        "liveSignal": true,
+        "zoneSignal": true,
+        "foulSignal": true
+      },
+      "adoptedSeasonAndOvr": {
+        "rimSignal": false,
+        "reboundSignal": false,
+        "liveSignal": false,
+        "zoneSignal": false,
+        "foulSignal": false
+      }
+    },
+    "explanation": "Same adopted event mechanics and individual attributes; different measurement environment. Old v3 signals differ from the currently adopted pure-card path. No validation of individual transfer is implied."
+  },
+  "unknownFields": [
+    "offBall",
+    "screen",
+    "handle",
+    "breakDbl"
+  ],
+  "sourceHashesVerified": true
+}

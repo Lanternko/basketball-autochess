@@ -1,0 +1,10 @@
+{
+  "checks": 3600,
+  "sourceMakeZoneTurnoverAndConditionalReboundBlockWeightsUnchanged": true,
+  "sourceContextReuse": "v14 make-context centers remain applicable: FTR changes foul-event conditioning, not the source make/context/role predictors. Keeping original drive is deliberate isolation; its raw-proxy reliability remains unresolved.",
+  "hashes": {
+    "src/free_throw_profile_prior.js": "721f1f4ba4b75fb86336854293d12f75d1cb3abd97c6c34ad8cac4ca37d24149",
+    "reports/player-impact-v16/input.mjs": "24e0b9d482a05ff27447286617bbe2152662daf49103bb6ff29792d83271e72a",
+    "reports/player-impact-v16/ftr-prior.json": "a132bfc6e328f116a885dcd6c27f04968cdb7bec1b9061b7e428bad7790c14fb"
+  }
+}

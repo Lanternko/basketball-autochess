@@ -1,0 +1,69 @@
+{
+  "label": "mechanism tests only; allNoRim is unrealistic stress, no accuracy inference",
+  "seasons": {
+    "2022-23": {
+      "gamesPerMode": 12,
+      "offExactParity": true,
+      "allRimGameplayExactParity": true,
+      "frozenMatchParity": true,
+      "allNoRimStress": {
+        "missedFGContactDecisions": 1134,
+        "retainedClockTransitions": 324,
+        "retainedClockAbove14": 86,
+        "liveFinalFTReset14": 8,
+        "naturalExpiry": 38,
+        "expiryLocations": {
+          "flight": 38
+        }
+      }
+    },
+    "2023-24": {
+      "gamesPerMode": 12,
+      "offExactParity": true,
+      "allRimGameplayExactParity": true,
+      "frozenMatchParity": true,
+      "allNoRimStress": {
+        "missedFGContactDecisions": 1149,
+        "retainedClockTransitions": 320,
+        "retainedClockAbove14": 90,
+        "liveFinalFTReset14": 12,
+        "naturalExpiry": 36,
+        "expiryLocations": {
+          "flight": 36
+        }
+      }
+    },
+    "2024-25": {
+      "gamesPerMode": 12,
+      "offExactParity": true,
+      "allRimGameplayExactParity": true,
+      "frozenMatchParity": true,
+      "allNoRimStress": {
+        "missedFGContactDecisions": 1111,
+        "retainedClockTransitions": 300,
+        "retainedClockAbove14": 71,
+        "liveFinalFTReset14": 11,
+        "naturalExpiry": 42,
+        "expiryLocations": {
+          "flight": 42
+        }
+      }
+    },
+    "2025-26": {
+      "gamesPerMode": 12,
+      "offExactParity": true,
+      "allRimGameplayExactParity": true,
+      "frozenMatchParity": true,
+      "allNoRimStress": {
+        "missedFGContactDecisions": 1097,
+        "retainedClockTransitions": 302,
+        "retainedClockAbove14": 77,
+        "liveFinalFTReset14": 12,
+        "naturalExpiry": 31,
+        "expiryLocations": {
+          "flight": 31
+        }
+      }
+    }
+  }
+}

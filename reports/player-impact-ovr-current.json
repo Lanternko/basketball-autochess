@@ -1,0 +1,21 @@
+{
+  "kind": "latest-completed-OVR-diagnostic",
+  "state": "complete_not_adopted",
+  "season": "2025-26",
+  "players": 582,
+  "simulatedGames": 279360,
+  "elapsedSeconds": 4305.523,
+  "probabilityBaseline": "v47",
+  "defenseBaseline": "v46",
+  "rotationPolicy": "frozen v29 workload schedules; natural position, supported healthy minutes, mean70 positional teammates",
+  "objectiveOvrAccepted": false,
+  "productionDefaultChanged": false,
+  "availabilityPenalty": 0,
+  "ranking": "reports/ovr-v47-2025-26/ranking.json",
+  "report": "reports/ovr-v47-2025-26/report.md",
+  "comparison": "reports/ovr-v47-2025-26/comparison.csv",
+  "verification": "reports/ovr-v47-2025-26/independent-verification.json",
+  "rankingSHA256": "f70c3b924af3613467edd01cc3f4046dd1236d2c42f99c71b365a6d424893695",
+  "verificationSHA256": "f012f55dc865f33ef9bb03904ca31c2b5b4c2e831185c17b109fa33a4b2a5e9f",
+  "previousRanking": "reports/model-evolution-20261016/latest-full-ovr/ranking.json"
+}

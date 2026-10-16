@@ -1,0 +1,28 @@
+{
+  "version": "terminal-flow-validation-6",
+  "targetSeason": "2025-26",
+  "diagnosticRunnable": true,
+  "individualBoxImproved": true,
+  "sameSeasonOnly": true,
+  "seasons": 4,
+  "playerSeasons": 2262,
+  "seedsPerSeason": 20,
+  "onCourtSeedsPerSeason": 3,
+  "candidateGames": 98400,
+  "otherThreeSeedCandidateGames": 28023,
+  "controlStrictGames": 13263,
+  "allPlayerOvrScreenGames": 352200,
+  "officialModelReplaced": false,
+  "ovrValidated": false,
+  "goalComplete": false,
+  "teamTwentySeedPointGuardrailsPassed": true,
+  "teamClockAccountingFixedInDiagnostic": true,
+  "reasons": [
+    "Twenty-seed team point estimates pass original margin; paired-seed intervals do not prove equivalence",
+    "On-court FG and ON-OFF not consistently improved",
+    "Jokic and Curry OVR still underrepresented; input uncertainty and low-minute extrapolation unresolved",
+    "Unknown four fields still70; no measured speed; raw minutes/totals require separate exposure validation"
+  ],
+  "frozenPreviousSourcesUnchanged": 85,
+  "report": "reports/player-impact-validation/report.md"
+}

@@ -1,0 +1,27 @@
+{
+  "registeredAt": "2026-10-14T01:19:16.465624+00:00",
+  "type": "post-observation measurement supplement; primary classifications remain unchanged",
+  "reason": "82 inch prereg threshold misses cached 81 inch Allen; explicit dual-big cases requested by user require named-pair observation",
+  "pairs": [
+    {
+      "season": "2022-23",
+      "team": "Cleveland Cavaliers",
+      "players": [
+        "Jarrett Allen",
+        "Evan Mobley"
+      ]
+    },
+    {
+      "season": "2023-24",
+      "team": "New York Knicks",
+      "players": [
+        "Isaiah Hartenstein",
+        "Mitchell Robinson"
+      ]
+    }
+  ],
+  "states": "neither,first only,second only,both; strict stints; min500 defensive possessions for contrast",
+  "spotlight": "include named pair members in extra card table even outside original top10",
+  "leagueReference": "strict pooled paint share and paint FG plus case ranking; same existing metric definitions",
+  "notAllowed": "do not refit, change primary threshold, derive causal effects, simulate or modify old outputs"
+}

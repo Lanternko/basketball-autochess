@@ -1,0 +1,402 @@
+[
+  {
+    "season": "2022-23",
+    "team": "Cleveland Cavaliers",
+    "fullSeason": {
+      "real": {
+        "defProxy": 107.97704440562111,
+        "threeShare": 36.62918066306412,
+        "threeFG": 36.8421052631579,
+        "forcedTOVpct": 15.81954872396366,
+        "FTR": 0.26843873229151455,
+        "efg": 53.49788228421206,
+        "DREBpct": 76.26666666666667
+      },
+      "pure": {
+        "paintShare": 44.87344972587427,
+        "paintFG": 52.95879483415625,
+        "threeShare": 41.68840155426625,
+        "threeFG": 35.050114913176714,
+        "defProxy": 107.87103884146929,
+        "forcedTOVpct": 13.898677819704059,
+        "FTR": 0.25031936977697344,
+        "efg": 51.17068983871826,
+        "DREBpct": 73.08432458961344
+      },
+      "v3": {
+        "paintShare": 52.94022388210765,
+        "paintFG": 55.12178335181432,
+        "threeShare": 34.84409897235548,
+        "threeFG": 34.936096049573976,
+        "defProxy": 111.31264674329758,
+        "forcedTOVpct": 13.637592862748956,
+        "FTR": 0.27218072508653673,
+        "efg": 52.42842587531966,
+        "DREBpct": 71.33140691873619
+      }
+    },
+    "strictPbpPaintReference": {
+      "defRtg": 110.24734982332154,
+      "paintShare": 49.00865176640231,
+      "paintFG": 55.82934902537698,
+      "threeShare": 36.211247296323,
+      "threeFG": 36.734693877551024,
+      "DREBpct": 75.89090909090909,
+      "FTR": 0.27361211247296324,
+      "poss": 6509.000000000001,
+      "minutes": 3226.0,
+      "stints": 2004.0
+    },
+    "limitation": "simulated paint counts cover 1230 games; real paint counts cover strict games only; no matched-game paint comparison available in saved T0 output"
+  },
+  {
+    "season": "2023-24",
+    "team": "New York Knicks",
+    "fullSeason": {
+      "real": {
+        "defProxy": 110.31294912152453,
+        "threeShare": 40.03700540848278,
+        "threeFG": 36.54461429079275,
+        "forcedTOVpct": 13.451888983375357,
+        "FTR": 0.23057216054654142,
+        "efg": 54.34101907201822,
+        "DREBpct": 76.05593607305936
+      },
+      "pure": {
+        "paintShare": 45.77121009670719,
+        "paintFG": 53.70830683854558,
+        "threeShare": 41.939303337787244,
+        "threeFG": 35.48097093197483,
+        "defProxy": 108.71107556183576,
+        "forcedTOVpct": 13.587555285654116,
+        "FTR": 0.2286708383494953,
+        "efg": 51.91959147495006,
+        "DREBpct": 73.79004371370783
+      },
+      "v3": {
+        "paintShare": 51.713221972246004,
+        "paintFG": 57.19309052642386,
+        "threeShare": 37.19911601329962,
+        "threeFG": 35.55626917861985,
+        "defProxy": 112.74060035157983,
+        "forcedTOVpct": 13.626764020374335,
+        "FTR": 0.22168023838440148,
+        "efg": 53.94774390931836,
+        "DREBpct": 71.30833126362558
+      }
+    },
+    "strictPbpPaintReference": {
+      "defRtg": 111.78770949720669,
+      "paintShare": 46.808510638297875,
+      "paintFG": 57.34006734006734,
+      "threeShare": 40.07880220646178,
+      "threeFG": 35.941801022414474,
+      "DREBpct": 74.81800132362673,
+      "FTR": 0.22994483845547675,
+      "poss": 7160.000000000001,
+      "minutes": 3557.0,
+      "stints": 2105.0
+    },
+    "limitation": "simulated paint counts cover 1230 games; real paint counts cover strict games only; no matched-game paint comparison available in saved T0 output"
+  },
+  {
+    "season": "2024-25",
+    "team": "New York Knicks",
+    "fullSeason": {
+      "real": {
+        "defProxy": 111.32614012652137,
+        "threeShare": 40.65628476084538,
+        "threeFG": 36.66210670314638,
+        "forcedTOVpct": 14.453677725533293,
+        "FTR": 0.2228865406006674,
+        "efg": 54.880422691879865,
+        "DREBpct": 74.48571428571428
+      },
+      "pure": {
+        "paintShare": 49.730951933657174,
+        "paintFG": 56.47927038221287,
+        "threeShare": 39.37360779367167,
+        "threeFG": 35.070888146683934,
+        "defProxy": 110.7937476697436,
+        "forcedTOVpct": 13.946510374242148,
+        "FTR": 0.23982179758997343,
+        "efg": 53.32284426075521,
+        "DREBpct": 72.74305318261963
+      },
+      "v3": {
+        "paintShare": 51.834314024997674,
+        "paintFG": 57.79446245307435,
+        "threeShare": 36.66104373929098,
+        "threeFG": 35.01141262997717,
+        "defProxy": 112.73254526617214,
+        "forcedTOVpct": 13.648963725456538,
+        "FTR": 0.22172486617875595,
+        "efg": 53.97113711530543,
+        "DREBpct": 71.07099746090769
+      }
+    },
+    "strictPbpPaintReference": {
+      "defRtg": 113.6100665316749,
+      "paintShare": 48.420195439739416,
+      "paintFG": 58.15674402959973,
+      "threeShare": 40.37459283387622,
+      "threeFG": 36.950383219039935,
+      "DREBpct": 73.76373626373626,
+      "FTR": 0.2262214983713355,
+      "poss": 6913.999999999997,
+      "minutes": 3389.9999999999973,
+      "stints": 1999.0
+    },
+    "limitation": "simulated paint counts cover 1230 games; real paint counts cover strict games only; no matched-game paint comparison available in saved T0 output"
+  },
+  {
+    "season": "2024-25",
+    "team": "Oklahoma City Thunder",
+    "fullSeason": {
+      "real": {
+        "defProxy": 104.73378679210356,
+        "threeShare": 45.23141654978962,
+        "threeFG": 34.23255813953488,
+        "forcedTOVpct": 16.565643140921885,
+        "FTR": 0.2723702664796634,
+        "efg": 51.34642356241234,
+        "DREBpct": 74.63362643218758
+      },
+      "pure": {
+        "paintShare": 48.52221556604091,
+        "paintFG": 55.089612695594276,
+        "threeShare": 39.47040729098656,
+        "threeFG": 34.5480900409277,
+        "defProxy": 107.65417100338296,
+        "forcedTOVpct": 14.99290140231347,
+        "FTR": 0.23579933632637126,
+        "efg": 52.06910013663869,
+        "DREBpct": 72.46152187390496
+      },
+      "v3": {
+        "paintShare": 47.58096209932638,
+        "paintFG": 54.06317924938415,
+        "threeShare": 41.80519453656653,
+        "threeFG": 33.943562086652484,
+        "defProxy": 105.36028108067933,
+        "forcedTOVpct": 16.79293023436369,
+        "FTR": 0.25896150637423554,
+        "efg": 51.39343753662858,
+        "DREBpct": 71.73695051222289
+      }
+    },
+    "strictPbpPaintReference": {
+      "defRtg": 105.81640728040102,
+      "paintShare": 44.649954142464075,
+      "paintFG": 53.064019171516605,
+      "threeShare": 45.03210027514522,
+      "threeFG": 34.08010862186015,
+      "DREBpct": 73.95679195028114,
+      "FTR": 0.26459798226841946,
+      "poss": 7581.9999999999945,
+      "minutes": 3599.9999999999995,
+      "stints": 2245.0
+    },
+    "limitation": "simulated paint counts cover 1230 games; real paint counts cover strict games only; no matched-game paint comparison available in saved T0 output"
+  },
+  {
+    "season": "2025-26",
+    "team": "New York Knicks",
+    "fullSeason": {
+      "real": {
+        "defProxy": 110.34479387641383,
+        "threeShare": 44.83889364128885,
+        "threeFG": 36.18441971383148,
+        "forcedTOVpct": 14.419363983850314,
+        "FTR": 0.2650413458796692,
+        "efg": 54.06330196749359,
+        "DREBpct": 76.72634271099744
+      },
+      "pure": {
+        "paintShare": 47.36806329699013,
+        "paintFG": 57.88537152369199,
+        "threeShare": 42.26936567062726,
+        "threeFG": 36.902790061912036,
+        "defProxy": 113.60781322362281,
+        "forcedTOVpct": 13.89594409745676,
+        "FTR": 0.24947660349656053,
+        "efg": 55.02392669730009,
+        "DREBpct": 73.43872851847692
+      },
+      "v3": {
+        "paintShare": 47.56903874967354,
+        "paintFG": 57.14326995318731,
+        "threeShare": 42.36621809234491,
+        "threeFG": 37.13377242789007,
+        "defProxy": 111.67120224257533,
+        "forcedTOVpct": 13.906018614822267,
+        "FTR": 0.24724738484377792,
+        "efg": 54.86742085801867,
+        "DREBpct": 76.40214333177815
+      }
+    },
+    "strictPbpPaintReference": {
+      "defRtg": 112.01235998454996,
+      "paintShare": 43.21719792438844,
+      "paintFG": 56.9811320754717,
+      "threeShare": 44.84803558191253,
+      "threeFG": 36.33057851239669,
+      "DREBpct": 75.49172650640025,
+      "FTR": 0.26389918458117123,
+      "poss": 7767.000000000005,
+      "minutes": 3807.0000000000005,
+      "stints": 2567.0
+    },
+    "limitation": "simulated paint counts cover 1230 games; real paint counts cover strict games only; no matched-game paint comparison available in saved T0 output"
+  },
+  {
+    "season": "2025-26",
+    "team": "Boston Celtics",
+    "fullSeason": {
+      "real": {
+        "defProxy": 109.3552433767087,
+        "threeShare": 45.087842586085735,
+        "threeFG": 35.81670822942643,
+        "forcedTOVpct": 12.669129140490437,
+        "FTR": 0.24455375966268447,
+        "efg": 52.276879831342235,
+        "DREBpct": 75.72947913826016
+      },
+      "pure": {
+        "paintShare": 44.943623101370456,
+        "paintFG": 56.772663123442335,
+        "threeShare": 44.34847738513755,
+        "threeFG": 36.7613048505873,
+        "defProxy": 112.59171220303212,
+        "forcedTOVpct": 13.71147254671716,
+        "FTR": 0.24620274090918293,
+        "efg": 54.281405407593844,
+        "DREBpct": 73.51688511526942
+      },
+      "v3": {
+        "paintShare": 44.30953146778171,
+        "paintFG": 53.570564394168535,
+        "threeShare": 44.350407419320256,
+        "threeFG": 36.85427211603838,
+        "defProxy": 109.16099322393717,
+        "forcedTOVpct": 13.54298021103651,
+        "FTR": 0.22624504127801007,
+        "efg": 52.76482255816447,
+        "DREBpct": 75.44072704949755
+      }
+    },
+    "strictPbpPaintReference": {
+      "defRtg": 111.42702409964792,
+      "paintShare": 42.42786664673344,
+      "paintFG": 53.03030303030303,
+      "threeShare": 44.7899536552549,
+      "threeFG": 36.048064085447265,
+      "DREBpct": 73.8427393785669,
+      "FTR": 0.23919868440723577,
+      "poss": 7386.000000000004,
+      "minutes": 3695.999999999999,
+      "stints": 2448.0
+    },
+    "limitation": "simulated paint counts cover 1230 games; real paint counts cover strict games only; no matched-game paint comparison available in saved T0 output"
+  },
+  {
+    "season": "2025-26",
+    "team": "Oklahoma City Thunder",
+    "fullSeason": {
+      "real": {
+        "defProxy": 105.12605381560277,
+        "threeShare": 44.00441562025666,
+        "threeFG": 36.876763875823144,
+        "forcedTOVpct": 16.304877440086706,
+        "FTR": 0.2481026631709673,
+        "efg": 51.85594038912654,
+        "DREBpct": 74.44181770422905
+      },
+      "pure": {
+        "paintShare": 44.48996285061859,
+        "paintFG": 56.89377805696426,
+        "threeShare": 44.69581813844109,
+        "threeFG": 36.935535526375986,
+        "defProxy": 112.05542010139712,
+        "forcedTOVpct": 14.944017242867817,
+        "FTR": 0.2488122422548652,
+        "efg": 54.44088476875362,
+        "DREBpct": 72.38333333333334
+      },
+      "v3": {
+        "paintShare": 45.34509828119322,
+        "paintFG": 52.83871845658386,
+        "threeShare": 44.785646215128516,
+        "threeFG": 36.794084778715,
+        "defProxy": 106.93909642561941,
+        "forcedTOVpct": 15.864789961707723,
+        "FTR": 0.23663588309097267,
+        "efg": 52.64094284127604,
+        "DREBpct": 74.14082145850796
+      }
+    },
+    "strictPbpPaintReference": {
+      "defRtg": 106.29990019960088,
+      "paintShare": 44.30795600628482,
+      "paintFG": 51.1605415860735,
+      "threeShare": 43.993715183545206,
+      "threeFG": 36.785714285714285,
+      "DREBpct": 73.57700892857143,
+      "FTR": 0.24625053563776603,
+      "poss": 8015.999999999994,
+      "minutes": 3826.9999999999973,
+      "stints": 2568.0
+    },
+    "limitation": "simulated paint counts cover 1230 games; real paint counts cover strict games only; no matched-game paint comparison available in saved T0 output"
+  },
+  {
+    "season": "2025-26",
+    "team": "Detroit Pistons",
+    "fullSeason": {
+      "real": {
+        "defProxy": 106.48860117009504,
+        "threeShare": 43.14539210074413,
+        "threeFG": 34.49419568822554,
+        "forcedTOVpct": 16.409291568823058,
+        "FTR": 0.31883228391528334,
+        "efg": 51.745850028620495,
+        "DREBpct": 74.24031223863953
+      },
+      "pure": {
+        "paintShare": 44.20950717337287,
+        "paintFG": 56.45129178982189,
+        "threeShare": 44.40043602190942,
+        "threeFG": 36.0725232162735,
+        "defProxy": 109.54234113397824,
+        "forcedTOVpct": 15.033323561997943,
+        "FTR": 0.2404213975720892,
+        "efg": 53.49460727560783,
+        "DREBpct": 73.86903869992236
+      },
+      "v3": {
+        "paintShare": 47.66180427701459,
+        "paintFG": 54.544779223866406,
+        "threeShare": 43.07392720577822,
+        "threeFG": 35.79213861809335,
+        "defProxy": 107.9830226320276,
+        "forcedTOVpct": 16.645341993804845,
+        "FTR": 0.3184463956946608,
+        "efg": 52.81192465656422,
+        "DREBpct": 73.56063670986732
+      }
+    },
+    "strictPbpPaintReference": {
+      "defRtg": 108.52741836105976,
+      "paintShare": 46.17867096963474,
+      "paintFG": 54.03430749682338,
+      "threeShare": 43.06879859175591,
+      "threeFG": 34.46866485013624,
+      "DREBpct": 72.08872458410352,
+      "FTR": 0.32213583687839226,
+      "poss": 8115.0,
+      "minutes": 3864.9999999999995,
+      "stints": 2795.0
+    },
+    "limitation": "simulated paint counts cover 1230 games; real paint counts cover strict games only; no matched-game paint comparison available in saved T0 output"
+  }
+]

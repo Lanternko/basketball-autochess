@@ -1,0 +1,10 @@
+{
+ "version":"shared-paint-defense-46",
+ "seasons":["2022-23","2023-24","2024-25","2025-26"],
+ "seeds":[20261012,20261013,20261014],
+ "source":"Frozen v45 five-zone fresh-FGA data, shot choice, middle/long makes and runtime transfer. Only RA and other-paint make defense are refitted jointly.",
+ "equation":"eta_RA = shooter_RA + sum(common_defender + contrast_defender) + beta_RA * sum(training_RA_block_feature); eta_paint = shooter_paint + sum(common_defender - contrast_defender) + beta_paint * sum(training_paint_block_feature). Independent zone intercepts and shooter priors as v45; no named exceptions.",
+ "grid":{"commonSigma":[0.025,0.05,0.1],"contrastSigma":[0,0.025,0.05],"shooterPriorMinutes":60,"blockPriorAttempts":200,"blockSlopePriorSD":1},
+ "selection":"Older three seasons only, whole-game five-fold cross-fit. Primary: equal-season mean source-minute-weighted player on-court combined-paint FG% MAE, >=500 source minutes and >=100 on-court actual paint attempts. Secondary: fine-zone heldout NLL. Report RA/paint likelihood, make errors and on/off separately. v45 independent fits remain an explicit comparator; do not force adoption if hierarchy loses. Target excluded from grid selection; this is same-season reconstruction, not future prediction.",
+ "scope":"Defense partial pooling only. Source on/off residuals are never fitted as player corrections. Team scoring can temporarily regress, but remains reported. No new OVR run. No new shot-choice, foul, rebound or total-attempt hazard mechanism."
+}

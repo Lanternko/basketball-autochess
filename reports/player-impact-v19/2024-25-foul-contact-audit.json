@@ -1,0 +1,144 @@
+{
+  "season": "2024-25",
+  "counts": {
+    "fga": 194618,
+    "defensiveNonshootingPersonalFouls": 15939,
+    "tov": 31179,
+    "shootingFouls": 21347,
+    "unrecordedShootingFouls": 16324,
+    "recordedShootingFouls": 5023,
+    "technicalFouls": 1132,
+    "multipleShotMatches": 23
+  },
+  "shootingAndFgaOverlapExcluded": true,
+  "design": "Source contact-frequency diagnostic only. Denominator FGA+TOV+shooting foul records without matching FGA; same-clock drawn-player FGA removes and-one/recorded-miss overlap. Personal-contact scope remains narrower than all foul categories. Personal fouls by non-possession team and non-shooting descriptor counted as defensive nonshooting contacts. No model option changed.",
+  "nonshootingContactRate": 0.061764705882352944,
+  "terminalEvents": 242121,
+  "nonshootingContactRateBounds": {
+    "lower": 0.061759201497192766,
+    "upper": 0.061764705882352944
+  },
+  "multipleShotMatches": 23,
+  "missingDrawnShooter": 0,
+  "ftKinds": {
+    "fga": 194618,
+    "shooting": 38450,
+    "fta": 47180,
+    "nonshooting": 7645,
+    "technical": 950,
+    "unresolved": 135
+  },
+  "foulSubtypes": [
+    {
+      "subType": "personal",
+      "descriptor": "shooting",
+      "count": 21347
+    },
+    {
+      "subType": "personal",
+      "descriptor": "",
+      "count": 12397
+    },
+    {
+      "subType": "personal",
+      "descriptor": "loose ball",
+      "count": 2547
+    },
+    {
+      "subType": "offensive",
+      "descriptor": "",
+      "count": 2019
+    },
+    {
+      "subType": "personal",
+      "descriptor": "take",
+      "count": 707
+    },
+    {
+      "subType": "offensive",
+      "descriptor": "charge",
+      "count": 704
+    },
+    {
+      "subType": "technical",
+      "descriptor": "",
+      "count": 618
+    },
+    {
+      "subType": "technical",
+      "descriptor": "defensive-3-second",
+      "count": 279
+    },
+    {
+      "subType": "offensive",
+      "descriptor": "off-the-ball",
+      "count": 253
+    },
+    {
+      "subType": "technical",
+      "descriptor": "double",
+      "count": 172
+    },
+    {
+      "subType": "personal",
+      "descriptor": "flagrant-type-1",
+      "count": 116
+    },
+    {
+      "subType": "personal",
+      "descriptor": "transition take",
+      "count": 104
+    },
+    {
+      "subType": "personal",
+      "descriptor": "away-from-play",
+      "count": 86
+    },
+    {
+      "subType": "technical",
+      "descriptor": "delay",
+      "count": 32
+    },
+    {
+      "subType": "personal",
+      "descriptor": "double",
+      "count": 24
+    },
+    {
+      "subType": "technical",
+      "descriptor": "flopping",
+      "count": 17
+    },
+    {
+      "subType": "personal",
+      "descriptor": "clear-path",
+      "count": 15
+    },
+    {
+      "subType": "personal",
+      "descriptor": "flagrant-type-2",
+      "count": 14
+    },
+    {
+      "subType": "technical",
+      "descriptor": "rim-hanging",
+      "count": 8
+    },
+    {
+      "subType": "technical",
+      "descriptor": "bench",
+      "count": 3
+    },
+    {
+      "subType": "technical",
+      "descriptor": "excess timeout",
+      "count": 2
+    },
+    {
+      "subType": "technical",
+      "descriptor": "too-many-players",
+      "count": 1
+    }
+  ],
+  "sourceFTKindsSHA256": "332b1eabd39143bdd93e0089682b75979afb48945bef3f6dcdf1e4936143fa26"
+}

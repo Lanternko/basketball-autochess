@@ -1,0 +1,120 @@
+import csv,hashlib,json,math
+from pathlib import Path
+from collections import Counter,defaultdict
+root=Path('reports/player-impact-v39');read=lambda p:json.loads(Path(p).read_text(encoding='utf-8'));sha=lambda p:hashlib.sha256(Path(p).read_bytes()).hexdigest()
+def close(a,b):assert math.isclose(a,b,abs_tol=1e-7,rel_tol=1e-10),(a,b)
+protocol=read(root/'validation-protocol.json')
+mechanism=read(root/'solver-repair-protocol.json')
+for p,h in mechanism['hashes'].items():assert sha(p)==h,p
+for p,h in protocol['hashes'].items():assert sha(p)==h,p
+manifest=read(root/'validation-manifest.json');assert len(manifest['jobs'])==24
+games=0;pred=defaultdict(Counter);onc=defaultdict(lambda:defaultdict(Counter));strict=defaultdict(Counter)
+for j in manifest['jobs']:
+ assert sha(j['file'])==j['sha256'];r=read(j['file']);games+=len(r['matches'])
+ if j['strict']:
+  truth=read(f"reports/player-impact-v1/{j['season']}-on-court-truth.json");assert {m['id'] for m in r['matches']}==set(truth['gameIds'])
+  for k in ['fga','fgm','fg3a','fg3m']:
+   n=sum(t['stats'][k] for t in r['teams'])
+   for g,mult in [('own',1),('on',5),('teammates',4)]:assert sum(p[g][k] for p in r['onCourt']['players'])==mult*n
+ else:assert len(r['matches'])==1230
+ if j['season']=='2025-26':
+  target=strict if j['strict'] else pred
+  for t in r['teams']:
+   for p in t['players']:
+    for k,n in p['stats'].items():
+     if isinstance(n,(int,float)):target[p['playerId']][k]+=n/3
+  if j['strict']:
+   for p in r['onCourt']['players']:
+    for g in ['on','off','own','teammates']:
+     for k,n in p[g].items():onc[p['playerId']][g][k]+=n/3
+assert games==28023
+ledger=read(root/'ledger-verification.json');assert ledger['passed'] and ledger['games']==games
+sv=read(root/'data-verification.json');assert sv['passed'] and sv['sourceGames']==4421 and sv['sourceFga']==785193
+scores=read(root/'scores.json');assert len(scores['cells'])==12
+for c in scores['cells']:
+ for group,s in c['summary'].items():
+  for k,m in s.items():
+   if m:
+    ps=[p for p in c['players'] if p['minutes']>=500 and p['metrics'].get(k) and (group=='ALL' or p['roleGroup']==group)];w=sum(p['minutes'] for p in ps)
+    assert m['players']==len(ps);close(m['mae'],sum(p['minutes']*abs(p['metrics'][k]['predicted']-p['metrics'][k]['actual']) for p in ps)/w)
+ for group,s in c['onCourtSummary'].items():
+  for k,m in s.items():
+   if m:
+    ps=[p for p in c['onCourtPlayers'] if p['minutes']>=500 and p['metrics'].get(k) and (group=='ALL' or p['roleGroup']==group)];w=sum(p['minutes'] for p in ps)
+    assert m['players']==len(ps);close(m['mae'],sum(p['minutes']*abs(p['metrics'][k]['predicted']-p['metrics'][k]['actual']) for p in ps)/w)
+ for v in ['v30','control']:
+  if c['version']==v:
+   previous=read('reports/player-impact-v30/scores.json');old=next(p for p in previous['cells'] if p['season']==c['season'] and p['version']==('rotation-space' if v=='v30' else v))
+   for k in ['summary','teamMetrics','players','onCourtSummary','onCourtPlayers']:assert c[k]==old[k],(c['season'],v,k)
+for v,a in scores['aggregate'].items():
+ cs=[c for c in scores['cells'] if c['version']==v]
+ for group,collection in [('individualMAE','summary'),('onCourtMAE','onCourtSummary')]:
+  for k,n in a[group].items():close(n,sum(c[collection]['ALL'][k]['mae'] for c in cs)/4)
+ for k,n in a['team'].items():close(n,sum(c['teamMetrics'][k] for c in cs)/4)
+c=next(c for c in scores['cells'] if c['season']=='2025-26' and c['version']=='rotation-space');by={p['playerId']:p for p in c['players']};onby={p['playerId']:p for p in c['onCourtPlayers']}
+with (root/'2025-26-player-validation.csv').open(encoding='utf-8-sig',newline='') as f:r=csv.DictReader(f);rows=list(r);cols=len(r.fieldnames)
+assert len(rows)==582 and {int(p['playerId']) for p in rows}==set(by)
+for r in rows:
+ pid=int(r['playerId']);p=by[pid];o=onby[pid]
+ close(float(r['actualMinutes']),p['minutes']);close(float(r['predictedMinutes']),pred[pid]['seconds']/60);close(float(r['strictPredictedMinutes']),strict[pid]['seconds']/60)
+ for collection in [p['metrics'],o['metrics']]:
+  for k,m in collection.items():
+   for label in ['actual','predicted']:
+    if m:close(float(r[k+'_'+label]),m[label])
+    else:assert r[k+'_'+label]==''
+   if m:close(float(r[k+'_error']),m['predicted']-m['actual'])
+   else:assert r[k+'_error']==''
+ for k in ['pts','fgm','fga','fg3m','fg3a','fta','ftm','oreb','dreb','ast','tov','stl','blk']:
+  close(float(r[k+'Total_predicted']),pred[pid][k]);close(float(r[k+'Total_error']),float(r[k+'Total_predicted'])-float(r[k+'Total_actual']))
+ for k in ['pts','ast','tov','stl','blk','oreb','dreb','fga','fg3a','fta']:
+  if p['metrics'][k+'36']:close(p['metrics'][k+'36']['predicted'],36*pred[pid][k]/p['predictedMinutes'])
+for name in ['fit-verification.json','data-verification.json','isolation-verification.json','ledger-verification.json','input-verification.json']:
+ check=read(root/name);assert check['passed']
+ for p,h in check['hashes'].items():assert sha(p)==h,p
+strata=read(root/'error-strata.json');assert len(strata['rows'])==144
+for p,h in strata['hashes'].items():assert sha(p)==h,p
+for row in strata['rows']:
+ cell=next(c for c in scores['cells'] if c['season']==row['season'] and c['version']==row['version'])
+ for field in ['players','onCourtPlayers']:
+  for k,value in row[field].items():
+   ps=[]
+   for p in cell[field]:
+    if p['minutes']<=0 or not p['metrics'].get(k):continue
+    if row['roleGroup']!='ALL' and p['roleGroup']!=row['roleGroup']:continue
+    if row['sample']=='primary500' and p['minutes']<500:continue
+    if row['sample']=='lowMinutes' and p['minutes']>=500:continue
+    ps.append(p)
+   if not ps:assert value is None;continue
+   w=sum(p['minutes'] for p in ps);assert value['players']==len(ps);close(value['actualMinutes'],w)
+   close(value['mae'],sum(p['minutes']*abs(p['metrics'][k]['predicted']-p['metrics'][k]['actual']) for p in ps)/w)
+   close(value['signedBias'],sum(p['minutes']*(p['metrics'][k]['predicted']-p['metrics'][k]['actual']) for p in ps)/w)
+   pairs=sorted((abs(p['metrics'][k]['predicted']-p['metrics'][k]['actual']),p['minutes']) for p in ps);cumulative=0
+   for absolute,weight in pairs:
+    cumulative+=weight
+    if cumulative>=.9*w:close(value['weightedAbsoluteP90'],absolute);break
+cohorts=read(root/'skill-cohort-errors.json');assert len(cohorts['rows'])==40
+for p,h in cohorts['hashes'].items():assert sha(p)==h,p
+limits={'blocksBelow1':('blk36',lambda x:x<1),'blocksAtLeast1':('blk36',lambda x:x>=1),'blocksAtLeast2':('blk36',lambda x:x>=2),'assistsAtLeast8':('ast36',lambda x:x>=8),'pointsAtLeast25':('pts36',lambda x:x>=25)}
+for row in cohorts['rows']:
+ cell=next(c for c in scores['cells'] if c['season']==row['season'] and c['version']==row['version'])
+ metric,select=limits[row['cohort']];assert row['metric']==metric
+ ps=[p for p in cell['players'] if p['minutes']>=500 and p['metrics'].get(metric) and select(p['metrics'][metric]['actual'])]
+ byid={p['playerId']:p for p in ps};assert {p['playerId'] for p in row['rows']}==set(byid)
+ for p in row['rows']:
+  q=byid[p['playerId']];assert p['name']==q['name'];close(p['actualMinutes'],q['minutes']);close(p['actual'],q['metrics'][metric]['actual']);close(p['predicted'],q['metrics'][metric]['predicted']);close(p['error'],p['predicted']-p['actual'])
+ w=sum(p['minutes'] for p in ps);close(row['actualMinutes'],w);assert row['players']==len(ps)
+ close(row['mae'],sum(p['minutes']*abs(p['metrics'][metric]['predicted']-p['metrics'][metric]['actual']) for p in ps)/w)
+ close(row['signedBias'],sum(p['minutes']*(p['metrics'][metric]['predicted']-p['metrics'][metric]['actual']) for p in ps)/w)
+ assert row['underestimatedPlayers']==sum(p['metrics'][metric]['predicted']<p['metrics'][metric]['actual'] for p in ps)
+status=read(root/'status.json');assert not status['officialModelAdopted'] and not status['goalComplete'] and not status['fullOvrThisVersion'] and status['latestCompleteOvrVersion']==24
+assert status['countsOnlyRepair'] and status['allNonBlockOutputsExactlyEqualV30']
+failed=[]
+for season in protocol['seasons']:
+ cs={c['version']:c for c in scores['cells'] if c['season']==season}
+ if cs['rotation-space']['teamMetrics']['winsMAE']>cs['control']['teamMetrics']['winsMAE']+.5:failed.append(season)
+assert status['failedWinGateSeasons']==failed and status['targetPlayerColumns']==cols
+previous=read('reports/player-impact-v38/all-verification.json');assert previous['passed']
+for p,h in previous['hashes'].items():assert sha(p)==h,p
+files=[p for p in root.iterdir() if p.is_file() and p.name!='verification.json']
+out={'passed':True,'games':games,'files':24,'targetPlayers':582,'columns':cols,'allIndividualAndOnCourtMAEsRecomputed':True,'previousV30AndControlScoresExactlyReproduced':True,'failedWinGateSeasons':failed,'scope':'Source block/no-block/recipient competing labels; same already determined misses. Every other output equals archived v30. No scoring impact, no full OVR or adoption. Same-season source descriptors are not causal or prospective ability estimates.','hashes':{str(p).replace('\\','/'):sha(p) for p in files}}
+(root/'verification.json').write_text(json.dumps(out,ensure_ascii=False,indent=2),encoding='utf-8');print(json.dumps({k:v for k,v in out.items() if k!='hashes'},ensure_ascii=False,indent=2))

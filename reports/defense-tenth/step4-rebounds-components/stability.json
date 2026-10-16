@@ -1,0 +1,482 @@
+[
+  {
+    "source": "2022-23",
+    "target": "2023-24",
+    "group": "all",
+    "feature": "chance36",
+    "n": 388,
+    "Pearson": 0.9166248686508709
+  },
+  {
+    "source": "2022-23",
+    "target": "2023-24",
+    "group": "all",
+    "feature": "conversion",
+    "n": 388,
+    "Pearson": 0.3798336234842228
+  },
+  {
+    "source": "2022-23",
+    "target": "2023-24",
+    "group": "all",
+    "feature": "adjustedConversion",
+    "n": 388,
+    "Pearson": 0.3775719424520858
+  },
+  {
+    "source": "2022-23",
+    "target": "2023-24",
+    "group": "all",
+    "feature": "rate",
+    "n": 388,
+    "Pearson": 0.9094648962312973
+  },
+  {
+    "source": "2022-23",
+    "target": "2023-24",
+    "group": "all",
+    "feature": "pct",
+    "n": 388,
+    "Pearson": 0.9176002057343912
+  },
+  {
+    "source": "2022-23",
+    "target": "2023-24",
+    "group": "movers",
+    "feature": "chance36",
+    "n": 134,
+    "Pearson": 0.9107817582070422
+  },
+  {
+    "source": "2022-23",
+    "target": "2023-24",
+    "group": "movers",
+    "feature": "conversion",
+    "n": 134,
+    "Pearson": 0.2754732042706573
+  },
+  {
+    "source": "2022-23",
+    "target": "2023-24",
+    "group": "movers",
+    "feature": "adjustedConversion",
+    "n": 134,
+    "Pearson": 0.28095304958703043
+  },
+  {
+    "source": "2022-23",
+    "target": "2023-24",
+    "group": "movers",
+    "feature": "rate",
+    "n": 134,
+    "Pearson": 0.8928075624576559
+  },
+  {
+    "source": "2022-23",
+    "target": "2023-24",
+    "group": "movers",
+    "feature": "pct",
+    "n": 134,
+    "Pearson": 0.897948959172592
+  },
+  {
+    "source": "2022-23",
+    "target": "2023-24",
+    "group": "stayers",
+    "feature": "chance36",
+    "n": 254,
+    "Pearson": 0.9216941676623822
+  },
+  {
+    "source": "2022-23",
+    "target": "2023-24",
+    "group": "stayers",
+    "feature": "conversion",
+    "n": 254,
+    "Pearson": 0.44938032286228125
+  },
+  {
+    "source": "2022-23",
+    "target": "2023-24",
+    "group": "stayers",
+    "feature": "adjustedConversion",
+    "n": 254,
+    "Pearson": 0.4430514153481609
+  },
+  {
+    "source": "2022-23",
+    "target": "2023-24",
+    "group": "stayers",
+    "feature": "rate",
+    "n": 254,
+    "Pearson": 0.9194212802694629
+  },
+  {
+    "source": "2022-23",
+    "target": "2023-24",
+    "group": "stayers",
+    "feature": "pct",
+    "n": 254,
+    "Pearson": 0.9280180178073538
+  },
+  {
+    "source": "2022-23",
+    "target": "2023-24",
+    "group": "both500",
+    "feature": "chance36",
+    "n": 293,
+    "Pearson": 0.9343522954113671
+  },
+  {
+    "source": "2022-23",
+    "target": "2023-24",
+    "group": "both500",
+    "feature": "conversion",
+    "n": 293,
+    "Pearson": 0.47260773081939644
+  },
+  {
+    "source": "2022-23",
+    "target": "2023-24",
+    "group": "both500",
+    "feature": "adjustedConversion",
+    "n": 293,
+    "Pearson": 0.4666922395016595
+  },
+  {
+    "source": "2022-23",
+    "target": "2023-24",
+    "group": "both500",
+    "feature": "rate",
+    "n": 293,
+    "Pearson": 0.9325619503331564
+  },
+  {
+    "source": "2022-23",
+    "target": "2023-24",
+    "group": "both500",
+    "feature": "pct",
+    "n": 293,
+    "Pearson": 0.9384640289375126
+  },
+  {
+    "source": "2023-24",
+    "target": "2024-25",
+    "group": "all",
+    "feature": "chance36",
+    "n": 392,
+    "Pearson": 0.9075984069958662
+  },
+  {
+    "source": "2023-24",
+    "target": "2024-25",
+    "group": "all",
+    "feature": "conversion",
+    "n": 392,
+    "Pearson": 0.1895207268067985
+  },
+  {
+    "source": "2023-24",
+    "target": "2024-25",
+    "group": "all",
+    "feature": "adjustedConversion",
+    "n": 392,
+    "Pearson": 0.18113259738270518
+  },
+  {
+    "source": "2023-24",
+    "target": "2024-25",
+    "group": "all",
+    "feature": "rate",
+    "n": 392,
+    "Pearson": 0.8793776490502827
+  },
+  {
+    "source": "2023-24",
+    "target": "2024-25",
+    "group": "all",
+    "feature": "pct",
+    "n": 392,
+    "Pearson": 0.8905789686211347
+  },
+  {
+    "source": "2023-24",
+    "target": "2024-25",
+    "group": "movers",
+    "feature": "chance36",
+    "n": 121,
+    "Pearson": 0.8701580055985624
+  },
+  {
+    "source": "2023-24",
+    "target": "2024-25",
+    "group": "movers",
+    "feature": "conversion",
+    "n": 121,
+    "Pearson": 0.18333904092778447
+  },
+  {
+    "source": "2023-24",
+    "target": "2024-25",
+    "group": "movers",
+    "feature": "adjustedConversion",
+    "n": 121,
+    "Pearson": 0.18675747080481697
+  },
+  {
+    "source": "2023-24",
+    "target": "2024-25",
+    "group": "movers",
+    "feature": "rate",
+    "n": 121,
+    "Pearson": 0.8082639908618631
+  },
+  {
+    "source": "2023-24",
+    "target": "2024-25",
+    "group": "movers",
+    "feature": "pct",
+    "n": 121,
+    "Pearson": 0.8363177944316849
+  },
+  {
+    "source": "2023-24",
+    "target": "2024-25",
+    "group": "stayers",
+    "feature": "chance36",
+    "n": 271,
+    "Pearson": 0.9237124570003696
+  },
+  {
+    "source": "2023-24",
+    "target": "2024-25",
+    "group": "stayers",
+    "feature": "conversion",
+    "n": 271,
+    "Pearson": 0.1940091030472474
+  },
+  {
+    "source": "2023-24",
+    "target": "2024-25",
+    "group": "stayers",
+    "feature": "adjustedConversion",
+    "n": 271,
+    "Pearson": 0.17911485713042602
+  },
+  {
+    "source": "2023-24",
+    "target": "2024-25",
+    "group": "stayers",
+    "feature": "rate",
+    "n": 271,
+    "Pearson": 0.9079931742671727
+  },
+  {
+    "source": "2023-24",
+    "target": "2024-25",
+    "group": "stayers",
+    "feature": "pct",
+    "n": 271,
+    "Pearson": 0.9128098864714669
+  },
+  {
+    "source": "2023-24",
+    "target": "2024-25",
+    "group": "both500",
+    "feature": "chance36",
+    "n": 288,
+    "Pearson": 0.9405172894850038
+  },
+  {
+    "source": "2023-24",
+    "target": "2024-25",
+    "group": "both500",
+    "feature": "conversion",
+    "n": 288,
+    "Pearson": 0.21943237445914884
+  },
+  {
+    "source": "2023-24",
+    "target": "2024-25",
+    "group": "both500",
+    "feature": "adjustedConversion",
+    "n": 288,
+    "Pearson": 0.19138896729843222
+  },
+  {
+    "source": "2023-24",
+    "target": "2024-25",
+    "group": "both500",
+    "feature": "rate",
+    "n": 288,
+    "Pearson": 0.9231531123826964
+  },
+  {
+    "source": "2023-24",
+    "target": "2024-25",
+    "group": "both500",
+    "feature": "pct",
+    "n": 288,
+    "Pearson": 0.9269792821289009
+  },
+  {
+    "source": "2024-25",
+    "target": "2025-26",
+    "group": "all",
+    "feature": "chance36",
+    "n": 399,
+    "Pearson": 0.9251456537435719
+  },
+  {
+    "source": "2024-25",
+    "target": "2025-26",
+    "group": "all",
+    "feature": "conversion",
+    "n": 398,
+    "Pearson": 0.32873488949971724
+  },
+  {
+    "source": "2024-25",
+    "target": "2025-26",
+    "group": "all",
+    "feature": "adjustedConversion",
+    "n": 397,
+    "Pearson": 0.2661441529647814
+  },
+  {
+    "source": "2024-25",
+    "target": "2025-26",
+    "group": "all",
+    "feature": "rate",
+    "n": 399,
+    "Pearson": 0.9207705607538983
+  },
+  {
+    "source": "2024-25",
+    "target": "2025-26",
+    "group": "all",
+    "feature": "pct",
+    "n": 399,
+    "Pearson": 0.9262267576806819
+  },
+  {
+    "source": "2024-25",
+    "target": "2025-26",
+    "group": "movers",
+    "feature": "chance36",
+    "n": 120,
+    "Pearson": 0.9111582131108233
+  },
+  {
+    "source": "2024-25",
+    "target": "2025-26",
+    "group": "movers",
+    "feature": "conversion",
+    "n": 120,
+    "Pearson": 0.24660910769873354
+  },
+  {
+    "source": "2024-25",
+    "target": "2025-26",
+    "group": "movers",
+    "feature": "adjustedConversion",
+    "n": 120,
+    "Pearson": 0.19468799903412848
+  },
+  {
+    "source": "2024-25",
+    "target": "2025-26",
+    "group": "movers",
+    "feature": "rate",
+    "n": 120,
+    "Pearson": 0.9252623059930135
+  },
+  {
+    "source": "2024-25",
+    "target": "2025-26",
+    "group": "movers",
+    "feature": "pct",
+    "n": 120,
+    "Pearson": 0.9262726838321179
+  },
+  {
+    "source": "2024-25",
+    "target": "2025-26",
+    "group": "stayers",
+    "feature": "chance36",
+    "n": 279,
+    "Pearson": 0.9320133377359879
+  },
+  {
+    "source": "2024-25",
+    "target": "2025-26",
+    "group": "stayers",
+    "feature": "conversion",
+    "n": 278,
+    "Pearson": 0.37856106356510094
+  },
+  {
+    "source": "2024-25",
+    "target": "2025-26",
+    "group": "stayers",
+    "feature": "adjustedConversion",
+    "n": 277,
+    "Pearson": 0.30325038014171724
+  },
+  {
+    "source": "2024-25",
+    "target": "2025-26",
+    "group": "stayers",
+    "feature": "rate",
+    "n": 279,
+    "Pearson": 0.9200754663912833
+  },
+  {
+    "source": "2024-25",
+    "target": "2025-26",
+    "group": "stayers",
+    "feature": "pct",
+    "n": 279,
+    "Pearson": 0.9271718827134043
+  },
+  {
+    "source": "2024-25",
+    "target": "2025-26",
+    "group": "both500",
+    "feature": "chance36",
+    "n": 289,
+    "Pearson": 0.950286018581575
+  },
+  {
+    "source": "2024-25",
+    "target": "2025-26",
+    "group": "both500",
+    "feature": "conversion",
+    "n": 289,
+    "Pearson": 0.38840625860117184
+  },
+  {
+    "source": "2024-25",
+    "target": "2025-26",
+    "group": "both500",
+    "feature": "adjustedConversion",
+    "n": 288,
+    "Pearson": 0.33543341374273355
+  },
+  {
+    "source": "2024-25",
+    "target": "2025-26",
+    "group": "both500",
+    "feature": "rate",
+    "n": 289,
+    "Pearson": 0.9395314833064967
+  },
+  {
+    "source": "2024-25",
+    "target": "2025-26",
+    "group": "both500",
+    "feature": "pct",
+    "n": 289,
+    "Pearson": 0.9438891659212105
+  }
+]

@@ -1,0 +1,37 @@
+{
+  "version": "v51",
+  "status": "confirmation-failed-not-adopted",
+  "rotationAdopted": false,
+  "acceptedRotation": "v49",
+  "acceptedCombinedOffense": "v47",
+  "candidate": "rollingPlan",
+  "confirmationGames": 360,
+  "confirmationSeedCount": 3,
+  "confirmationSimulationExecutions": 2160,
+  "mainSimulationExecutions": 5940,
+  "confirmationObjectiveImprovement": 0.09987084782089195,
+  "confirmationMean": {
+    "v49": {
+      "phaseMAE": 14.888532592035094,
+      "pairMAE": 3.139260288212157,
+      "regMinuteMAE": 0.8797367861797261,
+      "minuteMAE": 0.9495450789541214,
+      "shortShare": 0.09715998225949382
+    },
+    "v51Candidate": {
+      "phaseMAE": 13.337745537903578,
+      "pairMAE": 2.839320100415767,
+      "regMinuteMAE": 0.9154501288055509,
+      "minuteMAE": 0.9911893526913307,
+      "shortShare": 0.09177344746325725
+    }
+  },
+  "failure": "2024-25 regulation minute MAE0.8026037638566641\u21920.8843894474520926; +0.0817856835954285min exceeds original+0.05 guard. No further tuning on confirmation.",
+  "targetSeasonCandidateEvaluated": false,
+  "fullFourSeasonValidationCompleted": false,
+  "ovrRecomputed": false,
+  "gamePresetChanged": false,
+  "playerAbilitiesAndProbabilitiesUnchanged": true,
+  "namedPlayerOverrides": false,
+  "nextWork": "Reduce execution minute-budget drift and assess foul-out-driven unreachable minutes; preserve disjoint confirmation result as evidence, not reuse it to select another configuration."
+}

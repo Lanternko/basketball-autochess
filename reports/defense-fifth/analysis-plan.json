@@ -1,0 +1,33 @@
+{
+  "seeds": [
+    20261012,
+    20261013,
+    20261014,
+    20261015,
+    20261016,
+    20261017,
+    20261018,
+    20261019,
+    20261020,
+    20261021,
+    20261022,
+    20261023,
+    20261024,
+    20261025,
+    20261026,
+    20261027,
+    20261028,
+    20261029,
+    20261030,
+    20261031
+  ],
+  "cutoffs": [
+    25,
+    41,
+    55
+  ],
+  "mainCutoff": 41,
+  "bootstrap": 2000,
+  "varianceImplementationGate": 0.3,
+  "acceptance": "Heldout winMAE paired95 below v3, netRMSE no significant increase; residualSD, win slope and Q3/Q4 relation move toward observed. Calibration slope true-on-predicted near1 replaces SD ratio near1 outside training. No parameters selected from heldout accuracy; switches may be rejected. Simple shrink and Pythagorean exponent use only training. Cutoff41 frozen; other rolling endpoints rebuilt on same-cutoff data."
+}

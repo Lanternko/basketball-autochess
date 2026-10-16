@@ -1,0 +1,47 @@
+{
+  "version": "oreb-rim-effective-calibration-1",
+  "registeredUTC": "2026-10-15T02:44:49.879146+00:00",
+  "baseline": "pure-oreb-turnover-time-1",
+  "seasons": [
+    "2022-23",
+    "2023-24",
+    "2024-25",
+    "2025-26"
+  ],
+  "seeds": [
+    20261012,
+    20261013,
+    20261014
+  ],
+  "grid": [
+    0,
+    0.1,
+    0.25,
+    0.5,
+    1
+  ],
+  "gridGamesPerSeason": 256,
+  "split": "chronological schedule midpoint; first half fitting, second half validation; no contact labels inferred",
+  "parameter": "one league-wide constant pEffective, P(no rim | missed FG), not physically identified; no zone/block coefficients",
+  "fit": "pooled first-half immediate clock violations per missed FG; select adjacent grid bracket and linear interpolate; boundary if unbracketed; one selected full-schedule rerun, no refit",
+  "observable": "missed FG followed within 2 seconds by same-offense shot clock turnover before any individual rebound, defensive rebound, other FG/FT/foul/turnover, or period end; intervening same-offense team offensive rebound allowed; no-rim is NOT assigned as a real label",
+  "secondary": "clock turnover after individual FG OREB before another shot/FT/foul/rebound; same clock/period ordered events; descriptive only",
+  "validationGates": {
+    "immediateClockRate": "selected holdout simulated rate inside game-cluster-bootstrap real 95% interval",
+    "postOrebClockRate": "simulated inside real game-cluster-bootstrap 95% interval",
+    "totalClockPerTeamGame": "absolute bias <= 0.1",
+    "turnoversPerTeamGame": "absolute bias <= 0.2",
+    "leagueEfficiency": "absolute bias <= 0.5",
+    "fgAndThree": "absolute bias no worse than baseline + 0.1 percentage point"
+  },
+  "bootstrap": 2000,
+  "bootstrapSeed": 73194,
+  "adoption": "only if all gates pass, run 20 seed paired full schedule evaluation under existing franchise+seed method; otherwise retain baseline, report structural failure; no total-turnover retuning",
+  "restrictions": [
+    "no team/player IDs as probability input",
+    "frozen files unchanged",
+    "all four seasons already seen, within-season event validation only",
+    "abstract flight time and independent fresh-possession clock hazard unchanged",
+    "no injury data, new source hunt, or new seasons"
+  ]
+}

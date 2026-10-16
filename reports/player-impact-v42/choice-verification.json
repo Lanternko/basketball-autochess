@@ -1,0 +1,929 @@
+{
+  "passed": true,
+  "independentRowwiseNllAndGradient": true,
+  "wholeGameFoldRebuilt": true,
+  "olderOnlySelectionVerified": true,
+  "sourceHashesPassed": true,
+  "checks": [
+    {
+      "file": "reports/player-impact-v42/choice-fits/2022-23-sigma0-fold0.json",
+      "branch": "three",
+      "nll": 22855.83791801741,
+      "maxGradient": 4.184954605079838e-09
+    },
+    {
+      "file": "reports/player-impact-v42/choice-fits/2022-23-sigma0-fold0.json",
+      "branch": "paintGivenTwo",
+      "nll": 11733.54370813276,
+      "maxGradient": 1.295489937547245e-09
+    },
+    {
+      "file": "reports/player-impact-v42/choice-fits/2022-23-sigma0-fold1.json",
+      "branch": "three",
+      "nll": 22863.74262553069,
+      "maxGradient": 1.1755076911867945e-08
+    },
+    {
+      "file": "reports/player-impact-v42/choice-fits/2022-23-sigma0-fold1.json",
+      "branch": "paintGivenTwo",
+      "nll": 11737.137594329444,
+      "maxGradient": 2.089507233904442e-09
+    },
+    {
+      "file": "reports/player-impact-v42/choice-fits/2022-23-sigma0-fold2.json",
+      "branch": "three",
+      "nll": 19095.733701801655,
+      "maxGradient": 2.5868601705170136e-10
+    },
+    {
+      "file": "reports/player-impact-v42/choice-fits/2022-23-sigma0-fold2.json",
+      "branch": "paintGivenTwo",
+      "nll": 9843.78834778854,
+      "maxGradient": 1.3985754776513204e-09
+    },
+    {
+      "file": "reports/player-impact-v42/choice-fits/2022-23-sigma0-fold3.json",
+      "branch": "three",
+      "nll": 23105.834889967748,
+      "maxGradient": 1.6133313351929246e-08
+    },
+    {
+      "file": "reports/player-impact-v42/choice-fits/2022-23-sigma0-fold3.json",
+      "branch": "paintGivenTwo",
+      "nll": 11486.553623722855,
+      "maxGradient": 2.3638619950361317e-09
+    },
+    {
+      "file": "reports/player-impact-v42/choice-fits/2022-23-sigma0-fold4.json",
+      "branch": "three",
+      "nll": 21802.785430527743,
+      "maxGradient": 2.2658346865434e-09
+    },
+    {
+      "file": "reports/player-impact-v42/choice-fits/2022-23-sigma0-fold4.json",
+      "branch": "paintGivenTwo",
+      "nll": 11139.778597671433,
+      "maxGradient": 4.3519321479834616e-10
+    },
+    {
+      "file": "reports/player-impact-v42/choice-fits/2022-23-sigma0.05-fold0.json",
+      "branch": "three",
+      "nll": 22812.921790486886,
+      "maxGradient": 3.1734617156331524e-09
+    },
+    {
+      "file": "reports/player-impact-v42/choice-fits/2022-23-sigma0.05-fold0.json",
+      "branch": "paintGivenTwo",
+      "nll": 11720.24253442084,
+      "maxGradient": 2.464275894453749e-09
+    },
+    {
+      "file": "reports/player-impact-v42/choice-fits/2022-23-sigma0.05-fold1.json",
+      "branch": "three",
+      "nll": 22839.467941595456,
+      "maxGradient": 3.6027815453198997e-09
+    },
+    {
+      "file": "reports/player-impact-v42/choice-fits/2022-23-sigma0.05-fold1.json",
+      "branch": "paintGivenTwo",
+      "nll": 11727.487385039278,
+      "maxGradient": 9.570754855303676e-09
+    },
+    {
+      "file": "reports/player-impact-v42/choice-fits/2022-23-sigma0.05-fold2.json",
+      "branch": "three",
+      "nll": 19065.52756825886,
+      "maxGradient": 7.051539796520956e-09
+    },
+    {
+      "file": "reports/player-impact-v42/choice-fits/2022-23-sigma0.05-fold2.json",
+      "branch": "paintGivenTwo",
+      "nll": 9833.42424011802,
+      "maxGradient": 3.251273028581636e-09
+    },
+    {
+      "file": "reports/player-impact-v42/choice-fits/2022-23-sigma0.05-fold3.json",
+      "branch": "three",
+      "nll": 23055.68666008961,
+      "maxGradient": 1.6268430158561387e-08
+    },
+    {
+      "file": "reports/player-impact-v42/choice-fits/2022-23-sigma0.05-fold3.json",
+      "branch": "paintGivenTwo",
+      "nll": 11481.235106072108,
+      "maxGradient": 3.844718321488472e-09
+    },
+    {
+      "file": "reports/player-impact-v42/choice-fits/2022-23-sigma0.05-fold4.json",
+      "branch": "three",
+      "nll": 21778.749842701705,
+      "maxGradient": 1.1740192706888308e-09
+    },
+    {
+      "file": "reports/player-impact-v42/choice-fits/2022-23-sigma0.05-fold4.json",
+      "branch": "paintGivenTwo",
+      "nll": 11124.108841158602,
+      "maxGradient": 1.1454745485472984e-09
+    },
+    {
+      "file": "reports/player-impact-v42/choice-fits/2022-23-sigma0.05-foldNone.json",
+      "branch": "three",
+      "nll": 108680.40236560695,
+      "maxGradient": 3.838465545413783e-09
+    },
+    {
+      "file": "reports/player-impact-v42/choice-fits/2022-23-sigma0.05-foldNone.json",
+      "branch": "paintGivenTwo",
+      "nll": 55069.14242320031,
+      "maxGradient": 1.2344344213488512e-08
+    },
+    {
+      "file": "reports/player-impact-v42/choice-fits/2022-23-sigma0.1-fold0.json",
+      "branch": "three",
+      "nll": 22817.23602931592,
+      "maxGradient": 2.383586661380832e-09
+    },
+    {
+      "file": "reports/player-impact-v42/choice-fits/2022-23-sigma0.1-fold0.json",
+      "branch": "paintGivenTwo",
+      "nll": 11721.856217713394,
+      "maxGradient": 1.0796270544233266e-09
+    },
+    {
+      "file": "reports/player-impact-v42/choice-fits/2022-23-sigma0.1-fold1.json",
+      "branch": "three",
+      "nll": 22852.527940148364,
+      "maxGradient": 5.491566840154505e-09
+    },
+    {
+      "file": "reports/player-impact-v42/choice-fits/2022-23-sigma0.1-fold1.json",
+      "branch": "paintGivenTwo",
+      "nll": 11732.12328127259,
+      "maxGradient": 1.1768293006753083e-09
+    },
+    {
+      "file": "reports/player-impact-v42/choice-fits/2022-23-sigma0.1-fold2.json",
+      "branch": "three",
+      "nll": 19073.327160125235,
+      "maxGradient": 2.589593373070187e-09
+    },
+    {
+      "file": "reports/player-impact-v42/choice-fits/2022-23-sigma0.1-fold2.json",
+      "branch": "paintGivenTwo",
+      "nll": 9840.220398780208,
+      "maxGradient": 8.810388862912077e-09
+    },
+    {
+      "file": "reports/player-impact-v42/choice-fits/2022-23-sigma0.1-fold3.json",
+      "branch": "three",
+      "nll": 23062.38796669437,
+      "maxGradient": 5.974740702185954e-10
+    },
+    {
+      "file": "reports/player-impact-v42/choice-fits/2022-23-sigma0.1-fold3.json",
+      "branch": "paintGivenTwo",
+      "nll": 11491.777691554104,
+      "maxGradient": 1.8906973764387658e-09
+    },
+    {
+      "file": "reports/player-impact-v42/choice-fits/2022-23-sigma0.1-fold4.json",
+      "branch": "three",
+      "nll": 21788.980473046704,
+      "maxGradient": 5.835190108882671e-09
+    },
+    {
+      "file": "reports/player-impact-v42/choice-fits/2022-23-sigma0.1-fold4.json",
+      "branch": "paintGivenTwo",
+      "nll": 11125.748248387194,
+      "maxGradient": 2.6667805741453776e-09
+    },
+    {
+      "file": "reports/player-impact-v42/choice-fits/2022-23-sigma0.2-fold0.json",
+      "branch": "three",
+      "nll": 22833.048006269048,
+      "maxGradient": 1.3028962908556707e-09
+    },
+    {
+      "file": "reports/player-impact-v42/choice-fits/2022-23-sigma0.2-fold0.json",
+      "branch": "paintGivenTwo",
+      "nll": 11739.363736754558,
+      "maxGradient": 4.122284735785797e-10
+    },
+    {
+      "file": "reports/player-impact-v42/choice-fits/2022-23-sigma0.2-fold1.json",
+      "branch": "three",
+      "nll": 22873.176546859344,
+      "maxGradient": 3.2470595101585786e-09
+    },
+    {
+      "file": "reports/player-impact-v42/choice-fits/2022-23-sigma0.2-fold1.json",
+      "branch": "paintGivenTwo",
+      "nll": 11747.239679397386,
+      "maxGradient": 1.1040184877408876e-09
+    },
+    {
+      "file": "reports/player-impact-v42/choice-fits/2022-23-sigma0.2-fold2.json",
+      "branch": "three",
+      "nll": 19089.277654200963,
+      "maxGradient": 2.5553724469773442e-08
+    },
+    {
+      "file": "reports/player-impact-v42/choice-fits/2022-23-sigma0.2-fold2.json",
+      "branch": "paintGivenTwo",
+      "nll": 9859.482727534098,
+      "maxGradient": 8.623317171441158e-09
+    },
+    {
+      "file": "reports/player-impact-v42/choice-fits/2022-23-sigma0.2-fold3.json",
+      "branch": "three",
+      "nll": 23079.56069681819,
+      "maxGradient": 1.1897341778421833e-08
+    },
+    {
+      "file": "reports/player-impact-v42/choice-fits/2022-23-sigma0.2-fold3.json",
+      "branch": "paintGivenTwo",
+      "nll": 11516.185978459758,
+      "maxGradient": 4.788319074577885e-09
+    },
+    {
+      "file": "reports/player-impact-v42/choice-fits/2022-23-sigma0.2-fold4.json",
+      "branch": "three",
+      "nll": 21804.173550438296,
+      "maxGradient": 3.490986388854367e-10
+    },
+    {
+      "file": "reports/player-impact-v42/choice-fits/2022-23-sigma0.2-fold4.json",
+      "branch": "paintGivenTwo",
+      "nll": 11142.70788192844,
+      "maxGradient": 1.044685726814265e-09
+    },
+    {
+      "file": "reports/player-impact-v42/choice-fits/2023-24-sigma0-fold0.json",
+      "branch": "three",
+      "nll": 21202.755012087844,
+      "maxGradient": 3.1795366339792963e-09
+    },
+    {
+      "file": "reports/player-impact-v42/choice-fits/2023-24-sigma0-fold0.json",
+      "branch": "paintGivenTwo",
+      "nll": 10412.498032758122,
+      "maxGradient": 9.890328556139139e-10
+    },
+    {
+      "file": "reports/player-impact-v42/choice-fits/2023-24-sigma0-fold1.json",
+      "branch": "three",
+      "nll": 24444.061232077976,
+      "maxGradient": 8.440601106940449e-09
+    },
+    {
+      "file": "reports/player-impact-v42/choice-fits/2023-24-sigma0-fold1.json",
+      "branch": "paintGivenTwo",
+      "nll": 11954.691882719264,
+      "maxGradient": 1.6772503386164317e-09
+    },
+    {
+      "file": "reports/player-impact-v42/choice-fits/2023-24-sigma0-fold2.json",
+      "branch": "three",
+      "nll": 20313.512353662172,
+      "maxGradient": 5.127972713125928e-09
+    },
+    {
+      "file": "reports/player-impact-v42/choice-fits/2023-24-sigma0-fold2.json",
+      "branch": "paintGivenTwo",
+      "nll": 10129.620808222997,
+      "maxGradient": 1.865373633336276e-09
+    },
+    {
+      "file": "reports/player-impact-v42/choice-fits/2023-24-sigma0-fold3.json",
+      "branch": "three",
+      "nll": 21979.668032968388,
+      "maxGradient": 2.8552094022415986e-09
+    },
+    {
+      "file": "reports/player-impact-v42/choice-fits/2023-24-sigma0-fold3.json",
+      "branch": "paintGivenTwo",
+      "nll": 10579.058886771069,
+      "maxGradient": 1.3052954273007344e-09
+    },
+    {
+      "file": "reports/player-impact-v42/choice-fits/2023-24-sigma0-fold4.json",
+      "branch": "three",
+      "nll": 21497.828558601774,
+      "maxGradient": 7.193449391706963e-09
+    },
+    {
+      "file": "reports/player-impact-v42/choice-fits/2023-24-sigma0-fold4.json",
+      "branch": "paintGivenTwo",
+      "nll": 10425.371571865346,
+      "maxGradient": 2.141234745067777e-09
+    },
+    {
+      "file": "reports/player-impact-v42/choice-fits/2023-24-sigma0.05-fold0.json",
+      "branch": "three",
+      "nll": 21148.844927816164,
+      "maxGradient": 1.4475460829999065e-09
+    },
+    {
+      "file": "reports/player-impact-v42/choice-fits/2023-24-sigma0.05-fold0.json",
+      "branch": "paintGivenTwo",
+      "nll": 10402.024306757814,
+      "maxGradient": 1.9540067341949907e-09
+    },
+    {
+      "file": "reports/player-impact-v42/choice-fits/2023-24-sigma0.05-fold1.json",
+      "branch": "three",
+      "nll": 24398.342840066318,
+      "maxGradient": 7.241858945850055e-09
+    },
+    {
+      "file": "reports/player-impact-v42/choice-fits/2023-24-sigma0.05-fold1.json",
+      "branch": "paintGivenTwo",
+      "nll": 11943.37538566167,
+      "maxGradient": 1.0788880899781361e-08
+    },
+    {
+      "file": "reports/player-impact-v42/choice-fits/2023-24-sigma0.05-fold2.json",
+      "branch": "three",
+      "nll": 20275.850758570043,
+      "maxGradient": 3.5115448326905607e-09
+    },
+    {
+      "file": "reports/player-impact-v42/choice-fits/2023-24-sigma0.05-fold2.json",
+      "branch": "paintGivenTwo",
+      "nll": 10123.313153075074,
+      "maxGradient": 2.4359536610063515e-09
+    },
+    {
+      "file": "reports/player-impact-v42/choice-fits/2023-24-sigma0.05-fold3.json",
+      "branch": "three",
+      "nll": 21938.10980366951,
+      "maxGradient": 6.113282324804459e-09
+    },
+    {
+      "file": "reports/player-impact-v42/choice-fits/2023-24-sigma0.05-fold3.json",
+      "branch": "paintGivenTwo",
+      "nll": 10574.465648248552,
+      "maxGradient": 1.055101961355831e-08
+    },
+    {
+      "file": "reports/player-impact-v42/choice-fits/2023-24-sigma0.05-fold4.json",
+      "branch": "three",
+      "nll": 21442.394997641568,
+      "maxGradient": 4.9686227354683865e-09
+    },
+    {
+      "file": "reports/player-impact-v42/choice-fits/2023-24-sigma0.05-fold4.json",
+      "branch": "paintGivenTwo",
+      "nll": 10423.501145303919,
+      "maxGradient": 2.1236373215494098e-09
+    },
+    {
+      "file": "reports/player-impact-v42/choice-fits/2023-24-sigma0.05-foldNone.json",
+      "branch": "three",
+      "nll": 108368.68157529472,
+      "maxGradient": 1.10982417700356e-08
+    },
+    {
+      "file": "reports/player-impact-v42/choice-fits/2023-24-sigma0.05-foldNone.json",
+      "branch": "paintGivenTwo",
+      "nll": 52568.65365422005,
+      "maxGradient": 6.3314189446828095e-09
+    },
+    {
+      "file": "reports/player-impact-v42/choice-fits/2023-24-sigma0.1-fold0.json",
+      "branch": "three",
+      "nll": 21153.475668402487,
+      "maxGradient": 1.136498894993565e-09
+    },
+    {
+      "file": "reports/player-impact-v42/choice-fits/2023-24-sigma0.1-fold0.json",
+      "branch": "paintGivenTwo",
+      "nll": 10404.909452552143,
+      "maxGradient": 3.987224772572517e-09
+    },
+    {
+      "file": "reports/player-impact-v42/choice-fits/2023-24-sigma0.1-fold1.json",
+      "branch": "three",
+      "nll": 24409.354394782276,
+      "maxGradient": 4.5365739775871106e-09
+    },
+    {
+      "file": "reports/player-impact-v42/choice-fits/2023-24-sigma0.1-fold1.json",
+      "branch": "paintGivenTwo",
+      "nll": 11948.880978799985,
+      "maxGradient": 9.659402167017106e-10
+    },
+    {
+      "file": "reports/player-impact-v42/choice-fits/2023-24-sigma0.1-fold2.json",
+      "branch": "three",
+      "nll": 20284.349286184606,
+      "maxGradient": 5.005759362575191e-09
+    },
+    {
+      "file": "reports/player-impact-v42/choice-fits/2023-24-sigma0.1-fold2.json",
+      "branch": "paintGivenTwo",
+      "nll": 10124.338976317293,
+      "maxGradient": 2.0617818563550827e-09
+    },
+    {
+      "file": "reports/player-impact-v42/choice-fits/2023-24-sigma0.1-fold3.json",
+      "branch": "three",
+      "nll": 21954.594506524045,
+      "maxGradient": 4.108628104404488e-09
+    },
+    {
+      "file": "reports/player-impact-v42/choice-fits/2023-24-sigma0.1-fold3.json",
+      "branch": "paintGivenTwo",
+      "nll": 10576.708613083605,
+      "maxGradient": 4.2399221911182394e-09
+    },
+    {
+      "file": "reports/player-impact-v42/choice-fits/2023-24-sigma0.1-fold4.json",
+      "branch": "three",
+      "nll": 21446.60431034277,
+      "maxGradient": 2.7110900191473775e-09
+    },
+    {
+      "file": "reports/player-impact-v42/choice-fits/2023-24-sigma0.1-fold4.json",
+      "branch": "paintGivenTwo",
+      "nll": 10430.650720702426,
+      "maxGradient": 5.637019739879179e-09
+    },
+    {
+      "file": "reports/player-impact-v42/choice-fits/2023-24-sigma0.2-fold0.json",
+      "branch": "three",
+      "nll": 21168.350549674047,
+      "maxGradient": 4.083541949029268e-09
+    },
+    {
+      "file": "reports/player-impact-v42/choice-fits/2023-24-sigma0.2-fold0.json",
+      "branch": "paintGivenTwo",
+      "nll": 10420.613507661295,
+      "maxGradient": 5.504134037437325e-09
+    },
+    {
+      "file": "reports/player-impact-v42/choice-fits/2023-24-sigma0.2-fold1.json",
+      "branch": "three",
+      "nll": 24431.592373255186,
+      "maxGradient": 2.7564794891077327e-09
+    },
+    {
+      "file": "reports/player-impact-v42/choice-fits/2023-24-sigma0.2-fold1.json",
+      "branch": "paintGivenTwo",
+      "nll": 11970.603362126583,
+      "maxGradient": 5.62442892260151e-09
+    },
+    {
+      "file": "reports/player-impact-v42/choice-fits/2023-24-sigma0.2-fold2.json",
+      "branch": "three",
+      "nll": 20298.785550747503,
+      "maxGradient": 6.367252280981006e-10
+    },
+    {
+      "file": "reports/player-impact-v42/choice-fits/2023-24-sigma0.2-fold2.json",
+      "branch": "paintGivenTwo",
+      "nll": 10134.781605912176,
+      "maxGradient": 1.7594868895187687e-09
+    },
+    {
+      "file": "reports/player-impact-v42/choice-fits/2023-24-sigma0.2-fold3.json",
+      "branch": "three",
+      "nll": 21982.82329432852,
+      "maxGradient": 2.7378064260119572e-09
+    },
+    {
+      "file": "reports/player-impact-v42/choice-fits/2023-24-sigma0.2-fold3.json",
+      "branch": "paintGivenTwo",
+      "nll": 10585.477827938344,
+      "maxGradient": 1.185242126666708e-09
+    },
+    {
+      "file": "reports/player-impact-v42/choice-fits/2023-24-sigma0.2-fold4.json",
+      "branch": "three",
+      "nll": 21460.932525275122,
+      "maxGradient": 2.1527786220332246e-09
+    },
+    {
+      "file": "reports/player-impact-v42/choice-fits/2023-24-sigma0.2-fold4.json",
+      "branch": "paintGivenTwo",
+      "nll": 10446.551468703594,
+      "maxGradient": 9.183864335682301e-09
+    },
+    {
+      "file": "reports/player-impact-v42/choice-fits/2024-25-sigma0-fold0.json",
+      "branch": "three",
+      "nll": 21208.746730595107,
+      "maxGradient": 2.352825628770816e-09
+    },
+    {
+      "file": "reports/player-impact-v42/choice-fits/2024-25-sigma0-fold0.json",
+      "branch": "paintGivenTwo",
+      "nll": 9049.338960173603,
+      "maxGradient": 6.628937399000279e-10
+    },
+    {
+      "file": "reports/player-impact-v42/choice-fits/2024-25-sigma0-fold1.json",
+      "branch": "three",
+      "nll": 22102.28505191015,
+      "maxGradient": 5.582535322901094e-09
+    },
+    {
+      "file": "reports/player-impact-v42/choice-fits/2024-25-sigma0-fold1.json",
+      "branch": "paintGivenTwo",
+      "nll": 9456.938261920783,
+      "maxGradient": 1.1550831402473705e-09
+    },
+    {
+      "file": "reports/player-impact-v42/choice-fits/2024-25-sigma0-fold2.json",
+      "branch": "three",
+      "nll": 23087.791291508525,
+      "maxGradient": 4.671676379075507e-09
+    },
+    {
+      "file": "reports/player-impact-v42/choice-fits/2024-25-sigma0-fold2.json",
+      "branch": "paintGivenTwo",
+      "nll": 9964.897844924242,
+      "maxGradient": 1.6967689475677616e-09
+    },
+    {
+      "file": "reports/player-impact-v42/choice-fits/2024-25-sigma0-fold3.json",
+      "branch": "three",
+      "nll": 23995.179551594556,
+      "maxGradient": 1.986819597732392e-09
+    },
+    {
+      "file": "reports/player-impact-v42/choice-fits/2024-25-sigma0-fold3.json",
+      "branch": "paintGivenTwo",
+      "nll": 10286.968033496274,
+      "maxGradient": 2.1469048760991427e-09
+    },
+    {
+      "file": "reports/player-impact-v42/choice-fits/2024-25-sigma0-fold4.json",
+      "branch": "three",
+      "nll": 24264.129278323475,
+      "maxGradient": 1.8669014112404625e-09
+    },
+    {
+      "file": "reports/player-impact-v42/choice-fits/2024-25-sigma0-fold4.json",
+      "branch": "paintGivenTwo",
+      "nll": 10349.507587506556,
+      "maxGradient": 1.841918617628835e-09
+    },
+    {
+      "file": "reports/player-impact-v42/choice-fits/2024-25-sigma0.05-fold0.json",
+      "branch": "three",
+      "nll": 21172.65391484928,
+      "maxGradient": 4.939937986447873e-09
+    },
+    {
+      "file": "reports/player-impact-v42/choice-fits/2024-25-sigma0.05-fold0.json",
+      "branch": "paintGivenTwo",
+      "nll": 9044.125694622304,
+      "maxGradient": 1.5228991401272651e-09
+    },
+    {
+      "file": "reports/player-impact-v42/choice-fits/2024-25-sigma0.05-fold1.json",
+      "branch": "three",
+      "nll": 22071.653810941083,
+      "maxGradient": 3.018556071765488e-09
+    },
+    {
+      "file": "reports/player-impact-v42/choice-fits/2024-25-sigma0.05-fold1.json",
+      "branch": "paintGivenTwo",
+      "nll": 9449.38355948596,
+      "maxGradient": 1.0363581992578474e-08
+    },
+    {
+      "file": "reports/player-impact-v42/choice-fits/2024-25-sigma0.05-fold2.json",
+      "branch": "three",
+      "nll": 23041.135364547918,
+      "maxGradient": 4.245634954713751e-09
+    },
+    {
+      "file": "reports/player-impact-v42/choice-fits/2024-25-sigma0.05-fold2.json",
+      "branch": "paintGivenTwo",
+      "nll": 9952.82702987345,
+      "maxGradient": 1.3669485099399026e-08
+    },
+    {
+      "file": "reports/player-impact-v42/choice-fits/2024-25-sigma0.05-fold3.json",
+      "branch": "three",
+      "nll": 23976.984420031542,
+      "maxGradient": 5.075378339824965e-09
+    },
+    {
+      "file": "reports/player-impact-v42/choice-fits/2024-25-sigma0.05-fold3.json",
+      "branch": "paintGivenTwo",
+      "nll": 10275.496021675259,
+      "maxGradient": 2.2766926122130826e-09
+    },
+    {
+      "file": "reports/player-impact-v42/choice-fits/2024-25-sigma0.05-fold4.json",
+      "branch": "three",
+      "nll": 24218.562754786377,
+      "maxGradient": 1.0266210437315237e-08
+    },
+    {
+      "file": "reports/player-impact-v42/choice-fits/2024-25-sigma0.05-fold4.json",
+      "branch": "paintGivenTwo",
+      "nll": 10340.740907276646,
+      "maxGradient": 2.7616238185146358e-09
+    },
+    {
+      "file": "reports/player-impact-v42/choice-fits/2024-25-sigma0.05-foldNone.json",
+      "branch": "three",
+      "nll": 113608.58815972431,
+      "maxGradient": 1.301482260851472e-08
+    },
+    {
+      "file": "reports/player-impact-v42/choice-fits/2024-25-sigma0.05-foldNone.json",
+      "branch": "paintGivenTwo",
+      "nll": 48182.382755097016,
+      "maxGradient": 6.5780980662566435e-09
+    },
+    {
+      "file": "reports/player-impact-v42/choice-fits/2024-25-sigma0.1-fold0.json",
+      "branch": "three",
+      "nll": 21178.487237160385,
+      "maxGradient": 4.207180381854414e-09
+    },
+    {
+      "file": "reports/player-impact-v42/choice-fits/2024-25-sigma0.1-fold0.json",
+      "branch": "paintGivenTwo",
+      "nll": 9052.656323335079,
+      "maxGradient": 8.44735126293017e-09
+    },
+    {
+      "file": "reports/player-impact-v42/choice-fits/2024-25-sigma0.1-fold1.json",
+      "branch": "three",
+      "nll": 22077.311339522435,
+      "maxGradient": 2.4448354452033527e-09
+    },
+    {
+      "file": "reports/player-impact-v42/choice-fits/2024-25-sigma0.1-fold1.json",
+      "branch": "paintGivenTwo",
+      "nll": 9458.28644972278,
+      "maxGradient": 1.5647216855541046e-09
+    },
+    {
+      "file": "reports/player-impact-v42/choice-fits/2024-25-sigma0.1-fold2.json",
+      "branch": "three",
+      "nll": 23044.271271576035,
+      "maxGradient": 2.1527920557318225e-09
+    },
+    {
+      "file": "reports/player-impact-v42/choice-fits/2024-25-sigma0.1-fold2.json",
+      "branch": "paintGivenTwo",
+      "nll": 9956.162548467617,
+      "maxGradient": 4.619131743766047e-09
+    },
+    {
+      "file": "reports/player-impact-v42/choice-fits/2024-25-sigma0.1-fold3.json",
+      "branch": "three",
+      "nll": 23993.373852831224,
+      "maxGradient": 2.4392079467361327e-09
+    },
+    {
+      "file": "reports/player-impact-v42/choice-fits/2024-25-sigma0.1-fold3.json",
+      "branch": "paintGivenTwo",
+      "nll": 10277.991912360498,
+      "maxGradient": 7.0742700586379215e-09
+    },
+    {
+      "file": "reports/player-impact-v42/choice-fits/2024-25-sigma0.1-fold4.json",
+      "branch": "three",
+      "nll": 24221.957492243127,
+      "maxGradient": 3.5030893741350155e-09
+    },
+    {
+      "file": "reports/player-impact-v42/choice-fits/2024-25-sigma0.1-fold4.json",
+      "branch": "paintGivenTwo",
+      "nll": 10347.436109463488,
+      "maxGradient": 5.887649479063839e-09
+    },
+    {
+      "file": "reports/player-impact-v42/choice-fits/2024-25-sigma0.2-fold0.json",
+      "branch": "three",
+      "nll": 21193.880969874026,
+      "maxGradient": 1.7782610939320875e-09
+    },
+    {
+      "file": "reports/player-impact-v42/choice-fits/2024-25-sigma0.2-fold0.json",
+      "branch": "paintGivenTwo",
+      "nll": 9072.823240092956,
+      "maxGradient": 1.0319780585632543e-09
+    },
+    {
+      "file": "reports/player-impact-v42/choice-fits/2024-25-sigma0.2-fold1.json",
+      "branch": "three",
+      "nll": 22091.653122040905,
+      "maxGradient": 1.188348619507451e-08
+    },
+    {
+      "file": "reports/player-impact-v42/choice-fits/2024-25-sigma0.2-fold1.json",
+      "branch": "paintGivenTwo",
+      "nll": 9481.822846169978,
+      "maxGradient": 8.47830250449988e-09
+    },
+    {
+      "file": "reports/player-impact-v42/choice-fits/2024-25-sigma0.2-fold2.json",
+      "branch": "three",
+      "nll": 23062.922350683424,
+      "maxGradient": 2.2889992123964475e-09
+    },
+    {
+      "file": "reports/player-impact-v42/choice-fits/2024-25-sigma0.2-fold2.json",
+      "branch": "paintGivenTwo",
+      "nll": 9971.488102213789,
+      "maxGradient": 3.820439076207549e-09
+    },
+    {
+      "file": "reports/player-impact-v42/choice-fits/2024-25-sigma0.2-fold3.json",
+      "branch": "three",
+      "nll": 24017.66101298572,
+      "maxGradient": 7.87346721153881e-09
+    },
+    {
+      "file": "reports/player-impact-v42/choice-fits/2024-25-sigma0.2-fold3.json",
+      "branch": "paintGivenTwo",
+      "nll": 10294.674267806648,
+      "maxGradient": 1.2890524203612586e-09
+    },
+    {
+      "file": "reports/player-impact-v42/choice-fits/2024-25-sigma0.2-fold4.json",
+      "branch": "three",
+      "nll": 24238.7960755355,
+      "maxGradient": 1.728835741232615e-09
+    },
+    {
+      "file": "reports/player-impact-v42/choice-fits/2024-25-sigma0.2-fold4.json",
+      "branch": "paintGivenTwo",
+      "nll": 10369.850222870886,
+      "maxGradient": 5.332111641109805e-09
+    },
+    {
+      "file": "reports/player-impact-v42/choice-fits/2025-26-sigma0-fold0.json",
+      "branch": "three",
+      "nll": 27185.31865423004,
+      "maxGradient": 2.1903844071857748e-08
+    },
+    {
+      "file": "reports/player-impact-v42/choice-fits/2025-26-sigma0-fold0.json",
+      "branch": "paintGivenTwo",
+      "nll": 12094.812284372427,
+      "maxGradient": 8.853078270476544e-10
+    },
+    {
+      "file": "reports/player-impact-v42/choice-fits/2025-26-sigma0-fold1.json",
+      "branch": "three",
+      "nll": 23980.880025274833,
+      "maxGradient": 4.732555680675432e-09
+    },
+    {
+      "file": "reports/player-impact-v42/choice-fits/2025-26-sigma0-fold1.json",
+      "branch": "paintGivenTwo",
+      "nll": 10464.18305266188,
+      "maxGradient": 1.8559518366600969e-09
+    },
+    {
+      "file": "reports/player-impact-v42/choice-fits/2025-26-sigma0-fold2.json",
+      "branch": "three",
+      "nll": 24979.54043389509,
+      "maxGradient": 2.142712673958158e-09
+    },
+    {
+      "file": "reports/player-impact-v42/choice-fits/2025-26-sigma0-fold2.json",
+      "branch": "paintGivenTwo",
+      "nll": 10934.552011790181,
+      "maxGradient": 4.6680099785589846e-09
+    },
+    {
+      "file": "reports/player-impact-v42/choice-fits/2025-26-sigma0-fold3.json",
+      "branch": "three",
+      "nll": 22921.227647397613,
+      "maxGradient": 4.376140283479657e-09
+    },
+    {
+      "file": "reports/player-impact-v42/choice-fits/2025-26-sigma0-fold3.json",
+      "branch": "paintGivenTwo",
+      "nll": 10033.231039851857,
+      "maxGradient": 2.0254162791388808e-09
+    },
+    {
+      "file": "reports/player-impact-v42/choice-fits/2025-26-sigma0-fold4.json",
+      "branch": "three",
+      "nll": 25058.15564540271,
+      "maxGradient": 1.6487433640577365e-09
+    },
+    {
+      "file": "reports/player-impact-v42/choice-fits/2025-26-sigma0-fold4.json",
+      "branch": "paintGivenTwo",
+      "nll": 11054.854536194925,
+      "maxGradient": 1.3383996133597975e-09
+    },
+    {
+      "file": "reports/player-impact-v42/choice-fits/2025-26-sigma0.05-fold0.json",
+      "branch": "three",
+      "nll": 27115.44779062328,
+      "maxGradient": 8.300389708892908e-09
+    },
+    {
+      "file": "reports/player-impact-v42/choice-fits/2025-26-sigma0.05-fold0.json",
+      "branch": "paintGivenTwo",
+      "nll": 12064.104424425746,
+      "maxGradient": 5.659558155457489e-09
+    },
+    {
+      "file": "reports/player-impact-v42/choice-fits/2025-26-sigma0.05-fold1.json",
+      "branch": "three",
+      "nll": 23934.420619718578,
+      "maxGradient": 3.749704546862631e-09
+    },
+    {
+      "file": "reports/player-impact-v42/choice-fits/2025-26-sigma0.05-fold1.json",
+      "branch": "paintGivenTwo",
+      "nll": 10451.481033380347,
+      "maxGradient": 6.7714580609390396e-09
+    },
+    {
+      "file": "reports/player-impact-v42/choice-fits/2025-26-sigma0.05-fold2.json",
+      "branch": "three",
+      "nll": 24921.572594094163,
+      "maxGradient": 3.1363640573545126e-09
+    },
+    {
+      "file": "reports/player-impact-v42/choice-fits/2025-26-sigma0.05-fold2.json",
+      "branch": "paintGivenTwo",
+      "nll": 10905.686064338548,
+      "maxGradient": 8.71344241204497e-09
+    },
+    {
+      "file": "reports/player-impact-v42/choice-fits/2025-26-sigma0.05-fold3.json",
+      "branch": "three",
+      "nll": 22866.713263749487,
+      "maxGradient": 9.503168030278175e-09
+    },
+    {
+      "file": "reports/player-impact-v42/choice-fits/2025-26-sigma0.05-fold3.json",
+      "branch": "paintGivenTwo",
+      "nll": 10023.7152849304,
+      "maxGradient": 1.2880150279670488e-09
+    },
+    {
+      "file": "reports/player-impact-v42/choice-fits/2025-26-sigma0.05-fold4.json",
+      "branch": "three",
+      "nll": 25012.592091163853,
+      "maxGradient": 2.5036682171908353e-09
+    },
+    {
+      "file": "reports/player-impact-v42/choice-fits/2025-26-sigma0.05-fold4.json",
+      "branch": "paintGivenTwo",
+      "nll": 11038.133146779397,
+      "maxGradient": 6.773866800813266e-09
+    },
+    {
+      "file": "reports/player-impact-v42/choice-fits/2025-26-sigma0.05-foldNone.json",
+      "branch": "three",
+      "nll": 122911.06520673807,
+      "maxGradient": 7.913259103542458e-09
+    },
+    {
+      "file": "reports/player-impact-v42/choice-fits/2025-26-sigma0.05-foldNone.json",
+      "branch": "paintGivenTwo",
+      "nll": 53590.59118462136,
+      "maxGradient": 2.458421022311086e-09
+    }
+  ],
+  "targetHeldoutDiagnosticNotSelection": [
+    {
+      "branch": "three",
+      "scores": [
+        {
+          "sigma": 0,
+          "nll": 124125.12240620029,
+          "trials": 203079
+        },
+        {
+          "sigma": 0.05,
+          "nll": 123850.74635934936,
+          "trials": 203079
+        }
+      ]
+    },
+    {
+      "branch": "paintGivenTwo",
+      "scores": [
+        {
+          "sigma": 0,
+          "nll": 54581.63292487127,
+          "trials": 115272
+        },
+        {
+          "sigma": 0.05,
+          "nll": 54483.11995385444,
+          "trials": 115272
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "games": 48,
+  "comparisons": 24,
+  "allGameAndPersonalCountersExactlyV30": true,
+  "scope": "Controlled zero source-self anchors make receiver capacity equal to original terminal capacity; old and new transport are identical with passing active. Not unchanged behavior for actual inputs or a missing-data fallback.",
+  "hashes": {
+    "reports/player-impact-v34/model.mjs": "5ae06ef728e5a3fd4c305fc8c28bfa771d4bd2e10e79c316ff69ee2d368bc871",
+    "reports/player-impact-v34/engine.mjs": "c21d5b480845c23cb4007df978424d0792d169814a103e675f6dbe44f6100e50",
+    "reports/player-impact-v34/verify-equivalence.mjs": "e29cbbd0ee5e82055dd97490258e231ed03cb67289423bc01a6b9e115eeb5857"
+  }
+}

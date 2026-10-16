@@ -1,0 +1,10 @@
+{
+  "version": "defense-transfer-diagnosis-43",
+  "priority": "Defense first, per explicit user authorization on 2026-10-16. Temporary team scoring regression is permitted for research; team and individual scoring errors remain reported. This does not authorize unverified adoption.",
+  "baseline": "Frozen v42 defender-dependent recorded shot selection and v41 make defense",
+  "diagnostic": "Separate raw fresh-FGA on/off, fitted source-conditional make expectations, whole-game heldout expectations, runtime transfer and rotation effects before changing defense strength. No player-name adjustment, rank target, or simulation on/off residual fitting.",
+  "seasons": ["2022-23", "2023-24", "2024-25", "2025-26"],
+  "seeds": [20261012, 20261013, 20261014],
+  "makeDefenseCandidates": {"sigma": [0, 0.025, 0.05, 0.1], "family": ["Gaussian", "convex pseudo-Huber with delta=sigma"], "selection": "Per-zone minimum whole-game five-fold heldout NLL on older three seasons, target excluded. Sigma zero has only Gaussian family."},
+  "acceptance": "Report broad player defensive accuracy, shot selection and make rates, individual box scores and team errors. Temporary team PPG regression alone no longer rejects a research candidate. Preserve prior frozen protocols and outputs."
+}

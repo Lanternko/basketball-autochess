@@ -1,0 +1,88 @@
+{
+  "name": "nba-v3-cards-signals-off-tenth",
+  "base": "frozen calendar v3 effective cards/constants",
+  "flags": {
+    "rimSignal": false,
+    "reboundSignal": false,
+    "liveSignal": false,
+    "zoneSignal": false,
+    "foulSignal": false
+  },
+  "runtimeDelete": "defenseSignals",
+  "originalsUnchanged": true,
+  "protocolHash": "3bc36c24c3f6888e17aac27f341fb484f4c59410367325977f94588126e16329",
+  "manifests": [
+    {
+      "season": "2022-23",
+      "k": 25,
+      "manifest": "reports/defense-seventh/2022-23-calendar-25-v3-seeds.json",
+      "sha256": "5be08d0d705b39a6ac86c9dd1398dda31b6317d3c86c87f39f5418d00e3461bf"
+    },
+    {
+      "season": "2022-23",
+      "k": 41,
+      "manifest": "reports/defense-seventh/2022-23-calendar-41-v3-seeds.json",
+      "sha256": "e533f18224b6a03b6177fd04bbddd35b09f4df483819db5784183128a0c5eacf"
+    },
+    {
+      "season": "2022-23",
+      "k": 55,
+      "manifest": "reports/defense-seventh/2022-23-calendar-55-v3-seeds.json",
+      "sha256": "02251b1a431995fceaab0ec2e3a33f5bff2c6dbcf48996c6a57fa0f0dff8cf12"
+    },
+    {
+      "season": "2023-24",
+      "k": 25,
+      "manifest": "reports/defense-seventh/2023-24-calendar-25-v3-seeds.json",
+      "sha256": "301df8de9dda99f88a10672c9c641c1a46c6c9c04d2b941c664c982dd13b0f17"
+    },
+    {
+      "season": "2023-24",
+      "k": 41,
+      "manifest": "reports/defense-seventh/2023-24-calendar-41-v3-seeds.json",
+      "sha256": "59eddc332d6f725447f1a21da5edaaa182d0362744a06a096f4459ec430ef85d"
+    },
+    {
+      "season": "2023-24",
+      "k": 55,
+      "manifest": "reports/defense-seventh/2023-24-calendar-55-v3-seeds.json",
+      "sha256": "bd3293c97b0c6f2a7c91679b3483b8df848a68453e5bab1d1fb5a42ae4989d42"
+    },
+    {
+      "season": "2024-25",
+      "k": 25,
+      "manifest": "reports/defense-seventh/2024-25-calendar-25-v3-seeds.json",
+      "sha256": "3ca77142c089c3b3b3a30bff30e129edd29f56dfc856a3bfacfa5c43afcbb464"
+    },
+    {
+      "season": "2024-25",
+      "k": 41,
+      "manifest": "reports/defense-seventh/2024-25-calendar-41-v3-seeds.json",
+      "sha256": "39a848c364b12f649efebe258f37d8c0715689895fa6e71238c20d26a175788a"
+    },
+    {
+      "season": "2024-25",
+      "k": 55,
+      "manifest": "reports/defense-seventh/2024-25-calendar-55-v3-seeds.json",
+      "sha256": "cb90b54cb918dd5d417bcca97662decd1b27a179c254e873a45be7a37d855979"
+    },
+    {
+      "season": "2025-26",
+      "k": 25,
+      "manifest": "reports/defense-seventh/2025-26-calendar-25-v3-seeds.json",
+      "sha256": "13c4505eb28f3cc2a116c2ff28f941d2781b438e905c270400f8d381c1c0c24d"
+    },
+    {
+      "season": "2025-26",
+      "k": 41,
+      "manifest": "reports/defense-seventh/2025-26-calendar-41-v3-seeds.json",
+      "sha256": "5c0fc04ee7161c11bf25ee0978e3a96906b160d2f8005ebc3ec62b7aef12994f"
+    },
+    {
+      "season": "2025-26",
+      "k": 55,
+      "manifest": "reports/defense-seventh/2025-26-calendar-55-v3-seeds.json",
+      "sha256": "943ba1a5c4e95e99b39d0a327ac266b87edf78eadb83de7ff4478335c7987cbf"
+    }
+  ]
+}

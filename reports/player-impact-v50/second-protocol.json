@@ -1,0 +1,31 @@
+{
+  "version": "v50-rotation-controller-probe",
+  "baseline": "v49 accepted rotation; unchanged v47 probabilities and v49 out-of-fold profiles",
+  "seasons": [
+    "2022-23",
+    "2023-24",
+    "2024-25"
+  ],
+  "targetSeason": "2025-26",
+  "seed": 20261012,
+  "gamesPerSeason": 60,
+  "variants": [
+    "baselineUrgency",
+    "globalUrgency",
+    "globalCost",
+    "globalNoFadeCost",
+    "globalShortCost",
+    "globalShortUrgency"
+  ],
+  "selection": "Older-three equal-season normalized phase MAE + pair MAE; require >1% improvement. Every-season regulation minute MAE no more than baseline +0.05 min and short-stint share no more than baseline +0.01. Full actual minutes reported separately, including overtime differences. Target season excluded.",
+  "hypotheses": [
+    "Single-player greedy swaps can miss beneficial multi-player changes. Enumerate feasible five-player lineups respecting locks, roles, rest, protected shooter.",
+    "Final-quarter taper can leave measured pair deficits uncorrected; test removing taper.",
+    "Penalize entering a player with insufficient remaining budget for the usual minimum stint, using the existing minimumStint, not a named-player rule.",
+    "Unlock nonurgent incumbents when an offcourt player must play all remaining time to reach the budget.",
+    "Charge the existing substitution hysteresis once per entering player instead of once per entire five-player change."
+  ],
+  "probabilityOrAbilityChanges": false,
+  "gamePresetChanged": false,
+  "stage": "exploratory second probe; same earlier-three training selection sample; final candidate requires disjoint fixtures before target season"
+}

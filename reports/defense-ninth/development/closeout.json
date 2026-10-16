@@ -1,0 +1,129 @@
+{
+  "finishedAt": "2026-10-13T01:36:33.035Z",
+  "label": "四季，已看過答案",
+  "continue": true,
+  "blindTestStarted": false,
+  "gates": [
+    {
+      "delta": "sim-v3",
+      "b": [
+        {
+          "heldout": "2024-25",
+          "b": 0.4625996726250278
+        },
+        {
+          "heldout": "2025-26",
+          "b": 0.26510153472250175
+        },
+        {
+          "heldout": "2023-24",
+          "b": 0.27981033880795253
+        },
+        {
+          "heldout": "2022-23",
+          "b": 0.34019458875794695
+        }
+      ],
+      "sameSign": true,
+      "negativeK": [
+        25,
+        41,
+        55
+      ],
+      "nonWorseNaiveK": [
+        25,
+        55
+      ],
+      "overallRMSE": 4.142262853328064,
+      "naiveOverallRMSE": 4.182072665556725,
+      "nonWorseNaive": true,
+      "continue": true
+    },
+    {
+      "delta": "sim-v4",
+      "b": [
+        {
+          "heldout": "2024-25",
+          "b": 0.472384231663772
+        },
+        {
+          "heldout": "2025-26",
+          "b": 0.3345069584797601
+        },
+        {
+          "heldout": "2023-24",
+          "b": 0.35486384044947783
+        },
+        {
+          "heldout": "2022-23",
+          "b": 0.3761367304971378
+        }
+      ],
+      "sameSign": true,
+      "negativeK": [
+        25,
+        41,
+        55
+      ],
+      "nonWorseNaiveK": [
+        25,
+        41,
+        55
+      ],
+      "overallRMSE": 3.951457461125118,
+      "naiveOverallRMSE": 4.182072665556725,
+      "nonWorseNaive": true,
+      "continue": true
+    },
+    {
+      "delta": "seg",
+      "b": [
+        {
+          "heldout": "2024-25",
+          "b": 0.8800003708657944
+        },
+        {
+          "heldout": "2025-26",
+          "b": 0.7665731541300448
+        },
+        {
+          "heldout": "2023-24",
+          "b": 0.8711499778029562
+        },
+        {
+          "heldout": "2022-23",
+          "b": 0.829400801367912
+        }
+      ],
+      "sameSign": true,
+      "negativeK": [
+        25,
+        41,
+        55
+      ],
+      "nonWorseNaiveK": [
+        25,
+        41,
+        55
+      ],
+      "overallRMSE": 3.674554230506679,
+      "naiveOverallRMSE": 4.182072665556725,
+      "nonWorseNaive": true,
+      "continue": true
+    }
+  ],
+  "hashes": {
+    "reports/defense-seventh/v4-freeze.json": "0e302eb3e2ae4894e3acd8f33d3d41044b9df27a98d998118da8fbebd77b8236",
+    "reports/defense-eighth/b/v5-freeze.json": "c21ca1e02c267f8143ed2561729d36f27fa11406c6d44a3682cbd699ce590d98",
+    "reports/defense-ninth/development/prereg.json": "3b6261c7b33122f9da12d20864f1d4bf49ec07a595ae083801a3111f29b5954e",
+    "reports/defense-ninth/development/prereg-supplement.json": "2afaeac1ec11a9741a7de6df425be86f5c683796792eb054311fd56976c1817d",
+    "reports/defense-ninth/development/dataset.json": "6fc1e33ada52ec5c79ff912f5277e71def3c62830fed5ca5132d5fcb630732b8",
+    "reports/defense-ninth/development/assessment.json": "b9d723d3e7229e53e48ff3e051e1ec083f1423c2f31c1c07a1ce61846d925be9",
+    "reports/defense-ninth/development/execution-audit.json": "29c9c7e72a0c01c37a8254682a45986a51b0fb4de8c1960b912a87a25d36c6a6",
+    "reports/defense-ninth/development/signals.md": "d6b51aa12207cd8d9fd98fe167d22bceeae04d57f732350360fd8ba8c22c6b58",
+    "reports/defense-ninth/development/paired-results.md": "d97d47a9ceb2ff3d846703c73b6ee6d02a9c5de87c79b94d450bdb9a4832e438",
+    "reports/defense-ninth/development/feasibility.md": "8fe66ee16af77b6d2d14faefd8f1bdf35bb601bf453659126f0dd837158562e0",
+    "reports/defense-ninth/development/interpretation.md": "28f2abfe44aa635730d9731e97de35b5b9987f598b7d259a4986898c18799012",
+    "reports/defense-ninth/development/closeout.md": "5922a33a5bd042ddd07444dfb0122483eb6b09bd7af8666f23e7ce37ec0f2dc7"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "adopted": false,
+  "researchPhaseComplete": true,
+  "overallDefenseGoalComplete": false,
+  "temporaryTeamRegressionAuthorized": true,
+  "reason": "Target-season reconstruction improves, but broad cross-season defensive gains are too small and mixed. Versus v42, four-season mean on-paint-FG MAE changes 1.21545 to 1.20482 percentage points; three-point on/off FG MAE worsens 1.98434 to 2.03421, and FGA per48 MAE worsens 2.50860 to 2.52523. Only 708/1437 qualified player-seasons improve on-paint-FG absolute error. Not rejected merely for team PPG regression.",
+  "wembanyama": "Target-season paint FG on/off delta improves from -0.22090 to -1.54078 percentage points, versus actual -6.51146. Paint attempt-share on/off delta worsens from -2.05244 to -1.05942 versus actual -6.34378. Source fresh-FGA fixed-shot/lineup fit itself only predicts -1.81374 versus actual -6.55367, so changing runtime transfer cannot resolve the whole deficit. Raw on/off remains confounded and is not an individual causal target.",
+  "nextUnresolvedWork": "Improve source defense identification using richer measured defensive events or context, with whole-game heldout checks; separately isolate source versus simulated rotations. Do not amplify named-player coefficients, fit simulation/onoff residuals, or recompute OVR as evidence of defensive accuracy.",
+  "rankingRecomputed": false,
+  "formalEngineChanged": false
+}

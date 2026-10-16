@@ -1,0 +1,76 @@
+[
+  {
+    "season": "2022-23",
+    "players": 539,
+    "missing": [],
+    "minuteCoverage": 1,
+    "mu": 0.13510285552462933,
+    "kappa": 43.576730327115804,
+    "boxSummary": {
+      "players": 535,
+      "minuteCoverage": 0.9999680710369014,
+      "totalBoxouts": 13967,
+      "defensiveBoxouts": 11267,
+      "selfRebounds": 6615,
+      "teamRebounds": 12662,
+      "teammateRebounds": 6047,
+      "note": "Offense and defense not separated for rebound recipients; teammate recovery already counted elsewhere, not an additional rebound."
+    }
+  },
+  {
+    "season": "2023-24",
+    "players": 572,
+    "missing": [],
+    "minuteCoverage": 1,
+    "mu": 0.13461170266887593,
+    "kappa": 44.348377773759054,
+    "boxSummary": {
+      "players": 567,
+      "minuteCoverage": 0.9999713739172605,
+      "totalBoxouts": 16727,
+      "defensiveBoxouts": 13072,
+      "selfRebounds": 8352,
+      "teamRebounds": 16012,
+      "teammateRebounds": 7660,
+      "note": "Offense and defense not separated for rebound recipients; teammate recovery already counted elsewhere, not an additional rebound."
+    }
+  },
+  {
+    "season": "2024-25",
+    "players": 569,
+    "missing": [],
+    "minuteCoverage": 1,
+    "mu": 0.13238574407634293,
+    "kappa": 42.248413445890336,
+    "boxSummary": {
+      "players": 567,
+      "minuteCoverage": 0.9999814743082338,
+      "totalBoxouts": 15484,
+      "defensiveBoxouts": 12205,
+      "selfRebounds": 8357,
+      "teamRebounds": 15168,
+      "teammateRebounds": 6811,
+      "note": "Offense and defense not separated for rebound recipients; teammate recovery already counted elsewhere, not an additional rebound."
+    }
+  },
+  {
+    "season": "2025-26",
+    "players": 582,
+    "missing": [
+      1642468
+    ],
+    "minuteCoverage": 0.9999949470535427,
+    "mu": 0.12967489108627903,
+    "kappa": 48.12052487717981,
+    "boxSummary": {
+      "players": 581,
+      "minuteCoverage": 0.9999949470535427,
+      "totalBoxouts": 14528,
+      "defensiveBoxouts": 10908,
+      "selfRebounds": 8854,
+      "teamRebounds": 14359,
+      "teammateRebounds": 5505,
+      "note": "Offense and defense not separated for rebound recipients; teammate recovery already counted elsewhere, not an additional rebound."
+    }
+  }
+]

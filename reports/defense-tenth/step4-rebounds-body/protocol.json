@@ -1,0 +1,62 @@
+{
+  "version": "body-input-audit-1",
+  "registeredAt": "2026-10-14T06:45:39.368295+00:00",
+  "scope": "Layer 1 only: existing height/mass/strength/jump inputs and old physique mapping. No cards, engine edits, simulation, parameter fitting or new player-data downloads. Stop after report.",
+  "seasons": [
+    "2022-23",
+    "2023-24",
+    "2024-25",
+    "2025-26"
+  ],
+  "label": "四季均已看過答案；資料與表示法稽核，不是預測／籃板成績檢定",
+  "cohort": "Unique individual PLAYER_ID per season from official player-games, positive summed MIN. Report zero-minute IDs separately. Aggregate traded-player minutes once across teams. Rotation subcohort GP>=30 and MIN/GP>=20.",
+  "coverage": "For each component report observed positive finite value count and minute-weighted coverage; strict seasonal raw bio is distinct from deployed card fields/defaults. Never label default79in/210lb as observed. Record raw/card discrepancies and duplicate-card conflicts.",
+  "components": {
+    "size": [
+      "height",
+      "wingspan",
+      "standing reach"
+    ],
+    "mass": [
+      "weight"
+    ],
+    "strength": [
+      "bench press or other independently measured strength; never inferred from body mass/REB/BLK"
+    ],
+    "jump": [
+      "standing and maximum vertical leap; draft-date measurement is not current-season jump"
+    ],
+    "stamina": "Separate existing attribute, not an observed strength/jump measurement. Audit recipe only."
+  },
+  "localInventory": "Search data/ and reports/ filenames for bio/combine/anthro/measurement/player-info/commonplayer/draft/physical and inspect known seasonal raw bio and deployed bundles. List paths and schemas. Do not infer a measurement exists from generated report text; explicitly state search scope.",
+  "statistics": "Descriptive only: population Pearson/Spearman of raw height, mass, height+mass/10 and deployed physique; exact legacy rank reconstruction; raw source vs deployed mismatch lists; adjacent-season raw changes and source availability timestamps. No OREB/DREB/PPP/net/wins correlations or optimization. No causal strength conclusion.",
+  "missingness": "Null is missing, numeric zero and nonfinite are invalid for body quantities; preserve raw strings. No imputation; missing flag and provenance required. Proposed missingness rules do not create cards.",
+  "representation": "Propose separate physical-units fields with source, measurement date, availability date, uncertainty and missingness; no new 0-120 scalar. Derived standing reach plus jump only if both observed, with no repeated height/wingspan bonus. No fitted coefficients.",
+  "acceptance": "Completeness/provenance and reproducibility only. No claims of rebound/team accuracy improvement, no adoption change. Layer2+ deferred.",
+  "protectedManifestSHA256": "a0696d13872cb9d67a06c6763fe64d16c21faf8092ff8400d8ca1c4bf867493c",
+  "inputHashes": {
+    "reports/defense-tenth/step4-t0/2022-23/bundle.json": "b311dcfce6c80b98720784c28a4879b154a205a2ce0cbed61cb0c5014342c213",
+    "data/defense-seventh/2022-23/player-games.json": "f41f7f4b105af8d280381f0c3315219ee074b2329e5d9b5f979b6fc72dbd7f56",
+    "data/defense-seventh/2022-23/bio.json": "2b493e0aedcdfc610f9fe570ce0ca975a709753ad63e83fdddc31444d402927f",
+    "data/defense-seventh/2022-23/league.json": "dacf9a80104245e7c09556b3e371bf6fdbfa7f35b374163619c262c14e17a9c5",
+    "reports/defense-tenth/step4-t0/2023-24/bundle.json": "5e17a95310e7cea844b81005fbe214e9ecafe62b54a1ba45aad6aaa839baf971",
+    "data/defense-seventh/2023-24/player-games.json": "a33074c9c9b1f59e15f160464292b3ab9c791065ae542c20f2ed64f3e170afd5",
+    "data/defense-seventh/2023-24/bio.json": "1cb8eb0431bea1aaa43f1209571e39e9b2505a8c85cb14b356fddc54b9dfa1a6",
+    "data/defense-seventh/2023-24/league.json": "38bc80c55e074dc81dfb9b6fd2e6d9fdb3812d453ed001d2a78dd7407d2707ab",
+    "reports/defense-tenth/step4-t0/2024-25/bundle.json": "001cf3d44b29542c3d202cd375f2378e7c09b712ca958637c28d6538566215f8",
+    "data/defense-seventh/2024-25/player-games.json": "4c3f33c67ffaa1cf88ea01a7acaeef70af088e22f6020c3a02409989f6ad4ffa",
+    "data/defense-seventh/2024-25/bio.json": "945c9d37fb0409b0d023ef7c5514cc492a1805f14fc10a7b0f707fd5ae9881d3",
+    "data/defense-seventh/2024-25/league.json": "f88e88d81e13d9949a2540b72f448460f50dabf1118ca3e4fdc9404b6b53e677",
+    "reports/defense-tenth/step4-t0/2025-26/bundle.json": "43b5a5141fa667a492a67dfc6aa95eec058aabbe39e9d787b0a92b870d7db051",
+    "data/season-source/player-games.json": "11fc5866b2f61b31e27659e14e4071924b5873ef0d2a4118a585c1a54be04357",
+    "data/benchmark-source/bio.json": "d319d00ed383c8a30793907fd0edd56fd26e8cdb19a74bbb0c2667790644196e",
+    "scripts/build_season_league.js": "3649160f2ef16e442f951da91b441f45713e61c91b30c5df084967884a99b4d0",
+    "scripts/fetch_defense_seventh_season.js": "1aa95f02b22537567ff2810e42e6ac13c840ab4c42e35f034496d3e3e769ec19",
+    "reports/defense-tenth/step4-t0/prepare.mjs": "fc45e00fbf4288956e9ba1fad2d41a587ed5d5d1ad416e2fc259ab3162376d3e",
+    "src/rebound_block_model.js": "57459f5bb27147410c9f5ada9ae308809e591e5a6a4dfea24f832ab796fb0a92",
+    "src/probability_model.js": "13b175efac436d3c560fd39389f3486225ab90bfbc996d6802ee76ce461aad87",
+    "src/defense_fourth_game.js": "c3611d0c72f49fdd4b855184d7bc79c3e6cc9780c2c6eb836aa10cbf66ad022a",
+    "src/constants.js": "86f968d2a29326d0e4ab8375face0e83f76556464a1caeb8ff00be6797290598"
+  },
+  "registrationCodeSHA256": "e01c1e5aa114a6fb516ca4cbf2c4c141e41e49e19f4bb4f6db3281157efb20e2"
+}

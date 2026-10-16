@@ -1,0 +1,9 @@
+{
+  "version": "oreb-clock-sources-1",
+  "registeredUTC": "2026-10-15T02:27:10.474686+00:00",
+  "scope": "source discovery and bounded access probes only; no simulation or model calibration",
+  "selection": "first early clock example from each existing season source-examples.json; probe shot, rebound and turnover clip metadata. Supplement unrelated official public clips only for access validation. Do not infer rim from endpoint.",
+  "validation": "HTTP metadata availability is not playable video; playable video is not rim/clock labeled truth; label unknown if unavailable or obscured. Preserve engine and all prior reports.",
+  "noPaywallAccess": "public sources only; no purchase, account creation or access bypass",
+  "stop": "report verified availability and unresolved labels; no engine changes"
+}

@@ -1,0 +1,7 @@
+{
+  "UTC": "2026-10-15T01:41:37.925734+00:00",
+  "scope": "real observational foul classifier only, implementation correction to registered nonshooting definition",
+  "evidence": "NBA uses subType personal and descriptor shooting; checking subType alone mislabels shooting fouls",
+  "fix": "check subType+descriptor+qualifiers for shooting/special/offensive; do not alter engine, frozen output, sample, thresholds or ablation",
+  "beforeFinalAnalysis": true
+}

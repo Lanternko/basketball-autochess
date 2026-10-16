@@ -1,0 +1,58 @@
+{
+  "jobs": [
+    {
+      "season": "2025-26",
+      "seed": 20261012,
+      "version": "control",
+      "strict": false,
+      "onCourt": false,
+      "file": "reports/player-impact-v1/runs/2025-26-control-full-20261012.json",
+      "sha256": "1ef36a0743299e5342d2eb11268efc6e2ab437b1fa797723747ad58294832820"
+    },
+    {
+      "season": "2025-26",
+      "seed": 20261012,
+      "version": "control",
+      "strict": true,
+      "onCourt": true,
+      "file": "reports/player-impact-v1/runs/2025-26-control-strict-20261012.json",
+      "sha256": "58a752830ce37d88d36f1db2d447825a5e3b934959d2b350b745bee6327e1d77"
+    },
+    {
+      "season": "2025-26",
+      "seed": 20261012,
+      "version": "creation-flow",
+      "strict": false,
+      "onCourt": false,
+      "file": "reports/player-impact-v1/runs/2025-26-creation-flow-full-20261012.json",
+      "sha256": "b60bae4dc81129caffd621b05bfc1da479cd5875c24f81bab600078becbaf5bb"
+    },
+    {
+      "season": "2025-26",
+      "seed": 20261012,
+      "version": "creation-flow",
+      "strict": true,
+      "onCourt": true,
+      "file": "reports/player-impact-v1/runs/2025-26-creation-flow-strict-20261012.json",
+      "sha256": "f541d2fc143581b4c75761b2a6452f88620d126aa1074427a49f63d3e3338780"
+    },
+    {
+      "season": "2025-26",
+      "seed": 20261012,
+      "version": "creation-flow-balanced",
+      "strict": false,
+      "onCourt": false,
+      "file": "reports/player-impact-v1/runs/2025-26-creation-flow-balanced-full-20261012.json",
+      "sha256": "7429f4048252176ab2934be770c31ec83306958f4668831a90ba04b685d7811f"
+    },
+    {
+      "season": "2025-26",
+      "seed": 20261012,
+      "version": "creation-flow-balanced",
+      "strict": true,
+      "onCourt": true,
+      "file": "reports/player-impact-v1/runs/2025-26-creation-flow-balanced-strict-20261012.json",
+      "sha256": "f0acb421888c43b9b9626c6fbd7b92c6160f83952ecb529a672c12576fb0ded5"
+    }
+  ]
+}

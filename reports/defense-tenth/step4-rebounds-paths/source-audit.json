@@ -1,0 +1,2206 @@
+{
+  "2022-23": {
+    "firstFgRoutes": 18541,
+    "midN": 3814,
+    "midMade": 2333,
+    "midNearBasketText": 2852,
+    "midZeroDistance": 2837,
+    "midAtMostFourFeet": 2837,
+    "midAtLeastEightFeet": 977,
+    "midAtLeastEightFeetMade": 398,
+    "midMissingArea": 0,
+    "areas": {
+      "Mid-Range": {
+        "n": 3814,
+        "made": 2333
+      }
+    },
+    "types": {
+      "Jump Shot fadeaway": {
+        "n": 94,
+        "made": 38
+      },
+      "Jump Shot pullup": {
+        "n": 311,
+        "made": 139
+      },
+      "Jump Shot ": {
+        "n": 206,
+        "made": 78
+      },
+      "Jump Shot turnaround fadeaway": {
+        "n": 67,
+        "made": 20
+      },
+      "Layup tip": {
+        "n": 1947,
+        "made": 1131
+      },
+      "DUNK tip": {
+        "n": 261,
+        "made": 237
+      },
+      "Jump Shot floating": {
+        "n": 38,
+        "made": 20
+      },
+      "DUNK putback": {
+        "n": 122,
+        "made": 117
+      },
+      "Layup putback": {
+        "n": 515,
+        "made": 452
+      },
+      "Jump Shot turnaround": {
+        "n": 47,
+        "made": 18
+      },
+      "Jump Shot step back": {
+        "n": 107,
+        "made": 40
+      },
+      "Hook ": {
+        "n": 5,
+        "made": 1
+      },
+      "Hook turnaround": {
+        "n": 9,
+        "made": 3
+      },
+      "Jump Shot driving floating bank": {
+        "n": 19,
+        "made": 10
+      },
+      "Layup finger roll": {
+        "n": 1,
+        "made": 0
+      },
+      "Jump Shot driving floating": {
+        "n": 39,
+        "made": 18
+      },
+      "Layup ": {
+        "n": 4,
+        "made": 0
+      },
+      "Jump Shot driving bank": {
+        "n": 3,
+        "made": 3
+      },
+      "Jump Shot pullup bank": {
+        "n": 7,
+        "made": 4
+      },
+      "Jump Shot bank": {
+        "n": 4,
+        "made": 1
+      },
+      "Layup driving": {
+        "n": 2,
+        "made": 1
+      },
+      "Jump Shot step back bank": {
+        "n": 1,
+        "made": 1
+      },
+      "Hook driving": {
+        "n": 1,
+        "made": 0
+      },
+      "Jump Shot turnaround fadeaway bank": {
+        "n": 1,
+        "made": 0
+      },
+      "Jump Shot fadeaway bank": {
+        "n": 1,
+        "made": 1
+      },
+      "Jump Shot turnaround bank": {
+        "n": 1,
+        "made": 0
+      },
+      "Hook bank": {
+        "n": 1,
+        "made": 0
+      }
+    },
+    "examples": [
+      {
+        "id": "0022200003",
+        "event": {
+          "actionNumber": 344,
+          "clock": "PT11M20.00S",
+          "timeActual": "2022-10-20T00:30:03.8Z",
+          "period": 3,
+          "periodType": "REGULAR",
+          "teamId": 1610612753,
+          "teamTricode": "ORL",
+          "actionType": "2pt",
+          "subType": "Layup",
+          "descriptor": "tip",
+          "qualifiers": [
+            "pointsinthepaint",
+            "2ndchance"
+          ],
+          "personId": 1630591,
+          "x": 5.590000152587891,
+          "y": 50,
+          "area": "Mid-Range",
+          "areaDetail": "8-16 Left",
+          "side": "left",
+          "shotDistance": 0,
+          "possession": 1610612753,
+          "scoreHome": "60",
+          "scoreAway": "57",
+          "edited": "2022-10-20T00:30:03Z",
+          "orderNumber": 3430000,
+          "isTargetScoreLastPeriod": false,
+          "xLegacy": 0,
+          "yLegacy": 0,
+          "isFieldGoal": 1,
+          "shotResult": "Made",
+          "pointsTotal": 5,
+          "description": "J. Suggs tip Layup (5 PTS)",
+          "playerName": "Suggs",
+          "playerNameI": "J. Suggs",
+          "personIdsFilter": [
+            1630591
+          ]
+        }
+      },
+      {
+        "id": "0022200003",
+        "event": {
+          "actionNumber": 553,
+          "clock": "PT07M18.00S",
+          "timeActual": "2022-10-20T01:04:09.4Z",
+          "period": 4,
+          "periodType": "REGULAR",
+          "teamId": 1610612765,
+          "teamTricode": "DET",
+          "actionType": "2pt",
+          "subType": "DUNK",
+          "descriptor": "tip",
+          "qualifiers": [
+            "pointsinthepaint",
+            "2ndchance"
+          ],
+          "personId": 1631105,
+          "x": 94.40999984741211,
+          "y": 50,
+          "area": "Mid-Range",
+          "areaDetail": "8-16 Left",
+          "side": "right",
+          "shotDistance": 0,
+          "possession": 1610612765,
+          "scoreHome": "97",
+          "scoreAway": "93",
+          "edited": "2022-10-20T01:04:09Z",
+          "orderNumber": 5450000,
+          "isTargetScoreLastPeriod": false,
+          "xLegacy": 0,
+          "yLegacy": 0,
+          "isFieldGoal": 1,
+          "shotResult": "Made",
+          "pointsTotal": 10,
+          "description": "J. Duren tip DUNK (10 PTS)",
+          "playerName": "Duren",
+          "playerNameI": "J. Duren",
+          "personIdsFilter": [
+            1631105
+          ]
+        }
+      },
+      {
+        "id": "0022200004",
+        "event": {
+          "actionNumber": 92,
+          "clock": "PT05M24.00S",
+          "timeActual": "2022-10-19T23:29:13.5Z",
+          "period": 1,
+          "periodType": "REGULAR",
+          "teamId": 1610612764,
+          "teamTricode": "WAS",
+          "actionType": "2pt",
+          "subType": "Layup",
+          "descriptor": "tip",
+          "qualifiers": [
+            "pointsinthepaint",
+            "2ndchance"
+          ],
+          "personId": 203078,
+          "x": 5.590000152587891,
+          "y": 50,
+          "area": "Mid-Range",
+          "areaDetail": "8-16 Left",
+          "side": "left",
+          "shotDistance": 0,
+          "possession": 1610612764,
+          "scoreHome": "15",
+          "scoreAway": "25",
+          "edited": "2022-10-19T23:29:13Z",
+          "orderNumber": 910000,
+          "xLegacy": 0,
+          "yLegacy": 0,
+          "isFieldGoal": 1,
+          "shotResult": "Made",
+          "pointsTotal": 5,
+          "description": "B. Beal tip Layup (5 PTS)",
+          "playerName": "Beal",
+          "playerNameI": "B. Beal",
+          "personIdsFilter": [
+            203078
+          ]
+        }
+      },
+      {
+        "id": "0022200004",
+        "event": {
+          "actionNumber": 218,
+          "clock": "PT08M18.00S",
+          "timeActual": "2022-10-19T23:51:12.1Z",
+          "period": 2,
+          "periodType": "REGULAR",
+          "teamId": 1610612754,
+          "teamTricode": "IND",
+          "actionType": "2pt",
+          "subType": "Layup",
+          "descriptor": "tip",
+          "qualifiers": [
+            "pointsinthepaint",
+            "2ndchance"
+          ],
+          "personId": 1630188,
+          "x": 94.40999984741211,
+          "y": 50,
+          "area": "Mid-Range",
+          "areaDetail": "8-16 Left",
+          "side": "right",
+          "shotDistance": 0,
+          "possession": 1610612754,
+          "scoreHome": "31",
+          "scoreAway": "41",
+          "edited": "2022-10-19T23:51:12Z",
+          "orderNumber": 2130000,
+          "xLegacy": 0,
+          "yLegacy": 0,
+          "isFieldGoal": 1,
+          "shotResult": "Made",
+          "pointsTotal": 2,
+          "description": "J. Smith tip Layup (2 PTS)",
+          "playerName": "Smith",
+          "playerNameI": "J. Smith",
+          "personIdsFilter": [
+            1630188
+          ]
+        }
+      },
+      {
+        "id": "0022200004",
+        "event": {
+          "actionNumber": 573,
+          "clock": "PT08M09.00S",
+          "timeActual": "2022-10-20T01:11:56.0Z",
+          "period": 4,
+          "periodType": "REGULAR",
+          "teamId": 1610612764,
+          "teamTricode": "WAS",
+          "actionType": "2pt",
+          "subType": "Layup",
+          "descriptor": "tip",
+          "qualifiers": [
+            "pointsinthepaint",
+            "2ndchance"
+          ],
+          "personId": 1629655,
+          "x": 94.40999984741211,
+          "y": 50,
+          "area": "Mid-Range",
+          "areaDetail": "8-16 Left",
+          "side": "right",
+          "shotDistance": 0,
+          "possession": 1610612764,
+          "scoreHome": "83",
+          "scoreAway": "101",
+          "edited": "2022-10-20T01:11:56Z",
+          "orderNumber": 5660000,
+          "xLegacy": 0,
+          "yLegacy": 0,
+          "isFieldGoal": 1,
+          "shotResult": "Made",
+          "pointsTotal": 12,
+          "description": "D. Gafford tip Layup (12 PTS)",
+          "playerName": "Gafford",
+          "playerNameI": "D. Gafford",
+          "personIdsFilter": [
+            1629655
+          ]
+        }
+      },
+      {
+        "id": "0022200004",
+        "event": {
+          "actionNumber": 656,
+          "clock": "PT02M22.00S",
+          "timeActual": "2022-10-20T01:26:27.2Z",
+          "period": 4,
+          "periodType": "REGULAR",
+          "teamId": 1610612754,
+          "teamTricode": "IND",
+          "actionType": "2pt",
+          "subType": "Layup",
+          "descriptor": "tip",
+          "qualifiers": [
+            "pointsinthepaint",
+            "2ndchance"
+          ],
+          "personId": 1627741,
+          "x": 5.590000152587891,
+          "y": 50,
+          "area": "Mid-Range",
+          "areaDetail": "8-16 Left",
+          "side": "left",
+          "shotDistance": 0,
+          "possession": 1610612754,
+          "scoreHome": "99",
+          "scoreAway": "108",
+          "edited": "2022-10-20T01:26:27Z",
+          "orderNumber": 6490000,
+          "xLegacy": 0,
+          "yLegacy": 0,
+          "isFieldGoal": 1,
+          "shotResult": "Missed",
+          "description": "MISS B. Hield tip Layup",
+          "playerName": "Hield",
+          "playerNameI": "B. Hield",
+          "personIdsFilter": [
+            1627741
+          ]
+        }
+      },
+      {
+        "id": "0022200005",
+        "event": {
+          "actionNumber": 234,
+          "clock": "PT06M31.00S",
+          "timeActual": "2022-10-20T00:21:24.9Z",
+          "period": 2,
+          "periodType": "REGULAR",
+          "teamId": 1610612745,
+          "teamTricode": "HOU",
+          "actionType": "2pt",
+          "subType": "Layup",
+          "descriptor": "tip",
+          "qualifiers": [
+            "pointsinthepaint",
+            "2ndchance"
+          ],
+          "personId": 1630578,
+          "x": 5.590000152587891,
+          "y": 50,
+          "area": "Mid-Range",
+          "areaDetail": "8-16 Left",
+          "side": "left",
+          "shotDistance": 0,
+          "possession": 1610612745,
+          "scoreHome": "38",
+          "scoreAway": "39",
+          "edited": "2022-10-20T00:21:25Z",
+          "orderNumber": 2340000,
+          "xLegacy": 0,
+          "yLegacy": 0,
+          "isFieldGoal": 1,
+          "shotResult": "Missed",
+          "description": "MISS A. Sengun tip Layup",
+          "playerName": "Sengun",
+          "playerNameI": "A. Sengun",
+          "personIdsFilter": [
+            1630578
+          ]
+        }
+      },
+      {
+        "id": "0022200005",
+        "event": {
+          "actionNumber": 443,
+          "clock": "PT02M32.00S",
+          "timeActual": "2022-10-20T01:12:40.9Z",
+          "period": 3,
+          "periodType": "REGULAR",
+          "teamId": 1610612745,
+          "teamTricode": "HOU",
+          "actionType": "2pt",
+          "subType": "Layup",
+          "descriptor": "tip",
+          "qualifiers": [
+            "pointsinthepaint",
+            "fromturnover",
+            "2ndchance"
+          ],
+          "personId": 1631106,
+          "x": 94.40999984741211,
+          "y": 50,
+          "area": "Mid-Range",
+          "areaDetail": "8-16 Left",
+          "side": "right",
+          "shotDistance": 0,
+          "possession": 1610612745,
+          "scoreHome": "77",
+          "scoreAway": "71",
+          "edited": "2022-10-20T01:12:40Z",
+          "orderNumber": 4420000,
+          "xLegacy": 0,
+          "yLegacy": 0,
+          "isFieldGoal": 1,
+          "shotResult": "Missed",
+          "description": "MISS T. Eason tip Layup",
+          "playerName": "Eason",
+          "playerNameI": "T. Eason",
+          "personIdsFilter": [
+            1631106
+          ]
+        }
+      },
+      {
+        "id": "0022200006",
+        "event": {
+          "actionNumber": 11,
+          "clock": "PT11M21.00S",
+          "timeActual": "2022-10-19T23:45:13.5Z",
+          "period": 1,
+          "periodType": "REGULAR",
+          "teamId": 1610612740,
+          "teamTricode": "NOP",
+          "actionType": "2pt",
+          "subType": "Layup",
+          "descriptor": "tip",
+          "qualifiers": [
+            "pointsinthepaint",
+            "fromturnover",
+            "2ndchance"
+          ],
+          "personId": 202685,
+          "x": 94.40999984741211,
+          "y": 50,
+          "area": "Mid-Range",
+          "areaDetail": "8-16 Left",
+          "side": "right",
+          "shotDistance": 0,
+          "possession": 1610612740,
+          "scoreHome": "0",
+          "scoreAway": "0",
+          "edited": "2022-10-19T23:45:13Z",
+          "orderNumber": 110000,
+          "xLegacy": 0,
+          "yLegacy": 0,
+          "isFieldGoal": 1,
+          "shotResult": "Missed",
+          "description": "MISS J. Valanciunas tip Layup",
+          "playerName": "Valanciunas",
+          "playerNameI": "J. Valanciunas",
+          "personIdsFilter": [
+            202685
+          ]
+        }
+      },
+      {
+        "id": "0022200006",
+        "event": {
+          "actionNumber": 135,
+          "clock": "PT02M21.00S",
+          "timeActual": "2022-10-20T00:04:20.8Z",
+          "period": 1,
+          "periodType": "REGULAR",
+          "teamId": 1610612751,
+          "teamTricode": "BKN",
+          "actionType": "2pt",
+          "subType": "Layup",
+          "descriptor": "tip",
+          "qualifiers": [
+            "pointsinthepaint",
+            "2ndchance"
+          ],
+          "personId": 1630549,
+          "x": 5.590000152587891,
+          "y": 50,
+          "area": "Mid-Range",
+          "areaDetail": "8-16 Left",
+          "side": "left",
+          "shotDistance": 0,
+          "possession": 1610612751,
+          "scoreHome": "12",
+          "scoreAway": "24",
+          "edited": "2022-10-20T00:04:20Z",
+          "orderNumber": 1300000,
+          "xLegacy": 0,
+          "yLegacy": 0,
+          "isFieldGoal": 1,
+          "shotResult": "Missed",
+          "description": "MISS D. Sharpe tip Layup",
+          "playerName": "Sharpe",
+          "playerNameI": "D. Sharpe",
+          "personIdsFilter": [
+            1630549
+          ]
+        }
+      }
+    ]
+  },
+  "2023-24": {
+    "firstFgRoutes": 18880,
+    "midN": 3525,
+    "midMade": 2172,
+    "midNearBasketText": 2471,
+    "midZeroDistance": 2448,
+    "midAtMostFourFeet": 2448,
+    "midAtLeastEightFeet": 1077,
+    "midAtLeastEightFeetMade": 445,
+    "midMissingArea": 0,
+    "areas": {
+      "Mid-Range": {
+        "n": 3525,
+        "made": 2172
+      }
+    },
+    "types": {
+      "Jump Shot step back": {
+        "n": 131,
+        "made": 65
+      },
+      "Layup tip": {
+        "n": 1628,
+        "made": 983
+      },
+      "Jump Shot ": {
+        "n": 242,
+        "made": 102
+      },
+      "Layup putback": {
+        "n": 507,
+        "made": 442
+      },
+      "Jump Shot fadeaway": {
+        "n": 112,
+        "made": 31
+      },
+      "Jump Shot driving floating bank": {
+        "n": 20,
+        "made": 9
+      },
+      "Jump Shot pullup": {
+        "n": 292,
+        "made": 127
+      },
+      "Jump Shot turnaround fadeaway": {
+        "n": 76,
+        "made": 30
+      },
+      "DUNK tip": {
+        "n": 242,
+        "made": 228
+      },
+      "DUNK putback": {
+        "n": 83,
+        "made": 78
+      },
+      "Jump Shot fadeaway bank": {
+        "n": 6,
+        "made": 2
+      },
+      "Jump Shot driving floating": {
+        "n": 43,
+        "made": 13
+      },
+      "Layup driving": {
+        "n": 4,
+        "made": 2
+      },
+      "Jump Shot turnaround": {
+        "n": 52,
+        "made": 21
+      },
+      "Hook driving": {
+        "n": 3,
+        "made": 0
+      },
+      "Jump Shot floating": {
+        "n": 37,
+        "made": 12
+      },
+      "Jump Shot pullup bank": {
+        "n": 11,
+        "made": 5
+      },
+      "Hook turnaround": {
+        "n": 10,
+        "made": 4
+      },
+      "Layup cutting": {
+        "n": 1,
+        "made": 0
+      },
+      "Jump Shot bank": {
+        "n": 10,
+        "made": 6
+      },
+      "Hook ": {
+        "n": 2,
+        "made": 2
+      },
+      "Layup driving finger roll": {
+        "n": 2,
+        "made": 1
+      },
+      "Layup ": {
+        "n": 3,
+        "made": 2
+      },
+      "Jump Shot turnaround fadeaway bank": {
+        "n": 2,
+        "made": 1
+      },
+      "DUNK alley-oop": {
+        "n": 1,
+        "made": 1
+      },
+      "Jump Shot turnaround bank": {
+        "n": 4,
+        "made": 4
+      },
+      "Jump Shot running": {
+        "n": 1,
+        "made": 1
+      }
+    },
+    "examples": [
+      {
+        "id": "0022300061",
+        "event": {
+          "actionNumber": 286,
+          "clock": "PT02M33.00S",
+          "timeActual": "2023-10-25T00:25:03.3Z",
+          "period": 2,
+          "periodType": "REGULAR",
+          "teamId": 1610612743,
+          "teamTricode": "DEN",
+          "actionType": "2pt",
+          "subType": "Layup",
+          "descriptor": "tip",
+          "qualifiers": [
+            "pointsinthepaint",
+            "2ndchance"
+          ],
+          "personId": 1629008,
+          "x": 94.40999984741211,
+          "y": 50,
+          "area": "Mid-Range",
+          "areaDetail": "8-16 Left",
+          "side": "right",
+          "shotDistance": 0,
+          "possession": 1610612743,
+          "scoreHome": "58",
+          "scoreAway": "48",
+          "edited": "2023-10-25T00:25:03Z",
+          "orderNumber": 2750000,
+          "isTargetScoreLastPeriod": false,
+          "xLegacy": 0,
+          "yLegacy": 0,
+          "isFieldGoal": 1,
+          "shotResult": "Made",
+          "pointsTotal": 7,
+          "description": "M. Porter Jr. tip Layup (7 PTS)",
+          "playerName": "Porter Jr.",
+          "playerNameI": "M. Porter Jr.",
+          "personIdsFilter": [
+            1629008
+          ]
+        }
+      },
+      {
+        "id": "0022300061",
+        "event": {
+          "actionNumber": 648,
+          "clock": "PT01M01.00S",
+          "timeActual": "2023-10-25T01:49:50.6Z",
+          "period": 4,
+          "periodType": "REGULAR",
+          "teamId": 1610612743,
+          "teamTricode": "DEN",
+          "actionType": "2pt",
+          "subType": "Layup",
+          "descriptor": "tip",
+          "qualifiers": [
+            "pointsinthepaint",
+            "fromturnover",
+            "2ndchance"
+          ],
+          "personId": 1629008,
+          "x": 5.590000152587891,
+          "y": 50,
+          "area": "Mid-Range",
+          "areaDetail": "8-16 Left",
+          "side": "left",
+          "shotDistance": 0,
+          "possession": 1610612743,
+          "scoreHome": "117",
+          "scoreAway": "103",
+          "edited": "2023-10-25T01:49:50Z",
+          "orderNumber": 6170000,
+          "isTargetScoreLastPeriod": false,
+          "xLegacy": 0,
+          "yLegacy": 0,
+          "isFieldGoal": 1,
+          "shotResult": "Made",
+          "pointsTotal": 12,
+          "description": "M. Porter Jr. tip Layup (12 PTS)",
+          "playerName": "Porter Jr.",
+          "playerNameI": "M. Porter Jr.",
+          "personIdsFilter": [
+            1629008
+          ]
+        }
+      },
+      {
+        "id": "0022300062",
+        "event": {
+          "actionNumber": 341,
+          "clock": "PT01M32.00S",
+          "timeActual": "2023-10-25T03:08:46.1Z",
+          "period": 2,
+          "periodType": "REGULAR",
+          "teamId": 1610612756,
+          "teamTricode": "PHX",
+          "actionType": "2pt",
+          "subType": "Layup",
+          "descriptor": "tip",
+          "qualifiers": [
+            "pointsinthepaint",
+            "2ndchance"
+          ],
+          "personId": 1629006,
+          "x": 5.590000152587891,
+          "y": 50,
+          "area": "Mid-Range",
+          "areaDetail": "8-16 Left",
+          "side": "left",
+          "shotDistance": 0,
+          "possession": 1610612756,
+          "scoreHome": "43",
+          "scoreAway": "52",
+          "edited": "2023-10-25T03:08:46Z",
+          "orderNumber": 3350000,
+          "isTargetScoreLastPeriod": false,
+          "xLegacy": 0,
+          "yLegacy": 0,
+          "isFieldGoal": 1,
+          "shotResult": "Missed",
+          "description": "MISS J. Okogie tip Layup",
+          "playerName": "Okogie",
+          "playerNameI": "J. Okogie",
+          "personIdsFilter": [
+            1629006
+          ]
+        }
+      },
+      {
+        "id": "0022300062",
+        "event": {
+          "actionNumber": 588,
+          "clock": "PT10M29.00S",
+          "timeActual": "2023-10-25T04:11:33.5Z",
+          "period": 4,
+          "periodType": "REGULAR",
+          "teamId": 1610612756,
+          "teamTricode": "PHX",
+          "actionType": "2pt",
+          "subType": "Layup",
+          "descriptor": "putback",
+          "qualifiers": [
+            "pointsinthepaint",
+            "2ndchance"
+          ],
+          "personId": 1630692,
+          "x": 94.40999984741211,
+          "y": 50,
+          "area": "Mid-Range",
+          "areaDetail": "8-16 Left",
+          "side": "right",
+          "shotDistance": 0,
+          "possession": 1610612756,
+          "scoreHome": "88",
+          "scoreAway": "84",
+          "edited": "2023-10-25T04:11:33Z",
+          "orderNumber": 5750000,
+          "isTargetScoreLastPeriod": false,
+          "xLegacy": 0,
+          "yLegacy": 0,
+          "isFieldGoal": 1,
+          "shotResult": "Made",
+          "pointsTotal": 2,
+          "description": "J. Goodwin putback Layup (2 PTS)",
+          "playerName": "Goodwin",
+          "playerNameI": "J. Goodwin",
+          "personIdsFilter": [
+            1630692
+          ]
+        }
+      },
+      {
+        "id": "0022300062",
+        "event": {
+          "actionNumber": 657,
+          "clock": "PT04M53.00S",
+          "timeActual": "2023-10-25T04:25:20.4Z",
+          "period": 4,
+          "periodType": "REGULAR",
+          "teamId": 1610612756,
+          "teamTricode": "PHX",
+          "actionType": "2pt",
+          "subType": "Layup",
+          "descriptor": "tip",
+          "qualifiers": [
+            "pointsinthepaint",
+            "2ndchance"
+          ],
+          "personId": 203994,
+          "x": 94.40999984741211,
+          "y": 50,
+          "area": "Mid-Range",
+          "areaDetail": "8-16 Left",
+          "side": "right",
+          "shotDistance": 0,
+          "possession": 1610612756,
+          "scoreHome": "96",
+          "scoreAway": "95",
+          "edited": "2023-10-25T04:25:20Z",
+          "orderNumber": 6430000,
+          "isTargetScoreLastPeriod": false,
+          "xLegacy": 0,
+          "yLegacy": 0,
+          "isFieldGoal": 1,
+          "shotResult": "Missed",
+          "description": "MISS J. Nurkic tip Layup",
+          "playerName": "Nurkic",
+          "playerNameI": "J. Nurkic",
+          "personIdsFilter": [
+            203994
+          ]
+        }
+      },
+      {
+        "id": "0022300063",
+        "event": {
+          "actionNumber": 103,
+          "clock": "PT04M21.00S",
+          "timeActual": "2023-10-25T23:25:31.8Z",
+          "period": 1,
+          "periodType": "REGULAR",
+          "teamId": 1610612737,
+          "teamTricode": "ATL",
+          "actionType": "2pt",
+          "subType": "Layup",
+          "descriptor": "putback",
+          "qualifiers": [
+            "pointsinthepaint",
+            "2ndchance"
+          ],
+          "personId": 203991,
+          "x": 5.590000152587891,
+          "y": 50,
+          "area": "Mid-Range",
+          "areaDetail": "8-16 Left",
+          "side": "left",
+          "shotDistance": 0,
+          "possession": 1610612737,
+          "scoreHome": "17",
+          "scoreAway": "18",
+          "edited": "2023-10-25T23:25:31Z",
+          "orderNumber": 1030000,
+          "isTargetScoreLastPeriod": false,
+          "xLegacy": 0,
+          "yLegacy": 0,
+          "isFieldGoal": 1,
+          "shotResult": "Made",
+          "pointsTotal": 4,
+          "description": "C. Capela putback Layup (4 PTS)",
+          "playerName": "Capela",
+          "playerNameI": "C. Capela",
+          "personIdsFilter": [
+            203991
+          ]
+        }
+      },
+      {
+        "id": "0022300063",
+        "event": {
+          "actionNumber": 292,
+          "clock": "PT03M44.00S",
+          "timeActual": "2023-10-26T00:03:41.5Z",
+          "period": 2,
+          "periodType": "REGULAR",
+          "teamId": 1610612737,
+          "teamTricode": "ATL",
+          "actionType": "2pt",
+          "subType": "Layup",
+          "descriptor": "tip",
+          "qualifiers": [
+            "pointsinthepaint",
+            "2ndchance"
+          ],
+          "personId": 203991,
+          "x": 5.590000152587891,
+          "y": 50,
+          "area": "Mid-Range",
+          "areaDetail": "8-16 Left",
+          "side": "left",
+          "shotDistance": 0,
+          "possession": 1610612737,
+          "scoreHome": "40",
+          "scoreAway": "47",
+          "edited": "2023-10-26T00:03:41Z",
+          "orderNumber": 2870000,
+          "isTargetScoreLastPeriod": false,
+          "xLegacy": 0,
+          "yLegacy": 0,
+          "isFieldGoal": 1,
+          "shotResult": "Missed",
+          "description": "MISS C. Capela tip Layup",
+          "playerName": "Capela",
+          "playerNameI": "C. Capela",
+          "personIdsFilter": [
+            203991
+          ]
+        }
+      },
+      {
+        "id": "0022300063",
+        "event": {
+          "actionNumber": 336,
+          "clock": "PT01M13.00S",
+          "timeActual": "2023-10-26T00:09:13.6Z",
+          "period": 2,
+          "periodType": "REGULAR",
+          "teamId": 1610612766,
+          "teamTricode": "CHA",
+          "actionType": "2pt",
+          "subType": "Layup",
+          "descriptor": "putback",
+          "qualifiers": [
+            "pointsinthepaint",
+            "2ndchance"
+          ],
+          "personId": 1631109,
+          "x": 94.40999984741211,
+          "y": 50,
+          "area": "Mid-Range",
+          "areaDetail": "8-16 Left",
+          "side": "right",
+          "shotDistance": 0,
+          "possession": 1610612766,
+          "scoreHome": "51",
+          "scoreAway": "51",
+          "edited": "2023-10-26T00:09:13Z",
+          "orderNumber": 3310000,
+          "isTargetScoreLastPeriod": false,
+          "xLegacy": 0,
+          "yLegacy": 0,
+          "isFieldGoal": 1,
+          "shotResult": "Made",
+          "pointsTotal": 9,
+          "description": "M. Williams putback Layup (9 PTS)",
+          "playerName": "Williams",
+          "playerNameI": "M. Williams",
+          "personIdsFilter": [
+            1631109
+          ]
+        }
+      },
+      {
+        "id": "0022300063",
+        "event": {
+          "actionNumber": 470,
+          "clock": "PT04M00.00S",
+          "timeActual": "2023-10-26T00:43:03.1Z",
+          "period": 3,
+          "periodType": "REGULAR",
+          "teamId": 1610612737,
+          "teamTricode": "ATL",
+          "actionType": "2pt",
+          "subType": "Layup",
+          "descriptor": "tip",
+          "qualifiers": [
+            "pointsinthepaint",
+            "fromturnover",
+            "2ndchance"
+          ],
+          "personId": 1630168,
+          "x": 94.40999984741211,
+          "y": 50,
+          "area": "Mid-Range",
+          "areaDetail": "8-16 Left",
+          "side": "right",
+          "shotDistance": 0,
+          "possession": 1610612737,
+          "scoreHome": "69",
+          "scoreAway": "67",
+          "edited": "2023-10-26T00:43:03Z",
+          "orderNumber": 4580000,
+          "isTargetScoreLastPeriod": false,
+          "xLegacy": 0,
+          "yLegacy": 0,
+          "isFieldGoal": 1,
+          "shotResult": "Missed",
+          "description": "MISS O. Okongwu tip Layup",
+          "playerName": "Okongwu",
+          "playerNameI": "O. Okongwu",
+          "personIdsFilter": [
+            1630168
+          ]
+        }
+      },
+      {
+        "id": "0022300064",
+        "event": {
+          "actionNumber": 348,
+          "clock": "PT10M24.00S",
+          "timeActual": "2023-10-26T00:24:26.4Z",
+          "period": 3,
+          "periodType": "REGULAR",
+          "teamId": 1610612764,
+          "teamTricode": "WAS",
+          "actionType": "2pt",
+          "subType": "Layup",
+          "descriptor": "tip",
+          "qualifiers": [
+            "pointsinthepaint",
+            "2ndchance"
+          ],
+          "personId": 1630166,
+          "x": 5.590000152587891,
+          "y": 50,
+          "area": "Mid-Range",
+          "areaDetail": "8-16 Left",
+          "side": "left",
+          "shotDistance": 0,
+          "possession": 1610612764,
+          "scoreHome": "80",
+          "scoreAway": "72",
+          "edited": "2023-10-26T00:24:26Z",
+          "orderNumber": 3470000,
+          "isTargetScoreLastPeriod": false,
+          "xLegacy": 0,
+          "yLegacy": 0,
+          "isFieldGoal": 1,
+          "shotResult": "Made",
+          "pointsTotal": 7,
+          "description": "D. Avdija tip Layup (7 PTS)",
+          "playerName": "Avdija",
+          "playerNameI": "D. Avdija",
+          "personIdsFilter": [
+            1630166
+          ]
+        }
+      }
+    ]
+  },
+  "2024-25": {
+    "firstFgRoutes": 19628,
+    "midN": 2817,
+    "midMade": 1692,
+    "midNearBasketText": 1885,
+    "midZeroDistance": 1866,
+    "midAtMostFourFeet": 1866,
+    "midAtLeastEightFeet": 951,
+    "midAtLeastEightFeetMade": 388,
+    "midMissingArea": 0,
+    "areas": {
+      "Mid-Range": {
+        "n": 2817,
+        "made": 1692
+      }
+    },
+    "types": {
+      "Jump Shot step back": {
+        "n": 122,
+        "made": 44
+      },
+      "Layup tip": {
+        "n": 1280,
+        "made": 769
+      },
+      "DUNK tip": {
+        "n": 192,
+        "made": 177
+      },
+      "Layup putback": {
+        "n": 348,
+        "made": 308
+      },
+      "Jump Shot ": {
+        "n": 181,
+        "made": 79
+      },
+      "Jump Shot pullup": {
+        "n": 274,
+        "made": 120
+      },
+      "DUNK putback": {
+        "n": 59,
+        "made": 56
+      },
+      "Jump Shot fadeaway": {
+        "n": 93,
+        "made": 29
+      },
+      "Jump Shot driving floating": {
+        "n": 59,
+        "made": 19
+      },
+      "Jump Shot floating": {
+        "n": 37,
+        "made": 19
+      },
+      "Jump Shot turnaround": {
+        "n": 33,
+        "made": 12
+      },
+      "Jump Shot driving floating bank": {
+        "n": 21,
+        "made": 6
+      },
+      "Jump Shot pullup bank": {
+        "n": 11,
+        "made": 4
+      },
+      "Jump Shot turnaround fadeaway": {
+        "n": 66,
+        "made": 28
+      },
+      "Hook turnaround": {
+        "n": 13,
+        "made": 8
+      },
+      "Jump Shot driving bank": {
+        "n": 2,
+        "made": 2
+      },
+      "Hook ": {
+        "n": 4,
+        "made": 2
+      },
+      "Jump Shot bank": {
+        "n": 8,
+        "made": 6
+      },
+      "Jump Shot fadeaway bank": {
+        "n": 6,
+        "made": 3
+      },
+      "Hook driving": {
+        "n": 1,
+        "made": 1
+      },
+      "Layup ": {
+        "n": 2,
+        "made": 0
+      },
+      "Layup driving": {
+        "n": 2,
+        "made": 0
+      },
+      "Layup driving finger roll": {
+        "n": 1,
+        "made": 0
+      },
+      "Hook bank": {
+        "n": 1,
+        "made": 0
+      },
+      "DUNK cutting": {
+        "n": 1,
+        "made": 0
+      }
+    },
+    "examples": [
+      {
+        "id": "0022400062",
+        "event": {
+          "actionNumber": 93,
+          "clock": "PT03M51.00S",
+          "timeActual": "2024-10-23T02:20:51.7Z",
+          "period": 1,
+          "periodType": "REGULAR",
+          "teamId": 1610612747,
+          "teamTricode": "LAL",
+          "actionType": "2pt",
+          "subType": "Layup",
+          "descriptor": "tip",
+          "qualifiers": [
+            "pointsinthepaint",
+            "2ndchance"
+          ],
+          "personId": 1630559,
+          "x": 5.590000152587891,
+          "y": 50,
+          "area": "Mid-Range",
+          "areaDetail": "8-16 Left",
+          "side": "left",
+          "shotDistance": 0,
+          "possession": 1610612747,
+          "scoreHome": "18",
+          "scoreAway": "12",
+          "edited": "2024-10-23T02:20:51Z",
+          "orderNumber": 930000,
+          "isTargetScoreLastPeriod": false,
+          "xLegacy": 0,
+          "yLegacy": 0,
+          "isFieldGoal": 1,
+          "shotResult": "Made",
+          "pointsTotal": 2,
+          "description": "A. Reaves tip Layup (2 PTS)",
+          "playerName": "Reaves",
+          "playerNameI": "A. Reaves",
+          "personIdsFilter": [
+            1630559
+          ]
+        }
+      },
+      {
+        "id": "0022400062",
+        "event": {
+          "actionNumber": 293,
+          "clock": "PT02M27.00S",
+          "timeActual": "2024-10-23T02:55:47.2Z",
+          "period": 2,
+          "periodType": "REGULAR",
+          "teamId": 1610612750,
+          "teamTricode": "MIN",
+          "actionType": "2pt",
+          "subType": "DUNK",
+          "descriptor": "tip",
+          "qualifiers": [
+            "pointsinthepaint",
+            "2ndchance"
+          ],
+          "personId": 203497,
+          "x": 94.40999984741211,
+          "y": 50,
+          "area": "Mid-Range",
+          "areaDetail": "8-16 Left",
+          "side": "right",
+          "shotDistance": 0,
+          "possession": 1610612750,
+          "scoreHome": "51",
+          "scoreAway": "39",
+          "edited": "2024-10-23T02:55:47Z",
+          "orderNumber": 2930000,
+          "isTargetScoreLastPeriod": false,
+          "xLegacy": 0,
+          "yLegacy": 0,
+          "isFieldGoal": 1,
+          "shotResult": "Made",
+          "pointsTotal": 5,
+          "description": "R. Gobert tip DUNK (5 PTS)",
+          "playerName": "Gobert",
+          "playerNameI": "R. Gobert",
+          "personIdsFilter": [
+            203497
+          ]
+        }
+      },
+      {
+        "id": "0022400062",
+        "event": {
+          "actionNumber": 673,
+          "clock": "PT00M23.30S",
+          "timeActual": "2024-10-23T04:31:26.3Z",
+          "period": 4,
+          "periodType": "REGULAR",
+          "teamId": 1610612750,
+          "teamTricode": "MIN",
+          "actionType": "2pt",
+          "subType": "Layup",
+          "descriptor": "tip",
+          "qualifiers": [
+            "pointsinthepaint",
+            "2ndchance"
+          ],
+          "personId": 203944,
+          "x": 5.590000152587891,
+          "y": 50,
+          "area": "Mid-Range",
+          "areaDetail": "8-16 Left",
+          "side": "left",
+          "shotDistance": 0,
+          "possession": 1610612750,
+          "scoreHome": "110",
+          "scoreAway": "103",
+          "edited": "2024-10-23T04:31:26Z",
+          "orderNumber": 6670000,
+          "isTargetScoreLastPeriod": false,
+          "xLegacy": 0,
+          "yLegacy": 0,
+          "isFieldGoal": 1,
+          "shotResult": "Made",
+          "pointsTotal": 16,
+          "description": "J. Randle tip Layup (16 PTS)",
+          "playerName": "Randle",
+          "playerNameI": "J. Randle",
+          "personIdsFilter": [
+            203944
+          ]
+        }
+      },
+      {
+        "id": "0022400064",
+        "event": {
+          "actionNumber": 21,
+          "clock": "PT10M08.00S",
+          "timeActual": "2024-10-23T23:46:11.4Z",
+          "period": 1,
+          "periodType": "REGULAR",
+          "teamId": 1610612737,
+          "teamTricode": "ATL",
+          "actionType": "2pt",
+          "subType": "Layup",
+          "descriptor": "tip",
+          "qualifiers": [
+            "pointsinthepaint",
+            "2ndchance"
+          ],
+          "personId": 1630700,
+          "x": 94.40999984741211,
+          "y": 50,
+          "area": "Mid-Range",
+          "areaDetail": "8-16 Left",
+          "side": "right",
+          "shotDistance": 0,
+          "possession": 1610612737,
+          "scoreHome": "10",
+          "scoreAway": "4",
+          "edited": "2024-10-23T23:46:11Z",
+          "orderNumber": 210000,
+          "isTargetScoreLastPeriod": false,
+          "xLegacy": 0,
+          "yLegacy": 0,
+          "isFieldGoal": 1,
+          "shotResult": "Made",
+          "pointsTotal": 5,
+          "description": "D. Daniels tip Layup (5 PTS)",
+          "playerName": "Daniels",
+          "playerNameI": "D. Daniels",
+          "personIdsFilter": [
+            1630700
+          ]
+        }
+      },
+      {
+        "id": "0022400064",
+        "event": {
+          "actionNumber": 234,
+          "clock": "PT06M40.00S",
+          "timeActual": "2024-10-24T00:22:54.9Z",
+          "period": 2,
+          "periodType": "REGULAR",
+          "teamId": 1610612737,
+          "teamTricode": "ATL",
+          "actionType": "2pt",
+          "subType": "Layup",
+          "descriptor": "putback",
+          "qualifiers": [
+            "pointsinthepaint",
+            "2ndchance"
+          ],
+          "personId": 1630168,
+          "x": 94.40999984741211,
+          "y": 50,
+          "area": "Mid-Range",
+          "areaDetail": "8-16 Left",
+          "side": "right",
+          "shotDistance": 0,
+          "possession": 1610612737,
+          "scoreHome": "37",
+          "scoreAway": "41",
+          "edited": "2024-10-24T00:22:54Z",
+          "orderNumber": 2300000,
+          "isTargetScoreLastPeriod": false,
+          "xLegacy": 0,
+          "yLegacy": 0,
+          "isFieldGoal": 1,
+          "shotResult": "Made",
+          "pointsTotal": 12,
+          "description": "O. Okongwu putback Layup (12 PTS)",
+          "playerName": "Okongwu",
+          "playerNameI": "O. Okongwu",
+          "personIdsFilter": [
+            1630168
+          ]
+        }
+      },
+      {
+        "id": "0022400064",
+        "event": {
+          "actionNumber": 410,
+          "clock": "PT06M12.00S",
+          "timeActual": "2024-10-24T01:07:20.2Z",
+          "period": 3,
+          "periodType": "REGULAR",
+          "teamId": 1610612751,
+          "teamTricode": "BKN",
+          "actionType": "2pt",
+          "subType": "Layup",
+          "descriptor": "putback",
+          "qualifiers": [
+            "pointsinthepaint",
+            "2ndchance"
+          ],
+          "personId": 1641730,
+          "x": 94.40999984741211,
+          "y": 50,
+          "area": "Mid-Range",
+          "areaDetail": "8-16 Left",
+          "side": "right",
+          "shotDistance": 0,
+          "possession": 1610612751,
+          "scoreHome": "65",
+          "scoreAway": "66",
+          "edited": "2024-10-24T01:07:20Z",
+          "orderNumber": 4040000,
+          "isTargetScoreLastPeriod": false,
+          "xLegacy": 0,
+          "yLegacy": 0,
+          "isFieldGoal": 1,
+          "shotResult": "Made",
+          "pointsTotal": 7,
+          "description": "N. Clowney putback Layup (7 PTS)",
+          "playerName": "Clowney",
+          "playerNameI": "N. Clowney",
+          "personIdsFilter": [
+            1641730
+          ]
+        }
+      },
+      {
+        "id": "0022400065",
+        "event": {
+          "actionNumber": 43,
+          "clock": "PT09M08.00S",
+          "timeActual": "2024-10-23T23:47:55.7Z",
+          "period": 1,
+          "periodType": "REGULAR",
+          "teamId": 1610612748,
+          "teamTricode": "MIA",
+          "actionType": "2pt",
+          "subType": "Layup",
+          "descriptor": "tip",
+          "qualifiers": [
+            "pointsinthepaint",
+            "2ndchance",
+            "defensivegoaltending"
+          ],
+          "personId": 1631107,
+          "x": 5.590000152587891,
+          "y": 50,
+          "area": "Mid-Range",
+          "areaDetail": "8-16 Left",
+          "side": "left",
+          "shotDistance": 0,
+          "possession": 1610612748,
+          "scoreHome": "6",
+          "scoreAway": "6",
+          "edited": "2024-10-23T23:48:22Z",
+          "orderNumber": 430000,
+          "isTargetScoreLastPeriod": false,
+          "xLegacy": 0,
+          "yLegacy": 0,
+          "isFieldGoal": 1,
+          "shotResult": "Made",
+          "pointsTotal": 2,
+          "description": "N. Jović tip Layup (2 PTS)",
+          "playerName": "Jović",
+          "playerNameI": "N. Jović",
+          "personIdsFilter": [
+            1631107
+          ]
+        }
+      },
+      {
+        "id": "0022400066",
+        "event": {
+          "actionNumber": 49,
+          "clock": "PT08M12.00S",
+          "timeActual": "2024-10-23T23:51:00.3Z",
+          "period": 1,
+          "periodType": "REGULAR",
+          "teamId": 1610612755,
+          "teamTricode": "PHI",
+          "actionType": "2pt",
+          "subType": "Layup",
+          "descriptor": "tip",
+          "qualifiers": [
+            "pointsinthepaint",
+            "2ndchance"
+          ],
+          "personId": 203083,
+          "x": 5.590000152587891,
+          "y": 50,
+          "area": "Mid-Range",
+          "areaDetail": "8-16 Left",
+          "side": "left",
+          "shotDistance": 0,
+          "possession": 1610612755,
+          "scoreHome": "6",
+          "scoreAway": "4",
+          "edited": "2024-10-23T23:51:00Z",
+          "orderNumber": 490000,
+          "isTargetScoreLastPeriod": false,
+          "xLegacy": 0,
+          "yLegacy": 0,
+          "isFieldGoal": 1,
+          "shotResult": "Made",
+          "pointsTotal": 2,
+          "description": "A. Drummond tip Layup (2 PTS)",
+          "playerName": "Drummond",
+          "playerNameI": "A. Drummond",
+          "personIdsFilter": [
+            203083
+          ]
+        }
+      },
+      {
+        "id": "0022400066",
+        "event": {
+          "actionNumber": 475,
+          "clock": "PT04M11.00S",
+          "timeActual": "2024-10-24T01:24:23.2Z",
+          "period": 3,
+          "periodType": "REGULAR",
+          "teamId": 1610612749,
+          "teamTricode": "MIL",
+          "actionType": "2pt",
+          "subType": "DUNK",
+          "descriptor": "tip",
+          "qualifiers": [
+            "pointsinthepaint",
+            "2ndchance"
+          ],
+          "personId": 201572,
+          "x": 5.590000152587891,
+          "y": 50,
+          "area": "Mid-Range",
+          "areaDetail": "8-16 Left",
+          "side": "left",
+          "shotDistance": 0,
+          "possession": 1610612749,
+          "scoreHome": "69",
+          "scoreAway": "84",
+          "edited": "2024-10-24T01:24:23Z",
+          "orderNumber": 4690000,
+          "isTargetScoreLastPeriod": false,
+          "xLegacy": 0,
+          "yLegacy": 0,
+          "isFieldGoal": 1,
+          "shotResult": "Made",
+          "pointsTotal": 3,
+          "description": "B. Lopez tip DUNK (3 PTS)",
+          "playerName": "Lopez",
+          "playerNameI": "B. Lopez",
+          "personIdsFilter": [
+            201572
+          ]
+        }
+      },
+      {
+        "id": "0022400066",
+        "event": {
+          "actionNumber": 667,
+          "clock": "PT03M26.00S",
+          "timeActual": "2024-10-24T02:00:10.0Z",
+          "period": 4,
+          "periodType": "REGULAR",
+          "teamId": 1610612755,
+          "teamTricode": "PHI",
+          "actionType": "2pt",
+          "subType": "DUNK",
+          "descriptor": "tip",
+          "qualifiers": [
+            "pointsinthepaint",
+            "2ndchance"
+          ],
+          "personId": 203083,
+          "x": 94.40999984741211,
+          "y": 50,
+          "area": "Mid-Range",
+          "areaDetail": "8-16 Left",
+          "side": "right",
+          "shotDistance": 0,
+          "possession": 1610612755,
+          "scoreHome": "99",
+          "scoreAway": "115",
+          "edited": "2024-10-24T02:00:10Z",
+          "orderNumber": 6610000,
+          "isTargetScoreLastPeriod": false,
+          "xLegacy": 0,
+          "yLegacy": 0,
+          "isFieldGoal": 1,
+          "shotResult": "Made",
+          "pointsTotal": 10,
+          "description": "A. Drummond tip DUNK (10 PTS)",
+          "playerName": "Drummond",
+          "playerNameI": "A. Drummond",
+          "personIdsFilter": [
+            203083
+          ]
+        }
+      }
+    ]
+  },
+  "2025-26": {
+    "firstFgRoutes": 20067,
+    "midN": 3014,
+    "midMade": 1837,
+    "midNearBasketText": 2070,
+    "midZeroDistance": 2043,
+    "midAtMostFourFeet": 2043,
+    "midAtLeastEightFeet": 971,
+    "midAtLeastEightFeetMade": 382,
+    "midMissingArea": 0,
+    "areas": {
+      "Mid-Range": {
+        "n": 3014,
+        "made": 1837
+      }
+    },
+    "types": {
+      "Jump Shot pullup": {
+        "n": 293,
+        "made": 122
+      },
+      "Jump Shot fadeaway": {
+        "n": 95,
+        "made": 27
+      },
+      "Layup tip": {
+        "n": 1379,
+        "made": 847
+      },
+      "Jump Shot step back": {
+        "n": 114,
+        "made": 41
+      },
+      "Layup putback": {
+        "n": 407,
+        "made": 361
+      },
+      "Jump Shot driving floating": {
+        "n": 84,
+        "made": 27
+      },
+      "Jump Shot turnaround fadeaway": {
+        "n": 69,
+        "made": 34
+      },
+      "Jump Shot ": {
+        "n": 149,
+        "made": 61
+      },
+      "DUNK tip": {
+        "n": 195,
+        "made": 178
+      },
+      "Jump Shot turnaround": {
+        "n": 45,
+        "made": 18
+      },
+      "DUNK putback": {
+        "n": 80,
+        "made": 77
+      },
+      "Jump Shot floating": {
+        "n": 43,
+        "made": 21
+      },
+      "Jump Shot driving floating bank": {
+        "n": 15,
+        "made": 8
+      },
+      "Hook turnaround": {
+        "n": 9,
+        "made": 4
+      },
+      "Jump Shot driving bank": {
+        "n": 3,
+        "made": 2
+      },
+      "Layup driving": {
+        "n": 6,
+        "made": 1
+      },
+      "Jump Shot pullup bank": {
+        "n": 8,
+        "made": 3
+      },
+      "Jump Shot turnaround bank": {
+        "n": 1,
+        "made": 0
+      },
+      "Jump Shot turnaround fadeaway bank": {
+        "n": 6,
+        "made": 2
+      },
+      "Jump Shot bank": {
+        "n": 5,
+        "made": 2
+      },
+      "Jump Shot fadeaway bank": {
+        "n": 2,
+        "made": 0
+      },
+      "Hook driving": {
+        "n": 3,
+        "made": 1
+      },
+      "Layup cutting": {
+        "n": 1,
+        "made": 0
+      },
+      "Layup driving reverse": {
+        "n": 1,
+        "made": 0
+      },
+      "Layup driving finger roll": {
+        "n": 1,
+        "made": 0
+      }
+    },
+    "examples": [
+      {
+        "id": "0022500001",
+        "event": {
+          "actionNumber": 458,
+          "clock": "PT04M43.00S",
+          "timeActual": "2025-10-22T01:23:25.0Z",
+          "period": 3,
+          "periodType": "REGULAR",
+          "teamId": 1610612745,
+          "teamTricode": "HOU",
+          "actionType": "2pt",
+          "subType": "Layup",
+          "descriptor": "tip",
+          "qualifiers": [
+            "pointsinthepaint",
+            "2ndchance"
+          ],
+          "personId": 203500,
+          "x": 94.40999984741211,
+          "y": 50,
+          "area": "Mid-Range",
+          "areaDetail": "8-16 Left",
+          "side": "right",
+          "shotDistance": 0,
+          "possession": 1610612745,
+          "scoreHome": "63",
+          "scoreAway": "67",
+          "edited": "2025-10-22T01:23:25Z",
+          "orderNumber": 4520000,
+          "isTargetScoreLastPeriod": false,
+          "xLegacy": 0,
+          "yLegacy": 0,
+          "isFieldGoal": 1,
+          "shotResult": "Missed",
+          "description": "MISS S. Adams tip Layup",
+          "playerName": "Adams",
+          "playerNameI": "S. Adams",
+          "personIdsFilter": [
+            203500
+          ]
+        }
+      },
+      {
+        "id": "0022500001",
+        "event": {
+          "actionNumber": 640,
+          "clock": "PT03M17.00S",
+          "timeActual": "2025-10-22T01:58:40.3Z",
+          "period": 4,
+          "periodType": "REGULAR",
+          "teamId": 1610612760,
+          "teamTricode": "OKC",
+          "actionType": "2pt",
+          "subType": "Layup",
+          "descriptor": "tip",
+          "qualifiers": [
+            "pointsinthepaint",
+            "fromturnover",
+            "2ndchance"
+          ],
+          "personId": 1628392,
+          "x": 5.590000152587891,
+          "y": 50,
+          "area": "Mid-Range",
+          "areaDetail": "8-16 Left",
+          "side": "left",
+          "shotDistance": 0,
+          "possession": 1610612760,
+          "scoreHome": "95",
+          "scoreAway": "97",
+          "edited": "2025-10-22T01:58:40Z",
+          "orderNumber": 6320000,
+          "isTargetScoreLastPeriod": false,
+          "xLegacy": 0,
+          "yLegacy": 0,
+          "isFieldGoal": 1,
+          "shotResult": "Made",
+          "pointsTotal": 6,
+          "description": "I. Hartenstein tip Layup (6 PTS)",
+          "playerName": "Hartenstein",
+          "playerNameI": "I. Hartenstein",
+          "personIdsFilter": [
+            1628392
+          ]
+        }
+      },
+      {
+        "id": "0022500080",
+        "event": {
+          "actionNumber": 79,
+          "clock": "PT06M35.00S",
+          "timeActual": "2025-10-22T23:24:31.7Z",
+          "period": 1,
+          "periodType": "REGULAR",
+          "teamId": 1610612751,
+          "teamTricode": "BKN",
+          "actionType": "2pt",
+          "subType": "Layup",
+          "descriptor": "tip",
+          "qualifiers": [
+            "pointsinthepaint",
+            "2ndchance"
+          ],
+          "personId": 1629611,
+          "x": 5.590000152587891,
+          "y": 50,
+          "area": "Mid-Range",
+          "areaDetail": "8-16 Left",
+          "side": "left",
+          "shotDistance": 0,
+          "possession": 1610612751,
+          "scoreHome": "14",
+          "scoreAway": "16",
+          "edited": "2025-10-22T23:24:31Z",
+          "orderNumber": 770000,
+          "isTargetScoreLastPeriod": false,
+          "xLegacy": 0,
+          "yLegacy": 0,
+          "isFieldGoal": 1,
+          "shotResult": "Made",
+          "pointsTotal": 2,
+          "description": "T. Mann tip Layup (2 PTS)",
+          "playerName": "Mann",
+          "playerNameI": "T. Mann",
+          "personIdsFilter": [
+            1629611
+          ]
+        }
+      },
+      {
+        "id": "0022500080",
+        "event": {
+          "actionNumber": 251,
+          "clock": "PT09M24.00S",
+          "timeActual": "2025-10-22T23:53:52.1Z",
+          "period": 2,
+          "periodType": "REGULAR",
+          "teamId": 1610612751,
+          "teamTricode": "BKN",
+          "actionType": "2pt",
+          "subType": "Layup",
+          "descriptor": "tip",
+          "qualifiers": [
+            "pointsinthepaint",
+            "2ndchance"
+          ],
+          "personId": 1629651,
+          "x": 5.590000152587891,
+          "y": 50,
+          "area": "Mid-Range",
+          "areaDetail": "8-16 Left",
+          "side": "left",
+          "shotDistance": 0,
+          "possession": 1610612751,
+          "scoreHome": "44",
+          "scoreAway": "42",
+          "edited": "2025-10-22T23:53:52Z",
+          "orderNumber": 2480000,
+          "isTargetScoreLastPeriod": false,
+          "xLegacy": 0,
+          "yLegacy": 0,
+          "isFieldGoal": 1,
+          "shotResult": "Made",
+          "pointsTotal": 11,
+          "description": "N. Claxton tip Layup (11 PTS)",
+          "playerName": "Claxton",
+          "playerNameI": "N. Claxton",
+          "personIdsFilter": [
+            1629651
+          ]
+        }
+      },
+      {
+        "id": "0022500080",
+        "event": {
+          "actionNumber": 681,
+          "clock": "PT07M44.00S",
+          "timeActual": "2025-10-23T01:21:45.1Z",
+          "period": 4,
+          "periodType": "REGULAR",
+          "teamId": 1610612751,
+          "teamTricode": "BKN",
+          "actionType": "2pt",
+          "subType": "Layup",
+          "descriptor": "putback",
+          "qualifiers": [
+            "pointsinthepaint",
+            "fromturnover",
+            "2ndchance"
+          ],
+          "personId": 1629008,
+          "x": 94.40999984741211,
+          "y": 50,
+          "area": "Mid-Range",
+          "areaDetail": "8-16 Left",
+          "side": "right",
+          "shotDistance": 0,
+          "possession": 1610612751,
+          "scoreHome": "119",
+          "scoreAway": "106",
+          "edited": "2025-10-23T01:21:45Z",
+          "orderNumber": 6720000,
+          "isTargetScoreLastPeriod": false,
+          "xLegacy": 0,
+          "yLegacy": 0,
+          "isFieldGoal": 1,
+          "shotResult": "Made",
+          "pointsTotal": 12,
+          "description": "M. Porter Jr. putback Layup (12 PTS)",
+          "playerName": "Porter Jr.",
+          "playerNameI": "M. Porter Jr.",
+          "personIdsFilter": [
+            1629008
+          ]
+        }
+      },
+      {
+        "id": "0022500081",
+        "event": {
+          "actionNumber": 691,
+          "clock": "PT02M02.00S",
+          "timeActual": "2025-10-23T01:34:00.7Z",
+          "period": 4,
+          "periodType": "REGULAR",
+          "teamId": 1610612748,
+          "teamTricode": "MIA",
+          "actionType": "2pt",
+          "subType": "Layup",
+          "descriptor": "tip",
+          "qualifiers": [
+            "pointsinthepaint",
+            "2ndchance"
+          ],
+          "personId": 1628389,
+          "x": 5.590000152587891,
+          "y": 50,
+          "area": "Mid-Range",
+          "areaDetail": "8-16 Left",
+          "side": "left",
+          "shotDistance": 0,
+          "possession": 1610612748,
+          "scoreHome": "117",
+          "scoreAway": "116",
+          "edited": "2025-10-23T01:34:00Z",
+          "orderNumber": 6780000,
+          "isTargetScoreLastPeriod": false,
+          "xLegacy": 0,
+          "yLegacy": 0,
+          "isFieldGoal": 1,
+          "shotResult": "Missed",
+          "description": "MISS B. Adebayo tip Layup",
+          "playerName": "Adebayo",
+          "playerNameI": "B. Adebayo",
+          "personIdsFilter": [
+            1628389
+          ]
+        }
+      },
+      {
+        "id": "0022500082",
+        "event": {
+          "actionNumber": 339,
+          "clock": "PT02M08.00S",
+          "timeActual": "2025-10-23T00:41:07.1Z",
+          "period": 2,
+          "periodType": "REGULAR",
+          "teamId": 1610612761,
+          "teamTricode": "TOR",
+          "actionType": "2pt",
+          "subType": "Layup",
+          "descriptor": "tip",
+          "qualifiers": [
+            "pointsinthepaint",
+            "2ndchance"
+          ],
+          "personId": 1627751,
+          "x": 94.40999984741211,
+          "y": 50,
+          "area": "Mid-Range",
+          "areaDetail": "8-16 Left",
+          "side": "right",
+          "shotDistance": 0,
+          "possession": 1610612761,
+          "scoreHome": "52",
+          "scoreAway": "59",
+          "edited": "2025-10-23T00:41:07Z",
+          "orderNumber": 3380000,
+          "isTargetScoreLastPeriod": false,
+          "xLegacy": 0,
+          "yLegacy": 0,
+          "isFieldGoal": 1,
+          "shotResult": "Missed",
+          "description": "MISS J. Poeltl tip Layup",
+          "playerName": "Poeltl",
+          "playerNameI": "J. Poeltl",
+          "personIdsFilter": [
+            1627751
+          ]
+        }
+      },
+      {
+        "id": "0022500084",
+        "event": {
+          "actionNumber": 25,
+          "clock": "PT09M56.00S",
+          "timeActual": "2025-10-23T00:16:14.6Z",
+          "period": 1,
+          "periodType": "REGULAR",
+          "teamId": 1610612741,
+          "teamTricode": "CHI",
+          "actionType": "2pt",
+          "subType": "Layup",
+          "descriptor": "tip",
+          "qualifiers": [
+            "pointsinthepaint",
+            "2ndchance"
+          ],
+          "personId": 202696,
+          "x": 5.590000152587891,
+          "y": 50,
+          "area": "Mid-Range",
+          "areaDetail": "8-16 Left",
+          "side": "left",
+          "shotDistance": 0,
+          "possession": 1610612741,
+          "scoreHome": "6",
+          "scoreAway": "6",
+          "edited": "2025-10-23T00:16:14Z",
+          "orderNumber": 250000,
+          "isTargetScoreLastPeriod": false,
+          "xLegacy": 0,
+          "yLegacy": 0,
+          "isFieldGoal": 1,
+          "shotResult": "Missed",
+          "description": "MISS N. Vučević tip Layup",
+          "playerName": "Vučević",
+          "playerNameI": "N. Vučević",
+          "personIdsFilter": [
+            202696
+          ]
+        }
+      },
+      {
+        "id": "0022500084",
+        "event": {
+          "actionNumber": 168,
+          "clock": "PT00M00.00S",
+          "timeActual": "2025-10-23T00:40:51.2Z",
+          "period": 1,
+          "periodType": "REGULAR",
+          "teamId": 1610612741,
+          "teamTricode": "CHI",
+          "actionType": "2pt",
+          "subType": "Layup",
+          "descriptor": "tip",
+          "qualifiers": [
+            "pointsinthepaint",
+            "2ndchance"
+          ],
+          "personId": 1628989,
+          "x": 5.590000152587891,
+          "y": 50,
+          "area": "Mid-Range",
+          "areaDetail": "8-16 Left",
+          "side": "left",
+          "shotDistance": 0,
+          "possession": 1610612741,
+          "scoreHome": "35",
+          "scoreAway": "19",
+          "edited": "2025-10-23T00:40:51Z",
+          "orderNumber": 1670000,
+          "isTargetScoreLastPeriod": false,
+          "xLegacy": 0,
+          "yLegacy": 0,
+          "isFieldGoal": 1,
+          "shotResult": "Missed",
+          "description": "MISS K. Huerter tip Layup",
+          "playerName": "Huerter",
+          "playerNameI": "K. Huerter",
+          "personIdsFilter": [
+            1628989
+          ]
+        }
+      },
+      {
+        "id": "0022500084",
+        "event": {
+          "actionNumber": 250,
+          "clock": "PT06M42.00S",
+          "timeActual": "2025-10-23T00:58:24.2Z",
+          "period": 2,
+          "periodType": "REGULAR",
+          "teamId": 1610612741,
+          "teamTricode": "CHI",
+          "actionType": "2pt",
+          "subType": "Layup",
+          "descriptor": "tip",
+          "qualifiers": [
+            "pointsinthepaint",
+            "2ndchance"
+          ],
+          "personId": 202696,
+          "x": 5.590000152587891,
+          "y": 50,
+          "area": "Mid-Range",
+          "areaDetail": "8-16 Left",
+          "side": "left",
+          "shotDistance": 0,
+          "possession": 1610612741,
+          "scoreHome": "44",
+          "scoreAway": "28",
+          "edited": "2025-10-23T00:58:24Z",
+          "orderNumber": 2490000,
+          "isTargetScoreLastPeriod": false,
+          "xLegacy": 0,
+          "yLegacy": 0,
+          "isFieldGoal": 1,
+          "shotResult": "Missed",
+          "description": "MISS N. Vučević tip Layup",
+          "playerName": "Vučević",
+          "playerNameI": "N. Vučević",
+          "personIdsFilter": [
+            202696
+          ]
+        }
+      }
+    ]
+  }
+}

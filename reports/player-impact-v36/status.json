@@ -1,0 +1,34 @@
+{
+  "officialModelAdopted": false,
+  "goalComplete": false,
+  "fullOvrThisVersion": false,
+  "latestCompleteOvrVersion": 24,
+  "failedWinGateSeasons": [
+    "2023-24",
+    "2025-26"
+  ],
+  "targetPlayerColumns": 176,
+  "fullValidationSeasons": 4,
+  "seeds": 3,
+  "games": 28023,
+  "probePlayers": 10,
+  "probeGames": 9600,
+  "sourceRoleCards": 2262,
+  "sourceContextStates": 270090,
+  "sourceUnsupportedSelfMakesBefore": 891,
+  "sourceUnsupportedSelfMakesAfter": 0,
+  "worsenedIndividualMetrics": [
+    "pts36",
+    "ast36",
+    "tov36",
+    "stl36",
+    "blk36",
+    "fta36",
+    "fgPct",
+    "threePct",
+    "tovPer100Uses"
+  ],
+  "healthyProbeChangeIntervalsOverlappingZero": 10,
+  "fittedGlobalSelfScale": 0.9723144269336811,
+  "scope": "Terminal-column positive prior with older-only conditional mark calibration; no full OVR or adoption."
+}

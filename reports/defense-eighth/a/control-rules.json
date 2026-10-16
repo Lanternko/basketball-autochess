@@ -1,0 +1,36 @@
+{
+  "stage": "A5",
+  "writtenAt": "2026-10-12T12:41:44.646Z",
+  "versions": [
+    "v1",
+    "v3-signals-off"
+  ],
+  "cutoffs": [
+    25,
+    41,
+    55
+  ],
+  "seeds": [
+    20261012,
+    20261013,
+    20261014,
+    20261015,
+    20261016,
+    20261017,
+    20261018,
+    20261019,
+    20261020,
+    20261021,
+    20261022,
+    20261023,
+    20261024,
+    20261025,
+    20261026,
+    20261027,
+    20261028,
+    20261029,
+    20261030,
+    20261031
+  ],
+  "definition": "v1 uses frozen v1 event mechanisms with training-only rebuilt old cards and season MPG. v3-signals-off retains all v3 event accounting/timing/foul/turnover mechanisms and disables only learned DREB/rim/liveTOV/zone/FTA signals. Both use the frozen seven-batch pooled training calibration algorithm (3 seeds, at most5 iterations), initial pace1; no net/win tuning. Pure signal attribution is v3 versus signals-off; v3 versus v1 also changes accounting/events/timing and is not a pure defense signal attribution."
+}

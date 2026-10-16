@@ -1,0 +1,484 @@
+{
+  "season": "2025-26",
+  "description": "Exact replay of ranking protocol; score deltas include possession changes, not per-possession offensive/defensive causal effects.",
+  "players": [
+    {
+      "name": "Stephen Curry",
+      "rank": 47,
+      "minutes": 30.673295153553276,
+      "ownScoreDelta": 2.216666666666667,
+      "opponentScoreDelta": 0.4125,
+      "netContribution": 1.8041666666666667,
+      "matchedFullRanking": true,
+      "attributes": {
+        "long": 80.76349059827956,
+        "mid": 85.0055490603333,
+        "short": 79.49640890362654,
+        "offBall": 70,
+        "screen": 70,
+        "handle": 70,
+        "breakDbl": 70,
+        "onBall": 71.25729989694263,
+        "help": 67.51156336725255,
+        "physique": 41.58305553297016
+      },
+      "context": {
+        "spacing": 99,
+        "self": 92.78101716877228,
+        "creation": 90.74559982723248,
+        "sourceLong": 80.76349059827956,
+        "sourceMid": 85.0055490603333,
+        "sourceDouble": 71.58547969328558,
+        "sourceCreation": 79.58798995788791,
+        "rates": {
+          "spacing": 0.13919751585175663,
+          "self": 0.09987089316490762,
+          "creation": 0.6471461967650205
+        },
+        "definition": "Observed 3PM/min, fresh self-made FG/min, and self+pass creation opportunities/min. Production/role proxies, not measured off-ball movement, speed, handling ability or double-team tracking."
+      },
+      "defense": {
+        "logits": {
+          "long": 0,
+          "mid": 0.0008638322941083272,
+          "short": 0.03471213119994633
+        },
+        "sourceOnBall": 71.25729989694263,
+        "sourceHelp": 67.51156336725255,
+        "sourcePhysique": 41.58305553297016,
+        "source": "Fresh-FGA shooter-adjusted five-defender source association, selected whole-game Gaussian prior. Not pure or causal defensive skill."
+      },
+      "opportunities": {
+        "selfOpportunityRate": 0.27102667899770677,
+        "receiveOpportunityRate": 0.4441844167224897,
+        "passOpportunityRate": 0.3761195177673137,
+        "passStolenPerMinute": 0.03385527416667992,
+        "referenceMakeProbability": 0.4684106836478081,
+        "contestExposurePerMinute": 0.07102461209812747,
+        "referenceMakePerUse": 0.3679772788691241,
+        "referenceFgaSurvival": 0.7855868615195837,
+        "freshZone": {
+          "long": 0.6029986639997065,
+          "mid": 0.12280998114403555,
+          "short": 0.27419135485625795
+        },
+        "freshShotCounts": {
+          "longA": 484,
+          "longM": 190,
+          "shortA": 215,
+          "shortM": 134,
+          "midA": 98,
+          "midM": 50
+        },
+        "putbackProxyCounts": {
+          "shortA": 2,
+          "shortM": 0
+        },
+        "terminalOpportunityRate": 0.7152110957201965
+      },
+      "shooting": {
+        "rates": {
+          "long": 0.38873791481130004,
+          "mid": 0.47985054175184577,
+          "short": 0.6102157546327499
+        },
+        "sourceBase": {
+          "long": 0.3887277849800315,
+          "mid": 0.4645169642701618,
+          "short": 0.606119442176662
+        },
+        "priorAttempts": 100,
+        "season": "2025-26",
+        "strictSeconds": 76808.49999999999,
+        "meanSourceShootingMultiplier": 0.9612952106952075,
+        "sourceZoneAttempts": {
+          "long": 467,
+          "mid": 95,
+          "short": 207
+        },
+        "contexts": {
+          "rotation-space": {
+            "long": 0.0343601703799649,
+            "mid": -0.011500645344528887,
+            "short": -0.022372547199112677
+          }
+        }
+      },
+      "role": {
+        "playerId": 201939,
+        "name": "Stephen Curry",
+        "position": "PG",
+        "slot": 0,
+        "source": "modal-official-starter-role",
+        "starts": 41,
+        "exactStarts": 38,
+        "lowConfidence": false,
+        "secondsBySlot": [
+          75017.5,
+          1638,
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "name": "Cade Cunningham",
+      "rank": 43,
+      "minutes": 32.17895079990603,
+      "ownScoreDelta": 1.9208333333333334,
+      "opponentScoreDelta": 0.075,
+      "netContribution": 1.8458333333333334,
+      "matchedFullRanking": true,
+      "attributes": {
+        "long": 62.28642901333333,
+        "mid": 84.60316971004573,
+        "short": 49.35748832066771,
+        "offBall": 70,
+        "screen": 70,
+        "handle": 70,
+        "breakDbl": 70,
+        "onBall": 84.12182217060266,
+        "help": 75.66421481744062,
+        "physique": 72.35791527766484
+      },
+      "context": {
+        "spacing": 71.80056149443905,
+        "self": 98.41755749919015,
+        "creation": 99,
+        "sourceLong": 62.28642901333333,
+        "sourceMid": 84.60316971004573,
+        "sourceDouble": 68.75017262366643,
+        "sourceCreation": 88.31711208292842,
+        "rates": {
+          "spacing": 0.05749391189995103,
+          "self": 0.1532576119722077,
+          "creation": 1.0965929002082355
+        },
+        "definition": "Observed 3PM/min, fresh self-made FG/min, and self+pass creation opportunities/min. Production/role proxies, not measured off-ball movement, speed, handling ability or double-team tracking."
+      },
+      "defense": {
+        "logits": {
+          "long": 0,
+          "mid": -0.0003360446856440438,
+          "short": -0.01566608479549057
+        },
+        "sourceOnBall": 84.12182217060266,
+        "sourceHelp": 75.66421481744062,
+        "sourcePhysique": 72.35791527766484,
+        "source": "Fresh-FGA shooter-adjusted five-defender source association, selected whole-game Gaussian prior. Not pure or causal defensive skill."
+      },
+      "opportunities": {
+        "selfOpportunityRate": 0.42338554659049715,
+        "receiveOpportunityRate": 0.24386041758180801,
+        "passOpportunityRate": 0.6732073536177383,
+        "passStolenPerMinute": 0.051876647959250295,
+        "referenceMakeProbability": 0.46167665213295533,
+        "contestExposurePerMinute": 0.10922644446307658,
+        "referenceMakePerUse": 0.3456791430709334,
+        "referenceFgaSurvival": 0.748747292014636,
+        "freshZone": {
+          "long": 0.31246864761281085,
+          "mid": 0.15707735996219938,
+          "short": 0.5304539924249897
+        },
+        "freshShotCounts": {
+          "shortA": 627,
+          "shortM": 329,
+          "longA": 366,
+          "longM": 125,
+          "midA": 186,
+          "midM": 89
+        },
+        "putbackProxyCounts": {
+          "shortA": 10,
+          "shortM": 5
+        },
+        "terminalOpportunityRate": 0.6672459641723052
+      },
+      "shooting": {
+        "rates": {
+          "long": 0.3471485419612628,
+          "mid": 0.4691463991284098,
+          "short": 0.5337309679445374
+        },
+        "sourceBase": {
+          "long": 0.34713583905564444,
+          "mid": 0.4633650653707308,
+          "short": 0.5312350733711224
+        },
+        "priorAttempts": 100,
+        "season": "2025-26",
+        "strictSeconds": 128162.29999999994,
+        "meanSourceShootingMultiplier": 0.9580791540347618,
+        "sourceZoneAttempts": {
+          "long": 361,
+          "mid": 186,
+          "short": 612
+        },
+        "contexts": {
+          "rotation-space": {
+            "long": -0.0023955733577178204,
+            "mid": -0.021937598130011064,
+            "short": -0.028994011338551767
+          }
+        }
+      },
+      "role": {
+        "playerId": 1630595,
+        "name": "Cade Cunningham",
+        "position": "PG",
+        "slot": 0,
+        "source": "modal-official-starter-role",
+        "starts": 64,
+        "exactStarts": 61,
+        "lowConfidence": false,
+        "secondsBySlot": [
+          125883.1,
+          4417.4,
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "name": "Victor Wembanyama",
+      "rank": 7,
+      "minutes": 28.765912237587216,
+      "ownScoreDelta": 1.8916666666666666,
+      "opponentScoreDelta": -1.8458333333333334,
+      "netContribution": 3.7375,
+      "matchedFullRanking": true,
+      "attributes": {
+        "long": 64.87587369679423,
+        "mid": 66.78801184939437,
+        "short": 91.47545235024985,
+        "offBall": 70,
+        "screen": 70,
+        "handle": 70,
+        "breakDbl": 70,
+        "onBall": 82.09140264160116,
+        "help": 99,
+        "physique": 98.76656638751118
+      },
+      "context": {
+        "spacing": 77.59367238959075,
+        "self": 86.04848288521758,
+        "creation": 79.47251916639671,
+        "sourceLong": 64.87587369679423,
+        "sourceMid": 66.78801184939437,
+        "sourceDouble": 83.5968247360253,
+        "sourceCreation": 87.03879170715905,
+        "rates": {
+          "spacing": 0.06507290662778521,
+          "self": 0.07323004955931835,
+          "creation": 0.4592101823777233
+        },
+        "definition": "Observed 3PM/min, fresh self-made FG/min, and self+pass creation opportunities/min. Production/role proxies, not measured off-ball movement, speed, handling ability or double-team tracking."
+      },
+      "defense": {
+        "logits": {
+          "long": 0,
+          "mid": -0.00980452868696584,
+          "short": -0.09411264256530803
+        },
+        "sourceOnBall": 82.09140264160116,
+        "sourceHelp": 99,
+        "sourcePhysique": 98.76656638751118,
+        "source": "Fresh-FGA shooter-adjusted five-defender source association, selected whole-game Gaussian prior. Not pure or causal defensive skill."
+      },
+      "opportunities": {
+        "selfOpportunityRate": 0.1947433122567812,
+        "receiveOpportunityRate": 0.52449180921712,
+        "passOpportunityRate": 0.2644668701209421,
+        "passStolenPerMinute": 0.01779833380117792,
+        "referenceMakeProbability": 0.5085603428808301,
+        "contestExposurePerMinute": 0.2091604350025251,
+        "referenceMakePerUse": 0.38438571968176344,
+        "referenceFgaSurvival": 0.7558310927359033,
+        "freshZone": {
+          "long": 0.34159494602460383,
+          "mid": 0.19707330906845943,
+          "short": 0.4613317449069367
+        },
+        "freshShotCounts": {
+          "shortA": 474,
+          "shortM": 311,
+          "midA": 204,
+          "midM": 91,
+          "longA": 349,
+          "longM": 121
+        },
+        "putbackProxyCounts": {
+          "shortA": 42,
+          "shortM": 24
+        },
+        "terminalOpportunityRate": 0.7192351214739012
+      },
+      "shooting": {
+        "rates": {
+          "long": 0.35132811730705055,
+          "mid": 0.44804528451531134,
+          "short": 0.6439874089196116
+        },
+        "sourceBase": {
+          "long": 0.35276356550103277,
+          "mid": 0.41329165731710005,
+          "short": 0.642697674903287
+        },
+        "priorAttempts": 100,
+        "season": "2025-26",
+        "strictSeconds": 107879.2,
+        "meanSourceShootingMultiplier": 0.9675487146729379,
+        "sourceZoneAttempts": {
+          "long": 336,
+          "mid": 201,
+          "short": 463
+        },
+        "contexts": {
+          "rotation-space": {
+            "long": 0.05501917534294859,
+            "mid": -0.00006871505354317975,
+            "short": 0.07497690457535124
+          }
+        }
+      },
+      "role": {
+        "playerId": 1641705,
+        "name": "Victor Wembanyama",
+        "position": "C",
+        "slot": 4,
+        "source": "modal-official-starter-role",
+        "starts": 55,
+        "exactStarts": 52,
+        "lowConfidence": false,
+        "secondsBySlot": [
+          0,
+          0,
+          0,
+          0,
+          99743.7
+        ]
+      }
+    },
+    {
+      "name": "Mitchell Robinson",
+      "rank": 8,
+      "minutes": 19.575027777777777,
+      "ownScoreDelta": 2.0625,
+      "opponentScoreDelta": -1.5958333333333334,
+      "netContribution": 3.658333333333333,
+      "matchedFullRanking": true,
+      "attributes": {
+        "long": 68.84784023991301,
+        "mid": 68.84014845769107,
+        "short": 99.91687179028922,
+        "offBall": 70,
+        "screen": 70,
+        "handle": 70,
+        "breakDbl": 70,
+        "onBall": 73.06343958580251,
+        "help": 86.72267057960381,
+        "physique": 93.69704854053175
+      },
+      "context": {
+        "spacing": 40.197602850664076,
+        "self": 45.947521865889215,
+        "creation": 41.08843537414966,
+        "sourceLong": 68.84784023991301,
+        "sourceMid": 68.84014845769107,
+        "sourceDouble": 86.3897521949542,
+        "sourceCreation": 77.61418853255589,
+        "rates": {
+          "spacing": 0,
+          "self": 0.021070469406514514,
+          "creation": 0.15730337204870345
+        },
+        "definition": "Observed 3PM/min, fresh self-made FG/min, and self+pass creation opportunities/min. Production/role proxies, not measured off-ball movement, speed, handling ability or double-team tracking."
+      },
+      "defense": {
+        "logits": {
+          "long": 0,
+          "mid": -0.0005976463285420219,
+          "short": -0.001998156900306583
+        },
+        "sourceOnBall": 73.06343958580251,
+        "sourceHelp": 86.72267057960381,
+        "sourcePhysique": 93.69704854053175,
+        "source": "Fresh-FGA shooter-adjusted five-defender source association, selected whole-game Gaussian prior. Not pure or causal defensive skill."
+      },
+      "opportunities": {
+        "selfOpportunityRate": 0.038650424280669775,
+        "receiveOpportunityRate": 0.14548372399860796,
+        "passOpportunityRate": 0.11865294776803367,
+        "passStolenPerMinute": 0.010815294237273254,
+        "referenceMakeProbability": 0.6408536098018937,
+        "contestExposurePerMinute": 0.16643198584354818,
+        "referenceMakePerUse": 0.46503878232454493,
+        "referenceFgaSurvival": 0.725655243587224,
+        "freshZone": {
+          "long": 0,
+          "mid": 0.18113686653097638,
+          "short": 0.8188631334690236
+        },
+        "freshShotCounts": {
+          "shortA": 101,
+          "shortM": 87,
+          "midA": 22,
+          "midM": 11
+        },
+        "putbackProxyCounts": {
+          "shortA": 81,
+          "shortM": 49
+        },
+        "terminalOpportunityRate": 0.18413414827927774
+      },
+      "shooting": {
+        "rates": {
+          "long": 0.361455155508306,
+          "mid": 0.4579110135025008,
+          "short": 0.72117456695197
+        },
+        "sourceBase": {
+          "long": 0.3613959727880776,
+          "mid": 0.41859985067722755,
+          "short": 0.6680852976716745
+        },
+        "priorAttempts": 100,
+        "season": "2025-26",
+        "strictSeconds": 67235.89999999998,
+        "meanSourceShootingMultiplier": 0.9679510620339794,
+        "sourceZoneAttempts": {
+          "long": 0,
+          "mid": 22,
+          "short": 99
+        },
+        "contexts": {
+          "rotation-space": {
+            "long": 0.035662227263953954,
+            "mid": 0.00836364568444357,
+            "short": 0.09440884617997376
+          }
+        }
+      },
+      "role": {
+        "playerId": 1629011,
+        "name": "Mitchell Robinson",
+        "position": "C",
+        "slot": 4,
+        "source": "modal-official-starter-role",
+        "starts": 16,
+        "exactStarts": 16,
+        "lowConfidence": false,
+        "secondsBySlot": [
+          0,
+          0,
+          0,
+          0,
+          19312
+        ]
+      }
+    }
+  ]
+}

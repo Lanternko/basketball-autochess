@@ -1,0 +1,3051 @@
+{
+  "scope": "Describe all20 matched arms and frozen mean70 flow; no attribution of net effect to one stat. Counts are simulated at fixed workloads, not NBA per-game or OVR. Pointwise intervals across many players/arms/stats are not multiplicity-adjusted; fixed source/model only.",
+  "rows": [
+    {
+      "playerId": 1628983,
+      "name": "Shai Gilgeous-Alexander",
+      "arm": "fullCapCounterfactual",
+      "minutes": 34.983333333333334,
+      "mean70FrozenFlow": {
+        "playerId": 1628983,
+        "sourceSelf": 0.6032752878781867,
+        "sourceReceive": 0.1800878936472973,
+        "terminal": 0.783363181525484,
+        "incoming": 0.16931891166931107,
+        "previousAssignedSelf": 0.6036811088451293,
+        "assignedSelf": 0.614044269856173,
+        "addedSelf": 0.010363161011043731,
+        "previousPass": 0.39508443397699194,
+        "assignedPass": 0.39452548217131733,
+        "sourceCreator": 0.9983597218551787,
+        "assignedCreator": 1.0085697520274903
+      },
+      "stats": {
+        "pts": {
+          "v30PerWorkloadGame": 29.079166666666666,
+          "v36PerWorkloadGame": 28.9375,
+          "pairedChange": -0.14166666666666666,
+          "standardError": 0.5869333358574386,
+          "pointwise95": [
+            -1.2920560049472463,
+            1.008722671613913
+          ]
+        },
+        "ast": {
+          "v30PerWorkloadGame": 5.204166666666667,
+          "v36PerWorkloadGame": 4.904166666666667,
+          "pairedChange": -0.3,
+          "standardError": 0.16372402253657084,
+          "pointwise95": [
+            -0.6208990841716788,
+            0.02089908417167885
+          ]
+        },
+        "tov": {
+          "v30PerWorkloadGame": 2.033333333333333,
+          "v36PerWorkloadGame": 2.025,
+          "pairedChange": -0.008333333333333333,
+          "standardError": 0.13915252755852453,
+          "pointwise95": [
+            -0.28107228734804146,
+            0.26440562068137474
+          ]
+        },
+        "stl": {
+          "v30PerWorkloadGame": 1.275,
+          "v36PerWorkloadGame": 1.3708333333333333,
+          "pairedChange": 0.09583333333333334,
+          "standardError": 0.0884210780133167,
+          "pointwise95": [
+            -0.07747197957276737,
+            0.26913864623943407
+          ]
+        },
+        "blk": {
+          "v30PerWorkloadGame": 0.725,
+          "v36PerWorkloadGame": 0.6458333333333334,
+          "pairedChange": -0.07916666666666666,
+          "standardError": 0.06943055416638882,
+          "pointwise95": [
+            -0.21525055283278877,
+            0.05691721949945544
+          ]
+        },
+        "oreb": {
+          "v30PerWorkloadGame": 0.4625,
+          "v36PerWorkloadGame": 0.45,
+          "pairedChange": -0.0125,
+          "standardError": 0.04994209610101445,
+          "pointwise95": [
+            -0.11038650835798833,
+            0.08538650835798833
+          ]
+        },
+        "dreb": {
+          "v30PerWorkloadGame": 3.8291666666666666,
+          "v36PerWorkloadGame": 3.7958333333333334,
+          "pairedChange": -0.03333333333333333,
+          "standardError": 0.13096861371251425,
+          "pointwise95": [
+            -0.29003181620986124,
+            0.22336514954319459
+          ]
+        },
+        "fga": {
+          "v30PerWorkloadGame": 18.945833333333333,
+          "v36PerWorkloadGame": 19.008333333333333,
+          "pairedChange": 0.0625,
+          "standardError": 0.29133910177355565,
+          "pointwise95": [
+            -0.5085246394761691,
+            0.6335246394761691
+          ]
+        },
+        "fgm": {
+          "v30PerWorkloadGame": 10.158333333333333,
+          "v36PerWorkloadGame": 10.079166666666667,
+          "pairedChange": -0.07916666666666666,
+          "standardError": 0.2551438410576074,
+          "pointwise95": [
+            -0.5792485951395772,
+            0.4209152618062438
+          ]
+        },
+        "fg3a": {
+          "v30PerWorkloadGame": 4.354166666666667,
+          "v36PerWorkloadGame": 4.2875,
+          "pairedChange": -0.06666666666666667,
+          "standardError": 0.16329931618554522,
+          "pointwise95": [
+            -0.38673332639033525,
+            0.25339999305700195
+          ]
+        },
+        "fg3m": {
+          "v30PerWorkloadGame": 1.65,
+          "v36PerWorkloadGame": 1.5833333333333333,
+          "pairedChange": -0.06666666666666667,
+          "standardError": 0.09848387722908798,
+          "pointwise95": [
+            -0.2596950660356791,
+            0.1263617327023458
+          ]
+        },
+        "fta": {
+          "v30PerWorkloadGame": 8.125,
+          "v36PerWorkloadGame": 8.258333333333333,
+          "pairedChange": 0.13333333333333333,
+          "standardError": 0.32597787359585323,
+          "pointwise95": [
+            -0.505583298914539,
+            0.7722499655812056
+          ]
+        },
+        "ftm": {
+          "v30PerWorkloadGame": 7.1125,
+          "v36PerWorkloadGame": 7.195833333333334,
+          "pairedChange": 0.08333333333333333,
+          "standardError": 0.2959995620617381,
+          "pointwise95": [
+            -0.49682580830767337,
+            0.66349247497434
+          ]
+        }
+      }
+    },
+    {
+      "playerId": 1628983,
+      "name": "Shai Gilgeous-Alexander",
+      "arm": "supportedHealthy",
+      "minutes": 32.24,
+      "mean70FrozenFlow": {
+        "playerId": 1628983,
+        "sourceSelf": 0.6032752878781867,
+        "sourceReceive": 0.1800878936472973,
+        "terminal": 0.783363181525484,
+        "incoming": 0.16931891166931107,
+        "previousAssignedSelf": 0.6036811088451293,
+        "assignedSelf": 0.614044269856173,
+        "addedSelf": 0.010363161011043731,
+        "previousPass": 0.39508443397699194,
+        "assignedPass": 0.39452548217131733,
+        "sourceCreator": 0.9983597218551787,
+        "assignedCreator": 1.0085697520274903
+      },
+      "stats": {
+        "pts": {
+          "v30PerWorkloadGame": 26.8375,
+          "v36PerWorkloadGame": 26.6625,
+          "pairedChange": -0.175,
+          "standardError": 0.5693461974867248,
+          "pointwise95": [
+            -1.2909185470739806,
+            0.9409185470739805
+          ]
+        },
+        "ast": {
+          "v30PerWorkloadGame": 4.708333333333333,
+          "v36PerWorkloadGame": 4.508333333333334,
+          "pairedChange": -0.2,
+          "standardError": 0.17353887386041417,
+          "pointwise95": [
+            -0.5401361927664118,
+            0.14013619276641176
+          ]
+        },
+        "tov": {
+          "v30PerWorkloadGame": 1.9458333333333333,
+          "v36PerWorkloadGame": 1.875,
+          "pairedChange": -0.07083333333333333,
+          "standardError": 0.13230943668928924,
+          "pointwise95": [
+            -0.3301598292443403,
+            0.1884931625776736
+          ]
+        },
+        "stl": {
+          "v30PerWorkloadGame": 1.1833333333333333,
+          "v36PerWorkloadGame": 1.2625,
+          "pairedChange": 0.07916666666666666,
+          "standardError": 0.0942502087629086,
+          "pointwise95": [
+            -0.10556374250863418,
+            0.26389707584196753
+          ]
+        },
+        "blk": {
+          "v30PerWorkloadGame": 0.6333333333333333,
+          "v36PerWorkloadGame": 0.5666666666666667,
+          "pairedChange": -0.06666666666666667,
+          "standardError": 0.05672382737961705,
+          "pointwise95": [
+            -0.17784536833071607,
+            0.04451203499738275
+          ]
+        },
+        "oreb": {
+          "v30PerWorkloadGame": 0.4,
+          "v36PerWorkloadGame": 0.42916666666666664,
+          "pairedChange": 0.029166666666666667,
+          "standardError": 0.04519761137575828,
+          "pointwise95": [
+            -0.059420651629819556,
+            0.1177539849631529
+          ]
+        },
+        "dreb": {
+          "v30PerWorkloadGame": 3.6041666666666665,
+          "v36PerWorkloadGame": 3.45,
+          "pairedChange": -0.15416666666666667,
+          "standardError": 0.12245085938025492,
+          "pointwise95": [
+            -0.3941703510519663,
+            0.08583701771863297
+          ]
+        },
+        "fga": {
+          "v30PerWorkloadGame": 17.408333333333335,
+          "v36PerWorkloadGame": 17.558333333333334,
+          "pairedChange": 0.15,
+          "standardError": 0.2958039891549808,
+          "pointwise95": [
+            -0.42977581874376236,
+            0.7297758187437624
+          ]
+        },
+        "fgm": {
+          "v30PerWorkloadGame": 9.258333333333333,
+          "v36PerWorkloadGame": 9.275,
+          "pairedChange": 0.016666666666666666,
+          "standardError": 0.2202691955733223,
+          "pointwise95": [
+            -0.41506095665704507,
+            0.4483942899903784
+          ]
+        },
+        "fg3a": {
+          "v30PerWorkloadGame": 4.045833333333333,
+          "v36PerWorkloadGame": 3.9166666666666665,
+          "pairedChange": -0.12916666666666668,
+          "standardError": 0.16813588530092535,
+          "pointwise95": [
+            -0.45871300185648034,
+            0.200379668523147
+          ]
+        },
+        "fg3m": {
+          "v30PerWorkloadGame": 1.5333333333333334,
+          "v36PerWorkloadGame": 1.4208333333333334,
+          "pairedChange": -0.1125,
+          "standardError": 0.09697388919283988,
+          "pointwise95": [
+            -0.30256882281796615,
+            0.07756882281796616
+          ]
+        },
+        "fta": {
+          "v30PerWorkloadGame": 7.729166666666667,
+          "v36PerWorkloadGame": 7.783333333333333,
+          "pairedChange": 0.05416666666666667,
+          "standardError": 0.3471694404327235,
+          "pointwise95": [
+            -0.6262854365814714,
+            0.7346187699148048
+          ]
+        },
+        "ftm": {
+          "v30PerWorkloadGame": 6.7875,
+          "v36PerWorkloadGame": 6.691666666666666,
+          "pairedChange": -0.09583333333333334,
+          "standardError": 0.31086609895818723,
+          "pointwise95": [
+            -0.7051308872913803,
+            0.5134642206247136
+          ]
+        }
+      }
+    },
+    {
+      "playerId": 1629011,
+      "name": "Mitchell Robinson",
+      "arm": "fullCapCounterfactual",
+      "minutes": 34.983333333333334,
+      "mean70FrozenFlow": {
+        "playerId": 1629011,
+        "sourceSelf": 0.03322595513440896,
+        "sourceReceive": 0.12506552712752572,
+        "terminal": 0.15829148226193468,
+        "incoming": 0.12981297505280245,
+        "previousAssignedSelf": 0.035240725191160005,
+        "assignedSelf": 0.028478507209132208,
+        "addedSelf": -0.006762217982027797,
+        "previousPass": 0.08826890924602321,
+        "assignedPass": 0.09097129130098228,
+        "sourceCreator": 0.12149486438043217,
+        "assignedCreator": 0.11944979851011449
+      },
+      "stats": {
+        "pts": {
+          "v30PerWorkloadGame": 10.870833333333334,
+          "v36PerWorkloadGame": 10.595833333333333,
+          "pairedChange": -0.275,
+          "standardError": 0.35469731488296496,
+          "pointwise95": [
+            -0.9702067371706113,
+            0.4202067371706113
+          ]
+        },
+        "ast": {
+          "v30PerWorkloadGame": 1.2291666666666667,
+          "v36PerWorkloadGame": 1.1666666666666667,
+          "pairedChange": -0.0625,
+          "standardError": 0.08802751043050458,
+          "pointwise95": [
+            -0.23503392044378899,
+            0.11003392044378899
+          ]
+        },
+        "tov": {
+          "v30PerWorkloadGame": 1.2875,
+          "v36PerWorkloadGame": 1.3375,
+          "pairedChange": 0.05,
+          "standardError": 0.09065093817822623,
+          "pointwise95": [
+            -0.12767583882932337,
+            0.2276758388293234
+          ]
+        },
+        "stl": {
+          "v30PerWorkloadGame": 1.5333333333333334,
+          "v36PerWorkloadGame": 1.4291666666666667,
+          "pairedChange": -0.10416666666666667,
+          "standardError": 0.10707063262337797,
+          "pointwise95": [
+            -0.3140251066084875,
+            0.10569177327515415
+          ]
+        },
+        "blk": {
+          "v30PerWorkloadGame": 1.4458333333333333,
+          "v36PerWorkloadGame": 1.5541666666666667,
+          "pairedChange": 0.10833333333333334,
+          "standardError": 0.09154031696268934,
+          "pointwise95": [
+            -0.07108568791353778,
+            0.28775235458020443
+          ]
+        },
+        "oreb": {
+          "v30PerWorkloadGame": 6.675,
+          "v36PerWorkloadGame": 6.845833333333333,
+          "pairedChange": 0.17083333333333334,
+          "standardError": 0.20793016544913273,
+          "pointwise95": [
+            -0.2367097909469668,
+            0.5783764576136334
+          ]
+        },
+        "dreb": {
+          "v30PerWorkloadGame": 8.141666666666667,
+          "v36PerWorkloadGame": 8.120833333333334,
+          "pairedChange": -0.020833333333333332,
+          "standardError": 0.22544965357324526,
+          "pointwise95": [
+            -0.462714654336894,
+            0.4210479876702274
+          ]
+        },
+        "fga": {
+          "v30PerWorkloadGame": 7.029166666666667,
+          "v36PerWorkloadGame": 6.891666666666667,
+          "pairedChange": -0.1375,
+          "standardError": 0.2050716902650099,
+          "pointwise95": [
+            -0.5394405129194194,
+            0.2644405129194194
+          ]
+        },
+        "fgm": {
+          "v30PerWorkloadGame": 4.5625,
+          "v36PerWorkloadGame": 4.408333333333333,
+          "pairedChange": -0.15416666666666667,
+          "standardError": 0.1690626390599825,
+          "pointwise95": [
+            -0.48552943922423236,
+            0.177196105890899
+          ]
+        },
+        "fg3a": {
+          "v30PerWorkloadGame": 0,
+          "v36PerWorkloadGame": 0.008333333333333333,
+          "pairedChange": 0.008333333333333333,
+          "standardError": 0.005892556509887896,
+          "pointwise95": [
+            -0.003216077426046942,
+            0.01988274409271361
+          ]
+        },
+        "fg3m": {
+          "v30PerWorkloadGame": 0,
+          "v36PerWorkloadGame": 0,
+          "pairedChange": 0,
+          "standardError": 0.0,
+          "pointwise95": [
+            0.0,
+            0.0
+          ]
+        },
+        "fta": {
+          "v30PerWorkloadGame": 2.8666666666666667,
+          "v36PerWorkloadGame": 3.0125,
+          "pairedChange": 0.14583333333333334,
+          "standardError": 0.19219432199575356,
+          "pointwise95": [
+            -0.23086753777834365,
+            0.5225342044450103
+          ]
+        },
+        "ftm": {
+          "v30PerWorkloadGame": 1.7458333333333333,
+          "v36PerWorkloadGame": 1.7791666666666666,
+          "pairedChange": 0.03333333333333333,
+          "standardError": 0.12972549365372907,
+          "pointwise95": [
+            -0.22092863422797565,
+            0.2875953008946423
+          ]
+        }
+      }
+    },
+    {
+      "playerId": 1629011,
+      "name": "Mitchell Robinson",
+      "arm": "supportedHealthy",
+      "minutes": 19.575,
+      "mean70FrozenFlow": {
+        "playerId": 1629011,
+        "sourceSelf": 0.03322595513440896,
+        "sourceReceive": 0.12506552712752572,
+        "terminal": 0.15829148226193468,
+        "incoming": 0.12981297505280245,
+        "previousAssignedSelf": 0.035240725191160005,
+        "assignedSelf": 0.028478507209132208,
+        "addedSelf": -0.006762217982027797,
+        "previousPass": 0.08826890924602321,
+        "assignedPass": 0.09097129130098228,
+        "sourceCreator": 0.12149486438043217,
+        "assignedCreator": 0.11944979851011449
+      },
+      "stats": {
+        "pts": {
+          "v30PerWorkloadGame": 6.645833333333333,
+          "v36PerWorkloadGame": 6.291666666666667,
+          "pairedChange": -0.3541666666666667,
+          "standardError": 0.26519777734949274,
+          "pointwise95": [
+            -0.8739543102716725,
+            0.16562097693833905
+          ]
+        },
+        "ast": {
+          "v30PerWorkloadGame": 0.6333333333333333,
+          "v36PerWorkloadGame": 0.75,
+          "pairedChange": 0.11666666666666667,
+          "standardError": 0.0742243845327077,
+          "pointwise95": [
+            -0.028813127017440432,
+            0.26214646035077377
+          ]
+        },
+        "tov": {
+          "v30PerWorkloadGame": 0.675,
+          "v36PerWorkloadGame": 0.7666666666666667,
+          "pairedChange": 0.09166666666666666,
+          "standardError": 0.08878031563609382,
+          "pointwise95": [
+            -0.08234275198007722,
+            0.2656760853134105
+          ]
+        },
+        "stl": {
+          "v30PerWorkloadGame": 0.8041666666666667,
+          "v36PerWorkloadGame": 0.8666666666666667,
+          "pairedChange": 0.0625,
+          "standardError": 0.07694243880258078,
+          "pointwise95": [
+            -0.08830718005305832,
+            0.21330718005305832
+          ]
+        },
+        "blk": {
+          "v30PerWorkloadGame": 0.8666666666666667,
+          "v36PerWorkloadGame": 0.9333333333333333,
+          "pairedChange": 0.06666666666666667,
+          "standardError": 0.08409375279567001,
+          "pointwise95": [
+            -0.09815708881284656,
+            0.23149042214617988
+          ]
+        },
+        "oreb": {
+          "v30PerWorkloadGame": 3.7083333333333335,
+          "v36PerWorkloadGame": 3.6375,
+          "pairedChange": -0.07083333333333333,
+          "standardError": 0.16546441376387316,
+          "pointwise95": [
+            -0.39514358431052476,
+            0.25347691764385805
+          ]
+        },
+        "dreb": {
+          "v30PerWorkloadGame": 4.354166666666667,
+          "v36PerWorkloadGame": 4.545833333333333,
+          "pairedChange": 0.19166666666666668,
+          "standardError": 0.14942017564200924,
+          "pointwise95": [
+            -0.10119687759167142,
+            0.4845302109250048
+          ]
+        },
+        "fga": {
+          "v30PerWorkloadGame": 4.220833333333333,
+          "v36PerWorkloadGame": 3.9791666666666665,
+          "pairedChange": -0.24166666666666667,
+          "standardError": 0.15418543429308798,
+          "pointwise95": [
+            -0.543870117881119,
+            0.060536784547785744
+          ]
+        },
+        "fgm": {
+          "v30PerWorkloadGame": 2.85,
+          "v36PerWorkloadGame": 2.6375,
+          "pairedChange": -0.2125,
+          "standardError": 0.12372030133718137,
+          "pointwise95": [
+            -0.45499179062087547,
+            0.02999179062087548
+          ]
+        },
+        "fg3a": {
+          "v30PerWorkloadGame": 0.004166666666666667,
+          "v36PerWorkloadGame": 0.0125,
+          "pairedChange": 0.008333333333333333,
+          "standardError": 0.008333333333333333,
+          "pointwise95": [
+            -0.007999999999999998,
+            0.024666666666666663
+          ]
+        },
+        "fg3m": {
+          "v30PerWorkloadGame": 0,
+          "v36PerWorkloadGame": 0.004166666666666667,
+          "pairedChange": 0.004166666666666667,
+          "standardError": 0.004166666666666667,
+          "pointwise95": [
+            -0.003999999999999999,
+            0.012333333333333332
+          ]
+        },
+        "fta": {
+          "v30PerWorkloadGame": 1.5375,
+          "v36PerWorkloadGame": 1.6625,
+          "pairedChange": 0.125,
+          "standardError": 0.12294608875739294,
+          "pointwise95": [
+            -0.11597433396449014,
+            0.36597433396449014
+          ]
+        },
+        "ftm": {
+          "v30PerWorkloadGame": 0.9458333333333333,
+          "v36PerWorkloadGame": 1.0125,
+          "pairedChange": 0.06666666666666667,
+          "standardError": 0.09103316448985523,
+          "pointwise95": [
+            -0.11175833573344958,
+            0.24509166906678292
+          ]
+        }
+      }
+    },
+    {
+      "playerId": 1641705,
+      "name": "Victor Wembanyama",
+      "arm": "fullCapCounterfactual",
+      "minutes": 34.983333333333334,
+      "mean70FrozenFlow": {
+        "playerId": 1641705,
+        "sourceSelf": 0.20632448761267264,
+        "sourceReceive": 0.5556827730806853,
+        "terminal": 0.7620072606933579,
+        "incoming": 0.5331538794079533,
+        "previousAssignedSelf": 0.3009188287395004,
+        "assignedSelf": 0.22885338128540444,
+        "addedSelf": -0.07206544745409593,
+        "previousPass": 0.21457533439690263,
+        "assignedPass": 0.24349393023814747,
+        "sourceCreator": 0.42089982200957526,
+        "assignedCreator": 0.4723473115235519
+      },
+      "stats": {
+        "pts": {
+          "v30PerWorkloadGame": 26.716666666666665,
+          "v36PerWorkloadGame": 26.816666666666666,
+          "pairedChange": 0.1,
+          "standardError": 0.541174990525588,
+          "pointwise95": [
+            -0.9607029814301525,
+            1.1607029814301526
+          ]
+        },
+        "ast": {
+          "v30PerWorkloadGame": 2.529166666666667,
+          "v36PerWorkloadGame": 2.3958333333333335,
+          "pairedChange": -0.13333333333333333,
+          "standardError": 0.12061762355108441,
+          "pointwise95": [
+            -0.3697438754934588,
+            0.10307720882679211
+          ]
+        },
+        "tov": {
+          "v30PerWorkloadGame": 2.4208333333333334,
+          "v36PerWorkloadGame": 2.370833333333333,
+          "pairedChange": -0.05,
+          "standardError": 0.12388390622765422,
+          "pointwise95": [
+            -0.2928124562062023,
+            0.19281245620620224
+          ]
+        },
+        "stl": {
+          "v30PerWorkloadGame": 1.2583333333333333,
+          "v36PerWorkloadGame": 1.125,
+          "pairedChange": -0.13333333333333333,
+          "standardError": 0.09198178160999138,
+          "pointwise95": [
+            -0.31361762528891646,
+            0.04695095862224977
+          ]
+        },
+        "blk": {
+          "v30PerWorkloadGame": 1.9833333333333334,
+          "v36PerWorkloadGame": 2.1166666666666667,
+          "pairedChange": 0.13333333333333333,
+          "standardError": 0.10661022812441938,
+          "pointwise95": [
+            -0.07562271379052865,
+            0.3422893804571953
+          ]
+        },
+        "oreb": {
+          "v30PerWorkloadGame": 2.5125,
+          "v36PerWorkloadGame": 2.3541666666666665,
+          "pairedChange": -0.15833333333333333,
+          "standardError": 0.1126798973165101,
+          "pointwise95": [
+            -0.3791859320736931,
+            0.06251926540702646
+          ]
+        },
+        "dreb": {
+          "v30PerWorkloadGame": 10.7,
+          "v36PerWorkloadGame": 10.295833333333333,
+          "pairedChange": -0.4041666666666667,
+          "standardError": 0.22398174942185373,
+          "pointwise95": [
+            -0.8431708955335,
+            0.034837562200166594
+          ]
+        },
+        "fga": {
+          "v30PerWorkloadGame": 18.458333333333332,
+          "v36PerWorkloadGame": 18.733333333333334,
+          "pairedChange": 0.275,
+          "standardError": 0.30194201675401433,
+          "pointwise95": [
+            -0.31680635283786807,
+            0.8668063528378681
+          ]
+        },
+        "fgm": {
+          "v30PerWorkloadGame": 9.166666666666666,
+          "v36PerWorkloadGame": 9.429166666666667,
+          "pairedChange": 0.2625,
+          "standardError": 0.2043366639206538,
+          "pointwise95": [
+            -0.13799986128448144,
+            0.6629998612844814
+          ]
+        },
+        "fg3a": {
+          "v30PerWorkloadGame": 6.141666666666667,
+          "v36PerWorkloadGame": 6.183333333333334,
+          "pairedChange": 0.041666666666666664,
+          "standardError": 0.19421613580598138,
+          "pointwise95": [
+            -0.3389969595130568,
+            0.4223302928463902
+          ]
+        },
+        "fg3m": {
+          "v30PerWorkloadGame": 2.1,
+          "v36PerWorkloadGame": 2.1083333333333334,
+          "pairedChange": 0.008333333333333333,
+          "standardError": 0.12085727732115051,
+          "pointwise95": [
+            -0.22854693021612166,
+            0.24521359688278832
+          ]
+        },
+        "fta": {
+          "v30PerWorkloadGame": 7.6625,
+          "v36PerWorkloadGame": 7.0875,
+          "pairedChange": -0.575,
+          "standardError": 0.31652043407209146,
+          "pointwise95": [
+            -1.1953800507812993,
+            0.04538005078129925
+          ]
+        },
+        "ftm": {
+          "v30PerWorkloadGame": 6.283333333333333,
+          "v36PerWorkloadGame": 5.85,
+          "pairedChange": -0.43333333333333335,
+          "standardError": 0.2949419277429724,
+          "pointwise95": [
+            -1.0114195117095592,
+            0.14475284504289254
+          ]
+        }
+      }
+    },
+    {
+      "playerId": 1641705,
+      "name": "Victor Wembanyama",
+      "arm": "supportedHealthy",
+      "minutes": 28.766666666666666,
+      "mean70FrozenFlow": {
+        "playerId": 1641705,
+        "sourceSelf": 0.20632448761267264,
+        "sourceReceive": 0.5556827730806853,
+        "terminal": 0.7620072606933579,
+        "incoming": 0.5331538794079533,
+        "previousAssignedSelf": 0.3009188287395004,
+        "assignedSelf": 0.22885338128540444,
+        "addedSelf": -0.07206544745409593,
+        "previousPass": 0.21457533439690263,
+        "assignedPass": 0.24349393023814747,
+        "sourceCreator": 0.42089982200957526,
+        "assignedCreator": 0.4723473115235519
+      },
+      "stats": {
+        "pts": {
+          "v30PerWorkloadGame": 22.4125,
+          "v36PerWorkloadGame": 22.558333333333334,
+          "pairedChange": 0.14583333333333334,
+          "standardError": 0.5620059558798683,
+          "pointwise95": [
+            -0.9556983401912086,
+            1.2473650068578752
+          ]
+        },
+        "ast": {
+          "v30PerWorkloadGame": 2.075,
+          "v36PerWorkloadGame": 2.125,
+          "pairedChange": 0.05,
+          "standardError": 0.12346276991690877,
+          "pointwise95": [
+            -0.1919870290371412,
+            0.2919870290371412
+          ]
+        },
+        "tov": {
+          "v30PerWorkloadGame": 1.9958333333333333,
+          "v36PerWorkloadGame": 1.95,
+          "pairedChange": -0.04583333333333333,
+          "standardError": 0.13879858175174664,
+          "pointwise95": [
+            -0.31787855356675676,
+            0.2262118869000901
+          ]
+        },
+        "stl": {
+          "v30PerWorkloadGame": 1.0208333333333333,
+          "v36PerWorkloadGame": 0.975,
+          "pairedChange": -0.04583333333333333,
+          "standardError": 0.08848650242331375,
+          "pointwise95": [
+            -0.2192668780830283,
+            0.12760021141636163
+          ]
+        },
+        "blk": {
+          "v30PerWorkloadGame": 1.6791666666666667,
+          "v36PerWorkloadGame": 1.8875,
+          "pairedChange": 0.20833333333333334,
+          "standardError": 0.11536977587386216,
+          "pointwise95": [
+            -0.01779142737943648,
+            0.43445809404610314
+          ]
+        },
+        "oreb": {
+          "v30PerWorkloadGame": 1.85,
+          "v36PerWorkloadGame": 1.8208333333333333,
+          "pairedChange": -0.029166666666666667,
+          "standardError": 0.10304956556416413,
+          "pointwise95": [
+            -0.23114381517242835,
+            0.172810481839095
+          ]
+        },
+        "dreb": {
+          "v30PerWorkloadGame": 8.966666666666667,
+          "v36PerWorkloadGame": 8.679166666666667,
+          "pairedChange": -0.2875,
+          "standardError": 0.2319278104481204,
+          "pointwise95": [
+            -0.7420785084783159,
+            0.16707850847831596
+          ]
+        },
+        "fga": {
+          "v30PerWorkloadGame": 15.245833333333334,
+          "v36PerWorkloadGame": 15.5125,
+          "pairedChange": 0.26666666666666666,
+          "standardError": 0.2935061044226054,
+          "pointwise95": [
+            -0.3086052980016399,
+            0.8419386313349733
+          ]
+        },
+        "fgm": {
+          "v30PerWorkloadGame": 7.875,
+          "v36PerWorkloadGame": 7.945833333333334,
+          "pairedChange": 0.07083333333333333,
+          "standardError": 0.21901769334919038,
+          "pointwise95": [
+            -0.35844134563107977,
+            0.5001080122977465
+          ]
+        },
+        "fg3a": {
+          "v30PerWorkloadGame": 5.145833333333333,
+          "v36PerWorkloadGame": 5.133333333333334,
+          "pairedChange": -0.0125,
+          "standardError": 0.20359898402569768,
+          "pointwise95": [
+            -0.41155400869036746,
+            0.38655400869036743
+          ]
+        },
+        "fg3m": {
+          "v30PerWorkloadGame": 1.8708333333333333,
+          "v36PerWorkloadGame": 1.8166666666666667,
+          "pairedChange": -0.05416666666666667,
+          "standardError": 0.10647443615983865,
+          "pointwise95": [
+            -0.2628565615399504,
+            0.15452322820661707
+          ]
+        },
+        "fta": {
+          "v30PerWorkloadGame": 5.845833333333333,
+          "v36PerWorkloadGame": 5.866666666666666,
+          "pairedChange": 0.020833333333333332,
+          "standardError": 0.28458668860881975,
+          "pointwise95": [
+            -0.5369565763399533,
+            0.57862324300662
+          ]
+        },
+        "ftm": {
+          "v30PerWorkloadGame": 4.791666666666667,
+          "v36PerWorkloadGame": 4.85,
+          "pairedChange": 0.058333333333333334,
+          "standardError": 0.26350117717074883,
+          "pointwise95": [
+            -0.45812897392133434,
+            0.574795640588001
+          ]
+        }
+      }
+    },
+    {
+      "playerId": 1630595,
+      "name": "Cade Cunningham",
+      "arm": "fullCapCounterfactual",
+      "minutes": 34.983333333333334,
+      "mean70FrozenFlow": {
+        "playerId": 1630595,
+        "sourceSelf": 0.44814635880011494,
+        "sourceReceive": 0.2581220806303634,
+        "terminal": 0.7062684394304783,
+        "incoming": 0.2301823226421757,
+        "previousAssignedSelf": 0.44069858816490143,
+        "assignedSelf": 0.47608611678830265,
+        "addedSelf": 0.03538752862340122,
+        "previousPass": 0.5432203827901044,
+        "assignedPass": 0.5196880097948318,
+        "sourceCreator": 0.9913667415902194,
+        "assignedCreator": 0.9957741265831344
+      },
+      "stats": {
+        "pts": {
+          "v30PerWorkloadGame": 23.141666666666666,
+          "v36PerWorkloadGame": 22.9,
+          "pairedChange": -0.24166666666666667,
+          "standardError": 0.5706457518233831,
+          "pointwise95": [
+            -1.3601323402404975,
+            0.8767990069071641
+          ]
+        },
+        "ast": {
+          "v30PerWorkloadGame": 7.325,
+          "v36PerWorkloadGame": 5.933333333333334,
+          "pairedChange": -1.3916666666666666,
+          "standardError": 0.21940048786197827,
+          "pointwise95": [
+            -1.821691622876144,
+            -0.9616417104571893
+          ]
+        },
+        "tov": {
+          "v30PerWorkloadGame": 3.2666666666666666,
+          "v36PerWorkloadGame": 3.2125,
+          "pairedChange": -0.05416666666666667,
+          "standardError": 0.13954705166942666,
+          "pointwise95": [
+            -0.3276788879387429,
+            0.21934555460540958
+          ]
+        },
+        "stl": {
+          "v30PerWorkloadGame": 1.3833333333333333,
+          "v36PerWorkloadGame": 1.4416666666666667,
+          "pairedChange": 0.058333333333333334,
+          "standardError": 0.09848387722908798,
+          "pointwise95": [
+            -0.1346950660356791,
+            0.2513617327023458
+          ]
+        },
+        "blk": {
+          "v30PerWorkloadGame": 0.7791666666666667,
+          "v36PerWorkloadGame": 0.7041666666666667,
+          "pairedChange": -0.075,
+          "standardError": 0.06863416167003242,
+          "pointwise95": [
+            -0.20952295687326355,
+            0.05952295687326355
+          ]
+        },
+        "oreb": {
+          "v30PerWorkloadGame": 0.6958333333333333,
+          "v36PerWorkloadGame": 0.8416666666666667,
+          "pairedChange": 0.14583333333333334,
+          "standardError": 0.07534642216677136,
+          "pointwise95": [
+            -0.001845654113538514,
+            0.29351232078020517
+          ]
+        },
+        "dreb": {
+          "v30PerWorkloadGame": 4.758333333333334,
+          "v36PerWorkloadGame": 4.829166666666667,
+          "pairedChange": 0.07083333333333333,
+          "standardError": 0.185701248524892,
+          "pointwise95": [
+            -0.29314111377545504,
+            0.43480778044212165
+          ]
+        },
+        "fga": {
+          "v30PerWorkloadGame": 18.075,
+          "v36PerWorkloadGame": 18.1125,
+          "pairedChange": 0.0375,
+          "standardError": 0.316383279630308,
+          "pointwise95": [
+            -0.5826112280754037,
+            0.6576112280754036
+          ]
+        },
+        "fgm": {
+          "v30PerWorkloadGame": 8.525,
+          "v36PerWorkloadGame": 8.379166666666666,
+          "pairedChange": -0.14583333333333334,
+          "standardError": 0.2374756322781896,
+          "pointwise95": [
+            -0.611285572598585,
+            0.3196189059319182
+          ]
+        },
+        "fg3a": {
+          "v30PerWorkloadGame": 5.445833333333334,
+          "v36PerWorkloadGame": 5.7,
+          "pairedChange": 0.25416666666666665,
+          "standardError": 0.21633254151541445,
+          "pointwise95": [
+            -0.16984511470354569,
+            0.678178448036879
+          ]
+        },
+        "fg3m": {
+          "v30PerWorkloadGame": 1.8125,
+          "v36PerWorkloadGame": 1.9208333333333334,
+          "pairedChange": 0.10833333333333334,
+          "standardError": 0.12388390622765422,
+          "pointwise95": [
+            -0.13447912287286892,
+            0.35114578953953557
+          ]
+        },
+        "fta": {
+          "v30PerWorkloadGame": 5.383333333333334,
+          "v36PerWorkloadGame": 5.370833333333334,
+          "pairedChange": -0.0125,
+          "standardError": 0.26559027550805475,
+          "pointwise95": [
+            -0.5330569399957873,
+            0.5080569399957874
+          ]
+        },
+        "ftm": {
+          "v30PerWorkloadGame": 4.279166666666667,
+          "v36PerWorkloadGame": 4.220833333333333,
+          "pairedChange": -0.058333333333333334,
+          "standardError": 0.2185548070935611,
+          "pointwise95": [
+            -0.4867007552367131,
+            0.3700340885700464
+          ]
+        }
+      }
+    },
+    {
+      "playerId": 1630595,
+      "name": "Cade Cunningham",
+      "arm": "supportedHealthy",
+      "minutes": 32.178333333333335,
+      "mean70FrozenFlow": {
+        "playerId": 1630595,
+        "sourceSelf": 0.44814635880011494,
+        "sourceReceive": 0.2581220806303634,
+        "terminal": 0.7062684394304783,
+        "incoming": 0.2301823226421757,
+        "previousAssignedSelf": 0.44069858816490143,
+        "assignedSelf": 0.47608611678830265,
+        "addedSelf": 0.03538752862340122,
+        "previousPass": 0.5432203827901044,
+        "assignedPass": 0.5196880097948318,
+        "sourceCreator": 0.9913667415902194,
+        "assignedCreator": 0.9957741265831344
+      },
+      "stats": {
+        "pts": {
+          "v30PerWorkloadGame": 21.45,
+          "v36PerWorkloadGame": 21.833333333333332,
+          "pairedChange": 0.38333333333333336,
+          "standardError": 0.5807980620567608,
+          "pointwise95": [
+            -0.7550308682979179,
+            1.5216975349645845
+          ]
+        },
+        "ast": {
+          "v30PerWorkloadGame": 6.633333333333334,
+          "v36PerWorkloadGame": 5.458333333333333,
+          "pairedChange": -1.175,
+          "standardError": 0.1937089263512349,
+          "pointwise95": [
+            -1.5546694956484204,
+            -0.7953305043515797
+          ]
+        },
+        "tov": {
+          "v30PerWorkloadGame": 3.0208333333333335,
+          "v36PerWorkloadGame": 3.0083333333333333,
+          "pairedChange": -0.0125,
+          "standardError": 0.1486630231242606,
+          "pointwise95": [
+            -0.3038795253235508,
+            0.27887952532355076
+          ]
+        },
+        "stl": {
+          "v30PerWorkloadGame": 1.2958333333333334,
+          "v36PerWorkloadGame": 1.2625,
+          "pairedChange": -0.03333333333333333,
+          "standardError": 0.08733449956812493,
+          "pointwise95": [
+            -0.2045089524868582,
+            0.13784228582019153
+          ]
+        },
+        "blk": {
+          "v30PerWorkloadGame": 0.6416666666666667,
+          "v36PerWorkloadGame": 0.6666666666666666,
+          "pairedChange": 0.025,
+          "standardError": 0.0705468061066683,
+          "pointwise95": [
+            -0.11327173996906989,
+            0.16327173996906988
+          ]
+        },
+        "oreb": {
+          "v30PerWorkloadGame": 0.6375,
+          "v36PerWorkloadGame": 0.7916666666666666,
+          "pairedChange": 0.15416666666666667,
+          "standardError": 0.07034142923389222,
+          "pointwise95": [
+            0.016297465368237923,
+            0.2920358679650954
+          ]
+        },
+        "dreb": {
+          "v30PerWorkloadGame": 4.5,
+          "v36PerWorkloadGame": 4.458333333333333,
+          "pairedChange": -0.041666666666666664,
+          "standardError": 0.17320508075688773,
+          "pointwise95": [
+            -0.3811486249501666,
+            0.29781529161683323
+          ]
+        },
+        "fga": {
+          "v30PerWorkloadGame": 16.675,
+          "v36PerWorkloadGame": 16.975,
+          "pairedChange": 0.3,
+          "standardError": 0.3219766784745154,
+          "pointwise95": [
+            -0.3310742898100501,
+            0.9310742898100501
+          ]
+        },
+        "fgm": {
+          "v30PerWorkloadGame": 7.816666666666666,
+          "v36PerWorkloadGame": 8.054166666666667,
+          "pairedChange": 0.2375,
+          "standardError": 0.226218408885127,
+          "pointwise95": [
+            -0.20588808141484893,
+            0.6808880814148489
+          ]
+        },
+        "fg3a": {
+          "v30PerWorkloadGame": 5.158333333333333,
+          "v36PerWorkloadGame": 5.116666666666666,
+          "pairedChange": -0.041666666666666664,
+          "standardError": 0.1950486643929701,
+          "pointwise95": [
+            -0.4239620488768881,
+            0.3406287155435547
+          ]
+        },
+        "fg3m": {
+          "v30PerWorkloadGame": 1.725,
+          "v36PerWorkloadGame": 1.7875,
+          "pairedChange": 0.0625,
+          "standardError": 0.11802287129259374,
+          "pointwise95": [
+            -0.16882482773348373,
+            0.29382482773348373
+          ]
+        },
+        "fta": {
+          "v30PerWorkloadGame": 5.095833333333333,
+          "v36PerWorkloadGame": 5.004166666666666,
+          "pairedChange": -0.09166666666666666,
+          "standardError": 0.26076365771553595,
+          "pointwise95": [
+            -0.6027634357891171,
+            0.4194301024557837
+          ]
+        },
+        "ftm": {
+          "v30PerWorkloadGame": 4.091666666666667,
+          "v36PerWorkloadGame": 3.9375,
+          "pairedChange": -0.15416666666666667,
+          "standardError": 0.22001946462714342,
+          "pointwise95": [
+            -0.5854048173358677,
+            0.2770714840025344
+          ]
+        }
+      }
+    },
+    {
+      "playerId": 1629029,
+      "name": "Luka Don\u010di\u0107",
+      "arm": "fullCapCounterfactual",
+      "minutes": 34.983333333333334,
+      "mean70FrozenFlow": {
+        "playerId": 1629029,
+        "sourceSelf": 0.5936676233724849,
+        "sourceReceive": 0.2644618577529901,
+        "terminal": 0.858129481125475,
+        "incoming": 0.23714750301649185,
+        "previousAssignedSelf": 0.6047069181692581,
+        "assignedSelf": 0.6209819781089833,
+        "addedSelf": 0.01627505993972511,
+        "previousPass": 0.4179262392363878,
+        "assignedPass": 0.42520350579110916,
+        "sourceCreator": 1.0115938626088725,
+        "assignedCreator": 1.0461854839000924
+      },
+      "stats": {
+        "pts": {
+          "v30PerWorkloadGame": 29.295833333333334,
+          "v36PerWorkloadGame": 29.45,
+          "pairedChange": 0.15416666666666667,
+          "standardError": 0.5674473788623733,
+          "pointwise95": [
+            -0.958030195903585,
+            1.2663635292369184
+          ]
+        },
+        "ast": {
+          "v30PerWorkloadGame": 5.354166666666667,
+          "v36PerWorkloadGame": 4.65,
+          "pairedChange": -0.7041666666666667,
+          "standardError": 0.1748511271529774,
+          "pointwise95": [
+            -1.0468748758865023,
+            -0.361458457446831
+          ]
+        },
+        "tov": {
+          "v30PerWorkloadGame": 3.325,
+          "v36PerWorkloadGame": 2.904166666666667,
+          "pairedChange": -0.42083333333333334,
+          "standardError": 0.15044301862117715,
+          "pointwise95": [
+            -0.7157016498308406,
+            -0.12596501683582612
+          ]
+        },
+        "stl": {
+          "v30PerWorkloadGame": 1.4625,
+          "v36PerWorkloadGame": 1.5416666666666667,
+          "pairedChange": 0.07916666666666666,
+          "standardError": 0.08260094833999587,
+          "pointwise95": [
+            -0.08273119207972524,
+            0.24106452541305856
+          ]
+        },
+        "blk": {
+          "v30PerWorkloadGame": 0.475,
+          "v36PerWorkloadGame": 0.44583333333333336,
+          "pairedChange": -0.029166666666666667,
+          "standardError": 0.053845199930500354,
+          "pointwise95": [
+            -0.13470325853044735,
+            0.07636992519711402
+          ]
+        },
+        "oreb": {
+          "v30PerWorkloadGame": 0.6083333333333333,
+          "v36PerWorkloadGame": 0.6375,
+          "pairedChange": 0.029166666666666667,
+          "standardError": 0.06574889099191458,
+          "pointwise95": [
+            -0.09970115967748591,
+            0.15803449301081926
+          ]
+        },
+        "dreb": {
+          "v30PerWorkloadGame": 6.870833333333334,
+          "v36PerWorkloadGame": 6.675,
+          "pairedChange": -0.19583333333333333,
+          "standardError": 0.2659821944750772,
+          "pointwise95": [
+            -0.7171584345044846,
+            0.32549176783781797
+          ]
+        },
+        "fga": {
+          "v30PerWorkloadGame": 20.283333333333335,
+          "v36PerWorkloadGame": 19.979166666666668,
+          "pairedChange": -0.30416666666666664,
+          "standardError": 0.33583264405774316,
+          "pointwise95": [
+            -0.9623986490198433,
+            0.35406531568650995
+          ]
+        },
+        "fgm": {
+          "v30PerWorkloadGame": 9.533333333333333,
+          "v36PerWorkloadGame": 9.7375,
+          "pairedChange": 0.20416666666666666,
+          "standardError": 0.2117634293262177,
+          "pointwise95": [
+            -0.21088965481271998,
+            0.6192229881460534
+          ]
+        },
+        "fg3a": {
+          "v30PerWorkloadGame": 9.6125,
+          "v36PerWorkloadGame": 9.629166666666666,
+          "pairedChange": 0.016666666666666666,
+          "standardError": 0.22783705190820527,
+          "pointwise95": [
+            -0.42989395507341566,
+            0.463227288406749
+          ]
+        },
+        "fg3m": {
+          "v30PerWorkloadGame": 3.575,
+          "v36PerWorkloadGame": 3.6,
+          "pairedChange": 0.025,
+          "standardError": 0.14373490258883617,
+          "pointwise95": [
+            -0.25672040907411886,
+            0.3067204090741189
+          ]
+        },
+        "fta": {
+          "v30PerWorkloadGame": 8.504166666666666,
+          "v36PerWorkloadGame": 8.291666666666666,
+          "pairedChange": -0.2125,
+          "standardError": 0.394735319197842,
+          "pointwise95": [
+            -0.9861812256277703,
+            0.5611812256277703
+          ]
+        },
+        "ftm": {
+          "v30PerWorkloadGame": 6.654166666666667,
+          "v36PerWorkloadGame": 6.375,
+          "pairedChange": -0.2791666666666667,
+          "standardError": 0.321374003304561,
+          "pointwise95": [
+            -0.9090597131436062,
+            0.3507263798102729
+          ]
+        }
+      }
+    },
+    {
+      "playerId": 1629029,
+      "name": "Luka Don\u010di\u0107",
+      "arm": "supportedHealthy",
+      "minutes": 33.43666666666667,
+      "mean70FrozenFlow": {
+        "playerId": 1629029,
+        "sourceSelf": 0.5936676233724849,
+        "sourceReceive": 0.2644618577529901,
+        "terminal": 0.858129481125475,
+        "incoming": 0.23714750301649185,
+        "previousAssignedSelf": 0.6047069181692581,
+        "assignedSelf": 0.6209819781089833,
+        "addedSelf": 0.01627505993972511,
+        "previousPass": 0.4179262392363878,
+        "assignedPass": 0.42520350579110916,
+        "sourceCreator": 1.0115938626088725,
+        "assignedCreator": 1.0461854839000924
+      },
+      "stats": {
+        "pts": {
+          "v30PerWorkloadGame": 27.904166666666665,
+          "v36PerWorkloadGame": 28.270833333333332,
+          "pairedChange": 0.36666666666666664,
+          "standardError": 0.5727411347261583,
+          "pointwise95": [
+            -0.7559059573966036,
+            1.489239290729937
+          ]
+        },
+        "ast": {
+          "v30PerWorkloadGame": 5.129166666666666,
+          "v36PerWorkloadGame": 4.4875,
+          "pairedChange": -0.6416666666666667,
+          "standardError": 0.17287064313890677,
+          "pointwise95": [
+            -0.9804931272189239,
+            -0.3028402061144095
+          ]
+        },
+        "tov": {
+          "v30PerWorkloadGame": 3.1791666666666667,
+          "v36PerWorkloadGame": 2.841666666666667,
+          "pairedChange": -0.3375,
+          "standardError": 0.14819516036482283,
+          "pointwise95": [
+            -0.6279625143150528,
+            -0.047037485684947256
+          ]
+        },
+        "stl": {
+          "v30PerWorkloadGame": 1.3958333333333333,
+          "v36PerWorkloadGame": 1.4166666666666667,
+          "pairedChange": 0.020833333333333332,
+          "standardError": 0.0798218502527834,
+          "pointwise95": [
+            -0.13561749316212213,
+            0.1772841598287888
+          ]
+        },
+        "blk": {
+          "v30PerWorkloadGame": 0.44166666666666665,
+          "v36PerWorkloadGame": 0.4583333333333333,
+          "pairedChange": 0.016666666666666666,
+          "standardError": 0.04906533814626581,
+          "pointwise95": [
+            -0.07950139610001433,
+            0.11283472943334766
+          ]
+        },
+        "oreb": {
+          "v30PerWorkloadGame": 0.5833333333333334,
+          "v36PerWorkloadGame": 0.6333333333333333,
+          "pairedChange": 0.05,
+          "standardError": 0.06337352525861019,
+          "pointwise95": [
+            -0.07421210950687597,
+            0.174212109506876
+          ]
+        },
+        "dreb": {
+          "v30PerWorkloadGame": 6.625,
+          "v36PerWorkloadGame": 6.358333333333333,
+          "pairedChange": -0.26666666666666666,
+          "standardError": 0.22983488437152894,
+          "pointwise95": [
+            -0.7171430400348633,
+            0.18380970670153002
+          ]
+        },
+        "fga": {
+          "v30PerWorkloadGame": 19.466666666666665,
+          "v36PerWorkloadGame": 19.370833333333334,
+          "pairedChange": -0.09583333333333334,
+          "standardError": 0.32128395482754757,
+          "pointwise95": [
+            -0.7255498847953266,
+            0.5338832181286599
+          ]
+        },
+        "fgm": {
+          "v30PerWorkloadGame": 9.083333333333334,
+          "v36PerWorkloadGame": 9.345833333333333,
+          "pairedChange": 0.2625,
+          "standardError": 0.20798582127599913,
+          "pointwise95": [
+            -0.14515220970095827,
+            0.6701522097009582
+          ]
+        },
+        "fg3a": {
+          "v30PerWorkloadGame": 9.325,
+          "v36PerWorkloadGame": 9.179166666666667,
+          "pairedChange": -0.14583333333333334,
+          "standardError": 0.22861043607298745,
+          "pointwise95": [
+            -0.5939097880363887,
+            0.3022431213697221
+          ]
+        },
+        "fg3m": {
+          "v30PerWorkloadGame": 3.3916666666666666,
+          "v36PerWorkloadGame": 3.341666666666667,
+          "pairedChange": -0.05,
+          "standardError": 0.13428479961413134,
+          "pointwise95": [
+            -0.3131982072436974,
+            0.21319820724369742
+          ]
+        },
+        "fta": {
+          "v30PerWorkloadGame": 8.0375,
+          "v36PerWorkloadGame": 8.0625,
+          "pairedChange": 0.025,
+          "standardError": 0.37946416900091573,
+          "pointwise95": [
+            -0.7187497712417948,
+            0.7687497712417949
+          ]
+        },
+        "ftm": {
+          "v30PerWorkloadGame": 6.345833333333333,
+          "v36PerWorkloadGame": 6.2375,
+          "pairedChange": -0.10833333333333334,
+          "standardError": 0.30421422763621087,
+          "pointwise95": [
+            -0.7045932195003066,
+            0.48792655283364
+          ]
+        }
+      }
+    },
+    {
+      "playerId": 203999,
+      "name": "Nikola Joki\u0107",
+      "arm": "fullCapCounterfactual",
+      "minutes": 34.983333333333334,
+      "mean70FrozenFlow": {
+        "playerId": 203999,
+        "sourceSelf": 0.20952313557471147,
+        "sourceReceive": 0.41736643078384583,
+        "terminal": 0.6268895663585573,
+        "incoming": 0.40535043371136026,
+        "previousAssignedSelf": 0.15875222320199167,
+        "assignedSelf": 0.22153913264719705,
+        "addedSelf": 0.06278690944520537,
+        "previousPass": 0.6074636374543815,
+        "assignedPass": 0.540560061920613,
+        "sourceCreator": 0.816986773029093,
+        "assignedCreator": 0.7620991945678101
+      },
+      "stats": {
+        "pts": {
+          "v30PerWorkloadGame": 26.216666666666665,
+          "v36PerWorkloadGame": 26.145833333333332,
+          "pairedChange": -0.07083333333333333,
+          "standardError": 0.567875548768292,
+          "pointwise95": [
+            -1.1838694089191857,
+            1.042202742252519
+          ]
+        },
+        "ast": {
+          "v30PerWorkloadGame": 7.241666666666666,
+          "v36PerWorkloadGame": 6.116666666666666,
+          "pairedChange": -1.125,
+          "standardError": 0.20401071141087265,
+          "pointwise95": [
+            -1.5248609943653104,
+            -0.7251390056346896
+          ]
+        },
+        "tov": {
+          "v30PerWorkloadGame": 3.066666666666667,
+          "v36PerWorkloadGame": 3.154166666666667,
+          "pairedChange": 0.0875,
+          "standardError": 0.16235748736570083,
+          "pointwise95": [
+            -0.23072067523677361,
+            0.4057206752367736
+          ]
+        },
+        "stl": {
+          "v30PerWorkloadGame": 1.2625,
+          "v36PerWorkloadGame": 1.275,
+          "pairedChange": 0.0125,
+          "standardError": 0.09804217724285053,
+          "pointwise95": [
+            -0.17966266739598702,
+            0.20466266739598704
+          ]
+        },
+        "blk": {
+          "v30PerWorkloadGame": 0.7791666666666667,
+          "v36PerWorkloadGame": 0.9958333333333333,
+          "pairedChange": 0.21666666666666667,
+          "standardError": 0.06795627679291705,
+          "pointwise95": [
+            0.08347236415254927,
+            0.3498609691807841
+          ]
+        },
+        "oreb": {
+          "v30PerWorkloadGame": 2.808333333333333,
+          "v36PerWorkloadGame": 2.841666666666667,
+          "pairedChange": 0.03333333333333333,
+          "standardError": 0.1511529762268088,
+          "pointwise95": [
+            -0.2629265000712119,
+            0.32959316673787853
+          ]
+        },
+        "dreb": {
+          "v30PerWorkloadGame": 8.654166666666667,
+          "v36PerWorkloadGame": 8.841666666666667,
+          "pairedChange": 0.1875,
+          "standardError": 0.24824616292584947,
+          "pointwise95": [
+            -0.29906247933466495,
+            0.674062479334665
+          ]
+        },
+        "fga": {
+          "v30PerWorkloadGame": 16.4375,
+          "v36PerWorkloadGame": 16.716666666666665,
+          "pairedChange": 0.2791666666666667,
+          "standardError": 0.34688594827567043,
+          "pointwise95": [
+            -0.40072979195364733,
+            0.9590631252869807
+          ]
+        },
+        "fgm": {
+          "v30PerWorkloadGame": 9.545833333333333,
+          "v36PerWorkloadGame": 9.616666666666667,
+          "pairedChange": 0.07083333333333333,
+          "standardError": 0.24361047763759017,
+          "pointwise95": [
+            -0.40664320283634336,
+            0.5483098695030101
+          ]
+        },
+        "fg3a": {
+          "v30PerWorkloadGame": 4.429166666666666,
+          "v36PerWorkloadGame": 4.645833333333333,
+          "pairedChange": 0.21666666666666667,
+          "standardError": 0.17795130420052185,
+          "pointwise95": [
+            -0.13211788956635617,
+            0.5654512228996895
+          ]
+        },
+        "fg3m": {
+          "v30PerWorkloadGame": 1.8375,
+          "v36PerWorkloadGame": 1.8958333333333333,
+          "pairedChange": 0.058333333333333334,
+          "standardError": 0.09866000352876689,
+          "pointwise95": [
+            -0.13504027358304976,
+            0.2517069402497164
+          ]
+        },
+        "fta": {
+          "v30PerWorkloadGame": 6.529166666666667,
+          "v36PerWorkloadGame": 6.116666666666666,
+          "pairedChange": -0.4125,
+          "standardError": 0.34846721244350687,
+          "pointwise95": [
+            -1.0954957363892734,
+            0.2704957363892735
+          ]
+        },
+        "ftm": {
+          "v30PerWorkloadGame": 5.2875,
+          "v36PerWorkloadGame": 5.016666666666667,
+          "pairedChange": -0.2708333333333333,
+          "standardError": 0.2889656682158062,
+          "pointwise95": [
+            -0.8372060430363135,
+            0.29553937636964683
+          ]
+        }
+      }
+    },
+    {
+      "playerId": 203999,
+      "name": "Nikola Joki\u0107",
+      "arm": "supportedHealthy",
+      "minutes": 32.903333333333336,
+      "mean70FrozenFlow": {
+        "playerId": 203999,
+        "sourceSelf": 0.20952313557471147,
+        "sourceReceive": 0.41736643078384583,
+        "terminal": 0.6268895663585573,
+        "incoming": 0.40535043371136026,
+        "previousAssignedSelf": 0.15875222320199167,
+        "assignedSelf": 0.22153913264719705,
+        "addedSelf": 0.06278690944520537,
+        "previousPass": 0.6074636374543815,
+        "assignedPass": 0.540560061920613,
+        "sourceCreator": 0.816986773029093,
+        "assignedCreator": 0.7620991945678101
+      },
+      "stats": {
+        "pts": {
+          "v30PerWorkloadGame": 24.3625,
+          "v36PerWorkloadGame": 24.920833333333334,
+          "pairedChange": 0.5583333333333333,
+          "standardError": 0.5901879016544301,
+          "pointwise95": [
+            -0.5984349539093496,
+            1.7151016205760163
+          ]
+        },
+        "ast": {
+          "v30PerWorkloadGame": 6.9125,
+          "v36PerWorkloadGame": 5.7375,
+          "pairedChange": -1.175,
+          "standardError": 0.22298480267099421,
+          "pointwise95": [
+            -1.6120502132351486,
+            -0.7379497867648515
+          ]
+        },
+        "tov": {
+          "v30PerWorkloadGame": 2.925,
+          "v36PerWorkloadGame": 2.720833333333333,
+          "pairedChange": -0.20416666666666666,
+          "standardError": 0.14807796369930717,
+          "pointwise95": [
+            -0.49439947551730873,
+            0.0860661421839754
+          ]
+        },
+        "stl": {
+          "v30PerWorkloadGame": 1.2333333333333334,
+          "v36PerWorkloadGame": 1.1458333333333333,
+          "pairedChange": -0.0875,
+          "standardError": 0.09176131477310516,
+          "pointwise95": [
+            -0.2673521769552861,
+            0.09235217695528611
+          ]
+        },
+        "blk": {
+          "v30PerWorkloadGame": 0.7333333333333333,
+          "v36PerWorkloadGame": 0.9458333333333333,
+          "pairedChange": 0.2125,
+          "standardError": 0.059560504562198795,
+          "pointwise95": [
+            0.09576141105809036,
+            0.3292385889419096
+          ]
+        },
+        "oreb": {
+          "v30PerWorkloadGame": 2.6,
+          "v36PerWorkloadGame": 2.654166666666667,
+          "pairedChange": 0.05416666666666667,
+          "standardError": 0.13580606406577372,
+          "pointwise95": [
+            -0.2120132189022498,
+            0.32034655223558317
+          ]
+        },
+        "dreb": {
+          "v30PerWorkloadGame": 8.391666666666667,
+          "v36PerWorkloadGame": 8.133333333333333,
+          "pairedChange": -0.25833333333333336,
+          "standardError": 0.18751543146375188,
+          "pointwise95": [
+            -0.6258635790022871,
+            0.10919691233562034
+          ]
+        },
+        "fga": {
+          "v30PerWorkloadGame": 15.404166666666667,
+          "v36PerWorkloadGame": 15.8875,
+          "pairedChange": 0.48333333333333334,
+          "standardError": 0.3499834652178956,
+          "pointwise95": [
+            -0.202634258493742,
+            1.1693009251604087
+          ]
+        },
+        "fgm": {
+          "v30PerWorkloadGame": 8.866666666666667,
+          "v36PerWorkloadGame": 9.108333333333333,
+          "pairedChange": 0.24166666666666667,
+          "standardError": 0.23950179771999858,
+          "pointwise95": [
+            -0.22775685686453054,
+            0.7110901901978639
+          ]
+        },
+        "fg3a": {
+          "v30PerWorkloadGame": 4.095833333333333,
+          "v36PerWorkloadGame": 4.2125,
+          "pairedChange": 0.11666666666666667,
+          "standardError": 0.19281059598975864,
+          "pointwise95": [
+            -0.2612421014732602,
+            0.4945754348065936
+          ]
+        },
+        "fg3m": {
+          "v30PerWorkloadGame": 1.6458333333333333,
+          "v36PerWorkloadGame": 1.725,
+          "pairedChange": 0.07916666666666666,
+          "standardError": 0.09827799761296939,
+          "pointwise95": [
+            -0.11345820865475334,
+            0.27179154198808664
+          ]
+        },
+        "fta": {
+          "v30PerWorkloadGame": 6.125,
+          "v36PerWorkloadGame": 6.029166666666667,
+          "pairedChange": -0.09583333333333334,
+          "standardError": 0.3245277908547079,
+          "pointwise95": [
+            -0.7319078034085608,
+            0.5402411367418941
+          ]
+        },
+        "ftm": {
+          "v30PerWorkloadGame": 4.983333333333333,
+          "v36PerWorkloadGame": 4.979166666666667,
+          "pairedChange": -0.004166666666666667,
+          "standardError": 0.2597519293765011,
+          "pointwise95": [
+            -0.5132804482446088,
+            0.5049471149112755
+          ]
+        }
+      }
+    },
+    {
+      "playerId": 1630202,
+      "name": "Payton Pritchard",
+      "arm": "fullCapCounterfactual",
+      "minutes": 34.983333333333334,
+      "mean70FrozenFlow": {
+        "playerId": 1630202,
+        "sourceSelf": 0.24941847681971677,
+        "sourceReceive": 0.22839842815506042,
+        "terminal": 0.4778169049747772,
+        "incoming": 0.23420094933027183,
+        "previousAssignedSelf": 0.24043763669387164,
+        "assignedSelf": 0.24361595564450533,
+        "addedSelf": 0.003178318950633696,
+        "previousPass": 0.3171641845094055,
+        "assignedPass": 0.30965277730506585,
+        "sourceCreator": 0.5665826613291223,
+        "assignedCreator": 0.5532687329495711
+      },
+      "stats": {
+        "pts": {
+          "v30PerWorkloadGame": 17.475,
+          "v36PerWorkloadGame": 17.95,
+          "pairedChange": 0.475,
+          "standardError": 0.5443735781543705,
+          "pointwise95": [
+            -0.5919722131825661,
+            1.5419722131825662
+          ]
+        },
+        "ast": {
+          "v30PerWorkloadGame": 4.295833333333333,
+          "v36PerWorkloadGame": 3.7916666666666665,
+          "pairedChange": -0.5041666666666667,
+          "standardError": 0.17214940216761332,
+          "pointwise95": [
+            -0.8415794949151887,
+            -0.16675383841814456
+          ]
+        },
+        "tov": {
+          "v30PerWorkloadGame": 1.3333333333333333,
+          "v36PerWorkloadGame": 1.375,
+          "pairedChange": 0.041666666666666664,
+          "standardError": 0.09316949906249124,
+          "pointwise95": [
+            -0.14094555149581617,
+            0.22427888482914948
+          ]
+        },
+        "stl": {
+          "v30PerWorkloadGame": 0.8,
+          "v36PerWorkloadGame": 0.7291666666666666,
+          "pairedChange": -0.07083333333333333,
+          "standardError": 0.06405473643111226,
+          "pointwise95": [
+            -0.19638061673831336,
+            0.0547139500716467
+          ]
+        },
+        "blk": {
+          "v30PerWorkloadGame": 0.23333333333333334,
+          "v36PerWorkloadGame": 0.20833333333333334,
+          "pairedChange": -0.025,
+          "standardError": 0.03996526269427266,
+          "pointwise95": [
+            -0.10333191488077442,
+            0.05333191488077441
+          ]
+        },
+        "oreb": {
+          "v30PerWorkloadGame": 0.925,
+          "v36PerWorkloadGame": 0.8333333333333334,
+          "pairedChange": -0.09166666666666666,
+          "standardError": 0.08786300363297062,
+          "pointwise95": [
+            -0.26387815378728907,
+            0.08054482045395574
+          ]
+        },
+        "dreb": {
+          "v30PerWorkloadGame": 3.0625,
+          "v36PerWorkloadGame": 2.925,
+          "pairedChange": -0.1375,
+          "standardError": 0.15101891591109692,
+          "pointwise95": [
+            -0.43349707518575,
+            0.15849707518574996
+          ]
+        },
+        "fga": {
+          "v30PerWorkloadGame": 14.5875,
+          "v36PerWorkloadGame": 14.395833333333334,
+          "pairedChange": -0.19166666666666668,
+          "standardError": 0.29380170939673655,
+          "pointwise95": [
+            -0.7675180170842703,
+            0.38418468375093695
+          ]
+        },
+        "fgm": {
+          "v30PerWorkloadGame": 6.654166666666667,
+          "v36PerWorkloadGame": 6.754166666666666,
+          "pairedChange": 0.1,
+          "standardError": 0.21527329744441737,
+          "pointwise95": [
+            -0.321935662991058,
+            0.5219356629910581
+          ]
+        },
+        "fg3a": {
+          "v30PerWorkloadGame": 7.691666666666666,
+          "v36PerWorkloadGame": 7.466666666666667,
+          "pairedChange": -0.225,
+          "standardError": 0.18565449790563274,
+          "pointwise95": [
+            -0.5888828158950402,
+            0.13888281589504017
+          ]
+        },
+        "fg3m": {
+          "v30PerWorkloadGame": 2.85,
+          "v36PerWorkloadGame": 2.9875,
+          "pairedChange": 0.1375,
+          "standardError": 0.13559283412727482,
+          "pointwise95": [
+            -0.12826195488945863,
+            0.40326195488945865
+          ]
+        },
+        "fta": {
+          "v30PerWorkloadGame": 1.5,
+          "v36PerWorkloadGame": 1.7041666666666666,
+          "pairedChange": 0.20416666666666666,
+          "standardError": 0.13610402475884228,
+          "pointwise95": [
+            -0.06259722186066419,
+            0.4709305551939975
+          ]
+        },
+        "ftm": {
+          "v30PerWorkloadGame": 1.3166666666666667,
+          "v36PerWorkloadGame": 1.4541666666666666,
+          "pairedChange": 0.1375,
+          "standardError": 0.11802287129259374,
+          "pointwise95": [
+            -0.09382482773348372,
+            0.36882482773348374
+          ]
+        }
+      }
+    },
+    {
+      "playerId": 1630202,
+      "name": "Payton Pritchard",
+      "arm": "supportedHealthy",
+      "minutes": 31.855,
+      "mean70FrozenFlow": {
+        "playerId": 1630202,
+        "sourceSelf": 0.24941847681971677,
+        "sourceReceive": 0.22839842815506042,
+        "terminal": 0.4778169049747772,
+        "incoming": 0.23420094933027183,
+        "previousAssignedSelf": 0.24043763669387164,
+        "assignedSelf": 0.24361595564450533,
+        "addedSelf": 0.003178318950633696,
+        "previousPass": 0.3171641845094055,
+        "assignedPass": 0.30965277730506585,
+        "sourceCreator": 0.5665826613291223,
+        "assignedCreator": 0.5532687329495711
+      },
+      "stats": {
+        "pts": {
+          "v30PerWorkloadGame": 15.920833333333333,
+          "v36PerWorkloadGame": 16.554166666666667,
+          "pairedChange": 0.6333333333333333,
+          "standardError": 0.457853283956367,
+          "pointwise95": [
+            -0.264059103221146,
+            1.5307257698878125
+          ]
+        },
+        "ast": {
+          "v30PerWorkloadGame": 3.841666666666667,
+          "v36PerWorkloadGame": 3.316666666666667,
+          "pairedChange": -0.525,
+          "standardError": 0.17003539936447656,
+          "pointwise95": [
+            -0.8582693827543741,
+            -0.19173061724562596
+          ]
+        },
+        "tov": {
+          "v30PerWorkloadGame": 1.25,
+          "v36PerWorkloadGame": 1.2125,
+          "pairedChange": -0.0375,
+          "standardError": 0.0932005503878201,
+          "pointwise95": [
+            -0.2201730787601274,
+            0.1451730787601274
+          ]
+        },
+        "stl": {
+          "v30PerWorkloadGame": 0.7125,
+          "v36PerWorkloadGame": 0.6166666666666667,
+          "pairedChange": -0.09583333333333334,
+          "standardError": 0.062407338718502695,
+          "pointwise95": [
+            -0.21815171722159862,
+            0.026485050554931944
+          ]
+        },
+        "blk": {
+          "v30PerWorkloadGame": 0.2125,
+          "v36PerWorkloadGame": 0.19583333333333333,
+          "pairedChange": -0.016666666666666666,
+          "standardError": 0.034527230262933487,
+          "pointwise95": [
+            -0.0843400379820163,
+            0.05100670464868297
+          ]
+        },
+        "oreb": {
+          "v30PerWorkloadGame": 0.8833333333333333,
+          "v36PerWorkloadGame": 0.7583333333333333,
+          "pairedChange": -0.125,
+          "standardError": 0.08904066902680337,
+          "pointwise95": [
+            -0.29951971129253463,
+            0.0495197112925346
+          ]
+        },
+        "dreb": {
+          "v30PerWorkloadGame": 2.825,
+          "v36PerWorkloadGame": 2.6875,
+          "pairedChange": -0.1375,
+          "standardError": 0.1393810723639811,
+          "pointwise95": [
+            -0.41068690183340295,
+            0.13568690183340293
+          ]
+        },
+        "fga": {
+          "v30PerWorkloadGame": 13.383333333333333,
+          "v36PerWorkloadGame": 13.133333333333333,
+          "pairedChange": -0.25,
+          "standardError": 0.27290871489688023,
+          "pointwise95": [
+            -0.7849010811978853,
+            0.28490108119788526
+          ]
+        },
+        "fgm": {
+          "v30PerWorkloadGame": 6.054166666666666,
+          "v36PerWorkloadGame": 6.225,
+          "pairedChange": 0.17083333333333334,
+          "standardError": 0.1786815136865964,
+          "pointwise95": [
+            -0.17938243349239563,
+            0.5210491001590623
+          ]
+        },
+        "fg3a": {
+          "v30PerWorkloadGame": 7.008333333333334,
+          "v36PerWorkloadGame": 6.820833333333334,
+          "pairedChange": -0.1875,
+          "standardError": 0.18903691095578057,
+          "pointwise95": [
+            -0.5580123454733299,
+            0.1830123454733299
+          ]
+        },
+        "fg3m": {
+          "v30PerWorkloadGame": 2.5708333333333333,
+          "v36PerWorkloadGame": 2.7333333333333334,
+          "pairedChange": 0.1625,
+          "standardError": 0.126312553260201,
+          "pointwise95": [
+            -0.08507260438999395,
+            0.41007260438999393
+          ]
+        },
+        "fta": {
+          "v30PerWorkloadGame": 1.4333333333333333,
+          "v36PerWorkloadGame": 1.6375,
+          "pairedChange": 0.20416666666666666,
+          "standardError": 0.13623152270226513,
+          "pointwise95": [
+            -0.06284711782977298,
+            0.4711804511631063
+          ]
+        },
+        "ftm": {
+          "v30PerWorkloadGame": 1.2416666666666667,
+          "v36PerWorkloadGame": 1.3708333333333333,
+          "pairedChange": 0.12916666666666668,
+          "standardError": 0.12353305900311327,
+          "pointwise95": [
+            -0.11295812897943533,
+            0.37129146231276866
+          ]
+        }
+      }
+    },
+    {
+      "playerId": 1629674,
+      "name": "Neemias Queta",
+      "arm": "fullCapCounterfactual",
+      "minutes": 34.983333333333334,
+      "mean70FrozenFlow": {
+        "playerId": 1629674,
+        "sourceSelf": 0.03816109339137452,
+        "sourceReceive": 0.2316717417407929,
+        "terminal": 0.26983283513216744,
+        "incoming": 0.23461406376736335,
+        "previousAssignedSelf": 0.05026534286777126,
+        "assignedSelf": 0.035218771364804106,
+        "addedSelf": -0.015046571502967156,
+        "previousPass": 0.13976937752444318,
+        "assignedPass": 0.14785245107060227,
+        "sourceCreator": 0.1779304709158177,
+        "assignedCreator": 0.18307122243540638
+      },
+      "stats": {
+        "pts": {
+          "v30PerWorkloadGame": 14.091666666666667,
+          "v36PerWorkloadGame": 13.4625,
+          "pairedChange": -0.6291666666666667,
+          "standardError": 0.4093736747221975,
+          "pointwise95": [
+            -1.4315390691221737,
+            0.17320573578884046
+          ]
+        },
+        "ast": {
+          "v30PerWorkloadGame": 1.8083333333333333,
+          "v36PerWorkloadGame": 1.9208333333333334,
+          "pairedChange": 0.1125,
+          "standardError": 0.10883962888036147,
+          "pointwise95": [
+            -0.10082567260550847,
+            0.3258256726055085
+          ]
+        },
+        "tov": {
+          "v30PerWorkloadGame": 1.3083333333333333,
+          "v36PerWorkloadGame": 1.3333333333333333,
+          "pairedChange": 0.025,
+          "standardError": 0.09058707699511294,
+          "pointwise95": [
+            -0.15255067091042138,
+            0.20255067091042137
+          ]
+        },
+        "stl": {
+          "v30PerWorkloadGame": 1.1083333333333334,
+          "v36PerWorkloadGame": 1.0583333333333333,
+          "pairedChange": -0.05,
+          "standardError": 0.07765367082496868,
+          "pointwise95": [
+            -0.2022011948169386,
+            0.10220119481693861
+          ]
+        },
+        "blk": {
+          "v30PerWorkloadGame": 1.525,
+          "v36PerWorkloadGame": 1.6666666666666667,
+          "pairedChange": 0.14166666666666666,
+          "standardError": 0.09507550605624905,
+          "pointwise95": [
+            -0.04468132520358148,
+            0.3280146585369148
+          ]
+        },
+        "oreb": {
+          "v30PerWorkloadGame": 3.9625,
+          "v36PerWorkloadGame": 3.870833333333333,
+          "pairedChange": -0.09166666666666666,
+          "standardError": 0.17226701926348503,
+          "pointwise95": [
+            -0.42931002442309735,
+            0.245976691089764
+          ]
+        },
+        "dreb": {
+          "v30PerWorkloadGame": 7.154166666666667,
+          "v36PerWorkloadGame": 7.295833333333333,
+          "pairedChange": 0.14166666666666666,
+          "standardError": 0.20301546191799721,
+          "pointwise95": [
+            -0.25624363869260786,
+            0.5395769720259411
+          ]
+        },
+        "fga": {
+          "v30PerWorkloadGame": 9.304166666666667,
+          "v36PerWorkloadGame": 9.0,
+          "pairedChange": -0.30416666666666664,
+          "standardError": 0.2717931709550072,
+          "pointwise95": [
+            -0.8368812817384808,
+            0.22854794840514753
+          ]
+        },
+        "fgm": {
+          "v30PerWorkloadGame": 5.6,
+          "v36PerWorkloadGame": 5.45,
+          "pairedChange": -0.15,
+          "standardError": 0.19394777838567975,
+          "pointwise95": [
+            -0.5301376456359324,
+            0.23013764563593234
+          ]
+        },
+        "fg3a": {
+          "v30PerWorkloadGame": 0.3125,
+          "v36PerWorkloadGame": 0.35,
+          "pairedChange": 0.0375,
+          "standardError": 0.04683254250024268,
+          "pointwise95": [
+            -0.05429178330047565,
+            0.12929178330047564
+          ]
+        },
+        "fg3m": {
+          "v30PerWorkloadGame": 0.058333333333333334,
+          "v36PerWorkloadGame": 0.075,
+          "pairedChange": 0.016666666666666666,
+          "standardError": 0.01800205749557739,
+          "pointwise95": [
+            -0.01861736602466502,
+            0.051950699357998356
+          ]
+        },
+        "fta": {
+          "v30PerWorkloadGame": 3.775,
+          "v36PerWorkloadGame": 3.3291666666666666,
+          "pairedChange": -0.44583333333333336,
+          "standardError": 0.21143524093942123,
+          "pointwise95": [
+            -0.860246405574599,
+            -0.03142026109206775
+          ]
+        },
+        "ftm": {
+          "v30PerWorkloadGame": 2.8333333333333335,
+          "v36PerWorkloadGame": 2.4875,
+          "pairedChange": -0.3458333333333333,
+          "standardError": 0.17669483528053334,
+          "pointwise95": [
+            -0.6921552104831787,
+            0.0004885438165120326
+          ]
+        }
+      }
+    },
+    {
+      "playerId": 1629674,
+      "name": "Neemias Queta",
+      "arm": "supportedHealthy",
+      "minutes": 25.281666666666666,
+      "mean70FrozenFlow": {
+        "playerId": 1629674,
+        "sourceSelf": 0.03816109339137452,
+        "sourceReceive": 0.2316717417407929,
+        "terminal": 0.26983283513216744,
+        "incoming": 0.23461406376736335,
+        "previousAssignedSelf": 0.05026534286777126,
+        "assignedSelf": 0.035218771364804106,
+        "addedSelf": -0.015046571502967156,
+        "previousPass": 0.13976937752444318,
+        "assignedPass": 0.14785245107060227,
+        "sourceCreator": 0.1779304709158177,
+        "assignedCreator": 0.18307122243540638
+      },
+      "stats": {
+        "pts": {
+          "v30PerWorkloadGame": 10.495833333333334,
+          "v36PerWorkloadGame": 10.191666666666666,
+          "pairedChange": -0.30416666666666664,
+          "standardError": 0.33722553998001814,
+          "pointwise95": [
+            -0.9651287250275022,
+            0.3567953916941689
+          ]
+        },
+        "ast": {
+          "v30PerWorkloadGame": 1.3875,
+          "v36PerWorkloadGame": 1.35,
+          "pairedChange": -0.0375,
+          "standardError": 0.097331288030261,
+          "pointwise95": [
+            -0.22826932453931156,
+            0.15326932453931155
+          ]
+        },
+        "tov": {
+          "v30PerWorkloadGame": 0.9125,
+          "v36PerWorkloadGame": 0.8875,
+          "pairedChange": -0.025,
+          "standardError": 0.07071067811865475,
+          "pointwise95": [
+            -0.16359292911256332,
+            0.11359292911256333
+          ]
+        },
+        "stl": {
+          "v30PerWorkloadGame": 0.7666666666666667,
+          "v36PerWorkloadGame": 0.7041666666666667,
+          "pairedChange": -0.0625,
+          "standardError": 0.06892863996487533,
+          "pointwise95": [
+            -0.19760013433115564,
+            0.07260013433115564
+          ]
+        },
+        "blk": {
+          "v30PerWorkloadGame": 1.0791666666666666,
+          "v36PerWorkloadGame": 1.2041666666666666,
+          "pairedChange": 0.125,
+          "standardError": 0.09712296520581716,
+          "pointwise95": [
+            -0.06536101180340162,
+            0.3153610118034016
+          ]
+        },
+        "oreb": {
+          "v30PerWorkloadGame": 2.691666666666667,
+          "v36PerWorkloadGame": 2.7916666666666665,
+          "pairedChange": 0.1,
+          "standardError": 0.1366768288904727,
+          "pointwise95": [
+            -0.1678865846253265,
+            0.36788658462532653
+          ]
+        },
+        "dreb": {
+          "v30PerWorkloadGame": 5.095833333333333,
+          "v36PerWorkloadGame": 5.2,
+          "pairedChange": 0.10416666666666667,
+          "standardError": 0.17557775000351353,
+          "pointwise95": [
+            -0.23996572334021982,
+            0.4482990566735532
+          ]
+        },
+        "fga": {
+          "v30PerWorkloadGame": 6.9625,
+          "v36PerWorkloadGame": 6.558333333333334,
+          "pairedChange": -0.4041666666666667,
+          "standardError": 0.19414162928702908,
+          "pointwise95": [
+            -0.7846842600692436,
+            -0.023649073264089715
+          ]
+        },
+        "fgm": {
+          "v30PerWorkloadGame": 4.25,
+          "v36PerWorkloadGame": 4.075,
+          "pairedChange": -0.175,
+          "standardError": 0.1511529762268088,
+          "pointwise95": [
+            -0.4712598334045452,
+            0.12125983340454521
+          ]
+        },
+        "fg3a": {
+          "v30PerWorkloadGame": 0.2875,
+          "v36PerWorkloadGame": 0.22916666666666666,
+          "pairedChange": -0.058333333333333334,
+          "standardError": 0.042355418561046965,
+          "pointwise95": [
+            -0.14134995371298537,
+            0.02468328704631871
+          ]
+        },
+        "fg3m": {
+          "v30PerWorkloadGame": 0.08333333333333333,
+          "v36PerWorkloadGame": 0.041666666666666664,
+          "pairedChange": -0.041666666666666664,
+          "standardError": 0.019837301190396804,
+          "pointwise95": [
+            -0.08054777699984439,
+            -0.0027855563334889324
+          ]
+        },
+        "fta": {
+          "v30PerWorkloadGame": 2.6333333333333333,
+          "v36PerWorkloadGame": 2.658333333333333,
+          "pairedChange": 0.025,
+          "standardError": 0.17209897023386153,
+          "pointwise95": [
+            -0.3123139816583686,
+            0.36231398165836864
+          ]
+        },
+        "ftm": {
+          "v30PerWorkloadGame": 1.9125,
+          "v36PerWorkloadGame": 2.0,
+          "pairedChange": 0.0875,
+          "standardError": 0.14168709003110155,
+          "pointwise95": [
+            -0.19020669646095903,
+            0.36520669646095905
+          ]
+        }
+      }
+    },
+    {
+      "playerId": 203954,
+      "name": "Joel Embiid",
+      "arm": "fullCapCounterfactual",
+      "minutes": 34.983333333333334,
+      "mean70FrozenFlow": {
+        "playerId": 203954,
+        "sourceSelf": 0.25631383118776885,
+        "sourceReceive": 0.5194103870111108,
+        "terminal": 0.7757242181988796,
+        "incoming": 0.4984161432451289,
+        "previousAssignedSelf": 0.3272252552856666,
+        "assignedSelf": 0.27730807495375065,
+        "addedSelf": -0.049917180331915945,
+        "previousPass": 0.24107212247487275,
+        "assignedPass": 0.26589563091334206,
+        "sourceCreator": 0.4973859536626416,
+        "assignedCreator": 0.5432037058670927
+      },
+      "stats": {
+        "pts": {
+          "v30PerWorkloadGame": 26.5375,
+          "v36PerWorkloadGame": 26.4125,
+          "pairedChange": -0.125,
+          "standardError": 0.5753823205615678,
+          "pointwise95": [
+            -1.2527493483006729,
+            1.0027493483006729
+          ]
+        },
+        "ast": {
+          "v30PerWorkloadGame": 2.808333333333333,
+          "v36PerWorkloadGame": 2.8291666666666666,
+          "pairedChange": 0.020833333333333332,
+          "standardError": 0.12894245773757923,
+          "pointwise95": [
+            -0.23189388383232193,
+            0.2735605504989886
+          ]
+        },
+        "tov": {
+          "v30PerWorkloadGame": 2.558333333333333,
+          "v36PerWorkloadGame": 2.658333333333333,
+          "pairedChange": 0.1,
+          "standardError": 0.15210711381810543,
+          "pointwise95": [
+            -0.19812994308348666,
+            0.3981299430834867
+          ]
+        },
+        "stl": {
+          "v30PerWorkloadGame": 0.7083333333333334,
+          "v36PerWorkloadGame": 0.7708333333333334,
+          "pairedChange": 0.0625,
+          "standardError": 0.07268813393405292,
+          "pointwise95": [
+            -0.07996874251074373,
+            0.20496874251074373
+          ]
+        },
+        "blk": {
+          "v30PerWorkloadGame": 1.1958333333333333,
+          "v36PerWorkloadGame": 1.225,
+          "pairedChange": 0.029166666666666667,
+          "standardError": 0.08965597829729173,
+          "pointwise95": [
+            -0.1465590507960251,
+            0.20489238412935845
+          ]
+        },
+        "oreb": {
+          "v30PerWorkloadGame": 2.25,
+          "v36PerWorkloadGame": 2.1,
+          "pairedChange": -0.15,
+          "standardError": 0.11501811451535218,
+          "pointwise95": [
+            -0.3754355044500903,
+            0.07543550445009028
+          ]
+        },
+        "dreb": {
+          "v30PerWorkloadGame": 6.595833333333333,
+          "v36PerWorkloadGame": 6.45,
+          "pairedChange": -0.14583333333333334,
+          "standardError": 0.20439329825209626,
+          "pointwise95": [
+            -0.546444197907442,
+            0.2547775312407753
+          ]
+        },
+        "fga": {
+          "v30PerWorkloadGame": 18.570833333333333,
+          "v36PerWorkloadGame": 18.208333333333332,
+          "pairedChange": -0.3625,
+          "standardError": 0.33830493860049027,
+          "pointwise95": [
+            -1.025577679656961,
+            0.30057767965696097
+          ]
+        },
+        "fgm": {
+          "v30PerWorkloadGame": 9.229166666666666,
+          "v36PerWorkloadGame": 9.166666666666666,
+          "pairedChange": -0.0625,
+          "standardError": 0.21662659885926597,
+          "pointwise95": [
+            -0.48708813376416127,
+            0.36208813376416127
+          ]
+        },
+        "fg3a": {
+          "v30PerWorkloadGame": 4.3875,
+          "v36PerWorkloadGame": 4.291666666666667,
+          "pairedChange": -0.09583333333333334,
+          "standardError": 0.17069777819726148,
+          "pointwise95": [
+            -0.43040097859996584,
+            0.2387343119332992
+          ]
+        },
+        "fg3m": {
+          "v30PerWorkloadGame": 1.5166666666666666,
+          "v36PerWorkloadGame": 1.4833333333333334,
+          "pairedChange": -0.03333333333333333,
+          "standardError": 0.10363754503432017,
+          "pointwise95": [
+            -0.23646292160060087,
+            0.16979625493393422
+          ]
+        },
+        "fta": {
+          "v30PerWorkloadGame": 7.929166666666666,
+          "v36PerWorkloadGame": 7.716666666666667,
+          "pairedChange": -0.2125,
+          "standardError": 0.35359430875678016,
+          "pointwise95": [
+            -0.9055448451632891,
+            0.4805448451632891
+          ]
+        },
+        "ftm": {
+          "v30PerWorkloadGame": 6.5625,
+          "v36PerWorkloadGame": 6.595833333333333,
+          "pairedChange": 0.03333333333333333,
+          "standardError": 0.31350763473484505,
+          "pointwise95": [
+            -0.581141630746963,
+            0.6478082974136297
+          ]
+        }
+      }
+    },
+    {
+      "playerId": 203954,
+      "name": "Joel Embiid",
+      "arm": "supportedHealthy",
+      "minutes": 30.678333333333335,
+      "mean70FrozenFlow": {
+        "playerId": 203954,
+        "sourceSelf": 0.25631383118776885,
+        "sourceReceive": 0.5194103870111108,
+        "terminal": 0.7757242181988796,
+        "incoming": 0.4984161432451289,
+        "previousAssignedSelf": 0.3272252552856666,
+        "assignedSelf": 0.27730807495375065,
+        "addedSelf": -0.049917180331915945,
+        "previousPass": 0.24107212247487275,
+        "assignedPass": 0.26589563091334206,
+        "sourceCreator": 0.4973859536626416,
+        "assignedCreator": 0.5432037058670927
+      },
+      "stats": {
+        "pts": {
+          "v30PerWorkloadGame": 22.929166666666667,
+          "v36PerWorkloadGame": 22.691666666666666,
+          "pairedChange": -0.2375,
+          "standardError": 0.5658439697903903,
+          "pointwise95": [
+            -1.346554180789165,
+            0.8715541807891649
+          ]
+        },
+        "ast": {
+          "v30PerWorkloadGame": 2.3916666666666666,
+          "v36PerWorkloadGame": 2.533333333333333,
+          "pairedChange": 0.14166666666666666,
+          "standardError": 0.13118935988923852,
+          "pointwise95": [
+            -0.11546447871624083,
+            0.39879781204957415
+          ]
+        },
+        "tov": {
+          "v30PerWorkloadGame": 2.3583333333333334,
+          "v36PerWorkloadGame": 2.4583333333333335,
+          "pairedChange": 0.1,
+          "standardError": 0.1394848325751532,
+          "pointwise95": [
+            -0.1733902718473003,
+            0.37339027184730034
+          ]
+        },
+        "stl": {
+          "v30PerWorkloadGame": 0.5875,
+          "v36PerWorkloadGame": 0.675,
+          "pairedChange": 0.0875,
+          "standardError": 0.07172639629819642,
+          "pointwise95": [
+            -0.05308373674446498,
+            0.22808373674446497
+          ]
+        },
+        "blk": {
+          "v30PerWorkloadGame": 1.0833333333333333,
+          "v36PerWorkloadGame": 1.1166666666666667,
+          "pairedChange": 0.03333333333333333,
+          "standardError": 0.09354143466934854,
+          "pointwise95": [
+            -0.1500078786185898,
+            0.21667454528525645
+          ]
+        },
+        "oreb": {
+          "v30PerWorkloadGame": 1.9375,
+          "v36PerWorkloadGame": 1.7875,
+          "pairedChange": -0.15,
+          "standardError": 0.11711224435462664,
+          "pointwise95": [
+            -0.3795399989350682,
+            0.07953999893506822
+          ]
+        },
+        "dreb": {
+          "v30PerWorkloadGame": 5.7625,
+          "v36PerWorkloadGame": 5.720833333333333,
+          "pairedChange": -0.041666666666666664,
+          "standardError": 0.18506130115500968,
+          "pointwise95": [
+            -0.40438681693048567,
+            0.3210534835971523
+          ]
+        },
+        "fga": {
+          "v30PerWorkloadGame": 16.129166666666666,
+          "v36PerWorkloadGame": 15.654166666666667,
+          "pairedChange": -0.475,
+          "standardError": 0.3218328586221253,
+          "pointwise95": [
+            -1.1057924028993655,
+            0.15579240289936558
+          ]
+        },
+        "fgm": {
+          "v30PerWorkloadGame": 8.033333333333333,
+          "v36PerWorkloadGame": 7.845833333333333,
+          "pairedChange": -0.1875,
+          "standardError": 0.2189119770677331,
+          "pointwise95": [
+            -0.6165674750527569,
+            0.24156747505275689
+          ]
+        },
+        "fg3a": {
+          "v30PerWorkloadGame": 3.8125,
+          "v36PerWorkloadGame": 3.816666666666667,
+          "pairedChange": 0.004166666666666667,
+          "standardError": 0.15311200814122006,
+          "pointwise95": [
+            -0.29593286929012463,
+            0.30426620262345794
+          ]
+        },
+        "fg3m": {
+          "v30PerWorkloadGame": 1.275,
+          "v36PerWorkloadGame": 1.3125,
+          "pairedChange": 0.0375,
+          "standardError": 0.09607457558622923,
+          "pointwise95": [
+            -0.15080616814900927,
+            0.22580616814900928
+          ]
+        },
+        "fta": {
+          "v30PerWorkloadGame": 6.7125,
+          "v36PerWorkloadGame": 6.770833333333333,
+          "pairedChange": 0.058333333333333334,
+          "standardError": 0.2950792423388322,
+          "pointwise95": [
+            -0.5200219816507777,
+            0.6366886483174444
+          ]
+        },
+        "ftm": {
+          "v30PerWorkloadGame": 5.5875,
+          "v36PerWorkloadGame": 5.6875,
+          "pairedChange": 0.1,
+          "standardError": 0.25069348260818874,
+          "pointwise95": [
+            -0.39135922591204997,
+            0.5913592259120499
+          ]
+        }
+      }
+    },
+    {
+      "playerId": 201939,
+      "name": "Stephen Curry",
+      "arm": "fullCapCounterfactual",
+      "minutes": 34.983333333333334,
+      "mean70FrozenFlow": {
+        "playerId": 201939,
+        "sourceSelf": 0.289031901464243,
+        "sourceReceive": 0.47369309560544487,
+        "terminal": 0.7627249970696879,
+        "incoming": 0.41474037417103005,
+        "previousAssignedSelf": 0.3919164413652778,
+        "assignedSelf": 0.34798462289865784,
+        "addedSelf": -0.043931818466619976,
+        "previousPass": 0.33018853910489887,
+        "assignedPass": 0.3834271638808741,
+        "sourceCreator": 0.6192204405691419,
+        "assignedCreator": 0.731411786779532
+      },
+      "stats": {
+        "pts": {
+          "v30PerWorkloadGame": 26.216666666666665,
+          "v36PerWorkloadGame": 25.525,
+          "pairedChange": -0.6916666666666667,
+          "standardError": 0.6223834116612613,
+          "pointwise95": [
+            -1.911538153522739,
+            0.5282048201894056
+          ]
+        },
+        "ast": {
+          "v30PerWorkloadGame": 4.504166666666666,
+          "v36PerWorkloadGame": 4.758333333333334,
+          "pairedChange": 0.25416666666666665,
+          "standardError": 0.1545041351478263,
+          "pointwise95": [
+            -0.048661438223072895,
+            0.5569947715564062
+          ]
+        },
+        "tov": {
+          "v30PerWorkloadGame": 2.7666666666666666,
+          "v36PerWorkloadGame": 2.6375,
+          "pairedChange": -0.12916666666666668,
+          "standardError": 0.14140089449138207,
+          "pointwise95": [
+            -0.4063124198697755,
+            0.14797908653644218
+          ]
+        },
+        "stl": {
+          "v30PerWorkloadGame": 1.2541666666666667,
+          "v36PerWorkloadGame": 1.2333333333333334,
+          "pairedChange": -0.020833333333333332,
+          "standardError": 0.10008676791220261,
+          "pointwise95": [
+            -0.21700339844125047,
+            0.17533673177458378
+          ]
+        },
+        "blk": {
+          "v30PerWorkloadGame": 0.3875,
+          "v36PerWorkloadGame": 0.42083333333333334,
+          "pairedChange": 0.03333333333333333,
+          "standardError": 0.05485671571703194,
+          "pointwise95": [
+            -0.07418582947204927,
+            0.14085249613871595
+          ]
+        },
+        "oreb": {
+          "v30PerWorkloadGame": 0.48333333333333334,
+          "v36PerWorkloadGame": 0.44166666666666665,
+          "pairedChange": -0.041666666666666664,
+          "standardError": 0.055277079839256664,
+          "pointwise95": [
+            -0.15000974315160973,
+            0.06667640981827638
+          ]
+        },
+        "dreb": {
+          "v30PerWorkloadGame": 3.7625,
+          "v36PerWorkloadGame": 3.4916666666666667,
+          "pairedChange": -0.2708333333333333,
+          "standardError": 0.1634233028852554,
+          "pointwise95": [
+            -0.5911430069884338,
+            0.04947634032176723
+          ]
+        },
+        "fga": {
+          "v30PerWorkloadGame": 19.7,
+          "v36PerWorkloadGame": 19.216666666666665,
+          "pairedChange": -0.48333333333333334,
+          "standardError": 0.36013757659271556,
+          "pointwise95": [
+            -1.189202983455056,
+            0.2225363167883892
+          ]
+        },
+        "fgm": {
+          "v30PerWorkloadGame": 8.616666666666667,
+          "v36PerWorkloadGame": 8.2625,
+          "pairedChange": -0.3541666666666667,
+          "standardError": 0.22242612173400322,
+          "pointwise95": [
+            -0.790121865265313,
+            0.0817885319319796
+          ]
+        },
+        "fg3a": {
+          "v30PerWorkloadGame": 11.829166666666667,
+          "v36PerWorkloadGame": 11.679166666666667,
+          "pairedChange": -0.15,
+          "standardError": 0.2685695992282627,
+          "pointwise95": [
+            -0.6763964144873948,
+            0.3763964144873948
+          ]
+        },
+        "fg3m": {
+          "v30PerWorkloadGame": 4.241666666666666,
+          "v36PerWorkloadGame": 4.275,
+          "pairedChange": 0.03333333333333333,
+          "standardError": 0.17417131838551417,
+          "pointwise95": [
+            -0.30804245070227443,
+            0.3747091173689411
+          ]
+        },
+        "fta": {
+          "v30PerWorkloadGame": 5.458333333333333,
+          "v36PerWorkloadGame": 5.391666666666667,
+          "pairedChange": -0.06666666666666667,
+          "standardError": 0.31551325029404254,
+          "pointwise95": [
+            -0.6850726372429901,
+            0.5517393039096568
+          ]
+        },
+        "ftm": {
+          "v30PerWorkloadGame": 4.741666666666666,
+          "v36PerWorkloadGame": 4.725,
+          "pairedChange": -0.016666666666666666,
+          "standardError": 0.2829449953089299,
+          "pointwise95": [
+            -0.5712388574721693,
+            0.5379055241388359
+          ]
+        }
+      }
+    },
+    {
+      "playerId": 201939,
+      "name": "Stephen Curry",
+      "arm": "supportedHealthy",
+      "minutes": 30.673333333333332,
+      "mean70FrozenFlow": {
+        "playerId": 201939,
+        "sourceSelf": 0.289031901464243,
+        "sourceReceive": 0.47369309560544487,
+        "terminal": 0.7627249970696879,
+        "incoming": 0.41474037417103005,
+        "previousAssignedSelf": 0.3919164413652778,
+        "assignedSelf": 0.34798462289865784,
+        "addedSelf": -0.043931818466619976,
+        "previousPass": 0.33018853910489887,
+        "assignedPass": 0.3834271638808741,
+        "sourceCreator": 0.6192204405691419,
+        "assignedCreator": 0.731411786779532
+      },
+      "stats": {
+        "pts": {
+          "v30PerWorkloadGame": 22.633333333333333,
+          "v36PerWorkloadGame": 22.6,
+          "pairedChange": -0.03333333333333333,
+          "standardError": 0.5834126930144478,
+          "pointwise95": [
+            -1.1768222116416511,
+            1.1101555449749843
+          ]
+        },
+        "ast": {
+          "v30PerWorkloadGame": 4.095833333333333,
+          "v36PerWorkloadGame": 4.283333333333333,
+          "pairedChange": 0.1875,
+          "standardError": 0.15382845784978944,
+          "pointwise95": [
+            -0.11400377738558731,
+            0.4890037773855873
+          ]
+        },
+        "tov": {
+          "v30PerWorkloadGame": 2.5541666666666667,
+          "v36PerWorkloadGame": 2.35,
+          "pairedChange": -0.20416666666666666,
+          "standardError": 0.12525437081159047,
+          "pointwise95": [
+            -0.44966523345738396,
+            0.041331900124050636
+          ]
+        },
+        "stl": {
+          "v30PerWorkloadGame": 0.9875,
+          "v36PerWorkloadGame": 1.1041666666666667,
+          "pairedChange": 0.11666666666666667,
+          "standardError": 0.08477912478906585,
+          "pointwise95": [
+            -0.049500417919902395,
+            0.28283375125323573
+          ]
+        },
+        "blk": {
+          "v30PerWorkloadGame": 0.3333333333333333,
+          "v36PerWorkloadGame": 0.3541666666666667,
+          "pairedChange": 0.020833333333333332,
+          "standardError": 0.05187458165828639,
+          "pointwise95": [
+            -0.08084084671690799,
+            0.12250751338357464
+          ]
+        },
+        "oreb": {
+          "v30PerWorkloadGame": 0.4375,
+          "v36PerWorkloadGame": 0.4125,
+          "pairedChange": -0.025,
+          "standardError": 0.050803725439366336,
+          "pointwise95": [
+            -0.124575301861158,
+            0.07457530186115802
+          ]
+        },
+        "dreb": {
+          "v30PerWorkloadGame": 3.408333333333333,
+          "v36PerWorkloadGame": 3.1041666666666665,
+          "pairedChange": -0.30416666666666664,
+          "standardError": 0.16933625872363697,
+          "pointwise95": [
+            -0.6360657337649951,
+            0.027732400431661808
+          ]
+        },
+        "fga": {
+          "v30PerWorkloadGame": 17.320833333333333,
+          "v36PerWorkloadGame": 16.720833333333335,
+          "pairedChange": -0.6,
+          "standardError": 0.2948045491884788,
+          "pointwise95": [
+            -1.1778169164094185,
+            -0.02218308359058152
+          ]
+        },
+        "fgm": {
+          "v30PerWorkloadGame": 7.3875,
+          "v36PerWorkloadGame": 7.3125,
+          "pairedChange": -0.075,
+          "standardError": 0.20164256054271434,
+          "pointwise95": [
+            -0.47021941866372013,
+            0.3202194186637201
+          ]
+        },
+        "fg3a": {
+          "v30PerWorkloadGame": 10.575,
+          "v36PerWorkloadGame": 9.995833333333334,
+          "pairedChange": -0.5791666666666667,
+          "standardError": 0.23725621015952197,
+          "pointwise95": [
+            -1.0441888385793296,
+            -0.11414449475400368
+          ]
+        },
+        "fg3m": {
+          "v30PerWorkloadGame": 3.7625,
+          "v36PerWorkloadGame": 3.716666666666667,
+          "pairedChange": -0.04583333333333333,
+          "standardError": 0.15311200814122006,
+          "pointwise95": [
+            -0.3459328692901246,
+            0.25426620262345795
+          ]
+        },
+        "fta": {
+          "v30PerWorkloadGame": 4.683333333333334,
+          "v36PerWorkloadGame": 4.8125,
+          "pairedChange": 0.12916666666666668,
+          "standardError": 0.2899652756988518,
+          "pointwise95": [
+            -0.4391652737030828,
+            0.6974986070364161
+          ]
+        },
+        "ftm": {
+          "v30PerWorkloadGame": 4.095833333333333,
+          "v36PerWorkloadGame": 4.258333333333334,
+          "pairedChange": 0.1625,
+          "standardError": 0.26190408549696204,
+          "pointwise95": [
+            -0.35083200757404565,
+            0.6758320075740456
+          ]
+        }
+      }
+    }
+  ],
+  "hashes": {
+    "reports/player-impact-v36/ovr-probe-checkpoint.json": "599668512591af658c26aaa72a4f9b62e2d66256933e9fa68efddf059a9d6d41",
+    "reports/player-impact-v30/ovr-probe-checkpoint.json": "c8f9bded9605713c468e67b28867e4f1510b3a6b4bbe9d51a901ee43f267d323",
+    "reports/player-impact-v36/flow-audit.json": "061d61472e43eee362affeccd836e3d8e52b216373b910d011332b7893485538",
+    "reports/player-impact-v36/probe-role-diagnostics.py": "91b050aba20539aa5588ce880e89d9db6bc3c17fdf700424b19e95bfde00d948"
+  }
+}

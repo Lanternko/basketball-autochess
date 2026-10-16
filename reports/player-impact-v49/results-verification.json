@@ -1,0 +1,110 @@
+{
+  "passed": true,
+  "jobs": 36,
+  "candidateGames": 28023,
+  "observerBaselineGames": 13263,
+  "allFrozenSourceAndOutputHashesPassed": true,
+  "v46V47V48EvidenceUnchanged": true,
+  "exactObserverBaselineParityPassed": true,
+  "all36RotationMinutePhasePairAndStintLedgersPassed": true,
+  "individualAndTeamScoresRecomputed": true,
+  "allFourSeasonTimingAndPairScoresIndependentlyRecomputed": [
+    {
+      "season": "2022-23",
+      "variant": "v47",
+      "appearances": 68235,
+      "pairComparisons": 332424
+    },
+    {
+      "season": "2022-23",
+      "variant": "v49",
+      "appearances": 68235,
+      "pairComparisons": 332424
+    },
+    {
+      "season": "2023-24",
+      "variant": "v47",
+      "appearances": 68835,
+      "pairComparisons": 346155
+    },
+    {
+      "season": "2023-24",
+      "variant": "v49",
+      "appearances": 68835,
+      "pairComparisons": 346155
+    },
+    {
+      "season": "2024-25",
+      "variant": "v47",
+      "appearances": 70335,
+      "pairComparisons": 351060
+    },
+    {
+      "season": "2024-25",
+      "variant": "v49",
+      "appearances": 70335,
+      "pairComparisons": 351060
+    },
+    {
+      "season": "2025-26",
+      "variant": "v47",
+      "appearances": 77199,
+      "pairComparisons": 387759
+    },
+    {
+      "season": "2025-26",
+      "variant": "v49",
+      "appearances": 77199,
+      "pairComparisons": 387759
+    }
+  ],
+  "actualFullMinutesRecomputedFromOfficialBoxes": true,
+  "adoptionGatesIndependentlyVerified": true,
+  "minimumFiveLegacyFallbackGameOccurrences": [
+    {
+      "variant": "v49",
+      "season": "2024-25",
+      "seed": 20261014,
+      "strict": false,
+      "gameId": "0022400896",
+      "period": 4,
+      "elapsed": 2880,
+      "reason": "minimum-five-foul-exhaustion-legacy-fallback"
+    },
+    {
+      "variant": "v49",
+      "season": "2024-25",
+      "seed": 20261014,
+      "strict": true,
+      "gameId": "0022400896",
+      "period": 4,
+      "elapsed": 2880,
+      "reason": "minimum-five-foul-exhaustion-legacy-fallback"
+    }
+  ],
+  "evidenceSHA256": {
+    "reports/player-impact-v49/scores.json": "c77fd77a5fe1dde4cacf441b4a176785ad49023143a6ddf0743ca765460f7995",
+    "reports/player-impact-v49/fine-scores.json": "f2f7bba6d6fd4e8ba486ccc0988efd7832491b7ba6cfb38ee9549bf25588b026",
+    "reports/player-impact-v49/rotation-scores.json": "0a0bff34bf84d50191a6c1c0dcc5e7fac5be07ef825a456a5169402fa4a96d82",
+    "reports/player-impact-v49/baseline-offense-scores.json": "1dc44aa9a2ad2fbe1fc8772273857507251991761c017b4720ef64b988bf2be6",
+    "reports/player-impact-v49/candidate-offense-scores.json": "5d29810ebba27e4131b9914ae5ab3a3f74d05b73301095e226625a15f341f1d5",
+    "reports/player-impact-v49/decision.json": "1dde78742a3f20cf68842d267c57ad823d8e47c23888efa953f55ba1aef1b4c8",
+    "reports/player-impact-v49/report.md": "f57ca66e2c12b8bce23f5827f59e96d641277335aa80342b4a48b7a5fa11c931",
+    "reports/player-impact-v49/report.py": "2973b5dbdac6fbb05c8df62c47ad7e83d11ff18a56efc226a427123fe186a1dc",
+    "reports/player-impact-v49/verify-results.py": "7c0b3e1fc0c99b176ba0de6d2a18b7e19da197540e88f469af4f5d9d9e7e73ee",
+    "reports/player-impact-v49/verification.json": "afc8b2e9bfa7a0237852e15571bd76f08f881d7afaae9be39d0cab781707aa8b",
+    "reports/player-impact-v49/fit-verification.json": "63e74185143be1db42d1e65876da565d2ccb866ba9b9e5e0d06b311833a561f3",
+    "reports/player-impact-v49/tuning-selection.json": "f4fa135ae28bc85c1847b678481749b11986f2bed650f97f81a6d6974c79ec05",
+    "reports/player-impact-v49/role-selection.json": "36fc6ecd56ee0e5968e689ca109fb9f83b8640aa45583b39cf9a98a855ab268f",
+    "reports/player-impact-v49/source-stint-scores.json": "3534b1c1636c21adee9487e5ed50d943cafcb9db215f80a3aed5f50c8ce90ffc",
+    "reports/player-impact-v49/source-stints.py": "bf53559e8b13fcabf4f3b637b5f771b2b399a064c0075b2f65b60d52be3f1d44",
+    "reports/player-impact-v49/score.py": "d0640ae833a1fca49a8ae20e5fd0e24bf679ddaf14915fe452c9e5eef9d0d0e3",
+    "reports/player-impact-v49/score-rotation.py": "d38736082461bea0214af2bcd88d8d021824777cba3fc45be5af218737b031f5",
+    "reports/player-impact-v49/score-offense.py": "25b8ad1abe302eaafd59b1b5eb9c379629d8b983758be20f5f50524514984ee1",
+    "reports/player-impact-v49/score-fine.py": "3aa112d50e661ff87d01d2b64c8e1c7a49d23b2a70b22b508b9aacdffd178d04",
+    "reports/player-impact-v49/tuning-source-protocol.json": "db89eb262bbd68f193cf255d834a442f49ade15438413c1a4e8f8577ec41d9a4",
+    "reports/player-impact-v49/tuning-verification.json": "43192a3d7542ff34bb33d409f61c47643f4405db3901cd45c8c4e5078c1f078c",
+    "reports/player-impact-v49/role-source-protocol.json": "7889a36938c298e6b9a658baf4af3f2015c5d17aa5b04f67abbd0870b1e00efb",
+    "reports/player-impact-v49/role-verification.json": "176a38209a078b573609a829fdb1206950412c0409d216bab2614149aae98276"
+  }
+}

@@ -1,0 +1,21 @@
+import assert from 'node:assert/strict';
+import {posteriorFreeThrowRatio as mean,attachFreeThrowProfilePrior as attach} from '../src/free_throw_profile_prior.js';
+
+assert.equal(mean(0,0,.25,40),.25);
+assert.equal(mean(80,20,.25,40),.25);
+assert.ok(mean(8,15,.25,40)<15/8);
+assert.ok(mean(8,15,.25,40)>.25);
+assert.ok(mean(8,16,.25,40)>mean(8,15,.25,40));
+assert.ok(mean(9,15,.25,40)<mean(8,15,.25,40));
+assert.ok(Math.abs(mean(8000,15000,.25,40)-15000/8000)<Math.abs(mean(8,15,.25,40)-15/8));
+assert.ok(Number.isFinite(mean(0,15,.25,40)));
+for(const args of [[-1,1,.25,40],[1,-1,.25,40],[1,1,0,40],[1,1,.25,0],[Infinity,1,.25,40]])assert.throws(()=>mean(...args));
+const original={playerId:1,drive:99,offBall:70,screen:70,handle:70,breakDbl:70,shotProfile:{threeRate:.8,freeThrowsPerAttempt:1.875}},p=structuredClone(original),q=structuredClone(original);
+const reference={leagueFtr:.25,counts:{1:{FGA:8,FTA:15,MIN:21}}};
+attach([p,q],reference,40);
+assert.deepEqual(p,q,'Same full-season player record must agree across traded clones and opponent cards');
+assert.deepEqual(original.shotProfile,{threeRate:.8,freeThrowsPerAttempt:1.875},'Input profile object must not be mutated');
+assert.equal(p.drive,99);assert.equal(p.offBall,70);assert.equal(p.screen,70);assert.equal(p.handle,70);assert.equal(p.breakDbl,70);
+assert.equal(p.shotProfile.threeRate,.8);assert.equal(p.shotProfile.freeThrowsPerAttempt,25/48);
+assert.throws(()=>attach([{...original,playerId:2}],reference,40),/Missing source/);
+console.log('FTR source-count shrinkage, zero attempts, monotonicity, sample-size response and traded-card identity passed');

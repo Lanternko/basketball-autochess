@@ -1,0 +1,37 @@
+{
+  "passed": true,
+  "wholeGameFoldExclusionRebuilt": true,
+  "olderThreePriorSelectionVerified": true,
+  "checks": [
+    {
+      "season": "2022-23",
+      "playerFoldProfiles": 4635,
+      "pairFoldProfiles": 26315,
+      "maxProbabilityError": 6.106226635438361e-15
+    },
+    {
+      "season": "2023-24",
+      "playerFoldProfiles": 4835,
+      "pairFoldProfiles": 29620,
+      "maxProbabilityError": 7.605027718682322e-15
+    },
+    {
+      "season": "2024-25",
+      "playerFoldProfiles": 5055,
+      "pairFoldProfiles": 29795,
+      "maxProbabilityError": 8.382183835919932e-15
+    },
+    {
+      "season": "2025-26",
+      "playerFoldProfiles": 5225,
+      "pairFoldProfiles": 29975,
+      "maxProbabilityError": 5.995204332975845e-15
+    }
+  ],
+  "profileSHA256": {
+    "reports/player-impact-v49/2022-23-profiles.json": "b0b2af186283cf8d676cd7e69a3f47ca40f4229c5261ef1764fc7d0a32e8cce4",
+    "reports/player-impact-v49/2023-24-profiles.json": "c6618f3259717e1b805c1674accbbf93db53609c8a85af1bc72ec9c38386cffa",
+    "reports/player-impact-v49/2024-25-profiles.json": "8356c4bdf3b8e96adc3d1292801b730ad6cbae39d72a8177ceefee5fef0e1b11",
+    "reports/player-impact-v49/2025-26-profiles.json": "555c222f556224499270c659456c59293fec0cfb6d19c5f2246e450ee7ccac23"
+  }
+}

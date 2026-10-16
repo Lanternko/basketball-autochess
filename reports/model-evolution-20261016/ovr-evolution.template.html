@@ -1,0 +1,48 @@
+<div id="model-ovr-evolution">
+  <h3>媒體前十：在全聯盟 OVR 榜的位置</h3>
+  <div class="text-small text-muted meta">2025–26 季前 · ESPN／The Ringer／HoopsHype 名次等權平均</div>
+  <div class="ovr-holder"></div>
+  <div class="text-small text-muted missing">v25–v41：尚無完整 582 人榜單（v30、v38、v41 僅有部分球員診斷）</div>
+  <div class="text-small text-muted meta">v13／v14：每人 600 場；v24：每人 2,400 場。皆為未採用的實驗榜。</div>
+  <div class="text-small legend">色深＝名次較前 · 數字＝582 人中的名次 · 媒體同均分並列</div>
+  <div class="sr-only"></div>
+</div>
+<style>
+#model-ovr-evolution{color:var(--foreground)}
+#model-ovr-evolution h3{max-width:calc(100% - 94px);margin:0 0 8px;font-weight:500}
+#model-ovr-evolution .meta{margin:7px 0}
+#model-ovr-evolution .missing{margin:8px 0;padding:10px 0;border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+#model-ovr-evolution svg.ovr-chart{display:block;width:100%}
+#model-ovr-evolution svg.ovr-chart text{fill:var(--foreground);font-size:12px;font-weight:400}
+#model-ovr-evolution .legend{margin-top:9px}
+</style>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script>
+<script>
+(()=>{
+ const root=document.getElementById('model-ovr-evolution'),data=__PAYLOAD__,holder=root.querySelector('.ovr-holder');
+ const names={'Nikola Jokic':'Jokić','Shai Gilgeous-Alexander':'SGA','Giannis Antetokounmpo':'Giannis','Luka Doncic':'Luka','Anthony Edwards':'A. Edwards','Stephen Curry':'Curry','Jalen Brunson':'Brunson','Victor Wembanyama':'Wemby','Donovan Mitchell':'D. Mitchell','Cade Cunningham':'Cade'};
+ const versions=[13,14,24];
+ const summary=root.querySelector('.sr-only');summary.textContent=data.top10.map(p=>`媒體第${p.mediaRank}，${p.name}，三家平均${p.mediaAverage.toFixed(2)}；`+versions.map(v=>`v${v}第${p.models[v].rank}`).join('，')).join('。');
+ function draw(){
+  const width=Math.max(280,holder.getBoundingClientRect().width),left=width<420?118:188,right=6,top=45,row=43,height=top+data.top10.length*row+4;
+  const x=d3.scaleBand().domain(versions).range([left,width-right]).paddingInner(.06);
+  const vals=data.top10.flatMap(p=>versions.map(v=>p.models[v].rank));
+  const opacity=d3.scaleLog().domain(d3.extent(vals)).range([.48,.035]);
+  const svg=d3.create('svg').attr('class','ovr-chart').attr('viewBox',`0 0 ${width} ${height}`).attr('height',height).attr('role','img').attr('aria-label','媒體前十在 v13、v14、v24 的全聯盟名次比較；後續版本無完整榜。');
+  svg.append('text').attr('x',2).attr('y',19).text('媒體名次／球員');
+  svg.append('text').attr('x',2).attr('y',35).attr('opacity',.7).text('三家平均名次');
+  for(const v of versions){svg.append('text').attr('x',x(v)+x.bandwidth()/2).attr('y',24).attr('text-anchor','middle').text(`v${v}`);}
+  data.top10.forEach((p,i)=>{
+   const y=top+i*row;const tie=data.top10.filter(q=>q.mediaRank===p.mediaRank).length>1?'=':'';
+   svg.append('text').attr('x',2).attr('y',y+16).text(`${p.mediaRank}${tie} ${names[p.name]||p.name}`);
+   svg.append('text').attr('x',2).attr('y',y+33).attr('opacity',.7).text(`平均 ${p.mediaAverage.toFixed(2)}`);
+   for(const v of versions){const r=p.models[v],tip=`${p.name}｜媒體：${Object.entries(p.mediaRanks).map(([k,v])=>`${k} #${v}`).join('、')}｜v${v} 聯盟第 ${r.rank}／582；${r.games} 場；勝率 ${(100*r.winRate).toFixed(2)}%`;
+    const g=svg.append('g').attr('data-tooltip',tip).attr('aria-label',tip);
+    g.append('rect').attr('x',x(v)).attr('y',y+2).attr('width',x.bandwidth()).attr('height',row-4).attr('fill','var(--viz-series-1)').attr('fill-opacity',opacity(r.rank)).attr('data-chart-hit','');
+    g.append('text').attr('x',x(v)+x.bandwidth()/2).attr('y',y+25).attr('text-anchor','middle').style('font-weight','500').text(r.rank);
+   }
+  });holder.replaceChildren(svg.node());
+ }
+ new ResizeObserver(draw).observe(holder);draw();
+})();
+</script>

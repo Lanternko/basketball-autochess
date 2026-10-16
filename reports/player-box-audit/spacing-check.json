@@ -1,0 +1,464 @@
+{
+  "model": "pure-oreb-turnover-time-1",
+  "method": "Deterministic probability-path isolation: change only PG teammate attribute, same SG or sole C shooter, same defense and shot state. These are mechanism responses, not real-world causal effects or simulated per-game results.",
+  "contextLongScale": 0,
+  "contextShortScale": 0.5,
+  "unmeasured": "No independent speed attribute; offBall/screen/handle/breakDbl fixed70 on actual player cards. Synthetic offBall sweep tests wiring only.",
+  "checks": {
+    "noDirectTeammateThreeAccuracyEffect": true,
+    "threeShotAvailabilityResponds": true,
+    "soleCenterRimAccuracyResponds": true
+  },
+  "cells": [
+    {
+      "variable": "long",
+      "value": 40,
+      "shooter": "SG",
+      "context": {
+        "offBall": 70,
+        "screen": 70,
+        "pass": 70,
+        "gravity": 70,
+        "spacing": 64.375,
+        "dblPeer": 70,
+        "create": 70
+      },
+      "make": {
+        "long": 0.383883,
+        "mid": 0.43153350999999995,
+        "short": 0.5932006225
+      },
+      "zone": {
+        "long": 0.4137951874576206,
+        "mid": 0.10833872787779679,
+        "short": 0.4778660846645825
+      },
+      "ev": 1.0975690293060811
+    },
+    {
+      "variable": "long",
+      "value": 40,
+      "shooter": "C",
+      "context": {
+        "offBall": 70,
+        "screen": 70,
+        "pass": 70,
+        "gravity": 70,
+        "spacing": 64.375,
+        "dblPeer": 70,
+        "create": 70
+      },
+      "make": {
+        "long": 0.383883,
+        "mid": 0.43153350999999995,
+        "short": 0.5932006225
+      },
+      "zone": {
+        "long": 0.05278635332283783,
+        "mid": 0.175058135508012,
+        "short": 0.7721555111691502
+      },
+      "ev": 1.0901496893376184
+    },
+    {
+      "variable": "long",
+      "value": 70,
+      "shooter": "SG",
+      "context": {
+        "offBall": 70,
+        "screen": 70,
+        "pass": 70,
+        "gravity": 70,
+        "spacing": 70,
+        "dblPeer": 70,
+        "create": 70
+      },
+      "make": {
+        "long": 0.383883,
+        "mid": 0.43386225999999994,
+        "short": 0.6009631225000001
+      },
+      "zone": {
+        "long": 0.4149984460499677,
+        "mid": 0.10254521557341123,
+        "short": 0.48245633837662105
+      },
+      "ev": 1.1056231929142657
+    },
+    {
+      "variable": "long",
+      "value": 70,
+      "shooter": "C",
+      "context": {
+        "offBall": 70,
+        "screen": 70,
+        "pass": 70,
+        "gravity": 70,
+        "spacing": 70,
+        "dblPeer": 70,
+        "create": 70
+      },
+      "make": {
+        "long": 0.383883,
+        "mid": 0.43386225999999994,
+        "short": 0.6009631225000001
+      },
+      "zone": {
+        "long": 0.0530348223079305,
+        "mid": 0.16599400058216127,
+        "short": 0.7809711771099082
+      },
+      "ev": 1.1031523595214205
+    },
+    {
+      "variable": "long",
+      "value": 100,
+      "shooter": "SG",
+      "context": {
+        "offBall": 70,
+        "screen": 70,
+        "pass": 70,
+        "gravity": 88,
+        "spacing": 75.625,
+        "dblPeer": 73,
+        "create": 70
+      },
+      "make": {
+        "long": 0.383883,
+        "mid": 0.43691400387277357,
+        "short": 0.6203426594252944
+      },
+      "zone": {
+        "long": 0.40519561974994805,
+        "mid": 0.09472201980736357,
+        "short": 0.5000823604426885
+      },
+      "ev": 1.1245835296978577
+    },
+    {
+      "variable": "long",
+      "value": 100,
+      "shooter": "C",
+      "context": {
+        "offBall": 70,
+        "screen": 70,
+        "pass": 70,
+        "gravity": 88,
+        "spacing": 75.625,
+        "dblPeer": 73,
+        "create": 70
+      },
+      "make": {
+        "long": 0.383883,
+        "mid": 0.43691400387277357,
+        "short": 0.6203426594252944
+      },
+      "zone": {
+        "long": 0.051036150598761355,
+        "mid": 0.15112157126628392,
+        "short": 0.7978422781349546
+      },
+      "ev": 1.133495209238002
+    },
+    {
+      "variable": "offBall",
+      "value": 40,
+      "shooter": "SG",
+      "context": {
+        "offBall": 62.5,
+        "screen": 70,
+        "pass": 70,
+        "gravity": 70,
+        "spacing": 70,
+        "dblPeer": 70,
+        "create": 70
+      },
+      "make": {
+        "long": 0.383883,
+        "mid": 0.43386225999999994,
+        "short": 0.5961097143267687
+      },
+      "zone": {
+        "long": 0.4312197906506025,
+        "mid": 0.10655347462786176,
+        "short": 0.46222673472153575
+      },
+      "ev": 1.1001640739482663
+    },
+    {
+      "variable": "offBall",
+      "value": 40,
+      "shooter": "C",
+      "context": {
+        "offBall": 62.5,
+        "screen": 70,
+        "pass": 70,
+        "gravity": 70,
+        "spacing": 70,
+        "dblPeer": 70,
+        "create": 70
+      },
+      "make": {
+        "long": 0.383883,
+        "mid": 0.43386225999999994,
+        "short": 0.5961097143267687
+      },
+      "zone": {
+        "long": 0.05647365504255889,
+        "mid": 0.1767572232745941,
+        "short": 0.7667691216828469
+      },
+      "ev": 1.0939362378137825
+    },
+    {
+      "variable": "offBall",
+      "value": 70,
+      "shooter": "SG",
+      "context": {
+        "offBall": 70,
+        "screen": 70,
+        "pass": 70,
+        "gravity": 70,
+        "spacing": 70,
+        "dblPeer": 70,
+        "create": 70
+      },
+      "make": {
+        "long": 0.383883,
+        "mid": 0.43386225999999994,
+        "short": 0.6009631225000001
+      },
+      "zone": {
+        "long": 0.4149984460499677,
+        "mid": 0.10254521557341123,
+        "short": 0.48245633837662105
+      },
+      "ev": 1.1056231929142657
+    },
+    {
+      "variable": "offBall",
+      "value": 70,
+      "shooter": "C",
+      "context": {
+        "offBall": 70,
+        "screen": 70,
+        "pass": 70,
+        "gravity": 70,
+        "spacing": 70,
+        "dblPeer": 70,
+        "create": 70
+      },
+      "make": {
+        "long": 0.383883,
+        "mid": 0.43386225999999994,
+        "short": 0.6009631225000001
+      },
+      "zone": {
+        "long": 0.0530348223079305,
+        "mid": 0.16599400058216127,
+        "short": 0.7809711771099082
+      },
+      "ev": 1.1031523595214205
+    },
+    {
+      "variable": "offBall",
+      "value": 100,
+      "shooter": "SG",
+      "context": {
+        "offBall": 77.5,
+        "screen": 70,
+        "pass": 70,
+        "gravity": 70,
+        "spacing": 70,
+        "dblPeer": 70,
+        "create": 70
+      },
+      "make": {
+        "long": 0.383883,
+        "mid": 0.43386225999999994,
+        "short": 0.6058165306732314
+      },
+      "zone": {
+        "long": 0.3987308574077288,
+        "mid": 0.09852552971661861,
+        "short": 0.5027436128756526
+      },
+      "ev": 1.1114106159090171
+    },
+    {
+      "variable": "offBall",
+      "value": 100,
+      "shooter": "C",
+      "context": {
+        "offBall": 77.5,
+        "screen": 70,
+        "pass": 70,
+        "gravity": 70,
+        "spacing": 70,
+        "dblPeer": 70,
+        "create": 70
+      },
+      "make": {
+        "long": 0.383883,
+        "mid": 0.43386225999999994,
+        "short": 0.6058165306732314
+      },
+      "zone": {
+        "long": 0.049749279570244866,
+        "mid": 0.15571056114786808,
+        "short": 0.7945401592818869
+      },
+      "ev": 1.1124519204183978
+    },
+    {
+      "variable": "pass",
+      "value": 40,
+      "shooter": "SG",
+      "context": {
+        "offBall": 70,
+        "screen": 70,
+        "pass": 68,
+        "gravity": 70,
+        "spacing": 70,
+        "dblPeer": 70,
+        "create": 69.125
+      },
+      "make": {
+        "long": 0.383883,
+        "mid": 0.43386225999999994,
+        "short": 0.599066219901291
+      },
+      "zone": {
+        "long": 0.419097465887062,
+        "mid": 0.10386055977513786,
+        "short": 0.4770419743378001
+      },
+      "ev": 1.1036049743792435
+    },
+    {
+      "variable": "pass",
+      "value": 40,
+      "shooter": "C",
+      "context": {
+        "offBall": 70,
+        "screen": 70,
+        "pass": 68,
+        "gravity": 70,
+        "spacing": 70,
+        "dblPeer": 70,
+        "create": 69.125
+      },
+      "make": {
+        "long": 0.383883,
+        "mid": 0.43386225999999994,
+        "short": 0.599066219901291
+      },
+      "zone": {
+        "long": 0.05388798911867737,
+        "mid": 0.1691569881170655,
+        "short": 0.7769550227642571
+      },
+      "ev": 1.0998255526115002
+    },
+    {
+      "variable": "pass",
+      "value": 70,
+      "shooter": "SG",
+      "context": {
+        "offBall": 70,
+        "screen": 70,
+        "pass": 70,
+        "gravity": 70,
+        "spacing": 70,
+        "dblPeer": 70,
+        "create": 70
+      },
+      "make": {
+        "long": 0.383883,
+        "mid": 0.43386225999999994,
+        "short": 0.6009631225000001
+      },
+      "zone": {
+        "long": 0.4149984460499677,
+        "mid": 0.10254521557341123,
+        "short": 0.48245633837662105
+      },
+      "ev": 1.1056231929142657
+    },
+    {
+      "variable": "pass",
+      "value": 70,
+      "shooter": "C",
+      "context": {
+        "offBall": 70,
+        "screen": 70,
+        "pass": 70,
+        "gravity": 70,
+        "spacing": 70,
+        "dblPeer": 70,
+        "create": 70
+      },
+      "make": {
+        "long": 0.383883,
+        "mid": 0.43386225999999994,
+        "short": 0.6009631225000001
+      },
+      "zone": {
+        "long": 0.0530348223079305,
+        "mid": 0.16599400058216127,
+        "short": 0.7809711771099082
+      },
+      "ev": 1.1031523595214205
+    },
+    {
+      "variable": "pass",
+      "value": 100,
+      "shooter": "SG",
+      "context": {
+        "offBall": 70,
+        "screen": 70,
+        "pass": 94,
+        "gravity": 70,
+        "spacing": 70,
+        "dblPeer": 70,
+        "create": 77.875
+      },
+      "make": {
+        "long": 0.383883,
+        "mid": 0.43386225999999994,
+        "short": 0.6207613109657162
+      },
+      "zone": {
+        "long": 0.368014426779654,
+        "mid": 0.08857956553397385,
+        "short": 0.5434060076863722
+      },
+      "ev": 1.1290862176563976
+    },
+    {
+      "variable": "pass",
+      "value": 100,
+      "shooter": "C",
+      "context": {
+        "offBall": 70,
+        "screen": 70,
+        "pass": 94,
+        "gravity": 70,
+        "spacing": 70,
+        "dblPeer": 70,
+        "create": 77.875
+      },
+      "make": {
+        "long": 0.383883,
+        "mid": 0.43386225999999994,
+        "short": 0.6207613109657162
+      },
+      "zone": {
+        "long": 0.043951651001847815,
+        "mid": 0.1340004439534933,
+        "short": 0.8220479050446587
+      },
+      "ev": 1.1390696769875677
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "rows": [
+    {
+      "season": "2022-23",
+      "players": 539,
+      "lagSeason": "2021-22",
+      "coverage": {
+        "short": 0,
+        "long": 0
+      },
+      "missingPolicy": "zero centered measured feature; missing is not rated as bad defense",
+      "currentSeasonTrackingUsedInHeldout": false
+    },
+    {
+      "season": "2023-24",
+      "players": 572,
+      "lagSeason": "2022-23",
+      "coverage": {
+        "short": 447,
+        "long": 448
+      },
+      "missingPolicy": "zero centered measured feature; missing is not rated as bad defense",
+      "currentSeasonTrackingUsedInHeldout": false
+    },
+    {
+      "season": "2024-25",
+      "players": 569,
+      "lagSeason": "2023-24",
+      "coverage": {
+        "short": 444,
+        "long": 443
+      },
+      "missingPolicy": "zero centered measured feature; missing is not rated as bad defense",
+      "currentSeasonTrackingUsedInHeldout": false
+    },
+    {
+      "season": "2025-26",
+      "players": 582,
+      "lagSeason": "2024-25",
+      "coverage": {
+        "short": 459,
+        "long": 461
+      },
+      "missingPolicy": "zero centered measured feature; missing is not rated as bad defense",
+      "currentSeasonTrackingUsedInHeldout": false
+    }
+  ],
+  "priorFilesSHA256": {
+    "reports\\player-impact-v20\\2022-23-defense-exposure.json": "8a51352954a0591fa16b7dd26bc213bfecd886af1159e7db0807bb5aead99f2f",
+    "reports\\player-impact-v20\\2023-24-defense-exposure.json": "e592d5acb3de25b9356d8473d62d44cc4aded1832a9a41aec92c29f3826d8261",
+    "reports\\player-impact-v20\\2024-25-defense-exposure.json": "95dfcc9017d8e276cc1e1e9b22f99002b2f58fffcd118430d212d245d7f00a5e"
+  },
+  "allFeatureSourcesPrecedeHeldoutSeason": true
+}

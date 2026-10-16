@@ -1,0 +1,377 @@
+{
+  "baseline": "nba-defense-v3",
+  "cardVersion": "role-offense",
+  "neutral": true,
+  "clock": false,
+  "netResidual": false,
+  "roleDifference": {
+    "netRMSE": {
+      "estimate": -0.19347760835125039,
+      "standardError": 0.14188301520791086,
+      "ci95": [
+        -0.45754679814481936,
+        0.09561616758147062
+      ]
+    },
+    "netCorrelation": {
+      "estimate": 0.02629362377342448,
+      "standardError": 0.010574585499546254,
+      "ci95": [
+        0.005293832062674642,
+        0.046637770574115556
+      ]
+    },
+    "netSDRatio": {
+      "estimate": 0.1203205478310595,
+      "standardError": 0.015733872107303166,
+      "ci95": [
+        0.09175662927496042,
+        0.1510918368236882
+      ]
+    },
+    "calibrationSlope": {
+      "estimate": -0.0828199952061831,
+      "standardError": 0.014156084044944764,
+      "ci95": [
+        -0.10918626128315179,
+        -0.05416159850315738
+      ]
+    },
+    "calibrationError": {
+      "estimate": 0.0828199952061831,
+      "standardError": 0.014156084044944787,
+      "ci95": [
+        0.05417353341124931,
+        0.1092510030470385
+      ]
+    },
+    "residualSD": {
+      "estimate": 0.2052722599256782,
+      "standardError": 0.17833359471758783,
+      "ci95": [
+        -0.1558010827207923,
+        0.5386539095276426
+      ]
+    },
+    "winMAE": {
+      "estimate": -0.4983333333333331,
+      "standardError": 0.16038586403620148,
+      "ci95": [
+        -0.8066666666666671,
+        -0.18333333333333268
+      ]
+    },
+    "winRMSE": {
+      "estimate": -0.542865922220857,
+      "standardError": 0.1724263650660798,
+      "ci95": [
+        -0.8570715572127545,
+        -0.1938709656419273
+      ]
+    },
+    "winSlope": {
+      "estimate": -0.033016418995746144,
+      "standardError": 0.015682510920457974,
+      "ci95": [
+        -0.06327708948972666,
+        -0.0029486123860493763
+      ]
+    },
+    "defenseCorrelation": {
+      "estimate": -0.008586270868015888,
+      "standardError": 0.024918554387782826,
+      "ci95": [
+        -0.06014790490325306,
+        0.039588975025656614
+      ]
+    },
+    "defenseSDRatio": {
+      "estimate": -0.007341021573786244,
+      "standardError": 0.021014498509771266,
+      "ci95": [
+        -0.04734057084396359,
+        0.03623807768735854
+      ]
+    }
+  },
+  "neutralTests": {
+    "25": {
+      "netRMSE": {
+        "estimate": -0.4459308257792669,
+        "standardError": 0.11411776735687526,
+        "ci95": [
+          -0.6563297475244623,
+          -0.20876217735062141
+        ]
+      },
+      "netCorrelation": {
+        "estimate": 0.03515779474485958,
+        "standardError": 0.008319768092591787,
+        "ci95": [
+          0.018465558180022157,
+          0.05099546913493136
+        ]
+      },
+      "netSDRatio": {
+        "estimate": -0.025152207840568375,
+        "standardError": 0.019629006473303356,
+        "ci95": [
+          -0.06398495391932624,
+          0.014105764165168289
+        ]
+      },
+      "calibrationSlope": {
+        "estimate": 0.0435923050944218,
+        "standardError": 0.013656218978743957,
+        "ci95": [
+          0.016370851361203198,
+          0.07026823198864518
+        ]
+      },
+      "calibrationError": {
+        "estimate": -0.0435923050944218,
+        "standardError": 0.01365621897874397,
+        "ci95": [
+          -0.07024028822027606,
+          -0.016293150585133587
+        ]
+      },
+      "residualSD": {
+        "estimate": 0.03352972459398984,
+        "standardError": 0.12074290795279712,
+        "ci95": [
+          -0.2067686433521061,
+          0.28262504497145
+        ]
+      },
+      "winMAE": {
+        "estimate": -0.3100000000000005,
+        "standardError": 0.14924035418067158,
+        "ci95": [
+          -0.6016666666666679,
+          -0.004999999999999005
+        ]
+      },
+      "winRMSE": {
+        "estimate": -0.41891578460541723,
+        "standardError": 0.13052597762502344,
+        "ci95": [
+          -0.6620723628277716,
+          -0.14497978115023802
+        ]
+      },
+      "winSlope": {
+        "estimate": -0.017794300259725837,
+        "standardError": 0.011673964826693787,
+        "ci95": [
+          -0.039281974184671276,
+          0.005513064085054031
+        ]
+      },
+      "defenseCorrelation": {
+        "estimate": 0.06833452702487808,
+        "standardError": 0.02700912390736032,
+        "ci95": [
+          0.014502383111329342,
+          0.12180226166213382
+        ]
+      },
+      "defenseSDRatio": {
+        "estimate": -0.0328253134978741,
+        "standardError": 0.021088996151517003,
+        "ci95": [
+          -0.07029488785763738,
+          0.011852837370160962
+        ]
+      }
+    },
+    "41": {
+      "netRMSE": {
+        "estimate": -0.011151161754935135,
+        "standardError": 0.10477563417757378,
+        "ci95": [
+          -0.21418713843295167,
+          0.20680945009497131
+        ]
+      },
+      "netCorrelation": {
+        "estimate": -0.0014449582750314383,
+        "standardError": 0.007159846982250077,
+        "ci95": [
+          -0.016551155540331708,
+          0.011738155867931033
+        ]
+      },
+      "netSDRatio": {
+        "estimate": -0.015188486619806651,
+        "standardError": 0.02426843801123209,
+        "ci95": [
+          -0.06289650428758176,
+          0.03141908801243232
+        ]
+      },
+      "calibrationSlope": {
+        "estimate": 0.011209581415018932,
+        "standardError": 0.018418994077567127,
+        "ci95": [
+          -0.023612887725240173,
+          0.048806423184267866
+        ]
+      },
+      "calibrationError": {
+        "estimate": -0.011209581415018932,
+        "standardError": 0.018418994077567117,
+        "ci95": [
+          -0.04851594594932618,
+          0.023813158889555153
+        ]
+      },
+      "residualSD": {
+        "estimate": -0.1595711911653943,
+        "standardError": 0.19886191364506228,
+        "ci95": [
+          -0.5404800926052502,
+          0.2347250678219268
+        ]
+      },
+      "winMAE": {
+        "estimate": -0.06333333333333302,
+        "standardError": 0.14590968248086422,
+        "ci95": [
+          -0.3450000000000002,
+          0.22333333333333316
+        ]
+      },
+      "winRMSE": {
+        "estimate": -0.014090398309603458,
+        "standardError": 0.14897432944026898,
+        "ci95": [
+          -0.2939752286854409,
+          0.2974258151784115
+        ]
+      },
+      "winSlope": {
+        "estimate": 0.0037383538736729394,
+        "standardError": 0.014865901695829438,
+        "ci95": [
+          -0.02524783005698461,
+          0.03296130137241937
+        ]
+      },
+      "defenseCorrelation": {
+        "estimate": 0.02271295773277615,
+        "standardError": 0.0373855777772549,
+        "ci95": [
+          -0.05396904846535033,
+          0.09031366492892501
+        ]
+      },
+      "defenseSDRatio": {
+        "estimate": -0.006091121965290047,
+        "standardError": 0.0157188047499974,
+        "ci95": [
+          -0.03741149415695488,
+          0.026243905280708413
+        ]
+      }
+    },
+    "55": {
+      "netRMSE": {
+        "estimate": -0.21054280028294592,
+        "standardError": 0.21507018819010942,
+        "ci95": [
+          -0.6051231629525264,
+          0.2228910949548517
+        ]
+      },
+      "netCorrelation": {
+        "estimate": 0.0102241210483357,
+        "standardError": 0.01241354777793627,
+        "ci95": [
+          -0.015294416116783283,
+          0.033868447759275444
+        ]
+      },
+      "netSDRatio": {
+        "estimate": -0.017886394791448157,
+        "standardError": 0.01680830283752054,
+        "ci95": [
+          -0.052401456977165584,
+          0.014957028804671313
+        ]
+      },
+      "calibrationSlope": {
+        "estimate": 0.02556460056678156,
+        "standardError": 0.02041262698660492,
+        "ci95": [
+          -0.013123746301947792,
+          0.06738318701906498
+        ]
+      },
+      "calibrationError": {
+        "estimate": -0.02556460056678156,
+        "standardError": 0.020412626986604912,
+        "ci95": [
+          -0.06689977013354564,
+          0.01324245996578255
+        ]
+      },
+      "residualSD": {
+        "estimate": -0.19135454174421085,
+        "standardError": 0.20883785742760191,
+        "ci95": [
+          -0.6032741224924045,
+          0.21372938274573272
+        ]
+      },
+      "winMAE": {
+        "estimate": -0.20499999999999963,
+        "standardError": 0.10277102131545755,
+        "ci95": [
+          -0.3849999999999989,
+          0.01666666666666705
+        ]
+      },
+      "winRMSE": {
+        "estimate": -0.11554107397771363,
+        "standardError": 0.09341565182538869,
+        "ci95": [
+          -0.30279061052198486,
+          0.056459712929069816
+        ]
+      },
+      "winSlope": {
+        "estimate": 0.004730181294523406,
+        "standardError": 0.009960299072350375,
+        "ci95": [
+          -0.015324639698964138,
+          0.023643103283579325
+        ]
+      },
+      "defenseCorrelation": {
+        "estimate": 0.03362350684674853,
+        "standardError": 0.02694208537612968,
+        "ci95": [
+          -0.01934917182559326,
+          0.08502890775633287
+        ]
+      },
+      "defenseSDRatio": {
+        "estimate": -0.02642578716289129,
+        "standardError": 0.01784514741321273,
+        "ci95": [
+          -0.060823874922657895,
+          0.008949254873375834
+        ]
+      }
+    }
+  },
+  "policy": {
+    "baseline": "nba-defense-v3; clock forecast remains OFF",
+    "parameters": "Player-prior and residual penalties selected exclusively by pre-cutoff game-group CV. No test-dependent coefficient or rating multiplier.",
+    "role": "Pre-cutoff CV selects role prior; if role+offense significantly worsens either netRMSE or winMAE versus offense-only at main41, keep offense-only. Otherwise retain the training-selected role prior.",
+    "net": "No extra player net residual injected without a demonstrated remaining training representation gap after attack/defense controls. Offline simultaneous defense coefficients exist for confound control, not automatic adoption.",
+    "neutral": "One common switch across cutoffs. Adopt if at least one cutoff improves netRMSE or winMAE significantly and no cutoff significantly worsens either metric. Report calibration slope without a veto, per user. Paired20seed percentile bootstrap. Candidate selection is exploratory, not multiple-comparison-adjusted.",
+    "success": "Both netRMSE and winMAE significantly improve versus v3 in at least2 of25/41/55 and main41 point estimates no worse than simple baseline; report uncertainty against deterministic simple forecasts separately."
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "passed": true,
+  "sourceHashFiles": 5214,
+  "individualFgRebounds": 365784,
+  "individualFgOreb": 93950,
+  "sourceContextStates": 270090,
+  "playerSeasons": 2262,
+  "restoredSourcePlayerZoneCards": 12,
+  "fallbackExactV26Games": 96,
+  "test": "{\n  cards: 2262,\n  sourceAndCounterfactualChecks: 9048,\n  restoredSourceZoneCards: 12,\n  withoutAnchorsExactOldDeltas: true\n}",
+  "seasons": [
+    {
+      "season": "2022-23",
+      "individualFgRebounds": 88263,
+      "fgOreb": 21916,
+      "issues": 0,
+      "oldFgOreb36MAE": 0.07071277924236008
+    },
+    {
+      "season": "2023-24",
+      "individualFgRebounds": 87770,
+      "fgOreb": 21990,
+      "issues": 0,
+      "oldFgOreb36MAE": 0.0723252420518974
+    },
+    {
+      "season": "2024-25",
+      "individualFgRebounds": 91397,
+      "fgOreb": 23654,
+      "issues": 0,
+      "oldFgOreb36MAE": 0.06773812878852993
+    },
+    {
+      "season": "2025-26",
+      "individualFgRebounds": 98354,
+      "fgOreb": 26390,
+      "issues": 8,
+      "oldFgOreb36MAE": 0.06036514063386826
+    }
+  ],
+  "scope": "Source counts/provenance/round-trip correction and rebuilt contexts only. Does not certify ordinary simulation accuracy, OVR or adoption."
+}

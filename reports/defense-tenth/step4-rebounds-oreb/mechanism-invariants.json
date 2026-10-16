@@ -1,0 +1,121 @@
+{
+  "checks": [
+    {
+      "zone": "short",
+      "monotonic": true,
+      "strongerDefenseLowersAcquisition": true,
+      "noDoubleBodyBonus": true,
+      "offensiveSlotIndependent": true,
+      "recipientWeightsNormalized": true
+    },
+    {
+      "zone": "mid",
+      "monotonic": true,
+      "strongerDefenseLowersAcquisition": true,
+      "noDoubleBodyBonus": true,
+      "offensiveSlotIndependent": true,
+      "recipientWeightsNormalized": true
+    },
+    {
+      "zone": "long",
+      "monotonic": true,
+      "strongerDefenseLowersAcquisition": true,
+      "noDoubleBodyBonus": true,
+      "offensiveSlotIndependent": true,
+      "recipientWeightsNormalized": true
+    }
+  ],
+  "rows": [
+    {
+      "zone": "short",
+      "highOrebPlayers": 0,
+      "chance": 0.05000000000000001
+    },
+    {
+      "zone": "short",
+      "highOrebPlayers": 1,
+      "chance": 0.24
+    },
+    {
+      "zone": "short",
+      "highOrebPlayers": 2,
+      "chance": 0.43000000000000005
+    },
+    {
+      "zone": "short",
+      "highOrebPlayers": 3,
+      "chance": 0.6
+    },
+    {
+      "zone": "short",
+      "highOrebPlayers": 4,
+      "chance": 0.6
+    },
+    {
+      "zone": "short",
+      "highOrebPlayers": 5,
+      "chance": 0.6
+    },
+    {
+      "zone": "mid",
+      "highOrebPlayers": 0,
+      "chance": 0.05000000000000001
+    },
+    {
+      "zone": "mid",
+      "highOrebPlayers": 1,
+      "chance": 0.24
+    },
+    {
+      "zone": "mid",
+      "highOrebPlayers": 2,
+      "chance": 0.43000000000000005
+    },
+    {
+      "zone": "mid",
+      "highOrebPlayers": 3,
+      "chance": 0.6
+    },
+    {
+      "zone": "mid",
+      "highOrebPlayers": 4,
+      "chance": 0.6
+    },
+    {
+      "zone": "mid",
+      "highOrebPlayers": 5,
+      "chance": 0.6
+    },
+    {
+      "zone": "long",
+      "highOrebPlayers": 0,
+      "chance": 0.05000000000000001
+    },
+    {
+      "zone": "long",
+      "highOrebPlayers": 1,
+      "chance": 0.24
+    },
+    {
+      "zone": "long",
+      "highOrebPlayers": 2,
+      "chance": 0.43000000000000005
+    },
+    {
+      "zone": "long",
+      "highOrebPlayers": 3,
+      "chance": 0.6
+    },
+    {
+      "zone": "long",
+      "highOrebPlayers": 4,
+      "chance": 0.6
+    },
+    {
+      "zone": "long",
+      "highOrebPlayers": 5,
+      "chance": 0.6
+    }
+  ],
+  "scope": "Acquisition only; PG/C still affects unchanged recipient distribution."
+}

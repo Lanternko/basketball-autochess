@@ -1,0 +1,73 @@
+{
+  "version": "pure-oreb-putback-time-1",
+  "registeredUTC": "2026-10-14T20:09:52.695705+00:00",
+  "seasons": [
+    "2022-23",
+    "2023-24",
+    "2024-25",
+    "2025-26"
+  ],
+  "seeds": [
+    20261012,
+    20261013,
+    20261014,
+    20261015,
+    20261016,
+    20261017,
+    20261018,
+    20261019,
+    20261020,
+    20261021,
+    20261022,
+    20261023,
+    20261024,
+    20261025,
+    20261026,
+    20261027,
+    20261028,
+    20261029,
+    20261030,
+    20261031
+  ],
+  "diagnosticSeeds": [
+    20261012,
+    20261013,
+    20261014
+  ],
+  "base": "frozen pure OREB acquisition+allocation candidate; five signals OFF no-map; same cards/constants/schedule/observed minute soft targets",
+  "mechanism": {
+    "switch": "putbackTiming",
+    "scope": "only already-selected FG putback opportunity when empiricalTiming is ON",
+    "distribution": "pool four seen seasons valid FG player OREB followed by first outcome same-team FG with official putback/tip tag; 0<=latency<=14 sec; no interruption, same rebounder; empirical sorted samples",
+    "sampling": "existing continuousDuration kernel +/-0.5s, lower bound .1s; conditional on remaining shot/game time and 14s maximum; dedicated RNG seed XOR 0x6A8B2341; physical seconds not divided by pace",
+    "timing": "only opportunityDeadline uses dedicated putback duration; setup/release keep same 45%/remaining split; reorganization uses frozen retained CDF",
+    "unchanged": [
+      "OREB acquisition formula",
+      "recipient distribution",
+      "latent putback probability",
+      "shot/turnover/foul formulas",
+      "card projection",
+      "league constants"
+    ],
+    "calibration": "NONE; frozen constants reused exactly; mean drift is a failure not tuned away"
+  },
+  "primary": [
+    "netRMSE",
+    "winsMAE"
+  ],
+  "diagnostic": [
+    "same-rebounder short shot <=3s",
+    "latency",
+    "early/later losses",
+    "foul",
+    "next-shot zone and FG%"
+  ],
+  "uncertainty": {
+    "bootstrap": 20000,
+    "seed": 20261015,
+    "unit": "paired franchise plus seed across seasons; within-season centering; equal seasons; 20 seeds accuracy and 3 seeds event diagnostic"
+  },
+  "decision": "mechanism fidelity success if immediateProxy and meanSeconds absolute gaps decrease; accuracy improvement only if paired joint95 upper netRMSE/winsMAE difference <0; eligible candidate only if no significant harm netRMSE/winsMAE/OREB_RMSE/DREB_RMSE and each-season absolute league efficiency/possession bias<=.5. No frozen baseline replacement. Failures reported no retuning.",
+  "expectation": "faster putback should improve latency/quick-shot distribution; may raise possessions, change forced-shot probabilities and foul/turnover exposure; no promised net/wins gain",
+  "label": "all four seasons already seen; same-season reconstruction, not forecast/portability validation"
+}

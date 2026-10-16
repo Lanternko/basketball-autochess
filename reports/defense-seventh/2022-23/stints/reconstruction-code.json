@@ -1,0 +1,32 @@
+{
+  "season": "2022-23",
+  "replacements": {
+    "data/defense-a-source/pbp/": "data/defense-seventh/2022-23/pbp/",
+    "data/defense-a-source/manifest.json": "data/defense-seventh/2022-23/manifest.json",
+    "data/defense-source/game-exposure.json": "data/defense-seventh/2022-23/game-exposure.json",
+    "data/defense-source/boxes/": "data/defense-seventh/2022-23/boxes/",
+    "data/season-source/team-games.json": "data/defense-seventh/2022-23/team-games.json",
+    "data/season-league.json": "data/defense-seventh/2022-23/league.json",
+    "reports/defense-b1": "reports/defense-seventh/2022-23/stints"
+  },
+  "generated": [
+    {
+      "original": "scripts/prepare_defense_b1.js",
+      "originalHash": "99d4d3d2d1f2a2764847c88256034821669571154c8f1c166f0ea721178b2f45",
+      "generated": "scripts/.seventh-2022-23-prepare_defense_b1.js",
+      "generatedHash": "3301e37a9b68ee50f44fe7dd97cb3f4bf3929bf2fe30192bb2d6495786b43f00"
+    },
+    {
+      "original": "scripts/validate_defense_stints.js",
+      "originalHash": "d7c5a9cf267d8e7cf4db856b4c43f02ca15d1f668b3a92a4d3d61bffa1ff773d",
+      "generated": "scripts/.seventh-2022-23-validate_defense_stints.js",
+      "generatedHash": "9356194fa1c27ab050948b38d220dec27c461782db7a94fe5e4789b96e7fc09a"
+    },
+    {
+      "original": "scripts/prepare_defense_stint_zones.js",
+      "originalHash": "d666875624bc435ca53b10942c41087b69479cd74ae092bd9fbc5a10ee643c68",
+      "generated": "scripts/.seventh-2022-23-prepare_defense_stint_zones.js",
+      "generatedHash": "c06b9a442f9ec3fd915c2a85f1a8798b0e988f2c37197f8d58ab3a5d913202fc"
+    }
+  ]
+}

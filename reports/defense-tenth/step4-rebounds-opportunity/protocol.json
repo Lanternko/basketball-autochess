@@ -1,0 +1,97 @@
+{
+  "version": "rebound-opportunity-audit-1",
+  "at": "2026-10-14T07:20:38.889426+00:00",
+  "scope": "Diagnostic only: conservation, competition, role labels, missing helper/space paths. No new mechanism, card, coefficient, season simulation or downloads. Finish this item and stop.",
+  "label": "Four seasons already seen; synthetic probes reveal model behavior, not real causal effects or accuracy gains.",
+  "seasons": [
+    "2022-23",
+    "2023-24",
+    "2024-25",
+    "2025-26"
+  ],
+  "seeds": [
+    20261012,
+    20261013,
+    20261014,
+    20261015,
+    20261016,
+    20261017,
+    20261018,
+    20261019,
+    20261020,
+    20261021,
+    20261022,
+    20261023,
+    20261024,
+    20261025,
+    20261026,
+    20261027,
+    20261028,
+    20261029,
+    20261030,
+    20261031
+  ],
+  "opportunitiesPerSeed": 10000,
+  "kernel": {
+    "input": "Frozen pure v3 FG rebound kernel, five stint signals off/no map. No team/FT/period-expiry branch in kernel probe; actual game audit checks these separately.",
+    "neutral": "PG,SG,SF,PF,C, all rebound=physique=70. Synthetic modifications use rebound99, physique unchanged, unless anchor explicitly physique90.",
+    "exposure": "Equal weights over short/mid/long misses and five shooter indices, independent of cards. Designed exposure, not estimated NBA frequencies.",
+    "talentStack": "k=0..5 strong rebounders. Average exact probabilities across every subset of k slots to avoid choosing favorable positions. 30% uniform luck and existing 5%-60% team probability clamp preserved.",
+    "realTop5": "Per season deduplicate by playerId using card with largest observed in-team MIN, sum observed MIN across teams for >=1000MIN eligibility. Select top5 official OREB_PCT, tie lower playerId. Use unchanged v3 attributes and nominal court positions, not OREB_PCT as a new probability input.",
+    "role": "Neutral teammates, anchor index4 rebound99/physique90. Baseline C; change pos only with courtPosition=C; change courtPosition only to PG; swap PG/C courtPosition to retain balanced labels. Actual attributes/physical traits unchanged. Report per-zone nonshooter and anchor-shooter effects plus exposure-average team/player probability. Defensive-side effects separately.",
+    "ignoredInputs": "Add boxOut=99,boxOutHelp=99 to anchor; independently add reboundStartDistanceFeet=0 vs30 to all players, crashIntent=0 vs1. Compare full output probabilities exactly; these are hypothetical metadata probes, not new observed skills.",
+    "sampling": "Each seed draws 10000 zone/shooter/side/recipient uniforms, shared across scenarios. One Bernoulli team decision then one categorical recipient. Save seed means and SE; exact probabilities are primary."
+  },
+  "actualGameAudit": {
+    "cases": [
+      "neutral",
+      "allStrong",
+      "anchorC",
+      "anchorPG",
+      "anchorPosOnlyPG",
+      "boxOutHigh",
+      "distanceFar"
+    ],
+    "games": "20 seeds per case, 140 games. Five-player synthetic teams against neutral; full frozen 2025-26 v3 timing/accounting constants, five signals off, defenseSignals deleted, no substitutions/fatigue/rotation/minute targets; foulOut99. This controls exposure, not realistic rotations.",
+    "ledger": "For each completed opportunity: sum player OREB+DREB+teamOreb+teamDreb across sides equals reboundChances. Replay must have one terminal rebound per preceding FGX/final nontechnical FTX; nonfinal FT dead rebounds separate; expiry can leave a miss unresolved. More than one OREB in poss allowed only following another miss.",
+    "parity": "boxOutHigh and distanceFar must match neutral exactly in scores, full team/player stats and events if inputs are unused; anchorPosOnlyPG kernel parity required, full-game differences if other paths consume pos must be reported without attributing them to rebounding.",
+    "accuracy": "No win/net MAE or adoption claim from synthetic games; no new constants calibrated."
+  },
+  "hustle": {
+    "input": "Existing league-wide Totals hustle tables only, no new acquisition.",
+    "summary": "BOX_OUT_PLAYER_TEAM_REBS minus BOX_OUT_PLAYER_REBS; OFF_BOXOUTS and DEF_BOXOUTS separately. Raw player-credited records, not unique team possessions. No offensive/defensive recovery split invented; do not infer causal extra boards or convert into additive board counts.",
+    "validity": "Report invalid negative differences or team recovery>boxouts; never silently force counts to fit."
+  },
+  "rules": {
+    "conservationTolerance": 1e-12,
+    "missingMechanism": "Zero exact response to a hypothetical field documents absence, not evidence that real boxing-out or distance has no effect.",
+    "uncertainty": "Kernel seed SE/t19 interval measures Monte Carlo error only, not franchise generalization or real causal effect. No franchise+seed adoption comparison in this item.",
+    "proposal": "Write a chronological next-mechanism specification, measurable labels, unidentifiable effects, no fabricated fitted constants. Do not implement it in this diagnostic."
+  },
+  "inputHashes": {
+    "src/rebound_block_model.js": "57459f5bb27147410c9f5ada9ae308809e591e5a6a4dfea24f832ab796fb0a92",
+    "src/defense_fourth_game.js": "c3611d0c72f49fdd4b855184d7bc79c3e6cc9780c2c6eb836aa10cbf66ad022a",
+    "src/rng.js": "f549b8e5b37591f83ae2d78995f5526faf9c3d9a376502f984e0c9e730486c31",
+    "src/minute_budget.js": "388258e91afe84696612edab0d02ee88699d37f84683b4f68ef180c8d0f3e7dd",
+    "src/probability_model.js": "13b175efac436d3c560fd39389f3486225ab90bfbc996d6802ee76ce461aad87",
+    "src/defense_fourth_effects.js": "ce90813d1089a8dd400d6051db2b08022a26914a0b1e3672cd7ddf4924a03ff4",
+    "src/constants.js": "86f968d2a29326d0e4ab8375face0e83f76556464a1caeb8ff00be6797290598",
+    "src/defense_probability.js": "e652ede7ebe9753f85105dc657fcb2b39d67f28d1ef92a58df008bddd2de4e48",
+    "src/court-scene.js": "82627ab494af5b917182238a638dc434fb0bdce7b2e4c16ee2e5e74d5a6068e7",
+    "reports/defense-tenth/step4-rebounds/model.mjs": "f28a882c72a2c673e0638beb19d6b2f7ca27a3083a0c72eb973a75cd9a4d8a6e",
+    "reports/defense-tenth/step4-t0/2022-23/bundle.json": "b311dcfce6c80b98720784c28a4879b154a205a2ce0cbed61cb0c5014342c213",
+    "reports/defense-tenth/step4-t2/raw/2022-23/0-advanced.json": "5cce624bdcba6e4190c3520986006b5d8a87a0e1c11bdc2f268a7fb3815d3da2",
+    "reports/defense-tenth/step4-t2/raw/2022-23/0-hustle.json": "6f2077f4abf7348c37bcd6e89061cd258f9dc051af4d5666349f6eb56ff9a651",
+    "reports/defense-tenth/step4-t0/2023-24/bundle.json": "5e17a95310e7cea844b81005fbe214e9ecafe62b54a1ba45aad6aaa839baf971",
+    "reports/defense-tenth/step4-t2/raw/2023-24/0-advanced.json": "2a66adc5f1eccac6b23f60061e75115adfef8152c7b884dba7a940c4a372db23",
+    "reports/defense-tenth/step4-t2/raw/2023-24/0-hustle.json": "bf6e276af8dd0f153f1beb231f40fdd3a24ed4dba6702a49ba256aa21053bc35",
+    "reports/defense-tenth/step4-t0/2024-25/bundle.json": "001cf3d44b29542c3d202cd375f2378e7c09b712ca958637c28d6538566215f8",
+    "reports/defense-tenth/step4-t2/raw/2024-25/0-advanced.json": "6e97d8807369be5668940b190a901a24439b60b82fe6f393a953c33c8e523508",
+    "reports/defense-tenth/step4-t2/raw/2024-25/0-hustle.json": "e88b8dee6c689aebe1c01c0153a08c620dcefee8ca1f65eba2cd2679a07ad2ad",
+    "reports/defense-tenth/step4-t0/2025-26/bundle.json": "43b5a5141fa667a492a67dfc6aa95eec058aabbe39e9d787b0a92b870d7db051",
+    "reports/defense-tenth/step4-t2/raw/2025-26/0-advanced.json": "182975df662b91cc08fc70f9978952a359604719b13d1a60776595db7e604ad5",
+    "reports/defense-tenth/step4-t2/raw/2025-26/0-hustle.json": "a2103c77db873ae61ca228350f4386571f10a88dd20eea32bbe4f0f1ce19b2da"
+  },
+  "protectedManifestSHA256": "d8aee97e05ab6f74ae517dcec7a194177095456c25826658a5a91b01294b0ee7",
+  "registrationCodeSHA256": "26512fae36c66b890f4d407cabbe071eac43c398e06e66af5a35ecf128b06026"
+}

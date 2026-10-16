@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "games": 48,
+  "comparisons": 24,
+  "allGameAndPersonalCountersExactlyV30": true,
+  "scope": "Controlled symmetric self/pass roles give already feasible joint prior: own0.2, pass0.8, terminal1. Both new own-pool and old residual transport identical; original distinct shooting skills remain. Not unchanged behavior for actual inputs or a missing-data fallback.",
+  "hashes": {
+    "reports/player-impact-v37/model.mjs": "5b9ed01a71a560db6051261cb690f04f0a24c56c067bb2da8c4eb2d3ae0f0c10",
+    "reports/player-impact-v37/engine.mjs": "bbce18cac3563c76a8e4eebab2a6e7c5c8129700f260d349056de747a4803a35",
+    "reports/player-impact-v37/verify-equivalence.mjs": "635614ad000d3d1c6a38f15cc5ef0c39a798124e044e5c594ea3aec5aac22af0"
+  }
+}

@@ -1,0 +1,14 @@
+import fs from 'node:fs';
+import crypto from 'node:crypto';
+import assert from 'node:assert/strict';
+const root='reports/player-impact-v26',read=f=>JSON.parse(fs.readFileSync(f)),hash=f=>crypto.createHash('sha256').update(fs.readFileSync(f)).digest('hex');
+const protocol=read(root+'/pilot-protocol-2025-26.json');for(const[f,h]of Object.entries(protocol.hashes))assert.equal(hash(f),h,`Source drift ${f}`);
+const manifest=read(root+'/pilot-manifest-2025-26.json');assert.equal(manifest.jobs.length,2);for(const j of manifest.jobs)assert.equal(hash(j.file),j.sha256);
+const ledger=read(root+'/pilot-ledger-verification.json');assert.ok(ledger.passed);assert.equal(ledger.games,2418);
+const probe=read(root+'/counterfactual-verification.json');for(const k of ['cacheExactParity','disabledIntensityExactPreviousParity','previousInputUnchanged','syntheticAttributesUnchanged'])assert.equal(probe[k],true);assert.equal(probe.games,96);
+const passive=read(root+'/contact-opportunity-audit.json');assert.equal(passive.passiveExactMatchAndTeamParity,true);assert.equal(passive.games,1188);
+for(const obj of [probe,passive,read(root+'/source-verification.json')])for(const[f,h]of Object.entries(obj.hashes))assert.equal(hash(f),h);
+const status=read(root+'/pilot-status.json');assert.equal(status.officialModelAdopted,false);assert.equal(status.goalComplete,false);
+const artifacts=['pilot-report.md','pilot-report.py','pilot-status.json','pilot-scores.json','pilot-all-players.csv','pilot-all-players-on-court.csv','pilot-ledger-verification.json','counterfactual-verification.json','contact-opportunity-audit.json','source-verification.json','verify-source.py','verify-pilot.mjs','verify-pilot-ledgers.mjs','validation-score.py'];
+const output={frozenSourceFiles:Object.keys(protocol.hashes).length,resultFiles:2,games:2418,artifacts:Object.fromEntries(artifacts.map(f=>[root+'/'+f,hash(root+'/'+f)])),officialModelAdopted:false,goalComplete:false,scope:'One-seed target-season source-intensity pilot, 96 fixed-lineup parity probes, passive exact contact opportunity audit, four-season source count/rate integrity. Full validation and new OVR not claimed.'};
+fs.writeFileSync(root+'/pilot-verification.json',JSON.stringify(output,null,2));console.log({files:2,games:2418,passed:true});

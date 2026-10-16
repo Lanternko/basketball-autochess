@@ -1,0 +1,20 @@
+{
+  "registeredAt": "2026-10-13T07:05:52.846Z",
+  "originalProtocolSHA": "f25bdaf88acd41735c555d1ff59fe4c443b2805a9885547032e327b279647b61",
+  "purpose": "Before any correlations: clarify authoritative existing strict audit and verify season trade labels, without modifying original protocol, thresholds, card or simulator.",
+  "strictAudit": {
+    "reports/defense-seventh/2022-23/stints/defensive-samples.json": "1fc5ea2b7631af37943b9a9d949b0edc0292d4a21f288ec3dba88af2e27be0d1",
+    "reports/defense-seventh/2023-24/stints/defensive-samples.json": "230f0860d5a571d73192a751afab36263d5a8b24aa549c3d101746f11b04d133",
+    "reports/defense-seventh/2024-25/stints/defensive-samples.json": "a2bf9c15012ec5a1c1f7c0646425ee8cdafd8b39d172b75f4e22af0b5555195a",
+    "reports/defense-b1/defensive-samples.json": "86e948971436b8c4f7c671ff8a7027a52204ecab7031d8e14d29282268d3eb09"
+  },
+  "strictDefinition": "Use existing defensive-samples exclusions union: missing PBP, failed lineups, uncertain possession games, counter mismatch games. Preliminary pointsValid/lineupsValid stream alone misses authoritative counter mismatches; never count them usable.",
+  "tradeVerification": "Additional descriptive subset only, main preregistered season-mover proxy retained. Fetch four official NBA season trade trackers. Confirm season trade participation by PLAYER_ID in article links or exact normalized full name; restrict first/last chronology to exactly two played franchises. Still not a complete transaction-history proof of a specific leg; report this limitation. Unknown names stay unverified, never assume free-agent or trade.",
+  "urls": [
+    "https://www.nba.com/news/2022-23-nba-trade-tracker",
+    "https://www.nba.com/news/2023-24-nba-trade-tracker",
+    "https://www.nba.com/news/2024-25-nba-trade-tracker",
+    "https://www.nba.com/news/2025-26-nba-trade-tracker"
+  ],
+  "statistics": "Same thresholds and bootstrap as original protocol. No result-dependent model or sample tuning."
+}

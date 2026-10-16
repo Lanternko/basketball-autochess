@@ -1,0 +1,68 @@
+{
+  "design": "Target held-out-pair NLL differences with hyperparameters selected on older seasons. Positive gain favors passer+receiver model. Conditional pair-block bootstrap combines 2pt/3pt contributions for the same directed team/passer/receiver pair; fixed fitted predictions only, does not refit folds or cover team/season/parameter uncertainty. No runtime passing bonus.",
+  "zones": [
+    {
+      "zone": "2",
+      "attempts": 107546.0,
+      "heldoutPairs": 8173,
+      "receiverOnlyNll": 73498.06238076522,
+      "jointNll": 73491.74974413693,
+      "heldoutNllGain": 6.3126366282872635,
+      "receiverOnlyNllPerAttempt": 0.6834104697595933,
+      "jointNllPerAttempt": 0.6833517726752918,
+      "priorSelection": {
+        "receiverOnly": {
+          "zone": "2",
+          "receiverPrecision": 20.0,
+          "passerPrecision": null,
+          "nll": 249640.52399039816,
+          "attempts": 363084.0,
+          "nllPerAttempt": 0.6875558382919604
+        },
+        "joint": {
+          "zone": "2",
+          "receiverPrecision": 20.0,
+          "passerPrecision": 320.0,
+          "nll": 249564.52453093554,
+          "attempts": 363084.0,
+          "nllPerAttempt": 0.6873465218267275
+        }
+      }
+    },
+    {
+      "zone": "3",
+      "attempts": 88130.0,
+      "heldoutPairs": 7583,
+      "receiverOnlyNll": 57693.65355566875,
+      "jointNll": 57688.068521190005,
+      "heldoutNllGain": 5.58503447874623,
+      "receiverOnlyNllPerAttempt": 0.6546426138167338,
+      "jointNllPerAttempt": 0.654579241134574,
+      "priorSelection": {
+        "receiverOnly": {
+          "zone": "3",
+          "receiverPrecision": 80.0,
+          "passerPrecision": null,
+          "nll": 166926.4144110971,
+          "attempts": 255087.0,
+          "nllPerAttempt": 0.6543901273334082
+        },
+        "joint": {
+          "zone": "3",
+          "receiverPrecision": 80.0,
+          "passerPrecision": 320.0,
+          "nll": 166917.20554521366,
+          "attempts": 255087.0,
+          "nllPerAttempt": 0.654354026450637
+        }
+      }
+    }
+  ],
+  "jointPairBlocks": 9096,
+  "combinedNllGain": 11.897671107033496,
+  "conditionalPairBootstrap95": [
+    0.5388105635604983,
+    23.525611057800415
+  ],
+  "passingFitSHA256": "828b2a71018e448e9850f153091f8b484d115cda511ed749c9776624d8b6c56a"
+}

@@ -1,0 +1,29 @@
+{
+  "version": "v51-joint-rotation-plan",
+  "baseline": "v49",
+  "seasons": [
+    "2022-23",
+    "2023-24",
+    "2024-25"
+  ],
+  "targetSeason": "2025-26",
+  "variants": [
+    "currentPlan",
+    "currentPlanRest"
+  ],
+  "seed": 20261012,
+  "gamesPerSeason": 60,
+  "plan": {
+    "stepSeconds": 30,
+    "slots": 96,
+    "optimizationPasses": 6000,
+    "seed": 51001,
+    "objective": "Squared per-player two-minute-bin occupancy error + v49 pair weight .25 times squared whole-game pair overlap error + existing minimumStint/600 per substitution + short-stint shortfall in minutes. All weights fixed before first simulation. Exact five per slot, rounded per-player slots sum480, official starters at first slot. Deterministic quota-preserving rectangle swaps; game RNG unchanged.",
+    "scope": "Known game minute reconstruction; source profiles exclude entire game fold. No target-game stint sequence, scoring outcome, or player-name overrides. Joint feasibility guarantees apply to the planned grid, not real dead-ball execution or foul-outs."
+  },
+  "selection": "Earlier-three equal-season normalized phase+pair MAE >1% improvement, each-season regulation minute MAE <=baseline+0.05min and short-share <=baseline+0.01. Select best eligible. Confirm once on disjoint120games/season with same gate; if fail, reject without further tuning on confirmation. Full4season3seed evaluation only after confirmation.",
+  "runtime": "Current-time plan CDF debt plus 0.5min preference for current planned occupants. Existing eligibility, protection, minimum stint/rest, urgent-minute logic remain. Rest variant also penalizes planned interior rest intervals shorter than source minimumRest.",
+  "gamePresetChanged": false,
+  "abilityChanges": false,
+  "revision": "Correct execution clock alignment: use planned cumulative minutes at current clock, not ordinary minimum-stint lookahead, plus one grid-step occupancy preference. Compare old plan objective with added source minimum-rest shortfall penalty. First probe rejected; no files overwritten."
+}

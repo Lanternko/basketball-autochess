@@ -1,0 +1,28 @@
+{
+  "version": "v50-rotation-controller-probe",
+  "baseline": "v49 accepted rotation; unchanged v47 probabilities and v49 out-of-fold profiles",
+  "seasons": [
+    "2022-23",
+    "2023-24",
+    "2024-25"
+  ],
+  "targetSeason": "2025-26",
+  "seed": 20261012,
+  "gamesPerSeason": 120,
+  "variants": [
+    "baseline",
+    "phasePairShort"
+  ],
+  "selection": "Confirm the already selected phasePairShort only: >1% improvement in equal-season normalized phase+pair objective, every-season regulation minutes <= baseline+0.05min, short share <=baseline+0.01. Otherwise reject v50. No target-season simulation before this gate.",
+  "hypotheses": [
+    "Single-player greedy swaps can miss beneficial multi-player changes. Enumerate feasible five-player lineups respecting locks, roles, rest, protected shooter.",
+    "Final-quarter taper can leave measured pair deficits uncorrected; test removing taper.",
+    "Penalize entering a player with insufficient remaining budget for the usual minimum stint, using the existing minimumStint, not a named-player rule."
+  ],
+  "probabilityOrAbilityChanges": false,
+  "gamePresetChanged": false,
+  "stage": "disjoint confirmation; no model selection allowed from these results",
+  "priorGames": 1,
+  "measurement": "Learn the distribution of joint oncourt seconds across 24 phases from training folds only. Shrink toward uniform phase timing by one training game worth of mean pair overlap. Zero-overlap or unseen pairs use the old marginal-progress path. Existing v49 pair-total targets unchanged.",
+  "excludeEarlierProbeFixtures": true
+}

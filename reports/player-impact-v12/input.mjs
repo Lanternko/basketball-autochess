@@ -1,0 +1,5 @@
+import fs from 'node:fs';
+import {loadInput as previousInput,attachShooting} from '../player-impact-v9/input.mjs';
+export function attachContexts(players,season){const cards=JSON.parse(fs.readFileSync(`reports/player-impact-v12/${season}-contexts.json`)).cards;for(const p of players){if(!cards[p.playerId])throw Error('Missing source context');p.shootingMeasurement={...p.shootingMeasurement,...cards[p.playerId]};}return players;}
+export function loadInput(season){const b=previousInput(season);attachContexts(b.league.teams.flatMap(t=>t.roster),season);return b;}
+export function attachMeasurements(players,season){attachShooting(players,season);return attachContexts(players,season);}

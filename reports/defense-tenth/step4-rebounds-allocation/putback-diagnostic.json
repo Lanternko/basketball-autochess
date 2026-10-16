@@ -1,0 +1,859 @@
+{
+  "interpretation": "Same-path conditional expected putback probabilities, not actual putback scoring or independently validated landing positions. Baseline first seed only; candidate all20 seeds. Non-random observer, no extra RNG draws.",
+  "baselineFixedPaths": [
+    {
+      "season": "2022-23",
+      "games": 1230,
+      "identical": true,
+      "trace": {
+        "fgOreb": 25320,
+        "ftOreb": 635,
+        "dreb": 81564,
+        "expectedOldPutback": 10008.754075223214,
+        "expectedNewPutback": 9939.208616442807,
+        "selectedPutbackProbability": 10002.883696261775
+      }
+    },
+    {
+      "season": "2023-24",
+      "games": 1230,
+      "identical": true,
+      "trace": {
+        "fgOreb": 25594,
+        "ftOreb": 481,
+        "dreb": 81303,
+        "expectedOldPutback": 10015.642147718618,
+        "expectedNewPutback": 9926.852548485107,
+        "selectedPutbackProbability": 10005.582242748262
+      }
+    },
+    {
+      "season": "2024-25",
+      "games": 1230,
+      "identical": true,
+      "trace": {
+        "fgOreb": 26582,
+        "ftOreb": 627,
+        "dreb": 81304,
+        "expectedOldPutback": 10680.80086419466,
+        "expectedNewPutback": 10580.759855550405,
+        "selectedPutbackProbability": 10673.69515726759
+      }
+    },
+    {
+      "season": "2025-26",
+      "games": 1230,
+      "identical": true,
+      "trace": {
+        "fgOreb": 26587,
+        "ftOreb": 684,
+        "dreb": 79325,
+        "expectedOldPutback": 10625.334959370635,
+        "expectedNewPutback": 10504.852393454461,
+        "selectedPutbackProbability": 10619.433224332855
+      }
+    }
+  ],
+  "candidate": [
+    {
+      "season": "2022-23",
+      "seed": 20261012,
+      "fgOreb": 25307,
+      "ftOreb": 655,
+      "dreb": 81694,
+      "expectedOldPutback": 10000.302484642636,
+      "expectedNewPutback": 9930.05144519422,
+      "selectedPutbackProbability": 9931.948190850764
+    },
+    {
+      "season": "2022-23",
+      "seed": 20261013,
+      "fgOreb": 25029,
+      "ftOreb": 560,
+      "dreb": 81996,
+      "expectedOldPutback": 9892.495733290394,
+      "expectedNewPutback": 9822.143875377182,
+      "selectedPutbackProbability": 9821.653041610345
+    },
+    {
+      "season": "2022-23",
+      "seed": 20261014,
+      "fgOreb": 25202,
+      "ftOreb": 551,
+      "dreb": 81210,
+      "expectedOldPutback": 9948.764883493275,
+      "expectedNewPutback": 9876.187246067688,
+      "selectedPutbackProbability": 9867.44053838581
+    },
+    {
+      "season": "2022-23",
+      "seed": 20261015,
+      "fgOreb": 24967,
+      "ftOreb": 626,
+      "dreb": 81446,
+      "expectedOldPutback": 9857.852844082432,
+      "expectedNewPutback": 9787.819381409916,
+      "selectedPutbackProbability": 9796.672355080136
+    },
+    {
+      "season": "2022-23",
+      "seed": 20261016,
+      "fgOreb": 25043,
+      "ftOreb": 635,
+      "dreb": 81413,
+      "expectedOldPutback": 9897.493910272458,
+      "expectedNewPutback": 9826.132306922073,
+      "selectedPutbackProbability": 9824.180552402688
+    },
+    {
+      "season": "2022-23",
+      "seed": 20261017,
+      "fgOreb": 25244,
+      "ftOreb": 594,
+      "dreb": 82001,
+      "expectedOldPutback": 9973.190102280567,
+      "expectedNewPutback": 9900.875733531686,
+      "selectedPutbackProbability": 9896.044574242345
+    },
+    {
+      "season": "2022-23",
+      "seed": 20261018,
+      "fgOreb": 25241,
+      "ftOreb": 593,
+      "dreb": 81685,
+      "expectedOldPutback": 9970.980112130319,
+      "expectedNewPutback": 9900.015034213979,
+      "selectedPutbackProbability": 9906.175267211958
+    },
+    {
+      "season": "2022-23",
+      "seed": 20261019,
+      "fgOreb": 25081,
+      "ftOreb": 586,
+      "dreb": 81636,
+      "expectedOldPutback": 9915.351244791094,
+      "expectedNewPutback": 9842.75032942921,
+      "selectedPutbackProbability": 9842.085575824214
+    },
+    {
+      "season": "2022-23",
+      "seed": 20261020,
+      "fgOreb": 25065,
+      "ftOreb": 587,
+      "dreb": 81187,
+      "expectedOldPutback": 9902.892364446805,
+      "expectedNewPutback": 9832.23014307707,
+      "selectedPutbackProbability": 9839.408830293913
+    },
+    {
+      "season": "2022-23",
+      "seed": 20261021,
+      "fgOreb": 24866,
+      "ftOreb": 615,
+      "dreb": 81273,
+      "expectedOldPutback": 9820.454031680512,
+      "expectedNewPutback": 9749.66109061794,
+      "selectedPutbackProbability": 9741.88763011392
+    },
+    {
+      "season": "2022-23",
+      "seed": 20261022,
+      "fgOreb": 24918,
+      "ftOreb": 623,
+      "dreb": 81680,
+      "expectedOldPutback": 9832.628867935662,
+      "expectedNewPutback": 9762.23610324991,
+      "selectedPutbackProbability": 9751.921587769379
+    },
+    {
+      "season": "2022-23",
+      "seed": 20261023,
+      "fgOreb": 25240,
+      "ftOreb": 622,
+      "dreb": 81580,
+      "expectedOldPutback": 9969.26047625778,
+      "expectedNewPutback": 9896.525873352142,
+      "selectedPutbackProbability": 9893.80897735389
+    },
+    {
+      "season": "2022-23",
+      "seed": 20261024,
+      "fgOreb": 24921,
+      "ftOreb": 571,
+      "dreb": 81756,
+      "expectedOldPutback": 9856.04322055848,
+      "expectedNewPutback": 9783.946806368087,
+      "selectedPutbackProbability": 9788.201916624754
+    },
+    {
+      "season": "2022-23",
+      "seed": 20261025,
+      "fgOreb": 24901,
+      "ftOreb": 577,
+      "dreb": 81078,
+      "expectedOldPutback": 9823.280349579012,
+      "expectedNewPutback": 9754.051800471567,
+      "selectedPutbackProbability": 9758.451786699921
+    },
+    {
+      "season": "2022-23",
+      "seed": 20261026,
+      "fgOreb": 25289,
+      "ftOreb": 568,
+      "dreb": 81320,
+      "expectedOldPutback": 9988.675373646996,
+      "expectedNewPutback": 9916.178558011832,
+      "selectedPutbackProbability": 9911.331448294866
+    },
+    {
+      "season": "2022-23",
+      "seed": 20261027,
+      "fgOreb": 25214,
+      "ftOreb": 602,
+      "dreb": 81904,
+      "expectedOldPutback": 9958.208638157594,
+      "expectedNewPutback": 9886.688531526876,
+      "selectedPutbackProbability": 9886.902824012006
+    },
+    {
+      "season": "2022-23",
+      "seed": 20261028,
+      "fgOreb": 25291,
+      "ftOreb": 597,
+      "dreb": 81306,
+      "expectedOldPutback": 9992.736986468151,
+      "expectedNewPutback": 9922.116793372354,
+      "selectedPutbackProbability": 9924.797496099456
+    },
+    {
+      "season": "2022-23",
+      "seed": 20261029,
+      "fgOreb": 25445,
+      "ftOreb": 580,
+      "dreb": 81279,
+      "expectedOldPutback": 10042.909313645963,
+      "expectedNewPutback": 9971.94314367899,
+      "selectedPutbackProbability": 9975.549677784615
+    },
+    {
+      "season": "2022-23",
+      "seed": 20261030,
+      "fgOreb": 25294,
+      "ftOreb": 564,
+      "dreb": 81248,
+      "expectedOldPutback": 9998.6757735877,
+      "expectedNewPutback": 9924.61033403314,
+      "selectedPutbackProbability": 9928.400357341543
+    },
+    {
+      "season": "2022-23",
+      "seed": 20261031,
+      "fgOreb": 25278,
+      "ftOreb": 604,
+      "dreb": 81042,
+      "expectedOldPutback": 9984.336025060187,
+      "expectedNewPutback": 9910.948189270452,
+      "selectedPutbackProbability": 9923.753673659941
+    },
+    {
+      "season": "2023-24",
+      "seed": 20261012,
+      "fgOreb": 25885,
+      "ftOreb": 490,
+      "dreb": 81363,
+      "expectedOldPutback": 10126.814044357434,
+      "expectedNewPutback": 10037.113344761752,
+      "selectedPutbackProbability": 10036.990176911751
+    },
+    {
+      "season": "2023-24",
+      "seed": 20261013,
+      "fgOreb": 25599,
+      "ftOreb": 458,
+      "dreb": 81420,
+      "expectedOldPutback": 10025.707412074069,
+      "expectedNewPutback": 9936.765958396403,
+      "selectedPutbackProbability": 9939.283516679021
+    },
+    {
+      "season": "2023-24",
+      "seed": 20261014,
+      "fgOreb": 25421,
+      "ftOreb": 495,
+      "dreb": 81570,
+      "expectedOldPutback": 9951.13877071859,
+      "expectedNewPutback": 9863.922824904275,
+      "selectedPutbackProbability": 9863.542640074287
+    },
+    {
+      "season": "2023-24",
+      "seed": 20261015,
+      "fgOreb": 25507,
+      "ftOreb": 487,
+      "dreb": 81370,
+      "expectedOldPutback": 9988.225088546347,
+      "expectedNewPutback": 9899.844804622546,
+      "selectedPutbackProbability": 9895.751649225269
+    },
+    {
+      "season": "2023-24",
+      "seed": 20261016,
+      "fgOreb": 25521,
+      "ftOreb": 508,
+      "dreb": 81351,
+      "expectedOldPutback": 9999.758119331129,
+      "expectedNewPutback": 9909.717641319412,
+      "selectedPutbackProbability": 9908.177748338587
+    },
+    {
+      "season": "2023-24",
+      "seed": 20261017,
+      "fgOreb": 25814,
+      "ftOreb": 540,
+      "dreb": 81322,
+      "expectedOldPutback": 10111.701160670118,
+      "expectedNewPutback": 10023.979704415795,
+      "selectedPutbackProbability": 10026.362229553612
+    },
+    {
+      "season": "2023-24",
+      "seed": 20261018,
+      "fgOreb": 25742,
+      "ftOreb": 524,
+      "dreb": 81475,
+      "expectedOldPutback": 10074.50785272856,
+      "expectedNewPutback": 9986.157148959253,
+      "selectedPutbackProbability": 9986.513443463888
+    },
+    {
+      "season": "2023-24",
+      "seed": 20261019,
+      "fgOreb": 25652,
+      "ftOreb": 480,
+      "dreb": 81694,
+      "expectedOldPutback": 10034.313867491197,
+      "expectedNewPutback": 9946.334303185175,
+      "selectedPutbackProbability": 9938.0083221291
+    },
+    {
+      "season": "2023-24",
+      "seed": 20261020,
+      "fgOreb": 25871,
+      "ftOreb": 485,
+      "dreb": 81706,
+      "expectedOldPutback": 10124.925545003152,
+      "expectedNewPutback": 10035.299619568159,
+      "selectedPutbackProbability": 10044.917324078948
+    },
+    {
+      "season": "2023-24",
+      "seed": 20261021,
+      "fgOreb": 25533,
+      "ftOreb": 485,
+      "dreb": 80885,
+      "expectedOldPutback": 9993.729247278197,
+      "expectedNewPutback": 9904.145067126548,
+      "selectedPutbackProbability": 9906.074589067966
+    },
+    {
+      "season": "2023-24",
+      "seed": 20261022,
+      "fgOreb": 25437,
+      "ftOreb": 508,
+      "dreb": 81404,
+      "expectedOldPutback": 9949.519599984407,
+      "expectedNewPutback": 9861.510155325157,
+      "selectedPutbackProbability": 9857.56446324268
+    },
+    {
+      "season": "2023-24",
+      "seed": 20261023,
+      "fgOreb": 25768,
+      "ftOreb": 541,
+      "dreb": 81942,
+      "expectedOldPutback": 10088.116585103979,
+      "expectedNewPutback": 9999.208884333155,
+      "selectedPutbackProbability": 10000.809672714397
+    },
+    {
+      "season": "2023-24",
+      "seed": 20261024,
+      "fgOreb": 25794,
+      "ftOreb": 490,
+      "dreb": 81506,
+      "expectedOldPutback": 10111.552364955774,
+      "expectedNewPutback": 10022.43130115837,
+      "selectedPutbackProbability": 10016.534341464267
+    },
+    {
+      "season": "2023-24",
+      "seed": 20261025,
+      "fgOreb": 25556,
+      "ftOreb": 507,
+      "dreb": 81513,
+      "expectedOldPutback": 10003.370146975953,
+      "expectedNewPutback": 9914.869702931646,
+      "selectedPutbackProbability": 9912.227328386994
+    },
+    {
+      "season": "2023-24",
+      "seed": 20261026,
+      "fgOreb": 25848,
+      "ftOreb": 486,
+      "dreb": 81725,
+      "expectedOldPutback": 10116.81740374786,
+      "expectedNewPutback": 10025.612761365688,
+      "selectedPutbackProbability": 10020.887272560063
+    },
+    {
+      "season": "2023-24",
+      "seed": 20261027,
+      "fgOreb": 25923,
+      "ftOreb": 540,
+      "dreb": 81618,
+      "expectedOldPutback": 10156.180162162991,
+      "expectedNewPutback": 10066.845288660406,
+      "selectedPutbackProbability": 10072.155516205838
+    },
+    {
+      "season": "2023-24",
+      "seed": 20261028,
+      "fgOreb": 25385,
+      "ftOreb": 508,
+      "dreb": 81271,
+      "expectedOldPutback": 9935.052587424092,
+      "expectedNewPutback": 9845.531905544693,
+      "selectedPutbackProbability": 9852.30956668071
+    },
+    {
+      "season": "2023-24",
+      "seed": 20261029,
+      "fgOreb": 25613,
+      "ftOreb": 504,
+      "dreb": 81533,
+      "expectedOldPutback": 10031.96332509929,
+      "expectedNewPutback": 9943.687881998414,
+      "selectedPutbackProbability": 9945.741409535727
+    },
+    {
+      "season": "2023-24",
+      "seed": 20261030,
+      "fgOreb": 25656,
+      "ftOreb": 470,
+      "dreb": 81384,
+      "expectedOldPutback": 10049.384915784804,
+      "expectedNewPutback": 9959.713198615735,
+      "selectedPutbackProbability": 9955.556143951359
+    },
+    {
+      "season": "2023-24",
+      "seed": 20261031,
+      "fgOreb": 25538,
+      "ftOreb": 511,
+      "dreb": 81663,
+      "expectedOldPutback": 9998.046305134945,
+      "expectedNewPutback": 9909.688940667942,
+      "selectedPutbackProbability": 9910.848490154836
+    },
+    {
+      "season": "2024-25",
+      "seed": 20261012,
+      "fgOreb": 26638,
+      "ftOreb": 640,
+      "dreb": 81416,
+      "expectedOldPutback": 10698.189949678701,
+      "expectedNewPutback": 10598.945837438303,
+      "selectedPutbackProbability": 10593.074719463533
+    },
+    {
+      "season": "2024-25",
+      "seed": 20261013,
+      "fgOreb": 26826,
+      "ftOreb": 606,
+      "dreb": 81632,
+      "expectedOldPutback": 10775.784782786468,
+      "expectedNewPutback": 10675.494180642527,
+      "selectedPutbackProbability": 10676.268816916134
+    },
+    {
+      "season": "2024-25",
+      "seed": 20261014,
+      "fgOreb": 26583,
+      "ftOreb": 589,
+      "dreb": 81133,
+      "expectedOldPutback": 10683.690210764798,
+      "expectedNewPutback": 10583.47663632419,
+      "selectedPutbackProbability": 10581.761451445338
+    },
+    {
+      "season": "2024-25",
+      "seed": 20261015,
+      "fgOreb": 26358,
+      "ftOreb": 624,
+      "dreb": 81643,
+      "expectedOldPutback": 10607.289691941487,
+      "expectedNewPutback": 10508.000127309586,
+      "selectedPutbackProbability": 10510.916134122732
+    },
+    {
+      "season": "2024-25",
+      "seed": 20261016,
+      "fgOreb": 26607,
+      "ftOreb": 631,
+      "dreb": 81596,
+      "expectedOldPutback": 10693.719618899102,
+      "expectedNewPutback": 10592.695385095136,
+      "selectedPutbackProbability": 10599.69479823688
+    },
+    {
+      "season": "2024-25",
+      "seed": 20261017,
+      "fgOreb": 26893,
+      "ftOreb": 663,
+      "dreb": 81524,
+      "expectedOldPutback": 10801.148344017058,
+      "expectedNewPutback": 10699.065579072683,
+      "selectedPutbackProbability": 10699.059378041278
+    },
+    {
+      "season": "2024-25",
+      "seed": 20261018,
+      "fgOreb": 26622,
+      "ftOreb": 609,
+      "dreb": 81275,
+      "expectedOldPutback": 10696.986618788527,
+      "expectedNewPutback": 10596.365911588178,
+      "selectedPutbackProbability": 10601.415147019923
+    },
+    {
+      "season": "2024-25",
+      "seed": 20261019,
+      "fgOreb": 26605,
+      "ftOreb": 657,
+      "dreb": 81381,
+      "expectedOldPutback": 10691.393013331415,
+      "expectedNewPutback": 10593.098063771935,
+      "selectedPutbackProbability": 10596.388717668267
+    },
+    {
+      "season": "2024-25",
+      "seed": 20261020,
+      "fgOreb": 26680,
+      "ftOreb": 657,
+      "dreb": 81614,
+      "expectedOldPutback": 10723.77823965255,
+      "expectedNewPutback": 10622.844329559135,
+      "selectedPutbackProbability": 10618.857474302526
+    },
+    {
+      "season": "2024-25",
+      "seed": 20261021,
+      "fgOreb": 26781,
+      "ftOreb": 646,
+      "dreb": 80806,
+      "expectedOldPutback": 10761.641179473747,
+      "expectedNewPutback": 10660.987610783845,
+      "selectedPutbackProbability": 10650.291301531235
+    },
+    {
+      "season": "2024-25",
+      "seed": 20261022,
+      "fgOreb": 26986,
+      "ftOreb": 624,
+      "dreb": 80858,
+      "expectedOldPutback": 10835.228543383491,
+      "expectedNewPutback": 10735.2703604658,
+      "selectedPutbackProbability": 10732.234920757352
+    },
+    {
+      "season": "2024-25",
+      "seed": 20261023,
+      "fgOreb": 26745,
+      "ftOreb": 615,
+      "dreb": 81588,
+      "expectedOldPutback": 10750.78222863376,
+      "expectedNewPutback": 10649.315309477517,
+      "selectedPutbackProbability": 10647.237845643933
+    },
+    {
+      "season": "2024-25",
+      "seed": 20261024,
+      "fgOreb": 26636,
+      "ftOreb": 640,
+      "dreb": 80993,
+      "expectedOldPutback": 10707.037488926348,
+      "expectedNewPutback": 10608.19174130983,
+      "selectedPutbackProbability": 10602.097468725617
+    },
+    {
+      "season": "2024-25",
+      "seed": 20261025,
+      "fgOreb": 26235,
+      "ftOreb": 587,
+      "dreb": 81392,
+      "expectedOldPutback": 10538.171427505307,
+      "expectedNewPutback": 10438.036496193383,
+      "selectedPutbackProbability": 10439.763641975984
+    },
+    {
+      "season": "2024-25",
+      "seed": 20261026,
+      "fgOreb": 27001,
+      "ftOreb": 590,
+      "dreb": 81105,
+      "expectedOldPutback": 10847.861791246592,
+      "expectedNewPutback": 10747.872414610172,
+      "selectedPutbackProbability": 10744.726953880836
+    },
+    {
+      "season": "2024-25",
+      "seed": 20261027,
+      "fgOreb": 26908,
+      "ftOreb": 648,
+      "dreb": 81065,
+      "expectedOldPutback": 10819.628143951917,
+      "expectedNewPutback": 10718.756400474034,
+      "selectedPutbackProbability": 10710.57279581214
+    },
+    {
+      "season": "2024-25",
+      "seed": 20261028,
+      "fgOreb": 26715,
+      "ftOreb": 613,
+      "dreb": 81325,
+      "expectedOldPutback": 10742.209187206823,
+      "expectedNewPutback": 10641.772465953989,
+      "selectedPutbackProbability": 10643.01952012211
+    },
+    {
+      "season": "2024-25",
+      "seed": 20261029,
+      "fgOreb": 26832,
+      "ftOreb": 595,
+      "dreb": 81653,
+      "expectedOldPutback": 10776.996866755328,
+      "expectedNewPutback": 10675.614174246184,
+      "selectedPutbackProbability": 10675.770761383681
+    },
+    {
+      "season": "2024-25",
+      "seed": 20261030,
+      "fgOreb": 26736,
+      "ftOreb": 656,
+      "dreb": 81404,
+      "expectedOldPutback": 10742.518553268292,
+      "expectedNewPutback": 10640.396821528891,
+      "selectedPutbackProbability": 10642.540857567004
+    },
+    {
+      "season": "2024-25",
+      "seed": 20261031,
+      "fgOreb": 26849,
+      "ftOreb": 645,
+      "dreb": 81371,
+      "expectedOldPutback": 10786.482482753241,
+      "expectedNewPutback": 10687.772630547575,
+      "selectedPutbackProbability": 10682.820941361491
+    },
+    {
+      "season": "2025-26",
+      "seed": 20261012,
+      "fgOreb": 26728,
+      "ftOreb": 662,
+      "dreb": 79294,
+      "expectedOldPutback": 10679.638557177223,
+      "expectedNewPutback": 10557.755083722514,
+      "selectedPutbackProbability": 10558.846996596381
+    },
+    {
+      "season": "2025-26",
+      "seed": 20261013,
+      "fgOreb": 27360,
+      "ftOreb": 623,
+      "dreb": 78971,
+      "expectedOldPutback": 10910.198964980593,
+      "expectedNewPutback": 10789.227603112975,
+      "selectedPutbackProbability": 10787.93673529775
+    },
+    {
+      "season": "2025-26",
+      "seed": 20261014,
+      "fgOreb": 27231,
+      "ftOreb": 679,
+      "dreb": 78801,
+      "expectedOldPutback": 10866.637548657232,
+      "expectedNewPutback": 10746.09015471988,
+      "selectedPutbackProbability": 10738.799588318418
+    },
+    {
+      "season": "2025-26",
+      "seed": 20261015,
+      "fgOreb": 26906,
+      "ftOreb": 631,
+      "dreb": 79031,
+      "expectedOldPutback": 10730.324084646136,
+      "expectedNewPutback": 10612.719651832991,
+      "selectedPutbackProbability": 10613.331983819302
+    },
+    {
+      "season": "2025-26",
+      "seed": 20261016,
+      "fgOreb": 27292,
+      "ftOreb": 667,
+      "dreb": 78455,
+      "expectedOldPutback": 10893.21609211846,
+      "expectedNewPutback": 10772.774351038044,
+      "selectedPutbackProbability": 10763.456171226459
+    },
+    {
+      "season": "2025-26",
+      "seed": 20261017,
+      "fgOreb": 27283,
+      "ftOreb": 651,
+      "dreb": 78984,
+      "expectedOldPutback": 10890.157371113723,
+      "expectedNewPutback": 10766.628453946421,
+      "selectedPutbackProbability": 10761.060777641342
+    },
+    {
+      "season": "2025-26",
+      "seed": 20261018,
+      "fgOreb": 27067,
+      "ftOreb": 664,
+      "dreb": 79322,
+      "expectedOldPutback": 10802.694345930091,
+      "expectedNewPutback": 10683.635656606331,
+      "selectedPutbackProbability": 10686.669027368593
+    },
+    {
+      "season": "2025-26",
+      "seed": 20261019,
+      "fgOreb": 27273,
+      "ftOreb": 672,
+      "dreb": 79226,
+      "expectedOldPutback": 10881.483994275855,
+      "expectedNewPutback": 10759.852514610615,
+      "selectedPutbackProbability": 10759.912328313369
+    },
+    {
+      "season": "2025-26",
+      "seed": 20261020,
+      "fgOreb": 27117,
+      "ftOreb": 656,
+      "dreb": 78635,
+      "expectedOldPutback": 10820.56598272579,
+      "expectedNewPutback": 10700.241487969613,
+      "selectedPutbackProbability": 10697.204786988264
+    },
+    {
+      "season": "2025-26",
+      "seed": 20261021,
+      "fgOreb": 26781,
+      "ftOreb": 638,
+      "dreb": 78285,
+      "expectedOldPutback": 10692.868952583953,
+      "expectedNewPutback": 10575.531944299539,
+      "selectedPutbackProbability": 10581.541693686806
+    },
+    {
+      "season": "2025-26",
+      "seed": 20261022,
+      "fgOreb": 27232,
+      "ftOreb": 682,
+      "dreb": 78750,
+      "expectedOldPutback": 10866.811464962922,
+      "expectedNewPutback": 10745.101119991752,
+      "selectedPutbackProbability": 10742.547173136454
+    },
+    {
+      "season": "2025-26",
+      "seed": 20261023,
+      "fgOreb": 27080,
+      "ftOreb": 643,
+      "dreb": 78999,
+      "expectedOldPutback": 10802.20887827354,
+      "expectedNewPutback": 10681.592458801448,
+      "selectedPutbackProbability": 10685.972040308901
+    },
+    {
+      "season": "2025-26",
+      "seed": 20261024,
+      "fgOreb": 27063,
+      "ftOreb": 643,
+      "dreb": 78597,
+      "expectedOldPutback": 10790.834817673043,
+      "expectedNewPutback": 10670.996150454814,
+      "selectedPutbackProbability": 10666.04463209852
+    },
+    {
+      "season": "2025-26",
+      "seed": 20261025,
+      "fgOreb": 26792,
+      "ftOreb": 648,
+      "dreb": 78754,
+      "expectedOldPutback": 10688.410187904894,
+      "expectedNewPutback": 10569.145695672909,
+      "selectedPutbackProbability": 10561.638858089203
+    },
+    {
+      "season": "2025-26",
+      "seed": 20261026,
+      "fgOreb": 27166,
+      "ftOreb": 603,
+      "dreb": 79005,
+      "expectedOldPutback": 10842.208449848506,
+      "expectedNewPutback": 10718.479014373766,
+      "selectedPutbackProbability": 10720.178319347124
+    },
+    {
+      "season": "2025-26",
+      "seed": 20261027,
+      "fgOreb": 27006,
+      "ftOreb": 691,
+      "dreb": 78866,
+      "expectedOldPutback": 10782.076283209035,
+      "expectedNewPutback": 10660.328929886029,
+      "selectedPutbackProbability": 10652.926322975638
+    },
+    {
+      "season": "2025-26",
+      "seed": 20261028,
+      "fgOreb": 27056,
+      "ftOreb": 683,
+      "dreb": 79160,
+      "expectedOldPutback": 10797.858968843555,
+      "expectedNewPutback": 10675.921168165303,
+      "selectedPutbackProbability": 10670.602473364372
+    },
+    {
+      "season": "2025-26",
+      "seed": 20261029,
+      "fgOreb": 27236,
+      "ftOreb": 645,
+      "dreb": 78501,
+      "expectedOldPutback": 10865.848795157572,
+      "expectedNewPutback": 10744.561204399351,
+      "selectedPutbackProbability": 10736.771049787065
+    },
+    {
+      "season": "2025-26",
+      "seed": 20261030,
+      "fgOreb": 27167,
+      "ftOreb": 711,
+      "dreb": 78900,
+      "expectedOldPutback": 10857.692841473794,
+      "expectedNewPutback": 10740.811480448087,
+      "selectedPutbackProbability": 10742.153496539866
+    },
+    {
+      "season": "2025-26",
+      "seed": 20261031,
+      "fgOreb": 27481,
+      "ftOreb": 633,
+      "dreb": 78449,
+      "expectedOldPutback": 10972.797879045569,
+      "expectedNewPutback": 10848.916286768164,
+      "selectedPutbackProbability": 10841.683695977665
+    }
+  ]
+}

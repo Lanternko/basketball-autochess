@@ -1,0 +1,61 @@
+{
+  "label": "source verification and post-hoc descriptive blocked-shot association only, not a rim/no-rim classifier or a calibration sample",
+  "perSeason": {
+    "2022-23": {
+      "verifiedClockEvents": 174,
+      "eligibleAllAnchors": 24298,
+      "eligibleAllAnchorsBlocked": 2401,
+      "earlyClock": 137,
+      "earlyClockBlocked": 55,
+      "compatibleClock": 33,
+      "compatibleClockBlocked": 1,
+      "foulBetweenEarly": 0,
+      "explicitRimContactFieldCount": 0,
+      "explicitShotClockFieldCount": 0
+    },
+    "2023-24": {
+      "verifiedClockEvents": 171,
+      "eligibleAllAnchors": 24715,
+      "eligibleAllAnchorsBlocked": 2626,
+      "earlyClock": 135,
+      "earlyClockBlocked": 65,
+      "compatibleClock": 23,
+      "compatibleClockBlocked": 0,
+      "foulBetweenEarly": 0,
+      "explicitRimContactFieldCount": 0,
+      "explicitShotClockFieldCount": 0
+    },
+    "2024-25": {
+      "verifiedClockEvents": 236,
+      "eligibleAllAnchors": 25948,
+      "eligibleAllAnchorsBlocked": 2492,
+      "earlyClock": 195,
+      "earlyClockBlocked": 85,
+      "compatibleClock": 27,
+      "compatibleClockBlocked": 3,
+      "foulBetweenEarly": 0,
+      "explicitRimContactFieldCount": 0,
+      "explicitShotClockFieldCount": 0
+    },
+    "2025-26": {
+      "verifiedClockEvents": 184,
+      "eligibleAllAnchors": 26527,
+      "eligibleAllAnchorsBlocked": 2532,
+      "earlyClock": 144,
+      "earlyClockBlocked": 58,
+      "compatibleClock": 35,
+      "compatibleClockBlocked": 2,
+      "foulBetweenEarly": 0,
+      "explicitRimContactFieldCount": 0,
+      "explicitShotClockFieldCount": 0
+    }
+  },
+  "examplesSelection": "first two <13sec eligible clock events in existing schedule order per season",
+  "allClockEventsVerified": 765,
+  "findings": [
+    "clock event timestamp/period/team/action reference matched raw source",
+    "no explicit rim-contact or shot-clock field present on these shot/rebound/turnover records",
+    "blocked shot does not establish no rim contact; unblocked shot does not establish rim contact",
+    "outcome-selected clock events cannot estimate unconditional no-rim probability"
+  ]
+}

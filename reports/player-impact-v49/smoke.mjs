@@ -1,0 +1,12 @@
+import fs from 'node:fs';
+import assert from 'node:assert/strict';
+import {loadInput} from './input.mjs';
+import {impactEngine} from './engine.mjs';
+import {impactEngine as legacyEngine} from '../player-impact-v47/engine.mjs';
+const b=loadInput('2025-26'),run=await impactEngine('rotation-space'),old=await legacyEngine('rotation-space');
+Object.assign(b.options,{creationPolicy:'rotation-space',contextLongScale:1,spaceCenter:JSON.parse(fs.readFileSync('reports/player-impact-v7/2025-26-center.json')).fullCenter});
+const disabled=run(b.league,b.exposure,{seed:20261012,options:{...b.options,rotationPolicy:'legacy'},indices:[0,1,2],audit:false,replay:false}),legacy=old(b.league,b.exposure,{seed:20261012,options:b.options,indices:[0,1,2],audit:false,replay:false});
+assert.deepEqual(disabled.teams,legacy.teams);assert.deepEqual(disabled.matches,legacy.matches);
+let samples=0;
+const result=run(b.league,b.exposure,{seed:20261012,options:{...b.options,rotationIntervalObserver:e=>{samples++;for(const t of e.teams){assert.equal(new Set(t.lineup).size,5);assert(t.lineup.every(x=>t.active.includes(x)));}}},indices:Array.from({length:20},(_,i)=>i),audit:false,replay:false});
+console.log(JSON.stringify({passed:true,disabledParityGames:3,games:result.matches.length,samples,minuteMAE:result.teams.reduce((s,t)=>s+t.minuteError,0)/result.teams.reduce((s,t)=>s+t.playerGames,0),regulationMinuteMAE:result.teams.reduce((s,t)=>s+t.regulationMinuteError,0)/result.teams.reduce((s,t)=>s+t.playerGames,0)}));

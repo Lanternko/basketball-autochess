@@ -1,0 +1,31 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "season": "2022-23",
+      "entries": 609,
+      "onlyOffensiveLineupDescriptorAdded": true
+    },
+    {
+      "season": "2023-24",
+      "entries": 657,
+      "onlyOffensiveLineupDescriptorAdded": true
+    },
+    {
+      "season": "2024-25",
+      "entries": 654,
+      "onlyOffensiveLineupDescriptorAdded": true
+    },
+    {
+      "season": "2025-26",
+      "entries": 661,
+      "onlyOffensiveLineupDescriptorAdded": true
+    }
+  ],
+  "legacyNoDescriptorGameParity": 10,
+  "candidateObserverGameParity": 10,
+  "otherFourExcludesShooter": true,
+  "cornerArcAndPutbacksUnchanged": true,
+  "offensiveDefensiveFineLabelsAndLedgersMatch": true,
+  "fineGames": 3
+}

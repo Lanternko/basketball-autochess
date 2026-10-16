@@ -1,0 +1,349 @@
+{
+  "scope": "Exploratory source diagnostic of the previous frozen beta; not a change to v36 runtime, not a fitted OVR bonus. Prepared before viewing this conditional identity fit.",
+  "runtimeChanged": false,
+  "oldBeta": 1.1377523015046638,
+  "diagnosticFit": {
+    "excludedGameFold": null,
+    "beta": 1.1900792346025681,
+    "score": 7.676151381197371e-17
+  },
+  "folds": [
+    {
+      "excludedGameFold": 0,
+      "beta": 1.1862347418620456,
+      "score": -8.033938098117588e-17,
+      "heldout": [
+        {
+          "season": "2022-23",
+          "old": {
+            "nll": 14015.279777615557,
+            "assistedMakes": 11298,
+            "gradientPerMake": -0.01452701523451679,
+            "nllPerMake": 1.2405098050642198
+          },
+          "fitted": {
+            "nll": 14009.797132245541,
+            "assistedMakes": 11298,
+            "gradientPerMake": -0.005521537686780657,
+            "nllPerMake": 1.240024529318954
+          }
+        },
+        {
+          "season": "2023-24",
+          "old": {
+            "nll": 13691.894265876843,
+            "assistedMakes": 10923,
+            "gradientPerMake": -0.010249015526602491,
+            "nllPerMake": 1.2534921052711565
+          },
+          "fitted": {
+            "nll": 13688.648886303163,
+            "assistedMakes": 10923,
+            "gradientPerMake": -0.002031914249864087,
+            "nllPerMake": 1.2531949909643105
+          }
+        },
+        {
+          "season": "2024-25",
+          "old": {
+            "nll": 13858.859594637703,
+            "assistedMakes": 11052,
+            "gradientPerMake": -0.010465531654355575,
+            "nllPerMake": 1.2539684758086955
+          },
+          "fitted": {
+            "nll": 13855.453043905494,
+            "assistedMakes": 11052,
+            "gradientPerMake": -0.002271898317995316,
+            "nllPerMake": 1.2536602464626758
+          }
+        }
+      ]
+    },
+    {
+      "excludedGameFold": 1,
+      "beta": 1.1938179839366938,
+      "score": 9.413585362605392e-17,
+      "heldout": [
+        {
+          "season": "2022-23",
+          "old": {
+            "nll": 14273.023152409565,
+            "assistedMakes": 11504,
+            "gradientPerMake": -0.013490688462692977,
+            "nllPerMake": 1.2407008998965199
+          },
+          "fitted": {
+            "nll": 14267.74088607771,
+            "assistedMakes": 11504,
+            "gradientPerMake": -0.0029274819277651204,
+            "nllPerMake": 1.2402417320999402
+          }
+        },
+        {
+          "season": "2023-24",
+          "old": {
+            "nll": 16085.34755614982,
+            "assistedMakes": 12779,
+            "gradientPerMake": -0.0035791268255976135,
+            "nllPerMake": 1.258732886466063
+          },
+          "fitted": {
+            "nll": 16086.2342261784,
+            "assistedMakes": 12779,
+            "gradientPerMake": 0.006019522306071169,
+            "nllPerMake": 1.2588022713966978
+          }
+        },
+        {
+          "season": "2024-25",
+          "old": {
+            "nll": 14318.48259870187,
+            "assistedMakes": 11277,
+            "gradientPerMake": -0.0029346786023654947,
+            "nllPerMake": 1.269706712663108
+          },
+          "fitted": {
+            "nll": 14319.430126746509,
+            "assistedMakes": 11277,
+            "gradientPerMake": 0.005903499903023587,
+            "nllPerMake": 1.2697907357228437
+          }
+        }
+      ]
+    },
+    {
+      "excludedGameFold": 2,
+      "beta": 1.1891021323987732,
+      "score": -4.8030156241107846e-17,
+      "heldout": [
+        {
+          "season": "2022-23",
+          "old": {
+            "nll": 11832.983658325393,
+            "assistedMakes": 9459,
+            "gradientPerMake": -0.009153410769712149,
+            "nllPerMake": 1.2509761770087104
+          },
+          "fitted": {
+            "nll": 11830.810267304274,
+            "assistedMakes": 9459,
+            "gradientPerMake": 0.00017385028616881052,
+            "nllPerMake": 1.2507464073690955
+          }
+        },
+        {
+          "season": "2023-24",
+          "old": {
+            "nll": 13306.968016313156,
+            "assistedMakes": 10559,
+            "gradientPerMake": -0.009692816603308698,
+            "nllPerMake": 1.2602488887501806
+          },
+          "fitted": {
+            "nll": 13303.939761189831,
+            "assistedMakes": 10559,
+            "gradientPerMake": -0.0015034111087510382,
+            "nllPerMake": 1.259962095008034
+          }
+        },
+        {
+          "season": "2024-25",
+          "old": {
+            "nll": 14645.165217486843,
+            "assistedMakes": 11609,
+            "gradientPerMake": -0.00928143946917601,
+            "nllPerMake": 1.261535465370561
+          },
+          "fitted": {
+            "nll": 14642.093322500943,
+            "assistedMakes": 11609,
+            "gradientPerMake": -0.0010481212862169117,
+            "nllPerMake": 1.261270852140662
+          }
+        }
+      ]
+    },
+    {
+      "excludedGameFold": 3,
+      "beta": 1.1963385806164688,
+      "score": -3.4839029809200874e-17,
+      "heldout": [
+        {
+          "season": "2022-23",
+          "old": {
+            "nll": 14393.29116983477,
+            "assistedMakes": 11469,
+            "gradientPerMake": -0.0011051203921444628,
+            "nllPerMake": 1.254973508573962
+          },
+          "fitted": {
+            "nll": 14396.2702638302,
+            "assistedMakes": 11469,
+            "gradientPerMake": 0.009930989037656717,
+            "nllPerMake": 1.255233260426384
+          }
+        },
+        {
+          "season": "2023-24",
+          "old": {
+            "nll": 14207.134245135188,
+            "assistedMakes": 11329,
+            "gradientPerMake": -0.010808406629775677,
+            "nllPerMake": 1.2540501584548671
+          },
+          "fitted": {
+            "nll": 14203.264107978815,
+            "assistedMakes": 11329,
+            "gradientPerMake": -0.0008886349103716442,
+            "nllPerMake": 1.253708545147746
+          }
+        },
+        {
+          "season": "2024-25",
+          "old": {
+            "nll": 15310.762724735261,
+            "assistedMakes": 12012,
+            "gradientPerMake": -0.003007171294788652,
+            "nllPerMake": 1.2746222714564819
+          },
+          "fitted": {
+            "nll": 15311.817193274896,
+            "assistedMakes": 12012,
+            "gradientPerMake": 0.005976093809695364,
+            "nllPerMake": 1.2747100560501912
+          }
+        }
+      ]
+    },
+    {
+      "excludedGameFold": 4,
+      "beta": 1.1850508577791041,
+      "score": -4.9692599572252285e-17,
+      "heldout": [
+        {
+          "season": "2022-23",
+          "old": {
+            "nll": 13469.893537316653,
+            "assistedMakes": 10867,
+            "gradientPerMake": -0.016450340724104784,
+            "nllPerMake": 1.2395227327980725
+          },
+          "fitted": {
+            "nll": 13463.667562406852,
+            "assistedMakes": 10867,
+            "gradientPerMake": -0.0078025651433487,
+            "nllPerMake": 1.2389498078960939
+          }
+        },
+        {
+          "season": "2023-24",
+          "old": {
+            "nll": 14042.311633624224,
+            "assistedMakes": 11134,
+            "gradientPerMake": -0.007585709950585128,
+            "nllPerMake": 1.2612099545198692
+          },
+          "fitted": {
+            "nll": 14040.38290928182,
+            "assistedMakes": 11134,
+            "gradientPerMake": 0.00023906427832368199,
+            "nllPerMake": 1.2610367261794342
+          }
+        },
+        {
+          "season": "2024-25",
+          "old": {
+            "nll": 15155.143551461617,
+            "assistedMakes": 12018,
+            "gradientPerMake": -0.012431751194180746,
+            "nllPerMake": 1.261037073677951
+          },
+          "fitted": {
+            "nll": 15150.19615517918,
+            "assistedMakes": 12018,
+            "gradientPerMake": -0.004994706942977362,
+            "nllPerMake": 1.2606254081527026
+          }
+        }
+      ]
+    }
+  ],
+  "seasons": [
+    {
+      "season": "2022-23",
+      "old": {
+        "nll": 67984.47129550193,
+        "assistedMakes": 54597,
+        "gradientPerMake": -0.010940998389864618,
+        "nllPerMake": 1.245205254785097
+      },
+      "fitted": {
+        "nll": 67967.13240414923,
+        "assistedMakes": 54597,
+        "gradientPerMake": -0.0012305614370507134,
+        "nllPerMake": 1.2448876752229836
+      },
+      "gainPerAssistedMake": 0.0003175795621133126
+    },
+    {
+      "season": "2023-24",
+      "old": {
+        "nll": 71333.65571709923,
+        "assistedMakes": 56724,
+        "gradientPerMake": -0.00823182148851062,
+        "nllPerMake": 1.2575568668834924
+      },
+      "fitted": {
+        "nll": 71322.24761704344,
+        "assistedMakes": 56724,
+        "gradientPerMake": 0.0005167835712822394,
+        "nllPerMake": 1.2573557509527438
+      },
+      "gainPerAssistedMake": 0.0002011159307486743
+    },
+    {
+      "season": "2024-25",
+      "old": {
+        "nll": 73288.4136870233,
+        "assistedMakes": 57968,
+        "gradientPerMake": -0.007625493111460235,
+        "nllPerMake": 1.2642908792268719
+      },
+      "fitted": {
+        "nll": 73277.96768818932,
+        "assistedMakes": 57968,
+        "gradientPerMake": 0.0007137778657687042,
+        "nllPerMake": 1.2641106763764374
+      },
+      "gainPerAssistedMake": 0.00018020285043451878
+    },
+    {
+      "season": "2025-26",
+      "old": {
+        "nll": 80221.87510517836,
+        "assistedMakes": 63532,
+        "gradientPerMake": -0.011886197140307747,
+        "nllPerMake": 1.262700294421368
+      },
+      "fitted": {
+        "nll": 80195.79934602304,
+        "assistedMakes": 63532,
+        "gradientPerMake": -0.003823121852277901,
+        "nllPerMake": 1.2622898593783138
+      },
+      "gainPerAssistedMake": 0.00041043504305426914
+    }
+  ],
+  "limits": "Conditioning on assisted FGM estimates who receives assist credit, not total creation volume, pure pass skill, causal teammate effect or OVR. Engine and source-centering review still required for any future candidate.",
+  "hashes": {
+    "reports/player-impact-v36/passer-choice-inputs.json": "b8d85817f6626526be81e3d325a494092138f117e32540712eb749acf52c62e9",
+    "reports/player-impact-v36/passer-choice-diagnostic.py": "e7509ac9270331ff95f21aab361de7088786a3deaf0bdb808ab7d4d575f3f11e",
+    "reports/player-impact-v36/passer-choice-protocol.py": "ee2d35ca27d4f990b2377400995e586fa83e7a8eae6811b1078e9926f863717d",
+    "reports/player-impact-v36/2022-23-marked-data.json": "63af21a9c0a8e127653c8a8986c6b4eeda866c3a5699a4d3b48b34fea4efe7a2",
+    "reports/player-impact-v36/2023-24-marked-data.json": "7ce8ec296e58a69ce9225f435baa97d75c47a39d7b692d48976fb168bb715e6f",
+    "reports/player-impact-v36/2024-25-marked-data.json": "bb1c3908e5b556851a9b36806394414166fc5ef528f0fbfb6506b310e8575034",
+    "reports/player-impact-v36/2025-26-marked-data.json": "02e5f198d3ffbef607f46b6456100fb7039875bb144bfa250ac9e5623f2d6fb7",
+    "reports/player-impact-v36/passer-choice-protocol.json": "4103c9ec0f41b1d05536ff2943e7735650a56311021d5f95a8254d6401abf70f"
+  }
+}

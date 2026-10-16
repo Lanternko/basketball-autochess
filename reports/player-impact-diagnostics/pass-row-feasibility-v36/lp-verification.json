@@ -1,0 +1,4440 @@
+{
+  "passed": true,
+  "allMean70Subjects": 582,
+  "sourceNonStrictExceptions": 35,
+  "linearProgramsSolved": 617,
+  "strictlyFeasibleCases": 582,
+  "scope": "Independent LP max-min support checks, 582 natural-role mean70 lineups plus all non-strict source exceptions with unsupported marks. Does not choose the eventual allocation prior or prove simulated accuracy. No runtime changes.",
+  "samples": [
+    {
+      "tag": {
+        "mean70Subject": 2544
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.05399096368671914
+    },
+    {
+      "tag": {
+        "mean70Subject": 101108
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.05502348913539634
+    },
+    {
+      "tag": {
+        "mean70Subject": 200768
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.05627644825072742
+    },
+    {
+      "tag": {
+        "mean70Subject": 201142
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.0547804762200755
+    },
+    {
+      "tag": {
+        "mean70Subject": 201143
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.05505387868788131
+    },
+    {
+      "tag": {
+        "mean70Subject": 201144
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.0498205588817207
+    },
+    {
+      "tag": {
+        "mean70Subject": 201145
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.03458203632905959
+    },
+    {
+      "tag": {
+        "mean70Subject": 201566
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.05509209944838962
+    },
+    {
+      "tag": {
+        "mean70Subject": 201567
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.05516683579259491
+    },
+    {
+      "tag": {
+        "mean70Subject": 201569
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.03836469632677022
+    },
+    {
+      "tag": {
+        "mean70Subject": 201572
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.029344228751347106
+    },
+    {
+      "tag": {
+        "mean70Subject": 201587
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.025752066892876964
+    },
+    {
+      "tag": {
+        "mean70Subject": 201599
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.03439905456883814
+    },
+    {
+      "tag": {
+        "mean70Subject": 201935
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.05535710842620041
+    },
+    {
+      "tag": {
+        "mean70Subject": 201939
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.05586967677427103
+    },
+    {
+      "tag": {
+        "mean70Subject": 201942
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.054709084625199814
+    },
+    {
+      "tag": {
+        "mean70Subject": 201950
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.054560357143958585
+    },
+    {
+      "tag": {
+        "mean70Subject": 201959
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.044194395408836074
+    },
+    {
+      "tag": {
+        "mean70Subject": 202066
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.054989732880185556
+    },
+    {
+      "tag": {
+        "mean70Subject": 202331
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.05490283645683525
+    },
+    {
+      "tag": {
+        "mean70Subject": 202685
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.048292247085412854
+    },
+    {
+      "tag": {
+        "mean70Subject": 202687
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.030604633793745572
+    },
+    {
+      "tag": {
+        "mean70Subject": 202691
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.032237508237164335
+    },
+    {
+      "tag": {
+        "mean70Subject": 202695
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.05493908065369392
+    },
+    {
+      "tag": {
+        "mean70Subject": 202696
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.05511348857946813
+    },
+    {
+      "tag": {
+        "mean70Subject": 202699
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.042343232379119675
+    },
+    {
+      "tag": {
+        "mean70Subject": 202710
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.05429955325307818
+    },
+    {
+      "tag": {
+        "mean70Subject": 203076
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.04807743532513426
+    },
+    {
+      "tag": {
+        "mean70Subject": 203078
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.04312720481184766
+    },
+    {
+      "tag": {
+        "mean70Subject": 203083
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.03386544368229505
+    },
+    {
+      "tag": {
+        "mean70Subject": 203084
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.03570200199487587
+    },
+    {
+      "tag": {
+        "mean70Subject": 203110
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.05390256079893014
+    },
+    {
+      "tag": {
+        "mean70Subject": 203114
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.05479720413986079
+    },
+    {
+      "tag": {
+        "mean70Subject": 203468
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.0562646437992822
+    },
+    {
+      "tag": {
+        "mean70Subject": 203471
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.055314250481988396
+    },
+    {
+      "tag": {
+        "mean70Subject": 203482
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.05501240634193148
+    },
+    {
+      "tag": {
+        "mean70Subject": 203484
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.05473741576555316
+    },
+    {
+      "tag": {
+        "mean70Subject": 203486
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.04014869820002552
+    },
+    {
+      "tag": {
+        "mean70Subject": 203497
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.028660854310876664
+    },
+    {
+      "tag": {
+        "mean70Subject": 203500
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.034101624835437425
+    },
+    {
+      "tag": {
+        "mean70Subject": 203501
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.02274919069520295
+    },
+    {
+      "tag": {
+        "mean70Subject": 203507
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.05418620443766877
+    },
+    {
+      "tag": {
+        "mean70Subject": 203552
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.04682734580503292
+    },
+    {
+      "tag": {
+        "mean70Subject": 203648
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.054733090891011194
+    },
+    {
+      "tag": {
+        "mean70Subject": 203897
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.03621368132504496
+    },
+    {
+      "tag": {
+        "mean70Subject": 203903
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.039423276990372805
+    },
+    {
+      "tag": {
+        "mean70Subject": 203914
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.035025525721148656
+    },
+    {
+      "tag": {
+        "mean70Subject": 203924
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.0444623838401661
+    },
+    {
+      "tag": {
+        "mean70Subject": 203926
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.027901435232658214
+    },
+    {
+      "tag": {
+        "mean70Subject": 203932
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.04286413645627659
+    },
+    {
+      "tag": {
+        "mean70Subject": 203935
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.04869685244261942
+    },
+    {
+      "tag": {
+        "mean70Subject": 203937
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.054699427117912404
+    },
+    {
+      "tag": {
+        "mean70Subject": 203939
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.03604991853387538
+    },
+    {
+      "tag": {
+        "mean70Subject": 203944
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.05459602200864919
+    },
+    {
+      "tag": {
+        "mean70Subject": 203952
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.04583131480705597
+    },
+    {
+      "tag": {
+        "mean70Subject": 203954
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.055149100964988075
+    },
+    {
+      "tag": {
+        "mean70Subject": 203967
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.044044909575191256
+    },
+    {
+      "tag": {
+        "mean70Subject": 203991
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.028773916583860498
+    },
+    {
+      "tag": {
+        "mean70Subject": 203992
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.055047905125579506
+    },
+    {
+      "tag": {
+        "mean70Subject": 203994
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.05436524606526389
+    },
+    {
+      "tag": {
+        "mean70Subject": 203999
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.05329830045392714
+    },
+    {
+      "tag": {
+        "mean70Subject": 204001
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.05406587500587769
+    },
+    {
+      "tag": {
+        "mean70Subject": 204060
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.049274997626714334
+    },
+    {
+      "tag": {
+        "mean70Subject": 204456
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.05340383739458158
+    },
+    {
+      "tag": {
+        "mean70Subject": 1626145
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.0457413660586778
+    },
+    {
+      "tag": {
+        "mean70Subject": 1626156
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.05521631981237735
+    },
+    {
+      "tag": {
+        "mean70Subject": 1626157
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.045545572583316235
+    },
+    {
+      "tag": {
+        "mean70Subject": 1626162
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.025459217952944146
+    },
+    {
+      "tag": {
+        "mean70Subject": 1626164
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.054528862077911876
+    },
+    {
+      "tag": {
+        "mean70Subject": 1626166
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.0558263983011985
+    },
+    {
+      "tag": {
+        "mean70Subject": 1626167
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.024186295777558365
+    },
+    {
+      "tag": {
+        "mean70Subject": 1626171
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.031511048403107235
+    },
+    {
+      "tag": {
+        "mean70Subject": 1626172
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.03878385864120124
+    },
+    {
+      "tag": {
+        "mean70Subject": 1626181
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.04004388165861902
+    },
+    {
+      "tag": {
+        "mean70Subject": 1626192
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.0393476637083852
+    },
+    {
+      "tag": {
+        "mean70Subject": 1626204
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.04359932598435234
+    },
+    {
+      "tag": {
+        "mean70Subject": 1626220
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.04766735355145392
+    },
+    {
+      "tag": {
+        "mean70Subject": 1627734
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.05487548719212595
+    },
+    {
+      "tag": {
+        "mean70Subject": 1627739
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.04644912688946636
+    },
+    {
+      "tag": {
+        "mean70Subject": 1627741
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.04713115230754426
+    },
+    {
+      "tag": {
+        "mean70Subject": 1627742
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.05076905755225495
+    },
+    {
+      "tag": {
+        "mean70Subject": 1627746
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.05172768367069558
+    },
+    {
+      "tag": {
+        "mean70Subject": 1627747
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.054659626421904126
+    },
+    {
+      "tag": {
+        "mean70Subject": 1627749
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.055233482386143826
+    },
+    {
+      "tag": {
+        "mean70Subject": 1627750
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.05555921092323052
+    },
+    {
+      "tag": {
+        "mean70Subject": 1627751
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.042141698506145284
+    },
+    {
+      "tag": {
+        "mean70Subject": 1627752
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.038124306859366214
+    },
+    {
+      "tag": {
+        "mean70Subject": 1627759
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.05473262786309474
+    },
+    {
+      "tag": {
+        "mean70Subject": 1627780
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.0547673036509823
+    },
+    {
+      "tag": {
+        "mean70Subject": 1627783
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.05481370958511329
+    },
+    {
+      "tag": {
+        "mean70Subject": 1627824
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.03224439626100628
+    },
+    {
+      "tag": {
+        "mean70Subject": 1627826
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.038879620458779636
+    },
+    {
+      "tag": {
+        "mean70Subject": 1627827
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.029392929764532165
+    },
+    {
+      "tag": {
+        "mean70Subject": 1627884
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.02641417359218335
+    },
+    {
+      "tag": {
+        "mean70Subject": 1627936
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.05181290175634529
+    },
+    {
+      "tag": {
+        "mean70Subject": 1628365
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.05468801473417377
+    },
+    {
+      "tag": {
+        "mean70Subject": 1628366
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.055503441626393916
+    },
+    {
+      "tag": {
+        "mean70Subject": 1628368
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.055331243880446135
+    },
+    {
+      "tag": {
+        "mean70Subject": 1628369
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.05465361966868408
+    },
+    {
+      "tag": {
+        "mean70Subject": 1628370
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.05620487090211443
+    },
+    {
+      "tag": {
+        "mean70Subject": 1628371
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.02693878080976034
+    },
+    {
+      "tag": {
+        "mean70Subject": 1628374
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.03395922446899337
+    },
+    {
+      "tag": {
+        "mean70Subject": 1628378
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.05470499298442042
+    },
+    {
+      "tag": {
+        "mean70Subject": 1628379
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.05404438448483044
+    },
+    {
+      "tag": {
+        "mean70Subject": 1628380
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.04388044255354186
+    },
+    {
+      "tag": {
+        "mean70Subject": 1628381
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.018425381089336907
+    },
+    {
+      "tag": {
+        "mean70Subject": 1628384
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.02987215589822574
+    },
+    {
+      "tag": {
+        "mean70Subject": 1628386
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.034131485286662884
+    },
+    {
+      "tag": {
+        "mean70Subject": 1628389
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.048754801002843975
+    },
+    {
+      "tag": {
+        "mean70Subject": 1628392
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.054926610783388265
+    },
+    {
+      "tag": {
+        "mean70Subject": 1628396
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.031826688266317536
+    },
+    {
+      "tag": {
+        "mean70Subject": 1628398
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.0507795505970729
+    },
+    {
+      "tag": {
+        "mean70Subject": 1628401
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.056138294718501944
+    },
+    {
+      "tag": {
+        "mean70Subject": 1628404
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.054556379199860436
+    },
+    {
+      "tag": {
+        "mean70Subject": 1628415
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.02917971580710242
+    },
+    {
+      "tag": {
+        "mean70Subject": 1628418
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.02481728712952554
+    },
+    {
+      "tag": {
+        "mean70Subject": 1628420
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.05605121451554198
+    },
+    {
+      "tag": {
+        "mean70Subject": 1628436
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.03630048835947827
+    },
+    {
+      "tag": {
+        "mean70Subject": 1628449
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.030234405990576557
+    },
+    {
+      "tag": {
+        "mean70Subject": 1628467
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.03512802706849781
+    },
+    {
+      "tag": {
+        "mean70Subject": 1628502
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.02933240345099852
+    },
+    {
+      "tag": {
+        "mean70Subject": 1628960
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.05495826524029306
+    },
+    {
+      "tag": {
+        "mean70Subject": 1628963
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.04070288699495101
+    },
+    {
+      "tag": {
+        "mean70Subject": 1628964
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.03630110819192532
+    },
+    {
+      "tag": {
+        "mean70Subject": 1628969
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.05507620206591409
+    },
+    {
+      "tag": {
+        "mean70Subject": 1628970
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.0549090648502323
+    },
+    {
+      "tag": {
+        "mean70Subject": 1628971
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.04335460612800929
+    },
+    {
+      "tag": {
+        "mean70Subject": 1628973
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.05550911648641414
+    },
+    {
+      "tag": {
+        "mean70Subject": 1628975
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.055130454495048775
+    },
+    {
+      "tag": {
+        "mean70Subject": 1628976
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.039332859044121496
+    },
+    {
+      "tag": {
+        "mean70Subject": 1628978
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.05633041794689565
+    },
+    {
+      "tag": {
+        "mean70Subject": 1628983
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.05543052450311445
+    },
+    {
+      "tag": {
+        "mean70Subject": 1628988
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.03717875679027145
+    },
+    {
+      "tag": {
+        "mean70Subject": 1628989
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.05507241871070859
+    },
+    {
+      "tag": {
+        "mean70Subject": 1628991
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.0355466885478537
+    },
+    {
+      "tag": {
+        "mean70Subject": 1628997
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.05353453631057984
+    },
+    {
+      "tag": {
+        "mean70Subject": 1628998
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.04029071203487444
+    },
+    {
+      "tag": {
+        "mean70Subject": 1629001
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.05503035849040202
+    },
+    {
+      "tag": {
+        "mean70Subject": 1629004
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.045022001161596374
+    },
+    {
+      "tag": {
+        "mean70Subject": 1629006
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.0245885363160412
+    },
+    {
+      "tag": {
+        "mean70Subject": 1629008
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.0549139301870559
+    },
+    {
+      "tag": {
+        "mean70Subject": 1629011
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.022067227311505802
+    },
+    {
+      "tag": {
+        "mean70Subject": 1629012
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.05475914967639878
+    },
+    {
+      "tag": {
+        "mean70Subject": 1629013
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.029120719601171904
+    },
+    {
+      "tag": {
+        "mean70Subject": 1629014
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.05017824038227336
+    },
+    {
+      "tag": {
+        "mean70Subject": 1629018
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.02722359674439776
+    },
+    {
+      "tag": {
+        "mean70Subject": 1629020
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.038967213868138076
+    },
+    {
+      "tag": {
+        "mean70Subject": 1629021
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.0371732680634325
+    },
+    {
+      "tag": {
+        "mean70Subject": 1629023
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.029260404157268098
+    },
+    {
+      "tag": {
+        "mean70Subject": 1629026
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.04824570605282293
+    },
+    {
+      "tag": {
+        "mean70Subject": 1629027
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.05400621356627259
+    },
+    {
+      "tag": {
+        "mean70Subject": 1629028
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.01604447780253798
+    },
+    {
+      "tag": {
+        "mean70Subject": 1629029
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.055272568512243304
+    },
+    {
+      "tag": {
+        "mean70Subject": 1629048
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.0490248273607157
+    },
+    {
+      "tag": {
+        "mean70Subject": 1629057
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.04311318820278813
+    },
+    {
+      "tag": {
+        "mean70Subject": 1629060
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.013943214780858283
+    },
+    {
+      "tag": {
+        "mean70Subject": 1629111
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.0425830845338397
+    },
+    {
+      "tag": {
+        "mean70Subject": 1629130
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.03395624020170468
+    },
+    {
+      "tag": {
+        "mean70Subject": 1629162
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.056095874441983315
+    },
+    {
+      "tag": {
+        "mean70Subject": 1629216
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.04410587125801193
+    },
+    {
+      "tag": {
+        "mean70Subject": 1629234
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.021262188797168305
+    },
+    {
+      "tag": {
+        "mean70Subject": 1629312
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.047661366345453926
+    },
+    {
+      "tag": {
+        "mean70Subject": 1629599
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.03115567110801336
+    },
+    {
+      "tag": {
+        "mean70Subject": 1629610
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.03150001327462733
+    },
+    {
+      "tag": {
+        "mean70Subject": 1629611
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.0529160414972867
+    },
+    {
+      "tag": {
+        "mean70Subject": 1629614
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.05430083400495468
+    },
+    {
+      "tag": {
+        "mean70Subject": 1629618
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.0547653501413749
+    },
+    {
+      "tag": {
+        "mean70Subject": 1629622
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.039518793962752694
+    },
+    {
+      "tag": {
+        "mean70Subject": 1629627
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.05486504552597275
+    },
+    {
+      "tag": {
+        "mean70Subject": 1629628
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.0506392593853193
+    },
+    {
+      "tag": {
+        "mean70Subject": 1629630
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.05407190765675234
+    },
+    {
+      "tag": {
+        "mean70Subject": 1629631
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.03614414508148787
+    },
+    {
+      "tag": {
+        "mean70Subject": 1629632
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.054763344343573155
+    },
+    {
+      "tag": {
+        "mean70Subject": 1629634
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.05106564395550327
+    },
+    {
+      "tag": {
+        "mean70Subject": 1629636
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.05523976740906022
+    },
+    {
+      "tag": {
+        "mean70Subject": 1629637
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.027140658515544296
+    },
+    {
+      "tag": {
+        "mean70Subject": 1629638
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.0547222977567816
+    },
+    {
+      "tag": {
+        "mean70Subject": 1629639
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.054965248490957096
+    },
+    {
+      "tag": {
+        "mean70Subject": 1629640
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.02819916773728045
+    },
+    {
+      "tag": {
+        "mean70Subject": 1629645
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.05414275574039662
+    },
+    {
+      "tag": {
+        "mean70Subject": 1629646
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.035465259383269984
+    },
+    {
+      "tag": {
+        "mean70Subject": 1629651
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.05455391592598663
+    },
+    {
+      "tag": {
+        "mean70Subject": 1629652
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.019476145865546482
+    },
+    {
+      "tag": {
+        "mean70Subject": 1629655
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.027216555924812195
+    },
+    {
+      "tag": {
+        "mean70Subject": 1629656
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.055099815034643014
+    },
+    {
+      "tag": {
+        "mean70Subject": 1629660
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.0548305233682057
+    },
+    {
+      "tag": {
+        "mean70Subject": 1629661
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.0352976951742781
+    },
+    {
+      "tag": {
+        "mean70Subject": 1629673
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.055044512907648176
+    },
+    {
+      "tag": {
+        "mean70Subject": 1629674
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.034942344381110796
+    },
+    {
+      "tag": {
+        "mean70Subject": 1629675
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.04242193701617135
+    },
+    {
+      "tag": {
+        "mean70Subject": 1629680
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.037358584795071106
+    },
+    {
+      "tag": {
+        "mean70Subject": 1629684
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.045330496984112734
+    },
+    {
+      "tag": {
+        "mean70Subject": 1629723
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.036920877955608486
+    },
+    {
+      "tag": {
+        "mean70Subject": 1629726
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.030834456884080708
+    },
+    {
+      "tag": {
+        "mean70Subject": 1629731
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.03227067294989068
+    },
+    {
+      "tag": {
+        "mean70Subject": 1629750
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.0197994014118877
+    },
+    {
+      "tag": {
+        "mean70Subject": 1630162
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.05364444763712117
+    },
+    {
+      "tag": {
+        "mean70Subject": 1630163
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.054553297710730544
+    },
+    {
+      "tag": {
+        "mean70Subject": 1630164
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.04466278600444945
+    },
+    {
+      "tag": {
+        "mean70Subject": 1630165
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.05550410983711716
+    },
+    {
+      "tag": {
+        "mean70Subject": 1630166
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.05474191494316255
+    },
+    {
+      "tag": {
+        "mean70Subject": 1630167
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.05471334825092364
+    },
+    {
+      "tag": {
+        "mean70Subject": 1630168
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.04934004860207969
+    },
+    {
+      "tag": {
+        "mean70Subject": 1630170
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.03970310602719297
+    },
+    {
+      "tag": {
+        "mean70Subject": 1630171
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.030676575084365727
+    },
+    {
+      "tag": {
+        "mean70Subject": 1630172
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.0356349921506092
+    },
+    {
+      "tag": {
+        "mean70Subject": 1630173
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.03127044079474714
+    },
+    {
+      "tag": {
+        "mean70Subject": 1630174
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.033161385695765454
+    },
+    {
+      "tag": {
+        "mean70Subject": 1630175
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.05510741335780985
+    },
+    {
+      "tag": {
+        "mean70Subject": 1630178
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.05561700779778994
+    },
+    {
+      "tag": {
+        "mean70Subject": 1630180
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.04054664563240846
+    },
+    {
+      "tag": {
+        "mean70Subject": 1630182
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.032009552538895265
+    },
+    {
+      "tag": {
+        "mean70Subject": 1630183
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.04604057925194098
+    },
+    {
+      "tag": {
+        "mean70Subject": 1630188
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.029580315683286375
+    },
+    {
+      "tag": {
+        "mean70Subject": 1630191
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.027111376923677464
+    },
+    {
+      "tag": {
+        "mean70Subject": 1630192
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.027334819836914135
+    },
+    {
+      "tag": {
+        "mean70Subject": 1630193
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.05572533276107579
+    },
+    {
+      "tag": {
+        "mean70Subject": 1630194
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.052824801664797416
+    },
+    {
+      "tag": {
+        "mean70Subject": 1630198
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.029368185599258738
+    },
+    {
+      "tag": {
+        "mean70Subject": 1630200
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.05396444785877114
+    },
+    {
+      "tag": {
+        "mean70Subject": 1630202
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.05471646449366352
+    },
+    {
+      "tag": {
+        "mean70Subject": 1630208
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.015063426476892496
+    },
+    {
+      "tag": {
+        "mean70Subject": 1630209
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.05043580114237738
+    },
+    {
+      "tag": {
+        "mean70Subject": 1630214
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.04458687123419002
+    },
+    {
+      "tag": {
+        "mean70Subject": 1630217
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.05480792495523457
+    },
+    {
+      "tag": {
+        "mean70Subject": 1630224
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.05493570411990679
+    },
+    {
+      "tag": {
+        "mean70Subject": 1630228
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.0530644814452867
+    },
+    {
+      "tag": {
+        "mean70Subject": 1630230
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.0563479208088601
+    },
+    {
+      "tag": {
+        "mean70Subject": 1630241
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.040761291333503896
+    },
+    {
+      "tag": {
+        "mean70Subject": 1630245
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.0548931370472366
+    },
+    {
+      "tag": {
+        "mean70Subject": 1630249
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.03702672652168459
+    },
+    {
+      "tag": {
+        "mean70Subject": 1630256
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.03416958514972017
+    },
+    {
+      "tag": {
+        "mean70Subject": 1630264
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.04548696251417668
+    },
+    {
+      "tag": {
+        "mean70Subject": 1630286
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.039387875457238285
+    },
+    {
+      "tag": {
+        "mean70Subject": 1630311
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.05515918867268712
+    },
+    {
+      "tag": {
+        "mean70Subject": 1630314
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.05548402082765046
+    },
+    {
+      "tag": {
+        "mean70Subject": 1630322
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.03632232079325118
+    },
+    {
+      "tag": {
+        "mean70Subject": 1630526
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.02762054955936377
+    },
+    {
+      "tag": {
+        "mean70Subject": 1630529
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.04923021992168487
+    },
+    {
+      "tag": {
+        "mean70Subject": 1630530
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.05511984165671401
+    },
+    {
+      "tag": {
+        "mean70Subject": 1630532
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.05482118224289216
+    },
+    {
+      "tag": {
+        "mean70Subject": 1630533
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.029063485872907857
+    },
+    {
+      "tag": {
+        "mean70Subject": 1630534
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.026625855494469584
+    },
+    {
+      "tag": {
+        "mean70Subject": 1630536
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.054358190789529214
+    },
+    {
+      "tag": {
+        "mean70Subject": 1630538
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.05592371832657307
+    },
+    {
+      "tag": {
+        "mean70Subject": 1630540
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.04974137856084316
+    },
+    {
+      "tag": {
+        "mean70Subject": 1630541
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.03408979685439893
+    },
+    {
+      "tag": {
+        "mean70Subject": 1630543
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.03513142501254944
+    },
+    {
+      "tag": {
+        "mean70Subject": 1630544
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.056125423970457736
+    },
+    {
+      "tag": {
+        "mean70Subject": 1630545
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.03927906052184071
+    },
+    {
+      "tag": {
+        "mean70Subject": 1630548
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.04099665048362063
+    },
+    {
+      "tag": {
+        "mean70Subject": 1630549
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.054611473448563486
+    },
+    {
+      "tag": {
+        "mean70Subject": 1630551
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.03399551228515528
+    },
+    {
+      "tag": {
+        "mean70Subject": 1630552
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.053942102951571716
+    },
+    {
+      "tag": {
+        "mean70Subject": 1630557
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.0414398108076787
+    },
+    {
+      "tag": {
+        "mean70Subject": 1630558
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.05472866745898313
+    },
+    {
+      "tag": {
+        "mean70Subject": 1630559
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.054899587623336965
+    },
+    {
+      "tag": {
+        "mean70Subject": 1630560
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.05499769643189198
+    },
+    {
+      "tag": {
+        "mean70Subject": 1630567
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.05436635204364568
+    },
+    {
+      "tag": {
+        "mean70Subject": 1630568
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.030298128911446377
+    },
+    {
+      "tag": {
+        "mean70Subject": 1630570
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.05440849070110373
+    },
+    {
+      "tag": {
+        "mean70Subject": 1630572
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.04322220015623462
+    },
+    {
+      "tag": {
+        "mean70Subject": 1630573
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.026295102426734725
+    },
+    {
+      "tag": {
+        "mean70Subject": 1630574
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.03162422862518688
+    },
+    {
+      "tag": {
+        "mean70Subject": 1630577
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.02566521738471683
+    },
+    {
+      "tag": {
+        "mean70Subject": 1630578
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.0545643966652155
+    },
+    {
+      "tag": {
+        "mean70Subject": 1630579
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.034550373198663185
+    },
+    {
+      "tag": {
+        "mean70Subject": 1630581
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.05406230784043888
+    },
+    {
+      "tag": {
+        "mean70Subject": 1630583
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.055158331010518494
+    },
+    {
+      "tag": {
+        "mean70Subject": 1630587
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.03722614352484114
+    },
+    {
+      "tag": {
+        "mean70Subject": 1630590
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.05413656706505756
+    },
+    {
+      "tag": {
+        "mean70Subject": 1630591
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.05513085135259092
+    },
+    {
+      "tag": {
+        "mean70Subject": 1630592
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.037389692761269175
+    },
+    {
+      "tag": {
+        "mean70Subject": 1630595
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.05439543719310644
+    },
+    {
+      "tag": {
+        "mean70Subject": 1630596
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.05491070652147438
+    },
+    {
+      "tag": {
+        "mean70Subject": 1630598
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.03769504515331372
+    },
+    {
+      "tag": {
+        "mean70Subject": 1630604
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.046079080993815615
+    },
+    {
+      "tag": {
+        "mean70Subject": 1630610
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.05450712647680138
+    },
+    {
+      "tag": {
+        "mean70Subject": 1630611
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.05479279744221648
+    },
+    {
+      "tag": {
+        "mean70Subject": 1630619
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.013043649525255318
+    },
+    {
+      "tag": {
+        "mean70Subject": 1630621
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.045429618121717814
+    },
+    {
+      "tag": {
+        "mean70Subject": 1630623
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.055086544596711653
+    },
+    {
+      "tag": {
+        "mean70Subject": 1630625
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.05443252533016852
+    },
+    {
+      "tag": {
+        "mean70Subject": 1630631
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.054520010998258935
+    },
+    {
+      "tag": {
+        "mean70Subject": 1630639
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.0218034385871951
+    },
+    {
+      "tag": {
+        "mean70Subject": 1630643
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.03901354404615413
+    },
+    {
+      "tag": {
+        "mean70Subject": 1630644
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.05079763425292426
+    },
+    {
+      "tag": {
+        "mean70Subject": 1630649
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.05506838853732307
+    },
+    {
+      "tag": {
+        "mean70Subject": 1630658
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.052151143842149625
+    },
+    {
+      "tag": {
+        "mean70Subject": 1630679
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.051124583189911095
+    },
+    {
+      "tag": {
+        "mean70Subject": 1630692
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.05225221420225509
+    },
+    {
+      "tag": {
+        "mean70Subject": 1630695
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.04140023805591655
+    },
+    {
+      "tag": {
+        "mean70Subject": 1630696
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.055666799293328864
+    },
+    {
+      "tag": {
+        "mean70Subject": 1630699
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.04797234168382282
+    },
+    {
+      "tag": {
+        "mean70Subject": 1630700
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.054332884877391484
+    },
+    {
+      "tag": {
+        "mean70Subject": 1630702
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.03408172233045247
+    },
+    {
+      "tag": {
+        "mean70Subject": 1630703
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.055683712454641
+    },
+    {
+      "tag": {
+        "mean70Subject": 1630811
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.05574697585249107
+    },
+    {
+      "tag": {
+        "mean70Subject": 1630828
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.05280270892815756
+    },
+    {
+      "tag": {
+        "mean70Subject": 1630846
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.05485881169186609
+    },
+    {
+      "tag": {
+        "mean70Subject": 1631093
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.05513025881507191
+    },
+    {
+      "tag": {
+        "mean70Subject": 1631094
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.05448449077526141
+    },
+    {
+      "tag": {
+        "mean70Subject": 1631095
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.023832443551647424
+    },
+    {
+      "tag": {
+        "mean70Subject": 1631096
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.027186731971398693
+    },
+    {
+      "tag": {
+        "mean70Subject": 1631097
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.04078898569430678
+    },
+    {
+      "tag": {
+        "mean70Subject": 1631099
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.02522191826956654
+    },
+    {
+      "tag": {
+        "mean70Subject": 1631101
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.055098047379256734
+    },
+    {
+      "tag": {
+        "mean70Subject": 1631102
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.05545839490795185
+    },
+    {
+      "tag": {
+        "mean70Subject": 1631103
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.04937897310748443
+    },
+    {
+      "tag": {
+        "mean70Subject": 1631104
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.054136382921697854
+    },
+    {
+      "tag": {
+        "mean70Subject": 1631105
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.037082688401249696
+    },
+    {
+      "tag": {
+        "mean70Subject": 1631106
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.02715219792591093
+    },
+    {
+      "tag": {
+        "mean70Subject": 1631107
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.0547963042941509
+    },
+    {
+      "tag": {
+        "mean70Subject": 1631108
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.03442661626857241
+    },
+    {
+      "tag": {
+        "mean70Subject": 1631109
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.02390585896076942
+    },
+    {
+      "tag": {
+        "mean70Subject": 1631110
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.046615831944490635
+    },
+    {
+      "tag": {
+        "mean70Subject": 1631111
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.04859379856299102
+    },
+    {
+      "tag": {
+        "mean70Subject": 1631113
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.05526210673941581
+    },
+    {
+      "tag": {
+        "mean70Subject": 1631114
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.054343397652015846
+    },
+    {
+      "tag": {
+        "mean70Subject": 1631115
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.055150135204834694
+    },
+    {
+      "tag": {
+        "mean70Subject": 1631116
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.03707065480380498
+    },
+    {
+      "tag": {
+        "mean70Subject": 1631117
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.05419665346076716
+    },
+    {
+      "tag": {
+        "mean70Subject": 1631119
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.055168843554896055
+    },
+    {
+      "tag": {
+        "mean70Subject": 1631120
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.05582804022422533
+    },
+    {
+      "tag": {
+        "mean70Subject": 1631121
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.03831818812351295
+    },
+    {
+      "tag": {
+        "mean70Subject": 1631123
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.056107434704190155
+    },
+    {
+      "tag": {
+        "mean70Subject": 1631124
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.03518233066096731
+    },
+    {
+      "tag": {
+        "mean70Subject": 1631126
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.055919211494081515
+    },
+    {
+      "tag": {
+        "mean70Subject": 1631127
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.04531179126184155
+    },
+    {
+      "tag": {
+        "mean70Subject": 1631128
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.03841959183901791
+    },
+    {
+      "tag": {
+        "mean70Subject": 1631131
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.04589786096358501
+    },
+    {
+      "tag": {
+        "mean70Subject": 1631132
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.03027622541170931
+    },
+    {
+      "tag": {
+        "mean70Subject": 1631133
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.02466116163029954
+    },
+    {
+      "tag": {
+        "mean70Subject": 1631157
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.055759182927989065
+    },
+    {
+      "tag": {
+        "mean70Subject": 1631159
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.03341580366694262
+    },
+    {
+      "tag": {
+        "mean70Subject": 1631165
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.0235993248789356
+    },
+    {
+      "tag": {
+        "mean70Subject": 1631166
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.05493974329915817
+    },
+    {
+      "tag": {
+        "mean70Subject": 1631169
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.03036387168253815
+    },
+    {
+      "tag": {
+        "mean70Subject": 1631170
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.054256071391982234
+    },
+    {
+      "tag": {
+        "mean70Subject": 1631172
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.05482320536119886
+    },
+    {
+      "tag": {
+        "mean70Subject": 1631174
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.028702692939169785
+    },
+    {
+      "tag": {
+        "mean70Subject": 1631199
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.04274637386884507
+    },
+    {
+      "tag": {
+        "mean70Subject": 1631200
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.04218841736307154
+    },
+    {
+      "tag": {
+        "mean70Subject": 1631204
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.05471103941969245
+    },
+    {
+      "tag": {
+        "mean70Subject": 1631205
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.04610041176769074
+    },
+    {
+      "tag": {
+        "mean70Subject": 1631207
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.0549305831905858
+    },
+    {
+      "tag": {
+        "mean70Subject": 1631210
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.051667352555451004
+    },
+    {
+      "tag": {
+        "mean70Subject": 1631211
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.04617899235090364
+    },
+    {
+      "tag": {
+        "mean70Subject": 1631212
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.03237533957080666
+    },
+    {
+      "tag": {
+        "mean70Subject": 1631213
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.05631690451576539
+    },
+    {
+      "tag": {
+        "mean70Subject": 1631214
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.05509338943267106
+    },
+    {
+      "tag": {
+        "mean70Subject": 1631216
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.038678038770578266
+    },
+    {
+      "tag": {
+        "mean70Subject": 1631217
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.04101424507762074
+    },
+    {
+      "tag": {
+        "mean70Subject": 1631218
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.047222209291594194
+    },
+    {
+      "tag": {
+        "mean70Subject": 1631221
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.05573371357674081
+    },
+    {
+      "tag": {
+        "mean70Subject": 1631222
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.03401818513241404
+    },
+    {
+      "tag": {
+        "mean70Subject": 1631223
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.039858198955622745
+    },
+    {
+      "tag": {
+        "mean70Subject": 1631230
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.02718256498387914
+    },
+    {
+      "tag": {
+        "mean70Subject": 1631243
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.029271984088250342
+    },
+    {
+      "tag": {
+        "mean70Subject": 1631245
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.055610055480602855
+    },
+    {
+      "tag": {
+        "mean70Subject": 1631246
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.0551338829374198
+    },
+    {
+      "tag": {
+        "mean70Subject": 1631247
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.05224543983848445
+    },
+    {
+      "tag": {
+        "mean70Subject": 1631248
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.04014799094181299
+    },
+    {
+      "tag": {
+        "mean70Subject": 1631250
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.03737261467228876
+    },
+    {
+      "tag": {
+        "mean70Subject": 1631255
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.030700551555036378
+    },
+    {
+      "tag": {
+        "mean70Subject": 1631260
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.031556653626317425
+    },
+    {
+      "tag": {
+        "mean70Subject": 1631288
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.03535806066985957
+    },
+    {
+      "tag": {
+        "mean70Subject": 1631321
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.05096856859070145
+    },
+    {
+      "tag": {
+        "mean70Subject": 1631323
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.04392293075648161
+    },
+    {
+      "tag": {
+        "mean70Subject": 1631338
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.05473344436314241
+    },
+    {
+      "tag": {
+        "mean70Subject": 1631342
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.025456967574728616
+    },
+    {
+      "tag": {
+        "mean70Subject": 1631351
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.05233733361344198
+    },
+    {
+      "tag": {
+        "mean70Subject": 1631451
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.05506878579910423
+    },
+    {
+      "tag": {
+        "mean70Subject": 1631457
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.05484865215609462
+    },
+    {
+      "tag": {
+        "mean70Subject": 1631466
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.03910124596561219
+    },
+    {
+      "tag": {
+        "mean70Subject": 1641705
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.05364383359922566
+    },
+    {
+      "tag": {
+        "mean70Subject": 1641706
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.055082875904096266
+    },
+    {
+      "tag": {
+        "mean70Subject": 1641707
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.027847230795220914
+    },
+    {
+      "tag": {
+        "mean70Subject": 1641708
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.05601640324602525
+    },
+    {
+      "tag": {
+        "mean70Subject": 1641709
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.05486105436798595
+    },
+    {
+      "tag": {
+        "mean70Subject": 1641710
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.05483782083311361
+    },
+    {
+      "tag": {
+        "mean70Subject": 1641711
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.023336397035722243
+    },
+    {
+      "tag": {
+        "mean70Subject": 1641712
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.041191906632762405
+    },
+    {
+      "tag": {
+        "mean70Subject": 1641713
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.03650877862099304
+    },
+    {
+      "tag": {
+        "mean70Subject": 1641715
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.02588784127086135
+    },
+    {
+      "tag": {
+        "mean70Subject": 1641716
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.05135169798658207
+    },
+    {
+      "tag": {
+        "mean70Subject": 1641717
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.046597981999644926
+    },
+    {
+      "tag": {
+        "mean70Subject": 1641718
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.05543253714456956
+    },
+    {
+      "tag": {
+        "mean70Subject": 1641722
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.033289255848048815
+    },
+    {
+      "tag": {
+        "mean70Subject": 1641723
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.052651928116299034
+    },
+    {
+      "tag": {
+        "mean70Subject": 1641724
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.0376409256501981
+    },
+    {
+      "tag": {
+        "mean70Subject": 1641725
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.05299909771776053
+    },
+    {
+      "tag": {
+        "mean70Subject": 1641726
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.055137811940504676
+    },
+    {
+      "tag": {
+        "mean70Subject": 1641727
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.036514748551969026
+    },
+    {
+      "tag": {
+        "mean70Subject": 1641729
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.04419344480101002
+    },
+    {
+      "tag": {
+        "mean70Subject": 1641730
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.032975520686227666
+    },
+    {
+      "tag": {
+        "mean70Subject": 1641731
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.05492511307928688
+    },
+    {
+      "tag": {
+        "mean70Subject": 1641732
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.05489483055054459
+    },
+    {
+      "tag": {
+        "mean70Subject": 1641733
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.0463840048291206
+    },
+    {
+      "tag": {
+        "mean70Subject": 1641737
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.013775563236608978
+    },
+    {
+      "tag": {
+        "mean70Subject": 1641738
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.04831189485044525
+    },
+    {
+      "tag": {
+        "mean70Subject": 1641739
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.046300293530966166
+    },
+    {
+      "tag": {
+        "mean70Subject": 1641740
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.026818522451045285
+    },
+    {
+      "tag": {
+        "mean70Subject": 1641744
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.03262776725567433
+    },
+    {
+      "tag": {
+        "mean70Subject": 1641747
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.043512981352555824
+    },
+    {
+      "tag": {
+        "mean70Subject": 1641748
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.056279730133992074
+    },
+    {
+      "tag": {
+        "mean70Subject": 1641750
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.02216252563334247
+    },
+    {
+      "tag": {
+        "mean70Subject": 1641752
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.051357565592686866
+    },
+    {
+      "tag": {
+        "mean70Subject": 1641753
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.05229757084872922
+    },
+    {
+      "tag": {
+        "mean70Subject": 1641755
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.05496406718567613
+    },
+    {
+      "tag": {
+        "mean70Subject": 1641757
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.055022184462494406
+    },
+    {
+      "tag": {
+        "mean70Subject": 1641761
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.05495678532960838
+    },
+    {
+      "tag": {
+        "mean70Subject": 1641763
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.016009628787596285
+    },
+    {
+      "tag": {
+        "mean70Subject": 1641764
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.05601889020161314
+    },
+    {
+      "tag": {
+        "mean70Subject": 1641765
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.02952661445605714
+    },
+    {
+      "tag": {
+        "mean70Subject": 1641767
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.0449061753449623
+    },
+    {
+      "tag": {
+        "mean70Subject": 1641771
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.05473187256658106
+    },
+    {
+      "tag": {
+        "mean70Subject": 1641772
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.028723949733238937
+    },
+    {
+      "tag": {
+        "mean70Subject": 1641774
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.045836082322708714
+    },
+    {
+      "tag": {
+        "mean70Subject": 1641775
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.02229681469603537
+    },
+    {
+      "tag": {
+        "mean70Subject": 1641778
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.03170842139428647
+    },
+    {
+      "tag": {
+        "mean70Subject": 1641780
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.05119445194083064
+    },
+    {
+      "tag": {
+        "mean70Subject": 1641783
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.03744190565960805
+    },
+    {
+      "tag": {
+        "mean70Subject": 1641787
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.05000107328145773
+    },
+    {
+      "tag": {
+        "mean70Subject": 1641790
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.03327989830472686
+    },
+    {
+      "tag": {
+        "mean70Subject": 1641794
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.05508309478663176
+    },
+    {
+      "tag": {
+        "mean70Subject": 1641796
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.05475379942109077
+    },
+    {
+      "tag": {
+        "mean70Subject": 1641801
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.055052596219332936
+    },
+    {
+      "tag": {
+        "mean70Subject": 1641803
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.04777389918351673
+    },
+    {
+      "tag": {
+        "mean70Subject": 1641807
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.05493880301696113
+    },
+    {
+      "tag": {
+        "mean70Subject": 1641809
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.03854975728070548
+    },
+    {
+      "tag": {
+        "mean70Subject": 1641810
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.04150839033543474
+    },
+    {
+      "tag": {
+        "mean70Subject": 1641813
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.05453612411662642
+    },
+    {
+      "tag": {
+        "mean70Subject": 1641815
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.05578512098884284
+    },
+    {
+      "tag": {
+        "mean70Subject": 1641816
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.05485844125643531
+    },
+    {
+      "tag": {
+        "mean70Subject": 1641824
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.03465716505781905
+    },
+    {
+      "tag": {
+        "mean70Subject": 1641842
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.0320734612315744
+    },
+    {
+      "tag": {
+        "mean70Subject": 1641854
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.048682933523558077
+    },
+    {
+      "tag": {
+        "mean70Subject": 1641869
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.05444020557656823
+    },
+    {
+      "tag": {
+        "mean70Subject": 1641871
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.032185556623920586
+    },
+    {
+      "tag": {
+        "mean70Subject": 1641890
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.027980701114447025
+    },
+    {
+      "tag": {
+        "mean70Subject": 1641989
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.05476124253744649
+    },
+    {
+      "tag": {
+        "mean70Subject": 1641998
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.04399793331257937
+    },
+    {
+      "tag": {
+        "mean70Subject": 1642066
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.05485651960771743
+    },
+    {
+      "tag": {
+        "mean70Subject": 1642258
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.02509790238143022
+    },
+    {
+      "tag": {
+        "mean70Subject": 1642259
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.055136716494237493
+    },
+    {
+      "tag": {
+        "mean70Subject": 1642260
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.05481692484897675
+    },
+    {
+      "tag": {
+        "mean70Subject": 1642261
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.022491765179719746
+    },
+    {
+      "tag": {
+        "mean70Subject": 1642262
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.049930041130840264
+    },
+    {
+      "tag": {
+        "mean70Subject": 1642263
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.05633770664775992
+    },
+    {
+      "tag": {
+        "mean70Subject": 1642264
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.05389966888631939
+    },
+    {
+      "tag": {
+        "mean70Subject": 1642265
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.05581513790165903
+    },
+    {
+      "tag": {
+        "mean70Subject": 1642266
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.026385799094286427
+    },
+    {
+      "tag": {
+        "mean70Subject": 1642267
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.05558564415135592
+    },
+    {
+      "tag": {
+        "mean70Subject": 1642268
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.053746116015162486
+    },
+    {
+      "tag": {
+        "mean70Subject": 1642269
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.05604959279932796
+    },
+    {
+      "tag": {
+        "mean70Subject": 1642270
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.05309367740706385
+    },
+    {
+      "tag": {
+        "mean70Subject": 1642271
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.055093643566760664
+    },
+    {
+      "tag": {
+        "mean70Subject": 1642272
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.03989589799111829
+    },
+    {
+      "tag": {
+        "mean70Subject": 1642273
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.05449991556152954
+    },
+    {
+      "tag": {
+        "mean70Subject": 1642274
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.035119680365593306
+    },
+    {
+      "tag": {
+        "mean70Subject": 1642275
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.029305091665752278
+    },
+    {
+      "tag": {
+        "mean70Subject": 1642276
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.016649888941028146
+    },
+    {
+      "tag": {
+        "mean70Subject": 1642277
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.03560759292810973
+    },
+    {
+      "tag": {
+        "mean70Subject": 1642278
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.05477650099739762
+    },
+    {
+      "tag": {
+        "mean70Subject": 1642280
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.05487662231546621
+    },
+    {
+      "tag": {
+        "mean70Subject": 1642281
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.040123232803685384
+    },
+    {
+      "tag": {
+        "mean70Subject": 1642282
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.0549577096299821
+    },
+    {
+      "tag": {
+        "mean70Subject": 1642285
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.05461124091580316
+    },
+    {
+      "tag": {
+        "mean70Subject": 1642345
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.04803589140494125
+    },
+    {
+      "tag": {
+        "mean70Subject": 1642346
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.041143700412722084
+    },
+    {
+      "tag": {
+        "mean70Subject": 1642347
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.05495953856675328
+    },
+    {
+      "tag": {
+        "mean70Subject": 1642348
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.04529887012370935
+    },
+    {
+      "tag": {
+        "mean70Subject": 1642349
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.05495171281714511
+    },
+    {
+      "tag": {
+        "mean70Subject": 1642352
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.0211502002424081
+    },
+    {
+      "tag": {
+        "mean70Subject": 1642353
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.040418096628806015
+    },
+    {
+      "tag": {
+        "mean70Subject": 1642354
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.055657967747814695
+    },
+    {
+      "tag": {
+        "mean70Subject": 1642355
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.054714693468321064
+    },
+    {
+      "tag": {
+        "mean70Subject": 1642357
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.05433207864360414
+    },
+    {
+      "tag": {
+        "mean70Subject": 1642358
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.05506222818277118
+    },
+    {
+      "tag": {
+        "mean70Subject": 1642359
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.0526306489949562
+    },
+    {
+      "tag": {
+        "mean70Subject": 1642362
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.026047947662030977
+    },
+    {
+      "tag": {
+        "mean70Subject": 1642363
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.049864638342752114
+    },
+    {
+      "tag": {
+        "mean70Subject": 1642364
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.03656396341545411
+    },
+    {
+      "tag": {
+        "mean70Subject": 1642366
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.044415451287564606
+    },
+    {
+      "tag": {
+        "mean70Subject": 1642367
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.04480290287964349
+    },
+    {
+      "tag": {
+        "mean70Subject": 1642368
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.04391262277873426
+    },
+    {
+      "tag": {
+        "mean70Subject": 1642377
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.03135081277876811
+    },
+    {
+      "tag": {
+        "mean70Subject": 1642380
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.052483952080471394
+    },
+    {
+      "tag": {
+        "mean70Subject": 1642382
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.03161411576622032
+    },
+    {
+      "tag": {
+        "mean70Subject": 1642383
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.05500399297395058
+    },
+    {
+      "tag": {
+        "mean70Subject": 1642384
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.04274775133473581
+    },
+    {
+      "tag": {
+        "mean70Subject": 1642389
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.054572677793084085
+    },
+    {
+      "tag": {
+        "mean70Subject": 1642396
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.0322322903102595
+    },
+    {
+      "tag": {
+        "mean70Subject": 1642400
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.05339386111131672
+    },
+    {
+      "tag": {
+        "mean70Subject": 1642402
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.04637770637713753
+    },
+    {
+      "tag": {
+        "mean70Subject": 1642403
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.042418014330252274
+    },
+    {
+      "tag": {
+        "mean70Subject": 1642404
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.04067618778892911
+    },
+    {
+      "tag": {
+        "mean70Subject": 1642419
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.025400270581899687
+    },
+    {
+      "tag": {
+        "mean70Subject": 1642434
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.05479523132613073
+    },
+    {
+      "tag": {
+        "mean70Subject": 1642443
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.05599394093303454
+    },
+    {
+      "tag": {
+        "mean70Subject": 1642449
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.0551714864818857
+    },
+    {
+      "tag": {
+        "mean70Subject": 1642450
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.05546532587893298
+    },
+    {
+      "tag": {
+        "mean70Subject": 1642461
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.017301098661777193
+    },
+    {
+      "tag": {
+        "mean70Subject": 1642468
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.055936771402537167
+    },
+    {
+      "tag": {
+        "mean70Subject": 1642484
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.055710392568191
+    },
+    {
+      "tag": {
+        "mean70Subject": 1642490
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.041678029410048896
+    },
+    {
+      "tag": {
+        "mean70Subject": 1642502
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.05174106402639653
+    },
+    {
+      "tag": {
+        "mean70Subject": 1642504
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.04393802490743087
+    },
+    {
+      "tag": {
+        "mean70Subject": 1642530
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.05476523434844793
+    },
+    {
+      "tag": {
+        "mean70Subject": 1642843
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.05464646428957814
+    },
+    {
+      "tag": {
+        "mean70Subject": 1642844
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.05455954524461008
+    },
+    {
+      "tag": {
+        "mean70Subject": 1642845
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.05498978764326512
+    },
+    {
+      "tag": {
+        "mean70Subject": 1642846
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.036581540595812805
+    },
+    {
+      "tag": {
+        "mean70Subject": 1642847
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.05618490868674435
+    },
+    {
+      "tag": {
+        "mean70Subject": 1642848
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.04588152451943695
+    },
+    {
+      "tag": {
+        "mean70Subject": 1642849
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.05525589267570963
+    },
+    {
+      "tag": {
+        "mean70Subject": 1642851
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.05485426461254104
+    },
+    {
+      "tag": {
+        "mean70Subject": 1642852
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.05483684929019571
+    },
+    {
+      "tag": {
+        "mean70Subject": 1642853
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.014523942057996174
+    },
+    {
+      "tag": {
+        "mean70Subject": 1642854
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.027857707864172583
+    },
+    {
+      "tag": {
+        "mean70Subject": 1642855
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.050693447817137964
+    },
+    {
+      "tag": {
+        "mean70Subject": 1642856
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.05599197378701388
+    },
+    {
+      "tag": {
+        "mean70Subject": 1642857
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.05596974548627724
+    },
+    {
+      "tag": {
+        "mean70Subject": 1642859
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.05640810806074645
+    },
+    {
+      "tag": {
+        "mean70Subject": 1642860
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.05070131122442778
+    },
+    {
+      "tag": {
+        "mean70Subject": 1642862
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.04075196471145575
+    },
+    {
+      "tag": {
+        "mean70Subject": 1642863
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.013561212133472335
+    },
+    {
+      "tag": {
+        "mean70Subject": 1642864
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.018636326293123045
+    },
+    {
+      "tag": {
+        "mean70Subject": 1642866
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.0269044943343486
+    },
+    {
+      "tag": {
+        "mean70Subject": 1642867
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.04442232832454256
+    },
+    {
+      "tag": {
+        "mean70Subject": 1642868
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.027726572193826286
+    },
+    {
+      "tag": {
+        "mean70Subject": 1642869
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.05334857155592679
+    },
+    {
+      "tag": {
+        "mean70Subject": 1642873
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.04420881018682159
+    },
+    {
+      "tag": {
+        "mean70Subject": 1642874
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.05470716414435206
+    },
+    {
+      "tag": {
+        "mean70Subject": 1642875
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.028614879408174254
+    },
+    {
+      "tag": {
+        "mean70Subject": 1642876
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.04228719710828788
+    },
+    {
+      "tag": {
+        "mean70Subject": 1642877
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.03825703501629231
+    },
+    {
+      "tag": {
+        "mean70Subject": 1642878
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.05491728031001902
+    },
+    {
+      "tag": {
+        "mean70Subject": 1642879
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.055423939672233496
+    },
+    {
+      "tag": {
+        "mean70Subject": 1642880
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.05502229691938802
+    },
+    {
+      "tag": {
+        "mean70Subject": 1642882
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.03917437164797434
+    },
+    {
+      "tag": {
+        "mean70Subject": 1642883
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.04529226785504498
+    },
+    {
+      "tag": {
+        "mean70Subject": 1642884
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.05513998445204698
+    },
+    {
+      "tag": {
+        "mean70Subject": 1642885
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.0418736597942338
+    },
+    {
+      "tag": {
+        "mean70Subject": 1642886
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.05511236715132337
+    },
+    {
+      "tag": {
+        "mean70Subject": 1642905
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.053526828278183246
+    },
+    {
+      "tag": {
+        "mean70Subject": 1642907
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.055073928990427456
+    },
+    {
+      "tag": {
+        "mean70Subject": 1642910
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.04957245787036355
+    },
+    {
+      "tag": {
+        "mean70Subject": 1642911
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.049396606114972916
+    },
+    {
+      "tag": {
+        "mean70Subject": 1642914
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.05537029020157545
+    },
+    {
+      "tag": {
+        "mean70Subject": 1642917
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.050169179686164744
+    },
+    {
+      "tag": {
+        "mean70Subject": 1642918
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.05163992205601217
+    },
+    {
+      "tag": {
+        "mean70Subject": 1642920
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.043433943873422545
+    },
+    {
+      "tag": {
+        "mean70Subject": 1642928
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.040078180497882504
+    },
+    {
+      "tag": {
+        "mean70Subject": 1642933
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.05472128829035902
+    },
+    {
+      "tag": {
+        "mean70Subject": 1642935
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.0563628755781444
+    },
+    {
+      "tag": {
+        "mean70Subject": 1642938
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.056437944426567056
+    },
+    {
+      "tag": {
+        "mean70Subject": 1642939
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.05241881953339418
+    },
+    {
+      "tag": {
+        "mean70Subject": 1642942
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.0563307562192694
+    },
+    {
+      "tag": {
+        "mean70Subject": 1642948
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.05420792280522821
+    },
+    {
+      "tag": {
+        "mean70Subject": 1642949
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.022188488308947527
+    },
+    {
+      "tag": {
+        "mean70Subject": 1642950
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.054944199546444736
+    },
+    {
+      "tag": {
+        "mean70Subject": 1642951
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.056202681492949054
+    },
+    {
+      "tag": {
+        "mean70Subject": 1642954
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.03824970279539627
+    },
+    {
+      "tag": {
+        "mean70Subject": 1642955
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.055054369316236085
+    },
+    {
+      "tag": {
+        "mean70Subject": 1642959
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.039617615842901535
+    },
+    {
+      "tag": {
+        "mean70Subject": 1642962
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.04450815406455066
+    },
+    {
+      "tag": {
+        "mean70Subject": 1642964
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.035733642597717996
+    },
+    {
+      "tag": {
+        "mean70Subject": 1642967
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.029370833984221426
+    },
+    {
+      "tag": {
+        "mean70Subject": 1643007
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.04833908586051252
+    },
+    {
+      "tag": {
+        "mean70Subject": 1643016
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.048988207276571126
+    },
+    {
+      "tag": {
+        "mean70Subject": 1643018
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.03647967315083663
+    },
+    {
+      "tag": {
+        "mean70Subject": 1643024
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.047775600905422266
+    },
+    {
+      "tag": {
+        "mean70Subject": 1643047
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.04363783918340339
+    },
+    {
+      "tag": {
+        "mean70Subject": 1643052
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.05505497637187836
+    },
+    {
+      "tag": {
+        "mean70Subject": 1643060
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.048123035941172496
+    },
+    {
+      "tag": {
+        "mean70Subject": 1643133
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.04616066317743793
+    },
+    {
+      "tag": {
+        "mean70Subject": 1643141
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.048869197713431775
+    },
+    {
+      "tag": {
+        "mean70Subject": 1643158
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.05096012746990797
+    },
+    {
+      "tag": {
+        "mean70Subject": 1643253
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.026418303363655395
+    },
+    {
+      "tag": {
+        "mean70Subject": 1643257
+      },
+      "strictHallFeasible": true,
+      "maxCommonPositiveEdgeMass": 0.045099522365029676
+    },
+    {
+      "tag": {
+        "season": "2022-23",
+        "gameId": "0022200513",
+        "teamId": 1610612744,
+        "startIndex": 472
+      },
+      "strictHallFeasible": false,
+      "maxCommonPositiveEdgeMass": -0.0
+    },
+    {
+      "tag": {
+        "season": "2022-23",
+        "gameId": "0022200594",
+        "teamId": 1610612744,
+        "startIndex": 358
+      },
+      "strictHallFeasible": false,
+      "maxCommonPositiveEdgeMass": -0.0
+    },
+    {
+      "tag": {
+        "season": "2022-23",
+        "gameId": "0022201050",
+        "teamId": 1610612750,
+        "startIndex": 177
+      },
+      "strictHallFeasible": false,
+      "maxCommonPositiveEdgeMass": -0.0
+    },
+    {
+      "tag": {
+        "season": "2022-23",
+        "gameId": "0022201050",
+        "teamId": 1610612750,
+        "startIndex": 190
+      },
+      "strictHallFeasible": false,
+      "maxCommonPositiveEdgeMass": -0.0
+    },
+    {
+      "tag": {
+        "season": "2023-24",
+        "gameId": "0022300448",
+        "teamId": 1610612759,
+        "startIndex": 353
+      },
+      "strictHallFeasible": false,
+      "maxCommonPositiveEdgeMass": -0.0
+    },
+    {
+      "tag": {
+        "season": "2023-24",
+        "gameId": "0022300730",
+        "teamId": 1610612759,
+        "startIndex": 494
+      },
+      "strictHallFeasible": false,
+      "maxCommonPositiveEdgeMass": -0.0
+    },
+    {
+      "tag": {
+        "season": "2023-24",
+        "gameId": "0022300921",
+        "teamId": 1610612744,
+        "startIndex": 0
+      },
+      "strictHallFeasible": false,
+      "maxCommonPositiveEdgeMass": -0.0
+    },
+    {
+      "tag": {
+        "season": "2023-24",
+        "gameId": "0022300936",
+        "teamId": 1610612744,
+        "startIndex": 263
+      },
+      "strictHallFeasible": false,
+      "maxCommonPositiveEdgeMass": -0.0
+    },
+    {
+      "tag": {
+        "season": "2023-24",
+        "gameId": "0022300936",
+        "teamId": 1610612744,
+        "startIndex": 382
+      },
+      "strictHallFeasible": false,
+      "maxCommonPositiveEdgeMass": -0.0
+    },
+    {
+      "tag": {
+        "season": "2023-24",
+        "gameId": "0022300987",
+        "teamId": 1610612750,
+        "startIndex": 127
+      },
+      "strictHallFeasible": false,
+      "maxCommonPositiveEdgeMass": -0.0
+    },
+    {
+      "tag": {
+        "season": "2023-24",
+        "gameId": "0022300995",
+        "teamId": 1610612750,
+        "startIndex": 171
+      },
+      "strictHallFeasible": false,
+      "maxCommonPositiveEdgeMass": -0.0
+    },
+    {
+      "tag": {
+        "season": "2023-24",
+        "gameId": "0022301014",
+        "teamId": 1610612750,
+        "startIndex": 171
+      },
+      "strictHallFeasible": false,
+      "maxCommonPositiveEdgeMass": -0.0
+    },
+    {
+      "tag": {
+        "season": "2023-24",
+        "gameId": "0022301014",
+        "teamId": 1610612750,
+        "startIndex": 425
+      },
+      "strictHallFeasible": false,
+      "maxCommonPositiveEdgeMass": -0.0
+    },
+    {
+      "tag": {
+        "season": "2023-24",
+        "gameId": "0022301031",
+        "teamId": 1610612750,
+        "startIndex": 414
+      },
+      "strictHallFeasible": false,
+      "maxCommonPositiveEdgeMass": -0.0
+    },
+    {
+      "tag": {
+        "season": "2023-24",
+        "gameId": "0022301143",
+        "teamId": 1610612750,
+        "startIndex": 167
+      },
+      "strictHallFeasible": false,
+      "maxCommonPositiveEdgeMass": -0.0
+    },
+    {
+      "tag": {
+        "season": "2023-24",
+        "gameId": "0022301194",
+        "teamId": 1610612750,
+        "startIndex": 158
+      },
+      "strictHallFeasible": false,
+      "maxCommonPositiveEdgeMass": -0.0
+    },
+    {
+      "tag": {
+        "season": "2023-24",
+        "gameId": "0022301197",
+        "teamId": 1610612759,
+        "startIndex": 31
+      },
+      "strictHallFeasible": false,
+      "maxCommonPositiveEdgeMass": -0.0
+    },
+    {
+      "tag": {
+        "season": "2023-24",
+        "gameId": "0022301197",
+        "teamId": 1610612759,
+        "startIndex": 329
+      },
+      "strictHallFeasible": false,
+      "maxCommonPositiveEdgeMass": -0.0
+    },
+    {
+      "tag": {
+        "season": "2024-25",
+        "gameId": "0022400320",
+        "teamId": 1610612751,
+        "startIndex": 90
+      },
+      "strictHallFeasible": false,
+      "maxCommonPositiveEdgeMass": -0.0
+    },
+    {
+      "tag": {
+        "season": "2024-25",
+        "gameId": "0022400320",
+        "teamId": 1610612751,
+        "startIndex": 364
+      },
+      "strictHallFeasible": false,
+      "maxCommonPositiveEdgeMass": -0.0
+    },
+    {
+      "tag": {
+        "season": "2024-25",
+        "gameId": "0022401004",
+        "teamId": 1610612746,
+        "startIndex": 101
+      },
+      "strictHallFeasible": false,
+      "maxCommonPositiveEdgeMass": -0.0
+    },
+    {
+      "tag": {
+        "season": "2024-25",
+        "gameId": "0022401004",
+        "teamId": 1610612746,
+        "startIndex": 375
+      },
+      "strictHallFeasible": false,
+      "maxCommonPositiveEdgeMass": -0.0
+    },
+    {
+      "tag": {
+        "season": "2024-25",
+        "gameId": "0022400813",
+        "teamId": 1610612746,
+        "startIndex": 334
+      },
+      "strictHallFeasible": false,
+      "maxCommonPositiveEdgeMass": -0.0
+    },
+    {
+      "tag": {
+        "season": "2024-25",
+        "gameId": "0022400813",
+        "teamId": 1610612746,
+        "startIndex": 482
+      },
+      "strictHallFeasible": false,
+      "maxCommonPositiveEdgeMass": -0.0
+    },
+    {
+      "tag": {
+        "season": "2024-25",
+        "gameId": "0022401150",
+        "teamId": 1610612740,
+        "startIndex": 342
+      },
+      "strictHallFeasible": false,
+      "maxCommonPositiveEdgeMass": -0.0
+    },
+    {
+      "tag": {
+        "season": "2025-26",
+        "gameId": "0022500034",
+        "teamId": 1610612763,
+        "startIndex": 170
+      },
+      "strictHallFeasible": false,
+      "maxCommonPositiveEdgeMass": -0.0
+    },
+    {
+      "tag": {
+        "season": "2025-26",
+        "gameId": "0022500475",
+        "teamId": 1610612762,
+        "startIndex": 216
+      },
+      "strictHallFeasible": false,
+      "maxCommonPositiveEdgeMass": -0.0
+    },
+    {
+      "tag": {
+        "season": "2025-26",
+        "gameId": "0022500475",
+        "teamId": 1610612762,
+        "startIndex": 252
+      },
+      "strictHallFeasible": false,
+      "maxCommonPositiveEdgeMass": -0.0
+    },
+    {
+      "tag": {
+        "season": "2025-26",
+        "gameId": "0022500475",
+        "teamId": 1610612762,
+        "startIndex": 277
+      },
+      "strictHallFeasible": false,
+      "maxCommonPositiveEdgeMass": -0.0
+    },
+    {
+      "tag": {
+        "season": "2025-26",
+        "gameId": "0022500509",
+        "teamId": 1610612762,
+        "startIndex": 510
+      },
+      "strictHallFeasible": false,
+      "maxCommonPositiveEdgeMass": -0.0
+    },
+    {
+      "tag": {
+        "season": "2025-26",
+        "gameId": "0022500602",
+        "teamId": 1610612763,
+        "startIndex": 380
+      },
+      "strictHallFeasible": false,
+      "maxCommonPositiveEdgeMass": -0.0
+    },
+    {
+      "tag": {
+        "season": "2025-26",
+        "gameId": "0022500786",
+        "teamId": 1610612762,
+        "startIndex": 213
+      },
+      "strictHallFeasible": false,
+      "maxCommonPositiveEdgeMass": -0.0
+    },
+    {
+      "tag": {
+        "season": "2025-26",
+        "gameId": "0022500848",
+        "teamId": 1610612754,
+        "startIndex": 381
+      },
+      "strictHallFeasible": false,
+      "maxCommonPositiveEdgeMass": -0.0
+    },
+    {
+      "tag": {
+        "season": "2025-26",
+        "gameId": "0022500872",
+        "teamId": 1610612763,
+        "startIndex": 538
+      },
+      "strictHallFeasible": false,
+      "maxCommonPositiveEdgeMass": -0.0
+    },
+    {
+      "tag": {
+        "season": "2025-26",
+        "gameId": "0022500967",
+        "teamId": 1610612762,
+        "startIndex": 574
+      },
+      "strictHallFeasible": false,
+      "maxCommonPositiveEdgeMass": -0.0
+    }
+  ],
+  "hashes": {
+    "reports/player-impact-diagnostics/pass-row-feasibility-v36/audit.json": "f7be235fef05f2bfc5fe66ecf635e106f144b8be41072bab61a8c05f98fe140f",
+    "reports/player-impact-diagnostics/pass-row-feasibility-v36/audit.mjs": "54358b657e12465368e6e9078d067a8b6c6335d63b7222f03f86f402330c588d",
+    "reports/player-impact-diagnostics/pass-row-feasibility-v36/verify.py": "bf4143c21105bab13d8b5c307e9bc8189721e757590cd4ac781a2fab6a7f4158",
+    "reports/player-impact-v36/flow-audit.json": "061d61472e43eee362affeccd836e3d8e52b216373b910d011332b7893485538"
+  }
+}

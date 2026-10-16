@@ -1,0 +1,17 @@
+{
+  "version": "centered-spacing-2025-diagnostic-7",
+  "season": "2025-26",
+  "seed": 20261012,
+  "variants": [
+    "space-control",
+    "space-half",
+    "space-full"
+  ],
+  "design": "Enable half/full existing long context term, centered against source-lineup predicted context. Frozen terminal-flow inputs. Compare each with exact same implementation at context=0. No name/ranking adjustment. Single-seed mechanism check, not adoption.",
+  "hashes": {
+    "reports/player-impact-v7/engine.mjs": "1e34388eb2394c40da93145ee78dc1bbeb2607983f401a843c7bbc4ae0c6f3d0",
+    "reports/player-impact-v7/model.mjs": "3f9ce63d1b61748df0303d10d0abe0e583288bf03312b1b3c43cc9ac10e200df",
+    "reports/player-impact-v7/worker.mjs": "06653c9b150d47028c0159f0b040552bd92bcf511e6e3ad907f334449d01ba61",
+    "reports/player-impact-v7/2025-26-center.json": "9c5bffa5a52d8c4cef43011b3796e0f69333d9a3f2f3665e5059205312595a1d"
+  }
+}

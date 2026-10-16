@@ -1,0 +1,17 @@
+{
+  "passed": true,
+  "sourceRoleCards": 2262,
+  "teamCards": 2581,
+  "sourceContextStates": 270090,
+  "allRawAttributesAndOtherInputsUnchanged": true,
+  "sourceContextExposureExactlyRetained": true,
+  "fallbackExactGames": 96,
+  "hashes": {
+    "reports/player-impact-v30/verify-source.mjs": "2a71b91e820de51cf7daf5150e76a4307ea35d4553f04659920a3d4f97ea43c1",
+    "src/source_creation_dependence.js": "ca97c2e2fad147e98b8a665cb530e3184e2434833b35ccbe09f3e4a9b1b25067",
+    "reports/player-impact-v30/model.mjs": "25432a322a7f81a96f49009a1b93646d72862a1c7ee3ddb11e2dbe48177a3f04",
+    "reports/player-impact-v30/input.mjs": "ecae08d98a614611368dc0a87b544a8bea8b79acc20138afa2d75d6cb082c9b4",
+    "reports/player-impact-v30/dependence-audit.json": "395d6d186079849ee242f6f10514f9d5180396a937f9436f3488a1249819ed17"
+  },
+  "scope": "Source-role dependence and source calibration accounting. No causal skill or ranking accuracy claim."
+}

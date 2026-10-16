@@ -1,0 +1,122 @@
+{
+  "version": "tenth-t2-defense-portability-v1",
+  "registeredAt": "2026-10-13T06:56:53.816Z",
+  "scope": "T2 only. Retrospective observational diagnostics of four already observed seasons. No simulation, card estimation, engine modifications, no unseen season download.",
+  "seasons": [
+    "2022-23",
+    "2023-24",
+    "2024-25",
+    "2025-26"
+  ],
+  "inputHashes": {
+    "reports/defense-seventh/2022-23/stints/stints.jsonl": "5936e16bbfcce88da4743cb72b828be2d602bdb67e470e549c68bd2d7c3eaec6",
+    "reports/defense-seventh/2022-23/stints/real-games.jsonl": "bc106d8439dc2068bae25f2ec861106f01d0ec86150188817ce2ffd746869f85",
+    "reports/defense-seventh/2022-23/stints/preparation.json": "21a9b7b963787bee9e06897d091b652de35b6f1d7853e4daa73f7063b3f60ef4",
+    "data/defense-seventh/2022-23/player-games.json": "f41f7f4b105af8d280381f0c3315219ee074b2329e5d9b5f979b6fc72dbd7f56",
+    "data/defense-seventh/2022-23/team-games.json": "732bbf1991c0ce13e3b70db5f2d7769dd66d5d05d4fabef6306963cff066e020",
+    "reports/defense-seventh/2023-24/stints/stints.jsonl": "a83b1c42ba735810f2fd8dccd8355d2f41e4fd164389ee82fb4318b4a3d0adb6",
+    "reports/defense-seventh/2023-24/stints/real-games.jsonl": "355f889e82eb2e32da2853b3967ef4dd257f03b1ac0116991323bcde7185d4bf",
+    "reports/defense-seventh/2023-24/stints/preparation.json": "6e720565976610e03555a98bde1792b061797190daa801d080f27b43515bfa56",
+    "data/defense-seventh/2023-24/player-games.json": "a33074c9c9b1f59e15f160464292b3ab9c791065ae542c20f2ed64f3e170afd5",
+    "data/defense-seventh/2023-24/team-games.json": "befe8941b51e8c2f440df88e2aea79aab63826d389ec258d5fe8e209967586c5",
+    "reports/defense-seventh/2024-25/stints/stints.jsonl": "8790976ac74edf2054470427c50984d35d8c8ab0abf72fd92b5105489cf74ac0",
+    "reports/defense-seventh/2024-25/stints/real-games.jsonl": "277bc1c04ed426fce54f159aa06d42a23b22765b04552135f7a80c6b2fb939b0",
+    "reports/defense-seventh/2024-25/stints/preparation.json": "b0132bbc720f63b10254803c54149452367065867b35271512280627c6c69246",
+    "data/defense-seventh/2024-25/player-games.json": "4c3f33c67ffaa1cf88ea01a7acaeef70af088e22f6020c3a02409989f6ad4ffa",
+    "data/defense-seventh/2024-25/team-games.json": "b4da45c024c655c64db220568813922ca1e6d37fbc23650ad7ed43f352b1e470",
+    "reports/defense-b1/stints.jsonl": "5eff6aa81f37d0f3baef97be2fdc7346a05ffce5ccfa1f6e4456be229a296179",
+    "reports/defense-b1/real-games.jsonl": "b9451a56eeb3f7714e10d49abbd5f9846723ceb6551c5f04e179bcf04904fc26",
+    "reports/defense-b1/preparation.json": "9c95c376c8c073d4e0f236b3ff7fb27b21969dcbaf73e9e265f85ae8ace7c7da",
+    "data/season-source/player-games.json": "11fc5866b2f61b31e27659e14e4071924b5873ef0d2a4118a585c1a54be04357",
+    "data/season-source/team-games.json": "d5cb1a6dbd26a0ed71b24e7e18fcbc862afdf6d8bd8ea3814c5dadbf1989fb8a"
+  },
+  "protectedManifestSHA": "531bf5c69513113b168227941e645afc5252ace61ac3b572c540c8175220327f",
+  "acquisition": {
+    "directory": "reports/defense-tenth/step4-t2/raw",
+    "perSeasonGlobal": [
+      "leaguedashptdefend:Less Than 6Ft",
+      "leaguedashptdefend:3 Pointers",
+      "leagueseasonmatchups",
+      "leaguehustlestatsplayer",
+      "leaguedashplayerstats:Advanced"
+    ],
+    "perTeam": "For teams with season movers (>=1 played game each of >=2 franchises), acquire the same full-season metrics with TeamID/DefTeamID filters. No player selection by outcome. No DateTo, all regular season; explicitly not a pre-cutoff prediction.",
+    "workers": 4,
+    "timeoutMS": 20000,
+    "retries": 1,
+    "cache": "Only new directory. Failed/empty endpoints stay missing; never zero-fill. Existing calendar55 defensetracking inventory only, not full-season substitute.",
+    "teamFilterAudit": "Filtered tracking/hustle/advanced must not exceed official player GP in that franchise (GP/G where available). Matchups lack team column and GP is pair count: compare child GP to official player franchise GP and global pair GP; reject failing player rows; team split is not claimed if counts fail."
+  },
+  "metrics": {
+    "rimSuppression": "100*(official NS_LT_06_PCT - LT_06_PCT); personal 6ft, not PBP paint",
+    "threeSuppression": "100*(NS_FG3_PCT - FG3_PCT)",
+    "onDefRtg": "100*opponent points / fractional defensive possessions, positive sign reversed for correlations",
+    "onOffDef": "matched played-game OFF DefRtg minus ON DefRtg; not an isolated player coefficient",
+    "onOffRimShare": "100*(OFF opponent paint FGA/FGA - ON paint FGA/FGA); paint includes restricted and non-RA paint",
+    "onOffThreeShare": "100*(OFF opponent 3PA/FGA - ON 3PA/FGA); lower 3P frequency is not inherently better defense",
+    "matchupSuppression": "For each OFF player use own 2P/3P season FG rates as expected makes; sum expected minus actual / matchup FGA, *100",
+    "usageWeightedMatchupSuppression": "Same numerator and denominator weighted by opponent season USG_PCT (Advanced; absent => missing, never equal weight fallback)",
+    "defensiveLoad": "PARTIAL_POSS-weighted opponent USG_PCT, not arbitrary strength score",
+    "hustle": [
+      "CONTESTED_SHOTS_2PT",
+      "CONTESTED_SHOTS_3PT",
+      "DEFLECTIONS",
+      "DEF_BOXOUTS",
+      "CHARGES_DRAWN"
+    ],
+    "hustleRate": "totals / official franchise minutes *36; minutes and games reconciled. Count missing columns separately.",
+    "officialDefRtg": "Advanced DEF_RATING is on-court team efficiency, not box-derived independent individual value",
+    "boxControls": [
+      "STL36",
+      "BLK36",
+      "DREB36",
+      "PF36"
+    ]
+  },
+  "selection": {
+    "primaryAdjacent": "Both seasons >=500 official total minutes; dominant franchise >=60% minutes in each. Same team iff dominant franchise identical; mover iff different. Exclude ambiguous multi-team seasons from primary, report count.",
+    "trackingMinimumFGA": {
+      "rim": 100,
+      "three": 75,
+      "matchup": 100
+    },
+    "onOffMinimumPossessions": {
+      "on": 1000,
+      "off": 1000
+    },
+    "withinSeasonMove": "Two or more franchises in logs, sorted by first played date; compare first and last eligible team (>=300 minutes each). Overlapping date intervals or returned-to-original team => omit and list. This is documented season move, not automatically verified trade.",
+    "withinMoveFGA": {
+      "rim": 50,
+      "three": 40,
+      "matchup": 50
+    },
+    "withinMovePossessions": {
+      "on": 300,
+      "off": 300
+    },
+    "minimumCorrelationPairs": 10
+  },
+  "comparisons": {
+    "adjacent": "All three adjacent transitions separately and pooled after centering within transition. One row per player/transition; repeated player stays clustered.",
+    "withinSeason": "Each season separately and pooled after season centering; no manual transaction labels. Explicit limitation if transaction reason unverified.",
+    "teamCorrelation": "Minutes-weighted mean individual indicator vs own franchise negative official box possession-proxy DefRtg. 30 teams per season, equal season weight after centering. Also compare leave-player-out OFF defense in matched games to expose context association.",
+    "context": "Report raw ON, matched ON/OFF and team-centered ON side by side. Correlation loss after switching is consistent with context contamination, not proof of causality. No inferred card weights fitted to these answers."
+  },
+  "uncertainty": {
+    "replicates": 20000,
+    "rng": 202610132,
+    "method": "Paired player-ID cluster and franchise cluster multiplicative bootstrap; franchise pair gets average of old/new franchise multiplicities. Pooled rows share player multiplicity across transitions. Team-correlation bootstrap franchise across seasons. No simulation seed exists for these observed metrics; do not substitute seed-only intervals. Pearson primary, Spearman secondary point estimate. Fewer than10 usable pairs => not estimable."
+  },
+  "proposals": "Only after measurements. Favor direct event/process observations over raw ON/team shadows. Expected improvements explicitly hypotheses; no card modifications and no numeric RMSE gain claimed without simulation.",
+  "outputs": [
+    "inventory.json",
+    "fetch-manifest.json",
+    "players.json",
+    "correlations.json",
+    "team-correlations.json",
+    "move-samples.json",
+    "report.md",
+    "completion-audit.json"
+  ],
+  "stopAt": "T2; T3/T4 not started"
+}

@@ -1,0 +1,1392 @@
+{
+  "perSeason": {
+    "allAnchors": {
+      "2022-23": {
+        "real": {
+          "passingLive": 0.02438728463965057,
+          "handlingLive": 0.017471487503033244,
+          "otherLive": 0.0,
+          "passingDead": 0.007158456685270566,
+          "handlingDead": 0.004529644908193804,
+          "offensiveFoul": 0.006673137587964086,
+          "otherViolation": 0.007482002750141551,
+          "outUnclassified": 0.003033244358165494,
+          "unmappedDead": 0.0005662056135242255,
+          "clock": 0.007037126910943946,
+          "ownershipOther": 4.044325810887325e-05,
+          "early_passingLive": 0.014883118984065356,
+          "early_handlingLive": 0.01120278249615789,
+          "early_otherLive": 0.0,
+          "early_passingDead": 0.00497452074739141,
+          "early_handlingDead": 0.003033244358165494,
+          "early_offensiveFoul": 0.004044325810887325,
+          "early_otherViolation": 0.00473186119873817,
+          "early_outUnclassified": 0.0025074820027501414,
+          "early_unmappedDead": 0.00012132977432661975,
+          "early_clock": 0.004650974682520423,
+          "early_ownershipOther": 4.044325810887325e-05,
+          "totalTurnover": 0.07833859095688749,
+          "live": 0.04185877214268381,
+          "dead": 0.036479818814203674,
+          "matchedDead": 0.025843241931570008,
+          "matchedGeneric": 0.04331472943460325,
+          "unknown": 0.0035994499716897194,
+          "unknownShareOfTurnovers": 0.04594734124935467,
+          "earlyTurnover": 0.050149640055002824,
+          "lateTurnover": 0.02818895090188466
+        },
+        "baseline": {
+          "passingLive": 0.025779294147924067,
+          "handlingLive": 0.013200338515562857,
+          "otherLive": 0.0,
+          "passingDead": 0.008268693890716527,
+          "handlingDead": 0.003944265158503177,
+          "offensiveFoul": 0.010340591834997278,
+          "otherViolation": 0.0074684801825316074,
+          "outUnclassified": 0.0,
+          "unmappedDead": 0.0018699443356870562,
+          "clock": 0.0,
+          "ownershipOther": 0.0,
+          "early_passingLive": 0.015275152337355333,
+          "early_handlingLive": 0.008443170445754144,
+          "early_otherLive": 0.0,
+          "early_passingDead": 0.005639444172132922,
+          "early_handlingDead": 0.0027107791139919135,
+          "early_offensiveFoul": 0.006749262568653769,
+          "early_otherViolation": 0.0048795224649233705,
+          "early_outUnclassified": 0.0,
+          "early_unmappedDead": 0.0012327882088377475,
+          "early_clock": 0.0,
+          "early_ownershipOther": 0.0,
+          "totalTurnover": 0.07087160806592258,
+          "live": 0.038979632663486925,
+          "dead": 0.03189197540243564,
+          "matchedDead": 0.030022031066748583,
+          "matchedGeneric": 0.04322236958231144,
+          "unknown": 0.0018699443356870562,
+          "unknownShareOfTurnovers": 0.026377943795163516,
+          "earlyTurnover": 0.0449301193116492,
+          "lateTurnover": 0.025941488754273375
+        },
+        "realN": 24726,
+        "baselineN": 24593.333333333332,
+        "realRaw": {
+          "[\"out-of-bounds\",\"lost ball\",false]": 108,
+          "[\"offensive foul\",null,false]": 165,
+          "[\"3-second-violation\",null,false]": 9,
+          "[\"out-of-bounds\",\"bad pass\",false]": 171,
+          "[\"bad pass\",null,true]": 603,
+          "[\"lost ball\",null,true]": 432,
+          "[\"traveling\",null,false]": 142,
+          "[\"out-of-bounds\",\"step\",false]": 75,
+          "[\"backcourt\",null,false]": 21,
+          "[\"shot clock\",null,false]": 174,
+          "[\"lost ball\",null,false]": 4,
+          "[\"offensive goaltending\",null,false]": 13,
+          "DREB": 1,
+          "[\"palming\",null,false]": 6,
+          "[\"bad pass\",null,false]": 6,
+          "[\"discontinued dribble\",null,false]": 3,
+          "[\"offensive-kicked-ball\",null,false]": 2,
+          "[\"double dribble\",null,false]": 3
+        },
+        "baselineRaw": {
+          "passSteal": 634.0,
+          "handlingOutTov": 97.0,
+          "offensiveFoulTov": 254.33333333333337,
+          "passOutTov": 203.33333333333331,
+          "unmappedDeadTov": 46.0,
+          "touchSteal": 324.66666666666663,
+          "otherViolationTov": 183.66666666666666
+        }
+      },
+      "2023-24": {
+        "real": {
+          "passingLive": 0.027333492480305564,
+          "handlingLive": 0.018779342723004695,
+          "otherLive": 0.0,
+          "passingDead": 0.007559481180870534,
+          "handlingDead": 0.004098034534892974,
+          "offensiveFoul": 0.004336754993236254,
+          "otherViolation": 0.004933556139094453,
+          "outUnclassified": 0.0037001671043208405,
+          "unmappedDead": 0.0006763746319726267,
+          "clock": 0.006604599347497414,
+          "ownershipOther": 7.957348611442667e-05,
+          "early_passingLive": 0.01714808625765895,
+          "early_handlingLive": 0.012572610806079415,
+          "early_otherLive": 0.0,
+          "early_passingDead": 0.005172276597437734,
+          "early_handlingDead": 0.002944218986233787,
+          "early_offensiveFoul": 0.002586138298718867,
+          "early_otherViolation": 0.00322272618763428,
+          "early_outUnclassified": 0.003182939444577067,
+          "early_unmappedDead": 0.0003182939444577067,
+          "early_clock": 0.004734622423808387,
+          "early_ownershipOther": 7.957348611442667e-05,
+          "totalTurnover": 0.07802180313519534,
+          "live": 0.04611283520331026,
+          "dead": 0.03190896793188508,
+          "matchedDead": 0.020927826848094213,
+          "matchedGeneric": 0.039707169571098905,
+          "unknown": 0.0043765417362934675,
+          "unknownShareOfTurnovers": 0.05609382967873535,
+          "earlyTurnover": 0.051881912946606185,
+          "lateTurnover": 0.026139890188589157
+        },
+        "baseline": {
+          "passingLive": 0.025950539607156917,
+          "handlingLive": 0.0145841867809138,
+          "otherLive": 0.0,
+          "passingDead": 0.008169487017067338,
+          "handlingDead": 0.004319558931297068,
+          "offensiveFoul": 0.0082747156863282,
+          "otherViolation": 0.005900316123316387,
+          "outUnclassified": 0.0,
+          "unmappedDead": 0.0015552787481440996,
+          "clock": 0.0,
+          "ownershipOther": 0.0,
+          "early_passingLive": 0.015334830139802656,
+          "early_handlingLive": 0.009721568009349136,
+          "early_otherLive": 0.0,
+          "early_passingDead": 0.005520072789057836,
+          "early_handlingDead": 0.00300279435964444,
+          "early_offensiveFoul": 0.005231854445323254,
+          "early_otherViolation": 0.0037672305711919387,
+          "early_outUnclassified": 0.0,
+          "early_unmappedDead": 0.000961336263736808,
+          "early_clock": 0.0,
+          "early_ownershipOther": 0.0,
+          "totalTurnover": 0.06875408289422381,
+          "live": 0.040534726388070715,
+          "dead": 0.028219356506153103,
+          "matchedDead": 0.026664077758008994,
+          "matchedGeneric": 0.041248264538922795,
+          "unknown": 0.0015552787481440996,
+          "unknownShareOfTurnovers": 0.022607842248808782,
+          "earlyTurnover": 0.043539686578106064,
+          "lateTurnover": 0.025214396316117754
+        },
+        "realN": 25134,
+        "baselineN": 25303.333333333332,
+        "realRaw": {
+          "[\"bad pass\",null,true]": 687,
+          "[\"offensive foul\",null,false]": 109,
+          "[\"lost ball\",null,true]": 472,
+          "[\"out-of-bounds\",\"lost ball\",false]": 96,
+          "[\"traveling\",null,false]": 100,
+          "[\"shot clock\",null,false]": 166,
+          "[\"out-of-bounds\",\"step\",false]": 93,
+          "[\"out-of-bounds\",\"bad pass\",false]": 184,
+          "[\"offensive-kicked-ball\",null,false]": 3,
+          "[\"offensive goaltending\",null,false]": 8,
+          "[\"3-second-violation\",null,false]": 7,
+          "[\"lost ball\",null,false]": 7,
+          "[\"5-second-violation\",null,false]": 3,
+          "[\"bad pass\",null,false]": 6,
+          "[\"backcourt\",null,false]": 12,
+          "[\"discontinued dribble\",null,false]": 3,
+          "[\"double dribble\",null,false]": 4,
+          "DREB": 2,
+          "[\"LaneViolation\",null,false]": 1
+        },
+        "baselineRaw": {
+          "otherViolationTov": 149.33333333333334,
+          "passSteal": 656.6666666666666,
+          "touchSteal": 369.0,
+          "offensiveFoulTov": 209.33333333333337,
+          "passOutTov": 206.66666666666663,
+          "unmappedDeadTov": 39.333333333333336,
+          "handlingOutTov": 109.33333333333334
+        }
+      },
+      "2024-25": {
+        "real": {
+          "passingLive": 0.028739336492890996,
+          "handlingLive": 0.01990521327014218,
+          "otherLive": 0.0,
+          "passingDead": 0.007393364928909953,
+          "handlingDead": 0.005876777251184834,
+          "offensiveFoul": 0.004208530805687204,
+          "otherViolation": 0.005800947867298578,
+          "outUnclassified": 0.0037156398104265403,
+          "unmappedDead": 0.0005308056872037915,
+          "clock": 0.008872037914691943,
+          "ownershipOther": 3.791469194312796e-05,
+          "early_passingLive": 0.017137440758293838,
+          "early_handlingLive": 0.0124739336492891,
+          "early_otherLive": 0.0,
+          "early_passingDead": 0.004625592417061611,
+          "early_handlingDead": 0.0037156398104265403,
+          "early_offensiveFoul": 0.002274881516587678,
+          "early_otherViolation": 0.0036777251184834125,
+          "early_outUnclassified": 0.003071090047393365,
+          "early_unmappedDead": 0.00034123222748815165,
+          "early_clock": 0.006786729857819905,
+          "early_ownershipOther": 3.791469194312796e-05,
+          "totalTurnover": 0.08504265402843603,
+          "live": 0.048644549763033174,
+          "dead": 0.03639810426540285,
+          "matchedDead": 0.02327962085308057,
+          "matchedGeneric": 0.04318483412322275,
+          "unknown": 0.004246445497630332,
+          "unknownShareOfTurnovers": 0.049933125278644665,
+          "earlyTurnover": 0.05410426540284359,
+          "lateTurnover": 0.030938388625592436
+        },
+        "baseline": {
+          "passingLive": 0.02801949477554856,
+          "handlingLive": 0.01622455100742801,
+          "otherLive": 0.0,
+          "passingDead": 0.008564787766923902,
+          "handlingDead": 0.004429985982624301,
+          "offensiveFoul": 0.006608593091841158,
+          "otherViolation": 0.005145313951683782,
+          "outUnclassified": 0.0,
+          "unmappedDead": 0.0017317632476211273,
+          "clock": 0.0,
+          "ownershipOther": 0.0,
+          "early_passingLive": 0.016782725754858157,
+          "early_handlingLive": 0.010354516403259661,
+          "early_otherLive": 0.0,
+          "early_passingDead": 0.005609883376537381,
+          "early_handlingDead": 0.0028276444839705392,
+          "early_offensiveFoul": 0.00442965677878214,
+          "early_otherViolation": 0.0034145051658947914,
+          "early_outUnclassified": 0.0,
+          "early_unmappedDead": 0.0011582656663606293,
+          "early_clock": 0.0,
+          "early_ownershipOther": 0.0,
+          "totalTurnover": 0.07072448982367084,
+          "live": 0.04424404578297656,
+          "dead": 0.026480444040694263,
+          "matchedDead": 0.024748680793073144,
+          "matchedGeneric": 0.04097323180050116,
+          "unknown": 0.0017317632476211273,
+          "unknownShareOfTurnovers": 0.02449246793167069,
+          "earlyTurnover": 0.0445771976296633,
+          "lateTurnover": 0.02614729219400753
+        },
+        "realN": 26375,
+        "baselineN": 26182.0,
+        "realRaw": {
+          "[\"traveling\",null,false]": 109,
+          "[\"lost ball\",null,true]": 525,
+          "[\"bad pass\",null,true]": 758,
+          "[\"out-of-bounds\",\"lost ball\",false]": 144,
+          "[\"shot clock\",null,false]": 234,
+          "[\"out-of-bounds\",\"bad pass\",false]": 190,
+          "[\"out-of-bounds\",\"step\",false]": 98,
+          "[\"offensive foul\",null,false]": 111,
+          "[\"bad pass\",null,false]": 4,
+          "[\"lost ball\",null,false]": 11,
+          "[\"backcourt\",null,false]": 25,
+          "[\"palming\",null,false]": 2,
+          "[\"offensive goaltending\",null,false]": 14,
+          "[\"3-second-violation\",null,false]": 2,
+          "[\"5-second-violation\",null,false]": 5,
+          "[\"\",null,false]": 1,
+          "[\"offensive-kicked-ball\",null,false]": 4,
+          "[\"inbound\",null,false]": 1,
+          "[\"double dribble\",null,false]": 3,
+          "[\"discontinued dribble\",null,false]": 2,
+          "DREB": 1
+        },
+        "baselineRaw": {
+          "handlingOutTov": 116.0,
+          "touchSteal": 425.0,
+          "passSteal": 733.6666666666666,
+          "passOutTov": 224.33333333333331,
+          "offensiveFoulTov": 173.0,
+          "otherViolationTov": 134.66666666666666,
+          "unmappedDeadTov": 45.333333333333336
+        }
+      },
+      "2025-26": {
+        "real": {
+          "passingLive": 0.02681423159771225,
+          "handlingLive": 0.021020574909009878,
+          "otherLive": 0.0,
+          "passingDead": 0.008059125009284707,
+          "handlingDead": 0.004976602540295625,
+          "offensiveFoul": 0.004530936641164674,
+          "otherViolation": 0.004493797816237094,
+          "outUnclassified": 0.003231077768699398,
+          "unmappedDead": 0.00025997177449305504,
+          "clock": 0.006759266136819431,
+          "ownershipOther": 3.713882492757929e-05,
+          "early_passingLive": 0.01674961004233826,
+          "early_handlingLive": 0.012998588724652751,
+          "early_otherLive": 0.0,
+          "early_passingDead": 0.005347990789571418,
+          "early_handlingDead": 0.0031196612939166607,
+          "early_offensiveFoul": 0.0024883012701478126,
+          "early_otherViolation": 0.0027482730446408677,
+          "early_outUnclassified": 0.0028225506944960263,
+          "early_unmappedDead": 7.427764985515858e-05,
+          "early_clock": 0.004605214291019832,
+          "early_ownershipOther": 3.713882492757929e-05,
+          "totalTurnover": 0.0801455841937161,
+          "live": 0.04783480650672213,
+          "dead": 0.032310777686993974,
+          "matchedDead": 0.0220604620069821,
+          "matchedGeneric": 0.04308103691599198,
+          "unknown": 0.0034910495431924532,
+          "unknownShareOfTurnovers": 0.04355885078776645,
+          "earlyTurnover": 0.05095446780063878,
+          "lateTurnover": 0.029191116393077324
+        },
+        "baseline": {
+          "passingLive": 0.029989588459487043,
+          "handlingLive": 0.017753702430333747,
+          "otherLive": 0.0,
+          "passingDead": 0.0085752134726134,
+          "handlingDead": 0.005070255016326706,
+          "offensiveFoul": 0.007091814800097682,
+          "otherViolation": 0.004428771725228226,
+          "outUnclassified": 0.0,
+          "unmappedDead": 0.0019474420574281902,
+          "clock": 0.0,
+          "ownershipOther": 0.0,
+          "early_passingLive": 0.017570059273070537,
+          "early_handlingLive": 0.011574828099215487,
+          "early_otherLive": 0.0,
+          "early_passingDead": 0.005600962693388698,
+          "early_handlingDead": 0.0033131652029417293,
+          "early_offensiveFoul": 0.004567671700073166,
+          "early_otherViolation": 0.0028716927618078077,
+          "early_outUnclassified": 0.0,
+          "early_unmappedDead": 0.001218507461775515,
+          "early_clock": 0.0,
+          "early_ownershipOther": 0.0,
+          "totalTurnover": 0.074856787961515,
+          "live": 0.047743290889820794,
+          "dead": 0.027113497071694203,
+          "matchedDead": 0.02516605501426601,
+          "matchedGeneric": 0.042919757444599756,
+          "unknown": 0.0019474420574281902,
+          "unknownShareOfTurnovers": 0.026023492806709587,
+          "earlyTurnover": 0.04671688719227294,
+          "lateTurnover": 0.028139900769242054
+        },
+        "realN": 26926,
+        "baselineN": 26548.666666666668,
+        "realRaw": {
+          "[\"lost ball\",null,true]": 566,
+          "[\"bad pass\",null,true]": 722,
+          "[\"out-of-bounds\",\"step\",false]": 87,
+          "[\"traveling\",null,false]": 75,
+          "[\"3-second-violation\",null,false]": 5,
+          "[\"offensive foul\",null,false]": 122,
+          "[\"backcourt\",null,false]": 23,
+          "[\"shot clock\",null,false]": 182,
+          "[\"out-of-bounds\",\"bad pass\",false]": 209,
+          "[\"out-of-bounds\",\"lost ball\",false]": 125,
+          "[\"offensive goaltending\",null,false]": 18,
+          "[\"bad pass\",null,false]": 8,
+          "[\"lost ball\",null,false]": 9,
+          "[\"offensive-kicked-ball\",null,false]": 1,
+          "[\"double dribble\",null,false]": 4,
+          "DREB": 1,
+          "[\"illegal assist\",null,false]": 1,
+          "[\"discontinued dribble\",null,false]": 1
+        },
+        "baselineRaw": {
+          "passSteal": 796.0,
+          "unmappedDeadTov": 51.666666666666664,
+          "passOutTov": 227.66666666666669,
+          "touchSteal": 471.33333333333337,
+          "otherViolationTov": 117.66666666666667,
+          "handlingOutTov": 134.66666666666666,
+          "offensiveFoulTov": 188.33333333333331
+        }
+      }
+    },
+    "firstAnchors": {
+      "2022-23": {
+        "real": {
+          "passingLive": 0.025146038700255568,
+          "handlingLive": 0.0172964585615188,
+          "otherLive": 0.0,
+          "passingDead": 0.007073749543629062,
+          "handlingDead": 0.004426798101496897,
+          "offensiveFoul": 0.006845564074479737,
+          "otherViolation": 0.007119386637458927,
+          "outUnclassified": 0.003103322380430814,
+          "unmappedDead": 0.0006389193136181087,
+          "clock": 0.007028112449799197,
+          "ownershipOther": 4.5637093829864916e-05,
+          "early_passingLive": 0.015516611902154072,
+          "early_handlingLive": 0.011089813800657175,
+          "early_otherLive": 0.0,
+          "early_passingDead": 0.004883169039795546,
+          "early_handlingDead": 0.0030120481927710845,
+          "early_offensiveFoul": 0.004061701350857977,
+          "early_otherViolation": 0.004518072289156626,
+          "early_outUnclassified": 0.0025100401606425703,
+          "early_unmappedDead": 0.00013691128148959474,
+          "early_clock": 0.004746257758305951,
+          "early_ownershipOther": 4.5637093829864916e-05,
+          "totalTurnover": 0.07867834976268712,
+          "live": 0.04244249726177437,
+          "dead": 0.03623585250091275,
+          "matchedDead": 0.025465498357064624,
+          "matchedGeneric": 0.04276195691858342,
+          "unknown": 0.003742241694048923,
+          "unknownShareOfTurnovers": 0.04756380510440835,
+          "earlyTurnover": 0.050474625775830596,
+          "lateTurnover": 0.02820372398685652
+        },
+        "baseline": {
+          "passingLive": 0.025755630800691844,
+          "handlingLive": 0.01316167270167888,
+          "otherLive": 0.0,
+          "passingDead": 0.008530395767868766,
+          "handlingDead": 0.003957647032786715,
+          "offensiveFoul": 0.010177916607033296,
+          "otherViolation": 0.00742108939757138,
+          "outUnclassified": 0.0,
+          "unmappedDead": 0.001828531265230115,
+          "clock": 0.0,
+          "ownershipOther": 0.0,
+          "early_passingLive": 0.0153964240218648,
+          "early_handlingLive": 0.008409490002778833,
+          "early_otherLive": 0.0,
+          "early_passingDead": 0.005787399260302177,
+          "early_handlingDead": 0.0027432937312623844,
+          "early_offensiveFoul": 0.006715549505680686,
+          "early_otherViolation": 0.004827516774037493,
+          "early_outUnclassified": 0.0,
+          "early_unmappedDead": 0.0011838332757525178,
+          "early_clock": 0.0,
+          "early_ownershipOther": 0.0,
+          "totalTurnover": 0.070832883572861,
+          "live": 0.03891730350237072,
+          "dead": 0.03191558007049027,
+          "matchedDead": 0.030087048805260152,
+          "matchedGeneric": 0.043248721506939036,
+          "unknown": 0.001828531265230115,
+          "unknownShareOfTurnovers": 0.02580870070618751,
+          "earlyTurnover": 0.045063506571678895,
+          "lateTurnover": 0.025769377001182103
+        },
+        "realN": 21912,
+        "baselineN": 22235.0,
+        "realRaw": {
+          "[\"out-of-bounds\",\"lost ball\",false]": 95,
+          "[\"offensive foul\",null,false]": 150,
+          "[\"3-second-violation\",null,false]": 9,
+          "[\"out-of-bounds\",\"bad pass\",false]": 151,
+          "[\"lost ball\",null,true]": 379,
+          "[\"bad pass\",null,true]": 551,
+          "[\"traveling\",null,false]": 120,
+          "[\"out-of-bounds\",\"step\",false]": 68,
+          "[\"backcourt\",null,false]": 16,
+          "[\"lost ball\",null,false]": 2,
+          "[\"shot clock\",null,false]": 154,
+          "[\"offensive goaltending\",null,false]": 13,
+          "DREB": 1,
+          "[\"bad pass\",null,false]": 4,
+          "[\"palming\",null,false]": 4,
+          "[\"discontinued dribble\",null,false]": 3,
+          "[\"offensive-kicked-ball\",null,false]": 2,
+          "[\"double dribble\",null,false]": 3
+        },
+        "baselineRaw": {
+          "passSteal": 572.6666666666666,
+          "handlingOutTov": 88.0,
+          "offensiveFoulTov": 226.33333333333331,
+          "passOutTov": 189.66666666666666,
+          "unmappedDeadTov": 40.66666666666667,
+          "touchSteal": 292.66666666666663,
+          "otherViolationTov": 165.0
+        }
+      },
+      "2023-24": {
+        "real": {
+          "passingLive": 0.028268710550045085,
+          "handlingLive": 0.018079350766456267,
+          "otherLive": 0.0,
+          "passingDead": 0.007980162308385934,
+          "handlingDead": 0.004192966636609558,
+          "offensiveFoul": 0.004463480613165013,
+          "otherViolation": 0.004598737601442741,
+          "outUnclassified": 0.003832281334535618,
+          "unmappedDead": 0.0006762849413886385,
+          "clock": 0.006582506762849414,
+          "ownershipOther": 9.017132551848512e-05,
+          "early_passingLive": 0.01812443642921551,
+          "early_handlingLive": 0.012128043282236248,
+          "early_otherLive": 0.0,
+          "early_passingDead": 0.005500450856627592,
+          "early_handlingDead": 0.0030658250676284943,
+          "early_offensiveFoul": 0.002660054102795311,
+          "early_otherViolation": 0.0030207394048692516,
+          "early_outUnclassified": 0.003291253381424707,
+          "early_unmappedDead": 0.0002705139765554554,
+          "early_clock": 0.004553651938683499,
+          "early_ownershipOther": 9.017132551848512e-05,
+          "totalTurnover": 0.07867448151487824,
+          "live": 0.04634806131650135,
+          "dead": 0.03232642019837689,
+          "matchedDead": 0.021235347159603245,
+          "matchedGeneric": 0.039314697926059516,
+          "unknown": 0.004508566275924256,
+          "unknownShareOfTurnovers": 0.057306590257879673,
+          "earlyTurnover": 0.05261496844003606,
+          "lateTurnover": 0.02605951307484218
+        },
+        "baseline": {
+          "passingLive": 0.026041692074925824,
+          "handlingLive": 0.014682402556292093,
+          "otherLive": 0.0,
+          "passingDead": 0.008131574227705654,
+          "handlingDead": 0.004400388773965771,
+          "offensiveFoul": 0.008307217646823566,
+          "otherViolation": 0.005950481459856049,
+          "outUnclassified": 0.0,
+          "unmappedDead": 0.001535642897960144,
+          "clock": 0.0,
+          "ownershipOther": 0.0,
+          "early_passingLive": 0.015339758078634205,
+          "early_handlingLive": 0.009738410955503455,
+          "early_otherLive": 0.0,
+          "early_passingDead": 0.005542319664278854,
+          "early_handlingDead": 0.003128574267532312,
+          "early_offensiveFoul": 0.00530991143528433,
+          "early_otherViolation": 0.003816248667537983,
+          "early_outUnclassified": 0.0,
+          "early_unmappedDead": 0.0009646035576876787,
+          "early_clock": 0.0,
+          "early_ownershipOther": 0.0,
+          "totalTurnover": 0.0690493996375291,
+          "live": 0.04072409463121792,
+          "dead": 0.028325305006311186,
+          "matchedDead": 0.026789662108351042,
+          "matchedGeneric": 0.041472064664643135,
+          "unknown": 0.001535642897960144,
+          "unknownShareOfTurnovers": 0.02222263938966078,
+          "earlyTurnover": 0.04383982662645882,
+          "lateTurnover": 0.025209573011070286
+        },
+        "realN": 22180,
+        "baselineN": 22795.666666666668,
+        "realRaw": {
+          "[\"bad pass\",null,true]": 627,
+          "[\"offensive foul\",null,false]": 99,
+          "[\"lost ball\",null,true]": 401,
+          "[\"out-of-bounds\",\"lost ball\",false]": 86,
+          "[\"traveling\",null,false]": 84,
+          "[\"shot clock\",null,false]": 146,
+          "[\"out-of-bounds\",\"step\",false]": 85,
+          "[\"out-of-bounds\",\"bad pass\",false]": 172,
+          "[\"offensive-kicked-ball\",null,false]": 3,
+          "[\"offensive goaltending\",null,false]": 5,
+          "[\"3-second-violation\",null,false]": 6,
+          "[\"lost ball\",null,false]": 7,
+          "[\"5-second-violation\",null,false]": 2,
+          "[\"discontinued dribble\",null,false]": 3,
+          "[\"backcourt\",null,false]": 10,
+          "[\"double dribble\",null,false]": 3,
+          "[\"bad pass\",null,false]": 5,
+          "DREB": 2,
+          "[\"LaneViolation\",null,false]": 1
+        },
+        "baselineRaw": {
+          "otherViolationTov": 135.66666666666666,
+          "passSteal": 593.6666666666667,
+          "touchSteal": 334.6666666666667,
+          "offensiveFoulTov": 189.33333333333334,
+          "passOutTov": 185.33333333333331,
+          "unmappedDeadTov": 35.0,
+          "handlingOutTov": 100.33333333333333
+        }
+      },
+      "2024-25": {
+        "real": {
+          "passingLive": 0.029737206085753802,
+          "handlingLive": 0.019795988934993083,
+          "otherLive": 0.0,
+          "passingDead": 0.007650414937759336,
+          "handlingDead": 0.005878284923928077,
+          "offensiveFoul": 0.00423582295988935,
+          "otherViolation": 0.005791839557399724,
+          "outUnclassified": 0.0037603734439834026,
+          "unmappedDead": 0.0005618948824343015,
+          "clock": 0.009119986168741356,
+          "ownershipOther": 4.322268326417704e-05,
+          "early_passingLive": 0.017850968188105117,
+          "early_handlingLive": 0.012621023513139696,
+          "early_otherLive": 0.0,
+          "early_passingDead": 0.004840940525587829,
+          "early_handlingDead": 0.0037603734439834026,
+          "early_offensiveFoul": 0.00233402489626556,
+          "early_otherViolation": 0.0035010373443983404,
+          "early_outUnclassified": 0.003155255878284924,
+          "early_unmappedDead": 0.00034578146611341634,
+          "early_clock": 0.006872406639004149,
+          "early_ownershipOther": 4.322268326417704e-05,
+          "totalTurnover": 0.08653181189488242,
+          "live": 0.049533195020746885,
+          "dead": 0.03699861687413553,
+          "matchedDead": 0.023556362378976486,
+          "matchedGeneric": 0.04335235131396957,
+          "unknown": 0.004322268326417704,
+          "unknownShareOfTurnovers": 0.049950049950049966,
+          "earlyTurnover": 0.05528181189488243,
+          "lateTurnover": 0.031249999999999986
+        },
+        "baseline": {
+          "passingLive": 0.0279322311967545,
+          "handlingLive": 0.016194357920742957,
+          "otherLive": 0.0,
+          "passingDead": 0.00866965670160282,
+          "handlingDead": 0.004604114348622001,
+          "offensiveFoul": 0.00650623235274208,
+          "otherViolation": 0.005061371223712233,
+          "outUnclassified": 0.0,
+          "unmappedDead": 0.0017431932578626924,
+          "clock": 0.0,
+          "ownershipOther": 0.0,
+          "early_passingLive": 0.016727115656401868,
+          "early_handlingLive": 0.010295429816830117,
+          "early_otherLive": 0.0,
+          "early_passingDead": 0.005664405735856252,
+          "early_handlingDead": 0.0029060419101810497,
+          "early_offensiveFoul": 0.004392021363069689,
+          "early_otherViolation": 0.0033184206340847355,
+          "early_outUnclassified": 0.0,
+          "early_unmappedDead": 0.0011762309475713967,
+          "early_clock": 0.0,
+          "early_ownershipOther": 0.0,
+          "totalTurnover": 0.07071115700203928,
+          "live": 0.04412658911749746,
+          "dead": 0.02658456788454183,
+          "matchedDead": 0.024841374626679135,
+          "matchedGeneric": 0.04103573254742209,
+          "unknown": 0.0017431932578626924,
+          "unknownShareOfTurnovers": 0.024646541861919145,
+          "earlyTurnover": 0.04447966606399511,
+          "lateTurnover": 0.026231490938044177
+        },
+        "realN": 23136,
+        "baselineN": 23519.0,
+        "realRaw": {
+          "[\"traveling\",null,false]": 93,
+          "[\"lost ball\",null,true]": 458,
+          "[\"bad pass\",null,true]": 688,
+          "[\"out-of-bounds\",\"lost ball\",false]": 126,
+          "[\"shot clock\",null,false]": 211,
+          "[\"out-of-bounds\",\"bad pass\",false]": 172,
+          "[\"out-of-bounds\",\"step\",false]": 87,
+          "[\"offensive foul\",null,false]": 98,
+          "[\"bad pass\",null,false]": 4,
+          "[\"lost ball\",null,false]": 10,
+          "[\"backcourt\",null,false]": 24,
+          "[\"palming\",null,false]": 2,
+          "[\"offensive goaltending\",null,false]": 12,
+          "[\"3-second-violation\",null,false]": 2,
+          "[\"5-second-violation\",null,false]": 5,
+          "[\"offensive-kicked-ball\",null,false]": 4,
+          "[\"inbound\",null,false]": 1,
+          "[\"double dribble\",null,false]": 3,
+          "[\"discontinued dribble\",null,false]": 2,
+          "DREB": 1
+        },
+        "baselineRaw": {
+          "handlingOutTov": 108.33333333333333,
+          "touchSteal": 381.0,
+          "passSteal": 657.0,
+          "passOutTov": 203.99999999999997,
+          "offensiveFoulTov": 153.0,
+          "otherViolationTov": 119.0,
+          "unmappedDeadTov": 41.0
+        }
+      },
+      "2025-26": {
+        "real": {
+          "passingLive": 0.026824940858398108,
+          "handlingLive": 0.020615072659682324,
+          "otherLive": 0.0,
+          "passingDead": 0.00819533626225076,
+          "handlingDead": 0.004815816154106117,
+          "offensiveFoul": 0.004731328151402501,
+          "otherViolation": 0.0045201081446434605,
+          "outUnclassified": 0.0032527881040892194,
+          "unmappedDead": 0.0002957080094626563,
+          "clock": 0.0065900642108820545,
+          "ownershipOther": 4.224400135180804e-05,
+          "early_passingLive": 0.017108820547482258,
+          "early_handlingLive": 0.01271544440689422,
+          "early_otherLive": 0.0,
+          "early_passingDead": 0.005322744170327813,
+          "early_handlingDead": 0.002999324095978371,
+          "early_offensiveFoul": 0.0025768840824602905,
+          "early_otherViolation": 0.002872592091922947,
+          "early_outUnclassified": 0.002872592091922947,
+          "early_unmappedDead": 8.448800270361608e-05,
+          "early_clock": 0.004393376140588037,
+          "early_ownershipOther": 4.224400135180804e-05,
+          "totalTurnover": 0.07984116255491719,
+          "live": 0.04744001351808043,
+          "dead": 0.03240114903683676,
+          "matchedDead": 0.022262588712402838,
+          "matchedGeneric": 0.042877661372085166,
+          "unknown": 0.0035484961135518757,
+          "unknownShareOfTurnovers": 0.04444444444444445,
+          "earlyTurnover": 0.0509462656302805,
+          "lateTurnover": 0.02889489692463669
+        },
+        "baseline": {
+          "passingLive": 0.03005311671951032,
+          "handlingLive": 0.017723138953287993,
+          "otherLive": 0.0,
+          "passingDead": 0.008461384378944224,
+          "handlingDead": 0.00517384827033739,
+          "offensiveFoul": 0.006978058617605122,
+          "otherViolation": 0.004570363588901749,
+          "outUnclassified": 0.0,
+          "unmappedDead": 0.0019033358660628882,
+          "clock": 0.0,
+          "ownershipOther": 0.0,
+          "early_passingLive": 0.0176729934202909,
+          "early_handlingLive": 0.01149844742779176,
+          "early_otherLive": 0.0,
+          "early_passingDead": 0.005469404264722161,
+          "early_handlingDead": 0.0033698370342727484,
+          "early_offensiveFoul": 0.004487052775570999,
+          "early_otherViolation": 0.002920316696362543,
+          "early_outUnclassified": 0.0,
+          "early_unmappedDead": 0.0012314163367135574,
+          "early_clock": 0.0,
+          "early_ownershipOther": 0.0,
+          "totalTurnover": 0.07486324639464968,
+          "live": 0.04777625567279831,
+          "dead": 0.027086990721851376,
+          "matchedDead": 0.025183654855788485,
+          "matchedGeneric": 0.04290679380907647,
+          "unknown": 0.0019033358660628882,
+          "unknownShareOfTurnovers": 0.025404429492415042,
+          "earlyTurnover": 0.046649467955724666,
+          "lateTurnover": 0.02821377843892502
+        },
+        "realN": 23672,
+        "baselineN": 23828.666666666668,
+        "realRaw": {
+          "[\"lost ball\",null,true]": 488,
+          "[\"bad pass\",null,true]": 635,
+          "[\"out-of-bounds\",\"step\",false]": 77,
+          "[\"traveling\",null,false]": 64,
+          "[\"3-second-violation\",null,false]": 5,
+          "[\"offensive foul\",null,false]": 112,
+          "[\"backcourt\",null,false]": 21,
+          "[\"shot clock\",null,false]": 156,
+          "[\"out-of-bounds\",\"bad pass\",false]": 187,
+          "[\"out-of-bounds\",\"lost ball\",false]": 107,
+          "[\"offensive goaltending\",null,false]": 17,
+          "[\"lost ball\",null,false]": 7,
+          "[\"bad pass\",null,false]": 7,
+          "[\"offensive-kicked-ball\",null,false]": 1,
+          "[\"double dribble\",null,false]": 4,
+          "DREB": 1,
+          "[\"illegal assist\",null,false]": 1,
+          "[\"discontinued dribble\",null,false]": 1
+        },
+        "baselineRaw": {
+          "passSteal": 716.0,
+          "unmappedDeadTov": 45.333333333333336,
+          "passOutTov": 201.66666666666666,
+          "touchSteal": 422.33333333333337,
+          "otherViolationTov": 109.0,
+          "handlingOutTov": 123.33333333333334,
+          "offensiveFoulTov": 166.33333333333331
+        }
+      }
+    }
+  },
+  "pooled": {
+    "allAnchors": {
+      "real": {
+        "passingLive": 0.026818586302639846,
+        "handlingLive": 0.0192941546012975,
+        "otherLive": 0.0,
+        "passingDead": 0.007542606951083939,
+        "handlingDead": 0.004870264808641809,
+        "offensiveFoul": 0.004937340007013054,
+        "otherViolation": 0.0056775761431929195,
+        "outUnclassified": 0.003420032260403068,
+        "unmappedDead": 0.0005083394267984246,
+        "clock": 0.007318257577488183,
+        "ownershipOther": 4.87675652735018e-05,
+        "early_passingLive": 0.0164795640105891,
+        "early_handlingLive": 0.01231197891904479,
+        "early_otherLive": 0.0,
+        "early_passingDead": 0.005030095137865544,
+        "early_handlingDead": 0.0032031911121856204,
+        "early_offensiveFoul": 0.0028484117240854204,
+        "early_otherViolation": 0.0035951463873741827,
+        "early_outUnclassified": 0.00289601554730415,
+        "early_unmappedDead": 0.00021378339903190918,
+        "early_clock": 0.0051943853137921365,
+        "early_ownershipOther": 4.87675652735018e-05,
+        "totalTurnover": 0.08038715807855874,
+        "live": 0.04611274090393734,
+        "dead": 0.034274417174621395,
+        "matchedDead": 0.02302778790993172,
+        "matchedGeneric": 0.04232194251122923,
+        "unknown": 0.003928371687201493,
+        "unknownShareOfTurnovers": 0.048883286748625285,
+        "earlyTurnover": 0.05177257155127285,
+        "lateTurnover": 0.028614586527285896
+      },
+      "baseline": {
+        "passingLive": 0.027434729247529148,
+        "handlingLive": 0.015440694683559603,
+        "otherLive": 0.0,
+        "passingDead": 0.008394545536830292,
+        "handlingDead": 0.004441016272187814,
+        "offensiveFoul": 0.00807892885331608,
+        "otherViolation": 0.005735720495690001,
+        "outUnclassified": 0.0,
+        "unmappedDead": 0.0017761070972201183,
+        "clock": 0.0,
+        "ownershipOther": 0.0,
+        "early_passingLive": 0.01624069187627167,
+        "early_handlingLive": 0.010023520739394607,
+        "early_otherLive": 0.0,
+        "early_passingDead": 0.00559259075777921,
+        "early_handlingDead": 0.0029635957901371556,
+        "early_offensiveFoul": 0.005244611373208082,
+        "early_otherViolation": 0.003733237740954477,
+        "early_outUnclassified": 0.0,
+        "early_unmappedDead": 0.001142724400177675,
+        "early_clock": 0.0,
+        "early_ownershipOther": 0.0,
+        "totalTurnover": 0.07130174218633306,
+        "live": 0.04287542393108875,
+        "dead": 0.028426318255244304,
+        "matchedDead": 0.026650211158024184,
+        "matchedGeneric": 0.04209090584158379,
+        "unknown": 0.0017761070972201183,
+        "unknownShareOfTurnovers": 0.024875436695588143,
+        "earlyTurnover": 0.04494097267792287,
+        "lateTurnover": 0.026360769508410178
+      },
+      "baselineMinusReal": {
+        "passingLive": {
+          "delta": 0.0006161429448893023,
+          "joint95": [
+            -0.0008296481231573309,
+            0.002170522455872038
+          ]
+        },
+        "handlingLive": {
+          "delta": -0.003853459917737896,
+          "joint95": [
+            -0.0050170488130538895,
+            -0.0027574080742008363
+          ]
+        },
+        "otherLive": {
+          "delta": 0.0,
+          "joint95": [
+            0.0,
+            0.0
+          ]
+        },
+        "passingDead": {
+          "delta": 0.0008519385857463525,
+          "joint95": [
+            4.210663771658182e-05,
+            0.0016070313903819111
+          ]
+        },
+        "handlingDead": {
+          "delta": -0.00042924853645399507,
+          "joint95": [
+            -0.001150518004634222,
+            0.0002324050679159391
+          ]
+        },
+        "offensiveFoul": {
+          "delta": 0.0031415888463030258,
+          "joint95": [
+            0.0024589855090921564,
+            0.003806720901840882
+          ]
+        },
+        "otherViolation": {
+          "delta": 5.814435249708143e-05,
+          "joint95": [
+            -0.0004755263971749098,
+            0.0005898863182999106
+          ]
+        },
+        "outUnclassified": {
+          "delta": -0.003420032260403068,
+          "joint95": [
+            -0.0038371751551633244,
+            -0.002989353924015862
+          ]
+        },
+        "unmappedDead": {
+          "delta": 0.0012677676704216938,
+          "joint95": [
+            0.0009623969655188418,
+            0.00160932567307847
+          ]
+        },
+        "clock": {
+          "delta": -0.007318257577488183,
+          "joint95": [
+            -0.00769625544816153,
+            -0.0069257848518544055
+          ]
+        },
+        "ownershipOther": {
+          "delta": -4.87675652735018e-05,
+          "joint95": [
+            -9.959884600443009e-05,
+            -9.585145325524283e-06
+          ]
+        },
+        "early_passingLive": {
+          "delta": -0.0002388721343174298,
+          "joint95": [
+            -0.0013930861439475997,
+            0.0010072968919850815
+          ]
+        },
+        "early_handlingLive": {
+          "delta": -0.002288458179650182,
+          "joint95": [
+            -0.003289668907382158,
+            -0.00128594922897255
+          ]
+        },
+        "early_otherLive": {
+          "delta": 0.0,
+          "joint95": [
+            0.0,
+            0.0
+          ]
+        },
+        "early_passingDead": {
+          "delta": 0.0005624956199136661,
+          "joint95": [
+            -4.277282516488524e-05,
+            0.0011435462606596781
+          ]
+        },
+        "early_handlingDead": {
+          "delta": -0.00023959532204846472,
+          "joint95": [
+            -0.0008084829674684908,
+            0.0002836146400485567
+          ]
+        },
+        "early_offensiveFoul": {
+          "delta": 0.0023961996491226618,
+          "joint95": [
+            0.001962028342920206,
+            0.0028176735066906184
+          ]
+        },
+        "early_otherViolation": {
+          "delta": 0.0001380913535802943,
+          "joint95": [
+            -0.00031137749893551025,
+            0.0005886021612181118
+          ]
+        },
+        "early_outUnclassified": {
+          "delta": -0.00289601554730415,
+          "joint95": [
+            -0.003272192586554859,
+            -0.002507302306662731
+          ]
+        },
+        "early_unmappedDead": {
+          "delta": 0.0009289410011457657,
+          "joint95": [
+            0.0007360334294463213,
+            0.0011504063504352508
+          ]
+        },
+        "early_clock": {
+          "delta": -0.0051943853137921365,
+          "joint95": [
+            -0.0056447711636394855,
+            -0.004725546608251913
+          ]
+        },
+        "early_ownershipOther": {
+          "delta": -4.87675652735018e-05,
+          "joint95": [
+            -9.959884600443009e-05,
+            -9.585145325524283e-06
+          ]
+        },
+        "totalTurnover": {
+          "delta": -0.009085415892225682,
+          "joint95": [
+            -0.01240954934716594,
+            -0.005844222952331294
+          ]
+        },
+        "live": {
+          "delta": -0.0032373169728485904,
+          "joint95": [
+            -0.005163099955105466,
+            -0.0012730566992475926
+          ]
+        },
+        "dead": {
+          "delta": -0.005848098919377091,
+          "joint95": [
+            -0.007741660613088658,
+            -0.004021869898721953
+          ]
+        },
+        "matchedDead": {
+          "delta": 0.003622423248092463,
+          "joint95": [
+            0.0019537075014110982,
+            0.005219385448472617
+          ]
+        },
+        "matchedGeneric": {
+          "delta": -0.00023103666964544023,
+          "joint95": [
+            -0.002443439077397958,
+            0.0018612705558714942
+          ]
+        },
+        "unknown": {
+          "delta": -0.0021522645899813746,
+          "joint95": [
+            -0.0026803031009706517,
+            -0.0015849180911430923
+          ]
+        },
+        "unknownShareOfTurnovers": {
+          "delta": -0.02400785005303714,
+          "joint95": [
+            -0.030167906624287654,
+            -0.017139614587429096
+          ]
+        },
+        "earlyTurnover": {
+          "delta": -0.006831598873349977,
+          "joint95": [
+            -0.00915572668604783,
+            -0.004550997314266425
+          ]
+        },
+        "lateTurnover": {
+          "delta": -0.0022538170188757187,
+          "joint95": [
+            -0.004068666235288028,
+            -0.000471095427846943
+          ]
+        }
+      }
+    },
+    "firstAnchors": {
+      "real": {
+        "passingLive": 0.027494224048613142,
+        "handlingLive": 0.01894671773066262,
+        "otherLive": 0.0,
+        "passingDead": 0.007724915763006273,
+        "handlingDead": 0.004828466454035162,
+        "offensiveFoul": 0.00506904894973415,
+        "otherViolation": 0.005507517985236214,
+        "outUnclassified": 0.0034871913157597636,
+        "unmappedDead": 0.0005432017867259263,
+        "clock": 0.007330167398068006,
+        "ownershipOther": 5.531877599108378e-05,
+        "early_passingLive": 0.01715020926673924,
+        "early_handlingLive": 0.012138581250731834,
+        "early_otherLive": 0.0,
+        "early_passingDead": 0.005136826148084694,
+        "early_handlingDead": 0.003209392700090338,
+        "early_offensiveFoul": 0.0029081661080947846,
+        "early_otherViolation": 0.003478110282586791,
+        "early_outUnclassified": 0.0029572853780687872,
+        "early_unmappedDead": 0.00020942368171552063,
+        "early_clock": 0.00514142311914541,
+        "early_ownershipOther": 5.531877599108378e-05,
+        "totalTurnover": 0.08093145143184124,
+        "live": 0.046440941779275755,
+        "dead": 0.034490509652565476,
+        "matchedDead": 0.023129949152011796,
+        "matchedGeneric": 0.04207666688267442,
+        "unknown": 0.004030393102485689,
+        "unknownShareOfTurnovers": 0.04981622243919561,
+        "earlyTurnover": 0.0523294179352574,
+        "lateTurnover": 0.028602033496583846
+      },
+      "baseline": {
+        "passingLive": 0.027445667697970622,
+        "handlingLive": 0.015440393033000481,
+        "otherLive": 0.0,
+        "passingDead": 0.008448252769030367,
+        "handlingDead": 0.004533999606427969,
+        "offensiveFoul": 0.007992356306051015,
+        "otherViolation": 0.005750826417510352,
+        "outUnclassified": 0.0,
+        "unmappedDead": 0.00175267582177896,
+        "clock": 0.0,
+        "ownershipOther": 0.0,
+        "early_passingLive": 0.016284072794297944,
+        "early_handlingLive": 0.009985444550726042,
+        "early_otherLive": 0.0,
+        "early_passingDead": 0.0056158822312898605,
+        "early_handlingDead": 0.0030369367358121235,
+        "early_offensiveFoul": 0.005226133769901426,
+        "early_otherViolation": 0.003720625693005689,
+        "early_outUnclassified": 0.0,
+        "early_unmappedDead": 0.0011390210294312875,
+        "early_clock": 0.0,
+        "early_ownershipOther": 0.0,
+        "totalTurnover": 0.07136417165176977,
+        "live": 0.0428860607309711,
+        "dead": 0.028478110920798667,
+        "matchedDead": 0.026725435099019704,
+        "matchedGeneric": 0.04216582813202018,
+        "unknown": 0.00175267582177896,
+        "unknownShareOfTurnovers": 0.02452057786254562,
+        "earlyTurnover": 0.04500811680446437,
+        "lateTurnover": 0.026356054847305396
+      },
+      "baselineMinusReal": {
+        "passingLive": {
+          "delta": -4.8556350642520174e-05,
+          "joint95": [
+            -0.001490740407614149,
+            0.0014743927754557625
+          ]
+        },
+        "handlingLive": {
+          "delta": -0.003506324697662138,
+          "joint95": [
+            -0.004755046231763752,
+            -0.0023216767241450243
+          ]
+        },
+        "otherLive": {
+          "delta": 0.0,
+          "joint95": [
+            0.0,
+            0.0
+          ]
+        },
+        "passingDead": {
+          "delta": 0.0007233370060240937,
+          "joint95": [
+            -0.00013379928497477483,
+            0.0015221194946154616
+          ]
+        },
+        "handlingDead": {
+          "delta": -0.00029446684760719294,
+          "joint95": [
+            -0.0010557791071412071,
+            0.00043108115328271344
+          ]
+        },
+        "offensiveFoul": {
+          "delta": 0.002923307356316865,
+          "joint95": [
+            0.0021876551988547818,
+            0.003661675542516189
+          ]
+        },
+        "otherViolation": {
+          "delta": 0.0002433084322741386,
+          "joint95": [
+            -0.00028015498705271605,
+            0.0007573922940752124
+          ]
+        },
+        "outUnclassified": {
+          "delta": -0.0034871913157597636,
+          "joint95": [
+            -0.003913872589679505,
+            -0.0030491153916813187
+          ]
+        },
+        "unmappedDead": {
+          "delta": 0.0012094740350530337,
+          "joint95": [
+            0.0008868124442430453,
+            0.0015531683019673697
+          ]
+        },
+        "clock": {
+          "delta": -0.007330167398068006,
+          "joint95": [
+            -0.007803459310379963,
+            -0.006840340662118926
+          ]
+        },
+        "ownershipOther": {
+          "delta": -5.531877599108378e-05,
+          "joint95": [
+            -0.00011270510848409593,
+            -1.0923195738410742e-05
+          ]
+        },
+        "early_passingLive": {
+          "delta": -0.0008661364724412979,
+          "joint95": [
+            -0.0020673036672083332,
+            0.000452322559347663
+          ]
+        },
+        "early_handlingLive": {
+          "delta": -0.002153136700005791,
+          "joint95": [
+            -0.0031838643699475607,
+            -0.0011265245741724577
+          ]
+        },
+        "early_otherLive": {
+          "delta": 0.0,
+          "joint95": [
+            0.0,
+            0.0
+          ]
+        },
+        "early_passingDead": {
+          "delta": 0.0004790560832051661,
+          "joint95": [
+            -9.129923259320649e-05,
+            0.0010517458117405639
+          ]
+        },
+        "early_handlingDead": {
+          "delta": -0.0001724559642782143,
+          "joint95": [
+            -0.0007590352870298847,
+            0.00038529214396525717
+          ]
+        },
+        "early_offensiveFoul": {
+          "delta": 0.002317967661806641,
+          "joint95": [
+            0.0018518194632530475,
+            0.0027736567408800815
+          ]
+        },
+        "early_otherViolation": {
+          "delta": 0.00024251541041889766,
+          "joint95": [
+            -0.00022162155605308855,
+            0.0007336626565542517
+          ]
+        },
+        "early_outUnclassified": {
+          "delta": -0.0029572853780687872,
+          "joint95": [
+            -0.0033441808484411047,
+            -0.0025570514246859347
+          ]
+        },
+        "early_unmappedDead": {
+          "delta": 0.0009295973477157669,
+          "joint95": [
+            0.0007186424209530055,
+            0.0011534841089744059
+          ]
+        },
+        "early_clock": {
+          "delta": -0.00514142311914541,
+          "joint95": [
+            -0.005670605827725355,
+            -0.004580630630360239
+          ]
+        },
+        "early_ownershipOther": {
+          "delta": -5.531877599108378e-05,
+          "joint95": [
+            -0.00011270510848409593,
+            -1.0923195738410742e-05
+          ]
+        },
+        "totalTurnover": {
+          "delta": -0.009567279780071478,
+          "joint95": [
+            -0.012958516448244696,
+            -0.006274909097694484
+          ]
+        },
+        "live": {
+          "delta": -0.0035548810483046547,
+          "joint95": [
+            -0.0056065215775380145,
+            -0.0014699610466247185
+          ]
+        },
+        "dead": {
+          "delta": -0.006012398731766809,
+          "joint95": [
+            -0.008033251501046732,
+            -0.0040871124844465605
+          ]
+        },
+        "matchedDead": {
+          "delta": 0.0035954859470079086,
+          "joint95": [
+            0.001803413980120903,
+            0.005298008517414276
+          ]
+        },
+        "matchedGeneric": {
+          "delta": 8.916124934576358e-05,
+          "joint95": [
+            -0.002314553374559383,
+            0.0023534089626438136
+          ]
+        },
+        "unknown": {
+          "delta": -0.0022777172807067294,
+          "joint95": [
+            -0.002826087831604361,
+            -0.001682672259080614
+          ]
+        },
+        "unknownShareOfTurnovers": {
+          "delta": -0.02529564457664999,
+          "joint95": [
+            -0.0318157393492145,
+            -0.018119862237633035
+          ]
+        },
+        "earlyTurnover": {
+          "delta": -0.0073213011307930315,
+          "joint95": [
+            -0.009851138354132092,
+            -0.004907642041016006
+          ]
+        },
+        "lateTurnover": {
+          "delta": -0.0022459786492784496,
+          "joint95": [
+            -0.004164710655317358,
+            -0.000332377232824667
+          ]
+        }
+      }
+    }
+  },
+  "registeredGuards": {
+    "handlingLiveExcess": false,
+    "matchedDeadExcess": true,
+    "unknownAtMost5pct": true
+  },
+  "candidateEligible": false,
+  "registeredMultiplierIfEligible": null,
+  "simulationVersion": "candidate; baseline-labeled dictionary entries contain candidate for comparison with real only",
+  "interpretation": "engine touchSteal as handlingLive is a proxy; generic gate also produces passing dead/fouls/violations. One scalar cannot correct opposing category errors. Four seasons seen/in-sample; three seeds; joint20k95 intervals."
+}

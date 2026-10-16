@@ -1,0 +1,147 @@
+{
+  "selectedUTC": "2026-10-15T02:48:08.801321+00:00",
+  "pEffective": 0.2112781865697237,
+  "physicalNoRimIdentified": false,
+  "targetTrainRate": 0.005482446666033024,
+  "grid": [
+    {
+      "p": 0,
+      "rate": 0.0,
+      "counts": {
+        "misses": 146747,
+        "immediateClock": 0,
+        "fgOreb": 32415,
+        "postOrebClock": 0,
+        "clock": 1883,
+        "natural": 0
+      }
+    },
+    {
+      "p": 0.1,
+      "rate": 0.0024701635630403483,
+      "counts": {
+        "misses": 146549,
+        "immediateClock": 362,
+        "fgOreb": 32319,
+        "postOrebClock": 0,
+        "clock": 2244,
+        "natural": 362
+      }
+    },
+    {
+      "p": 0.25,
+      "rate": 0.006530640098266685,
+      "counts": {
+        "misses": 146540,
+        "immediateClock": 957,
+        "fgOreb": 32392,
+        "postOrebClock": 0,
+        "clock": 2841,
+        "natural": 957
+      }
+    },
+    {
+      "p": 0.5,
+      "rate": 0.013962860690272812,
+      "counts": {
+        "misses": 147391,
+        "immediateClock": 2058,
+        "fgOreb": 32352,
+        "postOrebClock": 0,
+        "clock": 3942,
+        "natural": 2058
+      }
+    },
+    {
+      "p": 1,
+      "rate": 0.03496204643969149,
+      "counts": {
+        "misses": 147417,
+        "immediateClock": 5154,
+        "fgOreb": 31280,
+        "postOrebClock": 0,
+        "clock": 7045,
+        "natural": 5154
+      }
+    }
+  ],
+  "seedwiseFits": [
+    0.210170347351742,
+    0.19763095309522943,
+    0.22703029631907531
+  ],
+  "parity": [
+    {
+      "season": "2022-23",
+      "seed": 20261012,
+      "games": 256,
+      "passed": true
+    },
+    {
+      "season": "2022-23",
+      "seed": 20261013,
+      "games": 256,
+      "passed": true
+    },
+    {
+      "season": "2022-23",
+      "seed": 20261014,
+      "games": 256,
+      "passed": true
+    },
+    {
+      "season": "2023-24",
+      "seed": 20261012,
+      "games": 256,
+      "passed": true
+    },
+    {
+      "season": "2023-24",
+      "seed": 20261013,
+      "games": 256,
+      "passed": true
+    },
+    {
+      "season": "2023-24",
+      "seed": 20261014,
+      "games": 256,
+      "passed": true
+    },
+    {
+      "season": "2024-25",
+      "seed": 20261012,
+      "games": 256,
+      "passed": true
+    },
+    {
+      "season": "2024-25",
+      "seed": 20261013,
+      "games": 256,
+      "passed": true
+    },
+    {
+      "season": "2024-25",
+      "seed": 20261014,
+      "games": 256,
+      "passed": true
+    },
+    {
+      "season": "2025-26",
+      "seed": 20261012,
+      "games": 256,
+      "passed": true
+    },
+    {
+      "season": "2025-26",
+      "seed": 20261013,
+      "games": 256,
+      "passed": true
+    },
+    {
+      "season": "2025-26",
+      "seed": 20261014,
+      "games": 256,
+      "passed": true
+    }
+  ]
+}

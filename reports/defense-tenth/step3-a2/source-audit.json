@@ -1,0 +1,230 @@
+{
+  "checkedAt": "2026-10-13T05:41:02.957Z",
+  "seasons": [
+    {
+      "season": "2022-23",
+      "boxPlayerCount": 539,
+      "pbpGames": 1230,
+      "pbpManifestHash": "aff068be58cf00c222eb8a517615d4a73fd7a53eeb98d163b40c0a23c8afbad0",
+      "pbpManifestFailures": [],
+      "pbpHashFailures": [],
+      "personalTrackingSeason": "2022-23",
+      "personalTrackingDate": "2023-02-08",
+      "personalTrackingFiles": 60,
+      "personalTrackingFailures": []
+    },
+    {
+      "season": "2023-24",
+      "boxPlayerCount": 571,
+      "pbpGames": 1230,
+      "pbpManifestHash": "6449717fe38448a8656d4744ec615f1eaa760244bd16dd1fa9323b15c7f74614",
+      "pbpManifestFailures": [],
+      "pbpHashFailures": [],
+      "personalTrackingSeason": "2023-24",
+      "personalTrackingDate": "2024-02-22",
+      "personalTrackingFiles": 60,
+      "personalTrackingFailures": []
+    },
+    {
+      "season": "2024-25",
+      "boxPlayerCount": 569,
+      "pbpGames": 1229,
+      "pbpManifestHash": "39dfdf6bdcbda2ea7648c729c4e9b06e91dac072bb3354e7f03b7b1c03bacbeb",
+      "pbpManifestFailures": [
+        {
+          "id": "0022400072",
+          "error": "Error: Invalid response"
+        }
+      ],
+      "pbpHashFailures": [],
+      "personalTrackingSeason": "2024-25",
+      "personalTrackingDate": "2025-02-21",
+      "personalTrackingFiles": 60,
+      "personalTrackingFailures": []
+    },
+    {
+      "season": "2025-26",
+      "boxPlayerCount": 582,
+      "pbpGames": 1227,
+      "pbpManifestHash": "0bb849fc0a3301cd8bff4c3733f0623c24e1328b5c43342dbfb848ce5dd3efed",
+      "pbpManifestFailures": [
+        {
+          "id": "0022500029",
+          "error": "Final score mismatch"
+        },
+        {
+          "id": "0022501230",
+          "error": "Final score mismatch"
+        },
+        {
+          "id": "0022501229",
+          "error": "Final score mismatch"
+        }
+      ],
+      "pbpHashFailures": [],
+      "personalTrackingSeason": "2025-26",
+      "personalTrackingDate": "2026-02-19",
+      "personalTrackingFiles": 60,
+      "personalTrackingFailures": []
+    }
+  ],
+  "transitionSupport": {
+    "2025-26": {
+      "23-26": {
+        "allPrior": 450,
+        "nextBoxObserved": 360,
+        "longBothWithAttempts": 329,
+        "midBothWithAttempts": 329,
+        "shortBothWithAttempts": 350,
+        "ftBothWithAttempts": 334,
+        "onBallBothTracked": 307,
+        "helpBothTracked": 310
+      },
+      "27-30": {
+        "allPrior": 245,
+        "nextBoxObserved": 193,
+        "longBothWithAttempts": 187,
+        "midBothWithAttempts": 188,
+        "shortBothWithAttempts": 192,
+        "ftBothWithAttempts": 188,
+        "onBallBothTracked": 180,
+        "helpBothTracked": 180
+      },
+      "<=22": {
+        "allPrior": 224,
+        "nextBoxObserved": 200,
+        "longBothWithAttempts": 192,
+        "midBothWithAttempts": 186,
+        "shortBothWithAttempts": 199,
+        "ftBothWithAttempts": 191,
+        "onBallBothTracked": 192,
+        "helpBothTracked": 191
+      },
+      "31-34": {
+        "allPrior": 135,
+        "nextBoxObserved": 105,
+        "longBothWithAttempts": 101,
+        "midBothWithAttempts": 104,
+        "shortBothWithAttempts": 105,
+        "ftBothWithAttempts": 105,
+        "onBallBothTracked": 104,
+        "helpBothTracked": 104
+      },
+      "35+": {
+        "allPrior": 56,
+        "nextBoxObserved": 38,
+        "longBothWithAttempts": 37,
+        "midBothWithAttempts": 37,
+        "shortBothWithAttempts": 36,
+        "ftBothWithAttempts": 35,
+        "onBallBothTracked": 37,
+        "helpBothTracked": 37
+      }
+    },
+    "2023-24": {
+      "23-26": {
+        "allPrior": 243,
+        "nextBoxObserved": 181,
+        "longBothWithAttempts": 166,
+        "midBothWithAttempts": 167,
+        "shortBothWithAttempts": 178,
+        "ftBothWithAttempts": 170,
+        "onBallBothTracked": 158,
+        "helpBothTracked": 157
+      },
+      "<=22": {
+        "allPrior": 109,
+        "nextBoxObserved": 97,
+        "longBothWithAttempts": 91,
+        "midBothWithAttempts": 88,
+        "shortBothWithAttempts": 96,
+        "ftBothWithAttempts": 93,
+        "onBallBothTracked": 95,
+        "helpBothTracked": 94
+      },
+      "31-34": {
+        "allPrior": 66,
+        "nextBoxObserved": 53,
+        "longBothWithAttempts": 51,
+        "midBothWithAttempts": 53,
+        "shortBothWithAttempts": 53,
+        "ftBothWithAttempts": 53,
+        "onBallBothTracked": 53,
+        "helpBothTracked": 53
+      },
+      "27-30": {
+        "allPrior": 120,
+        "nextBoxObserved": 96,
+        "longBothWithAttempts": 93,
+        "midBothWithAttempts": 94,
+        "shortBothWithAttempts": 96,
+        "ftBothWithAttempts": 95,
+        "onBallBothTracked": 90,
+        "helpBothTracked": 90
+      },
+      "35+": {
+        "allPrior": 33,
+        "nextBoxObserved": 20,
+        "longBothWithAttempts": 19,
+        "midBothWithAttempts": 20,
+        "shortBothWithAttempts": 19,
+        "ftBothWithAttempts": 18,
+        "onBallBothTracked": 19,
+        "helpBothTracked": 19
+      }
+    },
+    "2024-25": {
+      "23-26": {
+        "allPrior": 207,
+        "nextBoxObserved": 179,
+        "longBothWithAttempts": 163,
+        "midBothWithAttempts": 162,
+        "shortBothWithAttempts": 172,
+        "ftBothWithAttempts": 164,
+        "onBallBothTracked": 149,
+        "helpBothTracked": 153
+      },
+      "27-30": {
+        "allPrior": 125,
+        "nextBoxObserved": 97,
+        "longBothWithAttempts": 94,
+        "midBothWithAttempts": 94,
+        "shortBothWithAttempts": 96,
+        "ftBothWithAttempts": 93,
+        "onBallBothTracked": 90,
+        "helpBothTracked": 90
+      },
+      "<=22": {
+        "allPrior": 115,
+        "nextBoxObserved": 103,
+        "longBothWithAttempts": 101,
+        "midBothWithAttempts": 98,
+        "shortBothWithAttempts": 103,
+        "ftBothWithAttempts": 98,
+        "onBallBothTracked": 97,
+        "helpBothTracked": 97
+      },
+      "31-34": {
+        "allPrior": 69,
+        "nextBoxObserved": 52,
+        "longBothWithAttempts": 50,
+        "midBothWithAttempts": 51,
+        "shortBothWithAttempts": 52,
+        "ftBothWithAttempts": 52,
+        "onBallBothTracked": 51,
+        "helpBothTracked": 51
+      },
+      "35+": {
+        "allPrior": 23,
+        "nextBoxObserved": 18,
+        "longBothWithAttempts": 18,
+        "midBothWithAttempts": 17,
+        "shortBothWithAttempts": 17,
+        "ftBothWithAttempts": 17,
+        "onBallBothTracked": 18,
+        "helpBothTracked": 18
+      }
+    }
+  },
+  "issues": []
+}

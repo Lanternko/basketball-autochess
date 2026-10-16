@@ -1,0 +1,13 @@
+import assert from 'node:assert/strict';
+import {deadlineDecision as d} from './deadline.mjs';
+let calls=0;const args={pending:true,periodTicks:200,shotTicks:140,enabled:true,probability:1,rng:()=>{calls++;return .5;}};
+assert.deepEqual(d(args),{eligible:true,violation:true});
+assert.equal(d({...args,enabled:false}).violation,false);
+assert.equal(d({...args,periodTicks:140}).eligible,false);
+assert.equal(d({...args,periodTicks:139}).violation,false);
+assert.equal(d({...args,pending:false}).eligible,false);
+assert.equal(calls,1);
+assert.equal(d({...args,probability:0}).violation,false);
+assert.equal(d({...args,shotTicks:1}).violation,true);
+assert.throws(()=>d({...args,probability:1.1}));assert.throws(()=>d({...args,shotTicks:-1}));
+console.log('10 deadline assertions passed');

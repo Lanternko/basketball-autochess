@@ -1,0 +1,24 @@
+{
+  "frozenSourceFiles": 5191,
+  "resultFiles": 2,
+  "games": 2418,
+  "artifacts": {
+    "reports/player-impact-v26/pilot-report.md": "ba3a6eecd351a9fba46bf1feba8ffcc2d1c972a2b4ce98ce330fc1fff34bfdb2",
+    "reports/player-impact-v26/pilot-report.py": "61983877293bc50eb506df3064fcd83f8f4cfe9bb7c0ace4402a84973ad45221",
+    "reports/player-impact-v26/pilot-status.json": "773aa538fe29d3d80c35e637c3545cac09621370e58fbc0df2fa6e7dab43a0fe",
+    "reports/player-impact-v26/pilot-scores.json": "600498d140340fdb88a1ae056e7d9136414ef20b0cc05da7792c1a651439f843",
+    "reports/player-impact-v26/pilot-all-players.csv": "0f1284191b5f7d9f99bfd3cfc6a3d4a30c476380fbfdffc631d5f8b28da9ce20",
+    "reports/player-impact-v26/pilot-all-players-on-court.csv": "04b4626002f5265c3cb69e8e83b39630a6e8ad72d11a6c017294b5dbc7502f65",
+    "reports/player-impact-v26/pilot-ledger-verification.json": "eb9bdd55a52386f878d3f4a869f3b8e944bd29d8bbb8c7994e2cd29fdce62f84",
+    "reports/player-impact-v26/counterfactual-verification.json": "316a5b1ac6f521d5937f6bf0309553166beeba9cb7d5b2d9480e965748c9ea66",
+    "reports/player-impact-v26/contact-opportunity-audit.json": "94fa39e3721d6fb68b263ad117b93292bf00ceb5636e49ba9d06255df02eaf29",
+    "reports/player-impact-v26/source-verification.json": "f9cdd354ea147bc1b64f5b9c88b5ce70c0a8ee07e9c20f862f546cabbb836268",
+    "reports/player-impact-v26/verify-source.py": "45ed31aa202dc3fe19e9ddd873d8a3d8fcba810c4b441faedd9514ec4e86a757",
+    "reports/player-impact-v26/verify-pilot.mjs": "2115fb20c22137516e73f8b5db40993c12dea19fd2f5f4af39f118947b6126b4",
+    "reports/player-impact-v26/verify-pilot-ledgers.mjs": "28eb50470d4a34ee1e3bc158f7b94712bf44390978ad7ccc250b0288288b7135",
+    "reports/player-impact-v26/validation-score.py": "a674a6506d88bac10410f608a22bbb7193d9e1ea0a6a7439b3a3063c9036f7d8"
+  },
+  "officialModelAdopted": false,
+  "goalComplete": false,
+  "scope": "One-seed target-season source-intensity pilot, 96 fixed-lineup parity probes, passive exact contact opportunity audit, four-season source count/rate integrity. Full validation and new OVR not claimed."
+}

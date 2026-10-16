@@ -1,0 +1,27 @@
+{
+  "scope": "User3c mechanism validation, in addition to primary accuracy non-regression. No new parameter tuning. Directional point estimates, not proof of equivalence for starter curves. All20same seeds, regulation1227 fixtures.",
+  "gates": {
+    "starterCurveMeanAbsoluteError": true,
+    "residualSD": false,
+    "scoreCovariance": false,
+    "q3Q4": false,
+    "netRMSE": true
+  },
+  "without": {
+    "curveMAE": 0.07576112662843605,
+    "residualSD": 16.787274122166888,
+    "scoreCovariance": -9.01608506059235,
+    "q3Q4": 0.060542402325579905
+  },
+  "with": {
+    "curveMAE": 0.04668859017256814,
+    "residualSD": 16.866148642861198,
+    "scoreCovariance": -9.129868997163573,
+    "q3Q4": 0.06942574381937326
+  },
+  "truth": {
+    "residualSD": 14.027452283006898,
+    "scoreCovariance": 27.966054231830846,
+    "q3Q4": -0.10539309948194163
+  }
+}

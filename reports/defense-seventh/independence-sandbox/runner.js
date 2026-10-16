@@ -1,0 +1,1 @@
+import fs from 'node:fs';import {executeSeventhJob}from './src/defense_seventh_jobs.js';const r=executeSeventhJob(JSON.parse(fs.readFileSync('input/job.json')));fs.writeFileSync('input/result.json',JSON.stringify(r));

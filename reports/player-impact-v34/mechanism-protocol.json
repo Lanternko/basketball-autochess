@@ -1,0 +1,37 @@
+{
+  "stage": "predeclared-fixed-mechanism",
+  "priorTurn": "progress: v33 source/fit verified; no adoption",
+  "reserve": 1,
+  "fit": false,
+  "hypothesis": "Source self role anchors should not be erased by receiving transport. This floor can be wrong and is tested rather than adopted. Full terminal volume is conserved while passer supply and receiver transport jointly adapt.",
+  "controls": [
+    "archived official model",
+    "v30 full residual self"
+  ],
+  "adoptionGate": "Each of four seasons official control winsMAE+0.5, with complete individual/on-court and role-group review. No threshold relaxed and no rank/name-based tuning.",
+  "seasons": [
+    "2022-23",
+    "2023-24",
+    "2024-25",
+    "2025-26"
+  ],
+  "seeds": [
+    20261012,
+    20261013,
+    20261014
+  ],
+  "uncertainty": "Same-season reconstruction, fixed source descriptors with aggregate made outcomes. Not blind/causal; source-self floor is not physiology.",
+  "hashes": {
+    "reports/player-impact-v34/input.mjs": "a3006e3a7afdf86fc655592b92259d4c81666f9f1b9104b6d926d738046c54ba",
+    "reports/player-impact-v34/engine.mjs": "c21d5b480845c23cb4007df978424d0792d169814a103e675f6dbe44f6100e50",
+    "reports/player-impact-v34/probability.mjs": "590b335a840cd1347c5a8a53693f9eaf2a6d03bc2f553a72d43c2698257ba6f3",
+    "reports/player-impact-v34/worker.mjs": "fcd429798598c2d7e42cb0a2e4c10aa784d54baed075aef61c970afc89f533b1",
+    "reports/player-impact-v34/prepare-contexts.mjs": "63cbaad1bd6acfd196c3887fc2b8e4b27961fc3f3c1da126c0ef21d96d21cdba",
+    "reports/player-impact-v34/run.mjs": "2a61df88d1855e5fb0481039b94b57eeb6fe28d90528782c0e8df4461b6ceb34",
+    "reports/player-impact-v34/validation-score.py": "15724c05ffb68d60fb5209049b7d93f977d3674a8686f19304b51b0448a48e34",
+    "reports/player-impact-v34/verify-ledgers.mjs": "ab887389a6e530d06d46227bd4133f1b23e6bec1e39ca72685ddea81783129c4",
+    "reports/player-impact-v34/ovr-input.mjs": "e7dbd7f92269a9866815e16b355fbb2e405a4595d1fb508f8f88f73d595ac628",
+    "reports/player-impact-v34/model.mjs": "5ae06ef728e5a3fd4c305fc8c28bfa771d4bd2e10e79c316ff69ee2d368bc871",
+    "reports/player-impact-v34/scaffold.py": "2f715e0f0507e956600d9b98d5f4b19d41d48c88fdd058cc7db0024d574c9f2e"
+  }
+}

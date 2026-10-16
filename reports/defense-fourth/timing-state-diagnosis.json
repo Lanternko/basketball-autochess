@@ -1,0 +1,187 @@
+{
+  "scope": "20pairedseeds20261012-31, regulation1227 fixtures. Diagnostic only: replace every start-state CDF with same positive empirical pooled-segment CDF; other v2 parameters, pace and all outcomes unchanged. Not a proposed baseline and no accuracy optimization. Mean/count variance changes also listed; remaining covariance controls linearly for observed possession count.",
+  "summary": {
+    "scoreCovariance": {
+      "v2": -8.342503169775963,
+      "pooled": 19.028366979835603,
+      "difference": {
+        "estimate": 27.370870149611562,
+        "standardError": 1.3777373538266064,
+        "ci95": [
+          24.747325318796037,
+          30.189864086021423
+        ]
+      }
+    },
+    "paceCovariance": {
+      "v2": 1.2425884180037128,
+      "pooled": 17.94021657880495,
+      "difference": {
+        "estimate": 16.697628160801237,
+        "standardError": 0.523242503893258,
+        "ci95": [
+          15.618795166799762,
+          17.670823649311544
+        ]
+      }
+    },
+    "remainingCovariance": {
+      "v2": -9.585091587779678,
+      "pooled": 1.0881504010306464,
+      "difference": {
+        "estimate": 10.673241988810327,
+        "standardError": 1.2045119094070549,
+        "ci95": [
+          8.3715046797362,
+          13.09469666979291
+        ]
+      }
+    },
+    "meanPossessionCount": {
+      "v2": 99.8379380603097,
+      "pooled": 103.24790138549308,
+      "difference": {
+        "estimate": 3.4099633251833743,
+        "standardError": 0.020076114366263668,
+        "ci95": [
+          3.3726772616136933,
+          3.4507946210268954
+        ]
+      }
+    },
+    "possessionCountVariance": {
+      "v2": 12.581746681731136,
+      "pooled": 16.27967711017191,
+      "difference": {
+        "estimate": 3.697930428440775,
+        "standardError": 0.16052781757724707,
+        "ci95": [
+          3.3789153845591633,
+          4.013542316355256
+        ]
+      }
+    },
+    "marginResidualSD": {
+      "v2": 16.91428656585894,
+      "pooled": 17.206184135554345,
+      "difference": {
+        "estimate": 0.2918975696954037,
+        "standardError": 0.1037190783674052,
+        "ci95": [
+          0.07763606067583044,
+          0.4900674590925519
+        ]
+      }
+    }
+  },
+  "files": [
+    {
+      "seed": 20261012,
+      "file": "reports/defense-fourth/runs/diagnostic-pooled-clock-seed20261012.json",
+      "sha256": "b76eabcc337de5f69216f8110e2b10931f3468555074272085dddb1b09a13df2"
+    },
+    {
+      "seed": 20261013,
+      "file": "reports/defense-fourth/runs/diagnostic-pooled-clock-seed20261013.json",
+      "sha256": "7c9e41ac7b054b1e2be2f11db001cca90f8c4b5ffed31d6150814b222b6cb488"
+    },
+    {
+      "seed": 20261014,
+      "file": "reports/defense-fourth/runs/diagnostic-pooled-clock-seed20261014.json",
+      "sha256": "e5ca7863cb83eb8b052239845ae2eea4faaafe5fb1ebaeb38dcfda4f4b4efbc7"
+    },
+    {
+      "seed": 20261015,
+      "file": "reports/defense-fourth/runs/diagnostic-pooled-clock-seed20261015.json",
+      "sha256": "3fcb7a12a82928ae4b484c6863483e804895c04af64fa8dea856ad6a208365bc"
+    },
+    {
+      "seed": 20261016,
+      "file": "reports/defense-fourth/runs/diagnostic-pooled-clock-seed20261016.json",
+      "sha256": "98d0bd8dbb83b53c460b48989c53f311fef01ca1fa90e9f4992fad9af74a05f1"
+    },
+    {
+      "seed": 20261017,
+      "file": "reports/defense-fourth/runs/diagnostic-pooled-clock-seed20261017.json",
+      "sha256": "d1acfed4395304ba34f095ce8fc9b0ffd1949f1bbfb0f3e33e11860c0d7c1535"
+    },
+    {
+      "seed": 20261018,
+      "file": "reports/defense-fourth/runs/diagnostic-pooled-clock-seed20261018.json",
+      "sha256": "a8f727425f14774d0a46291268ef0c228941792a718d9be3706eb6d1942c9ebd"
+    },
+    {
+      "seed": 20261019,
+      "file": "reports/defense-fourth/runs/diagnostic-pooled-clock-seed20261019.json",
+      "sha256": "d7665430959b17ca7b43ac12fca04a22e545c527eeb849afea999105adaa16d8"
+    },
+    {
+      "seed": 20261020,
+      "file": "reports/defense-fourth/runs/diagnostic-pooled-clock-seed20261020.json",
+      "sha256": "b49e462431c01fdfab618c728f95f83d5676fb690cd71c72cdd26282f5fd3fe1"
+    },
+    {
+      "seed": 20261021,
+      "file": "reports/defense-fourth/runs/diagnostic-pooled-clock-seed20261021.json",
+      "sha256": "f4418f86b4b8d89f8cb605c16b56856c0873ded6f2d93b4196d15a18a4750bfa"
+    },
+    {
+      "seed": 20261022,
+      "file": "reports/defense-fourth/runs/diagnostic-pooled-clock-seed20261022.json",
+      "sha256": "e0cfacee282088db056d5757a4fdadf54b1d1d77d9e8ea109c516463a78ee543"
+    },
+    {
+      "seed": 20261023,
+      "file": "reports/defense-fourth/runs/diagnostic-pooled-clock-seed20261023.json",
+      "sha256": "efedfda84656848806b674295299902c72a3d55bb11003d9df7b0aff5ce17fce"
+    },
+    {
+      "seed": 20261024,
+      "file": "reports/defense-fourth/runs/diagnostic-pooled-clock-seed20261024.json",
+      "sha256": "f267e747afa5d191786a5a033fb893106af11037b5811d68aa505a6801b569dd"
+    },
+    {
+      "seed": 20261025,
+      "file": "reports/defense-fourth/runs/diagnostic-pooled-clock-seed20261025.json",
+      "sha256": "b8ba43f13f4073ca46535baf392a329dcfa16f96d87894097a19881ca947a444"
+    },
+    {
+      "seed": 20261026,
+      "file": "reports/defense-fourth/runs/diagnostic-pooled-clock-seed20261026.json",
+      "sha256": "1f2506104eadc10a61e654027954ae18d2dcd5bae35ab7516872bbffd3f13ab8"
+    },
+    {
+      "seed": 20261027,
+      "file": "reports/defense-fourth/runs/diagnostic-pooled-clock-seed20261027.json",
+      "sha256": "8fc03d1fb6eafa799ddfe20aa866b11b2f2c044a2a34a2d1a0fa80183128af89"
+    },
+    {
+      "seed": 20261028,
+      "file": "reports/defense-fourth/runs/diagnostic-pooled-clock-seed20261028.json",
+      "sha256": "087d6e601cac232fddf11555263df949affb3999f49c4da52818e6e5ebf37188"
+    },
+    {
+      "seed": 20261029,
+      "file": "reports/defense-fourth/runs/diagnostic-pooled-clock-seed20261029.json",
+      "sha256": "e9ae5b64bbb75ee5a83eb675fc7a2dfc754e25b25299a137604530eddb93d67b"
+    },
+    {
+      "seed": 20261030,
+      "file": "reports/defense-fourth/runs/diagnostic-pooled-clock-seed20261030.json",
+      "sha256": "e687ab02eeff2c4f0470487847c2e1397f7b91e750d1bd6d8cb6abca0bf497f5"
+    },
+    {
+      "seed": 20261031,
+      "file": "reports/defense-fourth/runs/diagnostic-pooled-clock-seed20261031.json",
+      "sha256": "1b6573e4e2723a4edff7ce730e5af7816095b93f9f4c36985d64fcc37e4c0e32"
+    }
+  ],
+  "verifiedCode": "Empirical deadline is drawn once before setup. Setup/pass elapsed time is subtracted from release deadline; extra completed passes do not increase the complete opportunity duration. Empirical setup/release also omit the existing hurry/protectLead timeFactor. Legacy clock sums setup+pass+release and applies that factor. This is verified from source, but does not identify each channel causal contribution.",
+  "sources": {
+    "reports/defense-b1/empirical-timing.json": "ddc9544e5d3fadbacbbe4bebc342569d93cf5e50fa30ebe69081e67cc3649ca4",
+    "reports/defense-fourth/v2-seeds.json": "8d5655c6bb0468f3b36134b1911f6b14a63d8362b343671950e833edb1c479ca",
+    "src/defense_fourth_game.js": "c3611d0c72f49fdd4b855184d7bc79c3e6cc9780c2c6eb836aa10cbf66ad022a",
+    "src/defense_fourth_effects.js": "ce90813d1089a8dd400d6051db2b08022a26914a0b1e3672cd7ddf4924a03ff4",
+    "scripts/diagnose_defense_fourth_timing_state.js": "3d89050817f86b9bf37d3d226cf40728ade9942d9566fc649ef3ddc60ea00c72"
+  }
+}

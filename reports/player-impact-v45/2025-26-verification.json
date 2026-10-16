@@ -1,0 +1,20 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "season": "2025-26",
+      "players": 661,
+      "sourceAttributesPreserved": true,
+      "oldBaselineDefenseZeroed": true,
+      "sourceMinutesEnergyAttemptsPreserved": true
+    }
+  ],
+  "transferChecks": 12,
+  "distributionChecks": 661,
+  "gameChecks": 10,
+  "observedFreshShots": 1752,
+  "observerScoreAndBoxParity": true,
+  "putbacksUnchanged": true,
+  "fineCollectorGameChecks": 3,
+  "fineCollectorFreshCountAndFivePlayerLedgersPassed": true
+}

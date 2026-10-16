@@ -13,6 +13,12 @@ learned from the simulator instead of being set by hand:
 
   python3 reports/ovr-calibrated-2025-26/calibrate.py [--target PATH]
 
+Extra derived card attribute 'creation': self-created field-goal attempts per 36 minutes
+= (1 - receivedShare) * FGA/36, receivedShare from the v41 validation export
+(creationDependence_sourceRole). Mapped to 40-99 with the same percentile rule and pool as
+scripts/build_season_league.js (GP >= 30 and MPG >= 20). Real-player simulations use this
+self-creation through opportunityMeasurement; without it the formula cannot see it.
+
 --target lets the 24-seed local run (resample-ranking.csv: name, healthy_minutes,
 centered_contribution, standard_error) replace the saved 4-seed board.
 Calibrated on one engine version: the formula inherits the simulator's blind spots
@@ -24,7 +30,7 @@ import numpy as np
 
 ROOT = Path(__file__).resolve().parents[2]
 OUT = Path(__file__).parent
-ATTRS = ['long', 'mid', 'short', 'ft', 'drive', 'tovSkill', 'pass', 'rebound', 'physique', 'onBall', 'help', 'stamina', 'heightInches']
+ATTRS = ['long', 'mid', 'short', 'ft', 'drive', 'tovSkill', 'pass', 'rebound', 'physique', 'onBall', 'help', 'stamina', 'heightInches', 'creation']
 POS = ['PG', 'SG', 'SF', 'PF', 'C']
 INTERACT = ['long', 'short', 'pass', 'rebound', 'help']
 SCALE_MIN_MINUTES = 500
@@ -37,6 +43,7 @@ def load(target_path):
         for p in t['roster']:
             c = cards.setdefault(p['name'], {'card': p, 'MIN': 0.0})
             c['MIN'] += p['observed']['MIN']
+    attach_creation(cards)
     rows = []
     for r in csv.DictReader(open(target_path, encoding='utf-8')):
         m = float(r['healthy_minutes'])
@@ -45,6 +52,23 @@ def load(target_path):
         rows.append({'name': r['name'], 'pos': r['position'], 'card': c['card'], 'MIN': c['MIN'],
                      'y': float(r['centered_contribution']) / m * 36, 'mc': (se / m * 36) ** 2})
     return rows
+
+
+def attach_creation(cards):
+    received = {r['name']: float(r['creationDependence_sourceRole']) for r in csv.DictReader(open(ROOT / 'reports/player-impact-v41/2025-26-player-validation.csv', encoding='utf-8-sig'))}
+    totals = {name: {'FGA': 0.0, 'MIN': 0.0, 'GP': 0} for name in cards}
+    league = json.loads((ROOT / 'data/season-league.json').read_text(encoding='utf-8'))
+    for team in league['teams']:
+        for p in team['roster']:
+            t = totals[p['name']]
+            for k in ('FGA', 'MIN', 'GP'):
+                t[k] += p['observed'][k]
+    raw = {n: (1 - received[n]) * t['FGA'] / max(t['MIN'], 1) * 36 for n, t in totals.items()}
+    pool = [raw[n] for n, t in totals.items() if t['GP'] >= 30 and t['MIN'] / t['GP'] >= 20]
+    for n, c in cards.items():
+        x = raw[n]
+        pct = 100 * (sum(v < x for v in pool) + 0.5 * sum(v == x for v in pool)) / len(pool)
+        c['card'] = {**c['card'], 'creation': max(40, min(99, 40 + (pct - 1) * 30 / 49 if pct < 50 else 70 + (pct - 50) * 29 / 49))}
 
 
 def design(rows, form, mean=None, sd=None):

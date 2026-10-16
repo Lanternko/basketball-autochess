@@ -183,4 +183,5 @@ def main():
     print('per10', {a: (round(v['per36'], 2), round(v['bootstrapSE'], 2)) for a, v in per10.items()})
 
 
-main()
+if __name__ == '__main__':
+    main()

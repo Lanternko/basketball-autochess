@@ -1,0 +1,494 @@
+[
+  {
+    "season": "2022-23",
+    "team": "league",
+    "kind": "current",
+    "subset": "all",
+    "players": 235,
+    "strata": 480,
+    "rawOnFGA": 72360,
+    "rawOffFGA": 44269,
+    "standardizedOnMinusOffPP": {
+      "FG": 1.2653979794246302,
+      "assistedMakeShare": 7.2045012781169895,
+      "explicitPullupShare": -2.1986390644339893
+    },
+    "ci95": null,
+    "limitation": "assisted share among makes; explicit pullup proxy, not exact catch/pull tracking; descriptive confounding remains"
+  },
+  {
+    "season": "2022-23",
+    "team": "league",
+    "kind": "current",
+    "subset": "role",
+    "players": 168,
+    "strata": 321,
+    "rawOnFGA": 45460,
+    "rawOffFGA": 25947,
+    "standardizedOnMinusOffPP": {
+      "FG": 1.4785758901332846,
+      "assistedMakeShare": 7.023376226035497,
+      "explicitPullupShare": -2.0153634254759973
+    },
+    "ci95": null,
+    "limitation": "assisted share among makes; explicit pullup proxy, not exact catch/pull tracking; descriptive confounding remains"
+  },
+  {
+    "season": "2022-23",
+    "team": "league",
+    "kind": "prior",
+    "subset": "all",
+    "players": 0,
+    "strata": 0,
+    "rawOnFGA": 0,
+    "rawOffFGA": 0,
+    "standardizedOnMinusOffPP": {
+      "FG": null,
+      "assistedMakeShare": null,
+      "explicitPullupShare": null
+    },
+    "ci95": null,
+    "limitation": "assisted share among makes; explicit pullup proxy, not exact catch/pull tracking; descriptive confounding remains"
+  },
+  {
+    "season": "2022-23",
+    "team": "league",
+    "kind": "prior",
+    "subset": "role",
+    "players": 0,
+    "strata": 0,
+    "rawOnFGA": 0,
+    "rawOffFGA": 0,
+    "standardizedOnMinusOffPP": {
+      "FG": null,
+      "assistedMakeShare": null,
+      "explicitPullupShare": null
+    },
+    "ci95": null,
+    "limitation": "assisted share among makes; explicit pullup proxy, not exact catch/pull tracking; descriptive confounding remains"
+  },
+  {
+    "season": "2023-24",
+    "team": "league",
+    "kind": "current",
+    "subset": "all",
+    "players": 229,
+    "strata": 468,
+    "rawOnFGA": 71816,
+    "rawOffFGA": 45968,
+    "standardizedOnMinusOffPP": {
+      "FG": 1.2122929758257315,
+      "assistedMakeShare": 7.307612687775303,
+      "explicitPullupShare": -2.5465635778264724
+    },
+    "ci95": null,
+    "limitation": "assisted share among makes; explicit pullup proxy, not exact catch/pull tracking; descriptive confounding remains"
+  },
+  {
+    "season": "2023-24",
+    "team": "league",
+    "kind": "current",
+    "subset": "role",
+    "players": 161,
+    "strata": 301,
+    "rawOnFGA": 43576,
+    "rawOffFGA": 24916,
+    "standardizedOnMinusOffPP": {
+      "FG": 1.94237662285538,
+      "assistedMakeShare": 4.695994655908758,
+      "explicitPullupShare": -1.9747116510403457
+    },
+    "ci95": null,
+    "limitation": "assisted share among makes; explicit pullup proxy, not exact catch/pull tracking; descriptive confounding remains"
+  },
+  {
+    "season": "2023-24",
+    "team": "league",
+    "kind": "prior",
+    "subset": "all",
+    "players": 147,
+    "strata": 294,
+    "rawOnFGA": 41146,
+    "rawOffFGA": 29465,
+    "standardizedOnMinusOffPP": {
+      "FG": 1.0339592307140555,
+      "assistedMakeShare": 5.834410440502343,
+      "explicitPullupShare": -1.878954636870962
+    },
+    "ci95": null,
+    "limitation": "assisted share among makes; explicit pullup proxy, not exact catch/pull tracking; descriptive confounding remains"
+  },
+  {
+    "season": "2023-24",
+    "team": "league",
+    "kind": "prior",
+    "subset": "role",
+    "players": 110,
+    "strata": 205,
+    "rawOnFGA": 27925,
+    "rawOffFGA": 17277,
+    "standardizedOnMinusOffPP": {
+      "FG": 1.2052310151221834,
+      "assistedMakeShare": 3.6590766515197526,
+      "explicitPullupShare": -1.924071737410785
+    },
+    "ci95": null,
+    "limitation": "assisted share among makes; explicit pullup proxy, not exact catch/pull tracking; descriptive confounding remains"
+  },
+  {
+    "season": "2024-25",
+    "team": "league",
+    "kind": "current",
+    "subset": "all",
+    "players": 247,
+    "strata": 479,
+    "rawOnFGA": 69434,
+    "rawOffFGA": 48171,
+    "standardizedOnMinusOffPP": {
+      "FG": 0.9109216346058876,
+      "assistedMakeShare": 6.634588612994224,
+      "explicitPullupShare": -2.4413854558887054
+    },
+    "ci95": null,
+    "limitation": "assisted share among makes; explicit pullup proxy, not exact catch/pull tracking; descriptive confounding remains"
+  },
+  {
+    "season": "2024-25",
+    "team": "league",
+    "kind": "current",
+    "subset": "role",
+    "players": 174,
+    "strata": 313,
+    "rawOnFGA": 43295,
+    "rawOffFGA": 26577,
+    "standardizedOnMinusOffPP": {
+      "FG": 0.680259528486851,
+      "assistedMakeShare": 4.9757476229993065,
+      "explicitPullupShare": -1.8233052056869987
+    },
+    "ci95": null,
+    "limitation": "assisted share among makes; explicit pullup proxy, not exact catch/pull tracking; descriptive confounding remains"
+  },
+  {
+    "season": "2024-25",
+    "team": "league",
+    "kind": "prior",
+    "subset": "all",
+    "players": 182,
+    "strata": 360,
+    "rawOnFGA": 55759,
+    "rawOffFGA": 36220,
+    "standardizedOnMinusOffPP": {
+      "FG": 0.03699415572428706,
+      "assistedMakeShare": 6.72371469988332,
+      "explicitPullupShare": -2.132148762638355
+    },
+    "ci95": null,
+    "limitation": "assisted share among makes; explicit pullup proxy, not exact catch/pull tracking; descriptive confounding remains"
+  },
+  {
+    "season": "2024-25",
+    "team": "league",
+    "kind": "prior",
+    "subset": "role",
+    "players": 124,
+    "strata": 229,
+    "rawOnFGA": 34060,
+    "rawOffFGA": 19190,
+    "standardizedOnMinusOffPP": {
+      "FG": -0.19580334064517088,
+      "assistedMakeShare": 5.080610027432832,
+      "explicitPullupShare": -2.0100643815315635
+    },
+    "ci95": null,
+    "limitation": "assisted share among makes; explicit pullup proxy, not exact catch/pull tracking; descriptive confounding remains"
+  },
+  {
+    "season": "2025-26",
+    "team": "league",
+    "kind": "current",
+    "subset": "all",
+    "players": 281,
+    "strata": 575,
+    "rawOnFGA": 74881,
+    "rawOffFGA": 57855,
+    "standardizedOnMinusOffPP": {
+      "FG": 1.2307175413065874,
+      "assistedMakeShare": 5.273378857213127,
+      "explicitPullupShare": -2.066678978201084
+    },
+    "ci95": null,
+    "limitation": "assisted share among makes; explicit pullup proxy, not exact catch/pull tracking; descriptive confounding remains"
+  },
+  {
+    "season": "2025-26",
+    "team": "league",
+    "kind": "current",
+    "subset": "role",
+    "players": 192,
+    "strata": 384,
+    "rawOnFGA": 49248,
+    "rawOffFGA": 32409,
+    "standardizedOnMinusOffPP": {
+      "FG": 1.0638843013930526,
+      "assistedMakeShare": 4.7016317254024615,
+      "explicitPullupShare": -1.5230442137758582
+    },
+    "ci95": null,
+    "limitation": "assisted share among makes; explicit pullup proxy, not exact catch/pull tracking; descriptive confounding remains"
+  },
+  {
+    "season": "2025-26",
+    "team": "league",
+    "kind": "prior",
+    "subset": "all",
+    "players": 167,
+    "strata": 332,
+    "rawOnFGA": 41697,
+    "rawOffFGA": 33894,
+    "standardizedOnMinusOffPP": {
+      "FG": 1.237218931452506,
+      "assistedMakeShare": 4.994869485902742,
+      "explicitPullupShare": -2.110127046618613
+    },
+    "ci95": null,
+    "limitation": "assisted share among makes; explicit pullup proxy, not exact catch/pull tracking; descriptive confounding remains"
+  },
+  {
+    "season": "2025-26",
+    "team": "league",
+    "kind": "prior",
+    "subset": "role",
+    "players": 117,
+    "strata": 221,
+    "rawOnFGA": 27181,
+    "rawOffFGA": 19350,
+    "standardizedOnMinusOffPP": {
+      "FG": 1.2660668466442897,
+      "assistedMakeShare": 4.377349278879605,
+      "explicitPullupShare": -1.6601132670211984
+    },
+    "ci95": null,
+    "limitation": "assisted share among makes; explicit pullup proxy, not exact catch/pull tracking; descriptive confounding remains"
+  },
+  {
+    "season": "2025-26",
+    "team": "Indiana Pacers",
+    "kind": "current",
+    "subset": "all",
+    "players": 9,
+    "strata": 19,
+    "rawOnFGA": 2540,
+    "rawOffFGA": 1769,
+    "standardizedOnMinusOffPP": {
+      "FG": 1.243882954005472,
+      "assistedMakeShare": 3.7704942292358665,
+      "explicitPullupShare": -0.7792782967263748
+    },
+    "ci95": {
+      "FG": [
+        -2.3249222028981356,
+        4.726023374658688
+      ],
+      "assistedMakeShare": [
+        -0.9457701135350703,
+        8.864284683217313
+      ],
+      "explicitPullupShare": [
+        -3.1655228494510315,
+        1.722149571360638
+      ]
+    },
+    "limitation": "assisted share among makes; explicit pullup proxy, not exact catch/pull tracking; descriptive confounding remains",
+    "bootstrapGames": 57
+  },
+  {
+    "season": "2025-26",
+    "team": "Indiana Pacers",
+    "kind": "current",
+    "subset": "role",
+    "players": 6,
+    "strata": 12,
+    "rawOnFGA": 1489,
+    "rawOffFGA": 938,
+    "standardizedOnMinusOffPP": {
+      "FG": 3.6762975260104684,
+      "assistedMakeShare": 3.1813154585248937,
+      "explicitPullupShare": -1.3621308529074085
+    },
+    "ci95": {
+      "FG": [
+        -0.6433599928059027,
+        8.265437375300095
+      ],
+      "assistedMakeShare": [
+        -2.0415359688780206,
+        9.287779822243847
+      ],
+      "explicitPullupShare": [
+        -3.6910880913868462,
+        0.9188738316427282
+      ]
+    },
+    "limitation": "assisted share among makes; explicit pullup proxy, not exact catch/pull tracking; descriptive confounding remains",
+    "bootstrapGames": 57
+  },
+  {
+    "season": "2025-26",
+    "team": "Indiana Pacers",
+    "kind": "prior",
+    "subset": "all",
+    "players": 0,
+    "strata": 0,
+    "rawOnFGA": 0,
+    "rawOffFGA": 0,
+    "standardizedOnMinusOffPP": {
+      "FG": null,
+      "assistedMakeShare": null,
+      "explicitPullupShare": null
+    },
+    "ci95": null,
+    "limitation": "assisted share among makes; explicit pullup proxy, not exact catch/pull tracking; descriptive confounding remains"
+  },
+  {
+    "season": "2025-26",
+    "team": "Indiana Pacers",
+    "kind": "prior",
+    "subset": "role",
+    "players": 0,
+    "strata": 0,
+    "rawOnFGA": 0,
+    "rawOffFGA": 0,
+    "standardizedOnMinusOffPP": {
+      "FG": null,
+      "assistedMakeShare": null,
+      "explicitPullupShare": null
+    },
+    "ci95": null,
+    "limitation": "assisted share among makes; explicit pullup proxy, not exact catch/pull tracking; descriptive confounding remains"
+  },
+  {
+    "season": "2024-25",
+    "team": "Memphis Grizzlies",
+    "kind": "current",
+    "subset": "all",
+    "players": 6,
+    "strata": 12,
+    "rawOnFGA": 1487,
+    "rawOffFGA": 1250,
+    "standardizedOnMinusOffPP": {
+      "FG": -0.26488935769727795,
+      "assistedMakeShare": 7.737780571384967,
+      "explicitPullupShare": -2.9065139906205726
+    },
+    "ci95": {
+      "FG": [
+        -5.218517563927768,
+        4.502658537882395
+      ],
+      "assistedMakeShare": [
+        1.8343317525543457,
+        13.695470939872177
+      ],
+      "explicitPullupShare": [
+        -5.6680449626768965,
+        -0.364924747127204
+      ]
+    },
+    "limitation": "assisted share among makes; explicit pullup proxy, not exact catch/pull tracking; descriptive confounding remains",
+    "bootstrapGames": 36
+  },
+  {
+    "season": "2024-25",
+    "team": "Memphis Grizzlies",
+    "kind": "current",
+    "subset": "role",
+    "players": 3,
+    "strata": 5,
+    "rawOnFGA": 728,
+    "rawOffFGA": 590,
+    "standardizedOnMinusOffPP": {
+      "FG": 1.477009395396424,
+      "assistedMakeShare": 5.71203155247829,
+      "explicitPullupShare": -1.1796128363422527
+    },
+    "ci95": {
+      "FG": [
+        -7.360443723942713,
+        10.590479803112029
+      ],
+      "assistedMakeShare": [
+        -1.2199866543977582,
+        12.726643739894195
+      ],
+      "explicitPullupShare": [
+        -4.638525549476296,
+        2.093832689265554
+      ]
+    },
+    "limitation": "assisted share among makes; explicit pullup proxy, not exact catch/pull tracking; descriptive confounding remains",
+    "bootstrapGames": 36
+  },
+  {
+    "season": "2024-25",
+    "team": "Memphis Grizzlies",
+    "kind": "prior",
+    "subset": "all",
+    "players": 11,
+    "strata": 23,
+    "rawOnFGA": 2154,
+    "rawOffFGA": 3194,
+    "standardizedOnMinusOffPP": {
+      "FG": -3.1157115436096228,
+      "assistedMakeShare": 0.9067253437435762,
+      "explicitPullupShare": -0.20892083980382364
+    },
+    "ci95": {
+      "FG": [
+        -6.212339465621896,
+        -0.11070388996702961
+      ],
+      "assistedMakeShare": [
+        -2.4622440601016904,
+        4.3214654138559965
+      ],
+      "explicitPullupShare": [
+        -1.6513975357794255,
+        1.1533217278799106
+      ]
+    },
+    "limitation": "assisted share among makes; explicit pullup proxy, not exact catch/pull tracking; descriptive confounding remains",
+    "bootstrapGames": 62
+  },
+  {
+    "season": "2024-25",
+    "team": "Memphis Grizzlies",
+    "kind": "prior",
+    "subset": "role",
+    "players": 7,
+    "strata": 13,
+    "rawOnFGA": 1054,
+    "rawOffFGA": 1462,
+    "standardizedOnMinusOffPP": {
+      "FG": -4.252907027532066,
+      "assistedMakeShare": 3.252481353881921,
+      "explicitPullupShare": -0.8443284294341673
+    },
+    "ci95": {
+      "FG": [
+        -8.462270030773029,
+        -0.19237446676913184
+      ],
+      "assistedMakeShare": [
+        -1.610973263299584,
+        7.8533718996022515
+      ],
+      "explicitPullupShare": [
+        -2.805601377620765,
+        1.0927263725548721
+      ]
+    },
+    "limitation": "assisted share among makes; explicit pullup proxy, not exact catch/pull tracking; descriptive confounding remains",
+    "bootstrapGames": 62
+  }
+]

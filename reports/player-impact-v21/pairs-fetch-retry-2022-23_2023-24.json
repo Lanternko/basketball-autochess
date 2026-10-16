@@ -1,0 +1,37 @@
+{
+  "jobs": [
+    {
+      "season": "2022-23",
+      "file": "reports/player-impact-v21/raw/2022-23/passing-pairs-league.json",
+      "url": "https://stats.nba.com/stats/playerdashptpass?PlayerID=0&TeamID=0&Season=2022-23&SeasonType=Regular+Season&PerMode=Totals&LeagueID=00&LastNGames=0&Month=0&OpponentTeamID=0&DateFrom=&DateTo=&Location=&Outcome=&SeasonSegment=&VsConference=&VsDivision=",
+      "rows": [
+        {
+          "name": "PassesMade",
+          "rows": 8969
+        },
+        {
+          "name": "PassesReceived",
+          "rows": 8969
+        }
+      ],
+      "sha256": "c0882590569c9b23a972f7a4700721245c529dbf25a35fda25d807e0d1528bc3"
+    },
+    {
+      "season": "2023-24",
+      "file": "reports/player-impact-v21/raw/2023-24/passing-pairs-league.json",
+      "url": "https://stats.nba.com/stats/playerdashptpass?PlayerID=0&TeamID=0&Season=2023-24&SeasonType=Regular+Season&PerMode=Totals&LeagueID=00&LastNGames=0&Month=0&OpponentTeamID=0&DateFrom=&DateTo=&Location=&Outcome=&SeasonSegment=&VsConference=&VsDivision=",
+      "rows": [
+        {
+          "name": "PassesMade",
+          "rows": 9725
+        },
+        {
+          "name": "PassesReceived",
+          "rows": 9725
+        }
+      ],
+      "sha256": "b1fce48c840fc1aef7a93608c89142171ce6991146a55fdf2d4268171f00fc5c"
+    }
+  ],
+  "failures": []
+}

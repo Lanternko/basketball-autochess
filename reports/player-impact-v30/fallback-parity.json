@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "games": 96,
+  "allGameAndPersonalCountersExactlyV28": true,
+  "scope": "v28 inputs with source defense anchors and v28 shooting contexts, without new creation-dependence anchors. No role override; every counter must exactly match v28.",
+  "hashes": {
+    "reports/player-impact-v30/engine.mjs": "071c13d9fff758094ee3ea0850e6692226ef8bb9ab462b89412a11cc7be493be",
+    "reports/player-impact-v30/model.mjs": "25432a322a7f81a96f49009a1b93646d72862a1c7ee3ddb11e2dbe48177a3f04",
+    "reports/player-impact-v30/verify-fallback.mjs": "a93b14f2e524a2bfad9843ed874327ed35efc0effff98eb4fd9ac3f0a2158c32"
+  }
+}

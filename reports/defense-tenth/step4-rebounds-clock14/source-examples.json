@@ -1,0 +1,525 @@
+[
+  {
+    "season": "2022-23",
+    "gameId": "0022200029",
+    "elapsed": 4,
+    "anchorAction": 668,
+    "clockAction": 669,
+    "actions": [
+      {
+        "actionNumber": 666,
+        "clock": "PT02M57.00S",
+        "actionType": "2pt",
+        "subType": "Layup",
+        "descriptor": "cutting finger roll",
+        "qualifiers": [
+          "pointsinthepaint",
+          "fromturnover",
+          "2ndchance"
+        ],
+        "personId": 1631093,
+        "teamId": 1610612765,
+        "description": "MISS J. Ivey cutting finger roll Layup - blocked",
+        "shotActionNumber": null,
+        "shotResult": "Missed"
+      },
+      {
+        "actionNumber": 667,
+        "clock": "PT02M57.00S",
+        "actionType": "block",
+        "subType": "",
+        "descriptor": null,
+        "qualifiers": [],
+        "personId": 1630174,
+        "teamId": 1610612754,
+        "description": "A. Nesmith BLOCK (3 BLK)",
+        "shotActionNumber": null,
+        "shotResult": null
+      },
+      {
+        "actionNumber": 668,
+        "clock": "PT02M54.00S",
+        "actionType": "rebound",
+        "subType": "offensive",
+        "descriptor": null,
+        "qualifiers": [],
+        "personId": 1630180,
+        "teamId": 1610612765,
+        "description": "S. Bey REBOUND (Off:3 Def:7)",
+        "shotActionNumber": 666,
+        "shotResult": null
+      },
+      {
+        "actionNumber": 669,
+        "clock": "PT02M50.00S",
+        "actionType": "turnover",
+        "subType": "shot clock",
+        "descriptor": null,
+        "qualifiers": [
+          "team"
+        ],
+        "personId": 0,
+        "teamId": 1610612765,
+        "description": "DET shot clock Team TURNOVER",
+        "shotActionNumber": null,
+        "shotResult": null
+      }
+    ]
+  },
+  {
+    "season": "2022-23",
+    "gameId": "0022200040",
+    "elapsed": 1,
+    "anchorAction": 461,
+    "clockAction": 462,
+    "actions": [
+      {
+        "actionNumber": 471,
+        "clock": "PT07M26.00S",
+        "actionType": "2pt",
+        "subType": "DUNK",
+        "descriptor": "tip",
+        "qualifiers": [
+          "pointsinthepaint",
+          "2ndchance"
+        ],
+        "personId": 1629627,
+        "teamId": 1610612740,
+        "description": "Z. Williamson tip DUNK (20 PTS)",
+        "shotActionNumber": null,
+        "shotResult": "Made"
+      },
+      {
+        "actionNumber": 460,
+        "clock": "PT07M01.00S",
+        "actionType": "2pt",
+        "subType": "Hook",
+        "descriptor": "turnaround",
+        "qualifiers": [
+          "pointsinthepaint"
+        ],
+        "personId": 201144,
+        "teamId": 1610612762,
+        "description": "MISS M. Conley turnaround Hook",
+        "shotActionNumber": null,
+        "shotResult": "Missed"
+      },
+      {
+        "actionNumber": 461,
+        "clock": "PT07M00.00S",
+        "actionType": "rebound",
+        "subType": "offensive",
+        "descriptor": null,
+        "qualifiers": [],
+        "personId": 1631117,
+        "teamId": 1610612762,
+        "description": "W. Kessler REBOUND (Off:4 Def:3)",
+        "shotActionNumber": 460,
+        "shotResult": null
+      },
+      {
+        "actionNumber": 462,
+        "clock": "PT06M59.00S",
+        "actionType": "turnover",
+        "subType": "shot clock",
+        "descriptor": null,
+        "qualifiers": [
+          "team"
+        ],
+        "personId": 0,
+        "teamId": 1610612762,
+        "description": "UTA shot clock Team TURNOVER",
+        "shotActionNumber": null,
+        "shotResult": null
+      }
+    ]
+  },
+  {
+    "season": "2023-24",
+    "gameId": "0022300074",
+    "elapsed": 0,
+    "anchorAction": 260,
+    "clockAction": 261,
+    "actions": [
+      {
+        "actionNumber": 258,
+        "clock": "PT05M31.00S",
+        "actionType": "2pt",
+        "subType": "Jump Shot",
+        "descriptor": null,
+        "qualifiers": [
+          "pointsinthepaint"
+        ],
+        "personId": 203924,
+        "teamId": 1610612757,
+        "description": "MISS J. Grant 6' Jump Shot - blocked",
+        "shotActionNumber": null,
+        "shotResult": "Missed"
+      },
+      {
+        "actionNumber": 259,
+        "clock": "PT05M31.00S",
+        "actionType": "block",
+        "subType": "",
+        "descriptor": null,
+        "qualifiers": [],
+        "personId": 1627826,
+        "teamId": 1610612746,
+        "description": "I. Zubac BLOCK (3 BLK)",
+        "shotActionNumber": null,
+        "shotResult": null
+      },
+      {
+        "actionNumber": 260,
+        "clock": "PT05M28.00S",
+        "actionType": "rebound",
+        "subType": "offensive",
+        "descriptor": null,
+        "qualifiers": [],
+        "personId": 203924,
+        "teamId": 1610612757,
+        "description": "J. Grant REBOUND (Off:1 Def:0)",
+        "shotActionNumber": 258,
+        "shotResult": null
+      },
+      {
+        "actionNumber": 261,
+        "clock": "PT05M28.00S",
+        "actionType": "turnover",
+        "subType": "shot clock",
+        "descriptor": null,
+        "qualifiers": [
+          "team"
+        ],
+        "personId": 0,
+        "teamId": 1610612757,
+        "description": "POR shot clock Team TURNOVER",
+        "shotActionNumber": null,
+        "shotResult": null
+      }
+    ]
+  },
+  {
+    "season": "2023-24",
+    "gameId": "0022300076",
+    "elapsed": 0,
+    "anchorAction": 87,
+    "clockAction": 88,
+    "actions": [
+      {
+        "actionNumber": 85,
+        "clock": "PT05M46.00S",
+        "actionType": "2pt",
+        "subType": "Layup",
+        "descriptor": "driving",
+        "qualifiers": [
+          "pointsinthepaint"
+        ],
+        "personId": 201142,
+        "teamId": 1610612756,
+        "description": "MISS K. Durant driving Layup - blocked",
+        "shotActionNumber": null,
+        "shotResult": "Missed"
+      },
+      {
+        "actionNumber": 86,
+        "clock": "PT05M46.00S",
+        "actionType": "block",
+        "subType": "",
+        "descriptor": null,
+        "qualifiers": [],
+        "personId": 1629060,
+        "teamId": 1610612747,
+        "description": "R. Hachimura BLOCK (1 BLK)",
+        "shotActionNumber": null,
+        "shotResult": null
+      },
+      {
+        "actionNumber": 87,
+        "clock": "PT05M46.00S",
+        "actionType": "rebound",
+        "subType": "offensive",
+        "descriptor": null,
+        "qualifiers": [],
+        "personId": 1628960,
+        "teamId": 1610612756,
+        "description": "G. Allen REBOUND (Off:1 Def:1)",
+        "shotActionNumber": 85,
+        "shotResult": null
+      },
+      {
+        "actionNumber": 88,
+        "clock": "PT05M46.00S",
+        "actionType": "turnover",
+        "subType": "shot clock",
+        "descriptor": null,
+        "qualifiers": [
+          "team"
+        ],
+        "personId": 0,
+        "teamId": 1610612756,
+        "description": "PHX shot clock Team TURNOVER",
+        "shotActionNumber": null,
+        "shotResult": null
+      }
+    ]
+  },
+  {
+    "season": "2024-25",
+    "gameId": "0022400064",
+    "elapsed": 2,
+    "anchorAction": 391,
+    "clockAction": 392,
+    "actions": [
+      {
+        "actionNumber": 389,
+        "clock": "PT07M21.00S",
+        "actionType": "2pt",
+        "subType": "Layup",
+        "descriptor": "driving",
+        "qualifiers": [
+          "pointsinthepaint"
+        ],
+        "personId": 1630560,
+        "teamId": 1610612751,
+        "description": "MISS C. Thomas 7' driving Layup - blocked",
+        "shotActionNumber": null,
+        "shotResult": "Missed"
+      },
+      {
+        "actionNumber": 390,
+        "clock": "PT07M21.00S",
+        "actionType": "block",
+        "subType": "",
+        "descriptor": null,
+        "qualifiers": [],
+        "personId": 1630700,
+        "teamId": 1610612737,
+        "description": "D. Daniels BLOCK (1 BLK)",
+        "shotActionNumber": null,
+        "shotResult": null
+      },
+      {
+        "actionNumber": 391,
+        "clock": "PT07M17.00S",
+        "actionType": "rebound",
+        "subType": "offensive",
+        "descriptor": null,
+        "qualifiers": [],
+        "personId": 1630560,
+        "teamId": 1610612751,
+        "description": "C. Thomas REBOUND (Off:2 Def:2)",
+        "shotActionNumber": 389,
+        "shotResult": null
+      },
+      {
+        "actionNumber": 392,
+        "clock": "PT07M15.00S",
+        "actionType": "turnover",
+        "subType": "shot clock",
+        "descriptor": null,
+        "qualifiers": [
+          "team"
+        ],
+        "personId": 0,
+        "teamId": 1610612751,
+        "description": "BKN shot clock Team TURNOVER",
+        "shotActionNumber": null,
+        "shotResult": null
+      }
+    ]
+  },
+  {
+    "season": "2024-25",
+    "gameId": "0022400067",
+    "elapsed": 0,
+    "anchorAction": 342,
+    "clockAction": 343,
+    "actions": [
+      {
+        "actionNumber": 340,
+        "clock": "PT01M04.00S",
+        "actionType": "2pt",
+        "subType": "Layup",
+        "descriptor": "driving",
+        "qualifiers": [
+          "pointsinthepaint"
+        ],
+        "personId": 1630567,
+        "teamId": 1610612761,
+        "description": "MISS S. Barnes driving Layup - blocked",
+        "shotActionNumber": null,
+        "shotResult": "Missed"
+      },
+      {
+        "actionNumber": 341,
+        "clock": "PT01M04.00S",
+        "actionType": "block",
+        "subType": "",
+        "descriptor": null,
+        "qualifiers": [],
+        "personId": 1630596,
+        "teamId": 1610612739,
+        "description": "E. Mobley BLOCK (2 BLK)",
+        "shotActionNumber": null,
+        "shotResult": null
+      },
+      {
+        "actionNumber": 342,
+        "clock": "PT01M03.00S",
+        "actionType": "rebound",
+        "subType": "offensive",
+        "descriptor": null,
+        "qualifiers": [],
+        "personId": 1630567,
+        "teamId": 1610612761,
+        "description": "S. Barnes REBOUND (Off:2 Def:2)",
+        "shotActionNumber": 340,
+        "shotResult": null
+      },
+      {
+        "actionNumber": 343,
+        "clock": "PT01M03.00S",
+        "actionType": "turnover",
+        "subType": "shot clock",
+        "descriptor": null,
+        "qualifiers": [
+          "team"
+        ],
+        "personId": 0,
+        "teamId": 1610612761,
+        "description": "TOR shot clock Team TURNOVER",
+        "shotActionNumber": null,
+        "shotResult": null
+      }
+    ]
+  },
+  {
+    "season": "2025-26",
+    "gameId": "0022500095",
+    "elapsed": 0,
+    "anchorAction": 669,
+    "clockAction": 676,
+    "actions": [
+      {
+        "actionNumber": 667,
+        "clock": "PT03M20.00S",
+        "actionType": "freethrow",
+        "subType": "2 of 2",
+        "descriptor": null,
+        "qualifiers": [
+          "2ndchance"
+        ],
+        "personId": 1642844,
+        "teamId": 1610612759,
+        "description": "D. Harper Free Throw 2 of 2 (13 PTS)",
+        "shotActionNumber": null,
+        "shotResult": "Made"
+      },
+      {
+        "actionNumber": 668,
+        "clock": "PT02M58.00S",
+        "actionType": "3pt",
+        "subType": "Jump Shot",
+        "descriptor": null,
+        "qualifiers": [],
+        "personId": 1642852,
+        "teamId": 1610612740,
+        "description": "MISS D. Queen 26' 3PT",
+        "shotActionNumber": null,
+        "shotResult": "Missed"
+      },
+      {
+        "actionNumber": 669,
+        "clock": "PT02M55.00S",
+        "actionType": "rebound",
+        "subType": "offensive",
+        "descriptor": null,
+        "qualifiers": [],
+        "personId": 1629627,
+        "teamId": 1610612740,
+        "description": "Z. Williamson REBOUND (Off:5 Def:5)",
+        "shotActionNumber": 668,
+        "shotResult": null
+      },
+      {
+        "actionNumber": 676,
+        "clock": "PT02M55.00S",
+        "actionType": "turnover",
+        "subType": "shot clock",
+        "descriptor": null,
+        "qualifiers": [
+          "team"
+        ],
+        "personId": 0,
+        "teamId": 1610612740,
+        "description": "NOP shot clock Team TURNOVER",
+        "shotActionNumber": null,
+        "shotResult": null
+      }
+    ]
+  },
+  {
+    "season": "2025-26",
+    "gameId": "0022500098",
+    "elapsed": 0,
+    "anchorAction": 436,
+    "clockAction": 439,
+    "actions": [
+      {
+        "actionNumber": 435,
+        "clock": "PT04M27.00S",
+        "actionType": "2pt",
+        "subType": "Jump Shot",
+        "descriptor": "turnaround",
+        "qualifiers": [],
+        "personId": 1641729,
+        "teamId": 1610612762,
+        "description": "MISS B. Sensabaugh 11' turnaround Shot - blocked",
+        "shotActionNumber": null,
+        "shotResult": "Missed"
+      },
+      {
+        "actionNumber": 438,
+        "clock": "PT04M27.00S",
+        "actionType": "block",
+        "subType": "",
+        "descriptor": null,
+        "qualifiers": [],
+        "personId": 1628370,
+        "teamId": 1610612758,
+        "description": "M. Monk BLOCK (2 BLK)",
+        "shotActionNumber": null,
+        "shotResult": null
+      },
+      {
+        "actionNumber": 436,
+        "clock": "PT04M25.00S",
+        "actionType": "rebound",
+        "subType": "offensive",
+        "descriptor": null,
+        "qualifiers": [],
+        "personId": 1642846,
+        "teamId": 1610612762,
+        "description": "A. Bailey REBOUND (Off:1 Def:0)",
+        "shotActionNumber": 435,
+        "shotResult": null
+      },
+      {
+        "actionNumber": 439,
+        "clock": "PT04M25.00S",
+        "actionType": "turnover",
+        "subType": "shot clock",
+        "descriptor": null,
+        "qualifiers": [
+          "team"
+        ],
+        "personId": 0,
+        "teamId": 1610612762,
+        "description": "UTA shot clock Team TURNOVER",
+        "shotActionNumber": null,
+        "shotResult": null
+      }
+    ]
+  }
+]

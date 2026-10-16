@@ -1,0 +1,28 @@
+{
+  "passed": true,
+  "jobs": 24,
+  "matches": 28023,
+  "observerOnlyGames": 13263,
+  "frozenSourcesAndOutputsPassed": true,
+  "v46AndV47Unchanged": true,
+  "rawLedgersAndByShooterPassed": true,
+  "rawIndividualAndTeamScoreRecomputationPassed": true,
+  "adoptionGatesIndependentlyRecomputed": true,
+  "evidenceSHA256": {
+    "reports/player-impact-v48/scores.json": "255666bab468d33a770a158ed3cf8681559eb4efdad4157816a64da74fb509f3",
+    "reports/player-impact-v48/fine-scores.json": "b3b2b92ebdb2e9037f0250bdb6dba8e52b6eab6e13581345fa3d6874eb186750",
+    "reports/player-impact-v48/baseline-offense-scores.json": "9be654180bc0ea0dc92a1041565f2bd229bbef74d751e315651e63a0d4b41cbb",
+    "reports/player-impact-v48/candidate-offense-scores.json": "88eeec89adedb852f8f2f140d2411c9299677ff163d69bd00059560b6fcf4b2b",
+    "reports/player-impact-v48/decision.json": "46577f6eb03f874854b6b41d7993bd54899a88f76f7cf03b2728ce561d9e9141",
+    "reports/player-impact-v48/report.md": "df9396a54e789a130e16ff6e6fe175985c99e3acdb1f83dc15c45766c8c661ff",
+    "reports/player-impact-v48/report.py": "387a6e4e6164fc71b1ce6cae7bf4eb31665b5be377173fd05482fd770aa3c001",
+    "reports/player-impact-v48/verify-results.py": "df91f5b947251e22c02a38a051b77ed5419959340d5444e2857736238924b0d2",
+    "reports/player-impact-v48/pair-scores.json": "f37b449c863cc6eced73d889c1f1f49dc312f432e56a0b56f39ec47914e2c613",
+    "reports/player-impact-v48/pair-verification.json": "cae75ecbb14d811f82b0416ee8e809eed2644a3752d8276e480085c3ee01af36",
+    "reports/player-impact-v48/pair-score.py": "6a45e882c1fe54fa526c6d005be20f3322ea2bb2d6979ded63992dcdf93ba3df",
+    "reports/player-impact-v48/score.py": "554266b3db0ce4603cb795eca7bdd9ec3260deaea2bc32d4b977e6fad9cc276e",
+    "reports/player-impact-v48/score-offense.py": "d5f846522e0d501e5e978797d52ab28ebc68cb7a91f950d5ed1fd6ea332f5e7e",
+    "reports/player-impact-v48/score-fine.py": "028d308d965cc600db2a188e2373ac338673c33f4ab70b80dc09917ed98b346e"
+  },
+  "pairObservationThreeSeedExactGameplayParityPassed": true
+}

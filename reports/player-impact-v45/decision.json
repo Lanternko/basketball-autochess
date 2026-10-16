@@ -1,0 +1,42 @@
+{
+  "version": "v45",
+  "implementationAndValidationComplete": true,
+  "adopted": false,
+  "adoptionScope": "Not promoted to the production simulation or healthy-ability OVR baseline. Five-zone measurement and candidate implementation retained for subsequent defense experiments.",
+  "namedPlayerExceptions": false,
+  "seasons": ["2022-23", "2023-24", "2024-25", "2025-26"],
+  "simulationJobs": 24,
+  "simulationGames": 28023,
+  "temporaryTeamRegressionAuthorized": true,
+  "reason": "The selected five-zone source model improves shot-level heldout likelihood and Wembanyama reconstruction, but all four seasons regress on overall on-court opponent paint FG% MAE versus v44. On/off paint make error also worsens in the four-season mean. Team scoring regression alone is not the rejection reason.",
+  "fourSeasonMeanMAE": {
+    "onOpponentPaintFGpct_pp": {"v44": 1.2048, "v45": 1.3629},
+    "onOpponentThreeFGpct_pp": {"v44": 1.4149, "v45": 1.2514},
+    "onOpponentPaintAttemptShare_pp": {"v44": 0.9291, "v45": 0.8956},
+    "onOpponentThreeAttemptShare_pp": {"v44": 0.9356, "v45": 0.9054},
+    "teamPPG": {"v44": 2.3335027100271, "v45": 2.3695121951219513}
+  },
+  "targetSeasonWembanyama": {
+    "onOpponentPaintFGpct": {"actual": 50.576, "v44": 53.909, "v45": 50.489},
+    "paintAttemptShareOnMinusOff_pp": {"actual": -6.344, "v44": -1.059, "v45": -5.388},
+    "paintFGpctOnMinusOff_pp": {"actual": -6.511, "v44": -1.541, "v45": -8.490},
+    "freshRestrictedAreaAttemptShareOnMinusOff_pp": {"actual": -4.0315, "v45": -4.1675},
+    "remainingIssue": "Off-court restricted-area FG% is too high; other-paint shot deterrence remains too weak; midrange make defense remains inaccurate. Correct on-court paint FG% does not imply correct on/off or every subzone."
+  },
+  "sourceEvidence": {
+    "fiveZoneMakeHeldoutNLLBetterThanCoarseAllFourSeasons": true,
+    "sourceConditionalCoarsePaintFGpctMAE": {"coarse": 0.9372847404525104, "fineSelected": 1.064352478267121},
+    "interpretation": "The deterioration is already present before simulation. Better fine-zone shot likelihood does not guarantee smaller player-level aggregated paint FG% errors. Source attribution, shrinkage and zone aggregation need separate ablations; a causal explanation has not yet been established.",
+    "laggedClosestDefenderTrackingSelected": false,
+    "trainingGameBlockActivitySelectedForMake": ["ra", "paint", "mid"],
+    "trainingGameBlockActivitySelectedForChoice": ["three", "paintGivenTwo", "raGivenPaint", "cornerGivenThree"],
+    "cornerChoiceFeatureEvidence": "Only a tiny heldout likelihood gain; not strong evidence of a distinct corner deterrence mechanism."
+  },
+  "remainingWork": [
+    "Evaluate shared paint defense with separate restricted-area and other-paint deviations using older-season whole-game heldout selection, rather than tuning Wembanyama or current-season on/off residuals.",
+    "Separate the effects of fine-zone shooter estimates, measured activity priors and runtime rotation composition with controlled ablations.",
+    "Retain joint fine-zone and aggregated player defense metrics; do not select solely by shot-level likelihood or the Wembanyama example.",
+    "Total attempt-rate deterrence and fine-zone foul/rebound geometry remain distinct uncompleted mechanisms."
+  ],
+  "scope": "Already-seen same-season reconstruction with target season excluded from hyperparameter selection. Not future prediction or causal individual defense. No new 582-player OVR run."
+}

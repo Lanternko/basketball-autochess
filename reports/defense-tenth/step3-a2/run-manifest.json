@@ -1,0 +1,1454 @@
+{
+  "finishedAt": "2026-10-13T05:49:12.403Z",
+  "seconds": 1302.857,
+  "protocolHash": "fa301dfa258b1ae3d89eefef5404e53ecdd6bc9973988d05ec817bd5ca4167cd",
+  "curveLockHash": "3f2d1fefb3b980cba8433c2403a62284dd645bd066f05c4e359bda16bd365e0a",
+  "implementationHashes": {
+    "cards.mjs": "681cafb7d1e3774226a189d28ab9543ee735e6d35cb2be82455f7c974ba4fbca",
+    "fit.mjs": "cab120c03eccb2b39d90baee0e529f5ae9dfe0c200a3fff52d5a1e16c3ceb2e7",
+    "prepare.mjs": "052fae67b41a9db2a5bccf8725e64bfa4e96f1072c5ade3451312346712db9e1",
+    "run.mjs": "121f89618774d571369fbb03b441ab1979f27c8c8c81e6ccd7fe118531c205a1"
+  },
+  "files": [
+    {
+      "target": "2023-24",
+      "layer": "L2",
+      "seed": 20261012,
+      "file": "reports/defense-tenth/step3-a2/runs/2023-24-L2-20261012.json",
+      "sha256": "2a06fc37dc178967f0776baf52de9c69745e43bc57f65973c72d937b655c9ae4",
+      "bundleHash": "031ef95ad25df2de5a6d6d549e143d2cafd8a1cace8b552ef2111fdbe033d9fe"
+    },
+    {
+      "target": "2023-24",
+      "layer": "L2",
+      "seed": 20261013,
+      "file": "reports/defense-tenth/step3-a2/runs/2023-24-L2-20261013.json",
+      "sha256": "2d3e23d8c9e04777acf9b78d8a84fd63d400fa3529822c6fa4b9d64a43c03e79",
+      "bundleHash": "8e6db2fe50ebe0a6c0f97374501a13cf9fc13e726305bc4dad2b30eedbdc2b47"
+    },
+    {
+      "target": "2023-24",
+      "layer": "L2",
+      "seed": 20261014,
+      "file": "reports/defense-tenth/step3-a2/runs/2023-24-L2-20261014.json",
+      "sha256": "ade7738c13f414d2c8cdfb15e8868d23f132ce1439cad64c31a6b631c0b11ed0",
+      "bundleHash": "726553f631610b7e61ff9a161e04a7b4755945cef66bb7ecc9971d36efdf343d"
+    },
+    {
+      "target": "2023-24",
+      "layer": "L2",
+      "seed": 20261015,
+      "file": "reports/defense-tenth/step3-a2/runs/2023-24-L2-20261015.json",
+      "sha256": "901c07e340b09344459155728e2b3d98255e128012aacac690fdf05819b36e26",
+      "bundleHash": "3efb4b72314080a3fdee5fb9b87e41975e313aaa4c9935366f5f4c0d8f399e72"
+    },
+    {
+      "target": "2023-24",
+      "layer": "L2",
+      "seed": 20261016,
+      "file": "reports/defense-tenth/step3-a2/runs/2023-24-L2-20261016.json",
+      "sha256": "20efbb8b6a0f4e7c4c8348406fe022c6fa06f7c5829e1ece6c7b79530affd545",
+      "bundleHash": "dd8bf7732b3e70341d7b6c4d61290d05c3bad8b98c5f704526b80c7288cb8294"
+    },
+    {
+      "target": "2023-24",
+      "layer": "L2",
+      "seed": 20261017,
+      "file": "reports/defense-tenth/step3-a2/runs/2023-24-L2-20261017.json",
+      "sha256": "90bf1d2a4f3b2243a3562fbbfcbac351666a96d6ffbe2050f2b70a4c230082f6",
+      "bundleHash": "449ff6e3cda31472217b91468f54f05f4e69f8881075d1b42d19df825460d18c"
+    },
+    {
+      "target": "2023-24",
+      "layer": "L2",
+      "seed": 20261018,
+      "file": "reports/defense-tenth/step3-a2/runs/2023-24-L2-20261018.json",
+      "sha256": "2cfd07f63f4529aab1a23c0b6bc0eb8ce77c6cfd5a5e31f9e5529969bf920096",
+      "bundleHash": "3db08bc2b1761ea91ddc1f98587fafaccfa9d29d454a742931c6b63fdebe2575"
+    },
+    {
+      "target": "2023-24",
+      "layer": "L2",
+      "seed": 20261019,
+      "file": "reports/defense-tenth/step3-a2/runs/2023-24-L2-20261019.json",
+      "sha256": "a1200ac066808bc944368909c7e0c029ab9706a291cff7102efb41f6b7b04f36",
+      "bundleHash": "818137b347633f01d49418449b4f6c274ab0015db575c8181959945c0045a5b8"
+    },
+    {
+      "target": "2023-24",
+      "layer": "L2",
+      "seed": 20261020,
+      "file": "reports/defense-tenth/step3-a2/runs/2023-24-L2-20261020.json",
+      "sha256": "65c0c69fe3362f2a95d2a5d582cbc53256e6e0d4198b6a2fab3fedf114c1a973",
+      "bundleHash": "c32d4d7950055559fed8e7aaf0185de66ce70e8acca9d07320db638e4d4ddd1c"
+    },
+    {
+      "target": "2023-24",
+      "layer": "L2",
+      "seed": 20261021,
+      "file": "reports/defense-tenth/step3-a2/runs/2023-24-L2-20261021.json",
+      "sha256": "e706d1e5b6ef7795c9db13e3b260892bc43b1acf45698a7741ca864f951cfb81",
+      "bundleHash": "cb4364c333c1cf9fbf1678985b24edcad47f59c4f423b6252d0b0324e7033599"
+    },
+    {
+      "target": "2023-24",
+      "layer": "L2",
+      "seed": 20261022,
+      "file": "reports/defense-tenth/step3-a2/runs/2023-24-L2-20261022.json",
+      "sha256": "4b6fd68132d02df31b128c3877f98643e2d91df1052397f08933e70f22adf374",
+      "bundleHash": "8cf04963df8985a6c6ec70e342fe682f0d12bafe0c136bc96aa792c5ddb4244e"
+    },
+    {
+      "target": "2023-24",
+      "layer": "L2",
+      "seed": 20261023,
+      "file": "reports/defense-tenth/step3-a2/runs/2023-24-L2-20261023.json",
+      "sha256": "464aa1e35cb31d8c90c2fee714a4578f8fdfbfadc6f312aea888e8be428d86b8",
+      "bundleHash": "12954e1c0f0e452d4d2477a4377121c32f4c828548c9f61e2731071fef59c8b4"
+    },
+    {
+      "target": "2023-24",
+      "layer": "L2",
+      "seed": 20261024,
+      "file": "reports/defense-tenth/step3-a2/runs/2023-24-L2-20261024.json",
+      "sha256": "db8b0b6f768d9e2c654c1200f923dbe3ee6b1ef9cdae97ccd04197a483fc3dbe",
+      "bundleHash": "5c6d3f621ff53835289fe6a13821df97b4032f71b801ce2f2a44c42f76f02765"
+    },
+    {
+      "target": "2023-24",
+      "layer": "L2",
+      "seed": 20261025,
+      "file": "reports/defense-tenth/step3-a2/runs/2023-24-L2-20261025.json",
+      "sha256": "a778f8906fe8d24be8b26131d3b47efe8a0736d092b82b9a8aa70893e9347e1f",
+      "bundleHash": "741028b1f7a1698ee4f4e2b7d16c05756fb8f7ad5330402b980d7d9f4fd6611e"
+    },
+    {
+      "target": "2023-24",
+      "layer": "L2",
+      "seed": 20261026,
+      "file": "reports/defense-tenth/step3-a2/runs/2023-24-L2-20261026.json",
+      "sha256": "b5d72ccf653e7d4c9a12a2ef0050f792695b2f0b8873cdc0e516a6491bdd08f0",
+      "bundleHash": "ae375f049e31075628101acff3de67ea3525c0e2e6a37b09c9e68f7e4c49c76b"
+    },
+    {
+      "target": "2023-24",
+      "layer": "L2",
+      "seed": 20261027,
+      "file": "reports/defense-tenth/step3-a2/runs/2023-24-L2-20261027.json",
+      "sha256": "1e724bd6b0833a780c32e9ff6e19c9589499263640dfc85c36a35f54dd3849b8",
+      "bundleHash": "5fc527b14648913f56b34fa091ce63b0b698f7dde8c248b01791744c1acbedd1"
+    },
+    {
+      "target": "2023-24",
+      "layer": "L2",
+      "seed": 20261028,
+      "file": "reports/defense-tenth/step3-a2/runs/2023-24-L2-20261028.json",
+      "sha256": "07b7509071e3ac52ad2637b88142595fd1729ee244015fbeecc8258b0970bc7d",
+      "bundleHash": "6b3afc9b1e24d0250141a546bf7bea4dd54a13255e78d2c0c1af76d79bb8ba0d"
+    },
+    {
+      "target": "2023-24",
+      "layer": "L2",
+      "seed": 20261029,
+      "file": "reports/defense-tenth/step3-a2/runs/2023-24-L2-20261029.json",
+      "sha256": "07491912d8144a55352e78bc403e421ad816bc69c1750d9d76ec9ff4879eac11",
+      "bundleHash": "64ca6e38de35a3c1db30415cb7c3fe1f128a7b3673918df9a5afeda45e25af31"
+    },
+    {
+      "target": "2023-24",
+      "layer": "L2",
+      "seed": 20261030,
+      "file": "reports/defense-tenth/step3-a2/runs/2023-24-L2-20261030.json",
+      "sha256": "4fa7001a233fea6b1b4d3f858fe6eaa9d1bfb8afda19627ac6d172a34ebc29df",
+      "bundleHash": "894c8e0bf672abec314716bfb8125dc6a689817f4e241ab8ac5c0078a4bb4d9a"
+    },
+    {
+      "target": "2023-24",
+      "layer": "L2",
+      "seed": 20261031,
+      "file": "reports/defense-tenth/step3-a2/runs/2023-24-L2-20261031.json",
+      "sha256": "00107d04ee1ebbe1a5b53e5bea5472cd02a17a8ba60be0b5cd41316a61277acd",
+      "bundleHash": "15c69ce856ff4474cd137dd94fec65048e3923ffbadaf024060af08cec55665a"
+    },
+    {
+      "target": "2023-24",
+      "layer": "L3",
+      "seed": 20261012,
+      "file": "reports/defense-tenth/step3-a2/runs/2023-24-L3-20261012.json",
+      "sha256": "174b27953435992edbd39144313e48da8ac8b704699b9fb4db4db67c61be72d8",
+      "bundleHash": "2b483d6016e624a2c34bf752dc8a3668bd6c78609724ee0085bf3fe59c12082c"
+    },
+    {
+      "target": "2023-24",
+      "layer": "L3",
+      "seed": 20261013,
+      "file": "reports/defense-tenth/step3-a2/runs/2023-24-L3-20261013.json",
+      "sha256": "05af5719e3a158cb63b6b94342b7fdc690af9257d7ad613a5f03172bba2756e8",
+      "bundleHash": "cc39e1e3573839824839377c1346aac364ffce5615fecb4f4b75a95a954e6316"
+    },
+    {
+      "target": "2023-24",
+      "layer": "L3",
+      "seed": 20261014,
+      "file": "reports/defense-tenth/step3-a2/runs/2023-24-L3-20261014.json",
+      "sha256": "bafa716d8f9de37e5efda43a135157b1b59b912f070e683c7b310f4bb696071b",
+      "bundleHash": "fc3c31f68eb7addf480c4a9739a6a327903975b5861a21fc5b273a00e8400f0d"
+    },
+    {
+      "target": "2023-24",
+      "layer": "L3",
+      "seed": 20261015,
+      "file": "reports/defense-tenth/step3-a2/runs/2023-24-L3-20261015.json",
+      "sha256": "713bdc2c0f11ed2eec140cf6d597217e8378a9ed6601dfb04be36233d7186d52",
+      "bundleHash": "d045a9ec51c7eed9e7f37db4467c5c1a6d12d2c6cacc35c101989e60bfc5e193"
+    },
+    {
+      "target": "2023-24",
+      "layer": "L3",
+      "seed": 20261016,
+      "file": "reports/defense-tenth/step3-a2/runs/2023-24-L3-20261016.json",
+      "sha256": "b09ec05b3594f5cfc6301a2145cc0566617f663d881d7154798857e85221507c",
+      "bundleHash": "7745eead455ad68308845397461d7dcb75b0e1b35faf03831cd968f9342aaf2f"
+    },
+    {
+      "target": "2023-24",
+      "layer": "L3",
+      "seed": 20261017,
+      "file": "reports/defense-tenth/step3-a2/runs/2023-24-L3-20261017.json",
+      "sha256": "1dcc2276a900772106d900bd45eca839f658264bfeb89983c4fa005e988dd005",
+      "bundleHash": "f6c7286f2b96df0355c56e7dd78fb963c9c23ef66fb87271a970368dbadf2bf5"
+    },
+    {
+      "target": "2023-24",
+      "layer": "L3",
+      "seed": 20261018,
+      "file": "reports/defense-tenth/step3-a2/runs/2023-24-L3-20261018.json",
+      "sha256": "92141cf6381fe32b44d1be77c65376fb42d3ba38496bb6a1b871e010e60aecb1",
+      "bundleHash": "25c9edcefbfa14deeb6e82b5a25fc103e40883fa763b76d7e104590e83938458"
+    },
+    {
+      "target": "2023-24",
+      "layer": "L3",
+      "seed": 20261019,
+      "file": "reports/defense-tenth/step3-a2/runs/2023-24-L3-20261019.json",
+      "sha256": "9612e4c7efd41ae258bccb4f8d90207129ab3f7bf1a72a8b27f26b088c877181",
+      "bundleHash": "08956ee8de46a2211037f486d8ec414f562e83bbfd545be4c0384800a4a16254"
+    },
+    {
+      "target": "2023-24",
+      "layer": "L3",
+      "seed": 20261020,
+      "file": "reports/defense-tenth/step3-a2/runs/2023-24-L3-20261020.json",
+      "sha256": "33072d651d49dfc44efcc43d8272411922343d44d08aed3172514417976d04cc",
+      "bundleHash": "679d14ab801d24227d3c89e45d24fffeb7e9626c1336fbd960a51034181da460"
+    },
+    {
+      "target": "2023-24",
+      "layer": "L3",
+      "seed": 20261021,
+      "file": "reports/defense-tenth/step3-a2/runs/2023-24-L3-20261021.json",
+      "sha256": "33a9f4c8323310077b9fb7ac333ca8997b19820b365ba8547c32c70396fd51c7",
+      "bundleHash": "edf2620b234c380abd3c499504fe9d95f6a423ff6270c70d8d48662e7066468c"
+    },
+    {
+      "target": "2023-24",
+      "layer": "L3",
+      "seed": 20261022,
+      "file": "reports/defense-tenth/step3-a2/runs/2023-24-L3-20261022.json",
+      "sha256": "f4d69426b1c17dd455b4f6112f256438a6c61d10c789d1cb2df86825be19c658",
+      "bundleHash": "81d232acaf8b26763afbaabb77a972b02f5df530ec4874692230a292e3c5ebc1"
+    },
+    {
+      "target": "2023-24",
+      "layer": "L3",
+      "seed": 20261023,
+      "file": "reports/defense-tenth/step3-a2/runs/2023-24-L3-20261023.json",
+      "sha256": "04199e6936a0b6eca71803c94a4fbcddb07bbbe17ef5b33045f6f9bd0730d177",
+      "bundleHash": "85a0a3da312da4f196cb1730b95fcd8e2dc305ae661bc7dacd04cad1aa412726"
+    },
+    {
+      "target": "2023-24",
+      "layer": "L3",
+      "seed": 20261024,
+      "file": "reports/defense-tenth/step3-a2/runs/2023-24-L3-20261024.json",
+      "sha256": "73944a8374911f8a20c276aa7398ae5806dd7494cfda9393d863df5defcb2535",
+      "bundleHash": "33e438272bbf08a454fd00f9677b0ecf230aeae7e7fe3f4b867275c1c452a19b"
+    },
+    {
+      "target": "2023-24",
+      "layer": "L3",
+      "seed": 20261025,
+      "file": "reports/defense-tenth/step3-a2/runs/2023-24-L3-20261025.json",
+      "sha256": "fe047b3a52270637f996e92291884c0f0104b079eb05154012dfcb75f5fce32a",
+      "bundleHash": "a378d95a7f0936b4849b067db27a30f78c88843df3310b9cc9c8b0f467e8a9db"
+    },
+    {
+      "target": "2023-24",
+      "layer": "L3",
+      "seed": 20261026,
+      "file": "reports/defense-tenth/step3-a2/runs/2023-24-L3-20261026.json",
+      "sha256": "c39fbb1db7281a5e5917d1c83ce4e25bb35a9755431ddfd5f5176bc3edbcc752",
+      "bundleHash": "2e9247aa44da0cd7f4453378b8a8a0c1910b5fcc1a724de06a6de512c95e42a3"
+    },
+    {
+      "target": "2023-24",
+      "layer": "L3",
+      "seed": 20261027,
+      "file": "reports/defense-tenth/step3-a2/runs/2023-24-L3-20261027.json",
+      "sha256": "eb425573c807132442dadae0d616aea44b62e19e6b188b6b07766d36df1e72b8",
+      "bundleHash": "da6c13294c9a8840c29ceef578df00afeb744a3befa165a24dd649325423ca2d"
+    },
+    {
+      "target": "2023-24",
+      "layer": "L3",
+      "seed": 20261028,
+      "file": "reports/defense-tenth/step3-a2/runs/2023-24-L3-20261028.json",
+      "sha256": "f24414410bf7f52fa9ef3b13459be3a4a9050e97b57204e1a672c433a96dafd9",
+      "bundleHash": "14d8dce0adcbee18c22f51de520825cef5bb89ebab2d66f6d824eec043cbb38b"
+    },
+    {
+      "target": "2023-24",
+      "layer": "L3",
+      "seed": 20261029,
+      "file": "reports/defense-tenth/step3-a2/runs/2023-24-L3-20261029.json",
+      "sha256": "cee82e4bc4f038397d987df1020d0e80ea5378ce26a6bb36b84080f490529455",
+      "bundleHash": "a00d4f18926479cf6a3fccc5b23333bddbbeb70d04c9c79b87389086e577b734"
+    },
+    {
+      "target": "2023-24",
+      "layer": "L3",
+      "seed": 20261030,
+      "file": "reports/defense-tenth/step3-a2/runs/2023-24-L3-20261030.json",
+      "sha256": "2aa310519614ff8ac890739e7ac7265dcac6aeab679e89f764aadeb8d37c8e80",
+      "bundleHash": "851627afeed5966eaab1b31d58a0a5bc67640cd71d1c4ea0de16612f4a0feccd"
+    },
+    {
+      "target": "2023-24",
+      "layer": "L3",
+      "seed": 20261031,
+      "file": "reports/defense-tenth/step3-a2/runs/2023-24-L3-20261031.json",
+      "sha256": "596b96a0d64db55cf48942fcb8f6c759d323e843a802dbab00bad6740d129bd3",
+      "bundleHash": "c1cce6897d8f3e582c184932906daffc824cc2085d90dff9d455eb92666c72cf"
+    },
+    {
+      "target": "2023-24",
+      "layer": "P3",
+      "seed": 20261012,
+      "file": "reports/defense-tenth/step3-a2/runs/2023-24-P3-20261012.json",
+      "sha256": "276fba247a1f21f5e6250325db00a4a16c15e69133f39a4e61c0aa22bfaedecb",
+      "bundleHash": "bea3bca17da1d0455d1df10d33a7e323933533c6a311d810cc715a083ff96597"
+    },
+    {
+      "target": "2023-24",
+      "layer": "P3",
+      "seed": 20261013,
+      "file": "reports/defense-tenth/step3-a2/runs/2023-24-P3-20261013.json",
+      "sha256": "8feb4420dceb4b3998cc4e6d92503b4405caadd06c3cbdd6338db6f8a69326eb",
+      "bundleHash": "e099573764642f983b761c4cc2c2666db168f5155900b8cef07d76c0973a99b8"
+    },
+    {
+      "target": "2023-24",
+      "layer": "P3",
+      "seed": 20261014,
+      "file": "reports/defense-tenth/step3-a2/runs/2023-24-P3-20261014.json",
+      "sha256": "09da85bf38c13c5e1352e4eafa39d48492ed57de7d3e607e2411ef6a50ce5472",
+      "bundleHash": "f787d0b62f9de23131f871bea99190c0dd8a2a0b62bc1b80a66fc70293be51f5"
+    },
+    {
+      "target": "2023-24",
+      "layer": "P3",
+      "seed": 20261015,
+      "file": "reports/defense-tenth/step3-a2/runs/2023-24-P3-20261015.json",
+      "sha256": "27982122453169abd1973d19be289c15947d5ef1c41ffaa07051e32db1456e9c",
+      "bundleHash": "1e6ada9a231fd1e0deacd715b634729a27e1d79a7c2e80de849c95901559f1e8"
+    },
+    {
+      "target": "2023-24",
+      "layer": "P3",
+      "seed": 20261016,
+      "file": "reports/defense-tenth/step3-a2/runs/2023-24-P3-20261016.json",
+      "sha256": "51b4effb976791252bceb4de6ebe479ab5f1d1db13c3f713b0e1b404efb89826",
+      "bundleHash": "5e8342d2aff355e2b4cc5f06fae4942ce6e504a0b257ee06d7a5ee20876fa720"
+    },
+    {
+      "target": "2023-24",
+      "layer": "P3",
+      "seed": 20261017,
+      "file": "reports/defense-tenth/step3-a2/runs/2023-24-P3-20261017.json",
+      "sha256": "296ee9c214bcf25fcb5c4c80c212365a5836402b3f82c00b67293e3fc95f0c12",
+      "bundleHash": "43c1de97b014f1bd14e2121c4cec67c24d0584bcdad06f1e20540f11133648e3"
+    },
+    {
+      "target": "2023-24",
+      "layer": "P3",
+      "seed": 20261018,
+      "file": "reports/defense-tenth/step3-a2/runs/2023-24-P3-20261018.json",
+      "sha256": "d3df07063c4cd4f7dd23fc2a343bcdccdf2d9202d8f3dce8689bf92a397023a9",
+      "bundleHash": "152a9acbd0ac7b8009c64bad38e22e2687e9ee8dd4ad6db7c7034154cac8249e"
+    },
+    {
+      "target": "2023-24",
+      "layer": "P3",
+      "seed": 20261019,
+      "file": "reports/defense-tenth/step3-a2/runs/2023-24-P3-20261019.json",
+      "sha256": "9444d880d344edf6bb8e02343af91cdd6880f7573ea9da3df5081ce951c76418",
+      "bundleHash": "24075860aa0c586a35b062e105d7616c0fb299ea1a706afbdbc603298620d33e"
+    },
+    {
+      "target": "2023-24",
+      "layer": "P3",
+      "seed": 20261020,
+      "file": "reports/defense-tenth/step3-a2/runs/2023-24-P3-20261020.json",
+      "sha256": "68f17b6470df001dd935a4778ab7bdefe4d5b4ca8dfd4451abb6c49bc4af18f4",
+      "bundleHash": "f516db4f10d275b8630a75923b37126955006587e44cc5bd0aa70c23b79a8134"
+    },
+    {
+      "target": "2023-24",
+      "layer": "P3",
+      "seed": 20261021,
+      "file": "reports/defense-tenth/step3-a2/runs/2023-24-P3-20261021.json",
+      "sha256": "65ba7b73d8d13102808368ecdc144a0b0580327df67d8c1a726a2f0c3cfb018d",
+      "bundleHash": "1c89e4130ac30497ad985111966e6c5225e477edb706db3d054cc3a924669110"
+    },
+    {
+      "target": "2023-24",
+      "layer": "P3",
+      "seed": 20261022,
+      "file": "reports/defense-tenth/step3-a2/runs/2023-24-P3-20261022.json",
+      "sha256": "03600771b82963b98c0f1a86b1b9d8234e08b558c2023eed2d07c953a7650c2e",
+      "bundleHash": "66b414f35fffe5b0664748f60541caa18193ab6feb58a85ee318e5f35b6a410a"
+    },
+    {
+      "target": "2023-24",
+      "layer": "P3",
+      "seed": 20261023,
+      "file": "reports/defense-tenth/step3-a2/runs/2023-24-P3-20261023.json",
+      "sha256": "f3743dbe916a5926a274173e1743de79a52c94c26abb5e8f537975a1b600ffa5",
+      "bundleHash": "64b614f5110cbfdca4dfdfd9c86cb2576819fb73f20afd0f97d9ae43d1cdff4f"
+    },
+    {
+      "target": "2023-24",
+      "layer": "P3",
+      "seed": 20261024,
+      "file": "reports/defense-tenth/step3-a2/runs/2023-24-P3-20261024.json",
+      "sha256": "4c541b1155681a43e089a6c796c804ce399ef383cbf0642c36fec993670f41ff",
+      "bundleHash": "55dd00f3e79fd912ccc655478f3818fe1cffb70ca036cd34fa70c68566fa08ed"
+    },
+    {
+      "target": "2023-24",
+      "layer": "P3",
+      "seed": 20261025,
+      "file": "reports/defense-tenth/step3-a2/runs/2023-24-P3-20261025.json",
+      "sha256": "977a1689a369b9b208f9e540d2d7a83eed2cbb21db1d8967ba4c4b9cc871c7a7",
+      "bundleHash": "30fd2cfa272d482ec77693341663994793de01efc9a558e412d4177706ab03af"
+    },
+    {
+      "target": "2023-24",
+      "layer": "P3",
+      "seed": 20261026,
+      "file": "reports/defense-tenth/step3-a2/runs/2023-24-P3-20261026.json",
+      "sha256": "fb27295e7a9134e85e90fbaa7a1549f2b8c404a4eb232625e6622a7777e197db",
+      "bundleHash": "0078dcaf8a1147edb4438c8d21ed3b4d4fbc7ea3f457f2fac10e36b5a046dd45"
+    },
+    {
+      "target": "2023-24",
+      "layer": "P3",
+      "seed": 20261027,
+      "file": "reports/defense-tenth/step3-a2/runs/2023-24-P3-20261027.json",
+      "sha256": "8cde9f48a6fa292f3e72634e7a0ab2469908e9583b471dc60615313c3e23747c",
+      "bundleHash": "2135c99a3b15f7ce3e84f9af16bb3aa0ee2e43bb21ecf1d9aeb08196e15613a7"
+    },
+    {
+      "target": "2023-24",
+      "layer": "P3",
+      "seed": 20261028,
+      "file": "reports/defense-tenth/step3-a2/runs/2023-24-P3-20261028.json",
+      "sha256": "516a43159c323a3202b567c9fb9008f66713c6228eaa738b3fea8ff9f6b183c1",
+      "bundleHash": "9a0eed77e83f7f72097b7206c6af344649602a8b0b9e53f95fa0b66de01b8283"
+    },
+    {
+      "target": "2023-24",
+      "layer": "P3",
+      "seed": 20261029,
+      "file": "reports/defense-tenth/step3-a2/runs/2023-24-P3-20261029.json",
+      "sha256": "241336538cfd649b5ce2bb56cdc855917f7f70c28d59602c98de42448c31972c",
+      "bundleHash": "2f04bd553c48da37e0c910631eb18cc92ab1409a0ffc91c102be48369de9b112"
+    },
+    {
+      "target": "2023-24",
+      "layer": "P3",
+      "seed": 20261030,
+      "file": "reports/defense-tenth/step3-a2/runs/2023-24-P3-20261030.json",
+      "sha256": "d4656f59be4f0155c632bb25c1dec9e70a0611d87254ef78b2cfd9e69368da66",
+      "bundleHash": "3279ad81c62d9980ad566b4edc864d6c8bff149d081006bb89793af4bca0b742"
+    },
+    {
+      "target": "2023-24",
+      "layer": "P3",
+      "seed": 20261031,
+      "file": "reports/defense-tenth/step3-a2/runs/2023-24-P3-20261031.json",
+      "sha256": "ac8cc4eef64ce050fcc58cff13a110f44c0339e35b97fddff4738fa126e1eb6c",
+      "bundleHash": "00a0c92dba5a82816ba00cdbc83c86e7ef155f3c22f9b13425257f3ea30d4cc8"
+    },
+    {
+      "target": "2024-25",
+      "layer": "L2",
+      "seed": 20261012,
+      "file": "reports/defense-tenth/step3-a2/runs/2024-25-L2-20261012.json",
+      "sha256": "6d7412e9e5b5aa4c374bcc1469f0f5eec3d4f953dbae111f095fc3fb71934f5d",
+      "bundleHash": "4ca48e7e671ec660b88fe60c703dd8c79f0b7e58ac3b1135499f789f51909f1d"
+    },
+    {
+      "target": "2024-25",
+      "layer": "L2",
+      "seed": 20261013,
+      "file": "reports/defense-tenth/step3-a2/runs/2024-25-L2-20261013.json",
+      "sha256": "1e6fcdb90853c16e0d07572cb40b639eb86d829521ce260b5d92d85362b119fc",
+      "bundleHash": "10b66eaa57e4fa5e72146fc058159a5c8ef4eab1b9334fefdbaa1b4602158e87"
+    },
+    {
+      "target": "2024-25",
+      "layer": "L2",
+      "seed": 20261014,
+      "file": "reports/defense-tenth/step3-a2/runs/2024-25-L2-20261014.json",
+      "sha256": "ae53c48d6dff88ee945b06fd5aa2517816575d7f9b520f677ec92248007928bf",
+      "bundleHash": "a57508a996d4b9d97dac79cbfda6c4a47233d6121c9a6b03d259c735c0821bb9"
+    },
+    {
+      "target": "2024-25",
+      "layer": "L2",
+      "seed": 20261015,
+      "file": "reports/defense-tenth/step3-a2/runs/2024-25-L2-20261015.json",
+      "sha256": "1863cf9ef616af37be0b2d2052a3a1fac7ae87209cf2e3706117097020581d9d",
+      "bundleHash": "10151f72955dc88607929679a56905c679028a1e5f7ec513ec8afebbc7905f39"
+    },
+    {
+      "target": "2024-25",
+      "layer": "L2",
+      "seed": 20261016,
+      "file": "reports/defense-tenth/step3-a2/runs/2024-25-L2-20261016.json",
+      "sha256": "7a9e5a9085301c05c6882d57ceb984ec2c6ae8c0c385f753066b3696ff536a35",
+      "bundleHash": "2c5c3438efdbeadd565e2cd678c86ce6d0c24149b83554ce7919c794f9ce1522"
+    },
+    {
+      "target": "2024-25",
+      "layer": "L2",
+      "seed": 20261017,
+      "file": "reports/defense-tenth/step3-a2/runs/2024-25-L2-20261017.json",
+      "sha256": "7a5c90066a8d5926cf8b297b6d959ee8a08ad322c6f378c56e4febbac17a9549",
+      "bundleHash": "ae545b41ed00f4749e9524d15ae39d0626f64fcaacf70a0cbe862a0d476d6de3"
+    },
+    {
+      "target": "2024-25",
+      "layer": "L2",
+      "seed": 20261018,
+      "file": "reports/defense-tenth/step3-a2/runs/2024-25-L2-20261018.json",
+      "sha256": "6ccb99b54e1fc905fa6f4be23480e5580a6bc92ccb0155ab96f0f4986f163ef5",
+      "bundleHash": "38a64535a001d8e11bd22721a4509884600181d1e1bd828502ea170c710db50e"
+    },
+    {
+      "target": "2024-25",
+      "layer": "L2",
+      "seed": 20261019,
+      "file": "reports/defense-tenth/step3-a2/runs/2024-25-L2-20261019.json",
+      "sha256": "5a83132a03b95c4406c8768fc7dbabc9dd3340df935dfd6c31ebfced86a8adf4",
+      "bundleHash": "bc1db30c06197e8527537f66952517662786ced813171592adc377cfb2693c63"
+    },
+    {
+      "target": "2024-25",
+      "layer": "L2",
+      "seed": 20261020,
+      "file": "reports/defense-tenth/step3-a2/runs/2024-25-L2-20261020.json",
+      "sha256": "c853d0e5482fe562e8f99e51c9062af6c5081c35412b7467d1a670200d17b959",
+      "bundleHash": "70ebf4b17f11e459793e6f1451e966e424949bb1caf45a8dc84a14033e14e62d"
+    },
+    {
+      "target": "2024-25",
+      "layer": "L2",
+      "seed": 20261021,
+      "file": "reports/defense-tenth/step3-a2/runs/2024-25-L2-20261021.json",
+      "sha256": "7d69cd782a6f99328413bf86cb50dabb9dadd2ff611d433c062856dcc5b11289",
+      "bundleHash": "9df9bc025736128b199d2c28e1a63ae98b68e0f9370b5e201fedf778ab591094"
+    },
+    {
+      "target": "2024-25",
+      "layer": "L2",
+      "seed": 20261022,
+      "file": "reports/defense-tenth/step3-a2/runs/2024-25-L2-20261022.json",
+      "sha256": "498b1e1ce6019c39be09d1158891320816a7a46e2560a0fdd3d742277e9b254e",
+      "bundleHash": "ef0a6904883876a2cd6ca49c76f6fcf7a88131705d52c6ab0fee514d6e0f150b"
+    },
+    {
+      "target": "2024-25",
+      "layer": "L2",
+      "seed": 20261023,
+      "file": "reports/defense-tenth/step3-a2/runs/2024-25-L2-20261023.json",
+      "sha256": "52a1723cb303884af9600adfe2fec541f23a467ccdee63566b3ef4b528b2c40d",
+      "bundleHash": "4ddf2567d4dadf17339d9725f673be92303142c19db29f21dcfb464d36cdb355"
+    },
+    {
+      "target": "2024-25",
+      "layer": "L2",
+      "seed": 20261024,
+      "file": "reports/defense-tenth/step3-a2/runs/2024-25-L2-20261024.json",
+      "sha256": "a21d46c6d1d626d38c59f6ac41992bfdbe2c7cfc8b2e7201d51fb312bea3edda",
+      "bundleHash": "b84f4e1e65c4df4d9d140c43510e8e898d675baae0b527fe22cc83a60a954ad2"
+    },
+    {
+      "target": "2024-25",
+      "layer": "L2",
+      "seed": 20261025,
+      "file": "reports/defense-tenth/step3-a2/runs/2024-25-L2-20261025.json",
+      "sha256": "0468195e05d0a2024e944a64561ecc3d2b5b33cf8372e71e7708b36d0a05125f",
+      "bundleHash": "922b5276e7e7d0a63347225212cdf4038a317b000b175381dc334e370d3092d8"
+    },
+    {
+      "target": "2024-25",
+      "layer": "L2",
+      "seed": 20261026,
+      "file": "reports/defense-tenth/step3-a2/runs/2024-25-L2-20261026.json",
+      "sha256": "b5b0243b32ab981105cc605a2b9b9043294bd59d8803e1d94372f62171155db0",
+      "bundleHash": "588098d6ce1ae4461cd325aa0ce763e1979fcd095e0085855e1e6a558145fa16"
+    },
+    {
+      "target": "2024-25",
+      "layer": "L2",
+      "seed": 20261027,
+      "file": "reports/defense-tenth/step3-a2/runs/2024-25-L2-20261027.json",
+      "sha256": "be6a1d688376d080970dc3dc6f43f9125158129a895784a76cbae487f3dfcd89",
+      "bundleHash": "ed69796787becd5c78f042c682a799db0c6a65843e751e4ff1830ff9101281c9"
+    },
+    {
+      "target": "2024-25",
+      "layer": "L2",
+      "seed": 20261028,
+      "file": "reports/defense-tenth/step3-a2/runs/2024-25-L2-20261028.json",
+      "sha256": "970ae5348b0c6bbc66d94aecdb6a7f103fec3dca3c83888d0b91c06018b1b4d1",
+      "bundleHash": "50b87cc0367d002d45710510f071f3a60b39d95b0ab6a937896d19ac3e109ce3"
+    },
+    {
+      "target": "2024-25",
+      "layer": "L2",
+      "seed": 20261029,
+      "file": "reports/defense-tenth/step3-a2/runs/2024-25-L2-20261029.json",
+      "sha256": "1c7efb8a598f1b63911f37cb35e4aaed968a923e2d44360c36536d4bc4828f61",
+      "bundleHash": "fb9940048b3338c330b31f5c2d699d6cf285c0d7a44c31b6bebfdf63fdb287b8"
+    },
+    {
+      "target": "2024-25",
+      "layer": "L2",
+      "seed": 20261030,
+      "file": "reports/defense-tenth/step3-a2/runs/2024-25-L2-20261030.json",
+      "sha256": "c468f0804c918840c81624f172e3bf624f58cbfc9362c0309af8cf7fbaa327a0",
+      "bundleHash": "f20d3dc5df20035f660b05818b929eab325cbcd7ad11db80313215ac095c1e79"
+    },
+    {
+      "target": "2024-25",
+      "layer": "L2",
+      "seed": 20261031,
+      "file": "reports/defense-tenth/step3-a2/runs/2024-25-L2-20261031.json",
+      "sha256": "c19d1e95f4af27e796ccc15c00f6b3aff16fb16887e1c8492fb7e136ef0b2226",
+      "bundleHash": "1072f07d54354b6ef2706d393bc46927014ab0705aee856cd67cd5dee9676d6e"
+    },
+    {
+      "target": "2024-25",
+      "layer": "L3",
+      "seed": 20261012,
+      "file": "reports/defense-tenth/step3-a2/runs/2024-25-L3-20261012.json",
+      "sha256": "86ede89cc04bb49621940af29d4fbdd08310a594146c0a392116afd057eb5a87",
+      "bundleHash": "ccd6362490a3ba9233081108970c67d950366a48181dc9da8c4472bf0600116f"
+    },
+    {
+      "target": "2024-25",
+      "layer": "L3",
+      "seed": 20261013,
+      "file": "reports/defense-tenth/step3-a2/runs/2024-25-L3-20261013.json",
+      "sha256": "cb15d441f8420ea0c6d905445030028f45d51d8c988f379afe1285b8ab8341e4",
+      "bundleHash": "46abfb58c6b2c2b8006246cf116526fdb48f02be3b7666b7f306a64581098c3b"
+    },
+    {
+      "target": "2024-25",
+      "layer": "L3",
+      "seed": 20261014,
+      "file": "reports/defense-tenth/step3-a2/runs/2024-25-L3-20261014.json",
+      "sha256": "351769b2786ea53d19f54538ba8ee828144c54eb22c52ee9e9ce603a33336662",
+      "bundleHash": "5784de90f9eb7e3364087c956d20e53c9be7a4c08ca448180b244d7cb87f9740"
+    },
+    {
+      "target": "2024-25",
+      "layer": "L3",
+      "seed": 20261015,
+      "file": "reports/defense-tenth/step3-a2/runs/2024-25-L3-20261015.json",
+      "sha256": "916c8629d581b632e61263ec70b42bea8f58529c48c57836e650753dca5dd57c",
+      "bundleHash": "edf41ac4a8f93799b908eb187da2128cabd3fe67b5b7371b399fa9611bba1933"
+    },
+    {
+      "target": "2024-25",
+      "layer": "L3",
+      "seed": 20261016,
+      "file": "reports/defense-tenth/step3-a2/runs/2024-25-L3-20261016.json",
+      "sha256": "b1088d8a3a40e2ebea92e09312ec187eb642f9a70c9a212775598c584b640689",
+      "bundleHash": "7e9ff3d8ce63339823c21b1536f03e468de1a9a34b9a85b5112897e75ac8429e"
+    },
+    {
+      "target": "2024-25",
+      "layer": "L3",
+      "seed": 20261017,
+      "file": "reports/defense-tenth/step3-a2/runs/2024-25-L3-20261017.json",
+      "sha256": "e4ae200f080c75fe2d53169118310061450782f1452b1e725e4b502fc5c64b30",
+      "bundleHash": "6d6f96440bfdc5122f68c98d7662efe9acd30285e70bbf3debf9d6eedee3d733"
+    },
+    {
+      "target": "2024-25",
+      "layer": "L3",
+      "seed": 20261018,
+      "file": "reports/defense-tenth/step3-a2/runs/2024-25-L3-20261018.json",
+      "sha256": "ed9ff6b6495fa1db1ae53dab0fe16e73cebf12cd355535874cbe6d38e9ae8896",
+      "bundleHash": "1f56ab3e648e7d7cef25a9fdb6ac0ec69e2166de4c3086e0503650686f7c4203"
+    },
+    {
+      "target": "2024-25",
+      "layer": "L3",
+      "seed": 20261019,
+      "file": "reports/defense-tenth/step3-a2/runs/2024-25-L3-20261019.json",
+      "sha256": "fdec791a932d9b75552a997aac0afb6364f88f7164e87be0ece1aa6f6e35b0c4",
+      "bundleHash": "1b6f387117804616ddc21f213618ad8848f7c1fb85f9e3c1005cbc39cd353bb8"
+    },
+    {
+      "target": "2024-25",
+      "layer": "L3",
+      "seed": 20261020,
+      "file": "reports/defense-tenth/step3-a2/runs/2024-25-L3-20261020.json",
+      "sha256": "df8b5c792ca1b78c46225f0a606ac5d79c76bb5eeae05f931e431346c1aa6c2e",
+      "bundleHash": "1fc500d32e7fa22a2390b219e2d11d7c042a1ae06af569ca6a9ff5e19a7defcc"
+    },
+    {
+      "target": "2024-25",
+      "layer": "L3",
+      "seed": 20261021,
+      "file": "reports/defense-tenth/step3-a2/runs/2024-25-L3-20261021.json",
+      "sha256": "9815cb9278704f931401726d3a1ca0c8f116aa95abb546cd3fccb0ac0bf41af5",
+      "bundleHash": "9d5b4ed049ae20873b6d6c65fb7990765fe21eab8e1a2cbc4604b1a5abf1ef53"
+    },
+    {
+      "target": "2024-25",
+      "layer": "L3",
+      "seed": 20261022,
+      "file": "reports/defense-tenth/step3-a2/runs/2024-25-L3-20261022.json",
+      "sha256": "9b980a8038837fc0be3a06bd59690d454fb285a3ea3c9f09ae3f14987a56c17f",
+      "bundleHash": "a9e4425f2dccf095a90da1aec941052f71c6604a75d5cce47f72b28f2700eaf8"
+    },
+    {
+      "target": "2024-25",
+      "layer": "L3",
+      "seed": 20261023,
+      "file": "reports/defense-tenth/step3-a2/runs/2024-25-L3-20261023.json",
+      "sha256": "be8746766cbd952197586dfe2f88eeb3e003b55e8c63e14fad3d8ad46e6c018a",
+      "bundleHash": "71200ded8f5304032413d163895cdf90a662bfdc04f1d28eedd25fa846b6aa31"
+    },
+    {
+      "target": "2024-25",
+      "layer": "L3",
+      "seed": 20261024,
+      "file": "reports/defense-tenth/step3-a2/runs/2024-25-L3-20261024.json",
+      "sha256": "afe4065910f08f4829cfb204d35814bc59a4412844c67254b6f699dd4413dcd9",
+      "bundleHash": "0a325fc91fc93c424007ec51e88f84398349b8ea4bba04f0fc168df358a49bdf"
+    },
+    {
+      "target": "2024-25",
+      "layer": "L3",
+      "seed": 20261025,
+      "file": "reports/defense-tenth/step3-a2/runs/2024-25-L3-20261025.json",
+      "sha256": "69563d1cbc7b5027e4f2b66cd4d15bd1af0100042e6ad3188b8f5dd9ce4248ee",
+      "bundleHash": "0b3977010f0f463b40be67f00e62c878d7c8eba65e15161bc986ebb606231008"
+    },
+    {
+      "target": "2024-25",
+      "layer": "L3",
+      "seed": 20261026,
+      "file": "reports/defense-tenth/step3-a2/runs/2024-25-L3-20261026.json",
+      "sha256": "894c497db2b9475f7d9258524dc6f27ce7dec0b8584502ae64d7157f7f6ca5d7",
+      "bundleHash": "45f84d8f975e743c5345c2a3dea5d23cd2f1e2c09178f6f84c87564e63fb5148"
+    },
+    {
+      "target": "2024-25",
+      "layer": "L3",
+      "seed": 20261027,
+      "file": "reports/defense-tenth/step3-a2/runs/2024-25-L3-20261027.json",
+      "sha256": "e789915970db31609f70ddd7ce0ba3426261bebf4ae546fbbe3b97e0d925106a",
+      "bundleHash": "316d3d27742214314d3326c8c80952ca01a4136ab5873ccc2c315a14cb5e8b93"
+    },
+    {
+      "target": "2024-25",
+      "layer": "L3",
+      "seed": 20261028,
+      "file": "reports/defense-tenth/step3-a2/runs/2024-25-L3-20261028.json",
+      "sha256": "f567c95846fd4689ab7c5548b84dc2322c31037f84cfc9c72944ec142d8fcd81",
+      "bundleHash": "544a46ec837d58bdfe29ed2223a05aaed20bb3a32be3b15d1d87282fa218bc0f"
+    },
+    {
+      "target": "2024-25",
+      "layer": "L3",
+      "seed": 20261029,
+      "file": "reports/defense-tenth/step3-a2/runs/2024-25-L3-20261029.json",
+      "sha256": "34d6b02b3704e08ffb10a6be298421761ac2d762d5ba16839ddbdab469dcb5b4",
+      "bundleHash": "7f9831974a2cecdd9c2cb1d6e7217d9058ad5f50953d33bc90fbcd58016565b5"
+    },
+    {
+      "target": "2024-25",
+      "layer": "L3",
+      "seed": 20261030,
+      "file": "reports/defense-tenth/step3-a2/runs/2024-25-L3-20261030.json",
+      "sha256": "eb3be7e6ebac75a20c8167ce308a90440607dc23018a8b0519539a4c79e83b08",
+      "bundleHash": "31a9c5f4c16f741a721e4abd9bd6db2289b4770fcd7f87cb5093a2114e53f25e"
+    },
+    {
+      "target": "2024-25",
+      "layer": "L3",
+      "seed": 20261031,
+      "file": "reports/defense-tenth/step3-a2/runs/2024-25-L3-20261031.json",
+      "sha256": "7fbe2c879fe97f86a40c65fc3a695f624e3141106da48300153e7c9a76c0a21d",
+      "bundleHash": "9dbc47200d7de889c62bc4c8f851f01f9ed5189f1daaccc9f056cca014d4b4bf"
+    },
+    {
+      "target": "2024-25",
+      "layer": "P3",
+      "seed": 20261012,
+      "file": "reports/defense-tenth/step3-a2/runs/2024-25-P3-20261012.json",
+      "sha256": "52819e751621646ced035f72cba771d36350c38bef0a63296888fd3b9cd601e4",
+      "bundleHash": "80ab9f14509e5958d633d26665d454ad4d4dac98c75c16e6debee98124746394"
+    },
+    {
+      "target": "2024-25",
+      "layer": "P3",
+      "seed": 20261013,
+      "file": "reports/defense-tenth/step3-a2/runs/2024-25-P3-20261013.json",
+      "sha256": "6be9968db49d6401e8a709b2726f737b30932c8a8a8514bcd2654ca42a20c305",
+      "bundleHash": "ac10599f79912b7b6d0b4aa43823f32f1d0b50f2618fdef30938c795a4dae587"
+    },
+    {
+      "target": "2024-25",
+      "layer": "P3",
+      "seed": 20261014,
+      "file": "reports/defense-tenth/step3-a2/runs/2024-25-P3-20261014.json",
+      "sha256": "d9ae27ff60e0844f7eb01043183a029f80b3c043b34594fb7aac2bf0ce3813f9",
+      "bundleHash": "cbfe024427da4d1dcd3bd63427849f454a2285004fce9544fef923ea0127d813"
+    },
+    {
+      "target": "2024-25",
+      "layer": "P3",
+      "seed": 20261015,
+      "file": "reports/defense-tenth/step3-a2/runs/2024-25-P3-20261015.json",
+      "sha256": "9be877ec432fe2af21684c4d1b14854bdfac2564aea21a37360dff64efbfdc75",
+      "bundleHash": "43ec8807d0d48ad7848ef1d40a86a709942d602db7e6c252a4e25c84182156c6"
+    },
+    {
+      "target": "2024-25",
+      "layer": "P3",
+      "seed": 20261016,
+      "file": "reports/defense-tenth/step3-a2/runs/2024-25-P3-20261016.json",
+      "sha256": "79f90b6c0c10990ee0d2fd8ec4cc59d8af64957d6feb9c26a255dc42800d987a",
+      "bundleHash": "ba890ba4dc733bf083ea470297aa8db73a20e316ba9de55576213e97e91cd0ad"
+    },
+    {
+      "target": "2024-25",
+      "layer": "P3",
+      "seed": 20261017,
+      "file": "reports/defense-tenth/step3-a2/runs/2024-25-P3-20261017.json",
+      "sha256": "bd41741ca28b9c31b1356aedb36e5f64bed0fadc633e11f35b0f5d1684d4f073",
+      "bundleHash": "1f17c74a64678e0e4f170f26aa04b226fdd6ad5d58c459676e26f7388cbfd051"
+    },
+    {
+      "target": "2024-25",
+      "layer": "P3",
+      "seed": 20261018,
+      "file": "reports/defense-tenth/step3-a2/runs/2024-25-P3-20261018.json",
+      "sha256": "24a8d247107b9c8cf31cad472f81a0939989097424142632ca60d7d8415da77c",
+      "bundleHash": "d681720791b2541a76153069126599e72bc99283fc4a06c8d4805f9dc3558ef2"
+    },
+    {
+      "target": "2024-25",
+      "layer": "P3",
+      "seed": 20261019,
+      "file": "reports/defense-tenth/step3-a2/runs/2024-25-P3-20261019.json",
+      "sha256": "2fd375b6aa9604d82bb961e4a7b97a2bc9b594435eb123d3ac0d9eeaf5b554ae",
+      "bundleHash": "9c5ca46eb2795452f53ae8dd260df229a18ae4f405bf206d27414750d8a55ee5"
+    },
+    {
+      "target": "2024-25",
+      "layer": "P3",
+      "seed": 20261020,
+      "file": "reports/defense-tenth/step3-a2/runs/2024-25-P3-20261020.json",
+      "sha256": "c0979d6c016f98009aadcb78e2f871f06359948e546d3c39c409f0362e355d65",
+      "bundleHash": "e333a6e685a9105a8ca5cdaa6fa5f61f8f16655204fcb4e4e8a2fc293d8c802a"
+    },
+    {
+      "target": "2024-25",
+      "layer": "P3",
+      "seed": 20261021,
+      "file": "reports/defense-tenth/step3-a2/runs/2024-25-P3-20261021.json",
+      "sha256": "904776370f3208f415d60523b8949b41e3572d3ec0566b4bf30dd4b5bed53048",
+      "bundleHash": "06e75ebbdacf5c01d0855a7f3dd2b7bb10a47227f116a4aceade13c9125f885f"
+    },
+    {
+      "target": "2024-25",
+      "layer": "P3",
+      "seed": 20261022,
+      "file": "reports/defense-tenth/step3-a2/runs/2024-25-P3-20261022.json",
+      "sha256": "b45d7eed12c6649d4e1b66c38544cdd45fa2a3c52c61dbe5a82343872dbf4849",
+      "bundleHash": "2bbe717a7bcf36593f615259649a3352fce5604d359477047a76dd38d5e85c61"
+    },
+    {
+      "target": "2024-25",
+      "layer": "P3",
+      "seed": 20261023,
+      "file": "reports/defense-tenth/step3-a2/runs/2024-25-P3-20261023.json",
+      "sha256": "73dc095370f16a2454e47cb167c2d5d51e82186ac7238bcd466a222af27f0adb",
+      "bundleHash": "c576976b483cf89f13fc20fba5d797857976c30e3549f1b919ad268e316717b8"
+    },
+    {
+      "target": "2024-25",
+      "layer": "P3",
+      "seed": 20261024,
+      "file": "reports/defense-tenth/step3-a2/runs/2024-25-P3-20261024.json",
+      "sha256": "2627712affc5f6ef34453c65a18b9002c048a540c56e0220a014862760d2b115",
+      "bundleHash": "de21599c39e5a168216414fb2998b41fa87cae831349da30fd45311d6b1c652d"
+    },
+    {
+      "target": "2024-25",
+      "layer": "P3",
+      "seed": 20261025,
+      "file": "reports/defense-tenth/step3-a2/runs/2024-25-P3-20261025.json",
+      "sha256": "8e7c77a32f551dff19520803981f6123a3f14247f458fdeacaa0d66b5ba6c2e9",
+      "bundleHash": "0b9249a24e8864f68156a7aa18af58c8e32533a3ecdff4b80fe2890ef28dc6e0"
+    },
+    {
+      "target": "2024-25",
+      "layer": "P3",
+      "seed": 20261026,
+      "file": "reports/defense-tenth/step3-a2/runs/2024-25-P3-20261026.json",
+      "sha256": "78ed44fe44c395ac9e056e31acaeaf1ce8e1d78144672f5e81d4d91bb329e670",
+      "bundleHash": "32740bbeb8078679196953fa1ca34b0a53f23fde8e0a462ddb0b6369b8629221"
+    },
+    {
+      "target": "2024-25",
+      "layer": "P3",
+      "seed": 20261027,
+      "file": "reports/defense-tenth/step3-a2/runs/2024-25-P3-20261027.json",
+      "sha256": "96b9b4da62d321d0ee22d832737c7c26cd51adea3894fd25ad20fdbe13b0f44f",
+      "bundleHash": "ddbef583d81e1f7fc84fb8127ba9dd471ff85a8a94e16c6f1e2d0572e9ccfa32"
+    },
+    {
+      "target": "2024-25",
+      "layer": "P3",
+      "seed": 20261028,
+      "file": "reports/defense-tenth/step3-a2/runs/2024-25-P3-20261028.json",
+      "sha256": "9836e8154f199139e159af64ea7f291fb536fcaa2caefb39bf8900fac58205dd",
+      "bundleHash": "18c3454817b8cfff643cd1eb668507b2aaaa15304fc1bf753053027202adee5d"
+    },
+    {
+      "target": "2024-25",
+      "layer": "P3",
+      "seed": 20261029,
+      "file": "reports/defense-tenth/step3-a2/runs/2024-25-P3-20261029.json",
+      "sha256": "a46a13ce92ce021f1f8fc468dae8dbd4fac843acf28d907df0ba80444350a430",
+      "bundleHash": "88abd5c27982811b15857574f79caecef67fc608e7537a5e717c77a13b26f588"
+    },
+    {
+      "target": "2024-25",
+      "layer": "P3",
+      "seed": 20261030,
+      "file": "reports/defense-tenth/step3-a2/runs/2024-25-P3-20261030.json",
+      "sha256": "17fc76f70dc209b2650776b4a4392b102e049898c5366ccda1a3f82a6176a9db",
+      "bundleHash": "5df08c8964cd9b29631fba3d48caf747c028e98c5e523ea16fea49b80ac47a3c"
+    },
+    {
+      "target": "2024-25",
+      "layer": "P3",
+      "seed": 20261031,
+      "file": "reports/defense-tenth/step3-a2/runs/2024-25-P3-20261031.json",
+      "sha256": "b1163307db2c2598cc261e2ba070d3225283f76cf66e52907b8d2bb72c2feb32",
+      "bundleHash": "0971be6c194497a8cfdf9965e3545367d68beb229937737e161c5b5b12694e66"
+    },
+    {
+      "target": "2025-26",
+      "layer": "L2",
+      "seed": 20261012,
+      "file": "reports/defense-tenth/step3-a2/runs/2025-26-L2-20261012.json",
+      "sha256": "d69914c2aed805ec0df521276eee4c6fe3d2509bfbfcc7b97ed7a20904a05f5d",
+      "bundleHash": "ff05098b7873618cbf5d80c28d2850083068a9715e7099c1cf0ed2e60022dfd3"
+    },
+    {
+      "target": "2025-26",
+      "layer": "L2",
+      "seed": 20261013,
+      "file": "reports/defense-tenth/step3-a2/runs/2025-26-L2-20261013.json",
+      "sha256": "bc63a3308daa88874e6788fb777f4c700778a61345e523439df9be522ba4a056",
+      "bundleHash": "175d82f19c2e8ae41eed65b49ea7fae00446b0647c7d7a3275966f1a69928ca0"
+    },
+    {
+      "target": "2025-26",
+      "layer": "L2",
+      "seed": 20261014,
+      "file": "reports/defense-tenth/step3-a2/runs/2025-26-L2-20261014.json",
+      "sha256": "7d6b2c542b2010a267c8482bbc3067610fe9e0ee4f238175035376b5ce5c3725",
+      "bundleHash": "fe12c56edf0467c428ac08fa076e840a073b6619df5643484acaa2882f711c1a"
+    },
+    {
+      "target": "2025-26",
+      "layer": "L2",
+      "seed": 20261015,
+      "file": "reports/defense-tenth/step3-a2/runs/2025-26-L2-20261015.json",
+      "sha256": "17427d52397ed496996a5d0654a3f01ef91927813d6adc51a7d09b4273adf1e4",
+      "bundleHash": "769e09f84f4161cec6bee24724725d1ae6038a7a141ba06b0a83545397daff6d"
+    },
+    {
+      "target": "2025-26",
+      "layer": "L2",
+      "seed": 20261016,
+      "file": "reports/defense-tenth/step3-a2/runs/2025-26-L2-20261016.json",
+      "sha256": "1ace838d8e6ab29f2fa36cf90b0a9c3c14e3e356f2156e7ce7dfb8ff8938e808",
+      "bundleHash": "2ce3feb862e4cf86f2318d14ce69b9df8e41d77bb020fd9e75971399db0c9c4b"
+    },
+    {
+      "target": "2025-26",
+      "layer": "L2",
+      "seed": 20261017,
+      "file": "reports/defense-tenth/step3-a2/runs/2025-26-L2-20261017.json",
+      "sha256": "7a9a2adb5e92dabe75437422e030d24779eae4436ece7e9dd8a4d7ab39887989",
+      "bundleHash": "642970267dca880a524432db57b5a8ead140a5428da9aaae85d897a2eaa1b7db"
+    },
+    {
+      "target": "2025-26",
+      "layer": "L2",
+      "seed": 20261018,
+      "file": "reports/defense-tenth/step3-a2/runs/2025-26-L2-20261018.json",
+      "sha256": "72a8abd065eb27200f9276e67c3ebc3279a78b29b2b3168693e2dc2ced04dee2",
+      "bundleHash": "20ce2efda1eca491e282ac766b327191a52f6274f3a45ca1ea8334bd8dfd90a3"
+    },
+    {
+      "target": "2025-26",
+      "layer": "L2",
+      "seed": 20261019,
+      "file": "reports/defense-tenth/step3-a2/runs/2025-26-L2-20261019.json",
+      "sha256": "2c062ac0a224a39fdf2ecce669d3d9ac6c1121526672db36349b6cdd1a10d196",
+      "bundleHash": "fc77a76d1d8eebebfa9e62a4d82779c7f9fec075f45adce682b527d7a9a5039a"
+    },
+    {
+      "target": "2025-26",
+      "layer": "L2",
+      "seed": 20261020,
+      "file": "reports/defense-tenth/step3-a2/runs/2025-26-L2-20261020.json",
+      "sha256": "fa5de3d20dfb255888a16311939ef1b424bc86ded67c80d487178af6c3eb2a58",
+      "bundleHash": "aa8860a6972ac7c49fafa6272b8806c49bc2740399d4b5186f8fc6b0ed7fca01"
+    },
+    {
+      "target": "2025-26",
+      "layer": "L2",
+      "seed": 20261021,
+      "file": "reports/defense-tenth/step3-a2/runs/2025-26-L2-20261021.json",
+      "sha256": "3bd1d85771515b85ecdf077448f3b783a7528360b64a4d81460904e4c410d1ee",
+      "bundleHash": "92ec6c5253220e5faf657f7aeab3e7300777b7e2d3c1d7aecf0e027e16aaf546"
+    },
+    {
+      "target": "2025-26",
+      "layer": "L2",
+      "seed": 20261022,
+      "file": "reports/defense-tenth/step3-a2/runs/2025-26-L2-20261022.json",
+      "sha256": "6067d59588a79ab00c72332492849485d53eb546270ea2b7b4aa7c6637bbb1d8",
+      "bundleHash": "62988af5e01ca9050e4209d64189432023804785959eba6556586dd3d8c15b04"
+    },
+    {
+      "target": "2025-26",
+      "layer": "L2",
+      "seed": 20261023,
+      "file": "reports/defense-tenth/step3-a2/runs/2025-26-L2-20261023.json",
+      "sha256": "43e0b98c886cd337a911214cbb2fbabbcea4c2ccd3f6895d76456bd812c38c61",
+      "bundleHash": "2a1f71ddc6d8755d44ef12a1874824d1702f97b33c16941b58a1cf752003eb40"
+    },
+    {
+      "target": "2025-26",
+      "layer": "L2",
+      "seed": 20261024,
+      "file": "reports/defense-tenth/step3-a2/runs/2025-26-L2-20261024.json",
+      "sha256": "c507113a8d91695793eabc2ac9d9319ecb06f82abde13fd2ab9a56c2792cbaa8",
+      "bundleHash": "5c2be846a3e3fcbdf6b521288f8d069348179e14402794b77b86a320ea65bf8f"
+    },
+    {
+      "target": "2025-26",
+      "layer": "L2",
+      "seed": 20261025,
+      "file": "reports/defense-tenth/step3-a2/runs/2025-26-L2-20261025.json",
+      "sha256": "a4650e33d0d17f79e9d153809ce8abe127d7f7f2d071b66ac093e4ddf880548b",
+      "bundleHash": "685faf4918533ff1121b4c490ff3444c8daece1a5e9f2b5070eb2606e44ff17d"
+    },
+    {
+      "target": "2025-26",
+      "layer": "L2",
+      "seed": 20261026,
+      "file": "reports/defense-tenth/step3-a2/runs/2025-26-L2-20261026.json",
+      "sha256": "c83ebb06964cdb4402baca2f77ffdb466a1ed944ceda2306081316c9d7c6b323",
+      "bundleHash": "a7e9c8fe72093fdaa8816acff6ec81f3245437aa0f8e1c1c00caf8162b480754"
+    },
+    {
+      "target": "2025-26",
+      "layer": "L2",
+      "seed": 20261027,
+      "file": "reports/defense-tenth/step3-a2/runs/2025-26-L2-20261027.json",
+      "sha256": "182147002e234bf3281f31a81034acfbbc562d0d49674730189505dccd3d4ab0",
+      "bundleHash": "c693a55f5629955b6dc691f110d40bb08cbb1e6fa7a49cdbacf0ba974c2be73d"
+    },
+    {
+      "target": "2025-26",
+      "layer": "L2",
+      "seed": 20261028,
+      "file": "reports/defense-tenth/step3-a2/runs/2025-26-L2-20261028.json",
+      "sha256": "ddb8a8bd25b0daa74e5a40a1979df6e4e450a6eac254715a44808048bfab9742",
+      "bundleHash": "f5a804e4c7f1c596556e573808221fe4c99def18c66338926718ee90eed2c26e"
+    },
+    {
+      "target": "2025-26",
+      "layer": "L2",
+      "seed": 20261029,
+      "file": "reports/defense-tenth/step3-a2/runs/2025-26-L2-20261029.json",
+      "sha256": "aafabb750b5a3c92c8eaa9aa25deac29d8c199d35c5a6ec227b9e059a1a66d20",
+      "bundleHash": "ba3cfd242b72492575e870355edce0bd73ee673ec20cd7d62fd056c35255b77b"
+    },
+    {
+      "target": "2025-26",
+      "layer": "L2",
+      "seed": 20261030,
+      "file": "reports/defense-tenth/step3-a2/runs/2025-26-L2-20261030.json",
+      "sha256": "8d3296ec7419e4d417007e90bb1d4e76f7aadd2f2134d207533e9a95b369be95",
+      "bundleHash": "ee69a25f5d293a1561355b27801e0d789446c6a1f83729d97dbdd8764accce0c"
+    },
+    {
+      "target": "2025-26",
+      "layer": "L2",
+      "seed": 20261031,
+      "file": "reports/defense-tenth/step3-a2/runs/2025-26-L2-20261031.json",
+      "sha256": "f4373ddb21672fd892089c0d782bbcdf768ac40c4c87d90a313a07bbee6b47d5",
+      "bundleHash": "3016f4d66e72136c8d6f90c0c7c797a02cd733abe35a04e8ee363885792dbf55"
+    },
+    {
+      "target": "2025-26",
+      "layer": "L3",
+      "seed": 20261012,
+      "file": "reports/defense-tenth/step3-a2/runs/2025-26-L3-20261012.json",
+      "sha256": "f8696792cb3e57d7c3eb518437257edabb4943300c09f3bb9d88ff31987d0195",
+      "bundleHash": "3888b2db3b608cbce1878bcb13c42b6b87ce1fd150e07a966ac1cb37853015e2"
+    },
+    {
+      "target": "2025-26",
+      "layer": "L3",
+      "seed": 20261013,
+      "file": "reports/defense-tenth/step3-a2/runs/2025-26-L3-20261013.json",
+      "sha256": "a00510c4acc75ff0f2a8471a8cf00bcea28b7edf784e2653050376e7e5e05447",
+      "bundleHash": "bebd653003ecd680db66b4b17e97ad224af775a39e6ba6ad6ed86a9ccdedc334"
+    },
+    {
+      "target": "2025-26",
+      "layer": "L3",
+      "seed": 20261014,
+      "file": "reports/defense-tenth/step3-a2/runs/2025-26-L3-20261014.json",
+      "sha256": "f96a6ed33c176024c9ce83f7d6d2930ac4dc92c53eb6b1134fe55b79c5097595",
+      "bundleHash": "096c8ec24c92f6f53bc7aaa225bea6cef624f9706223e62d91f4b70502d0081c"
+    },
+    {
+      "target": "2025-26",
+      "layer": "L3",
+      "seed": 20261015,
+      "file": "reports/defense-tenth/step3-a2/runs/2025-26-L3-20261015.json",
+      "sha256": "da59c47445fc1653c861ca311ca8434f0f01ee82985fbac5171454437a2601ae",
+      "bundleHash": "cbb3b328b56871a8109eeb4d6f5f17e9d168582155923543b25f26649d686952"
+    },
+    {
+      "target": "2025-26",
+      "layer": "L3",
+      "seed": 20261016,
+      "file": "reports/defense-tenth/step3-a2/runs/2025-26-L3-20261016.json",
+      "sha256": "7919c6da2670f38112270c036c8c57aa81ac48f0e5583a74a3794282048338cb",
+      "bundleHash": "bc6358f60a5d0722296f464fd9ff681a0c2d2cbe955206e2fc054477cc9fa855"
+    },
+    {
+      "target": "2025-26",
+      "layer": "L3",
+      "seed": 20261017,
+      "file": "reports/defense-tenth/step3-a2/runs/2025-26-L3-20261017.json",
+      "sha256": "b0cde758fb5539bd7d4193f1c6438afa0b1c42f7d337c42a7ef7eb47c700fc1e",
+      "bundleHash": "45615e22edeb708020332d6c85c11c1a5afa9645eadf83216f1ecfe00bd186c3"
+    },
+    {
+      "target": "2025-26",
+      "layer": "L3",
+      "seed": 20261018,
+      "file": "reports/defense-tenth/step3-a2/runs/2025-26-L3-20261018.json",
+      "sha256": "0f7d269e5fba30729a492f8c69bb4fff186e2deb0e0230965bf4739933e8b5c0",
+      "bundleHash": "352a3b5028b77de5361e88dde806f0a542fd00be1d6f38823e06215cb608ca2a"
+    },
+    {
+      "target": "2025-26",
+      "layer": "L3",
+      "seed": 20261019,
+      "file": "reports/defense-tenth/step3-a2/runs/2025-26-L3-20261019.json",
+      "sha256": "5802b9745eae86872aa8b2bd12f158ea32d0c758becae20b9a8ccfd7449fad80",
+      "bundleHash": "ee3505751c49db42d331a701f6a08a33951b6229af88329514298e1d97d02ba8"
+    },
+    {
+      "target": "2025-26",
+      "layer": "L3",
+      "seed": 20261020,
+      "file": "reports/defense-tenth/step3-a2/runs/2025-26-L3-20261020.json",
+      "sha256": "9b3b3e37234bbe9f0a589cda821617ac8274ad21bcb3e0a630916d4183938b64",
+      "bundleHash": "e688ac08e936d5bf601cd31845e24460c33b0399bdb2648b5dcb4bdd657c233e"
+    },
+    {
+      "target": "2025-26",
+      "layer": "L3",
+      "seed": 20261021,
+      "file": "reports/defense-tenth/step3-a2/runs/2025-26-L3-20261021.json",
+      "sha256": "4b3fce0ab698a7cd886562bcf5487741ce082d802bc386e349682b0b5c4dc533",
+      "bundleHash": "356173e5f9e0891b98299e276ce7c8dfb9e9ed66fe1e3d171a0ab7baa6fed6af"
+    },
+    {
+      "target": "2025-26",
+      "layer": "L3",
+      "seed": 20261022,
+      "file": "reports/defense-tenth/step3-a2/runs/2025-26-L3-20261022.json",
+      "sha256": "c2e495be64645140a97331c78e7e38dbc06cccdf25b3e16a2bc265fa85e064e7",
+      "bundleHash": "91639da040da285497e51b5deb4171569ddeaeabfa9727e02e476ff7538615a3"
+    },
+    {
+      "target": "2025-26",
+      "layer": "L3",
+      "seed": 20261023,
+      "file": "reports/defense-tenth/step3-a2/runs/2025-26-L3-20261023.json",
+      "sha256": "54160b2714a9ffb59c8f08c5b1826ba6b724e860b4e6f29dcb7a5e8cc3a3962b",
+      "bundleHash": "0c867b7bfac69b014ed14b4e60205271252d014d306a24240555a869cd128bca"
+    },
+    {
+      "target": "2025-26",
+      "layer": "L3",
+      "seed": 20261024,
+      "file": "reports/defense-tenth/step3-a2/runs/2025-26-L3-20261024.json",
+      "sha256": "11384176c20a8acdc2ab68fdc5fe7c0eedeb324f93753e01c6b7ad793d446a0e",
+      "bundleHash": "4c47b906f64060e20cccf9e58d9d1a8175aecdbe0e8cb7fa46cb34a05edaacd6"
+    },
+    {
+      "target": "2025-26",
+      "layer": "L3",
+      "seed": 20261025,
+      "file": "reports/defense-tenth/step3-a2/runs/2025-26-L3-20261025.json",
+      "sha256": "291f4a069fc9e5b56f257f29eeddd062db36933f3f53fd252b83fd19100ae9e7",
+      "bundleHash": "aa15202b49abf85a110bb23987dea672a0fa66f5b7de710b8236d6026ec91385"
+    },
+    {
+      "target": "2025-26",
+      "layer": "L3",
+      "seed": 20261026,
+      "file": "reports/defense-tenth/step3-a2/runs/2025-26-L3-20261026.json",
+      "sha256": "57bcf09b09044c08e223a6eec0ed657e4f35abadeb2bd750b7a8ea08f6d68d4b",
+      "bundleHash": "163982e54c4c3aeb00a21c5764567ca6715d6e01d05b984ac2aca9373cef00da"
+    },
+    {
+      "target": "2025-26",
+      "layer": "L3",
+      "seed": 20261027,
+      "file": "reports/defense-tenth/step3-a2/runs/2025-26-L3-20261027.json",
+      "sha256": "5ec899fa1f78bbc6185c151e9aaa00503c123f765bf927daad2dc54df76686bf",
+      "bundleHash": "c8028138b854f569317bc56bee6c3f423e62ab01d3d9a2263721859dcd8fe208"
+    },
+    {
+      "target": "2025-26",
+      "layer": "L3",
+      "seed": 20261028,
+      "file": "reports/defense-tenth/step3-a2/runs/2025-26-L3-20261028.json",
+      "sha256": "505cad3ac7c63580db1c95584b93c13ec0e38c7f5f690d0203c5c367d5c1c6fb",
+      "bundleHash": "f11aaf0dff02b506fe9281f6cdaee25e830ba9a8c3b1fde7118dab3c7c2141ff"
+    },
+    {
+      "target": "2025-26",
+      "layer": "L3",
+      "seed": 20261029,
+      "file": "reports/defense-tenth/step3-a2/runs/2025-26-L3-20261029.json",
+      "sha256": "89ed82e865952c86db3e4aac4b2af8e0fd61486c08966b395542ccd2b37fd5a8",
+      "bundleHash": "db32481fdf0593b7e019f0711a00aa02b363e3e5a90ef3674ecfeea2d6f780f4"
+    },
+    {
+      "target": "2025-26",
+      "layer": "L3",
+      "seed": 20261030,
+      "file": "reports/defense-tenth/step3-a2/runs/2025-26-L3-20261030.json",
+      "sha256": "3ec276c8fb71cc328d6e91c7d8fad2d6dee173a1bca9f288ceead87ecfdc4ef1",
+      "bundleHash": "3d0cfd963f0108f0d3464409481779a910ebd7b6b8d462978945b34a81343038"
+    },
+    {
+      "target": "2025-26",
+      "layer": "L3",
+      "seed": 20261031,
+      "file": "reports/defense-tenth/step3-a2/runs/2025-26-L3-20261031.json",
+      "sha256": "7ca16da9ddf2049f1d0cee1724f336ca90ad585e90a2eaa5951afe272a591d66",
+      "bundleHash": "feee38dfcc5d2853d115c998c64a74bd70642a1a28d0aac4bf865eeb1106ac7c"
+    },
+    {
+      "target": "2025-26",
+      "layer": "P3",
+      "seed": 20261012,
+      "file": "reports/defense-tenth/step3-a2/runs/2025-26-P3-20261012.json",
+      "sha256": "b7e52bccbc7c9fb1cb06acbb1e7af2cfb7b35a3e64dc925a00cea30811c21839",
+      "bundleHash": "1fd870af31a4a6905ac908bc4949f7bf9e8847da35a0d619caf05b7fcac04d38"
+    },
+    {
+      "target": "2025-26",
+      "layer": "P3",
+      "seed": 20261013,
+      "file": "reports/defense-tenth/step3-a2/runs/2025-26-P3-20261013.json",
+      "sha256": "63e66f95693a4f668342a6817f3e33d213a4e0dde5ca3e7cc8733a158a828553",
+      "bundleHash": "81eb2ee8995d7f7caff6ea2d542aef13c73ecd0f2a4cabf2123cdcf0c005c519"
+    },
+    {
+      "target": "2025-26",
+      "layer": "P3",
+      "seed": 20261014,
+      "file": "reports/defense-tenth/step3-a2/runs/2025-26-P3-20261014.json",
+      "sha256": "1c7f4254e4cdb3bf84e1b38a766739d69f71e6a22b9933517058bff49f835fa7",
+      "bundleHash": "a358d6ef561b3c1e591d0db8ed1da456f4c941ddfb471219f71a5bb53d087590"
+    },
+    {
+      "target": "2025-26",
+      "layer": "P3",
+      "seed": 20261015,
+      "file": "reports/defense-tenth/step3-a2/runs/2025-26-P3-20261015.json",
+      "sha256": "9c2b0239b82f67ceadab37dcee154152e6a479c9e7d7b63c43e26e58a6ec2f9f",
+      "bundleHash": "33a266076003dfd3eef55ff1ceb3dc7d15f57715a546d19b144dfacefc3ac8b2"
+    },
+    {
+      "target": "2025-26",
+      "layer": "P3",
+      "seed": 20261016,
+      "file": "reports/defense-tenth/step3-a2/runs/2025-26-P3-20261016.json",
+      "sha256": "a65d54884baabe8149154cfcbc0f62cb9b108b8cefa6e5a3b4f9b065f21cc7a0",
+      "bundleHash": "cbc3aade466eee94a5aeb817a06c1c616bf37e98620030ecce1b96ab277cc41c"
+    },
+    {
+      "target": "2025-26",
+      "layer": "P3",
+      "seed": 20261017,
+      "file": "reports/defense-tenth/step3-a2/runs/2025-26-P3-20261017.json",
+      "sha256": "fc8feef7ee5eb56a27ca1f60a86a088f2dd73f44d2442d0cb0cbfcb10a694158",
+      "bundleHash": "a5b9f03739b54f9aaf8a31a8992bf0a0c863c72600696da6349ae21a23b4ba7f"
+    },
+    {
+      "target": "2025-26",
+      "layer": "P3",
+      "seed": 20261018,
+      "file": "reports/defense-tenth/step3-a2/runs/2025-26-P3-20261018.json",
+      "sha256": "13ef373742f3ec213de1e1f3ae33d7f56b3a6d9e9cb0b344b64f95efbe87e156",
+      "bundleHash": "166d5a2c0ede035d8a937120c8d798a67d5c082e09fd49de52705bc2831e2543"
+    },
+    {
+      "target": "2025-26",
+      "layer": "P3",
+      "seed": 20261019,
+      "file": "reports/defense-tenth/step3-a2/runs/2025-26-P3-20261019.json",
+      "sha256": "dfcc15d4d2b784664a600a7b45543a969a6ae7e6c8d0f291d7e4b50e22b7bc27",
+      "bundleHash": "c67ae4401ec51ffec29e721e5992a27dee79a99519883f453a2e5ac6bd24ac6a"
+    },
+    {
+      "target": "2025-26",
+      "layer": "P3",
+      "seed": 20261020,
+      "file": "reports/defense-tenth/step3-a2/runs/2025-26-P3-20261020.json",
+      "sha256": "5a6717f784939554ddc4e27c212b204c3ffb307672fb3deea4a1f870df8b3eb8",
+      "bundleHash": "a071293791a9caf2787a03a26fe457c7a65e6ebc4fed491db53abbdccfe50755"
+    },
+    {
+      "target": "2025-26",
+      "layer": "P3",
+      "seed": 20261021,
+      "file": "reports/defense-tenth/step3-a2/runs/2025-26-P3-20261021.json",
+      "sha256": "8067adbe6280b783aabb2f27b2991cd92aaaf33bf9a79bceb2fd4d1949308cea",
+      "bundleHash": "815acfe002d4aeaa5eaaa0015b37adadf8dbeb0a3ba8dddd4a2f7aebebffdde3"
+    },
+    {
+      "target": "2025-26",
+      "layer": "P3",
+      "seed": 20261022,
+      "file": "reports/defense-tenth/step3-a2/runs/2025-26-P3-20261022.json",
+      "sha256": "0725eeaba63034759349b307c95d2669178804fbd10f8c2adec31b6d67d39c4c",
+      "bundleHash": "2eed59de5d3bb4adc3534c304029226cfeef3ca24cdc1d8a6e91e6d60e906c4d"
+    },
+    {
+      "target": "2025-26",
+      "layer": "P3",
+      "seed": 20261023,
+      "file": "reports/defense-tenth/step3-a2/runs/2025-26-P3-20261023.json",
+      "sha256": "6832db14d009e24f8adbe9dad6e6067d07f91b0f2239d9b9f6248975c0a927b2",
+      "bundleHash": "f9ab51d3a8fe1ce11c46598893d6de6542c9e4878cb0959f4ac5abb3b40cdf09"
+    },
+    {
+      "target": "2025-26",
+      "layer": "P3",
+      "seed": 20261024,
+      "file": "reports/defense-tenth/step3-a2/runs/2025-26-P3-20261024.json",
+      "sha256": "d7862ac535bf2685ef2a776ada9c4f35e5fafeaf8c5eb857c87566ee7c42b7ef",
+      "bundleHash": "04ba039e7aec1a1cf7bcd4c86d551f659037a7bfdc53ad32e9477a28820a144d"
+    },
+    {
+      "target": "2025-26",
+      "layer": "P3",
+      "seed": 20261025,
+      "file": "reports/defense-tenth/step3-a2/runs/2025-26-P3-20261025.json",
+      "sha256": "e197c9ec7a6ea950b09ac7f12eca45dc6911c011e75f2cbca7baba5eac8fbef8",
+      "bundleHash": "1c1f67211cda2a151495c9b9c564d72ef4de96ee033b258bad6a006a18fdf3fb"
+    },
+    {
+      "target": "2025-26",
+      "layer": "P3",
+      "seed": 20261026,
+      "file": "reports/defense-tenth/step3-a2/runs/2025-26-P3-20261026.json",
+      "sha256": "c3401c0321c484e6705fb062fac48ff7bd25820856921d8d5b20fde3fb125578",
+      "bundleHash": "804557c397cd5b848cf10b9dcff355d3b82df655a5a247fc5807eb9ddced0325"
+    },
+    {
+      "target": "2025-26",
+      "layer": "P3",
+      "seed": 20261027,
+      "file": "reports/defense-tenth/step3-a2/runs/2025-26-P3-20261027.json",
+      "sha256": "50b143083b4fe5760f59f2d5c8bbbe375f36efe8814ae260ea9affa15408dd52",
+      "bundleHash": "b2ec3d93f379b849f892532427d61aab2f55adf480b1f1f2719ffb0feb827411"
+    },
+    {
+      "target": "2025-26",
+      "layer": "P3",
+      "seed": 20261028,
+      "file": "reports/defense-tenth/step3-a2/runs/2025-26-P3-20261028.json",
+      "sha256": "f2fe540ef0d307f0557d232e7827a5f3a55e3fd615a2438412192eff131e4b92",
+      "bundleHash": "bd7d982187e9ba54881d71ab9ff0e221626f0076ac2d19f49d3027d6cf80d223"
+    },
+    {
+      "target": "2025-26",
+      "layer": "P3",
+      "seed": 20261029,
+      "file": "reports/defense-tenth/step3-a2/runs/2025-26-P3-20261029.json",
+      "sha256": "f8e837211ec4eba3f57f4e317cfb2dc4a925793aa642098585c2881baf737a4b",
+      "bundleHash": "2d9c7cb8d91ae6d5c9ae20005e3867fbd167eab42d13b1ca8822fee7cd4ed2b0"
+    },
+    {
+      "target": "2025-26",
+      "layer": "P3",
+      "seed": 20261030,
+      "file": "reports/defense-tenth/step3-a2/runs/2025-26-P3-20261030.json",
+      "sha256": "d70e912c7c62fd99d78db2e69300c7c3a61a8f158d9cf0551e29bf94507448ec",
+      "bundleHash": "3978d5b31bc8a790252d4ecfb1a64333c942fab5d5889d7bc2bf3bdee9e2f830"
+    },
+    {
+      "target": "2025-26",
+      "layer": "P3",
+      "seed": 20261031,
+      "file": "reports/defense-tenth/step3-a2/runs/2025-26-P3-20261031.json",
+      "sha256": "c5df1f1adb1353250a04ef695aa9e0a0631f74b4b86cbb9cdd301736c67ee6a7",
+      "bundleHash": "be57618e9563b000786041848c9eead2df7145a860b0f7b66ef1c0bb9526daa7"
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "passed": true,
+  "players": 10,
+  "variants": 2,
+  "armChecks": 40,
+  "seatChecks": 9600,
+  "simulatedGames": 19200,
+  "all13CountersAndPairedIntervalsRecomputed": true,
+  "baselineExactlyCanonicalV38ExceptBlockCounts": true,
+  "recurrenceSensitivityIndependentlyRecomputed": true,
+  "scope": "Conditional workload experiment, not full OVR, source/model uncertainty, causal NBA defense or adoption.",
+  "hashes": {
+    "reports/player-impact-v41/probe-protocol.json": "ce90a532ab3e3e088356c0a93dd59fada0005cb15f862b61e1c137321fb96685",
+    "reports/player-impact-v41/probe-manifest.json": "ed2ef38b9511164dba257fa4239fa6855867fde84ebba64d7dcc826bcb23ed81",
+    "reports/player-impact-v41/probe-checkpoint.json": "2c692bf214536de15177bd7d82be7be1a0c24ad7031e24d2228365b3fe7fa5d4",
+    "reports/player-impact-v41/probe-summary.json": "8ae536a6d714b83db77abe4605a70e06e3065e58de03f6c6a84098f80805beb5",
+    "reports/player-impact-v41/verify-probe.py": "338cd6ace0b8822d03f6729273c0b1770afb82b8d8893493b458f2e4456e2943",
+    "reports/player-impact-v41/summarize-probe.py": "2d999d4b0695c1aafa09b0d92ceab97298678134c4652b58d8de9e084bfefbc9",
+    "reports/player-impact-v41/input-verification.json": "e54a6c27f2b605d344ce0f5a53f297c67cdfdf4e989cc5bedb306453b08933a0"
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "coverage": [
+    {
+      "season": "2022-23",
+      "players": 539,
+      "partialPoss": 1214298.1,
+      "positionCoverage": 0.999909247984494,
+      "usageCoverage": 1.0
+    },
+    {
+      "season": "2023-24",
+      "players": 571,
+      "partialPoss": 1202069.7,
+      "positionCoverage": 0.9999251291335269,
+      "usageCoverage": 1.0
+    },
+    {
+      "season": "2024-25",
+      "players": 569,
+      "partialPoss": 1121489.6,
+      "positionCoverage": 0.999780648879847,
+      "usageCoverage": 1.0
+    },
+    {
+      "season": "2025-26",
+      "players": 582,
+      "partialPoss": 1168041.2,
+      "positionCoverage": 0.9998855348595581,
+      "usageCoverage": 1.0
+    }
+  ],
+  "missingFilters": [
+    {
+      "season": "2023-24",
+      "team": 1610612741,
+      "reason": "no prior team-filtered matchup file"
+    },
+    {
+      "season": "2023-24",
+      "team": 1610612743,
+      "reason": "no prior team-filtered matchup file"
+    },
+    {
+      "season": "2023-24",
+      "team": 1610612744,
+      "reason": "no prior team-filtered matchup file"
+    },
+    {
+      "season": "2023-24",
+      "team": 1610612745,
+      "reason": "no prior team-filtered matchup file"
+    },
+    {
+      "season": "2023-24",
+      "team": 1610612753,
+      "reason": "no prior team-filtered matchup file"
+    },
+    {
+      "season": "2024-25",
+      "team": 1610612743,
+      "reason": "no prior team-filtered matchup file"
+    },
+    {
+      "season": "2024-25",
+      "team": 1610612753,
+      "reason": "no prior team-filtered matchup file"
+    },
+    {
+      "season": "2025-26",
+      "team": 1610612745,
+      "reason": "no prior team-filtered matchup file"
+    },
+    {
+      "season": "2025-26",
+      "team": 1610612748,
+      "reason": "no prior team-filtered matchup file"
+    }
+  ]
+}

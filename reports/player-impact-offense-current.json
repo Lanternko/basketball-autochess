@@ -1,0 +1,15 @@
+{
+  "version": "v47",
+  "scope": "Measured NBA offense FT-accuracy development baseline layered on frozen v46 defense; no product preset or OVR change.",
+  "defenseBaseline": "v46",
+  "sourceInput": "reports/player-impact-v47/input.mjs",
+  "engine": "reports/player-impact-v47/engine.mjs",
+  "creationPolicy": "rotation-space",
+  "run": "node reports/player-impact-v47/run.mjs",
+  "report": "reports/player-impact-v47/report.md",
+  "decision": "reports/player-impact-v47/decision.json",
+  "verification": "reports/player-impact-v47/results-verification.json",
+  "gameDefaultChanged": false,
+  "ovrRecomputed": false,
+  "curryOffenseComplete": false
+}

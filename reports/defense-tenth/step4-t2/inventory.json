@@ -1,0 +1,815 @@
+{
+  "metrics": [
+    {
+      "season": "2022-23",
+      "metric": "rimSuppression",
+      "players": 529,
+      "totalPlayers": 539,
+      "playerCoverage": 0.9814471243042672,
+      "minuteCoverage": 0.9999109349976726,
+      "rotationPlayers": 367,
+      "totalRotationPlayers": 367
+    },
+    {
+      "season": "2022-23",
+      "metric": "threeSuppression",
+      "players": 529,
+      "totalPlayers": 539,
+      "playerCoverage": 0.9814471243042672,
+      "minuteCoverage": 0.999877325562832,
+      "rotationPlayers": 367,
+      "totalRotationPlayers": 367
+    },
+    {
+      "season": "2022-23",
+      "metric": "onDefRtg",
+      "players": 539,
+      "totalPlayers": 539,
+      "playerCoverage": 1.0,
+      "minuteCoverage": 1.0,
+      "rotationPlayers": 367,
+      "totalRotationPlayers": 367
+    },
+    {
+      "season": "2022-23",
+      "metric": "onOffDef",
+      "players": 539,
+      "totalPlayers": 539,
+      "playerCoverage": 1.0,
+      "minuteCoverage": 1.0,
+      "rotationPlayers": 367,
+      "totalRotationPlayers": 367
+    },
+    {
+      "season": "2022-23",
+      "metric": "teamCenteredOn",
+      "players": 539,
+      "totalPlayers": 539,
+      "playerCoverage": 1.0,
+      "minuteCoverage": 1.0,
+      "rotationPlayers": 367,
+      "totalRotationPlayers": 367
+    },
+    {
+      "season": "2022-23",
+      "metric": "onOffRimShare",
+      "players": 539,
+      "totalPlayers": 539,
+      "playerCoverage": 1.0,
+      "minuteCoverage": 1.0,
+      "rotationPlayers": 367,
+      "totalRotationPlayers": 367
+    },
+    {
+      "season": "2022-23",
+      "metric": "onOffThreeShare",
+      "players": 539,
+      "totalPlayers": 539,
+      "playerCoverage": 1.0,
+      "minuteCoverage": 1.0,
+      "rotationPlayers": 367,
+      "totalRotationPlayers": 367
+    },
+    {
+      "season": "2022-23",
+      "metric": "matchupSuppression",
+      "players": 534,
+      "totalPlayers": 539,
+      "playerCoverage": 0.9907235621521335,
+      "minuteCoverage": 0.9999579882064493,
+      "rotationPlayers": 367,
+      "totalRotationPlayers": 367
+    },
+    {
+      "season": "2022-23",
+      "metric": "usageWeightedMatchupSuppression",
+      "players": 534,
+      "totalPlayers": 539,
+      "playerCoverage": 0.9907235621521335,
+      "minuteCoverage": 0.9999579882064493,
+      "rotationPlayers": 367,
+      "totalRotationPlayers": 367
+    },
+    {
+      "season": "2022-23",
+      "metric": "defensiveLoad",
+      "players": 539,
+      "totalPlayers": 539,
+      "playerCoverage": 1.0,
+      "minuteCoverage": 1.0,
+      "rotationPlayers": 367,
+      "totalRotationPlayers": 367
+    },
+    {
+      "season": "2022-23",
+      "metric": "CONTESTED_SHOTS_2PT36",
+      "players": 535,
+      "totalPlayers": 539,
+      "playerCoverage": 0.9925788497217068,
+      "minuteCoverage": 0.9999680710369014,
+      "rotationPlayers": 367,
+      "totalRotationPlayers": 367
+    },
+    {
+      "season": "2022-23",
+      "metric": "CONTESTED_SHOTS_3PT36",
+      "players": 535,
+      "totalPlayers": 539,
+      "playerCoverage": 0.9925788497217068,
+      "minuteCoverage": 0.9999680710369014,
+      "rotationPlayers": 367,
+      "totalRotationPlayers": 367
+    },
+    {
+      "season": "2022-23",
+      "metric": "DEFLECTIONS36",
+      "players": 535,
+      "totalPlayers": 539,
+      "playerCoverage": 0.9925788497217068,
+      "minuteCoverage": 0.9999680710369014,
+      "rotationPlayers": 367,
+      "totalRotationPlayers": 367
+    },
+    {
+      "season": "2022-23",
+      "metric": "DEF_BOXOUTS36",
+      "players": 535,
+      "totalPlayers": 539,
+      "playerCoverage": 0.9925788497217068,
+      "minuteCoverage": 0.9999680710369014,
+      "rotationPlayers": 367,
+      "totalRotationPlayers": 367
+    },
+    {
+      "season": "2022-23",
+      "metric": "CHARGES_DRAWN36",
+      "players": 535,
+      "totalPlayers": 539,
+      "playerCoverage": 0.9925788497217068,
+      "minuteCoverage": 0.9999680710369014,
+      "rotationPlayers": 367,
+      "totalRotationPlayers": 367
+    },
+    {
+      "season": "2022-23",
+      "metric": "officialDefRtg",
+      "players": 539,
+      "totalPlayers": 539,
+      "playerCoverage": 1.0,
+      "minuteCoverage": 1.0,
+      "rotationPlayers": 367,
+      "totalRotationPlayers": 367
+    },
+    {
+      "season": "2022-23",
+      "metric": "STL36",
+      "players": 539,
+      "totalPlayers": 539,
+      "playerCoverage": 1.0,
+      "minuteCoverage": 1.0,
+      "rotationPlayers": 367,
+      "totalRotationPlayers": 367
+    },
+    {
+      "season": "2022-23",
+      "metric": "BLK36",
+      "players": 539,
+      "totalPlayers": 539,
+      "playerCoverage": 1.0,
+      "minuteCoverage": 1.0,
+      "rotationPlayers": 367,
+      "totalRotationPlayers": 367
+    },
+    {
+      "season": "2022-23",
+      "metric": "DREB36",
+      "players": 539,
+      "totalPlayers": 539,
+      "playerCoverage": 1.0,
+      "minuteCoverage": 1.0,
+      "rotationPlayers": 367,
+      "totalRotationPlayers": 367
+    },
+    {
+      "season": "2022-23",
+      "metric": "PF36",
+      "players": 539,
+      "totalPlayers": 539,
+      "playerCoverage": 1.0,
+      "minuteCoverage": 1.0,
+      "rotationPlayers": 367,
+      "totalRotationPlayers": 367
+    },
+    {
+      "season": "2023-24",
+      "metric": "rimSuppression",
+      "players": 562,
+      "totalPlayers": 571,
+      "playerCoverage": 0.9842381786339754,
+      "minuteCoverage": 0.9999259089623214,
+      "rotationPlayers": 360,
+      "totalRotationPlayers": 360
+    },
+    {
+      "season": "2023-24",
+      "metric": "threeSuppression",
+      "players": 562,
+      "totalPlayers": 571,
+      "playerCoverage": 0.9842381786339754,
+      "minuteCoverage": 0.9998955989923619,
+      "rotationPlayers": 360,
+      "totalRotationPlayers": 360
+    },
+    {
+      "season": "2023-24",
+      "metric": "onDefRtg",
+      "players": 569,
+      "totalPlayers": 571,
+      "playerCoverage": 0.9964973730297724,
+      "minuteCoverage": 0.9999882127894603,
+      "rotationPlayers": 360,
+      "totalRotationPlayers": 360
+    },
+    {
+      "season": "2023-24",
+      "metric": "onOffDef",
+      "players": 569,
+      "totalPlayers": 571,
+      "playerCoverage": 0.9964973730297724,
+      "minuteCoverage": 0.9999882127894603,
+      "rotationPlayers": 360,
+      "totalRotationPlayers": 360
+    },
+    {
+      "season": "2023-24",
+      "metric": "teamCenteredOn",
+      "players": 569,
+      "totalPlayers": 571,
+      "playerCoverage": 0.9964973730297724,
+      "minuteCoverage": 0.9999882127894603,
+      "rotationPlayers": 360,
+      "totalRotationPlayers": 360
+    },
+    {
+      "season": "2023-24",
+      "metric": "onOffRimShare",
+      "players": 568,
+      "totalPlayers": 571,
+      "playerCoverage": 0.9947460595446584,
+      "minuteCoverage": 0.9999730578044805,
+      "rotationPlayers": 360,
+      "totalRotationPlayers": 360
+    },
+    {
+      "season": "2023-24",
+      "metric": "onOffThreeShare",
+      "players": 568,
+      "totalPlayers": 571,
+      "playerCoverage": 0.9947460595446584,
+      "minuteCoverage": 0.9999730578044805,
+      "rotationPlayers": 360,
+      "totalRotationPlayers": 360
+    },
+    {
+      "season": "2023-24",
+      "metric": "matchupSuppression",
+      "players": 569,
+      "totalPlayers": 571,
+      "playerCoverage": 0.9964973730297724,
+      "minuteCoverage": 0.9999882127894603,
+      "rotationPlayers": 360,
+      "totalRotationPlayers": 360
+    },
+    {
+      "season": "2023-24",
+      "metric": "usageWeightedMatchupSuppression",
+      "players": 569,
+      "totalPlayers": 571,
+      "playerCoverage": 0.9964973730297724,
+      "minuteCoverage": 0.9999882127894603,
+      "rotationPlayers": 360,
+      "totalRotationPlayers": 360
+    },
+    {
+      "season": "2023-24",
+      "metric": "defensiveLoad",
+      "players": 571,
+      "totalPlayers": 571,
+      "playerCoverage": 1.0,
+      "minuteCoverage": 1.0,
+      "rotationPlayers": 360,
+      "totalRotationPlayers": 360
+    },
+    {
+      "season": "2023-24",
+      "metric": "CONTESTED_SHOTS_2PT36",
+      "players": 567,
+      "totalPlayers": 571,
+      "playerCoverage": 0.9929947460595446,
+      "minuteCoverage": 0.9999713739172605,
+      "rotationPlayers": 360,
+      "totalRotationPlayers": 360
+    },
+    {
+      "season": "2023-24",
+      "metric": "CONTESTED_SHOTS_3PT36",
+      "players": 567,
+      "totalPlayers": 571,
+      "playerCoverage": 0.9929947460595446,
+      "minuteCoverage": 0.9999713739172605,
+      "rotationPlayers": 360,
+      "totalRotationPlayers": 360
+    },
+    {
+      "season": "2023-24",
+      "metric": "DEFLECTIONS36",
+      "players": 567,
+      "totalPlayers": 571,
+      "playerCoverage": 0.9929947460595446,
+      "minuteCoverage": 0.9999713739172605,
+      "rotationPlayers": 360,
+      "totalRotationPlayers": 360
+    },
+    {
+      "season": "2023-24",
+      "metric": "DEF_BOXOUTS36",
+      "players": 567,
+      "totalPlayers": 571,
+      "playerCoverage": 0.9929947460595446,
+      "minuteCoverage": 0.9999713739172605,
+      "rotationPlayers": 360,
+      "totalRotationPlayers": 360
+    },
+    {
+      "season": "2023-24",
+      "metric": "CHARGES_DRAWN36",
+      "players": 567,
+      "totalPlayers": 571,
+      "playerCoverage": 0.9929947460595446,
+      "minuteCoverage": 0.9999713739172605,
+      "rotationPlayers": 360,
+      "totalRotationPlayers": 360
+    },
+    {
+      "season": "2023-24",
+      "metric": "officialDefRtg",
+      "players": 571,
+      "totalPlayers": 571,
+      "playerCoverage": 1.0,
+      "minuteCoverage": 1.0,
+      "rotationPlayers": 360,
+      "totalRotationPlayers": 360
+    },
+    {
+      "season": "2023-24",
+      "metric": "STL36",
+      "players": 571,
+      "totalPlayers": 571,
+      "playerCoverage": 1.0,
+      "minuteCoverage": 1.0,
+      "rotationPlayers": 360,
+      "totalRotationPlayers": 360
+    },
+    {
+      "season": "2023-24",
+      "metric": "BLK36",
+      "players": 571,
+      "totalPlayers": 571,
+      "playerCoverage": 1.0,
+      "minuteCoverage": 1.0,
+      "rotationPlayers": 360,
+      "totalRotationPlayers": 360
+    },
+    {
+      "season": "2023-24",
+      "metric": "DREB36",
+      "players": 571,
+      "totalPlayers": 571,
+      "playerCoverage": 1.0,
+      "minuteCoverage": 1.0,
+      "rotationPlayers": 360,
+      "totalRotationPlayers": 360
+    },
+    {
+      "season": "2023-24",
+      "metric": "PF36",
+      "players": 571,
+      "totalPlayers": 571,
+      "playerCoverage": 1.0,
+      "minuteCoverage": 1.0,
+      "rotationPlayers": 360,
+      "totalRotationPlayers": 360
+    },
+    {
+      "season": "2024-25",
+      "metric": "rimSuppression",
+      "players": 559,
+      "totalPlayers": 569,
+      "playerCoverage": 0.9824253075571178,
+      "minuteCoverage": 0.9997642184684306,
+      "rotationPlayers": 375,
+      "totalRotationPlayers": 375
+    },
+    {
+      "season": "2024-25",
+      "metric": "threeSuppression",
+      "players": 565,
+      "totalPlayers": 569,
+      "playerCoverage": 0.9929701230228472,
+      "minuteCoverage": 0.9999393704633107,
+      "rotationPlayers": 375,
+      "totalRotationPlayers": 375
+    },
+    {
+      "season": "2024-25",
+      "metric": "onDefRtg",
+      "players": 569,
+      "totalPlayers": 569,
+      "playerCoverage": 1.0,
+      "minuteCoverage": 1.0,
+      "rotationPlayers": 375,
+      "totalRotationPlayers": 375
+    },
+    {
+      "season": "2024-25",
+      "metric": "onOffDef",
+      "players": 569,
+      "totalPlayers": 569,
+      "playerCoverage": 1.0,
+      "minuteCoverage": 1.0,
+      "rotationPlayers": 375,
+      "totalRotationPlayers": 375
+    },
+    {
+      "season": "2024-25",
+      "metric": "teamCenteredOn",
+      "players": 569,
+      "totalPlayers": 569,
+      "playerCoverage": 1.0,
+      "minuteCoverage": 1.0,
+      "rotationPlayers": 375,
+      "totalRotationPlayers": 375
+    },
+    {
+      "season": "2024-25",
+      "metric": "onOffRimShare",
+      "players": 569,
+      "totalPlayers": 569,
+      "playerCoverage": 1.0,
+      "minuteCoverage": 1.0,
+      "rotationPlayers": 375,
+      "totalRotationPlayers": 375
+    },
+    {
+      "season": "2024-25",
+      "metric": "onOffThreeShare",
+      "players": 569,
+      "totalPlayers": 569,
+      "playerCoverage": 1.0,
+      "minuteCoverage": 1.0,
+      "rotationPlayers": 375,
+      "totalRotationPlayers": 375
+    },
+    {
+      "season": "2024-25",
+      "metric": "matchupSuppression",
+      "players": 569,
+      "totalPlayers": 569,
+      "playerCoverage": 1.0,
+      "minuteCoverage": 1.0,
+      "rotationPlayers": 375,
+      "totalRotationPlayers": 375
+    },
+    {
+      "season": "2024-25",
+      "metric": "usageWeightedMatchupSuppression",
+      "players": 569,
+      "totalPlayers": 569,
+      "playerCoverage": 1.0,
+      "minuteCoverage": 1.0,
+      "rotationPlayers": 375,
+      "totalRotationPlayers": 375
+    },
+    {
+      "season": "2024-25",
+      "metric": "defensiveLoad",
+      "players": 569,
+      "totalPlayers": 569,
+      "playerCoverage": 1.0,
+      "minuteCoverage": 1.0,
+      "rotationPlayers": 375,
+      "totalRotationPlayers": 375
+    },
+    {
+      "season": "2024-25",
+      "metric": "CONTESTED_SHOTS_2PT36",
+      "players": 567,
+      "totalPlayers": 569,
+      "playerCoverage": 0.9964850615114236,
+      "minuteCoverage": 0.9999814743082338,
+      "rotationPlayers": 375,
+      "totalRotationPlayers": 375
+    },
+    {
+      "season": "2024-25",
+      "metric": "CONTESTED_SHOTS_3PT36",
+      "players": 567,
+      "totalPlayers": 569,
+      "playerCoverage": 0.9964850615114236,
+      "minuteCoverage": 0.9999814743082338,
+      "rotationPlayers": 375,
+      "totalRotationPlayers": 375
+    },
+    {
+      "season": "2024-25",
+      "metric": "DEFLECTIONS36",
+      "players": 567,
+      "totalPlayers": 569,
+      "playerCoverage": 0.9964850615114236,
+      "minuteCoverage": 0.9999814743082338,
+      "rotationPlayers": 375,
+      "totalRotationPlayers": 375
+    },
+    {
+      "season": "2024-25",
+      "metric": "DEF_BOXOUTS36",
+      "players": 567,
+      "totalPlayers": 569,
+      "playerCoverage": 0.9964850615114236,
+      "minuteCoverage": 0.9999814743082338,
+      "rotationPlayers": 375,
+      "totalRotationPlayers": 375
+    },
+    {
+      "season": "2024-25",
+      "metric": "CHARGES_DRAWN36",
+      "players": 567,
+      "totalPlayers": 569,
+      "playerCoverage": 0.9964850615114236,
+      "minuteCoverage": 0.9999814743082338,
+      "rotationPlayers": 375,
+      "totalRotationPlayers": 375
+    },
+    {
+      "season": "2024-25",
+      "metric": "officialDefRtg",
+      "players": 569,
+      "totalPlayers": 569,
+      "playerCoverage": 1.0,
+      "minuteCoverage": 1.0,
+      "rotationPlayers": 375,
+      "totalRotationPlayers": 375
+    },
+    {
+      "season": "2024-25",
+      "metric": "STL36",
+      "players": 569,
+      "totalPlayers": 569,
+      "playerCoverage": 1.0,
+      "minuteCoverage": 1.0,
+      "rotationPlayers": 375,
+      "totalRotationPlayers": 375
+    },
+    {
+      "season": "2024-25",
+      "metric": "BLK36",
+      "players": 569,
+      "totalPlayers": 569,
+      "playerCoverage": 1.0,
+      "minuteCoverage": 1.0,
+      "rotationPlayers": 375,
+      "totalRotationPlayers": 375
+    },
+    {
+      "season": "2024-25",
+      "metric": "DREB36",
+      "players": 569,
+      "totalPlayers": 569,
+      "playerCoverage": 1.0,
+      "minuteCoverage": 1.0,
+      "rotationPlayers": 375,
+      "totalRotationPlayers": 375
+    },
+    {
+      "season": "2024-25",
+      "metric": "PF36",
+      "players": 569,
+      "totalPlayers": 569,
+      "playerCoverage": 1.0,
+      "minuteCoverage": 1.0,
+      "rotationPlayers": 375,
+      "totalRotationPlayers": 375
+    },
+    {
+      "season": "2025-26",
+      "metric": "rimSuppression",
+      "players": 576,
+      "totalPlayers": 582,
+      "playerCoverage": 0.9896907216494846,
+      "minuteCoverage": 0.9998804136005107,
+      "rotationPlayers": 380,
+      "totalRotationPlayers": 380
+    },
+    {
+      "season": "2025-26",
+      "metric": "threeSuppression",
+      "players": 575,
+      "totalPlayers": 582,
+      "playerCoverage": 0.9879725085910653,
+      "minuteCoverage": 0.9998467272907954,
+      "rotationPlayers": 380,
+      "totalRotationPlayers": 380
+    },
+    {
+      "season": "2025-26",
+      "metric": "onDefRtg",
+      "players": 581,
+      "totalPlayers": 582,
+      "playerCoverage": 0.9982817869415808,
+      "minuteCoverage": 0.9999949470535427,
+      "rotationPlayers": 380,
+      "totalRotationPlayers": 380
+    },
+    {
+      "season": "2025-26",
+      "metric": "onOffDef",
+      "players": 581,
+      "totalPlayers": 582,
+      "playerCoverage": 0.9982817869415808,
+      "minuteCoverage": 0.9999949470535427,
+      "rotationPlayers": 380,
+      "totalRotationPlayers": 380
+    },
+    {
+      "season": "2025-26",
+      "metric": "teamCenteredOn",
+      "players": 581,
+      "totalPlayers": 582,
+      "playerCoverage": 0.9982817869415808,
+      "minuteCoverage": 0.9999949470535427,
+      "rotationPlayers": 380,
+      "totalRotationPlayers": 380
+    },
+    {
+      "season": "2025-26",
+      "metric": "onOffRimShare",
+      "players": 581,
+      "totalPlayers": 582,
+      "playerCoverage": 0.9982817869415808,
+      "minuteCoverage": 0.9999949470535427,
+      "rotationPlayers": 380,
+      "totalRotationPlayers": 380
+    },
+    {
+      "season": "2025-26",
+      "metric": "onOffThreeShare",
+      "players": 581,
+      "totalPlayers": 582,
+      "playerCoverage": 0.9982817869415808,
+      "minuteCoverage": 0.9999949470535427,
+      "rotationPlayers": 380,
+      "totalRotationPlayers": 380
+    },
+    {
+      "season": "2025-26",
+      "metric": "matchupSuppression",
+      "players": 580,
+      "totalPlayers": 582,
+      "playerCoverage": 0.9965635738831615,
+      "minuteCoverage": 0.9999831568451424,
+      "rotationPlayers": 380,
+      "totalRotationPlayers": 380
+    },
+    {
+      "season": "2025-26",
+      "metric": "usageWeightedMatchupSuppression",
+      "players": 580,
+      "totalPlayers": 582,
+      "playerCoverage": 0.9965635738831615,
+      "minuteCoverage": 0.9999831568451424,
+      "rotationPlayers": 380,
+      "totalRotationPlayers": 380
+    },
+    {
+      "season": "2025-26",
+      "metric": "defensiveLoad",
+      "players": 582,
+      "totalPlayers": 582,
+      "playerCoverage": 1.0,
+      "minuteCoverage": 1.0,
+      "rotationPlayers": 380,
+      "totalRotationPlayers": 380
+    },
+    {
+      "season": "2025-26",
+      "metric": "CONTESTED_SHOTS_2PT36",
+      "players": 581,
+      "totalPlayers": 582,
+      "playerCoverage": 0.9982817869415808,
+      "minuteCoverage": 0.9999949470535427,
+      "rotationPlayers": 380,
+      "totalRotationPlayers": 380
+    },
+    {
+      "season": "2025-26",
+      "metric": "CONTESTED_SHOTS_3PT36",
+      "players": 581,
+      "totalPlayers": 582,
+      "playerCoverage": 0.9982817869415808,
+      "minuteCoverage": 0.9999949470535427,
+      "rotationPlayers": 380,
+      "totalRotationPlayers": 380
+    },
+    {
+      "season": "2025-26",
+      "metric": "DEFLECTIONS36",
+      "players": 581,
+      "totalPlayers": 582,
+      "playerCoverage": 0.9982817869415808,
+      "minuteCoverage": 0.9999949470535427,
+      "rotationPlayers": 380,
+      "totalRotationPlayers": 380
+    },
+    {
+      "season": "2025-26",
+      "metric": "DEF_BOXOUTS36",
+      "players": 581,
+      "totalPlayers": 582,
+      "playerCoverage": 0.9982817869415808,
+      "minuteCoverage": 0.9999949470535427,
+      "rotationPlayers": 380,
+      "totalRotationPlayers": 380
+    },
+    {
+      "season": "2025-26",
+      "metric": "CHARGES_DRAWN36",
+      "players": 581,
+      "totalPlayers": 582,
+      "playerCoverage": 0.9982817869415808,
+      "minuteCoverage": 0.9999949470535427,
+      "rotationPlayers": 380,
+      "totalRotationPlayers": 380
+    },
+    {
+      "season": "2025-26",
+      "metric": "officialDefRtg",
+      "players": 582,
+      "totalPlayers": 582,
+      "playerCoverage": 1.0,
+      "minuteCoverage": 1.0,
+      "rotationPlayers": 380,
+      "totalRotationPlayers": 380
+    },
+    {
+      "season": "2025-26",
+      "metric": "STL36",
+      "players": 582,
+      "totalPlayers": 582,
+      "playerCoverage": 1.0,
+      "minuteCoverage": 1.0,
+      "rotationPlayers": 380,
+      "totalRotationPlayers": 380
+    },
+    {
+      "season": "2025-26",
+      "metric": "BLK36",
+      "players": 582,
+      "totalPlayers": 582,
+      "playerCoverage": 1.0,
+      "minuteCoverage": 1.0,
+      "rotationPlayers": 380,
+      "totalRotationPlayers": 380
+    },
+    {
+      "season": "2025-26",
+      "metric": "DREB36",
+      "players": 582,
+      "totalPlayers": 582,
+      "playerCoverage": 1.0,
+      "minuteCoverage": 1.0,
+      "rotationPlayers": 380,
+      "totalRotationPlayers": 380
+    },
+    {
+      "season": "2025-26",
+      "metric": "PF36",
+      "players": 582,
+      "totalPlayers": 582,
+      "playerCoverage": 1.0,
+      "minuteCoverage": 1.0,
+      "rotationPlayers": 380,
+      "totalRotationPlayers": 380
+    }
+  ],
+  "fetch": {
+    "jobs": 575,
+    "success": 575,
+    "failures": []
+  },
+  "strictGames": {
+    "2022-23": 1079,
+    "2023-24": 1063,
+    "2024-25": 1091,
+    "2025-26": 1188
+  }
+}

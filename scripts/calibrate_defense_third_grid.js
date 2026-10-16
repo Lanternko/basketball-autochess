@@ -1,0 +1,12 @@
+import fs from 'node:fs';
+import {runThirdJobs} from '../src/defense_third_pool.js';
+import {globalDefenseMetrics} from '../src/defense_third_season.js';
+import {read} from './defense_io.js';
+const initial=read('reports/defense-third/calibration.json');
+const jobs=[.89,.90,.91,.915].map(pace=>({preset:'combined',seed:731019,options:{...initial.selected,pace}}));
+const runs=await runThirdJobs(jobs,{onProgress:(n)=>console.log('clock grid',n+'/4')});
+const grid=runs.map((r,i)=>({options:jobs[i].options,metrics:globalDefenseMetrics(r)}));
+fs.writeFileSync('reports/defense-third/clock-grid.json',JSON.stringify({initial,grid},null,2)+'\n');
+const best=grid.slice().sort((a,b)=>Math.abs(a.metrics.possessionsProxy-102.55443902439025)-Math.abs(b.metrics.possessionsProxy-102.55443902439025))[0];
+fs.writeFileSync('reports/defense-third/calibration-grid.json',JSON.stringify({selected:best.options,calibrationMetrics:best.metrics,seed:731019,reason:'Full-season grid, because scaled empirical CDF has support jumps; no strength/win selection.'},null,2));
+console.log(grid.map(r=>({pace:r.options.pace,poss:r.metrics.possessionsProxy,tov:r.metrics.turnovers,stl:r.metrics.steals})));

@@ -1,0 +1,40 @@
+{
+  "jobs": [
+    {
+      "season": "2025-26",
+      "seed": 20261012,
+      "version": "reference-flow",
+      "strict": false,
+      "onCourt": false,
+      "file": "reports/player-impact-v3/runs/2025-26-reference-flow-full-20261012.json",
+      "sha256": "66b8f4bdcd4d9e053512830ad49bdfa728a443ad0e8981c13a554f3caab3bc58"
+    },
+    {
+      "season": "2025-26",
+      "seed": 20261012,
+      "version": "reference-contests",
+      "strict": false,
+      "onCourt": false,
+      "file": "reports/player-impact-v3/runs/2025-26-reference-contests-full-20261012.json",
+      "sha256": "6ccbca1259a7d153a136b8ffb7a998346dcd6e329d2b1caa6a24935c28c779a5"
+    },
+    {
+      "season": "2025-26",
+      "seed": 20261012,
+      "version": "reference-no-size",
+      "strict": false,
+      "onCourt": false,
+      "file": "reports/player-impact-v3/runs/2025-26-reference-no-size-full-20261012.json",
+      "sha256": "fa874421e4854f47329395647930f0a1a18c06b4506e65ff6679c9fb1539a894"
+    },
+    {
+      "season": "2025-26",
+      "seed": 20261012,
+      "version": "reference-both",
+      "strict": false,
+      "onCourt": false,
+      "file": "reports/player-impact-v3/runs/2025-26-reference-both-full-20261012.json",
+      "sha256": "f015c6e27f1f7d9b5504a2a79c0d9c04328b15ce6aa01bad0ff5f5bdeddc63fb"
+    }
+  ]
+}

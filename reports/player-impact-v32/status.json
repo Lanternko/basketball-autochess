@@ -1,0 +1,8 @@
+{
+  "valid": false,
+  "officialModelAdopted": false,
+  "goalComplete": false,
+  "reason": "Diagnostic preparation omitted pressureAttribute in a turnoverMode=pressure probability call. NaN foul/EV escaped the survival-only assertions, causing best() to choose own for every received shot. All fitted estimates in this folder are invalid and must not be used.",
+  "runtimeEngineAffected": false,
+  "replacement": "../player-impact-v33/report.md"
+}

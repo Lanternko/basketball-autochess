@@ -1,0 +1,20 @@
+{
+  "season": "2025-26",
+  "seed": 20261012,
+  "games": 1230,
+  "counts": {
+    "fresh": {
+      "fga": 211743,
+      "fgm": 100267,
+      "points": 233893
+    },
+    "putback": {
+      "fga": 8210,
+      "fgm": 5097,
+      "points": 10194
+    }
+  },
+  "putbackFG": 0.6208282582216809,
+  "passiveExactTeamAndMatchParity": true,
+  "design": "Actual engine putback branch flag; emitted field only, no probability or RNG changes. Recorded FGAs only, unrecorded foul misses excluded."
+}

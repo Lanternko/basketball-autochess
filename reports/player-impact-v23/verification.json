@@ -1,0 +1,43 @@
+{
+  "groups": {
+    "reports/player-impact-v23/validation-protocol.json": 5134,
+    "reports/player-impact-v23/ovr-protocol.json": 5133,
+    "reports/player-box-audit/source-hashes.json": 85,
+    "reports/player-impact-v14/validation-protocol.json": 107,
+    "reports/player-impact-v19/validation-protocol.json": 139,
+    "reports/player-impact-v19/ovr-protocol.json": 144,
+    "reports/player-impact-v20/validation-protocol.json": 154,
+    "reports/player-impact-v20/ovr-protocol.json": 153,
+    "reports/player-impact-v21/validation-protocol.json": 4598,
+    "reports/player-impact-v21/ovr-protocol.json": 1358,
+    "reports/player-impact-v22/validation-protocol.json": 5114,
+    "reports/player-impact-v22/ovr-protocol.json": 4655
+  },
+  "resultFiles": 24,
+  "ovrRows": 36,
+  "games": 28023,
+  "artifacts": {
+    "reports/player-impact-v23/report.md": "c3ff13e5e1cb71cbf4ce0f41e95388046a9004f61fbec373721a482d15cf90c0",
+    "reports/player-impact-v23/report.py": "6a4b466a78aa60e960dcbc775203082efd52fa5aeaece6d73af87cce69f83348",
+    "reports/player-impact-v23/status.json": "54b0547091cfe9caf95fbbd43bc44e819d1fc1cd6f96d359d97233ffcc85cf2d",
+    "reports/player-impact-v23/2025-26-player-validation.csv": "180da2ecb5968308370064e55347f8c8161eb8eab25afae82b21cadd0289e333",
+    "reports/player-impact-v23/scores.json": "bc7885685f6ab24d798e6fa54ca760fb65907f202b97d4124281f018e9545398",
+    "reports/player-impact-v23/all-players.csv": "06a54a048ee7e41b9005dbb995a0995a2a8b174e6f11d6f82287479eaf038439",
+    "reports/player-impact-v23/all-players-on-court.csv": "bc781142965c69a01a75d71ed1e6d23d92bbb6ca8c3fff434036c45b8c496f7c",
+    "reports/player-impact-v23/ovr-checkpoint.json": "c7fd3c80dd04e1dfb74f56a827959baf8e149f0409f45732581f5d53b262291d",
+    "reports/player-impact-v23/ledger-verification.json": "ebf23a21f010119e38bb4c7b82de9709b8ea42c1973455b70e24da1b7e975414",
+    "reports/player-impact-v23/ovr-cache-verification.json": "1eaa00e91777e476a71e76cc4b8a36c9332223aebf8f1c5bb111f2f6baee942e",
+    "reports/player-impact-v23/source-score-audit.json": "3d000c590014289ed0140db821ed25ca465e933636a45099d53ba4ce675eea34",
+    "reports/player-impact-v23/audit-source-scores.py": "22020c24d11180f6aebcf7613ef2a158ff1ce999cb3c1105cdcff0bcf216cec6",
+    "reports/player-impact-v23/putback-fit-audit.json": "98b93bef9fe4cef6e992eee978b5d8c9b17a678e282637baf6bd16a5a5e7d4a0",
+    "reports/player-impact-v23/audit-putback-fit.py": "1fd8fabd3886b336d2d059cda6f243888aa5ee172201220ab442d176d10088ee",
+    "reports/player-impact-v23/export-players.py": "ed4efc7773db786eba84dc01c616acd01ad9ba9dc2f7f077c299e6c0a5de0979",
+    "reports/player-impact-v23/validation-score.py": "42e140d4466388a4eb5b99b4b61d14f02303cbb135e4ec0f20a75b14c6e8f9af",
+    "reports/player-impact-v23/verify-ledgers.mjs": "cb2eb0670c63144fc607067b423f16a62813d2baee0a1089dc3ca058d72552e9",
+    "reports/player-impact-v23/verify-ovr-cache.mjs": "1faf278fb47beafcf5546a0bbd235e6d7d39e294fb6a4b4ac17c92f5e8260cc5",
+    "reports/player-impact-v23/verify.mjs": "f71e05d40266a22fed9372292a5641b7d6ae8f0ac53e5f464f6da8e9a4cd75dc",
+    "reports/player-impact-v23/../../test/measured_putback_choice.js": "f9a62d0a992a22ccf6b0065e3d4fbb7afc883982ccec858fbdef8da37a686ff2",
+    "reports/player-impact-v23/../../test/measured_putback_choice_profiles.js": "5f0d1802f02eb940b536c6594364a8a0657e1a2a8d9996f38bdbc258ee1047e4"
+  },
+  "status": "Frozen archived and candidate sources, all 24 run hashes and required ledgers passed. 31-player OVR diagnostic only. All four win gates fail; experimental, not adopted."
+}

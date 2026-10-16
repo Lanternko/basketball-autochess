@@ -1,0 +1,8 @@
+{
+  "baseline": "nba-defense-v3; clock forecast remains OFF",
+  "parameters": "Player-prior and residual penalties selected exclusively by pre-cutoff game-group CV. No test-dependent coefficient or rating multiplier.",
+  "role": "Pre-cutoff CV selects role prior; if role+offense significantly worsens either netRMSE or winMAE versus offense-only at main41, keep offense-only. Otherwise retain the training-selected role prior.",
+  "net": "No extra player net residual injected without a demonstrated remaining training representation gap after attack/defense controls. Offline simultaneous defense coefficients exist for confound control, not automatic adoption.",
+  "neutral": "One common switch across cutoffs. Adopt if at least one cutoff improves netRMSE or winMAE significantly and no cutoff significantly worsens either metric. Report calibration slope without a veto, per user. Paired20seed percentile bootstrap. Candidate selection is exploratory, not multiple-comparison-adjusted.",
+  "success": "Both netRMSE and winMAE significantly improve versus v3 in at least2 of25/41/55 and main41 point estimates no worse than simple baseline; report uncertainty against deterministic simple forecasts separately."
+}

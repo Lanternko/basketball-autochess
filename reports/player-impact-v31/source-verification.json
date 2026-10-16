@@ -1,0 +1,29 @@
+{
+  "passed": true,
+  "sourceRoleCards": 2262,
+  "teamCards": 2581,
+  "sourceContextStates": 270090,
+  "allRawAttributesAndOtherInputsUnchanged": true,
+  "sourceContextExposureExactlyRetained": true,
+  "allPassTransportUnchanged": true,
+  "mean70PlayerLineups": 582,
+  "hashes": {
+    "reports/defense-seventh/2022-23/stints/stints.jsonl": "5936e16bbfcce88da4743cb72b828be2d602bdb67e470e549c68bd2d7c3eaec6",
+    "reports/player-impact-v31/2022-23-contexts.json": "3d853d296c15567f0be5dd043ca30187b99fc271ae5f47d00bb98586aea54421",
+    "reports/player-impact-v30/2022-23-contexts.json": "c4d790d63e9d22e7ee4eb634cc5496ecfd2f34c38352fe835076e52cdbc1413b",
+    "reports/defense-seventh/2023-24/stints/stints.jsonl": "a83b1c42ba735810f2fd8dccd8355d2f41e4fd164389ee82fb4318b4a3d0adb6",
+    "reports/player-impact-v31/2023-24-contexts.json": "55f4eca6643ee5f71a720ec89c6796c8943182bf7f110fc19e5c647f0be75350",
+    "reports/player-impact-v30/2023-24-contexts.json": "f8ec8e9527dacf234f047b9fd32436652b990d0a5a8ebb0eaa89637cfc1917ba",
+    "reports/defense-seventh/2024-25/stints/stints.jsonl": "8790976ac74edf2054470427c50984d35d8c8ab0abf72fd92b5105489cf74ac0",
+    "reports/player-impact-v31/2024-25-contexts.json": "f4ed4b14aae3cc7908811bce8cd4e1b740b0bc8ff90b4a91d4667e1f4f7fe8a1",
+    "reports/player-impact-v30/2024-25-contexts.json": "359f13f90b224f4dd9e61b5a7a3f36d756a71af50812b2ac80f3eca88c34d18e",
+    "reports/defense-b1/stints.jsonl": "5eff6aa81f37d0f3baef97be2fdc7346a05ffce5ccfa1f6e4456be229a296179",
+    "reports/player-impact-v31/2025-26-contexts.json": "58788a8712db90ffb6fbbae8021988c64ee32e1bee67bd09645dfaa483450c97",
+    "reports/player-impact-v30/2025-26-contexts.json": "42bb1d5827638c629e10c3ddd1f1e20a7c24ad767692aaf87dafc3cac8b5b052",
+    "src/source_self_opportunities.js": "4177e0e474ac0258d77fb6380cd6435de1be93ac836cddfca08cb60f730d70de",
+    "reports/player-impact-v31/model.mjs": "22cc9e408c42164b2e769809d6485c12d517561c800085029420c5d7477a2e67",
+    "reports/player-impact-v31/input.mjs": "bd8fa39448a022338d532d0c089c6806d6e64b21561410b29f70b169e05111c6",
+    "reports/player-impact-v31/audit-flow.mjs": "130854a8df544538355770ae1bcfe49a56b8430be9e25d337f1918685f397bcf"
+  },
+  "scope": "Source role restriction and contexts only; source rates are not validated maximum capacities."
+}

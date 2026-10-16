@@ -1,0 +1,38 @@
+{
+  "officialModelAdopted": false,
+  "goalComplete": false,
+  "fullOvrThisVersion": false,
+  "latestCompleteOvrVersion": 24,
+  "failedWinGateSeasons": [
+    "2022-23",
+    "2023-24",
+    "2024-25",
+    "2025-26"
+  ],
+  "targetPlayerColumns": 176,
+  "fullValidationSeasons": 4,
+  "seeds": 3,
+  "games": 28023,
+  "probePlayers": 10,
+  "probeGames": 9600,
+  "probeComparisonValid": false,
+  "probeInvalidityReason": "Repeated non-idempotent creation-success correction changes actual source passing roles across OVR variants. Numeric ledgers retained; interpretation withdrawn. Canonical-role rerun in v38.",
+  "fullSeasonInputsAffectedByRepeatedOvrAssembly": false,
+  "sourceRoleCards": 2262,
+  "sourceContextStates": 270090,
+  "sourceUnsupportedSelfMakesBefore": 891,
+  "sourceUnsupportedSelfMakesAfter": 0,
+  "worsenedIndividualMetrics": [
+    "pts36",
+    "stl36",
+    "blk36",
+    "oreb36",
+    "dreb36",
+    "fta36",
+    "fgPct",
+    "threePct",
+    "ftPct"
+  ],
+  "healthyProbeChangeIntervalsOverlappingZero": 10,
+  "scope": "Fixed passer rows plus separate own pool; complete source/full-game validation. Original workload comparison confounded by repeated input correction, withdrawn. No full OVR or adoption."
+}

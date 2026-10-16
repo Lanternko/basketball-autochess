@@ -1,0 +1,63 @@
+{
+  "results": [
+    {
+      "season": "2022-23",
+      "games": 1230,
+      "identical": true,
+      "trace": {
+        "fgOreb": 25320,
+        "ftOreb": 635,
+        "dreb": 81564,
+        "expectedOldPutback": 10008.754075223214,
+        "expectedNewPutback": 9939.208616442807,
+        "selectedPutbackProbability": 10002.883696261775
+      }
+    },
+    {
+      "season": "2023-24",
+      "games": 1230,
+      "identical": true,
+      "trace": {
+        "fgOreb": 25594,
+        "ftOreb": 481,
+        "dreb": 81303,
+        "expectedOldPutback": 10015.642147718618,
+        "expectedNewPutback": 9926.852548485107,
+        "selectedPutbackProbability": 10005.582242748262
+      }
+    },
+    {
+      "season": "2024-25",
+      "games": 1230,
+      "identical": true,
+      "trace": {
+        "fgOreb": 26582,
+        "ftOreb": 627,
+        "dreb": 81304,
+        "expectedOldPutback": 10680.80086419466,
+        "expectedNewPutback": 10580.759855550405,
+        "selectedPutbackProbability": 10673.69515726759
+      }
+    },
+    {
+      "season": "2025-26",
+      "games": 1230,
+      "identical": true,
+      "trace": {
+        "fgOreb": 26587,
+        "ftOreb": 684,
+        "dreb": 79325,
+        "expectedOldPutback": 10625.334959370635,
+        "expectedNewPutback": 10504.852393454461,
+        "selectedPutbackProbability": 10619.433224332855
+      }
+    }
+  ],
+  "invariants": [
+    "OFF exact full-season parity",
+    "acquisition function re-exported byte-identically",
+    "FT and DREB allocation unchanged",
+    "one normalized recipient distribution",
+    "no PG/C penalty or uniform floor on FG OREB allocation"
+  ]
+}

@@ -1,0 +1,23 @@
+import fs from 'node:fs';
+import assert from 'node:assert/strict';
+import {loadInput} from '../player-impact-v49/input.mjs';
+import {loadInput as previousInput} from '../player-impact-v49/input.mjs';
+import {impactEngine} from './rolling-engine.mjs';
+import {impactEngine as previousEngine} from '../player-impact-v49/engine.mjs';
+import {measuredRotate} from './rolling-rotation.mjs';
+const read=f=>JSON.parse(fs.readFileSync(f));
+let entries=0;
+for(const season of read('reports/player-impact-v51/protocol.json').seasons){const a=previousInput(season),b=loadInput(season);assert.deepEqual(a.league,b.league);assert.deepEqual(a.exposure,b.exposure);entries+=a.league.teams.reduce((n,t)=>n+t.roster.length,0);}
+const b=loadInput('2024-25'),run=await impactEngine('rotation-space'),old=await previousEngine('rotation-space');Object.assign(b.options,{creationPolicy:'rotation-space',rotationController:'baseline',contextLongScale:1,spaceCenter:read('reports/player-impact-v7/2024-25-center.json').fullCenter});
+const options={seed:49001,indices:Array.from({length:10},(_,i)=>i),audit:false,replay:false};
+const legacy=old(b.league,b.exposure,{...options,options:b.options}),disabled=run(b.league,b.exposure,{...options,options:b.options});assert.deepEqual(legacy.teams,disabled.teams);assert.deepEqual(legacy.matches,disabled.matches);
+b.options.rotationController='rollingPlan';
+let plans=0;b.options.rotationPlanObserver=e=>{plans++;const p=e.plan,n=p.on.length,T=p.on[0].length;for(let t=0;t<T;t++)assert.equal(p.on.reduce((sum,row)=>sum+row[t],0),5);for(let i=0;i<n;i++){assert(p.on[i].every(x=>x===0||x===1));assert.equal(p.on[i].reduce((sum,v)=>sum+v,0),p.quota[i]);assert(Math.abs(p.quota[i]*p.stepSeconds/60-e.targets[i])<=p.stepSeconds/60+1e-7);}assert(Math.abs(e.targets.reduce((a,b)=>a+b,0)-T*p.stepSeconds/60*5)<1e-6);};
+const a=run(b.league,b.exposure,{...options,options:b.options}),c=run(b.league,b.exposure,{...options,options:{...b.options,rotationIntervalObserver:e=>{for(const t of e.teams){assert.equal(new Set(t.lineup).size,5);assert(t.lineup.every(id=>t.active.includes(id)));}}}});assert.deepEqual(a.teams,c.teams);assert.deepEqual(a.matches,c.matches);
+const fake=()=>({rotationTeamId:1,roster:[48,48,48,47.9,.1,48].map((targetMinutes,i)=>({playerId:100+i,targetMinutes,pos:i<2?'G':'C',officialStarter:i<5})),players:Array.from({length:6},()=>({regulationSeconds:6,pf:0})),lineup:[0,1,2,3,4],stint:[6,6,6,6,6,0]});
+const s=[fake(),fake()],profile={foldByGame:{},fallbackPrior:{players:{},pairs:{}},minimumStintSeconds:240,minimumRestSeconds:180},opt={rotationPolicy:'measured',rotationController:'rollingPlan',foulOut:6,measuredRotationProfiles:profile};
+measuredRotate({sides:s,period:1,clock:7140,elapsed:60,opt,protectedSide:0,protectedPlayer:0,emit:()=>{}});assert(s[0].lineup.includes(0));assert(!s[0].lineup.includes(4));assert(s[0].lineup.includes(5));
+const f=[fake(),fake()];f[0].players[2].pf=6;measuredRotate({sides:f,period:1,clock:7140,elapsed:60,opt,protectedSide:0,protectedPlayer:0,emit:()=>{}});assert(!f[0].lineup.includes(2));
+let exceptions=0;f[0].players[3].pf=6;assert.equal(measuredRotate({sides:f,period:1,clock:7140,elapsed:60,opt:{...opt,rotationExceptionObserver:()=>exceptions++},protectedSide:0,protectedPlayer:0,emit:()=>{}}),false);assert.equal(exceptions,1);
+const opening=[fake(),fake()];for(const side of opening){side.roster.forEach(p=>p.targetMinutes=40);side.players.forEach((p,i)=>p.regulationSeconds=i===5?0:720);side.stint.fill(30);}measuredRotate({sides:opening,period:2,clock:7200,elapsed:7200,opt:{...opt,quarterSeconds:720},protectedSide:-1,protectedPlayer:null,emit:()=>{}});assert(opening.every(s=>s.lineup.includes(5)));
+const result={passed:true,jointPlansVerified:plans,playerInputsUnchanged:entries,baselineExactParityGames:10,observerExactParityGames:10,fiveDistinctActivePlayers:true,protectedShooterPreserved:true,completedShortAppearanceCanExitBeforeMinimumStint:true,foulOutReplacedWhenFiveEligibleRemain:true,minimumFiveLegacyFallbackExplicit:true,quarterOpeningNotBlockedByOrdinaryMinimumStint:true};fs.writeFileSync('reports/player-impact-v51/runtime-verification.json',JSON.stringify(result,null,2));console.log(JSON.stringify(result));

@@ -1,0 +1,189 @@
+{
+  "at": "2026-10-14T07:42:30.816944+00:00",
+  "pass": true,
+  "protocolSHA256": "e011fe0b9a6558fe64edc8b423ce52fd6b4914541a05c07337cb54d8bf0c82fa",
+  "checks": [
+    {
+      "name": "Protocol SHA matches registration and output",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Registration code unchanged",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Manifest SHA unchanged",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Analysis code unchanged since before outputs",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "UTC order: protocol then code lock then output",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "All registered input hashes unchanged",
+      "pass": true,
+      "detail": {
+        "files": 8,
+        "changed": []
+      }
+    },
+    {
+      "name": "Protected files unchanged",
+      "pass": true,
+      "detail": {
+        "files": 4122,
+        "changed": []
+      }
+    },
+    {
+      "name": "No new files in protected scopes outside this batch",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "Saved cohort matches eligibility 2024-25-rate",
+      "pass": true,
+      "detail": 392
+    },
+    {
+      "name": "Saved cohort matches eligibility 2025-26-rate",
+      "pass": true,
+      "detail": 399
+    },
+    {
+      "name": "Saved cohort matches eligibility 2024-25-pct",
+      "pass": true,
+      "detail": 392
+    },
+    {
+      "name": "Saved cohort matches eligibility 2025-26-pct",
+      "pass": true,
+      "detail": 399
+    },
+    {
+      "name": "No future source/training data in saved predictions or fits",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "All saved input features match source-season individual data",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "Prediction finiteness, bounds and common model cohort",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "Feature whitelist and train-only ridge choices",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "All subgroup and equal-season pooled metrics recompute",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "Previous primary baselines reproduced exactly rate",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "Previous primary baselines reproduced exactly pct",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "Every interval has 20000 valid paired draws",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "All paired point differences match saved metrics",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "Interval finiteness, ordering and nested coverage",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "Stability results recompute from individual inputs",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Tracking product identity holds where defined",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Duplicate tracking joins absent",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Every flagged adjusted ratio excluded rather than clipped",
+      "pass": true,
+      "detail": [
+        {
+          "id": 1630182,
+          "problems": [
+            "invalid_adjusted_counts"
+          ]
+        },
+        {
+          "id": 1631113,
+          "problems": [
+            "invalid_adjusted_counts"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Decision follows preregistration without post-hoc exceptions",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "No engine adoption and no passing candidate",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Report rendered",
+      "pass": true,
+      "detail": null
+    }
+  ],
+  "outputHashes": {
+    "analysis-code-registration.json": "ce7998e1f530d897c73b8cae1cb2ae75416c55fcd1b83c32e8b91a01f6de529d",
+    "analyze.py": "2553fcedef48794a753c131f5269bccddc545d01a3b1ba8918ce79b14fd1f4ad",
+    "audit.py": "2c0f6010b2d0ebe834f4e32f33bca6da5faa4fcc94f1225cbcc5361774c3e9af",
+    "data-quality.json": "cc41ba6f4ef26883306a07058cc72373c9f460b5c85c52f8e5b19941ed0bb3bb",
+    "decision.json": "1c84425febe177ffba310619ac153da02ce8417013153b8eba7b319eb9ad1d01",
+    "fits.json": "8b8c84d74502400056effa0c7c17cd0e26e699a72b91f80677d7dbaee363c5a0",
+    "personal-inputs.json": "4371cf9a4b68e68b575c48e6e35e921879099e5ce263e62c7f451edff8a353ef",
+    "predictions.json": "fef55a983238479b76628aa549690c37b0e7bdb4d528e11777add11b2551fd46",
+    "protocol.json": "e011fe0b9a6558fe64edc8b423ce52fd6b4914541a05c07337cb54d8bf0c82fa",
+    "protocol.sha256": "5ca4ebb1f58b1970602c9355a1ad3372f31a67a4c5008951734d3e57ad4475fc",
+    "register.py": "b86290f56ea7f2a3fbc4cbaa5d375243eefed1527a53848747520c056497c8b8",
+    "report.md": "7e0ec6b5fae8dcf9fd75c8a650f19d61275b9ced6c99a4e7006efcc9d3df67f5",
+    "report.py": "b2f0114228e4e4c9df73dcd093787840a0acd9e6a9d9dd63eb900de48a54b46b",
+    "results.json": "6db532723ec9d43a5d46a38a0c123c59922ffddf57a46d4a6ce449c509696deb",
+    "stability.json": "c138257318a8fc1f48cb3c7aec59575898409103af4cc341e12cde7937f66270"
+  },
+  "limits": "No engine simulation, no seed sampling, no train-refit uncertainty. Flagged raw-data issues retained."
+}

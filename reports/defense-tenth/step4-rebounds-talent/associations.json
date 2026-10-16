@@ -1,0 +1,965 @@
+{
+  "label": "Descriptive, same-season and observed-only; not causal/incremental",
+  "rows": [
+    {
+      "season": "2022-23",
+      "feature": "height",
+      "target": "rate",
+      "n": 367,
+      "Pearson": 0.6399900057694226,
+      "Spearman": 0.6813526074330734
+    },
+    {
+      "season": "2022-23",
+      "feature": "height",
+      "target": "pct",
+      "n": 367,
+      "Pearson": 0.6513622435921698,
+      "Spearman": 0.6897621492460431
+    },
+    {
+      "season": "2022-23",
+      "feature": "mass",
+      "target": "rate",
+      "n": 367,
+      "Pearson": 0.6010745658454675,
+      "Spearman": 0.6190913414043108
+    },
+    {
+      "season": "2022-23",
+      "feature": "mass",
+      "target": "pct",
+      "n": 367,
+      "Pearson": 0.6166570254740608,
+      "Spearman": 0.6303080819770885
+    },
+    {
+      "season": "2022-23",
+      "feature": "wingspan",
+      "target": "rate",
+      "n": 230,
+      "Pearson": 0.6378400136190185,
+      "Spearman": 0.6747382497661069
+    },
+    {
+      "season": "2022-23",
+      "feature": "wingspan",
+      "target": "pct",
+      "n": 230,
+      "Pearson": 0.6482341848374089,
+      "Spearman": 0.678446164349369
+    },
+    {
+      "season": "2022-23",
+      "feature": "reach",
+      "target": "rate",
+      "n": 230,
+      "Pearson": 0.6586474524392023,
+      "Spearman": 0.7022682131846113
+    },
+    {
+      "season": "2022-23",
+      "feature": "reach",
+      "target": "pct",
+      "n": 230,
+      "Pearson": 0.6668234873007707,
+      "Spearman": 0.7054076562808739
+    },
+    {
+      "season": "2022-23",
+      "feature": "standingJump",
+      "target": "rate",
+      "n": 169,
+      "Pearson": -0.013430898847088752,
+      "Spearman": -0.013636540111774828
+    },
+    {
+      "season": "2022-23",
+      "feature": "standingJump",
+      "target": "pct",
+      "n": 169,
+      "Pearson": -0.014607910603152374,
+      "Spearman": -0.013169378456816108
+    },
+    {
+      "season": "2022-23",
+      "feature": "runningJump",
+      "target": "rate",
+      "n": 169,
+      "Pearson": -0.13118290733818874,
+      "Spearman": -0.13212136074869654
+    },
+    {
+      "season": "2022-23",
+      "feature": "runningJump",
+      "target": "pct",
+      "n": 169,
+      "Pearson": -0.13513524318787098,
+      "Spearman": -0.13437726362941582
+    },
+    {
+      "season": "2022-23",
+      "feature": "bench",
+      "target": "rate",
+      "n": 110,
+      "Pearson": 0.14370471004902127,
+      "Spearman": 0.12052219714169696
+    },
+    {
+      "season": "2022-23",
+      "feature": "bench",
+      "target": "pct",
+      "n": 110,
+      "Pearson": 0.13496762132159895,
+      "Spearman": 0.12702783353324598
+    },
+    {
+      "season": "2022-23",
+      "feature": "agility",
+      "target": "rate",
+      "n": 168,
+      "Pearson": 0.29395346903939223,
+      "Spearman": 0.22980183921945566
+    },
+    {
+      "season": "2022-23",
+      "feature": "agility",
+      "target": "pct",
+      "n": 168,
+      "Pearson": 0.2979886127436415,
+      "Spearman": 0.22678984746139869
+    },
+    {
+      "season": "2022-23",
+      "feature": "shuttle",
+      "target": "rate",
+      "n": 131,
+      "Pearson": 0.013629799495689253,
+      "Spearman": 0.06273177219295333
+    },
+    {
+      "season": "2022-23",
+      "feature": "shuttle",
+      "target": "pct",
+      "n": 131,
+      "Pearson": 0.007273324206933056,
+      "Spearman": 0.0562402936877623
+    },
+    {
+      "season": "2022-23",
+      "feature": "sprint",
+      "target": "rate",
+      "n": 169,
+      "Pearson": 0.22112888287203702,
+      "Spearman": 0.20478107811591628
+    },
+    {
+      "season": "2022-23",
+      "feature": "sprint",
+      "target": "pct",
+      "n": 169,
+      "Pearson": 0.2234908148482337,
+      "Spearman": 0.20603256437196021
+    },
+    {
+      "season": "2022-23",
+      "feature": "testAge",
+      "target": "rate",
+      "n": 230,
+      "Pearson": -0.12339157946968961,
+      "Spearman": -0.17547667210420065
+    },
+    {
+      "season": "2022-23",
+      "feature": "testAge",
+      "target": "pct",
+      "n": 230,
+      "Pearson": -0.10695383753848826,
+      "Spearman": -0.1509611933001781
+    },
+    {
+      "season": "2022-23",
+      "feature": "speedOff",
+      "target": "rate",
+      "n": 367,
+      "Pearson": -0.157302667117165,
+      "Spearman": -0.118675115917365
+    },
+    {
+      "season": "2022-23",
+      "feature": "speedOff",
+      "target": "pct",
+      "n": 367,
+      "Pearson": -0.18208881032276814,
+      "Spearman": -0.14282706591275499
+    },
+    {
+      "season": "2022-23",
+      "feature": "speedDef",
+      "target": "rate",
+      "n": 367,
+      "Pearson": 0.18401399823545905,
+      "Spearman": 0.22930758161347203
+    },
+    {
+      "season": "2022-23",
+      "feature": "speedDef",
+      "target": "pct",
+      "n": 367,
+      "Pearson": 0.16695971175477317,
+      "Spearman": 0.2114116742649379
+    },
+    {
+      "season": "2022-23",
+      "feature": "chances36",
+      "target": "rate",
+      "n": 367,
+      "Pearson": 0.9779573644241496,
+      "Spearman": 0.9724107158463472
+    },
+    {
+      "season": "2022-23",
+      "feature": "chances36",
+      "target": "pct",
+      "n": 367,
+      "Pearson": 0.974251296817657,
+      "Spearman": 0.9667247122511209
+    },
+    {
+      "season": "2022-23",
+      "feature": "contestedShare",
+      "target": "rate",
+      "n": 367,
+      "Pearson": 0.7451566853217821,
+      "Spearman": 0.8191991510203097
+    },
+    {
+      "season": "2022-23",
+      "feature": "contestedShare",
+      "target": "pct",
+      "n": 367,
+      "Pearson": 0.7540098355471102,
+      "Spearman": 0.8228547865993193
+    },
+    {
+      "season": "2023-24",
+      "feature": "height",
+      "target": "rate",
+      "n": 360,
+      "Pearson": 0.62499025762921,
+      "Spearman": 0.6497517680333534
+    },
+    {
+      "season": "2023-24",
+      "feature": "height",
+      "target": "pct",
+      "n": 360,
+      "Pearson": 0.6389166843453965,
+      "Spearman": 0.6559861772250094
+    },
+    {
+      "season": "2023-24",
+      "feature": "mass",
+      "target": "rate",
+      "n": 360,
+      "Pearson": 0.6144207917558285,
+      "Spearman": 0.6004732250707768
+    },
+    {
+      "season": "2023-24",
+      "feature": "mass",
+      "target": "pct",
+      "n": 360,
+      "Pearson": 0.6275666861937244,
+      "Spearman": 0.6075006258226073
+    },
+    {
+      "season": "2023-24",
+      "feature": "wingspan",
+      "target": "rate",
+      "n": 224,
+      "Pearson": 0.6088637530097288,
+      "Spearman": 0.6037155747125084
+    },
+    {
+      "season": "2023-24",
+      "feature": "wingspan",
+      "target": "pct",
+      "n": 224,
+      "Pearson": 0.6186842028841194,
+      "Spearman": 0.609271501622035
+    },
+    {
+      "season": "2023-24",
+      "feature": "reach",
+      "target": "rate",
+      "n": 224,
+      "Pearson": 0.630506521254481,
+      "Spearman": 0.6380216917296341
+    },
+    {
+      "season": "2023-24",
+      "feature": "reach",
+      "target": "pct",
+      "n": 224,
+      "Pearson": 0.641077052020232,
+      "Spearman": 0.6425885709645888
+    },
+    {
+      "season": "2023-24",
+      "feature": "standingJump",
+      "target": "rate",
+      "n": 165,
+      "Pearson": 0.042563299796115846,
+      "Spearman": 0.034010548107246255
+    },
+    {
+      "season": "2023-24",
+      "feature": "standingJump",
+      "target": "pct",
+      "n": 165,
+      "Pearson": 0.030765292064034302,
+      "Spearman": 0.032679770425772546
+    },
+    {
+      "season": "2023-24",
+      "feature": "runningJump",
+      "target": "rate",
+      "n": 165,
+      "Pearson": -0.1089395583032169,
+      "Spearman": -0.10661885692657726
+    },
+    {
+      "season": "2023-24",
+      "feature": "runningJump",
+      "target": "pct",
+      "n": 165,
+      "Pearson": -0.1160901140903384,
+      "Spearman": -0.10587630113131774
+    },
+    {
+      "season": "2023-24",
+      "feature": "bench",
+      "target": "rate",
+      "n": 89,
+      "Pearson": 0.08542478357831436,
+      "Spearman": 0.08577733386416406
+    },
+    {
+      "season": "2023-24",
+      "feature": "bench",
+      "target": "pct",
+      "n": 89,
+      "Pearson": 0.07773339600954993,
+      "Spearman": 0.08712447924042434
+    },
+    {
+      "season": "2023-24",
+      "feature": "agility",
+      "target": "rate",
+      "n": 164,
+      "Pearson": 0.2904962976016451,
+      "Spearman": 0.3205734897464713
+    },
+    {
+      "season": "2023-24",
+      "feature": "agility",
+      "target": "pct",
+      "n": 164,
+      "Pearson": 0.30761277071731524,
+      "Spearman": 0.3238978622454138
+    },
+    {
+      "season": "2023-24",
+      "feature": "shuttle",
+      "target": "rate",
+      "n": 127,
+      "Pearson": 0.02038379055000325,
+      "Spearman": 0.08832552784404575
+    },
+    {
+      "season": "2023-24",
+      "feature": "shuttle",
+      "target": "pct",
+      "n": 127,
+      "Pearson": 0.024219036838367812,
+      "Spearman": 0.08744296067977896
+    },
+    {
+      "season": "2023-24",
+      "feature": "sprint",
+      "target": "rate",
+      "n": 165,
+      "Pearson": 0.21919699058747089,
+      "Spearman": 0.20985572803285918
+    },
+    {
+      "season": "2023-24",
+      "feature": "sprint",
+      "target": "pct",
+      "n": 165,
+      "Pearson": 0.21658992789411496,
+      "Spearman": 0.20516228831932873
+    },
+    {
+      "season": "2023-24",
+      "feature": "testAge",
+      "target": "rate",
+      "n": 224,
+      "Pearson": -0.09724915428810538,
+      "Spearman": -0.15317233118656792
+    },
+    {
+      "season": "2023-24",
+      "feature": "testAge",
+      "target": "pct",
+      "n": 224,
+      "Pearson": -0.0797114027668677,
+      "Spearman": -0.13676293811726348
+    },
+    {
+      "season": "2023-24",
+      "feature": "speedOff",
+      "target": "rate",
+      "n": 360,
+      "Pearson": -0.21827440505593496,
+      "Spearman": -0.17430072385293566
+    },
+    {
+      "season": "2023-24",
+      "feature": "speedOff",
+      "target": "pct",
+      "n": 360,
+      "Pearson": -0.22903588961706933,
+      "Spearman": -0.19079415578821454
+    },
+    {
+      "season": "2023-24",
+      "feature": "speedDef",
+      "target": "rate",
+      "n": 360,
+      "Pearson": 0.13421352328545527,
+      "Spearman": 0.2263253743240543
+    },
+    {
+      "season": "2023-24",
+      "feature": "speedDef",
+      "target": "pct",
+      "n": 360,
+      "Pearson": 0.12377551326764812,
+      "Spearman": 0.21391629343619384
+    },
+    {
+      "season": "2023-24",
+      "feature": "chances36",
+      "target": "rate",
+      "n": 360,
+      "Pearson": 0.9738515270654349,
+      "Spearman": 0.9751776538313085
+    },
+    {
+      "season": "2023-24",
+      "feature": "chances36",
+      "target": "pct",
+      "n": 360,
+      "Pearson": 0.9709966297089293,
+      "Spearman": 0.9709205845478311
+    },
+    {
+      "season": "2023-24",
+      "feature": "contestedShare",
+      "target": "rate",
+      "n": 360,
+      "Pearson": 0.7192985735506358,
+      "Spearman": 0.775499999917163
+    },
+    {
+      "season": "2023-24",
+      "feature": "contestedShare",
+      "target": "pct",
+      "n": 360,
+      "Pearson": 0.7309229680906292,
+      "Spearman": 0.7818586854411996
+    },
+    {
+      "season": "2024-25",
+      "feature": "height",
+      "target": "rate",
+      "n": 375,
+      "Pearson": 0.6510546084172446,
+      "Spearman": 0.6804816204024607
+    },
+    {
+      "season": "2024-25",
+      "feature": "height",
+      "target": "pct",
+      "n": 375,
+      "Pearson": 0.6672023666429769,
+      "Spearman": 0.6881660209645117
+    },
+    {
+      "season": "2024-25",
+      "feature": "mass",
+      "target": "rate",
+      "n": 374,
+      "Pearson": 0.6453398854419793,
+      "Spearman": 0.6262381272812366
+    },
+    {
+      "season": "2024-25",
+      "feature": "mass",
+      "target": "pct",
+      "n": 374,
+      "Pearson": 0.6625081930294996,
+      "Spearman": 0.6387940829992609
+    },
+    {
+      "season": "2024-25",
+      "feature": "wingspan",
+      "target": "rate",
+      "n": 254,
+      "Pearson": 0.6494087703615283,
+      "Spearman": 0.6297903829287798
+    },
+    {
+      "season": "2024-25",
+      "feature": "wingspan",
+      "target": "pct",
+      "n": 254,
+      "Pearson": 0.6592674878133283,
+      "Spearman": 0.6371923743189877
+    },
+    {
+      "season": "2024-25",
+      "feature": "reach",
+      "target": "rate",
+      "n": 254,
+      "Pearson": 0.6709386612512224,
+      "Spearman": 0.6544156107017614
+    },
+    {
+      "season": "2024-25",
+      "feature": "reach",
+      "target": "pct",
+      "n": 254,
+      "Pearson": 0.6826336952426675,
+      "Spearman": 0.6629523137510412
+    },
+    {
+      "season": "2024-25",
+      "feature": "standingJump",
+      "target": "rate",
+      "n": 195,
+      "Pearson": -0.07586258176390442,
+      "Spearman": -0.05525783610239553
+    },
+    {
+      "season": "2024-25",
+      "feature": "standingJump",
+      "target": "pct",
+      "n": 195,
+      "Pearson": -0.06774003069018934,
+      "Spearman": -0.05882082792088332
+    },
+    {
+      "season": "2024-25",
+      "feature": "runningJump",
+      "target": "rate",
+      "n": 195,
+      "Pearson": -0.20920619572868332,
+      "Spearman": -0.16790922655648113
+    },
+    {
+      "season": "2024-25",
+      "feature": "runningJump",
+      "target": "pct",
+      "n": 195,
+      "Pearson": -0.20393034383190956,
+      "Spearman": -0.17242676598328308
+    },
+    {
+      "season": "2024-25",
+      "feature": "bench",
+      "target": "rate",
+      "n": 82,
+      "Pearson": 0.1556620659169,
+      "Spearman": 0.13384832995242596
+    },
+    {
+      "season": "2024-25",
+      "feature": "bench",
+      "target": "pct",
+      "n": 82,
+      "Pearson": 0.13775769900458107,
+      "Spearman": 0.11932966760620291
+    },
+    {
+      "season": "2024-25",
+      "feature": "agility",
+      "target": "rate",
+      "n": 195,
+      "Pearson": 0.3452107589377762,
+      "Spearman": 0.32425956146018614
+    },
+    {
+      "season": "2024-25",
+      "feature": "agility",
+      "target": "pct",
+      "n": 195,
+      "Pearson": 0.35269638679126547,
+      "Spearman": 0.32588551873100347
+    },
+    {
+      "season": "2024-25",
+      "feature": "shuttle",
+      "target": "rate",
+      "n": 162,
+      "Pearson": 0.13375103982709202,
+      "Spearman": 0.13027775088198632
+    },
+    {
+      "season": "2024-25",
+      "feature": "shuttle",
+      "target": "pct",
+      "n": 162,
+      "Pearson": 0.13582095375830783,
+      "Spearman": 0.13436514472953934
+    },
+    {
+      "season": "2024-25",
+      "feature": "sprint",
+      "target": "rate",
+      "n": 195,
+      "Pearson": 0.27377465928990286,
+      "Spearman": 0.25863145577975544
+    },
+    {
+      "season": "2024-25",
+      "feature": "sprint",
+      "target": "pct",
+      "n": 195,
+      "Pearson": 0.2720006723387067,
+      "Spearman": 0.2606622524767903
+    },
+    {
+      "season": "2024-25",
+      "feature": "testAge",
+      "target": "rate",
+      "n": 254,
+      "Pearson": -0.11980094432632955,
+      "Spearman": -0.18156717655809693
+    },
+    {
+      "season": "2024-25",
+      "feature": "testAge",
+      "target": "pct",
+      "n": 254,
+      "Pearson": -0.10273093938744164,
+      "Spearman": -0.16444558189305278
+    },
+    {
+      "season": "2024-25",
+      "feature": "speedOff",
+      "target": "rate",
+      "n": 375,
+      "Pearson": -0.1862578667568548,
+      "Spearman": -0.17745388029199444
+    },
+    {
+      "season": "2024-25",
+      "feature": "speedOff",
+      "target": "pct",
+      "n": 375,
+      "Pearson": -0.20072921116027545,
+      "Spearman": -0.19034374321682382
+    },
+    {
+      "season": "2024-25",
+      "feature": "speedDef",
+      "target": "rate",
+      "n": 375,
+      "Pearson": 0.09648789697035716,
+      "Spearman": 0.19547392464946342
+    },
+    {
+      "season": "2024-25",
+      "feature": "speedDef",
+      "target": "pct",
+      "n": 375,
+      "Pearson": 0.08143239128388358,
+      "Spearman": 0.1808177972080507
+    },
+    {
+      "season": "2024-25",
+      "feature": "chances36",
+      "target": "rate",
+      "n": 375,
+      "Pearson": 0.9758554893878988,
+      "Spearman": 0.974572522276726
+    },
+    {
+      "season": "2024-25",
+      "feature": "chances36",
+      "target": "pct",
+      "n": 375,
+      "Pearson": 0.9725713137814543,
+      "Spearman": 0.9730407405873446
+    },
+    {
+      "season": "2024-25",
+      "feature": "contestedShare",
+      "target": "rate",
+      "n": 375,
+      "Pearson": 0.7584168393677112,
+      "Spearman": 0.7886576349946341
+    },
+    {
+      "season": "2024-25",
+      "feature": "contestedShare",
+      "target": "pct",
+      "n": 375,
+      "Pearson": 0.7712143506251082,
+      "Spearman": 0.7936466622415134
+    },
+    {
+      "season": "2025-26",
+      "feature": "height",
+      "target": "rate",
+      "n": 380,
+      "Pearson": 0.6214967480959827,
+      "Spearman": 0.6480206433105044
+    },
+    {
+      "season": "2025-26",
+      "feature": "height",
+      "target": "pct",
+      "n": 380,
+      "Pearson": 0.6312363428507678,
+      "Spearman": 0.6550387178692889
+    },
+    {
+      "season": "2025-26",
+      "feature": "mass",
+      "target": "rate",
+      "n": 379,
+      "Pearson": 0.5997442374279975,
+      "Spearman": 0.5898204029443406
+    },
+    {
+      "season": "2025-26",
+      "feature": "mass",
+      "target": "pct",
+      "n": 379,
+      "Pearson": 0.6086630527251305,
+      "Spearman": 0.5990473617644662
+    },
+    {
+      "season": "2025-26",
+      "feature": "wingspan",
+      "target": "rate",
+      "n": 256,
+      "Pearson": 0.6231850039370251,
+      "Spearman": 0.6256762882973459
+    },
+    {
+      "season": "2025-26",
+      "feature": "wingspan",
+      "target": "pct",
+      "n": 256,
+      "Pearson": 0.6296057645351516,
+      "Spearman": 0.6307913484645045
+    },
+    {
+      "season": "2025-26",
+      "feature": "reach",
+      "target": "rate",
+      "n": 256,
+      "Pearson": 0.6485700157778562,
+      "Spearman": 0.6543681747419661
+    },
+    {
+      "season": "2025-26",
+      "feature": "reach",
+      "target": "pct",
+      "n": 256,
+      "Pearson": 0.6531547171765199,
+      "Spearman": 0.6592550508069897
+    },
+    {
+      "season": "2025-26",
+      "feature": "standingJump",
+      "target": "rate",
+      "n": 209,
+      "Pearson": -0.09646384679484024,
+      "Spearman": -0.051341348608283606
+    },
+    {
+      "season": "2025-26",
+      "feature": "standingJump",
+      "target": "pct",
+      "n": 209,
+      "Pearson": -0.09238802291016841,
+      "Spearman": -0.05159669349253463
+    },
+    {
+      "season": "2025-26",
+      "feature": "runningJump",
+      "target": "rate",
+      "n": 209,
+      "Pearson": -0.19158157359053812,
+      "Spearman": -0.14582865094057432
+    },
+    {
+      "season": "2025-26",
+      "feature": "runningJump",
+      "target": "pct",
+      "n": 209,
+      "Pearson": -0.18586217460905058,
+      "Spearman": -0.14709558769030537
+    },
+    {
+      "season": "2025-26",
+      "feature": "bench",
+      "target": "rate",
+      "n": 65,
+      "Pearson": 0.11140861777415698,
+      "Spearman": 0.09043139732787765
+    },
+    {
+      "season": "2025-26",
+      "feature": "bench",
+      "target": "pct",
+      "n": 65,
+      "Pearson": 0.10764944535742987,
+      "Spearman": 0.10810829575339144
+    },
+    {
+      "season": "2025-26",
+      "feature": "agility",
+      "target": "rate",
+      "n": 211,
+      "Pearson": 0.3930621500528925,
+      "Spearman": 0.3505254912575364
+    },
+    {
+      "season": "2025-26",
+      "feature": "agility",
+      "target": "pct",
+      "n": 211,
+      "Pearson": 0.4002681863319879,
+      "Spearman": 0.3537656465986883
+    },
+    {
+      "season": "2025-26",
+      "feature": "shuttle",
+      "target": "rate",
+      "n": 180,
+      "Pearson": 0.13849066712112998,
+      "Spearman": 0.11666130203461036
+    },
+    {
+      "season": "2025-26",
+      "feature": "shuttle",
+      "target": "pct",
+      "n": 180,
+      "Pearson": 0.1404757496745355,
+      "Spearman": 0.1258070796775431
+    },
+    {
+      "season": "2025-26",
+      "feature": "sprint",
+      "target": "rate",
+      "n": 211,
+      "Pearson": 0.29045328961507455,
+      "Spearman": 0.25572043977420905
+    },
+    {
+      "season": "2025-26",
+      "feature": "sprint",
+      "target": "pct",
+      "n": 211,
+      "Pearson": 0.28927690502689185,
+      "Spearman": 0.2568547467530441
+    },
+    {
+      "season": "2025-26",
+      "feature": "testAge",
+      "target": "rate",
+      "n": 256,
+      "Pearson": -0.07375232963858891,
+      "Spearman": -0.124427459633039
+    },
+    {
+      "season": "2025-26",
+      "feature": "testAge",
+      "target": "pct",
+      "n": 256,
+      "Pearson": -0.06395660672675754,
+      "Spearman": -0.11181382576225886
+    },
+    {
+      "season": "2025-26",
+      "feature": "speedOff",
+      "target": "rate",
+      "n": 380,
+      "Pearson": -0.055681912921027914,
+      "Spearman": -0.15573898434944847
+    },
+    {
+      "season": "2025-26",
+      "feature": "speedOff",
+      "target": "pct",
+      "n": 380,
+      "Pearson": -0.06348952554394625,
+      "Spearman": -0.17471875462347275
+    },
+    {
+      "season": "2025-26",
+      "feature": "speedDef",
+      "target": "rate",
+      "n": 380,
+      "Pearson": -0.023922351637035745,
+      "Spearman": 0.12799574526774465
+    },
+    {
+      "season": "2025-26",
+      "feature": "speedDef",
+      "target": "pct",
+      "n": 380,
+      "Pearson": -0.03062868414478139,
+      "Spearman": 0.11595743179381296
+    },
+    {
+      "season": "2025-26",
+      "feature": "chances36",
+      "target": "rate",
+      "n": 380,
+      "Pearson": 0.9755393641086924,
+      "Spearman": 0.9737908705240299
+    },
+    {
+      "season": "2025-26",
+      "feature": "chances36",
+      "target": "pct",
+      "n": 380,
+      "Pearson": 0.9726162407492771,
+      "Spearman": 0.9712843956519844
+    },
+    {
+      "season": "2025-26",
+      "feature": "contestedShare",
+      "target": "rate",
+      "n": 380,
+      "Pearson": 0.7325164847285986,
+      "Spearman": 0.7977795023814961
+    },
+    {
+      "season": "2025-26",
+      "feature": "contestedShare",
+      "target": "pct",
+      "n": 380,
+      "Pearson": 0.7400668536716716,
+      "Spearman": 0.8015395695401619
+    }
+  ]
+}

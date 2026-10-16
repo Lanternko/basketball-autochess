@@ -1,0 +1,58 @@
+{
+  "passed": true,
+  "runtimeChanged": false,
+  "allDirectCategoryNllAndScoresRecomputed": true,
+  "maximumDifferenceToExplicitRenormalizedPassPriors": 3.3306690738754696e-16,
+  "seasons": [
+    {
+      "season": "2022-23",
+      "assistedMakes": 54597,
+      "oldNll": 67984.47129550205,
+      "fittedNll": 67967.13240414958,
+      "gainPerAssistedMake": 0.00031757956210906526,
+      "fixedSourceWholeGameBootstrap95": [
+        0.00011155834415868464,
+        0.0005129707692801516
+      ]
+    },
+    {
+      "season": "2023-24",
+      "assistedMakes": 56724,
+      "oldNll": 71333.65571709856,
+      "fittedNll": 71322.24761704348,
+      "gainPerAssistedMake": 0.00020111593073618853,
+      "fixedSourceWholeGameBootstrap95": [
+        2.123511169086e-05,
+        0.00038281791601681424
+      ]
+    },
+    {
+      "season": "2024-25",
+      "assistedMakes": 57968,
+      "oldNll": 73288.41368702294,
+      "fittedNll": 73277.96768818815,
+      "gainPerAssistedMake": 0.00018020285044844256,
+      "fixedSourceWholeGameBootstrap95": [
+        -4.48193820819864e-06,
+        0.0003615066676413336
+      ]
+    },
+    {
+      "season": "2025-26",
+      "assistedMakes": 63532,
+      "oldNll": 80221.87510517795,
+      "fittedNll": 80195.79934602344,
+      "gainPerAssistedMake": 0.00041043504304148483,
+      "fixedSourceWholeGameBootstrap95": [
+        0.00024344705143491166,
+        0.0005819385614521513
+      ]
+    }
+  ],
+  "scope": "Conditional assister identity only. Whole-game intervals fix source predictions and the fitted diagnostic beta; no parameter uncertainty, no inferred total creation or OVR benefit.",
+  "hashes": {
+    "reports/player-impact-v36/passer-choice-diagnostic.json": "7fa909a1f0da88ecf9c992483b1e4f986ebd884fdcfc184a0d0ab8a1c9dad687",
+    "reports/player-impact-v36/passer-choice-inputs.json": "b8d85817f6626526be81e3d325a494092138f117e32540712eb749acf52c62e9",
+    "reports/player-impact-v36/verify-passer-choice.py": "37c1db383d840f963c2bd76e5fba3e790eb25f7098a7272eef30dabb12173a0c"
+  }
+}

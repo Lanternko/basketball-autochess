@@ -1,0 +1,15 @@
+{
+  "registeredUTC": "2026-10-15T03:44:33.347864+00:00",
+  "kind": "additional descriptive timing audit, not fitting and not altering protocol thresholds",
+  "reason": "matching counts alone cannot show correctness; prior clock14 audit found many post-OREB clock endpoints earlier than 13 seconds",
+  "sample": "same uniformly spaced 256 games per season, same diagnostic 3 seeds, baseline and combined",
+  "outputs": [
+    "elapsed from individual FG OREB to clock loss before another significant event",
+    "fraction at least 13 seconds; compare real existing data under identical collector reset rules"
+  ],
+  "restrictions": [
+    "no parameter changes",
+    "no new adoption threshold from results",
+    "do not call elapsed a direct rim-contact label"
+  ]
+}

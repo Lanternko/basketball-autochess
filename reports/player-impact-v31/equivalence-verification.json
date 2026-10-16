@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "games": 48,
+  "comparisons": 24,
+  "allGameAndPersonalCountersExactlyV30": true,
+  "scope": "Controlled source-role inputs with zero received-demand priors ensure old residual self never exceeds source self. Not unchanged behavior for actual inputs or a missing-data fallback.",
+  "hashes": {
+    "src/source_self_opportunities.js": "4177e0e474ac0258d77fb6380cd6435de1be93ac836cddfca08cb60f730d70de",
+    "reports/player-impact-v31/model.mjs": "22cc9e408c42164b2e769809d6485c12d517561c800085029420c5d7477a2e67",
+    "reports/player-impact-v31/engine.mjs": "f22e6f89540ee74ee4c7a40ad94e061a54317b13a8aead43192c1b0244cf765d",
+    "reports/player-impact-v31/verify-equivalence.mjs": "56c89ab298963386b1030d8ee4e78fc108e5ef9b04b14fb1f9ea1839c929c26b"
+  }
+}

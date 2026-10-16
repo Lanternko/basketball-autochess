@@ -1,0 +1,23 @@
+{
+  "version": "v18",
+  "season": "2025-26",
+  "seed": 20261012,
+  "games": 1230,
+  "counts": {
+    "andOne": 6842,
+    "shooting": 50367,
+    "nonShooting": 5610,
+    "intentional": 1368
+  },
+  "fouls": {
+    "andOne": 6842,
+    "nonShooting": 11614,
+    "shooting": 24641,
+    "intentional": 779
+  },
+  "fta": 64187,
+  "sourceShootingFTAPerGame": 23.255691056910567,
+  "otherFTAPerGame": 2.8365853658536584,
+  "passiveTeamAndMatchParity": true,
+  "codeSHA256": "42627fa0159dabda8f72f97b73522b0c5431e06adf38e95d363df41ae5fcd348"
+}

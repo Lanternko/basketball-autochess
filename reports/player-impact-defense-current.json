@@ -1,0 +1,14 @@
+{
+ "version":"v46",
+ "scope":"Measured NBA defense development baseline; not the product game preset or current published OVR ranking.",
+ "sourceInput":"reports/player-impact-v46/input.mjs",
+ "engine":"reports/player-impact-v45/engine.mjs",
+ "creationPolicy":"rotation-space",
+ "run":"node reports/player-impact-v46/run.mjs",
+ "report":"reports/player-impact-v46/report.md",
+ "decision":"reports/player-impact-v46/decision.json",
+ "verification":"reports/player-impact-v46/results-verification.json",
+ "previousCandidate":"v45",
+ "gameDefaultChanged":false,
+ "ovrRecomputed":false
+}

@@ -1,0 +1,33 @@
+{
+  "passed": true,
+  "workerSHA256": "03d6cc5f11efeb8bc0f9871b3e6c28ba7f833be867917eef4cc826e536ad7d6f",
+  "frozenCheckpointSHA256": "2c692bf214536de15177bd7d82be7be1a0c24ad7031e24d2228365b3fe7fa5d4",
+  "comparison": "deepStrictEqual on complete supportedHealthy arm; only fullCap arm omitted",
+  "elapsedSeconds": 52.96,
+  "rows": [
+    {
+      "name": "Mitchell Robinson",
+      "playerId": 1629011,
+      "pairedObservations": 120,
+      "allScoresBaselinesPlayerStatsAndMinutesExactlyEqual": true,
+      "originalGames": 960,
+      "optimizedGames": 480
+    },
+    {
+      "name": "Shai Gilgeous-Alexander",
+      "playerId": 1628983,
+      "pairedObservations": 120,
+      "allScoresBaselinesPlayerStatsAndMinutesExactlyEqual": true,
+      "originalGames": 960,
+      "optimizedGames": 480
+    },
+    {
+      "name": "Nikola Jokić",
+      "playerId": 203999,
+      "pairedObservations": 120,
+      "allScoresBaselinesPlayerStatsAndMinutesExactlyEqual": true,
+      "originalGames": 960,
+      "optimizedGames": 480
+    }
+  ]
+}

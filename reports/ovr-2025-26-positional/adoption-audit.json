@@ -1,0 +1,49 @@
+{
+  "passed": true,
+  "playerTeamStintCardsCompared": 661,
+  "uniquePlayers": 582,
+  "attributesCompared": [
+    "long",
+    "mid",
+    "short",
+    "drive",
+    "tovSkill",
+    "pass",
+    "ft",
+    "rebound",
+    "onBall",
+    "help",
+    "stamina",
+    "physique",
+    "offBall",
+    "screen",
+    "handle",
+    "breakDbl"
+  ],
+  "cardProjectionSameAsAdoptedSeasonWorker": true,
+  "eventOptionsMatch": true,
+  "differences": {
+    "exposure": "OVR disables rotations, fatigue, observed minute targets and overtime; 14.4 rather than 48 regulation minutes.",
+    "candidateVolume": "OVR candidate combines team stints into full-season shot/volume inputs.",
+    "teammates": "Artificial baseline instead of observed NBA game roster.",
+    "positions": "Five-slot average in old OVR; modal natural-role position in this diagnostic."
+  },
+  "unknownAll70": true,
+  "signalFlags": {
+    "oldV3": {
+      "rimSignal": true,
+      "reboundSignal": true,
+      "liveSignal": true,
+      "zoneSignal": true,
+      "foulSignal": true
+    },
+    "adoptedSeasonAndOvr": {
+      "rimSignal": false,
+      "reboundSignal": false,
+      "liveSignal": false,
+      "zoneSignal": false,
+      "foulSignal": false
+    }
+  },
+  "explanation": "Same adopted event mechanics and individual attributes; different measurement environment. Old v3 signals differ from the currently adopted pure-card path. No validation of individual transfer is implied."
+}

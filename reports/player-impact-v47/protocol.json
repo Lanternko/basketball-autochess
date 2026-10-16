@@ -1,0 +1,17 @@
+{
+  "seasons": [
+    "2022-23",
+    "2023-24",
+    "2024-25",
+    "2025-26"
+  ],
+  "seeds": [
+    20261012,
+    20261013,
+    20261014
+  ],
+  "version": "measured-ft-accuracy-v47",
+  "scope": "Only FT accuracy and technical-FT taker preference change. v46 defense/shot choice/shooting/foul-generation/rebound/creation input preserved. Healthy OVR not recomputed.",
+  "selection": "FT Beta count prior selected by older-three-season whole-game heldout NLL per attempt, target2025-26 excluded.",
+  "adoptionRule": "All four seasons FT% all-player MAE must improve; four-season team PPG MAE must not increase; four-season mean coarse paint/three defense MAE may fluctuate at most0.05 percentage points each, fine-zone changes and seed results reported. This is a pre-run screen, not a causal or future-prediction guarantee."
+}

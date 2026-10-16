@@ -1,0 +1,30 @@
+{
+  "preset": "a-accounting",
+  "mode": "fast",
+  "workers": 4,
+  "seeds": [
+    20261012,
+    20261013,
+    20261014,
+    20261015
+  ],
+  "elapsedSeconds": 26.1861364,
+  "files": [
+    {
+      "file": "reports/defense-a/runs/a-accounting-seed20261012.json",
+      "sha256": "35044eadc83e6ef384df4e9c25ce0a79a7ad3cfe9d00277be34e60840d26ab54"
+    },
+    {
+      "file": "reports/defense-a/runs/a-accounting-seed20261013.json",
+      "sha256": "451719e83ed0f64615e3db9c4d4289ca0a7c42f42998d620bf49837510ab42a8"
+    },
+    {
+      "file": "reports/defense-a/runs/a-accounting-seed20261014.json",
+      "sha256": "6291f291b1efd03c72c6017fad5d8c24c9d53a4671dafa6bd5368bdc1130a521"
+    },
+    {
+      "file": "reports/defense-a/runs/a-accounting-seed20261015.json",
+      "sha256": "9022e84595940590496d7475c74b773309474b73a1bfa7c04ff2636546457c7d"
+    }
+  ]
+}

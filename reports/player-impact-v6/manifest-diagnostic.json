@@ -1,0 +1,22 @@
+{
+  "jobs": [
+    {
+      "season": "2025-26",
+      "seed": 20261012,
+      "version": "terminal-flow",
+      "strict": false,
+      "onCourt": false,
+      "file": "reports/player-impact-v6/runs/2025-26-terminal-flow-full-20261012.json",
+      "sha256": "805a1f41880e67a731e27f3d0f6d60c019ef79c854b4da28d00e2ddc376d1455"
+    },
+    {
+      "season": "2025-26",
+      "seed": 20261012,
+      "version": "terminal-contests",
+      "strict": false,
+      "onCourt": false,
+      "file": "reports/player-impact-v6/runs/2025-26-terminal-contests-full-20261012.json",
+      "sha256": "bcd55262ef2916fb2760d674af8a48dd8841bbb70a0549802108b64577e008ed"
+    }
+  ]
+}

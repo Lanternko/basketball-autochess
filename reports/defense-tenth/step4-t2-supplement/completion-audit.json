@@ -1,0 +1,65 @@
+{
+  "completedAt": "2026-10-14T01:26:56.395433+00:00",
+  "protectedFiles": 1880,
+  "issues": [],
+  "cases": 8,
+  "playerRows": 80,
+  "strictReconciliations": [
+    {
+      "season": "2022-23",
+      "strictGames": 1079,
+      "ratingAndFiveExposureChecks": "pass"
+    },
+    {
+      "season": "2023-24",
+      "strictGames": 1063,
+      "ratingAndFiveExposureChecks": "pass"
+    },
+    {
+      "season": "2024-25",
+      "strictGames": 1091,
+      "ratingAndFiveExposureChecks": "pass"
+    },
+    {
+      "season": "2025-26",
+      "strictGames": 1188,
+      "ratingAndFiveExposureChecks": "pass"
+    }
+  ],
+  "newGamesSimulated": 0,
+  "newDataDownloads": 0,
+  "newCardFits": 0,
+  "checks": [
+    "protocol SHAs",
+    "protected file SHA parity",
+    "finite values",
+    "syntax",
+    "G/F/C shares",
+    "bin totals",
+    "pair totals",
+    "O+D identity",
+    "cached paired proxy independent recomputation"
+  ],
+  "outputHashes": {
+    "reports/defense-tenth/step4-t2-supplement/analyze.py": "9eb8e47d335f0619b4b4e3e93b6262d0198812f1b6b9613f58dac4f9661eac7d",
+    "reports/defense-tenth/step4-t2-supplement/audit.py": "3749a93de9ee3d864542972a4302a25ed3a7d82ae7c6d34f87590405373e5520",
+    "reports/defense-tenth/step4-t2-supplement/cached-factors.json": "71ac331c80c4635f32a5cc0b1f5fd39363655579c36cceb30b5c447ced28d418",
+    "reports/defense-tenth/step4-t2-supplement/cached_factors.py": "ab8ddd0d97d75ac2d2ef7ea9fca3044527869ac27d6e9a85807abe0c5d21fff9",
+    "reports/defense-tenth/step4-t2-supplement/cases.json": "cf80249d5400233826056aba7b9d917c6f7845858efd73e93400c8ed08a46ccb",
+    "reports/defense-tenth/step4-t2-supplement/league-reference.json": "6fee310d3209db6e609a52c2121579dae18e4141994722d914db232efaaf8fad",
+    "reports/defense-tenth/step4-t2-supplement/lineup-observations.json": "ed8cae537fa0bb3626b8e29275584d723139b1b67173fc6c5e70405720477250",
+    "reports/defense-tenth/step4-t2-supplement/matchup-correlations.json": "737c96cbf379726498000568363509d9ef4990d5f125ff32c83970e782772ebe",
+    "reports/defense-tenth/step4-t2-supplement/matchup-coverage.json": "36ec10d71f7726a0855fb998a9c2cc2f7e1431a3e474fb016826ff8d7b067c85",
+    "reports/defense-tenth/step4-t2-supplement/matchup-player-data.json": "c80a2133b581776ba467e14ea3fd74942a17a0fbe6cf7429332d18ec207a04aa",
+    "reports/defense-tenth/step4-t2-supplement/named-pairs-supplement.json": "8535ec0840fe843b53f0d0c3033002ae96595c80ae1720e1e2558122b81d7085",
+    "reports/defense-tenth/step4-t2-supplement/named-pairs-supplement.sha256": "87969258d369eef191746cd9e193f2b936e1546f71234fc47ca41c2c47ff82fc",
+    "reports/defense-tenth/step4-t2-supplement/named-pairs.json": "d2982b38fccc6f952b0a2b2644381e562c00e8bcc21c2af36e8025e8faea30d4",
+    "reports/defense-tenth/step4-t2-supplement/named_pairs.py": "0589c613ad9f9aedb13a37864b02983833c4db37533cb7169f5e955b9c44c7bf",
+    "reports/defense-tenth/step4-t2-supplement/player-comparisons.md": "85ef0d5a0cc0f047fe17d9b704664f3d87daa9a1a0685e88c47a2bbe98a10460",
+    "reports/defense-tenth/step4-t2-supplement/protocol.json": "c5cb48b98be05f293aeabd5d0bc6aad378bcbd36135109b71054b892afc714ee",
+    "reports/defense-tenth/step4-t2-supplement/protocol.sha256": "6cd6f760e92906c0cd64c304f953348655d621928a19fcef98ca4cb9376be6fb",
+    "reports/defense-tenth/step4-t2-supplement/report.md": "8d8a6894e7163265ebca8674e81bda82b8b9177314c314ccdb019650c5d26856",
+    "reports/defense-tenth/step4-t2-supplement/report.py": "4d9bcf36aa16ddf2e1d92fac893d64b48b770f7111574529b61753cffb5401c0",
+    "reports/defense-tenth/step4-t2-supplement/stint-audit.json": "caf3e7bf4cc5774f8c69424d03b155998330a8fcf3482daec2cd9491b9f39cbc"
+  }
+}

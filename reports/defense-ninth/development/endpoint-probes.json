@@ -1,0 +1,221 @@
+{
+  "checkedAt": "2026-10-13T00:44:15.280Z",
+  "noGamePayloads": true,
+  "results": [
+    {
+      "season": "2021-22",
+      "id": "0022100001",
+      "kind": "cdn-pbp",
+      "url": "https://cdn.nba.com/static/json/liveData/playbyplay/playbyplay_0022100001.json",
+      "checkedAt": "2026-10-13T00:43:30.032Z",
+      "method": "HEAD",
+      "status": 403,
+      "contentType": "text/html",
+      "contentLength": "445",
+      "payloadDownloaded": false
+    },
+    {
+      "season": "2021-22",
+      "id": "0022100001",
+      "kind": "cdn-box",
+      "url": "https://cdn.nba.com/static/json/liveData/boxscore/boxscore_0022100001.json",
+      "checkedAt": "2026-10-13T00:43:30.030Z",
+      "method": "HEAD",
+      "status": 403,
+      "contentType": "text/html",
+      "contentLength": "443",
+      "payloadDownloaded": false
+    },
+    {
+      "season": "2021-22",
+      "id": "0022100001",
+      "kind": "team-log",
+      "url": "https://stats.nba.com/stats/leaguegamelog?LeagueID=00&Season=2021-22&SeasonType=Regular+Season&PlayerOrTeam=T&Counter=1000&Direction=DESC&Sorter=DATE",
+      "checkedAt": "2026-10-13T00:43:29.929Z",
+      "method": "HEAD",
+      "error": "TimeoutError: The operation was aborted due to timeout",
+      "payloadDownloaded": false
+    },
+    {
+      "season": "2021-22",
+      "id": "0022100001",
+      "kind": "tracking",
+      "url": "https://stats.nba.com/stats/leaguedashptdefend?LeagueID=00&Season=2021-22&SeasonType=Regular+Season&TeamID=1610612738&PerMode=Totals&DefenseCategory=3+Pointers&DateTo=2021-12-01&DateFrom=&MeasureType=Base&LastNGames=0&Month=0&OpponentTeamID=0&PaceAdjust=N&PlusMinus=N&Rank=N&Period=0",
+      "checkedAt": "2026-10-13T00:43:30.028Z",
+      "method": "HEAD",
+      "error": "TimeoutError: The operation was aborted due to timeout",
+      "payloadDownloaded": false
+    },
+    {
+      "season": "2021-22",
+      "id": "0022100001",
+      "kind": "stats-pbp-v3",
+      "url": "https://stats.nba.com/stats/playbyplayv3?GameID=0022100001&StartPeriod=1&EndPeriod=4",
+      "checkedAt": "2026-10-13T00:43:30.127Z",
+      "method": "HEAD",
+      "error": "TimeoutError: The operation was aborted due to timeout",
+      "payloadDownloaded": false
+    },
+    {
+      "season": "2021-22",
+      "id": "0022100001",
+      "kind": "stats-box-v3",
+      "url": "https://stats.nba.com/stats/boxscoretraditionalv3?GameID=0022100001&StartPeriod=1&EndPeriod=4&StartRange=0&EndRange=0&RangeType=0",
+      "checkedAt": "2026-10-13T00:43:30.132Z",
+      "method": "HEAD",
+      "error": "TimeoutError: The operation was aborted due to timeout",
+      "payloadDownloaded": false
+    },
+    {
+      "season": "2018-19",
+      "id": "0021800001",
+      "kind": "cdn-box",
+      "url": "https://cdn.nba.com/static/json/liveData/boxscore/boxscore_0021800001.json",
+      "checkedAt": "2026-10-13T00:43:45.137Z",
+      "method": "HEAD",
+      "status": 403,
+      "contentType": "text/html",
+      "contentLength": "441",
+      "payloadDownloaded": false
+    },
+    {
+      "season": "2018-19",
+      "id": "0021800001",
+      "kind": "cdn-pbp",
+      "url": "https://cdn.nba.com/static/json/liveData/playbyplay/playbyplay_0021800001.json",
+      "checkedAt": "2026-10-13T00:43:45.140Z",
+      "method": "HEAD",
+      "status": 403,
+      "contentType": "text/html",
+      "contentLength": "447",
+      "payloadDownloaded": false
+    },
+    {
+      "season": "2018-19",
+      "id": "0021800001",
+      "kind": "team-log",
+      "url": "https://stats.nba.com/stats/leaguegamelog?LeagueID=00&Season=2018-19&SeasonType=Regular+Season&PlayerOrTeam=T&Counter=1000&Direction=DESC&Sorter=DATE",
+      "checkedAt": "2026-10-13T00:43:44.938Z",
+      "method": "HEAD",
+      "error": "TimeoutError: The operation was aborted due to timeout",
+      "payloadDownloaded": false
+    },
+    {
+      "season": "2018-19",
+      "id": "0021800001",
+      "kind": "tracking",
+      "url": "https://stats.nba.com/stats/leaguedashptdefend?LeagueID=00&Season=2018-19&SeasonType=Regular+Season&TeamID=1610612738&PerMode=Totals&DefenseCategory=3+Pointers&DateTo=2018-12-01&DateFrom=&MeasureType=Base&LastNGames=0&Month=0&OpponentTeamID=0&PaceAdjust=N&PlusMinus=N&Rank=N&Period=0",
+      "checkedAt": "2026-10-13T00:43:45.045Z",
+      "method": "HEAD",
+      "error": "TimeoutError: The operation was aborted due to timeout",
+      "payloadDownloaded": false
+    },
+    {
+      "season": "2018-19",
+      "id": "0021800001",
+      "kind": "stats-pbp-v3",
+      "url": "https://stats.nba.com/stats/playbyplayv3?GameID=0021800001&StartPeriod=1&EndPeriod=4",
+      "checkedAt": "2026-10-13T00:43:45.180Z",
+      "method": "HEAD",
+      "error": "TimeoutError: The operation was aborted due to timeout",
+      "payloadDownloaded": false
+    },
+    {
+      "season": "2018-19",
+      "id": "0021800001",
+      "kind": "stats-box-v3",
+      "url": "https://stats.nba.com/stats/boxscoretraditionalv3?GameID=0021800001&StartPeriod=1&EndPeriod=4&StartRange=0&EndRange=0&RangeType=0",
+      "checkedAt": "2026-10-13T00:43:45.182Z",
+      "method": "HEAD",
+      "error": "TimeoutError: The operation was aborted due to timeout",
+      "payloadDownloaded": false
+    },
+    {
+      "season": "2017-18",
+      "id": "0021700001",
+      "kind": "cdn-pbp",
+      "url": "https://cdn.nba.com/static/json/liveData/playbyplay/playbyplay_0021700001.json",
+      "checkedAt": "2026-10-13T00:44:00.188Z",
+      "method": "HEAD",
+      "status": 403,
+      "contentType": "text/html",
+      "contentLength": "445",
+      "payloadDownloaded": false
+    },
+    {
+      "season": "2017-18",
+      "id": "0021700001",
+      "kind": "cdn-box",
+      "url": "https://cdn.nba.com/static/json/liveData/boxscore/boxscore_0021700001.json",
+      "checkedAt": "2026-10-13T00:44:00.186Z",
+      "method": "HEAD",
+      "status": 403,
+      "contentType": "text/html",
+      "contentLength": "441",
+      "payloadDownloaded": false
+    },
+    {
+      "season": "2017-18",
+      "id": "0021700001",
+      "kind": "team-log",
+      "url": "https://stats.nba.com/stats/leaguegamelog?LeagueID=00&Season=2017-18&SeasonType=Regular+Season&PlayerOrTeam=T&Counter=1000&Direction=DESC&Sorter=DATE",
+      "checkedAt": "2026-10-13T00:43:59.952Z",
+      "method": "HEAD",
+      "error": "TimeoutError: The operation was aborted due to timeout",
+      "payloadDownloaded": false
+    },
+    {
+      "season": "2017-18",
+      "id": "0021700001",
+      "kind": "tracking",
+      "url": "https://stats.nba.com/stats/leaguedashptdefend?LeagueID=00&Season=2017-18&SeasonType=Regular+Season&TeamID=1610612738&PerMode=Totals&DefenseCategory=3+Pointers&DateTo=2017-12-01&DateFrom=&MeasureType=Base&LastNGames=0&Month=0&OpponentTeamID=0&PaceAdjust=N&PlusMinus=N&Rank=N&Period=0",
+      "checkedAt": "2026-10-13T00:44:00.046Z",
+      "method": "HEAD",
+      "error": "TimeoutError: The operation was aborted due to timeout",
+      "payloadDownloaded": false
+    },
+    {
+      "season": "2017-18",
+      "id": "0021700001",
+      "kind": "stats-pbp-v3",
+      "url": "https://stats.nba.com/stats/playbyplayv3?GameID=0021700001&StartPeriod=1&EndPeriod=4",
+      "checkedAt": "2026-10-13T00:44:00.264Z",
+      "method": "HEAD",
+      "error": "TimeoutError: The operation was aborted due to timeout",
+      "payloadDownloaded": false
+    },
+    {
+      "season": "2017-18",
+      "id": "0021700001",
+      "kind": "stats-box-v3",
+      "url": "https://stats.nba.com/stats/boxscoretraditionalv3?GameID=0021700001&StartPeriod=1&EndPeriod=4&StartRange=0&EndRange=0&RangeType=0",
+      "checkedAt": "2026-10-13T00:44:00.270Z",
+      "method": "HEAD",
+      "error": "TimeoutError: The operation was aborted due to timeout",
+      "payloadDownloaded": false
+    }
+  ],
+  "limitation": "HEAD can verify routing/status only. No historical response schema, nonempty tracking or strict sample coverage is proven.",
+  "references": [
+    "https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/endpoints/playbyplayv3.md",
+    "https://github.com/swar/nba_api/blob/master/docs/nba_api/live/endpoints/playbyplay.md",
+    "https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/endpoints/leaguedashptdefend.md",
+    "https://github.com/swar/nba_api/releases"
+  ],
+  "controls": [
+    {
+      "knownDownloadedSeason": "2023-24",
+      "url": "https://cdn.nba.com/static/json/liveData/boxscore/boxscore_0022300061.json",
+      "method": "HEAD",
+      "status": 403,
+      "payloadDownloaded": false
+    },
+    {
+      "knownDownloadedSeason": "2023-24",
+      "url": "https://cdn.nba.com/static/json/liveData/playbyplay/playbyplay_0022300061.json",
+      "method": "HEAD",
+      "status": 403,
+      "payloadDownloaded": false
+    }
+  ]
+}

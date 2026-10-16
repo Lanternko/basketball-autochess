@@ -1,0 +1,101 @@
+{
+  "registeredAt": "2026-10-13T02:49:59.081Z",
+  "sourceProtocolHash": "61c9d7c275d4a96bd547162309ea87f66245c25cc5a51660d6dcb46b5267cda3",
+  "treatments": [
+    {
+      "id": "as-card",
+      "description": "Unchanged effective v3 real-rim cards, five C positions."
+    },
+    {
+      "id": "all-PG",
+      "description": "Only pos/courtPosition=PG for all five; attributes and measurements unchanged."
+    },
+    {
+      "id": "neutral-positions",
+      "description": "Only positions PG/SG/SF/PF/C in existing order."
+    },
+    {
+      "id": "no-oreb",
+      "options": {
+        "auditNoOreb": true
+      },
+      "description": "Audit in-memory override: attacking test team never retains team/player OREB; all recorded misses instead end possession. Opponent unchanged."
+    },
+    {
+      "id": "twoP-prior-neutral",
+      "neutralTwoP": true,
+      "description": "Audit in-memory probability model: remaining two-point attempt prior split half mid/half paint, instead of league fixed mid/paint ratio. All threeRate and skills unchanged."
+    },
+    {
+      "id": "neutral-shot-skills",
+      "description": "Only long/mid/short=training-minute weighted league average."
+    },
+    {
+      "id": "legacy-ball-allocation",
+      "options": {
+        "shotSelection": "legacy"
+      },
+      "description": "Existing handlingWeights/receiverWeights rather than measured volume allocation, no new ability estimate."
+    },
+    {
+      "id": "full-context",
+      "options": {
+        "contextLongScale": 1,
+        "contextShortScale": 1
+      },
+      "description": "Existing direct teammate make context coefficients set to1."
+    },
+    {
+      "id": "no-context",
+      "options": {
+        "contextLongScale": 0,
+        "contextShortScale": 0
+      },
+      "description": "Existing direct teammate make context coefficients set to0; zone accessibility and spacing tax remain."
+    },
+    {
+      "id": "neutral-creation",
+      "options": {
+        "auditNeutralCreation": true
+      },
+      "description": "Test team context.create=70 only; other context unchanged."
+    },
+    {
+      "id": "no-spacing-gravity",
+      "options": {
+        "auditNoSpacing": true
+      },
+      "description": "Test team context.spacing/gravity=70 only; other context unchanged."
+    },
+    {
+      "id": "weak-control-fields",
+      "description": "Test team handle/pass/tovSkill=0. Deliberate stress substitution, not an estimate of those actual players."
+    },
+    {
+      "id": "combined-stress",
+      "options": {
+        "auditNoOreb": true,
+        "shotSelection": "legacy"
+      },
+      "description": "Combination of handle/pass/tovSkill=0, allPG, and no attacking OREB; not a proposed model."
+    }
+  ],
+  "N": 1000,
+  "seed0": 202610120,
+  "controls": {
+    "fatigue": false,
+    "substitutions": false,
+    "foulOut": 99,
+    "maxOvertimes": 0,
+    "replay": false,
+    "auditIds": [
+      1642259,
+      1629674,
+      1629651,
+      1629057,
+      1642270
+    ]
+  },
+  "instrumentationHash": "6c16b0d4a5d86203d9b217129166fa59a1253cfa3d84a048e08d97abc2e1686f",
+  "scope": "mechanism diagnostics only; frozen engine files untouched"
+}

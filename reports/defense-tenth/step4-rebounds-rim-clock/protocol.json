@@ -1,0 +1,22 @@
+{
+  "version": "oreb-rim-clock-1",
+  "registeredUTC": "2026-10-15T02:37:03.499879+00:00",
+  "base": "pure-oreb-turnover-time-1 unchanged; pure cards; no new calibration",
+  "scope": "single mechanism implementation and deterministic rule/parity/integration tests; no production no-rim rate estimation, season accuracy claims or baseline promotion",
+  "switch": "rimContactClock; default false; enabled requires explicit per-missed-shot boolean resolver; unknown is rejected, never silently becomes no-rim",
+  "rule": {
+    "offensiveFGRebound": "rim contact =>140 deciseconds; no contact=>carry remaining deciseconds; applies player and team retained possession",
+    "liveFinalFT": "existing14 behavior preserved",
+    "expiredNoRim": "if clock expires during no-rim flight before period end, stop at expiry and record natural dead clockTov without awarding an individual rebound; period expiry takes priority",
+    "defensiveControl": "existing next-possession24 unchanged",
+    "limitations": "immediate and clear defensive-control exception at expiry not modeled; flight/contact/control intervals remain abstract; independent per-possession clock hazards unchanged"
+  },
+  "randomness": "rim decision gets dedicated seed-xor RNG; no added draws in gameplay/time/rebound RNG streams. All-rim resolver must reproduce baseline gameplay exactly. No block=>no-rim assumption.",
+  "tests": {
+    "unit": "positive and zero remaining time; player/team retain; FT; period end; invalid contact; independent RNG and no missing resolver",
+    "integration": "four seasons first12 schedule fixtures seed20261012; baseline vs switchOff vs enabled allRim (exact score/team/player/gameplay events after dropping newly added telemetry); forced allNoRim stress only, no inference to real frequency",
+    "stress": "allNoRim is intentionally unrealistic branch coverage, not a prediction or an adoption candidate"
+  },
+  "protected": "all prior protected manifests and prior two deliverable manifests; src/scripts and package files snapshot before implementation",
+  "stop": "report rules/parity/stress and limitations; no other engine fixes"
+}

@@ -1,0 +1,132 @@
+{
+  "kappaAttempts": 89.53791936137011,
+  "fitSeasons": [
+    "2022-23",
+    "2023-24",
+    "2024-25"
+  ],
+  "checkSeason": "2025-26",
+  "design": "Common Beta prior strength chosen by five whole-game folds on preceding three seasons, scoring recorded-FGA conditional binomial NLL of same-player 0-3s putbacks following FG rebounds. No simulated output, name, rank or on/off target fitted. 2025-26 was historically seen; this is descriptive source estimation, not a blind forward claim.",
+  "foldScores": [
+    {
+      "season": "2022-23",
+      "fold": 0,
+      "events": 1303,
+      "nll": 889.3904032201559
+    },
+    {
+      "season": "2022-23",
+      "fold": 1,
+      "events": 1365,
+      "nll": 926.913663326461
+    },
+    {
+      "season": "2022-23",
+      "fold": 2,
+      "events": 1367,
+      "nll": 938.5785390183709
+    },
+    {
+      "season": "2022-23",
+      "fold": 3,
+      "events": 1370,
+      "nll": 930.7329535212176
+    },
+    {
+      "season": "2022-23",
+      "fold": 4,
+      "events": 1315,
+      "nll": 901.291007553015
+    },
+    {
+      "season": "2023-24",
+      "fold": 0,
+      "events": 1274,
+      "nll": 878.1363805887916
+    },
+    {
+      "season": "2023-24",
+      "fold": 1,
+      "events": 1433,
+      "nll": 987.1352066114639
+    },
+    {
+      "season": "2023-24",
+      "fold": 2,
+      "events": 1484,
+      "nll": 1021.1048062202783
+    },
+    {
+      "season": "2023-24",
+      "fold": 3,
+      "events": 1498,
+      "nll": 1032.9118716043647
+    },
+    {
+      "season": "2023-24",
+      "fold": 4,
+      "events": 1414,
+      "nll": 969.7864677142534
+    },
+    {
+      "season": "2024-25",
+      "fold": 0,
+      "events": 1610,
+      "nll": 1112.1738830371532
+    },
+    {
+      "season": "2024-25",
+      "fold": 1,
+      "events": 1483,
+      "nll": 1016.3279123164516
+    },
+    {
+      "season": "2024-25",
+      "fold": 2,
+      "events": 1548,
+      "nll": 1054.7935136160768
+    },
+    {
+      "season": "2024-25",
+      "fold": 3,
+      "events": 1488,
+      "nll": 1029.9704389275907
+    },
+    {
+      "season": "2024-25",
+      "fold": 4,
+      "events": 1536,
+      "nll": 1057.7413853592327
+    }
+  ],
+  "nll": {
+    "fitted": 14746.988432634877,
+    "nearUnshrunk": 18210.268847322623,
+    "pooledApprox": 14775.25056402839
+  },
+  "sourceHashes": {
+    "reports\\player-impact-v22\\2022-23-putback-events.json": "6964d047fe7c47017e0e0d262a3261268dd49b6837fb15990821a41f8952bc76",
+    "reports\\player-impact-v22\\2023-24-putback-events.json": "684929fb6844305a8ea735185b5a70fd524f394a54f7d9a1aa91902ee3952360",
+    "reports\\player-impact-v22\\2024-25-putback-events.json": "2bcb927e4fabb01ca27f592ae128a08792a3b7f7c52453f65a332163d6c6db4b",
+    "reports\\player-impact-v22\\2025-26-putback-events.json": "5d5d258249b881fb0b6fb3c15a6394f11407f401e76a105f82d6c4290f873d24"
+  },
+  "codeHash": "c9fa3329395a1900cc135ccd1a88ba885b816fb31396a5575d543614175309e3",
+  "references": {
+    "2022-23": {
+      "leagueRecordedFG": 0.5636904761904762,
+      "kappaAttempts": 89.53791936137011
+    },
+    "2023-24": {
+      "leagueRecordedFG": 0.549063775869351,
+      "kappaAttempts": 89.53791936137011
+    },
+    "2024-25": {
+      "leagueRecordedFG": 0.5475538160469667,
+      "kappaAttempts": 89.53791936137011
+    },
+    "2025-26": {
+      "leagueRecordedFG": 0.5555024495160712,
+      "kappaAttempts": 89.53791936137011
+    }
+  }
+}

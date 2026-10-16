@@ -1,0 +1,44 @@
+{
+  "passed": true,
+  "seasons": [
+    {
+      "season": "2022-23",
+      "passed": true,
+      "freshAttempts": 183377
+    },
+    {
+      "season": "2023-24",
+      "passed": true,
+      "freshAttempts": 181617
+    },
+    {
+      "season": "2024-25",
+      "passed": true,
+      "freshAttempts": 186841
+    },
+    {
+      "season": "2025-26",
+      "passed": true,
+      "freshAttempts": 203079
+    }
+  ],
+  "rosterPlayers": 582,
+  "strictPbpPlayers": 581,
+  "missingPlayers": [
+    "Darius Brown II"
+  ],
+  "allScoresAndGridRecomputed": true,
+  "allOlderGameFoldsRecomputed": true,
+  "fixedFitWholeGameBootstrapReplicates": 2000,
+  "allPlayerExportRejoined": true,
+  "hashes": {
+    "reports/player-impact-v33/verify-fit.py": "8c85e10576f8978e7a0f9efdbf80a8cceeedcd7ba0bcd2fcf9478099cf7f8dbb",
+    "reports/player-impact-v33/fit-compensation.py": "8f22da2acd63ed0d28e388579d8dcb4b69545eab5d5d4e8ac59b133e42961280",
+    "reports/player-impact-v33/fit-protocol.json": "16bcb6d28071d4b0243cc341f58a7b881cef092b25ba7c80bb7f970518d2cd48",
+    "reports/player-impact-v33/compensation-fit.json": "209ae07ecb0e541fd705a241f3f390e056b47698b4cf648f0dab4d960a6d7a35",
+    "reports/player-impact-v33/data-verification.json": "9e535132bdabc40aa0b6e05949b6be5b26df2fe12f11291c99f1679f1e5d8c83",
+    "reports/player-impact-v33/probability-verification.json": "4b6019c6ce329f23154e0ab2cf104444fe38a3de46e9a34f27566e370c77ceae",
+    "reports/player-impact-v33/2025-26-all-player-conditional-scores.csv": "bae87f60efff44eb16f960712a978d17483a249e70f90510df422c28cdee4388",
+    "reports/player-impact-v31/2025-26-player-validation.csv": "edcdc1237cb36f78edd73e8786a887d7914d61fb4b9f4ebb06ebb61ab8216184"
+  }
+}

@@ -1,0 +1,18 @@
+import json
+from pathlib import Path
+R=Path('reports/player-impact-diagnostics/pass-row-feasibility-v36');read=lambda p:json.loads(Path(p).read_text(encoding='utf-8'))
+a=read(R/'audit.json');p=read(R/'source-prototype-verification.json');lp=read(R/'lp-verification.json');q=read(R/'projection-verification.json')
+assert p['passed'] and lp['passed'] and q['passed'];t=a['totals']
+lines=['# 保留傳球總量的自主機會分配原型','',
+'v36完整驗證未通過，高助攻組62／64球員季低估。這項後續原型專門測：修復零自主支援，是否一定要壓縮組織者的傳球。**目前只完成分配原型，沒有接入引擎、沒有新版OVR，也沒有採用。**','',
+'把既有每位傳球者的傳球總量保留為五列，另把全隊終結量減傳球量的餘額作為一列自主池。五欄仍是每人既有終結量。前五列禁止傳自己，第六列的各格代表本人自主進攻，不記成傳球或助攻。','',
+'先驗保留舊版傳球矩陣與來源自主量的相對形狀；以KL投影滿足所有列／欄總量。自主池的來源形狀仍是模型假設，並非已量出的控球技術或可持續負荷。沒有按球員名字、位置、OVR、ON–OFF或勝場調參數。','',
+'正支援的嚴格可行條件為：自主池餘額為正，且每位傳球者的量小於其他四人的終結容量。所有可接格要同時為正；非嚴格可行輸入目前明確拒絕，不偷偷縮放傳球或套用回退。','',
+'| 球季 | 有出手情境 | 可行且原型通過 | 需另處理的情境 | 零自主進球：原型已給正支援 | 尚待處理的進球 |','|---|---:|---:|---:|---:|---:|']
+for s in p['seasons']:lines.append(f"| {s['season']} | {s['shotStates']} | {s['strictSourceStatesChecked']} | {s['nonStrictSourceStatesRejected']} | {s['legacyUnsupportedMakesWithPositiveOwnNow']} | {s['legacyUnsupportedMakesStillPending']} |")
+lines+=['',f"四季{t['sourceShotStates']:,}個有出手來源情境中，舊版891次零自主支援，有 **{p['legacyUnsupportedMakesWithPositiveOwnNow']}次**已由這個原型給予正自主機會，同時保留每人的原傳球總量；**{p['legacyUnsupportedMakesStillPending']}次尚未處理**。這是機會支援的修復，不代表實際進球或助攻數已準確。",'',
+f"全部582個自然位置、平均70隊友陣容也通過原型。四季全部嚴格可行的實際五人已逐一驗證，自主與傳球加總等於終結量，傳球列總量最大數值差{p['maxPasserRowAbsoluteDifference']:.3g}，最多{p['maxIterations']}次平衡迭代。",'',
+f"獨立線性規劃解了{lp['linearProgramsSolved']}個問題：582個平均70陣容，加上全部35個含41次問題進球的非嚴格來源情境。另對{q['sampledSourceAndMean70Matrices']}個確定性來源／平均70矩陣，改用對數空間的對偶解算，最大矩陣差{q['maxAbsoluteDifferenceToIndependentDualSolve']:.3g}。這些核對只證明原型與約束一致。",'',
+'剩下需要決定並驗證非嚴格可行情境的供給調整方式，再重算來源情境、逐球機率、四季個人／在場／球隊指標及健康負荷貢獻。不能從目前的可行性推論後衛OVR已修好；正式模型與v24完整實驗榜不變。','',
+'檔案：[可行性核對](audit.json)、[全部來源原型核對](source-prototype-verification.json)、[獨立LP](lp-verification.json)、[獨立對偶矩陣核對](projection-verification.json)、[v36完整比較](../../player-impact-v36/report.md)。']
+f=R/'report.md';assert not f.exists();f.write_text('\n'.join(lines)+'\n',encoding='utf-8');print('Wrote prototype report; runtime unchanged, 41 unsupported source makes remain pending.')

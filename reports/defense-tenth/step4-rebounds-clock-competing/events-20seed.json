@@ -1,0 +1,122 @@
+[
+  {
+    "season": "2022-23",
+    "games": 615,
+    "real": {
+      "misses": 56599,
+      "immediateClock": 278,
+      "fgOreb": 12428,
+      "postOrebClock": 79,
+      "clock": 795,
+      "immediateRate": 0.004911747557377339,
+      "postOrebRate": 0.006356614097199871,
+      "clockPerTeamGame": 0.6463414634146342
+    },
+    "combinedMean": {
+      "misses": 58734.55000000011,
+      "immediateClock": 319.1000000000235,
+      "fgOreb": 12642.25000000003,
+      "postOrebClock": 103.5499999999966,
+      "clock": 817.849999999979,
+      "immediateRate": 0.005432918103569754,
+      "postOrebRate": 0.008190788823191786,
+      "clockPerTeamGame": 0.6649186991869748
+    }
+  },
+  {
+    "season": "2023-24",
+    "games": 615,
+    "real": {
+      "misses": 57269,
+      "immediateClock": 309,
+      "fgOreb": 12491,
+      "postOrebClock": 69,
+      "clock": 833,
+      "immediateRate": 0.005395589236759852,
+      "postOrebRate": 0.0055239772636298135,
+      "clockPerTeamGame": 0.6772357723577236
+    },
+    "combinedMean": {
+      "misses": 59485.700000000026,
+      "immediateClock": 329.60000000002447,
+      "fgOreb": 12834.049999999941,
+      "postOrebClock": 103.6499999999966,
+      "clock": 825.7499999999781,
+      "immediateRate": 0.005540827459372998,
+      "postOrebRate": 0.008076172369594717,
+      "clockPerTeamGame": 0.6713414634146163
+    }
+  },
+  {
+    "season": "2024-25",
+    "games": 615,
+    "real": {
+      "misses": 58485,
+      "immediateClock": 370,
+      "fgOreb": 13588,
+      "postOrebClock": 117,
+      "clock": 943,
+      "immediateRate": 0.006326408480807045,
+      "postOrebRate": 0.008610538710627023,
+      "clockPerTeamGame": 0.7666666666666667
+    },
+    "combinedMean": {
+      "misses": 60043.75000000006,
+      "immediateClock": 326.05000000002497,
+      "fgOreb": 13447.500000000027,
+      "postOrebClock": 110.8999999999963,
+      "clock": 831.0499999999737,
+      "immediateRate": 0.005430207140627037,
+      "postOrebRate": 0.00824688603829679,
+      "clockPerTeamGame": 0.6756504065040436
+    }
+  },
+  {
+    "season": "2025-26",
+    "games": 615,
+    "real": {
+      "misses": 57589,
+      "immediateClock": 351,
+      "fgOreb": 13553,
+      "postOrebClock": 86,
+      "clock": 853,
+      "immediateRate": 0.006094913959263054,
+      "postOrebRate": 0.00634545857005829,
+      "clockPerTeamGame": 0.6934959349593496
+    },
+    "combinedMean": {
+      "misses": 58800.10000000016,
+      "immediateClock": 314.7000000000229,
+      "fgOreb": 13607.500000000058,
+      "postOrebClock": 109.84999999999631,
+      "clock": 821.3499999999766,
+      "immediateRate": 0.005352031714232154,
+      "postOrebRate": 0.008072753995957806,
+      "clockPerTeamGame": 0.6677642276422574
+    }
+  },
+  {
+    "season": "pooled",
+    "games": 2460,
+    "real": {
+      "misses": 229942,
+      "immediateClock": 1308,
+      "fgOreb": 52060,
+      "postOrebClock": 351,
+      "clock": 3424,
+      "immediateRate": 0.005688390985552879,
+      "postOrebRate": 0.006742220514790626,
+      "clockPerTeamGame": 0.6959349593495935
+    },
+    "combinedMean": {
+      "misses": 237064.10000000036,
+      "immediateClock": 1289.4500000000958,
+      "fgOreb": 52531.300000000054,
+      "postOrebClock": 427.94999999998583,
+      "clock": 3295.9999999999072,
+      "immediateRate": 0.005439246178565602,
+      "postOrebRate": 0.008146571662989216,
+      "clockPerTeamGame": 0.669918699186973
+    }
+  }
+]

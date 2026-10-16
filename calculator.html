@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Basketball Autochess — OVR 計算器</title>
+<style>
+  :root{
+    --bg:#0f1216; --panel:#161b22; --line:#262d38; --ink:#e6edf3; --dim:#8b98a8;
+    --acc:#4c8dff; --good:#3fb950; --warn:#d29922; --bad:#f85149;
+    --mono:ui-monospace,"SF Mono",Menlo,Consolas,"Noto Sans Mono",monospace;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);
+       font:14px/1.55 system-ui,-apple-system,"Noto Sans TC",sans-serif}
+  header{padding:18px 22px;border-bottom:1px solid var(--line)}
+  h1{margin:0;font-size:17px;letter-spacing:.02em}
+  header p{margin:4px 0 0;color:var(--dim);font-size:12.5px}
+  main{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line)}
+  @media(max-width:900px){main{grid-template-columns:1fr}}
+  .col{background:var(--bg);padding:16px 20px}
+  .full{grid-column:1/-1;background:var(--bg);padding:16px 20px}
+  h2{font-size:13px;text-transform:uppercase;letter-spacing:.08em;color:var(--dim);
+     margin:0 0 10px;font-weight:600}
+  select,button{background:var(--panel);color:var(--ink);border:1px solid var(--line);
+    border-radius:6px;padding:7px 11px;font:inherit}
+  button{cursor:pointer}
+  button.primary{background:var(--acc);border-color:var(--acc);color:#fff;font-weight:600}
+  button:hover{border-color:var(--acc)}
+  table{width:100%;border-collapse:collapse;font-size:12px}
+  th,td{padding:4px 2px;text-align:right;border-bottom:1px solid var(--line)}
+  th:first-child,td:first-child{text-align:left}
+  th{color:var(--dim);font-weight:600;font-size:11.5px}
+  td.num{font-family:var(--mono);font-variant-numeric:tabular-nums}
+  input[type=number]{width:34px;background:var(--panel);color:var(--ink);
+    border:1px solid var(--line);border-radius:4px;padding:3px 5px;
+    font-family:var(--mono);text-align:right}
+  .bar{height:6px;border-radius:3px;background:var(--line);overflow:hidden;margin-top:6px}
+  .bar>i{display:block;height:100%;background:var(--acc)}
+  .big{font-family:var(--mono);font-size:30px;font-variant-numeric:tabular-nums}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(128px,1fr));gap:12px}
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:11px 13px}
+  .card .k{color:var(--dim);font-size:11px;text-transform:uppercase;letter-spacing:.06em}
+  .card .v{font-family:var(--mono);font-size:19px;margin-top:3px;font-variant-numeric:tabular-nums}
+  .ok{color:var(--good)} .warn{color:var(--warn)} .bad{color:var(--bad)}
+  .ctrl{display:flex;gap:9px;align-items:center;flex-wrap:wrap;margin-bottom:12px}
+  .log{font-family:var(--mono);font-size:12px;max-height:230px;overflow:auto;
+       background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:10px 12px}
+  .log div{white-space:pre}
+  .note{color:var(--dim);font-size:11.5px;margin-top:8px}
+</style>
+</head>
+<body>
+<header>
+  <h1>Basketball Autochess — OVR 計算器</h1>
+  <p>十四屬性 → possession 事件機率 → Monte Carlo。錨點取自 NBA 真實分布（rotation player, G≥30 MPG≥20），各球員在自己那個賽季內定錨。出手區域與持球者都由期望得分決定，不是靜態權重。</p>
+</header>
+
+<main>
+  <section class="col">
+    <h2>A 隊</h2>
+    <div class="ctrl"><select id="selA"></select></div>
+    <table id="tblA"></table>
+  </section>
+
+  <section class="col">
+    <h2>B 隊</h2>
+    <div class="ctrl"><select id="selB"></select></div>
+    <table id="tblB"></table>
+  </section>
+
+  <section class="full">
+    <h2>賽制</h2>
+    <div class="ctrl">
+      <select id="mode">
+        <option value="race21">先到 21 分</option>
+        <option value="race21w2">先到 21 分（需贏 2）</option>
+        <option value="fixed20">固定 20 回合</option>
+        <option value="fixed24">固定 24 回合</option>
+        <option value="fixed100">固定 100 回合（全場參照）</option>
+      </select>
+      <select id="n">
+        <option value="1000">1000 場</option>
+        <option value="4000" selected>4000 場</option>
+        <option value="10000">10000 場</option>
+      </select>
+      <button class="primary" id="run">跑模擬</button>
+      <button id="one">跑一場（看逐回合）</button>
+    </div>
+  </section>
+
+  <section class="full" id="out"></section>
+</main>
+
+<script type="module">
+import { TEAMS, BASELINE, SMALLBALL, BIGBALL } from './src/teams.js';
+import { monteCarlo, simulateGame } from './src/simulation_engine.js';
+import { LEAGUE_TARGETS as T } from './src/constants.js';
+
+const ATTRS = [
+  ['long','三分'],['mid','中投'],['short','近射'],['ft','罰球'],
+  ['drive','切入'],['pass','傳球'],['tovSkill','失誤'],
+  ['rebound','籃板'],['onBall','盯防'],['help','協防'],
+  ['stamina','體力'],['physique','肉體'],
+  ['offBall','無球'],['screen','擋拆'],
+];
+const POOL = { ...TEAMS, BASE: BASELINE, SMALL: SMALLBALL, BIG: BIGBALL };
+const clone = o => JSON.parse(JSON.stringify(o));
+const state = { A: clone(POOL.GSW), B: clone(POOL.LAL) };
+
+for (const side of ['A','B']) {
+  const sel = document.getElementById('sel' + side);
+  sel.innerHTML = Object.entries(POOL)
+    .map(([k,v]) => `<option value="${k}">${v.name}</option>`).join('');
+  sel.value = side === 'A' ? 'GSW' : 'LAL';
+  sel.onchange = () => { state[side] = clone(POOL[sel.value]); render(side); };
+}
+
+function render(side){
+  const t = state[side];
+  const rows = t.roster.map((p,i) => `<tr>
+    <td title="${p.note||''}">${p.name}${p.note?' <span class="warn">*</span>':''}</td>
+    ${ATTRS.map(([k]) => `<td><input type="number" min="0" max="150"
+        value="${p[k]}" data-side="${side}" data-i="${i}" data-k="${k}"></td>`).join('')}
+  </tr>`).join('');
+  document.getElementById('tbl'+side).innerHTML =
+    `<tr><th>球員</th>${ATTRS.map(([,l])=>`<th>${l}</th>`).join('')}</tr>${rows}`;
+}
+document.addEventListener('input', e => {
+  const el = e.target;
+  if (el.dataset && el.dataset.k) {
+    state[el.dataset.side].roster[+el.dataset.i][el.dataset.k] = +el.value || 0;
+  }
+});
+
+const MODES = {
+  race21:   { mode:'race',  targetScore:21, winBy:1 },
+  race21w2: { mode:'race',  targetScore:21, winBy:2 },
+  fixed20:  { mode:'fixed', possessions:20 },
+  fixed24:  { mode:'fixed', possessions:24 },
+  fixed100: { mode:'fixed', possessions:100 },
+};
+const pct = x => (x*100).toFixed(1) + '%';
+const avg = (t,k) => Math.round(t.roster.reduce((s,p)=>s+p[k],0)/t.roster.length);
+const cls = (got, want, tol=0.06) =>
+  Math.abs(got-want)/want < tol ? 'ok' : (Math.abs(got-want)/want < 0.15 ? 'warn' : 'bad');
+
+document.getElementById('run').onclick = () => {
+  const opts = MODES[document.getElementById('mode').value];
+  const n = +document.getElementById('n').value;
+  const r = monteCarlo(state.A, state.B, n, opts);
+  const wr = r.winRateA + r.tieRate/2;
+  const s = r.statA;
+  document.getElementById('out').innerHTML = `
+    <h2>結果 · n=${n}</h2>
+    <div class="grid">
+      <div class="card"><div class="k">A 隊勝率</div>
+        <div class="v">${pct(wr)}</div>
+        <div class="bar"><i style="width:${(wr*100).toFixed(1)}%"></i></div></div>
+      <div class="card"><div class="k">平均比分</div>
+        <div class="v">${r.avgScoreA.toFixed(1)} : ${r.avgScoreB.toFixed(1)}</div></div>
+      <div class="card"><div class="k">分差 SD</div>
+        <div class="v">${r.marginSd.toFixed(2)}</div></div>
+      <div class="card"><div class="k">平均回合</div>
+        <div class="v">${r.avgPossessions.toFixed(1)}</div></div>
+      <div class="card"><div class="k">每回合得分</div>
+        <div class="v">${(r.avgScoreA/(r.avgPossessions/2)).toFixed(3)}</div></div>
+      <div class="card"><div class="k">平手率</div>
+        <div class="v">${pct(r.tieRate)}</div></div>
+      <div class="card"><div class="k">隊伍肉體 A : B</div>
+        <div class="v">${avg(state.A,'physique')} : ${avg(state.B,'physique')}</div></div>
+      <div class="card"><div class="k">出手區域 近/中/遠</div>
+        <div class="v" style="font-size:15px">${s.shortRate.toFixed(2)} / ${s.midRate.toFixed(2)} / ${s.longRate.toFixed(2)}</div></div>
+    </div>
+    <h2 style="margin-top:20px">A 隊數據 vs 聯盟平均</h2>
+    <table>
+      <tr><th>指標</th><th>模擬</th><th>聯盟</th><th>差</th></tr>
+      ${[['eFG%',s.efg,T.efg],
+         ['三分命中',s.longPct,T.longPct],['中投命中',s.midPct,T.midPct],
+         ['近射命中',s.shortPct,T.shortPct],
+         ['近射佔比',s.shortRate,T.shortRate],['中投佔比',s.midRate,T.midRate],
+         ['三分佔比',s.longRate,T.longRate],['TOV%',s.tovPct,T.tovPct]]
+        .map(([k,g,w]) => `<tr><td>${k}</td>
+          <td class="num ${cls(g,w)}">${g.toFixed(3)}</td>
+          <td class="num">${w.toFixed(3)}</td>
+          <td class="num">${((g-w)/w*100).toFixed(1)}%</td></tr>`).join('')}
+    </table>
+    <p class="note">顏色只表示與聯盟平均的距離，不代表對錯——強隊本來就該高於平均。
+       校準是否成立要看 PR50 基準隊互打（<code>node test/calibrate.js</code>）。</p>`;
+};
+
+document.getElementById('one').onclick = () => {
+  const opts = MODES[document.getElementById('mode').value];
+  const g = simulateGame(state.A, state.B, { ...opts, seed: (Math.random()*1e9)|0 });
+  const L = { TOV:'失誤', FOUL:'犯規罰球', FG3M:'三分命中', FG3X:'三分不進',
+              MIDM:'中投命中', MIDX:'中投不進', RIMM:'近射命中', RIMX:'近射不進' };
+  document.getElementById('out').innerHTML = `
+    <h2>單場逐回合</h2>
+    <div class="big">${g.scoreA} : ${g.scoreB}</div>
+    <p class="note">共 ${g.possessions} 回合</p>
+    <div class="log">${g.log.map(e =>
+      `<div>#${String(e.poss).padStart(3)}  ${e.off===0?'A':'B'}  ${
+        e.handler.padEnd(26)}${L[e.ev]}</div>`).join('')}</div>`;
+};
+
+render('A'); render('B');
+document.getElementById('run').click();
+</script>
+</body>
+</html>

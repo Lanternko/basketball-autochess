@@ -1,0 +1,362 @@
+[
+  {
+    "caseId": "flat",
+    "variant": "frozen-v3",
+    "opponentUnassisted": {
+      "make": {
+        "long": 0.3189673327700968,
+        "mid": 0.4153787817845242,
+        "short": 0.5215886208373495
+      },
+      "zone": {
+        "long": 0.38330127059073393,
+        "mid": 0.15986909178233813,
+        "short": 0.4568296376269279
+      },
+      "pTovTouch": 0.07741690990278143
+    },
+    "helpComposite": 70.3345343299595
+  },
+  {
+    "caseId": "flat",
+    "variant": "cards-signals-off",
+    "opponentUnassisted": {
+      "make": {
+        "long": 0.3189673327700968,
+        "mid": 0.4153787817845242,
+        "short": 0.5199679919739835
+      },
+      "zone": {
+        "long": 0.38107153666625543,
+        "mid": 0.16217308138119743,
+        "short": 0.4567553819525471
+      },
+      "pTovTouch": 0.0774600793536304
+    },
+    "helpComposite": 70.3345343299595
+  },
+  {
+    "caseId": "complement",
+    "variant": "frozen-v3",
+    "opponentUnassisted": {
+      "make": {
+        "long": 0.30530066610343015,
+        "mid": 0.3959910275454809,
+        "short": 0.5215886208373495
+      },
+      "zone": {
+        "long": 0.3764892680651751,
+        "mid": 0.155182835603167,
+        "short": 0.46832789633165794
+      },
+      "pTovTouch": 0.07741690990278143
+    },
+    "helpComposite": 85.3345343299595
+  },
+  {
+    "caseId": "complement",
+    "variant": "cards-signals-off",
+    "opponentUnassisted": {
+      "make": {
+        "long": 0.30530066610343015,
+        "mid": 0.3959910275454809,
+        "short": 0.4690088111771726
+      },
+      "zone": {
+        "long": 0.42607350192270427,
+        "mid": 0.19617289891213757,
+        "short": 0.37775359916515805
+      },
+      "pTovTouch": 0.0774600793536304
+    },
+    "helpComposite": 85.3345343299595
+  },
+  {
+    "caseId": "stacked",
+    "variant": "frozen-v3",
+    "opponentUnassisted": {
+      "make": {
+        "long": 0.2781414549243213,
+        "mid": 0.38784326419174825,
+        "short": 0.5215886208373495
+      },
+      "zone": {
+        "long": 0.3573226803175162,
+        "mid": 0.15719266379837699,
+        "short": 0.48548465588410683
+      },
+      "pTovTouch": 0.07741690990278143
+    },
+    "helpComposite": 85.3345343299595
+  },
+  {
+    "caseId": "stacked",
+    "variant": "cards-signals-off",
+    "opponentUnassisted": {
+      "make": {
+        "long": 0.2781414549243213,
+        "mid": 0.38784326419174825,
+        "short": 0.4690088111771726
+      },
+      "zone": {
+        "long": 0.36020257799753247,
+        "mid": 0.21479583474579336,
+        "short": 0.4250015872566742
+      },
+      "pTovTouch": 0.0774600793536304
+    },
+    "helpComposite": 85.3345343299595
+  },
+  {
+    "caseId": "perimeter-no-rim",
+    "variant": "frozen-v3",
+    "opponentUnassisted": {
+      "make": {
+        "long": 0.2946741027293432,
+        "mid": 0.45864579225945207,
+        "short": 0.5215886208373495
+      },
+      "zone": {
+        "long": 0.35782073482056387,
+        "mid": 0.1816703325378379,
+        "short": 0.46050893264159815
+      },
+      "pTovTouch": 0.07741690990278143
+    },
+    "helpComposite": 0.10037326663288937
+  },
+  {
+    "caseId": "perimeter-no-rim",
+    "variant": "cards-signals-off",
+    "opponentUnassisted": {
+      "make": {
+        "long": 0.2946741027293432,
+        "mid": 0.45864579225945207,
+        "short": 0.6884845902644967
+      },
+      "zone": {
+        "long": 0.08721332788283555,
+        "mid": 0.055332425807123345,
+        "short": 0.8574542463100411
+      },
+      "pTovTouch": 0.0774600793536304
+    },
+    "helpComposite": 0.10037326663288937
+  },
+  {
+    "caseId": "rim-no-perimeter",
+    "variant": "frozen-v3",
+    "opponentUnassisted": {
+      "make": {
+        "long": 0.45385323690130464,
+        "mid": 0.4394426324271936,
+        "short": 0.5215886208373495
+      },
+      "zone": {
+        "long": 0.4670380435951509,
+        "mid": 0.14512862882485303,
+        "short": 0.38783332757999606
+      },
+      "pTovTouch": 0.07741690990278143
+    },
+    "helpComposite": 86.44079879854777
+  },
+  {
+    "caseId": "rim-no-perimeter",
+    "variant": "cards-signals-off",
+    "opponentUnassisted": {
+      "make": {
+        "long": 0.45385323690130464,
+        "mid": 0.4394426324271936,
+        "short": 0.4652949233183405
+      },
+      "zone": {
+        "long": 0.8254406870856945,
+        "mid": 0.06681860628462144,
+        "short": 0.10774070662968405
+      },
+      "pTovTouch": 0.0774600793536304
+    },
+    "helpComposite": 86.44079879854777
+  },
+  {
+    "caseId": "no-three-ability",
+    "variant": "frozen-v3",
+    "opponentUnassisted": {
+      "make": {
+        "long": 0.3189673327700968,
+        "mid": 0.4153787817845242,
+        "short": 0.5215886208373495
+      },
+      "zone": {
+        "long": 0.38330127059073393,
+        "mid": 0.15986909178233813,
+        "short": 0.4568296376269279
+      },
+      "pTovTouch": 0.07741690990278143
+    },
+    "helpComposite": 70.3345343299595
+  },
+  {
+    "caseId": "no-three-ability",
+    "variant": "cards-signals-off",
+    "opponentUnassisted": {
+      "make": {
+        "long": 0.3189673327700968,
+        "mid": 0.4153787817845242,
+        "short": 0.5199679919739835
+      },
+      "zone": {
+        "long": 0.38107153666625543,
+        "mid": 0.16217308138119743,
+        "short": 0.4567553819525471
+      },
+      "pTovTouch": 0.0774600793536304
+    },
+    "helpComposite": 70.3345343299595
+  },
+  {
+    "caseId": "no-three-threat",
+    "variant": "frozen-v3",
+    "opponentUnassisted": {
+      "make": {
+        "long": 0.3189673327700968,
+        "mid": 0.4153787817845242,
+        "short": 0.5215886208373495
+      },
+      "zone": {
+        "long": 0.38330127059073393,
+        "mid": 0.15986909178233813,
+        "short": 0.4568296376269279
+      },
+      "pTovTouch": 0.07741690990278143
+    },
+    "helpComposite": 70.3345343299595
+  },
+  {
+    "caseId": "no-three-threat",
+    "variant": "cards-signals-off",
+    "opponentUnassisted": {
+      "make": {
+        "long": 0.3189673327700968,
+        "mid": 0.4153787817845242,
+        "short": 0.5199679919739835
+      },
+      "zone": {
+        "long": 0.38107153666625543,
+        "mid": 0.16217308138119743,
+        "short": 0.4567553819525471
+      },
+      "pTovTouch": 0.0774600793536304
+    },
+    "helpComposite": 70.3345343299595
+  },
+  {
+    "caseId": "no-control",
+    "variant": "frozen-v3",
+    "opponentUnassisted": {
+      "make": {
+        "long": 0.3189673327700968,
+        "mid": 0.4153787817845242,
+        "short": 0.5215886208373495
+      },
+      "zone": {
+        "long": 0.38330127059073393,
+        "mid": 0.15986909178233813,
+        "short": 0.4568296376269279
+      },
+      "pTovTouch": 0.07741690990278143
+    },
+    "helpComposite": 70.3345343299595
+  },
+  {
+    "caseId": "no-control",
+    "variant": "cards-signals-off",
+    "opponentUnassisted": {
+      "make": {
+        "long": 0.3189673327700968,
+        "mid": 0.4153787817845242,
+        "short": 0.5199679919739835
+      },
+      "zone": {
+        "long": 0.38107153666625543,
+        "mid": 0.16217308138119743,
+        "short": 0.4567553819525471
+      },
+      "pTovTouch": 0.0774600793536304
+    },
+    "helpComposite": 70.3345343299595
+  },
+  {
+    "caseId": "handle-only-zero",
+    "variant": "frozen-v3",
+    "opponentUnassisted": {
+      "make": {
+        "long": 0.3189673327700968,
+        "mid": 0.4153787817845242,
+        "short": 0.5215886208373495
+      },
+      "zone": {
+        "long": 0.38330127059073393,
+        "mid": 0.15986909178233813,
+        "short": 0.4568296376269279
+      },
+      "pTovTouch": 0.07741690990278143
+    },
+    "helpComposite": 70.3345343299595
+  },
+  {
+    "caseId": "handle-only-zero",
+    "variant": "cards-signals-off",
+    "opponentUnassisted": {
+      "make": {
+        "long": 0.3189673327700968,
+        "mid": 0.4153787817845242,
+        "short": 0.5199679919739835
+      },
+      "zone": {
+        "long": 0.38107153666625543,
+        "mid": 0.16217308138119743,
+        "short": 0.4567553819525471
+      },
+      "pTovTouch": 0.0774600793536304
+    },
+    "helpComposite": 70.3345343299595
+  },
+  {
+    "caseId": "defensive-rebound-zero",
+    "variant": "frozen-v3",
+    "opponentUnassisted": {
+      "make": {
+        "long": 0.3189673327700968,
+        "mid": 0.4153787817845242,
+        "short": 0.5215886208373495
+      },
+      "zone": {
+        "long": 0.38330127059073393,
+        "mid": 0.15986909178233813,
+        "short": 0.4568296376269279
+      },
+      "pTovTouch": 0.07741690990278143
+    },
+    "helpComposite": 70.3345343299595
+  },
+  {
+    "caseId": "defensive-rebound-zero",
+    "variant": "cards-signals-off",
+    "opponentUnassisted": {
+      "make": {
+        "long": 0.3189673327700968,
+        "mid": 0.4153787817845242,
+        "short": 0.5199679919739835
+      },
+      "zone": {
+        "long": 0.38107153666625543,
+        "mid": 0.16217308138119743,
+        "short": 0.4567553819525471
+      },
+      "pTovTouch": 0.0774600793536304
+    },
+    "helpComposite": 70.3345343299595
+  }
+]

@@ -1,0 +1,35 @@
+{
+  "version": "oreb-turnover-types-1",
+  "registeredUTC": "2026-10-15T02:01:26.933651+00:00",
+  "seasons": [
+    "2022-23",
+    "2023-24",
+    "2024-25",
+    "2025-26"
+  ],
+  "seeds": [
+    20261012,
+    20261013,
+    20261014
+  ],
+  "bootstrapSeed": 20261020,
+  "bootstrapDraws": 20000,
+  "baseline": "pure-oreb-turnover-time-1; postOrebNonshootFoul and skipGenericPutbackTouchRisk OFF",
+  "sample": "same valid player FG OREB and special-FT exclusions as putback-risk; primary first anchor per possession; full pre-first-own-FG-or-ordinary-FT endpoint; <=3sec comparison excludes period remaining <3sec; all anchors separately for calibration",
+  "classification": "official stealPersonId means live; passing=bad pass/inbound/out-of-bounds descriptor bad pass; handling=lost ball/out-of-bounds descriptor lost ball; shot clock; offensive foul; other violations; out-of-bounds with unknown cause explicitly separate. Engine passSteal=passingLive; touchSteal=handlingLive proxy only, not biomechanical proof; generic terminal dead gate emits labeled subcategories. Unmapped or other-live kept unknown, never forced",
+  "metrics": [
+    "first pre-attempt loss by category, early and late; total vs live and dead",
+    "all anchors and first anchors; mode flag only sim, no assumed real intention",
+    "source raw subtype/descriptor/steal counts and ambiguous categories",
+    "same baseline exact scores and player stats",
+    "conditional one-mechanism test only if eligible below"
+  ],
+  "conditionalTest": {
+    "eligibility": "matched terminal generic-gate proxy = handlingLive + passingDead + handlingDead + offensiveFoul + otherViolation; both handlingLive and dead aggregate baseline-real pooled franchise+seed95 lower bound >0, and real unmapped share of pre-attempt turnovers <=5%. Otherwise stop after diagnosis: one scalar not justified",
+    "scalar": "single league multiplier = pooled all-anchor real matched-generic incidence / baseline matched-generic incidence, four-season equal weight; strictly positive and <1. No scoring/wins search; approximation of incidence to a gate multiplier, not identified event hazard",
+    "scope": "generic terminal touch risk only while after player FG OREB and before first FG or ordinary FT; maintain through ordinary nonshooting fouls; reset at possession end, FG, FT, period. Same RNG draw and live/dead category mix. Passing interception, independent clock, fouls, cards, rebound, timing and pace unchanged",
+    "sampleSize": "3seed diagnostic; if guard fails reject. No baseline adoption without separate20seed paired test",
+    "guard": "matched category incidence should move toward truth; combined postOREB live/dead category squared error must fall, FT excess must not increase significantly; any inconsistency is failure not compensated via other parameters"
+  },
+  "scope": "all four seasons already seen, same-season in-sample; no downloads; do one batch and stop"
+}

@@ -1,0 +1,138 @@
+{
+  "label": "v2",
+  "seeds": [
+    20261012,
+    20261013,
+    20261014,
+    20261015,
+    20261016,
+    20261017,
+    20261018,
+    20261019,
+    20261020,
+    20261021,
+    20261022,
+    20261023,
+    20261024,
+    20261025,
+    20261026,
+    20261027,
+    20261028,
+    20261029,
+    20261030,
+    20261031
+  ],
+  "options": {},
+  "extra": {},
+  "files": [
+    {
+      "seed": 20261012,
+      "file": "reports/defense-fourth/runs/v2-seed20261012.json",
+      "sha256": "0df0639d27208e2cd9590e8253e9ee6275598236cc0a825dc277dfc9312f2e1b"
+    },
+    {
+      "seed": 20261013,
+      "file": "reports/defense-fourth/runs/v2-seed20261013.json",
+      "sha256": "500abe619cf350fcdd3bf401762abc923034a8b7a060343d8a29d41f762772ee"
+    },
+    {
+      "seed": 20261014,
+      "file": "reports/defense-fourth/runs/v2-seed20261014.json",
+      "sha256": "580ad2cd85dd7ff4e90471a444898df193a6b299c34385bf4148eb9201304973"
+    },
+    {
+      "seed": 20261015,
+      "file": "reports/defense-fourth/runs/v2-seed20261015.json",
+      "sha256": "96504b644a11aa32b15db7355b225c3c1229602dac61b1a42d5ed053809f2067"
+    },
+    {
+      "seed": 20261016,
+      "file": "reports/defense-fourth/runs/v2-seed20261016.json",
+      "sha256": "40442edda55876965fe138dfb038f6fcdea3989ce586ce208678e5d13a0e103e"
+    },
+    {
+      "seed": 20261017,
+      "file": "reports/defense-fourth/runs/v2-seed20261017.json",
+      "sha256": "af2b6eafbdfe990d495258aca6b3ad3acce0ec1394175a62c8b81591b5fd5b61"
+    },
+    {
+      "seed": 20261018,
+      "file": "reports/defense-fourth/runs/v2-seed20261018.json",
+      "sha256": "88d00136c7d89addc605e6b73678d89540e872f473f0061e10973ffa4fff5229"
+    },
+    {
+      "seed": 20261019,
+      "file": "reports/defense-fourth/runs/v2-seed20261019.json",
+      "sha256": "b578d746c6dc2ba80c4e81c9da25c2496be4dd4ceb65f3932416e7ed528258a5"
+    },
+    {
+      "seed": 20261020,
+      "file": "reports/defense-fourth/runs/v2-seed20261020.json",
+      "sha256": "91f73e95b17dcdb0ceca095db0cce07bf62879fcab5dd80b400f36b8d5ff0eb5"
+    },
+    {
+      "seed": 20261021,
+      "file": "reports/defense-fourth/runs/v2-seed20261021.json",
+      "sha256": "9e31d2e5dd1c499a27e6cd1c106d02536c9e665f91bea03a52e76f2967655f13"
+    },
+    {
+      "seed": 20261022,
+      "file": "reports/defense-fourth/runs/v2-seed20261022.json",
+      "sha256": "3d674226aff8653d09ad7ae98de8e10cb51d53ad5216f34cf94ef20bd7ba0212"
+    },
+    {
+      "seed": 20261023,
+      "file": "reports/defense-fourth/runs/v2-seed20261023.json",
+      "sha256": "5a60d336d650cd1c80dbbf6911d35e1af1bd994cc8c7c8da4e1bca52bec950df"
+    },
+    {
+      "seed": 20261024,
+      "file": "reports/defense-fourth/runs/v2-seed20261024.json",
+      "sha256": "c01e9d60af84ce123e9da47a7dafb2441ba0a0c7ee7fb3d516f8c29e64a636a6"
+    },
+    {
+      "seed": 20261025,
+      "file": "reports/defense-fourth/runs/v2-seed20261025.json",
+      "sha256": "60f3ccc51e3ec01cc629c4c48b1e441860f56d55470ff1167f9e98cb781f09ff"
+    },
+    {
+      "seed": 20261026,
+      "file": "reports/defense-fourth/runs/v2-seed20261026.json",
+      "sha256": "24077ca6b9896abd18c0f684b268ef59ccc3d782d26dadb9e745b4819a42de72"
+    },
+    {
+      "seed": 20261027,
+      "file": "reports/defense-fourth/runs/v2-seed20261027.json",
+      "sha256": "6a3f35502dd3ba47757226401f99fe581507029739ce7cded875b62c3aaf8ed4"
+    },
+    {
+      "seed": 20261028,
+      "file": "reports/defense-fourth/runs/v2-seed20261028.json",
+      "sha256": "a078c3f96476dc5b91d6f51381f081bbba60cb745b606b254fe5518730e13cfe"
+    },
+    {
+      "seed": 20261029,
+      "file": "reports/defense-fourth/runs/v2-seed20261029.json",
+      "sha256": "308009b4f92ef3e7df53eadfd43caef7556772e3523300a8714b62a29af23402"
+    },
+    {
+      "seed": 20261030,
+      "file": "reports/defense-fourth/runs/v2-seed20261030.json",
+      "sha256": "d36187109804101228f2a52eeaf3ef158caf0cfae3f3fef82e57d39eb733fd0c"
+    },
+    {
+      "seed": 20261031,
+      "file": "reports/defense-fourth/runs/v2-seed20261031.json",
+      "sha256": "d9f6565ef47e4d76b28a5665798be800bd392a070aa64947b438d47750b597e7"
+    }
+  ],
+  "seconds": 161.668,
+  "code": {
+    "src/defense_fourth_game.js": "c3611d0c72f49fdd4b855184d7bc79c3e6cc9780c2c6eb836aa10cbf66ad022a",
+    "src/defense_fourth_season.js": "ad8e8f726a48b0afea11454a061aaee2037cb6145c529fbb3a457d10346a0f9a",
+    "src/defense_fourth_jobs.js": "744aa02d75e54daf588b8c0cf0bd952f1f38d7b6a833fa34ac99d3d43c864b82",
+    "src/defense_fourth_effects.js": "ce90813d1089a8dd400d6051db2b08022a26914a0b1e3672cd7ddf4924a03ff4",
+    "reports/defense-fourth/v2-calibration.json": "23e874b770abe374c853c73598821d1ba7356ec949dea88724d99d82bc6a9301",
+    "reports/defense-fourth/model-full/engine-signals.json": "4d3effa14bd5350257e933c6380899f3fc61f25e80238e783dffbae3772b7118"
+  }
+}

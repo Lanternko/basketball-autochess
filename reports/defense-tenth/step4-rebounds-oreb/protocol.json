@@ -1,0 +1,119 @@
+{
+  "version": "pure-oreb-acquisition-1",
+  "registeredUTC": "2026-10-14T09:19:10.651735+00:00",
+  "interpretation": "已看過答案；四季全季同季重現；只估計球隊取得進攻籃板，不宣稱換隊或跨季預測增益。",
+  "seasons": [
+    "2022-23",
+    "2023-24",
+    "2024-25",
+    "2025-26"
+  ],
+  "seeds": [
+    20261012,
+    20261013,
+    20261014,
+    20261015,
+    20261016,
+    20261017,
+    20261018,
+    20261019,
+    20261020,
+    20261021,
+    20261022,
+    20261023,
+    20261024,
+    20261025,
+    20261026,
+    20261027,
+    20261028,
+    20261029,
+    20261030,
+    20261031
+  ],
+  "base": "T0 v3 cards, five stint signals OFF, no defenseSignals map, observed appearances and game minute soft targets. Frozen files never rewritten.",
+  "inputs": "Only individual own OREB counts, official OREB_PCT, MIN. Season-pooled player IDs only join data; no team outcomes or stint outcomes as inputs.",
+  "cardRule": {
+    "N": "positive OREB / positive official OREB_PCT; zero OREB uses individual MIN times pooled opportunities/minute",
+    "fit": "players with MIN >=500 and positive valid share",
+    "mu": "sum OREB / sum N",
+    "kappa": "clip(mu*(1-mu)/max(population rate variance - mean(mu*(1-mu)/N),1e-6)-1,1,10000)",
+    "posterior": "(OREB+kappa*mu)/(N+kappa)",
+    "missing": "pooled individual prior, flagged"
+  },
+  "mechanism": {
+    "switch": "individualOrebCard",
+    "chance": "sigmoid(logit(clip(sum five posterior shares,.01,.95)) + logit(old neutral attack vs current defense, shooterIndex=-1) - logit(DEFAULT_OREB_SHARE) + leagueOrbLogit), clipped .05..60",
+    "scope": "field goal player-board branch only; FT/team-board branches unchanged",
+    "allocation": "old recipient weights unchanged",
+    "counting": "one Bernoulli team decision and one recipient per effective miss; subsequent rebound needs a new miss",
+    "limitations": "OREB% embeds observed roles/team context. Replaces offense position, physique and landing effects only in acquisition; recipient effects retained. No invented boxout or physical bonus."
+  },
+  "calibration": {
+    "seeds": [
+      20260101,
+      20260102,
+      20260103
+    ],
+    "iterations": 6,
+    "tolerances": {
+      "efficiency": 0.12,
+      "possessions": 0.15,
+      "orebShare": 0.0005
+    },
+    "rule": "Same frozen pooled control procedure, last evaluated iteration; league shot-logit, pace, OREB-logit only. No team net/rank/wins or TOV calibration. Reuse existing pooled baseline results and calibration."
+  },
+  "uncertainty": {
+    "bootstrap": 20000,
+    "seed": 20261014,
+    "unit": "franchise plus simulation seed paired across seasons; within-season centering and equal season weights"
+  },
+  "primary": [
+    "OREB centered MAE percentage points",
+    "OREB centered RMSE percentage points"
+  ],
+  "secondary": [
+    "OREB correlation/SD ratio/raw MAE",
+    "DREB centered RMSE",
+    "net centered RMSE/Spearman",
+    "wins MAE",
+    "individual minute-weighted OREB36 MAE",
+    "league efficiency/possessions/FG/3P/TOV/minutes"
+  ],
+  "decision": "OREB improves only if pooled comparison upper joint95 below zero for both centered MAE and RMSE. Retain independent candidate; do not promote T0 if net RMSE, wins MAE or DREB RMSE show significant deterioration. Existing baselines unchanged regardless.",
+  "expectation": "Likely stronger team differentiation than old total-rebound/body/position signal (old OREB correlation ~0.24); no numeric effect promised. Individual allocation unchanged may remain a bottleneck.",
+  "inputHashes": {
+    "data/defense-seventh/2022-23/player-games.json": "f41f7f4b105af8d280381f0c3315219ee074b2329e5d9b5f979b6fc72dbd7f56",
+    "data/defense-seventh/2022-23/team-games.json": "732bbf1991c0ce13e3b70db5f2d7769dd66d5d05d4fabef6306963cff066e020",
+    "reports/defense-tenth/step4-t2/raw/2022-23/0-advanced.json": "5cce624bdcba6e4190c3520986006b5d8a87a0e1c11bdc2f268a7fb3815d3da2",
+    "reports/defense-tenth/step4-t0/2022-23/bundle.json": "b311dcfce6c80b98720784c28a4879b154a205a2ce0cbed61cb0c5014342c213",
+    "reports/defense-tenth/step4-t0/2022-23/calibration-v3.json": "5f8cc5179d2dc659c73a4274cc3989ea44a484d94452d4750dc8486f4af8baf6",
+    "data/defense-seventh/2023-24/player-games.json": "a33074c9c9b1f59e15f160464292b3ab9c791065ae542c20f2ed64f3e170afd5",
+    "data/defense-seventh/2023-24/team-games.json": "befe8941b51e8c2f440df88e2aea79aab63826d389ec258d5fe8e209967586c5",
+    "reports/defense-tenth/step4-t2/raw/2023-24/0-advanced.json": "2a66adc5f1eccac6b23f60061e75115adfef8152c7b884dba7a940c4a372db23",
+    "reports/defense-tenth/step4-t0/2023-24/bundle.json": "5e17a95310e7cea844b81005fbe214e9ecafe62b54a1ba45aad6aaa839baf971",
+    "reports/defense-tenth/step4-t0/2023-24/calibration-v3.json": "853f1df493e5d6be7c444d904ed39ed8e95a60d8b257457e8afd09c7ac484f51",
+    "data/defense-seventh/2024-25/player-games.json": "4c3f33c67ffaa1cf88ea01a7acaeef70af088e22f6020c3a02409989f6ad4ffa",
+    "data/defense-seventh/2024-25/team-games.json": "b4da45c024c655c64db220568813922ca1e6d37fbc23650ad7ed43f352b1e470",
+    "reports/defense-tenth/step4-t2/raw/2024-25/0-advanced.json": "6e97d8807369be5668940b190a901a24439b60b82fe6f393a953c33c8e523508",
+    "reports/defense-tenth/step4-t0/2024-25/bundle.json": "001cf3d44b29542c3d202cd375f2378e7c09b712ca958637c28d6538566215f8",
+    "reports/defense-tenth/step4-t0/2024-25/calibration-v3.json": "0b9188c7fba1243d5dfc2c181b74a863bc6d1f515c702b1ebe9275d41b7c8a72",
+    "data/season-source/player-games.json": "11fc5866b2f61b31e27659e14e4071924b5873ef0d2a4118a585c1a54be04357",
+    "data/season-source/team-games.json": "d5cb1a6dbd26a0ed71b24e7e18fcbc862afdf6d8bd8ea3814c5dadbf1989fb8a",
+    "reports/defense-tenth/step4-t2/raw/2025-26/0-advanced.json": "182975df662b91cc08fc70f9978952a359604719b13d1a60776595db7e604ad5",
+    "reports/defense-tenth/step4-t0/2025-26/bundle.json": "43b5a5141fa667a492a67dfc6aa95eec058aabbe39e9d787b0a92b870d7db051"
+  },
+  "codeHashes": {
+    "reports/defense-tenth/step4-rebounds-oreb/adapter.mjs": "4f1a53e2af7e695a85869bfc5c6af2459d89ee7056c3fa90ae6b4613acaaefc8",
+    "reports/defense-tenth/step4-rebounds-oreb/analyze.mjs": "1daa0d40341c3f3f50aa8509db3bcb7a36a0e376afdb93c5fb1ab73fa5eec1e3",
+    "reports/defense-tenth/step4-rebounds-oreb/bootstrap.py": "3957851446b73573892c4af08e2bf043f530adafaf5c0ea0334671ac17d71bc0",
+    "reports/defense-tenth/step4-rebounds-oreb/calibrate.mjs": "9f77f83b11a6ee077bcffb32bf794ba0ba9d7fa10d61e5713a30fdc6487b8cbd",
+    "reports/defense-tenth/step4-rebounds-oreb/model.mjs": "4cba6619f5f2e75fdfaa5c74cd49616e23dd0989b4c8b06b3db85b9b20106cf2",
+    "reports/defense-tenth/step4-rebounds-oreb/parity.mjs": "6b6393da0e5ded671116682f4686dabf4f8b348eaa6959601f5564d5b4466457",
+    "reports/defense-tenth/step4-rebounds-oreb/player-diagnostic.mjs": "97297f759aa984c0c877851ff10c5433cad2e9acc4cde56da75f111cbb79c957",
+    "reports/defense-tenth/step4-rebounds-oreb/prepare.mjs": "bb179ebaacc95884fffb4fe9a919c216088354caff6df001176371a918fa17f4",
+    "reports/defense-tenth/step4-rebounds-oreb/run.mjs": "d4ac88e4fbfbb22ef214e7f08071711c69f24e84b4ca720c67d6a55a39733b96",
+    "reports/defense-tenth/step4-rebounds-oreb/setup.py": "f07e780f7dd8468ae623d61aaedba913fee6d382aaeddbecb137523531b53b46",
+    "reports/defense-tenth/step4-rebounds-oreb/worker.mjs": "e4288f818e258cf6e43694badb4cc50df3e81e77764843a5e404bf94016a89e8"
+  },
+  "protectedManifestSHA": "f993101e5286933b6be513d064daa295ffb22053ad11aaea25929bc525080720"
+}

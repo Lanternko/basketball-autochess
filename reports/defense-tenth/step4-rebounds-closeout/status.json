@@ -1,0 +1,201 @@
+{
+  "phase": "closed",
+  "baseline": "pure-oreb-turnover-time-1",
+  "defaultRunner": "reports/defense-tenth/step4-rebounds-turnover-time/run.mjs",
+  "defaultMode": "split",
+  "retainedComponents": {
+    "orebAcquisition": {
+      "enabled": true,
+      "source": "step4-rebounds-oreb"
+    },
+    "individualOrebAllocation": {
+      "enabled": true,
+      "source": "step4-rebounds-allocation"
+    },
+    "putbackTimingAndLeagueClockCalibration": {
+      "enabled": true,
+      "source": [
+        "step4-rebounds-putback-time",
+        "step4-rebounds-clock"
+      ]
+    },
+    "splitTurnoverTiming": {
+      "enabled": true,
+      "source": "step4-rebounds-turnover-time"
+    }
+  },
+  "optionalClock": {
+    "version": "oreb-clock-competing-1",
+    "retained": true,
+    "defaultEnabled": false,
+    "switches": [
+      "rimContactClock",
+      "competingFreshClock",
+      "postOrebDeadline"
+    ],
+    "runner": "reports/defense-tenth/step4-rebounds-clock-competing/run.mjs --full",
+    "winsMAEDifference": {
+      "point": 0.040000000000000924,
+      "joint95": [
+        -0.28499999999999837,
+        0.3345833333333328
+      ]
+    },
+    "interpretation": "未發現顯著勝場誤差變化；未證明勝率逐場相同或統計等效；時序仍錯，保留可選模式但不升為預設"
+  },
+  "baselineMetrics": {
+    "netRMSE": {
+      "point": 2.5552948548671113,
+      "joint95": [
+        2.1438109499664,
+        2.985039125280368
+      ]
+    },
+    "Pearson": {
+      "point": 0.8828949437228718,
+      "joint95": [
+        0.8215463437653892,
+        0.9213190698981716
+      ]
+    },
+    "Spearman": {
+      "point": 0.844016797233956,
+      "joint95": [
+        0.7351157157424396,
+        0.8990185087376362
+      ]
+    },
+    "calibrationSlope": {
+      "point": 1.0491797739533488,
+      "joint95": [
+        0.916770014458779,
+        1.1671811833266512
+      ]
+    },
+    "SDRatio": {
+      "point": 0.8415096875115028,
+      "joint95": [
+        0.75396348098991,
+        0.9417690483532852
+      ]
+    },
+    "winsMAE": {
+      "point": 4.937499999999999,
+      "joint95": [
+        4.187489583333333,
+        5.862916666666666
+      ]
+    },
+    "winsRMSE": {
+      "point": 6.323853651058031,
+      "joint95": [
+        5.33893403799022,
+        7.407202611003124
+      ]
+    },
+    "winSlope": {
+      "point": 1.8414895889501635,
+      "joint95": [
+        1.7973329444828514,
+        1.889236258049677
+      ]
+    },
+    "OREB_MAE": {
+      "point": 0.4602112365462467,
+      "joint95": [
+        0.3819013562619517,
+        0.5649459004967614
+      ]
+    },
+    "OREB_RMSE": {
+      "point": 0.5950945453425818,
+      "joint95": [
+        0.48204469304242076,
+        0.7301268087918338
+      ]
+    },
+    "OREB_RawMAE": {
+      "point": 0.4623621561970887,
+      "joint95": [
+        0.3965364668291615,
+        0.5729007335353692
+      ]
+    },
+    "OREB_Correlation": {
+      "point": 0.9868273561191193,
+      "joint95": [
+        0.9755751274503975,
+        0.9904448330683291
+      ]
+    },
+    "OREB_SDRatio": {
+      "point": 0.8265249562390344,
+      "joint95": [
+        0.7977943806460966,
+        0.8710560901919726
+      ]
+    },
+    "DREB_RMSE": {
+      "point": 1.309904427820043,
+      "joint95": [
+        1.1070461588871547,
+        1.4664728941669367
+      ]
+    },
+    "DREB_Correlation": {
+      "point": 0.48454735148504274,
+      "joint95": [
+        0.26826074623844076,
+        0.6497264962730028
+      ]
+    },
+    "DREB_SDRatio": {
+      "point": 0.5009730980916273,
+      "joint95": [
+        0.43842810245513025,
+        0.5961320514151414
+      ]
+    },
+    "defenseProxyRMSE": {
+      "point": 2.210877335837863,
+      "joint95": [
+        1.7973350611719783,
+        2.572872575334224
+      ]
+    },
+    "defenseCorrelation": {
+      "point": 0.6545856915024878,
+      "joint95": [
+        0.513793386919431,
+        0.7612040380064368
+      ]
+    },
+    "defenseSDRatio": {
+      "point": 0.628185559040858,
+      "joint95": [
+        0.5414717553424958,
+        0.7463030254505978
+      ]
+    },
+    "offenseRMSE": {
+      "point": 2.5479931428506832,
+      "joint95": [
+        2.2186477226095334,
+        2.805275501921806
+      ]
+    },
+    "defenseRMSE": {
+      "point": 3.551244330723523,
+      "joint95": [
+        3.008291942475084,
+        3.9673913444195374
+      ]
+    }
+  },
+  "existingDecisionsPreserved": true,
+  "adoptionNote": "本次使用者指示下保留上述組合；舊批報告當時的未升級決策不回寫，也不把保留機制改稱預測準確度顯著提升。",
+  "newSimulations": 0,
+  "newCalibration": false,
+  "newDownloads": 0,
+  "futureWorkAutomaticallyStarted": false
+}

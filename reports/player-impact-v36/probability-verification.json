@@ -1,0 +1,16 @@
+{
+  "passed": true,
+  "games": 4,
+  "probabilityComparisons": 3271,
+  "selfComparisons": 2266,
+  "receivedComparisons": 1005,
+  "allProbabilitiesExactlyGameClosure": true,
+  "missingPressureRejected": true,
+  "scope": "Diagnostic reconstruction against actual game closure, including forced/putback/fatigue states. Does not validate source mean-energy or role adaptations as physiology.",
+  "hashes": {
+    "reports/player-impact-v36/verify-probability.mjs": "1fd2c4132434304c65ae059fa34662374d7b950d6cf7f40e4dca21175f99a868",
+    "reports/player-impact-v36/engine.mjs": "ef354e22b9b590ced6608c3809ee1eeca80519e97ed3b19b240dfb74f050ed84",
+    "reports/player-impact-v30/model.mjs": "25432a322a7f81a96f49009a1b93646d72862a1c7ee3ddb11e2dbe48177a3f04",
+    "reports/player-impact-v36/prepare-final-data.mjs": "374f6a2502c28c0b97ffb64c7d43afcd49f12652a1dff1621052579ca4f52fbc"
+  }
+}

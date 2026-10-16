@@ -1,0 +1,73 @@
+{
+  "version": "pure-oreb-turnover-time-1",
+  "registeredUTC": "2026-10-14T21:56:47.948950+00:00",
+  "seasons": [
+    "2022-23",
+    "2023-24",
+    "2024-25",
+    "2025-26"
+  ],
+  "seeds": [
+    20261012,
+    20261013,
+    20261014,
+    20261015,
+    20261016,
+    20261017,
+    20261018,
+    20261019,
+    20261020,
+    20261021,
+    20261022,
+    20261023,
+    20261024,
+    20261025,
+    20261026,
+    20261027,
+    20261028,
+    20261029,
+    20261030,
+    20261031
+  ],
+  "diagnosticSeeds": [
+    20261012,
+    20261013,
+    20261014
+  ],
+  "base": "frozen pure-oreb-putback-clock-1; five stint signals OFF; no-map; unchanged cards and all probability formulas",
+  "mechanism": {
+    "switch": "splitTurnoverTiming",
+    "scope": "only choose liveTurnover vs deadTurnover CDF after existing turnover outcome. Live=credited steal; all other turnover/clock violation/jumpball loss=dead. Existing possession rotation/dead flag unchanged. No changes to made/dreb/retained/period or putback CDF.",
+    "cdf": "per-season existing real normalizeRealGame segment extraction, only relabel turnover nextState by stealPersonId>0; jumpball turnovers dead; duration in [0,60], sorted; same legacy segment-ending semantics preserved. No new first-event correction.",
+    "source": "existing official regular-season PBP; all available games, no new downloads; skip missing and list."
+  },
+  "calibration": {
+    "seeds": [
+      20260101,
+      20260102,
+      20260103
+    ],
+    "iterations": 6,
+    "tolerance": 0.15,
+    "target": "pooled full-season official FGA-OREB+TOV+.44FTA per team/game; never net/wins/ranks",
+    "start": "frozen step4-rebounds-clock selected pace",
+    "update": "pace_next=clip(pace_current*targetPossessions/simPossessions,.5,2)",
+    "selection": "first abs bias<.15 else final sixth run; no adjustment after evaluation"
+  },
+  "uncertainty": {
+    "bootstrap": 20000,
+    "seed": 20261015,
+    "unit": "franchise+seed jointly paired across four seasons; equal seasons, season centering; twenty accuracy seeds; three diagnostic seeds"
+  },
+  "comparisons": [
+    "candidate vs frozen calibrated clock",
+    "candidate vs frozen allocation; secondary"
+  ],
+  "decision": {
+    "eligibility": "every season abs efficiencyBias and possessionsBias <=.5; no significant harm vs calibrated in netRMSE/winsMAE/OREB_RMSE/DREB_RMSE; live and dead first-event timing absolute errors both smaller than calibrated",
+    "accuracy": "claim improvement only if upper paired joint95<0 for netRMSE or winsMAE; no baseline promotion without these gates; report all failures"
+  },
+  "parity": "switch OFF at frozen base pace: all four seasons first evaluation seed exact match scores, teams, players, postOreb; observer recording three seeds also exact gameplay parity",
+  "label": "all four seasons already seen; full-season reconstruction, not forecast or transfer validation",
+  "stop": "finish this batch and report; do not fix retained fouls or event-deadline semantics"
+}

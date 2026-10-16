@@ -1,0 +1,47 @@
+{
+  "label": "2024-25-eighth-c-ablation-41-offensePrior",
+  "extra": {
+    "bundle": "reports/defense-seventh/2024-25/calendar-41/bundle.json",
+    "cutoff": 41,
+    "calendarDate": "2025-01-18",
+    "cardFile": "reports/defense-eighth/c/ablation/2024-25/calendar-41/offensePrior/pre41-ablation-league.json",
+    "neutralContests": true,
+    "calibration": {
+      "shotDelta": -0.09861868001457874,
+      "options": {
+        "pace": 0.9316593828767108,
+        "foulScale": 0.974541698968548,
+        "passTurnoverScale": 1.4658433748568263,
+        "touchTurnoverScale": 0.9892816118892929,
+        "touchLiveShare": 0.3618571172563434,
+        "clockViolationProbability": 0.007650720185634655
+      }
+    },
+    "options": {}
+  },
+  "files": [
+    {
+      "seed": 20261012,
+      "file": "reports/defense-seventh/runs/2024-25-eighth-c-ablation-41-offensePrior-seed20261012.json",
+      "sha256": "ad6018694f34274ba0fa4f23c0b4272bcc0d159ded850e9e1cc3348cf6e0e373"
+    },
+    {
+      "seed": 20261013,
+      "file": "reports/defense-seventh/runs/2024-25-eighth-c-ablation-41-offensePrior-seed20261013.json",
+      "sha256": "f6d0444c9046832e9d52ffa9b3ce049f2885e62609600684665f8c767abbfaf5"
+    },
+    {
+      "seed": 20261014,
+      "file": "reports/defense-seventh/runs/2024-25-eighth-c-ablation-41-offensePrior-seed20261014.json",
+      "sha256": "fc0f04d22d6640445b666177225555f17576a1cfa0ed5066180b0eafb6164203"
+    }
+  ],
+  "seconds": 43.134,
+  "sources": {
+    "src/defense_fifth_game.js": "bddd3f34b93e969513ce79d717b78358dc433c0f15eba3eeffa675177b9dfa86",
+    "src/defense_sixth_season.js": "1c30c6c59fbc3e2a40b08231dddf9be255b11fca386d93daf1eb986a99000bcf",
+    "src/defense_seventh_jobs.js": "ca1501845b601e0b742f601751ac74fba7e9717a6de66d8ab9d7a4d0c4c6d41d",
+    "scripts/run_defense_seventh.js": "0e40923369762bd8b0a0faa1545e704ba0587bc1341ea40058b7766f240f3f01",
+    "reports/defense-eighth/c/ablation/2024-25/calendar-41/offensePrior/pre41-ablation-league.json": "bb0d451e3c70730a73177c3381b9691c17e679d19ce259b3084f4ed5bd7e38e5"
+  }
+}

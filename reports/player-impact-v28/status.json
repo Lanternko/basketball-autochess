@@ -1,0 +1,21 @@
+{
+  "version": "source-defense-probability-roundtrip-28",
+  "officialModelAdopted": false,
+  "goalComplete": false,
+  "sourceFgRebounds": 365784,
+  "sourceFgOreb": 93950,
+  "restoredPlayerZoneCards": 12,
+  "sourceContextStates": 270090,
+  "fullValidationSeasons": 4,
+  "seeds": 3,
+  "games": 28023,
+  "failedWinGateSeasons": [
+    "2023-24",
+    "2025-26"
+  ],
+  "targetPlayers": 582,
+  "targetPlayerColumns": 166,
+  "fullOvrThisVersion": false,
+  "latestCompleteOvrVersion": 24,
+  "next": "Separate pass supply, pass losses and created shot quality; validate remaining defensive/shot-volume/FT gaps without rank/name residual tuning."
+}

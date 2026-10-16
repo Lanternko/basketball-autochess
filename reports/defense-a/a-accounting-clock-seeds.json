@@ -1,0 +1,140 @@
+{
+  "preset": "a-accounting-clock",
+  "mode": "full",
+  "workers": 4,
+  "seeds": [
+    20261012,
+    20261013,
+    20261014,
+    20261015,
+    20261016,
+    20261017,
+    20261018,
+    20261019,
+    20261020,
+    20261021,
+    20261022,
+    20261023,
+    20261024,
+    20261025,
+    20261026,
+    20261027,
+    20261028,
+    20261029,
+    20261030,
+    20261031
+  ],
+  "elapsedSeconds": 164.56889900000002,
+  "files": [
+    {
+      "file": "reports/defense-a/runs/a-accounting-clock-seed20261012.json",
+      "sha256": "6c49253caf3bc02ca184f78aba203d1517017eff315515ec6bb9447df8b0a7af"
+    },
+    {
+      "file": "reports/defense-a/runs/a-accounting-clock-seed20261013.json",
+      "sha256": "0a5c2e796b1ba2e3653c9956cf9c800237285afe7169e15ac54211814a9f0b79"
+    },
+    {
+      "file": "reports/defense-a/runs/a-accounting-clock-seed20261014.json",
+      "sha256": "e2a791ee85957d4cee3abb91969d4ef235cdacd00ef96a82c17ec68454853ed3"
+    },
+    {
+      "file": "reports/defense-a/runs/a-accounting-clock-seed20261015.json",
+      "sha256": "90f57353d75d610f91399c8b45ce3dd91dc742b786abdf04a0bb507d92bcdece"
+    },
+    {
+      "file": "reports/defense-a/runs/a-accounting-clock-seed20261016.json",
+      "sha256": "520553c5fb0b53b056a0928be4766a1ef19d78ee64f5af7c22e0d8d98f1b167d"
+    },
+    {
+      "file": "reports/defense-a/runs/a-accounting-clock-seed20261017.json",
+      "sha256": "9df11f697e89bca5b466a5ebae122744109fcf439c54fc136897d6eaecce74f9"
+    },
+    {
+      "file": "reports/defense-a/runs/a-accounting-clock-seed20261018.json",
+      "sha256": "76a0042af7f38cefc649bf7c12c5af53711ec1b7b5c22f76fb9b7842295b2ae2"
+    },
+    {
+      "file": "reports/defense-a/runs/a-accounting-clock-seed20261019.json",
+      "sha256": "75b95d8a6946e045392630a1608dbaea594d51e3cf05a4e5bc493b2c5972a5b8"
+    },
+    {
+      "file": "reports/defense-a/runs/a-accounting-clock-seed20261020.json",
+      "sha256": "0591168a5c1e0e7a2a27ed518101ed2ad243e1f66cf8f78327f0d7445302bcf6"
+    },
+    {
+      "file": "reports/defense-a/runs/a-accounting-clock-seed20261021.json",
+      "sha256": "5c5377a206e86de654e5686df12d457ede8348ba09e61cede988ea8371a0bc32"
+    },
+    {
+      "file": "reports/defense-a/runs/a-accounting-clock-seed20261022.json",
+      "sha256": "7539b4a4ec1fbcedf0482af2f3c33e29aee4e84b88cbcbd8ad747d47340cacef"
+    },
+    {
+      "file": "reports/defense-a/runs/a-accounting-clock-seed20261023.json",
+      "sha256": "bf6d7308c253eaa857a324d385265e06f561641e187be5cb42e7c0b3dba1865d"
+    },
+    {
+      "file": "reports/defense-a/runs/a-accounting-clock-seed20261024.json",
+      "sha256": "d8f2f0862e5f6335a2d1575de9e4c7145fe4fc1adf13a5f0b64b485e26a8c8e2"
+    },
+    {
+      "file": "reports/defense-a/runs/a-accounting-clock-seed20261025.json",
+      "sha256": "21b0e9f0627a495cd3a6a072d07c06ae48fdcbf6fba0f8f1ccf82a3de06e3743"
+    },
+    {
+      "file": "reports/defense-a/runs/a-accounting-clock-seed20261026.json",
+      "sha256": "cad858aff1a562c388bc286919b0ffd9b16044827913a28965b35684e6e11696"
+    },
+    {
+      "file": "reports/defense-a/runs/a-accounting-clock-seed20261027.json",
+      "sha256": "f9781e3d453ec33f01102d409911fd2abb2fd44841b547c994945b3d6a1a3053"
+    },
+    {
+      "file": "reports/defense-a/runs/a-accounting-clock-seed20261028.json",
+      "sha256": "90459c0eb5ff13b0c68b3a17d238a5a0cec4ca22488bb9e6bde73e6042802676"
+    },
+    {
+      "file": "reports/defense-a/runs/a-accounting-clock-seed20261029.json",
+      "sha256": "118987b8da3eac9aae2f2a43455562512371e5a96ea0cb72dd498d5a7d3745fb"
+    },
+    {
+      "file": "reports/defense-a/runs/a-accounting-clock-seed20261030.json",
+      "sha256": "be54bf83c35b2f36e36c90cd7fad60ee0dd086c816357c04a477087861481dea"
+    },
+    {
+      "file": "reports/defense-a/runs/a-accounting-clock-seed20261031.json",
+      "sha256": "ff67b6855c2f90cf69ab2ace950670dfb718ef0c3911c2d770b6de0cccd37410"
+    }
+  ],
+  "provenance": {
+    "sources": {
+      "data/season-league.json": "497725ecb6a2ec181aeb3cf93263f53a81bdfed772a2c4c733ba3a2d65a79bf6",
+      "data/defense-source/game-exposure.json": "9943a7c303b24fe1d5086b4621f3d525fdb207d68d92b2152356477d7727191e",
+      "reports/defense-a/rebound-audit.json": "32d32a6192db4b2ce1662614fc08d33e009066dbd8c9a8d6020e98e1991678e5",
+      "reports/defense-a/clock-calibration.json": "4b0a051429fe53c143ec43b16461cd8724d43f96b57b6a2c6fad82c3c86b682e"
+    },
+    "code": {
+      "src/defense_game.js": "6fc0410c6821c9d26ae8757fe109ed9633a19fbce047edc752ba6ef546b4c34c",
+      "src/defense_probability.js": "e652ede7ebe9753f85105dc657fcb2b39d67f28d1ef92a58df008bddd2de4e48",
+      "src/defense_validation.js": "189130f6ee9fda4f7dede42494bbefed362c39e106456266ddf3269d120a13a1",
+      "src/defense_presets.js": "0fef4b11953e0d1d80978ea7c0b34c9ce9f8903a85f91faa1abc936cf86decdc",
+      "src/minute_budget.js": "388258e91afe84696612edab0d02ee88699d37f84683b4f68ef180c8d0f3e7dd",
+      "src/replay_accounting.js": "afa36e2507ae94a4d31460d74e71caa31ed395fd89ed8c0711842ea826620af9",
+      "src/probability_model.js": "13b175efac436d3c560fd39389f3486225ab90bfbc996d6802ee76ce461aad87",
+      "src/constants.js": "86f968d2a29326d0e4ab8375face0e83f76556464a1caeb8ff00be6797290598",
+      "src/rebound_block_model.js": "57459f5bb27147410c9f5ada9ae308809e591e5a6a4dfea24f832ab796fb0a92",
+      "src/rng.js": "f549b8e5b37591f83ae2d78995f5526faf9c3d9a376502f984e0c9e730486c31",
+      "scripts/defense_io.js": "e6c58bf725bf8ab46c38de4edabe51a77df413b809ccbf50ff664d0b6082e195",
+      "src/timed_game.js": "9634c261d4439cd7ab011f9e42466ceaaaed3c62861f231b3b801e9902130f5e",
+      "src/season_simulation.js": "a57959fb823c1c9745f96628a92e97fe5c45c5d7a7102001132f370e88c629f2",
+      "src/defense_a_game.js": "c283cac09b1a0eca87f8a3a7a385c12d9078f6a100d2d3c55e4f39b6621f8a7c",
+      "src/defense_a_season.js": "2e084aff44c2669bb1a16ba32c87e7844524f9a7c59110416618aaf909ca7cec",
+      "src/defense_a_jobs.js": "bc188b7c44045110f2ecf63d5504f476e631cdc599108e0cb65d8f4010c77e89",
+      "src/defense_a_presets.js": "1d214b0dbdeb98d3bb03f03a9fc29fcd02918907846b0c97b45b47a8e276e10e",
+      "src/defense_a_pool.js": "94058c9a99ee8999e61f7f87269ca2aab7052dd33de23f1af3a3048e029ee86c",
+      "scripts/defense_a_worker.js": "3f581412074cc4fa868fc555f319b9f1e58e626a7d6977c185c58a8e11b6044d",
+      "scripts/run_defense_a_seeds.js": "8df2e3c4144d4ed3d7db6af28911555e7143277e4d16717a6a3e71486e9249ad"
+    }
+  }
+}

@@ -1,0 +1,720 @@
+[
+  {
+    "season": "2022-23",
+    "team": "Cleveland Cavaliers",
+    "pair": [
+      "Jarrett Allen",
+      "Evan Mobley"
+    ],
+    "present": [],
+    "stats": {
+      "defRtg": 109.7314385609014,
+      "paintShare": 49.25816023738872,
+      "paintFG": 60.24096385542169,
+      "threeShare": 34.124629080118694,
+      "threeFG": 30.869565217391305,
+      "FTR": 0.3115727002967359,
+      "poss": 785.5542689541853,
+      "minutes": 385.13833333333326
+    },
+    "sufficient": true,
+    "playerCards": [
+      {
+        "name": "Jarrett Allen",
+        "card": {
+          "heightInches": 81,
+          "help": 88.76435045317221,
+          "onBall": 69.51451451451452,
+          "rebound": 94.40694226408512
+        },
+        "metrics": {
+          "onDefRtg": -110.74289355918026,
+          "onOffDef": 0.24160858250375838,
+          "teamCenteredOn": -0.4955437358587176,
+          "onOffRimShare": -1.0457214417544103,
+          "onOffThreeShare": -1.048082665142891,
+          "offDefRtg": -110.98450214168402,
+          "STL36": 0.8725314183123878,
+          "BLK36": 1.3572710951526032,
+          "DREB36": 7.190305206463195,
+          "PF36": 2.472172351885099,
+          "rimSuppression": 8.699999999999996,
+          "threeSuppression": -0.7000000000000006,
+          "CONTESTED_SHOTS_2PT36": 9.40394973070018,
+          "CONTESTED_SHOTS_3PT36": 2.8114901256732496,
+          "DEFLECTIONS36": 1.6481149012567324,
+          "DEF_BOXOUTS36": 1.341113105924596,
+          "CHARGES_DRAWN36": 0.06463195691202872,
+          "officialDefRtg": -108.8,
+          "matchupSuppression": 3.4033296508901967,
+          "usageWeightedMatchupSuppression": 3.6424971851163703,
+          "defensiveLoad": 20.046133394453356
+        },
+        "minutes": 2228.0
+      },
+      {
+        "name": "Evan Mobley",
+        "card": {
+          "heightInches": 83,
+          "help": 84.71842298512945,
+          "onBall": 66.47444474177145,
+          "rebound": 91.24542124542126
+        },
+        "metrics": {
+          "onDefRtg": -110.08948461922613,
+          "onOffDef": 1.1425983935186679,
+          "teamCenteredOn": 0.15786520409541538,
+          "onOffRimShare": 3.5536995507446933,
+          "onOffThreeShare": -3.5556264822044383,
+          "offDefRtg": -111.2320830127448,
+          "STL36": 0.7947019867549668,
+          "BLK36": 1.576158940397351,
+          "DREB36": 6.940397350993377,
+          "PF36": 2.8874172185430464,
+          "rimSuppression": 6.2000000000000055,
+          "threeSuppression": -1.7000000000000015,
+          "CONTESTED_SHOTS_2PT36": 8.132450331125828,
+          "CONTESTED_SHOTS_3PT36": 3.7218543046357615,
+          "DEFLECTIONS36": 1.9205298013245033,
+          "DEF_BOXOUTS36": 1.1523178807947019,
+          "CHARGES_DRAWN36": 0.013245033112582781,
+          "officialDefRtg": -109,
+          "matchupSuppression": 2.61971661585734,
+          "usageWeightedMatchupSuppression": 2.349960293268363,
+          "defensiveLoad": 19.147216545103436
+        },
+        "minutes": 2718.0
+      }
+    ]
+  },
+  {
+    "season": "2022-23",
+    "team": "Cleveland Cavaliers",
+    "pair": [
+      "Jarrett Allen",
+      "Evan Mobley"
+    ],
+    "present": [
+      "Jarrett Allen"
+    ],
+    "stats": {
+      "defRtg": 111.08599161288836,
+      "paintShare": 51.64233576642336,
+      "paintFG": 59.540636042402824,
+      "threeShare": 33.941605839416056,
+      "threeFG": 34.946236559139784,
+      "FTR": 0.2956204379562044,
+      "poss": 1313.396926845927,
+      "minutes": 655.255
+    },
+    "sufficient": true,
+    "playerCards": [
+      {
+        "name": "Jarrett Allen",
+        "card": {
+          "heightInches": 81,
+          "help": 88.76435045317221,
+          "onBall": 69.51451451451452,
+          "rebound": 94.40694226408512
+        },
+        "metrics": {
+          "onDefRtg": -110.74289355918026,
+          "onOffDef": 0.24160858250375838,
+          "teamCenteredOn": -0.4955437358587176,
+          "onOffRimShare": -1.0457214417544103,
+          "onOffThreeShare": -1.048082665142891,
+          "offDefRtg": -110.98450214168402,
+          "STL36": 0.8725314183123878,
+          "BLK36": 1.3572710951526032,
+          "DREB36": 7.190305206463195,
+          "PF36": 2.472172351885099,
+          "rimSuppression": 8.699999999999996,
+          "threeSuppression": -0.7000000000000006,
+          "CONTESTED_SHOTS_2PT36": 9.40394973070018,
+          "CONTESTED_SHOTS_3PT36": 2.8114901256732496,
+          "DEFLECTIONS36": 1.6481149012567324,
+          "DEF_BOXOUTS36": 1.341113105924596,
+          "CHARGES_DRAWN36": 0.06463195691202872,
+          "officialDefRtg": -108.8,
+          "matchupSuppression": 3.4033296508901967,
+          "usageWeightedMatchupSuppression": 3.6424971851163703,
+          "defensiveLoad": 20.046133394453356
+        },
+        "minutes": 2228.0
+      },
+      {
+        "name": "Evan Mobley",
+        "card": {
+          "heightInches": 83,
+          "help": 84.71842298512945,
+          "onBall": 66.47444474177145,
+          "rebound": 91.24542124542126
+        },
+        "metrics": {
+          "onDefRtg": -110.08948461922613,
+          "onOffDef": 1.1425983935186679,
+          "teamCenteredOn": 0.15786520409541538,
+          "onOffRimShare": 3.5536995507446933,
+          "onOffThreeShare": -3.5556264822044383,
+          "offDefRtg": -111.2320830127448,
+          "STL36": 0.7947019867549668,
+          "BLK36": 1.576158940397351,
+          "DREB36": 6.940397350993377,
+          "PF36": 2.8874172185430464,
+          "rimSuppression": 6.2000000000000055,
+          "threeSuppression": -1.7000000000000015,
+          "CONTESTED_SHOTS_2PT36": 8.132450331125828,
+          "CONTESTED_SHOTS_3PT36": 3.7218543046357615,
+          "DEFLECTIONS36": 1.9205298013245033,
+          "DEF_BOXOUTS36": 1.1523178807947019,
+          "CHARGES_DRAWN36": 0.013245033112582781,
+          "officialDefRtg": -109,
+          "matchupSuppression": 2.61971661585734,
+          "usageWeightedMatchupSuppression": 2.349960293268363,
+          "defensiveLoad": 19.147216545103436
+        },
+        "minutes": 2718.0
+      }
+    ]
+  },
+  {
+    "season": "2022-23",
+    "team": "Cleveland Cavaliers",
+    "pair": [
+      "Jarrett Allen",
+      "Evan Mobley"
+    ],
+    "present": [
+      "Evan Mobley"
+    ],
+    "stats": {
+      "defRtg": 109.62783564034861,
+      "paintShare": 48.45528455284553,
+      "paintFG": 53.24384787472036,
+      "threeShare": 36.205962059620596,
+      "threeFG": 38.47305389221557,
+      "FTR": 0.2850948509485095,
+      "poss": 2180.103242976329,
+      "minutes": 1070.3783333333336
+    },
+    "sufficient": true,
+    "playerCards": [
+      {
+        "name": "Jarrett Allen",
+        "card": {
+          "heightInches": 81,
+          "help": 88.76435045317221,
+          "onBall": 69.51451451451452,
+          "rebound": 94.40694226408512
+        },
+        "metrics": {
+          "onDefRtg": -110.74289355918026,
+          "onOffDef": 0.24160858250375838,
+          "teamCenteredOn": -0.4955437358587176,
+          "onOffRimShare": -1.0457214417544103,
+          "onOffThreeShare": -1.048082665142891,
+          "offDefRtg": -110.98450214168402,
+          "STL36": 0.8725314183123878,
+          "BLK36": 1.3572710951526032,
+          "DREB36": 7.190305206463195,
+          "PF36": 2.472172351885099,
+          "rimSuppression": 8.699999999999996,
+          "threeSuppression": -0.7000000000000006,
+          "CONTESTED_SHOTS_2PT36": 9.40394973070018,
+          "CONTESTED_SHOTS_3PT36": 2.8114901256732496,
+          "DEFLECTIONS36": 1.6481149012567324,
+          "DEF_BOXOUTS36": 1.341113105924596,
+          "CHARGES_DRAWN36": 0.06463195691202872,
+          "officialDefRtg": -108.8,
+          "matchupSuppression": 3.4033296508901967,
+          "usageWeightedMatchupSuppression": 3.6424971851163703,
+          "defensiveLoad": 20.046133394453356
+        },
+        "minutes": 2228.0
+      },
+      {
+        "name": "Evan Mobley",
+        "card": {
+          "heightInches": 83,
+          "help": 84.71842298512945,
+          "onBall": 66.47444474177145,
+          "rebound": 91.24542124542126
+        },
+        "metrics": {
+          "onDefRtg": -110.08948461922613,
+          "onOffDef": 1.1425983935186679,
+          "teamCenteredOn": 0.15786520409541538,
+          "onOffRimShare": 3.5536995507446933,
+          "onOffThreeShare": -3.5556264822044383,
+          "offDefRtg": -111.2320830127448,
+          "STL36": 0.7947019867549668,
+          "BLK36": 1.576158940397351,
+          "DREB36": 6.940397350993377,
+          "PF36": 2.8874172185430464,
+          "rimSuppression": 6.2000000000000055,
+          "threeSuppression": -1.7000000000000015,
+          "CONTESTED_SHOTS_2PT36": 8.132450331125828,
+          "CONTESTED_SHOTS_3PT36": 3.7218543046357615,
+          "DEFLECTIONS36": 1.9205298013245033,
+          "DEF_BOXOUTS36": 1.1523178807947019,
+          "CHARGES_DRAWN36": 0.013245033112582781,
+          "officialDefRtg": -109,
+          "matchupSuppression": 2.61971661585734,
+          "usageWeightedMatchupSuppression": 2.349960293268363,
+          "defensiveLoad": 19.147216545103436
+        },
+        "minutes": 2718.0
+      }
+    ]
+  },
+  {
+    "season": "2022-23",
+    "team": "Cleveland Cavaliers",
+    "pair": [
+      "Jarrett Allen",
+      "Evan Mobley"
+    ],
+    "present": [
+      "Jarrett Allen",
+      "Evan Mobley"
+    ],
+    "stats": {
+      "defRtg": 110.5408151151219,
+      "paintShare": 47.9565442317641,
+      "paintFG": 54.47680690399137,
+      "threeShare": 38.23072943610968,
+      "threeFG": 37.88903924221921,
+      "FTR": 0.23693740300051733,
+      "poss": 2229.9455612235574,
+      "minutes": 1115.2283333333332
+    },
+    "sufficient": true,
+    "playerCards": [
+      {
+        "name": "Jarrett Allen",
+        "card": {
+          "heightInches": 81,
+          "help": 88.76435045317221,
+          "onBall": 69.51451451451452,
+          "rebound": 94.40694226408512
+        },
+        "metrics": {
+          "onDefRtg": -110.74289355918026,
+          "onOffDef": 0.24160858250375838,
+          "teamCenteredOn": -0.4955437358587176,
+          "onOffRimShare": -1.0457214417544103,
+          "onOffThreeShare": -1.048082665142891,
+          "offDefRtg": -110.98450214168402,
+          "STL36": 0.8725314183123878,
+          "BLK36": 1.3572710951526032,
+          "DREB36": 7.190305206463195,
+          "PF36": 2.472172351885099,
+          "rimSuppression": 8.699999999999996,
+          "threeSuppression": -0.7000000000000006,
+          "CONTESTED_SHOTS_2PT36": 9.40394973070018,
+          "CONTESTED_SHOTS_3PT36": 2.8114901256732496,
+          "DEFLECTIONS36": 1.6481149012567324,
+          "DEF_BOXOUTS36": 1.341113105924596,
+          "CHARGES_DRAWN36": 0.06463195691202872,
+          "officialDefRtg": -108.8,
+          "matchupSuppression": 3.4033296508901967,
+          "usageWeightedMatchupSuppression": 3.6424971851163703,
+          "defensiveLoad": 20.046133394453356
+        },
+        "minutes": 2228.0
+      },
+      {
+        "name": "Evan Mobley",
+        "card": {
+          "heightInches": 83,
+          "help": 84.71842298512945,
+          "onBall": 66.47444474177145,
+          "rebound": 91.24542124542126
+        },
+        "metrics": {
+          "onDefRtg": -110.08948461922613,
+          "onOffDef": 1.1425983935186679,
+          "teamCenteredOn": 0.15786520409541538,
+          "onOffRimShare": 3.5536995507446933,
+          "onOffThreeShare": -3.5556264822044383,
+          "offDefRtg": -111.2320830127448,
+          "STL36": 0.7947019867549668,
+          "BLK36": 1.576158940397351,
+          "DREB36": 6.940397350993377,
+          "PF36": 2.8874172185430464,
+          "rimSuppression": 6.2000000000000055,
+          "threeSuppression": -1.7000000000000015,
+          "CONTESTED_SHOTS_2PT36": 8.132450331125828,
+          "CONTESTED_SHOTS_3PT36": 3.7218543046357615,
+          "DEFLECTIONS36": 1.9205298013245033,
+          "DEF_BOXOUTS36": 1.1523178807947019,
+          "CHARGES_DRAWN36": 0.013245033112582781,
+          "officialDefRtg": -109,
+          "matchupSuppression": 2.61971661585734,
+          "usageWeightedMatchupSuppression": 2.349960293268363,
+          "defensiveLoad": 19.147216545103436
+        },
+        "minutes": 2718.0
+      }
+    ]
+  },
+  {
+    "season": "2023-24",
+    "team": "New York Knicks",
+    "pair": [
+      "Isaiah Hartenstein",
+      "Mitchell Robinson"
+    ],
+    "present": [],
+    "stats": {
+      "defRtg": 110.2022402366804,
+      "paintShare": 47.03328509406657,
+      "paintFG": 56.717948717948715,
+      "threeShare": 39.89387361312108,
+      "threeFG": 34.220072551390565,
+      "FTR": 0.241196333815726,
+      "poss": 2315.742397358794,
+      "minutes": 1158.91
+    },
+    "sufficient": true,
+    "playerCards": [
+      {
+        "name": "Isaiah Hartenstein",
+        "card": {
+          "heightInches": 84,
+          "help": 94.05004944336342,
+          "onBall": 71.64003364171573,
+          "rebound": 96.0875402792696
+        },
+        "metrics": {
+          "onDefRtg": -110.49096563751708,
+          "onOffDef": 1.6413763316081713,
+          "teamCenteredOn": 1.296743859689613,
+          "onOffRimShare": -1.556127886739328,
+          "onOffThreeShare": 0.7190642502266253,
+          "offDefRtg": -112.13234196912525,
+          "STL36": 1.6510279388508171,
+          "BLK36": 1.6130732735898787,
+          "DREB36": 7.24934106483922,
+          "PF36": 3.985239852398524,
+          "rimSuppression": 11.2,
+          "threeSuppression": 0.30000000000000027,
+          "CONTESTED_SHOTS_2PT36": 8.748550342646283,
+          "CONTESTED_SHOTS_3PT36": 1.7459146020031628,
+          "DEFLECTIONS36": 2.770690564048498,
+          "DEF_BOXOUTS36": 2.1634159198734846,
+          "CHARGES_DRAWN36": 0.0,
+          "officialDefRtg": -110.3,
+          "matchupSuppression": 5.272668561288155,
+          "usageWeightedMatchupSuppression": 5.069062117697307,
+          "defensiveLoad": 19.34520445898851
+        },
+        "minutes": 1897.0
+      },
+      {
+        "name": "Mitchell Robinson",
+        "card": {
+          "heightInches": 84,
+          "help": 63.71814092953523,
+          "onBall": 62.874898309680916,
+          "rebound": 96.73648406731114
+        },
+        "metrics": {
+          "onDefRtg": -117.68774268582128,
+          "onOffDef": -10.816146325576938,
+          "teamCenteredOn": -5.900033188614586,
+          "onOffRimShare": -1.9800987382497637,
+          "onOffThreeShare": 0.5299607009818352,
+          "offDefRtg": -106.87159636024434,
+          "STL36": 1.7389033942558747,
+          "BLK36": 1.6449086161879896,
+          "DREB36": 5.68668407310705,
+          "PF36": 2.5848563968668405,
+          "rimSuppression": -5.499999999999994,
+          "threeSuppression": -6.2,
+          "CONTESTED_SHOTS_2PT36": 6.391644908616188,
+          "CONTESTED_SHOTS_3PT36": 2.6788511749347257,
+          "DEFLECTIONS36": 2.4438642297650133,
+          "DEF_BOXOUTS36": 2.0678851174934727,
+          "CHARGES_DRAWN36": 0.0,
+          "officialDefRtg": -116.2,
+          "matchupSuppression": -1.7807758745900546,
+          "usageWeightedMatchupSuppression": -2.3802867567611634,
+          "defensiveLoad": 19.2910184016475
+        },
+        "minutes": 766.0
+      }
+    ]
+  },
+  {
+    "season": "2023-24",
+    "team": "New York Knicks",
+    "pair": [
+      "Isaiah Hartenstein",
+      "Mitchell Robinson"
+    ],
+    "present": [
+      "Isaiah Hartenstein"
+    ],
+    "stats": {
+      "defRtg": 110.46195777045551,
+      "paintShare": 47.454844006568145,
+      "paintFG": 55.70934256055364,
+      "threeShare": 39.90147783251231,
+      "threeFG": 35.390946502057616,
+      "FTR": 0.22791461412151068,
+      "poss": 3447.3406744366966,
+      "minutes": 1700.0283333333325
+    },
+    "sufficient": true,
+    "playerCards": [
+      {
+        "name": "Isaiah Hartenstein",
+        "card": {
+          "heightInches": 84,
+          "help": 94.05004944336342,
+          "onBall": 71.64003364171573,
+          "rebound": 96.0875402792696
+        },
+        "metrics": {
+          "onDefRtg": -110.49096563751708,
+          "onOffDef": 1.6413763316081713,
+          "teamCenteredOn": 1.296743859689613,
+          "onOffRimShare": -1.556127886739328,
+          "onOffThreeShare": 0.7190642502266253,
+          "offDefRtg": -112.13234196912525,
+          "STL36": 1.6510279388508171,
+          "BLK36": 1.6130732735898787,
+          "DREB36": 7.24934106483922,
+          "PF36": 3.985239852398524,
+          "rimSuppression": 11.2,
+          "threeSuppression": 0.30000000000000027,
+          "CONTESTED_SHOTS_2PT36": 8.748550342646283,
+          "CONTESTED_SHOTS_3PT36": 1.7459146020031628,
+          "DEFLECTIONS36": 2.770690564048498,
+          "DEF_BOXOUTS36": 2.1634159198734846,
+          "CHARGES_DRAWN36": 0.0,
+          "officialDefRtg": -110.3,
+          "matchupSuppression": 5.272668561288155,
+          "usageWeightedMatchupSuppression": 5.069062117697307,
+          "defensiveLoad": 19.34520445898851
+        },
+        "minutes": 1897.0
+      },
+      {
+        "name": "Mitchell Robinson",
+        "card": {
+          "heightInches": 84,
+          "help": 63.71814092953523,
+          "onBall": 62.874898309680916,
+          "rebound": 96.73648406731114
+        },
+        "metrics": {
+          "onDefRtg": -117.68774268582128,
+          "onOffDef": -10.816146325576938,
+          "teamCenteredOn": -5.900033188614586,
+          "onOffRimShare": -1.9800987382497637,
+          "onOffThreeShare": 0.5299607009818352,
+          "offDefRtg": -106.87159636024434,
+          "STL36": 1.7389033942558747,
+          "BLK36": 1.6449086161879896,
+          "DREB36": 5.68668407310705,
+          "PF36": 2.5848563968668405,
+          "rimSuppression": -5.499999999999994,
+          "threeSuppression": -6.2,
+          "CONTESTED_SHOTS_2PT36": 6.391644908616188,
+          "CONTESTED_SHOTS_3PT36": 2.6788511749347257,
+          "DEFLECTIONS36": 2.4438642297650133,
+          "DEF_BOXOUTS36": 2.0678851174934727,
+          "CHARGES_DRAWN36": 0.0,
+          "officialDefRtg": -116.2,
+          "matchupSuppression": -1.7807758745900546,
+          "usageWeightedMatchupSuppression": -2.3802867567611634,
+          "defensiveLoad": 19.2910184016475
+        },
+        "minutes": 766.0
+      }
+    ]
+  },
+  {
+    "season": "2023-24",
+    "team": "New York Knicks",
+    "pair": [
+      "Isaiah Hartenstein",
+      "Mitchell Robinson"
+    ],
+    "present": [
+      "Mitchell Robinson"
+    ],
+    "stats": {
+      "defRtg": 117.61615646764255,
+      "paintShare": 44.82477587612062,
+      "paintFG": 62.72727272727273,
+      "threeShare": 40.831295843520785,
+      "threeFG": 40.119760479041915,
+      "FTR": 0.21515892420537897,
+      "poss": 1396.916928204508,
+      "minutes": 698.0616666666666
+    },
+    "sufficient": true,
+    "playerCards": [
+      {
+        "name": "Isaiah Hartenstein",
+        "card": {
+          "heightInches": 84,
+          "help": 94.05004944336342,
+          "onBall": 71.64003364171573,
+          "rebound": 96.0875402792696
+        },
+        "metrics": {
+          "onDefRtg": -110.49096563751708,
+          "onOffDef": 1.6413763316081713,
+          "teamCenteredOn": 1.296743859689613,
+          "onOffRimShare": -1.556127886739328,
+          "onOffThreeShare": 0.7190642502266253,
+          "offDefRtg": -112.13234196912525,
+          "STL36": 1.6510279388508171,
+          "BLK36": 1.6130732735898787,
+          "DREB36": 7.24934106483922,
+          "PF36": 3.985239852398524,
+          "rimSuppression": 11.2,
+          "threeSuppression": 0.30000000000000027,
+          "CONTESTED_SHOTS_2PT36": 8.748550342646283,
+          "CONTESTED_SHOTS_3PT36": 1.7459146020031628,
+          "DEFLECTIONS36": 2.770690564048498,
+          "DEF_BOXOUTS36": 2.1634159198734846,
+          "CHARGES_DRAWN36": 0.0,
+          "officialDefRtg": -110.3,
+          "matchupSuppression": 5.272668561288155,
+          "usageWeightedMatchupSuppression": 5.069062117697307,
+          "defensiveLoad": 19.34520445898851
+        },
+        "minutes": 1897.0
+      },
+      {
+        "name": "Mitchell Robinson",
+        "card": {
+          "heightInches": 84,
+          "help": 63.71814092953523,
+          "onBall": 62.874898309680916,
+          "rebound": 96.73648406731114
+        },
+        "metrics": {
+          "onDefRtg": -117.68774268582128,
+          "onOffDef": -10.816146325576938,
+          "teamCenteredOn": -5.900033188614586,
+          "onOffRimShare": -1.9800987382497637,
+          "onOffThreeShare": 0.5299607009818352,
+          "offDefRtg": -106.87159636024434,
+          "STL36": 1.7389033942558747,
+          "BLK36": 1.6449086161879896,
+          "DREB36": 5.68668407310705,
+          "PF36": 2.5848563968668405,
+          "rimSuppression": -5.499999999999994,
+          "threeSuppression": -6.2,
+          "CONTESTED_SHOTS_2PT36": 6.391644908616188,
+          "CONTESTED_SHOTS_3PT36": 2.6788511749347257,
+          "DEFLECTIONS36": 2.4438642297650133,
+          "DEF_BOXOUTS36": 2.0678851174934727,
+          "CHARGES_DRAWN36": 0.0,
+          "officialDefRtg": -116.2,
+          "matchupSuppression": -1.7807758745900546,
+          "usageWeightedMatchupSuppression": -2.3802867567611634,
+          "defensiveLoad": 19.2910184016475
+        },
+        "minutes": 766.0
+      }
+    ]
+  },
+  {
+    "season": "2023-24",
+    "team": "New York Knicks",
+    "pair": [
+      "Isaiah Hartenstein",
+      "Mitchell Robinson"
+    ],
+    "present": [
+      "Isaiah Hartenstein",
+      "Mitchell Robinson"
+    ],
+    "stats": {
+      "defRtg": null,
+      "paintShare": null,
+      "paintFG": null,
+      "threeShare": null,
+      "threeFG": null,
+      "FTR": null,
+      "poss": 0.0,
+      "minutes": 0.0
+    },
+    "sufficient": false,
+    "playerCards": [
+      {
+        "name": "Isaiah Hartenstein",
+        "card": {
+          "heightInches": 84,
+          "help": 94.05004944336342,
+          "onBall": 71.64003364171573,
+          "rebound": 96.0875402792696
+        },
+        "metrics": {
+          "onDefRtg": -110.49096563751708,
+          "onOffDef": 1.6413763316081713,
+          "teamCenteredOn": 1.296743859689613,
+          "onOffRimShare": -1.556127886739328,
+          "onOffThreeShare": 0.7190642502266253,
+          "offDefRtg": -112.13234196912525,
+          "STL36": 1.6510279388508171,
+          "BLK36": 1.6130732735898787,
+          "DREB36": 7.24934106483922,
+          "PF36": 3.985239852398524,
+          "rimSuppression": 11.2,
+          "threeSuppression": 0.30000000000000027,
+          "CONTESTED_SHOTS_2PT36": 8.748550342646283,
+          "CONTESTED_SHOTS_3PT36": 1.7459146020031628,
+          "DEFLECTIONS36": 2.770690564048498,
+          "DEF_BOXOUTS36": 2.1634159198734846,
+          "CHARGES_DRAWN36": 0.0,
+          "officialDefRtg": -110.3,
+          "matchupSuppression": 5.272668561288155,
+          "usageWeightedMatchupSuppression": 5.069062117697307,
+          "defensiveLoad": 19.34520445898851
+        },
+        "minutes": 1897.0
+      },
+      {
+        "name": "Mitchell Robinson",
+        "card": {
+          "heightInches": 84,
+          "help": 63.71814092953523,
+          "onBall": 62.874898309680916,
+          "rebound": 96.73648406731114
+        },
+        "metrics": {
+          "onDefRtg": -117.68774268582128,
+          "onOffDef": -10.816146325576938,
+          "teamCenteredOn": -5.900033188614586,
+          "onOffRimShare": -1.9800987382497637,
+          "onOffThreeShare": 0.5299607009818352,
+          "offDefRtg": -106.87159636024434,
+          "STL36": 1.7389033942558747,
+          "BLK36": 1.6449086161879896,
+          "DREB36": 5.68668407310705,
+          "PF36": 2.5848563968668405,
+          "rimSuppression": -5.499999999999994,
+          "threeSuppression": -6.2,
+          "CONTESTED_SHOTS_2PT36": 6.391644908616188,
+          "CONTESTED_SHOTS_3PT36": 2.6788511749347257,
+          "DEFLECTIONS36": 2.4438642297650133,
+          "DEF_BOXOUTS36": 2.0678851174934727,
+          "CHARGES_DRAWN36": 0.0,
+          "officialDefRtg": -116.2,
+          "matchupSuppression": -1.7807758745900546,
+          "usageWeightedMatchupSuppression": -2.3802867567611634,
+          "defensiveLoad": 19.2910184016475
+        },
+        "minutes": 766.0
+      }
+    ]
+  }
+]

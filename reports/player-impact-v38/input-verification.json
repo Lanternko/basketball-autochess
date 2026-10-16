@@ -1,0 +1,29 @@
+{
+  "passed": true,
+  "actualCardsAndOpponentPrimaries": 732,
+  "players": 582,
+  "allCanonicalRolesExactlySeasonInput": true,
+  "allOtherCardFieldsIdenticalAcrossControlledVariants": true,
+  "onlyShootingCenteringDiffers": true,
+  "profilesExactlyArchivedV30": true,
+  "mean70Branches": {
+    "fixed-pass-rows": 582
+  },
+  "hashes": {
+    "reports/player-impact-v24/ovr-input.mjs": "44529060f8e4ea79728a24f7083a5fa3556c656dbaa457a7d3ce87ed7282be0a",
+    "reports/player-impact-v29/ovr-input.mjs": "afbb6a557473152c3d8af82358fdceef71eb22253524e67c13eda2bf1401475d",
+    "reports/player-impact-v30/ovr-input.mjs": "e22fb23985f588eef94c2d427ce075fb15af41b057b6a822c72a10bebf5b5d99",
+    "reports/player-impact-v34/ovr-input.mjs": "e7dbd7f92269a9866815e16b355fbb2e405a4595d1fb508f8f88f73d595ac628",
+    "reports/player-impact-v35/ovr-input.mjs": "e7dbd7f92269a9866815e16b355fbb2e405a4595d1fb508f8f88f73d595ac628",
+    "reports/player-impact-v36/ovr-input.mjs": "e7dbd7f92269a9866815e16b355fbb2e405a4595d1fb508f8f88f73d595ac628",
+    "reports/player-impact-v37/ovr-input.mjs": "e7dbd7f92269a9866815e16b355fbb2e405a4595d1fb508f8f88f73d595ac628",
+    "src/source_creation_roles.js": "dbea326d348f6dd9ffa830b94cf7decb097bed89609872ada42e25febc17c654",
+    "test/source_creation_roles.js": "70415a231cb8e46af2f128cc4322d4e4f1758a15c8099218797d260c7515191e",
+    "reports/player-impact-v38/input.mjs": "68ac365762ef9a3243e12f71ed461ee0031e4f3c56a74951ce320dede6357a16",
+    "reports/player-impact-v38/audit-inputs.mjs": "617c5e92bc05aeb1d32edebbcee26ae7d08172836038149e2edacec59fa882d1",
+    "reports/player-impact-v6/2025-26-cards.json": "cb1516bea2fd3249259b65e61a3fc8acc8bcf9a0d967f240460af011ed808441",
+    "reports/player-impact-v17/2025-26-creation-audit.json": "07d4ae7eb2eac4025597339afb5ba556eb0208f70f8e885a20d49c4795747332",
+    "reports/player-impact-v37/2025-26-contexts.json": "4726386df2b8bd326e159738bfa0b53f9a8b4f29bdbc8707a13cc3d70942547b",
+    "reports/player-impact-v30/validation-protocol.json": "eb68320065269b4145505e19d8839adc2747206bbb52e0fdf0dcd6a21cfde407"
+  }
+}

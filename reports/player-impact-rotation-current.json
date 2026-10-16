@@ -1,0 +1,19 @@
+{
+  "version": "v49",
+  "scope": "Accepted measured rotation development baseline. All player probability inputs retained from v47. Combined offense not promoted; next offense candidates should use these corrected rotations. No product preset or OVR change.",
+  "probabilityBaseline": "v47",
+  "defenseBaseline": "v46",
+  "sourceInput": "reports/player-impact-v49/input.mjs",
+  "engine": "reports/player-impact-v49/engine.mjs",
+  "rotationModule": "src/measured_rotation.js",
+  "run": "node reports/player-impact-v49/run.mjs",
+  "report": "reports/player-impact-v49/report.md",
+  "decision": "reports/player-impact-v49/decision.json",
+  "verification": "reports/player-impact-v49/results-verification.json",
+  "verificationSHA256": "2c8394ee5035c67902d9d780aa32db9b8a045e4effd597670b562c3124a06f4a",
+  "rotationAdopted": true,
+  "combinedOffenseAdopted": false,
+  "gameDefaultChanged": false,
+  "ovrRecomputed": false,
+  "curryOffenseComplete": false
+}

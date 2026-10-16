@@ -1,0 +1,50 @@
+{
+  "sources": {
+    "2022-23": {
+      "strictGames": 1079,
+      "strictStints": 32257,
+      "stintsSHA": "5936e16bbfcce88da4743cb72b828be2d602bdb67e470e549c68bd2d7c3eaec6",
+      "auditSHA": "1fc5ea2b7631af37943b9a9d949b0edc0292d4a21f288ec3dba88af2e27be0d1"
+    },
+    "2023-24": {
+      "strictGames": 1063,
+      "strictStints": 31180,
+      "stintsSHA": "a83b1c42ba735810f2fd8dccd8355d2f41e4fd164389ee82fb4318b4a3d0adb6",
+      "auditSHA": "230f0860d5a571d73192a751afab36263d5a8b24aa549c3d101746f11b04d133"
+    },
+    "2024-25": {
+      "strictGames": 1091,
+      "strictStints": 32985,
+      "stintsSHA": "8790976ac74edf2054470427c50984d35d8c8ab0abf72fd92b5105489cf74ac0",
+      "auditSHA": "a2bf9c15012ec5a1c1f7c0646425ee8cdafd8b39d172b75f4e22af0b5555195a"
+    },
+    "2025-26": {
+      "strictGames": 1188,
+      "strictStints": 38623,
+      "stintsSHA": "5eff6aa81f37d0f3baef97be2fdc7346a05ffce5ccfa1f6e4456be229a296179",
+      "auditSHA": "86e948971436b8c4f7c671ff8a7027a52204ecab7031d8e14d29282268d3eb09"
+    }
+  },
+  "validation": [
+    {
+      "season": "2022-23",
+      "strictGames": 1079,
+      "ratingAndFiveExposureChecks": "pass"
+    },
+    {
+      "season": "2023-24",
+      "strictGames": 1063,
+      "ratingAndFiveExposureChecks": "pass"
+    },
+    {
+      "season": "2024-25",
+      "strictGames": 1091,
+      "ratingAndFiveExposureChecks": "pass"
+    },
+    {
+      "season": "2025-26",
+      "strictGames": 1188,
+      "ratingAndFiveExposureChecks": "pass"
+    }
+  ]
+}

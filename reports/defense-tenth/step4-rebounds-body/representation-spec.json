@@ -1,0 +1,20 @@
+{
+  "version": "body-fields-proposal-1",
+  "status": "Representation proposal only; no engine/card implementation or fitted coefficient",
+  "baseUnitPolicy": "Keep physical quantities in their recorded units, with explicit conversion metadata when needed. No percentile scalar replaces the originals.",
+  "fields": {
+    "height": {"unit": "inches", "meaning": "Recorded standing stature, shoe protocol retained if known"},
+    "wingspan": {"unit": "inches", "meaning": "Arm span; does not receive an additional bonus on top of an observed standing reach"},
+    "standingReach": {"unit": "inches", "meaning": "Observed reach; never derived silently from height"},
+    "mass": {"unit": "lb", "meaning": "Recorded mass; never renamed strength"},
+    "strengthTest": {"unit": "test specific", "meaning": "Store test type, load and repetitions separately; no conversion from bench repetitions to a basketball strength rating"},
+    "standingJump": {"unit": "inches", "meaning": "No-step jump from dated measurement; not assumed current"},
+    "runningJump": {"unit": "inches", "meaning": "Maximum approach jump from dated measurement; not substituted for every rebound jump"}
+  },
+  "provenancePerField": ["value", "unit", "source", "measurementDate", "sourceFetchedAt", "availabilityDate", "measurementProtocol", "observedOrEstimated", "uncertainty", "missingReason"],
+  "missingPolicy": "Preserve null and reason. An eventual prior must be a separately registered model with its own estimated flag, training cutoff and uncertainty. No current imputation.",
+  "derivedReach": "Observed compatible standingReach + observed jump height can describe tested maximum touch height. It is not an automatic effective in-game reach, and cannot be computed when either input or test compatibility is unknown.",
+  "separateFrom": ["stamina and fatigue", "starting court position", "boxout awareness/technique", "rebound participation tendency", "rebound skill and outcomes"],
+  "futureIntegrationRule": "A body-only mechanism must replace its designated old physique pathway under its own switch, rather than stacking new height/mass/jump bonuses on old physique. Other physique pathways stay frozen. No effect coefficient is selected in this audit.",
+  "forbidden": ["Inferring strength/jump from OREB/DREB/BLK and then predicting those same outcomes", "Treating defaults as measurements", "Using player/team IDs as prediction exceptions", "Interpreting retrospective source fetches as proof of cutoff-time availability"]
+}

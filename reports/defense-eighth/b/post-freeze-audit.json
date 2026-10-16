@@ -1,0 +1,16 @@
+{
+  "verifiedAt": "2026-10-12T14:55:42.367Z",
+  "stage": "B",
+  "predictionChanges": false,
+  "freezeHash": "c21ca1e02c267f8143ed2561729d36f27fa11406c6d44a3682cbd699ce590d98",
+  "originalTestHash": "7c037b1a87d992a5615b30e245e1d14db63154fc0a59f5800e1d520a076d37c9",
+  "executionTestHash": "4c8840e90f68815c2dbec7d2d76bda21383976527903611a4b92b71238e6e546",
+  "validatorHash": "773df020513e5beb26451717a8865723596d1e4e6974b4d41c371cbafea8dc1d",
+  "onlyCorrection": {
+    "before": "source.models.role.offenseResidual.map(v=>v*c)",
+    "after": "JSON.parse(JSON.stringify(source.models.role.offenseResidual.map(v=>v*c)))",
+    "reason": "JSON serialization canonicalizes negative zero to positive zero. Compare expected scaled residuals after the same JSON round trip as the persisted model. No numerical tolerance, prediction or calibration changes."
+  },
+  "originalArtifactTest": "Failed strict negative-zero comparison for c=0; not a model discrepancy.",
+  "correctedArtifactTest": "Passed all frozen source hashes, exact c=1 card/game parity, residual-only scaling,20 paired seeds and run/input hashes, prior/defense preservation, past-only calibration, FG gate and absence of blind-season data."
+}

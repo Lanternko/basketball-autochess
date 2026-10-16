@@ -1,0 +1,147 @@
+{
+  "passed": true,
+  "scope": "Exploratory release-path observation of one selected player, all archived supportedHealthy seeds/opponents/seats. Every observed game exactly reproduces its archived margin, all13 player counters and minutes; observer adds no random draw or return mutation. This is a conditional model mechanism diagnostic, not causal NBA data, full OVR or proof all decrease is caused by one step.",
+  "versions": [
+    {
+      "version": "v30",
+      "name": "Nikola Jokić",
+      "minutesPerGame": 32.903333333333336,
+      "totals": {
+        "games": 240,
+        "passes": 4056,
+        "releasePotential": 4015,
+        "releaseUsesAssist": 4015,
+        "releaseRejectsAssist": 0,
+        "creditedAssists": 1659,
+        "playerAst": 1659,
+        "minutes": 7896.80000000003
+      },
+      "receivers": [
+        {
+          "playerId": -2003,
+          "passes": 429,
+          "releases": 426,
+          "usesAssist": 426,
+          "rejectsAssist": 0,
+          "creditedAssists": 197
+        },
+        {
+          "playerId": -1002,
+          "passes": 1040,
+          "releases": 1031,
+          "usesAssist": 1031,
+          "rejectsAssist": 0,
+          "creditedAssists": 439
+        },
+        {
+          "playerId": -2001,
+          "passes": 403,
+          "releases": 403,
+          "usesAssist": 403,
+          "rejectsAssist": 0,
+          "creditedAssists": 154
+        },
+        {
+          "playerId": -1000,
+          "passes": 1006,
+          "releases": 994,
+          "usesAssist": 994,
+          "rejectsAssist": 0,
+          "creditedAssists": 363
+        },
+        {
+          "playerId": -1001,
+          "passes": 578,
+          "releases": 566,
+          "usesAssist": 566,
+          "rejectsAssist": 0,
+          "creditedAssists": 244
+        },
+        {
+          "playerId": -1003,
+          "passes": 600,
+          "releases": 595,
+          "usesAssist": 595,
+          "rejectsAssist": 0,
+          "creditedAssists": 262
+        }
+      ]
+    },
+    {
+      "version": "v37",
+      "name": "Nikola Jokić",
+      "minutesPerGame": 32.903333333333336,
+      "totals": {
+        "games": 240,
+        "passes": 3505,
+        "releasePotential": 3473,
+        "releaseUsesAssist": 3473,
+        "releaseRejectsAssist": 0,
+        "creditedAssists": 1432,
+        "playerAst": 1432,
+        "minutes": 7896.80000000003
+      },
+      "receivers": [
+        {
+          "playerId": -2003,
+          "passes": 374,
+          "releases": 384,
+          "usesAssist": 384,
+          "rejectsAssist": 0,
+          "creditedAssists": 162
+        },
+        {
+          "playerId": -1002,
+          "passes": 855,
+          "releases": 844,
+          "usesAssist": 844,
+          "rejectsAssist": 0,
+          "creditedAssists": 337
+        },
+        {
+          "playerId": -1000,
+          "passes": 953,
+          "releases": 944,
+          "usesAssist": 944,
+          "rejectsAssist": 0,
+          "creditedAssists": 386
+        },
+        {
+          "playerId": -1003,
+          "passes": 509,
+          "releases": 497,
+          "usesAssist": 497,
+          "rejectsAssist": 0,
+          "creditedAssists": 206
+        },
+        {
+          "playerId": -1001,
+          "passes": 481,
+          "releases": 476,
+          "usesAssist": 476,
+          "rejectsAssist": 0,
+          "creditedAssists": 202
+        },
+        {
+          "playerId": -2001,
+          "passes": 333,
+          "releases": 328,
+          "usesAssist": 328,
+          "rejectsAssist": 0,
+          "creditedAssists": 139
+        }
+      ]
+    }
+  ],
+  "hashes": {
+    "reports/player-impact-v30/engine.mjs": "071c13d9fff758094ee3ea0850e6692226ef8bb9ab462b89412a11cc7be493be",
+    "reports/player-impact-v30/ovr-input.mjs": "e22fb23985f588eef94c2d427ce075fb15af41b057b6a822c72a10bebf5b5d99",
+    "reports/player-impact-v30/ovr-probe-checkpoint.json": "c8f9bded9605713c468e67b28867e4f1510b3a6b4bbe9d51a901ee43f267d323",
+    "reports/player-impact-v30/ovr-probe-protocol.json": "ad15898fceac76b0d3c9884364b5762fe17ab5aab7f90224d4e24d1529b214bd",
+    "reports/player-impact-v37/engine.mjs": "bbce18cac3563c76a8e4eebab2a6e7c5c8129700f260d349056de747a4803a35",
+    "reports/player-impact-v37/ovr-input.mjs": "e7dbd7f92269a9866815e16b355fbb2e405a4595d1fb508f8f88f73d595ac628",
+    "reports/player-impact-v37/ovr-probe-checkpoint.json": "6f754c8b8a5b1b14d979e3430e0a6299edb0a9846eb3a13269d6b1d62e0b7999",
+    "reports/player-impact-v37/ovr-probe-protocol.json": "bec5b43cb5916044a2d9a81a9d00cee827bfe5949462276446fcb33b198c7580",
+    "reports/player-impact-diagnostics/pass-release-v37/audit.mjs": "96a01bc1479c40dccee71c32b1f0de273c9264377180748c566896a54499f922"
+  }
+}

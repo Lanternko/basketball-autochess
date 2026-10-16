@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "sampledSourceAndMean70Matrices": 158,
+  "maxAbsoluteDifferenceToIndependentDualSolve": 7.718048422589163e-12,
+  "scope": "Independent masked transport solve, positive own support, unchanged passer rows and conserved finisher columns. Source non-strict cases, engine, full-game and OVR still unimplemented/unverified.",
+  "hashes": {
+    "reports/player-impact-diagnostics/pass-row-feasibility-v36/prototype-verification.json": "baaf41a93a75fd23de309f305330992ec462c6602373e9318d894393f7f96251",
+    "reports/player-impact-diagnostics/pass-row-feasibility-v36/source-prototype-verification.json": "e053e7379cd3668ad4a228202daef3915f2bcac4019180dfde7471bbdbb52d9a",
+    "reports/player-impact-diagnostics/pass-row-feasibility-v36/verify-projection.py": "2a80643e3ef9a50ef5224a1442c16021c80d29bae1efe6a139ef3899b64f275e"
+  }
+}

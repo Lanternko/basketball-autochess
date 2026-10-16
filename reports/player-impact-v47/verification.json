@@ -1,0 +1,35 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "season": "2022-23",
+      "entries": 609,
+      "onlyFTDescriptorChanged": true
+    },
+    {
+      "season": "2023-24",
+      "entries": 657,
+      "onlyFTDescriptorChanged": true
+    },
+    {
+      "season": "2024-25",
+      "entries": 654,
+      "onlyFTDescriptorChanged": true
+    },
+    {
+      "season": "2025-26",
+      "entries": 661,
+      "onlyFTDescriptorChanged": true
+    }
+  ],
+  "legacyNoDescriptorGameParity": 10,
+  "candidateObserverGameParity": 10,
+  "sourceAttributeDeltaPreserved": true,
+  "evLedgerPassed": true,
+  "fineConservationGames": 3,
+  "curry2025": {
+    "oldFTProbability": 0.8793942555052092,
+    "newFTProbability": 0.9114402954499353,
+    "actualFTProbability": 0.9230769230769231
+  }
+}

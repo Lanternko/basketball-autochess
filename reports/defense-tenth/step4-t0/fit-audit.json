@@ -1,0 +1,32 @@
+[
+  {
+    "season": "2022-23",
+    "strictGames": 1079,
+    "fittedGames": 1079,
+    "finite": true,
+    "source": "reports/defense-tenth/step4-t0/2022-23/factors/engine-signals.json",
+    "sha256": "5ec45044a5cd066db69b6047941b26dba727f88943fb0bd0d03858804591c582",
+    "heldoutAssessment": "Unavailable: full-season fitting has no holdout. Legacy estimator offline-model.json empty-test zeros/NaN are not accuracy results.",
+    "legacyFixedStrictMetadata": "offline-model strictGames has stale hardcoded1188; config and actual fitted training IDs are authoritative"
+  },
+  {
+    "season": "2023-24",
+    "strictGames": 1063,
+    "fittedGames": 1063,
+    "finite": true,
+    "source": "reports/defense-tenth/step4-t0/2023-24/factors/engine-signals.json",
+    "sha256": "fd53912411e8c976432e1fb9f9d8c990b708f9b00c5fe60ad7d3563e0404bd92",
+    "heldoutAssessment": "Unavailable: full-season fitting has no holdout. Legacy estimator offline-model.json empty-test zeros/NaN are not accuracy results.",
+    "legacyFixedStrictMetadata": "validation adapter corrected this metadata"
+  },
+  {
+    "season": "2024-25",
+    "strictGames": 1091,
+    "fittedGames": 1091,
+    "finite": true,
+    "source": "reports/defense-tenth/step4-t0/2024-25/factors/engine-signals.json",
+    "sha256": "b8a6e2e710cace23bead24c7c5712147356a1032eb921c68e5137e939235dade",
+    "heldoutAssessment": "Unavailable: full-season fitting has no holdout. Legacy estimator offline-model.json empty-test zeros/NaN are not accuracy results.",
+    "legacyFixedStrictMetadata": "offline-model strictGames has stale hardcoded1188; config and actual fitted training IDs are authoritative"
+  }
+]

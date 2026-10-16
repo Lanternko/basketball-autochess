@@ -1,0 +1,14 @@
+import fs from 'node:fs';
+import {read} from './defense_io.js';
+import {loadRuns} from './run_defense_fourth.js';
+import {mean} from '../src/statistical_summary.js';
+const root='reports/defense-fourth',s=read(root+'/final-selection.json'),truth=read('reports/defense-b1/variance-sources.json').real;
+const a=loadRuns(s.allSignals).map(r=>r.analysis),b=loadRuns('rotation-signals').map(r=>r.analysis);
+const avg=(rows,k)=>mean(rows.map(r=>r[k])),keys=Object.keys(truth.scoreBuckets);
+const curveError=rows=>mean(keys.map(k=>Math.abs(mean(rows.map(r=>r.scoreBuckets[k].starterShare))-truth.scoreBuckets[k].starterShare)));
+const gates={starterCurveMeanAbsoluteError:curveError(b)<curveError(a),residualSD:Math.abs(avg(b,'marginResidualSD')-truth.marginResidualSD)<Math.abs(avg(a,'marginResidualSD')-truth.marginResidualSD),scoreCovariance:Math.abs(avg(b,'scoreCovariance')-truth.scoreCovariance)<Math.abs(avg(a,'scoreCovariance')-truth.scoreCovariance),q3Q4:Math.abs(avg(b,'q3Q4Correlation')-truth.q3Q4Correlation)<Math.abs(avg(a,'q3Q4Correlation')-truth.q3Q4Correlation),netRMSE:s.rotationDelta.netRMSE.ci95[0]<=0};
+const check={scope:'User3c mechanism validation, in addition to primary accuracy non-regression. No new parameter tuning. Directional point estimates, not proof of equivalence for starter curves. All20same seeds, regulation1227 fixtures.',gates,without:{curveMAE:curveError(a),residualSD:avg(a,'marginResidualSD'),scoreCovariance:avg(a,'scoreCovariance'),q3Q4:avg(a,'q3Q4Correlation')},with:{curveMAE:curveError(b),residualSD:avg(b,'marginResidualSD'),scoreCovariance:avg(b,'scoreCovariance'),q3Q4:avg(b,'q3Q4Correlation')},truth:{residualSD:truth.marginResidualSD,scoreCovariance:truth.scoreCovariance,q3Q4:truth.q3Q4Correlation}};
+fs.writeFileSync(root+'/rotation-validation.json',JSON.stringify(check,null,2)+'\n');
+const accepted=s.rotationAccepted&&Object.values(gates).every(Boolean);
+fs.writeFileSync(root+'/final-selection.json',JSON.stringify({...s,provisionalFinalLabel:s.finalLabel,rotationAccepted:accepted,rotationValidation:check,finalLabel:accepted?'rotation-signals':s.allSignals,finalOptions:accepted?s.finalOptions:s.signalOptions},null,2)+'\n');
+console.log(JSON.stringify(check,null,2));

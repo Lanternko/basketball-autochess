@@ -1,0 +1,139 @@
+{
+  "season": "2025-26",
+  "counts": {
+    "fga": 211583,
+    "shootingFouls": 24750,
+    "tov": 34437,
+    "defensiveNonshootingPersonalFouls": 18855,
+    "technicalFouls": 1273
+  },
+  "shootingAndFgaMayOverlap": true,
+  "design": "Source contact-frequency diagnostic only. Denominator FGA+TOV+shooting foul records includes overlap on and-one; not a validated terminal count. Personal fouls by non-possession team and non-shooting descriptor counted as defensive nonshooting contacts. No model option changed.",
+  "roughNonshootingContactRate": 0.0651014242555028,
+  "ftKinds": {
+    "fga": 211583,
+    "shooting": 44720,
+    "fta": 55805,
+    "nonshooting": 9893,
+    "technical": 1050,
+    "unresolved": 142
+  },
+  "foulSubtypes": [
+    {
+      "subType": "personal",
+      "descriptor": "shooting",
+      "count": 24750
+    },
+    {
+      "subType": "personal",
+      "descriptor": "",
+      "count": 14276
+    },
+    {
+      "subType": "personal",
+      "descriptor": "loose ball",
+      "count": 3372
+    },
+    {
+      "subType": "offensive",
+      "descriptor": "",
+      "count": 2398
+    },
+    {
+      "subType": "personal",
+      "descriptor": "take",
+      "count": 773
+    },
+    {
+      "subType": "offensive",
+      "descriptor": "charge",
+      "count": 718
+    },
+    {
+      "subType": "technical",
+      "descriptor": "",
+      "count": 673
+    },
+    {
+      "subType": "offensive",
+      "descriptor": "off-the-ball",
+      "count": 349
+    },
+    {
+      "subType": "technical",
+      "descriptor": "defensive-3-second",
+      "count": 305
+    },
+    {
+      "subType": "personal",
+      "descriptor": "flagrant-type-1",
+      "count": 228
+    },
+    {
+      "subType": "technical",
+      "descriptor": "double",
+      "count": 214
+    },
+    {
+      "subType": "personal",
+      "descriptor": "transition take",
+      "count": 111
+    },
+    {
+      "subType": "personal",
+      "descriptor": "away-from-play",
+      "count": 110
+    },
+    {
+      "subType": "personal",
+      "descriptor": "double",
+      "count": 58
+    },
+    {
+      "subType": "technical",
+      "descriptor": "delay",
+      "count": 42
+    },
+    {
+      "subType": "technical",
+      "descriptor": "flopping",
+      "count": 22
+    },
+    {
+      "subType": "personal",
+      "descriptor": "clear-path",
+      "count": 18
+    },
+    {
+      "subType": "personal",
+      "descriptor": "flagrant-type-2",
+      "count": 9
+    },
+    {
+      "subType": "technical",
+      "descriptor": "rim-hanging",
+      "count": 7
+    },
+    {
+      "subType": "technical",
+      "descriptor": "non-unsportsmanlike",
+      "count": 4
+    },
+    {
+      "subType": "technical",
+      "descriptor": "excess timeout",
+      "count": 4
+    },
+    {
+      "subType": "technical",
+      "descriptor": "too-many-players",
+      "count": 1
+    },
+    {
+      "subType": "technical",
+      "descriptor": "bench",
+      "count": 1
+    }
+  ],
+  "sourceFTKindsSHA256": "ba490d8b9926a90103886f70451c2aa24a8038242e6612f097c18bda5e42b8a1"
+}

@@ -1,0 +1,140 @@
+{
+  "perSeason": {
+    "2022-23": {
+      "games": 1230,
+      "counts": {
+        "anchors": 25069,
+        "eligible": 24298,
+        "clock": 174,
+        "eligibleClock": 170,
+        "compatible": 33,
+        "negative": 0,
+        "under3": 109,
+        "from3to13": 28,
+        "from13to14": 16,
+        "from14to15": 11,
+        "over15": 6,
+        "shortPeriodClock": 4
+      },
+      "eligibleClockRate": 0.006996460614042308,
+      "compatibleShare": 0.19411764705882353,
+      "compatible95Franchise": [
+        0.13698426288323548,
+        0.25308641975308643
+      ],
+      "rawElapsedQuantiles": [
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        11.875,
+        13.819999999999997,
+        21.0
+      ]
+    },
+    "2023-24": {
+      "games": 1230,
+      "counts": {
+        "anchors": 25447,
+        "eligible": 24715,
+        "clock": 171,
+        "eligibleClock": 158,
+        "compatible": 23,
+        "negative": 0,
+        "under3": 106,
+        "from3to13": 29,
+        "from13to14": 10,
+        "from14to15": 8,
+        "over15": 5,
+        "shortPeriodClock": 13
+      },
+      "eligibleClockRate": 0.006392878818531256,
+      "compatibleShare": 0.14556962025316456,
+      "compatible95Franchise": [
+        0.08383233532934131,
+        0.21476510067114093
+      ],
+      "rawElapsedQuantiles": [
+        0.0,
+        0.0,
+        0.0,
+        0.40000000000000036,
+        5.0,
+        13.0,
+        23.0
+      ]
+    },
+    "2024-25": {
+      "games": 1229,
+      "counts": {
+        "anchors": 26718,
+        "eligible": 25948,
+        "clock": 236,
+        "eligibleClock": 222,
+        "compatible": 27,
+        "negative": 0,
+        "under3": 164,
+        "from3to13": 31,
+        "from13to14": 10,
+        "from14to15": 13,
+        "over15": 4,
+        "shortPeriodClock": 14
+      },
+      "eligibleClockRate": 0.008555572683829197,
+      "compatibleShare": 0.12162162162162163,
+      "compatible95Franchise": [
+        0.07894736842105263,
+        0.1725922934933084
+      ],
+      "rawElapsedQuantiles": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        3.0,
+        13.0,
+        16.400000000000002
+      ]
+    },
+    "2025-26": {
+      "games": 1227,
+      "counts": {
+        "anchors": 27266,
+        "eligible": 26527,
+        "clock": 184,
+        "eligibleClock": 179,
+        "compatible": 35,
+        "negative": 0,
+        "under3": 117,
+        "from3to13": 27,
+        "from13to14": 11,
+        "from14to15": 22,
+        "over15": 2,
+        "shortPeriodClock": 5
+      },
+      "eligibleClockRate": 0.006747841821540318,
+      "compatibleShare": 0.19553072625698323,
+      "compatible95Franchise": [
+        0.13846153846153847,
+        0.25683441707116006
+      ],
+      "rawElapsedQuantiles": [
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        12.0,
+        14.0,
+        18.0
+      ]
+    }
+  },
+  "equalSeasonCompatibleShare": 0.16420990379764822,
+  "equalSeasonCompatible95Franchise": [
+    0.13577676471320194,
+    0.19513617061885555
+  ],
+  "registered95pctGuardPassed": false,
+  "candidateAllowed": false,
+  "note": "elapsed >=13sec is only a necessary plausibility check for fresh14 reset, not proof of rim contact or no intervening reset; all individual FG OREB anchors, no outcome-based exclusion from denominator. No new simulation or rate fitting before this gate."
+}

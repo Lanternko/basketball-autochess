@@ -1,0 +1,728 @@
+{
+  "passed": true,
+  "jointFits": 144,
+  "rawFeatureAndGradientIndependentlyRebuilt": true,
+  "sourceHashesPassed": true,
+  "checks": [
+    {
+      "file": "reports\\player-impact-v46\\fits\\2022-23-common0.025-contrast0-fold0.json",
+      "maxGradient": 1.5482072512895684e-08,
+      "onCountAndNllPassed": true
+    },
+    {
+      "file": "reports\\player-impact-v46\\fits\\2022-23-common0.025-contrast0-fold1.json",
+      "maxGradient": 3.8138953328825664e-08,
+      "onCountAndNllPassed": true
+    },
+    {
+      "file": "reports\\player-impact-v46\\fits\\2022-23-common0.025-contrast0-fold2.json",
+      "maxGradient": 2.3697218409779452e-08,
+      "onCountAndNllPassed": true
+    },
+    {
+      "file": "reports\\player-impact-v46\\fits\\2022-23-common0.025-contrast0-fold3.json",
+      "maxGradient": 4.431867495213737e-08,
+      "onCountAndNllPassed": true
+    },
+    {
+      "file": "reports\\player-impact-v46\\fits\\2022-23-common0.025-contrast0-fold4.json",
+      "maxGradient": 2.750513772298291e-08,
+      "onCountAndNllPassed": true
+    },
+    {
+      "file": "reports\\player-impact-v46\\fits\\2022-23-common0.025-contrast0.025-fold0.json",
+      "maxGradient": 1.77138801404908e-08,
+      "onCountAndNllPassed": true
+    },
+    {
+      "file": "reports\\player-impact-v46\\fits\\2022-23-common0.025-contrast0.025-fold1.json",
+      "maxGradient": 4.2110237075121404e-08,
+      "onCountAndNllPassed": true
+    },
+    {
+      "file": "reports\\player-impact-v46\\fits\\2022-23-common0.025-contrast0.025-fold2.json",
+      "maxGradient": 2.7603100249962154e-08,
+      "onCountAndNllPassed": true
+    },
+    {
+      "file": "reports\\player-impact-v46\\fits\\2022-23-common0.025-contrast0.025-fold3.json",
+      "maxGradient": 4.7521290014174156e-08,
+      "onCountAndNllPassed": true
+    },
+    {
+      "file": "reports\\player-impact-v46\\fits\\2022-23-common0.025-contrast0.025-fold4.json",
+      "maxGradient": 3.0784399029926135e-08,
+      "onCountAndNllPassed": true
+    },
+    {
+      "file": "reports\\player-impact-v46\\fits\\2022-23-common0.025-contrast0.05-fold0.json",
+      "maxGradient": 2.8900878135118546e-08,
+      "onCountAndNllPassed": true
+    },
+    {
+      "file": "reports\\player-impact-v46\\fits\\2022-23-common0.025-contrast0.05-fold1.json",
+      "maxGradient": 6.512115646728489e-08,
+      "onCountAndNllPassed": true
+    },
+    {
+      "file": "reports\\player-impact-v46\\fits\\2022-23-common0.025-contrast0.05-fold2.json",
+      "maxGradient": 4.312114754156937e-08,
+      "onCountAndNllPassed": true
+    },
+    {
+      "file": "reports\\player-impact-v46\\fits\\2022-23-common0.025-contrast0.05-fold3.json",
+      "maxGradient": 6.68044108920185e-08,
+      "onCountAndNllPassed": true
+    },
+    {
+      "file": "reports\\player-impact-v46\\fits\\2022-23-common0.025-contrast0.05-fold4.json",
+      "maxGradient": 4.76695447559905e-08,
+      "onCountAndNllPassed": true
+    },
+    {
+      "file": "reports\\player-impact-v46\\fits\\2022-23-common0.05-contrast0-fold0.json",
+      "maxGradient": 2.397614196070208e-08,
+      "onCountAndNllPassed": true
+    },
+    {
+      "file": "reports\\player-impact-v46\\fits\\2022-23-common0.05-contrast0-fold1.json",
+      "maxGradient": 6.036779431894956e-08,
+      "onCountAndNllPassed": true
+    },
+    {
+      "file": "reports\\player-impact-v46\\fits\\2022-23-common0.05-contrast0-fold2.json",
+      "maxGradient": 3.783416957503505e-08,
+      "onCountAndNllPassed": true
+    },
+    {
+      "file": "reports\\player-impact-v46\\fits\\2022-23-common0.05-contrast0-fold3.json",
+      "maxGradient": 6.596116719492784e-08,
+      "onCountAndNllPassed": true
+    },
+    {
+      "file": "reports\\player-impact-v46\\fits\\2022-23-common0.05-contrast0-fold4.json",
+      "maxGradient": 4.226586725053494e-08,
+      "onCountAndNllPassed": true
+    },
+    {
+      "file": "reports\\player-impact-v46\\fits\\2022-23-common0.05-contrast0.025-fold0.json",
+      "maxGradient": 2.7096447752228414e-08,
+      "onCountAndNllPassed": true
+    },
+    {
+      "file": "reports\\player-impact-v46\\fits\\2022-23-common0.05-contrast0.025-fold1.json",
+      "maxGradient": 6.592114942804983e-08,
+      "onCountAndNllPassed": true
+    },
+    {
+      "file": "reports\\player-impact-v46\\fits\\2022-23-common0.05-contrast0.025-fold2.json",
+      "maxGradient": 4.252113683378411e-08,
+      "onCountAndNllPassed": true
+    },
+    {
+      "file": "reports\\player-impact-v46\\fits\\2022-23-common0.05-contrast0.025-fold3.json",
+      "maxGradient": 6.865602841799046e-08,
+      "onCountAndNllPassed": true
+    },
+    {
+      "file": "reports\\player-impact-v46\\fits\\2022-23-common0.05-contrast0.025-fold4.json",
+      "maxGradient": 4.772620343374001e-08,
+      "onCountAndNllPassed": true
+    },
+    {
+      "file": "reports\\player-impact-v46\\fits\\2022-23-common0.05-contrast0.05-fold0.json",
+      "maxGradient": 4.328526870267524e-08,
+      "onCountAndNllPassed": true
+    },
+    {
+      "file": "reports\\player-impact-v46\\fits\\2022-23-common0.05-contrast0.05-fold1.json",
+      "maxGradient": 1.0532874128443837e-07,
+      "onCountAndNllPassed": true
+    },
+    {
+      "file": "reports\\player-impact-v46\\fits\\2022-23-common0.05-contrast0.05-fold2.json",
+      "maxGradient": 6.4159166868194e-08,
+      "onCountAndNllPassed": true
+    },
+    {
+      "file": "reports\\player-impact-v46\\fits\\2022-23-common0.05-contrast0.05-fold3.json",
+      "maxGradient": 9.400086753430514e-08,
+      "onCountAndNllPassed": true
+    },
+    {
+      "file": "reports\\player-impact-v46\\fits\\2022-23-common0.05-contrast0.05-fold4.json",
+      "maxGradient": 7.890113806752197e-08,
+      "onCountAndNllPassed": true
+    },
+    {
+      "file": "reports\\player-impact-v46\\fits\\2022-23-common0.1-contrast0-fold0.json",
+      "maxGradient": 7.91372940511792e-08,
+      "onCountAndNllPassed": true
+    },
+    {
+      "file": "reports\\player-impact-v46\\fits\\2022-23-common0.1-contrast0-fold1.json",
+      "maxGradient": 1.9527490024984218e-07,
+      "onCountAndNllPassed": true
+    },
+    {
+      "file": "reports\\player-impact-v46\\fits\\2022-23-common0.1-contrast0-fold2.json",
+      "maxGradient": 1.1573239788731371e-07,
+      "onCountAndNllPassed": true
+    },
+    {
+      "file": "reports\\player-impact-v46\\fits\\2022-23-common0.1-contrast0-fold3.json",
+      "maxGradient": 1.6248916523409207e-07,
+      "onCountAndNllPassed": true
+    },
+    {
+      "file": "reports\\player-impact-v46\\fits\\2022-23-common0.1-contrast0-fold4.json",
+      "maxGradient": 1.2111880209886294e-07,
+      "onCountAndNllPassed": true
+    },
+    {
+      "file": "reports\\player-impact-v46\\fits\\2022-23-common0.1-contrast0.025-fold0.json",
+      "maxGradient": 8.687779740057522e-08,
+      "onCountAndNllPassed": true
+    },
+    {
+      "file": "reports\\player-impact-v46\\fits\\2022-23-common0.1-contrast0.025-fold1.json",
+      "maxGradient": 2.0871166483971137e-07,
+      "onCountAndNllPassed": true
+    },
+    {
+      "file": "reports\\player-impact-v46\\fits\\2022-23-common0.1-contrast0.025-fold2.json",
+      "maxGradient": 1.246501568630265e-07,
+      "onCountAndNllPassed": true
+    },
+    {
+      "file": "reports\\player-impact-v46\\fits\\2022-23-common0.1-contrast0.025-fold3.json",
+      "maxGradient": 1.6578448480686347e-07,
+      "onCountAndNllPassed": true
+    },
+    {
+      "file": "reports\\player-impact-v46\\fits\\2022-23-common0.1-contrast0.025-fold4.json",
+      "maxGradient": 1.3653737696017743e-07,
+      "onCountAndNllPassed": true
+    },
+    {
+      "file": "reports\\player-impact-v46\\fits\\2022-23-common0.1-contrast0.05-fold0.json",
+      "maxGradient": 1.290325144509552e-07,
+      "onCountAndNllPassed": true
+    },
+    {
+      "file": "reports\\player-impact-v46\\fits\\2022-23-common0.1-contrast0.05-fold1.json",
+      "maxGradient": 3.2197239718811943e-07,
+      "onCountAndNllPassed": true
+    },
+    {
+      "file": "reports\\player-impact-v46\\fits\\2022-23-common0.1-contrast0.05-fold2.json",
+      "maxGradient": 1.802616793611378e-07,
+      "onCountAndNllPassed": true
+    },
+    {
+      "file": "reports\\player-impact-v46\\fits\\2022-23-common0.1-contrast0.05-fold3.json",
+      "maxGradient": 2.199321684770439e-07,
+      "onCountAndNllPassed": true
+    },
+    {
+      "file": "reports\\player-impact-v46\\fits\\2022-23-common0.1-contrast0.05-fold4.json",
+      "maxGradient": 2.2481549777353393e-07,
+      "onCountAndNllPassed": true
+    },
+    {
+      "file": "reports\\player-impact-v46\\fits\\2022-23-common0.1-contrast0.05-foldNone.json",
+      "maxGradient": 2.2972656665842806e-07,
+      "onCountAndNllPassed": true
+    },
+    {
+      "file": "reports\\player-impact-v46\\fits\\2023-24-common0.025-contrast0-fold0.json",
+      "maxGradient": 3.72551056671e-08,
+      "onCountAndNllPassed": true
+    },
+    {
+      "file": "reports\\player-impact-v46\\fits\\2023-24-common0.025-contrast0-fold1.json",
+      "maxGradient": 1.7427488785415335e-08,
+      "onCountAndNllPassed": true
+    },
+    {
+      "file": "reports\\player-impact-v46\\fits\\2023-24-common0.025-contrast0-fold2.json",
+      "maxGradient": 3.345213883676479e-08,
+      "onCountAndNllPassed": true
+    },
+    {
+      "file": "reports\\player-impact-v46\\fits\\2023-24-common0.025-contrast0-fold3.json",
+      "maxGradient": 1.8051629524507007e-08,
+      "onCountAndNllPassed": true
+    },
+    {
+      "file": "reports\\player-impact-v46\\fits\\2023-24-common0.025-contrast0-fold4.json",
+      "maxGradient": 2.4692468514331267e-08,
+      "onCountAndNllPassed": true
+    },
+    {
+      "file": "reports\\player-impact-v46\\fits\\2023-24-common0.025-contrast0.025-fold0.json",
+      "maxGradient": 4.502915373905125e-08,
+      "onCountAndNllPassed": true
+    },
+    {
+      "file": "reports\\player-impact-v46\\fits\\2023-24-common0.025-contrast0.025-fold1.json",
+      "maxGradient": 2.2152583767365286e-08,
+      "onCountAndNllPassed": true
+    },
+    {
+      "file": "reports\\player-impact-v46\\fits\\2023-24-common0.025-contrast0.025-fold2.json",
+      "maxGradient": 4.1365805003579226e-08,
+      "onCountAndNllPassed": true
+    },
+    {
+      "file": "reports\\player-impact-v46\\fits\\2023-24-common0.025-contrast0.025-fold3.json",
+      "maxGradient": 2.3926723713429965e-08,
+      "onCountAndNllPassed": true
+    },
+    {
+      "file": "reports\\player-impact-v46\\fits\\2023-24-common0.025-contrast0.025-fold4.json",
+      "maxGradient": 2.917104779953661e-08,
+      "onCountAndNllPassed": true
+    },
+    {
+      "file": "reports\\player-impact-v46\\fits\\2023-24-common0.025-contrast0.05-fold0.json",
+      "maxGradient": 7.422899273024086e-08,
+      "onCountAndNllPassed": true
+    },
+    {
+      "file": "reports\\player-impact-v46\\fits\\2023-24-common0.025-contrast0.05-fold1.json",
+      "maxGradient": 4.039307555103733e-08,
+      "onCountAndNllPassed": true
+    },
+    {
+      "file": "reports\\player-impact-v46\\fits\\2023-24-common0.025-contrast0.05-fold2.json",
+      "maxGradient": 7.49255022469697e-08,
+      "onCountAndNllPassed": true
+    },
+    {
+      "file": "reports\\player-impact-v46\\fits\\2023-24-common0.025-contrast0.05-fold3.json",
+      "maxGradient": 4.5675719206883514e-08,
+      "onCountAndNllPassed": true
+    },
+    {
+      "file": "reports\\player-impact-v46\\fits\\2023-24-common0.025-contrast0.05-fold4.json",
+      "maxGradient": 4.615368709437462e-08,
+      "onCountAndNllPassed": true
+    },
+    {
+      "file": "reports\\player-impact-v46\\fits\\2023-24-common0.05-contrast0-fold0.json",
+      "maxGradient": 6.31926404537353e-08,
+      "onCountAndNllPassed": true
+    },
+    {
+      "file": "reports\\player-impact-v46\\fits\\2023-24-common0.05-contrast0-fold1.json",
+      "maxGradient": 3.030942963277994e-08,
+      "onCountAndNllPassed": true
+    },
+    {
+      "file": "reports\\player-impact-v46\\fits\\2023-24-common0.05-contrast0-fold2.json",
+      "maxGradient": 4.879255399714566e-08,
+      "onCountAndNllPassed": true
+    },
+    {
+      "file": "reports\\player-impact-v46\\fits\\2023-24-common0.05-contrast0-fold3.json",
+      "maxGradient": 3.1439107317510206e-08,
+      "onCountAndNllPassed": true
+    },
+    {
+      "file": "reports\\player-impact-v46\\fits\\2023-24-common0.05-contrast0-fold4.json",
+      "maxGradient": 3.7035846389699145e-08,
+      "onCountAndNllPassed": true
+    },
+    {
+      "file": "reports\\player-impact-v46\\fits\\2023-24-common0.05-contrast0.025-fold0.json",
+      "maxGradient": 8.413498164827615e-08,
+      "onCountAndNllPassed": true
+    },
+    {
+      "file": "reports\\player-impact-v46\\fits\\2023-24-common0.05-contrast0.025-fold1.json",
+      "maxGradient": 4.2171635072918434e-08,
+      "onCountAndNllPassed": true
+    },
+    {
+      "file": "reports\\player-impact-v46\\fits\\2023-24-common0.05-contrast0.025-fold2.json",
+      "maxGradient": 6.696359378111083e-08,
+      "onCountAndNllPassed": true
+    },
+    {
+      "file": "reports\\player-impact-v46\\fits\\2023-24-common0.05-contrast0.025-fold3.json",
+      "maxGradient": 4.636080319642133e-08,
+      "onCountAndNllPassed": true
+    },
+    {
+      "file": "reports\\player-impact-v46\\fits\\2023-24-common0.05-contrast0.025-fold4.json",
+      "maxGradient": 4.853393420489738e-08,
+      "onCountAndNllPassed": true
+    },
+    {
+      "file": "reports\\player-impact-v46\\fits\\2023-24-common0.05-contrast0.05-fold0.json",
+      "maxGradient": 1.519040360165036e-07,
+      "onCountAndNllPassed": true
+    },
+    {
+      "file": "reports\\player-impact-v46\\fits\\2023-24-common0.05-contrast0.05-fold1.json",
+      "maxGradient": 8.49630268362489e-08,
+      "onCountAndNllPassed": true
+    },
+    {
+      "file": "reports\\player-impact-v46\\fits\\2023-24-common0.05-contrast0.05-fold2.json",
+      "maxGradient": 1.390199813045001e-07,
+      "onCountAndNllPassed": true
+    },
+    {
+      "file": "reports\\player-impact-v46\\fits\\2023-24-common0.05-contrast0.05-fold3.json",
+      "maxGradient": 1.0089853219596989e-07,
+      "onCountAndNllPassed": true
+    },
+    {
+      "file": "reports\\player-impact-v46\\fits\\2023-24-common0.05-contrast0.05-fold4.json",
+      "maxGradient": 8.356910541351681e-08,
+      "onCountAndNllPassed": true
+    },
+    {
+      "file": "reports\\player-impact-v46\\fits\\2023-24-common0.1-contrast0-fold0.json",
+      "maxGradient": 1.8906548149288938e-07,
+      "onCountAndNllPassed": true
+    },
+    {
+      "file": "reports\\player-impact-v46\\fits\\2023-24-common0.1-contrast0-fold1.json",
+      "maxGradient": 1.0795290705800653e-07,
+      "onCountAndNllPassed": true
+    },
+    {
+      "file": "reports\\player-impact-v46\\fits\\2023-24-common0.1-contrast0-fold2.json",
+      "maxGradient": 1.3023828415725802e-07,
+      "onCountAndNllPassed": true
+    },
+    {
+      "file": "reports\\player-impact-v46\\fits\\2023-24-common0.1-contrast0-fold3.json",
+      "maxGradient": 1.1118249432229277e-07,
+      "onCountAndNllPassed": true
+    },
+    {
+      "file": "reports\\player-impact-v46\\fits\\2023-24-common0.1-contrast0-fold4.json",
+      "maxGradient": 1.0490502688753622e-07,
+      "onCountAndNllPassed": true
+    },
+    {
+      "file": "reports\\player-impact-v46\\fits\\2023-24-common0.1-contrast0.025-fold0.json",
+      "maxGradient": 2.548795485779465e-07,
+      "onCountAndNllPassed": true
+    },
+    {
+      "file": "reports\\player-impact-v46\\fits\\2023-24-common0.1-contrast0.025-fold1.json",
+      "maxGradient": 1.4988665952841984e-07,
+      "onCountAndNllPassed": true
+    },
+    {
+      "file": "reports\\player-impact-v46\\fits\\2023-24-common0.1-contrast0.025-fold2.json",
+      "maxGradient": 1.8331568085727667e-07,
+      "onCountAndNllPassed": true
+    },
+    {
+      "file": "reports\\player-impact-v46\\fits\\2023-24-common0.1-contrast0.025-fold3.json",
+      "maxGradient": 1.6965051941042475e-07,
+      "onCountAndNllPassed": true
+    },
+    {
+      "file": "reports\\player-impact-v46\\fits\\2023-24-common0.1-contrast0.025-fold4.json",
+      "maxGradient": 1.403759455342879e-07,
+      "onCountAndNllPassed": true
+    },
+    {
+      "file": "reports\\player-impact-v46\\fits\\2023-24-common0.1-contrast0.05-fold0.json",
+      "maxGradient": 4.5488355837619565e-07,
+      "onCountAndNllPassed": true
+    },
+    {
+      "file": "reports\\player-impact-v46\\fits\\2023-24-common0.1-contrast0.05-fold1.json",
+      "maxGradient": 2.931628984015333e-07,
+      "onCountAndNllPassed": true
+    },
+    {
+      "file": "reports\\player-impact-v46\\fits\\2023-24-common0.1-contrast0.05-fold2.json",
+      "maxGradient": 3.757367004197931e-07,
+      "onCountAndNllPassed": true
+    },
+    {
+      "file": "reports\\player-impact-v46\\fits\\2023-24-common0.1-contrast0.05-fold3.json",
+      "maxGradient": 3.870952838269659e-07,
+      "onCountAndNllPassed": true
+    },
+    {
+      "file": "reports\\player-impact-v46\\fits\\2023-24-common0.1-contrast0.05-fold4.json",
+      "maxGradient": 2.396645726321367e-07,
+      "onCountAndNllPassed": true
+    },
+    {
+      "file": "reports\\player-impact-v46\\fits\\2023-24-common0.1-contrast0.05-foldNone.json",
+      "maxGradient": 4.068742569529604e-07,
+      "onCountAndNllPassed": true
+    },
+    {
+      "file": "reports\\player-impact-v46\\fits\\2024-25-common0.025-contrast0-fold0.json",
+      "maxGradient": 2.019329059521624e-08,
+      "onCountAndNllPassed": true
+    },
+    {
+      "file": "reports\\player-impact-v46\\fits\\2024-25-common0.025-contrast0-fold1.json",
+      "maxGradient": 1.2253487113866868e-08,
+      "onCountAndNllPassed": true
+    },
+    {
+      "file": "reports\\player-impact-v46\\fits\\2024-25-common0.025-contrast0-fold2.json",
+      "maxGradient": 1.2881315569757135e-08,
+      "onCountAndNllPassed": true
+    },
+    {
+      "file": "reports\\player-impact-v46\\fits\\2024-25-common0.025-contrast0-fold3.json",
+      "maxGradient": 7.170182669824499e-09,
+      "onCountAndNllPassed": true
+    },
+    {
+      "file": "reports\\player-impact-v46\\fits\\2024-25-common0.025-contrast0-fold4.json",
+      "maxGradient": 1.0248310644556113e-08,
+      "onCountAndNllPassed": true
+    },
+    {
+      "file": "reports\\player-impact-v46\\fits\\2024-25-common0.025-contrast0.025-fold0.json",
+      "maxGradient": 2.286255096350942e-08,
+      "onCountAndNllPassed": true
+    },
+    {
+      "file": "reports\\player-impact-v46\\fits\\2024-25-common0.025-contrast0.025-fold1.json",
+      "maxGradient": 1.3485934147183798e-08,
+      "onCountAndNllPassed": true
+    },
+    {
+      "file": "reports\\player-impact-v46\\fits\\2024-25-common0.025-contrast0.025-fold2.json",
+      "maxGradient": 1.501268798165256e-08,
+      "onCountAndNllPassed": true
+    },
+    {
+      "file": "reports\\player-impact-v46\\fits\\2024-25-common0.025-contrast0.025-fold3.json",
+      "maxGradient": 8.020450081858144e-09,
+      "onCountAndNllPassed": true
+    },
+    {
+      "file": "reports\\player-impact-v46\\fits\\2024-25-common0.025-contrast0.025-fold4.json",
+      "maxGradient": 1.2708795793514582e-08,
+      "onCountAndNllPassed": true
+    },
+    {
+      "file": "reports\\player-impact-v46\\fits\\2024-25-common0.025-contrast0.05-fold0.json",
+      "maxGradient": 3.425639505394429e-08,
+      "onCountAndNllPassed": true
+    },
+    {
+      "file": "reports\\player-impact-v46\\fits\\2024-25-common0.025-contrast0.05-fold1.json",
+      "maxGradient": 2.144884092558641e-08,
+      "onCountAndNllPassed": true
+    },
+    {
+      "file": "reports\\player-impact-v46\\fits\\2024-25-common0.025-contrast0.05-fold2.json",
+      "maxGradient": 2.569388612982948e-08,
+      "onCountAndNllPassed": true
+    },
+    {
+      "file": "reports\\player-impact-v46\\fits\\2024-25-common0.025-contrast0.05-fold3.json",
+      "maxGradient": 1.3494716455397793e-08,
+      "onCountAndNllPassed": true
+    },
+    {
+      "file": "reports\\player-impact-v46\\fits\\2024-25-common0.025-contrast0.05-fold4.json",
+      "maxGradient": 2.3170642293735e-08,
+      "onCountAndNllPassed": true
+    },
+    {
+      "file": "reports\\player-impact-v46\\fits\\2024-25-common0.05-contrast0-fold0.json",
+      "maxGradient": 3.40257457764892e-08,
+      "onCountAndNllPassed": true
+    },
+    {
+      "file": "reports\\player-impact-v46\\fits\\2024-25-common0.05-contrast0-fold1.json",
+      "maxGradient": 2.503908369533292e-08,
+      "onCountAndNllPassed": true
+    },
+    {
+      "file": "reports\\player-impact-v46\\fits\\2024-25-common0.05-contrast0-fold2.json",
+      "maxGradient": 2.285061739826233e-08,
+      "onCountAndNllPassed": true
+    },
+    {
+      "file": "reports\\player-impact-v46\\fits\\2024-25-common0.05-contrast0-fold3.json",
+      "maxGradient": 1.4220695732092281e-08,
+      "onCountAndNllPassed": true
+    },
+    {
+      "file": "reports\\player-impact-v46\\fits\\2024-25-common0.05-contrast0-fold4.json",
+      "maxGradient": 2.0396864641725188e-08,
+      "onCountAndNllPassed": true
+    },
+    {
+      "file": "reports\\player-impact-v46\\fits\\2024-25-common0.05-contrast0.025-fold0.json",
+      "maxGradient": 3.899694434039702e-08,
+      "onCountAndNllPassed": true
+    },
+    {
+      "file": "reports\\player-impact-v46\\fits\\2024-25-common0.05-contrast0.025-fold1.json",
+      "maxGradient": 2.6923920870558504e-08,
+      "onCountAndNllPassed": true
+    },
+    {
+      "file": "reports\\player-impact-v46\\fits\\2024-25-common0.05-contrast0.025-fold2.json",
+      "maxGradient": 2.720181413451428e-08,
+      "onCountAndNllPassed": true
+    },
+    {
+      "file": "reports\\player-impact-v46\\fits\\2024-25-common0.05-contrast0.025-fold3.json",
+      "maxGradient": 1.5771494332739167e-08,
+      "onCountAndNllPassed": true
+    },
+    {
+      "file": "reports\\player-impact-v46\\fits\\2024-25-common0.05-contrast0.025-fold4.json",
+      "maxGradient": 2.4378884688758262e-08,
+      "onCountAndNllPassed": true
+    },
+    {
+      "file": "reports\\player-impact-v46\\fits\\2024-25-common0.05-contrast0.05-fold0.json",
+      "maxGradient": 5.89514037585559e-08,
+      "onCountAndNllPassed": true
+    },
+    {
+      "file": "reports\\player-impact-v46\\fits\\2024-25-common0.05-contrast0.05-fold1.json",
+      "maxGradient": 4.134280828793635e-08,
+      "onCountAndNllPassed": true
+    },
+    {
+      "file": "reports\\player-impact-v46\\fits\\2024-25-common0.05-contrast0.05-fold2.json",
+      "maxGradient": 4.677868759017656e-08,
+      "onCountAndNllPassed": true
+    },
+    {
+      "file": "reports\\player-impact-v46\\fits\\2024-25-common0.05-contrast0.05-fold3.json",
+      "maxGradient": 2.536224741334081e-08,
+      "onCountAndNllPassed": true
+    },
+    {
+      "file": "reports\\player-impact-v46\\fits\\2024-25-common0.05-contrast0.05-fold4.json",
+      "maxGradient": 4.19478816127139e-08,
+      "onCountAndNllPassed": true
+    },
+    {
+      "file": "reports\\player-impact-v46\\fits\\2024-25-common0.1-contrast0-fold0.json",
+      "maxGradient": 1.096314576898294e-07,
+      "onCountAndNllPassed": true
+    },
+    {
+      "file": "reports\\player-impact-v46\\fits\\2024-25-common0.1-contrast0-fold1.json",
+      "maxGradient": 9.993807204011773e-08,
+      "onCountAndNllPassed": true
+    },
+    {
+      "file": "reports\\player-impact-v46\\fits\\2024-25-common0.1-contrast0-fold2.json",
+      "maxGradient": 8.156001385373202e-08,
+      "onCountAndNllPassed": true
+    },
+    {
+      "file": "reports\\player-impact-v46\\fits\\2024-25-common0.1-contrast0-fold3.json",
+      "maxGradient": 5.359084553901994e-08,
+      "onCountAndNllPassed": true
+    },
+    {
+      "file": "reports\\player-impact-v46\\fits\\2024-25-common0.1-contrast0-fold4.json",
+      "maxGradient": 7.827406633964529e-08,
+      "onCountAndNllPassed": true
+    },
+    {
+      "file": "reports\\player-impact-v46\\fits\\2024-25-common0.1-contrast0.025-fold0.json",
+      "maxGradient": 1.2742206934035494e-07,
+      "onCountAndNllPassed": true
+    },
+    {
+      "file": "reports\\player-impact-v46\\fits\\2024-25-common0.1-contrast0.025-fold1.json",
+      "maxGradient": 1.0826560981058719e-07,
+      "onCountAndNllPassed": true
+    },
+    {
+      "file": "reports\\player-impact-v46\\fits\\2024-25-common0.1-contrast0.025-fold2.json",
+      "maxGradient": 9.807225964664212e-08,
+      "onCountAndNllPassed": true
+    },
+    {
+      "file": "reports\\player-impact-v46\\fits\\2024-25-common0.1-contrast0.025-fold3.json",
+      "maxGradient": 6.147081776930463e-08,
+      "onCountAndNllPassed": true
+    },
+    {
+      "file": "reports\\player-impact-v46\\fits\\2024-25-common0.1-contrast0.025-fold4.json",
+      "maxGradient": 8.992925870643376e-08,
+      "onCountAndNllPassed": true
+    },
+    {
+      "file": "reports\\player-impact-v46\\fits\\2024-25-common0.1-contrast0.05-fold0.json",
+      "maxGradient": 1.9396864203713449e-07,
+      "onCountAndNllPassed": true
+    },
+    {
+      "file": "reports\\player-impact-v46\\fits\\2024-25-common0.1-contrast0.05-fold1.json",
+      "maxGradient": 1.587175972872501e-07,
+      "onCountAndNllPassed": true
+    },
+    {
+      "file": "reports\\player-impact-v46\\fits\\2024-25-common0.1-contrast0.05-fold2.json",
+      "maxGradient": 1.6117817125405054e-07,
+      "onCountAndNllPassed": true
+    },
+    {
+      "file": "reports\\player-impact-v46\\fits\\2024-25-common0.1-contrast0.05-fold3.json",
+      "maxGradient": 9.972111669753758e-08,
+      "onCountAndNllPassed": true
+    },
+    {
+      "file": "reports\\player-impact-v46\\fits\\2024-25-common0.1-contrast0.05-fold4.json",
+      "maxGradient": 1.4270726111931253e-07,
+      "onCountAndNllPassed": true
+    },
+    {
+      "file": "reports\\player-impact-v46\\fits\\2024-25-common0.1-contrast0.05-foldNone.json",
+      "maxGradient": 1.7061894652670162e-07,
+      "onCountAndNllPassed": true
+    },
+    {
+      "file": "reports\\player-impact-v46\\fits\\2025-26-common0.1-contrast0.05-fold0.json",
+      "maxGradient": 5.696358442719429e-07,
+      "onCountAndNllPassed": true
+    },
+    {
+      "file": "reports\\player-impact-v46\\fits\\2025-26-common0.1-contrast0.05-fold1.json",
+      "maxGradient": 7.571240558945647e-07,
+      "onCountAndNllPassed": true
+    },
+    {
+      "file": "reports\\player-impact-v46\\fits\\2025-26-common0.1-contrast0.05-fold2.json",
+      "maxGradient": 7.077947827838216e-07,
+      "onCountAndNllPassed": true
+    },
+    {
+      "file": "reports\\player-impact-v46\\fits\\2025-26-common0.1-contrast0.05-fold3.json",
+      "maxGradient": 1.0401248005109665e-06,
+      "onCountAndNllPassed": true
+    },
+    {
+      "file": "reports\\player-impact-v46\\fits\\2025-26-common0.1-contrast0.05-fold4.json",
+      "maxGradient": 8.70302116595667e-07,
+      "onCountAndNllPassed": true
+    },
+    {
+      "file": "reports\\player-impact-v46\\fits\\2025-26-common0.1-contrast0.05-foldNone.json",
+      "maxGradient": 1.0269910575289032e-06,
+      "onCountAndNllPassed": true
+    }
+  ]
+}

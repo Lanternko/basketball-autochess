@@ -1,0 +1,12 @@
+import fs from 'node:fs';
+import {read,table,hash} from '../../../scripts/defense_io.js';
+const root='reports/defense-tenth/step3-a2',base='reports/defense-tenth/step3-a/preseason-schedule';
+fs.mkdirSync(root,{recursive:true});
+const paths=s=>`data/defense-seventh/${s}`,seasons=['2022-23','2023-24','2024-25'];
+const totals=s=>{const m=new Map();for(const q of table(paths(s)+'/player-games.json'))if(q.MIN>0){const z=m.get(q.PLAYER_ID)??{id:q.PLAYER_ID,name:q.PLAYER_NAME,GP:0,MIN:0};z.GP++;z.MIN+=q.MIN;m.set(z.id,z);}return m;};
+const group=a=>a<=22?'<=22':a<=26?'23-26':a<=30?'27-30':a<=34?'31-34':'35+';
+const out={generatedAt:new Date().toISOString(),AProtocolHash:hash(base+'/protocol.json'),available:[],trainingRetention:[],AFileHashes:read(base+'/deliverable-hashes.json').files};
+for(const s of seasons){const rows=table(paths(s)+'/bio.json'),by=new Map(rows.map(q=>[q.PLAYER_ID,q])),ps=[...totals(s).values()],meta=read(paths(s)+'/league.json').teams.flatMap(t=>t.roster),mb=new Map(meta.map(q=>[q.playerId,q]));out.available.push({season:s,players:ps.length,bioFields:Object.keys(rows[0]),age:ps.filter(q=>Number.isFinite(by.get(q.id)?.AGE)).length,birthday:ps.filter(q=>by.get(q.id)?.BIRTHDATE||by.get(q.id)?.BIRTH_DATE).length,trueExperience:ps.filter(q=>by.get(q.id)?.SEASON_EXP!=null).length,minutesAndGP:ps.length,positionAndBody:ps.filter(q=>mb.get(q.id)?.pos&&mb.get(q.id)?.heightInches&&mb.get(q.id)?.bodyWeight).length,missingAge:ps.filter(q=>!Number.isFinite(by.get(q.id)?.AGE)).map(q=>({id:q.id,name:q.name})),bioHash:hash(paths(s)+'/bio.json')});}
+for(const [a,b] of [['2022-23','2023-24'],['2023-24','2024-25']]){const pa=totals(a),pb=totals(b),bio=new Map(table(paths(a)+'/bio.json').map(q=>[q.PLAYER_ID,q])),groups={};for(const q of pa.values()){const age=bio.get(q.id)?.AGE,k=Number.isFinite(age)?group(age):'unknown',z=groups[k]??={all:0,noNextAppearance:0,nextBelow15GPOr300MIN:0};z.all++;const n=pb.get(q.id);if(!n)z.noNextAppearance++;if(!n||n.GP<15||n.MIN<300)z.nextBelow15GPOr300MIN++;}out.trainingRetention.push({prior:a,next:b,groups:Object.fromEntries(Object.entries(groups).map(([k,z])=>[k,{...z,disappearanceShare:z.noNextAppearance/z.all,lowOrMissingShare:z.nextBelow15GPOr300MIN/z.all}]))});}
+const changed=Object.entries(out.AFileHashes).filter(([f,h])=>hash(base+'/'+f)!==h).map(([f])=>f);out.changedAOutputs=changed;
+fs.writeFileSync(root+'/input-inventory.json',JSON.stringify(out,null,2)+'\n');console.log(JSON.stringify(out,null,2));if(changed.length)throw Error('A changed');

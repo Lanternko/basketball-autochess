@@ -1,0 +1,19 @@
+{
+  "passed": true,
+  "players": 10,
+  "transports": 2,
+  "scenarios": 40,
+  "games": 19200,
+  "allPairedIntervalsAnd13CountersRecomputed": true,
+  "sourceRoleComparabilityVerified": true,
+  "noFullOvr": true,
+  "hashes": {
+    "reports/player-impact-v38/protocol.json": "4d73ab43d11a3f361f3b6b10bf99d68e157d27d43f6cd77813c424cfd42c9355",
+    "reports/player-impact-v38/manifest.json": "46c9709ba83867fd64fe07b42237ad2050f34f1f705d54bfad79c52ce71dd8e0",
+    "reports/player-impact-v38/checkpoint.json": "9d763ffefc7a7b9ead5ab520b0aa3aafe9e3f62b1e8f0633e2ce0ace489dd5a5",
+    "reports/player-impact-v38/summary.json": "00600bf98d7951a9988719533e545d73f1a8648c2a7e9f67ffae188d91158b74",
+    "reports/player-impact-v38/input-verification.json": "f4ec71105fe0dd4f6814dbd29121fd947498157de61c6d1510f13900648ace25",
+    "reports/player-impact-v38/input-audit-verification.json": "dd35559ae2244490f232ed0787c652d21f5640171afb6e8f0aa89a1832d04f62",
+    "reports/player-impact-v38/verify.py": "dc3c9413a92e1bfe1a32968d090b0b82762a4cac35d32286c2155a54f098dd79"
+  }
+}

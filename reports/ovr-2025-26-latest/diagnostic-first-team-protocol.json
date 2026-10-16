@@ -1,0 +1,1090 @@
+{
+  "model": "pure-oreb-turnover-time-1",
+  "season": "2025-26",
+  "samples": 16,
+  "seed": 20261015,
+  "playerCount": 582,
+  "opponentCount": 30,
+  "slots": 5,
+  "gamesPerPlayer": 4800,
+  "exposure": {
+    "quarterSeconds": 216,
+    "gameSeconds": 864,
+    "fatigue": false,
+    "substitutions": false,
+    "foulOut": 99,
+    "overtime": false,
+    "tieWinCredit": 0.5
+  },
+  "selection": "All 582 unique season players. Opponents: each team top five by observed in-team minutes, height-ordered positions. Players swap all five slots beside four neutral-70 teammates.",
+  "mapping": "Same winToOvr piecewise function: flat16 attributes 40/70/99 anchors; auxiliary volume, steal and OREB fields held at pooled league neutral values for all anchors.",
+  "uncertainty": "Paired seating is one sample, stratified by opponent and slot. Conditional OVR CI holds fitted anchors fixed; excludes card uncertainty and model error. Nearby ranks not guaranteed.",
+  "measurementScope": "New 14.4-minute timed OVR protocol, preserving adopted event/timing mechanics. Does not inherit acceptance of old fixed-possession OVR report. Equal exposure removes availability/stamina/rotation value.",
+  "opponentPool": [
+    {
+      "id": 1610612737,
+      "name": "Atlanta Hawks",
+      "roster": [
+        {
+          "id": 1629638,
+          "name": "Nickeil Alexander-Walker",
+          "pos": "PG"
+        },
+        {
+          "id": 1630700,
+          "name": "Dyson Daniels",
+          "pos": "SG"
+        },
+        {
+          "id": 1630552,
+          "name": "Jalen Johnson",
+          "pos": "SF"
+        },
+        {
+          "id": 1642258,
+          "name": "Zaccharie Risacher",
+          "pos": "PF"
+        },
+        {
+          "id": 1630168,
+          "name": "Onyeka Okongwu",
+          "pos": "C"
+        }
+      ]
+    },
+    {
+      "id": 1610612738,
+      "name": "Boston Celtics",
+      "roster": [
+        {
+          "id": 1630202,
+          "name": "Payton Pritchard",
+          "pos": "PG"
+        },
+        {
+          "id": 1628401,
+          "name": "Derrick White",
+          "pos": "SG"
+        },
+        {
+          "id": 1627759,
+          "name": "Jaylen Brown",
+          "pos": "SF"
+        },
+        {
+          "id": 1630573,
+          "name": "Sam Hauser",
+          "pos": "PF"
+        },
+        {
+          "id": 1629674,
+          "name": "Neemias Queta",
+          "pos": "C"
+        }
+      ]
+    },
+    {
+      "id": 1610612739,
+      "name": "Cleveland Cavaliers",
+      "roster": [
+        {
+          "id": 1628378,
+          "name": "Donovan Mitchell",
+          "pos": "PG"
+        },
+        {
+          "id": 1630241,
+          "name": "Sam Merrill",
+          "pos": "SG"
+        },
+        {
+          "id": 1642281,
+          "name": "Jaylon Tyson",
+          "pos": "SF"
+        },
+        {
+          "id": 1628386,
+          "name": "Jarrett Allen",
+          "pos": "PF"
+        },
+        {
+          "id": 1630596,
+          "name": "Evan Mobley",
+          "pos": "C"
+        }
+      ]
+    },
+    {
+      "id": 1610612740,
+      "name": "New Orleans Pelicans",
+      "roster": [
+        {
+          "id": 1642847,
+          "name": "Jeremiah Fears",
+          "pos": "PG"
+        },
+        {
+          "id": 1629627,
+          "name": "Zion Williamson",
+          "pos": "SG"
+        },
+        {
+          "id": 1630180,
+          "name": "Saddiq Bey",
+          "pos": "SF"
+        },
+        {
+          "id": 1630530,
+          "name": "Trey Murphy III",
+          "pos": "PF"
+        },
+        {
+          "id": 1642852,
+          "name": "Derik Queen",
+          "pos": "C"
+        }
+      ]
+    },
+    {
+      "id": 1610612741,
+      "name": "Chicago Bulls",
+      "roster": [
+        {
+          "id": 1630200,
+          "name": "Tre Jones",
+          "pos": "PG"
+        },
+        {
+          "id": 1630171,
+          "name": "Isaac Okoro",
+          "pos": "SG"
+        },
+        {
+          "id": 1630581,
+          "name": "Josh Giddey",
+          "pos": "SF"
+        },
+        {
+          "id": 1641824,
+          "name": "Matas Buzelis",
+          "pos": "PF"
+        },
+        {
+          "id": 202696,
+          "name": "Nikola Vučević",
+          "pos": "C"
+        }
+      ]
+    },
+    {
+      "id": 1610612742,
+      "name": "Dallas Mavericks",
+      "roster": [
+        {
+          "id": 202691,
+          "name": "Klay Thompson",
+          "pos": "PG"
+        },
+        {
+          "id": 1631108,
+          "name": "Max Christie",
+          "pos": "SG"
+        },
+        {
+          "id": 1630230,
+          "name": "Naji Marshall",
+          "pos": "SF"
+        },
+        {
+          "id": 1629023,
+          "name": "P.J. Washington",
+          "pos": "PF"
+        },
+        {
+          "id": 1642843,
+          "name": "Cooper Flagg",
+          "pos": "C"
+        }
+      ]
+    },
+    {
+      "id": 1610612743,
+      "name": "Denver Nuggets",
+      "roster": [
+        {
+          "id": 1627750,
+          "name": "Jamal Murray",
+          "pos": "PG"
+        },
+        {
+          "id": 1628971,
+          "name": "Bruce Brown",
+          "pos": "SG"
+        },
+        {
+          "id": 203501,
+          "name": "Tim Hardaway Jr.",
+          "pos": "SF"
+        },
+        {
+          "id": 1629661,
+          "name": "Cameron Johnson",
+          "pos": "PF"
+        },
+        {
+          "id": 203999,
+          "name": "Nikola Jokić",
+          "pos": "C"
+        }
+      ]
+    },
+    {
+      "id": 1610612744,
+      "name": "Golden State Warriors",
+      "roster": [
+        {
+          "id": 1642954,
+          "name": "Will Richard",
+          "pos": "PG"
+        },
+        {
+          "id": 1641764,
+          "name": "Brandin Podziemski",
+          "pos": "SG"
+        },
+        {
+          "id": 1630541,
+          "name": "Moses Moody",
+          "pos": "SF"
+        },
+        {
+          "id": 203110,
+          "name": "Draymond Green",
+          "pos": "PF"
+        },
+        {
+          "id": 1630611,
+          "name": "Gui Santos",
+          "pos": "C"
+        }
+      ]
+    },
+    {
+      "id": 1610612745,
+      "name": "Houston Rockets",
+      "roster": [
+        {
+          "id": 1642263,
+          "name": "Reed Sheppard",
+          "pos": "PG"
+        },
+        {
+          "id": 1641708,
+          "name": "Amen Thompson",
+          "pos": "SG"
+        },
+        {
+          "id": 201142,
+          "name": "Kevin Durant",
+          "pos": "SF"
+        },
+        {
+          "id": 1630578,
+          "name": "Alperen Sengun",
+          "pos": "PF"
+        },
+        {
+          "id": 1631095,
+          "name": "Jabari Smith Jr.",
+          "pos": "C"
+        }
+      ]
+    },
+    {
+      "id": 1610612746,
+      "name": "LA Clippers",
+      "roster": [
+        {
+          "id": 1627739,
+          "name": "Kris Dunn",
+          "pos": "PG"
+        },
+        {
+          "id": 201935,
+          "name": "James Harden",
+          "pos": "SG"
+        },
+        {
+          "id": 202695,
+          "name": "Kawhi Leonard",
+          "pos": "SF"
+        },
+        {
+          "id": 1628381,
+          "name": "John Collins",
+          "pos": "PF"
+        },
+        {
+          "id": 201572,
+          "name": "Brook Lopez",
+          "pos": "C"
+        }
+      ]
+    },
+    {
+      "id": 1610612747,
+      "name": "Los Angeles Lakers",
+      "roster": [
+        {
+          "id": 1631222,
+          "name": "Jake LaRavia",
+          "pos": "PG"
+        },
+        {
+          "id": 1629029,
+          "name": "Luka Dončić",
+          "pos": "SG"
+        },
+        {
+          "id": 1629060,
+          "name": "Rui Hachimura",
+          "pos": "SF"
+        },
+        {
+          "id": 2544,
+          "name": "LeBron James",
+          "pos": "PF"
+        },
+        {
+          "id": 1629028,
+          "name": "Deandre Ayton",
+          "pos": "C"
+        }
+      ]
+    },
+    {
+      "id": 1610612748,
+      "name": "Miami Heat",
+      "roster": [
+        {
+          "id": 1630558,
+          "name": "Davion Mitchell",
+          "pos": "PG"
+        },
+        {
+          "id": 1641796,
+          "name": "Pelle Larsson",
+          "pos": "SG"
+        },
+        {
+          "id": 203952,
+          "name": "Andrew Wiggins",
+          "pos": "SF"
+        },
+        {
+          "id": 1631170,
+          "name": "Jaime Jaquez Jr.",
+          "pos": "PF"
+        },
+        {
+          "id": 1628389,
+          "name": "Bam Adebayo",
+          "pos": "C"
+        }
+      ]
+    },
+    {
+      "id": 1610612749,
+      "name": "Milwaukee Bucks",
+      "roster": [
+        {
+          "id": 1631157,
+          "name": "Ryan Rollins",
+          "pos": "PG"
+        },
+        {
+          "id": 1631260,
+          "name": "AJ Green",
+          "pos": "SG"
+        },
+        {
+          "id": 1628398,
+          "name": "Kyle Kuzma",
+          "pos": "SF"
+        },
+        {
+          "id": 1626171,
+          "name": "Bobby Portis Jr.",
+          "pos": "PF"
+        },
+        {
+          "id": 1626167,
+          "name": "Myles Turner",
+          "pos": "C"
+        }
+      ]
+    },
+    {
+      "id": 1610612750,
+      "name": "Minnesota Timberwolves",
+      "roster": [
+        {
+          "id": 1628978,
+          "name": "Donte DiVincenzo",
+          "pos": "PG"
+        },
+        {
+          "id": 1630162,
+          "name": "Anthony Edwards",
+          "pos": "SG"
+        },
+        {
+          "id": 203944,
+          "name": "Julius Randle",
+          "pos": "SF"
+        },
+        {
+          "id": 1630183,
+          "name": "Jaden McDaniels",
+          "pos": "PF"
+        },
+        {
+          "id": 203497,
+          "name": "Rudy Gobert",
+          "pos": "C"
+        }
+      ]
+    },
+    {
+      "id": 1610612751,
+      "name": "Brooklyn Nets",
+      "roster": [
+        {
+          "id": 1642962,
+          "name": "Drake Powell",
+          "pos": "PG"
+        },
+        {
+          "id": 1629611,
+          "name": "Terance Mann",
+          "pos": "SG"
+        },
+        {
+          "id": 1629008,
+          "name": "Michael Porter Jr.",
+          "pos": "SF"
+        },
+        {
+          "id": 1641730,
+          "name": "Noah Clowney",
+          "pos": "PF"
+        },
+        {
+          "id": 1629651,
+          "name": "Nic Claxton",
+          "pos": "C"
+        }
+      ]
+    },
+    {
+      "id": 1610612752,
+      "name": "New York Knicks",
+      "roster": [
+        {
+          "id": 1628973,
+          "name": "Jalen Brunson",
+          "pos": "PG"
+        },
+        {
+          "id": 1628404,
+          "name": "Josh Hart",
+          "pos": "SG"
+        },
+        {
+          "id": 1628969,
+          "name": "Mikal Bridges",
+          "pos": "SF"
+        },
+        {
+          "id": 1628384,
+          "name": "OG Anunoby",
+          "pos": "PF"
+        },
+        {
+          "id": 1626157,
+          "name": "Karl-Anthony Towns",
+          "pos": "C"
+        }
+      ]
+    },
+    {
+      "id": 1610612753,
+      "name": "Orlando Magic",
+      "roster": [
+        {
+          "id": 1630217,
+          "name": "Desmond Bane",
+          "pos": "PG"
+        },
+        {
+          "id": 1641710,
+          "name": "Anthony Black",
+          "pos": "SG"
+        },
+        {
+          "id": 1641783,
+          "name": "Tristan da Silva",
+          "pos": "SF"
+        },
+        {
+          "id": 1628976,
+          "name": "Wendell Carter Jr.",
+          "pos": "PF"
+        },
+        {
+          "id": 1631094,
+          "name": "Paolo Banchero",
+          "pos": "C"
+        }
+      ]
+    },
+    {
+      "id": 1610612754,
+      "name": "Indiana Pacers",
+      "roster": [
+        {
+          "id": 1629614,
+          "name": "Andrew Nembhard",
+          "pos": "PG"
+        },
+        {
+          "id": 1641767,
+          "name": "Ben Sheppard",
+          "pos": "SG"
+        },
+        {
+          "id": 1641716,
+          "name": "Jarace Walker",
+          "pos": "SF"
+        },
+        {
+          "id": 1627783,
+          "name": "Pascal Siakam",
+          "pos": "PF"
+        },
+        {
+          "id": 1630643,
+          "name": "Jay Huff",
+          "pos": "C"
+        }
+      ]
+    },
+    {
+      "id": 1610612755,
+      "name": "Philadelphia 76ers",
+      "roster": [
+        {
+          "id": 1630178,
+          "name": "Tyrese Maxey",
+          "pos": "PG"
+        },
+        {
+          "id": 1642845,
+          "name": "VJ Edgecombe",
+          "pos": "SG"
+        },
+        {
+          "id": 1629656,
+          "name": "Quentin Grimes",
+          "pos": "SF"
+        },
+        {
+          "id": 1626162,
+          "name": "Kelly Oubre Jr.",
+          "pos": "PF"
+        },
+        {
+          "id": 1631230,
+          "name": "Dominick Barlow",
+          "pos": "C"
+        }
+      ]
+    },
+    {
+      "id": 1610612756,
+      "name": "Phoenix Suns",
+      "roster": [
+        {
+          "id": 1631221,
+          "name": "Collin Gillespie",
+          "pos": "PG"
+        },
+        {
+          "id": 1626164,
+          "name": "Devin Booker",
+          "pos": "SG"
+        },
+        {
+          "id": 1626220,
+          "name": "Royce O'Neale",
+          "pos": "SF"
+        },
+        {
+          "id": 1628415,
+          "name": "Dillon Brooks",
+          "pos": "PF"
+        },
+        {
+          "id": 1642345,
+          "name": "Oso Ighodaro",
+          "pos": "C"
+        }
+      ]
+    },
+    {
+      "id": 1610612757,
+      "name": "Portland Trail Blazers",
+      "roster": [
+        {
+          "id": 201950,
+          "name": "Jrue Holiday",
+          "pos": "PG"
+        },
+        {
+          "id": 203924,
+          "name": "Jerami Grant",
+          "pos": "SG"
+        },
+        {
+          "id": 1641739,
+          "name": "Toumani Camara",
+          "pos": "SF"
+        },
+        {
+          "id": 1630166,
+          "name": "Deni Avdija",
+          "pos": "PF"
+        },
+        {
+          "id": 1642270,
+          "name": "Donovan Clingan",
+          "pos": "C"
+        }
+      ]
+    },
+    {
+      "id": 1610612758,
+      "name": "Sacramento Kings",
+      "roster": [
+        {
+          "id": 201566,
+          "name": "Russell Westbrook",
+          "pos": "PG"
+        },
+        {
+          "id": 1642363,
+          "name": "Nique Clifford",
+          "pos": "SG"
+        },
+        {
+          "id": 201942,
+          "name": "DeMar DeRozan",
+          "pos": "SF"
+        },
+        {
+          "id": 1630173,
+          "name": "Precious Achiuwa",
+          "pos": "PF"
+        },
+        {
+          "id": 1642875,
+          "name": "Maxime Raynaud",
+          "pos": "C"
+        }
+      ]
+    },
+    {
+      "id": 1610612759,
+      "name": "San Antonio Spurs",
+      "roster": [
+        {
+          "id": 1628368,
+          "name": "De'Aaron Fox",
+          "pos": "PG"
+        },
+        {
+          "id": 1630170,
+          "name": "Devin Vassell",
+          "pos": "SG"
+        },
+        {
+          "id": 1642264,
+          "name": "Stephon Castle",
+          "pos": "SF"
+        },
+        {
+          "id": 203084,
+          "name": "Harrison Barnes",
+          "pos": "PF"
+        },
+        {
+          "id": 1630577,
+          "name": "Julian Champagnie",
+          "pos": "C"
+        }
+      ]
+    },
+    {
+      "id": 1610612760,
+      "name": "Oklahoma City Thunder",
+      "roster": [
+        {
+          "id": 1641717,
+          "name": "Cason Wallace",
+          "pos": "PG"
+        },
+        {
+          "id": 1629652,
+          "name": "Luguentz Dort",
+          "pos": "SG"
+        },
+        {
+          "id": 1630198,
+          "name": "Isaiah Joe",
+          "pos": "SF"
+        },
+        {
+          "id": 1628983,
+          "name": "Shai Gilgeous-Alexander",
+          "pos": "PF"
+        },
+        {
+          "id": 1631096,
+          "name": "Chet Holmgren",
+          "pos": "C"
+        }
+      ]
+    },
+    {
+      "id": 1610612761,
+      "name": "Toronto Raptors",
+      "roster": [
+        {
+          "id": 1642347,
+          "name": "Jamal Shead",
+          "pos": "PG"
+        },
+        {
+          "id": 1630193,
+          "name": "Immanuel Quickley",
+          "pos": "SG"
+        },
+        {
+          "id": 1627742,
+          "name": "Brandon Ingram",
+          "pos": "SF"
+        },
+        {
+          "id": 1630567,
+          "name": "Scottie Barnes",
+          "pos": "PF"
+        },
+        {
+          "id": 1630572,
+          "name": "Sandro Mamukelashvili",
+          "pos": "C"
+        }
+      ]
+    },
+    {
+      "id": 1610612762,
+      "name": "Utah Jazz",
+      "roster": [
+        {
+          "id": 1641718,
+          "name": "Keyonte George",
+          "pos": "PG"
+        },
+        {
+          "id": 1641729,
+          "name": "Brice Sensabaugh",
+          "pos": "SG"
+        },
+        {
+          "id": 1642262,
+          "name": "Cody Williams",
+          "pos": "SF"
+        },
+        {
+          "id": 1642846,
+          "name": "Ace Bailey",
+          "pos": "PF"
+        },
+        {
+          "id": 1642271,
+          "name": "Kyle Filipowski",
+          "pos": "C"
+        }
+      ]
+    },
+    {
+      "id": 1610612763,
+      "name": "Memphis Grizzlies",
+      "roster": [
+        {
+          "id": 1642285,
+          "name": "Cam Spencer",
+          "pos": "PG"
+        },
+        {
+          "id": 1642907,
+          "name": "Cedric Coward",
+          "pos": "SG"
+        },
+        {
+          "id": 1642377,
+          "name": "Jaylen Wells",
+          "pos": "SF"
+        },
+        {
+          "id": 1628991,
+          "name": "Jaren Jackson Jr.",
+          "pos": "PF"
+        },
+        {
+          "id": 1630583,
+          "name": "Santi Aldama",
+          "pos": "C"
+        }
+      ]
+    },
+    {
+      "id": 1610612764,
+      "name": "Washington Wizards",
+      "roster": [
+        {
+          "id": 1642267,
+          "name": "Bub Carrington",
+          "pos": "PG"
+        },
+        {
+          "id": 1642848,
+          "name": "Tre Johnson",
+          "pos": "SG"
+        },
+        {
+          "id": 1641731,
+          "name": "Bilal Coulibaly",
+          "pos": "SF"
+        },
+        {
+          "id": 1642273,
+          "name": "Kyshawn George",
+          "pos": "PF"
+        },
+        {
+          "id": 1642860,
+          "name": "Will Riley",
+          "pos": "C"
+        }
+      ]
+    },
+    {
+      "id": 1610612765,
+      "name": "Detroit Pistons",
+      "roster": [
+        {
+          "id": 1630595,
+          "name": "Cade Cunningham",
+          "pos": "PG"
+        },
+        {
+          "id": 1629130,
+          "name": "Duncan Robinson",
+          "pos": "SG"
+        },
+        {
+          "id": 1641709,
+          "name": "Ausar Thompson",
+          "pos": "SF"
+        },
+        {
+          "id": 202699,
+          "name": "Tobias Harris",
+          "pos": "PF"
+        },
+        {
+          "id": 1631105,
+          "name": "Jalen Duren",
+          "pos": "C"
+        }
+      ]
+    },
+    {
+      "id": 1610612766,
+      "name": "Charlotte Hornets",
+      "roster": [
+        {
+          "id": 1642851,
+          "name": "Kon Knueppel",
+          "pos": "PG"
+        },
+        {
+          "id": 1628970,
+          "name": "Miles Bridges",
+          "pos": "SG"
+        },
+        {
+          "id": 1630163,
+          "name": "LaMelo Ball",
+          "pos": "SF"
+        },
+        {
+          "id": 1641706,
+          "name": "Brandon Miller",
+          "pos": "PF"
+        },
+        {
+          "id": 1631217,
+          "name": "Moussa Diabaté",
+          "pos": "C"
+        }
+      ]
+    }
+  ],
+  "neutral": {
+    "name": "中性基準",
+    "playerId": -100,
+    "long": 70,
+    "mid": 70,
+    "short": 70,
+    "drive": 70,
+    "tovSkill": 70,
+    "pass": 70,
+    "ft": 70,
+    "rebound": 70,
+    "onBall": 70,
+    "help": 70,
+    "stamina": 70,
+    "physique": 70,
+    "offBall": 70,
+    "screen": 70,
+    "handle": 70,
+    "breakDbl": 70,
+    "offenseMeasurement": {
+      "minutes": 560956.0066666666,
+      "attempts": 207063,
+      "freeThrows": 54806,
+      "turnovers": 31943
+    },
+    "defenseMeasurement": {
+      "minutes": 560956.0066666666,
+      "steals": 19634
+    },
+    "shotProfile": {
+      "threeRate": 0.41422175859521015,
+      "freeThrowsPerAttempt": 0.26468272941085563,
+      "sourceSeason": "2025-26"
+    },
+    "individualOreb": {
+      "share": 0.045396392382520134
+    },
+    "pos": "PG",
+    "courtPosition": "PG"
+  },
+  "hashes": {
+    "src/action-silhouette.js": "56fec450aa94ab6a699e024114ecd34e04287286d73a1e8b0e87462a9f9ca2ac",
+    "src/benchmark_teams.js": "f0dd05e82a3e06b5b1ae9c78a8fc3872e634899e230d27b04c5888c6a055dd23",
+    "src/calibration_presets.js": "fd609961e03473632413170ca60f3c4fd33c3b4a69aa4eced5134b9367541375",
+    "src/constants.js": "86f968d2a29326d0e4ab8375face0e83f76556464a1caeb8ff00be6797290598",
+    "src/court-motion.js": "d0dd3900cf94e36b7020e6d4969eace6511c1e37acab7123eca752f97cd0b4d9",
+    "src/court-scene.js": "82627ab494af5b917182238a638dc434fb0bdce7b2e4c16ee2e5e74d5a6068e7",
+    "src/courtside.js": "90635f7540feeb340c6258af277094c0e02cb2a549e9b0301ad6ee3d406e93d3",
+    "src/defense_a_game.js": "c283cac09b1a0eca87f8a3a7a385c12d9078f6a100d2d3c55e4f39b6621f8a7c",
+    "src/defense_a_jobs.js": "bc188b7c44045110f2ecf63d5504f476e631cdc599108e0cb65d8f4010c77e89",
+    "src/defense_a_pool.js": "94058c9a99ee8999e61f7f87269ca2aab7052dd33de23f1af3a3048e029ee86c",
+    "src/defense_a_presets.js": "1d214b0dbdeb98d3bb03f03a9fc29fcd02918907846b0c97b45b47a8e276e10e",
+    "src/defense_a_season.js": "2e084aff44c2669bb1a16ba32c87e7844524f9a7c59110416618aaf909ca7cec",
+    "src/defense_a_variance.js": "3dd940c3bbab98ddce594e59b8d8aa7c3b2c7a71d2ed8d781795a3ac2392b248",
+    "src/defense_clock_game.js": "1cb83cc25f39ac036c845fd9c1204915983441829d58033e910f37ae79cbb6f9",
+    "src/defense_clock_jobs.js": "df3a4e0f87086d1b364e9af15369b0663b91705acb8e416b520e21553366b9e5",
+    "src/defense_clock_pool.js": "93cca175e4d20ceeb096df0929a3a516b1460b0e655bfa0fdba7beea143e1116",
+    "src/defense_clock_season.js": "45d0a5813e486379a28ee40bd6ffdc98d7d509bf79f1eb62ccd8390454213c72",
+    "src/defense_eighth_analysis.js": "f2c2e530ba4ef0467667e77b92abf8ef580056243eff4ddd622ece00c36fadd3",
+    "src/defense_eighth_blind_evaluation.js": "b5b8ac0f5e1cbb35d7b41afd3e7109cf5b115888e8993249104a51ca50fd82b5",
+    "src/defense_eighth_c_statistics.js": "1ef1a4b2887a001dd0e05bafc922dc62bd04a587c5ddd7dfc1f1814f52ec079a",
+    "src/defense_fifth_clock.js": "23c82db47ca65d8aa453b3a316df674a46e83ea83bb2bc268ebb350ef0861ab5",
+    "src/defense_fifth_diagnostics.js": "77d7551100618b6cd8d1538962b547e1d129eede196306fa18db372458288942",
+    "src/defense_fifth_game.js": "bddd3f34b93e969513ce79d717b78358dc433c0f15eba3eeffa675177b9dfa86",
+    "src/defense_fifth_jobs.js": "2efac6fb3def7965e213a4c4c342a87c5064a15ec21d05a4bb15f3a30caeacb8",
+    "src/defense_fifth_pool.js": "f5e480a89eb289e79a7f7dcac52665cb8fa0fb7b15ce30e2968bb74feb38f479",
+    "src/defense_fifth_presets.js": "d3f63c527f8b396e2f8bc2e3bbfa2da47edcf2f21cf23a191371af4871b9f317",
+    "src/defense_fifth_scoreboard.js": "ad4802e5c24b492f5e87f4ece15607098c9cfba8e44671b0f83d2e90e3f232dc",
+    "src/defense_fifth_season.js": "7b5448d359b15c5e1273a14e332a745a9c8db61a6b214e59acf8aa2a188c25d8",
+    "src/defense_fourth_effects.js": "ce90813d1089a8dd400d6051db2b08022a26914a0b1e3672cd7ddf4924a03ff4",
+    "src/defense_fourth_game.js": "c3611d0c72f49fdd4b855184d7bc79c3e6cc9780c2c6eb836aa10cbf66ad022a",
+    "src/defense_fourth_jobs.js": "744aa02d75e54daf588b8c0cf0bd952f1f38d7b6a833fa34ac99d3d43c864b82",
+    "src/defense_fourth_normalization.js": "0d1a8d58fa242aa213c0dccd5b28b0c2eaf63f15239b162e168e1b49c370349d",
+    "src/defense_fourth_pool.js": "ddc5e5ac1c1297ddbfcc7248f459aacd6e0204995edd57f00d84a21523e8e153",
+    "src/defense_fourth_presets.js": "27f7fe00bf7ad24ca71df05f1170faafcf031811f061b4f2cf97bb0bfa0d4260",
+    "src/defense_fourth_scoreboard.js": "f01b3988e206a84defd5fe46c4c4057f677c3fc8381213babbc1df856dce49c5",
+    "src/defense_fourth_season.js": "ad8e8f726a48b0afea11454a061aaee2037cb6145c529fbb3a457d10346a0f9a",
+    "src/defense_game.js": "6fc0410c6821c9d26ae8757fe109ed9633a19fbce047edc752ba6ef546b4c34c",
+    "src/defense_ninth_rosters.js": "5eb055747b4500e156eea904322ee3b20ad26de9f00748806bb2467e5025cae2",
+    "src/defense_ninth_statistics.js": "1eb1bc954fb24bac3d42fe5bb80cee4cb6399ff57020c4fe79c3822189a95b20",
+    "src/defense_pbp_analysis.js": "9fa9ecacd1b8a649d708098277e2b579be57a83299e094d730c6b92305cc8e00",
+    "src/defense_presets.js": "0fef4b11953e0d1d80978ea7c0b34c9ce9f8903a85f91faa1abc936cf86decdc",
+    "src/defense_probability.js": "e652ede7ebe9753f85105dc657fcb2b39d67f28d1ef92a58df008bddd2de4e48",
+    "src/defense_scoreboard.js": "919d45a9eb4ebc9f087d330efdd6043f29177cf7566b06068fdd54164d7c741a",
+    "src/defense_seventh_jobs.js": "ca1501845b601e0b742f601751ac74fba7e9717a6de66d8ab9d7a4d0c4c6d41d",
+    "src/defense_seventh_scoreboard.js": "f412a96f53badc6ed233ed0d45d80e20de4be1b8271c41a357efd9630b24a638",
+    "src/defense_seventh_season.js": "08851b87a804659812dd02e9874e7e1afe0f27f28cbe4da9114341396c38e01c",
+    "src/defense_sixth_jobs.js": "601e75cc23ecc69a7f4e5290d2d848c4bfaed0465fe85fc2a9cd786020db0d19",
+    "src/defense_sixth_pool.js": "49a7eac9245fc3eda22bdf270c0961baf909cf7f85d6f990f1b127cf72da9dc0",
+    "src/defense_sixth_presets.js": "44b29a6175c297ae32de0d4cdefae7921da309b63b31b61583a241dfcfd52d04",
+    "src/defense_sixth_season.js": "1c30c6c59fbc3e2a40b08231dddf9be255b11fca386d93daf1eb986a99000bcf",
+    "src/defense_third_clock_audit.js": "715b1d4885bd987c108b662b8f1b56c3cf42585376e1347c8534b2591d2b49d9",
+    "src/defense_third_game.js": "eadeecdd518179c8559b3bb2afbfee30a636f8b8323cd93ea191721b00bbd3d0",
+    "src/defense_third_jobs.js": "d15c933121632cf68733ca4e3cd24ed13c11311f23ebc3c29edc06f9e81fa6af",
+    "src/defense_third_minutes.js": "0894e14a649ad63ce96e57b315e090d22f0ac49590b0dd8a031195b0033de4c6",
+    "src/defense_third_pool.js": "02ddeb690caf2f570dabe1ca30826a690fd64354349299a40e08b2cc0eaafff3",
+    "src/defense_third_season.js": "92c10204741647e6a1cbbafbe9f13e22927deb418856860e821dbd4116c0f880",
+    "src/defense_validation.js": "189130f6ee9fda4f7dede42494bbefed362c39e106456266ddf3269d120a13a1",
+    "src/defense_variance_sources.js": "c0d90f2c2c17c1005b3c439e3b1a1b8c0a3504c6ca8fbf7292e6ab93f00fb4d4",
+    "src/event-highlights.js": "2db8159b648e994bc9fb8c744ed2a62641c86c6da4ea1c94e3f1fafff5d17c96",
+    "src/minute_budget.js": "388258e91afe84696612edab0d02ee88699d37f84683b4f68ef180c8d0f3e7dd",
+    "src/motion-model.js": "927f838cf01ff7c42c9de74b9555b606182e81ef481261c6e23247ed18b465ba",
+    "src/per36_report.js": "ff34b97732c75ff182fdfe6a2b0331e3308a779f1e17a1b31e46235fb4be74c3",
+    "src/player-figure.js": "f08e1df384ae7f1b64198dbbeb78b4c0339633432274fc6030855200e8fda479",
+    "src/player-portraits.js": "a8fd7ccc1ccc23609bf0f954ccf22fc3d5a54962a0670573e4bf09ac9aabb213",
+    "src/player-pose.js": "8e1534aa7f52168838a93b7bb266169a43963497a0f346b5cf32987203ae170f",
+    "src/probability_model.js": "13b175efac436d3c560fd39389f3486225ab90bfbc996d6802ee76ce461aad87",
+    "src/rebound_block_model.js": "57459f5bb27147410c9f5ada9ae308809e591e5a6a4dfea24f832ab796fb0a92",
+    "src/replay_accounting.js": "afa36e2507ae94a4d31460d74e71caa31ed395fd89ed8c0711842ea826620af9",
+    "src/rng.js": "f549b8e5b37591f83ae2d78995f5526faf9c3d9a376502f984e0c9e730486c31",
+    "src/season_simulation.js": "a57959fb823c1c9745f96628a92e97fe5c45c5d7a7102001132f370e88c629f2",
+    "src/season_style.js": "becd8451371053251f11ba457cb22ff62dfd4cbb4b241c4307f735075f622a1f",
+    "src/shop_constants.js": "545cb596e9d1bb1cb1d1b5ed57f39d9710e166fc311eb3c06225e4161f3657fb",
+    "src/simulation_engine.js": "680617059298d25c46c5211abc466f371088c2aa17c16f0e0280b7e6ad30a764",
+    "src/statistical_summary.js": "6481945c99dd2ff950675edbbff562ff16acbd3052a1b34a5d44bc7317dca085",
+    "src/strength_benchmark.js": "76c7197bd738317d57fa9e0e8a1c048d9e40fcf5e32fabd6afa84471d681bb50",
+    "src/teams.js": "2ebc706c06353c355c50b4a03ac1ca263ae9042fa3e6f097f169d9c559ebdf89",
+    "src/timed_game.js": "9634c261d4439cd7ab011f9e42466ceaaaed3c62861f231b3b801e9902130f5e",
+    "reports/ovr-2025-26-latest/runtime.mjs": "dd8a4d2862ce44b14abf7b848fb02f30700059d8fcd86527dd041440341ede45",
+    "reports/ovr-2025-26-latest/worker.mjs": "3601dd8acb81e55d89aca841bb1889887e145866425ffaeadff199973e7b5e8a",
+    "reports/ovr-2025-26-latest/run.mjs": "1e2bca34be2ab27dbd8151743a1e161c04e96e2584344469d3cfa500fada3604",
+    "scripts/export_defense_sixth_cards.js": "eef3d5bb04b598471dcb5a4db76514677274fe70f6382545279a29974a72c49c",
+    "reports/defense-tenth/step4-t0/2025-26/bundle.json": "43b5a5141fa667a492a67dfc6aa95eec058aabbe39e9d787b0a92b870d7db051",
+    "reports/defense-tenth/step4-rebounds-turnover-time/adapter.mjs": "f79c352899be469dd04e71be6b711bf81e83056d4f0981fa35fd94af6e71d1bc",
+    "reports/defense-tenth/step4-rebounds-allocation/model.mjs": "75556915f6792ada3992b4a069ccee89f9c3318882566f3601da01fa45c6e428",
+    "reports/defense-tenth/step4-rebounds-oreb/model.mjs": "4cba6619f5f2e75fdfaa5c74cd49616e23dd0989b4c8b06b3db85b9b20106cf2",
+    "reports/defense-tenth/step4-rebounds-oreb/2025-26/cards.json": "1f292f0bf39c7c8a0a174b938728de65b0ce53a663f6f0a36f4101416b3cff7d",
+    "reports/defense-tenth/step4-rebounds-oreb/2025-26/calibration-oreb.json": "d8e67526ffc3aad24bb48e4fee41d68b26489f383fe036813fa38792a3f24b2e",
+    "reports/defense-tenth/step4-rebounds-putback-time/timing.mjs": "e3a2963ef7e8c589a1ed593a223fe7b1c928087b8bddedee69ee648e0038e209",
+    "reports/defense-tenth/step4-rebounds-putback-time/putback-cdf.json": "bcdbc4cceaba613266e22bcafa67e8a14a3e7a7fc07643f720666379df218ee4",
+    "reports/defense-tenth/step4-rebounds-turnover-time/2025-26/calibration.json": "7b941465078969e457c6b7194f3e032b0befec333b868cf92d5fcd82b70f1c52",
+    "reports/defense-tenth/step4-rebounds-turnover-time/2025-26/turnover-cdf.json": "e799d5a04157e72386c50fb8d3c1506b8993ec215368d0edf9b88e2788fc67ca",
+    "reports/defense-tenth/step4-rebounds-closeout/status.json": "552cd0bc74c1cbd8d7c914f4f6c5c05db83a53c63d75668b429c5f0338e724f5"
+  },
+  "fingerprint": "f4d478625db177771282bca57991a2f06d847d485bc92ee55d7ca10424755391"
+}

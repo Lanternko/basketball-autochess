@@ -1,0 +1,17 @@
+{
+  "version": "conditional-source-choice-diagnostic-15",
+  "adopted": false,
+  "changesSimulation": false,
+  "decision": "Do not apply individual conditional offsets: shot holdout NLL is worse than the existing global elasticity; DREB holdout NLL is worse than existing marginal rates. These are point comparisons, not a statistical equivalence claim. Season-rate inputs already use all games, so the split is a conditional mechanism check, not a blind forecast.",
+  "comparisons": {
+    "shot": {
+      "existingCheckNll": 1.5600399635157802,
+      "conditionalCheckNll": 1.561026558533944
+    },
+    "dreb": {
+      "existingCheckNll": 1.5430237401283937,
+      "conditionalCheckNll": 1.543888856121618
+    }
+  },
+  "sourceArtifact": "reports\\player-impact-v15\\2025-26-conditional-choices-comparison.json"
+}

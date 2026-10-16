@@ -63,9 +63,28 @@ sec('1  單調性：屬性升高不該讓期望得分下降');
       M.helpDefense(hi), teamRebound(L), teamRebound(hi), 70).ev;
     ok(evHi < evLo, `${k} 40->99 讓對手期望得分下降（${evLo.toFixed(3)} -> ${evHi.toFixed(3)}）`);
   }
-  for (const k of ['offBall', 'screen', 'pass']) {
+  for (const k of ['screen', 'pass']) {
     const lo = probeOf({ [k]: 40 }).ev, hi = probeOf({ [k]: 99 }).ev;
     ok(hi > lo, `隊友 ${k} 40->99 提高持球者期望得分（${lo.toFixed(3)} -> ${hi.toFixed(3)}）`);
+  }
+  // 空間與無球刻意是兩件事，所以分兩條測：
+  //   空間 = 隊友的定點投射威脅 -> 走命中率與三分可及性（在 possession 層看得到）
+  //   無球 = 隊友跑不跑得動     -> 走傳得出去與誰接得到（只在整場模擬看得到）
+  {
+    const evOf = (v) => {
+      const L = BASELINE.roster.map((q, i) => i === 0 ? q : { ...q, long: v, mid: v });
+      return M.possessionProbabilities(L[0], M.teammateContext(L, 0), D[0],
+        M.helpDefense(D), teamRebound(L), teamRebound(D), 70).ev;
+    };
+    const lo = evOf(40), hi = evOf(99);
+    ok(hi > lo, `隊友空間（定點投射）40->99 提高持球者期望得分（${lo.toFixed(3)} -> ${hi.toFixed(3)}）`);
+  }
+  {
+    const team = (v) => ({ name: 'o', season: 's',
+      roster: BASELINE.roster.map((q, i) => i === 0 ? q : { ...q, offBall: v }) });
+    const pppOf = (A) => { const r = monteCarlo(A, BASELINE, 2000, OPTS); return r.avgScoreA / (r.avgPossessions / 2); };
+    const lo = pppOf(team(40)), hi = pppOf(team(99));
+    ok(hi > lo, `隊友無球（跑動）40->99 提高每回合得分（${lo.toFixed(3)} -> ${hi.toFixed(3)}）`);
   }
 }
 
@@ -139,19 +158,47 @@ sec('5  決定性：同 seed 必須完全一致');
 }
 
 // ---------------------------------------------------------------- 6
-sec('6  球權：出手品質搜尋要落在 NBA 真實範圍');
+sec('6  球權：要對得上真實 USG%');
 {
+  // 真實 USG%（stats.nba.com leaguedashplayerstats, MeasureType=Advanced，各自賽季）。
+  // 模型只打先發五人，所以每隊正規化到 100——真實五人加總 106-111%，
+  // 差額是板凳吃掉的球權，那不在這個模型的範圍內。
+  const REAL = {
+    GSW: { 'Stephen Curry': 28.6, 'Klay Thompson': 25.8, 'Kevin Durant': 27.1,
+      'Draymond Green': 15.9, 'Andre Iguodala': 11.1 },
+    CLE: { 'Kyrie Irving': 28.5, 'JR Smith': 17.7, 'LeBron James': 30.5,
+      'Kevin Love': 23.3, 'Tristan Thompson': 11.4 },
+    OKC: { 'Shai Gilgeous-Alexander': 32.3, 'Jalen Williams': 25.2,
+      'Chet Holmgren': 21.4, 'Luguentz Dort': 13.9, 'Isaiah Hartenstein': 15.3 },
+    NYK: { 'Jalen Brunson': 29.6, 'Mikal Bridges': 17.0, 'OG Anunoby': 19.4,
+      'Karl-Anthony Towns': 25.1, 'Josh Hart': 16.3 },
+    LAL: { "Shaquille O'Neal": 31.4, 'Kobe Bryant': 29.9, 'Derek Fisher': 17.3,
+      'Rick Fox': 15.0, 'Robert Horry': 12.7 },
+  };
+  const errs = [];
   for (const k of Object.keys(TEAMS)) {
-    const counts = new Map(TEAMS[k].roster.map(p => [p.name, 0]));
+    const roster = TEAMS[k].roster;
+    const counts = new Map(roster.map(p => [p.name, 0]));
     let tot = 0;
     for (let i = 0; i < 800; i++) {
       const g = simulateGame(TEAMS[k], BASELINE, { ...OPTS, seed: i * 7919 });
       for (const e of g.log) if (e.off === 0) { counts.set(e.handler, counts.get(e.handler) + 1); tot++; }
     }
-    const v = [...counts.values()].map(c => c / tot).sort((a, b) => b - a);
-    ok(v[0] <= 0.38 && v[4] >= 0.075,
-      `${TEAMS[k].name} 球權 ${(v[0] * 100).toFixed(1)}% ~ ${(v[4] * 100).toFixed(1)}%（上限 38%、下限 7.5%）`);
+    const raw = roster.map(p => REAL[k][p.name]);
+    const sum = raw.reduce((a, b) => a + b, 0);
+    const te = roster.map((p, i) =>
+      Math.abs(counts.get(p.name) / tot * 100 - raw[i] / sum * 100));
+    errs.push(...te);
+    const mae = te.reduce((a, b) => a + b, 0) / te.length;
+    // 6.0 這個門檻是為勇士留的，其他四隊都在 1.1pp 以內。
+    // 勇士的殘差集中在 Draymond（模型 7.6% vs 真實 14.7%）：他的真實球權有
+    // 三分之一是失誤，投籃又是全隊最差，期望得分驅動的模型不會把球留給他。
+    ok(mae <= 6.0, `${TEAMS[k].name} 對真實 USG% 平均絕對誤差 ${mae.toFixed(2)}pp（<= 6.0）`);
   }
+  const mae = errs.reduce((a, b) => a + b, 0) / errs.length;
+  ok(mae <= 2.5, `25 名球員對真實 USG% 平均絕對誤差 ${mae.toFixed(2)}pp（<= 2.5）`);
+  ok(Math.max(...errs) <= 10, `單人最大誤差 ${Math.max(...errs).toFixed(1)}pp（<= 10）`);
+
   // 出手品質搜尋的核心主張：期望得分高的人應該拿到較多球權
   const L = flat().roster.map((p, i) => i === 2 ? { ...p, long: 99, mid: 99, short: 99 } : p);
   const team = { name: 'x', season: 's', roster: L };
@@ -256,6 +303,51 @@ sec('11 傳球：必須真的影響得分，不能只是重分配球權');
   const dg = TEAMS.GSW.roster.find(q => q.name.includes('Draymond'));
   ok(dg.pass > 80 && dg.tovSkill < 60,
     `Draymond 傳球 ${dg.pass} / 失誤 ${dg.tovSkill}——真實 corr(AST%, TOV%) = +0.48，合併會抵消訊號`);
+}
+
+// ---------------------------------------------------------------- 12
+sec('12 創造者：陣容裡沒有人能創造機會，就必須打不動');
+{
+  // 屬性總量固定（每組 4970±10），只改變分配。
+  // 吃餅型：終結/防守/籃板/肉體全滿，切入與傳球極低——機會全靠別人生。
+  // 創造型：切入/傳球/投射高，終結與防守低。
+  const FIN = {
+    long: 55, mid: 55, short: 95, drive: 50, pass: 45, offBall: 88, screen: 88,
+    physique: 88, help: 85, onBall: 60, rebound: 90, tovSkill: 70, ft: 55, stamina: 70,
+  };
+  const CRE = {
+    long: 92, mid: 85, short: 70, drive: 92, pass: 99, offBall: 45, screen: 45,
+    physique: 55, help: 50, onBall: 70, rebound: 50, tovSkill: 75, ft: 90, stamina: 80,
+  };
+  const T = (rs) => ({
+    name: 'x', season: 's',
+    roster: rs.map((r, i) => ({ ...r, name: `p${i}`, pos: ['PG', 'SG', 'SF', 'PF', 'C'][i] })),
+  });
+  const pppOf = (A) => {
+    const r = monteCarlo(A, BASELINE, 3000, OPTS);
+    return r.avgScoreA / (r.avgPossessions / 2);
+  };
+  const none = pppOf(T([FIN, FIN, FIN, FIN, FIN]));
+  const one = pppOf(T([CRE, FIN, FIN, FIN, FIN]));
+  const gain = one - none;
+  ok(gain > 0.08,
+    `零創造者 -> 一創造者值 +${gain.toFixed(3)} 分/回合（${none.toFixed(3)} -> ${one.toFixed(3)}）`
+    + '——同屬性總量，這是「創造者是必需品」的門檻');
+
+  // 第二個創造者要遞減：一個大腦就夠，兩個是浪費終結與防守。
+  const two = pppOf(T([CRE, CRE, FIN, FIN, FIN]));
+  ok(two - one < gain,
+    `第二個創造者邊際遞減（+${(two - one).toFixed(3)} < +${gain.toFixed(3)}）——一個大腦就夠`);
+
+  // 依賴度必須有方向性：吃餅型受隊友創造力影響，創造型幾乎不受。
+  const ctxOf = (v) => M.teammateContext(
+    Array.from({ length: 5 }, () => ({ ...FIN, drive: v, pass: v })), 0);
+  const evOf = (self, v) => M.possessionProbabilities(
+    self, ctxOf(v), D[0], M.helpDefense(D), teamRebound(D), teamRebound(D), 70).ev;
+  const finSwing = evOf(FIN, 95) - evOf(FIN, 45);
+  const creSwing = evOf(CRE, 95) - evOf(CRE, 45);
+  ok(finSwing > creSwing * 1.5,
+    `吃餅型對隊友創造力的敏感度遠高於創造型（+${finSwing.toFixed(3)} vs +${creSwing.toFixed(3)}）`);
 }
 
 console.log(`\n===== ${pass} passed, ${fail} failed =====\n`);

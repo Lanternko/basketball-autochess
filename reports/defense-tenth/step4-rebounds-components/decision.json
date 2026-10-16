@@ -1,0 +1,25 @@
+{
+  "at": "2026-10-14T07:36:30.291032+00:00",
+  "models": {
+    "chance": {
+      "primaryMAEBothReferencesPass": false,
+      "RMSEnotSignificantlyWorse": true,
+      "replicationAndMoversNotSignificantlyWorse": true,
+      "supportedDevelopmentIncrement": false
+    },
+    "conversion": {
+      "primaryMAEBothReferencesPass": false,
+      "RMSEnotSignificantlyWorse": true,
+      "replicationAndMoversNotSignificantlyWorse": true,
+      "supportedDevelopmentIncrement": false
+    },
+    "both": {
+      "primaryMAEBothReferencesPass": false,
+      "RMSEnotSignificantlyWorse": true,
+      "replicationAndMoversNotSignificantlyWorse": true,
+      "supportedDevelopmentIncrement": false
+    }
+  },
+  "engineAdoption": false,
+  "supportedCandidates": []
+}

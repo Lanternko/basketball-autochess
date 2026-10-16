@@ -1,0 +1,26 @@
+{
+  "version": "source-ft-categories-19",
+  "officialModelAdopted": false,
+  "goalComplete": false,
+  "seasons": 4,
+  "fullSeasonSeeds": 3,
+  "strictOnCourtSeeds": 3,
+  "teamWinGatesFailed": [
+    "2023-24",
+    "2025-26"
+  ],
+  "ledgerConservationPassed": true,
+  "sourceFTCategoryConservationPassed": true,
+  "ovrSamplePlayers": 31,
+  "ovrFullRanking": false,
+  "cacheExactParityGames": 96,
+  "unresolved": [
+    "team win gates",
+    "individual FG/attempt accuracy",
+    "teammate FG regression fromv14",
+    "low-minute extrapolation",
+    "technical FT source mechanism",
+    "creator reference with new FTR survival",
+    "four missing skills remain70 and speed missing"
+  ]
+}

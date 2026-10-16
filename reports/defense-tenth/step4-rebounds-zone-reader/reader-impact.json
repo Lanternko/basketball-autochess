@@ -1,0 +1,713 @@
+{
+  "zoneOnly": true,
+  "allUnzonedPooledMetricsUnchanged": true,
+  "routes": {
+    "fg_short": {
+      "oldReal": {
+        "realProbability": 0.45273906718971874,
+        "simProbability": 0.5176687167701346,
+        "realValue": 1.3775361004200763,
+        "simValue": 1.3305908951345171,
+        "realFirstFgMake": 0.5660949478135427,
+        "simFirstFgMake": 0.5649062465049866,
+        "frequencyContribution": 0.08794862185893863,
+        "valueContribution": -0.02274422457649394,
+        "totalContribution": 0.06520439728244472,
+        "probabilityDeltaInterval": {
+          "delta": 0.06492964958041586,
+          "joint95": [
+            0.054383051780603604,
+            0.07559783431655313
+          ]
+        },
+        "frequencyContributionInterval": {
+          "delta": 0.08794862185893863,
+          "joint95": [
+            0.07381563361572818,
+            0.10223285758691475
+          ]
+        },
+        "valueContributionInterval": {
+          "delta": -0.02274422457649394,
+          "joint95": [
+            -0.03095811665917521,
+            -0.013951974074417447
+          ]
+        },
+        "totalContributionInterval": {
+          "delta": 0.06520439728244472,
+          "joint95": [
+            0.04620367125502294,
+            0.08439809521532936
+          ]
+        },
+        "firstFgMakeDeltaInterval": {
+          "delta": -0.0011887013085561948,
+          "joint95": [
+            -0.009820782312564698,
+            0.008063884476141097
+          ]
+        }
+      },
+      "correctedRealAndFrozenSimulation": {
+        "realProbability": 0.5531220923515276,
+        "simProbability": 0.5176687167701346,
+        "realValue": 1.4110881112032425,
+        "simValue": 1.3305908951345171,
+        "realFirstFgMake": 0.5899040415866096,
+        "simFirstFgMake": 0.5649062465049866,
+        "frequencyContribution": -0.04861037289759153,
+        "valueContribution": -0.043192095622427124,
+        "totalContribution": -0.09180246852001862,
+        "probabilityDeltaInterval": {
+          "delta": -0.035453375581393054,
+          "joint95": [
+            -0.04615601946162495,
+            -0.02452575481056667
+          ]
+        },
+        "frequencyContributionInterval": {
+          "delta": -0.04861037289759153,
+          "joint95": [
+            -0.06324245645668197,
+            -0.03367902232966481
+          ]
+        },
+        "valueContributionInterval": {
+          "delta": -0.043192095622427124,
+          "joint95": [
+            -0.05116417395740757,
+            -0.03493505799581095
+          ]
+        },
+        "totalContributionInterval": {
+          "delta": -0.09180246852001862,
+          "joint95": [
+            -0.11016990467701279,
+            -0.07333820096227177
+          ]
+        },
+        "firstFgMakeDeltaInterval": {
+          "delta": -0.02499779508162303,
+          "joint95": [
+            -0.03222769010820584,
+            -0.017370191167467658
+          ]
+        }
+      }
+    },
+    "fg_mid": {
+      "oldReal": {
+        "realProbability": 0.14363424682157588,
+        "simProbability": 0.05975531410160048,
+        "realValue": 1.3982578234982386,
+        "simValue": 1.0695545812207359,
+        "realFirstFgMake": 0.609498000332207,
+        "simFirstFgMake": 0.428557325916217,
+        "frequencyContribution": -0.10355931397326713,
+        "valueContribution": -0.03341751639228562,
+        "totalContribution": -0.13697683036555275,
+        "probabilityDeltaInterval": {
+          "delta": -0.0838789327199754,
+          "joint95": [
+            -0.09203366139001903,
+            -0.07613805319356814
+          ]
+        },
+        "frequencyContributionInterval": {
+          "delta": -0.10355931397326713,
+          "joint95": [
+            -0.11404645091010883,
+            -0.09357323012940966
+          ]
+        },
+        "valueContributionInterval": {
+          "delta": -0.03341751639228562,
+          "joint95": [
+            -0.03759946321669772,
+            -0.02922395155058836
+          ]
+        },
+        "totalContributionInterval": {
+          "delta": -0.13697683036555275,
+          "joint95": [
+            -0.15042257685037427,
+            -0.12378644264814694
+          ]
+        },
+        "firstFgMakeDeltaInterval": {
+          "delta": -0.18094067441599004,
+          "joint95": [
+            -0.1987053335144904,
+            -0.16267203544620726
+          ]
+        }
+      },
+      "correctedRealAndFrozenSimulation": {
+        "realProbability": 0.0423422254047601,
+        "simProbability": 0.05975531410160048,
+        "realValue": 1.0185689888816185,
+        "simValue": 1.0695545812207359,
+        "realFirstFgMake": 0.407078686591985,
+        "simFirstFgMake": 0.428557325916217,
+        "frequencyContribution": 0.018194752406517363,
+        "valueContribution": 0.00260433452912658,
+        "totalContribution": 0.020799086935643942,
+        "probabilityDeltaInterval": {
+          "delta": 0.017413088696840384,
+          "joint95": [
+            0.013569258180347384,
+            0.021172229843733625
+          ]
+        },
+        "frequencyContributionInterval": {
+          "delta": 0.018194752406517363,
+          "joint95": [
+            0.014227843072648011,
+            0.022097104499474367
+          ]
+        },
+        "valueContributionInterval": {
+          "delta": 0.00260433452912658,
+          "joint95": [
+            0.00026959999472093554,
+            0.004841288015605088
+          ]
+        },
+        "totalContributionInterval": {
+          "delta": 0.020799086935643942,
+          "joint95": [
+            0.016007961512216343,
+            0.02549380695081247
+          ]
+        },
+        "firstFgMakeDeltaInterval": {
+          "delta": 0.021478639324231996,
+          "joint95": [
+            0.0029772152239470858,
+            0.039540459359320795
+          ]
+        }
+      }
+    },
+    "fg_long": {
+      "oldReal": {
+        "realProbability": 0.2410159087839373,
+        "simProbability": 0.21347331681490245,
+        "realValue": 1.3295376262570953,
+        "simValue": 1.316019199916924,
+        "realFirstFgMake": 0.37601651674912107,
+        "simFirstFgMake": 0.3640480967636169,
+        "frequencyContribution": -0.03655213554429061,
+        "valueContribution": -0.0032547300866429454,
+        "totalContribution": -0.03980686563093355,
+        "probabilityDeltaInterval": {
+          "delta": -0.027542591969034858,
+          "joint95": [
+            -0.034844283936078795,
+            -0.020321869222499914
+          ]
+        },
+        "frequencyContributionInterval": {
+          "delta": -0.03655213554429061,
+          "joint95": [
+            -0.04637089806094023,
+            -0.02693811547361449
+          ]
+        },
+        "valueContributionInterval": {
+          "delta": -0.0032547300866429454,
+          "joint95": [
+            -0.009211915500584063,
+            0.0023133111979648413
+          ]
+        },
+        "totalContributionInterval": {
+          "delta": -0.03980686563093355,
+          "joint95": [
+            -0.051493439118044826,
+            -0.028606020399286263
+          ]
+        },
+        "firstFgMakeDeltaInterval": {
+          "delta": -0.011968419985504186,
+          "joint95": [
+            -0.02085997539358011,
+            -0.0028917337380594695
+          ]
+        }
+      },
+      "correctedRealAndFrozenSimulation": {
+        "realProbability": 0.2410159087839373,
+        "simProbability": 0.21347331681490245,
+        "realValue": 1.3295376262570953,
+        "simValue": 1.316019199916924,
+        "realFirstFgMake": 0.37601651674912107,
+        "simFirstFgMake": 0.3640480967636169,
+        "frequencyContribution": -0.03655213554429061,
+        "valueContribution": -0.0032547300866429454,
+        "totalContribution": -0.03980686563093355,
+        "probabilityDeltaInterval": {
+          "delta": -0.027542591969034858,
+          "joint95": [
+            -0.034844283936078795,
+            -0.020321869222499914
+          ]
+        },
+        "frequencyContributionInterval": {
+          "delta": -0.03655213554429061,
+          "joint95": [
+            -0.04637089806094023,
+            -0.02693811547361449
+          ]
+        },
+        "valueContributionInterval": {
+          "delta": -0.0032547300866429454,
+          "joint95": [
+            -0.009211915500584063,
+            0.0023133111979648413
+          ]
+        },
+        "totalContributionInterval": {
+          "delta": -0.03980686563093355,
+          "joint95": [
+            -0.051493439118044826,
+            -0.028606020399286263
+          ]
+        },
+        "firstFgMakeDeltaInterval": {
+          "delta": -0.011968419985504186,
+          "joint95": [
+            -0.02085997539358011,
+            -0.0028917337380594695
+          ]
+        }
+      }
+    },
+    "fg_unknown": {
+      "oldReal": null,
+      "correctedRealAndFrozenSimulation": {
+        "realProbability": 0.000908996255006898,
+        "simProbability": 0.0,
+        "realValue": 0.8185227561657767,
+        "simValue": 0.0,
+        "realFirstFgMake": 0.320976353928299,
+        "simFirstFgMake": 0.0,
+        "frequencyContribution": -0.0003845257493666738,
+        "valueContribution": -0.0003845257493666738,
+        "totalContribution": -0.0007690514987333476,
+        "probabilityDeltaInterval": {
+          "delta": -0.000908996255006898,
+          "joint95": [
+            -0.001127769345188873,
+            -0.0006998552762797245
+          ]
+        },
+        "frequencyContributionInterval": {
+          "delta": -0.0003845257493666738,
+          "joint95": [
+            -0.0005068083400901398,
+            -0.00027073099723996184
+          ]
+        },
+        "valueContributionInterval": {
+          "delta": -0.0003845257493666738,
+          "joint95": [
+            -0.0005068083400901398,
+            -0.00027073099723996184
+          ]
+        },
+        "totalContributionInterval": {
+          "delta": -0.0007690514987333476,
+          "joint95": [
+            -0.0010136166801802797,
+            -0.0005414619944799237
+          ]
+        },
+        "firstFgMakeDeltaInterval": {
+          "delta": -0.320976353928299,
+          "joint95": [
+            -0.4449405513468013,
+            -0.20601895703933748
+          ]
+        }
+      }
+    },
+    "ft_first": {
+      "oldReal": {
+        "realProbability": 0.0788112465731381,
+        "simProbability": 0.09912491676983178,
+        "realValue": 1.5482774453493928,
+        "simValue": 1.58913622190269,
+        "realFirstFgMake": 0.4347064393939394,
+        "simFirstFgMake": 0.501836513786584,
+        "frequencyContribution": 0.03187951518828853,
+        "valueContribution": 0.0036061158458702385,
+        "totalContribution": 0.03548563103415876,
+        "probabilityDeltaInterval": {
+          "delta": 0.02031367019669368,
+          "joint95": [
+            0.017052325930658068,
+            0.02365266978050544
+          ]
+        },
+        "frequencyContributionInterval": {
+          "delta": 0.03187951518828853,
+          "joint95": [
+            0.026761665121859003,
+            0.03714311537413616
+          ]
+        },
+        "valueContributionInterval": {
+          "delta": 0.0036061158458702385,
+          "joint95": [
+            0.001789388722261022,
+            0.0054195431467009975
+          ]
+        },
+        "totalContributionInterval": {
+          "delta": 0.03548563103415876,
+          "joint95": [
+            0.029922447536360634,
+            0.04123282891344089
+          ]
+        },
+        "firstFgMakeDeltaInterval": {
+          "delta": 0.06713007439264462,
+          "joint95": [
+            -0.023439796446458813,
+            0.15737247244949773
+          ]
+        }
+      },
+      "correctedRealAndFrozenSimulation": {
+        "realProbability": 0.0788112465731381,
+        "simProbability": 0.09912491676983178,
+        "realValue": 1.5482774453493928,
+        "simValue": 1.58913622190269,
+        "realFirstFgMake": 0.4347064393939394,
+        "simFirstFgMake": 0.501836513786584,
+        "frequencyContribution": 0.03187951518828853,
+        "valueContribution": 0.0036061158458702385,
+        "totalContribution": 0.03548563103415876,
+        "probabilityDeltaInterval": {
+          "delta": 0.02031367019669368,
+          "joint95": [
+            0.017052325930658068,
+            0.02365266978050544
+          ]
+        },
+        "frequencyContributionInterval": {
+          "delta": 0.03187951518828853,
+          "joint95": [
+            0.026761665121859003,
+            0.03714311537413616
+          ]
+        },
+        "valueContributionInterval": {
+          "delta": 0.0036061158458702385,
+          "joint95": [
+            0.001789388722261022,
+            0.0054195431467009975
+          ]
+        },
+        "totalContributionInterval": {
+          "delta": 0.03548563103415876,
+          "joint95": [
+            0.029922447536360634,
+            0.04123282891344089
+          ]
+        },
+        "firstFgMakeDeltaInterval": {
+          "delta": 0.06713007439264462,
+          "joint95": [
+            -0.023439796446458813,
+            0.15737247244949773
+          ]
+        }
+      }
+    },
+    "loss_before_attempt": {
+      "oldReal": {
+        "realProbability": 0.08024548187939132,
+        "simProbability": 0.10503094408540972,
+        "realValue": 0.0,
+        "simValue": 0.0,
+        "realFirstFgMake": 0.0,
+        "simFirstFgMake": 0.0,
+        "frequencyContribution": 0.0,
+        "valueContribution": 0.0,
+        "totalContribution": 0.0,
+        "probabilityDeltaInterval": {
+          "delta": 0.024785462206018405,
+          "joint95": [
+            0.020911943047794476,
+            0.028539072235628283
+          ]
+        },
+        "frequencyContributionInterval": {
+          "delta": 0.0,
+          "joint95": [
+            0.0,
+            0.0
+          ]
+        },
+        "valueContributionInterval": {
+          "delta": 0.0,
+          "joint95": [
+            0.0,
+            0.0
+          ]
+        },
+        "totalContributionInterval": {
+          "delta": 0.0,
+          "joint95": [
+            0.0,
+            0.0
+          ]
+        },
+        "firstFgMakeDeltaInterval": {
+          "delta": 0.0,
+          "joint95": [
+            0.0,
+            0.0
+          ]
+        }
+      },
+      "correctedRealAndFrozenSimulation": {
+        "realProbability": 0.08024548187939132,
+        "simProbability": 0.10503094408540972,
+        "realValue": 0.0,
+        "simValue": 0.0,
+        "realFirstFgMake": 0.0,
+        "simFirstFgMake": 0.0,
+        "frequencyContribution": 0.0,
+        "valueContribution": 0.0,
+        "totalContribution": 0.0,
+        "probabilityDeltaInterval": {
+          "delta": 0.024785462206018405,
+          "joint95": [
+            0.020911943047794476,
+            0.028539072235628283
+          ]
+        },
+        "frequencyContributionInterval": {
+          "delta": 0.0,
+          "joint95": [
+            0.0,
+            0.0
+          ]
+        },
+        "valueContributionInterval": {
+          "delta": 0.0,
+          "joint95": [
+            0.0,
+            0.0
+          ]
+        },
+        "totalContributionInterval": {
+          "delta": 0.0,
+          "joint95": [
+            0.0,
+            0.0
+          ]
+        },
+        "firstFgMakeDeltaInterval": {
+          "delta": 0.0,
+          "joint95": [
+            0.0,
+            0.0
+          ]
+        }
+      }
+    },
+    "period_end": {
+      "oldReal": {
+        "realProbability": 0.003554048752238693,
+        "simProbability": 0.004946791458121014,
+        "realValue": 0.0,
+        "simValue": 0.0,
+        "realFirstFgMake": 0.0,
+        "simFirstFgMake": 0.0,
+        "frequencyContribution": 0.0,
+        "valueContribution": 0.0,
+        "totalContribution": 0.0,
+        "probabilityDeltaInterval": {
+          "delta": 0.0013927427058823211,
+          "joint95": [
+            0.0008254896130956076,
+            0.0019324477035389724
+          ]
+        },
+        "frequencyContributionInterval": {
+          "delta": 0.0,
+          "joint95": [
+            0.0,
+            0.0
+          ]
+        },
+        "valueContributionInterval": {
+          "delta": 0.0,
+          "joint95": [
+            0.0,
+            0.0
+          ]
+        },
+        "totalContributionInterval": {
+          "delta": 0.0,
+          "joint95": [
+            0.0,
+            0.0
+          ]
+        },
+        "firstFgMakeDeltaInterval": {
+          "delta": 0.0,
+          "joint95": [
+            0.0,
+            0.0
+          ]
+        }
+      },
+      "correctedRealAndFrozenSimulation": {
+        "realProbability": 0.003554048752238693,
+        "simProbability": 0.004946791458121014,
+        "realValue": 0.0,
+        "simValue": 0.0,
+        "realFirstFgMake": 0.0,
+        "simFirstFgMake": 0.0,
+        "frequencyContribution": 0.0,
+        "valueContribution": 0.0,
+        "totalContribution": 0.0,
+        "probabilityDeltaInterval": {
+          "delta": 0.0013927427058823211,
+          "joint95": [
+            0.0008254896130956076,
+            0.0019324477035389724
+          ]
+        },
+        "frequencyContributionInterval": {
+          "delta": 0.0,
+          "joint95": [
+            0.0,
+            0.0
+          ]
+        },
+        "valueContributionInterval": {
+          "delta": 0.0,
+          "joint95": [
+            0.0,
+            0.0
+          ]
+        },
+        "totalContributionInterval": {
+          "delta": 0.0,
+          "joint95": [
+            0.0,
+            0.0
+          ]
+        },
+        "firstFgMakeDeltaInterval": {
+          "delta": 0.0,
+          "joint95": [
+            0.0,
+            0.0
+          ]
+        }
+      }
+    },
+    "other": {
+      "oldReal": {
+        "realProbability": 0.0,
+        "simProbability": 0.0,
+        "realValue": 0.0,
+        "simValue": 0.0,
+        "realFirstFgMake": 0.0,
+        "simFirstFgMake": 0.0,
+        "frequencyContribution": 0.0,
+        "valueContribution": 0.0,
+        "totalContribution": 0.0,
+        "probabilityDeltaInterval": {
+          "delta": 0.0,
+          "joint95": [
+            0.0,
+            0.0
+          ]
+        },
+        "frequencyContributionInterval": {
+          "delta": 0.0,
+          "joint95": [
+            0.0,
+            0.0
+          ]
+        },
+        "valueContributionInterval": {
+          "delta": 0.0,
+          "joint95": [
+            0.0,
+            0.0
+          ]
+        },
+        "totalContributionInterval": {
+          "delta": 0.0,
+          "joint95": [
+            0.0,
+            0.0
+          ]
+        },
+        "firstFgMakeDeltaInterval": {
+          "delta": 0.0,
+          "joint95": [
+            0.0,
+            0.0
+          ]
+        }
+      },
+      "correctedRealAndFrozenSimulation": {
+        "realProbability": 0.0,
+        "simProbability": 0.0,
+        "realValue": 0.0,
+        "simValue": 0.0,
+        "realFirstFgMake": 0.0,
+        "simFirstFgMake": 0.0,
+        "frequencyContribution": 0.0,
+        "valueContribution": 0.0,
+        "totalContribution": 0.0,
+        "probabilityDeltaInterval": {
+          "delta": 0.0,
+          "joint95": [
+            0.0,
+            0.0
+          ]
+        },
+        "frequencyContributionInterval": {
+          "delta": 0.0,
+          "joint95": [
+            0.0,
+            0.0
+          ]
+        },
+        "valueContributionInterval": {
+          "delta": 0.0,
+          "joint95": [
+            0.0,
+            0.0
+          ]
+        },
+        "totalContributionInterval": {
+          "delta": 0.0,
+          "joint95": [
+            0.0,
+            0.0
+          ]
+        },
+        "firstFgMakeDeltaInterval": {
+          "delta": 0.0,
+          "joint95": [
+            0.0,
+            0.0
+          ]
+        }
+      }
+    }
+  }
+}

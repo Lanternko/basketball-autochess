@@ -1,0 +1,4087 @@
+{
+  "season": "2025-26",
+  "design": "Independent Gamma-Poisson posterior source token rates (events per floor minute); contact/terminal priors selected by 2022-25 whole-game folds. Not causal skill, no team/win/on-off/OVR or simulation residual fit. Floor minutes include endgame whereas counts exclude source action-time policy; ordinary-state exposure not separately identified. Candidate joint lineup odds require runtime validation.",
+  "priorMinutes": {
+    "contacts": 128.87400247995137,
+    "terminal": 24.639829368903087
+  },
+  "leagueContactRate": 0.03193773015235868,
+  "leagueTerminalRate": 0.45911621494266913,
+  "unassignedTerminalRatePerTeamMinute": 0.014817012513307387,
+  "cards": {
+    "1629652": {
+      "sourceMinutes": 1807.7749999999999,
+      "sourceContacts": 29,
+      "sourceTerminal": 582,
+      "contactRate": 0.017099610240396114,
+      "terminalRate": 0.32378724276152315
+    },
+    "1631096": {
+      "sourceMinutes": 1910.4483333333337,
+      "sourceContacts": 112,
+      "sourceTerminal": 948,
+      "contactRate": 0.05693849426140467,
+      "terminalRate": 0.4957461699610939
+    },
+    "1628392": {
+      "sourceMinutes": 1097.6466666666668,
+      "sourceContacts": 35,
+      "sourceTerminal": 399,
+      "contactRate": 0.03189179285667886,
+      "terminalRate": 0.3656041007764915
+    },
+    "1641717": {
+      "sourceMinutes": 1972.7383333333335,
+      "sourceContacts": 26,
+      "sourceTerminal": 660,
+      "contactRate": 0.01432992307936981,
+      "terminalRate": 0.3360968682507627
+    },
+    "1628983": {
+      "sourceMinutes": 2161.9183333333335,
+      "sourceContacts": 121,
+      "sourceTerminal": 1605,
+      "contactRate": 0.054616885676998746,
+      "terminalRate": 0.7392040023299357
+    },
+    "1631095": {
+      "sourceMinutes": 2679.2983333333327,
+      "sourceContacts": 61,
+      "sourceTerminal": 1142,
+      "contactRate": 0.02318801530960907,
+      "terminalRate": 0.4265306659395263
+    },
+    "1630578": {
+      "sourceMinutes": 2362.8783333333326,
+      "sourceContacts": 169,
+      "sourceTerminal": 1450,
+      "contactRate": 0.0694755817529336,
+      "terminalRate": 0.612063425537565
+    },
+    "203500": {
+      "sourceMinutes": 708.1983333333334,
+      "sourceContacts": 37,
+      "sourceTerminal": 188,
+      "contactRate": 0.049118745603880895,
+      "terminalRate": 0.27197347974039365
+    },
+    "201142": {
+      "sourceMinutes": 2773.914999999999,
+      "sourceContacts": 193,
+      "sourceTerminal": 1695,
+      "contactRate": 0.06790570825039516,
+      "terminalRate": 0.6097120296840751
+    },
+    "1641708": {
+      "sourceMinutes": 2880.766666666666,
+      "sourceContacts": 86,
+      "sourceTerminal": 1328,
+      "contactRate": 0.029942426030683405,
+      "terminalRate": 0.4609725169349548
+    },
+    "1631106": {
+      "sourceMinutes": 1492.1650000000002,
+      "sourceContacts": 29,
+      "sourceTerminal": 658,
+      "contactRate": 0.02042883796392102,
+      "terminalRate": 0.44126477727207974
+    },
+    "1631119": {
+      "sourceMinutes": 1221.67,
+      "sourceContacts": 39,
+      "sourceTerminal": 424,
+      "contactRate": 0.03192487104136331,
+      "terminalRate": 0.34928116182563873
+    },
+    "1642263": {
+      "sourceMinutes": 2079.059999999999,
+      "sourceContacts": 29,
+      "sourceTerminal": 1062,
+      "contactRate": 0.014998610953798112,
+      "terminalRate": 0.5102023255469254
+    },
+    "203991": {
+      "sourceMinutes": 894.56,
+      "sourceContacts": 22,
+      "sourceTerminal": 284,
+      "contactRate": 0.025517955287371538,
+      "terminalRate": 0.32127132290639937
+    },
+    "1630598": {
+      "sourceMinutes": 1383.07,
+      "sourceContacts": 19,
+      "sourceTerminal": 632,
+      "contactRate": 0.015288888395961353,
+      "terminalRate": 0.4569922947011676
+    },
+    "1627936": {
+      "sourceMinutes": 966.5266666666669,
+      "sourceContacts": 15,
+      "sourceTerminal": 343,
+      "contactRate": 0.017451096802553114,
+      "terminalRate": 0.3574702601569463
+    },
+    "1642964": {
+      "sourceMinutes": 332.28166666666675,
+      "sourceContacts": 5,
+      "sourceTerminal": 80,
+      "contactRate": 0.019767605007932364,
+      "terminalRate": 0.25583369511480486
+    },
+    "1642349": {
+      "sourceMinutes": 1390.791666666667,
+      "sourceContacts": 45,
+      "sourceTerminal": 691,
+      "contactRate": 0.032320229450495244,
+      "terminalRate": 0.49618264618511415
+    },
+    "1642959": {
+      "sourceMinutes": 179.6916666666667,
+      "sourceContacts": 6,
+      "sourceTerminal": 65,
+      "contactRate": 0.032783760885765935,
+      "terminalRate": 0.3734742155629282
+    },
+    "1629006": {
+      "sourceMinutes": 1332.9083333333335,
+      "sourceContacts": 28,
+      "sourceTerminal": 357,
+      "contactRate": 0.021970400331175775,
+      "terminalRate": 0.27130716634284846
+    },
+    "1630559": {
+      "sourceMinutes": 1728.3333333333335,
+      "sourceContacts": 90,
+      "sourceTerminal": 993,
+      "contactRate": 0.05067605608699851,
+      "terminalRate": 0.5729195212826419
+    },
+    "1629060": {
+      "sourceMinutes": 1873.8149999999998,
+      "sourceContacts": 7,
+      "sourceTerminal": 647,
+      "contactRate": 0.005550508891342639,
+      "terminalRate": 0.3467622905810852
+    },
+    "1629028": {
+      "sourceMinutes": 1910.9516666666673,
+      "sourceContacts": 49,
+      "sourceTerminal": 716,
+      "contactRate": 0.026039452252348935,
+      "terminalRate": 0.3757572538866529
+    },
+    "1629216": {
+      "sourceMinutes": 849.4450000000002,
+      "sourceContacts": 14,
+      "sourceTerminal": 237,
+      "contactRate": 0.01851741923537904,
+      "terminalRate": 0.28408289087452504
+    },
+    "1629029": {
+      "sourceMinutes": 2261.9516666666673,
+      "sourceContacts": 150,
+      "sourceTerminal": 1908,
+      "contactRate": 0.06446138884307245,
+      "terminalRate": 0.8393771027856682
+    },
+    "202710": {
+      "sourceMinutes": 1128.3099999999997,
+      "sourceContacts": 68,
+      "sourceTerminal": 600,
+      "contactRate": 0.057363077300221346,
+      "terminalRate": 0.5302160854052964
+    },
+    "1630228": {
+      "sourceMinutes": 806.7799999999999,
+      "sourceContacts": 27,
+      "sourceTerminal": 439,
+      "contactRate": 0.03325582216544393,
+      "terminalRate": 0.5416187217214894
+    },
+    "203110": {
+      "sourceMinutes": 1822.1933333333327,
+      "sourceContacts": 55,
+      "sourceTerminal": 686,
+      "contactRate": 0.03029928389950579,
+      "terminalRate": 0.3775720293956577
+    },
+    "1641764": {
+      "sourceMinutes": 2292.078333333334,
+      "sourceContacts": 84,
+      "sourceTerminal": 1069,
+      "contactRate": 0.03639722344440861,
+      "terminalRate": 0.46631159654595167
+    },
+    "201939": {
+      "sourceMinutes": 1280.1416666666669,
+      "sourceContacts": 86,
+      "sourceTerminal": 952,
+      "contactRate": 0.06395666498828828,
+      "terminalRate": 0.7382941497282108
+    },
+    "203935": {
+      "sourceMinutes": 1748.0449999999994,
+      "sourceContacts": 49,
+      "sourceTerminal": 600,
+      "contactRate": 0.02829953932198333,
+      "terminalRate": 0.3448512307821345
+    },
+    "1627741": {
+      "sourceMinutes": 796.6549999999999,
+      "sourceContacts": 3,
+      "sourceTerminal": 375,
+      "contactRate": 0.007688514455832231,
+      "terminalRate": 0.4703701172617064
+    },
+    "1627780": {
+      "sourceMinutes": 1117.245,
+      "sourceContacts": 18,
+      "sourceTerminal": 481,
+      "contactRate": 0.017747858006213906,
+      "terminalRate": 0.43114028011807054
+    },
+    "201143": {
+      "sourceMinutes": 969.1850000000002,
+      "sourceContacts": 9,
+      "sourceTerminal": 376,
+      "contactRate": 0.011944661521135849,
+      "terminalRate": 0.3897191273060007
+    },
+    "1631222": {
+      "sourceMinutes": 2017.4533333333334,
+      "sourceContacts": 40,
+      "sourceTerminal": 645,
+      "contactRate": 0.020554154242341006,
+      "terminalRate": 0.3213920682875245
+    },
+    "1629637": {
+      "sourceMinutes": 1175.9283333333335,
+      "sourceContacts": 61,
+      "sourceTerminal": 334,
+      "contactRate": 0.04990483334341385,
+      "terminalRate": 0.2876242731770058
+    },
+    "1629020": {
+      "sourceMinutes": 1099.3916666666667,
+      "sourceContacts": 27,
+      "sourceTerminal": 298,
+      "contactRate": 0.025333235224654627,
+      "terminalRate": 0.2751813861867941
+    },
+    "1630611": {
+      "sourceMinutes": 1364.1966666666665,
+      "sourceContacts": 46,
+      "sourceTerminal": 599,
+      "contactRate": 0.03356568724473266,
+      "terminalRate": 0.4394416095334618
+    },
+    "1642954": {
+      "sourceMinutes": 1331.9433333333332,
+      "sourceContacts": 25,
+      "sourceTerminal": 401,
+      "contactRate": 0.01993126888698189,
+      "terminalRate": 0.3039345884076734
+    },
+    "1642366": {
+      "sourceMinutes": 1137.7483333333337,
+      "sourceContacts": 30,
+      "sourceTerminal": 499,
+      "contactRate": 0.02693458195883906,
+      "terminalRate": 0.43902076911239873
+    },
+    "1628384": {
+      "sourceMinutes": 2149.3999999999996,
+      "sourceContacts": 40,
+      "sourceTerminal": 975,
+      "contactRate": 0.01936375653974804,
+      "terminalRate": 0.45367731164474506
+    },
+    "1626157": {
+      "sourceMinutes": 2223.1799999999994,
+      "sourceContacts": 139,
+      "sourceTerminal": 1324,
+      "contactRate": 0.06084721820330697,
+      "terminalRate": 0.5940478537248184
+    },
+    "1630574": {
+      "sourceMinutes": 492.9783333333333,
+      "sourceContacts": 17,
+      "sourceTerminal": 123,
+      "contactRate": 0.033956522953705354,
+      "terminalRate": 0.2594819016695677
+    },
+    "1628969": {
+      "sourceMinutes": 2582.0583333333334,
+      "sourceContacts": 53,
+      "sourceTerminal": 1025,
+      "contactRate": 0.021068745376016256,
+      "terminalRate": 0.3975575538528747
+    },
+    "1628973": {
+      "sourceMinutes": 2481.203333333333,
+      "sourceContacts": 137,
+      "sourceTerminal": 1690,
+      "contactRate": 0.054065809153845706,
+      "terminalRate": 0.6789381596260928
+    },
+    "1630596": {
+      "sourceMinutes": 1901.2983333333339,
+      "sourceContacts": 61,
+      "sourceTerminal": 997,
+      "contactRate": 0.03207409635437363,
+      "terminalRate": 0.5235435720230733
+    },
+    "1642281": {
+      "sourceMinutes": 1624.6300000000006,
+      "sourceContacts": 30,
+      "sourceTerminal": 731,
+      "contactRate": 0.01945586840213052,
+      "terminalRate": 0.450085566338609
+    },
+    "1628386": {
+      "sourceMinutes": 1361.45,
+      "sourceContacts": 96,
+      "sourceTerminal": 629,
+      "contactRate": 0.06717730033755254,
+      "terminalRate": 0.4619560230726338
+    },
+    "1630241": {
+      "sourceMinutes": 1286.0566666666668,
+      "sourceContacts": 42,
+      "sourceTerminal": 508,
+      "contactRate": 0.032592369449927064,
+      "terminalRate": 0.39621113413168907
+    },
+    "1628378": {
+      "sourceMinutes": 2152.7216666666664,
+      "sourceContacts": 130,
+      "sourceTerminal": 1593,
+      "contactRate": 0.058781643447378344,
+      "terminalRate": 0.7368149699155311
+    },
+    "1627824": {
+      "sourceMinutes": 990.9550000000002,
+      "sourceContacts": 18,
+      "sourceTerminal": 379,
+      "contactRate": 0.019749393046511167,
+      "terminalRate": 0.38431915357350394
+    },
+    "1629731": {
+      "sourceMinutes": 1230.9599999999994,
+      "sourceContacts": 16,
+      "sourceTerminal": 281,
+      "contactRate": 0.014792940225184344,
+      "terminalRate": 0.2328070921637573
+    },
+    "1628366": {
+      "sourceMinutes": 647.7916666666666,
+      "sourceContacts": 10,
+      "sourceTerminal": 212,
+      "contactRate": 0.018175057396793856,
+      "terminalRate": 0.3320970931808813
+    },
+    "1630540": {
+      "sourceMinutes": 1040.9350000000004,
+      "sourceContacts": 13,
+      "sourceTerminal": 443,
+      "contactRate": 0.014631399723009418,
+      "terminalRate": 0.42635442643268406
+    },
+    "1641998": {
+      "sourceMinutes": 81.58833333333334,
+      "sourceContacts": 2,
+      "sourceTerminal": 20,
+      "contactRate": 0.029059561138221682,
+      "terminalRate": 0.2947668904380361
+    },
+    "1641854": {
+      "sourceMinutes": 1052.0183333333327,
+      "sourceContacts": 29,
+      "sourceTerminal": 297,
+      "contactRate": 0.02804315186960041,
+      "terminalRate": 0.28636066290796514
+    },
+    "1629013": {
+      "sourceMinutes": 1150.8716666666667,
+      "sourceContacts": 22,
+      "sourceTerminal": 409,
+      "contactRate": 0.02040713537422961,
+      "terminalRate": 0.3575571541530597
+    },
+    "203903": {
+      "sourceMinutes": 1251.3750000000002,
+      "sourceContacts": 21,
+      "sourceTerminal": 611,
+      "contactRate": 0.01819667543300681,
+      "terminalRate": 0.48770008848915175
+    },
+    "1642278": {
+      "sourceMinutes": 693.3333333333333,
+      "sourceContacts": 19,
+      "sourceTerminal": 296,
+      "contactRate": 0.028114493884920162,
+      "terminalRate": 0.42802790015165953
+    },
+    "1642878": {
+      "sourceMinutes": 491.2916666666666,
+      "sourceContacts": 14,
+      "sourceTerminal": 261,
+      "contactRate": 0.02921145754454229,
+      "terminalRate": 0.5278075622231639
+    },
+    "1626204": {
+      "sourceMinutes": 404.925,
+      "sourceContacts": 9,
+      "sourceTerminal": 133,
+      "contactRate": 0.02457093972436133,
+      "terminalRate": 0.3359505604979378
+    },
+    "1629023": {
+      "sourceMinutes": 1655.0183333333334,
+      "sourceContacts": 34,
+      "sourceTerminal": 779,
+      "contactRate": 0.021366728445235378,
+      "terminalRate": 0.4705198728801032
+    },
+    "203076": {
+      "sourceMinutes": 625.6300000000001,
+      "sourceContacts": 44,
+      "sourceTerminal": 403,
+      "contactRate": 0.06377162076901986,
+      "terminalRate": 0.6371394250272702
+    },
+    "1641726": {
+      "sourceMinutes": 115.27333333333331,
+      "sourceContacts": 5,
+      "sourceTerminal": 32,
+      "contactRate": 0.037337876673905805,
+      "terminalRate": 0.3095673370550695
+    },
+    "202691": {
+      "sourceMinutes": 1448.853333333333,
+      "sourceContacts": 12,
+      "sourceTerminal": 785,
+      "contactRate": 0.010214656708443015,
+      "terminalRate": 0.5404250018617854
+    },
+    "1642843": {
+      "sourceMinutes": 2261.5749999999994,
+      "sourceContacts": 120,
+      "sourceTerminal": 1412,
+      "contactRate": 0.051921602588507886,
+      "terminalRate": 0.6225629048122227
+    },
+    "1630577": {
+      "sourceMinutes": 2121.1266666666666,
+      "sourceContacts": 24,
+      "sourceTerminal": 750,
+      "contactRate": 0.012495971001432158,
+      "terminalRate": 0.3547974798764236
+    },
+    "203084": {
+      "sourceMinutes": 1856.2366666666667,
+      "sourceContacts": 34,
+      "sourceTerminal": 630,
+      "contactRate": 0.019200915952582536,
+      "terminalRate": 0.3409647292357658
+    },
+    "1641705": {
+      "sourceMinutes": 1797.9866666666667,
+      "sourceContacts": 190,
+      "sourceTerminal": 1324,
+      "contactRate": 0.10074207555486124,
+      "terminalRate": 0.7326309301994391
+    },
+    "1630170": {
+      "sourceMinutes": 1929.4250000000006,
+      "sourceContacts": 31,
+      "sourceTerminal": 810,
+      "contactRate": 0.01706066177583989,
+      "terminalRate": 0.4203097731726434
+    },
+    "1642264": {
+      "sourceMinutes": 1884.7449999999994,
+      "sourceContacts": 68,
+      "sourceTerminal": 1096,
+      "contactRate": 0.035814095430189076,
+      "terminalRate": 0.5799315717631827
+    },
+    "1630230": {
+      "sourceMinutes": 2110.3816666666667,
+      "sourceContacts": 34,
+      "sourceTerminal": 1010,
+      "contactRate": 0.017021702184362497,
+      "terminalRate": 0.47836171537060196
+    },
+    "1631108": {
+      "sourceMinutes": 2192.8049999999994,
+      "sourceContacts": 45,
+      "sourceTerminal": 850,
+      "contactRate": 0.021155354836906764,
+      "terminalRate": 0.3884256932975503
+    },
+    "1626156": {
+      "sourceMinutes": 494.7749999999999,
+      "sourceContacts": 26,
+      "sourceTerminal": 302,
+      "contactRate": 0.04828989222319367,
+      "terminalRate": 0.6032029266037005
+    },
+    "1642948": {
+      "sourceMinutes": 1101.485,
+      "sourceContacts": 29,
+      "sourceTerminal": 457,
+      "contactRate": 0.026915675057531608,
+      "terminalRate": 0.41586201900825975
+    },
+    "1628436": {
+      "sourceMinutes": 1306.6333333333328,
+      "sourceContacts": 65,
+      "sourceTerminal": 303,
+      "contactRate": 0.048147398059586774,
+      "terminalRate": 0.2360992123950642
+    },
+    "1629640": {
+      "sourceMinutes": 1804.0166666666676,
+      "sourceContacts": 49,
+      "sourceTerminal": 874,
+      "contactRate": 0.02748005563000108,
+      "terminalRate": 0.4841327756831281
+    },
+    "1642844": {
+      "sourceMinutes": 1439.6316666666667,
+      "sourceContacts": 25,
+      "sourceTerminal": 730,
+      "contactRate": 0.01856285488002112,
+      "terminalRate": 0.5062671418543248
+    },
+    "1629162": {
+      "sourceMinutes": 281.6166666666667,
+      "sourceContacts": 6,
+      "sourceTerminal": 94,
+      "contactRate": 0.0246435397323146,
+      "terminalRate": 0.3438704045789534
+    },
+    "203939": {
+      "sourceMinutes": 880.8033333333331,
+      "sourceContacts": 51,
+      "sourceTerminal": 167,
+      "contactRate": 0.05458767980610735,
+      "terminalRate": 0.19693400153856352
+    },
+    "1642868": {
+      "sourceMinutes": 784.2866666666667,
+      "sourceContacts": 7,
+      "sourceTerminal": 297,
+      "contactRate": 0.012173041930558992,
+      "terminalRate": 0.3811378990645981
+    },
+    "1630314": {
+      "sourceMinutes": 1462.6449999999995,
+      "sourceContacts": 66,
+      "sourceTerminal": 861,
+      "contactRate": 0.044055988653357206,
+      "terminalRate": 0.5865134424633587
+    },
+    "1630702": {
+      "sourceMinutes": 862.9816666666668,
+      "sourceContacts": 18,
+      "sourceTerminal": 500,
+      "contactRate": 0.022297541671448432,
+      "terminalRate": 0.5760479522864035
+    },
+    "202687": {
+      "sourceMinutes": 141.35333333333332,
+      "sourceContacts": 4,
+      "sourceTerminal": 25,
+      "contactRate": 0.030033760612830272,
+      "terminalRate": 0.21875928264480715
+    },
+    "1628997": {
+      "sourceMinutes": 856.2116666666666,
+      "sourceContacts": 12,
+      "sourceTerminal": 254,
+      "contactRate": 0.016359940682946255,
+      "terminalRate": 0.30120008468030174
+    },
+    "1630619": {
+      "sourceMinutes": 516.1133333333332,
+      "sourceContacts": 36,
+      "sourceTerminal": 163,
+      "contactRate": 0.06219648183367143,
+      "terminalRate": 0.32235141136413203
+    },
+    "1631127": {
+      "sourceMinutes": 26.116666666666664,
+      "sourceContacts": 1,
+      "sourceTerminal": 7,
+      "contactRate": 0.033008071666685374,
+      "terminalRate": 0.3607921473509659
+    },
+    "1642357": {
+      "sourceMinutes": 67.975,
+      "sourceContacts": 3,
+      "sourceTerminal": 32,
+      "contactRate": 0.036149246504735694,
+      "terminalRate": 0.4676631754528382
+    },
+    "1642434": {
+      "sourceMinutes": 58.08333333333333,
+      "sourceContacts": 2,
+      "sourceTerminal": 27,
+      "contactRate": 0.032713041658697546,
+      "terminalRate": 0.46314168783162624
+    },
+    "1630174": {
+      "sourceMinutes": 1334.95,
+      "sourceContacts": 42,
+      "sourceTerminal": 609,
+      "contactRate": 0.03150374842653989,
+      "terminalRate": 0.45624976871489387
+    },
+    "1627783": {
+      "sourceMinutes": 2056.651666666667,
+      "sourceContacts": 131,
+      "sourceTerminal": 1422,
+      "contactRate": 0.06182308678516586,
+      "terminalRate": 0.6886649697684577
+    },
+    "1630543": {
+      "sourceMinutes": 892.9616666666665,
+      "sourceContacts": 32,
+      "sourceTerminal": 324,
+      "contactRate": 0.03534417930920457,
+      "terminalRate": 0.3654228405744514
+    },
+    "1631097": {
+      "sourceMinutes": 1620.015,
+      "sourceContacts": 80,
+      "sourceTerminal": 908,
+      "contactRate": 0.04809678772957083,
+      "terminalRate": 0.558969899811408
+    },
+    "1629614": {
+      "sourceMinutes": 1785.5933333333323,
+      "sourceContacts": 71,
+      "sourceTerminal": 977,
+      "contactRate": 0.03923594919050898,
+      "terminalRate": 0.5459587005473787
+    },
+    "1630167": {
+      "sourceMinutes": 423.725,
+      "sourceContacts": 22,
+      "sourceTerminal": 241,
+      "contactRate": 0.04726020676413832,
+      "terminalRate": 0.5627393780012296
+    },
+    "1643007": {
+      "sourceMinutes": 492.23,
+      "sourceContacts": 4,
+      "sourceTerminal": 189,
+      "contactRate": 0.013066963153439127,
+      "terminalRate": 0.3875493089648223
+    },
+    "1641767": {
+      "sourceMinutes": 1390.4766666666662,
+      "sourceContacts": 14,
+      "sourceTerminal": 445,
+      "contactRate": 0.011923477234544132,
+      "terminalRate": 0.3224558165176067
+    },
+    "1631172": {
+      "sourceMinutes": 1046.3483333333334,
+      "sourceContacts": 23,
+      "sourceTerminal": 468,
+      "contactRate": 0.023073032470995496,
+      "terminalRate": 0.4475423369641349
+    },
+    "1630643": {
+      "sourceMinutes": 1719.2433333333333,
+      "sourceContacts": 56,
+      "sourceTerminal": 718,
+      "contactRate": 0.03252820692166951,
+      "terminalRate": 0.4182118164766135
+    },
+    "1641716": {
+      "sourceMinutes": 1953.3833333333323,
+      "sourceContacts": 42,
+      "sourceTerminal": 938,
+      "contactRate": 0.02214709119843116,
+      "terminalRate": 0.4799299437423171
+    },
+    "1628396": {
+      "sourceMinutes": 450.68666666666667,
+      "sourceContacts": 16,
+      "sourceTerminal": 151,
+      "contactRate": 0.0347089514277756,
+      "terminalRate": 0.3414759045633715
+    },
+    "1642382": {
+      "sourceMinutes": 486.38666666666666,
+      "sourceContacts": 9,
+      "sourceTerminal": 210,
+      "contactRate": 0.021317701216057302,
+      "terminalRate": 0.4330745018381193
+    },
+    "1642277": {
+      "sourceMinutes": 643.0533333333334,
+      "sourceContacts": 8,
+      "sourceTerminal": 188,
+      "contactRate": 0.01569570418450593,
+      "terminalRate": 0.2985091900447828
+    },
+    "1629661": {
+      "sourceMinutes": 1617.8650000000002,
+      "sourceContacts": 32,
+      "sourceTerminal": 543,
+      "contactRate": 0.020676210391811882,
+      "terminalRate": 0.33748000936451833
+    },
+    "203932": {
+      "sourceMinutes": 1004.9583333333334,
+      "sourceContacts": 40,
+      "sourceTerminal": 492,
+      "contactRate": 0.03890870080294124,
+      "terminalRate": 0.4888436706954806
+    },
+    "203999": {
+      "sourceMinutes": 2236.2049999999995,
+      "sourceContacts": 240,
+      "sourceTerminal": 1491,
+      "contactRate": 0.10321682398722683,
+      "terminalRate": 0.6644916650985034
+    },
+    "1631128": {
+      "sourceMinutes": 1399.1383333333329,
+      "sourceContacts": 21,
+      "sourceTerminal": 467,
+      "contactRate": 0.016437002847553017,
+      "terminalRate": 0.3359459765058334
+    },
+    "1627750": {
+      "sourceMinutes": 2586.0633333333335,
+      "sourceContacts": 123,
+      "sourceTerminal": 1581,
+      "contactRate": 0.04682094921236196,
+      "terminalRate": 0.6099171165627821
+    },
+    "203501": {
+      "sourceMinutes": 2074.6833333333334,
+      "sourceContacts": 46,
+      "sourceTerminal": 860,
+      "contactRate": 0.022743199053798343,
+      "terminalRate": 0.4150445060945908
+    },
+    "1628971": {
+      "sourceMinutes": 1946.166666666667,
+      "sourceContacts": 30,
+      "sourceTerminal": 644,
+      "contactRate": 0.01644109612988435,
+      "terminalRate": 0.33250983620913366
+    },
+    "1631212": {
+      "sourceMinutes": 1529.7033333333334,
+      "sourceContacts": 42,
+      "sourceTerminal": 703,
+      "contactRate": 0.027804517835308597,
+      "terminalRate": 0.4595591001634714
+    },
+    "202685": {
+      "sourceMinutes": 854.8483333333331,
+      "sourceContacts": 81,
+      "sourceTerminal": 499,
+      "contactRate": 0.08652435755104633,
+      "terminalRate": 0.58023810534157
+    },
+    "1642461": {
+      "sourceMinutes": 1360.5233333333335,
+      "sourceContacts": 15,
+      "sourceTerminal": 297,
+      "contactRate": 0.012834683301229914,
+      "terminalRate": 0.2225821141497977
+    },
+    "1641709": {
+      "sourceMinutes": 1845.593333333333,
+      "sourceContacts": 47,
+      "sourceTerminal": 735,
+      "contactRate": 0.02588847239339333,
+      "terminalRate": 0.39904786209563436
+    },
+    "202699": {
+      "sourceMinutes": 1696.2333333333333,
+      "sourceContacts": 28,
+      "sourceTerminal": 746,
+      "contactRate": 0.017596742111908686,
+      "terminalRate": 0.44007458632657065
+    },
+    "1631105": {
+      "sourceMinutes": 1926.4216666666662,
+      "sourceContacts": 74,
+      "sourceTerminal": 1055,
+      "contactRate": 0.038007155995854226,
+      "terminalRate": 0.546529439160868
+    },
+    "1629130": {
+      "sourceMinutes": 2061.275,
+      "sourceContacts": 55,
+      "sourceTerminal": 752,
+      "contactRate": 0.026991744875769125,
+      "terminalRate": 0.3659365830519674
+    },
+    "1630595": {
+      "sourceMinutes": 2136.0383333333334,
+      "sourceContacts": 114,
+      "sourceTerminal": 1522,
+      "contactRate": 0.0521503376740831,
+      "terminalRate": 0.7096441162153727
+    },
+    "1629631": {
+      "sourceMinutes": 1078.0866666666664,
+      "sourceContacts": 58,
+      "sourceTerminal": 567,
+      "contactRate": 0.05146476161379659,
+      "terminalRate": 0.5244387862954097
+    },
+    "1630191": {
+      "sourceMinutes": 1292.7666666666669,
+      "sourceContacts": 68,
+      "sourceTerminal": 489,
+      "contactRate": 0.05072726510993022,
+      "terminalRate": 0.3797708199422569
+    },
+    "1641842": {
+      "sourceMinutes": 1507.3816666666667,
+      "sourceContacts": 41,
+      "sourceTerminal": 670,
+      "contactRate": 0.02757267336979747,
+      "terminalRate": 0.4447147425540207
+    },
+    "1629750": {
+      "sourceMinutes": 1426.6283333333329,
+      "sourceContacts": 34,
+      "sourceTerminal": 497,
+      "contactRate": 0.024503944634021023,
+      "terminalRate": 0.3502540455722635
+    },
+    "1642450": {
+      "sourceMinutes": 1417.616666666666,
+      "sourceContacts": 78,
+      "sourceTerminal": 709,
+      "contactRate": 0.0530982467292688,
+      "terminalRate": 0.49943442596837473
+    },
+    "1630194": {
+      "sourceMinutes": 877.4949999999999,
+      "sourceContacts": 29,
+      "sourceTerminal": 417,
+      "contactRate": 0.0329063624110569,
+      "terminalRate": 0.4747766423077958
+    },
+    "1642404": {
+      "sourceMinutes": 259.50500000000005,
+      "sourceContacts": 3,
+      "sourceTerminal": 92,
+      "contactRate": 0.01832216229358698,
+      "terminalRate": 0.36359114971806894
+    },
+    "1641732": {
+      "sourceMinutes": 6.816666666666666,
+      "sourceContacts": 0,
+      "sourceTerminal": 3,
+      "contactRate": 0.03033328039978699,
+      "terminalRate": 0.45499489773113777
+    },
+    "1641752": {
+      "sourceMinutes": 71.38333333333334,
+      "sourceContacts": 3,
+      "sourceTerminal": 33,
+      "contactRate": 0.03553399472713364,
+      "terminalRate": 0.46147766798824613
+    },
+    "1631247": {
+      "sourceMinutes": 91.79166666666667,
+      "sourceContacts": 0,
+      "sourceTerminal": 39,
+      "contactRate": 0.01865239450602673,
+      "terminalRate": 0.4321214354345627
+    },
+    "1628418": {
+      "sourceMinutes": 708.4666666666668,
+      "sourceContacts": 27,
+      "sourceTerminal": 301,
+      "contactRate": 0.0371604345296773,
+      "terminalRate": 0.4260125191709266
+    },
+    "1642449": {
+      "sourceMinutes": 134.94166666666666,
+      "sourceContacts": 6,
+      "sourceTerminal": 53,
+      "contactRate": 0.038344739520521275,
+      "terminalRate": 0.4030075340461097
+    },
+    "1630183": {
+      "sourceMinutes": 2307.58,
+      "sourceContacts": 55,
+      "sourceTerminal": 994,
+      "contactRate": 0.024263106569911753,
+      "terminalRate": 0.4310539394859364
+    },
+    "203944": {
+      "sourceMinutes": 2577.9433333333336,
+      "sourceContacts": 102,
+      "sourceTerminal": 1581,
+      "contactRate": 0.039203215418662785,
+      "terminalRate": 0.6118200440301786
+    },
+    "203497": {
+      "sourceMinutes": 2340.7550000000006,
+      "sourceContacts": 162,
+      "sourceTerminal": 698,
+      "contactRate": 0.06726352134188932,
+      "terminalRate": 0.299870675453337
+    },
+    "1628978": {
+      "sourceMinutes": 2460.8866666666663,
+      "sourceContacts": 57,
+      "sourceTerminal": 964,
+      "contactRate": 0.023599069922935437,
+      "terminalRate": 0.3923967605062001
+    },
+    "201144": {
+      "sourceMinutes": 967.3983333333333,
+      "sourceContacts": 19,
+      "sourceTerminal": 256,
+      "contactRate": 0.02108594950333232,
+      "terminalRate": 0.26945792535696916
+    },
+    "1630545": {
+      "sourceMinutes": 525.475,
+      "sourceContacts": 19,
+      "sourceTerminal": 214,
+      "contactRate": 0.03532662696397606,
+      "terminalRate": 0.4095736620210087
+    },
+    "1629675": {
+      "sourceMinutes": 1978.428333333333,
+      "sourceContacts": 45,
+      "sourceTerminal": 1024,
+      "contactRate": 0.023307497116166517,
+      "terminalRate": 0.5168633621533862
+    },
+    "1642265": {
+      "sourceMinutes": 969.9533333333333,
+      "sourceContacts": 25,
+      "sourceTerminal": 532,
+      "contactRate": 0.02649728684926577,
+      "terminalRate": 0.5462661172137399
+    },
+    "1630538": {
+      "sourceMinutes": 1158.3683333333333,
+      "sourceContacts": 42,
+      "sourceTerminal": 552,
+      "contactRate": 0.03582537788871189,
+      "terminalRate": 0.47616961822981946
+    },
+    "1630548": {
+      "sourceMinutes": 87.69833333333332,
+      "sourceContacts": 4,
+      "sourceTerminal": 44,
+      "contactRate": 0.037474514389761,
+      "terminalRate": 0.4923753768636528
+    },
+    "1631159": {
+      "sourceMinutes": 718.6616666666665,
+      "sourceContacts": 9,
+      "sourceTerminal": 314,
+      "contactRate": 0.015475387753373858,
+      "terminalRate": 0.43765894045922477
+    },
+    "1642866": {
+      "sourceMinutes": 314.1316666666666,
+      "sourceContacts": 12,
+      "sourceTerminal": 122,
+      "contactRate": 0.03637863855310016,
+      "terminalRate": 0.3935175974270477
+    },
+    "1631124": {
+      "sourceMinutes": 843.4733333333331,
+      "sourceContacts": 39,
+      "sourceTerminal": 365,
+      "contactRate": 0.04434212089324679,
+      "terminalRate": 0.4334832846276743
+    },
+    "1641816": {
+      "sourceMinutes": 158.74999999999997,
+      "sourceContacts": 3,
+      "sourceTerminal": 59,
+      "contactRate": 0.024740435615609315,
+      "terminalRate": 0.38340482369523765
+    },
+    "1641747": {
+      "sourceMinutes": 185.5233333333333,
+      "sourceContacts": 11,
+      "sourceTerminal": 68,
+      "contactRate": 0.04807910689114806,
+      "terminalRate": 0.3773855711766942
+    },
+    "1629618": {
+      "sourceMinutes": 766.2966666666665,
+      "sourceContacts": 11,
+      "sourceTerminal": 256,
+      "contactRate": 0.016886101875153468,
+      "terminalRate": 0.33796966828126057
+    },
+    "1630192": {
+      "sourceMinutes": 598.9299999999996,
+      "sourceContacts": 15,
+      "sourceTerminal": 186,
+      "contactRate": 0.026265234939245447,
+      "terminalRate": 0.3164241371273181
+    },
+    "1628404": {
+      "sourceMinutes": 1902.2716666666668,
+      "sourceContacts": 58,
+      "sourceTerminal": 714,
+      "contactRate": 0.030581727376036493,
+      "terminalRate": 0.37641196634559654
+    },
+    "1629636": {
+      "sourceMinutes": 1220.4733333333334,
+      "sourceContacts": 47,
+      "sourceTerminal": 766,
+      "contactRate": 0.03788197579539464,
+      "terminalRate": 0.6242906817479168
+    },
+    "1629011": {
+      "sourceMinutes": 1120.5983333333331,
+      "sourceContacts": 47,
+      "sourceTerminal": 257,
+      "contactRate": 0.040910023895477134,
+      "terminalRate": 0.23428536869884742
+    },
+    "1642885": {
+      "sourceMinutes": 624.5683333333333,
+      "sourceContacts": 5,
+      "sourceTerminal": 247,
+      "contactRate": 0.012099058788645199,
+      "terminalRate": 0.3978886280811611
+    },
+    "1631114": {
+      "sourceMinutes": 873.9533333333333,
+      "sourceContacts": 22,
+      "sourceTerminal": 520,
+      "contactRate": 0.02604231275135642,
+      "terminalRate": 0.591271520026848
+    },
+    "1628368": {
+      "sourceMinutes": 2068.2649999999994,
+      "sourceContacts": 55,
+      "sourceTerminal": 1218,
+      "contactRate": 0.026905873068628728,
+      "terminalRate": 0.5873714504100851
+    },
+    "1630198": {
+      "sourceMinutes": 1459.5149999999999,
+      "sourceContacts": 62,
+      "sourceTerminal": 593,
+      "contactRate": 0.04162452838166992,
+      "terminalRate": 0.40717621452854197
+    },
+    "1629026": {
+      "sourceMinutes": 848.53,
+      "sourceContacts": 18,
+      "sourceTerminal": 356,
+      "contactRate": 0.02262722790038169,
+      "terminalRate": 0.4206656401105439
+    },
+    "1631110": {
+      "sourceMinutes": 460.09500000000014,
+      "sourceContacts": 13,
+      "sourceTerminal": 155,
+      "contactRate": 0.02906085556759282,
+      "terminalRate": 0.34310005207014593
+    },
+    "1630322": {
+      "sourceMinutes": 273.9599999999999,
+      "sourceContacts": 8,
+      "sourceTerminal": 92,
+      "contactRate": 0.03007676372965087,
+      "terminalRate": 0.34598996729180065
+    },
+    "203482": {
+      "sourceMinutes": 330.805,
+      "sourceContacts": 22,
+      "sourceTerminal": 114,
+      "contactRate": 0.05681343497084821,
+      "terminalRate": 0.35255132398234085
+    },
+    "1630541": {
+      "sourceMinutes": 1508.1316666666667,
+      "sourceContacts": 27,
+      "sourceTerminal": 637,
+      "contactRate": 0.019007840779855113,
+      "terminalRate": 0.42296751138281813
+    },
+    "1631218": {
+      "sourceMinutes": 445.8433333333333,
+      "sourceContacts": 13,
+      "sourceTerminal": 152,
+      "contactRate": 0.029781497874321564,
+      "terminalRate": 0.34711666249370693
+    },
+    "1629001": {
+      "sourceMinutes": 1101.7233333333334,
+      "sourceContacts": 36,
+      "sourceTerminal": 652,
+      "contactRate": 0.03259875667482006,
+      "terminalRate": 0.5888975839775722
+    },
+    "1629655": {
+      "sourceMinutes": 1156.2700000000004,
+      "sourceContacts": 70,
+      "sourceTerminal": 418,
+      "contactRate": 0.05767131385419612,
+      "terminalRate": 0.3635438833006541
+    },
+    "2544": {
+      "sourceMinutes": 1989.0550000000003,
+      "sourceContacts": 66,
+      "sourceTerminal": 1212,
+      "contactRate": 0.03310589874956057,
+      "terminalRate": 0.6074964921969199
+    },
+    "1627827": {
+      "sourceMinutes": 588.7950000000002,
+      "sourceContacts": 4,
+      "sourceTerminal": 150,
+      "contactRate": 0.011308755271321353,
+      "terminalRate": 0.2629660682335906
+    },
+    "1628467": {
+      "sourceMinutes": 431.06,
+      "sourceContacts": 11,
+      "sourceTerminal": 98,
+      "contactRate": 0.02699593710671343,
+      "terminalRate": 0.23987839834847102
+    },
+    "1642876": {
+      "sourceMinutes": 129.40333333333334,
+      "sourceContacts": 2,
+      "sourceTerminal": 44,
+      "contactRate": 0.023679751440832817,
+      "terminalRate": 0.3590717317561343
+    },
+    "1642355": {
+      "sourceMinutes": 350.67499999999995,
+      "sourceContacts": 7,
+      "sourceTerminal": 130,
+      "contactRate": 0.023179994239115983,
+      "terminalRate": 0.3765173506048321
+    },
+    "1642261": {
+      "sourceMinutes": 514.5116666666669,
+      "sourceContacts": 5,
+      "sourceTerminal": 203,
+      "contactRate": 0.014168707125463961,
+      "terminalRate": 0.3974996763851045
+    },
+    "1628988": {
+      "sourceMinutes": 758.9649999999999,
+      "sourceContacts": 23,
+      "sourceTerminal": 289,
+      "contactRate": 0.030541509259131027,
+      "terminalRate": 0.3832448881645468
+    },
+    "201145": {
+      "sourceMinutes": 158.08333333333334,
+      "sourceContacts": 1,
+      "sourceTerminal": 64,
+      "contactRate": 0.017828236035017743,
+      "terminalRate": 0.4121674782928996
+    },
+    "1630256": {
+      "sourceMinutes": 398.25666666666666,
+      "sourceContacts": 7,
+      "sourceTerminal": 126,
+      "contactRate": 0.02108764252486941,
+      "terminalRate": 0.3246953958803543
+    },
+    "1631120": {
+      "sourceMinutes": 213.66666666666666,
+      "sourceContacts": 3,
+      "sourceTerminal": 76,
+      "contactRate": 0.020774009499623082,
+      "terminalRate": 0.3663876002089833
+    },
+    "1630162": {
+      "sourceMinutes": 2099.9299999999994,
+      "sourceContacts": 66,
+      "sourceTerminal": 1528,
+      "contactRate": 0.03145899910303568,
+      "terminalRate": 0.7245290429705162
+    },
+    "1641740": {
+      "sourceMinutes": 881.5666666666668,
+      "sourceContacts": 12,
+      "sourceTerminal": 273,
+      "contactRate": 0.015949420492417467,
+      "terminalRate": 0.3137392486596392
+    },
+    "1630557": {
+      "sourceMinutes": 1018.5566666666668,
+      "sourceContacts": 17,
+      "sourceTerminal": 450,
+      "contactRate": 0.0184028052261874,
+      "terminalRate": 0.4422105969007728
+    },
+    "1630552": {
+      "sourceMinutes": 2432.5983333333334,
+      "sourceContacts": 58,
+      "sourceTerminal": 1542,
+      "contactRate": 0.024250093294541423,
+      "terminalRate": 0.632137563535355
+    },
+    "1630168": {
+      "sourceMinutes": 2176.2516666666666,
+      "sourceContacts": 65,
+      "sourceTerminal": 1005,
+      "contactRate": 0.029983590066239883,
+      "terminalRate": 0.46177312558449674
+    },
+    "1630700": {
+      "sourceMinutes": 2385.2300000000005,
+      "sourceContacts": 40,
+      "sourceTerminal": 914,
+      "contactRate": 0.01754738191870441,
+      "terminalRate": 0.38396785333380634
+    },
+    "1629638": {
+      "sourceMinutes": 2502.9600000000005,
+      "sourceContacts": 96,
+      "sourceTerminal": 1395,
+      "contactRate": 0.03804037147499455,
+      "terminalRate": 0.5563825922348693
+    },
+    "1628398": {
+      "sourceMinutes": 1718.6416666666664,
+      "sourceContacts": 41,
+      "sourceTerminal": 827,
+      "contactRate": 0.024419789162436988,
+      "terminalRate": 0.48088191557307697
+    },
+    "203507": {
+      "sourceMinutes": 1039.23,
+      "sourceContacts": 113,
+      "sourceTerminal": 845,
+      "contactRate": 0.10026157162908035,
+      "terminalRate": 0.8049034962337979
+    },
+    "1626167": {
+      "sourceMinutes": 1830.6733333333332,
+      "sourceContacts": 66,
+      "sourceTerminal": 758,
+      "contactRate": 0.035781704189227145,
+      "terminalRate": 0.41465374183848924
+    },
+    "1631260": {
+      "sourceMinutes": 2198.5800000000004,
+      "sourceContacts": 51,
+      "sourceTerminal": 675,
+      "contactRate": 0.023680787270610668,
+      "terminalRate": 0.30870206181612947
+    },
+    "1631157": {
+      "sourceMinutes": 2284.7433333333324,
+      "sourceContacts": 78,
+      "sourceTerminal": 1218,
+      "contactRate": 0.03402193955786682,
+      "terminalRate": 0.5323120758177917
+    },
+    "1630249": {
+      "sourceMinutes": 1354.4616666666668,
+      "sourceContacts": 34,
+      "sourceTerminal": 464,
+      "contactRate": 0.025696100961954,
+      "terminalRate": 0.3446537811488421
+    },
+    "1631243": {
+      "sourceMinutes": 1091.8883333333333,
+      "sourceContacts": 23,
+      "sourceTerminal": 316,
+      "contactRate": 0.02221230318085966,
+      "terminalRate": 0.29315207276502353
+    },
+    "203468": {
+      "sourceMinutes": 2177.9550000000004,
+      "sourceContacts": 56,
+      "sourceTerminal": 1309,
+      "contactRate": 0.02605999103107841,
+      "terminalRate": 0.5994350516000191
+    },
+    "1626171": {
+      "sourceMinutes": 1580.2500000000005,
+      "sourceContacts": 42,
+      "sourceTerminal": 812,
+      "contactRate": 0.02698221021291873,
+      "terminalRate": 0.5130025314699876
+    },
+    "1629645": {
+      "sourceMinutes": 1223.7483333333334,
+      "sourceContacts": 55,
+      "sourceTerminal": 654,
+      "contactRate": 0.04370469239613342,
+      "terminalRate": 0.5329372426574132
+    },
+    "203914": {
+      "sourceMinutes": 650.0683333333333,
+      "sourceContacts": 1,
+      "sourceTerminal": 126,
+      "contactRate": 0.006567807242775671,
+      "terminalRate": 0.20351398247020033
+    },
+    "1631250": {
+      "sourceMinutes": 682.8483333333334,
+      "sourceContacts": 9,
+      "sourceTerminal": 212,
+      "contactRate": 0.01615816460405503,
+      "terminalRate": 0.31564138733254044
+    },
+    "1628379": {
+      "sourceMinutes": 1657.5750000000005,
+      "sourceContacts": 24,
+      "sourceTerminal": 513,
+      "contactRate": 0.015738452693487743,
+      "terminalRate": 0.31167989726578743
+    },
+    "1642854": {
+      "sourceMinutes": 469.4583333333333,
+      "sourceContacts": 14,
+      "sourceTerminal": 185,
+      "contactRate": 0.030277392730638484,
+      "terminalRate": 0.39731486578101266
+    },
+    "1641772": {
+      "sourceMinutes": 976.421666666667,
+      "sourceContacts": 20,
+      "sourceTerminal": 351,
+      "contactRate": 0.02181854483649487,
+      "terminalRate": 0.36192835967772574
+    },
+    "1630526": {
+      "sourceMinutes": 360.61499999999995,
+      "sourceContacts": 5,
+      "sourceTerminal": 119,
+      "contactRate": 0.018623386978408086,
+      "terminalRate": 0.338250257394963
+    },
+    "1642359": {
+      "sourceMinutes": 133.67666666666665,
+      "sourceContacts": 1,
+      "sourceTerminal": 55,
+      "contactRate": 0.019485545900483528,
+      "terminalRate": 0.41886061691123605
+    },
+    "1642939": {
+      "sourceMinutes": 133.72333333333333,
+      "sourceContacts": 0,
+      "sourceTerminal": 50,
+      "contactRate": 0.0156739713375678,
+      "terminalRate": 0.38716418736829217
+    },
+    "1627759": {
+      "sourceMinutes": 2261.1383333333333,
+      "sourceContacts": 163,
+      "sourceTerminal": 1847,
+      "contactRate": 0.06992262785036718,
+      "terminalRate": 0.8129890185842862
+    },
+    "1630573": {
+      "sourceMinutes": 1812.4366666666663,
+      "sourceContacts": 16,
+      "sourceTerminal": 601,
+      "contactRate": 0.010362042219497962,
+      "terminalRate": 0.3333081374227263
+    },
+    "1629674": {
+      "sourceMinutes": 1791.0983333333334,
+      "sourceContacts": 100,
+      "sourceTerminal": 590,
+      "contactRate": 0.054227835043652556,
+      "terminalRate": 0.331166991776938
+    },
+    "1628401": {
+      "sourceMinutes": 2484.2066666666665,
+      "sourceContacts": 76,
+      "sourceTerminal": 1231,
+      "contactRate": 0.03065957513704444,
+      "terminalRate": 0.49517280039243616
+    },
+    "1630202": {
+      "sourceMinutes": 2382.7066666666656,
+      "sourceContacts": 72,
+      "sourceTerminal": 1153,
+      "contactRate": 0.030305991780356277,
+      "terminalRate": 0.4836497559092886
+    },
+    "1630568": {
+      "sourceMinutes": 1050.7299999999996,
+      "sourceContacts": 47,
+      "sourceTerminal": 411,
+      "contactRate": 0.04333313807633328,
+      "terminalRate": 0.39271377498522964
+    },
+    "1629014": {
+      "sourceMinutes": 1251.3999999999999,
+      "sourceContacts": 22,
+      "sourceTerminal": 676,
+      "contactRate": 0.018920839679611678,
+      "terminalRate": 0.5386293823889584
+    },
+    "1631093": {
+      "sourceMinutes": 656.9883333333335,
+      "sourceContacts": 14,
+      "sourceTerminal": 307,
+      "contactRate": 0.023052311186425537,
+      "terminalRate": 0.4669885468563542
+    },
+    "1642864": {
+      "sourceMinutes": 1010.5366666666669,
+      "sourceContacts": 20,
+      "sourceTerminal": 268,
+      "contactRate": 0.021165277601728226,
+      "terminalRate": 0.26982118147617457
+    },
+    "1627747": {
+      "sourceMinutes": 1116.6649999999997,
+      "sourceContacts": 36,
+      "sourceTerminal": 478,
+      "contactRate": 0.03220769725796268,
+      "terminalRate": 0.42873081109036826
+    },
+    "1641775": {
+      "sourceMinutes": 1133.991666666667,
+      "sourceContacts": 18,
+      "sourceTerminal": 302,
+      "contactRate": 0.017512506401257975,
+      "terminalRate": 0.27041604364177
+    },
+    "1630214": {
+      "sourceMinutes": 177.07333333333332,
+      "sourceContacts": 3,
+      "sourceTerminal": 54,
+      "contactRate": 0.023258719007776714,
+      "terminalRate": 0.3237892080106673
+    },
+    "1631248": {
+      "sourceMinutes": 1363.2016666666664,
+      "sourceContacts": 26,
+      "sourceTerminal": 378,
+      "contactRate": 0.020183924808641705,
+      "terminalRate": 0.28051657650298867
+    },
+    "1628449": {
+      "sourceMinutes": 94.14999999999999,
+      "sourceContacts": 2,
+      "sourceTerminal": 27,
+      "contactRate": 0.02742280224035025,
+      "terminalRate": 0.3225237833931387
+    },
+    "1642873": {
+      "sourceMinutes": 138.3116666666667,
+      "sourceContacts": 8,
+      "sourceTerminal": 34,
+      "contactRate": 0.045346530573877705,
+      "terminalRate": 0.2780738213461567
+    },
+    "204060": {
+      "sourceMinutes": 152.68833333333333,
+      "sourceContacts": 2,
+      "sourceTerminal": 42,
+      "contactRate": 0.021721453251882447,
+      "terminalRate": 0.3006434194336331
+    },
+    "1631132": {
+      "sourceMinutes": 337.05666666666673,
+      "sourceContacts": 11,
+      "sourceTerminal": 93,
+      "contactRate": 0.03244247291672151,
+      "terminalRate": 0.2883979976030117
+    },
+    "1631245": {
+      "sourceMinutes": 897.4250000000001,
+      "sourceContacts": 50,
+      "sourceTerminal": 428,
+      "contactRate": 0.05272921729836353,
+      "terminalRate": 0.47644431411332167
+    },
+    "1642258": {
+      "sourceMinutes": 1425.6200000000003,
+      "sourceContacts": 28,
+      "sourceTerminal": 593,
+      "contactRate": 0.020660062414922888,
+      "terminalRate": 0.4166926042898515
+    },
+    "204001": {
+      "sourceMinutes": 768.8916666666668,
+      "sourceContacts": 74,
+      "sourceTerminal": 479,
+      "contactRate": 0.0870115062309223,
+      "terminalRate": 0.6178866845818378
+    },
+    "1642484": {
+      "sourceMinutes": 206.2333333333333,
+      "sourceContacts": 6,
+      "sourceTerminal": 101,
+      "contactRate": 0.03018717298536102,
+      "terminalRate": 0.4864686041553329
+    },
+    "1630811": {
+      "sourceMinutes": 485.8733333333332,
+      "sourceContacts": 8,
+      "sourceTerminal": 187,
+      "contactRate": 0.01970881760525275,
+      "terminalRate": 0.3884572616051282
+    },
+    "1630644": {
+      "sourceMinutes": 135.175,
+      "sourceContacts": 2,
+      "sourceTerminal": 71,
+      "contactRate": 0.023162151939291872,
+      "terminalRate": 0.5150494827152782
+    },
+    "1631210": {
+      "sourceMinutes": 13.8,
+      "sourceContacts": 1,
+      "sourceTerminal": 4,
+      "contactRate": 0.03585757058703098,
+      "terminalRate": 0.3983510189322403
+    },
+    "1642368": {
+      "sourceMinutes": 10.016666666666666,
+      "sourceContacts": 1,
+      "sourceTerminal": 4,
+      "contactRate": 0.03683431829001064,
+      "terminalRate": 0.44183766243904016
+    },
+    "1631216": {
+      "sourceMinutes": 56.15,
+      "sourceContacts": 1,
+      "sourceTerminal": 26,
+      "contactRate": 0.02765015914847825,
+      "terminalRate": 0.46184706030640554
+    },
+    "1626162": {
+      "sourceMinutes": 1479.3616666666665,
+      "sourceContacts": 28,
+      "sourceTerminal": 613,
+      "contactRate": 0.01996967467578981,
+      "terminalRate": 0.41510101342473604
+    },
+    "1631133": {
+      "sourceMinutes": 733.308333333333,
+      "sourceContacts": 20,
+      "sourceTerminal": 257,
+      "contactRate": 0.02797081558405028,
+      "terminalRate": 0.3539985429083915
+    },
+    "203954": {
+      "sourceMinutes": 1123.3866666666665,
+      "sourceContacts": 75,
+      "sourceTerminal": 862,
+      "contactRate": 0.0631784939542775,
+      "terminalRate": 0.760707656323662
+    },
+    "1642845": {
+      "sourceMinutes": 2475.115,
+      "sourceContacts": 50,
+      "sourceTerminal": 1154,
+      "contactRate": 0.020781939963387286,
+      "terminalRate": 0.46617073462795666
+    },
+    "1630178": {
+      "sourceMinutes": 2500.7416666666663,
+      "sourceContacts": 88,
+      "sourceTerminal": 1709,
+      "contactRate": 0.03503019250898868,
+      "terminalRate": 0.6812089769000405
+    },
+    "1631169": {
+      "sourceMinutes": 761.905,
+      "sourceContacts": 15,
+      "sourceTerminal": 300,
+      "contactRate": 0.021459804352863973,
+      "terminalRate": 0.39579758657427155
+    },
+    "1629656": {
+      "sourceMinutes": 2084.7149999999992,
+      "sourceContacts": 73,
+      "sourceTerminal": 920,
+      "contactRate": 0.034837516372038246,
+      "terminalRate": 0.4415153544723072
+    },
+    "1641737": {
+      "sourceMinutes": 1174.6166666666668,
+      "sourceContacts": 44,
+      "sourceTerminal": 305,
+      "contactRate": 0.03691314733105079,
+      "terminalRate": 0.26375720810546455
+    },
+    "1642348": {
+      "sourceMinutes": 957.7850000000001,
+      "sourceContacts": 14,
+      "sourceTerminal": 359,
+      "contactRate": 0.016671230876949668,
+      "terminalRate": 0.37693728224943984
+    },
+    "1630570": {
+      "sourceMinutes": 821.9683333333335,
+      "sourceContacts": 33,
+      "sourceTerminal": 342,
+      "contactRate": 0.03903480284469315,
+      "terminalRate": 0.41732711868613154
+    },
+    "203083": {
+      "sourceMinutes": 1171.0449999999998,
+      "sourceContacts": 47,
+      "sourceTerminal": 406,
+      "contactRate": 0.039322406255575496,
+      "terminalRate": 0.3490155055466805
+    },
+    "1627742": {
+      "sourceMinutes": 2576.596666666667,
+      "sourceContacts": 105,
+      "sourceTerminal": 1587,
+      "contactRate": 0.04033159344849868,
+      "terminalRate": 0.6144433801511711
+    },
+    "1630567": {
+      "sourceMinutes": 2655.1933333333327,
+      "sourceContacts": 104,
+      "sourceTerminal": 1422,
+      "contactRate": 0.03883381041977427,
+      "terminalRate": 0.5348514098360472
+    },
+    "1642867": {
+      "sourceMinutes": 1245.5999999999997,
+      "sourceContacts": 29,
+      "sourceTerminal": 443,
+      "contactRate": 0.02409353909576194,
+      "terminalRate": 0.35765887251575285
+    },
+    "1629628": {
+      "sourceMinutes": 1702.5266666666666,
+      "sourceContacts": 44,
+      "sourceTerminal": 1018,
+      "contactRate": 0.02627275610709468,
+      "terminalRate": 0.5959544418904047
+    },
+    "1630193": {
+      "sourceMinutes": 2205.5583333333334,
+      "sourceContacts": 58,
+      "sourceTerminal": 1071,
+      "contactRate": 0.026608585805601746,
+      "terminalRate": 0.48529882379837125
+    },
+    "1630534": {
+      "sourceMinutes": 973.2199999999999,
+      "sourceContacts": 10,
+      "sourceTerminal": 330,
+      "contactRate": 0.01280829319739981,
+      "terminalRate": 0.34204457895909823
+    },
+    "1642347": {
+      "sourceMinutes": 1831.0383333333325,
+      "sourceContacts": 53,
+      "sourceTerminal": 643,
+      "contactRate": 0.02914209073088889,
+      "terminalRate": 0.35260022904180494
+    },
+    "1630572": {
+      "sourceMinutes": 1732.9249999999997,
+      "sourceContacts": 22,
+      "sourceTerminal": 750,
+      "contactRate": 0.01402726238443149,
+      "terminalRate": 0.4331632793710672
+    },
+    "1641711": {
+      "sourceMinutes": 1051.3216666666665,
+      "sourceContacts": 24,
+      "sourceTerminal": 449,
+      "contactRate": 0.02382312005532889,
+      "terminalRate": 0.42781507227974896
+    },
+    "1642266": {
+      "sourceMinutes": 1447.9416666666662,
+      "sourceContacts": 28,
+      "sourceTerminal": 466,
+      "contactRate": 0.02036759511163435,
+      "terminalRate": 0.324133194992391
+    },
+    "1642419": {
+      "sourceMinutes": 506.23499999999996,
+      "sourceContacts": 3,
+      "sourceTerminal": 163,
+      "contactRate": 0.011204286330492884,
+      "terminalRate": 0.32834961379484584
+    },
+    "1630171": {
+      "sourceMinutes": 1599.6233333333328,
+      "sourceContacts": 31,
+      "sourceTerminal": 511,
+      "contactRate": 0.020315879224850824,
+      "terminalRate": 0.32156891641113683
+    },
+    "1641824": {
+      "sourceMinutes": 2154.915,
+      "sourceContacts": 78,
+      "sourceTerminal": 1163,
+      "contactRate": 0.03595601127148346,
+      "terminalRate": 0.5387855030638113
+    },
+    "202696": {
+      "sourceMinutes": 1763.9016666666664,
+      "sourceContacts": 83,
+      "sourceTerminal": 884,
+      "contactRate": 0.046025498179684675,
+      "terminalRate": 0.5005824842091774
+    },
+    "1630200": {
+      "sourceMinutes": 1697.7899999999997,
+      "sourceContacts": 69,
+      "sourceTerminal": 768,
+      "contactRate": 0.04002703453705444,
+      "terminalRate": 0.45244951748323103
+    },
+    "1630581": {
+      "sourceMinutes": 1666.0233333333335,
+      "sourceContacts": 41,
+      "sourceTerminal": 954,
+      "contactRate": 0.0251356677703333,
+      "terminalRate": 0.5709668055071341
+    },
+    "1628989": {
+      "sourceMinutes": 1500.6433333333334,
+      "sourceContacts": 28,
+      "sourceTerminal": 670,
+      "contactRate": 0.019708868637982407,
+      "terminalRate": 0.4466793850852262
+    },
+    "1630172": {
+      "sourceMinutes": 1400.9633333333334,
+      "sourceContacts": 32,
+      "sourceTerminal": 544,
+      "contactRate": 0.023607701465632822,
+      "terminalRate": 0.3895281377912258
+    },
+    "1630245": {
+      "sourceMinutes": 1831.843333333333,
+      "sourceContacts": 24,
+      "sourceTerminal": 869,
+      "contactRate": 0.014339620811888675,
+      "terminalRate": 0.4741828866981642
+    },
+    "1630188": {
+      "sourceMinutes": 1043.0716666666665,
+      "sourceContacts": 42,
+      "sourceTerminal": 457,
+      "contactRate": 0.03934989848841679,
+      "terminalRate": 0.4386133772423883
+    },
+    "1641763": {
+      "sourceMinutes": 420.93333333333334,
+      "sourceContacts": 8,
+      "sourceTerminal": 138,
+      "contactRate": 0.02203670690740598,
+      "terminalRate": 0.33510219576771333
+    },
+    "203484": {
+      "sourceMinutes": 1087.5583333333332,
+      "sourceContacts": 19,
+      "sourceTerminal": 459,
+      "contactRate": 0.019003065303590597,
+      "terminalRate": 0.4228675796892129
+    },
+    "1628991": {
+      "sourceMinutes": 1417.5650000000003,
+      "sourceContacts": 89,
+      "sourceTerminal": 875,
+      "contactRate": 0.06021313673900712,
+      "terminalRate": 0.6145538602755386
+    },
+    "1629111": {
+      "sourceMinutes": 1447.3766666666666,
+      "sourceContacts": 83,
+      "sourceTerminal": 625,
+      "contactRate": 0.05526782308173336,
+      "terminalRate": 0.4322727000073702
+    },
+    "1642377": {
+      "sourceMinutes": 1788.6083333333331,
+      "sourceContacts": 63,
+      "sourceTerminal": 816,
+      "contactRate": 0.03500211806978259,
+      "terminalRate": 0.456259966073128
+    },
+    "1629630": {
+      "sourceMinutes": 534.0166666666668,
+      "sourceContacts": 18,
+      "sourceTerminal": 406,
+      "contactRate": 0.03336288191132689,
+      "terminalRate": 0.7469930953243826
+    },
+    "1630583": {
+      "sourceMinutes": 1161.7733333333335,
+      "sourceContacts": 38,
+      "sourceTerminal": 544,
+      "contactRate": 0.03263164301061395,
+      "terminalRate": 0.46806000022106564
+    },
+    "1642907": {
+      "sourceMinutes": 1561.196666666667,
+      "sourceContacts": 40,
+      "sourceTerminal": 790,
+      "contactRate": 0.026103016826589227,
+      "terminalRate": 0.5052932929718064
+    },
+    "1642285": {
+      "sourceMinutes": 1695.9350000000002,
+      "sourceContacts": 43,
+      "sourceTerminal": 675,
+      "contactRate": 0.025819657318013882,
+      "terminalRate": 0.39888561280907464
+    },
+    "1631246": {
+      "sourceMinutes": 819.395,
+      "sourceContacts": 23,
+      "sourceTerminal": 375,
+      "contactRate": 0.028595201407980626,
+      "terminalRate": 0.4576973979682041
+    },
+    "1629723": {
+      "sourceMinutes": 1114.6766666666667,
+      "sourceContacts": 15,
+      "sourceTerminal": 252,
+      "contactRate": 0.015372066124155065,
+      "terminalRate": 0.23111448496789194
+    },
+    "1642346": {
+      "sourceMinutes": 1281.178333333333,
+      "sourceContacts": 6,
+      "sourceTerminal": 411,
+      "contactRate": 0.0071741614533934695,
+      "terminalRate": 0.3234083866031992
+    },
+    "1626220": {
+      "sourceMinutes": 2189.9599999999996,
+      "sourceContacts": 37,
+      "sourceTerminal": 725,
+      "contactRate": 0.017731300761885647,
+      "terminalRate": 0.33248108097547896
+    },
+    "1631109": {
+      "sourceMinutes": 1395.8166666666666,
+      "sourceContacts": 45,
+      "sourceTerminal": 565,
+      "contactRate": 0.03221371003886952,
+      "terminalRate": 0.40572347467532194
+    },
+    "1628960": {
+      "sourceMinutes": 1439.7683333333332,
+      "sourceContacts": 75,
+      "sourceTerminal": 778,
+      "contactRate": 0.05043593514505034,
+      "terminalRate": 0.5389976410266555
+    },
+    "1626164": {
+      "sourceMinutes": 2053.27,
+      "sourceContacts": 174,
+      "sourceTerminal": 1506,
+      "contactRate": 0.08162428460836445,
+      "terminalRate": 0.7302109666893091
+    },
+    "1642271": {
+      "sourceMinutes": 1750.7433333333333,
+      "sourceContacts": 44,
+      "sourceTerminal": 841,
+      "contactRate": 0.025598797264784742,
+      "terminalRate": 0.48007245033202567
+    },
+    "1628374": {
+      "sourceMinutes": 1366.6133333333332,
+      "sourceContacts": 107,
+      "sourceTerminal": 895,
+      "contactRate": 0.07430082519183046,
+      "terminalRate": 0.6514361077435754
+    },
+    "1631117": {
+      "sourceMinutes": 153.98,
+      "sourceContacts": 1,
+      "sourceTerminal": 62,
+      "contactRate": 0.018086868384412227,
+      "terminalRate": 0.41043900588031457
+    },
+    "1629004": {
+      "sourceMinutes": 1141.295,
+      "sourceContacts": 9,
+      "sourceTerminal": 406,
+      "contactRate": 0.010326140135092862,
+      "terminalRate": 0.35792098724983357
+    },
+    "1641718": {
+      "sourceMinutes": 1711.341666666667,
+      "sourceContacts": 62,
+      "sourceTerminal": 1134,
+      "contactRate": 0.0359283665623387,
+      "terminalRate": 0.6597492817822158
+    },
+    "1642846": {
+      "sourceMinutes": 1939.3450000000005,
+      "sourceContacts": 43,
+      "sourceTerminal": 1009,
+      "contactRate": 0.022780925549162584,
+      "terminalRate": 0.5195114187946889
+    },
+    "1641729": {
+      "sourceMinutes": 1717.0366666666669,
+      "sourceContacts": 39,
+      "sourceTerminal": 1035,
+      "contactRate": 0.023357545863685807,
+      "terminalRate": 0.6007502240389166
+    },
+    "1630692": {
+      "sourceMinutes": 1497.0450000000003,
+      "sourceContacts": 28,
+      "sourceTerminal": 604,
+      "contactRate": 0.019752486480491268,
+      "terminalRate": 0.4043626730851197
+    },
+    "1642345": {
+      "sourceMinutes": 1731.5616666666663,
+      "sourceContacts": 51,
+      "sourceTerminal": 484,
+      "contactRate": 0.029625288328373533,
+      "terminalRate": 0.2820362847399899
+    },
+    "203994": {
+      "sourceMinutes": 1048.535,
+      "sourceContacts": 63,
+      "sourceTerminal": 477,
+      "contactRate": 0.05700308301830054,
+      "terminalRate": 0.4550167706447641
+    },
+    "1641707": {
+      "sourceMinutes": 1087.4549999999997,
+      "sourceContacts": 21,
+      "sourceTerminal": 416,
+      "contactRate": 0.020648971671028686,
+      "terminalRate": 0.3842411041863917
+    },
+    "1631221": {
+      "sourceMinutes": 2213.911666666666,
+      "sourceContacts": 63,
+      "sourceTerminal": 958,
+      "contactRate": 0.028647922854721376,
+      "terminalRate": 0.4330088215139645
+    },
+    "1630587": {
+      "sourceMinutes": 321.55,
+      "sourceContacts": 3,
+      "sourceTerminal": 76,
+      "contactRate": 0.015798321305436704,
+      "terminalRate": 0.252210024066429
+    },
+    "1642383": {
+      "sourceMinutes": 1380.5200000000007,
+      "sourceContacts": 37,
+      "sourceTerminal": 605,
+      "contactRate": 0.027240033448725196,
+      "terminalRate": 0.43860672096887876
+    },
+    "1642262": {
+      "sourceMinutes": 1600.0349999999996,
+      "sourceContacts": 24,
+      "sourceTerminal": 617,
+      "contactRate": 0.016262245771483354,
+      "terminalRate": 0.3867312608275892
+    },
+    "1630208": {
+      "sourceMinutes": 692.3266666666666,
+      "sourceContacts": 31,
+      "sourceTerminal": 299,
+      "contactRate": 0.0427617078677629,
+      "terminalRate": 0.43281317455214674
+    },
+    "203937": {
+      "sourceMinutes": 837.7866666666664,
+      "sourceContacts": 25,
+      "sourceTerminal": 260,
+      "contactRate": 0.030120128028549117,
+      "terminalRate": 0.31459207995563965
+    },
+    "1641989": {
+      "sourceMinutes": 544.8133333333333,
+      "sourceContacts": 20,
+      "sourceTerminal": 210,
+      "contactRate": 0.03579693699562571,
+      "terminalRate": 0.38864047070436064
+    },
+    "1628502": {
+      "sourceMinutes": 190.28000000000003,
+      "sourceContacts": 1,
+      "sourceTerminal": 53,
+      "contactRate": 0.016029700630749457,
+      "terminalRate": 0.2992396996849162
+    },
+    "1642863": {
+      "sourceMinutes": 372.9449999999999,
+      "sourceContacts": 13,
+      "sourceTerminal": 130,
+      "contactRate": 0.03410780187731713,
+      "terminalRate": 0.35542740758241
+    },
+    "1642853": {
+      "sourceMinutes": 616.9516666666667,
+      "sourceContacts": 10,
+      "sourceTerminal": 239,
+      "contactRate": 0.018926598666161094,
+      "terminalRate": 0.39014317793078523
+    },
+    "1630166": {
+      "sourceMinutes": 2121.8149999999996,
+      "sourceContacts": 132,
+      "sourceTerminal": 1478,
+      "contactRate": 0.06047745511035863,
+      "terminalRate": 0.6938476062105482
+    },
+    "1641739": {
+      "sourceMinutes": 2660.3833333333328,
+      "sourceContacts": 57,
+      "sourceTerminal": 1046,
+      "contactRate": 0.021911188447959775,
+      "terminalRate": 0.3937815359971023
+    },
+    "1642270": {
+      "sourceMinutes": 2025.7133333333334,
+      "sourceContacts": 62,
+      "sourceTerminal": 824,
+      "contactRate": 0.030686128158226886,
+      "terminalRate": 0.40739934972753405
+    },
+    "1631101": {
+      "sourceMinutes": 1411.201666666667,
+      "sourceContacts": 50,
+      "sourceTerminal": 1036,
+      "contactRate": 0.035138496243399285,
+      "terminalRate": 0.7294067960066386
+    },
+    "201950": {
+      "sourceMinutes": 1560.4016666666669,
+      "sourceContacts": 45,
+      "sourceTerminal": 882,
+      "contactRate": 0.02907514978870873,
+      "terminalRate": 0.563589374430256
+    },
+    "1631104": {
+      "sourceMinutes": 360.8183333333334,
+      "sourceContacts": 12,
+      "sourceTerminal": 172,
+      "contactRate": 0.03291034377349118,
+      "terminalRate": 0.4755705364016161
+    },
+    "203924": {
+      "sourceMinutes": 1695.1016666666665,
+      "sourceContacts": 70,
+      "sourceTerminal": 956,
+      "contactRate": 0.04063428277501951,
+      "terminalRate": 0.5624755507886384
+    },
+    "1629057": {
+      "sourceMinutes": 1008.2133333333335,
+      "sourceContacts": 20,
+      "sourceTerminal": 317,
+      "contactRate": 0.02120852317611164,
+      "terminalRate": 0.3178695259428023
+    },
+    "1631200": {
+      "sourceMinutes": 1275.5599999999997,
+      "sourceContacts": 17,
+      "sourceTerminal": 333,
+      "contactRate": 0.015035197864458234,
+      "terminalRate": 0.2648150979713696
+    },
+    "1641712": {
+      "sourceMinutes": 1049.4733333333331,
+      "sourceContacts": 12,
+      "sourceTerminal": 382,
+      "contactRate": 0.013676734036773643,
+      "terminalRate": 0.36617421595243727
+    },
+    "1641871": {
+      "sourceMinutes": 258.16999999999996,
+      "sourceContacts": 1,
+      "sourceTerminal": 83,
+      "contactRate": 0.013217988347782478,
+      "terminalRate": 0.3334839719225627
+    },
+    "202695": {
+      "sourceMinutes": 2048.6450000000004,
+      "sourceContacts": 135,
+      "sourceTerminal": 1498,
+      "contactRate": 0.06388736123837335,
+      "terminalRate": 0.7279812806309447
+    },
+    "1627884": {
+      "sourceMinutes": 1312.2083333333333,
+      "sourceContacts": 24,
+      "sourceTerminal": 436,
+      "contactRate": 0.019510296126828634,
+      "terminalRate": 0.3346023562560084
+    },
+    "1627826": {
+      "sourceMinutes": 1446.6999999999998,
+      "sourceContacts": 83,
+      "sourceTerminal": 606,
+      "contactRate": 0.05529155912558771,
+      "terminalRate": 0.419558101313322
+    },
+    "203078": {
+      "sourceMinutes": 120.91666666666669,
+      "sourceContacts": 5,
+      "sourceTerminal": 61,
+      "contactRate": 0.036494330016420114,
+      "terminalRate": 0.4968005356422768
+    },
+    "201935": {
+      "sourceMinutes": 2406.296666666667,
+      "sourceContacts": 89,
+      "sourceTerminal": 1526,
+      "contactRate": 0.03672965463354919,
+      "terminalRate": 0.6323951891395643
+    },
+    "1630530": {
+      "sourceMinutes": 2193.8600000000006,
+      "sourceContacts": 71,
+      "sourceTerminal": 1156,
+      "contactRate": 0.032339451282264266,
+      "terminalRate": 0.5261720238800961
+    },
+    "1629627": {
+      "sourceMinutes": 1781.6266666666666,
+      "sourceContacts": 77,
+      "sourceTerminal": 1082,
+      "contactRate": 0.042457950643425814,
+      "terminalRate": 0.6052886147178772
+    },
+    "1642274": {
+      "sourceMinutes": 1242.0433333333335,
+      "sourceContacts": 30,
+      "sourceTerminal": 359,
+      "contactRate": 0.024885485232134807,
+      "terminalRate": 0.2923482020607979
+    },
+    "1630529": {
+      "sourceMinutes": 1505.7066666666667,
+      "sourceContacts": 22,
+      "sourceTerminal": 543,
+      "contactRate": 0.01597715157643073,
+      "terminalRate": 0.362213751351511
+    },
+    "1642847": {
+      "sourceMinutes": 2018.048333333333,
+      "sourceContacts": 76,
+      "sourceTerminal": 1216,
+      "contactRate": 0.03731664708053356,
+      "terminalRate": 0.6008320641429155
+    },
+    "1630180": {
+      "sourceMinutes": 2146.8366666666675,
+      "sourceContacts": 18,
+      "sourceTerminal": 1106,
+      "contactRate": 0.009718257867619203,
+      "terminalRate": 0.5145404738372915
+    },
+    "101108": {
+      "sourceMinutes": 227.53500000000003,
+      "sourceContacts": 7,
+      "sourceTerminal": 72,
+      "contactRate": 0.031188727101483304,
+      "terminalRate": 0.33037613391147463
+    },
+    "1627739": {
+      "sourceMinutes": 2196.833333333333,
+      "sourceContacts": 29,
+      "sourceTerminal": 608,
+      "contactRate": 0.014239084430319633,
+      "terminalRate": 0.27878461716068725
+    },
+    "1629673": {
+      "sourceMinutes": 908.6366666666664,
+      "sourceContacts": 57,
+      "sourceTerminal": 528,
+      "contactRate": 0.058906327358665814,
+      "terminalRate": 0.5778700604671925
+    },
+    "1630631": {
+      "sourceMinutes": 1260.8350000000003,
+      "sourceContacts": 28,
+      "sourceTerminal": 501,
+      "contactRate": 0.023109833107181305,
+      "terminalRate": 0.3985395384584862
+    },
+    "1642852": {
+      "sourceMinutes": 1918.546666666667,
+      "sourceContacts": 73,
+      "sourceTerminal": 975,
+      "contactRate": 0.03766492361679715,
+      "terminalRate": 0.5075748247576487
+    },
+    "1628381": {
+      "sourceMinutes": 1842.2466666666671,
+      "sourceContacts": 74,
+      "sourceTerminal": 791,
+      "contactRate": 0.03963021865560305,
+      "terminalRate": 0.4297596811056463
+    },
+    "201572": {
+      "sourceMinutes": 1600.7666666666662,
+      "sourceContacts": 51,
+      "sourceTerminal": 616,
+      "contactRate": 0.03186554531124236,
+      "terminalRate": 0.385941945431327
+    },
+    "201587": {
+      "sourceMinutes": 1274.2116666666666,
+      "sourceContacts": 7,
+      "sourceTerminal": 274,
+      "contactRate": 0.007922497791328741,
+      "terminalRate": 0.21966525508692228
+    },
+    "1631255": {
+      "sourceMinutes": 851.9233333333335,
+      "sourceContacts": 15,
+      "sourceTerminal": 264,
+      "contactRate": 0.019490207015099605,
+      "terminalRate": 0.31408181054284856
+    },
+    "1630532": {
+      "sourceMinutes": 946.7199999999998,
+      "sourceContacts": 47,
+      "sourceTerminal": 589,
+      "contactRate": 0.04752345494396887,
+      "terminalRate": 0.6180125294935348
+    },
+    "1631094": {
+      "sourceMinutes": 2311.171666666666,
+      "sourceContacts": 79,
+      "sourceTerminal": 1486,
+      "contactRate": 0.03406327355501018,
+      "terminalRate": 0.6410245637278442
+    },
+    "1628976": {
+      "sourceMinutes": 2116.941666666666,
+      "sourceContacts": 94,
+      "sourceTerminal": 759,
+      "contactRate": 0.04368833313561391,
+      "terminalRate": 0.3596933138536466
+    },
+    "1630217": {
+      "sourceMinutes": 2572.3966666666665,
+      "sourceContacts": 79,
+      "sourceTerminal": 1373,
+      "contactRate": 0.030769202088555228,
+      "terminalRate": 0.5330354607298996
+    },
+    "1630591": {
+      "sourceMinutes": 1462.2549999999999,
+      "sourceContacts": 58,
+      "sourceTerminal": 770,
+      "contactRate": 0.039038910747050994,
+      "terminalRate": 0.5254659104089453
+    },
+    "1641783": {
+      "sourceMinutes": 1775.5266666666666,
+      "sourceContacts": 32,
+      "sourceTerminal": 664,
+      "contactRate": 0.018964466721723548,
+      "terminalRate": 0.37513893669496473
+    },
+    "1641710": {
+      "sourceMinutes": 1795.3016666666665,
+      "sourceContacts": 51,
+      "sourceTerminal": 936,
+      "contactRate": 0.028643924771849603,
+      "terminalRate": 0.5205181305334495
+    },
+    "1629048": {
+      "sourceMinutes": 910.0100000000001,
+      "sourceContacts": 48,
+      "sourceTerminal": 282,
+      "contactRate": 0.050165314886408435,
+      "terminalRate": 0.3138207871869354
+    },
+    "1628371": {
+      "sourceMinutes": 494.9799999999999,
+      "sourceContacts": 31,
+      "sourceTerminal": 135,
+      "contactRate": 0.056288719756971674,
+      "terminalRate": 0.2815761387982169
+    },
+    "1626145": {
+      "sourceMinutes": 921.9766666666667,
+      "sourceContacts": 7,
+      "sourceTerminal": 236,
+      "contactRate": 0.0105780425718206,
+      "terminalRate": 0.26125949234186074
+    },
+    "1627751": {
+      "sourceMinutes": 1132.476666666667,
+      "sourceContacts": 45,
+      "sourceTerminal": 397,
+      "contactRate": 0.038939166019620115,
+      "terminalRate": 0.3528707321999257
+    },
+    "1629008": {
+      "sourceMinutes": 1504.4683333333335,
+      "sourceContacts": 61,
+      "sourceTerminal": 1024,
+      "contactRate": 0.039866684213775753,
+      "terminalRate": 0.6770695301024892
+    },
+    "1641730": {
+      "sourceMinutes": 1643.83,
+      "sourceContacts": 68,
+      "sourceTerminal": 760,
+      "contactRate": 0.040681322439601535,
+      "terminalRate": 0.46228737950175114
+    },
+    "1629651": {
+      "sourceMinutes": 1757.4233333333334,
+      "sourceContacts": 109,
+      "sourceTerminal": 695,
+      "contactRate": 0.0599671859612147,
+      "terminalRate": 0.3963454045734636
+    },
+    "1629611": {
+      "sourceMinutes": 1443.1466666666668,
+      "sourceContacts": 27,
+      "sourceTerminal": 446,
+      "contactRate": 0.01979359669090775,
+      "terminalRate": 0.31156612111629733
+    },
+    "1642856": {
+      "sourceMinutes": 1182.9533333333334,
+      "sourceContacts": 34,
+      "sourceTerminal": 499,
+      "contactRate": 0.029055609739393494,
+      "terminalRate": 0.42258648107509605
+    },
+    "1630533": {
+      "sourceMinutes": 1173.3866666666665,
+      "sourceContacts": 32,
+      "sourceTerminal": 492,
+      "contactRate": 0.02773326721026303,
+      "terminalRate": 0.42011804151428433
+    },
+    "1631213": {
+      "sourceMinutes": 740.4666666666664,
+      "sourceContacts": 9,
+      "sourceTerminal": 314,
+      "contactRate": 0.015087230564899561,
+      "terminalRate": 0.4251859667671158
+    },
+    "1630549": {
+      "sourceMinutes": 1074.4100000000003,
+      "sourceContacts": 49,
+      "sourceTerminal": 485,
+      "contactRate": 0.04414248257717037,
+      "terminalRate": 0.4515832967115574
+    },
+    "1642962": {
+      "sourceMinutes": 1259.315,
+      "sourceContacts": 14,
+      "sourceTerminal": 431,
+      "contactRate": 0.013050055203214827,
+      "terminalRate": 0.344492294494575
+    },
+    "1630592": {
+      "sourceMinutes": 845.5466666666666,
+      "sourceContacts": 25,
+      "sourceTerminal": 347,
+      "contactRate": 0.029880260175883137,
+      "terminalRate": 0.4117652328886952
+    },
+    "1630623": {
+      "sourceMinutes": 380.01666666666665,
+      "sourceContacts": 7,
+      "sourceTerminal": 172,
+      "contactRate": 0.021843479923693475,
+      "terminalRate": 0.4530077905398821
+    },
+    "1630604": {
+      "sourceMinutes": 349.19,
+      "sourceContacts": 16,
+      "sourceTerminal": 134,
+      "contactRate": 0.04207792891852947,
+      "terminalRate": 0.38871308221176365
+    },
+    "1641796": {
+      "sourceMinutes": 1729.5433333333337,
+      "sourceContacts": 64,
+      "sourceTerminal": 686,
+      "contactRate": 0.0366526623499506,
+      "terminalRate": 0.3975141023030382
+    },
+    "203952": {
+      "sourceMinutes": 1939.3316666666665,
+      "sourceContacts": 37,
+      "sourceTerminal": 923,
+      "contactRate": 0.019880006968467666,
+      "terminalRate": 0.4757261228498821
+    },
+    "1642276": {
+      "sourceMinutes": 1616.088333333333,
+      "sourceContacts": 35,
+      "sourceTerminal": 696,
+      "contactRate": 0.022416497085381563,
+      "terminalRate": 0.43109672965676343
+    },
+    "1626181": {
+      "sourceMinutes": 1663.27,
+      "sourceContacts": 83,
+      "sourceTerminal": 1077,
+      "contactRate": 0.048609901321717955,
+      "terminalRate": 0.6447693628300013
+    },
+    "1630558": {
+      "sourceMinutes": 1888.2833333333333,
+      "sourceContacts": 15,
+      "sourceTerminal": 630,
+      "contactRate": 0.009476674315616464,
+      "terminalRate": 0.33525264250068054
+    },
+    "1642851": {
+      "sourceMinutes": 2450.681666666667,
+      "sourceContacts": 78,
+      "sourceTerminal": 1260,
+      "contactRate": 0.03183336731090014,
+      "terminalRate": 0.5135949197842765
+    },
+    "1628970": {
+      "sourceMinutes": 2289.098333333333,
+      "sourceContacts": 47,
+      "sourceTerminal": 1188,
+      "contactRate": 0.021140003281992167,
+      "terminalRate": 0.5183441084776835
+    },
+    "1641750": {
+      "sourceMinutes": 1396.05,
+      "sourceContacts": 40,
+      "sourceTerminal": 378,
+      "contactRate": 0.028929928995224865,
+      "terminalRate": 0.2740306414170811
+    },
+    "1642883": {
+      "sourceMinutes": 1769.8533333333337,
+      "sourceContacts": 27,
+      "sourceTerminal": 451,
+      "contactRate": 0.016387789087963567,
+      "terminalRate": 0.2576284796206807
+    },
+    "1630544": {
+      "sourceMinutes": 629.7899999999998,
+      "sourceContacts": 12,
+      "sourceTerminal": 342,
+      "contactRate": 0.02124253037204698,
+      "terminalRate": 0.5398784244559874
+    },
+    "1631170": {
+      "sourceMinutes": 2049.8050000000003,
+      "sourceContacts": 54,
+      "sourceTerminal": 1108,
+      "contactRate": 0.02667485345418336,
+      "terminalRate": 0.5395720962785046
+    },
+    "1631107": {
+      "sourceMinutes": 754.1850000000001,
+      "sourceContacts": 33,
+      "sourceTerminal": 385,
+      "contactRate": 0.04203110212412081,
+      "terminalRate": 0.5088596694045101
+    },
+    "1631217": {
+      "sourceMinutes": 1854.206666666667,
+      "sourceContacts": 108,
+      "sourceTerminal": 492,
+      "contactRate": 0.056536249311081276,
+      "terminalRate": 0.26788380331160133
+    },
+    "1642862": {
+      "sourceMinutes": 352.48833333333334,
+      "sourceContacts": 12,
+      "sourceTerminal": 118,
+      "contactRate": 0.03347985896659412,
+      "terminalRate": 0.3428875326364407
+    },
+    "1630696": {
+      "sourceMinutes": 1095.2133333333331,
+      "sourceContacts": 16,
+      "sourceTerminal": 408,
+      "contactRate": 0.01643342147763831,
+      "terminalRate": 0.37443529130629183
+    },
+    "1626192": {
+      "sourceMinutes": 294.10166666666674,
+      "sourceContacts": 10,
+      "sourceTerminal": 100,
+      "contactRate": 0.03337294351549572,
+      "terminalRate": 0.34922514508202634
+    },
+    "1642354": {
+      "sourceMinutes": 232.3083333333333,
+      "sourceContacts": 15,
+      "sourceTerminal": 120,
+      "contactRate": 0.05292601885364955,
+      "terminalRate": 0.5110468345666093
+    },
+    "1631323": {
+      "sourceMinutes": 1158.3316666666672,
+      "sourceContacts": 19,
+      "sourceTerminal": 541,
+      "contactRate": 0.017958235943898785,
+      "terminalRate": 0.4668857593336947
+    },
+    "1641765": {
+      "sourceMinutes": 983.5916666666667,
+      "sourceContacts": 24,
+      "sourceTerminal": 435,
+      "contactRate": 0.025273537777059738,
+      "terminalRate": 0.4426687193879712
+    },
+    "1641790": {
+      "sourceMinutes": 213.37833333333333,
+      "sourceContacts": 7,
+      "sourceTerminal": 85,
+      "contactRate": 0.03247879401157214,
+      "terminalRate": 0.40464367972276194
+    },
+    "1641713": {
+      "sourceMinutes": 1154.748333333334,
+      "sourceContacts": 20,
+      "sourceTerminal": 654,
+      "contactRate": 0.018787413121461122,
+      "terminalRate": 0.5641166888366143
+    },
+    "1642914": {
+      "sourceMinutes": 821.0250000000001,
+      "sourceContacts": 17,
+      "sourceTerminal": 367,
+      "contactRate": 0.0222296718490393,
+      "terminalRate": 0.4473551838250249
+    },
+    "1629018": {
+      "sourceMinutes": 1313.2583333333332,
+      "sourceContacts": 10,
+      "sourceTerminal": 500,
+      "contactRate": 0.00978824395259015,
+      "terminalRate": 0.38217598278478404
+    },
+    "1630175": {
+      "sourceMinutes": 514.4033333333333,
+      "sourceContacts": 30,
+      "sourceTerminal": 296,
+      "contactRate": 0.05303457966807874,
+      "terminalRate": 0.5701074913113058
+    },
+    "1629599": {
+      "sourceMinutes": 468.5516666666666,
+      "sourceContacts": 2,
+      "sourceTerminal": 130,
+      "contactRate": 0.010237161592998338,
+      "terminalRate": 0.2865267271082313
+    },
+    "1631207": {
+      "sourceMinutes": 521.91,
+      "sourceContacts": 20,
+      "sourceTerminal": 181,
+      "contactRate": 0.037056754657398064,
+      "terminalRate": 0.3518664444900584
+    },
+    "1630579": {
+      "sourceMinutes": 1252.4566666666667,
+      "sourceContacts": 40,
+      "sourceTerminal": 267,
+      "contactRate": 0.03193727910357177,
+      "terminalRate": 0.21792601112025325
+    },
+    "1642268": {
+      "sourceMinutes": 1461.8299999999997,
+      "sourceContacts": 49,
+      "sourceTerminal": 723,
+      "contactRate": 0.03339146882892725,
+      "terminalRate": 0.49399761144728016
+    },
+    "201567": {
+      "sourceMinutes": 612.8,
+      "sourceContacts": 21,
+      "sourceTerminal": 240,
+      "contactRate": 0.033863858016970214,
+      "terminalRate": 0.39425296885746197
+    },
+    "1630311": {
+      "sourceMinutes": 1206.5766666666666,
+      "sourceContacts": 22,
+      "sourceTerminal": 526,
+      "contactRate": 0.019555902526558876,
+      "terminalRate": 0.43640785103740287
+    },
+    "201942": {
+      "sourceMinutes": 2370.7816666666668,
+      "sourceContacts": 83,
+      "sourceTerminal": 1236,
+      "contactRate": 0.034851177380203116,
+      "terminalRate": 0.5207069182859844
+    },
+    "201566": {
+      "sourceMinutes": 1823.87,
+      "sourceContacts": 49,
+      "sourceTerminal": 1109,
+      "contactRate": 0.027200668929159563,
+      "terminalRate": 0.6060625306921782
+    },
+    "1629234": {
+      "sourceMinutes": 535.7866666666667,
+      "sourceContacts": 22,
+      "sourceTerminal": 200,
+      "contactRate": 0.0392921445891936,
+      "terminalRate": 0.3770566643288617
+    },
+    "203897": {
+      "sourceMinutes": 1188.0666666666668,
+      "sourceContacts": 27,
+      "sourceTerminal": 656,
+      "contactRate": 0.023627444913689486,
+      "terminalRate": 0.5502671482161428
+    },
+    "203471": {
+      "sourceMinutes": 1647.2150000000006,
+      "sourceContacts": 56,
+      "sourceTerminal": 803,
+      "contactRate": 0.03384737084173104,
+      "terminalRate": 0.48707132395225544
+    },
+    "1630173": {
+      "sourceMinutes": 1745.1850000000002,
+      "sourceContacts": 31,
+      "sourceTerminal": 717,
+      "contactRate": 0.018737906900684553,
+      "terminalRate": 0.41151674058974014
+    },
+    "1628370": {
+      "sourceMinutes": 1335.9933333333336,
+      "sourceContacts": 33,
+      "sourceTerminal": 750,
+      "contactRate": 0.02533740920248765,
+      "terminalRate": 0.5595281417988568
+    },
+    "1642875": {
+      "sourceMinutes": 1963.8799999999999,
+      "sourceContacts": 61,
+      "sourceTerminal": 823,
+      "contactRate": 0.031114953328339367,
+      "terminalRate": 0.41956460925082656
+    },
+    "1642363": {
+      "sourceMinutes": 1881.9250000000002,
+      "sourceContacts": 11,
+      "sourceTerminal": 753,
+      "contactRate": 0.007517381446985177,
+      "terminalRate": 0.4008846347226918
+    },
+    "1631165": {
+      "sourceMinutes": 1439.5883333333334,
+      "sourceContacts": 32,
+      "sourceTerminal": 436,
+      "contactRate": 0.023026337509170807,
+      "terminalRate": 0.3054937451627537
+    },
+    "1642269": {
+      "sourceMinutes": 687.7983333333333,
+      "sourceContacts": 31,
+      "sourceTerminal": 379,
+      "contactRate": 0.04299881552849322,
+      "terminalRate": 0.547854628837191
+    },
+    "1642352": {
+      "sourceMinutes": 275.1716666666666,
+      "sourceContacts": 4,
+      "sourceTerminal": 123,
+      "contactRate": 0.02008669745675214,
+      "terminalRate": 0.4479899769445436
+    },
+    "1641724": {
+      "sourceMinutes": 643.1566666666668,
+      "sourceContacts": 9,
+      "sourceTerminal": 257,
+      "contactRate": 0.016988888704845235,
+      "terminalRate": 0.40178789015747174
+    },
+    "1631288": {
+      "sourceMinutes": 485.9683333333334,
+      "sourceContacts": 11,
+      "sourceTerminal": 188,
+      "contactRate": 0.02458507203292113,
+      "terminalRate": 0.39034343701417484
+    },
+    "1631230": {
+      "sourceMinutes": 1625.7533333333336,
+      "sourceContacts": 28,
+      "sourceTerminal": 485,
+      "contactRate": 0.018303569344525844,
+      "terminalRate": 0.30072382533629566
+    },
+    "1631111": {
+      "sourceMinutes": 59.555,
+      "sourceContacts": 1,
+      "sourceTerminal": 9,
+      "contactRate": 0.02715050787048252,
+      "terminalRate": 0.2412564447121064
+    },
+    "1631321": {
+      "sourceMinutes": 1390.3450000000003,
+      "sourceContacts": 40,
+      "sourceTerminal": 418,
+      "contactRate": 0.029038567213051477,
+      "terminalRate": 0.303404344898992
+    },
+    "1631126": {
+      "sourceMinutes": 955.7783333333333,
+      "sourceContacts": 16,
+      "sourceTerminal": 536,
+      "contactRate": 0.018545982385937448,
+      "terminalRate": 0.558243988144994
+    },
+    "1630163": {
+      "sourceMinutes": 1967.5649999999996,
+      "sourceContacts": 134,
+      "sourceTerminal": 1452,
+      "contactRate": 0.06588121235651355,
+      "terminalRate": 0.7345191235482734
+    },
+    "1629012": {
+      "sourceMinutes": 1595.765,
+      "sourceContacts": 94,
+      "sourceTerminal": 963,
+      "contactRate": 0.056890713345675754,
+      "terminalRate": 0.6012772410559577
+    },
+    "203486": {
+      "sourceMinutes": 164.3216666666667,
+      "sourceContacts": 6,
+      "sourceTerminal": 30,
+      "contactRate": 0.034502362003854904,
+      "terminalRate": 0.2186294354322184
+    },
+    "1641810": {
+      "sourceMinutes": 67.67666666666668,
+      "sourceContacts": 0,
+      "sourceTerminal": 21,
+      "contactRate": 0.02094087561609256,
+      "terminalRate": 0.3500191903322879
+    },
+    "203648": {
+      "sourceMinutes": 145.60833333333332,
+      "sourceContacts": 4,
+      "sourceTerminal": 53,
+      "contactRate": 0.02956818000987838,
+      "terminalRate": 0.3777576461084427
+    },
+    "1641748": {
+      "sourceMinutes": 395.9916666666667,
+      "sourceContacts": 16,
+      "sourceTerminal": 156,
+      "contactRate": 0.038325888503177793,
+      "terminalRate": 0.39776513830656085
+    },
+    "1641813": {
+      "sourceMinutes": 26.081666666666667,
+      "sourceContacts": 5,
+      "sourceTerminal": 18,
+      "contactRate": 0.05882936174625301,
+      "terminalRate": 0.5779116841531611
+    },
+    "1627734": {
+      "sourceMinutes": 532.0716666666667,
+      "sourceContacts": 34,
+      "sourceTerminal": 279,
+      "contactRate": 0.057668799258602604,
+      "terminalRate": 0.5214775467437719
+    },
+    "1626172": {
+      "sourceMinutes": 291.17,
+      "sourceContacts": 4,
+      "sourceTerminal": 69,
+      "contactRate": 0.019321649796074546,
+      "terminalRate": 0.25430666726610807
+    },
+    "1642877": {
+      "sourceMinutes": 851.4866666666668,
+      "sourceContacts": 6,
+      "sourceTerminal": 284,
+      "contactRate": 0.01031859338427437,
+      "terminalRate": 0.33706610464694203
+    },
+    "1641722": {
+      "sourceMinutes": 669.9250000000003,
+      "sourceContacts": 17,
+      "sourceTerminal": 293,
+      "contactRate": 0.026434613775558714,
+      "terminalRate": 0.43813411265466606
+    },
+    "1642920": {
+      "sourceMinutes": 1352.9683333333332,
+      "sourceContacts": 27,
+      "sourceTerminal": 486,
+      "contactRate": 0.020998146943737857,
+      "terminalRate": 0.3609970952997147
+    },
+    "1641757": {
+      "sourceMinutes": 1303.2033333333336,
+      "sourceContacts": 31,
+      "sourceTerminal": 528,
+      "contactRate": 0.024520982377614787,
+      "terminalRate": 0.4061568115462915
+    },
+    "203992": {
+      "sourceMinutes": 452.01166666666666,
+      "sourceContacts": 15,
+      "sourceTerminal": 188,
+      "contactRate": 0.03290827116279597,
+      "terminalRate": 0.41815151500502257
+    },
+    "204456": {
+      "sourceMinutes": 962.505,
+      "sourceContacts": 21,
+      "sourceTerminal": 523,
+      "contactRate": 0.023013034938172607,
+      "terminalRate": 0.5412706720434106
+    },
+    "1629726": {
+      "sourceMinutes": 196.1,
+      "sourceContacts": 6,
+      "sourceTerminal": 64,
+      "contactRate": 0.031128468854929932,
+      "terminalRate": 0.3411824019797567
+    },
+    "1641731": {
+      "sourceMinutes": 1430.7050000000002,
+      "sourceContacts": 39,
+      "sourceTerminal": 667,
+      "contactRate": 0.027645885874520392,
+      "terminalRate": 0.46608372909864115
+    },
+    "203114": {
+      "sourceMinutes": 1402.82,
+      "sourceContacts": 44,
+      "sourceTerminal": 679,
+      "contactRate": 0.03141354803045192,
+      "terminalRate": 0.48359507636854443
+    },
+    "1641774": {
+      "sourceMinutes": 626.6466666666666,
+      "sourceContacts": 29,
+      "sourceTerminal": 387,
+      "contactRate": 0.043831948571657856,
+      "terminalRate": 0.6115780806469083
+    },
+    "1642273": {
+      "sourceMinutes": 1390.9633333333336,
+      "sourceContacts": 57,
+      "sourceTerminal": 745,
+      "contactRate": 0.04021216065346569,
+      "terminalRate": 0.5342687591577313
+    },
+    "1641715": {
+      "sourceMinutes": 349.04999999999995,
+      "sourceContacts": 5,
+      "sourceTerminal": 194,
+      "contactRate": 0.019074043294658543,
+      "terminalRate": 0.549419676589596
+    },
+    "1642848": {
+      "sourceMinutes": 1367.255,
+      "sourceContacts": 37,
+      "sourceTerminal": 724,
+      "contactRate": 0.027481549416331203,
+      "terminalRate": 0.5282816845652634
+    },
+    "1642267": {
+      "sourceMinutes": 2180.2783333333336,
+      "sourceContacts": 66,
+      "sourceTerminal": 921,
+      "contactRate": 0.030364364458512094,
+      "terminalRate": 0.4228331740231523
+    },
+    "1630551": {
+      "sourceMinutes": 1341.4700000000005,
+      "sourceContacts": 23,
+      "sourceTerminal": 529,
+      "contactRate": 0.01844190411844035,
+      "terminalRate": 0.39551179091236766
+    },
+    "1642364": {
+      "sourceMinutes": 969.3100000000001,
+      "sourceContacts": 32,
+      "sourceTerminal": 344,
+      "contactRate": 0.03288696888071672,
+      "terminalRate": 0.35747533195139797
+    },
+    "1642860": {
+      "sourceMinutes": 1549.4049999999997,
+      "sourceContacts": 41,
+      "sourceTerminal": 743,
+      "contactRate": 0.026882266326512094,
+      "terminalRate": 0.4792192262396478
+    },
+    "1631103": {
+      "sourceMinutes": 275.495,
+      "sourceContacts": 3,
+      "sourceTerminal": 122,
+      "contactRate": 0.017597647374595432,
+      "terminalRate": 0.4441755243035332
+    },
+    "1630264": {
+      "sourceMinutes": 908.6966666666666,
+      "sourceContacts": 34,
+      "sourceTerminal": 253,
+      "contactRate": 0.036735756173802335,
+      "terminalRate": 0.28319105308682907
+    },
+    "202066": {
+      "sourceMinutes": 65.10333333333332,
+      "sourceContacts": 4,
+      "sourceTerminal": 20,
+      "contactRate": 0.04183964627017659,
+      "terminalRate": 0.3489128781941589
+    },
+    "1628389": {
+      "sourceMinutes": 2242.1633333333334,
+      "sourceContacts": 135,
+      "sourceTerminal": 1351,
+      "contactRate": 0.05867302931657177,
+      "terminalRate": 0.6009840499660689
+    },
+    "1628975": {
+      "sourceMinutes": 845.9583333333335,
+      "sourceContacts": 9,
+      "sourceTerminal": 342,
+      "contactRate": 0.013454563039208887,
+      "terminalRate": 0.4058273498993411
+    },
+    "1642443": {
+      "sourceMinutes": 58.195,
+      "sourceContacts": 1,
+      "sourceTerminal": 28,
+      "contactRate": 0.027347893274875284,
+      "terminalRate": 0.47458955968396394
+    },
+    "1642066": {
+      "sourceMinutes": 388.97166666666664,
+      "sourceContacts": 9,
+      "sourceTerminal": 142,
+      "contactRate": 0.025327899596946448,
+      "terminalRate": 0.3706679980275487
+    },
+    "1628415": {
+      "sourceMinutes": 1675.966666666667,
+      "sourceContacts": 73,
+      "sourceTerminal": 1109,
+      "contactRate": 0.042727285811507,
+      "terminalRate": 0.6587723543384909
+    },
+    "1631451": {
+      "sourceMinutes": 93.66499999999998,
+      "sourceContacts": 1,
+      "sourceTerminal": 51,
+      "contactRate": 0.02298897297933196,
+      "terminalRate": 0.5267117625636264
+    },
+    "1642259": {
+      "sourceMinutes": 1229.695,
+      "sourceContacts": 47,
+      "sourceTerminal": 746,
+      "contactRate": 0.037624841301068496,
+      "terminalRate": 0.6037562917532258
+    },
+    "1630536": {
+      "sourceMinutes": 670.3483333333334,
+      "sourceContacts": 32,
+      "sourceTerminal": 307,
+      "contactRate": 0.04518885608734606,
+      "terminalRate": 0.4580114630428075
+    },
+    "1642272": {
+      "sourceMinutes": 1146.9716666666664,
+      "sourceContacts": 23,
+      "sourceTerminal": 555,
+      "contactRate": 0.021253309683604827,
+      "terminalRate": 0.4833620591065719
+    },
+    "1642869": {
+      "sourceMinutes": 712.015,
+      "sourceContacts": 14,
+      "sourceTerminal": 245,
+      "contactRate": 0.021543798362722685,
+      "terminalRate": 0.3479411726877141
+    },
+    "201569": {
+      "sourceMinutes": 73.75,
+      "sourceContacts": 0,
+      "sourceTerminal": 25,
+      "contactRate": 0.020313206058923557,
+      "terminalRate": 0.3690680777637457
+    },
+    "1641780": {
+      "sourceMinutes": 50.045,
+      "sourceContacts": 3,
+      "sourceTerminal": 25,
+      "contactRate": 0.03977186892519402,
+      "terminalRate": 0.4862104593868651
+    },
+    "1642859": {
+      "sourceMinutes": 579.1650000000002,
+      "sourceContacts": 21,
+      "sourceTerminal": 222,
+      "contactRate": 0.03547254180474367,
+      "terminalRate": 0.38640390710445666
+    },
+    "1642282": {
+      "sourceMinutes": 21.573333333333334,
+      "sourceContacts": 1,
+      "sourceTerminal": 9,
+      "contactRate": 0.03400487677102053,
+      "terminalRate": 0.4395402523640955
+    },
+    "1631115": {
+      "sourceMinutes": 24.816666666666666,
+      "sourceContacts": 1,
+      "sourceTerminal": 5,
+      "contactRate": 0.033287272046285225,
+      "terminalRate": 0.32983625012479256
+    },
+    "1641738": {
+      "sourceMinutes": 962.3766666666667,
+      "sourceContacts": 26,
+      "sourceTerminal": 344,
+      "contactRate": 0.02759763999815956,
+      "terminalRate": 0.35998643044348816
+    },
+    "1642353": {
+      "sourceMinutes": 479.75,
+      "sourceContacts": 5,
+      "sourceTerminal": 182,
+      "contactRate": 0.01497795531841414,
+      "terminalRate": 0.38326019665891825
+    },
+    "1643141": {
+      "sourceMinutes": 32.03333333333333,
+      "sourceContacts": 0,
+      "sourceTerminal": 7,
+      "contactRate": 0.025579586499618577,
+      "terminalRate": 0.3231255205025174
+    },
+    "1642949": {
+      "sourceMinutes": 423.67833333333334,
+      "sourceContacts": 19,
+      "sourceTerminal": 145,
+      "contactRate": 0.041834848242629265,
+      "terminalRate": 0.3486643152142456
+    },
+    "1631166": {
+      "sourceMinutes": 228.44833333333335,
+      "sourceContacts": 5,
+      "sourceTerminal": 82,
+      "contactRate": 0.02551182000450858,
+      "terminalRate": 0.36869581018875297
+    },
+    "1629639": {
+      "sourceMinutes": 949.1066666666669,
+      "sourceContacts": 35,
+      "sourceTerminal": 563,
+      "contactRate": 0.03628631220801498,
+      "terminalRate": 0.5897967772257894
+    },
+    "1641744": {
+      "sourceMinutes": 283.8516666666667,
+      "sourceContacts": 22,
+      "sourceTerminal": 133,
+      "contactRate": 0.06327676000588559,
+      "terminalRate": 0.46780072401102574
+    },
+    "1631121": {
+      "sourceMinutes": 835.5683333333335,
+      "sourceContacts": 18,
+      "sourceTerminal": 277,
+      "contactRate": 0.02293132755957813,
+      "terminalRate": 0.33516601875874574
+    },
+    "1642905": {
+      "sourceMinutes": 278.6016666666667,
+      "sourceContacts": 19,
+      "sourceTerminal": 136,
+      "contactRate": 0.05672962796348338,
+      "terminalRate": 0.4857928321901052
+    },
+    "1631099": {
+      "sourceMinutes": 793.0966666666667,
+      "sourceContacts": 12,
+      "sourceTerminal": 348,
+      "contactRate": 0.017479887000934755,
+      "terminalRate": 0.4393989346674026
+    },
+    "1631123": {
+      "sourceMinutes": 616.3233333333333,
+      "sourceContacts": 18,
+      "sourceTerminal": 266,
+      "contactRate": 0.02967796857556187,
+      "terminalRate": 0.43264973922613925
+    },
+    "202331": {
+      "sourceMinutes": 1057.865,
+      "sourceContacts": 37,
+      "sourceTerminal": 577,
+      "contactRate": 0.034646154739111396,
+      "terminalRate": 0.5434733677259144
+    },
+    "200768": {
+      "sourceMinutes": 114.84,
+      "sourceContacts": 4,
+      "sourceTerminal": 30,
+      "contactRate": 0.033301094858210825,
+      "terminalRate": 0.2961901042151303
+    },
+    "1642874": {
+      "sourceMinutes": 1131.2483333333332,
+      "sourceContacts": 20,
+      "sourceTerminal": 546,
+      "contactRate": 0.019137779269101384,
+      "terminalRate": 0.48215092357533823
+    },
+    "1641706": {
+      "sourceMinutes": 1876.3116666666665,
+      "sourceContacts": 65,
+      "sourceTerminal": 1217,
+      "contactRate": 0.03446860017919138,
+      "terminalRate": 0.6461566998202359
+    },
+    "1629632": {
+      "sourceMinutes": 1189.8049999999998,
+      "sourceContacts": 57,
+      "sourceTerminal": 788,
+      "contactRate": 0.04634633826725264,
+      "terminalRate": 0.658171146080019
+    },
+    "1642358": {
+      "sourceMinutes": 444.59999999999997,
+      "sourceContacts": 7,
+      "sourceTerminal": 216,
+      "contactRate": 0.019383517067537343,
+      "terminalRate": 0.484427218172005
+    },
+    "1630560": {
+      "sourceMinutes": 734.0050000000001,
+      "sourceContacts": 52,
+      "sourceTerminal": 483,
+      "contactRate": 0.06503338585546693,
+      "terminalRate": 0.6515730761756984
+    },
+    "1642879": {
+      "sourceMinutes": 897.8516666666665,
+      "sourceContacts": 26,
+      "sourceTerminal": 427,
+      "contactRate": 0.029332025116203163,
+      "terminalRate": 0.47513993037371427
+    },
+    "1642275": {
+      "sourceMinutes": 540.445,
+      "sourceContacts": 14,
+      "sourceTerminal": 185,
+      "contactRate": 0.02706623156930574,
+      "terminalRate": 0.34740367285373663
+    },
+    "1642849": {
+      "sourceMinutes": 1171.5149999999999,
+      "sourceContacts": 26,
+      "sourceTerminal": 611,
+      "contactRate": 0.023159180104895885,
+      "terminalRate": 0.5202608641600512
+    },
+    "1629027": {
+      "sourceMinutes": 328.98499999999996,
+      "sourceContacts": 28,
+      "sourceTerminal": 207,
+      "contactRate": 0.07014374062955196,
+      "terminalRate": 0.6173563818646325
+    },
+    "1642367": {
+      "sourceMinutes": 231.65666666666667,
+      "sourceContacts": 5,
+      "sourceTerminal": 56,
+      "contactRate": 0.025284792376850145,
+      "terminalRate": 0.262635448544494
+    },
+    "1630621": {
+      "sourceMinutes": 42.478333333333325,
+      "sourceContacts": 1,
+      "sourceTerminal": 17,
+      "contactRate": 0.029856278822097376,
+      "terminalRate": 0.42183135021573837
+    },
+    "1628963": {
+      "sourceMinutes": 1164.6516666666669,
+      "sourceContacts": 40,
+      "sourceTerminal": 510,
+      "contactRate": 0.03410519340057924,
+      "terminalRate": 0.4383387478464677
+    },
+    "1627752": {
+      "sourceMinutes": 589.5533333333333,
+      "sourceContacts": 6,
+      "sourceTerminal": 215,
+      "contactRate": 0.014080676793022485,
+      "terminalRate": 0.3684712871126528
+    },
+    "203967": {
+      "sourceMinutes": 41.24833333333333,
+      "sourceContacts": 0,
+      "sourceTerminal": 9,
+      "contactRate": 0.024194019528255735,
+      "terminalRate": 0.30828823211357415
+    },
+    "1642928": {
+      "sourceMinutes": 906.5383333333333,
+      "sourceContacts": 27,
+      "sourceTerminal": 235,
+      "contactRate": 0.030051740778632378,
+      "terminalRate": 0.26451709786867883
+    },
+    "1629680": {
+      "sourceMinutes": 479.6500000000001,
+      "sourceContacts": 11,
+      "sourceTerminal": 170,
+      "contactRate": 0.024840339991941567,
+      "terminalRate": 0.35954035682930346
+    },
+    "1642403": {
+      "sourceMinutes": 34.03333333333333,
+      "sourceContacts": 2,
+      "sourceTerminal": 9,
+      "contactRate": 0.03754246599348259,
+      "terminalRate": 0.34619823205660866
+    },
+    "1630164": {
+      "sourceMinutes": 58.46166666666667,
+      "sourceContacts": 1,
+      "sourceTerminal": 16,
+      "contactRate": 0.027308964374825506,
+      "terminalRate": 0.328664903758092
+    },
+    "1643024": {
+      "sourceMinutes": 46.084999999999994,
+      "sourceContacts": 1,
+      "sourceTerminal": 8,
+      "contactRate": 0.02924081094624055,
+      "terminalRate": 0.27306598501566004
+    },
+    "201599": {
+      "sourceMinutes": 198.8,
+      "sourceContacts": 7,
+      "sourceTerminal": 45,
+      "contactRate": 0.03392378715042923,
+      "terminalRate": 0.25202554690332757
+    },
+    "1631199": {
+      "sourceMinutes": 310.8433333333333,
+      "sourceContacts": 6,
+      "sourceTerminal": 118,
+      "contactRate": 0.02300555900564853,
+      "terminalRate": 0.3854516696310553
+    },
+    "1641733": {
+      "sourceMinutes": 327.9266666666667,
+      "sourceContacts": 7,
+      "sourceTerminal": 166,
+      "contactRate": 0.024334340699687627,
+      "terminalRate": 0.5029194412698684
+    },
+    "1642886": {
+      "sourceMinutes": 79.13333333333333,
+      "sourceContacts": 1,
+      "sourceTerminal": 37,
+      "contactRate": 0.0245950129347907,
+      "terminalRate": 0.4655591478435572
+    },
+    "1629646": {
+      "sourceMinutes": 152.70333333333335,
+      "sourceContacts": 8,
+      "sourceTerminal": 57,
+      "contactRate": 0.04302882929076802,
+      "terminalRate": 0.38519976838003306
+    },
+    "1628998": {
+      "sourceMinutes": 55.18000000000001,
+      "sourceContacts": 2,
+      "sourceTerminal": 16,
+      "contactRate": 0.03322906881921944,
+      "terminalRate": 0.34217744403403416
+    },
+    "1630224": {
+      "sourceMinutes": 762.2933333333334,
+      "sourceContacts": 28,
+      "sourceTerminal": 577,
+      "contactRate": 0.036038061342934975,
+      "terminalRate": 0.7476016681982083
+    },
+    "1628420": {
+      "sourceMinutes": 64.61666666666666,
+      "sourceContacts": 2,
+      "sourceTerminal": 23,
+      "contactRate": 0.03160846536855335,
+      "terminalRate": 0.3844263075598448
+    },
+    "1631342": {
+      "sourceMinutes": 844.3683333333335,
+      "sourceContacts": 14,
+      "sourceTerminal": 319,
+      "contactRate": 0.018614010558552815,
+      "terminalRate": 0.3801029258109107
+    },
+    "203926": {
+      "sourceMinutes": 439.1983333333334,
+      "sourceContacts": 4,
+      "sourceTerminal": 153,
+      "contactRate": 0.014286812793374001,
+      "terminalRate": 0.35424542094473016
+    },
+    "1641809": {
+      "sourceMinutes": 58.10166666666667,
+      "sourceContacts": 1,
+      "sourceTerminal": 16,
+      "contactRate": 0.027361544623473944,
+      "terminalRate": 0.330094891986756
+    },
+    "1642942": {
+      "sourceMinutes": 673.1516666666668,
+      "sourceContacts": 16,
+      "sourceTerminal": 257,
+      "contactRate": 0.025081420568824335,
+      "terminalRate": 0.3845167886411256
+    },
+    "1642855": {
+      "sourceMinutes": 6.033333333333333,
+      "sourceContacts": 0,
+      "sourceTerminal": 3,
+      "contactRate": 0.030509409218158923,
+      "terminalRate": 0.4666145886430047
+    },
+    "1641753": {
+      "sourceMinutes": 17.426666666666666,
+      "sourceContacts": 0,
+      "sourceTerminal": 7,
+      "contactRate": 0.028133453789840276,
+      "terminalRate": 0.43532375934519574
+    },
+    "1641787": {
+      "sourceMinutes": 7.713333333333335,
+      "sourceContacts": 0,
+      "sourceTerminal": 1,
+      "contactRate": 0.030134148897124666,
+      "terminalRate": 0.3805669730036283
+    },
+    "1642384": {
+      "sourceMinutes": 91.48333333333335,
+      "sourceContacts": 6,
+      "sourceTerminal": 30,
+      "contactRate": 0.04590699500664968,
+      "terminalRate": 0.35576489853809634
+    },
+    "1642950": {
+      "sourceMinutes": 327.73833333333334,
+      "sourceContacts": 25,
+      "sourceTerminal": 97,
+      "contactRate": 0.0637651259749693,
+      "terminalRate": 0.3073758724606591
+    },
+    "1641801": {
+      "sourceMinutes": 33.05,
+      "sourceContacts": 0,
+      "sourceTerminal": 14,
+      "contactRate": 0.02541898082940919,
+      "terminalRate": 0.4387696319020209
+    },
+    "1642938": {
+      "sourceMinutes": 87.71666666666667,
+      "sourceContacts": 1,
+      "sourceTerminal": 30,
+      "contactRate": 0.023620330160187664,
+      "terminalRate": 0.36769164805215443
+    },
+    "1642935": {
+      "sourceMinutes": 13.233333333333333,
+      "sourceContacts": 1,
+      "sourceTerminal": 7,
+      "contactRate": 0.036000556097828366,
+      "terminalRate": 0.483522998611432
+    },
+    "1641725": {
+      "sourceMinutes": 108.24333333333334,
+      "sourceContacts": 2,
+      "sourceTerminal": 41,
+      "contactRate": 0.02579289740196397,
+      "terminalRate": 0.39367323995670955
+    },
+    "1630679": {
+      "sourceMinutes": 653.2316666666666,
+      "sourceContacts": 20,
+      "sourceTerminal": 235,
+      "contactRate": 0.030834635351988705,
+      "terminalRate": 0.36336170887433117
+    },
+    "1642857": {
+      "sourceMinutes": 898.4316666666666,
+      "sourceContacts": 25,
+      "sourceTerminal": 302,
+      "contactRate": 0.02834204462148611,
+      "terminalRate": 0.3394239195363593
+    },
+    "203552": {
+      "sourceMinutes": 133.0,
+      "sourceContacts": 6,
+      "sourceTerminal": 53,
+      "contactRate": 0.038629046866282754,
+      "terminalRate": 0.40797142101811135
+    },
+    "1642280": {
+      "sourceMinutes": 5.55,
+      "sourceContacts": 0,
+      "sourceTerminal": 4,
+      "contactRate": 0.03061910848453542,
+      "terminalRate": 0.507208736080391
+    },
+    "1628380": {
+      "sourceMinutes": 163.82,
+      "sourceContacts": 8,
+      "sourceTerminal": 72,
+      "contactRate": 0.041394572530364694,
+      "terminalRate": 0.4420705753351968
+    },
+    "1631204": {
+      "sourceMinutes": 439.6200000000002,
+      "sourceContacts": 4,
+      "sourceTerminal": 207,
+      "contactRate": 0.014276215895778611,
+      "terminalRate": 0.47023785256943207
+    },
+    "1630639": {
+      "sourceMinutes": 226.11499999999995,
+      "sourceContacts": 4,
+      "sourceTerminal": 89,
+      "contactRate": 0.02286251984754782,
+      "terminalRate": 0.40004232600085704
+    },
+    "1642918": {
+      "sourceMinutes": 145.615,
+      "sourceContacts": 4,
+      "sourceTerminal": 64,
+      "contactRate": 0.029567461871088534,
+      "terminalRate": 0.44235188790738506
+    },
+    "1629634": {
+      "sourceMinutes": 20.438333333333336,
+      "sourceContacts": 0,
+      "sourceTerminal": 11,
+      "contactRate": 0.027565995082992224,
+      "terminalRate": 0.4949745921116928
+    },
+    "1630182": {
+      "sourceMinutes": 876.3933333333335,
+      "sourceContacts": 14,
+      "sourceTerminal": 216,
+      "contactRate": 0.018021020348982956,
+      "terminalRate": 0.2522798878067529
+    },
+    "1641755": {
+      "sourceMinutes": 154.99333333333334,
+      "sourceContacts": 1,
+      "sourceTerminal": 61,
+      "contactRate": 0.018022302919079528,
+      "terminalRate": 0.4025567668512898
+    },
+    "1642884": {
+      "sourceMinutes": 23.961666666666666,
+      "sourceContacts": 0,
+      "sourceTerminal": 7,
+      "contactRate": 0.026930513916293915,
+      "terminalRate": 0.37678974291823614
+    },
+    "1642880": {
+      "sourceMinutes": 616.3249999999999,
+      "sourceContacts": 8,
+      "sourceTerminal": 208,
+      "contactRate": 0.01625866791895639,
+      "terminalRate": 0.34216002992335814
+    },
+    "1630695": {
+      "sourceMinutes": 908.3166666666668,
+      "sourceContacts": 40,
+      "sourceTerminal": 376,
+      "contactRate": 0.04253407249715899,
+      "terminalRate": 0.41514534369233586
+    },
+    "1628964": {
+      "sourceMinutes": 43.8,
+      "sourceContacts": 1,
+      "sourceTerminal": 13,
+      "contactRate": 0.029627755431528183,
+      "terminalRate": 0.3552397108653643
+    },
+    "1631131": {
+      "sourceMinutes": 448.4200000000001,
+      "sourceContacts": 8,
+      "sourceTerminal": 183,
+      "contactRate": 0.020987474428646704,
+      "terminalRate": 0.410756807349107
+    },
+    "1629684": {
+      "sourceMinutes": 711.4533333333334,
+      "sourceContacts": 21,
+      "sourceTerminal": 233,
+      "contactRate": 0.029888285248451905,
+      "terminalRate": 0.3319043805539504
+    },
+    "1629021": {
+      "sourceMinutes": 415.4450000000001,
+      "sourceContacts": 22,
+      "sourceTerminal": 234,
+      "contactRate": 0.047979113343229275,
+      "terminalRate": 0.5574210443665387
+    },
+    "1641723": {
+      "sourceMinutes": 119.48333333333333,
+      "sourceContacts": 5,
+      "sourceTerminal": 59,
+      "contactRate": 0.036704948074142915,
+      "terminalRate": 0.48786429522055536
+    },
+    "1631102": {
+      "sourceMinutes": 88.12833333333333,
+      "sourceContacts": 1,
+      "sourceTerminal": 22,
+      "contactRate": 0.023575520953198405,
+      "terminalRate": 0.2954073596520815
+    },
+    "1642502": {
+      "sourceMinutes": 276.47166666666664,
+      "sourceContacts": 12,
+      "sourceTerminal": 89,
+      "contactRate": 0.03975851807862729,
+      "terminalRate": 0.33314086814152816
+    },
+    "1643018": {
+      "sourceMinutes": 292.14666666666665,
+      "sourceContacts": 6,
+      "sourceTerminal": 134,
+      "contactRate": 0.024027188820357582,
+      "terminalRate": 0.45870814259824977
+    },
+    "1631116": {
+      "sourceMinutes": 102.47166666666668,
+      "sourceContacts": 2,
+      "sourceTerminal": 34,
+      "contactRate": 0.026436384728615946,
+      "terminalRate": 0.3564787341028866
+    },
+    "1629660": {
+      "sourceMinutes": 338.6883333333333,
+      "sourceContacts": 12,
+      "sourceTerminal": 260,
+      "contactRate": 0.03446800967581528,
+      "terminalRate": 0.7467424027325863
+    },
+    "1631174": {
+      "sourceMinutes": 306.74333333333334,
+      "sourceContacts": 7,
+      "sourceTerminal": 132,
+      "contactRate": 0.025517678478304703,
+      "terminalRate": 0.43246779355973847
+    },
+    "201959": {
+      "sourceMinutes": 96.87333333333333,
+      "sourceContacts": 2,
+      "sourceTerminal": 31,
+      "contactRate": 0.027091983579011436,
+      "terminalRate": 0.3482136770678033
+    },
+    "1630610": {
+      "sourceMinutes": 230.7333333333333,
+      "sourceContacts": 6,
+      "sourceTerminal": 117,
+      "contactRate": 0.028130524901503928,
+      "terminalRate": 0.5024511731731798
+    },
+    "1641890": {
+      "sourceMinutes": 165.58333333333334,
+      "sourceContacts": 3,
+      "sourceTerminal": 57,
+      "contactRate": 0.024166295926046504,
+      "terminalRate": 0.3591179130147059
+    },
+    "1642967": {
+      "sourceMinutes": 253.435,
+      "sourceContacts": 4,
+      "sourceTerminal": 95,
+      "contactRate": 0.0212287522977822,
+      "terminalRate": 0.38231631909282354
+    },
+    "1630828": {
+      "sourceMinutes": 20.638333333333335,
+      "sourceContacts": 2,
+      "sourceTerminal": 14,
+      "contactRate": 0.04090594318917507,
+      "terminalRate": 0.5590453252961551
+    },
+    "1627746": {
+      "sourceMinutes": 37.550000000000004,
+      "sourceContacts": 0,
+      "sourceTerminal": 11,
+      "contactRate": 0.024731667629222687,
+      "terminalRate": 0.35878125769293373
+    },
+    "1641815": {
+      "sourceMinutes": 42.78333333333333,
+      "sourceContacts": 1,
+      "sourceTerminal": 10,
+      "contactRate": 0.029803230317076625,
+      "terminalRate": 0.31610123795004147
+    },
+    "1641794": {
+      "sourceMinutes": 36.68833333333333,
+      "sourceContacts": 0,
+      "sourceTerminal": 11,
+      "contactRate": 0.024860383218444707,
+      "terminalRate": 0.363822169351738
+    },
+    "1642530": {
+      "sourceMinutes": 182.76999999999998,
+      "sourceContacts": 6,
+      "sourceTerminal": 65,
+      "contactRate": 0.0324599319555648,
+      "terminalRate": 0.36793118932156804
+    },
+    "1630649": {
+      "sourceMinutes": 6.566666666666666,
+      "sourceContacts": 0,
+      "sourceTerminal": 2,
+      "contactRate": 0.03038927037789126,
+      "terminalRate": 0.42659532109949516
+    },
+    "1642400": {
+      "sourceMinutes": 85.13333333333334,
+      "sourceContacts": 2,
+      "sourceTerminal": 34,
+      "contactRate": 0.028578193787689013,
+      "terminalRate": 0.4127834534529708
+    },
+    "1642917": {
+      "sourceMinutes": 36.275000000000006,
+      "sourceContacts": 0,
+      "sourceTerminal": 12,
+      "contactRate": 0.024922603546205215,
+      "terminalRate": 0.38270722315418665
+    },
+    "1630590": {
+      "sourceMinutes": 211.86666666666667,
+      "sourceContacts": 15,
+      "sourceTerminal": 131,
+      "contactRate": 0.05610114918989505,
+      "terminalRate": 0.6017278492649972
+    },
+    "1630703": {
+      "sourceMinutes": 747.8299999999999,
+      "sourceContacts": 49,
+      "sourceTerminal": 443,
+      "contactRate": 0.06058594801051312,
+      "terminalRate": 0.5881298245238277
+    },
+    "1642933": {
+      "sourceMinutes": 73.78333333333333,
+      "sourceContacts": 2,
+      "sourceTerminal": 22,
+      "contactRate": 0.030178740336811307,
+      "terminalRate": 0.33846245418332865
+    },
+    "1642402": {
+      "sourceMinutes": 37.208333333333336,
+      "sourceContacts": 3,
+      "sourceTerminal": 11,
+      "contactRate": 0.04284587569179584,
+      "terminalRate": 0.36076326639008116
+    },
+    "1630625": {
+      "sourceMinutes": 61.650000000000006,
+      "sourceContacts": 1,
+      "sourceTerminal": 22,
+      "contactRate": 0.02685196116115309,
+      "terminalRate": 0.38605413222301593
+    },
+    "1630699": {
+      "sourceMinutes": 196.11166666666665,
+      "sourceContacts": 3,
+      "sourceTerminal": 98,
+      "contactRate": 0.021896175094566143,
+      "terminalRate": 0.4951837118198757
+    },
+    "1642955": {
+      "sourceMinutes": 66.8,
+      "sourceContacts": 1,
+      "sourceTerminal": 19,
+      "contactRate": 0.02614523672036231,
+      "terminalRate": 0.33150264393420564
+    },
+    "1631205": {
+      "sourceMinutes": 15.003333333333332,
+      "sourceContacts": 0,
+      "sourceTerminal": 6,
+      "contactRate": 0.0286073069923988,
+      "terminalRate": 0.4367094857370533
+    },
+    "1643133": {
+      "sourceMinutes": 49.265,
+      "sourceContacts": 2,
+      "sourceTerminal": 13,
+      "contactRate": 0.03433242035554458,
+      "terminalRate": 0.32897099424079024
+    },
+    "1642260": {
+      "sourceMinutes": 160.08333333333331,
+      "sourceContacts": 5,
+      "sourceTerminal": 78,
+      "contactRate": 0.03154771305321534,
+      "terminalRate": 0.48349402365230676
+    },
+    "1642396": {
+      "sourceMinutes": 285.43333333333334,
+      "sourceContacts": 5,
+      "sourceTerminal": 125,
+      "contactRate": 0.02200285229554168,
+      "terminalRate": 0.4396141349633186
+    },
+    "1631214": {
+      "sourceMinutes": 100.78333333333333,
+      "sourceContacts": 0,
+      "sourceTerminal": 34,
+      "contactRate": 0.0179221059944953,
+      "terminalRate": 0.36127732884761665
+    },
+    "1626166": {
+      "sourceMinutes": 364.35333333333335,
+      "sourceContacts": 8,
+      "sourceTerminal": 165,
+      "contactRate": 0.024564622102465298,
+      "terminalRate": 0.45325358412956585
+    },
+    "1631211": {
+      "sourceMinutes": 14.946666666666665,
+      "sourceContacts": 0,
+      "sourceTerminal": 12,
+      "contactRate": 0.02861857853451572,
+      "terminalRate": 0.5889014570963017
+    },
+    "1642911": {
+      "sourceMinutes": 36.483333333333334,
+      "sourceContacts": 0,
+      "sourceTerminal": 11,
+      "contactRate": 0.024891203614375225,
+      "terminalRate": 0.3650423867197502
+    },
+    "1630165": {
+      "sourceMinutes": 405.52666666666676,
+      "sourceContacts": 12,
+      "sourceTerminal": 176,
+      "contactRate": 0.030157041420989537,
+      "terminalRate": 0.4354419670591812
+    },
+    "1627749": {
+      "sourceMinutes": 389.41666666666674,
+      "sourceContacts": 13,
+      "sourceTerminal": 240,
+      "contactRate": 0.03302383032100699,
+      "terminalRate": 0.606952306274395
+    },
+    "1642910": {
+      "sourceMinutes": 41.89833333333333,
+      "sourceContacts": 2,
+      "sourceTerminal": 15,
+      "contactRate": 0.03581343011871668,
+      "terminalRate": 0.3954504321743108
+    },
+    "1641778": {
+      "sourceMinutes": 405.35999999999996,
+      "sourceContacts": 2,
+      "sourceTerminal": 114,
+      "contactRate": 0.01144806037516979,
+      "terminalRate": 0.29142463935532537
+    },
+    "1641761": {
+      "sourceMinutes": 35.010000000000005,
+      "sourceContacts": 4,
+      "sourceTerminal": 17,
+      "contactRate": 0.04952248536797816,
+      "terminalRate": 0.47464587067945607
+    },
+    "1631466": {
+      "sourceMinutes": 239.17000000000002,
+      "sourceContacts": 12,
+      "sourceTerminal": 107,
+      "contactRate": 0.043788087854351,
+      "terminalRate": 0.44847663743127475
+    },
+    "1642882": {
+      "sourceMinutes": 401.50000000000006,
+      "sourceContacts": 30,
+      "sourceTerminal": 162,
+      "contactRate": 0.06432431257063492,
+      "terminalRate": 0.40670346504186966
+    },
+    "1641807": {
+      "sourceMinutes": 23.666666666666668,
+      "sourceContacts": 1,
+      "sourceTerminal": 10,
+      "contactRate": 0.033538223894519444,
+      "terminalRate": 0.44119418599500226
+    },
+    "1628369": {
+      "sourceMinutes": 521.85,
+      "sourceContacts": 20,
+      "sourceTerminal": 352,
+      "contactRate": 0.03706017147508262,
+      "terminalRate": 0.6648111742834159
+    },
+    "1631223": {
+      "sourceMinutes": 73.01666666666668,
+      "sourceContacts": 2,
+      "sourceTerminal": 35,
+      "contactRate": 0.030293342137657383,
+      "terminalRate": 0.47423926801362415
+    },
+    "1629312": {
+      "sourceMinutes": 90.79,
+      "sourceContacts": 2,
+      "sourceTerminal": 25,
+      "contactRate": 0.027842263847565506,
+      "terminalRate": 0.31458545330282395
+    },
+    "1643052": {
+      "sourceMinutes": 347.5833333333333,
+      "sourceContacts": 8,
+      "sourceTerminal": 127,
+      "contactRate": 0.025429229868353033,
+      "terminalRate": 0.3715850034494723
+    },
+    "1641771": {
+      "sourceMinutes": 310.55,
+      "sourceContacts": 10,
+      "sourceTerminal": 100,
+      "contactRate": 0.032123741614462964,
+      "terminalRate": 0.3320880750059265
+    },
+    "1643158": {
+      "sourceMinutes": 168.74999999999997,
+      "sourceContacts": 9,
+      "sourceTerminal": 39,
+      "contactRate": 0.044068835193299336,
+      "terminalRate": 0.2601612781854712
+    },
+    "1642951": {
+      "sourceMinutes": 30.999999999999996,
+      "sourceContacts": 0,
+      "sourceTerminal": 16,
+      "contactRate": 0.02574491819190703,
+      "terminalRate": 0.49088118181665186
+    },
+    "1643016": {
+      "sourceMinutes": 492.18499999999995,
+      "sourceContacts": 15,
+      "sourceTerminal": 128,
+      "contactRate": 0.030779592661127522,
+      "terminalRate": 0.2695546678103665
+    },
+    "1641869": {
+      "sourceMinutes": 358.82,
+      "sourceContacts": 12,
+      "sourceTerminal": 114,
+      "contactRate": 0.03304519439014754,
+      "terminalRate": 0.32679445302764304
+    },
+    "1629622": {
+      "sourceMinutes": 288.295,
+      "sourceContacts": 9,
+      "sourceTerminal": 118,
+      "contactRate": 0.031440358791972864,
+      "terminalRate": 0.41322516083450705
+    },
+    "1630209": {
+      "sourceMinutes": 103.95500000000001,
+      "sourceContacts": 8,
+      "sourceTerminal": 41,
+      "contactRate": 0.0520379462429831,
+      "terminalRate": 0.4068013111679143
+    },
+    "1643257": {
+      "sourceMinutes": 22.46666666666666,
+      "sourceContacts": 0,
+      "sourceTerminal": 7,
+      "contactRate": 0.027196543652596026,
+      "terminalRate": 0.3887477680967045
+    },
+    "1642362": {
+      "sourceMinutes": 63.333333333333336,
+      "sourceContacts": 0,
+      "sourceTerminal": 29,
+      "contactRate": 0.021414079215256517,
+      "terminalRate": 0.4582368526766537
+    },
+    "1642380": {
+      "sourceMinutes": 241.31500000000003,
+      "sourceContacts": 5,
+      "sourceTerminal": 78,
+      "contactRate": 0.024625105159229544,
+      "terminalRate": 0.3358184749215421
+    },
+    "1631351": {
+      "sourceMinutes": 223.73999999999998,
+      "sourceContacts": 1,
+      "sourceTerminal": 88,
+      "contactRate": 0.014508621548998095,
+      "terminalRate": 0.39984142612958024
+    },
+    "1642389": {
+      "sourceMinutes": 42.583333333333336,
+      "sourceContacts": 1,
+      "sourceTerminal": 17,
+      "contactRate": 0.029837994919215936,
+      "terminalRate": 0.42117246583731593
+    },
+    "1631457": {
+      "sourceMinutes": 23.583333333333336,
+      "sourceContacts": 0,
+      "sourceTerminal": 12,
+      "contactRate": 0.02699734383329318,
+      "terminalRate": 0.4834304489863508
+    },
+    "1630658": {
+      "sourceMinutes": 21.383333333333333,
+      "sourceContacts": 1,
+      "sourceTerminal": 7,
+      "contactRate": 0.03404787584691605,
+      "terminalRate": 0.397898452028681
+    },
+    "1642504": {
+      "sourceMinutes": 270.6783333333334,
+      "sourceContacts": 10,
+      "sourceTerminal": 127,
+      "contactRate": 0.035329397051643376,
+      "terminalRate": 0.4683509606422069
+    },
+    "1631113": {
+      "sourceMinutes": 355.2266666666667,
+      "sourceContacts": 10,
+      "sourceTerminal": 177,
+      "contactRate": 0.029159106802605632,
+      "terminalRate": 0.49573349364048913
+    },
+    "1628365": {
+      "sourceMinutes": 35.766666666666666,
+      "sourceContacts": 0,
+      "sourceTerminal": 15,
+      "contactRate": 0.0249995528820021,
+      "terminalRate": 0.4355913175495252
+    },
+    "1629610": {
+      "sourceMinutes": 59.903333333333336,
+      "sourceContacts": 0,
+      "sourceTerminal": 21,
+      "contactRate": 0.021803163484254668,
+      "terminalRate": 0.38220175545702917
+    },
+    "1630846": {
+      "sourceMinutes": 39.349999999999994,
+      "sourceContacts": 4,
+      "sourceTerminal": 10,
+      "contactRate": 0.048244858017965256,
+      "terminalRate": 0.33306144752811584
+    },
+    "1643047": {
+      "sourceMinutes": 35.666666666666664,
+      "sourceContacts": 0,
+      "sourceTerminal": 9,
+      "contactRate": 0.02501474642230534,
+      "terminalRate": 0.33682184394701575
+    },
+    "1630286": {
+      "sourceMinutes": 182.235,
+      "sourceContacts": 2,
+      "sourceTerminal": 56,
+      "contactRate": 0.01965852182388459,
+      "terminalRate": 0.3253781303507494
+    },
+    "1641727": {
+      "sourceMinutes": 182.81666666666666,
+      "sourceContacts": 0,
+      "sourceTerminal": 106,
+      "contactRate": 0.013205217615683475,
+      "terminalRate": 0.5654802208583047
+    },
+    "1643253": {
+      "sourceMinutes": 217.09000000000003,
+      "sourceContacts": 5,
+      "sourceTerminal": 76,
+      "contactRate": 0.026349397768304975,
+      "terminalRate": 0.3611988864784933
+    },
+    "1642490": {
+      "sourceMinutes": 81.76666666666667,
+      "sourceContacts": 1,
+      "sourceTerminal": 20,
+      "contactRate": 0.024287537328786676,
+      "terminalRate": 0.29427287208308023
+    },
+    "1631338": {
+      "sourceMinutes": 45.44166666666667,
+      "sourceContacts": 0,
+      "sourceTerminal": 16,
+      "contactRate": 0.02361200880568656,
+      "terminalRate": 0.38972548735006396
+    },
+    "1641803": {
+      "sourceMinutes": 12.0,
+      "sourceContacts": 1,
+      "sourceTerminal": 10,
+      "contactRate": 0.036315736223844215,
+      "terminalRate": 0.581676977316176
+    },
+    "1643060": {
+      "sourceMinutes": 24.750000000000004,
+      "sourceContacts": 0,
+      "sourceTerminal": 5,
+      "contactRate": 0.026792317921779437,
+      "terminalRate": 0.3302814649316187
+    },
+    "1642468": {
+      "sourceMinutes": 0,
+      "sourceContacts": 0,
+      "sourceTerminal": 0,
+      "contactRate": 0.03193773015235868,
+      "terminalRate": 0.45911621494266913
+    }
+  }
+}

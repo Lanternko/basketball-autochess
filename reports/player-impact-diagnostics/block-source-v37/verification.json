@@ -1,0 +1,41 @@
+{
+  "passed": true,
+  "seasons": [
+    {
+      "season": "2022-23",
+      "sourceGames": 1079,
+      "players": 539,
+      "fga": 190203,
+      "blocks": 10043
+    },
+    {
+      "season": "2023-24",
+      "sourceGames": 1063,
+      "players": 570,
+      "fga": 188789,
+      "blocks": 10860
+    },
+    {
+      "season": "2024-25",
+      "sourceGames": 1091,
+      "players": 569,
+      "fga": 194618,
+      "blocks": 10587
+    },
+    {
+      "season": "2025-26",
+      "sourceGames": 1188,
+      "players": 581,
+      "fga": 211583,
+      "blocks": 11442
+    }
+  ],
+  "allSourceCountsAndExpectationsIndependentlyRecomputed": true,
+  "runtimeChanged": false,
+  "scope": "Source-only descriptive diagnosis, not OVR or a fitted improvement.",
+  "hashes": {
+    "reports/player-impact-diagnostics/block-source-v37/audit.json": "dca73627084fd0ad59ada2a5c25f51595ebbcfb948794f03ef6b35852ff05d97",
+    "reports/player-impact-diagnostics/block-source-v37/source-cards.json": "d1ca9650e1a38db0fd207eb7d53fd30db45eea741224425fe1c1362e9366a4a8",
+    "reports/player-impact-diagnostics/block-source-v37/verify.py": "d2a86e95d040604ab390b8729f7202597866ef6bf9677d8f314529c0ff45ae81"
+  }
+}

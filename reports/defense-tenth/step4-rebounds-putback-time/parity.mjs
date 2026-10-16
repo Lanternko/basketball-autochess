@@ -1,0 +1,5 @@
+import fs from 'node:fs';import assert from 'node:assert/strict';import {verify,pool,job,root} from './run.mjs';import {read} from '../../../scripts/defense_io.js';import {putbackDuration} from './timing.mjs';import {makeRng} from '../../../src/rng.js';
+verify();const p=read(root+'/protocol.json'),rows=await pool(p.seasons.map(s=>({...job(s,'allocation',p.seeds[0],read(`reports/defense-tenth/step4-rebounds-oreb/${s}/calibration-oreb.json`).selected),diagnostic:true})));let checks=[];
+for(const m of rows){const o=read(`reports/defense-tenth/step4-rebounds-allocation/runs/${m.job.season}-allocation-${m.job.seed}.json`);assert.deepEqual(m.result.matches,o.matches);assert.deepEqual(m.result.teams,o.teams);checks.push({season:m.job.season,matches:m.result.matches.length,identical:true});}
+const cdf=read(root+'/putback-cdf.json').cdf,rng=makeRng(20261015);for(const limit of [5,30,140])for(let i=0;i<1000;i++){const t=putbackDuration(cdf,limit,limit,rng);assert(t>=1&&t<=limit-1);}
+fs.writeFileSync(root+'/parity.json',JSON.stringify({checks,boundedDrawChecks:3000},null,2)+'\n');console.log('PARITY OK',checks.length);

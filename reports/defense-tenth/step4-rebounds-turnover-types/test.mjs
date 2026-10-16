@@ -1,0 +1,13 @@
+import assert from 'node:assert/strict';import {realCategory,simCategory} from './category.mjs';import {detail} from './collector.mjs';
+assert.equal(realCategory({subType:'bad pass',stealPersonId:1}),'passingLive');
+assert.equal(realCategory({subType:'out-of-bounds',descriptor:'bad pass'}),'passingDead');
+assert.equal(realCategory({subType:'lost ball',stealPersonId:1}),'handlingLive');
+assert.equal(realCategory({subType:'out-of-bounds',descriptor:'lost ball'}),'handlingDead');
+assert.equal(realCategory({subType:'out-of-bounds'}),'outUnclassified');
+assert.equal(realCategory({subType:'offensive foul'}),'offensiveFoul');
+assert.equal(realCategory({subType:'shot clock'}),'clock');
+assert.equal(realCategory({subType:'unrecognized new event'}),'unmappedDead');
+assert.equal(simCategory('passSteal'),'passingLive');assert.equal(simCategory('touchSteal'),'handlingLive');assert.equal(simCategory('passOutTov'),'passingDead');
+const a={clock:10,player:7};const fg={kind:'fg',clock:8,zone:'short',made:false,points:0};const loss={kind:'loss',clock:7,lossKind:'touchSteal'};
+assert.equal(detail([fg,loss],a).lossCategory,null);assert.equal(detail([loss,fg],a).lossCategory,'handlingLive');assert.equal(detail([loss],a).earlyLoss,true);assert.equal(detail([{...loss,clock:6.9}],a).lateLoss,true);assert.equal(detail([loss],{...a,clock:2.9}).windowEligible,false);
+console.log('PASS category source mapping, unknown retained, first-attempt boundary, early/late and period censoring');

@@ -1,0 +1,60 @@
+{
+  "passed": true,
+  "seasons": [
+    {
+      "season": "2022-23",
+      "games": 1079,
+      "rows": 143620,
+      "fga": 183377,
+      "fgm": 86716,
+      "short": 84407,
+      "mid": 25368,
+      "long": 73602
+    },
+    {
+      "season": "2023-24",
+      "games": 1063,
+      "rows": 142075,
+      "fga": 181617,
+      "fgm": 85732,
+      "short": 83049,
+      "long": 74722,
+      "mid": 23846
+    },
+    {
+      "season": "2024-25",
+      "games": 1091,
+      "rows": 148000,
+      "fga": 186841,
+      "fgm": 86672,
+      "long": 82059,
+      "short": 83843,
+      "mid": 20939
+    },
+    {
+      "season": "2025-26",
+      "games": 1188,
+      "rows": 164443,
+      "fga": 203079,
+      "fgm": 94962,
+      "long": 87807,
+      "short": 91510,
+      "mid": 23762
+    }
+  ],
+  "sourceGames": 4421,
+  "freshFga": 754914,
+  "madeFga": 354082,
+  "scope": "Every fresh recorded FGA outcome, actor, actual own/defensive five and minute exposure independently rejoined. No source makes, actors or games dropped. Putback exclusion is the frozen v17 three-second PBP proxy, not tracking classification.",
+  "hashes": {
+    "reports/player-impact-v40/2022-23-fga-data.json": "28caa01cebdea7dd35151d56d14908f68d2017605c11ec1d4a73dcc02659c04f",
+    "reports/player-impact-v39/2022-23-miss-data.json": "7c11cfbbf4ece0668e03590e833fe252eff07509de0dbe05e02ddb5c11f02bc3",
+    "reports/player-impact-v40/2023-24-fga-data.json": "d253ae20016f3d4fa0ad914c5e37609c2da218750f17f0c7e7d27ada5ca16d01",
+    "reports/player-impact-v39/2023-24-miss-data.json": "9e3caf570e553078793a6b60a279577b741b56c3aabcfa396935eca0177e776b",
+    "reports/player-impact-v40/2024-25-fga-data.json": "dd9456e9886beac7336700ffbc16fa937d1587500771f1de0d08eea47e0f3f90",
+    "reports/player-impact-v39/2024-25-miss-data.json": "d0f99f3a8b49729943d7faf251993df6d1c7429983e0d66851934909b4bec14c",
+    "reports/player-impact-v40/2025-26-fga-data.json": "4bac601aade187340e80164a5caeec3673009699e17e4c0054735cc612e96d7b",
+    "reports/player-impact-v39/2025-26-miss-data.json": "85977600adf3194fe5e7ea14849ba90a882218a019f53a994042d749faf4301f",
+    "reports/player-impact-v40/verify-data.py": "66ba24f45bbc4df8d2092c8d1f112fa077b635093c3c7f5539dad69cbf97ff57"
+  }
+}

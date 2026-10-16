@@ -1,0 +1,1530 @@
+[
+  {
+    "metric": "assistedMakeShare",
+    "group": "same",
+    "period": "2022-23→2023-24",
+    "n": 168,
+    "players": 168,
+    "franchises": 30,
+    "pearson": 0.9024793831238734,
+    "spearman": 0.9002679557226326,
+    "ci95": [
+      0.8430307547022209,
+      0.9446509287872056
+    ],
+    "validBootstrap": 20000,
+    "label": "descriptive association, not portability proof"
+  },
+  {
+    "metric": "assistedMakeShare",
+    "group": "same",
+    "period": "2023-24→2024-25",
+    "n": 176,
+    "players": 176,
+    "franchises": 30,
+    "pearson": 0.9263041376930516,
+    "spearman": 0.9233891537352603,
+    "ci95": [
+      0.869067554252358,
+      0.9610787879286397
+    ],
+    "validBootstrap": 20000,
+    "label": "descriptive association, not portability proof"
+  },
+  {
+    "metric": "assistedMakeShare",
+    "group": "same",
+    "period": "2024-25→2025-26",
+    "n": 176,
+    "players": 176,
+    "franchises": 30,
+    "pearson": 0.8989323115631654,
+    "spearman": 0.880955669638593,
+    "ci95": [
+      0.8340670821665102,
+      0.9430326914480008
+    ],
+    "validBootstrap": 20000,
+    "label": "descriptive association, not portability proof"
+  },
+  {
+    "metric": "assistedMakeShare",
+    "group": "moved",
+    "period": "2022-23→2023-24",
+    "n": 59,
+    "players": 59,
+    "franchises": 27,
+    "pearson": 0.8735872320941462,
+    "spearman": 0.8630040911747516,
+    "ci95": [
+      0.7589830267534511,
+      0.9431811283682957
+    ],
+    "validBootstrap": 20000,
+    "label": "descriptive association, not portability proof"
+  },
+  {
+    "metric": "assistedMakeShare",
+    "group": "moved",
+    "period": "2023-24→2024-25",
+    "n": 46,
+    "players": 46,
+    "franchises": 27,
+    "pearson": 0.8684798330901065,
+    "spearman": 0.8651865556583408,
+    "ci95": [
+      0.7479298397090446,
+      0.942458300884675
+    ],
+    "validBootstrap": 20000,
+    "label": "descriptive association, not portability proof"
+  },
+  {
+    "metric": "assistedMakeShare",
+    "group": "moved",
+    "period": "2024-25→2025-26",
+    "n": 43,
+    "players": 43,
+    "franchises": 29,
+    "pearson": 0.8157934446961873,
+    "spearman": 0.8299165634336272,
+    "ci95": [
+      0.6686300798595861,
+      0.9183781938806834
+    ],
+    "validBootstrap": 20000,
+    "label": "descriptive association, not portability proof"
+  },
+  {
+    "metric": "assistedMakeShare",
+    "group": "seasonMove",
+    "period": "2022-23",
+    "n": 28,
+    "players": 28,
+    "franchises": 24,
+    "pearson": 0.6868748517811749,
+    "spearman": 0.57342275068262,
+    "ci95": [
+      0.2252092786488177,
+      0.886256726716088
+    ],
+    "validBootstrap": 20000,
+    "label": "descriptive association, not portability proof"
+  },
+  {
+    "metric": "assistedMakeShare",
+    "group": "seasonMove",
+    "period": "2023-24",
+    "n": 26,
+    "players": 26,
+    "franchises": 15,
+    "pearson": 0.6498260493970718,
+    "spearman": 0.7135042735042738,
+    "ci95": [
+      0.3617004023195718,
+      0.8787859519356199
+    ],
+    "validBootstrap": 20000,
+    "label": "descriptive association, not portability proof"
+  },
+  {
+    "metric": "assistedMakeShare",
+    "group": "seasonMove",
+    "period": "2024-25",
+    "n": 29,
+    "players": 29,
+    "franchises": 20,
+    "pearson": 0.835613367703937,
+    "spearman": 0.8350782179366184,
+    "ci95": [
+      0.6391525955423774,
+      0.9442781322429462
+    ],
+    "validBootstrap": 20000,
+    "label": "descriptive association, not portability proof"
+  },
+  {
+    "metric": "assistedMakeShare",
+    "group": "seasonMove",
+    "period": "2025-26",
+    "n": 26,
+    "players": 26,
+    "franchises": 23,
+    "pearson": 0.932859949908594,
+    "spearman": 0.9172649572649574,
+    "ci95": [
+      0.8447777398840747,
+      0.9760885078194804
+    ],
+    "validBootstrap": 20000,
+    "label": "descriptive association, not portability proof"
+  },
+  {
+    "metric": "assistedMakeShare",
+    "group": "officialTradeParticipant",
+    "period": "2022-23",
+    "n": 25,
+    "players": 25,
+    "franchises": 21,
+    "pearson": 0.7273172616551961,
+    "spearman": 0.6143489246169214,
+    "ci95": [
+      0.2529302024952209,
+      0.8981445815598446
+    ],
+    "validBootstrap": 20000,
+    "label": "descriptive association, not portability proof"
+  },
+  {
+    "metric": "assistedMakeShare",
+    "group": "officialTradeParticipant",
+    "period": "2023-24",
+    "n": 25,
+    "players": 25,
+    "franchises": 15,
+    "pearson": 0.7313669853700295,
+    "spearman": 0.7538461538461538,
+    "ci95": [
+      0.5010116676671322,
+      0.9011908314862497
+    ],
+    "validBootstrap": 20000,
+    "label": "descriptive association, not portability proof"
+  },
+  {
+    "metric": "assistedMakeShare",
+    "group": "officialTradeParticipant",
+    "period": "2024-25",
+    "n": 28,
+    "players": 28,
+    "franchises": 19,
+    "pearson": 0.8253499621477571,
+    "spearman": 0.8200355899976753,
+    "ci95": [
+      0.6110233232487058,
+      0.9407904396027678
+    ],
+    "validBootstrap": 20000,
+    "label": "descriptive association, not portability proof"
+  },
+  {
+    "metric": "assistedMakeShare",
+    "group": "officialTradeParticipant",
+    "period": "2025-26",
+    "n": 25,
+    "players": 25,
+    "franchises": 22,
+    "pearson": 0.9334258721729913,
+    "spearman": 0.9184615384615386,
+    "ci95": [
+      0.8428010757976877,
+      0.9770958146151301
+    ],
+    "validBootstrap": 20000,
+    "label": "descriptive association, not portability proof"
+  },
+  {
+    "metric": "catch3FG",
+    "group": "same",
+    "period": "2022-23→2023-24",
+    "n": 142,
+    "players": 142,
+    "franchises": 30,
+    "pearson": 0.3126883973998728,
+    "spearman": 0.2976603242177281,
+    "ci95": [
+      0.0582858974559507,
+      0.5261821570288348
+    ],
+    "validBootstrap": 20000,
+    "label": "descriptive association, not portability proof"
+  },
+  {
+    "metric": "catch3FG",
+    "group": "same",
+    "period": "2023-24→2024-25",
+    "n": 145,
+    "players": 145,
+    "franchises": 30,
+    "pearson": 0.39630519664272174,
+    "spearman": 0.39843505508418825,
+    "ci95": [
+      0.11314232639943261,
+      0.6266731577078768
+    ],
+    "validBootstrap": 20000,
+    "label": "descriptive association, not portability proof"
+  },
+  {
+    "metric": "catch3FG",
+    "group": "same",
+    "period": "2024-25→2025-26",
+    "n": 158,
+    "players": 158,
+    "franchises": 30,
+    "pearson": 0.3843243774855017,
+    "spearman": 0.321106472118831,
+    "ci95": [
+      0.14642696677431766,
+      0.5937607112638315
+    ],
+    "validBootstrap": 20000,
+    "label": "descriptive association, not portability proof"
+  },
+  {
+    "metric": "catch3FG",
+    "group": "moved",
+    "period": "2022-23→2023-24",
+    "n": 56,
+    "players": 56,
+    "franchises": 28,
+    "pearson": 0.528201054555058,
+    "spearman": 0.5112276984072732,
+    "ci95": [
+      0.2778962652722734,
+      0.7279924629739631
+    ],
+    "validBootstrap": 20000,
+    "label": "descriptive association, not portability proof"
+  },
+  {
+    "metric": "catch3FG",
+    "group": "moved",
+    "period": "2023-24→2024-25",
+    "n": 41,
+    "players": 41,
+    "franchises": 27,
+    "pearson": 0.23503330563802222,
+    "spearman": 0.1899908534403769,
+    "ci95": [
+      -0.10571881419937805,
+      0.5216633419328569
+    ],
+    "validBootstrap": 20000,
+    "label": "descriptive association, not portability proof"
+  },
+  {
+    "metric": "catch3FG",
+    "group": "moved",
+    "period": "2024-25→2025-26",
+    "n": 37,
+    "players": 37,
+    "franchises": 27,
+    "pearson": 0.06452207232904064,
+    "spearman": 0.07396870554765293,
+    "ci95": [
+      -0.3939789398183644,
+      0.486555094382579
+    ],
+    "validBootstrap": 20000,
+    "label": "descriptive association, not portability proof"
+  },
+  {
+    "metric": "catch3FG",
+    "group": "seasonMove",
+    "period": "2022-23",
+    "n": 27,
+    "players": 27,
+    "franchises": 26,
+    "pearson": 0.17543578833964793,
+    "spearman": 0.08977099236641226,
+    "ci95": [
+      -0.41184221320226644,
+      0.694670371971164
+    ],
+    "validBootstrap": 20000,
+    "label": "descriptive association, not portability proof"
+  },
+  {
+    "metric": "catch3FG",
+    "group": "seasonMove",
+    "period": "2023-24",
+    "n": 22,
+    "players": 22,
+    "franchises": 14,
+    "pearson": 0.43248303212181555,
+    "spearman": 0.4850367024280068,
+    "ci95": [
+      -0.11366702494791635,
+      0.8447941714383377
+    ],
+    "validBootstrap": 20000,
+    "label": "descriptive association, not portability proof"
+  },
+  {
+    "metric": "catch3FG",
+    "group": "seasonMove",
+    "period": "2024-25",
+    "n": 19,
+    "players": 19,
+    "franchises": 17,
+    "pearson": 0.4862285686883498,
+    "spearman": 0.4730145255712051,
+    "ci95": [
+      -0.06266853700817575,
+      0.8328508565532468
+    ],
+    "validBootstrap": 20000,
+    "label": "descriptive association, not portability proof"
+  },
+  {
+    "metric": "catch3FG",
+    "group": "seasonMove",
+    "period": "2025-26",
+    "n": 26,
+    "players": 26,
+    "franchises": 22,
+    "pearson": 0.25945092191551244,
+    "spearman": 0.2594871794871794,
+    "ci95": [
+      -0.19295060501604627,
+      0.659724729838056
+    ],
+    "validBootstrap": 20000,
+    "label": "descriptive association, not portability proof"
+  },
+  {
+    "metric": "catch3FG",
+    "group": "officialTradeParticipant",
+    "period": "2022-23",
+    "n": 25,
+    "players": 25,
+    "franchises": 23,
+    "pearson": 0.16348359018774994,
+    "spearman": 0.07233551365909967,
+    "ci95": [
+      -0.43437741896101967,
+      0.6923488003218294
+    ],
+    "validBootstrap": 20000,
+    "label": "descriptive association, not portability proof"
+  },
+  {
+    "metric": "catch3FG",
+    "group": "officialTradeParticipant",
+    "period": "2023-24",
+    "n": 22,
+    "players": 22,
+    "franchises": 14,
+    "pearson": 0.43248303212181555,
+    "spearman": 0.4850367024280068,
+    "ci95": [
+      -0.1134344095552548,
+      0.8439598673400736
+    ],
+    "validBootstrap": 20000,
+    "label": "descriptive association, not portability proof"
+  },
+  {
+    "metric": "catch3FG",
+    "group": "officialTradeParticipant",
+    "period": "2024-25",
+    "n": 18,
+    "players": 18,
+    "franchises": 16,
+    "pearson": 0.5297722034333104,
+    "spearman": 0.47496134362535714,
+    "ci95": [
+      -0.07926248802140728,
+      0.8635387337148627
+    ],
+    "validBootstrap": 20000,
+    "label": "descriptive association, not portability proof"
+  },
+  {
+    "metric": "catch3FG",
+    "group": "officialTradeParticipant",
+    "period": "2025-26",
+    "n": 25,
+    "players": 25,
+    "franchises": 22,
+    "pearson": 0.25826178653285486,
+    "spearman": 0.26153846153846155,
+    "ci95": [
+      -0.21076261294919943,
+      0.6783582905500278
+    ],
+    "validBootstrap": 20000,
+    "label": "descriptive association, not portability proof"
+  },
+  {
+    "metric": "catchFG",
+    "group": "same",
+    "period": "2022-23→2023-24",
+    "n": 132,
+    "players": 132,
+    "franchises": 30,
+    "pearson": 0.35095630370308173,
+    "spearman": 0.31907152818405954,
+    "ci95": [
+      0.06552660665751847,
+      0.5815339674704646
+    ],
+    "validBootstrap": 20000,
+    "label": "descriptive association, not portability proof"
+  },
+  {
+    "metric": "catchFG",
+    "group": "same",
+    "period": "2023-24→2024-25",
+    "n": 141,
+    "players": 141,
+    "franchises": 30,
+    "pearson": 0.45061566719328466,
+    "spearman": 0.460466634559839,
+    "ci95": [
+      0.1453428693056798,
+      0.6715763365685228
+    ],
+    "validBootstrap": 20000,
+    "label": "descriptive association, not portability proof"
+  },
+  {
+    "metric": "catchFG",
+    "group": "same",
+    "period": "2024-25→2025-26",
+    "n": 147,
+    "players": 147,
+    "franchises": 30,
+    "pearson": 0.33411693700222067,
+    "spearman": 0.24245595410618803,
+    "ci95": [
+      0.06526063102064235,
+      0.5826896715855592
+    ],
+    "validBootstrap": 20000,
+    "label": "descriptive association, not portability proof"
+  },
+  {
+    "metric": "catchFG",
+    "group": "moved",
+    "period": "2022-23→2023-24",
+    "n": 49,
+    "players": 49,
+    "franchises": 27,
+    "pearson": 0.5516820601821044,
+    "spearman": 0.49522934908077176,
+    "ci95": [
+      0.1974440162777129,
+      0.7706191500727444
+    ],
+    "validBootstrap": 20000,
+    "label": "descriptive association, not portability proof"
+  },
+  {
+    "metric": "catchFG",
+    "group": "moved",
+    "period": "2023-24→2024-25",
+    "n": 38,
+    "players": 38,
+    "franchises": 27,
+    "pearson": 0.27656265725934825,
+    "spearman": 0.2670606942356315,
+    "ci95": [
+      -0.12647886163460967,
+      0.6226878461874065
+    ],
+    "validBootstrap": 20000,
+    "label": "descriptive association, not portability proof"
+  },
+  {
+    "metric": "catchFG",
+    "group": "moved",
+    "period": "2024-25→2025-26",
+    "n": 34,
+    "players": 34,
+    "franchises": 27,
+    "pearson": 0.2435539102403344,
+    "spearman": 0.21466768525592056,
+    "ci95": [
+      -0.2795491302638873,
+      0.655869810061825
+    ],
+    "validBootstrap": 20000,
+    "label": "descriptive association, not portability proof"
+  },
+  {
+    "metric": "catchFG",
+    "group": "seasonMove",
+    "period": "2022-23",
+    "n": 24,
+    "players": 24,
+    "franchises": 24,
+    "pearson": 0.3998256846627121,
+    "spearman": 0.204436730953502,
+    "ci95": [
+      -0.2645700872433334,
+      0.8074608492023917
+    ],
+    "validBootstrap": 20000,
+    "label": "descriptive association, not portability proof"
+  },
+  {
+    "metric": "catchFG",
+    "group": "seasonMove",
+    "period": "2023-24",
+    "n": 19,
+    "players": 19,
+    "franchises": 13,
+    "pearson": 0.3767634604938012,
+    "spearman": 0.5333333333333332,
+    "ci95": [
+      -0.08952522727717585,
+      0.7496246067195059
+    ],
+    "validBootstrap": 20000,
+    "label": "descriptive association, not portability proof"
+  },
+  {
+    "metric": "catchFG",
+    "group": "seasonMove",
+    "period": "2024-25",
+    "n": 18,
+    "players": 18,
+    "franchises": 16,
+    "pearson": 0.4914969571627845,
+    "spearman": 0.5335397316821465,
+    "ci95": [
+      -0.03404038467335255,
+      0.8254627861542375
+    ],
+    "validBootstrap": 20000,
+    "label": "descriptive association, not portability proof"
+  },
+  {
+    "metric": "catchFG",
+    "group": "seasonMove",
+    "period": "2025-26",
+    "n": 22,
+    "players": 22,
+    "franchises": 21,
+    "pearson": 0.3066234233420325,
+    "spearman": 0.27562836456356016,
+    "ci95": [
+      -0.3538956896350763,
+      0.7426455287387095
+    ],
+    "validBootstrap": 20000,
+    "label": "descriptive association, not portability proof"
+  },
+  {
+    "metric": "catchFG",
+    "group": "officialTradeParticipant",
+    "period": "2022-23",
+    "n": 22,
+    "players": 22,
+    "franchises": 21,
+    "pearson": 0.3858512705822927,
+    "spearman": 0.18079098930559612,
+    "ci95": [
+      -0.30293295865899805,
+      0.8053233513799226
+    ],
+    "validBootstrap": 20000,
+    "label": "descriptive association, not portability proof"
+  },
+  {
+    "metric": "catchFG",
+    "group": "officialTradeParticipant",
+    "period": "2023-24",
+    "n": 19,
+    "players": 19,
+    "franchises": 13,
+    "pearson": 0.3767634604938012,
+    "spearman": 0.5333333333333332,
+    "ci95": [
+      -0.09930041836477421,
+      0.7542953608746266
+    ],
+    "validBootstrap": 20000,
+    "label": "descriptive association, not portability proof"
+  },
+  {
+    "metric": "catchFG",
+    "group": "officialTradeParticipant",
+    "period": "2024-25",
+    "n": 17,
+    "players": 17,
+    "franchises": 15,
+    "pearson": 0.5401922148853356,
+    "spearman": 0.573529411764706,
+    "ci95": [
+      -0.03923439553790557,
+      0.8580596617462695
+    ],
+    "validBootstrap": 19999,
+    "label": "descriptive association, not portability proof"
+  },
+  {
+    "metric": "catchFG",
+    "group": "officialTradeParticipant",
+    "period": "2025-26",
+    "n": 22,
+    "players": 22,
+    "franchises": 21,
+    "pearson": 0.3066234233420325,
+    "spearman": 0.27562836456356016,
+    "ci95": [
+      -0.3474470126672996,
+      0.7401268903693884
+    ],
+    "validBootstrap": 20000,
+    "label": "descriptive association, not portability proof"
+  },
+  {
+    "metric": "catchShare",
+    "group": "same",
+    "period": "2022-23→2023-24",
+    "n": 176,
+    "players": 176,
+    "franchises": 30,
+    "pearson": 0.9184565514291565,
+    "spearman": 0.9190072639225182,
+    "ci95": [
+      0.8708520112461516,
+      0.9526630427071531
+    ],
+    "validBootstrap": 20000,
+    "label": "descriptive association, not portability proof"
+  },
+  {
+    "metric": "catchShare",
+    "group": "same",
+    "period": "2023-24→2024-25",
+    "n": 179,
+    "players": 179,
+    "franchises": 30,
+    "pearson": 0.9272302638040947,
+    "spearman": 0.9149938275479672,
+    "ci95": [
+      0.8641136782481702,
+      0.9619240076395906
+    ],
+    "validBootstrap": 20000,
+    "label": "descriptive association, not portability proof"
+  },
+  {
+    "metric": "catchShare",
+    "group": "same",
+    "period": "2024-25→2025-26",
+    "n": 183,
+    "players": 183,
+    "franchises": 30,
+    "pearson": 0.9011788274884392,
+    "spearman": 0.8849021375922971,
+    "ci95": [
+      0.8283977643621465,
+      0.9461271391679535
+    ],
+    "validBootstrap": 20000,
+    "label": "descriptive association, not portability proof"
+  },
+  {
+    "metric": "catchShare",
+    "group": "moved",
+    "period": "2022-23→2023-24",
+    "n": 65,
+    "players": 65,
+    "franchises": 29,
+    "pearson": 0.8780942621230075,
+    "spearman": 0.8668269230769231,
+    "ci95": [
+      0.7829776669429855,
+      0.935599514065474
+    ],
+    "validBootstrap": 20000,
+    "label": "descriptive association, not portability proof"
+  },
+  {
+    "metric": "catchShare",
+    "group": "moved",
+    "period": "2023-24→2024-25",
+    "n": 48,
+    "players": 48,
+    "franchises": 27,
+    "pearson": 0.865279014856254,
+    "spearman": 0.8244680851063829,
+    "ci95": [
+      0.7395566004085194,
+      0.9382952012435843
+    ],
+    "validBootstrap": 20000,
+    "label": "descriptive association, not portability proof"
+  },
+  {
+    "metric": "catchShare",
+    "group": "moved",
+    "period": "2024-25→2025-26",
+    "n": 47,
+    "players": 47,
+    "franchises": 29,
+    "pearson": 0.8881826987665289,
+    "spearman": 0.8655180388529135,
+    "ci95": [
+      0.7831417569514322,
+      0.9509237512296691
+    ],
+    "validBootstrap": 20000,
+    "label": "descriptive association, not portability proof"
+  },
+  {
+    "metric": "catchShare",
+    "group": "seasonMove",
+    "period": "2022-23",
+    "n": 30,
+    "players": 30,
+    "franchises": 26,
+    "pearson": 0.7612117887109001,
+    "spearman": 0.7713014460511682,
+    "ci95": [
+      0.4646507670845788,
+      0.9092197819140733
+    ],
+    "validBootstrap": 20000,
+    "label": "descriptive association, not portability proof"
+  },
+  {
+    "metric": "catchShare",
+    "group": "seasonMove",
+    "period": "2023-24",
+    "n": 28,
+    "players": 28,
+    "franchises": 17,
+    "pearson": 0.7245398851052306,
+    "spearman": 0.6759715380405038,
+    "ci95": [
+      0.3575305743833967,
+      0.9063064688582438
+    ],
+    "validBootstrap": 20000,
+    "label": "descriptive association, not portability proof"
+  },
+  {
+    "metric": "catchShare",
+    "group": "seasonMove",
+    "period": "2024-25",
+    "n": 28,
+    "players": 28,
+    "franchises": 19,
+    "pearson": 0.8774518141638622,
+    "spearman": 0.8264915161466886,
+    "ci95": [
+      0.7008639932914961,
+      0.9586189255017608
+    ],
+    "validBootstrap": 20000,
+    "label": "descriptive association, not portability proof"
+  },
+  {
+    "metric": "catchShare",
+    "group": "seasonMove",
+    "period": "2025-26",
+    "n": 29,
+    "players": 29,
+    "franchises": 23,
+    "pearson": 0.8545106035333181,
+    "spearman": 0.8743842364532021,
+    "ci95": [
+      0.7192071142693728,
+      0.9433672384849286
+    ],
+    "validBootstrap": 20000,
+    "label": "descriptive association, not portability proof"
+  },
+  {
+    "metric": "catchShare",
+    "group": "officialTradeParticipant",
+    "period": "2022-23",
+    "n": 27,
+    "players": 27,
+    "franchises": 23,
+    "pearson": 0.7549029589449764,
+    "spearman": 0.7698412698412697,
+    "ci95": [
+      0.4416084156153987,
+      0.9117806868502123
+    ],
+    "validBootstrap": 20000,
+    "label": "descriptive association, not portability proof"
+  },
+  {
+    "metric": "catchShare",
+    "group": "officialTradeParticipant",
+    "period": "2023-24",
+    "n": 27,
+    "players": 27,
+    "franchises": 17,
+    "pearson": 0.763853407713406,
+    "spearman": 0.7362637362637364,
+    "ci95": [
+      0.42315082958886996,
+      0.9224195960599433
+    ],
+    "validBootstrap": 20000,
+    "label": "descriptive association, not portability proof"
+  },
+  {
+    "metric": "catchShare",
+    "group": "officialTradeParticipant",
+    "period": "2024-25",
+    "n": 27,
+    "players": 27,
+    "franchises": 18,
+    "pearson": 0.8774131297611476,
+    "spearman": 0.8351648351648351,
+    "ci95": [
+      0.7055233611065557,
+      0.9583515422678803
+    ],
+    "validBootstrap": 20000,
+    "label": "descriptive association, not portability proof"
+  },
+  {
+    "metric": "catchShare",
+    "group": "officialTradeParticipant",
+    "period": "2025-26",
+    "n": 28,
+    "players": 28,
+    "franchises": 23,
+    "pearson": 0.8656656402897752,
+    "spearman": 0.875205254515599,
+    "ci95": [
+      0.734740218032657,
+      0.9517137749150467
+    ],
+    "validBootstrap": 20000,
+    "label": "descriptive association, not portability proof"
+  },
+  {
+    "metric": "pull3FG",
+    "group": "same",
+    "period": "2022-23→2023-24",
+    "n": 53,
+    "players": 53,
+    "franchises": 30,
+    "pearson": 0.37475991871653985,
+    "spearman": 0.3437014938106365,
+    "ci95": [
+      -0.041096828231699474,
+      0.6968438409287634
+    ],
+    "validBootstrap": 20000,
+    "label": "descriptive association, not portability proof"
+  },
+  {
+    "metric": "pull3FG",
+    "group": "same",
+    "period": "2023-24→2024-25",
+    "n": 60,
+    "players": 60,
+    "franchises": 30,
+    "pearson": 0.1394384510557359,
+    "spearman": 0.10092112767008332,
+    "ci95": [
+      -0.30994272911694776,
+      0.5413277033468519
+    ],
+    "validBootstrap": 20000,
+    "label": "descriptive association, not portability proof"
+  },
+  {
+    "metric": "pull3FG",
+    "group": "same",
+    "period": "2024-25→2025-26",
+    "n": 44,
+    "players": 44,
+    "franchises": 26,
+    "pearson": 0.2975035951478848,
+    "spearman": 0.28049897808161245,
+    "ci95": [
+      -0.2863688400521725,
+      0.7612232625851827
+    ],
+    "validBootstrap": 20000,
+    "label": "descriptive association, not portability proof"
+  },
+  {
+    "metric": "pull3FG",
+    "group": "moved",
+    "period": "2022-23→2023-24",
+    "n": 19,
+    "players": 19,
+    "franchises": 19,
+    "pearson": 0.03121015824113757,
+    "spearman": 0.13508771929824562,
+    "ci95": [
+      -0.5990585632362481,
+      0.6747733338481432
+    ],
+    "validBootstrap": 20000,
+    "label": "descriptive association, not portability proof"
+  },
+  {
+    "metric": "pull3FG",
+    "group": "moved",
+    "period": "2023-24→2024-25",
+    "n": 11,
+    "players": 11,
+    "franchises": 14,
+    "pearson": 0.0909588212582751,
+    "spearman": 0.12727272727272726,
+    "ci95": [
+      -0.7448128923702373,
+      0.8549935670843165
+    ],
+    "validBootstrap": 19997,
+    "label": "descriptive association, not portability proof"
+  },
+  {
+    "metric": "pull3FG",
+    "group": "moved",
+    "period": "2024-25→2025-26",
+    "n": 13,
+    "players": 13,
+    "franchises": 17,
+    "pearson": 0.3337426179427955,
+    "spearman": 0.4120879120879122,
+    "ci95": [
+      -0.2917666484584011,
+      0.8709408953936869
+    ],
+    "validBootstrap": 19999,
+    "label": "descriptive association, not portability proof"
+  },
+  {
+    "metric": "pull3FG",
+    "group": "seasonMove",
+    "period": "2022-23",
+    "n": 6,
+    "players": 6,
+    "pearson": null,
+    "spearman": null,
+    "ci95": null,
+    "reason": "fewer than 10 pairs"
+  },
+  {
+    "metric": "pull3FG",
+    "group": "seasonMove",
+    "period": "2023-24",
+    "n": 4,
+    "players": 4,
+    "pearson": null,
+    "spearman": null,
+    "ci95": null,
+    "reason": "fewer than 10 pairs"
+  },
+  {
+    "metric": "pull3FG",
+    "group": "seasonMove",
+    "period": "2024-25",
+    "n": 8,
+    "players": 8,
+    "pearson": null,
+    "spearman": null,
+    "ci95": null,
+    "reason": "fewer than 10 pairs"
+  },
+  {
+    "metric": "pull3FG",
+    "group": "seasonMove",
+    "period": "2025-26",
+    "n": 7,
+    "players": 7,
+    "pearson": null,
+    "spearman": null,
+    "ci95": null,
+    "reason": "fewer than 10 pairs"
+  },
+  {
+    "metric": "pull3FG",
+    "group": "officialTradeParticipant",
+    "period": "2022-23",
+    "n": 6,
+    "players": 6,
+    "pearson": null,
+    "spearman": null,
+    "ci95": null,
+    "reason": "fewer than 10 pairs"
+  },
+  {
+    "metric": "pull3FG",
+    "group": "officialTradeParticipant",
+    "period": "2023-24",
+    "n": 4,
+    "players": 4,
+    "pearson": null,
+    "spearman": null,
+    "ci95": null,
+    "reason": "fewer than 10 pairs"
+  },
+  {
+    "metric": "pull3FG",
+    "group": "officialTradeParticipant",
+    "period": "2024-25",
+    "n": 8,
+    "players": 8,
+    "pearson": null,
+    "spearman": null,
+    "ci95": null,
+    "reason": "fewer than 10 pairs"
+  },
+  {
+    "metric": "pull3FG",
+    "group": "officialTradeParticipant",
+    "period": "2025-26",
+    "n": 7,
+    "players": 7,
+    "pearson": null,
+    "spearman": null,
+    "ci95": null,
+    "reason": "fewer than 10 pairs"
+  },
+  {
+    "metric": "pullFG",
+    "group": "same",
+    "period": "2022-23→2023-24",
+    "n": 86,
+    "players": 86,
+    "franchises": 30,
+    "pearson": 0.5042066985594915,
+    "spearman": 0.4761141013417,
+    "ci95": [
+      0.2502967608757361,
+      0.7018903762654328
+    ],
+    "validBootstrap": 20000,
+    "label": "descriptive association, not portability proof"
+  },
+  {
+    "metric": "pullFG",
+    "group": "same",
+    "period": "2023-24→2024-25",
+    "n": 90,
+    "players": 90,
+    "franchises": 30,
+    "pearson": 0.5340055337920973,
+    "spearman": 0.46965225730640997,
+    "ci95": [
+      0.1845753100229343,
+      0.7669636495716373
+    ],
+    "validBootstrap": 20000,
+    "label": "descriptive association, not portability proof"
+  },
+  {
+    "metric": "pullFG",
+    "group": "same",
+    "period": "2024-25→2025-26",
+    "n": 76,
+    "players": 76,
+    "franchises": 29,
+    "pearson": 0.4933904608225273,
+    "spearman": 0.49077213320938373,
+    "ci95": [
+      0.1465409442106111,
+      0.7566623203261806
+    ],
+    "validBootstrap": 20000,
+    "label": "descriptive association, not portability proof"
+  },
+  {
+    "metric": "pullFG",
+    "group": "moved",
+    "period": "2022-23→2023-24",
+    "n": 28,
+    "players": 28,
+    "franchises": 21,
+    "pearson": 0.6104120708724681,
+    "spearman": 0.5287356321839077,
+    "ci95": [
+      0.0663138014529279,
+      0.8502359257139641
+    ],
+    "validBootstrap": 20000,
+    "label": "descriptive association, not portability proof"
+  },
+  {
+    "metric": "pullFG",
+    "group": "moved",
+    "period": "2023-24→2024-25",
+    "n": 19,
+    "players": 19,
+    "franchises": 22,
+    "pearson": 0.22838864338049614,
+    "spearman": 0.22280701754385965,
+    "ci95": [
+      -0.3592728267655332,
+      0.6760818184508273
+    ],
+    "validBootstrap": 20000,
+    "label": "descriptive association, not portability proof"
+  },
+  {
+    "metric": "pullFG",
+    "group": "moved",
+    "period": "2024-25→2025-26",
+    "n": 19,
+    "players": 19,
+    "franchises": 22,
+    "pearson": 0.4092915401017511,
+    "spearman": 0.41578947368421065,
+    "ci95": [
+      -0.18505801401064387,
+      0.7699915397716796
+    ],
+    "validBootstrap": 20000,
+    "label": "descriptive association, not portability proof"
+  },
+  {
+    "metric": "pullFG",
+    "group": "seasonMove",
+    "period": "2022-23",
+    "n": 11,
+    "players": 11,
+    "franchises": 11,
+    "pearson": 0.16465387766276018,
+    "spearman": 0.30909090909090897,
+    "ci95": [
+      -0.6222082712613554,
+      0.9255411022839612
+    ],
+    "validBootstrap": 19996,
+    "label": "descriptive association, not portability proof"
+  },
+  {
+    "metric": "pullFG",
+    "group": "seasonMove",
+    "period": "2023-24",
+    "n": 10,
+    "players": 10,
+    "franchises": 9,
+    "pearson": 0.13958549482712368,
+    "spearman": 0.1276601641728136,
+    "ci95": [
+      -0.5248493589686846,
+      0.8806135540314366
+    ],
+    "validBootstrap": 19985,
+    "label": "descriptive association, not portability proof"
+  },
+  {
+    "metric": "pullFG",
+    "group": "seasonMove",
+    "period": "2024-25",
+    "n": 14,
+    "players": 14,
+    "franchises": 15,
+    "pearson": -0.19522496935552752,
+    "spearman": -0.07252747252747249,
+    "ci95": [
+      -0.79473783902606,
+      0.5735989491723401
+    ],
+    "validBootstrap": 20000,
+    "label": "descriptive association, not portability proof"
+  },
+  {
+    "metric": "pullFG",
+    "group": "seasonMove",
+    "period": "2025-26",
+    "n": 12,
+    "players": 12,
+    "franchises": 16,
+    "pearson": 0.3790148051236359,
+    "spearman": 0.18213688176797002,
+    "ci95": [
+      -0.5183862174473117,
+      0.8602547827754404
+    ],
+    "validBootstrap": 19999,
+    "label": "descriptive association, not portability proof"
+  },
+  {
+    "metric": "pullFG",
+    "group": "officialTradeParticipant",
+    "period": "2022-23",
+    "n": 10,
+    "players": 10,
+    "franchises": 10,
+    "pearson": 0.12345996217580099,
+    "spearman": 0.296969696969697,
+    "ci95": [
+      -0.7961330630317625,
+      0.9334317081647763
+    ],
+    "validBootstrap": 19994,
+    "label": "descriptive association, not portability proof"
+  },
+  {
+    "metric": "pullFG",
+    "group": "officialTradeParticipant",
+    "period": "2023-24",
+    "n": 10,
+    "players": 10,
+    "franchises": 9,
+    "pearson": 0.13958549482712368,
+    "spearman": 0.1276601641728136,
+    "ci95": [
+      -0.5219132610581876,
+      0.8693681169876699
+    ],
+    "validBootstrap": 19981,
+    "label": "descriptive association, not portability proof"
+  },
+  {
+    "metric": "pullFG",
+    "group": "officialTradeParticipant",
+    "period": "2024-25",
+    "n": 13,
+    "players": 13,
+    "franchises": 14,
+    "pearson": -0.03946309404213383,
+    "spearman": 0.0989010989010989,
+    "ci95": [
+      -0.720749484601111,
+      0.6796468167852441
+    ],
+    "validBootstrap": 20000,
+    "label": "descriptive association, not portability proof"
+  },
+  {
+    "metric": "pullFG",
+    "group": "officialTradeParticipant",
+    "period": "2025-26",
+    "n": 12,
+    "players": 12,
+    "franchises": 16,
+    "pearson": 0.3790148051236359,
+    "spearman": 0.18213688176797002,
+    "ci95": [
+      -0.5222336635770702,
+      0.8638949846610603
+    ],
+    "validBootstrap": 19999,
+    "label": "descriptive association, not portability proof"
+  },
+  {
+    "metric": "pullShare",
+    "group": "same",
+    "period": "2022-23→2023-24",
+    "n": 176,
+    "players": 176,
+    "franchises": 30,
+    "pearson": 0.9460783112711114,
+    "spearman": 0.9448646268985251,
+    "ci95": [
+      0.9095138389624517,
+      0.970470544870964
+    ],
+    "validBootstrap": 20000,
+    "label": "descriptive association, not portability proof"
+  },
+  {
+    "metric": "pullShare",
+    "group": "same",
+    "period": "2023-24→2024-25",
+    "n": 179,
+    "players": 179,
+    "franchises": 30,
+    "pearson": 0.9439672284598258,
+    "spearman": 0.9430752862090472,
+    "ci95": [
+      0.9111587853075409,
+      0.9670074388450312
+    ],
+    "validBootstrap": 20000,
+    "label": "descriptive association, not portability proof"
+  },
+  {
+    "metric": "pullShare",
+    "group": "same",
+    "period": "2024-25→2025-26",
+    "n": 183,
+    "players": 183,
+    "franchises": 30,
+    "pearson": 0.9188425899378551,
+    "spearman": 0.9274160623394494,
+    "ci95": [
+      0.8686032467749979,
+      0.9540860894508311
+    ],
+    "validBootstrap": 20000,
+    "label": "descriptive association, not portability proof"
+  },
+  {
+    "metric": "pullShare",
+    "group": "moved",
+    "period": "2022-23→2023-24",
+    "n": 65,
+    "players": 65,
+    "franchises": 29,
+    "pearson": 0.9239747409149374,
+    "spearman": 0.9187062937062938,
+    "ci95": [
+      0.8618523175162638,
+      0.960517743742766
+    ],
+    "validBootstrap": 20000,
+    "label": "descriptive association, not portability proof"
+  },
+  {
+    "metric": "pullShare",
+    "group": "moved",
+    "period": "2023-24→2024-25",
+    "n": 48,
+    "players": 48,
+    "franchises": 27,
+    "pearson": 0.9165633976493623,
+    "spearman": 0.9118541033434651,
+    "ci95": [
+      0.8085322768066627,
+      0.972586976701436
+    ],
+    "validBootstrap": 20000,
+    "label": "descriptive association, not portability proof"
+  },
+  {
+    "metric": "pullShare",
+    "group": "moved",
+    "period": "2024-25→2025-26",
+    "n": 47,
+    "players": 47,
+    "franchises": 29,
+    "pearson": 0.9162770290746459,
+    "spearman": 0.9320074005550418,
+    "ci95": [
+      0.8422997197433257,
+      0.9690695498797266
+    ],
+    "validBootstrap": 20000,
+    "label": "descriptive association, not portability proof"
+  },
+  {
+    "metric": "pullShare",
+    "group": "seasonMove",
+    "period": "2022-23",
+    "n": 30,
+    "players": 30,
+    "franchises": 26,
+    "pearson": 0.8642433274751895,
+    "spearman": 0.8981090100111235,
+    "ci95": [
+      0.7207584695385443,
+      0.9522732704639039
+    ],
+    "validBootstrap": 20000,
+    "label": "descriptive association, not portability proof"
+  },
+  {
+    "metric": "pullShare",
+    "group": "seasonMove",
+    "period": "2023-24",
+    "n": 28,
+    "players": 28,
+    "franchises": 17,
+    "pearson": 0.8351251808402311,
+    "spearman": 0.8483853311439519,
+    "ci95": [
+      0.6531323748698882,
+      0.9455921607926583
+    ],
+    "validBootstrap": 20000,
+    "label": "descriptive association, not portability proof"
+  },
+  {
+    "metric": "pullShare",
+    "group": "seasonMove",
+    "period": "2024-25",
+    "n": 28,
+    "players": 28,
+    "franchises": 19,
+    "pearson": 0.9171408942879569,
+    "spearman": 0.9135194307608101,
+    "ci95": [
+      0.7923460619129932,
+      0.9763898154887934
+    ],
+    "validBootstrap": 20000,
+    "label": "descriptive association, not portability proof"
+  },
+  {
+    "metric": "pullShare",
+    "group": "seasonMove",
+    "period": "2025-26",
+    "n": 29,
+    "players": 29,
+    "franchises": 23,
+    "pearson": 0.8112327875638555,
+    "spearman": 0.8305418719211823,
+    "ci95": [
+      0.5535852455775088,
+      0.9341898874121397
+    ],
+    "validBootstrap": 20000,
+    "label": "descriptive association, not portability proof"
+  },
+  {
+    "metric": "pullShare",
+    "group": "officialTradeParticipant",
+    "period": "2022-23",
+    "n": 27,
+    "players": 27,
+    "franchises": 23,
+    "pearson": 0.8689053078758913,
+    "spearman": 0.8925518925518926,
+    "ci95": [
+      0.7183538370204028,
+      0.9570264345943947
+    ],
+    "validBootstrap": 20000,
+    "label": "descriptive association, not portability proof"
+  },
+  {
+    "metric": "pullShare",
+    "group": "officialTradeParticipant",
+    "period": "2023-24",
+    "n": 27,
+    "players": 27,
+    "franchises": 17,
+    "pearson": 0.8853620046343085,
+    "spearman": 0.8717948717948716,
+    "ci95": [
+      0.7290230636181408,
+      0.9548281988238295
+    ],
+    "validBootstrap": 20000,
+    "label": "descriptive association, not portability proof"
+  },
+  {
+    "metric": "pullShare",
+    "group": "officialTradeParticipant",
+    "period": "2024-25",
+    "n": 27,
+    "players": 27,
+    "franchises": 18,
+    "pearson": 0.91977658004938,
+    "spearman": 0.9169719169719167,
+    "ci95": [
+      0.7990825206748736,
+      0.9777353139275253
+    ],
+    "validBootstrap": 20000,
+    "label": "descriptive association, not portability proof"
+  },
+  {
+    "metric": "pullShare",
+    "group": "officialTradeParticipant",
+    "period": "2025-26",
+    "n": 28,
+    "players": 28,
+    "franchises": 23,
+    "pearson": 0.8129758106902759,
+    "spearman": 0.8292282430213466,
+    "ci95": [
+      0.5584939035009203,
+      0.9362129495430356
+    ],
+    "validBootstrap": 20000,
+    "label": "descriptive association, not portability proof"
+  }
+]

@@ -1,0 +1,47 @@
+{
+  "label": "2024-25-eighth-c-ablation-55-offenseResidual",
+  "extra": {
+    "bundle": "reports/defense-seventh/2024-25/calendar-55/bundle.json",
+    "cutoff": 55,
+    "calendarDate": "2025-02-21",
+    "cardFile": "reports/defense-eighth/c/ablation/2024-25/calendar-55/offenseResidual/pre55-ablation-league.json",
+    "neutralContests": true,
+    "calibration": {
+      "shotDelta": -0.09740662007723565,
+      "options": {
+        "pace": 0.9328799745240655,
+        "foulScale": 0.983491013031715,
+        "passTurnoverScale": 1.455075474135973,
+        "touchTurnoverScale": 0.9878418872257715,
+        "touchLiveShare": 0.36981978668374105,
+        "clockViolationProbability": 0.00791342686000682
+      }
+    },
+    "options": {}
+  },
+  "files": [
+    {
+      "seed": 20261012,
+      "file": "reports/defense-seventh/runs/2024-25-eighth-c-ablation-55-offenseResidual-seed20261012.json",
+      "sha256": "cf37c39835a6f27c3cdff0e9db889f5bd93b461ad7a34d896392ff6835eb3647"
+    },
+    {
+      "seed": 20261013,
+      "file": "reports/defense-seventh/runs/2024-25-eighth-c-ablation-55-offenseResidual-seed20261013.json",
+      "sha256": "fa8718d5cdefa03c9f753ba132797a584f14ffe411de7becba85f5a5ac7bcf36"
+    },
+    {
+      "seed": 20261014,
+      "file": "reports/defense-seventh/runs/2024-25-eighth-c-ablation-55-offenseResidual-seed20261014.json",
+      "sha256": "089d5c5b3eb14efe6a5c8b07dd8e94d11f3e408d252494a73525df6becebc908"
+    }
+  ],
+  "seconds": 37.71,
+  "sources": {
+    "src/defense_fifth_game.js": "bddd3f34b93e969513ce79d717b78358dc433c0f15eba3eeffa675177b9dfa86",
+    "src/defense_sixth_season.js": "1c30c6c59fbc3e2a40b08231dddf9be255b11fca386d93daf1eb986a99000bcf",
+    "src/defense_seventh_jobs.js": "ca1501845b601e0b742f601751ac74fba7e9717a6de66d8ab9d7a4d0c4c6d41d",
+    "scripts/run_defense_seventh.js": "0e40923369762bd8b0a0faa1545e704ba0587bc1341ea40058b7766f240f3f01",
+    "reports/defense-eighth/c/ablation/2024-25/calendar-55/offenseResidual/pre55-ablation-league.json": "bdf14e03a30b01d6bdd077620ed862b5dcf0583342ba6efb0c5ab45c0e43964c"
+  }
+}

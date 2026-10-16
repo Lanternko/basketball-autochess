@@ -1,0 +1,136 @@
+{
+  "preset": "season-minutes",
+  "seeds": [
+    20261012,
+    20261013,
+    20261014,
+    20261015,
+    20261016,
+    20261017,
+    20261018,
+    20261019,
+    20261020,
+    20261021,
+    20261022,
+    20261023,
+    20261024,
+    20261025,
+    20261026,
+    20261027,
+    20261028,
+    20261029,
+    20261030,
+    20261031
+  ],
+  "files": [
+    {
+      "seed": 20261012,
+      "file": "reports/defense-third/runs/season-minutes-seed20261012.json",
+      "sha256": "5b49a4e3f55affbda364b2989b23b3af69ab5ae8a3d92af0a990c98234fd02af"
+    },
+    {
+      "seed": 20261013,
+      "file": "reports/defense-third/runs/season-minutes-seed20261013.json",
+      "sha256": "277346f7ec47a7cf1084dcfcc61c4b966684b10a0ee19e844195826ec4b95367"
+    },
+    {
+      "seed": 20261014,
+      "file": "reports/defense-third/runs/season-minutes-seed20261014.json",
+      "sha256": "1e9911a1a7fdb29805d0f2dceb1c6b2623692ee120b55bd26c51ac001d181f64"
+    },
+    {
+      "seed": 20261015,
+      "file": "reports/defense-third/runs/season-minutes-seed20261015.json",
+      "sha256": "3dafcf39fa58dee558c765ecf4396c37fd6b92db881e809c50329fb3d05a7c22"
+    },
+    {
+      "seed": 20261016,
+      "file": "reports/defense-third/runs/season-minutes-seed20261016.json",
+      "sha256": "a2f57a639cd0f4bc1afe315743b002b289c5c4577071fb08ce389f0aa73ba00d"
+    },
+    {
+      "seed": 20261017,
+      "file": "reports/defense-third/runs/season-minutes-seed20261017.json",
+      "sha256": "e472e8e97a9b0c0b6151d6d4a1aa6359590903cf0145a3fb703d6e6836cf281f"
+    },
+    {
+      "seed": 20261018,
+      "file": "reports/defense-third/runs/season-minutes-seed20261018.json",
+      "sha256": "cd6719c5f151836533a46c110a499c350a3f3c70137e8616d641140d974a2bce"
+    },
+    {
+      "seed": 20261019,
+      "file": "reports/defense-third/runs/season-minutes-seed20261019.json",
+      "sha256": "3a2d1a8e89f05ee05ac14cde8040e3f5bd5439094ea832209100b639cd105255"
+    },
+    {
+      "seed": 20261020,
+      "file": "reports/defense-third/runs/season-minutes-seed20261020.json",
+      "sha256": "b55a3b1229244903db52db52e9785d96ceb6347bd082e5aa2dff97faca067d64"
+    },
+    {
+      "seed": 20261021,
+      "file": "reports/defense-third/runs/season-minutes-seed20261021.json",
+      "sha256": "8b0ec6776c497f9fc7123123013e3e9bb954946a91d7e86242e82648a71a418d"
+    },
+    {
+      "seed": 20261022,
+      "file": "reports/defense-third/runs/season-minutes-seed20261022.json",
+      "sha256": "29ba707b07c92cbb29b7d8089eb16f426f04919aeb96f65cf019bb92de0bfe75"
+    },
+    {
+      "seed": 20261023,
+      "file": "reports/defense-third/runs/season-minutes-seed20261023.json",
+      "sha256": "cb4ba1453ae1c6d9baffa1d28f859a67923fd315c196ab01fa3230cf203ad759"
+    },
+    {
+      "seed": 20261024,
+      "file": "reports/defense-third/runs/season-minutes-seed20261024.json",
+      "sha256": "e21065577ce9770867887657f8d04732e0e95cc4e30d14f35a4e0bb538861543"
+    },
+    {
+      "seed": 20261025,
+      "file": "reports/defense-third/runs/season-minutes-seed20261025.json",
+      "sha256": "2c633ad249f00000c635d38d6903f893316ef89b817e42f4d7d5ec4fd6416f63"
+    },
+    {
+      "seed": 20261026,
+      "file": "reports/defense-third/runs/season-minutes-seed20261026.json",
+      "sha256": "2e44b3e266f21fb49d989123f33e5a8947309be62a3f9c9de1c3ba80cd2943ea"
+    },
+    {
+      "seed": 20261027,
+      "file": "reports/defense-third/runs/season-minutes-seed20261027.json",
+      "sha256": "fd1bb847404c8e615e80835c601ee954a9a679597822616fea1792f43f7adba6"
+    },
+    {
+      "seed": 20261028,
+      "file": "reports/defense-third/runs/season-minutes-seed20261028.json",
+      "sha256": "3651bdf8053508f18068f7ad287d5bba216d475a1719212eb7fb9b909b2198a1"
+    },
+    {
+      "seed": 20261029,
+      "file": "reports/defense-third/runs/season-minutes-seed20261029.json",
+      "sha256": "55564d89916cefcf0119b0e00032bfed71572a083b805b3603a2b4e6660fb265"
+    },
+    {
+      "seed": 20261030,
+      "file": "reports/defense-third/runs/season-minutes-seed20261030.json",
+      "sha256": "0756a3f33562406dd1d787306f382edd0aabff1e38b301efbffe675c46534b26"
+    },
+    {
+      "seed": 20261031,
+      "file": "reports/defense-third/runs/season-minutes-seed20261031.json",
+      "sha256": "08fa81c534c5de46cb01c4162040dd34737cf5ce5899c964dc890f594c7d0eb3"
+    }
+  ],
+  "seconds": 152.143,
+  "code": {
+    "src/defense_third_game.js": "eadeecdd518179c8559b3bb2afbfee30a636f8b8323cd93ea191721b00bbd3d0",
+    "src/defense_third_season.js": "92c10204741647e6a1cbbafbe9f13e22927deb418856860e821dbd4116c0f880",
+    "src/defense_third_jobs.js": "d15c933121632cf68733ca4e3cd24ed13c11311f23ebc3c29edc06f9e81fa6af",
+    "src/defense_third_minutes.js": "0894e14a649ad63ce96e57b315e090d22f0ac49590b0dd8a031195b0033de4c6",
+    "reports/defense-third/foul-audit.json": "571e7062d48746ad9bb39d57c6742189bbd423d833ddb557d3f3b05c5fe916b1",
+    "reports/defense-third/calibration.json": "a69c1a7d3e009bebf3d22f13ab1eba9003af14802d4fbf70d2dbf3e3863961e1"
+  }
+}

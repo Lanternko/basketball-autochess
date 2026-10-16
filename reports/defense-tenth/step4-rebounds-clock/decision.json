@@ -1,0 +1,19 @@
+{
+  "version": "pure-oreb-putback-clock-1",
+  "fidelityGapReduced": {
+    "immediateProxy": true,
+    "meanSeconds": true
+  },
+  "accuracySignificantlyImprovedVsAllocation": [],
+  "significantHarmVsAllocation": [],
+  "driftFailures": [
+    {
+      "season": "2025-26",
+      "efficiencyBias": 0.08046530130590668,
+      "possessionsBias": 0.5036569105691058
+    }
+  ],
+  "eligibleIndependentCandidate": false,
+  "promotedFrozenBaseline": false,
+  "noRetuning": true
+}

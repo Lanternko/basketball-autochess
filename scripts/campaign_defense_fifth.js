@@ -1,0 +1,10 @@
+import fs from 'node:fs';
+import {read} from './defense_io.js';
+import {runFifth} from './run_defense_fifth.js';
+import {fourthOptions} from '../src/defense_fourth_jobs.js';
+const root='reports/defense-fifth';
+const m=read('reports/defense-fourth/model-pre41/engine-signals.json');
+const rawSignals={centers:m.centers,values:Object.fromEntries(m.players.map((p,i)=>[p,Object.fromEntries(Object.entries(m.effects).map(([k,v])=>[k,v[i]]))]))};
+const raw=fourthOptions({label:'raw',options:{...read('reports/defense-fourth/final-selection.json').signalOptions,defenseSignals:rawSignals,scoreRotation:false}});
+const jobs=[['grid-00',{cutoff:41,options:raw}],['grid-11',{cutoff:41,options:{scoreRotation:true}}],['neutral-41',{cutoff:41,options:{neutralContests:true}}],... [25,55].flatMap(k=>[['v1-'+k,{cutoff:k,oldSignal:true}],['v3-'+k,{cutoff:k}]])];
+for(const [label,opts] of jobs)if(!fs.existsSync(root+'/'+label+'-seeds.json'))await runFifth(label,opts);

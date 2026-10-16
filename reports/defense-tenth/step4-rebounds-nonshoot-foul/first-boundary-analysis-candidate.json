@@ -1,0 +1,507 @@
+{
+  "allAnchors": {
+    "2022-23": {
+      "real": {
+        "nonshoot": 0.025560139124807896,
+        "shooting": 0.07809593140823425,
+        "fg": 0.8196230688344253,
+        "ft": 0.00012132977432661975,
+        "loss": 0.06976462023780636,
+        "offensiveOrOtherFoul": 0.006390034781201974,
+        "periodEnd": 0.00044487583919760573,
+        "anyNonshoot": 0.025560139124807896,
+        "earlyNonshoot": 0.02054517511930761,
+        "within3GivenFoul": 0.8037974683544303,
+        "within6GivenFoul": 0.9319620253164557,
+        "meanFoulSeconds": 1.6602848101265826
+      },
+      "baseline": {
+        "nonshoot": 0.025816745050916367,
+        "shooting": 0.09332802668577755,
+        "fg": 0.7766808081927136,
+        "ft": 0.0,
+        "loss": 0.10359060319919938,
+        "offensiveOrOtherFoul": 0.0,
+        "periodEnd": 0.0005838168713930837,
+        "anyNonshoot": 0.025816745050916367,
+        "earlyNonshoot": 0.020900343584061707,
+        "within3GivenFoul": 0.8094790934943227,
+        "within6GivenFoul": 0.9853666121972884,
+        "meanFoulSeconds": 1.6706759699630929
+      },
+      "realN": 24726,
+      "baselineN": 24557.0,
+      "oldGateProbability": 0.04
+    },
+    "2023-24": {
+      "real": {
+        "nonshoot": 0.025543089042730963,
+        "shooting": 0.07181507121827008,
+        "fg": 0.8268480942150076,
+        "ft": 0.0,
+        "loss": 0.07109890984324023,
+        "offensiveOrOtherFoul": 0.004336754993236254,
+        "periodEnd": 0.00035808068751492004,
+        "anyNonshoot": 0.025543089042730963,
+        "earlyNonshoot": 0.020490172674464867,
+        "within3GivenFoul": 0.8021806853582555,
+        "within6GivenFoul": 0.9190031152647975,
+        "meanFoulSeconds": 1.7596573208722741
+      },
+      "baseline": {
+        "nonshoot": 0.026606374955273727,
+        "shooting": 0.08687573423337304,
+        "fg": 0.7861176797729413,
+        "ft": 0.0,
+        "loss": 0.09978065250360273,
+        "offensiveOrOtherFoul": 0.0,
+        "periodEnd": 0.0006195585348091321,
+        "anyNonshoot": 0.026606374955273727,
+        "earlyNonshoot": 0.021543672518803684,
+        "within3GivenFoul": 0.809693355786487,
+        "within6GivenFoul": 0.9840869606376481,
+        "meanFoulSeconds": 1.7038780023093156
+      },
+      "realN": 25134,
+      "baselineN": 25281.666666666668,
+      "oldGateProbability": 0.04
+    },
+    "2024-25": {
+      "real": {
+        "nonshoot": 0.026502369668246446,
+        "shooting": 0.06695734597156398,
+        "fg": 0.8229383886255924,
+        "ft": 3.791469194312796e-05,
+        "loss": 0.07874881516587677,
+        "offensiveOrOtherFoul": 0.004056872037914692,
+        "periodEnd": 0.0007582938388625592,
+        "anyNonshoot": 0.026502369668246446,
+        "earlyNonshoot": 0.019867298578199053,
+        "within3GivenFoul": 0.7496423462088698,
+        "within6GivenFoul": 0.8969957081545065,
+        "meanFoulSeconds": 2.106580829756795
+      },
+      "baseline": {
+        "nonshoot": 0.027337944402759645,
+        "shooting": 0.08895090961678348,
+        "fg": 0.7807038865269414,
+        "ft": 0.0,
+        "loss": 0.10226460690933865,
+        "offensiveOrOtherFoul": 0.0,
+        "periodEnd": 0.0007426525441767638,
+        "anyNonshoot": 0.027337944402759645,
+        "earlyNonshoot": 0.02240948948894227,
+        "within3GivenFoul": 0.819668021121733,
+        "within6GivenFoul": 0.9936797672696729,
+        "meanFoulSeconds": 1.6105045800376097
+      },
+      "realN": 26375,
+      "baselineN": 26039.333333333332,
+      "oldGateProbability": 0.04
+    },
+    "2025-26": {
+      "real": {
+        "nonshoot": 0.025700066849884868,
+        "shooting": 0.07390626160588279,
+        "fg": 0.8222164450716779,
+        "ft": 7.427764985515858e-05,
+        "loss": 0.07323776275718637,
+        "offensiveOrOtherFoul": 0.004085270742033722,
+        "periodEnd": 0.0007799153234791652,
+        "anyNonshoot": 0.025700066849884868,
+        "earlyNonshoot": 0.019757854861472184,
+        "within3GivenFoul": 0.7687861271676301,
+        "within6GivenFoul": 0.9046242774566474,
+        "meanFoulSeconds": 1.9806358381502889
+      },
+      "baseline": {
+        "nonshoot": 0.02704570708106357,
+        "shooting": 0.09332936085839881,
+        "fg": 0.7737147707783459,
+        "ft": 0.0,
+        "loss": 0.10532093613257754,
+        "offensiveOrOtherFoul": 0.0,
+        "periodEnd": 0.0005892251496142634,
+        "anyNonshoot": 0.02704570708106357,
+        "earlyNonshoot": 0.02224796841940702,
+        "within3GivenFoul": 0.8223434122172671,
+        "within6GivenFoul": 0.9911614588989944,
+        "meanFoulSeconds": 1.6110400914739431
+      },
+      "realN": 26926,
+      "baselineN": 26610.0,
+      "oldGateProbability": 0.04
+    }
+  },
+  "firstAnchors": {
+    "2022-23": {
+      "real": {
+        "nonshoot": 0.025876232201533407,
+        "shooting": 0.07639649507119387,
+        "fg": 0.8205549470609712,
+        "ft": 9.127418765972983e-05,
+        "loss": 0.0700985761226725,
+        "offensiveOrOtherFoul": 0.006526104417670682,
+        "periodEnd": 0.00045637093829864917,
+        "anyNonshoot": 0.025876232201533407,
+        "earlyNonshoot": 0.020764877692588536,
+        "within3GivenFoul": 0.8024691358024691,
+        "within6GivenFoul": 0.9347442680776014,
+        "meanFoulSeconds": 1.646913580246914
+      },
+      "baseline": {
+        "nonshoot": 0.0257660157217878,
+        "shooting": 0.09321860119743341,
+        "fg": 0.7771260410074309,
+        "ft": 0.0,
+        "loss": 0.10327663462266361,
+        "offensiveOrOtherFoul": 0.0,
+        "periodEnd": 0.000612707450684362,
+        "anyNonshoot": 0.0257660157217878,
+        "earlyNonshoot": 0.020920102515856714,
+        "within3GivenFoul": 0.8120452904745621,
+        "within6GivenFoul": 0.9868044631888243,
+        "meanFoulSeconds": 1.6657554175057312
+      },
+      "realN": 21912,
+      "baselineN": 22304.666666666668,
+      "oldGateProbability": 0.04
+    },
+    "2023-24": {
+      "real": {
+        "nonshoot": 0.025743913435527503,
+        "shooting": 0.07110009017132551,
+        "fg": 0.8266005410279531,
+        "ft": 0.0,
+        "loss": 0.07173128944995491,
+        "offensiveOrOtherFoul": 0.004463480613165013,
+        "periodEnd": 0.0003606853020739405,
+        "anyNonshoot": 0.025743913435527503,
+        "earlyNonshoot": 0.02055906221821461,
+        "within3GivenFoul": 0.7985989492119089,
+        "within6GivenFoul": 0.9194395796847635,
+        "meanFoulSeconds": 1.7991243432574433
+      },
+      "baseline": {
+        "nonshoot": 0.026770183590012916,
+        "shooting": 0.08627530603660155,
+        "fg": 0.7861541451115341,
+        "ft": 0.0,
+        "loss": 0.10017384310199316,
+        "offensiveOrOtherFoul": 0.0,
+        "periodEnd": 0.0006265221598582729,
+        "anyNonshoot": 0.026770183590012916,
+        "earlyNonshoot": 0.02165540217775044,
+        "within3GivenFoul": 0.8089117680417107,
+        "within6GivenFoul": 0.9846907847203116,
+        "meanFoulSeconds": 1.7122101488627905
+      },
+      "realN": 22180,
+      "baselineN": 22873.0,
+      "oldGateProbability": 0.04
+    },
+    "2024-25": {
+      "real": {
+        "nonshoot": 0.02684128630705394,
+        "shooting": 0.06505013831258645,
+        "fg": 0.8231327800829875,
+        "ft": 4.322268326417704e-05,
+        "loss": 0.08026452282157677,
+        "offensiveOrOtherFoul": 0.004019709543568464,
+        "periodEnd": 0.0006483402489626556,
+        "anyNonshoot": 0.02684128630705394,
+        "earlyNonshoot": 0.020012102351313968,
+        "within3GivenFoul": 0.7455716586151369,
+        "within6GivenFoul": 0.895330112721417,
+        "meanFoulSeconds": 2.132850241545894
+      },
+      "baseline": {
+        "nonshoot": 0.02745052525866376,
+        "shooting": 0.08845515634971757,
+        "fg": 0.7814083713987716,
+        "ft": 0.0,
+        "loss": 0.10197673144779289,
+        "offensiveOrOtherFoul": 0.0,
+        "periodEnd": 0.0007092155450541499,
+        "anyNonshoot": 0.02745052525866376,
+        "earlyNonshoot": 0.022475899674622452,
+        "within3GivenFoul": 0.8189181963927218,
+        "within6GivenFoul": 0.9930055727034661,
+        "meanFoulSeconds": 1.61343558196152
+      },
+      "realN": 23136,
+      "baselineN": 23517.333333333332,
+      "oldGateProbability": 0.04
+    },
+    "2025-26": {
+      "real": {
+        "nonshoot": 0.026191280838120987,
+        "shooting": 0.0724907063197026,
+        "fg": 0.8234200743494424,
+        "ft": 8.448800270361608e-05,
+        "loss": 0.07274417032781345,
+        "offensiveOrOtherFoul": 0.0042666441365326125,
+        "periodEnd": 0.0008026360256843528,
+        "anyNonshoot": 0.026191280838120987,
+        "earlyNonshoot": 0.02010814464346063,
+        "within3GivenFoul": 0.7677419354838709,
+        "within6GivenFoul": 0.9032258064516129,
+        "meanFoulSeconds": 1.9696774193548388
+      },
+      "baseline": {
+        "nonshoot": 0.026880071675474165,
+        "shooting": 0.09323769276264286,
+        "fg": 0.773872823857099,
+        "ft": 0.0,
+        "loss": 0.10539682884196644,
+        "offensiveOrOtherFoul": 0.0,
+        "periodEnd": 0.0006125828628175508,
+        "anyNonshoot": 0.026880071675474165,
+        "earlyNonshoot": 0.02201050119023767,
+        "within3GivenFoul": 0.8186228098555689,
+        "within6GivenFoul": 0.9911813357759738,
+        "meanFoulSeconds": 1.609577030015134
+      },
+      "realN": 23672,
+      "baselineN": 23959.0,
+      "oldGateProbability": 0.04
+    }
+  },
+  "simulationVersion": "candidate",
+  "pooled": {
+    "allAnchors": {
+      "real": {
+        "nonshoot": 0.02582641617141754,
+        "shooting": 0.07269365255098778,
+        "fg": 0.8229064991866758,
+        "ft": 5.8380529031226575e-05,
+        "loss": 0.07321252700102743,
+        "offensiveOrOtherFoul": 0.0047172331385966606,
+        "periodEnd": 0.0005852914222635626,
+        "anyNonshoot": 0.02582641617141754,
+        "earlyNonshoot": 0.020165125308360926,
+        "within3GivenFoul": 0.7811016567722965,
+        "within6GivenFoul": 0.9131462815481018,
+        "meanFoulSeconds": 1.8767896997264852
+      },
+      "baseline": {
+        "nonshoot": 0.02670169287250333,
+        "shooting": 0.09062100784858322,
+        "fg": 0.7793042863177356,
+        "ft": 0.0,
+        "loss": 0.10273919968617957,
+        "offensiveOrOtherFoul": 0.0,
+        "periodEnd": 0.0006338132749983107,
+        "anyNonshoot": 0.02670169287250333,
+        "earlyNonshoot": 0.02177536850280367,
+        "within3GivenFoul": 0.8152959706549524,
+        "within6GivenFoul": 0.9885736997509009,
+        "meanFoulSeconds": 1.6490246609459904
+      },
+      "baselineMinusReal": {
+        "nonshoot": {
+          "delta": 0.0008752767010857879,
+          "joint95": [
+            -0.0009559762889762172,
+            0.0026847174421468774
+          ]
+        },
+        "shooting": {
+          "delta": 0.01792735529759544,
+          "joint95": [
+            0.014529383011356931,
+            0.021373888036507124
+          ]
+        },
+        "fg": {
+          "delta": -0.04360221286894017,
+          "joint95": [
+            -0.04917176898872208,
+            -0.03801176623463431
+          ]
+        },
+        "ft": {
+          "delta": -5.8380529031226575e-05,
+          "joint95": [
+            -0.00011195508111535108,
+            -1.8339050581031763e-05
+          ]
+        },
+        "loss": {
+          "delta": 0.029526672685152147,
+          "joint95": [
+            0.025893634261757708,
+            0.03311136215761286
+          ]
+        },
+        "offensiveOrOtherFoul": {
+          "delta": -0.0047172331385966606,
+          "joint95": [
+            -0.0051367793978918455,
+            -0.004325231540704501
+          ]
+        },
+        "periodEnd": {
+          "delta": 4.8521852734748094e-05,
+          "joint95": [
+            -0.00015716508760715015,
+            0.00024825905512648456
+          ]
+        },
+        "anyNonshoot": {
+          "delta": 0.0008752767010857879,
+          "joint95": [
+            -0.0009559762889762172,
+            0.0026847174421468774
+          ]
+        },
+        "earlyNonshoot": {
+          "delta": 0.001610243194442744,
+          "joint95": [
+            2.1280605144229783e-05,
+            0.0031999686168231083
+          ]
+        },
+        "within3GivenFoul": {
+          "delta": 0.034194313882655925,
+          "joint95": [
+            0.014672507845668141,
+            0.05344529563310826
+          ]
+        },
+        "within6GivenFoul": {
+          "delta": 0.07542741820279908,
+          "joint95": [
+            0.06335968176601652,
+            0.08798871206866012
+          ]
+        },
+        "meanFoulSeconds": {
+          "delta": -0.2277650387804948,
+          "joint95": [
+            -0.3733920114479654,
+            -0.07906500015156585
+          ]
+        }
+      }
+    },
+    "firstAnchors": {
+      "real": {
+        "nonshoot": 0.02616317819555896,
+        "shooting": 0.07125935746870211,
+        "fg": 0.8234270856303385,
+        "ft": 5.474621840688074e-05,
+        "loss": 0.07370963968050441,
+        "offensiveOrOtherFoul": 0.004818984677734193,
+        "periodEnd": 0.0005670081287548996,
+        "anyNonshoot": 0.02616317819555896,
+        "earlyNonshoot": 0.020361046726394435,
+        "within3GivenFoul": 0.7785954197783465,
+        "within6GivenFoul": 0.9131849417338487,
+        "meanFoulSeconds": 1.8871413961012724
+      },
+      "baseline": {
+        "nonshoot": 0.02671669906148466,
+        "shooting": 0.09029668908659885,
+        "fg": 0.7796403453437089,
+        "ft": 0.0,
+        "loss": 0.10270600950360402,
+        "offensiveOrOtherFoul": 0.0,
+        "periodEnd": 0.0006402570046035839,
+        "anyNonshoot": 0.02671669906148466,
+        "earlyNonshoot": 0.02176547638961682,
+        "within3GivenFoul": 0.8146245161911408,
+        "within6GivenFoul": 0.988920539097144,
+        "meanFoulSeconds": 1.6502445445862939
+      },
+      "baselineMinusReal": {
+        "nonshoot": {
+          "delta": 0.000553520865925701,
+          "joint95": [
+            -0.00132465850303055,
+            0.0023897071070456475
+          ]
+        },
+        "shooting": {
+          "delta": 0.01903733161789674,
+          "joint95": [
+            0.015655939257456303,
+            0.022457649789430673
+          ]
+        },
+        "fg": {
+          "delta": -0.043786740286629655,
+          "joint95": [
+            -0.04941344547168647,
+            -0.038133799275221605
+          ]
+        },
+        "ft": {
+          "delta": -5.474621840688074e-05,
+          "joint95": [
+            -0.00011207603800540194,
+            -1.0642249147207254e-05
+          ]
+        },
+        "loss": {
+          "delta": 0.02899636982309961,
+          "joint95": [
+            0.025298982716047885,
+            0.032690488475474504
+          ]
+        },
+        "offensiveOrOtherFoul": {
+          "delta": -0.004818984677734193,
+          "joint95": [
+            -0.005304123202016395,
+            -0.004369196069078054
+          ]
+        },
+        "periodEnd": {
+          "delta": 7.324887584868431e-05,
+          "joint95": [
+            -0.00013004605971199653,
+            0.000270229799589256
+          ]
+        },
+        "anyNonshoot": {
+          "delta": 0.000553520865925701,
+          "joint95": [
+            -0.00132465850303055,
+            0.0023897071070456475
+          ]
+        },
+        "earlyNonshoot": {
+          "delta": 0.0014044296632223854,
+          "joint95": [
+            -0.0002274825260228875,
+            0.003036031387913129
+          ]
+        },
+        "within3GivenFoul": {
+          "delta": 0.03602909641279439,
+          "joint95": [
+            0.015340097507260004,
+            0.057195391549255827
+          ]
+        },
+        "within6GivenFoul": {
+          "delta": 0.07573559736329527,
+          "joint95": [
+            0.06372456287532258,
+            0.08825114376508318
+          ]
+        },
+        "meanFoulSeconds": {
+          "delta": -0.23689685151497852,
+          "joint95": [
+            -0.3805969637056838,
+            -0.09007177851088317
+          ]
+        }
+      }
+    }
+  },
+  "registeredExperimentConditionMet": false,
+  "interpretation": "first-event classifier is a discrete competing-event approximation; no inferred real putback intent or continuous hazard"
+}

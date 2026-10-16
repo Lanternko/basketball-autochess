@@ -1,0 +1,28 @@
+{
+  "status": "Completed offline diagnostic",
+  "models": {
+    "role": {
+      "mainBothReferencesPass": false,
+      "chanceNotWorse": true,
+      "eachSeasonAndMoversNotWorse": true,
+      "insufficientMoverGroup": false,
+      "supported": false
+    },
+    "competition": {
+      "mainBothReferencesPass": false,
+      "chanceNotWorse": true,
+      "eachSeasonAndMoversNotWorse": true,
+      "insufficientMoverGroup": false,
+      "supported": false
+    },
+    "both": {
+      "mainBothReferencesPass": false,
+      "chanceNotWorse": false,
+      "eachSeasonAndMoversNotWorse": true,
+      "insufficientMoverGroup": false,
+      "supported": false
+    }
+  },
+  "supportedCandidates": [],
+  "engineAdoption": false
+}

@@ -1,0 +1,25 @@
+{
+ "version":"v46",
+ "adopted":true,
+ "adoptionScope":"Measured NBA defense development baseline for subsequent player-impact versions. Does not switch the product's existing game preset or recompute OVR.",
+ "gameDefaultChanged":false,
+ "ovrRecomputed":false,
+ "summaryZh":"v46 採作後續版本的防守開發基準，取代 v45 候選路線。四季的全體在場禁區命中率 MAE 都優於 v44 與 v45，限制區與其他油漆區的全體細區誤差也都優於 v45，並保留三分防守改善；三種位置的四季平均禁區誤差均下降。球隊得分 MAE 四季平均 2.3695 → 2.4021 分的暫時退步依使用者授權接受。這不是宣稱每位球員、每個細區都已準確，也不是遊戲預設或 OVR 已完成更新。",
+ "validation":{"seasons":["2022-23","2023-24","2024-25","2025-26"],"jobs":24,"games":28023,"jointFitsIndependentlyChecked":144,"targetExcludedFromHyperparameterSelection":true,"namedPlayerExceptions":false,"singleSeedPaintMAEBetterThanV45":12,"singleSeedComparisons":12},
+ "fourSeasonMeanMAE":{
+   "onOpponentPaintFGpct_pp":{"v44":1.2048229045665508,"v45":1.362918141249644,"v46":1.0483650616157287},
+   "onOpponentThreeFGpct_pp":{"v44":1.4148979895707587,"v45":1.251359808953194,"v46":1.238656876499211},
+   "teamPPG":{"v44":2.3335027100271004,"v45":2.3695121951219513,"v46":2.4021341463414645}
+ },
+ "targetSeasonWembanyama":{
+   "onOpponentPaintFGpct":{"actual":50.576,"v45":50.489,"v46":50.745},
+   "paintFGpctOnMinusOff_pp":{"actual":-6.511,"v45":-8.490,"v46":-6.634},
+   "paintAttemptShareOnMinusOff_pp":{"actual":-6.344,"v45":-5.388,"v46":-5.207},
+   "threeAttemptShareOnCourt":{"actual":44.317,"v45":43.566,"v46":44.320},
+   "remainingIssue":"Restricted-area make on/off is still too strong and other-paint make on/off too weak; these partly cancel in combined paint. Other-paint shot deterrence also remains too weak. Do not describe the fine-zone Wembanyama problem as fully solved."
+ },
+ "selection":{"commonSigma":0.1,"contrastSigma":0.05,"primary":"Older-three-season whole-game cross-fitted source-minute-weighted player on-court paint FG% MAE","secondary":"Fine-zone shot heldout NLL","tradeoff":"Fine-zone shot NLL is slightly worse than v45; player aggregate and fine-zone FG% MAEs are better. Values at grid upper boundary are not a claim of global optimum."},
+ "unchangedMechanisms":["v45 shot choice","v45 midrange and three make models","source neutral contexts","fouls","rebounding","putbacks","total-attempt hazard"],
+ "remainingWork":["Calibrate team scoring after retaining the improved defense basis.","Refine other-paint deterrence and individual fine-zone attribution, with both subzones and the combined zone reported.","Independently measure total-attempt-rate deterrence; current source choice models primarily estimate relative shot mix.","Fine-zone foul and rebound geometry remain unimplemented.","Healthy-ability OVR remains separate; this round did not recompute its ranking."],
+ "scope":"Four already-seen same-season reconstructions, not future prediction. Raw on/off is descriptive, not a causal individual defense target."
+}

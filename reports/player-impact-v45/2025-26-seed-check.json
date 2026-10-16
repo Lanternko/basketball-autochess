@@ -1,0 +1,131 @@
+{
+  "scope": "Per-seed Monte Carlo diagnostic; not independent real-world seasons or formal confidence intervals. Main reported errors pool three seeds before calculating rates.",
+  "rows": [
+    {
+      "season": "2025-26",
+      "variant": "v44",
+      "seed": 20261012,
+      "defenseMAE": {
+        "onshortFGpct": 1.651981085561416,
+        "onlongFGpct": 1.5975648045732225,
+        "onshortShare": 1.192524293006645,
+        "onlongShare": 1.1329370707259088,
+        "deltashortFGpct": 2.298055014458636,
+        "deltashortShare": 1.6924788907396267
+      },
+      "wemby": {
+        "onshortFGpct": 55.309734513274336,
+        "onlongFGpct": 37.0026525198939,
+        "onshortShare": 44.488188976377955,
+        "onlongShare": 42.407199100112486,
+        "deltashortFGpct": -3.269500459403261,
+        "deltashortShare": -2.603936602623591
+      }
+    },
+    {
+      "season": "2025-26",
+      "variant": "v44",
+      "seed": 20261013,
+      "defenseMAE": {
+        "onshortFGpct": 1.551165703285626,
+        "onlongFGpct": 1.527731349827952,
+        "onshortShare": 1.0724675590955688,
+        "onlongShare": 0.9897924829569863,
+        "deltashortFGpct": 2.3669335191198457,
+        "deltashortShare": 1.6641111400628703
+      },
+      "wemby": {
+        "onshortFGpct": 53.83655645664379,
+        "onlongFGpct": 33.90501319261214,
+        "onshortShare": 45.33371040723982,
+        "onlongShare": 42.873303167420815,
+        "deltashortFGpct": 0.404062177467587,
+        "deltashortShare": 1.3256540124764769
+      }
+    },
+    {
+      "season": "2025-26",
+      "variant": "v44",
+      "seed": 20261014,
+      "defenseMAE": {
+        "onshortFGpct": 1.4280572341511728,
+        "onlongFGpct": 1.6941523721219078,
+        "onshortShare": 1.1194189125941567,
+        "onlongShare": 1.0912494741119605,
+        "deltashortFGpct": 2.2408721715360995,
+        "deltashortShare": 1.7520712135167749
+      },
+      "wemby": {
+        "onshortFGpct": 52.493261455525605,
+        "onlongFGpct": 36.78082191780822,
+        "onshortShare": 43.788728238418415,
+        "onlongShare": 43.0805547359103,
+        "deltashortFGpct": -1.7802428179786673,
+        "deltashortShare": -1.9590723480918513
+      }
+    },
+    {
+      "season": "2025-26",
+      "variant": "v45",
+      "seed": 20261012,
+      "defenseMAE": {
+        "onshortFGpct": 1.672613005338417,
+        "onlongFGpct": 1.4611311852938897,
+        "onshortShare": 1.1730466665388464,
+        "onlongShare": 1.099793777349834,
+        "deltashortFGpct": 2.384899925114997,
+        "deltashortShare": 1.7532376857737342
+      },
+      "wemby": {
+        "onshortFGpct": 50.76923076923077,
+        "onlongFGpct": 37.243207422133864,
+        "onshortShare": 43.76463700234192,
+        "onlongShare": 44.17447306791569,
+        "deltashortFGpct": -9.210086707501397,
+        "deltashortShare": -3.988449417411168
+      }
+    },
+    {
+      "season": "2025-26",
+      "variant": "v45",
+      "seed": 20261013,
+      "defenseMAE": {
+        "onshortFGpct": 1.5451574411151714,
+        "onlongFGpct": 1.4806909134900033,
+        "onshortShare": 1.1661128040883628,
+        "onlongShare": 1.1091292890766566,
+        "deltashortFGpct": 2.2379410636640706,
+        "deltashortShare": 1.778174870419076
+      },
+      "wemby": {
+        "onshortFGpct": 50.19946808510638,
+        "onlongFGpct": 35.528942115768466,
+        "onshortShare": 43.418013856812934,
+        "onlongShare": 43.3891454965358,
+        "deltashortFGpct": -9.056257105733316,
+        "deltashortShare": -7.406428432226832
+      }
+    },
+    {
+      "season": "2025-26",
+      "variant": "v45",
+      "seed": 20261014,
+      "defenseMAE": {
+        "onshortFGpct": 1.7464202848770618,
+        "onlongFGpct": 1.4926578545505713,
+        "onshortShare": 1.0630328551847799,
+        "onlongShare": 1.0232717166321026,
+        "deltashortFGpct": 2.344433577995306,
+        "deltashortShare": 1.6699178982459075
+      },
+      "wemby": {
+        "onshortFGpct": 50.500333555703804,
+        "onlongFGpct": 35.34136546184739,
+        "onshortShare": 43.28616806237366,
+        "onlongShare": 43.141784579844064,
+        "deltashortFGpct": -7.176014992014039,
+        "deltashortShare": -4.721800065116376
+      }
+    }
+  ]
+}

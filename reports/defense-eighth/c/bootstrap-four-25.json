@@ -1,0 +1,797 @@
+{
+  "versions": {
+    "v1": {
+      "netRMSE": 4.91741152348042,
+      "netCorrelation": 0.5452375602518243,
+      "calibrationSlope": 0.6867960499966477,
+      "netSDRatio": 0.7930504220333219,
+      "residualSD": 17.16541368724681,
+      "winMAE": 5.8183333333333325,
+      "winRMSE": 7.2388736462702985,
+      "efficiencyBias": -1.4589526146676235,
+      "oracleRMSE": 4.69711546777475,
+      "observedNetSD": 5.563567334643402
+    },
+    "v3-signals-off": {
+      "netRMSE": 4.872001850372526,
+      "netCorrelation": 0.560033564565797,
+      "calibrationSlope": 0.721358535583009,
+      "netSDRatio": 0.7767166239484552,
+      "residualSD": 16.82843464771244,
+      "winMAE": 5.955,
+      "winRMSE": 7.261924102238102,
+      "efficiencyBias": -1.6940000386748189,
+      "oracleRMSE": 4.673395859907093,
+      "observedNetSD": 5.563567334643402
+    },
+    "v3": {
+      "netRMSE": 4.525666891820782,
+      "netCorrelation": 0.6569742278465642,
+      "calibrationSlope": 0.7199024570428698,
+      "netSDRatio": 0.9141392650479139,
+      "residualSD": 16.936078937083852,
+      "winMAE": 5.265833333333334,
+      "winRMSE": 6.63724654255563,
+      "efficiencyBias": -1.635328755803961,
+      "oracleRMSE": 4.274734076005083,
+      "observedNetSD": 5.563567334643402
+    },
+    "v4": {
+      "netRMSE": 4.723474036496081,
+      "netCorrelation": 0.7450740828450101,
+      "calibrationSlope": 0.583625235161653,
+      "netSDRatio": 1.2939486101716464,
+      "residualSD": 17.65944091190257,
+      "winMAE": 4.8025,
+      "winRMSE": 6.0559887714559055,
+      "efficiencyBias": -2.5510324372822275,
+      "oracleRMSE": 3.6902127411426933,
+      "observedNetSD": 5.563567334643402
+    },
+    "v5": {
+      "netRMSE": 4.696868190383375,
+      "netCorrelation": 0.7475828127438534,
+      "calibrationSlope": 0.5872939482973808,
+      "netSDRatio": 1.2938369530646805,
+      "residualSD": 17.68899206957729,
+      "winMAE": 4.724166666666667,
+      "winRMSE": 5.98930296445254,
+      "efficiencyBias": -2.9328095475014138,
+      "oracleRMSE": 3.6729771235601922,
+      "observedNetSD": 5.563567334643402
+    },
+    "simple": {
+      "netRMSE": 4.225209400470207,
+      "netCorrelation": 0.7378579659929738,
+      "calibrationSlope": 0.688274150281901,
+      "netSDRatio": 1.0722357174776558,
+      "residualSD": null,
+      "winMAE": 5.411964797325899,
+      "winRMSE": 6.801804649271566,
+      "efficiencyBias": null,
+      "oracleRMSE": 3.777909893905536,
+      "observedNetSD": 5.563567334643402
+    },
+    "shrink": {
+      "netRMSE": 3.905360128072176,
+      "netCorrelation": 0.7378579659929737,
+      "calibrationSlope": 0.9680204838412629,
+      "netSDRatio": 0.7958099395327315,
+      "residualSD": null,
+      "winMAE": 5.055495362810614,
+      "winRMSE": 6.273664226756407,
+      "efficiencyBias": null,
+      "oracleRMSE": 3.777909893905536,
+      "observedNetSD": 5.563567334643402
+    },
+    "v4cal": {
+      "netRMSE": 3.746808386188412,
+      "netCorrelation": 0.74507408284501,
+      "calibrationSlope": 0.9137274399523252,
+      "netSDRatio": 0.8264839479242558,
+      "residualSD": null,
+      "winMAE": null,
+      "winRMSE": null,
+      "efficiencyBias": null,
+      "oracleRMSE": 3.6902127411426937,
+      "observedNetSD": 5.563567334643402
+    },
+    "simplecal": {
+      "netRMSE": 3.779802138272167,
+      "netCorrelation": 0.7378579659929736,
+      "calibrationSlope": 1.011837044072385,
+      "netSDRatio": 0.7293586765499399,
+      "residualSD": null,
+      "winMAE": null,
+      "winRMSE": null,
+      "efficiencyBias": null,
+      "oracleRMSE": 3.777909893905537,
+      "observedNetSD": 5.563567334643402
+    }
+  },
+  "pairs": {
+    "a": {
+      "netRMSE": {
+        "estimate": -0.34633495855174434,
+        "standardError": 0.19811859824100408,
+        "ci95": [
+          -0.7364136376274724,
+          0.042648655889176545
+        ],
+        "ci998": [
+          -0.9824414338809566,
+          0.25050291953434467
+        ]
+      },
+      "netCorrelation": {
+        "estimate": 0.09694066328076723,
+        "standardError": 0.03211837862340562,
+        "ci95": [
+          0.0351227701613539,
+          0.1613516753283697
+        ],
+        "ci998": [
+          -0.0007836298999119862,
+          0.21059870548081933
+        ]
+      },
+      "calibrationSlope": {
+        "estimate": -0.001456078540139183,
+        "standardError": 0.060289652516451964,
+        "ci95": [
+          -0.12478223704637881,
+          0.1138829501620241
+        ],
+        "ci998": [
+          -0.21598661677680753,
+          0.19678956669456282
+        ]
+      },
+      "netSDRatio": {
+        "estimate": 0.13742264109945868,
+        "standardError": 0.03529971581380952,
+        "ci95": [
+          0.0659727211573301,
+          0.20493907683321222
+        ],
+        "ci998": [
+          0.019329097931480632,
+          0.2493155225633834
+        ]
+      },
+      "residualSD": {
+        "estimate": 0.1076442893714109,
+        "standardError": 0.08584741291324438,
+        "ci95": [
+          -0.059922372336863816,
+          0.27428190463789903
+        ],
+        "ci998": [
+          -0.16490285399925142,
+          0.3845129247477814
+        ]
+      },
+      "winMAE": {
+        "estimate": -0.689166666666666,
+        "standardError": 0.2593746960977598,
+        "ci95": [
+          -1.1866666666666665,
+          -0.17000000000000082
+        ],
+        "ci998": [
+          -1.4925000000000006,
+          0.11041666666666572
+        ]
+      },
+      "winRMSE": {
+        "estimate": -0.6246775596824721,
+        "standardError": 0.28836296134601896,
+        "ci95": [
+          -1.2007563535521468,
+          -0.06773103231532396
+        ],
+        "ci998": [
+          -1.5472338601992384,
+          0.2356240350380956
+        ]
+      },
+      "efficiencyBias": {
+        "estimate": 0.058671282870857766,
+        "standardError": 0.07246992421029216,
+        "ci95": [
+          -0.08552643140106397,
+          0.20131108753490068
+        ],
+        "ci998": [
+          -0.17744898220795946,
+          0.28580205046118223
+        ]
+      },
+      "oracleRMSE": {
+        "estimate": -0.39866178390201057,
+        "standardError": 0.14782602079568702,
+        "ci95": [
+          -0.7171443471777548,
+          -0.13645491281778543
+        ],
+        "ci998": [
+          -0.9789763937162701,
+          -0.0024117735120698924
+        ]
+      },
+      "verdict": {
+        "answer": "成立",
+        "tradeoff": false,
+        "widths": {
+          "netRMSE": 0.7790622935166489,
+          "winMAE": 1.0166666666666657
+        }
+      }
+    },
+    "b": {
+      "netRMSE": {
+        "estimate": 0.19780714467529936,
+        "standardError": 0.2546272916282715,
+        "ci95": [
+          -0.29200128364316935,
+          0.703199524806144
+        ],
+        "ci998": [
+          -0.5658081704717404,
+          0.966737710703331
+        ]
+      },
+      "netCorrelation": {
+        "estimate": 0.08809985499844586,
+        "standardError": 0.030061573563335844,
+        "ci95": [
+          0.03616747081438132,
+          0.1533722920275966
+        ],
+        "ci998": [
+          0.006857443076584535,
+          0.19700345733650704
+        ]
+      },
+      "calibrationSlope": {
+        "estimate": -0.13627722188121683,
+        "standardError": 0.05973685969708694,
+        "ci95": [
+          -0.24193868143897834,
+          -0.006619645421402476
+        ],
+        "ci998": [
+          -0.2976461871758851,
+          0.08173954496512897
+        ]
+      },
+      "netSDRatio": {
+        "estimate": 0.37980934512373254,
+        "standardError": 0.04442665559775993,
+        "ci95": [
+          0.2883532285811652,
+          0.4631509693597545
+        ],
+        "ci998": [
+          0.22100223532650087,
+          0.5197957373956468
+        ]
+      },
+      "residualSD": {
+        "estimate": 0.7233619748187188,
+        "standardError": 0.10095238945305386,
+        "ci95": [
+          0.5200639310685311,
+          0.9177382209664593
+        ],
+        "ci998": [
+          0.39680667107833756,
+          1.0419546133574968
+        ]
+      },
+      "winMAE": {
+        "estimate": -0.4633333333333338,
+        "standardError": 0.27569376108540655,
+        "ci95": [
+          -0.9970833333333333,
+          0.08000000000000096
+        ],
+        "ci998": [
+          -1.2987500000000018,
+          0.38833333333333275
+        ]
+      },
+      "winRMSE": {
+        "estimate": -0.5812577710997244,
+        "standardError": 0.2966090533260614,
+        "ci95": [
+          -1.154319957673792,
+          0.002714271992806161
+        ],
+        "ci998": [
+          -1.4776979732240791,
+          0.3345866203688006
+        ]
+      },
+      "efficiencyBias": {
+        "estimate": -0.9157036814782664,
+        "standardError": 0.34001739449929336,
+        "ci95": [
+          -1.5657519998707272,
+          -0.23286167993623152
+        ],
+        "ci998": [
+          -1.9242373572024434,
+          0.14433257557882584
+        ]
+      },
+      "oracleRMSE": {
+        "estimate": -0.5845213348623894,
+        "standardError": 0.15461811235968614,
+        "ci95": [
+          -0.862118163824686,
+          -0.25179775777996927
+        ],
+        "ci998": [
+          -1.0196747415420422,
+          -0.04829391992333942
+        ]
+      },
+      "verdict": {
+        "answer": "分不出",
+        "tradeoff": false,
+        "widths": {
+          "netRMSE": 0.9952008084493134,
+          "winMAE": 1.0770833333333343
+        }
+      }
+    },
+    "c": {
+      "netRMSE": {
+        "estimate": -0.02660584611270611,
+        "standardError": 0.09923790178055338,
+        "ci95": [
+          -0.2264561132848666,
+          0.16524454415805678
+        ],
+        "ci998": [
+          -0.35531974773975694,
+          0.2838878067362147
+        ]
+      },
+      "netCorrelation": {
+        "estimate": 0.0025087298988433204,
+        "standardError": 0.008680412468142466,
+        "ci95": [
+          -0.014043191473254835,
+          0.020537161045740326
+        ],
+        "ci998": [
+          -0.02644713137927157,
+          0.0349761462118755
+        ]
+      },
+      "calibrationSlope": {
+        "estimate": 0.003668713135727808,
+        "standardError": 0.011861389745159094,
+        "ci95": [
+          -0.01806728958050019,
+          0.028771866829473858
+        ],
+        "ci998": [
+          -0.033234768675435955,
+          0.048049060562618595
+        ]
+      },
+      "netSDRatio": {
+        "estimate": -0.00011165710696592335,
+        "standardError": 0.021201763110973437,
+        "ci95": [
+          -0.04268805490730099,
+          0.04082733531267757
+        ],
+        "ci998": [
+          -0.07175100792847466,
+          0.06909108631739369
+        ]
+      },
+      "residualSD": {
+        "estimate": 0.029551157674717388,
+        "standardError": 0.09022334371394049,
+        "ci95": [
+          -0.14932707189592875,
+          0.2065067611944471
+        ],
+        "ci998": [
+          -0.2668574039724412,
+          0.32605180688627655
+        ]
+      },
+      "winMAE": {
+        "estimate": -0.07833333333333314,
+        "standardError": 0.13921975996531027,
+        "ci95": [
+          -0.35208333333333375,
+          0.19583333333333375
+        ],
+        "ci998": [
+          -0.5116666666666667,
+          0.3604166666666684
+        ]
+      },
+      "winRMSE": {
+        "estimate": -0.06668580700336513,
+        "standardError": 0.15872066192451642,
+        "ci95": [
+          -0.3921415685486638,
+          0.23396293995555784
+        ],
+        "ci998": [
+          -0.5895356490268595,
+          0.40766710518273275
+        ]
+      },
+      "efficiencyBias": {
+        "estimate": -0.38177711021918626,
+        "standardError": 0.06799586905385302,
+        "ci95": [
+          -0.5170667679334784,
+          -0.24921674424673412
+        ],
+        "ci998": [
+          -0.604665177156857,
+          -0.18003175494737889
+        ]
+      },
+      "oracleRMSE": {
+        "estimate": -0.01723561758250103,
+        "standardError": 0.049892606334677486,
+        "ci95": [
+          -0.11931405697981967,
+          0.07841057633773962
+        ],
+        "ci998": [
+          -0.19432632114245862,
+          0.14519556006461887
+        ]
+      },
+      "verdict": {
+        "answer": "分不出",
+        "tradeoff": false,
+        "widths": {
+          "netRMSE": 0.3917006574429234,
+          "winMAE": 0.5479166666666675
+        }
+      }
+    },
+    "d": {
+      "netRMSE": {
+        "estimate": 0.8181139084239053,
+        "standardError": 0.3525600107466123,
+        "ci95": [
+          0.13916699445837466,
+          1.5035525893721458
+        ],
+        "ci998": [
+          -0.3176217630311071,
+          1.8868892726471653
+        ]
+      },
+      "netCorrelation": null,
+      "calibrationSlope": null,
+      "netSDRatio": null,
+      "residualSD": null,
+      "winMAE": {
+        "estimate": -0.25299536281061386,
+        "standardError": 0.47061252807913034,
+        "ci95": [
+          -1.1427847233619435,
+          0.7057410247354463
+        ],
+        "ci998": [
+          -1.633869602477886,
+          1.2170359149728318
+        ]
+      },
+      "winRMSE": {
+        "estimate": -0.21767545530050114,
+        "standardError": 0.4964742321606525,
+        "ci95": [
+          -1.1595167412578853,
+          0.7896366551369711
+        ],
+        "ci998": [
+          -1.696680070349493,
+          1.3148608405180244
+        ]
+      },
+      "efficiencyBias": null,
+      "oracleRMSE": null,
+      "verdict": {
+        "answer": "不成立",
+        "tradeoff": false,
+        "widths": {
+          "netRMSE": 1.364385594913771,
+          "winMAE": 1.8485257480973898
+        }
+      }
+    },
+    "e": {
+      "netRMSE": {
+        "estimate": 0.7915080623111992,
+        "standardError": 0.3566256460141542,
+        "ci95": [
+          0.09925951660612586,
+          1.4855322876132786
+        ],
+        "ci998": [
+          -0.3305360195266305,
+          1.889282062735821
+        ]
+      },
+      "netCorrelation": null,
+      "calibrationSlope": null,
+      "netSDRatio": null,
+      "residualSD": null,
+      "winMAE": {
+        "estimate": -0.331328696143947,
+        "standardError": 0.47794138613495735,
+        "ci95": [
+          -1.2335987776815003,
+          0.6473986649618881
+        ],
+        "ci998": [
+          -1.733869097161314,
+          1.1657577106033337
+        ]
+      },
+      "winRMSE": {
+        "estimate": -0.28436126230386627,
+        "standardError": 0.49219703912007834,
+        "ci95": [
+          -1.2042633146631028,
+          0.7209706451975508
+        ],
+        "ci998": [
+          -1.7207628543356996,
+          1.2553330319096023
+        ]
+      },
+      "efficiencyBias": null,
+      "oracleRMSE": null,
+      "verdict": {
+        "answer": "不成立",
+        "tradeoff": false,
+        "widths": {
+          "netRMSE": 1.3862727710071527,
+          "winMAE": 1.8809974426433884
+        }
+      }
+    },
+    "f": {
+      "netRMSE": {
+        "estimate": -0.9766656503076692,
+        "standardError": 0.16767234084503913,
+        "ci95": [
+          -1.2955452906971692,
+          -0.6422208359234207
+        ],
+        "ci998": [
+          -1.4752206435289965,
+          -0.4332560372148544
+        ]
+      },
+      "netCorrelation": {
+        "estimate": -1.1102230246251565e-16,
+        "standardError": 1.0261328989682137e-16,
+        "ci95": [
+          -2.220446049250313e-16,
+          2.220446049250313e-16
+        ],
+        "ci998": [
+          -3.3306690738754696e-16,
+          3.3306690738754696e-16
+        ]
+      },
+      "calibrationSlope": {
+        "estimate": 0.3301022047906722,
+        "standardError": 0.024625932253635935,
+        "ci95": [
+          0.27558196485034914,
+          0.37192600427873257
+        ],
+        "ci998": [
+          0.22968013709103718,
+          0.39423639312289627
+        ]
+      },
+      "netSDRatio": {
+        "estimate": -0.4674646622473906,
+        "standardError": 0.02583111317850642,
+        "ci95": [
+          -0.5252741001799808,
+          -0.42282549596477337
+        ],
+        "ci998": [
+          -0.5753862872317081,
+          -0.3963934738159288
+        ]
+      },
+      "residualSD": null,
+      "winMAE": null,
+      "winRMSE": null,
+      "efficiencyBias": null,
+      "oracleRMSE": {
+        "estimate": 4.440892098500626e-16,
+        "standardError": 6.365437840641757e-16,
+        "ci95": [
+          -1.3322676295501878e-15,
+          1.3322676295501878e-15
+        ],
+        "ci998": [
+          -2.220446049250313e-15,
+          2.220446049250313e-15
+        ]
+      },
+      "verdict": {
+        "answer": "成立",
+        "tradeoff": false,
+        "widths": {
+          "netRMSE": 0.6533244547737485
+        }
+      }
+    },
+    "g": {
+      "netRMSE": {
+        "estimate": -0.4454072621980396,
+        "standardError": 0.12680002412355695,
+        "ci95": [
+          -0.6777313112209846,
+          -0.18616821090149083
+        ],
+        "ci998": [
+          -0.8091470760032236,
+          -0.03614910056042486
+        ]
+      },
+      "netCorrelation": {
+        "estimate": -2.220446049250313e-16,
+        "standardError": 1.028258465586018e-16,
+        "ci95": [
+          -2.220446049250313e-16,
+          2.220446049250313e-16
+        ],
+        "ci998": [
+          -3.3306690738754696e-16,
+          3.3306690738754696e-16
+        ]
+      },
+      "calibrationSlope": {
+        "estimate": 0.323562893790484,
+        "standardError": 0.025406781980800704,
+        "ci95": [
+          0.268487387788389,
+          0.3680942170289949
+        ],
+        "ci998": [
+          0.22707066680658688,
+          0.39446290072562484
+        ]
+      },
+      "netSDRatio": {
+        "estimate": -0.34287704092771587,
+        "standardError": 0.01681216680785466,
+        "ci95": [
+          -0.37734900173438424,
+          -0.3118791985557765
+        ],
+        "ci998": [
+          -0.403001012749469,
+          -0.29396645615979244
+        ]
+      },
+      "residualSD": null,
+      "winMAE": null,
+      "winRMSE": null,
+      "efficiencyBias": null,
+      "oracleRMSE": {
+        "estimate": 8.881784197001252e-16,
+        "standardError": 6.11194569948507e-16,
+        "ci95": [
+          -1.3322676295501878e-15,
+          1.3322676295501878e-15
+        ],
+        "ci998": [
+          -1.7763568394002505e-15,
+          2.220446049250313e-15
+        ]
+      },
+      "verdict": {
+        "answer": "成立",
+        "tradeoff": false,
+        "widths": {
+          "netRMSE": 0.4915631003194938
+        }
+      }
+    },
+    "h": {
+      "netRMSE": {
+        "estimate": -0.0329937520837551,
+        "standardError": 0.24943937127766927,
+        "ci95": [
+          -0.5193897240931218,
+          0.4569035893565787
+        ],
+        "ci998": [
+          -0.8216698352287715,
+          0.7290604574078361
+        ]
+      },
+      "netCorrelation": null,
+      "calibrationSlope": null,
+      "netSDRatio": null,
+      "residualSD": null,
+      "winMAE": null,
+      "winRMSE": null,
+      "efficiencyBias": null,
+      "oracleRMSE": null,
+      "verdict": {
+        "answer": "分不出",
+        "tradeoff": false,
+        "widths": {
+          "netRMSE": 0.9762933134497005
+        }
+      }
+    }
+  },
+  "bootstrap": {
+    "B": 20000,
+    "rngSeed": 20261082
+  },
+  "inputHashes": {
+    "prereg": "a355f424cde6d143d901e8aa6e6dad62661fd8c5d3b0dae0359be7d4bc4d7017",
+    "code": "1ef1a4b2887a001dd0e05bafc922dc62bd04a587c5ddd7dfc1f1814f52ec079a",
+    "loader": "ef7768d13b7a87fb18641c8f77cf65d0b84368750b53920bda7b326be397136b",
+    "assessmentCode": "81e99807fde2a0a61cfe1e31c9c98df5f2325914c6d1fcf5188e2e89e1b247ae",
+    "truth": {
+      "reports/defense-seventh/2024-25/calendar-25/config.json": "d9929df70bd7017302d46e345a26e7f39bc5bbcb6a3f50039a1db114d8db0e2a",
+      "data/defense-seventh/2024-25/league.json": "f88e88d81e13d9949a2540b72f448460f50dabf1118ca3e4fdc9404b6b53e677",
+      "data/defense-seventh/2024-25/team-games.json": "b4da45c024c655c64db220568813922ca1e6d37fbc23650ad7ed43f352b1e470",
+      "reports/defense-seventh/2024-25/stints/real-games.jsonl": "277bc1c04ed426fce54f159aa06d42a23b22765b04552135f7a80c6b2fb939b0",
+      "reports/defense-seventh/2025-26/calendar-25/config.json": "fc618e6c54dd39a323ce0182efebc512d806fb9e86e4a578d29986400ddf4108",
+      "data/season-league.json": "497725ecb6a2ec181aeb3cf93263f53a81bdfed772a2c4c733ba3a2d65a79bf6",
+      "data/season-source/team-games.json": "d5cb1a6dbd26a0ed71b24e7e18fcbc862afdf6d8bd8ea3814c5dadbf1989fb8a",
+      "reports/defense-b1/real-games.jsonl": "b9451a56eeb3f7714e10d49abbd5f9846723ceb6551c5f04e179bcf04904fc26",
+      "reports/defense-seventh/2023-24/calendar-25/config.json": "63deb93216418cb34d2ec1188ab95acb62d04526e56090cae89f8f7a0d191ae4",
+      "data/defense-seventh/2023-24/league.json": "38bc80c55e074dc81dfb9b6fd2e6d9fdb3812d453ed001d2a78dd7407d2707ab",
+      "data/defense-seventh/2023-24/team-games.json": "befe8941b51e8c2f440df88e2aea79aab63826d389ec258d5fe8e209967586c5",
+      "reports/defense-seventh/2023-24/stints/real-games.jsonl": "355f889e82eb2e32da2853b3967ef4dd257f03b1ac0116991323bcde7185d4bf",
+      "reports/defense-seventh/2022-23/calendar-25/config.json": "33f837e181dfc9a72bd5d11fab659334e5daf6a3557118b458e388878b1a82e8",
+      "data/defense-seventh/2022-23/league.json": "dacf9a80104245e7c09556b3e371bf6fdbfa7f35b374163619c262c14e17a9c5",
+      "data/defense-seventh/2022-23/team-games.json": "732bbf1991c0ce13e3b70db5f2d7769dd66d5d05d4fabef6306963cff066e020",
+      "reports/defense-seventh/2022-23/stints/real-games.jsonl": "bc106d8439dc2068bae25f2ec861106f01d0ec86150188817ce2ffd746869f85"
+    },
+    "manifests": {
+      "reports/defense-seventh/2024-25-eighth-a-calendar-25-v1-seeds.json": "a629e6239f6b4d57092bcd4759d5cfca3efefbae243a3c30bc2975fd6530a7ab",
+      "reports/defense-seventh/2024-25-eighth-a-calendar-25-v3-signals-off-seeds.json": "442799c102ac42c1f8cef46113690f00cce6dd92d8884ef2e90970d52f387314",
+      "reports/defense-seventh/2024-25-calendar-25-v3-seeds.json": "3ca77142c089c3b3b3a30bff30e129edd29f56dfc856a3bfacfa5c43afcbb464",
+      "reports/defense-seventh/2024-25-calendar-25-v4-seeds.json": "b92191b75abe4f94b6a5322cee796959aa7c3c6c2be1c7e0cef4a99a30286b71",
+      "reports/defense-seventh/2024-25-eighth-b-calendar-25-c0p500000-seeds.json": "7444ea125fa1979d79eeec419d3fbd61a76aecd533501315d14930cb7545e3b9",
+      "reports/defense-seventh/2025-26-eighth-c-calendar-25-v1-seeds.json": "ea2489d4bdb97f532e0b51f6ff358f895ade1555ad2b2b66196f3b56b5610812",
+      "reports/defense-seventh/2025-26-eighth-c-calendar-25-v3-signals-off-seeds.json": "a36480042e04a3423eec464529f59768754df42671c88bf2c10ceaeee7308fa6",
+      "reports/defense-seventh/2025-26-calendar-25-v3-seeds.json": "13c4505eb28f3cc2a116c2ff28f941d2781b438e905c270400f8d381c1c0c24d",
+      "reports/defense-seventh/2025-26-calendar-25-v4-seeds.json": "a8c2468805931db44a886f59fe0da033867cd6e346887e22c9e18c52c8b2200a",
+      "reports/defense-seventh/2025-26-eighth-b-calendar-25-c0p500000-seeds.json": "ca6c9ecf588f6b020d3a0898fee78aaf1d59dceacd4091249eeb4f245e37967b",
+      "reports/defense-seventh/2023-24-eighth-c-calendar-25-v1-seeds.json": "a3322624f279f3e6e572c0dfaabeb70bc6acd1ff01c6b1b9bbd27064bc73dccb",
+      "reports/defense-seventh/2023-24-eighth-c-calendar-25-v3-signals-off-seeds.json": "ab8bf23cc54babac9fbc027a7e9d99c9d64ea5d3bd60129533a360ee18085fe8",
+      "reports/defense-seventh/2023-24-calendar-25-v3-seeds.json": "301df8de9dda99f88a10672c9c641c1a46c6c9c04d2b941c664c982dd13b0f17",
+      "reports/defense-seventh/2023-24-calendar-25-v4-seeds.json": "5977575f7abc1bef73d510215f8bd59332433e6a75b6fb66df73bc42f75c04a1",
+      "reports/defense-seventh/2023-24-eighth-c-calendar-25-v5-seeds.json": "759c1d0928527742e36ae90c6ea00c2109d566c32bab3eb73e5085cf7208acb8",
+      "reports/defense-seventh/2022-23-eighth-c-calendar-25-v1-seeds.json": "9455e52eb934fe738caa98d27e3b180d40cb0a1fca463052baf380309bdf4b5d",
+      "reports/defense-seventh/2022-23-eighth-c-calendar-25-v3-signals-off-seeds.json": "bf58648988d4d63aac25fe3761c1a5c3340ffeef734a39379655558ac9b299cc",
+      "reports/defense-seventh/2022-23-calendar-25-v3-seeds.json": "5be08d0d705b39a6ac86c9dd1398dda31b6317d3c86c87f39f5418d00e3461bf",
+      "reports/defense-seventh/2022-23-calendar-25-v4-seeds.json": "5efab678107533584e85740665e2fb6dd57b5a44a8124557660cbd7e1c7ce71d",
+      "reports/defense-seventh/2022-23-eighth-c-calendar-25-v5-seeds.json": "db7c0ba2c9f82bce3c8c1c5699bfbc85ccef4d6c95a76080ce8b6eb0d1a90c64"
+    }
+  }
+}

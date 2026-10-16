@@ -1,0 +1,11 @@
+{
+  "candidateImplemented": false,
+  "simulationRun": false,
+  "baselineChanged": false,
+  "reason": "registered necessary timing guard failed: only16.42% of eligible observed postOREB clock losses compatible with >=13sec elapsed; cannot use all0.73% as fresh14sec violation target",
+  "previousInterpretationCorrected": "engine lacks independent post-reset clock sampling, but prior overall clock loss incidence does not identify this missing fresh14 process",
+  "noNewConstants": true,
+  "noCardOrEngineChanges": true,
+  "nextProposal": "reconstruct rim-contact/reset/remaining-shot-clock states with explicit unknowns before calibrating a hazard; do not infer all blocks as no-rim or all rebounds as fresh14 resets",
+  "protocolSHA": "898b802487f00553727185721676a340c285d56fc37d46bf84bc26e20ff9aada"
+}

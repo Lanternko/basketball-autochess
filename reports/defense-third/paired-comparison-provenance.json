@@ -1,0 +1,40 @@
+{
+  "seeds": [
+    20261012,
+    20261013,
+    20261014,
+    20261015,
+    20261016,
+    20261017,
+    20261018,
+    20261019,
+    20261020,
+    20261021,
+    20261022,
+    20261023,
+    20261024,
+    20261025,
+    20261026,
+    20261027,
+    20261028,
+    20261029,
+    20261030,
+    20261031
+  ],
+  "repetitions": 2000,
+  "bootstrapSeed": 20261101,
+  "sources": {
+    "reports/defense-a/v1-seeds.json": "9b053559c8083e7e4d4421249396efb3589a899caebb034c8f84ca7a8f0502ac",
+    "reports/defense-third/accounting-seeds.json": "e39293ffb1e6c1b4d12d9222633e34b973bb137b1f6dd7215214e1fff27d7b34",
+    "reports/defense-third/independent-seeds.json": "dec3a2bcfaed582de64276526f4d9b239859f496462e2e7a824b31e966626b14",
+    "reports/defense-third/empirical-seeds.json": "e153d9f73bbab30c5de74a78292c008ea27912226b3e0c00f778ef9c5cc2aa9b",
+    "reports/defense-third/fouls-seeds.json": "a1645ca72d1b795146fc1a136402229fb650e9a6335c27f66b151acffa5d5a21",
+    "reports/defense-third/combined-seeds.json": "f03ed1584f43476c0d557d842689a46a7fc86c8a6a0159db075146ceb3bbdee5",
+    "reports/defense-third/combined-grid-seeds.json": "5e7cfc793be55ca2c70675a7575af490d178890584ef436d82c3ca4fe3cc1cac",
+    "reports/defense-third/season-minutes-seeds.json": "11101696f26dcf19b8bd545e6368cfcc83048db5f70929bde066800cf1b54907",
+    "data/season-league.json": "497725ecb6a2ec181aeb3cf93263f53a81bdfed772a2c4c733ba3a2d65a79bf6",
+    "data/benchmark-source/teams.json": "cc6e6b95667fa6be0a0ed71b8f26c1f25c78dc5e12d03cbffaf2d688ee7eb613",
+    "data/diagnostic-source/opponents.json": "8696e4f4b729204c353a676d7c8145d97e8019660c1ab00da691f647f9f58eab"
+  },
+  "code": "9dc9361fbfbb09b53db1e58fa1d85c4428290bb3f55e12a6cbb2e94db7aa233b"
+}

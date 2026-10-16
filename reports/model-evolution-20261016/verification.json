@@ -1,0 +1,319 @@
+{
+  "passed": true,
+  "season": "2025-26",
+  "versions": [
+    14,
+    17,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    28,
+    30,
+    31,
+    34,
+    35,
+    36,
+    37,
+    39,
+    41
+  ],
+  "teamScoreboardChecks": [
+    {
+      "version": 14,
+      "metric": "winsMAE",
+      "difference": 0.0
+    },
+    {
+      "version": 14,
+      "metric": "netRMSE",
+      "difference": 4.884981308350689e-15
+    },
+    {
+      "version": 17,
+      "metric": "winsMAE",
+      "difference": 1.7763568394002505e-15
+    },
+    {
+      "version": 17,
+      "metric": "netRMSE",
+      "difference": 1.3322676295501878e-15
+    },
+    {
+      "version": 19,
+      "metric": "winsMAE",
+      "difference": 8.881784197001252e-16
+    },
+    {
+      "version": 19,
+      "metric": "netRMSE",
+      "difference": 6.217248937900877e-15
+    },
+    {
+      "version": 20,
+      "metric": "winsMAE",
+      "difference": 0.0
+    },
+    {
+      "version": 20,
+      "metric": "netRMSE",
+      "difference": 4.440892098500626e-16
+    },
+    {
+      "version": 21,
+      "metric": "winsMAE",
+      "difference": 1.7763568394002505e-15
+    },
+    {
+      "version": 21,
+      "metric": "netRMSE",
+      "difference": 3.552713678800501e-15
+    },
+    {
+      "version": 22,
+      "metric": "winsMAE",
+      "difference": 0.0
+    },
+    {
+      "version": 22,
+      "metric": "netRMSE",
+      "difference": 3.9968028886505635e-15
+    },
+    {
+      "version": 23,
+      "metric": "winsMAE",
+      "difference": 0.0
+    },
+    {
+      "version": 23,
+      "metric": "netRMSE",
+      "difference": 8.881784197001252e-16
+    },
+    {
+      "version": 24,
+      "metric": "winsMAE",
+      "difference": 0.0
+    },
+    {
+      "version": 24,
+      "metric": "netRMSE",
+      "difference": 8.881784197001252e-16
+    },
+    {
+      "version": 25,
+      "metric": "winsMAE",
+      "difference": 0.0
+    },
+    {
+      "version": 25,
+      "metric": "netRMSE",
+      "difference": 4.884981308350689e-15
+    },
+    {
+      "version": 26,
+      "metric": "winsMAE",
+      "difference": 0.0
+    },
+    {
+      "version": 26,
+      "metric": "netRMSE",
+      "difference": 2.220446049250313e-15
+    },
+    {
+      "version": 28,
+      "metric": "winsMAE",
+      "difference": 2.6645352591003757e-15
+    },
+    {
+      "version": 28,
+      "metric": "netRMSE",
+      "difference": 4.440892098500626e-16
+    },
+    {
+      "version": 30,
+      "metric": "winsMAE",
+      "difference": 0.0
+    },
+    {
+      "version": 30,
+      "metric": "netRMSE",
+      "difference": 1.3322676295501878e-15
+    },
+    {
+      "version": 31,
+      "metric": "winsMAE",
+      "difference": 8.881784197001252e-16
+    },
+    {
+      "version": 31,
+      "metric": "netRMSE",
+      "difference": 2.220446049250313e-15
+    },
+    {
+      "version": 34,
+      "metric": "winsMAE",
+      "difference": 1.7763568394002505e-15
+    },
+    {
+      "version": 34,
+      "metric": "netRMSE",
+      "difference": 3.552713678800501e-15
+    },
+    {
+      "version": 35,
+      "metric": "winsMAE",
+      "difference": 8.881784197001252e-16
+    },
+    {
+      "version": 35,
+      "metric": "netRMSE",
+      "difference": 8.881784197001252e-16
+    },
+    {
+      "version": 36,
+      "metric": "winsMAE",
+      "difference": 8.881784197001252e-16
+    },
+    {
+      "version": 36,
+      "metric": "netRMSE",
+      "difference": 4.440892098500626e-16
+    },
+    {
+      "version": 37,
+      "metric": "winsMAE",
+      "difference": 0.0
+    },
+    {
+      "version": 37,
+      "metric": "netRMSE",
+      "difference": 0.0
+    },
+    {
+      "version": 39,
+      "metric": "winsMAE",
+      "difference": 0.0
+    },
+    {
+      "version": 39,
+      "metric": "netRMSE",
+      "difference": 1.3322676295501878e-15
+    },
+    {
+      "version": 41,
+      "metric": "winsMAE",
+      "difference": 0.0
+    },
+    {
+      "version": 41,
+      "metric": "netRMSE",
+      "difference": 4.440892098500626e-16
+    }
+  ],
+  "sourceSHA256": {
+    "reports/model-evolution-20261016/media-ranks.json": "cca3c7e91c4828b67fcf0139fbde16f5a84f7225e841bcb0ef907f4b204bc69d",
+    "reports/player-impact-v13/all-2025-26/ranking.json": "9ae1f0bf6d66f2b1ee3e1ccad22cbce5d62fda2a977381bef8b140d96f5afc00",
+    "reports/player-impact-v14/all-2025-26/ranking.json": "2920d0991223994543babd33e2d8426783b04d27427a965eb82be9ece6b4ba33",
+    "reports/player-impact-v24/all-2025-26/ranking.json": "82aec87128499b71299e793ed5d2e53268e6d11142467db376b21447fa2be4ed",
+    "reports/player-impact-v14/scores.json": "0693c610fc6711dd1e59d1c08efeb07be707fbb2194a6ce17fa6efbc8634a0d8",
+    "reports/player-impact-v17/scores.json": "dd1b18fecb6cd063d8db86555322b9c65937bb9dc4611f6105115ada6e5bbc25",
+    "reports/player-impact-v19/scores.json": "2df489f004bed5a348226db166083aa85b542537422a2b235f05c434d5960bed",
+    "reports/player-impact-v20/scores.json": "b41a44e1f7079acdc64a9f7b17b387855691ad2d6ae469238bcdaca227ecee23",
+    "reports/player-impact-v21/scores.json": "6af4ac39d15b18a8d06c73a571589739fff7012333afb6470ed68a1887102be7",
+    "reports/player-impact-v22/scores.json": "6809261a81ab51054cc55b2b6002f86da0799a1e581ccdf40cc2645f42f3f02c",
+    "reports/player-impact-v23/scores.json": "bc7885685f6ab24d798e6fa54ca760fb65907f202b97d4124281f018e9545398",
+    "reports/player-impact-v24/scores.json": "08a3723921b993a29125d6c3bec5881741de7915ea53b153eb533c34344cb2b8",
+    "reports/player-impact-v25/scores.json": "89ec362861b6cad6a4b15ef8e4f7abd0a093dcc98b0f3954541681132066a107",
+    "reports/player-impact-v26/scores.json": "76df756fad36a375bc1cfc686a557c7be4009f2a40d60eb0139f399a0b14ce7e",
+    "reports/player-impact-v28/scores.json": "e9a9968cd7642d12cf5b9ea05dd556cb7ebf47e13de34e683f83f56e0abcfc5a",
+    "reports/player-impact-v30/scores.json": "049e2c4d36277cb8c3c26b0edc1cefd28304949a77a6f7f47f442e3c799c8bc3",
+    "reports/player-impact-v31/scores.json": "0dfafdfee8dfc0dcc1a049d34b75ebe75b12d85c93c9ccce1a16ff62e0da1a92",
+    "reports/player-impact-v34/scores.json": "9835105acc0282cef327c47c55d97ba460befa904197bb1ed817c1f9fc91d15f",
+    "reports/player-impact-v35/scores.json": "030bbcca637d8be511dda517cbe78452edfd6a58c79bf8e84974427e397df084",
+    "reports/player-impact-v36/scores.json": "c15881d490e9d2927b6a7b59b12524f62b22396e83262f4943a3fe37af727ed3",
+    "reports/player-impact-v37/scores.json": "8a40fb4ea34b69dc10844b17d6d240dfbe0dbdb2b190b2f4b1d9e4f1f62b1b11",
+    "reports/player-impact-v39/scores.json": "0e057cc4ed3f738a74792b3f867d7db202850ef0e5125e2d9f8475cfc2563b0b",
+    "reports/player-impact-v41/scores.json": "22a289345ab1f144474ac3266fd0bb681e52348d517742643ca57e841adbac5e",
+    "reports/player-impact-diagnostics/team-error-v39/audit.json": "3ce62758b7ae841ed87fcc0af7e02aa65173118d4a6a06d1ee7c21f14a50ed0d",
+    "reports/player-impact-v14/validation-manifest.json": "69356842382bdf650451168740599d64aaf76dd23b7d1a5182278ebfe673e656",
+    "reports/player-impact-v14/runs/2025-26-rotation-space-full-20261012.json": "be315400abcc7f005e034e36e724e1812c65bd6ea404a14e5397ff124461a27c",
+    "reports/player-impact-v14/runs/2025-26-rotation-space-full-20261013.json": "fcdd8d6fc81da053019a4ecc2d312e6d57647a0981761afe265cfee42a7a5230",
+    "reports/player-impact-v14/runs/2025-26-rotation-space-full-20261014.json": "7269af9c2661b82f80dc4dd74df97b9db046c39cf5fcabceca9152a432c8b954",
+    "reports/player-impact-v17/validation-manifest.json": "8ca93e5da317377e59c8fc6225fcf98b3d9ba0a25672b8354620859f15c63045",
+    "reports/player-impact-v17/runs/2025-26-rotation-space-full-20261012.json": "2297ab2404538c37b1154c046fd1b49d121ac023f10c3bff49c09926287c0817",
+    "reports/player-impact-v17/runs/2025-26-rotation-space-full-20261013.json": "2c36f467ba5c0fb8872ef7287446ad736e49cd7b3cecbfa649bb0e555c13236f",
+    "reports/player-impact-v17/runs/2025-26-rotation-space-full-20261014.json": "06f6eb96b634fe254932d2c30c4b5a2d8c0cb8845773248c6c8d89c4eedf9f1e",
+    "reports/player-impact-v19/validation-manifest.json": "93812c9bc5cba249e12f1ccff188c28da7cf4ca6b5e0955e4f3d8b77a581b40d",
+    "reports/player-impact-v19/runs/2025-26-rotation-space-full-20261012.json": "caf4187fe81f4a853f32495b755d9970a67f2204deb257e9c296a553beb254b9",
+    "reports/player-impact-v19/runs/2025-26-rotation-space-full-20261013.json": "5a6893cb2e71c203139d61c619f500050b693b24235a7f891f52a8e33305ca01",
+    "reports/player-impact-v19/runs/2025-26-rotation-space-full-20261014.json": "404bbfebdc1c9d4f2921aa0a6882acc2d68707c4226425f987eb49fdbcc3737b",
+    "reports/player-impact-v20/validation-manifest.json": "cf272aefd6e1ee6d17887ff31e5f17ce6590a24bd30993e6386d00f1daba5d3a",
+    "reports/player-impact-v20/runs/2025-26-rotation-space-full-20261012.json": "10ef44572eb99cb9d0027ff72be1c9a3338853244e3fd412d82a5a2316f80659",
+    "reports/player-impact-v20/runs/2025-26-rotation-space-full-20261013.json": "cf21a679f08c8a22e73809cf36d77d2524117cdfc519ffe9d7508676ab381ff3",
+    "reports/player-impact-v20/runs/2025-26-rotation-space-full-20261014.json": "dc6602714a7670231cf49495010d4c9095d3d662de7893a8e34d32b523872a7f",
+    "reports/player-impact-v21/validation-manifest.json": "45d92fbf717c03d3b4bd21e0ce4481e8ca4cba62cec09947e34dc9d36ac36b4b",
+    "reports/player-impact-v21/runs/2025-26-rotation-space-full-20261012.json": "904ec7feb6795a0a757535de176be57f880cc800ab059678ef84494b4ddb2ad3",
+    "reports/player-impact-v21/runs/2025-26-rotation-space-full-20261013.json": "7fe922020143051ad256416608ff54b5a2bcd7cb88d107e4b3d0129ba080ff1a",
+    "reports/player-impact-v21/runs/2025-26-rotation-space-full-20261014.json": "7d46c8d39a2a395d69df32438612d8cee55e62e44aae66fc79453239205a7030",
+    "reports/player-impact-v22/validation-manifest.json": "84d1793ceee56885d534918530bb2a84dc7bc5a195f44890cadc890bbd9acd83",
+    "reports/player-impact-v22/runs/2025-26-rotation-space-full-20261012.json": "83478c7751dcc60f38edc29e7eb8535d4ce2c0fd2a52ddca40c7fd1fe70551c5",
+    "reports/player-impact-v22/runs/2025-26-rotation-space-full-20261013.json": "480a11d5a03328b71d8ed6746d968514c6d7f9e429f881bc144be3bedf9c6036",
+    "reports/player-impact-v22/runs/2025-26-rotation-space-full-20261014.json": "94faa152f537ee2ae3fd0a8847e7441dc77232c683749410db66141c81ce787d",
+    "reports/player-impact-v23/validation-manifest.json": "817dc2e7d36c6d36b2d1e944e31c98906e059e58a126abc4f2ecf59fe17de564",
+    "reports/player-impact-v23/runs/2025-26-rotation-space-full-20261012.json": "0731239463d6786c7d632f1845b9f75f2bd135ce7e4fc63ac382e9f9680f66f2",
+    "reports/player-impact-v23/runs/2025-26-rotation-space-full-20261013.json": "7de22971eff74048eafaf1e259c8a328e55314a42888351bc0a8379d1eba3f70",
+    "reports/player-impact-v23/runs/2025-26-rotation-space-full-20261014.json": "a0df66998411460922b7183090ec3f4a0b4c49d4e8961ae2edbdacf647124570",
+    "reports/player-impact-v24/validation-manifest.json": "fbfaf28efde9491ee62fd16049a1a5c23e90b1fdde05d3e0dacd8173eb8d84c8",
+    "reports/player-impact-v24/runs/2025-26-rotation-space-full-20261012.json": "f39987b8a36f1aafe70a11e29a44d374041dc9d15a0a014f8df107519ea12c55",
+    "reports/player-impact-v24/runs/2025-26-rotation-space-full-20261013.json": "fccc8b5640f8e50d029f44769892898813ab2334fc2f2adafac0ef64ee933273",
+    "reports/player-impact-v24/runs/2025-26-rotation-space-full-20261014.json": "7b25731f040d947e72724da766776e42bfc48391896654fcd15cac9bb10d207b",
+    "reports/player-impact-v25/validation-manifest.json": "835049e016d13b966c18d8aa1b184d05d5647521d4487aab3c35c2eed7069fdf",
+    "reports/player-impact-v25/runs/2025-26-rotation-space-full-20261012.json": "d7d3d4410e4e5b80288d60dce20e1bb393bfc679f16ecfe47144ed04288785dd",
+    "reports/player-impact-v25/runs/2025-26-rotation-space-full-20261013.json": "ea8bfd4143aaf76bccb0e5fced5eb9b19ae811f9ef569934a681073bc7c71ddd",
+    "reports/player-impact-v25/runs/2025-26-rotation-space-full-20261014.json": "9857db94ff87086b62f201a0e693e827d6e82eaa74ea2aa8d260d9dca2775aeb",
+    "reports/player-impact-v26/validation-manifest.json": "f71cd4b11d5b08c42ea29ab4f6ad0ff85ae1a7ae4c05f5e2fbf5eaf90e1f5365",
+    "reports/player-impact-v26/runs/2025-26-rotation-space-full-20261012.json": "3ad44cbd6ca1096bd8c790a529bccc73f141236a82dd9ff07a06207393b6d9fb",
+    "reports/player-impact-v26/runs/2025-26-rotation-space-full-20261013.json": "f24c3c6930e8f9d412b44c1f9c771c5eae90ce39f36112690916903481660135",
+    "reports/player-impact-v26/runs/2025-26-rotation-space-full-20261014.json": "cf84b4c204210211cd348d4d05ad632984ee1dedb25821bc4a32cbd870f1349e",
+    "reports/player-impact-v28/validation-manifest.json": "33895775cf3af6c491d4c009e85a6215b2f353b68e4e5c247e2453de47fb69dd",
+    "reports/player-impact-v28/runs/2025-26-rotation-space-full-20261012.json": "870a41542594ad2ebbbf2e3f64f189b1ebb32a8902936d0dd36a746db20ca22f",
+    "reports/player-impact-v28/runs/2025-26-rotation-space-full-20261013.json": "3465bbc5237af0f4a18ce8f9195c20bf9e9be90155d81e6e71b1864a60449ad9",
+    "reports/player-impact-v28/runs/2025-26-rotation-space-full-20261014.json": "1157532ddefdcd0effca9b4c5e4d78e424c2270561eb50a0bd18edd6df69eacc",
+    "reports/player-impact-v30/validation-manifest.json": "b3d80493d3a235d942bd84a45a06189f4e4bf282f91a2142fc46841c7c2ba72d",
+    "reports/player-impact-v30/runs/2025-26-rotation-space-full-20261012.json": "a5b5a06d3795fb3065f27bbaa2217ade18929039c8c34d9fd1db985154463b75",
+    "reports/player-impact-v30/runs/2025-26-rotation-space-full-20261013.json": "0ed982521e76654abdacfeb3f5f0e36753c19f2db367536c84371653d1a2b43f",
+    "reports/player-impact-v30/runs/2025-26-rotation-space-full-20261014.json": "825f09d9c5190f2f0450b9c5d196b5a68d3d0f6c102caf7a0061083020d31a52",
+    "reports/player-impact-v31/validation-manifest.json": "8553fec212c58f1ec87d4cee8c37e76ee9d8d6c9dfa04d0b1b3446a69b57a2dd",
+    "reports/player-impact-v31/runs/2025-26-rotation-space-full-20261012.json": "ca2a439d32963549091325ef3ec44a0f382810a2520392e3beb81ba056deca0f",
+    "reports/player-impact-v31/runs/2025-26-rotation-space-full-20261013.json": "b4fe18041bbaf9df13223f63d7707a52be4646931727d66c767e062d12104990",
+    "reports/player-impact-v31/runs/2025-26-rotation-space-full-20261014.json": "8b88c22cf7265ae520307c24633f70fbef471117ab1c6ba3465d4b45ce3d6719",
+    "reports/player-impact-v34/validation-manifest.json": "ba1138786fb56b59c0b35e8df965c1197877881fc20b4f8999366e5196ed07b5",
+    "reports/player-impact-v34/runs/2025-26-rotation-space-full-20261012.json": "426815aa57bc3f5f3f546e2e5adad2c3a1bd7f7f1f809b6c892fb0c872d43716",
+    "reports/player-impact-v34/runs/2025-26-rotation-space-full-20261013.json": "e2d57746574cff9641f69c5804bfba06c33ebad6ecc70774db304ae1957fe764",
+    "reports/player-impact-v34/runs/2025-26-rotation-space-full-20261014.json": "8823f78368e767f4e9a55d2140ef785cb6b23be9c68f39d6c9b239056aa097ec",
+    "reports/player-impact-v35/validation-manifest.json": "b64d7d290d8e11148ba07ab41203e014daa5caa70fc9e9aff38234d8e3673e54",
+    "reports/player-impact-v35/runs/2025-26-rotation-space-full-20261012.json": "2aeb1617d6de22aa5fad43f89b829d5b7674e4753b7359d892dff2c2630e5032",
+    "reports/player-impact-v35/runs/2025-26-rotation-space-full-20261013.json": "2e9b5b74c9336313bcab217989d158924a33ed287fea603dbade64b51271aaa2",
+    "reports/player-impact-v35/runs/2025-26-rotation-space-full-20261014.json": "ccd740182e959778a8b341305a410c0742cefd61d8559a4e082b0afbb83206c1",
+    "reports/player-impact-v36/validation-manifest.json": "199bf519ebc0468fd18fb4ede86851c8a95654166fc8a92b73e8ed2ff318a83f",
+    "reports/player-impact-v36/runs/2025-26-rotation-space-full-20261012.json": "dc78fe84b043db9f266c853a1435e710c00ac9ab6101c36b134e3be82c678057",
+    "reports/player-impact-v36/runs/2025-26-rotation-space-full-20261013.json": "d225ee373d507f4cb44d1bb276f60b79c7f4388f654548153ff976343b56b248",
+    "reports/player-impact-v36/runs/2025-26-rotation-space-full-20261014.json": "2fb294a18658c48e5822f8c6c55a276d0b0c19addebde0f21019e7235472b471",
+    "reports/player-impact-v37/validation-manifest.json": "490d4a0d942af155ea25bfc72c079e2c2f6ae386456f923b3f15ebe2df773e15",
+    "reports/player-impact-v37/runs/2025-26-rotation-space-full-20261012.json": "787485079c008717bd1b08fe0dbbbee65d81ad6a12d93f0f738dbdf0565c14b2",
+    "reports/player-impact-v37/runs/2025-26-rotation-space-full-20261013.json": "53fd5abd5792345d551c7f489cb350de2449200848af210c8f9cc78daf6e9ddc",
+    "reports/player-impact-v37/runs/2025-26-rotation-space-full-20261014.json": "780d1767706ced326e956b804d68514170f40dfba265ca8d8093b08947b4efa6",
+    "reports/player-impact-v39/validation-manifest.json": "82152a8be6ff5605272b2acd81f4366eb569699055f6ebb708103735cb09b2fe",
+    "reports/player-impact-v39/runs/2025-26-rotation-space-full-20261012.json": "35de52555ba6a221e3026e069121b9cdccd7032bb6377a7812ee8609f78bad52",
+    "reports/player-impact-v39/runs/2025-26-rotation-space-full-20261013.json": "9543e7c3106f14f94061a33c32b3c896f37da76ee1d53fbd65e2789d05096cea",
+    "reports/player-impact-v39/runs/2025-26-rotation-space-full-20261014.json": "452c2bc7fef2de729c93b1f2cb456897070119caefac68daa6a9ed694e5e9ab0",
+    "reports/player-impact-v41/validation-manifest.json": "73eec9fcc55477fe125e790244abf76cad966796353a1cebe83e634c11bed7db",
+    "reports/player-impact-v41/runs/2025-26-rotation-space-full-20261012.json": "51f35c0bf7a63ec5a62f5232e4f7ff92dc998d25316ded4f72eda979ca94af62",
+    "reports/player-impact-v41/runs/2025-26-rotation-space-full-20261013.json": "03b514b50b1f573ec987e7043bc318ec3f2f66fffb3c38b4873ff9aea700c098",
+    "reports/player-impact-v41/runs/2025-26-rotation-space-full-20261014.json": "f6c6bf24dfb3b3fe90311f445602e32c99d6a27e44541298bc91f8a62a658e63"
+  }
+}

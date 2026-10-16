@@ -1,0 +1,36 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "season": "2022-23",
+      "rosterEntries": 609,
+      "onlyPaintCoefficientsChanged": true,
+      "sourceNeutralContextsPreserved": true,
+      "sourceChoicePreserved": true
+    },
+    {
+      "season": "2023-24",
+      "rosterEntries": 657,
+      "onlyPaintCoefficientsChanged": true,
+      "sourceNeutralContextsPreserved": true,
+      "sourceChoicePreserved": true
+    },
+    {
+      "season": "2024-25",
+      "rosterEntries": 654,
+      "onlyPaintCoefficientsChanged": true,
+      "sourceNeutralContextsPreserved": true,
+      "sourceChoicePreserved": true
+    },
+    {
+      "season": "2025-26",
+      "rosterEntries": 661,
+      "onlyPaintCoefficientsChanged": true,
+      "sourceNeutralContextsPreserved": true,
+      "sourceChoicePreserved": true
+    }
+  ],
+  "smokeGames": 10,
+  "observerBoxParityPassed": true,
+  "fineConservationGames": 3
+}

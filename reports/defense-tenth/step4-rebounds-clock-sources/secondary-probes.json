@@ -1,0 +1,31 @@
+[
+  {
+    "name": "rule-videos",
+    "url": "https://videorulebook.nba.com/rule/other-violations/",
+    "status": 200,
+    "bytes": 217140,
+    "media": []
+  },
+  {
+    "name": "replay",
+    "url": "https://official.nba.com/archive/shot-clock-violation-nets-knicks/",
+    "status": 200,
+    "bytes": 118240,
+    "media": [
+      "https://videos.nba.com/nba/official-replay/media/trigger8_bknnyk_1_030123_approved_1280x720.mp4",
+      "https://videos.nba.com/nba/official-replay/media/trigger8_bknnyk_1_030123_approved_1280x720.mp4",
+      "https://videos.nba.com/nba/official-replay/media/trigger8_bknnyk_1_030123_approved_320x180.mp4",
+      "https://videos.nba.com/nba/official-replay/media/trigger8_bknnyk_1_030123_approved_320x180.mp4",
+      "https://videos.nba.com/nba/official-replay/media/trigger8_bknnyk_1_030123_approved_1280x720.mp4",
+      "https://videos.nba.com/nba/official-replay/media/trigger8_bknnyk_1_030123_approved_320x180.mp4",
+      "https://videos.nba.com/nba/official-replay/media/trigger8_bknnyk_1_030123_approved_1280x720.mp4"
+    ]
+  },
+  {
+    "name": "nba-games-metadata",
+    "url": "https://huggingface.co/datasets/choucsan/NBA_Games/resolve/main/nba_games.jsonl",
+    "status": 200,
+    "bytes": 127119,
+    "media": []
+  }
+]

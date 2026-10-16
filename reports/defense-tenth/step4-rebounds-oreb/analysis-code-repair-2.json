@@ -1,0 +1,7 @@
+{
+  "registeredUTC": "2026-10-14T09:30:26.724578+00:00",
+  "file": "reports/defense-tenth/step4-rebounds-oreb/player-diagnostic.mjs",
+  "beforeSHA": "97297f759aa984c0c877851ff10c5433cad2e9acc4cde56da75f111cbb79c957",
+  "afterSHA": "6b9e749a20fba99ab9cdd2060d16d5fbeb28329c19b1fdebc0ac3b748986c7f3",
+  "reason": "Clone OREB diagnostic retained uppercase DREB box field; replace actual box field only. No player or final scoreboard output has been produced or inspected. No protocol/mechanism/threshold change."
+}

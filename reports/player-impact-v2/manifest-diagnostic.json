@@ -1,0 +1,22 @@
+{
+  "jobs": [
+    {
+      "season": "2025-26",
+      "seed": 20261012,
+      "version": "opportunity-flow",
+      "strict": false,
+      "onCourt": false,
+      "file": "reports/player-impact-v2/runs/2025-26-opportunity-flow-full-20261012.json",
+      "sha256": "5a1d9661173803bb73f9bc1c58d6720959b015179c5667e4e4244d9f137f575c"
+    },
+    {
+      "season": "2025-26",
+      "seed": 20261012,
+      "version": "opportunity-flow",
+      "strict": true,
+      "onCourt": true,
+      "file": "reports/player-impact-v2/runs/2025-26-opportunity-flow-strict-20261012.json",
+      "sha256": "ab0c95c29bc834e7abcad6fe77a345ed013ca07da5480bcfa452815b99ae7356"
+    }
+  ]
+}

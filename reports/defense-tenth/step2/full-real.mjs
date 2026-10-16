@@ -1,0 +1,10 @@
+import fs from 'node:fs';
+import readline from 'node:readline';
+import {read} from '../../../scripts/defense_io.js';
+import {cConfig} from '../../../scripts/defense_eighth_c_data.js';
+const d='reports/defense-tenth/step2',p=read(d+'/protocol.json'),classifications=read(d+'/styles-prepared.json').classification,flags=['noRim','lowSpacing','noCreator'],out=[];
+for(const season of p.seasons){const cells=p.cutoffs.map(k=>{const c=read(cConfig(season,k));return{k,c,known:new Map(classifications.find(x=>x.season===season&&x.k===k).players.map(x=>[x.id,x])),train:new Set(c.trainGames),counts:{}};});
+ for await(const line of readline.createInterface({input:fs.createReadStream(cells[0].c.paths['reports/defense-b1/stints.jsonl']),crlfDelay:Infinity})){const s=JSON.parse(line);for(const c of cells){if(!c.train.has(s.id))continue;for(let side=0;side<2;side++){const own=s.teams[side],opp=s.teams[1-side];if([...own.players,...opp.players].some(id=>!c.known.has(id)))continue;const labels={noRim:!own.players.some(id=>c.known.get(id).rim),lowSpacing:own.players.filter(id=>c.known.get(id).shooter).length<2,noCreator:!own.players.some(id=>c.known.get(id).creator)},team=c.counts[own.teamId]??={all:[0,0,0,0,0],...Object.fromEntries(flags.map(f=>[f,[0,0,0,0,0]]))};for(const f of ['all',...flags.filter(f=>labels[f])]){const a=team[f];a[0]+=opp.opponent.points;a[1]+=opp.defensivePossessions;a[2]+=own.opponent.points;a[3]+=own.defensivePossessions;a[4]++;}}}}
+ for(const c of cells){const groups=Object.fromEntries(flags.map(f=>{const t=[0,0,0,0,0,0,0];for(const team of Object.values(c.counts)){const a=team[f],b=team.all;for(let i=0;i<5;i++)t[i]+=a[i];t[5]+=a[1]*100*b[0]/b[1];t[6]+=a[3]*100*b[2]/b[3];}return[f,{realOff:(100*t[0]-t[5])/t[1],realDef:(100*t[2]-t[6])/t[3],offPoss:t[1],defPoss:t[3],rows:t[4]}];}));out.push({season,k:c.k,groups,teamCounts:c.counts});}console.log('FULL REAL',season);
+}
+fs.writeFileSync(d+'/styles-full-real.json',JSON.stringify({label:'全量嚴格截止前區段，登記分類不變；純觀測關聯',cells:out},null,2)+'\n');

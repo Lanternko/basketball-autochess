@@ -1,0 +1,182 @@
+{
+  "at": "2026-10-14T09:06:12.404149+00:00",
+  "pass": true,
+  "protocolSHA256": "70f9cd6df97ad1e041eaf17a31bb153082d477ec033e8620efbd069074662968",
+  "checks": [
+    {
+      "name": "Protocol SHA unchanged",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Registration code unchanged",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Manifest intact",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Initial analysis source preserved",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Repair analysis source intact",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Initial gate outputs preserved",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Registration/code/repair precede final result",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Initial failure limited to date formatting",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "All frozen input hashes unchanged",
+      "pass": true,
+      "detail": {
+        "n": 22,
+        "changed": []
+      }
+    },
+    {
+      "name": "Protected code and prior reports unchanged",
+      "pass": true,
+      "detail": {
+        "n": 4141,
+        "changed": []
+      }
+    },
+    {
+      "name": "No files added outside this batch in protected scopes",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "All eight requested acquisitions completed",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Fetch code unchanged from before acquisition",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Raw hashes/date windows/time after registration",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "All four seasons pass declared data gate",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Every player half-count sum reconciles exactly",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Registered median calendar dates recompute",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "Prefix profiles contain only corresponding earlier-period counts",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "Saved predictors source-prefix and context deltas exactly match",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "Whitelisted individual features and older train seasons only",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "Saved forecasts and fixed prefix conversion follow protocol",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "All season/pooled/subgroup metrics recompute",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "20k paired draws and valid point/interval arithmetic",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "Decision obeys preregistration",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "No passing candidate or engine adoption",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Geometry inventory remains limited to three sampled games per season",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Geometry sampled files unchanged",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Report present",
+      "pass": true,
+      "detail": null
+    }
+  ],
+  "outputHashes": {
+    "analysis-code-registration.json": "4637b737e86fcd6a6d2ebcb74f700f6db318b97d213e73e7374e499cbfe3a91b",
+    "analysis-code-repair-1.json": "19c00f2dea73741d15e13a7f92ae66e7e70a9868abbc0f52117a824965dd3d9d",
+    "analyze-initial.py": "a9724d558190cfec6fecdad77fc73e445e5511f87d510a3ab0b5a7763aa06cd3",
+    "analyze.py": "09e2397bb7565432cf0de1e42c8f7b7e7e2b4b6a87978abbe675380f32f577bd",
+    "audit.py": "24134f9b8b9084b0bdd42e775ca6edc4bd89c1a06800151275ff7054dde291a9",
+    "cohort-exclusions.json": "86318fd6814956cb3e751c4f556aaf204fffc8a39bc77716d6eb2fc2135d8e9c",
+    "data-audit-initial.json": "cf7e15f9c7c9309f6dcd468d2c945bdc6a5a2ec78cfe36c03919b9133abfcc77",
+    "data-audit.json": "d1f2a5f371c0a5d29cafdd7fee98290275e65fdb18a1dba0f29a730de5ff08c1",
+    "decision-initial.json": "0aa965a7c5535761e9e6172abe41d1e20a60effe1ac8271b623141c8db8bee1a",
+    "decision.json": "977d9249b59160029df53d95e78a8d13f941f3aeebd213765d38dc957908a034",
+    "descriptive.json": "25f9a043e92c693316e7480a18fc12ed1c351a519dc563df8eba78fb70ddd3c8",
+    "fetch-code-registration.json": "d3c81d441dcc053f0fa46e6eafd428fd0ac73ec764a19c502045c75758c6f4b9",
+    "fetch-manifest.json": "1510bbbbd1b88a9197dacc0934d8ed73bc950b59f049a44941535ec2e51c03ee",
+    "fetch.mjs": "70bd13056ba66b7bdf922f7ca7c80704eb321b8fa9aa972a8021142937541cee",
+    "fits.json": "0a82a33400d2ec95f29f3ab6c3d3c4099b318c46db7a26ee590f56abbf1da1c2",
+    "geometry-inventory.json": "cc9e4cb9300bb8a7433e632cbe9ab18bda52c46366c193cfda6056f6b8656db1",
+    "lineup-contexts.json": "bf4b2c886d43512847b6840e4716759337cc239e55aa968111b6ec93fe082270",
+    "predictions.json": "56de86f32c6430084c0fa76dd960804f70584b987fdaf3c62a2e279e702a727e",
+    "prefix-profiles.json": "54a202376f8611f207f5bbbd9421b404081ed354f8b84a5d18c37cd90095e01f",
+    "protocol.json": "70f9cd6df97ad1e041eaf17a31bb153082d477ec033e8620efbd069074662968",
+    "protocol.sha256": "6df11cd7c88e1ab35be8328ca9e3a56ad8bb8899f7ceb75e0d56f0fec7dfab1e",
+    "register.py": "6f38bf5c8c6d24295935eb6fac702bcbda68bebaa8891b84d9e89dc0838d8ae0",
+    "report.md": "8bd2b4dd3cf0b9c490f64b46dad24b379675304161f2628ea6fe325b1336b380",
+    "report.py": "6922344d67a9ea61debe38be252f81fdeab32acb07c8ec914f12025a4196e2e9",
+    "results.json": "e9e57b657ec7e6dc21efc143ed45c767b01da37aafbe402a503473b6948b1fa9",
+    "samples.json": "816b5ccd1fb46ad58475cfa52b0e93a716944e03031dbdc43450e0708f321270"
+  },
+  "limits": "Observed later lineups are oracle conditions. No engine/card changes, simulation seeds, causal identification or train-refit intervals."
+}

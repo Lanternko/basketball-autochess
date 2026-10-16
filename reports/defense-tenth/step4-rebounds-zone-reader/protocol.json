@@ -1,0 +1,43 @@
+{
+  "version": "oreb-zone-reader-1",
+  "registeredUTC": "2026-10-15T01:07:00.275739+00:00",
+  "seasons": [
+    "2022-23",
+    "2023-24",
+    "2024-25",
+    "2025-26"
+  ],
+  "seeds": [
+    20261012,
+    20261013,
+    20261014
+  ],
+  "bootstrapSeed": 20261017,
+  "bootstrapDraws": 20000,
+  "status": "all seasons seen-data; source-quality repair and diagnostic only; no simulation, engine/card changes or accuracy promotion",
+  "definitions": {
+    "routes": [
+      "fg_short",
+      "fg_mid",
+      "fg_long",
+      "fg_unknown",
+      "ft_first",
+      "loss_before_attempt",
+      "period_end",
+      "other"
+    ],
+    "sample": "exact same anchors/possession boundaries/special-FT exclusions as step4-rebounds-paths; retain count and all unzoned fields",
+    "three": "actionType 3pt always long; do not infer from success",
+    "short": "recognized Restricted Area or In The Paint unchanged; for nominal Mid-Range conflicting with near-basket evidence apply rule below",
+    "repair": "only 2pt, original area Mid-Range, layup/dunk/tip/putback action text, numeric shotDistance in [0,4] feet, finite normalized x,y in [0,100], nearest-hoop geometric distance <=4 feet => short",
+    "geometry": "hoop normalized x=5.59 or94.41,y=50; x distance *0.94 ft, y distance *0.50 ft; use nearest hoop; tolerance limit exactly4ft",
+    "uncertain": "nominal Mid-Range plus any near-basket text, distance<=4 or valid geometry<=4, but repair conditions not all met => unknown; never default unknown areas to mid",
+    "mid": "recognized Mid-Range without near-basket conflict stays mid",
+    "unknown": "unrecognized/missing 2pt area or unresolved contradictory evidence; keep separate FG bin, retain points/FGA",
+    "invariants": "same player/game anchors, 2/3-point score, FGM/FGA, FG reached, loss-before-attempt, FT, repeat rebounds and full possession points; compare row projection exactly",
+    "simulation": "reuse existing same-seed frozen step4-rebounds-paths outputs; no RNG or rerun",
+    "comparison": "recompute real zone/quick same-shooter short <=3sec proxy; keep frozen simulation predictions; 20000 franchise+seed paired bootstrap, equal season; no adoption claims",
+    "putbackProxy": "first FG following eligible player FG OREB; same shooter short zone and clock difference<=3 seconds; do not call official putbacks or landing coordinates",
+    "scope": "do not alter raw PBP, card construction, older reports or constants; unresolved labels reported"
+  }
+}

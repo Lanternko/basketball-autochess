@@ -1,0 +1,10 @@
+{
+  "at": "2026-10-14T08:59:31.415615+00:00",
+  "reason": "Normalize echoed MM/DD/YYYY and ISO dates to identical calendar dates. Initial gate failure was formatting only; no fitted outputs existed. Protocol, cutoffs, model and decision rules unchanged.",
+  "sha256": "09e2397bb7565432cf0de1e42c8f7b7e7e2b4b6a87978abbe675380f32f577bd",
+  "initialSHA256": "a9724d558190cfec6fecdad77fc73e445e5511f87d510a3ab0b5a7763aa06cd3",
+  "preserved": {
+    "data-audit-initial.json": "cf7e15f9c7c9309f6dcd468d2c945bdc6a5a2ec78cfe36c03919b9133abfcc77",
+    "decision-initial.json": "0aa965a7c5535761e9e6172abe41d1e20a60effe1ac8271b623141c8db8bee1a"
+  }
+}

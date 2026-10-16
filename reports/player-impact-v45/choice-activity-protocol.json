@@ -1,0 +1,6 @@
+{
+ "timing":"Declared before inspecting target shot-choice results or running any v45 simulation.",
+ "design":"Add one measured-activity candidate per conditional choice branch at sigma=0.05, alongside the original sigma grid without activity. Feature is training-only blocked shots per on-court opponent branch-trial attempt, smoothed by 200 trial attempts and centered at training league rate; same scale and N(0,1) slope prior as make activity.",
+ "branchTrialSets":{"three":["ra","paint","mid","corner","arc"],"paintGivenTwo":["ra","paint","mid"],"raGivenPaint":["ra","paint"],"cornerGivenThree":["corner","arc"]},
+ "selection":"Older-three-season whole-game heldout NLL only; target excluded. No direct fitting to observed on/off or player rank. Training activity and heldout trial outcomes never share games. This is predictive structure, not a causal deterrence estimate."
+}

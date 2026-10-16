@@ -1,0 +1,42 @@
+{
+  "groups": {
+    "reports/player-impact-v25/validation-protocol.json": 5174,
+    "reports/player-box-audit/source-hashes.json": 85,
+    "reports/player-impact-v14/validation-protocol.json": 107,
+    "reports/player-impact-v19/validation-protocol.json": 139,
+    "reports/player-impact-v19/ovr-protocol.json": 144,
+    "reports/player-impact-v20/validation-protocol.json": 154,
+    "reports/player-impact-v20/ovr-protocol.json": 153,
+    "reports/player-impact-v21/validation-protocol.json": 4598,
+    "reports/player-impact-v21/ovr-protocol.json": 1358,
+    "reports/player-impact-v22/validation-protocol.json": 5114,
+    "reports/player-impact-v22/ovr-protocol.json": 4655,
+    "reports/player-impact-v23/validation-protocol.json": 5134,
+    "reports/player-impact-v23/ovr-protocol.json": 5133,
+    "reports/player-impact-v24/validation-protocol.json": 5154
+  },
+  "resultFiles": 24,
+  "games": 28023,
+  "artifacts": {
+    "reports/player-impact-v25/report.md": "c435fa3f18242f9fcc4f3a6ef4f2eca23a7810bfedd5104f15e0411e3e570f75",
+    "reports/player-impact-v25/report.py": "72ed3e1f9f21d1bfcdcba6de1108f3c2737d3f1ea3dba4f479ce1a3c4dd70345",
+    "reports/player-impact-v25/status.json": "7494b4d8b5563a4a28ad9a290826a9ef3466c523f6c83d36390574e711f1c455",
+    "reports/player-impact-v25/2025-26-player-validation.csv": "be2db1d853c281589cd1143dd53d3bbd0cb2b47b7d3b9df023fe8d77110dc7f3",
+    "reports/player-impact-v25/scores.json": "89ec362861b6cad6a4b15ef8e4f7abd0a093dcc98b0f3954541681132066a107",
+    "reports/player-impact-v25/all-players.csv": "8ac2defd39d181c0ae97d9476fa3b01c671f19f0900fa6bdd6fce6f633d5cb23",
+    "reports/player-impact-v25/all-players-on-court.csv": "7938a3bf3763b40191dd95c5ce9b870c491d441bd185535453aa2e958b9f6da4",
+    "reports/player-impact-v25/ledger-verification.json": "ebf23a21f010119e38bb4c7b82de9709b8ea42c1973455b70e24da1b7e975414",
+    "reports/player-impact-v25/counterfactual-verification.json": "2445f3dec7f58a47cd4863e6704173e783b0844c37df38ff9c9ee8df72a21af4",
+    "reports/player-impact-v25/contact-opportunity-audit.json": "0f2bd9b958ce7ab58e46fa154e1138bc458e7f1f0c4d878918b65b94b64fadff",
+    "reports/player-impact-v25/audit-contact-opportunities.mjs": "b16018cea8ed7c4452bfd1d9398bf04438153632c18286ee1f37ab4f53dc30ce",
+    "reports/player-impact-v25/audit-engine.mjs": "f34e9cf0e4213832a767005d565505ead5d79a41010732e547f178f71ca34db5",
+    "reports/player-impact-v25/ovr-input.mjs": "040de5538c8fb67a4b22e8f5efb3736a0925a1ddc48d28eca2b933bc6748c7ff",
+    "reports/player-impact-v25/verify-counterfactual.mjs": "7ffad474c677f4b50a4568c3a9673d52b96ec56eaa03cbc92c8b61d122fa34d2",
+    "reports/player-impact-v25/export-players.py": "f2c284af04a5fd8867b9f726a63412b41634022000327acbcd49da854a307854",
+    "reports/player-impact-v25/validation-score.py": "f3122ad4eff1b3dfc84937ab59824e8f415a011584454e8c8d20183eaa9f5015",
+    "reports/player-impact-v25/verify-ledgers.mjs": "271706daaf0aedd98c63ad56da31a28cc9270e29a9b04761647881da137a825b",
+    "reports/player-impact-v25/verify.mjs": "739919d57692ae35646b424fe9658c000838b18d24f37e644aefba34486503cd",
+    "reports/player-impact-v25/../../test/conditional_contact_recipient.js": "2b1ffb9cdd4decf6b1cfb9ee955b8a1ad50a52bdcc039c55015bbc7fd0b59b70"
+  },
+  "status": "Frozen source/run hashes, 24 season ledgers including FT identities/categories, 96 counterfactual probes and passive contact opportunity audit passed. Experimental; not adopted; no v25 OVR ranking."
+}

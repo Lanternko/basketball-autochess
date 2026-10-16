@@ -1,0 +1,15 @@
+import {collector,realEvent,simEvent} from './collect.mjs';
+import assert from 'node:assert/strict';
+const run=a=>{const c=collector();a.forEach(x=>c.event({period:1,off:0,...x}));c.event({kind:'gameEnd'});return c.finish()[0]};
+assert.equal(run([{kind:'fg',made:false,time:10},{kind:'clock',time:9}]).immediateClock,1);
+assert.equal(run([{kind:'fg',made:false,time:10},{kind:'teamOreb',time:10},{kind:'clock',time:9}]).immediateClock,1);
+const post=run([{kind:'fg',made:false,time:10},{kind:'reb',fgOreb:true,time:10},{kind:'clock',time:9}]);
+assert.equal(post.immediateClock,0);assert.equal(post.postOrebClock,1);
+assert.equal(run([{kind:'fg',made:false,time:10},{kind:'clock',time:7}]).immediateClock,0);
+assert.equal(run([{kind:'fg',made:false,time:10},{kind:'period',time:0},{kind:'clock',time:0}]).immediateClock,0);
+assert.equal(run([{kind:'fg',made:false,time:10},{kind:'clock',time:9,off:1}]).immediateClock,0);
+assert.equal(run([{kind:'reb',fgOreb:true,time:10},{kind:'foul',time:9},{kind:'clock',time:8}]).postOrebClock,0);
+assert.equal(run([{kind:'fg',made:false,time:10},{kind:'ft',time:10},{kind:'clock',time:9}]).immediateClock,0);
+assert.equal(realEvent({actionType:'turnover',subType:'shot clock',clock:'PT01M02.50S',period:2,teamId:1},new Map()).time,62.5);
+assert.equal(simEvent({type:'SHOT_CLOCK',clock:1,period:1,off:0,naturalNoRim:true}).natural,true);
+console.log('11 collector assertions passed');

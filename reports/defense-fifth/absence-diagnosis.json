@@ -1,0 +1,2327 @@
+{
+  "effects": {
+    "offenseError": {
+      "per10pctAbsence": 0.39384342806367545,
+      "gameCluster95": [
+        -0.04186378820960175,
+        0.8295506443369526
+      ],
+      "engineSeed95": [
+        0.30630298086459795,
+        0.4793464817784611
+      ]
+    },
+    "defenseAllowedError": {
+      "per10pctAbsence": -0.2787147749622824,
+      "gameCluster95": [
+        -0.7061620046117076,
+        0.14873245468714275
+      ],
+      "engineSeed95": [
+        -0.3675323315825062,
+        -0.2006265186121885
+      ]
+    },
+    "netError": {
+      "per10pctAbsence": 0.6725582030259579,
+      "gameCluster95": [
+        0.166564919928162,
+        1.1785514861237538
+      ],
+      "engineSeed95": [
+        0.5454516318142785,
+        0.8120264957396061
+      ]
+    }
+  },
+  "buckets": [
+    {
+      "from": 0,
+      "to": 0.1,
+      "teamGames": 373,
+      "meanAbsence": 0.05040710022573093,
+      "offenseError": -0.8339142091152814,
+      "defenseAllowedError": 1.327077747989276
+    },
+    {
+      "from": 0.1,
+      "to": 0.2,
+      "teamGames": 504,
+      "meanAbsence": 0.15221363538766713,
+      "offenseError": 0.5151785714285715,
+      "defenseAllowedError": 0.9957341269841268
+    },
+    {
+      "from": 0.2,
+      "to": 0.3,
+      "teamGames": 605,
+      "meanAbsence": 0.24620882408677125,
+      "offenseError": -0.38446280991735543,
+      "defenseAllowedError": -0.017024793388429677
+    },
+    {
+      "from": 0.3,
+      "to": 0.5,
+      "teamGames": 852,
+      "meanAbsence": 0.38153635696243904,
+      "offenseError": 0.35481220657276996,
+      "defenseAllowedError": -0.6985915492957747
+    },
+    {
+      "from": 0.5,
+      "to": 1.01,
+      "teamGames": 126,
+      "meanAbsence": 0.5807808251698616,
+      "offenseError": -0.7686507936507937,
+      "defenseAllowedError": -3.729365079365079
+    }
+  ],
+  "teams": {
+    "Atlanta Hawks": {
+      "meanAbsence": 0.14087227093162408,
+      "offenseError": -1.2914634146341462,
+      "defenseAllowedError": -1.4286585365853661,
+      "core": [
+        {
+          "player": "Nickeil Alexander-Walker",
+          "GP": 78,
+          "MPG": 33.37405982905983
+        },
+        {
+          "player": "Jalen Johnson",
+          "GP": 72,
+          "MPG": 35.16108796296297
+        },
+        {
+          "player": "Dyson Daniels",
+          "GP": 76,
+          "MPG": 33.15184210526316
+        },
+        {
+          "player": "Onyeka Okongwu",
+          "GP": 74,
+          "MPG": 31.04011261261261
+        },
+        {
+          "player": "Zaccharie Risacher",
+          "GP": 67,
+          "MPG": 22.436616915422885
+        },
+        {
+          "player": "CJ McCollum",
+          "GP": 41,
+          "MPG": 28.819065040650408
+        },
+        {
+          "player": "Mouhamed Gueye",
+          "GP": 77,
+          "MPG": 15.309567099567099
+        },
+        {
+          "player": "Vít Krejčí",
+          "GP": 46,
+          "MPG": 22.344710144927536
+        },
+        {
+          "player": "Luke Kennard",
+          "GP": 46,
+          "MPG": 20.50960144927536
+        },
+        {
+          "player": "Corey Kispert",
+          "GP": 39,
+          "MPG": 18.201153846153847
+        },
+        {
+          "player": "Jock Landale",
+          "GP": 23,
+          "MPG": 19.391739130434782
+        },
+        {
+          "player": "Kristaps Porziņģis",
+          "GP": 17,
+          "MPG": 24.299901960784315
+        },
+        {
+          "player": "Jonathan Kuminga",
+          "GP": 16,
+          "MPG": 22.146770833333335
+        },
+        {
+          "player": "Trae Young",
+          "GP": 10,
+          "MPG": 28.010333333333335
+        }
+      ]
+    },
+    "Boston Celtics": {
+      "meanAbsence": 0.1908698731777785,
+      "offenseError": 2.7378048780487805,
+      "defenseAllowedError": 4.9243902439024385,
+      "core": [
+        {
+          "player": "Derrick White",
+          "GP": 77,
+          "MPG": 34.09034632034632
+        },
+        {
+          "player": "Payton Pritchard",
+          "GP": 79,
+          "MPG": 32.34839662447258
+        },
+        {
+          "player": "Jaylen Brown",
+          "GP": 71,
+          "MPG": 34.406173708920186
+        },
+        {
+          "player": "Sam Hauser",
+          "GP": 78,
+          "MPG": 24.796794871794873
+        },
+        {
+          "player": "Neemias Queta",
+          "GP": 76,
+          "MPG": 25.34482456140351
+        },
+        {
+          "player": "Baylor Scheierman",
+          "GP": 77,
+          "MPG": 18.562380952380952
+        },
+        {
+          "player": "Jordan Walsh",
+          "GP": 68,
+          "MPG": 17.82308823529412
+        },
+        {
+          "player": "Anfernee Simons",
+          "GP": 49,
+          "MPG": 24.526496598639458
+        },
+        {
+          "player": "Luka Garza",
+          "GP": 69,
+          "MPG": 16.20157004830918
+        },
+        {
+          "player": "Josh Minott",
+          "GP": 33,
+          "MPG": 15.928989898989897
+        },
+        {
+          "player": "Jayson Tatum",
+          "GP": 16,
+          "MPG": 32.615625
+        },
+        {
+          "player": "Nikola Vučević",
+          "GP": 16,
+          "MPG": 21.113229166666667
+        }
+      ]
+    },
+    "Cleveland Cavaliers": {
+      "meanAbsence": 0.28730904058226575,
+      "offenseError": -1.5073170731707317,
+      "defenseAllowedError": -0.673170731707317,
+      "core": [
+        {
+          "player": "Donovan Mitchell",
+          "GP": 70,
+          "MPG": 33.45804761904762
+        },
+        {
+          "player": "Evan Mobley",
+          "GP": 65,
+          "MPG": 31.912128205128205
+        },
+        {
+          "player": "Jaylon Tyson",
+          "GP": 66,
+          "MPG": 26.931565656565656
+        },
+        {
+          "player": "Jarrett Allen",
+          "GP": 56,
+          "MPG": 27.127142857142854
+        },
+        {
+          "player": "Sam Merrill",
+          "GP": 52,
+          "MPG": 26.482179487179486
+        },
+        {
+          "player": "Dean Wade",
+          "GP": 59,
+          "MPG": 22.33361581920904
+        },
+        {
+          "player": "Craig Porter Jr.",
+          "GP": 64,
+          "MPG": 17.932213541666666
+        },
+        {
+          "player": "De'Andre Hunter",
+          "GP": 43,
+          "MPG": 26.15124031007752
+        },
+        {
+          "player": "Nae'Qwan Tomlin",
+          "GP": 64,
+          "MPG": 15.681848958333333
+        },
+        {
+          "player": "James Harden",
+          "GP": 26,
+          "MPG": 33.81564102564103
+        },
+        {
+          "player": "Darius Garland",
+          "GP": 26,
+          "MPG": 30.460320512820513
+        },
+        {
+          "player": "Lonzo Ball",
+          "GP": 35,
+          "MPG": 20.792666666666666
+        },
+        {
+          "player": "Keon Ellis",
+          "GP": 29,
+          "MPG": 24.844080459770115
+        },
+        {
+          "player": "Dennis Schröder",
+          "GP": 30,
+          "MPG": 21.354499999999998
+        },
+        {
+          "player": "Max Strus",
+          "GP": 12,
+          "MPG": 24.024583333333336
+        }
+      ]
+    },
+    "New Orleans Pelicans": {
+      "meanAbsence": 0.314473728141658,
+      "offenseError": -2.467073170731708,
+      "defenseAllowedError": -3.1256097560975613,
+      "core": [
+        {
+          "player": "Trey Murphy III",
+          "GP": 66,
+          "MPG": 35.46421717171717
+        },
+        {
+          "player": "Saddiq Bey",
+          "GP": 72,
+          "MPG": 31.188541666666666
+        },
+        {
+          "player": "Jeremiah Fears",
+          "GP": 82,
+          "MPG": 25.75491869918699
+        },
+        {
+          "player": "Derik Queen",
+          "GP": 81,
+          "MPG": 24.98
+        },
+        {
+          "player": "Zion Williamson",
+          "GP": 62,
+          "MPG": 29.69456989247312
+        },
+        {
+          "player": "Herbert Jones",
+          "GP": 56,
+          "MPG": 28.363958333333333
+        },
+        {
+          "player": "Yves Missi",
+          "GP": 66,
+          "MPG": 19.652070707070706
+        },
+        {
+          "player": "Jordan Poole",
+          "GP": 39,
+          "MPG": 23.9291452991453
+        },
+        {
+          "player": "Jose Alvarado",
+          "GP": 41,
+          "MPG": 21.86467479674797
+        },
+        {
+          "player": "Bryce McGowens",
+          "GP": 42,
+          "MPG": 20.95079365079365
+        },
+        {
+          "player": "Dejounte Murray",
+          "GP": 14,
+          "MPG": 27.815476190476193
+        },
+        {
+          "player": "DeAndre Jordan",
+          "GP": 12,
+          "MPG": 16.566666666666666
+        }
+      ]
+    },
+    "Chicago Bulls": {
+      "meanAbsence": 0.2217385886818806,
+      "offenseError": -4.358536585365854,
+      "defenseAllowedError": -4.859756097560975,
+      "core": [
+        {
+          "player": "Matas Buzelis",
+          "GP": 77,
+          "MPG": 29.198030303030304
+        },
+        {
+          "player": "Tre Jones",
+          "GP": 65,
+          "MPG": 26.959589743589742
+        },
+        {
+          "player": "Josh Giddey",
+          "GP": 54,
+          "MPG": 32.06216049382716
+        },
+        {
+          "player": "Isaac Okoro",
+          "GP": 63,
+          "MPG": 26.903015873015875
+        },
+        {
+          "player": "Nikola Vučević",
+          "GP": 48,
+          "MPG": 30.83972222222222
+        },
+        {
+          "player": "Patrick Williams",
+          "GP": 72,
+          "MPG": 20.469166666666666
+        },
+        {
+          "player": "Ayo Dosunmu",
+          "GP": 45,
+          "MPG": 26.382444444444445
+        },
+        {
+          "player": "Jalen Smith",
+          "GP": 53,
+          "MPG": 20.667704402515724
+        },
+        {
+          "player": "Kevin Huerter",
+          "GP": 44,
+          "MPG": 23.567840909090908
+        },
+        {
+          "player": "Coby White",
+          "GP": 29,
+          "MPG": 29.08367816091954
+        },
+        {
+          "player": "Collin Sexton",
+          "GP": 26,
+          "MPG": 25.9875641025641
+        },
+        {
+          "player": "Rob Dillingham",
+          "GP": 30,
+          "MPG": 21.468277777777775
+        },
+        {
+          "player": "Guerschon Yabusele",
+          "GP": 26,
+          "MPG": 24.668717948717948
+        },
+        {
+          "player": "Leonard Miller",
+          "GP": 27,
+          "MPG": 23.10222222222222
+        },
+        {
+          "player": "Nick Richards",
+          "GP": 20,
+          "MPG": 22.358416666666667
+        },
+        {
+          "player": "Zach Collins",
+          "GP": 10,
+          "MPG": 18.37366666666667
+        }
+      ]
+    },
+    "Dallas Mavericks": {
+      "meanAbsence": 0.32038350639448493,
+      "offenseError": -0.15731707317073176,
+      "defenseAllowedError": -4.0530487804878055,
+      "core": [
+        {
+          "player": "Cooper Flagg",
+          "GP": 70,
+          "MPG": 33.483690476190475
+        },
+        {
+          "player": "Max Christie",
+          "GP": 77,
+          "MPG": 29.14909090909091
+        },
+        {
+          "player": "Naji Marshall",
+          "GP": 74,
+          "MPG": 29.509999999999998
+        },
+        {
+          "player": "P.J. Washington",
+          "GP": 56,
+          "MPG": 30.993214285714284
+        },
+        {
+          "player": "Klay Thompson",
+          "GP": 69,
+          "MPG": 21.693188405797102
+        },
+        {
+          "player": "Brandon Williams",
+          "GP": 66,
+          "MPG": 22.161287878787878
+        },
+        {
+          "player": "Daniel Gafford",
+          "GP": 55,
+          "MPG": 21.717060606060606
+        },
+        {
+          "player": "Ryan Nembhard",
+          "GP": 60,
+          "MPG": 19.514666666666667
+        },
+        {
+          "player": "Anthony Davis",
+          "GP": 20,
+          "MPG": 31.2815
+        },
+        {
+          "player": "Khris Middleton",
+          "GP": 29,
+          "MPG": 21.107471264367817
+        },
+        {
+          "player": "D'Angelo Russell",
+          "GP": 26,
+          "MPG": 19.029807692307692
+        },
+        {
+          "player": "Marvin Bagley III",
+          "GP": 22,
+          "MPG": 21.37333333333333
+        },
+        {
+          "player": "John Poulakidas",
+          "GP": 13,
+          "MPG": 19.495
+        }
+      ]
+    },
+    "Denver Nuggets": {
+      "meanAbsence": 0.26352413666150976,
+      "offenseError": 0.7676829268292685,
+      "defenseAllowedError": 0.19207317073170718,
+      "core": [
+        {
+          "player": "Jamal Murray",
+          "GP": 75,
+          "MPG": 35.35855555555556
+        },
+        {
+          "player": "Nikola Jokić",
+          "GP": 65,
+          "MPG": 34.843923076923076
+        },
+        {
+          "player": "Tim Hardaway Jr.",
+          "GP": 80,
+          "MPG": 26.591250000000002
+        },
+        {
+          "player": "Bruce Brown",
+          "GP": 82,
+          "MPG": 24.363272357723577
+        },
+        {
+          "player": "Cameron Johnson",
+          "GP": 54,
+          "MPG": 30.500586419753088
+        },
+        {
+          "player": "Peyton Watson",
+          "GP": 54,
+          "MPG": 29.58811728395062
+        },
+        {
+          "player": "Spencer Jones",
+          "GP": 64,
+          "MPG": 22.13734375
+        },
+        {
+          "player": "Christian Braun",
+          "GP": 44,
+          "MPG": 31.798598484848483
+        },
+        {
+          "player": "Aaron Gordon",
+          "GP": 36,
+          "MPG": 27.91550925925926
+        },
+        {
+          "player": "Julian Strawther",
+          "GP": 57,
+          "MPG": 15.099532163742689
+        },
+        {
+          "player": "Jalen Pickett",
+          "GP": 50,
+          "MPG": 16.1296
+        }
+      ]
+    },
+    "Golden State Warriors": {
+      "meanAbsence": 0.3382559347832754,
+      "offenseError": -1.8689024390243907,
+      "defenseAllowedError": 0.6091463414634143,
+      "core": [
+        {
+          "player": "Brandin Podziemski",
+          "GP": 82,
+          "MPG": 28.447235772357722
+        },
+        {
+          "player": "Draymond Green",
+          "GP": 68,
+          "MPG": 27.483651960784314
+        },
+        {
+          "player": "Moses Moody",
+          "GP": 60,
+          "MPG": 25.66497222222222
+        },
+        {
+          "player": "Gui Santos",
+          "GP": 68,
+          "MPG": 20.520049019607843
+        },
+        {
+          "player": "Will Richard",
+          "GP": 69,
+          "MPG": 19.953695652173913
+        },
+        {
+          "player": "Stephen Curry",
+          "GP": 43,
+          "MPG": 30.90065891472868
+        },
+        {
+          "player": "Pat Spencer",
+          "GP": 66,
+          "MPG": 18.62010101010101
+        },
+        {
+          "player": "Jimmy Butler III",
+          "GP": 38,
+          "MPG": 31.096754385964914
+        },
+        {
+          "player": "Quinten Post",
+          "GP": 67,
+          "MPG": 17.301467661691543
+        },
+        {
+          "player": "Gary Payton II",
+          "GP": 73,
+          "MPG": 15.647671232876712
+        },
+        {
+          "player": "De'Anthony Melton",
+          "GP": 49,
+          "MPG": 22.96442176870748
+        },
+        {
+          "player": "Al Horford",
+          "GP": 45,
+          "MPG": 21.537444444444443
+        },
+        {
+          "player": "Buddy Hield",
+          "GP": 44,
+          "MPG": 17.45655303030303
+        },
+        {
+          "player": "Jonathan Kuminga",
+          "GP": 20,
+          "MPG": 23.807416666666665
+        },
+        {
+          "player": "Kristaps Porziņģis",
+          "GP": 15,
+          "MPG": 23.719555555555555
+        },
+        {
+          "player": "LJ Cryer",
+          "GP": 18,
+          "MPG": 16.23037037037037
+        },
+        {
+          "player": "Nate Williams",
+          "GP": 14,
+          "MPG": 17.083571428571428
+        }
+      ]
+    },
+    "Houston Rockets": {
+      "meanAbsence": 0.16020155781291806,
+      "offenseError": -0.26524390243902446,
+      "defenseAllowedError": 3.529878048780487,
+      "core": [
+        {
+          "player": "Amen Thompson",
+          "GP": 79,
+          "MPG": 37.381645569620254
+        },
+        {
+          "player": "Kevin Durant",
+          "GP": 78,
+          "MPG": 36.40799145299145
+        },
+        {
+          "player": "Jabari Smith Jr.",
+          "GP": 77,
+          "MPG": 35.13461038961039
+        },
+        {
+          "player": "Alperen Sengun",
+          "GP": 72,
+          "MPG": 33.301319444444445
+        },
+        {
+          "player": "Reed Sheppard",
+          "GP": 82,
+          "MPG": 26.181991869918697
+        },
+        {
+          "player": "Tari Eason",
+          "GP": 60,
+          "MPG": 25.818416666666668
+        },
+        {
+          "player": "Josh Okogie",
+          "GP": 78,
+          "MPG": 17.35655982905983
+        },
+        {
+          "player": "Steven Adams",
+          "GP": 32,
+          "MPG": 22.82390625
+        },
+        {
+          "player": "Dorian Finney-Smith",
+          "GP": 37,
+          "MPG": 16.765180180180177
+        }
+      ]
+    },
+    "LA Clippers": {
+      "meanAbsence": 0.200747496989196,
+      "offenseError": 2.301829268292683,
+      "defenseAllowedError": 2.4487804878048776,
+      "core": [
+        {
+          "player": "Kris Dunn",
+          "GP": 82,
+          "MPG": 27.195121951219512
+        },
+        {
+          "player": "Kawhi Leonard",
+          "GP": 65,
+          "MPG": 32.072743589743595
+        },
+        {
+          "player": "John Collins",
+          "GP": 69,
+          "MPG": 27.122874396135263
+        },
+        {
+          "player": "Brook Lopez",
+          "GP": 75,
+          "MPG": 21.803644444444444
+        },
+        {
+          "player": "James Harden",
+          "GP": 44,
+          "MPG": 35.43837121212121
+        },
+        {
+          "player": "Kobe Sanders",
+          "GP": 68,
+          "MPG": 19.873774509803923
+        },
+        {
+          "player": "Derrick Jones Jr.",
+          "GP": 50,
+          "MPG": 26.990166666666667
+        },
+        {
+          "player": "Ivica Zubac",
+          "GP": 43,
+          "MPG": 30.894263565891475
+        },
+        {
+          "player": "Jordan Miller",
+          "GP": 60,
+          "MPG": 22.079666666666665
+        },
+        {
+          "player": "Nicolas Batum",
+          "GP": 74,
+          "MPG": 17.494527027027026
+        },
+        {
+          "player": "Bennedict Mathurin",
+          "GP": 26,
+          "MPG": 28.042371794871794
+        },
+        {
+          "player": "Darius Garland",
+          "GP": 19,
+          "MPG": 29.068859649122803
+        },
+        {
+          "player": "Bogdan Bogdanović",
+          "GP": 23,
+          "MPG": 19.65478260869565
+        },
+        {
+          "player": "Isaiah Jackson",
+          "GP": 17,
+          "MPG": 15.896372549019608
+        }
+      ]
+    },
+    "Los Angeles Lakers": {
+      "meanAbsence": 0.21129188324284892,
+      "offenseError": 3.320731707317073,
+      "defenseAllowedError": 1.2841463414634144,
+      "core": [
+        {
+          "player": "Luka Dončić",
+          "GP": 64,
+          "MPG": 35.75940104166666
+        },
+        {
+          "player": "Jake LaRavia",
+          "GP": 82,
+          "MPG": 25.139878048780485
+        },
+        {
+          "player": "LeBron James",
+          "GP": 60,
+          "MPG": 33.15091666666667
+        },
+        {
+          "player": "Deandre Ayton",
+          "GP": 72,
+          "MPG": 27.199791666666666
+        },
+        {
+          "player": "Rui Hachimura",
+          "GP": 68,
+          "MPG": 28.331838235294118
+        },
+        {
+          "player": "Marcus Smart",
+          "GP": 62,
+          "MPG": 28.531908602150537
+        },
+        {
+          "player": "Austin Reaves",
+          "GP": 51,
+          "MPG": 34.5421568627451
+        },
+        {
+          "player": "Jaxson Hayes",
+          "GP": 66,
+          "MPG": 18.2814898989899
+        },
+        {
+          "player": "Jarred Vanderbilt",
+          "GP": 65,
+          "MPG": 17.34987179487179
+        },
+        {
+          "player": "Luke Kennard",
+          "GP": 32,
+          "MPG": 23.03234375
+        },
+        {
+          "player": "Gabe Vincent",
+          "GP": 29,
+          "MPG": 19.266551724137933
+        }
+      ]
+    },
+    "Miami Heat": {
+      "meanAbsence": 0.2234566306404829,
+      "offenseError": -4.661585365853658,
+      "defenseAllowedError": -3.8213414634146337,
+      "core": [
+        {
+          "player": "Bam Adebayo",
+          "GP": 73,
+          "MPG": 32.39294520547945
+        },
+        {
+          "player": "Jaime Jaquez Jr.",
+          "GP": 75,
+          "MPG": 28.2828
+        },
+        {
+          "player": "Andrew Wiggins",
+          "GP": 68,
+          "MPG": 30.33232843137255
+        },
+        {
+          "player": "Davion Mitchell",
+          "GP": 70,
+          "MPG": 28.57507142857143
+        },
+        {
+          "player": "Pelle Larsson",
+          "GP": 70,
+          "MPG": 26.416333333333334
+        },
+        {
+          "player": "Norman Powell",
+          "GP": 58,
+          "MPG": 29.602356321839082
+        },
+        {
+          "player": "Kel'el Ware",
+          "GP": 77,
+          "MPG": 22.12755411255411
+        },
+        {
+          "player": "Simone Fontecchio",
+          "GP": 70,
+          "MPG": 16.74957142857143
+        },
+        {
+          "player": "Dru Smith",
+          "GP": 70,
+          "MPG": 16.304404761904763
+        },
+        {
+          "player": "Tyler Herro",
+          "GP": 33,
+          "MPG": 31.292525252525255
+        },
+        {
+          "player": "Kasparas Jakučionis",
+          "GP": 53,
+          "MPG": 17.82317610062893
+        },
+        {
+          "player": "Nikola Jović",
+          "GP": 47,
+          "MPG": 17.191879432624113
+        }
+      ]
+    },
+    "Milwaukee Bucks": {
+      "meanAbsence": 0.3350617795692325,
+      "offenseError": 6.074390243902439,
+      "defenseAllowedError": 1.2774390243902438,
+      "core": [
+        {
+          "player": "Ryan Rollins",
+          "GP": 74,
+          "MPG": 32.101126126126125
+        },
+        {
+          "player": "AJ Green",
+          "GP": 78,
+          "MPG": 29.101709401709403
+        },
+        {
+          "player": "Myles Turner",
+          "GP": 71,
+          "MPG": 26.92680751173709
+        },
+        {
+          "player": "Kyle Kuzma",
+          "GP": 69,
+          "MPG": 26.170169082125604
+        },
+        {
+          "player": "Bobby Portis Jr.",
+          "GP": 67,
+          "MPG": 24.168855721393033
+        },
+        {
+          "player": "Gary Trent Jr.",
+          "GP": 65,
+          "MPG": 21.190487179487178
+        },
+        {
+          "player": "Jericho Sims",
+          "GP": 67,
+          "MPG": 19.669179104477614
+        },
+        {
+          "player": "Kevin Porter Jr.",
+          "GP": 38,
+          "MPG": 33.1846052631579
+        },
+        {
+          "player": "Giannis Antetokounmpo",
+          "GP": 36,
+          "MPG": 28.8675
+        },
+        {
+          "player": "Ousmane Dieng",
+          "GP": 30,
+          "MPG": 26.809166666666666
+        },
+        {
+          "player": "Pete Nance",
+          "GP": 47,
+          "MPG": 15.682943262411348
+        },
+        {
+          "player": "Taurean Prince",
+          "GP": 26,
+          "MPG": 23.511666666666663
+        },
+        {
+          "player": "Cole Anthony",
+          "GP": 35,
+          "MPG": 15.046714285714286
+        },
+        {
+          "player": "Cam Thomas",
+          "GP": 18,
+          "MPG": 16.59148148148148
+        },
+        {
+          "player": "Cormac Ryan",
+          "GP": 11,
+          "MPG": 24.607121212121214
+        }
+      ]
+    },
+    "Minnesota Timberwolves": {
+      "meanAbsence": 0.11243808735495867,
+      "offenseError": 0.5109756097560977,
+      "defenseAllowedError": -1.0804878048780486,
+      "core": [
+        {
+          "player": "Julius Randle",
+          "GP": 79,
+          "MPG": 33.041729957805906
+        },
+        {
+          "player": "Donte DiVincenzo",
+          "GP": 82,
+          "MPG": 30.41508130081301
+        },
+        {
+          "player": "Rudy Gobert",
+          "GP": 76,
+          "MPG": 31.31640350877193
+        },
+        {
+          "player": "Jaden McDaniels",
+          "GP": 73,
+          "MPG": 31.731689497716896
+        },
+        {
+          "player": "Anthony Edwards",
+          "GP": 61,
+          "MPG": 35.02612021857924
+        },
+        {
+          "player": "Naz Reid",
+          "GP": 77,
+          "MPG": 26.069480519480518
+        },
+        {
+          "player": "Bones Hyland",
+          "GP": 71,
+          "MPG": 16.57631455399061
+        },
+        {
+          "player": "Mike Conley",
+          "GP": 54,
+          "MPG": 18.357376543209877
+        },
+        {
+          "player": "Ayo Dosunmu",
+          "GP": 24,
+          "MPG": 28.909722222222225
+        },
+        {
+          "player": "Kyle Anderson",
+          "GP": 19,
+          "MPG": 19.09
+        }
+      ]
+    },
+    "Brooklyn Nets": {
+      "meanAbsence": 0.37676739286740285,
+      "offenseError": 5.509756097560976,
+      "defenseAllowedError": 3.7670731707317078,
+      "core": [
+        {
+          "player": "Nic Claxton",
+          "GP": 69,
+          "MPG": 27.831400966183573
+        },
+        {
+          "player": "Noah Clowney",
+          "GP": 66,
+          "MPG": 26.970656565656565
+        },
+        {
+          "player": "Michael Porter Jr.",
+          "GP": 52,
+          "MPG": 32.47314102564103
+        },
+        {
+          "player": "Terance Mann",
+          "GP": 63,
+          "MPG": 24.27010582010582
+        },
+        {
+          "player": "Drake Powell",
+          "GP": 63,
+          "MPG": 20.944656084656085
+        },
+        {
+          "player": "Egor Dëmin",
+          "GP": 52,
+          "MPG": 25.157852564102562
+        },
+        {
+          "player": "Ziaire Williams",
+          "GP": 56,
+          "MPG": 22.879761904761903
+        },
+        {
+          "player": "Nolan Traore",
+          "GP": 56,
+          "MPG": 22.20342261904762
+        },
+        {
+          "player": "Danny Wolf",
+          "GP": 57,
+          "MPG": 20.82739766081871
+        },
+        {
+          "player": "Day'Ron Sharpe",
+          "GP": 62,
+          "MPG": 18.708306451612902
+        },
+        {
+          "player": "Ben Saraf",
+          "GP": 44,
+          "MPG": 20.82541666666667
+        },
+        {
+          "player": "Jalen Wilson",
+          "GP": 54,
+          "MPG": 15.911512345679013
+        },
+        {
+          "player": "Tyrese Martin",
+          "GP": 37,
+          "MPG": 18.81063063063063
+        },
+        {
+          "player": "Cam Thomas",
+          "GP": 24,
+          "MPG": 24.245
+        },
+        {
+          "player": "Tyson Etienne",
+          "GP": 24,
+          "MPG": 15.834027777777777
+        },
+        {
+          "player": "Malachi Smith",
+          "GP": 15,
+          "MPG": 23.921333333333333
+        },
+        {
+          "player": "Chaney Johnson",
+          "GP": 17,
+          "MPG": 20.44607843137255
+        },
+        {
+          "player": "Ochai Agbaji",
+          "GP": 20,
+          "MPG": 16.1575
+        },
+        {
+          "player": "Josh Minott",
+          "GP": 16,
+          "MPG": 19.2546875
+        }
+      ]
+    },
+    "New York Knicks": {
+      "meanAbsence": 0.18704393927578342,
+      "offenseError": 1.164024390243902,
+      "defenseAllowedError": 4.316463414634147,
+      "core": [
+        {
+          "player": "Mikal Bridges",
+          "GP": 82,
+          "MPG": 32.8284756097561
+        },
+        {
+          "player": "Jalen Brunson",
+          "GP": 74,
+          "MPG": 34.99738738738739
+        },
+        {
+          "player": "Karl-Anthony Towns",
+          "GP": 75,
+          "MPG": 30.95708888888889
+        },
+        {
+          "player": "OG Anunoby",
+          "GP": 67,
+          "MPG": 33.192114427860695
+        },
+        {
+          "player": "Josh Hart",
+          "GP": 66,
+          "MPG": 30.20568181818182
+        },
+        {
+          "player": "Jordan Clarkson",
+          "GP": 72,
+          "MPG": 17.770300925925923
+        },
+        {
+          "player": "Mitchell Robinson",
+          "GP": 60,
+          "MPG": 19.57502777777778
+        },
+        {
+          "player": "Landry Shamet",
+          "GP": 51,
+          "MPG": 22.961862745098042
+        },
+        {
+          "player": "Miles McBride",
+          "GP": 41,
+          "MPG": 26.342317073170733
+        },
+        {
+          "player": "Jose Alvarado",
+          "GP": 28,
+          "MPG": 16.920892857142857
+        }
+      ]
+    },
+    "Orlando Magic": {
+      "meanAbsence": 0.17928895002102754,
+      "offenseError": 1.4573170731707317,
+      "defenseAllowedError": -0.08902439024390264,
+      "core": [
+        {
+          "player": "Desmond Bane",
+          "GP": 82,
+          "MPG": 33.61030487804878
+        },
+        {
+          "player": "Paolo Banchero",
+          "GP": 72,
+          "MPG": 34.745625
+        },
+        {
+          "player": "Wendell Carter Jr.",
+          "GP": 78,
+          "MPG": 29.337841880341877
+        },
+        {
+          "player": "Anthony Black",
+          "GP": 64,
+          "MPG": 29.84453125
+        },
+        {
+          "player": "Tristan da Silva",
+          "GP": 77,
+          "MPG": 24.6682683982684
+        },
+        {
+          "player": "Jalen Suggs",
+          "GP": 57,
+          "MPG": 27.606491228070173
+        },
+        {
+          "player": "Franz Wagner",
+          "GP": 34,
+          "MPG": 29.970686274509802
+        },
+        {
+          "player": "Goga Bitadze",
+          "GP": 64,
+          "MPG": 15.187604166666667
+        },
+        {
+          "player": "Tyus Jones",
+          "GP": 48,
+          "MPG": 15.709097222222221
+        },
+        {
+          "player": "Jevon Carter",
+          "GP": 30,
+          "MPG": 20.44038888888889
+        }
+      ]
+    },
+    "Indiana Pacers": {
+      "meanAbsence": 0.3774540327829484,
+      "offenseError": 1.1353658536585367,
+      "defenseAllowedError": -2.49390243902439,
+      "core": [
+        {
+          "player": "Pascal Siakam",
+          "GP": 62,
+          "MPG": 33.17180107526882
+        },
+        {
+          "player": "Jarace Walker",
+          "GP": 76,
+          "MPG": 25.702412280701754
+        },
+        {
+          "player": "Andrew Nembhard",
+          "GP": 57,
+          "MPG": 31.326198830409353
+        },
+        {
+          "player": "Jay Huff",
+          "GP": 82,
+          "MPG": 20.966382113821137
+        },
+        {
+          "player": "Ben Sheppard",
+          "GP": 65,
+          "MPG": 21.39194871794872
+        },
+        {
+          "player": "Aaron Nesmith",
+          "GP": 45,
+          "MPG": 29.665555555555557
+        },
+        {
+          "player": "T.J. McConnell",
+          "GP": 56,
+          "MPG": 17.187589285714285
+        },
+        {
+          "player": "Micah Potter",
+          "GP": 47,
+          "MPG": 19.325886524822696
+        },
+        {
+          "player": "Quenton Jackson",
+          "GP": 49,
+          "MPG": 18.314795918367345
+        },
+        {
+          "player": "Bennedict Mathurin",
+          "GP": 28,
+          "MPG": 31.81833333333333
+        },
+        {
+          "player": "Kobe Brown",
+          "GP": 27,
+          "MPG": 24.732469135802468
+        },
+        {
+          "player": "Ethan Thompson",
+          "GP": 32,
+          "MPG": 20.413489583333334
+        },
+        {
+          "player": "Johnny Furphy",
+          "GP": 35,
+          "MPG": 18.37295238095238
+        },
+        {
+          "player": "Isaiah Jackson",
+          "GP": 38,
+          "MPG": 16.791403508771932
+        },
+        {
+          "player": "Kam Jones",
+          "GP": 37,
+          "MPG": 16.657432432432433
+        },
+        {
+          "player": "Obi Toppin",
+          "GP": 24,
+          "MPG": 17.655208333333334
+        },
+        {
+          "player": "Jalen Slawson",
+          "GP": 13,
+          "MPG": 23.888461538461538
+        },
+        {
+          "player": "Jeremiah Robinson-Earl",
+          "GP": 17,
+          "MPG": 17.62156862745098
+        }
+      ]
+    },
+    "Philadelphia 76ers": {
+      "meanAbsence": 0.28682232873652225,
+      "offenseError": -0.94390243902439,
+      "defenseAllowedError": -1.692073170731707,
+      "core": [
+        {
+          "player": "Tyrese Maxey",
+          "GP": 70,
+          "MPG": 38.01597619047619
+        },
+        {
+          "player": "VJ Edgecombe",
+          "GP": 75,
+          "MPG": 34.977399999999996
+        },
+        {
+          "player": "Quentin Grimes",
+          "GP": 75,
+          "MPG": 29.409622222222225
+        },
+        {
+          "player": "Dominick Barlow",
+          "GP": 71,
+          "MPG": 23.78194835680751
+        },
+        {
+          "player": "Kelly Oubre Jr.",
+          "GP": 50,
+          "MPG": 31.486233333333335
+        },
+        {
+          "player": "Adem Bona",
+          "GP": 71,
+          "MPG": 17.38255868544601
+        },
+        {
+          "player": "Andre Drummond",
+          "GP": 63,
+          "MPG": 19.535687830687827
+        },
+        {
+          "player": "Joel Embiid",
+          "GP": 38,
+          "MPG": 31.59574561403509
+        },
+        {
+          "player": "Paul George",
+          "GP": 37,
+          "MPG": 30.676531531531534
+        },
+        {
+          "player": "Justin Edwards",
+          "GP": 64,
+          "MPG": 15.265911458333333
+        },
+        {
+          "player": "Trendon Watford",
+          "GP": 53,
+          "MPG": 16.296540880503144
+        },
+        {
+          "player": "Jared McCain",
+          "GP": 37,
+          "MPG": 16.75945945945946
+        },
+        {
+          "player": "Cameron Payne",
+          "GP": 22,
+          "MPG": 17.01530303030303
+        }
+      ]
+    },
+    "Phoenix Suns": {
+      "meanAbsence": 0.22129325445024156,
+      "offenseError": 2.180487804878049,
+      "defenseAllowedError": 3.9115853658536586,
+      "core": [
+        {
+          "player": "Collin Gillespie",
+          "GP": 80,
+          "MPG": 28.522520833333335
+        },
+        {
+          "player": "Royce O'Neale",
+          "GP": 78,
+          "MPG": 28.372478632478632
+        },
+        {
+          "player": "Devin Booker",
+          "GP": 64,
+          "MPG": 33.53796875
+        },
+        {
+          "player": "Oso Ighodaro",
+          "GP": 82,
+          "MPG": 22.053292682926827
+        },
+        {
+          "player": "Dillon Brooks",
+          "GP": 56,
+          "MPG": 30.385416666666664
+        },
+        {
+          "player": "Jordan Goodwin",
+          "GP": 70,
+          "MPG": 22.45395238095238
+        },
+        {
+          "player": "Grayson Allen",
+          "GP": 51,
+          "MPG": 28.770163398692812
+        },
+        {
+          "player": "Mark Williams",
+          "GP": 60,
+          "MPG": 23.600833333333334
+        },
+        {
+          "player": "Ryan Dunn",
+          "GP": 70,
+          "MPG": 19.360642857142857
+        },
+        {
+          "player": "Jalen Green",
+          "GP": 32,
+          "MPG": 25.88515625
+        }
+      ]
+    },
+    "Portland Trail Blazers": {
+      "meanAbsence": 0.28984670009421665,
+      "offenseError": -4.98109756097561,
+      "defenseAllowedError": 0.9006097560975609,
+      "core": [
+        {
+          "player": "Toumani Camara",
+          "GP": 82,
+          "MPG": 33.307764227642274
+        },
+        {
+          "player": "Deni Avdija",
+          "GP": 66,
+          "MPG": 33.324015151515155
+        },
+        {
+          "player": "Donovan Clingan",
+          "GP": 77,
+          "MPG": 27.190086580086582
+        },
+        {
+          "player": "Jerami Grant",
+          "GP": 57,
+          "MPG": 29.73862573099415
+        },
+        {
+          "player": "Jrue Holiday",
+          "GP": 53,
+          "MPG": 29.441540880503144
+        },
+        {
+          "player": "Shaedon Sharpe",
+          "GP": 50,
+          "MPG": 29.426033333333336
+        },
+        {
+          "player": "Sidy Cissoko",
+          "GP": 75,
+          "MPG": 19.13406666666667
+        },
+        {
+          "player": "Kris Murray",
+          "GP": 57,
+          "MPG": 23.38964912280702
+        },
+        {
+          "player": "Caleb Love",
+          "GP": 49,
+          "MPG": 20.66547619047619
+        },
+        {
+          "player": "Robert Williams III",
+          "GP": 59,
+          "MPG": 17.088361581920903
+        },
+        {
+          "player": "Scoot Henderson",
+          "GP": 30,
+          "MPG": 24.927666666666667
+        },
+        {
+          "player": "Matisse Thybulle",
+          "GP": 30,
+          "MPG": 15.988333333333333
+        },
+        {
+          "player": "Vít Krejčí",
+          "GP": 19,
+          "MPG": 19.170701754385966
+        }
+      ]
+    },
+    "Sacramento Kings": {
+      "meanAbsence": 0.3909964254259612,
+      "offenseError": 1.2792682926829266,
+      "defenseAllowedError": -1.5365853658536586,
+      "core": [
+        {
+          "player": "DeMar DeRozan",
+          "GP": 77,
+          "MPG": 31.240454545454543
+        },
+        {
+          "player": "Maxime Raynaud",
+          "GP": 74,
+          "MPG": 26.53891891891892
+        },
+        {
+          "player": "Nique Clifford",
+          "GP": 75,
+          "MPG": 25.092333333333332
+        },
+        {
+          "player": "Russell Westbrook",
+          "GP": 64,
+          "MPG": 28.94640625
+        },
+        {
+          "player": "Precious Achiuwa",
+          "GP": 73,
+          "MPG": 23.90664383561644
+        },
+        {
+          "player": "Malik Monk",
+          "GP": 62,
+          "MPG": 21.99424731182796
+        },
+        {
+          "player": "Zach LaVine",
+          "GP": 39,
+          "MPG": 31.39136752136752
+        },
+        {
+          "player": "Dennis Schröder",
+          "GP": 40,
+          "MPG": 26.391583333333337
+        },
+        {
+          "player": "Dylan Cardwell",
+          "GP": 44,
+          "MPG": 20.603143939393938
+        },
+        {
+          "player": "Daeqwon Plowden",
+          "GP": 32,
+          "MPG": 26.386510416666667
+        },
+        {
+          "player": "Keegan Murray",
+          "GP": 23,
+          "MPG": 34.48246376811594
+        },
+        {
+          "player": "Keon Ellis",
+          "GP": 43,
+          "MPG": 17.631627906976743
+        },
+        {
+          "player": "Devin Carter",
+          "GP": 38,
+          "MPG": 18.417587719298247
+        },
+        {
+          "player": "Domantas Sabonis",
+          "GP": 19,
+          "MPG": 29.662543859649123
+        },
+        {
+          "player": "Doug McDermott",
+          "GP": 29,
+          "MPG": 15.144770114942528
+        },
+        {
+          "player": "Killian Hayes",
+          "GP": 23,
+          "MPG": 17.63159420289855
+        }
+      ]
+    },
+    "San Antonio Spurs": {
+      "meanAbsence": 0.12291546788643755,
+      "offenseError": 0.42682926829268303,
+      "defenseAllowedError": -1.7993902439024387,
+      "core": [
+        {
+          "player": "Julian Champagnie",
+          "GP": 82,
+          "MPG": 27.63369918699187
+        },
+        {
+          "player": "De'Aaron Fox",
+          "GP": 72,
+          "MPG": 30.98701388888889
+        },
+        {
+          "player": "Devin Vassell",
+          "GP": 67,
+          "MPG": 30.510920398009947
+        },
+        {
+          "player": "Stephon Castle",
+          "GP": 68,
+          "MPG": 29.966813725490198
+        },
+        {
+          "player": "Harrison Barnes",
+          "GP": 77,
+          "MPG": 25.798376623376623
+        },
+        {
+          "player": "Keldon Johnson",
+          "GP": 82,
+          "MPG": 23.31056910569106
+        },
+        {
+          "player": "Victor Wembanyama",
+          "GP": 64,
+          "MPG": 29.150755208333333
+        },
+        {
+          "player": "Dylan Harper",
+          "GP": 69,
+          "MPG": 22.579082125603865
+        },
+        {
+          "player": "Luke Kornet",
+          "GP": 68,
+          "MPG": 21.03058823529412
+        }
+      ]
+    },
+    "Oklahoma City Thunder": {
+      "meanAbsence": 0.27986386742741354,
+      "offenseError": 1.3341463414634147,
+      "defenseAllowedError": 2.0932926829268292,
+      "core": [
+        {
+          "player": "Shai Gilgeous-Alexander",
+          "GP": 68,
+          "MPG": 33.21980392156863
+        },
+        {
+          "player": "Cason Wallace",
+          "GP": 77,
+          "MPG": 26.572337662337663
+        },
+        {
+          "player": "Chet Holmgren",
+          "GP": 69,
+          "MPG": 28.945917874396137
+        },
+        {
+          "player": "Luguentz Dort",
+          "GP": 69,
+          "MPG": 26.793357487922705
+        },
+        {
+          "player": "Isaiah Joe",
+          "GP": 71,
+          "MPG": 21.231619718309858
+        },
+        {
+          "player": "Ajay Mitchell",
+          "GP": 57,
+          "MPG": 25.83856725146199
+        },
+        {
+          "player": "Aaron Wiggins",
+          "GP": 65,
+          "MPG": 21.75353846153846
+        },
+        {
+          "player": "Jaylin Williams",
+          "GP": 65,
+          "MPG": 19.651923076923076
+        },
+        {
+          "player": "Isaiah Hartenstein",
+          "GP": 47,
+          "MPG": 24.200531914893617
+        },
+        {
+          "player": "Alex Caruso",
+          "GP": 56,
+          "MPG": 18.22047619047619
+        },
+        {
+          "player": "Jalen Williams",
+          "GP": 33,
+          "MPG": 28.362525252525252
+        },
+        {
+          "player": "Kenrich Williams",
+          "GP": 56,
+          "MPG": 15.270773809523808
+        },
+        {
+          "player": "Jared McCain",
+          "GP": 30,
+          "MPG": 17.985555555555557
+        },
+        {
+          "player": "Nikola Topić",
+          "GP": 10,
+          "MPG": 16.008333333333333
+        }
+      ]
+    },
+    "Toronto Raptors": {
+      "meanAbsence": 0.15528649189928417,
+      "offenseError": 2.164634146341463,
+      "defenseAllowedError": 3.334146341463415,
+      "core": [
+        {
+          "player": "Scottie Barnes",
+          "GP": 80,
+          "MPG": 33.509708333333336
+        },
+        {
+          "player": "Brandon Ingram",
+          "GP": 77,
+          "MPG": 33.81640692640693
+        },
+        {
+          "player": "Immanuel Quickley",
+          "GP": 70,
+          "MPG": 31.875833333333333
+        },
+        {
+          "player": "Jamal Shead",
+          "GP": 82,
+          "MPG": 22.588272357723575
+        },
+        {
+          "player": "Sandro Mamukelashvili",
+          "GP": 80,
+          "MPG": 21.883645833333333
+        },
+        {
+          "player": "RJ Barrett",
+          "GP": 57,
+          "MPG": 30.276491228070174
+        },
+        {
+          "player": "Ja'Kobe Walter",
+          "GP": 72,
+          "MPG": 20.466319444444444
+        },
+        {
+          "player": "Collin Murray-Boyles",
+          "GP": 57,
+          "MPG": 21.852631578947367
+        },
+        {
+          "player": "Jakob Poeltl",
+          "GP": 46,
+          "MPG": 24.979565217391304
+        },
+        {
+          "player": "Ochai Agbaji",
+          "GP": 42,
+          "MPG": 15.477460317460316
+        }
+      ]
+    },
+    "Utah Jazz": {
+      "meanAbsence": 0.44489510341015925,
+      "offenseError": -3.2170731707317075,
+      "defenseAllowedError": -5.662804878048781,
+      "core": [
+        {
+          "player": "Ace Bailey",
+          "GP": 72,
+          "MPG": 27.60615740740741
+        },
+        {
+          "player": "Kyle Filipowski",
+          "GP": 77,
+          "MPG": 23.388874458874458
+        },
+        {
+          "player": "Keyonte George",
+          "GP": 54,
+          "MPG": 33.076080246913584
+        },
+        {
+          "player": "Brice Sensabaugh",
+          "GP": 75,
+          "MPG": 23.491555555555554
+        },
+        {
+          "player": "Cody Williams",
+          "GP": 67,
+          "MPG": 24.336442786069654
+        },
+        {
+          "player": "Isaiah Collier",
+          "GP": 59,
+          "MPG": 25.710508474576272
+        },
+        {
+          "player": "Lauri Markkanen",
+          "GP": 42,
+          "MPG": 34.34753968253968
+        },
+        {
+          "player": "Svi Mykhailiuk",
+          "GP": 50,
+          "MPG": 23.112233333333332
+        },
+        {
+          "player": "Jusuf Nurkić",
+          "GP": 41,
+          "MPG": 26.41630081300813
+        },
+        {
+          "player": "Walter Clayton Jr.",
+          "GP": 45,
+          "MPG": 18.026481481481483
+        },
+        {
+          "player": "John Konchar",
+          "GP": 26,
+          "MPG": 26.1574358974359
+        },
+        {
+          "player": "Kevin Love",
+          "GP": 37,
+          "MPG": 16.56216216216216
+        },
+        {
+          "player": "Elijah Harkless",
+          "GP": 26,
+          "MPG": 20.954358974358975
+        },
+        {
+          "player": "Bez Mbeng",
+          "GP": 15,
+          "MPG": 32.812333333333335
+        },
+        {
+          "player": "Oscar Tshiebwe",
+          "GP": 27,
+          "MPG": 16.60814814814815
+        },
+        {
+          "player": "Kyle Anderson",
+          "GP": 20,
+          "MPG": 20.063583333333334
+        },
+        {
+          "player": "Kennedy Chandler",
+          "GP": 11,
+          "MPG": 32.29333333333334
+        },
+        {
+          "player": "Blake Hinson",
+          "GP": 14,
+          "MPG": 20.38809523809524
+        }
+      ]
+    },
+    "Memphis Grizzlies": {
+      "meanAbsence": 0.4815690691218944,
+      "offenseError": -2.1469512195121947,
+      "defenseAllowedError": -2.7664634146341465,
+      "core": [
+        {
+          "player": "Jaylen Wells",
+          "GP": 69,
+          "MPG": 26.38611111111111
+        },
+        {
+          "player": "Cam Spencer",
+          "GP": 72,
+          "MPG": 23.811828703703704
+        },
+        {
+          "player": "Cedric Coward",
+          "GP": 62,
+          "MPG": 25.773333333333333
+        },
+        {
+          "player": "Jaren Jackson Jr.",
+          "GP": 45,
+          "MPG": 30.721444444444444
+        },
+        {
+          "player": "Santi Aldama",
+          "GP": 43,
+          "MPG": 27.86228682170543
+        },
+        {
+          "player": "GG Jackson",
+          "GP": 55,
+          "MPG": 21.413909090909094
+        },
+        {
+          "player": "Kentavious Caldwell-Pope",
+          "GP": 51,
+          "MPG": 21.32467320261438
+        },
+        {
+          "player": "Jock Landale",
+          "GP": 45,
+          "MPG": 23.557037037037034
+        },
+        {
+          "player": "Olivier-Maxence Prosper",
+          "GP": 53,
+          "MPG": 18.558333333333334
+        },
+        {
+          "player": "Javon Small",
+          "GP": 41,
+          "MPG": 20.241666666666667
+        },
+        {
+          "player": "Vince Williams Jr.",
+          "GP": 34,
+          "MPG": 21.643970588235295
+        },
+        {
+          "player": "Jahmai Mashack",
+          "GP": 31,
+          "MPG": 21.71456989247312
+        },
+        {
+          "player": "Taylor Hendricks",
+          "GP": 26,
+          "MPG": 24.08897435897436
+        },
+        {
+          "player": "Walter Clayton Jr.",
+          "GP": 24,
+          "MPG": 24.97263888888889
+        },
+        {
+          "player": "Ja Morant",
+          "GP": 20,
+          "MPG": 28.425
+        },
+        {
+          "player": "Rayan Rupert",
+          "GP": 16,
+          "MPG": 30.9571875
+        },
+        {
+          "player": "Ty Jerome",
+          "GP": 15,
+          "MPG": 22.57922222222222
+        },
+        {
+          "player": "Tyler Burton",
+          "GP": 12,
+          "MPG": 25.561944444444446
+        },
+        {
+          "player": "Zach Edey",
+          "GP": 11,
+          "MPG": 25.804696969696973
+        },
+        {
+          "player": "DeJon Jarreau",
+          "GP": 11,
+          "MPG": 20.975757575757573
+        },
+        {
+          "player": "Scotty Pippen Jr.",
+          "GP": 10,
+          "MPG": 21.186666666666667
+        },
+        {
+          "player": "Christian Koloko",
+          "GP": 11,
+          "MPG": 17.686969696969697
+        }
+      ]
+    },
+    "Washington Wizards": {
+      "meanAbsence": 0.386065198229721,
+      "offenseError": -3.3634146341463422,
+      "defenseAllowedError": -4.58170731707317,
+      "core": [
+        {
+          "player": "Bub Carrington",
+          "GP": 82,
+          "MPG": 27.690853658536586
+        },
+        {
+          "player": "Will Riley",
+          "GP": 74,
+          "MPG": 22.060427927927925
+        },
+        {
+          "player": "Bilal Coulibaly",
+          "GP": 56,
+          "MPG": 26.207232142857144
+        },
+        {
+          "player": "Tre Johnson",
+          "GP": 60,
+          "MPG": 24.046944444444442
+        },
+        {
+          "player": "Kyshawn George",
+          "GP": 48,
+          "MPG": 28.978402777777777
+        },
+        {
+          "player": "Justin Champagnie",
+          "GP": 69,
+          "MPG": 19.963091787439613
+        },
+        {
+          "player": "Alex Sarr",
+          "GP": 48,
+          "MPG": 27.180451388888887
+        },
+        {
+          "player": "CJ McCollum",
+          "GP": 35,
+          "MPG": 30.908285714285714
+        },
+        {
+          "player": "Jamir Watkins",
+          "GP": 50,
+          "MPG": 20.643533333333334
+        },
+        {
+          "player": "Anthony Gill",
+          "GP": 55,
+          "MPG": 17.289939393939395
+        },
+        {
+          "player": "Khris Middleton",
+          "GP": 34,
+          "MPG": 24.32264705882353
+        },
+        {
+          "player": "Marvin Bagley III",
+          "GP": 38,
+          "MPG": 19.228684210526318
+        },
+        {
+          "player": "Sharife Cooper",
+          "GP": 41,
+          "MPG": 17.073130081300814
+        },
+        {
+          "player": "Jaden Hardy",
+          "GP": 23,
+          "MPG": 20.435797101449275
+        },
+        {
+          "player": "Leaky Black",
+          "GP": 15,
+          "MPG": 28.871777777777776
+        },
+        {
+          "player": "Julian Reese",
+          "GP": 13,
+          "MPG": 30.884615384615383
+        },
+        {
+          "player": "Corey Kispert",
+          "GP": 19,
+          "MPG": 19.46114035087719
+        },
+        {
+          "player": "Cam Whitmore",
+          "GP": 21,
+          "MPG": 16.856349206349208
+        }
+      ]
+    },
+    "Detroit Pistons": {
+      "meanAbsence": 0.1545129689452571,
+      "offenseError": -1.3768292682926828,
+      "defenseAllowedError": 2.5134146341463413,
+      "core": [
+        {
+          "player": "Cade Cunningham",
+          "GP": 64,
+          "MPG": 33.932369791666666
+        },
+        {
+          "player": "Duncan Robinson",
+          "GP": 77,
+          "MPG": 27.443614718614718
+        },
+        {
+          "player": "Jalen Duren",
+          "GP": 70,
+          "MPG": 28.226476190476188
+        },
+        {
+          "player": "Ausar Thompson",
+          "GP": 73,
+          "MPG": 25.967260273972602
+        },
+        {
+          "player": "Tobias Harris",
+          "GP": 63,
+          "MPG": 27.705555555555556
+        },
+        {
+          "player": "Ronald Holland II",
+          "GP": 78,
+          "MPG": 19.877542735042734
+        },
+        {
+          "player": "Daniss Jenkins",
+          "GP": 72,
+          "MPG": 20.2125
+        },
+        {
+          "player": "Javonte Green",
+          "GP": 82,
+          "MPG": 17.633678861788617
+        },
+        {
+          "player": "Isaiah Stewart",
+          "GP": 58,
+          "MPG": 22.709224137931034
+        },
+        {
+          "player": "Caris LeVert",
+          "GP": 60,
+          "MPG": 19.24025
+        },
+        {
+          "player": "Jaden Ivey",
+          "GP": 33,
+          "MPG": 16.812272727272727
+        },
+        {
+          "player": "Kevin Huerter",
+          "GP": 25,
+          "MPG": 20.483666666666668
+        }
+      ]
+    },
+    "Charlotte Hornets": {
+      "meanAbsence": 0.18281794440648208,
+      "offenseError": -0.7164634146341466,
+      "defenseAllowedError": 3.6036585365853666,
+      "core": [
+        {
+          "player": "Kon Knueppel",
+          "GP": 81,
+          "MPG": 31.490699588477362
+        },
+        {
+          "player": "Miles Bridges",
+          "GP": 77,
+          "MPG": 31.003008658008657
+        },
+        {
+          "player": "LaMelo Ball",
+          "GP": 72,
+          "MPG": 28.020092592592594
+        },
+        {
+          "player": "Brandon Miller",
+          "GP": 65,
+          "MPG": 30.28171794871795
+        },
+        {
+          "player": "Moussa Diabaté",
+          "GP": 73,
+          "MPG": 26.013105022831052
+        },
+        {
+          "player": "Sion James",
+          "GP": 82,
+          "MPG": 22.479024390243904
+        },
+        {
+          "player": "Ryan Kalkbrenner",
+          "GP": 69,
+          "MPG": 21.43669082125604
+        },
+        {
+          "player": "Collin Sexton",
+          "GP": 42,
+          "MPG": 22.322063492063492
+        },
+        {
+          "player": "Josh Green",
+          "GP": 58,
+          "MPG": 15.653936781609195
+        },
+        {
+          "player": "Grant Williams",
+          "GP": 36,
+          "MPG": 19.762592592592593
+        },
+        {
+          "player": "Tidjane Salaün",
+          "GP": 37,
+          "MPG": 15.55081081081081
+        },
+        {
+          "player": "Coby White",
+          "GP": 21,
+          "MPG": 19.350555555555555
+        },
+        {
+          "player": "KJ Simpson",
+          "GP": 14,
+          "MPG": 15.937619047619048
+        },
+        {
+          "player": "PJ Hall",
+          "GP": 12,
+          "MPG": 15.558611111111112
+        }
+      ]
+    }
+  },
+  "definition": "Core GP>=10, MPG>=15, continuous MPG weights; eligible single-team core throughout season. Multi-team players limited to observed first/last in-team dates to reduce trade-as-absence confounding. Actual active roster determines absence, not realized game minutes. Player and game IDs used only diagnostic joins. Team + opponent fixed effects, common home and linear time adjustment; two team rows clustered by fixture. Coefficients describe error association, not causal injury effects. Full-season MPG is diagnostic weighting only and never input to future engine. Positive offense error slope means simulated offense falls too little with own absence; negative allowed-error slope means defense worsens too little."
+}

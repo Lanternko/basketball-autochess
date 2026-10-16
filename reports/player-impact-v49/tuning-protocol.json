@@ -1,0 +1,8 @@
+{
+ "purpose":"Secondary controller-weight experiment after initialv49 target-season diagnosis;2025-26 excluded from all weight selection. Initialv49 full experiment continues unchanged and remains separately recorded.",
+ "seasons":["2022-23","2023-24","2024-25"],
+ "pairWeights":[0,0.25,1,4],
+ "gamesPerSeason":60,
+ "fixtureSampling":"60 evenly spaced strict-source fixtures per season in schedule order; all teams and season phases, same source crossfit profiles, one common seed20261012. No named-player criteria.",
+ "selection":"Equal-season mean of phaseMAE/current0.25phaseMAE plus pairOverlapMAE/current0.25pairOverlapMAE. Candidate eligible only if each season actual minuteMAE <= current0.25+0.05min. Lower weight on exact tie. Retain0.25 if best improvement <1%. This is a development selection on720 reconstructed games, not independent future prediction; final chosen controller must be rerun on all4seasons3seeds."
+}

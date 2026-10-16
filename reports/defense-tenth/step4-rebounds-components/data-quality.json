@@ -1,0 +1,137 @@
+[
+  {
+    "season": "2022-23",
+    "players": 539,
+    "trackingRows": 532,
+    "duplicates": [],
+    "coverage": {
+      "chance36": {
+        "n": 532,
+        "minuteFraction": 0.9999025326389624
+      },
+      "conversion": {
+        "n": 528,
+        "minuteFraction": 0.9998571599019277
+      },
+      "adjustedConversion": {
+        "n": 527,
+        "minuteFraction": 0.9997882605605045
+      }
+    },
+    "trackedMinutes": 566395,
+    "boxMinutes": 595071,
+    "trackedMinutesCappedPerPlayerFraction": 0.9517301296820043,
+    "trackedOreb": 25573,
+    "boxOreb": 25668,
+    "maxProductIdentityError": 8.881784197001252e-16,
+    "issues": []
+  },
+  {
+    "season": "2023-24",
+    "players": 571,
+    "trackingRows": 560,
+    "duplicates": [],
+    "coverage": {
+      "chance36": {
+        "n": 560,
+        "minuteFraction": 0.9998130885185834
+      },
+      "conversion": {
+        "n": 551,
+        "minuteFraction": 0.99944431721741
+      },
+      "adjustedConversion": {
+        "n": 551,
+        "minuteFraction": 0.99944431721741
+      }
+    },
+    "trackedMinutes": 560844,
+    "boxMinutes": 593864,
+    "trackedMinutesCappedPerPlayerFraction": 0.9443340562822464,
+    "trackedOreb": 25684,
+    "boxOreb": 25962,
+    "maxProductIdentityError": 1.7763568394002505e-15,
+    "issues": []
+  },
+  {
+    "season": "2024-25",
+    "players": 569,
+    "trackingRows": 564,
+    "duplicates": [],
+    "coverage": {
+      "chance36": {
+        "n": 564,
+        "minuteFraction": 0.9999511595398892
+      },
+      "conversion": {
+        "n": 556,
+        "minuteFraction": 0.9996614850868182
+      },
+      "adjustedConversion": {
+        "n": 554,
+        "minuteFraction": 0.9994728598615625
+      }
+    },
+    "trackedMinutes": 566706,
+    "boxMinutes": 593770,
+    "trackedMinutesCappedPerPlayerFraction": 0.9543122757970258,
+    "trackedOreb": 27320,
+    "boxOreb": 27352,
+    "maxProductIdentityError": 8.881784197001252e-16,
+    "issues": []
+  },
+  {
+    "season": "2025-26",
+    "players": 582,
+    "trackingRows": 578,
+    "duplicates": [],
+    "coverage": {
+      "chance36": {
+        "n": 578,
+        "minuteFraction": 0.9999107312792544
+      },
+      "conversion": {
+        "n": 570,
+        "minuteFraction": 0.9994694406219841
+      },
+      "adjustedConversion": {
+        "n": 568,
+        "minuteFraction": 0.9973455187944343
+      }
+    },
+    "trackedMinutes": 566723,
+    "boxMinutes": 593713,
+    "trackedMinutesCappedPerPlayerFraction": 0.954429160217142,
+    "trackedOreb": 27987,
+    "boxOreb": 27989,
+    "maxProductIdentityError": 1.7763568394002505e-15,
+    "issues": [
+      {
+        "id": 1630182,
+        "name": "Josh Green",
+        "problems": [
+          "invalid_adjusted_counts"
+        ],
+        "MIN": 699,
+        "OREB": 45,
+        "chances": 52,
+        "deferred": 8,
+        "reportedRaw": 0.865,
+        "reportedAdjusted": 1.023
+      },
+      {
+        "id": 1631113,
+        "name": "Kennedy Chandler",
+        "problems": [
+          "invalid_adjusted_counts"
+        ],
+        "MIN": 335,
+        "OREB": 6,
+        "chances": 8,
+        "deferred": 3,
+        "reportedRaw": 0.75,
+        "reportedAdjusted": 1.2
+      }
+    ]
+  }
+]

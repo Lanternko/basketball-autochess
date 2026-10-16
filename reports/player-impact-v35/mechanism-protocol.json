@@ -1,0 +1,24 @@
+{
+  "priorTurn": "progress: v34 complete28,023+9,600games; rejected hard source-self floor after AST/3P regression and one failed win season",
+  "hypothesis": "Joint source creator and terminal marginals, positive own/pass prior balanced without hard self cap/floor. All off-diagonal cells represent passes; diagonal is own shooting only.",
+  "fittedParameter": false,
+  "rowDefinition": "(sourceSelf+sourcePass)*sum(sourceTerminal)/sum(sourceSelf+sourcePass), after existing frozen elastic role transform",
+  "columnDefinition": "sourceTerminal after existing frozen elastic role transform",
+  "priorDefinition": "diag sourceSelf; offdiag sourcePass_i*sourceReceive_j/sum(other sourceReceive)",
+  "adoptionGate": "Each of four seasons archived official winsMAE+0.5 plus full individual/role/on-court and workload review. No gate relaxed, no ranking-driven fit. No adoption from positive support alone.",
+  "validation": "2022-23..2025-26,3matchingseeds,full and strict. Source full-season rates contain outcomes; same-season reconstruction, no blind/causal claim.",
+  "hashes": {
+    "reports/player-impact-v35/input.mjs": "478e8e215e6ebbddcdec9ad2972d4b54882da3afc443a3cfd31fd27c8b2441da",
+    "reports/player-impact-v35/engine.mjs": "ee8108fff5f6a4d251f8e833dfa110155da0f81720020c14de46a3b44a7e5795",
+    "reports/player-impact-v35/probability.mjs": "590b335a840cd1347c5a8a53693f9eaf2a6d03bc2f553a72d43c2698257ba6f3",
+    "reports/player-impact-v35/worker.mjs": "fcd429798598c2d7e42cb0a2e4c10aa784d54baed075aef61c970afc89f533b1",
+    "reports/player-impact-v35/prepare-contexts.mjs": "234561b45df1522d20634ae19fd9654de008eba306388465f23c76c52df9f95c",
+    "reports/player-impact-v35/run.mjs": "0869a3d2bdb18b1f34065cfc9278827e8df550eaa78b038b0f032ac18366bc77",
+    "reports/player-impact-v35/validation-score.py": "875d449624b4e98bb14abba917767321581cf7003b72486ff706fd54b66bbf1e",
+    "reports/player-impact-v35/verify-ledgers.mjs": "cf95c412b37970215d2da7f269ceccaf29c02d5495410598b890bf89b28e6d76",
+    "reports/player-impact-v35/ovr-input.mjs": "e7dbd7f92269a9866815e16b355fbb2e405a4595d1fb508f8f88f73d595ac628",
+    "reports/player-impact-v35/model.mjs": "751567a008e697bc2612933bdc63e2790e6ec6b7fae8f775b6349ab7c1aa5c8c",
+    "reports/player-impact-v35/scaffold.py": "68e3086fecd8484f155c919fb0bf327a0146050caaecf538eb6a73afb5f85c88",
+    "test/joint_creator_transport.js": "2e724e563db2329638d35f2b2ceb6bc61fd6d6ae6d24e4c17884c4243ebef601"
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "version": "v50",
+  "status": "closed-rejected",
+  "rotationAdopted": false,
+  "currentRotation": "v49",
+  "combinedOffenseCurrent": "v47",
+  "targetSeasonCandidateAssessed": false,
+  "gamePresetChanged": false,
+  "ovrRecomputed": false,
+  "reason": "Disjoint older-three confirmation failed fixed minute guard and >1% joint-objective improvement. Do not evaluate more configurations on confirmation fixtures or fit player-name fixes.",
+  "gameExecutions": 3600,
+  "fourStageExploratoryExecutions": 2880,
+  "disjointConfirmationExecutions": 720,
+  "confirmationGamesPerSeasonPerVariant": 120,
+  "confirmationMean": {
+    "v49": {
+      "regMinuteMAE": 0.8553723418251409,
+      "phaseMAE": 14.994364400377519,
+      "pairMAE": 3.1580030098958103,
+      "shortShare": 0.09394896642785175
+    },
+    "v50Candidate": {
+      "regMinuteMAE": 0.9359149832163872,
+      "phaseMAE": 14.745072970992776,
+      "pairMAE": 3.15737685327013,
+      "shortShare": 0.08050371247021756
+    }
+  },
+  "priorRotationOffenseDiagnosis": {
+    "pts36BaselineMAE": 0.7355469762174685,
+    "pts36RotationMAE": 0.7988383452128602,
+    "fga36MAEbaseline": 0.4732491292107889,
+    "fga36MAErotation": 0.4986408011003953,
+    "volumeAbsoluteTerm": 0.6452430291476607,
+    "efficiencyAbsoluteTerm": 0.48342658155665674
+  },
+  "nextMechanism": "Current phase and pair preferences are independent targets, and the online controller cannot guarantee their joint feasibility with minute/stint/rest constraints. Future work should plan remaining minutes and joint lineups together before testing further scalar changes."
+}

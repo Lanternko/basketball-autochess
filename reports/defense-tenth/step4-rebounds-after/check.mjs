@@ -1,0 +1,5 @@
+import fs from 'node:fs';import assert from 'node:assert/strict';import {classify} from './classify.mjs';
+const r='reports/defense-tenth/step4-rebounds-after',p=JSON.parse(fs.readFileSync(r+'/protocol.json'));let checks=[];
+assert.equal(classify({clock:20,period:1,player:7},{clock:17,period:1,player:7,kind:'fg',zone:'short'}).category,'immediateProxy');assert.equal(classify({clock:20,period:1,player:7},{clock:16.9,period:1,player:7,kind:'fg',zone:'short'}).category,'otherShot');assert.equal(classify({clock:20,period:1},{clock:20,period:1,kind:'loss'}).category,'earlyLoss');
+for(const s of p.seasons)for(const seed of p.seeds){const a=JSON.parse(fs.readFileSync(`${r}/runs/${s}-allocation-${seed}.json`)),b=JSON.parse(fs.readFileSync(`reports/defense-tenth/step4-rebounds-allocation/runs/${s}-allocation-${seed}.json`));assert.deepEqual(a.matches,b.matches);assert.deepEqual(a.teams,b.teams);checks.push({season:s,seed,matches:a.matches.length,exact:true});}
+fs.writeFileSync(r+'/parity.json',JSON.stringify({syntheticClassificationChecks:3,checks},null,2));console.log('PARITY OK',checks.length);

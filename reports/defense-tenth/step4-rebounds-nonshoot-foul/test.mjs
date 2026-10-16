@@ -1,0 +1,17 @@
+import assert from 'node:assert/strict';
+import {detail} from './collector.mjs';
+import {isNonShooting} from '../step4-rebounds-putback-risk/foul.mjs';
+const a={clock:10,player:7,intent:null};
+const foul={kind:'foul',clock:9,defensive:true,nonShooting:true};
+const shot={kind:'fg',clock:8,player:7,zone:'short',made:true,points:2};
+assert.equal(detail([foul,shot],a).boundary,'nonshoot');assert.equal(detail([foul,shot],a).earlyNonShootingFoul,true);
+assert.equal(detail([shot,foul],a).boundary,'fg');assert.equal(detail([shot,foul],a).nonshootBeforeAttempt,false);
+assert.equal(detail([{...foul,nonShooting:false},shot],a).boundary,'shooting');
+assert.equal(detail([{...foul,defensive:false},shot],a).boundary,'offensiveOrOtherFoul');
+assert.equal(detail([{...foul,clock:7},shot],a).earlyNonShootingFoul,true);
+assert.equal(detail([{...foul,clock:6.9},shot],a).earlyNonShootingFoul,false);
+assert.equal(detail([],{...a,clock:2.9}).windowEligible,false);
+assert.equal(isNonShooting({subType:'personal',descriptor:'shooting',qualifiers:['2freethrow']}),false);
+assert.equal(isNonShooting({subType:'looseball',qualifiers:['inpenalty','2freethrow']}),true);
+assert.equal(isNonShooting({subType:'personal',descriptor:'transition take'}),false);
+console.log('PASS boundary precedence, shooting descriptor, defensive ownership, exact 3sec censoring, penalty looseball');

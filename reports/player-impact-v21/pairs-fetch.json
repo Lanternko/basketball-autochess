@@ -1,0 +1,54 @@
+{
+  "jobs": [
+    {
+      "season": "2025-26",
+      "file": "reports/player-impact-v21/raw/2025-26/passing-pairs-league.json",
+      "url": "https://stats.nba.com/stats/playerdashptpass?PlayerID=0&TeamID=0&Season=2025-26&SeasonType=Regular+Season&PerMode=Totals&LeagueID=00&LastNGames=0&Month=0&OpponentTeamID=0&DateFrom=&DateTo=",
+      "rows": [
+        {
+          "name": "PassesMade",
+          "rows": 10245
+        },
+        {
+          "name": "PassesReceived",
+          "rows": 10245
+        }
+      ],
+      "sha256": "6d38cc3641d5f44ec9ef29f071179b4b2746df78f83fd57de9a03a70ad4ee91b"
+    },
+    {
+      "season": "2024-25",
+      "file": "reports/player-impact-v21/raw/2024-25/passing-pairs-league.json",
+      "url": "https://stats.nba.com/stats/playerdashptpass?PlayerID=0&TeamID=0&Season=2024-25&SeasonType=Regular+Season&PerMode=Totals&LeagueID=00&LastNGames=0&Month=0&OpponentTeamID=0&DateFrom=&DateTo=&Location=&Outcome=&SeasonSegment=&VsConference=&VsDivision=",
+      "rows": [
+        {
+          "name": "PassesMade",
+          "rows": 9925
+        },
+        {
+          "name": "PassesReceived",
+          "rows": 9925
+        }
+      ],
+      "sha256": "3f39eb20323d620a1064c8195226d1e0844140d2d45742d21e3fc5db1a1bedd7"
+    },
+    {
+      "season": "2022-23",
+      "error": "TimeoutError: The operation was aborted due to timeout"
+    },
+    {
+      "season": "2023-24",
+      "error": "TimeoutError: The operation was aborted due to timeout"
+    }
+  ],
+  "failures": [
+    {
+      "season": "2022-23",
+      "error": "TimeoutError: The operation was aborted due to timeout"
+    },
+    {
+      "season": "2023-24",
+      "error": "TimeoutError: The operation was aborted due to timeout"
+    }
+  ]
+}

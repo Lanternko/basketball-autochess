@@ -1,0 +1,22 @@
+{
+  "jobs": [
+    {
+      "season": "2025-26",
+      "seed": 20261012,
+      "version": "rotation-space",
+      "strict": false,
+      "onCourt": false,
+      "file": "reports/player-impact-v25/runs/2025-26-rotation-space-full-20261012.json",
+      "sha256": "d7d3d4410e4e5b80288d60dce20e1bb393bfc679f16ecfe47144ed04288785dd"
+    },
+    {
+      "season": "2025-26",
+      "seed": 20261012,
+      "version": "rotation-space",
+      "strict": true,
+      "onCourt": true,
+      "file": "reports/player-impact-v25/runs/2025-26-rotation-space-strict-20261012.json",
+      "sha256": "8a025a2b9a32cc6068655007c59db29c619a61a0e81492133a40bde59c424b1f"
+    }
+  ]
+}

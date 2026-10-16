@@ -1,0 +1,34 @@
+{
+  "version": "observed-profiles-natural-role-ovr-5",
+  "samples": 40,
+  "seed": 20261015,
+  "ids": [
+    1629674,
+    201939,
+    1628983,
+    203999,
+    1641705,
+    203507,
+    1629029,
+    1630162,
+    1628378,
+    1629627,
+    203991,
+    1628436,
+    1628389,
+    1627759,
+    201142,
+    2544,
+    1629008,
+    1626156,
+    1630163,
+    1628386
+  ],
+  "variants": [
+    "profile-flow",
+    "profile-contests"
+  ],
+  "design": "Equal 14.4-minute exposure, no fatigue/substitutions, one supported natural position, four distinct mean70 positional teammates, 30 opponents, both seating orders. Same role and auxiliary profile policy as prior positional test. Measured role priors added by minute-weighted position pools; no name-specific adjustments.",
+  "scope": "20-player mechanism screen, cannot establish all-player Top50 or completion of goal.",
+  "fingerprint": "34a9bb6d455e6958baf31b2f9ddb7ed4bce8ffeb05404df024e1b1cf2d3a1029"
+}

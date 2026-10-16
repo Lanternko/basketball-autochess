@@ -1,0 +1,14 @@
+import fs from 'node:fs';
+import assert from 'node:assert/strict';
+import {loadInput} from '../player-impact-v21/input.mjs';
+import {impactEngine} from './audit-engine.mjs';
+const root='reports/player-impact-v22',season='2025-26',b=loadInput(season),run=await impactEngine('rotation-space');
+const counts={fresh:{fga:0,fgm:0,points:0,expectedMakes:0},putback:{fga:0,fgm:0,points:0,expectedMakes:0}},players={};
+b.options.creationPolicy='rotation-space';b.options.contextLongScale=1;b.options.spaceCenter=JSON.parse(fs.readFileSync('reports/player-impact-v7/'+season+'-center.json')).fullCenter;
+b.options.eventObserver=e=>{if(['FGM','FGX'].includes(e.type)){const row=counts[e.putback?'putback':'fresh'];row.fga++;row.fgm+=e.type==='FGM'?1:0;row.points+=e.points;row.expectedMakes+=e.makeProbability;if(e.putback){const p=players[e.putbackPlayerId]??={fga:0,fgm:0,expectedMakes:0};p.fga++;p.fgm+=Number(e.type==='FGM');p.expectedMakes+=e.makeProbability;}}};
+const valid=new Set(JSON.parse(fs.readFileSync('reports/player-impact-v1/'+season+'-on-court-truth.json')).gameIds),indices=b.league.schedule.flatMap((g,i)=>valid.has(g.id)?[i]:[]);const result=run(b.league,b.exposure,{seed:20261012,options:b.options,audit:false,replay:false,indices});
+const old=JSON.parse(fs.readFileSync('reports/player-impact-v21/runs/'+season+'-rotation-space-strict-20261012.json'));
+assert.deepEqual(result.teams,old.teams);assert.deepEqual(result.matches,old.matches);
+for(const k of ['fga','fgm'])assert.equal(result.teams.reduce((s,t)=>s+t.stats[k],0),counts.fresh[k]+counts.putback[k]);
+const out={season,seed:20261012,games:result.matches.length,counts,players,putbackFG:counts.putback.fgm/counts.putback.fga,passiveExactTeamAndMatchParity:true,design:'Actual engine putback branch flag; emitted field only, no probability or RNG changes. Recorded FGAs only, unrecorded foul misses excluded.'};
+fs.writeFileSync(root+'/putback-runtime-strict-audit.json',JSON.stringify(out,null,2));console.log(out);

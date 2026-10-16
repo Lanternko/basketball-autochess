@@ -1,0 +1,192 @@
+{
+  "version": "oreb-context-offline-1",
+  "at": "2026-10-14T08:55:35.946236+00:00",
+  "scope": "Offline diagnostic; no engine/card changes. Finish and stop. Four seen seasons, not blind. Second-half observed lineups are explicit oracle conditions, never called preseason forecasts.",
+  "sources": {
+    "2022-23": {
+      "teamGames": "data/defense-seventh/2022-23/team-games.json",
+      "playerGames": "data/defense-seventh/2022-23/player-games.json",
+      "stints": "reports/defense-seventh/2022-23/stints/stints.jsonl",
+      "strictAudit": "reports/defense-seventh/2022-23/stints/defensive-samples.json",
+      "fullTracking": "reports/defense-tenth/step4-rebounds-talent/raw/tracking/2022-23-Rebounding.json",
+      "cutoff": "2023-01-10",
+      "nextDay": "2023-01-11",
+      "games": 1230
+    },
+    "2023-24": {
+      "teamGames": "data/defense-seventh/2023-24/team-games.json",
+      "playerGames": "data/defense-seventh/2023-24/player-games.json",
+      "stints": "reports/defense-seventh/2023-24/stints/stints.jsonl",
+      "strictAudit": "reports/defense-seventh/2023-24/stints/defensive-samples.json",
+      "fullTracking": "reports/defense-tenth/step4-rebounds-talent/raw/tracking/2023-24-Rebounding.json",
+      "cutoff": "2024-01-19",
+      "nextDay": "2024-01-20",
+      "games": 1230
+    },
+    "2024-25": {
+      "teamGames": "data/defense-seventh/2024-25/team-games.json",
+      "playerGames": "data/defense-seventh/2024-25/player-games.json",
+      "stints": "reports/defense-seventh/2024-25/stints/stints.jsonl",
+      "strictAudit": "reports/defense-seventh/2024-25/stints/defensive-samples.json",
+      "fullTracking": "reports/defense-tenth/step4-rebounds-talent/raw/tracking/2024-25-Rebounding.json",
+      "cutoff": "2025-01-18",
+      "nextDay": "2025-01-19",
+      "games": 1230
+    },
+    "2025-26": {
+      "teamGames": "data/season-source/team-games.json",
+      "playerGames": "data/season-source/player-games.json",
+      "stints": "reports/defense-b1/stints.jsonl",
+      "strictAudit": "reports/defense-b1/defensive-samples.json",
+      "fullTracking": "reports/defense-tenth/step4-rebounds-talent/raw/tracking/2025-26-Rebounding.json",
+      "cutoff": "2026-01-16",
+      "nextDay": "2026-01-17",
+      "games": 1230
+    }
+  },
+  "inputHashes": {
+    "data/defense-seventh/2022-23/team-games.json": "732bbf1991c0ce13e3b70db5f2d7769dd66d5d05d4fabef6306963cff066e020",
+    "data/defense-seventh/2022-23/player-games.json": "f41f7f4b105af8d280381f0c3315219ee074b2329e5d9b5f979b6fc72dbd7f56",
+    "reports/defense-seventh/2022-23/stints/stints.jsonl": "5936e16bbfcce88da4743cb72b828be2d602bdb67e470e549c68bd2d7c3eaec6",
+    "reports/defense-seventh/2022-23/stints/defensive-samples.json": "1fc5ea2b7631af37943b9a9d949b0edc0292d4a21f288ec3dba88af2e27be0d1",
+    "reports/defense-tenth/step4-rebounds-talent/raw/tracking/2022-23-Rebounding.json": "c89ca992ba99b981423adbe671fd35bd4d0fa3f62dbd47e78ba5868bbc077df9",
+    "data/defense-seventh/2023-24/team-games.json": "befe8941b51e8c2f440df88e2aea79aab63826d389ec258d5fe8e209967586c5",
+    "data/defense-seventh/2023-24/player-games.json": "a33074c9c9b1f59e15f160464292b3ab9c791065ae542c20f2ed64f3e170afd5",
+    "reports/defense-seventh/2023-24/stints/stints.jsonl": "a83b1c42ba735810f2fd8dccd8355d2f41e4fd164389ee82fb4318b4a3d0adb6",
+    "reports/defense-seventh/2023-24/stints/defensive-samples.json": "230f0860d5a571d73192a751afab36263d5a8b24aa549c3d101746f11b04d133",
+    "reports/defense-tenth/step4-rebounds-talent/raw/tracking/2023-24-Rebounding.json": "f5338cca6714bb46541d3b439738623e91131daecab078f0071badeb7b91b20f",
+    "data/defense-seventh/2024-25/team-games.json": "b4da45c024c655c64db220568813922ca1e6d37fbc23650ad7ed43f352b1e470",
+    "data/defense-seventh/2024-25/player-games.json": "4c3f33c67ffaa1cf88ea01a7acaeef70af088e22f6020c3a02409989f6ad4ffa",
+    "reports/defense-seventh/2024-25/stints/stints.jsonl": "8790976ac74edf2054470427c50984d35d8c8ab0abf72fd92b5105489cf74ac0",
+    "reports/defense-seventh/2024-25/stints/defensive-samples.json": "a2bf9c15012ec5a1c1f7c0646425ee8cdafd8b39d172b75f4e22af0b5555195a",
+    "reports/defense-tenth/step4-rebounds-talent/raw/tracking/2024-25-Rebounding.json": "739c27b78615767495d15579e4d29489a8ed892b972efac22ef16ec673846e91",
+    "data/season-source/team-games.json": "d5cb1a6dbd26a0ed71b24e7e18fcbc862afdf6d8bd8ea3814c5dadbf1989fb8a",
+    "data/season-source/player-games.json": "11fc5866b2f61b31e27659e14e4071924b5873ef0d2a4118a585c1a54be04357",
+    "reports/defense-b1/stints.jsonl": "5eff6aa81f37d0f3baef97be2fdc7346a05ffce5ccfa1f6e4456be229a296179",
+    "reports/defense-b1/defensive-samples.json": "86e948971436b8c4f7c671ff8a7027a52204ecab7031d8e14d29282268d3eb09",
+    "reports/defense-tenth/step4-rebounds-talent/raw/tracking/2025-26-Rebounding.json": "b1d42e679d9f5b88c6c3853386d63008fbb1120344e35b29444c166ac4ee2be4",
+    "reports/defense-tenth/step4-rebounds-components/analyze.py": "2553fcedef48794a753c131f5269bccddc545d01a3b1ba8918ce79b14fd1f4ad",
+    "reports/defense-tenth/step4-rebounds-components/protocol.json": "e011fe0b9a6558fe64edc8b423ce52fd6b4914541a05c07337cb54d8bf0c82fa"
+  },
+  "protectedSHA256": "436ffcda8d5c82bd275102f2f2dffc9781816d6c95a252563003026386cc4ac0",
+  "registerSHA256": "6f38bf5c8c6d24295935eb6fac702bcbda68bebaa8891b84d9e89dc0838d8ae0",
+  "acquisition": {
+    "jobs": [
+      {
+        "season": "2022-23",
+        "half": "first",
+        "DateFrom": "",
+        "DateTo": "2023-01-10",
+        "file": "reports/defense-tenth/step4-rebounds-context/raw/2022-23-first.json"
+      },
+      {
+        "season": "2022-23",
+        "half": "second",
+        "DateFrom": "2023-01-11",
+        "DateTo": "",
+        "file": "reports/defense-tenth/step4-rebounds-context/raw/2022-23-second.json"
+      },
+      {
+        "season": "2023-24",
+        "half": "first",
+        "DateFrom": "",
+        "DateTo": "2024-01-19",
+        "file": "reports/defense-tenth/step4-rebounds-context/raw/2023-24-first.json"
+      },
+      {
+        "season": "2023-24",
+        "half": "second",
+        "DateFrom": "2024-01-20",
+        "DateTo": "",
+        "file": "reports/defense-tenth/step4-rebounds-context/raw/2023-24-second.json"
+      },
+      {
+        "season": "2024-25",
+        "half": "first",
+        "DateFrom": "",
+        "DateTo": "2025-01-18",
+        "file": "reports/defense-tenth/step4-rebounds-context/raw/2024-25-first.json"
+      },
+      {
+        "season": "2024-25",
+        "half": "second",
+        "DateFrom": "2025-01-19",
+        "DateTo": "",
+        "file": "reports/defense-tenth/step4-rebounds-context/raw/2024-25-second.json"
+      },
+      {
+        "season": "2025-26",
+        "half": "first",
+        "DateFrom": "",
+        "DateTo": "2026-01-16",
+        "file": "reports/defense-tenth/step4-rebounds-context/raw/2025-26-first.json"
+      },
+      {
+        "season": "2025-26",
+        "half": "second",
+        "DateFrom": "2026-01-17",
+        "DateTo": "",
+        "file": "reports/defense-tenth/step4-rebounds-context/raw/2025-26-second.json"
+      }
+    ],
+    "endpoint": "https://stats.nba.com/stats/leaguedashptstats",
+    "PtMeasureType": "Rebounding",
+    "concurrency": 2,
+    "attempts": 2,
+    "timeoutMS": 15000,
+    "integrity": "Audit echoed dates, player GP <= corresponding official box appearances, nonempty table, no duplicate IDs; first+second OREB and chances reconcile to cached full-season within1% summed absolute difference. If a season fails, no fitting/evaluation for it; missing older training seasons stops fit rather than substituting latest seasons."
+  },
+  "cutoff": "One league calendar date, the date of median regular-season game; every game on cutoff belongs to first half. Cup final excluded by official002 regular-season games. No per-team K.",
+  "context": {
+    "role": "First-half individual AST/36 determines order among five. Proxy leader share is stint-time fraction with focal highest AST/36; exact ties split1/n. Do not call it observed ballhandling or starting PG.",
+    "competition": "Stint-time weighted sum of OTHER FOUR players first-half tracking OREB_CHANCES/36. Same first-half profiles used for both halves; focal omitted. Missing/new players use prefix league median, never second-half rates.",
+    "lineups": "Use existing strict-game lineups. Exclude missingPbp, lineupFailed, uncertainPossessionGames, counterMismatchGames. Strict game counts must match prior audit. No coordinates manufactured.",
+    "features": "Own first-half chance36, log1p(first-half box MIN), first-half AST36; independent additions deltaRole (second-first), deltaCompetition (second-first). These deltas use known later membership/time but only prefix individual traits. No post abilities, team efficiency, on-off or outcomes as features.",
+    "confounding": "Within-person changes remove fixed person differences, not time-varying scheme, shot mix, misses, injury or teammate selection. Opportunity is period aggregate, not per-lineup chance labels."
+  },
+  "cohort": {
+    "MIN": 200,
+    "trackingMIN": 100,
+    "firstHalfChances": 10,
+    "strictMinuteFraction": 0.7,
+    "rule": "Both halves meet box and tracking MIN; first tracking chances>=10; valid raw conversion[0,1]; valid second chance/36. Existing strict stints cover>=70% box MIN in each half. Tracking-missing rows not silently counted as zeros; all exclusions listed."
+  },
+  "estimator": {
+    "train": [
+      "2022-23",
+      "2023-24"
+    ],
+    "test": [
+      "2024-25",
+      "2025-26"
+    ],
+    "type": "Ridge predicts second-minus-first chance36; intercept unpenalized; train-only imputation/scaling; grouped five-fold player SHA256 modulo5 CV; larger lambda on tie.",
+    "grid": [
+      0.1,
+      1,
+      10,
+      100,
+      1000
+    ],
+    "weight": "min(second-half box MIN,1000) normalized; test MIN used for evaluation only.",
+    "clip": "Predicted chance36>=0. Derived OREB36=predicted chance36*first-half raw conversion; no second conversion, clipping multipliers or result calibration."
+  },
+  "models": {
+    "boxPersistence": "First-half box OREB36, OREB outcome only.",
+    "chancePersistence": "First-half chance36; derived rate is first-half tracking OREB36.",
+    "history": "Chance delta predicted from own first chance36, logMIN, AST36.",
+    "role": "History + deltaRole",
+    "competition": "History + deltaCompetition",
+    "both": "History + both changes"
+  },
+  "metrics": "Second-half chance36 and box OREB36 MAE/RMSE weighted by second box MIN; tests pooled equal season weights, Pearson descriptive. No team net/wins metric or engine adoption.",
+  "descriptive": "Each season weighted correlation and slope of within-player chance change vs role/competition changes; roleUp>=.15, roleDown<=-.15; competitionUp>=1 and down<=-1 chance36. Descriptive only. List known trade/mover groups via half maximum-minute teams, not causal trade estimate.",
+  "uncertainty": {
+    "replicates": 20000,
+    "seed": 20261057,
+    "scheme": "Paired franchise resampling crossed Poisson1 individual weights, common franchise and player weights across seasons/models; no simulation seed or training-refit uncertainty.",
+    "primary": "Six pooled TEST OREB36 MAE comparisons: role/competition/both vs boxPersistence and history;95% plus Bonferroni99.1667%. All other comparisons exploratory."
+  },
+  "decision": "A context candidate supported only if pooled held-out OREB36 MAE Bonferroni intervals wholly negative vs BOTH references, chanceMAE95 not significantly worse vs history, and each test-season/mover OREB36 MAE95 not significantly worse vs boxPersistence. Even success is oracle-context evidence, not a causal participation coefficient or engine adoption.",
+  "geometryInventory": "Inspect first3 sorted PBP file names per season for coordinate fields; count per-action x/y and whether ten-player position trajectories exist. Sampling only, no claim of full-data spatial completeness."
+}

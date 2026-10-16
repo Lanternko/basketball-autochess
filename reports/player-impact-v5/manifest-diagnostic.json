@@ -1,0 +1,22 @@
+{
+  "jobs": [
+    {
+      "season": "2025-26",
+      "seed": 20261012,
+      "version": "profile-flow",
+      "strict": false,
+      "onCourt": false,
+      "file": "reports/player-impact-v5/runs/2025-26-profile-flow-full-20261012.json",
+      "sha256": "8fccf46fbc7c74d0f3e13413f79622a362e589c1b9d77602d2ac707c8acffd78"
+    },
+    {
+      "season": "2025-26",
+      "seed": 20261012,
+      "version": "profile-contests",
+      "strict": false,
+      "onCourt": false,
+      "file": "reports/player-impact-v5/runs/2025-26-profile-contests-full-20261012.json",
+      "sha256": "5da76fc0f0d42817567004223c034a2a33184d99a690e0cc168a399713a061ad"
+    }
+  ]
+}

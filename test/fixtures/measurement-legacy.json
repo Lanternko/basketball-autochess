@@ -1,0 +1,236 @@
+{
+  "description": "Captured before measurement changes; fatigue enabled, current working-tree baseline",
+  "stats": [
+    "poss",
+    "fga",
+    "fg3a",
+    "fg3m",
+    "mida",
+    "midm",
+    "rima",
+    "rimm",
+    "tov",
+    "oreb",
+    "fta",
+    "ftm",
+    "passes",
+    "touches",
+    "assisted",
+    "forced",
+    "putbacks",
+    "passPerPoss",
+    "assistedRate",
+    "forcedRate",
+    "putbackRate",
+    "efg",
+    "longPct",
+    "midPct",
+    "shortPct",
+    "longRate",
+    "midRate",
+    "shortRate",
+    "tovPct"
+  ],
+  "cases": [
+    {
+      "key": "GSW",
+      "opts": {
+        "seed": 1,
+        "mode": "race",
+        "possessions": 75,
+        "targetScore": 21
+      },
+      "sha256": "280afc98b512ae58fd0af2b66257b345e775c157b05cd2fcb894124939040748"
+    },
+    {
+      "key": "GSW",
+      "opts": {
+        "seed": 1,
+        "mode": "fixed",
+        "possessions": 75,
+        "targetScore": 21
+      },
+      "sha256": "9d551a05f99cce205841e9a407f06981495befabc758d19b9a7b83385aef0056"
+    },
+    {
+      "key": "GSW",
+      "opts": {
+        "seed": 20260908,
+        "mode": "race",
+        "possessions": 75,
+        "targetScore": 21
+      },
+      "sha256": "03428f4da1771994d35b164c0e61df40def514885556d4bef7111d319bf49b93"
+    },
+    {
+      "key": "GSW",
+      "opts": {
+        "seed": 20260908,
+        "mode": "fixed",
+        "possessions": 75,
+        "targetScore": 21
+      },
+      "sha256": "6c9d01467ee13842286796181a66ad5d803bd018391b7e7dcec0e6d0c59afe14"
+    },
+    {
+      "key": "CLE",
+      "opts": {
+        "seed": 1,
+        "mode": "race",
+        "possessions": 75,
+        "targetScore": 21
+      },
+      "sha256": "c50fe15489a6b481772d32a14ba38302d5c3e2ae1b41f33ca9fa0fa245e4ab63"
+    },
+    {
+      "key": "CLE",
+      "opts": {
+        "seed": 1,
+        "mode": "fixed",
+        "possessions": 75,
+        "targetScore": 21
+      },
+      "sha256": "0a549e90e9c7751ba91b9499fe4ffd28af36f12efdfa4fcbd9ae6a852647290c"
+    },
+    {
+      "key": "CLE",
+      "opts": {
+        "seed": 20260908,
+        "mode": "race",
+        "possessions": 75,
+        "targetScore": 21
+      },
+      "sha256": "d09ef4d94feeafc0c55b98244009d3e8cf661fd3df4daea5726426540c8eeb7d"
+    },
+    {
+      "key": "CLE",
+      "opts": {
+        "seed": 20260908,
+        "mode": "fixed",
+        "possessions": 75,
+        "targetScore": 21
+      },
+      "sha256": "3ddeee52ddcb516801fca58f3d418fbd16d2b0db7d7997789828bf819dcef0e3"
+    },
+    {
+      "key": "OKC",
+      "opts": {
+        "seed": 1,
+        "mode": "race",
+        "possessions": 75,
+        "targetScore": 21
+      },
+      "sha256": "947c41a550328d9c9dcf2a1215189c42ef5a97f55545bd038c4327782f8b7603"
+    },
+    {
+      "key": "OKC",
+      "opts": {
+        "seed": 1,
+        "mode": "fixed",
+        "possessions": 75,
+        "targetScore": 21
+      },
+      "sha256": "171bd01c0f46f4ec4f1458f059d97b4f7d12853cecf32e0422738560bec6c94d"
+    },
+    {
+      "key": "OKC",
+      "opts": {
+        "seed": 20260908,
+        "mode": "race",
+        "possessions": 75,
+        "targetScore": 21
+      },
+      "sha256": "ed8726bc44f24baab8076b527f4d75a7aaedeeea9dc037a07a4839d01179d8ee"
+    },
+    {
+      "key": "OKC",
+      "opts": {
+        "seed": 20260908,
+        "mode": "fixed",
+        "possessions": 75,
+        "targetScore": 21
+      },
+      "sha256": "299753d1f1b4f07cd83063d7a242bc0150f9acb4d336932f8ac3eb138fb52797"
+    },
+    {
+      "key": "NYK",
+      "opts": {
+        "seed": 1,
+        "mode": "race",
+        "possessions": 75,
+        "targetScore": 21
+      },
+      "sha256": "90ace72371e95fb3978f0a4e3fe4e7b51f2832525f426654dd8200f18e9766c2"
+    },
+    {
+      "key": "NYK",
+      "opts": {
+        "seed": 1,
+        "mode": "fixed",
+        "possessions": 75,
+        "targetScore": 21
+      },
+      "sha256": "2aca84ab7a51390b743c977ed7728093c0b3da295ed678a4c7b893c9af614b4f"
+    },
+    {
+      "key": "NYK",
+      "opts": {
+        "seed": 20260908,
+        "mode": "race",
+        "possessions": 75,
+        "targetScore": 21
+      },
+      "sha256": "874bac49fdcfa9a3514ede6b13546d78de9cb35702fe5a4f4fcab6c310580aec"
+    },
+    {
+      "key": "NYK",
+      "opts": {
+        "seed": 20260908,
+        "mode": "fixed",
+        "possessions": 75,
+        "targetScore": 21
+      },
+      "sha256": "05f7faf003d5680c57c47e0fd3e01ccab117121b84ebc30164fa8f4dbc9cea80"
+    },
+    {
+      "key": "LAL",
+      "opts": {
+        "seed": 1,
+        "mode": "race",
+        "possessions": 75,
+        "targetScore": 21
+      },
+      "sha256": "6803340cbd09441858da99e5b6e21bac0bc0eb23a1226b8d7841651eb7ad8eca"
+    },
+    {
+      "key": "LAL",
+      "opts": {
+        "seed": 1,
+        "mode": "fixed",
+        "possessions": 75,
+        "targetScore": 21
+      },
+      "sha256": "25b1362a52b790b197afa4dd550a8d0495717000f5183f69d0e2eaa0e858a5ea"
+    },
+    {
+      "key": "LAL",
+      "opts": {
+        "seed": 20260908,
+        "mode": "race",
+        "possessions": 75,
+        "targetScore": 21
+      },
+      "sha256": "97d6771c32dc87720ebb9dd76691f6ab1bd2b2287f35280e9bc3d545d5cace37"
+    },
+    {
+      "key": "LAL",
+      "opts": {
+        "seed": 20260908,
+        "mode": "fixed",
+        "possessions": 75,
+        "targetScore": 21
+      },
+      "sha256": "edda67e9fc0bb17236e15b0b91e80fc1b6e33b1a8903cda9551a081f22f03ac0"
+    }
+  ]
+}

@@ -1,0 +1,133 @@
+<div id="model-personal-curves">
+  <h3 class="figure-title">個人數據：誤差隨版本變化</h3>
+  <div class="text-small text-muted metadata">2025–26 · 378 人（實際 ≥500 分鐘）· 相同 3 組種子 · 實際分鐘加權 MAE</div>
+  <div class="viz-row text-small figure-key">
+    <span class="sample-key"><i></i>實驗版本：實測點＋直線連接</span>
+    <button type="button" class="reference-key cursor-interaction" aria-pressed="true"><i></i>正式模型基準</button>
+    <span>誤差越低越準</span>
+  </div>
+  <div class="plot-grid"></div>
+  <div class="text-small text-muted footer-label">圖例數值＝v41。版本缺口無同規格完整結果；連線不代表缺號版本的實測值。各圖 Y 軸尺度不同。</div>
+  <div class="tooltip curve-tooltip" role="tooltip" hidden></div>
+  <div class="sr-only" aria-live="polite"></div>
+</div>
+<style>
+#model-personal-curves{position:relative;color:var(--foreground)}
+#model-personal-curves .figure-title{max-width:calc(100% - 94px);margin:0 0 8px;font-weight:500}
+#model-personal-curves .metadata{margin-bottom:12px}
+#model-personal-curves .figure-key{gap:8px 20px;margin-bottom:18px}
+#model-personal-curves .sample-key{display:inline-flex;align-items:center;gap:7px}
+#model-personal-curves .sample-key i{width:22px;height:0;border-top:2px solid var(--viz-series-1)}
+#model-personal-curves .reference-key,#model-personal-curves .series-key{display:inline-flex;align-items:center;gap:6px;padding:4px 0;background:transparent!important;border:0;color:var(--foreground)!important;font:inherit;font-weight:400;min-height:32px;text-align:left}
+#model-personal-curves .reference-key i{display:block;width:22px;height:0;border-top:1.5px dashed var(--muted-foreground)}
+#model-personal-curves button[aria-pressed="false"]{opacity:.45}
+#model-personal-curves .plot-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px 20px}
+#model-personal-curves .plot{min-width:0}
+#model-personal-curves .plot-title{font-weight:500;margin-bottom:3px}
+#model-personal-curves .plot-keys{display:flex;flex-wrap:wrap;gap:2px 14px;min-height:36px}
+#model-personal-curves .series-key i{width:9px;height:9px;border-radius:50%;display:inline-block;flex:none}
+#model-personal-curves .plot-holder{width:100%}
+#model-personal-curves svg.curve-chart{display:block;width:100%;overflow:visible}
+#model-personal-curves svg.curve-chart text{fill:var(--foreground);font-size:12px;font-weight:400}
+#model-personal-curves svg.curve-chart .domain,#model-personal-curves svg.curve-chart .tick line{stroke:var(--border)}
+#model-personal-curves .footer-label{margin-top:14px}
+#model-personal-curves .curve-tooltip{position:absolute;z-index:4;pointer-events:none;max-width:290px;padding:9px 11px;background:var(--popover);color:var(--popover-foreground);border:1px solid var(--border)}
+#model-personal-curves .tip-row{display:flex;justify-content:space-between;gap:16px}
+@media(max-width:650px){#model-personal-curves .plot-grid{grid-template-columns:1fr}}
+@media(pointer:coarse){#model-personal-curves .series-key,#model-personal-curves .reference-key{min-height:44px}}
+</style>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script>
+<script>
+(()=>{
+const root=document.getElementById('model-personal-curves');
+const data=__PAYLOAD__;
+const ns='http://www.w3.org/2000/svg';
+const hidden=new Set();let references=true;
+const saved=window.openai?.widgetState?.privateContent;
+if(saved?.chart===root.id){(saved.hidden||[]).forEach(k=>hidden.add(k));references=saved.references!==false;}
+const tooltip=root.querySelector('.curve-tooltip'),grid=root.querySelector('.plot-grid'),status=root.querySelector('.sr-only');
+const refButton=root.querySelector('.reference-key');
+const format=v=>v>=10?v.toFixed(2):v.toFixed(3);
+const color=k=>`var(--viz-series-${k})`;
+const persist=()=>window.openai?.setWidgetState?.({modelContent:{chart:data.kind,hiddenMetrics:[...hidden],showOfficialBaseline:references},privateContent:{chart:root.id,hidden:[...hidden],references}})?.catch(()=>{});
+const panels=[];
+const svgElement=(tag,attrs={})=>{const e=document.createElementNS(ns,tag);for(const[k,v]of Object.entries(attrs))e.setAttribute(k,v);return e;};
+function readState(state){const p=state?.privateContent;if(p?.chart!==root.id)return;hidden.clear();(p.hidden||[]).forEach(k=>hidden.add(k));references=p.references!==false;update(false);}
+window.addEventListener('openai:set_globals',e=>readState(e.detail?.globals?.widgetState));
+for(const group of data.groups){
+ const section=document.createElement('section');section.className='plot';
+ const title=document.createElement('div');title.className='plot-title';title.textContent=group.title;
+ const keys=document.createElement('div');keys.className='plot-keys text-small';
+ const holder=document.createElement('div');holder.className='plot-holder';
+ const svg=svgElement('svg',{class:'curve-chart',role:'img','aria-label':`${group.title}，橫軸模型版本，縱軸${group.unit}誤差；越低越準。`});holder.append(svg);
+ for(const metric of group.metrics){
+  const b=document.createElement('button');b.type='button';b.className='series-key cursor-interaction';b.dataset.metric=metric.key;
+  const sw=document.createElement('i');sw.style.background=color(metric.color);sw.setAttribute('aria-hidden','true');
+  const label=document.createElement('span');label.textContent=`${metric.label} ${format(data.values['41'][metric.key])}`;
+  b.append(sw,label);b.setAttribute('aria-label',`${metric.label}，v41 ${format(data.values['41'][metric.key])} ${group.unit}；切換顯示`);
+  b.addEventListener('click',()=>{hidden.has(metric.key)?hidden.delete(metric.key):hidden.add(metric.key);update(true);persist();});keys.append(b);
+ }
+ section.append(title,keys,holder);grid.append(section);panels.push({group,holder,svg,drawn:false});
+}
+function draw(panel,animate){
+ const {svg,holder,group}=panel,width=Math.max(280,holder.getBoundingClientRect().width),height=256;
+ const margin={left:64,right:15,top:17,bottom:49},frame={x:margin.left,y:margin.top,w:width-margin.left-margin.right,h:height-margin.top-margin.bottom};
+ const active=group.metrics.filter(m=>!hidden.has(m.key));
+ const all=[];for(const m of active){for(const v of data.versions)all.push(data.values[v][m.key]);if(references)all.push(data.values.control[m.key]);}
+ let lo,hi;[lo,hi]=d3.extent(all.length?all:[0,1]);const pad=Math.max((hi-lo)*.12,hi*.025,.0001);
+ const x=d3.scaleLinear().domain(d3.extent(data.versions)).range([frame.x+4,frame.x+frame.w-4]);
+ const y=d3.scaleLinear().domain([Math.max(0,lo-pad),hi+pad]).nice(4).range([frame.y+frame.h-4,frame.y+4]);
+ const old=panel.drawn,prev=panel.coords;panel.coords={x,y};
+ svg.setAttribute('viewBox',`0 0 ${width} ${height}`);svg.setAttribute('height',height);svg.replaceChildren();
+ const desc=svgElement('desc');desc.textContent=group.metrics.map(m=>`${m.label}：v14 ${format(data.values['14'][m.key])}，v41 ${format(data.values['41'][m.key])}，正式模型 ${format(data.values.control[m.key])} ${group.unit}`).join('；');svg.append(desc);
+ const frameRect=svgElement('rect',{'data-chart-frame':'',x:frame.x,y:frame.y,width:frame.w,height:frame.h,fill:'none',stroke:'var(--border)','stroke-width':1});svg.append(frameRect);
+ const ticks=width<400?[14,24,30,41]:[14,20,24,30,41];
+ const gx=d3.select(svg).append('g').attr('transform',`translate(0,${frame.y+frame.h})`).call(d3.axisBottom(x).tickValues(ticks).tickFormat(v=>`v${v}`).tickSizeOuter(0));
+ gx.select('.domain').remove();gx.selectAll('text').attr('dy','1.15em');
+ const gy=d3.select(svg).append('g').attr('transform',`translate(${frame.x},0)`).call(d3.axisLeft(y).ticks(4).tickFormat(d3.format('.2~f')).tickSizeOuter(0));gy.select('.domain').remove();
+ for(const t of y.ticks(4)){svg.append(svgElement('line',{x1:frame.x,x2:frame.x+frame.w,y1:y(t),y2:y(t),stroke:'var(--border)','stroke-width':.5,'pointer-events':'none'}));}
+ const xt=svgElement('text',{class:'axis-title','data-axis':'x',x:frame.x+frame.w/2,y:height-3,'text-anchor':'middle'});xt.textContent='模型版本';svg.append(xt);
+ const yt=svgElement('text',{class:'axis-title','data-axis':'y',transform:`translate(15,${frame.y+frame.h/2}) rotate(-90)`,'text-anchor':'middle'});yt.textContent=`${group.error||'MAE'}（${group.unit}）`;svg.append(yt);
+ const line=d3.line().x(d=>x(d.x)).y(d=>y(d.y));
+ const reduced=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+ const change=animate&&old&&!reduced;
+ for(const m of active){
+  const vals=data.versions.map(v=>({x:v,y:data.values[v][m.key]}));
+  if(references){const path=svgElement('line',{x1:x(data.versions[0]),x2:x(data.versions.at(-1)),y1:y(data.values.control[m.key]),y2:y(data.values.control[m.key]),stroke:color(m.color),'stroke-width':1.2,'stroke-dasharray':'4 4',opacity:.65});svg.append(path);}
+  const p=svgElement('path',{d:line(vals),fill:'none',stroke:color(m.color),'stroke-width':2});svg.append(p);
+  if(change){const prior=d3.line().x(d=>prev.x(d.x)).y(d=>prev.y(d.y));d3.select(p).attr('d',prior(vals)).transition().duration(240).attr('d',line(vals));}
+  for(const d of vals){const c=svgElement('circle',{cx:x(d.x),cy:y(d.y),r:2.7,fill:color(m.color)});svg.append(c);if(change)d3.select(c).attr('cy',prev.y(d.y)).transition().duration(240).attr('cy',y(d.y));}
+ }
+ const guide=svgElement('line',{'data-chart-hover-guide':'',x1:0,x2:0,y1:frame.y,y2:frame.y+frame.h,stroke:'var(--muted-foreground)','stroke-width':1,visibility:'hidden'});svg.append(guide);
+ const markers=active.map(m=>{const c=svgElement('circle',{'data-chart-hover-marker':m.key,r:4,fill:color(m.color),visibility:'hidden'});svg.append(c);return{m,c};});
+ const overlay=svgElement('rect',{'data-chart-hit':'','data-chart-hover-overlay':'cross-series',x:frame.x,y:frame.y,width:frame.w,height:frame.h,fill:'transparent'});svg.append(overlay);
+ let pinned=false;
+ function clear(){if(pinned)return;tooltip.hidden=true;guide.setAttribute('visibility','hidden');markers.forEach(({c})=>c.setAttribute('visibility','hidden'));}
+ function detail(event){
+  const [px]=d3.pointer(event,svg),cursor=Math.max(x(data.versions[0]),Math.min(x(data.versions.at(-1)),px)),vx=x.invert(cursor);
+  const points=data.versions.map(v=>({x:v}));const nearest=d3.bisector(d=>d.x).center(points,vx);
+  let a=Math.max(0,d3.bisector(d=>d.x).right(points,vx)-1),b=Math.min(points.length-1,a+1);
+  const va=points[a].x,vb=points[b].x,weight=va===vb?0:(vx-va)/(vb-va);
+  guide.setAttribute('x1',cursor);guide.setAttribute('x2',cursor);guide.setAttribute('visibility','visible');
+  tooltip.replaceChildren();const head=document.createElement('div');head.textContent=`v${vx.toFixed(2)} 線段內插（非實測）`;head.style.fontWeight='500';tooltip.append(head);
+  for(const {m,c} of markers){
+   const value=data.values[va][m.key]+weight*(data.values[vb][m.key]-data.values[va][m.key]);c.setAttribute('cx',cursor);c.setAttribute('cy',y(value));c.setAttribute('visibility','visible');
+   const row=document.createElement('div');row.className='tip-row';const label=document.createElement('span');label.textContent=m.label;const valueEl=document.createElement('span');valueEl.className='tabular-nums';valueEl.textContent=format(value);row.append(label,valueEl);tooltip.append(row);
+  }
+  if(references){const title=document.createElement('div');title.textContent='正式模型';title.style.marginTop='5px';tooltip.append(title);for(const m of active){const row=document.createElement('div');row.className='tip-row';const label=document.createElement('span');label.textContent=m.label;const v=document.createElement('span');v.className='tabular-nums';v.textContent=format(data.values.control[m.key]);row.append(label,v);tooltip.append(row);}}
+  const note=document.createElement('div');note.className='text-small';note.textContent=`鄰近實測 v${points[nearest].x}：${active.map(m=>`${m.label} ${format(data.values[points[nearest].x][m.key])}`).join('；')}`;tooltip.append(note);tooltip.hidden=false;
+  const rr=root.getBoundingClientRect(),sr=svg.getBoundingClientRect();const left=Math.max(0,Math.min(sr.left-rr.left+cursor+12,rr.width-tooltip.offsetWidth));
+  tooltip.style.left=`${left}px`;tooltip.style.top=`${sr.top-rr.top+22}px`;
+ }
+ overlay.addEventListener('pointermove',e=>{if(!pinned)detail(e);});overlay.addEventListener('pointerleave',clear);
+ overlay.addEventListener('pointerdown',e=>{pinned=!pinned;detail(e);});
+ // Verify measured label bounds after layout; omit optional x ticks if crowded.
+ const labels=[...gx.selectAll('text').nodes()].map(e=>({el:e,box:e.getBBox()}));
+ for(let i=1;i<labels.length;i++){const p=labels[i-1],q=labels[i];const px=+p.el.parentElement.getAttribute('transform').match(/translate\(([^,]+)/)[1],qx=+q.el.parentElement.getAttribute('transform').match(/translate\(([^,]+)/)[1];if(px+p.box.x+p.box.width+4>qx+q.box.x&&i<labels.length-1)q.el.textContent='';}
+ panel.drawn=true;
+}
+function update(animate=false){tooltip.hidden=true;refButton.setAttribute('aria-pressed',String(references));root.querySelectorAll('.series-key').forEach(b=>b.setAttribute('aria-pressed',String(!hidden.has(b.dataset.metric))));panels.forEach(p=>draw(p,animate));status.textContent=`${data.kind}，顯示 ${data.groups.flatMap(g=>g.metrics).filter(m=>!hidden.has(m.key)).length} 個指標；正式模型基準${references?'顯示':'隱藏'}`;}
+refButton.addEventListener('click',()=>{references=!references;update(true);persist();});
+const observer=new ResizeObserver(()=>update(false));panels.forEach(p=>observer.observe(p.holder));update();
+})();
+</script>

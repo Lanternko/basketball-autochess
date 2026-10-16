@@ -1,0 +1,118 @@
+{
+  "label": "full-candidate",
+  "extra": {
+    "cutoff": 0,
+    "bundle": "reports/defense-seventh/full/bundle.json",
+    "cardFile": "reports/defense-seventh/full/pre82-candidate-league.json"
+  },
+  "files": [
+    {
+      "seed": 20261012,
+      "file": "reports/defense-seventh/runs/full-candidate-seed20261012.json",
+      "sha256": "07507627a4017667ebab142a8ce5a37bee9b7a3583684957c76eef4f42dc2513"
+    },
+    {
+      "seed": 20261013,
+      "file": "reports/defense-seventh/runs/full-candidate-seed20261013.json",
+      "sha256": "0ce5414feff2ddf490a246f893eaa67125c7198e5d64aaced928bac72a4c4e31"
+    },
+    {
+      "seed": 20261014,
+      "file": "reports/defense-seventh/runs/full-candidate-seed20261014.json",
+      "sha256": "4a385dd7792dcec11eeeb2b86ad87bcc11284dbdc105de2aa68f44c0e65c107b"
+    },
+    {
+      "seed": 20261015,
+      "file": "reports/defense-seventh/runs/full-candidate-seed20261015.json",
+      "sha256": "5ba59c163130593620f90273ebffd97e7acbce9ba5865ef0788205d38afac425"
+    },
+    {
+      "seed": 20261016,
+      "file": "reports/defense-seventh/runs/full-candidate-seed20261016.json",
+      "sha256": "e130cc8672f8c3724215f7dd6ef7e729b99322082b2c144a865254b2cfd1a5e5"
+    },
+    {
+      "seed": 20261017,
+      "file": "reports/defense-seventh/runs/full-candidate-seed20261017.json",
+      "sha256": "eef6d924241a94a2e42d9cc97eef623fa3f0698fc33ebc95f8597615888f0c49"
+    },
+    {
+      "seed": 20261018,
+      "file": "reports/defense-seventh/runs/full-candidate-seed20261018.json",
+      "sha256": "03a6fbadbeeaacafa193a27097c8935d695401b051a8ce5083ea1f82b1b1e87f"
+    },
+    {
+      "seed": 20261019,
+      "file": "reports/defense-seventh/runs/full-candidate-seed20261019.json",
+      "sha256": "650ce6bcbde5178a3598d832c24ae5eaf07ed071ef08319f700801b70ad255fe"
+    },
+    {
+      "seed": 20261020,
+      "file": "reports/defense-seventh/runs/full-candidate-seed20261020.json",
+      "sha256": "44c9d885ab9f8c48f8557acd743725b57de767e3b6c9ffe097992b231f2150d3"
+    },
+    {
+      "seed": 20261021,
+      "file": "reports/defense-seventh/runs/full-candidate-seed20261021.json",
+      "sha256": "20c03c91202d724dd7787ecfa7b1437b4da54dbcbed9794c4ba8d22ed2c57636"
+    },
+    {
+      "seed": 20261022,
+      "file": "reports/defense-seventh/runs/full-candidate-seed20261022.json",
+      "sha256": "e9d07e8635409772bbf45d0961dcbf485297cf72ebcdaf245b86d1a9b50ceaf5"
+    },
+    {
+      "seed": 20261023,
+      "file": "reports/defense-seventh/runs/full-candidate-seed20261023.json",
+      "sha256": "403c9a5a21c4d8367c615a0d85432e2f7c12c6cfbdd06b4d752b2667ebc57bb5"
+    },
+    {
+      "seed": 20261024,
+      "file": "reports/defense-seventh/runs/full-candidate-seed20261024.json",
+      "sha256": "8a886418018d9a1e38731dffc56a6ed1b554c8a58c5d9eff59ceb024d2008e8e"
+    },
+    {
+      "seed": 20261025,
+      "file": "reports/defense-seventh/runs/full-candidate-seed20261025.json",
+      "sha256": "c2b7e3cf5dd17e0c3157de3ffb46b7fd99f698de9096043002b8df2bd1faefa9"
+    },
+    {
+      "seed": 20261026,
+      "file": "reports/defense-seventh/runs/full-candidate-seed20261026.json",
+      "sha256": "12c754691d6682e4d993c3f41072e7ffce9785bfdfd413b4772d1d7e54ab1844"
+    },
+    {
+      "seed": 20261027,
+      "file": "reports/defense-seventh/runs/full-candidate-seed20261027.json",
+      "sha256": "aa24a91ef06b1d47c7df4fff6f31aea4b52006bd04c12b558548d53f67f7470c"
+    },
+    {
+      "seed": 20261028,
+      "file": "reports/defense-seventh/runs/full-candidate-seed20261028.json",
+      "sha256": "1b39007958048c0c840b6aa893d9a1d27287d9c1fd309646f2eb6aab16a1e2f2"
+    },
+    {
+      "seed": 20261029,
+      "file": "reports/defense-seventh/runs/full-candidate-seed20261029.json",
+      "sha256": "bfd303976a2921fce7660b663a2816e082e6939bfe7a8b3c16c435214841809a"
+    },
+    {
+      "seed": 20261030,
+      "file": "reports/defense-seventh/runs/full-candidate-seed20261030.json",
+      "sha256": "0bacdd16a0a5d1b6750b46f5930c8612f8038a6c0ddd8f7aaf2b656a8285ae8a"
+    },
+    {
+      "seed": 20261031,
+      "file": "reports/defense-seventh/runs/full-candidate-seed20261031.json",
+      "sha256": "d284cb40af30db401d0b913495c3d07b00663e21df57fcd8159eefbfe3a2aee7"
+    }
+  ],
+  "seconds": 263.137,
+  "sources": {
+    "src/defense_fifth_game.js": "bddd3f34b93e969513ce79d717b78358dc433c0f15eba3eeffa675177b9dfa86",
+    "src/defense_sixth_season.js": "1c30c6c59fbc3e2a40b08231dddf9be255b11fca386d93daf1eb986a99000bcf",
+    "src/defense_seventh_jobs.js": "ca1501845b601e0b742f601751ac74fba7e9717a6de66d8ab9d7a4d0c4c6d41d",
+    "scripts/run_defense_seventh.js": "0e40923369762bd8b0a0faa1545e704ba0587bc1341ea40058b7766f240f3f01",
+    "reports/defense-seventh/full/pre82-candidate-league.json": "51c8a5dfce6f1660429dbffab6c50447905b9a65de253f69130fc814882ee55f"
+  }
+}

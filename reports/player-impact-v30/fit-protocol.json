@@ -1,0 +1,30 @@
+{
+  "design": "Receiver-controlled passed-shot production association; never a causal skill label.",
+  "trainingSeasons": [
+    "2022-23",
+    "2023-24",
+    "2024-25"
+  ],
+  "targetSeason": "2025-26",
+  "folds": 5,
+  "foldPolicy": "Entire directed team/passer/recipient pair held out together across shot types; deterministic SHA256 first8 digits mod5. Not game/time holdout, no causal teammate independence claim.",
+  "receiverPrecisionGrid": [
+    5.0,
+    20.0,
+    80.0
+  ],
+  "passerPrecisionGrid": [
+    5.0,
+    20.0,
+    80.0,
+    320.0
+  ],
+  "criterion": "Summed held-out binomial negative log likelihood per FGA, training seasons only. Receiver-only null chooses its own precision. 2025-26 only tests preselected hyperparameters. No names, ranks, simulation residuals or on/off fitting.",
+  "hashes": {
+    "reports/player-impact-v21/raw/2022-23/passing-pairs-league.json": "c0882590569c9b23a972f7a4700721245c529dbf25a35fda25d807e0d1528bc3",
+    "reports/player-impact-v21/raw/2023-24/passing-pairs-league.json": "b1fce48c840fc1aef7a93608c89142171ce6991146a55fdf2d4268171f00fc5c",
+    "reports/player-impact-v21/raw/2024-25/passing-pairs-league.json": "3f39eb20323d620a1064c8195226d1e0844140d2d45742d21e3fc5db1a1bedd7",
+    "reports/player-impact-v21/raw/2025-26/passing-pairs-league.json": "6d38cc3641d5f44ec9ef29f071179b4b2746df78f83fd57de9a03a70ad4ee91b",
+    "D:/Projects/CODING/basketball-autochess/reports/player-impact-v30/fit-passing.py": "a8303475477ce80951c27ea6c3861f16ffc11e1cb89a943967e5d71fe56b9a3a"
+  }
+}

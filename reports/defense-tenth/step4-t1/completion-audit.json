@@ -1,0 +1,110 @@
+{
+  "completedAt": "2026-10-13T06:44:06.399Z",
+  "issues": [],
+  "protectedFiles": 998,
+  "verifiedExistingRuns": 160,
+  "summaries": [
+    {
+      "task": "task1",
+      "season": "2025-26",
+      "version": "v1",
+      "runs": 20,
+      "matches": 24600,
+      "maximumAggregateDifference": 0,
+      "meanActualMinuteMAE": 1.399984966167622
+    },
+    {
+      "task": "task1",
+      "season": "2025-26",
+      "version": "v3",
+      "runs": 20,
+      "matches": 24600,
+      "maximumAggregateDifference": 0,
+      "meanActualMinuteMAE": 1.4796809187897872
+    },
+    {
+      "task": "task2",
+      "season": "2023-24",
+      "version": "L1",
+      "runs": 20,
+      "matches": 24600,
+      "maximumAggregateDifference": 0,
+      "meanActualMinuteMAE": 1.5405521869515257
+    },
+    {
+      "task": "task2",
+      "season": "2023-24",
+      "version": "L2",
+      "runs": 20,
+      "matches": 24600,
+      "maximumAggregateDifference": 0,
+      "meanActualMinuteMAE": 1.5519001565715884
+    },
+    {
+      "task": "task2",
+      "season": "2024-25",
+      "version": "L1",
+      "runs": 20,
+      "matches": 24600,
+      "maximumAggregateDifference": 0,
+      "meanActualMinuteMAE": 1.4786969696969698
+    },
+    {
+      "task": "task2",
+      "season": "2024-25",
+      "version": "L2",
+      "runs": 20,
+      "matches": 24600,
+      "maximumAggregateDifference": 0,
+      "meanActualMinuteMAE": 1.5031500665373945
+    },
+    {
+      "task": "task2",
+      "season": "2025-26",
+      "version": "L1",
+      "runs": 20,
+      "matches": 24600,
+      "maximumAggregateDifference": 0,
+      "meanActualMinuteMAE": 1.4219956846410742
+    },
+    {
+      "task": "task2",
+      "season": "2025-26",
+      "version": "L2",
+      "runs": 20,
+      "matches": 24600,
+      "maximumAggregateDifference": 0,
+      "meanActualMinuteMAE": 1.4320418339650043
+    }
+  ],
+  "validCoverage": {
+    "2022-23": {
+      "minimumTeamCoverage": 0.975609756097561,
+      "validGames": 1228,
+      "missingOrInvalid": 2
+    },
+    "2023-24": {
+      "minimumTeamCoverage": 0.975609756097561,
+      "validGames": 1224,
+      "missingOrInvalid": 6
+    },
+    "2024-25": {
+      "minimumTeamCoverage": 0.975609756097561,
+      "validGames": 1222,
+      "missingOrInvalid": 8
+    },
+    "2025-26": {
+      "minimumTeamCoverage": 0.9634146341463414,
+      "validGames": 1222,
+      "missingOrInvalid": 8
+    }
+  },
+  "protocolHash": "7d51a8d6c18b564cf40dc25576ca2840ee3d7e63b41dfb561bf7dc424478c685",
+  "newSimulations": 0,
+  "unchanged": [
+    "A",
+    "A2",
+    "src"
+  ],
+  "stopAt": "T1"
+}

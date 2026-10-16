@@ -1,0 +1,23 @@
+{
+  "officialModelAdopted": false,
+  "goalComplete": false,
+  "fullOvrThisVersion": false,
+  "latestCompleteOvrVersion": 24,
+  "countsOnlyRepair": true,
+  "allNonBlockOutputsExactlyEqualV30": true,
+  "games": 28023,
+  "canonicalWorkloadSmokeGames": 40,
+  "sourceGames": 4421,
+  "sourceFga": 785193,
+  "sourceMisses": 414386,
+  "sourceBlocks": 42932,
+  "targetPlayers": 582,
+  "targetPlayerColumns": 170,
+  "selectedSigma": 0.5,
+  "failedWinGateSeasons": [
+    "2022-23",
+    "2023-24",
+    "2025-26"
+  ],
+  "scope": "Individual block count mechanism repaired and isolated. Team win model remains archived v30 and fails unchanged gates. No ranking or injury coefficient fit."
+}

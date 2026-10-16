@@ -1,0 +1,114 @@
+{
+  "kappaRebounds": 9.922603176057486,
+  "fitSeasons": [
+    "2022-23",
+    "2023-24",
+    "2024-25"
+  ],
+  "checkSeason": "2025-26",
+  "design": "Observed fast recorded-FGA probability = theta_player * source_model_survival_event. MAP theta has Beta(1+kappa*mu,1+kappa*(1-mu)) prior, mu=total successes/sum survival, solved by monotone derivative bisection. Common kappa minimizes five whole-game fold Bernoulli NLL. Counts and contextual survival only; no simulated residual, name, rank, ON/OFF or wins fit. Survival uses full-season v22 shooting/turnover covariates and coarse engine foul/endgame assumptions, so descriptive conditional reconstruction, not blind or causal skill estimation. Runtime unchanged; source choice physics centering and residual policy mismatches must be audited before integration.",
+  "nll": {
+    "fitted": 41126.357656349464,
+    "nearUnshrunk": 42866.286742953416,
+    "pooledApprox": 42357.561365248075
+  },
+  "foldScores": [
+    {
+      "season": "2022-23",
+      "fold": 0,
+      "events": 4220,
+      "nll": 2552.229983535161
+    },
+    {
+      "season": "2022-23",
+      "fold": 1,
+      "events": 4454,
+      "nll": 2697.223283471424
+    },
+    {
+      "season": "2022-23",
+      "fold": 2,
+      "events": 4339,
+      "nll": 2646.2051286804763
+    },
+    {
+      "season": "2022-23",
+      "fold": 3,
+      "events": 4416,
+      "nll": 2695.7341252286683
+    },
+    {
+      "season": "2022-23",
+      "fold": 4,
+      "events": 4400,
+      "nll": 2639.3105685657874
+    },
+    {
+      "season": "2023-24",
+      "fold": 0,
+      "events": 4106,
+      "nll": 2497.878440036432
+    },
+    {
+      "season": "2023-24",
+      "fold": 1,
+      "events": 4532,
+      "nll": 2751.3414062433267
+    },
+    {
+      "season": "2023-24",
+      "fold": 2,
+      "events": 4504,
+      "nll": 2779.1527104404413
+    },
+    {
+      "season": "2023-24",
+      "fold": 3,
+      "events": 4488,
+      "nll": 2774.470937303722
+    },
+    {
+      "season": "2023-24",
+      "fold": 4,
+      "events": 4294,
+      "nll": 2673.951874441328
+    },
+    {
+      "season": "2024-25",
+      "fold": 0,
+      "events": 4755,
+      "nll": 2949.355236821243
+    },
+    {
+      "season": "2024-25",
+      "fold": 1,
+      "events": 4602,
+      "nll": 2790.7866303646206
+    },
+    {
+      "season": "2024-25",
+      "fold": 2,
+      "events": 4792,
+      "nll": 2923.2653873126706
+    },
+    {
+      "season": "2024-25",
+      "fold": 3,
+      "events": 4711,
+      "nll": 2853.732208429952
+    },
+    {
+      "season": "2024-25",
+      "fold": 4,
+      "events": 4712,
+      "nll": 2901.719735474211
+    }
+  ],
+  "sourceHashes": {
+    "reports\\player-impact-v23\\2022-23-choice-survival.json": "b15ea67c072cc3c6030a639a7222233b14e9c12ad8e5089f16b94eb43ca0a0d1",
+    "reports\\player-impact-v23\\2023-24-choice-survival.json": "bec8609ffe95c90693d8daf7bd8ab6cf9a1e2a7a98f8a06d6fbd0073c0a3c7bf",
+    "reports\\player-impact-v23\\2024-25-choice-survival.json": "7be281af7ae38283379dfcfe78df155b3cae501e8137a39b7b610f40861b937a",
+    "reports\\player-impact-v23\\2025-26-choice-survival.json": "38e0f05a0225fda3d4300809cbb2bd40baa4f45146e429297dea1950f27478f2"
+  },
+  "codeHash": "2d64cd0a3f2bd386ac605ac78a10283f0f2c88c5a002eb2a1cbb14009a1951bb"
+}

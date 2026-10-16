@@ -1,0 +1,11 @@
+import fs from 'node:fs';
+import {execFileSync} from 'node:child_process';
+import {read} from './defense_io.js';
+const configFile=process.argv[2],c=read(configFile);
+const modelFile=c.modelOutput+'/engine-signals.json';for(const key of Object.keys(c.paths))if(key.endsWith('/engine-signals.json'))c.paths[key]=modelFile;
+fs.writeFileSync(configFile,JSON.stringify(c,null,2)+'\n');
+let s=fs.readFileSync('scripts/build_defense_fifth_holdout.js','utf8');
+s=s.replace("import {read,table,hash} from './defense_io.js';",`import {read as sourceRead,table as sourceTable,hash as sourceHash} from './defense_io.js';\nconst config=sourceRead(${JSON.stringify(configFile)}),mapped=f=>config.paths[f]??f,read=f=>sourceRead(mapped(f)),table=f=>sourceTable(mapped(f)),hash=f=>sourceHash(mapped(f));`);
+s=s.replace('Number(process.argv[2]??41)',String(c.k)).replace("fs.createReadStream('reports/defense-b1/stints.jsonl')","fs.createReadStream(mapped('reports/defense-b1/stints.jsonl'))");
+s=s.replace("'reports/defense-fifth/pre'+cutoff+'-league.json'",'config.leagueOutput').replace("'reports/defense-fifth/pre'+cutoff+'-foul-means.json'",'config.foulMeansOutput');
+const file='scripts/.seventh-base-'+c.season+'-'+c.k+'.js';fs.writeFileSync(file,s);execFileSync(process.execPath,[file],{stdio:'inherit'});

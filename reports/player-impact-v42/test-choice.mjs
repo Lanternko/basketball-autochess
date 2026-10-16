@@ -1,0 +1,17 @@
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import {recordedZoneChoice,applyRecordedZone} from './choice-model.mjs';
+import {spaceProbability} from './space-model.mjs';
+const d=(three=0,paint=0)=>({defensiveChoiceMeasurement:{shooter:{three:0,paintGivenTwo:0},defender:{three,paintGivenTwo:paint}}});
+const player={...d(),opportunityMeasurement:{freshZone:{long:.4,mid:.2,short:.4}},shootingMeasurement:{rates:{long:.4,mid:.45,short:.6},sourceBase:{long:.4,mid:.45,short:.6},contexts:{'rotation-space':{long:0,mid:0,short:0}}},long:70,mid:70,short:70};
+const neutral=Array.from({length:5},()=>d()),rim=neutral.map((p,i)=>i===4?d(0,-2):p),outside=neutral.map((p,i)=>i===0?d(-2,0):p);
+const a=recordedZoneChoice(player,neutral),b=recordedZoneChoice(player,rim),c=recordedZoneChoice(player,outside);
+assert.ok(b.short<a.short&&b.mid>a.mid);assert.equal(b.long,a.long);assert.ok(c.long<a.long);
+const p={make:{long:.4,mid:.45,short:.6},zone:{long:.4,mid:.2,short:.4},pTovTouch:.1,pFoul:.1,ftPct:.8,defensiveZone:b};
+const q=spaceProbability(p,player,false,{creationPolicy:'rotation-space'});
+assert.deepEqual(q.zone,b);assert.notDeepEqual(q.zone,player.opportunityMeasurement.freshZone);assert.deepEqual(q.make,p.make);
+for(const[z,m,x]of [['long','FG3M','FG3X'],['mid','MIDM','MIDX'],['short','RIMM','RIMX']])assert.ok(Math.abs(q[m]+q[x]-.8*q.zone[z])<1e-12);
+assert.deepEqual(player.opportunityMeasurement.freshZone,{long:.4,mid:.2,short:.4});
+assert.throws(()=>applyRecordedZone(p,{long:1,mid:1,short:0}));
+fs.writeFileSync('reports/player-impact-v42/choice-test.json',JSON.stringify({passed:true,directionalPaintSuppression:true,directionalThreeSuppression:true,survivesOldFixedZoneOverwrite:true,preservesMakeProbabilities:true,sourceUnchanged:true},null,2));
+console.log('Defender zone change survives old fixed-zone overwrite; recorded-FGA probability ledger passed.');

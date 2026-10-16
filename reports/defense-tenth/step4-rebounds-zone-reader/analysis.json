@@ -1,0 +1,954 @@
+{
+  "seasons": {
+    "2022-23": {
+      "games": 1230,
+      "firstAnchorsReal": 22211,
+      "real": {
+        "points": 1.2695511233172752,
+        "firstFgPoints": 0.9624060150375939,
+        "postFirstFgPoints": 0.3071451082796812,
+        "firstFgMakeRate": 0.5260411062089745,
+        "firstFgReached": 0.8367925802530278,
+        "recoveryPlayerGivenMiss": 0.2792598478828471,
+        "recoveryTeamGivenMiss": 0.0700420024974458,
+        "foulBeforeAttempt": 0.10809959029309801
+      },
+      "simulation": {
+        "points": 1.1825625833385711,
+        "firstFgPoints": 0.8674128962909166,
+        "postFirstFgPoints": 0.3151496870476546,
+        "firstFgMakeRate": 0.5012597432493299,
+        "firstFgReached": 0.7914921120149021,
+        "recoveryPlayerGivenMiss": 0.22310325733933878,
+        "recoveryTeamGivenMiss": 0.07042093027222984,
+        "foulBeforeAttempt": 0.13027887084901676
+      },
+      "routes": {
+        "fg_short": {
+          "realProbability": 0.5682769798748368,
+          "simProbability": 0.5226569559635871,
+          "realValue": 1.4214862937727777,
+          "simValue": 1.3245174634590822,
+          "realFirstFgMake": 0.5975281254951672,
+          "simFirstFgMake": 0.563321664537849,
+          "frequencyContribution": -0.06263076259949722,
+          "valueContribution": -0.052887677920731645,
+          "totalContribution": -0.11551844052022882
+        },
+        "fg_mid": {
+          "realProbability": 0.04331187249561028,
+          "simProbability": 0.06346723767118656,
+          "realValue": 1.0488565488565489,
+          "simValue": 1.0638879667211851,
+          "realFirstFgMake": 0.4106029106029106,
+          "simFirstFgMake": 0.43400657674058846,
+          "frequencyContribution": 0.021276842555493596,
+          "valueContribution": 0.0007877946504765584,
+          "totalContribution": 0.022064637205970156
+        },
+        "fg_long": {
+          "realProbability": 0.2225023636936653,
+          "simProbability": 0.20286328692296443,
+          "realValue": 1.2847025495750708,
+          "simValue": 1.293352722739966,
+          "realFirstFgMake": 0.367462565762849,
+          "simFirstFgMake": 0.36231422661134466,
+          "frequencyContribution": -0.02532035374218758,
+          "valueContribution": 0.0018347022319810992,
+          "totalContribution": -0.023485651510206446
+        },
+        "fg_unknown": {
+          "realProbability": 0.0006753410472288506,
+          "simProbability": 0.0,
+          "realValue": 0.6666666666666666,
+          "simValue": 0.0,
+          "realFirstFgMake": 0.2,
+          "simFirstFgMake": 0.0,
+          "frequencyContribution": -0.00022511368240961686,
+          "valueContribution": -0.00022511368240961686,
+          "totalContribution": -0.0004502273648192337
+        },
+        "ft_first": {
+          "realProbability": 0.0836072216469317,
+          "simProbability": 0.1015329363429679,
+          "realValue": 1.5551965535810448,
+          "simValue": 1.5801020307719673,
+          "realFirstFgMake": 0.4666666666666667,
+          "simFirstFgMake": 0.5061728395061729,
+          "frequencyContribution": 0.0280984370873044,
+          "valueContribution": 0.0023027051232758573,
+          "totalContribution": 0.03040114221058025
+        },
+        "loss_before_attempt": {
+          "realProbability": 0.07797937958669128,
+          "simProbability": 0.10430793793223915,
+          "realValue": 0.0,
+          "simValue": 0.0,
+          "realFirstFgMake": 0.0,
+          "simFirstFgMake": 0.0,
+          "frequencyContribution": 0.0,
+          "valueContribution": 0.0,
+          "totalContribution": 0.0
+        },
+        "period_end": {
+          "realProbability": 0.003646841655035793,
+          "simProbability": 0.00517164516705491,
+          "realValue": 0.0,
+          "simValue": 0.0,
+          "realFirstFgMake": 0.0,
+          "simFirstFgMake": 0.0,
+          "frequencyContribution": 0.0,
+          "valueContribution": 0.0,
+          "totalContribution": 0.0
+        },
+        "other": {
+          "realProbability": 0.0,
+          "simProbability": 0.0,
+          "realValue": 0.0,
+          "simValue": 0.0,
+          "realFirstFgMake": 0.0,
+          "simFirstFgMake": 0.0,
+          "frequencyContribution": 0.0,
+          "valueContribution": 0.0,
+          "totalContribution": 0.0
+        }
+      },
+      "attemptDecomposition": {
+        "realAttemptProbability": 0.918373778758273,
+        "simAttemptProbability": 0.8905204169007058,
+        "realValueGivenAttempt": 1.3823904304343562,
+        "simValueGivenAttempt": 1.327946379132855,
+        "frequencyContribution": -0.037746385870680486,
+        "valueContribution": -0.049242154108023524
+      }
+    },
+    "2023-24": {
+      "games": 1230,
+      "firstAnchorsReal": 22459,
+      "real": {
+        "points": 1.2688454517120085,
+        "firstFgPoints": 0.9659824569215014,
+        "postFirstFgPoints": 0.30286299479050716,
+        "firstFgMakeRate": 0.5213598392724965,
+        "firstFgReached": 0.8421568190925687,
+        "recoveryPlayerGivenMiss": 0.2838837954269303,
+        "recoveryTeamGivenMiss": 0.06992157295924004,
+        "foulBeforeAttempt": 0.10080591299701679
+      },
+      "simulation": {
+        "points": 1.1948798354151435,
+        "firstFgPoints": 0.879342981574096,
+        "postFirstFgPoints": 0.3155368538410476,
+        "firstFgMakeRate": 0.49951931231565433,
+        "firstFgReached": 0.8008920085894227,
+        "recoveryPlayerGivenMiss": 0.22759749173990487,
+        "recoveryTeamGivenMiss": 0.07183810863542661,
+        "foulBeforeAttempt": 0.1259394230732739
+      },
+      "routes": {
+        "fg_short": {
+          "realProbability": 0.5613785119551182,
+          "simProbability": 0.520218506824339,
+          "realValue": 1.4126744923857868,
+          "simValue": 1.3248630544465094,
+          "realFirstFgMake": 0.5897842639593909,
+          "simFirstFgMake": 0.5620060462237376,
+          "frequencyContribution": -0.056339243194581605,
+          "valueContribution": -0.047489008202852394,
+          "totalContribution": -0.10382825139743397
+        },
+        "fg_mid": {
+          "realProbability": 0.04692996126274545,
+          "simProbability": 0.06258269026303445,
+          "realValue": 1.0028462998102468,
+          "simValue": 1.0896331048661319,
+          "realFirstFgMake": 0.4127134724857685,
+          "simFirstFgMake": 0.4405574725071533,
+          "frequencyContribution": 0.016376959407819597,
+          "valueContribution": 0.004752579447337357,
+          "totalContribution": 0.021129538855156952
+        },
+        "fg_long": {
+          "realProbability": 0.23126586223785564,
+          "simProbability": 0.21555795051263024,
+          "realValue": 1.3307662687716597,
+          "simValue": 1.330860539926665,
+          "realFirstFgMake": 0.3785136696187909,
+          "simFirstFgMake": 0.3658877355870059,
+          "frequencyContribution": -0.020913702055506193,
+          "valueContribution": 1.1658721213103745e-05,
+          "totalContribution": -0.020902043334293057
+        },
+        "fg_unknown": {
+          "realProbability": 0.0010240883387506122,
+          "simProbability": 0.0,
+          "realValue": 1.0869565217391304,
+          "simValue": 0.0,
+          "realFirstFgMake": 0.43478260869565216,
+          "simFirstFgMake": 0.0,
+          "frequencyContribution": -0.0005565697493209848,
+          "valueContribution": -0.0005565697493209848,
+          "totalContribution": -0.0011131394986419697
+        },
+        "ft_first": {
+          "realProbability": 0.078320495124449,
+          "simProbability": 0.09452160295998295,
+          "realValue": 1.5304150085275725,
+          "simValue": 1.5934182290062902,
+          "realFirstFgMake": 0.4,
+          "simFirstFgMake": 0.5025207940991839,
+          "frequencyContribution": 0.025304127121146935,
+          "valueContribution": 0.005444151957200123,
+          "totalContribution": 0.030748279078347065
+        },
+        "loss_before_attempt": {
+          "realProbability": 0.07823144396455764,
+          "simProbability": 0.10223961957954138,
+          "realValue": 0.0,
+          "simValue": 0.0,
+          "realFirstFgMake": 0.0,
+          "simFirstFgMake": 0.0,
+          "frequencyContribution": 0.0,
+          "valueContribution": 0.0,
+          "totalContribution": 0.0
+        },
+        "period_end": {
+          "realProbability": 0.0028496371165234427,
+          "simProbability": 0.004879629860472019,
+          "realValue": 0.0,
+          "simValue": 0.0,
+          "realFirstFgMake": 0.0,
+          "simFirstFgMake": 0.0,
+          "frequencyContribution": 0.0,
+          "valueContribution": 0.0,
+          "totalContribution": 0.0
+        },
+        "other": {
+          "realProbability": 0.0,
+          "simProbability": 0.0,
+          "realValue": 0.0,
+          "simValue": 0.0,
+          "realFirstFgMake": 0.0,
+          "simFirstFgMake": 0.0,
+          "frequencyContribution": 0.0,
+          "valueContribution": 0.0,
+          "totalContribution": 0.0
+        }
+      },
+      "attemptDecomposition": {
+        "realAttemptProbability": 0.9189189189189189,
+        "simAttemptProbability": 0.8928807505599866,
+        "realValueGivenAttempt": 1.3808024033336563,
+        "simValueGivenAttempt": 1.3382290851798297,
+        "frequencyContribution": -0.03539887712628965,
+        "valueContribution": -0.03856673917057513
+      }
+    },
+    "2024-25": {
+      "games": 1229,
+      "firstAnchorsReal": 23443,
+      "real": {
+        "points": 1.247067354860726,
+        "firstFgPoints": 0.9521818879836198,
+        "postFirstFgPoints": 0.29488546687710615,
+        "firstFgMakeRate": 0.5098168870803662,
+        "firstFgReached": 0.8386298681909312,
+        "recoveryPlayerGivenMiss": 0.2897167168205873,
+        "recoveryTeamGivenMiss": 0.07118397841651966,
+        "foulBeforeAttempt": 0.09550825406304654
+      },
+      "simulation": {
+        "points": 1.1823311579962879,
+        "firstFgPoints": 0.8682391290429612,
+        "postFirstFgPoints": 0.31409202895332683,
+        "firstFgMakeRate": 0.4955004156871152,
+        "firstFgReached": 0.7957938505388834,
+        "recoveryPlayerGivenMiss": 0.23262378759522842,
+        "recoveryTeamGivenMiss": 0.07354779488579466,
+        "foulBeforeAttempt": 0.12846841073864468
+      },
+      "routes": {
+        "fg_short": {
+          "realProbability": 0.5413556285458346,
+          "simProbability": 0.5148823329128939,
+          "realValue": 1.3860215901032227,
+          "simValue": 1.3201356784552574,
+          "realFirstFgMake": 0.5788353951619257,
+          "simFirstFgMake": 0.5600286113352227,
+          "frequencyContribution": -0.03582311178920616,
+          "valueContribution": -0.03479826159326439,
+          "totalContribution": -0.07062137338247058
+        },
+        "fg_mid": {
+          "realProbability": 0.039756003924412406,
+          "simProbability": 0.058709801251092396,
+          "realValue": 1.0257510729613735,
+          "simValue": 1.0674196432746361,
+          "realFirstFgMake": 0.40987124463519314,
+          "simFirstFgMake": 0.4328399325903384,
+          "frequencyContribution": 0.019825619437514295,
+          "valueContribution": 0.0020403173378786134,
+          "totalContribution": 0.02186593677539291
+        },
+        "fg_long": {
+          "realProbability": 0.25534274623555003,
+          "simProbability": 0.2194508696102627,
+          "realValue": 1.3424657534246576,
+          "simValue": 1.306560791237575,
+          "realFirstFgMake": 0.37955228867357166,
+          "simFirstFgMake": 0.36060454076255644,
+          "frequencyContribution": -0.04754041742220249,
+          "valueContribution": -0.008524873874944555,
+          "totalContribution": -0.05606529129714707
+        },
+        "fg_unknown": {
+          "realProbability": 0.000810476474853901,
+          "simProbability": 0.0,
+          "realValue": 0.631578947368421,
+          "simValue": 0.0,
+          "realFirstFgMake": 0.3157894736842105,
+          "simFirstFgMake": 0.0,
+          "frequencyContribution": -0.00025593993942754764,
+          "valueContribution": -0.00025593993942754764,
+          "totalContribution": -0.0005118798788550953
+        },
+        "ft_first": {
+          "realProbability": 0.07319882267627863,
+          "simProbability": 0.0970752950836286,
+          "realValue": 1.539044289044289,
+          "simValue": 1.578536718916589,
+          "realFirstFgMake": 0.53125,
+          "simFirstFgMake": 0.5198970184044811,
+          "frequencyContribution": 0.03722628002420967,
+          "valueContribution": 0.003370130894432045,
+          "totalContribution": 0.04059641091864172
+        },
+        "loss_before_attempt": {
+          "realProbability": 0.0856119097385147,
+          "simProbability": 0.1049019554507707,
+          "realValue": 0.0,
+          "simValue": 0.0,
+          "realFirstFgMake": 0.0,
+          "simFirstFgMake": 0.0,
+          "frequencyContribution": 0.0,
+          "valueContribution": 0.0,
+          "totalContribution": 0.0
+        },
+        "period_end": {
+          "realProbability": 0.003924412404555731,
+          "simProbability": 0.004979745691351827,
+          "realValue": 0.0,
+          "simValue": 0.0,
+          "realFirstFgMake": 0.0,
+          "simFirstFgMake": 0.0,
+          "frequencyContribution": 0.0,
+          "valueContribution": 0.0,
+          "totalContribution": 0.0
+        },
+        "other": {
+          "realProbability": 0.0,
+          "simProbability": 0.0,
+          "realValue": 0.0,
+          "simValue": 0.0,
+          "realFirstFgMake": 0.0,
+          "simFirstFgMake": 0.0,
+          "frequencyContribution": 0.0,
+          "valueContribution": 0.0,
+          "totalContribution": 0.0
+        }
+      },
+      "attemptDecomposition": {
+        "realAttemptProbability": 0.9104636778569295,
+        "simAttemptProbability": 0.8901182988578774,
+        "realValueGivenAttempt": 1.3697057721139432,
+        "simValueGivenAttempt": 1.3282847759306105,
+        "frequencyContribution": -0.027445533694855317,
+        "valueContribution": -0.037290663169582794
+      }
+    },
+    "2025-26": {
+      "games": 1227,
+      "firstAnchorsReal": 23977,
+      "real": {
+        "points": 1.2838553613879968,
+        "firstFgPoints": 0.9655086124202361,
+        "postFirstFgPoints": 0.3183467489677608,
+        "firstFgMakeRate": 0.5179255134006265,
+        "firstFgReached": 0.8387621470575969,
+        "recoveryPlayerGivenMiss": 0.2874677668901496,
+        "recoveryTeamGivenMiss": 0.08138215575038679,
+        "foulBeforeAttempt": 0.10234808358009759
+      },
+      "simulation": {
+        "points": 1.2051710438084726,
+        "firstFgPoints": 0.8747191389839681,
+        "postFirstFgPoints": 0.3304519048245045,
+        "firstFgMakeRate": 0.5055305377876047,
+        "firstFgReached": 0.7861699824557373,
+        "recoveryPlayerGivenMiss": 0.2438583704226148,
+        "recoveryTeamGivenMiss": 0.07395994478566802,
+        "foulBeforeAttempt": 0.13359233370811327
+      },
+      "routes": {
+        "fg_short": {
+          "realProbability": 0.5414772490303207,
+          "simProbability": 0.5129170713797184,
+          "realValue": 1.4241700685511822,
+          "simValue": 1.3528473841772197,
+          "realFirstFgMake": 0.5934683817299545,
+          "simFirstFgMake": 0.574268663923137,
+          "frequencyContribution": -0.039648374007081114,
+          "valueContribution": -0.03759343477286007,
+          "totalContribution": -0.07724180877994113
+        },
+        "fg_mid": {
+          "realProbability": 0.03937106393627226,
+          "simProbability": 0.05426152722108852,
+          "realValue": 0.996822033898305,
+          "simValue": 1.05727761002099,
+          "realFirstFgMake": 0.3951271186440678,
+          "simFirstFgMake": 0.4068253218267877,
+          "frequencyContribution": 0.015299588225241972,
+          "valueContribution": 0.0028366466808137903,
+          "totalContribution": 0.018136234906055763
+        },
+        "fg_long": {
+          "realProbability": 0.2549526629686783,
+          "simProbability": 0.2160211602137524,
+          "realValue": 1.3602159332569932,
+          "simValue": 1.33330274576349,
+          "realFirstFgMake": 0.3785375429412727,
+          "simFirstFgMake": 0.3673858840935605,
+          "frequencyContribution": -0.05243406895726619,
+          "valueContribution": -0.00634040742482143,
+          "totalContribution": -0.058774476382087625
+        },
+        "fg_unknown": {
+          "realProbability": 0.0011260791591942278,
+          "simProbability": 0.0,
+          "realValue": 0.8888888888888888,
+          "simValue": 0.0,
+          "realFirstFgMake": 0.3333333333333333,
+          "simFirstFgMake": 0.0,
+          "frequencyContribution": -0.0005004796263085457,
+          "valueContribution": -0.0005004796263085457,
+          "totalContribution": -0.0010009592526170914
+        },
+        "ft_first": {
+          "realProbability": 0.08011844684489303,
+          "simProbability": 0.10336983269274762,
+          "realValue": 1.5684539302446643,
+          "simValue": 1.6044879089159139,
+          "realFirstFgMake": 0.3409090909090909,
+          "simFirstFgMake": 0.4787554031364984,
+          "frequencyContribution": 0.036889216520493096,
+          "valueContribution": 0.0033074754085729275,
+          "totalContribution": 0.04019669192906602
+        },
+        "loss_before_attempt": {
+          "realProbability": 0.07915919422780164,
+          "simProbability": 0.10867426337908764,
+          "realValue": 0.0,
+          "simValue": 0.0,
+          "realFirstFgMake": 0.0,
+          "simFirstFgMake": 0.0,
+          "frequencyContribution": 0.0,
+          "valueContribution": 0.0,
+          "totalContribution": 0.0
+        },
+        "period_end": {
+          "realProbability": 0.003795303832839805,
+          "simProbability": 0.004756145113605299,
+          "realValue": 0.0,
+          "simValue": 0.0,
+          "realFirstFgMake": 0.0,
+          "simFirstFgMake": 0.0,
+          "frequencyContribution": 0.0,
+          "valueContribution": 0.0,
+          "totalContribution": 0.0
+        },
+        "other": {
+          "realProbability": 0.0,
+          "simProbability": 0.0,
+          "realValue": 0.0,
+          "simValue": 0.0,
+          "realFirstFgMake": 0.0,
+          "simFirstFgMake": 0.0,
+          "frequencyContribution": 0.0,
+          "valueContribution": 0.0,
+          "totalContribution": 0.0
+        }
+      },
+      "attemptDecomposition": {
+        "realAttemptProbability": 0.9170455019393584,
+        "simAttemptProbability": 0.886569591507307,
+        "realValueGivenAttempt": 1.3999909041295253,
+        "simValueGivenAttempt": 1.3593641741760576,
+        "frequencyContribution": -0.04204687750856476,
+        "valueContribution": -0.03663744007095944
+      }
+    }
+  },
+  "pooledRoutes": {
+    "fg_short": {
+      "realProbability": 0.5531220923515276,
+      "simProbability": 0.5176687167701346,
+      "realValue": 1.4110881112032425,
+      "simValue": 1.3305908951345171,
+      "realFirstFgMake": 0.5899040415866096,
+      "simFirstFgMake": 0.5649062465049866,
+      "frequencyContribution": -0.04861037289759153,
+      "valueContribution": -0.043192095622427124,
+      "totalContribution": -0.09180246852001862,
+      "probabilityDeltaInterval": {
+        "delta": -0.035453375581393054,
+        "joint95": [
+          -0.04615601946162495,
+          -0.02452575481056667
+        ]
+      },
+      "frequencyContributionInterval": {
+        "delta": -0.04861037289759153,
+        "joint95": [
+          -0.06324245645668197,
+          -0.03367902232966481
+        ]
+      },
+      "valueContributionInterval": {
+        "delta": -0.043192095622427124,
+        "joint95": [
+          -0.05116417395740757,
+          -0.03493505799581095
+        ]
+      },
+      "totalContributionInterval": {
+        "delta": -0.09180246852001862,
+        "joint95": [
+          -0.11016990467701279,
+          -0.07333820096227177
+        ]
+      },
+      "firstFgMakeDeltaInterval": {
+        "delta": -0.02499779508162303,
+        "joint95": [
+          -0.03222769010820584,
+          -0.017370191167467658
+        ]
+      }
+    },
+    "fg_mid": {
+      "realProbability": 0.0423422254047601,
+      "simProbability": 0.05975531410160048,
+      "realValue": 1.0185689888816185,
+      "simValue": 1.0695545812207359,
+      "realFirstFgMake": 0.407078686591985,
+      "simFirstFgMake": 0.428557325916217,
+      "frequencyContribution": 0.018194752406517363,
+      "valueContribution": 0.00260433452912658,
+      "totalContribution": 0.020799086935643942,
+      "probabilityDeltaInterval": {
+        "delta": 0.017413088696840384,
+        "joint95": [
+          0.013569258180347384,
+          0.021172229843733625
+        ]
+      },
+      "frequencyContributionInterval": {
+        "delta": 0.018194752406517363,
+        "joint95": [
+          0.014227843072648011,
+          0.022097104499474367
+        ]
+      },
+      "valueContributionInterval": {
+        "delta": 0.00260433452912658,
+        "joint95": [
+          0.00026959999472093554,
+          0.004841288015605088
+        ]
+      },
+      "totalContributionInterval": {
+        "delta": 0.020799086935643942,
+        "joint95": [
+          0.016007961512216343,
+          0.02549380695081247
+        ]
+      },
+      "firstFgMakeDeltaInterval": {
+        "delta": 0.021478639324231996,
+        "joint95": [
+          0.0029772152239470858,
+          0.039540459359320795
+        ]
+      }
+    },
+    "fg_long": {
+      "realProbability": 0.2410159087839373,
+      "simProbability": 0.21347331681490245,
+      "realValue": 1.3295376262570953,
+      "simValue": 1.316019199916924,
+      "realFirstFgMake": 0.37601651674912107,
+      "simFirstFgMake": 0.3640480967636169,
+      "frequencyContribution": -0.03655213554429061,
+      "valueContribution": -0.0032547300866429454,
+      "totalContribution": -0.03980686563093355,
+      "probabilityDeltaInterval": {
+        "delta": -0.027542591969034858,
+        "joint95": [
+          -0.034844283936078795,
+          -0.020321869222499914
+        ]
+      },
+      "frequencyContributionInterval": {
+        "delta": -0.03655213554429061,
+        "joint95": [
+          -0.04637089806094023,
+          -0.02693811547361449
+        ]
+      },
+      "valueContributionInterval": {
+        "delta": -0.0032547300866429454,
+        "joint95": [
+          -0.009211915500584063,
+          0.0023133111979648413
+        ]
+      },
+      "totalContributionInterval": {
+        "delta": -0.03980686563093355,
+        "joint95": [
+          -0.051493439118044826,
+          -0.028606020399286263
+        ]
+      },
+      "firstFgMakeDeltaInterval": {
+        "delta": -0.011968419985504186,
+        "joint95": [
+          -0.02085997539358011,
+          -0.0028917337380594695
+        ]
+      }
+    },
+    "fg_unknown": {
+      "realProbability": 0.000908996255006898,
+      "simProbability": 0.0,
+      "realValue": 0.8185227561657767,
+      "simValue": 0.0,
+      "realFirstFgMake": 0.320976353928299,
+      "simFirstFgMake": 0.0,
+      "frequencyContribution": -0.0003845257493666738,
+      "valueContribution": -0.0003845257493666738,
+      "totalContribution": -0.0007690514987333476,
+      "probabilityDeltaInterval": {
+        "delta": -0.000908996255006898,
+        "joint95": [
+          -0.001127769345188873,
+          -0.0006998552762797245
+        ]
+      },
+      "frequencyContributionInterval": {
+        "delta": -0.0003845257493666738,
+        "joint95": [
+          -0.0005068083400901398,
+          -0.00027073099723996184
+        ]
+      },
+      "valueContributionInterval": {
+        "delta": -0.0003845257493666738,
+        "joint95": [
+          -0.0005068083400901398,
+          -0.00027073099723996184
+        ]
+      },
+      "totalContributionInterval": {
+        "delta": -0.0007690514987333476,
+        "joint95": [
+          -0.0010136166801802797,
+          -0.0005414619944799237
+        ]
+      },
+      "firstFgMakeDeltaInterval": {
+        "delta": -0.320976353928299,
+        "joint95": [
+          -0.4449405513468013,
+          -0.20601895703933748
+        ]
+      }
+    },
+    "ft_first": {
+      "realProbability": 0.0788112465731381,
+      "simProbability": 0.09912491676983178,
+      "realValue": 1.5482774453493928,
+      "simValue": 1.58913622190269,
+      "realFirstFgMake": 0.4347064393939394,
+      "simFirstFgMake": 0.501836513786584,
+      "frequencyContribution": 0.03187951518828853,
+      "valueContribution": 0.0036061158458702385,
+      "totalContribution": 0.03548563103415876,
+      "probabilityDeltaInterval": {
+        "delta": 0.02031367019669368,
+        "joint95": [
+          0.017052325930658068,
+          0.02365266978050544
+        ]
+      },
+      "frequencyContributionInterval": {
+        "delta": 0.03187951518828853,
+        "joint95": [
+          0.026761665121859003,
+          0.03714311537413616
+        ]
+      },
+      "valueContributionInterval": {
+        "delta": 0.0036061158458702385,
+        "joint95": [
+          0.001789388722261022,
+          0.0054195431467009975
+        ]
+      },
+      "totalContributionInterval": {
+        "delta": 0.03548563103415876,
+        "joint95": [
+          0.029922447536360634,
+          0.04123282891344089
+        ]
+      },
+      "firstFgMakeDeltaInterval": {
+        "delta": 0.06713007439264462,
+        "joint95": [
+          -0.023439796446458813,
+          0.15737247244949773
+        ]
+      }
+    },
+    "loss_before_attempt": {
+      "realProbability": 0.08024548187939132,
+      "simProbability": 0.10503094408540972,
+      "realValue": 0.0,
+      "simValue": 0.0,
+      "realFirstFgMake": 0.0,
+      "simFirstFgMake": 0.0,
+      "frequencyContribution": 0.0,
+      "valueContribution": 0.0,
+      "totalContribution": 0.0,
+      "probabilityDeltaInterval": {
+        "delta": 0.024785462206018405,
+        "joint95": [
+          0.020911943047794476,
+          0.028539072235628283
+        ]
+      },
+      "frequencyContributionInterval": {
+        "delta": 0.0,
+        "joint95": [
+          0.0,
+          0.0
+        ]
+      },
+      "valueContributionInterval": {
+        "delta": 0.0,
+        "joint95": [
+          0.0,
+          0.0
+        ]
+      },
+      "totalContributionInterval": {
+        "delta": 0.0,
+        "joint95": [
+          0.0,
+          0.0
+        ]
+      },
+      "firstFgMakeDeltaInterval": {
+        "delta": 0.0,
+        "joint95": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    "period_end": {
+      "realProbability": 0.003554048752238693,
+      "simProbability": 0.004946791458121014,
+      "realValue": 0.0,
+      "simValue": 0.0,
+      "realFirstFgMake": 0.0,
+      "simFirstFgMake": 0.0,
+      "frequencyContribution": 0.0,
+      "valueContribution": 0.0,
+      "totalContribution": 0.0,
+      "probabilityDeltaInterval": {
+        "delta": 0.0013927427058823211,
+        "joint95": [
+          0.0008254896130956076,
+          0.0019324477035389724
+        ]
+      },
+      "frequencyContributionInterval": {
+        "delta": 0.0,
+        "joint95": [
+          0.0,
+          0.0
+        ]
+      },
+      "valueContributionInterval": {
+        "delta": 0.0,
+        "joint95": [
+          0.0,
+          0.0
+        ]
+      },
+      "totalContributionInterval": {
+        "delta": 0.0,
+        "joint95": [
+          0.0,
+          0.0
+        ]
+      },
+      "firstFgMakeDeltaInterval": {
+        "delta": 0.0,
+        "joint95": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    "other": {
+      "realProbability": 0.0,
+      "simProbability": 0.0,
+      "realValue": 0.0,
+      "simValue": 0.0,
+      "realFirstFgMake": 0.0,
+      "simFirstFgMake": 0.0,
+      "frequencyContribution": 0.0,
+      "valueContribution": 0.0,
+      "totalContribution": 0.0,
+      "probabilityDeltaInterval": {
+        "delta": 0.0,
+        "joint95": [
+          0.0,
+          0.0
+        ]
+      },
+      "frequencyContributionInterval": {
+        "delta": 0.0,
+        "joint95": [
+          0.0,
+          0.0
+        ]
+      },
+      "valueContributionInterval": {
+        "delta": 0.0,
+        "joint95": [
+          0.0,
+          0.0
+        ]
+      },
+      "totalContributionInterval": {
+        "delta": 0.0,
+        "joint95": [
+          0.0,
+          0.0
+        ]
+      },
+      "firstFgMakeDeltaInterval": {
+        "delta": 0.0,
+        "joint95": [
+          0.0,
+          0.0
+        ]
+      }
+    }
+  },
+  "pooledOverall": {
+    "points": {
+      "real": 1.2673298228195016,
+      "sim": 1.1912361551396187,
+      "delta": -0.0760936676798829,
+      "joint95": [
+        -0.08682344067562829,
+        -0.06572214914806199
+      ]
+    },
+    "firstFgPoints": {
+      "real": 0.9615197430907378,
+      "sim": 0.8724285364729855,
+      "delta": -0.08909120661775238,
+      "joint95": [
+        -0.1007038885499066,
+        -0.07752771816249708
+      ]
+    },
+    "postFirstFgPoints": {
+      "real": 0.30581007972876384,
+      "sim": 0.3188076186666334,
+      "delta": 0.012997538937869535,
+      "joint95": [
+        0.005953457431217439,
+        0.020302959862633987
+      ]
+    },
+    "firstFgMakeRate": {
+      "real": 0.5187858364906159,
+      "sim": 0.500452502259926,
+      "delta": -0.018333334230689946,
+      "joint95": [
+        -0.024000785650384136,
+        -0.012541749439462669
+      ]
+    },
+    "firstFgReached": {
+      "real": 0.8390853536485311,
+      "sim": 0.7935869883997364,
+      "delta": -0.04549836524879469,
+      "joint95": [
+        -0.05069383552158351,
+        -0.04006849027288896
+      ]
+    },
+    "recoveryPlayerGivenMiss": {
+      "real": 0.2850820317551286,
+      "sim": 0.2317957267742717,
+      "delta": -0.053286304980856875,
+      "joint95": [
+        -0.060466104191315866,
+        -0.04638029736557577
+      ]
+    },
+    "recoveryTeamGivenMiss": {
+      "real": 0.07313242740589807,
+      "sim": 0.07244169464477979,
+      "delta": -0.000690732761118279,
+      "joint95": [
+        -0.005087483721691122,
+        0.0037723301800468775
+      ]
+    },
+    "foulBeforeAttempt": {
+      "real": 0.10169046023331474,
+      "sim": 0.12956975959226216,
+      "delta": 0.027879299358947424,
+      "joint95": [
+        0.0245183738135752,
+        0.031375421006347146
+      ]
+    }
+  },
+  "attemptDecomposition": {
+    "realAttemptProbability": 0.9162004693683699,
+    "simAttemptProbability": 0.8900222644564691,
+    "realValueGivenAttempt": 1.3832223775028702,
+    "simValueGivenAttempt": 1.3384561036048381,
+    "frequencyContribution": -0.035659418550097556,
+    "valueContribution": -0.040434249129785216,
+    "frequencyContributionJoint95": [
+      -0.04086796551107119,
+      -0.03034553483751465
+    ],
+    "valueContributionJoint95": [
+      -0.05030140133261493,
+      -0.03079947572686697
+    ]
+  },
+  "accountingIdentityPassed": true,
+  "interpretation": "Frequency/value decomposition is exact arithmetic, not causal or guaranteed benefit from fixing a probability. Conditional selection and opponent/card mix remain."
+}

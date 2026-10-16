@@ -1,0 +1,14 @@
+{
+  "promoted": false,
+  "productionBaselineChanged": false,
+  "experiment": "skipGenericPutbackTouchRisk",
+  "role": "single-mechanism sensitivity ablation only",
+  "reasons": [
+    "early loss probability moves below observed truth, not just toward it",
+    "ordinary FT points already high and become higher",
+    "league TOV deficit increases; efficiency bias exceeds 0.5 in two seasons in 3seed diagnostic",
+    "quick putback proxy remains low; removing risk cannot explain the whole gap",
+    "3seed seen-data experiment is not a 20seed adoption test"
+  ],
+  "frozenProtocolSHA": "31f12aa22d8c35dfa5496730009637c71ad55381720ab2001cf5f13378e6aece"
+}

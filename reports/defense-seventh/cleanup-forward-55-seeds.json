@@ -1,0 +1,123 @@
+{
+  "label": "cleanup-forward-55",
+  "extra": {
+    "cutoff": 55,
+    "cardFile": "reports/defense-seventh/pre55-forward-league.json",
+    "calibration": {
+      "shotDelta": -0.01820346270478629,
+      "options": {
+        "pace": 0.9165517327523478
+      }
+    }
+  },
+  "files": [
+    {
+      "seed": 20261012,
+      "file": "reports/defense-seventh/runs/cleanup-forward-55-seed20261012.json",
+      "sha256": "1e5d12a90d02b4becf4f19837158e3ac835875800820f540bf4dfaf7b73b7d3e"
+    },
+    {
+      "seed": 20261013,
+      "file": "reports/defense-seventh/runs/cleanup-forward-55-seed20261013.json",
+      "sha256": "e61be21cb513e4ebcd9fb12253d5190a7a8cf642abc18027231fefafd8b22da9"
+    },
+    {
+      "seed": 20261014,
+      "file": "reports/defense-seventh/runs/cleanup-forward-55-seed20261014.json",
+      "sha256": "90b0f0338071c1108dca1711914b9ddfdbe39b392469244bdf02eff7fcf5bec0"
+    },
+    {
+      "seed": 20261015,
+      "file": "reports/defense-seventh/runs/cleanup-forward-55-seed20261015.json",
+      "sha256": "c362f1751bd7171fc2500c500e6da0e16e1c4569a3a62212a211251ec7eeb750"
+    },
+    {
+      "seed": 20261016,
+      "file": "reports/defense-seventh/runs/cleanup-forward-55-seed20261016.json",
+      "sha256": "900cf49ae8f64a040ce5ac41377088c103289298d9bc5e334c1baf201c21d374"
+    },
+    {
+      "seed": 20261017,
+      "file": "reports/defense-seventh/runs/cleanup-forward-55-seed20261017.json",
+      "sha256": "6866138378963d6992d250afb9cc824946aa920560f54e2d3bfb023f040cbc8f"
+    },
+    {
+      "seed": 20261018,
+      "file": "reports/defense-seventh/runs/cleanup-forward-55-seed20261018.json",
+      "sha256": "be7bd4cfd34a294e59acdb780cb117aea4a165e01261e60b287e71a1a2690f93"
+    },
+    {
+      "seed": 20261019,
+      "file": "reports/defense-seventh/runs/cleanup-forward-55-seed20261019.json",
+      "sha256": "a3018d76f4bc9cb06c3545f72b1a9659be5da599a466ebf8e30d5b7ffabf45c2"
+    },
+    {
+      "seed": 20261020,
+      "file": "reports/defense-seventh/runs/cleanup-forward-55-seed20261020.json",
+      "sha256": "1a108ce08f1d3d33ca4947d3fd5130cf12eeb62748b9b26bee0e8a85a5c83463"
+    },
+    {
+      "seed": 20261021,
+      "file": "reports/defense-seventh/runs/cleanup-forward-55-seed20261021.json",
+      "sha256": "636b20b80a107d98df67dc0800ee86070e9ed5868154c64a74aa9f5ad694bf91"
+    },
+    {
+      "seed": 20261022,
+      "file": "reports/defense-seventh/runs/cleanup-forward-55-seed20261022.json",
+      "sha256": "0606df406956a0d60add023de4c1c8c6d12bc9a5840f2a5d4688934eb48f9ae9"
+    },
+    {
+      "seed": 20261023,
+      "file": "reports/defense-seventh/runs/cleanup-forward-55-seed20261023.json",
+      "sha256": "03c5340486d7315c746545aba426c911e5ce6fc7a65b672b981b06ced9890889"
+    },
+    {
+      "seed": 20261024,
+      "file": "reports/defense-seventh/runs/cleanup-forward-55-seed20261024.json",
+      "sha256": "7701e000d8ccf25403fd152b44f1cdec465b85d8c501a7b738472da6ce772486"
+    },
+    {
+      "seed": 20261025,
+      "file": "reports/defense-seventh/runs/cleanup-forward-55-seed20261025.json",
+      "sha256": "a635f3a0ceac94b97d7dd66e12c675b23019e9a508b5cf18a9727ba8ef15c490"
+    },
+    {
+      "seed": 20261026,
+      "file": "reports/defense-seventh/runs/cleanup-forward-55-seed20261026.json",
+      "sha256": "5650f83f8846cbcf253834f1227628ba220111d70cf070bf242e499374a2683e"
+    },
+    {
+      "seed": 20261027,
+      "file": "reports/defense-seventh/runs/cleanup-forward-55-seed20261027.json",
+      "sha256": "bb47e6af28a37792ca5f9fd4c5b6067b5bfdc62a8b75a2788d284985351be546"
+    },
+    {
+      "seed": 20261028,
+      "file": "reports/defense-seventh/runs/cleanup-forward-55-seed20261028.json",
+      "sha256": "cbb106af4971148ab6c9fed58a8f63e091638304aa4d576aaec53a9f22f941c7"
+    },
+    {
+      "seed": 20261029,
+      "file": "reports/defense-seventh/runs/cleanup-forward-55-seed20261029.json",
+      "sha256": "7d08259906ecf2d455d3a6e2c8e7ff23d1846ca87cb4001b8c42d54e066327bb"
+    },
+    {
+      "seed": 20261030,
+      "file": "reports/defense-seventh/runs/cleanup-forward-55-seed20261030.json",
+      "sha256": "03e614feef5a7e5cbd58dfc93997f3f0207f80aec2948485aa68b53dbc133abd"
+    },
+    {
+      "seed": 20261031,
+      "file": "reports/defense-seventh/runs/cleanup-forward-55-seed20261031.json",
+      "sha256": "a7ce0c283c496f744e38b38f5d626b52edd0a30981380817933a0c4a912d57b6"
+    }
+  ],
+  "seconds": 121.649,
+  "sources": {
+    "src/defense_fifth_game.js": "bddd3f34b93e969513ce79d717b78358dc433c0f15eba3eeffa675177b9dfa86",
+    "src/defense_sixth_season.js": "1c30c6c59fbc3e2a40b08231dddf9be255b11fca386d93daf1eb986a99000bcf",
+    "src/defense_seventh_jobs.js": "db63b596bfb60660f676411049739625f419f945707b575c7201b2c1fcee72ad",
+    "scripts/run_defense_seventh.js": "0e40923369762bd8b0a0faa1545e704ba0587bc1341ea40058b7766f240f3f01",
+    "reports/defense-seventh/pre55-forward-league.json": "ab4769d0e4d50a02b25e49b56e5c3f68360482ce8b73389c237995b957ad294f"
+  }
+}

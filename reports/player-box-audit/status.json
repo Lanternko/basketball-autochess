@@ -1,0 +1,160 @@
+{
+  "conditionalBoxAllocationAccepted": true,
+  "boxReconstructionVersion": "pure-oreb-turnover-time-individual-allocation-1",
+  "gameplayBaseline": "pure-oreb-turnover-time-1",
+  "runner": "scripts/simulate_individual_box_season.mjs",
+  "scope": "Same-season conditional DREB/BLK recipient allocation only; no change to game outcomes, team event probabilities, OREB or other individual statistics.",
+  "offenseInterventionsPromoted": false,
+  "individualOffenseAndSpacingValidated": false,
+  "ovrRankingValidated": false,
+  "limits": [
+    "All four seasons previously seen; random-seed confirmation is not future-season validation.",
+    "Same-season observed rates are inputs, not independently identified abilities.",
+    "OffBall, screen, handle and breakDbl remain unmeasured70; no independent speed attribute.",
+    "PTS/AST opportunity errors and spacing effect size remain unresolved."
+  ],
+  "parity": {
+    "passed": true,
+    "runs": 48,
+    "games": 59040,
+    "completeTeamStatisticsIdentical": true,
+    "allNonTargetPlayerStatisticsIdentical": true,
+    "changedDrebPlayerStints": 21325,
+    "changedBlkPlayerStints": 19549
+  },
+  "acceptanceGates": [
+    {
+      "phase": "developmentSeeds",
+      "season": "2022-23",
+      "metric": "dreb36",
+      "old": 0.6632426973014495,
+      "new": 0.3932895499774076,
+      "passed": true
+    },
+    {
+      "phase": "developmentSeeds",
+      "season": "2022-23",
+      "metric": "blk36",
+      "old": 0.30717284922994087,
+      "new": 0.16266198247191055,
+      "passed": true
+    },
+    {
+      "phase": "developmentSeeds",
+      "season": "2023-24",
+      "metric": "dreb36",
+      "old": 0.6844122944631739,
+      "new": 0.3722810817827045,
+      "passed": true
+    },
+    {
+      "phase": "developmentSeeds",
+      "season": "2023-24",
+      "metric": "blk36",
+      "old": 0.32037178203081657,
+      "new": 0.17554046464905707,
+      "passed": true
+    },
+    {
+      "phase": "developmentSeeds",
+      "season": "2024-25",
+      "metric": "dreb36",
+      "old": 0.6682981944105909,
+      "new": 0.38706100974862184,
+      "passed": true
+    },
+    {
+      "phase": "developmentSeeds",
+      "season": "2024-25",
+      "metric": "blk36",
+      "old": 0.28521845274421803,
+      "new": 0.15320485854734675,
+      "passed": true
+    },
+    {
+      "phase": "developmentSeeds",
+      "season": "2025-26",
+      "metric": "dreb36",
+      "old": 0.6609767396461215,
+      "new": 0.3840019881366979,
+      "passed": true
+    },
+    {
+      "phase": "developmentSeeds",
+      "season": "2025-26",
+      "metric": "blk36",
+      "old": 0.3019240799830734,
+      "new": 0.16423650489102226,
+      "passed": true
+    },
+    {
+      "phase": "confirmationSeeds",
+      "season": "2022-23",
+      "metric": "dreb36",
+      "old": 0.6737720986284278,
+      "new": 0.39866883018928007,
+      "passed": true
+    },
+    {
+      "phase": "confirmationSeeds",
+      "season": "2022-23",
+      "metric": "blk36",
+      "old": 0.3106268343301787,
+      "new": 0.16451416960981677,
+      "passed": true
+    },
+    {
+      "phase": "confirmationSeeds",
+      "season": "2023-24",
+      "metric": "dreb36",
+      "old": 0.6821558184256115,
+      "new": 0.3718239823895141,
+      "passed": true
+    },
+    {
+      "phase": "confirmationSeeds",
+      "season": "2023-24",
+      "metric": "blk36",
+      "old": 0.3276754540853391,
+      "new": 0.17169153230587034,
+      "passed": true
+    },
+    {
+      "phase": "confirmationSeeds",
+      "season": "2024-25",
+      "metric": "dreb36",
+      "old": 0.67601843983651,
+      "new": 0.4098088432647143,
+      "passed": true
+    },
+    {
+      "phase": "confirmationSeeds",
+      "season": "2024-25",
+      "metric": "blk36",
+      "old": 0.2877487932560213,
+      "new": 0.15810733437764218,
+      "passed": true
+    },
+    {
+      "phase": "confirmationSeeds",
+      "season": "2025-26",
+      "metric": "dreb36",
+      "old": 0.6648996410362158,
+      "new": 0.3898839091301418,
+      "passed": true
+    },
+    {
+      "phase": "confirmationSeeds",
+      "season": "2025-26",
+      "metric": "blk36",
+      "old": 0.2987134186245558,
+      "new": 0.15917168187923303,
+      "passed": true
+    }
+  ],
+  "sourceSHA256": {
+    "src/individual_box_allocation.js": "4442171ae4f94911d31e250a462955ce98f4377f4f01d6ff65186b9f48568121",
+    "reports/player-box-audit/allocation/adapter.mjs": "8ddec360510017ded67c7fcd0045758e2eb43708fb7b7a0cc81bea010a2b6747",
+    "reports/player-box-audit/allocation/worker.mjs": "7c995676b5e0e89b4fe3cbd61b0b70d2745a824b22de32a7b97a6acdac3071ad"
+  }
+}

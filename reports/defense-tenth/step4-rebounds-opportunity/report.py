@@ -1,0 +1,101 @@
+from register import HERE, ROOT, dump, sha
+import json
+
+def read(f):
+    return json.loads(Path(f).read_text(encoding='utf-8'))
+
+from pathlib import Path
+
+def main():
+    p=read(HERE/'protocol.json'); k=read(HERE/'kernel-results.json')
+    g=read(HERE/'game-audit.json'); h=read(HERE/'hustle-summary.json')['rows']
+    cases={x['name']:x for x in k['kernels']}
+    lines=['# 籃板第2層前置：機會、角色與卡位歸屬稽核','',
+      '**結論：既有引擎已守恆，沒有「五人各自抽一顆板」的錯誤；缺口是位置標籤代替機會、沒有多人空間競爭與卡位助攻路徑。先保留守恆與歸屬框架，不以新增體測加成修補。**','',
+      '本項只診斷與提出下一機制規格。未改凍結卡、引擎、前批 protocol 或輸出。四季均已看過答案；合成陣容是機制測試，不是預測成績。', '',
+      f"預先登記 UTC {p['at']}；SHA-256 `{sha(HERE/'protocol.json')}`。", '',
+      '## 已驗證：球只有一顆，守恆沒有壞', '',
+      'src/defense_fourth_game.js:166–200：先排除節末來不及回收的投失，再計一次 reboundChances；團隊籃板分支直接回傳。個人分支先抽攻守哪邊取得，再從該邊五人中抽一名。這是十名球員的聯合結果經由兩階段抽樣實現，沒有把每人 OREB% 獨立擲一次。', '',
+      '每個固定投失情境均有 Σ攻方五人機率＋Σ守方五人機率＝1。團隊籃板分支另外在完整比賽驗證，不混入固定投失表。', '',
+      f"完整凍結 v3 遊戲流程、五個訊號全關且 no-map：{g['totalGames']} 場、{g['totalChances']:,} 次有效籃板機會，球員 OREB＋DREB＋團隊 OREB＋團隊 DREB 全部等於機會數。每一筆回收事件都有此前尚未回收的 FGX 或最後一罰 FTX；沒有一失兩板。", '',
+      f"單一進攻回合最多觀察到 {g['maxOrebsInOnePossession']} 次個人 OREB，但各次前都有新的投失。節末未形成有效機會的球另以 periodMiss 記帳；非最後一罰投失另以 deadFtReb 記帳。", '',
+      '## 五名高手如何競爭', '',
+      '固定五種位置 PG/SG/SF/PF/C，體型 physique=70，只有 rebound 由70升為99。對每個高手人數 k，平均所有可能的位置組合，再對三種出手區與五個出手者等權平均。這是設計用的投失曝光，不能當真實 NBA 賽季 OREB%。', '',
+      '| 高手人數 | 球隊拿下該次投失 | 比上一人增加 | 20 seed 抽樣 SE（百分點） |', '|---|---:|---:|---:|']
+    prev=None
+    for n in range(6):
+        x=cases['stack'+str(n)];v=x['exact']['offShare']
+        lines.append(f"| {n} | {v*100:.3f}% | {'—' if prev is None else f'{(v-prev)*100:+.3f} pp'} | {x['sampling']['seedSE']*100:.3f} |")
+        prev=v
+    lines += ['',
+      '五名都強時是約35.5%的團隊取得率，沒有超過100%。增量遞減來自 odds→probability 的轉換，尚不是多人擠在同一落點的空間代價。五人每人的歸屬份額仍須分同一顆球；同等加強所有人時，對內相對分配不會因此各自維持原顆數。', '',
+      '程式依據：src/rebound_block_model.js:39–49 把每人機會×能力相加，60–76 計算 attack/defend 的 odds 比並截斷在5%–60%，34–36把個人份額正規化，另保留30%的均勻幸運分配。沒有實際落點抽樣、隊友遮擋或多人重複覆蓋懲罰。', '',
+      '用官方 OREB% 選出每季至少1,000分鐘的前五名，放在同一隊，沿用原卡的總籃板屬性與名義位置：', '',
+      '| 球季 | 五人 | 固定投失下團隊取得率 |', '|---|---|---:|']
+    for x in k['topCards']:
+        lines.append(f"| {x['season']} | {'、'.join(p['name'] for p in x['players'])} | {cases['realTop5-'+x['season']]['exact']['offShare']*100:.3f}% |")
+    lines += ['',
+      '這約54.7%–55.2%並未證明合理：五人多為內線，而目前模型會對內線衝搶給較高倍率、沒有擁擠代價。這只測投失後的取得，完全沒有把五大陣容的投籃、失誤或退防問題混進來。官方 OREB% 僅用於選樣；實際機率仍由凍結 v3 的 rebound（總 REB% 映射）、physique與位置計算，並非直接用了個人 OREB% 卡。', '',
+      '## 同一卡改打控衛：目前標籤代替角色', '',
+      '一名合成籃板手 rebound99、physique90，其他人全70。每次投失仍按三區×五名出手者等權。下表個人取得率是對所有投失的無條件機率，非只在球隊拿下後的份額。', '',
+      '| 情境 | 團隊取得率 | 該籃板手取得率 | 球隊拿下後該球員份額 |', '|---|---:|---:|---:|']
+    for name,title in [('anchorC','原角色C'),('anchorPosOnlyPG','只改pos=PG，courtPosition仍C'),
+                        ('anchorPG','只把courtPosition改PG（另留原PG）'),('anchorSwapPG','與原PG交換courtPosition，仍維持五種位置')]:
+        x=cases[name]['exact']
+        lines.append(f"| {title} | {x['offShare']*100:.3f}% | {x['offIndividual'][4]*100:.3f}% | {x['offConditional'][4]*100:.3f}% |")
+    lines += ['',
+      'courtPosition優先於pos（src/rebound_block_model.js:23），不是單純 roster array 的第幾槽。官方逐場先發位置會覆蓋它（src/minute_budget.js:35–45）；不能把卡片名義位置當成實際每回合站位。', '',
+      '現有 crash 倍率 C=1、PG=0.2；inside C=0.85、PG=0.15（rebound_block_model.js:9–10）。例如近框投失且該人不是出手者，同一卡由C換PG，該人的未正規化進攻競爭值約只剩7.62%，但這是規則假設，不是真實回合估計。即使保留五種位置、將一名中性PG換到C，強者個人取得率仍由14.14%降到3.57%。幅度需要驗證，目前不能稱合理。', '',
+      '防守端也受inside位置權重影響，但沒有進攻crash倍率。近框非出手者例：強者在守方拿下後的份額，C約37.54%、PG約22.67%；三分投失反而C約26.14%、PG約28.21%，來自既有長籃板假設。完整非出手者／本人出手各區分表見 kernel-results.json 的 roleDetail。', '',
+      '## 卡位、距離與衝搶意圖：目前沒有獨立路徑', '',
+      '| 單獨修改 | 固定投失結果 | 完整遊戲逐事件結果 |', '|---|---|---|',
+      '| boxOut、boxOutHelp高值 | 完全相同 | 20/20 seed比分、球隊／球員統計、事件完全相同 |',
+      '| 籃板起始距離0 vs30呎 | 完全相同 | 遠距離情境對中性基準20/20 seed完全相同 |',
+      '| crashIntent=0 vs1 | 完全相同 | 本欄只測固定投失，未另跑整場 |', '',
+      '以上新增欄位是明示的假想測試輸入，並不是已建立的技能或真實追蹤值。零反應代表引擎不讀這些欄位，不代表現實中的卡位或距離沒有作用。球場動畫的落點是從事件安排的畫面，不能當成引擎已模擬了站位因果。', '',
+      '現有機會權重沒有對手配對：一名卡位者不會降低特定衝搶者的接近機會，也沒有因而讓隊友撿到球的中介路徑。第4步先前的DREB候選亦只用個人DREB份額相加及分配（step4-rebounds/model.mjs:8–22），沒有卡位助攻；它改善個人DREB的結果不能替代這項缺口。', '',
+      '## 已有卡位資料能支持什麼', '',
+      '既有官方leaguehustlestatsplayer的聯盟Totals有OFF_BOXOUTS、DEF_BOXOUTS與BOX_OUT_PLAYER_TEAM_REBS、BOX_OUT_PLAYER_REBS。後兩欄相減可描述卡位後球在隊友／團隊而非本人名下的記錄，但不是「沒有他卡位就搶不到」的額外籃板。', '',
+      '| 球季 | 玩家列數 | 進攻卡位記錄 | 防守卡位記錄 | 本人取得記錄 | 球隊取得記錄 | 差額 |', '|---|---:|---:|---:|---:|---:|---:|']
+    for x in h:
+        lines.append(f"| {x['season']} | {x['rows']} | {x['offBoxouts']} | {x['defBoxouts']} | {x['ownRecoveryCredits']} | {x['teamRecoveryCredits']} | {x['teammateRecoveryCredits']} |")
+    quality=[]
+    for season in p['seasons']:
+        doc=read(ROOT/f'reports/defense-tenth/step4-t2/raw/{season}/0-hustle.json')
+        s=doc['data']['resultSets'][0];rows=[dict(zip(s['headers'],r)) for r in s['rowSet']]
+        mismatch=[{key:r[key] for key in ['PLAYER_ID','PLAYER_NAME','OFF_BOXOUTS','DEF_BOXOUTS','BOX_OUTS']}
+                  for r in rows if r['OFF_BOXOUTS']+r['DEF_BOXOUTS']!=r['BOX_OUTS']]
+        quality.append({'season':season,'componentMismatchRows':mismatch,
+                        'totalMinusComponents':sum(r['BOX_OUTS']-r['OFF_BOXOUTS']-r['DEF_BOXOUTS'] for r in rows)})
+    dump(HERE/'hustle-quality-supplement.json',{'label':'事後資料品質檢查，不改原始表或模型', 'rows':quality})
+    lines += ['',
+      '限制：取得結果欄混合攻防，不能用OFF/DEF卡位次數比例硬拆；這些是球員卡位歸功記錄，未按實際投失事件去重，多人可能對同一球各有貢獻。團隊取得也不等於box score中的team rebound（團隊籃板）類別。不能把差額直接加到隊友既有DREB或OREB上，否則同一顆球重複加分。', '',
+      '品質檢查：沒有本人取得大於球隊取得、或球隊取得大於BOX_OUTS的列。另發現OFF_BOXOUTS＋DEF_BOXOUTS與BOX_OUTS合計有小額差異：', '',
+      '；'.join(f"{x['season']}差{x['totalMinusComponents']:+d}筆（{len(x['componentMismatchRows'])}名球員）" for x in quality)+'。完整清單見 hustle-quality-supplement.json；保留原值，不手改。', '',
+      'NBA另有[籃板機會與讓板等追蹤定義](https://www.nba.com/stats/help/glossary)，但彙總表不是投籃當下的完整站位軌跡；不能把事後接近球的機會指標當作已觀測的起始距離。', '',
+      '## 下一個機制提案：先角色機會，再卡位，分批驗證', '',
+      '本批沒有建立下列機制或估計新係數。第一個可做的實作範圍應只替換角色機會，卡位與落點另開批次，遵守可歸因原則。', '',
+      '1. **先把身體能力與角色分開。** 保留球員卡；當回合另有出手位置、是否為出手者、衝搶／退防任務。PG/C標籤只在缺資料時作低信心先驗，不直接把同一個人固定打成20%衝搶者。用個人出手分區、球觸／接球資料及可取得的起始站位估機會；目前沒有站位就明示不確定，不能造座標。',
+      '2. **一次投失建立唯一missId。** 記錄出手區、出手者、是否最後一罰及節末，產生一次落點／可競爭區域；同一落點由十人共享，不讓每人各抽不同的球。落點資料若不足，可先保留原三區的聯盟先驗，但必須標為假設。',
+      '3. **進入競爭前處理卡位與移動。** 誰衝搶、誰卡誰、誰退防分開。卡位改變對手進入競爭的機會，也可能使卡位者自己較難取得，讓隊友受益；絕不在球已分配後額外生一顆。這一層需個人配對與事件樣本，現有攻防混合彙總不足以識別係數。',
+      '4. **一次聯合歸屬。** 產生十名球員與團隊留球／出界的互斥結果，總和=1；或等價地先抽球隊再抽球員。以人員能力、共享落點與可達性計算機率，卡位貢獻另外記credit，不另加官方個人籃板。',
+      '5. **拿到球後另記位置。** 決定可補籃、需整理或受壓迫等狀態，再進下一次進攻。這是後續層，不跟本次角色／卡位一起改。', '',
+      '驗證安排：先用同卡同投失的角色反事實，確保只改pos不產生無依據跳變；真實資料用下一段的個人OREB機會／分鐘與取得率、團隊OREB/DREB率分別評分。角色機會資料必須在評分期間之前或作明示答案側條件，不能偷用同一球最後誰搶到來決定誰起初有機會。', '',
+      '若之後接入實驗引擎：只替換指定籃板機會路徑、保留OFF完全一致；同卡同賽程20seed，分別報球員籃板誤差、球隊OREB/DREB、net RMSE、勝場MAE與franchise＋seed聯合區間。成功需比OREB%／現有率基準有增量，且不能只把籃板從球員A搬給B卻不改善團隊。聯盟均值只用聯盟計數校正。現在尚無新機制，故不指定或捏造效果係數。', '',
+      '## 已驗證／推測／失敗', '',
+      '- 已驗證：19個固定投失案例（每案20×10,000次抽樣，另有精確機率）、140場逐事件守恆；位置標籤反應很大；卡位、距離、衝搶意圖零獨立反應。',
+      '- 推測：位置標籤與缺少空間重疊可能高估五內線，並低估有組織卡位的團隊；沒有真實對應反事實，尚不能宣稱這就是賽季誤差來源或量級。',
+      '- 失敗／未解：沒有驗證真實卡位的因果增益、沒有實際起始站位與落點資料；無法從現有hustle表識別對手配對與攻防各自的卡位回收效果。未跑新完整球季、沒有新的net或wins MAE改善可報。', '',
+      '## 可重跑與修復記錄', '',
+      '固定投失每案的seed SE與t19區間僅量Monte Carlo誤差，不是球隊抽樣／真實泛化區間。精確機率才是本項主要量；不能拿極窄抽樣區間宣稱實際有效。', '',
+      '第一次完整遊戲稽核因合成球員缺少出手量介面而停止，固定投失結果已完成。保留analyze-initial.mjs及原程式鎖；analysis-code-repair-1.json登記後，僅在完整遊戲的合成副本補所有人一致的正權重介面（minutes1, attempts1, FTA0, TOV0，僅使選球權重相等，不冒充實測）。引擎選球模式及所有聯盟常數不改；既有kernel檔保留且逐值一致性通過。', '',
+      '在專案根目錄執行，不重建protocol：', '', '```powershell',
+      'node reports/defense-tenth/step4-rebounds-opportunity/analyze.mjs',
+      'python reports/defense-tenth/step4-rebounds-opportunity/report.py',
+      'python reports/defense-tenth/step4-rebounds-opportunity/audit.py', '```', '',
+      '原始輸入與程式雜湊在protocol.json；完整機率與seed在kernel-results.json；事件守恆與整場雜湊在game-audit.json；卡位彙總在hustle-summary.json；完整性見completion-audit.json。', '']
+    (HERE/'report.md').write_text('\n'.join(lines),encoding='utf-8')
+    print('Saved report.md and separate hustle quality supplement.')
+
+if __name__=='__main__':
+    main()

@@ -1,0 +1,60 @@
+{
+  "createdAt": "2026-10-12T12:10:56.166Z",
+  "asOf": "2025-10-20",
+  "truePreseason": true,
+  "noFutureActiveLists": true,
+  "noFutureStarters": true,
+  "noFutureMinutes": true,
+  "noFutureTransactions": true,
+  "noActualCupAssignments": true,
+  "previousSeason": "2024-25",
+  "leagueConstants": "Previous full season, frozen v4 estimator; no 2025-26 calibration.",
+  "rookieAbility": "Mean previous-season cards and B1 coefficients for same-position players with MPG<10. No NBA previous sample means role prior, including nonrookie returnees.",
+  "rookieMinutes": 12,
+  "availability": "Per-game Bernoulli: previous GP shrunk by20 games toward previous same MPG-bin mean GP/82. Unknown players use prior MPG10–20 availability. All listed non-two-way inactive players miss first14 games; fixed known/scenario exceptions below. Independent absence draws, not later injury observations.",
+  "rotation": "At most12 available players, ranked by previous MPG (unknown12, two-way weight capped5); retain at least8 via rank fallback excluding predetermined inactive. Starter positions chosen from these players to minimize position distance then favor MPG. Existing frozen soft minute targets normalized to240; no observed future seconds.",
+  "specialAbsences": [
+    {
+      "id": 1630169,
+      "name": "Tyrese Haliburton",
+      "untilGame": 82,
+      "status": "confirmed before opening",
+      "source": "https://www.nba.com/news/pacers-confirm-tyrese-haliburton-will-miss-entire-2025-26-season"
+    },
+    {
+      "id": 1642850,
+      "name": "Thomas Sorber",
+      "untilGame": 82,
+      "status": "confirmed before opening",
+      "source": "https://www.nba.com/news/thunder-1st-round-pick-thomas-sorber-tears-acl-will-miss-rookie-season"
+    },
+    {
+      "id": 1628369,
+      "name": "Jayson Tatum",
+      "untilGame": 82,
+      "status": "conservative full-season absence scenario; no official return timetable, NOT a known eventual return",
+      "source": "https://www.nba.com/news/celtics-jayson-tatum-surgery-ruptured-right-achilles"
+    },
+    {
+      "id": 203081,
+      "name": "Damian Lillard",
+      "untilGame": 82,
+      "status": "conservative full-season absence scenario; could miss season",
+      "source": "https://www.nba.com/news/damian-lillard-to-return-to-trail-blazers"
+    },
+    {
+      "id": 1627832,
+      "name": "Fred VanVleet",
+      "untilGame": 82,
+      "status": "conservative full-season absence scenario after pre-opening ACL injury",
+      "source": "https://www.nba.com/news/rockets-fred-vanvleet-tears-acl"
+    }
+  ],
+  "schedule": "1200 announced fixtures plus two fixed cyclic-pairing Cup-week fixtures per team; no actual Cup results, later opponents or postponements. NBA Cup final is excluded from regular-season statistics.",
+  "sourceHashes": {
+    "data/defense-seventh/preseason-2025-26/opening-rosters.json": "9401d541858515b9d6d2694bb3230ed76dda6fa4038e90ae7f085dd959f71d16",
+    "data/defense-seventh/preseason-2025-26/opening-schedule.json": "236be8ac0ed39f5a195f7ce0e9f84cb939db0f9807412cf891d96c687cef826f",
+    "reports/defense-seventh/2024-25/calendar-82/pre82-v4-league.json": "f19a93028680b3f5e5569608f2de89b5f40a7a1546227786c5f0c28575d28edf",
+    "reports/defense-seventh/2024-25/calendar-82/calibration-v4.json": "be67c408eca827f21bea93351bf00b8f8444146373f39a32ffbab95ea8284ec7"
+  }
+}

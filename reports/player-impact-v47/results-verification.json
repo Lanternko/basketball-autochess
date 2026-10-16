@@ -1,0 +1,104 @@
+{
+  "passed": true,
+  "jobs": 24,
+  "matches": 28023,
+  "allFrozenSourceOutputHashesPassed": true,
+  "v46CloseoutUnchanged": true,
+  "allTeamPlayerCoarseFineAndObserverLedgersPassed": true,
+  "baselineScoreParityPassed": true,
+  "candidateIndividualAndTeamScoresRecomputedFromRawRuns": true,
+  "adoptionGatesIndependentlyRecomputed": true,
+  "seedFTcomparison": [
+    {
+      "season": "2022-23",
+      "seed": 20261012,
+      "baselineFTmae": 4.003318961252124,
+      "candidateFTmae": 2.961530735050895,
+      "improved": true
+    },
+    {
+      "season": "2022-23",
+      "seed": 20261013,
+      "baselineFTmae": 3.9719018576150535,
+      "candidateFTmae": 2.716401360756343,
+      "improved": true
+    },
+    {
+      "season": "2022-23",
+      "seed": 20261014,
+      "baselineFTmae": 3.564658839352337,
+      "candidateFTmae": 2.621607209345153,
+      "improved": true
+    },
+    {
+      "season": "2023-24",
+      "seed": 20261012,
+      "baselineFTmae": 3.720680035785317,
+      "candidateFTmae": 2.574821333988642,
+      "improved": true
+    },
+    {
+      "season": "2023-24",
+      "seed": 20261013,
+      "baselineFTmae": 3.8480193075661497,
+      "candidateFTmae": 2.9645095114065354,
+      "improved": true
+    },
+    {
+      "season": "2023-24",
+      "seed": 20261014,
+      "baselineFTmae": 3.9922379071866265,
+      "candidateFTmae": 3.025124788887657,
+      "improved": true
+    },
+    {
+      "season": "2024-25",
+      "seed": 20261012,
+      "baselineFTmae": 3.660196282452038,
+      "candidateFTmae": 2.719622731196916,
+      "improved": true
+    },
+    {
+      "season": "2024-25",
+      "seed": 20261013,
+      "baselineFTmae": 3.9360495726754032,
+      "candidateFTmae": 3.0727973934865065,
+      "improved": true
+    },
+    {
+      "season": "2024-25",
+      "seed": 20261014,
+      "baselineFTmae": 3.788041448181959,
+      "candidateFTmae": 2.7530244147468528,
+      "improved": true
+    },
+    {
+      "season": "2025-26",
+      "seed": 20261012,
+      "baselineFTmae": 3.9262399895727174,
+      "candidateFTmae": 2.8891368162900317,
+      "improved": true
+    },
+    {
+      "season": "2025-26",
+      "seed": 20261013,
+      "baselineFTmae": 3.669956792512147,
+      "candidateFTmae": 2.734366007109297,
+      "improved": true
+    },
+    {
+      "season": "2025-26",
+      "seed": 20261014,
+      "baselineFTmae": 3.8602672749705595,
+      "candidateFTmae": 2.7370880321553064,
+      "improved": true
+    }
+  ],
+  "seedFTmaeImproved": 12,
+  "seedComparisons": 12,
+  "scoresSHA256": "5514a4fb4b4bc835cabe0180081b18b2d611335f921da38c3ae4c2ff47f57bab",
+  "fineScoresSHA256": "89d98648d75f79275470f2fc640083ece4b68236522f2b2876e9fbd0c22d5bac",
+  "offenseOnCourtScoresSHA256": "dca948ca1c90a646bfee1bcc4af1dd22b1ec6bbc4f48137718e72bd19fb0bf52",
+  "decisionSHA256": "bba7a731d0c5fa0139ca3037782107a09daad5ed490db0c4a2540059577821ec",
+  "reportSHA256": "e8a1e7b7d527e89b4e424c9e3b3f5e889a4b8d6f698f0c0981febd4a2895a321"
+}

@@ -1,0 +1,28 @@
+{
+  "checkedAt": "2026-10-13T04:57:43.700Z",
+  "protocolHash": "4c9ad5fe4fd2af50cfe4a1f44f3cdf83c980fb4fcdec63eca05bcbc0f9e2c960",
+  "runCount": 120,
+  "games": 147600,
+  "allTeams82": true,
+  "commonCardPairs": 1520,
+  "checks": [
+    "Frozen/source fingerprints",
+    "120 run and bundle hashes",
+    "Same main/parent cards and engine options",
+    "Score aggregation and event-count identities",
+    "Five segment signals/maps absent",
+    "Common cards between exposure arms"
+  ],
+  "adapterHashes": {
+    "prepare.mjs": "1154831e32c1285b4982884717c7fc98b52c18309198e452c01a1bf2c654b85f",
+    "prepare-opening.mjs": "8eb7144efc51564384c967eca62a42d9599c1e73d35d8995868265196291f69d",
+    "run.mjs": "1836b32be0c8b428b8e4af34a32772a6c0b519e89665af3d001e34311358abf9",
+    "analyze.mjs": "369f9473d29316fd6ee7d23bc7132fcfb69773ba1d8d2996ce8f6318081abb04",
+    "report.mjs": "2d65353741679c1aeb2ef9dc93a7922d00d4b63bf7576984b0076e5c4c969116",
+    "rosters.py": "1acd7ebea82d007b1e540fdbf5e72d58d0467ba83da408119a3d66f408238465",
+    "schedules.py": "2cbdc73bc411b9c7a6a9f5ad9fe1a3bd0ab2f108284041dcde5fae2739660419",
+    "completion-audit.mjs": "88ccda48ebe452f6589cbca02539206abff6b98fba5b2338ca15d62e705517d3"
+  },
+  "priorInputAuditHash": "eea4c6a481decf82a31d18d6467fea40f469cd8da9f66690bf851efbd95cfc28",
+  "issues": []
+}

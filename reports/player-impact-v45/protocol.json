@@ -1,0 +1,12 @@
+{
+ "version":"fine-zone-measured-defense-45",
+ "seasons":["2022-23","2023-24","2024-25","2025-26"],
+ "zones":["ra","paint","mid","corner","arc"],
+ "design":"Separate restricted area, non-RA paint, midrange, corner threes and above-break/backcourt threes. Preserve coarse-zone and fresh-versus-putback ledgers exactly. Train source make and conditional shot selection on shooter and five defender identities. Compare zero-centered defense shrinkage against a measured blocked-shot exposure feature learned on training games only. No named-player exceptions.",
+ "makeGrid":{"sigma":[0,0.025,0.05,0.1],"blockFeature":[false,true],"shooterPriorMinutes":60,"blockPriorOpponentAttempts":200,"blockSlopePriorSD":1},
+ "choiceGrid":{"sigma":[0,0.05,0.1,0.2],"shooterPriorTrials":0.5,"branches":["three","paintGivenTwo","raGivenPaint","cornerGivenThree"]},
+ "selection":"Whole-game five-fold heldout negative log likelihood on older three seasons only, independently by zone/branch; target excluded. Baseline comparison includes coarse models and no-defender fine models. No full-season tracking outcome is used in a heldout feature.",
+ "tracking":"Audit existing closest-defender and hustle season aggregates for coverage and source scope. Full-season DFG outcomes are descriptive reconstruction evidence only until dated training-only equivalents exist. They must not leak into heldout fitting. PBP blocked-shot identities supply a genuine measured, training-only defensive activity feature.",
+ "runtimeGate":"Complete source-conditional heldout and reconstruction checks first. Simulation integration requires a clearly selected model and explicit coarse/fine make and shot-choice probability conservation; team PPG may temporarily regress per user authorization, but stays reported. Blocks are already misses and must not be subtracted twice. Source on/off is descriptive, not a causal individual target.",
+ "seeds":[20261012,20261013,20261014]
+}

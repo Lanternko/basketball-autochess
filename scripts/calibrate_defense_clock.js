@@ -1,0 +1,14 @@
+import fs from 'node:fs';
+import {runClockJobs} from '../src/defense_clock_pool.js';
+import {read,table,hash} from './defense_io.js';
+import {teamDefenseMetrics,realCountStats} from '../src/defense_validation.js';
+const real=table('data/season-source/team-games.json'),stats={};for(const t of real)for(const [k,v] of Object.entries(realCountStats(t)))stats[k]=(stats[k]??0)+v;
+const target=teamDefenseMetrics(stats,stats,real.length).possessionsProxy,seed=731019;
+const run=async paces=>{const runs=await runClockJobs(paces.map(pace=>({preset:'c-empirical',seed,options:{pace}})),{onProgress:(n,t)=>console.log('full-season clock calibration '+n+'/'+t)});return runs.map(r=>{const s={};for(const t of r.teams)for(const [k,v] of Object.entries(t.stats))s[k]=(s[k]??0)+v;const global=teamDefenseMetrics(s,s,2460);return {pace:r.options.pace,games:r.matches.length,global,error:global.possessionsProxy-target};});};
+const coarse=await run([.65,.75,.85,.95,1.05]);const best=coarse.slice().sort((a,b)=>Math.abs(a.error)-Math.abs(b.error))[0];
+const refine=await run([-.04,-.02,0,.02,.04].map(d=>Number((best.pace+d).toFixed(3))));
+const intermediate=[...coarse,...refine].sort((a,b)=>Math.abs(a.error)-Math.abs(b.error))[0];
+const fine=await run([-.012,-.006,0,.006,.012].map(d=>Number((intermediate.pace+d).toFixed(3))));
+const trials=[...coarse,...refine,...fine],selected=trials.slice().sort((a,b)=>Math.abs(a.error)-Math.abs(b.error)||a.pace-b.pace)[0];
+const result={preset:'c-empirical',seed,target,objective:'Pooled box-possession proxy only, all 1230 games per trial. No turnover, shooting, efficiency, team or win fit.',trials,selected,provenance:{sources:Object.fromEntries(['data/season-source/team-games.json','reports/defense-b1/empirical-timing.json','reports/defense-a/rebound-audit.json'].map(f=>[f,hash(f)])),code:Object.fromEntries(['scripts/calibrate_defense_clock.js','src/defense_clock_game.js','src/defense_clock_season.js','src/defense_clock_jobs.js','src/defense_clock_pool.js','scripts/defense_clock_worker.js'].map(f=>[f,hash(f)]))}};
+fs.writeFileSync('reports/defense-b1/clock-calibration.json',JSON.stringify(result,null,2)+'\n');console.log(JSON.stringify({target,selected}));

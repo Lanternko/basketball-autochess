@@ -1,0 +1,88 @@
+{
+  "bootstrap": 20000,
+  "seeds": [
+    20261012,
+    20261013,
+    20261014
+  ],
+  "method": "paired franchise and seed across seasons; equal season weight; diagnostic only",
+  "metrics": {
+    "immediateProxy": {
+      "simulationMinusReal": -16.579058695052105,
+      "joint95": [
+        -17.741606119085237,
+        -15.4497372210783
+      ]
+    },
+    "otherShot": {
+      "simulationMinusReal": 10.839004646009165,
+      "joint95": [
+        9.806391542881808,
+        11.867388121461932
+      ]
+    },
+    "earlyLoss": {
+      "simulationMinusReal": -0.2290137773174954,
+      "joint95": [
+        -0.45632069455981117,
+        0.003324443470771247
+      ]
+    },
+    "laterLoss": {
+      "simulationMinusReal": 2.6389238791747456,
+      "joint95": [
+        2.4194025961514325,
+        2.863217696769197
+      ]
+    },
+    "foul": {
+      "simulationMinusReal": 3.1818875902210966,
+      "joint95": [
+        2.839047032179417,
+        3.5415929342787122
+      ]
+    },
+    "meanSeconds": {
+      "simulationMinusReal": 1.9757835201202796,
+      "joint95": [
+        1.8962055315444866,
+        2.0523026642250906
+      ]
+    },
+    "shortShotPct": {
+      "simulationMinusReal": 11.258983688975,
+      "joint95": [
+        10.185963855873034,
+        12.36466227667035
+      ]
+    },
+    "longShotPct": {
+      "simulationMinusReal": -1.3277255612264973,
+      "joint95": [
+        -2.244703433283642,
+        -0.4105700807057705
+      ]
+    },
+    "fgPct": {
+      "simulationMinusReal": -1.5989680659221577,
+      "joint95": [
+        -2.112770052830999,
+        -1.0843770681530431
+      ]
+    },
+    "sameShooterPct": {
+      "simulationMinusReal": -9.521982926858028,
+      "joint95": [
+        -10.840730210645752,
+        -8.149691577633778
+      ]
+    },
+    "firstFgPointsPerOreb": {
+      "simulationMinusReal": -0.09539093227307271,
+      "joint95": [
+        -0.10814176829775735,
+        -0.08301612319371915
+      ]
+    }
+  }
+}

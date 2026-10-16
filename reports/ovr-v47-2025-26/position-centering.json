@@ -1,0 +1,160 @@
+{
+  "method": "post-hoc per-position per-minute centering on confident source-minute-weighted pool; no new simulation",
+  "confidentPoolProxy": "workload starts >= 5",
+  "bias": {
+    "v47": {
+      "PG": {
+        "confidentPlayers": 64,
+        "perMinuteBias": -0.035990482318775975,
+        "per32MinuteBias": -1.1516954342008312,
+        "bootstrapSE32": 0.3228298775703384
+      },
+      "SG": {
+        "confidentPlayers": 70,
+        "perMinuteBias": 0.012445563755005022,
+        "per32MinuteBias": 0.3982580401601607,
+        "bootstrapSE32": 0.22860088798289727
+      },
+      "SF": {
+        "confidentPlayers": 69,
+        "perMinuteBias": -0.04419708166980196,
+        "per32MinuteBias": -1.4143066134336628,
+        "bootstrapSE32": 0.2494046037781754
+      },
+      "PF": {
+        "confidentPlayers": 56,
+        "perMinuteBias": -0.0006237617959593319,
+        "per32MinuteBias": -0.01996037747069862,
+        "bootstrapSE32": 0.2453405768546976
+      },
+      "C": {
+        "confidentPlayers": 75,
+        "perMinuteBias": 0.004265706069135484,
+        "per32MinuteBias": 0.1365025942123355,
+        "bootstrapSE32": 0.2840810327095507
+      }
+    },
+    "v41": {
+      "PG": {
+        "confidentPlayers": 64,
+        "perMinuteBias": 0.024812641708318553,
+        "per32MinuteBias": 0.7940045346661937,
+        "bootstrapSE32": 0.3171758547012476
+      },
+      "SG": {
+        "confidentPlayers": 70,
+        "perMinuteBias": -0.015123596960035316,
+        "per32MinuteBias": -0.4839551027211301,
+        "bootstrapSE32": 0.21442038368707506
+      },
+      "SF": {
+        "confidentPlayers": 69,
+        "perMinuteBias": -0.011486768765994628,
+        "per32MinuteBias": -0.3675766005118281,
+        "bootstrapSE32": 0.2151800447857625
+      },
+      "PF": {
+        "confidentPlayers": 56,
+        "perMinuteBias": -0.004518243903214483,
+        "per32MinuteBias": -0.14458380490286346,
+        "bootstrapSE32": 0.22044393038840707
+      },
+      "C": {
+        "confidentPlayers": 75,
+        "perMinuteBias": 0.0018415006077416383,
+        "per32MinuteBias": 0.058928019447732426,
+        "bootstrapSE32": 0.29648160271598645
+      }
+    }
+  },
+  "positionMeans": {
+    "v47Raw": {
+      "PG": -1.15343567251462,
+      "SG": 0.4057183908045977,
+      "SF": -1.1293939393939394,
+      "PF": 0.09934895833333333,
+      "C": -0.12339743589743589
+    },
+    "v47Centered": {
+      "PG": -0.4244000448967409,
+      "SG": 0.17157184589164187,
+      "SF": -0.2613344603306683,
+      "PF": 0.11182158441583896,
+      "C": -0.20293723747057663
+    },
+    "v41Raw": {
+      "PG": 0.21451023391812868,
+      "SG": -0.275,
+      "SF": -0.385,
+      "PF": -0.07131076388888888,
+      "C": -0.04042022792022792
+    },
+    "v41Centered": {
+      "PG": -0.2881031976124768,
+      "SG": 0.0095301381726699,
+      "SF": -0.15939237763197253,
+      "PF": 0.01903520971740296,
+      "C": -0.07475747257859536
+    }
+  },
+  "top20Positions": {
+    "v47Raw": {
+      "PG": 1,
+      "SG": 7,
+      "SF": 1,
+      "PF": 5,
+      "C": 6
+    },
+    "v47Centered": {
+      "PG": 4,
+      "SG": 3,
+      "SF": 4,
+      "PF": 4,
+      "C": 5
+    },
+    "v41Centered": {
+      "PG": 6,
+      "SG": 2,
+      "SF": 3,
+      "PF": 3,
+      "C": 6
+    }
+  },
+  "top50Positions": {
+    "v47Raw": {
+      "PG": 4,
+      "SG": 21,
+      "SF": 4,
+      "PF": 10,
+      "C": 11
+    },
+    "v47Centered": {
+      "PG": 8,
+      "SG": 11,
+      "SF": 9,
+      "PF": 11,
+      "C": 11
+    },
+    "v41Centered": {
+      "PG": 10,
+      "SG": 12,
+      "SF": 7,
+      "PF": 9,
+      "C": 12
+    }
+  },
+  "spearmanV41V47": {
+    "raw": 0.48089895307515057,
+    "centered": 0.5578847673817712
+  },
+  "mediaMatched": 94,
+  "spearmanWithMedia": {
+    "v47Raw": 0.404333490922074,
+    "v47Centered": 0.40524550059564046
+  },
+  "signalShare": {
+    "c47": 0.4784552937625408,
+    "c47c": 0.41321685301962985
+  },
+  "unchanged": "Monte Carlo noise, missing small-sample shrinkage and mechanism gaps (off-ball, spacing, rim deterrence) are not addressed here"
+}

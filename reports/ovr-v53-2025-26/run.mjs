@@ -3,15 +3,18 @@
 //   node reports/ovr-v53-2025-26/run.mjs --variant control --ids 1628983,201939,1627936   # parity smoke test
 //   node reports/ovr-v53-2025-26/run.mjs --variant both            # all 582 players, about 72 minutes
 //   python3 reports/ovr-v53-2025-26/analyze.py
-// Resumable through checkpoint-<variant>.jsonl.
+// 24-seed run, compared with the local v47 24-seed board (resample-ranking.csv), about 7 hours:
+//   node reports/ovr-v53-2025-26/run.mjs --variant both --samples 24
+//   python3 reports/ovr-v53-2025-26/analyze.py --samples 24
+// Resumable through checkpoint-<variant>.jsonl (checkpoint-<variant>-s<N>.jsonl when samples != 4).
 import fs from 'node:fs';
 import {Worker} from 'node:worker_threads';
 import {ovrInput} from '../ovr-v47-2025-26/input.mjs';
 const root='reports/ovr-v53-2025-26',arg=(k,d)=>{const i=process.argv.indexOf('--'+k);return i<0?d:process.argv[i+1];};
-const variant=arg('variant','both'),workers=+arg('workers',6),seed=20261016,samples=4;
+const variant=arg('variant','both'),workers=+arg('workers',6),seed=20261016,samples=+arg('samples',4);
 const x=await ovrInput(),only=arg('ids',null)?.split(',').map(Number);
 const ids=x.players.map(p=>p.playerId).filter(id=>!only||only.includes(id)).sort((a,b)=>a-b);
-const cf=`${root}/checkpoint-${variant}.jsonl`;
+const cf=`${root}/checkpoint-${variant}${samples===4?'':'-s'+samples}.jsonl`;
 const done=new Set(fs.existsSync(cf)?fs.readFileSync(cf,'utf8').trim().split('\n').filter(Boolean).map(l=>JSON.parse(l).playerId):[]);
 const jobs=ids.filter(id=>!done.has(id)).map(id=>({id,variant,seed,samples}));
 console.log(JSON.stringify({variant,total:ids.length,remaining:jobs.length,workers}));

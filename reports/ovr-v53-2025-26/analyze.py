@@ -1,6 +1,11 @@
 """Compare the v53 OVR board with v47 against real impact (pooled four-season RAPM).
 
-  python3 reports/ovr-v53-2025-26/analyze.py [--variant both]
+  python3 reports/ovr-v53-2025-26/analyze.py [--variant both] [--samples 24]
+
+With --samples 24 the v53 board (seeds 0..23) is compared with the local v47 24-seed board
+(reports/ovr-v47-2025-26/resample-ranking.csv, same seeds), so both sides carry the same
+Monte Carlo precision. The 4-seed comparison could not resolve the effect: the analytic
+per-player change has SD 0.25 points per 36, the 4-seed noise between two boards about 1.7.
 
 Per player: mean paired margin delta -> position-centered per-36 contribution, with the same
 rule as reports/ovr-v47-2025-26/position-centering.py (confident pool = starts >= 5,
@@ -28,9 +33,9 @@ def spearman(a, b):
     return float(np.corrcoef(ra, rb)[0, 1])
 
 
-def load(variant):
+def load(variant, samples=4):
     rows = {}
-    for line in open(OUT / f'checkpoint-{variant}.jsonl', encoding='utf-8'):
+    for line in open(OUT / f'checkpoint-{variant}{"" if samples == 4 else f"-s{samples}"}.jsonl', encoding='utf-8'):
         r = json.loads(line); rows[r['playerId']] = r
     return rows
 
@@ -73,16 +78,18 @@ def centered(board):
 
 def main():
     variant = sys.argv[sys.argv.index('--variant') + 1] if '--variant' in sys.argv else 'both'
-    v53 = centered(load(variant))
+    samples = int(sys.argv[sys.argv.index('--samples') + 1]) if '--samples' in sys.argv else 4
+    v53 = centered(load(variant, samples))
+    baseline = ROOT / ('reports/ovr-v47-2025-26/centered-ranking.csv' if samples == 4 else 'reports/ovr-v47-2025-26/resample-ranking.csv')
     v47 = {r['name']: float(r['centered_contribution']) / float(r['healthy_minutes']) * 36
-           for r in csv.DictReader(open(ROOT / 'reports/ovr-v47-2025-26/centered-ranking.csv', encoding='utf-8'))}
+           for r in csv.DictReader(open(baseline, encoding='utf-8'))}
     rapm = {int(r['playerId']): r for r in csv.DictReader(open(ROOT / 'reports/impact-rapm/rapm.csv', encoding='utf-8'))}
     ff = {int(r['playerId']): float(r['tovNonSteal_defense']) for r in csv.DictReader(open(ROOT / 'reports/impact-rapm/four-factors.csv', encoding='utf-8'))}
     keep = [p for p in v53 if p in rapm and float(rapm[p]['pooledPoss']) >= 5000 and v53[p]['name'] in v47]
     D = [float(rapm[p]['pooledD']) for p in keep]; N = [float(rapm[p]['pooledNet']) for p in keep]
     new = [v53[p]['per36'] for p in keep]; old = [v47[v53[p]['name']] for p in keep]
     result = {
-        'variant': variant, 'players': len(v53), 'comparedPlayers': len(keep), 'parity': parity(),
+        'variant': variant, 'samples': samples, 'v47Baseline': baseline.name, 'players': len(v53), 'comparedPlayers': len(keep), 'parity': parity(),
         'spearmanWithRAPMDefense': {'v47': spearman(old, D), 'v53': spearman(new, D)},
         'spearmanWithRAPMNet': {'v47': spearman(old, N), 'v53': spearman(new, N)},
         'mechanism': {'spearmanChangeVsTovNonStealCoefficient': spearman([a - b for a, b in zip(new, old)], [ff.get(p, 0.0) for p in keep]),
@@ -97,8 +104,9 @@ def main():
     rank_old = {n: k + 1 for k, n in enumerate(sorted(v47, key=lambda n: -v47[n]))}
     result['focus'] = {v53[p]['name']: {'v47Rank': rank_old.get(v53[p]['name']), 'v53Rank': rank_new[p], 'v47Per36': round(v47.get(v53[p]['name'], float('nan')), 2),
                                          'v53Per36': round(v53[p]['per36'], 2)} for p in v53 if v53[p]['name'] in FOCUS}
-    (OUT / f'result-{variant}.json').write_text(json.dumps(result, ensure_ascii=False, indent=2), encoding='utf-8')
-    with open(OUT / f'ranking-{variant}.csv', 'w', encoding='utf-8', newline='') as fh:
+    suffix = '' if samples == 4 else f'-s{samples}'
+    (OUT / f'result-{variant}{suffix}.json').write_text(json.dumps(result, ensure_ascii=False, indent=2), encoding='utf-8')
+    with open(OUT / f'ranking-{variant}{suffix}.csv', 'w', encoding='utf-8', newline='') as fh:
         w = csv.writer(fh); w.writerow(['rank', 'playerId', 'name', 'position', 'minutes', 'per36Centered', 'v47Per36Centered', 'opponentTovPerGame', 'opponentFgaPerGame'])
         for p in sorted(v53, key=lambda p: rank_new[p]):
             r = v53[p]

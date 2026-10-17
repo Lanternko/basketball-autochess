@@ -25,6 +25,9 @@
   "expectedAccounting": {
     "meanLuckPerGame": 0.1617425087246103,
     "meanLuckSE": 0.03533072496375019,
+    "meanLuckSEClustered": 0.23505880932605588,
+    "clusters": 1200,
+    "note": "Per-draw luck has expectation exactly 0 when every draw probability is in [0, 1]; use the clustered SE.",
     "medianPlayerSEActual": 0.8537729438327463,
     "medianPlayerSEExpected": 0.5734392690063461
   },

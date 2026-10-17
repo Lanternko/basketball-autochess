@@ -1,0 +1,21 @@
+import assert from 'node:assert/strict';
+import {applyPerimeter} from './perimeter.mjs';
+import {K_DATA} from './perimeter.mjs';
+const md=()=>({makeDefender:{ra:.01,paint:0,mid:0,corner:0,arc:.002}});
+const mk=(id,onBall,MIN,slot)=>({playerId:id,name:'p'+id,onBall,observed:{MIN},fineDefenseMeasurement:md(),slot});
+const players=[mk(1,90,2000,0),mk(2,50,1000,0),mk(3,70,500,1)];
+const shared=players[0];
+const x={players,opponents:[{roster:[shared,mk(9,99,100,0)]}],profiles:[{fineDefenseMeasurement:md()},{fineDefenseMeasurement:md()}],
+ roleMap:new Map(players.map(p=>[p.playerId,{slot:p.slot,lowConfidence:false}]))};
+const before=structuredClone(x);
+applyPerimeter(x,0);assert.deepEqual(x,before,'k=0 must be exact');
+applyPerimeter(x,K_DATA);
+assert.ok(Math.abs(x.players[0].fineDefenseMeasurement.makeDefender.corner-(-K_DATA*20))<1e-15,'good defender lowers 3P logit');
+assert.ok(Math.abs(x.players[1].fineDefenseMeasurement.makeDefender.arc-(.002+K_DATA*20))<1e-15,'weak defender raises arc logit');
+assert.equal(x.players[2].fineDefenseMeasurement.makeDefender.corner,0,'onBall 70 unchanged');
+assert.equal(x.players[0].fineDefenseMeasurement.makeDefender.ra,.01,'inside zones untouched');
+assert.ok(Math.abs(x.opponents[0].roster[0].fineDefenseMeasurement.makeDefender.corner-(-K_DATA*20))<1e-15,'shared object applied once');
+const expected=(2000*-K_DATA*20+1000*K_DATA*20)/3000;
+assert.ok(Math.abs(x.profiles[0].fineDefenseMeasurement.makeDefender.corner-expected)<1e-15,'profile gets pool weighted mean');
+assert.equal(x.profiles[1].fineDefenseMeasurement.makeDefender.corner,0,'slot of onBall-70 pool unchanged');
+console.log('v52 input tests pass');

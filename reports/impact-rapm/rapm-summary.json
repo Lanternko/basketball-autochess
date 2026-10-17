@@ -1,0 +1,596 @@
+{
+  "seasons": [
+    "2022-23",
+    "2023-24",
+    "2024-25",
+    "2025-26"
+  ],
+  "observations": 262169,
+  "players": 877,
+  "pooled": {
+    "lambda": 3000,
+    "cvWeightedMSE": {
+      "100": 4342.485672102363,
+      "300": 4337.672225622392,
+      "1000": 4332.0760280080885,
+      "3000": 4329.264390361417,
+      "10000": 4332.579746346402,
+      "30000": 4340.725786228907
+    },
+    "intercept": 110.17253769687468
+  },
+  "lastSeason": {
+    "lambda": 3000,
+    "cvWeightedMSE": {
+      "100": 4657.5544608168575,
+      "300": 4640.9508127831,
+      "1000": 4625.644485560255,
+      "3000": 4621.9228495485095,
+      "10000": 4628.3100992577165,
+      "30000": 4637.74371868343
+    },
+    "intercept": 112.14309785743575
+  },
+  "comparison2025_26": {
+    "pooledRAPM": {
+      "simulatedCentered": {
+        "players": 478,
+        "spearmanWithNetRAPM": 0.33229303547060807
+      },
+      "players": {
+        "nikola jokic": {
+          "netRAPM": 10.32,
+          "possessions": 38592,
+          "simulatedCentered": 9,
+          "simulatedShrunk": 5,
+          "calibratedOVR": 9,
+          "expectedProductionOVR": 2
+        },
+        "shai gilgeous-alexander": {
+          "netRAPM": 8.51,
+          "possessions": 35723,
+          "simulatedCentered": 1,
+          "simulatedShrunk": 1,
+          "calibratedOVR": 1,
+          "expectedProductionOVR": 1
+        },
+        "giannis antetokounmpo": {
+          "netRAPM": 7.81,
+          "possessions": 30299,
+          "simulatedCentered": 16,
+          "simulatedShrunk": 15,
+          "calibratedOVR": 3,
+          "expectedProductionOVR": 9
+        },
+        "kawhi leonard": {
+          "netRAPM": 7.71,
+          "possessions": 28006,
+          "simulatedCentered": 11,
+          "simulatedShrunk": 8,
+          "calibratedOVR": 5,
+          "expectedProductionOVR": 6
+        },
+        "victor wembanyama": {
+          "netRAPM": 7.57,
+          "possessions": 21367,
+          "simulatedCentered": 8,
+          "simulatedShrunk": 11,
+          "calibratedOVR": 13,
+          "expectedProductionOVR": 14
+        },
+        "derrick white": {
+          "netRAPM": 6.82,
+          "possessions": 37548,
+          "simulatedCentered": 63,
+          "simulatedShrunk": 31,
+          "calibratedOVR": 248,
+          "expectedProductionOVR": 68
+        },
+        "franz wagner": {
+          "netRAPM": 6.41,
+          "possessions": 31146,
+          "simulatedCentered": 76,
+          "simulatedShrunk": 45,
+          "calibratedOVR": 95,
+          "expectedProductionOVR": 302
+        },
+        "chet holmgren": {
+          "netRAPM": 6.24,
+          "possessions": 18690,
+          "simulatedCentered": 26,
+          "simulatedShrunk": 28,
+          "calibratedOVR": 2,
+          "expectedProductionOVR": 49
+        },
+        "alex caruso": {
+          "netRAPM": 5.91,
+          "possessions": 21658,
+          "simulatedCentered": 378,
+          "simulatedShrunk": 414,
+          "calibratedOVR": 517,
+          "expectedProductionOVR": 94
+        },
+        "joel embiid": {
+          "netRAPM": 5.8,
+          "possessions": 19383,
+          "simulatedCentered": 205,
+          "simulatedShrunk": 113,
+          "calibratedOVR": 37,
+          "expectedProductionOVR": 224
+        },
+        "lauri markkanen": {
+          "netRAPM": 5.71,
+          "possessions": 27249,
+          "simulatedCentered": 2,
+          "simulatedShrunk": 3,
+          "calibratedOVR": 29,
+          "expectedProductionOVR": 78
+        },
+        "jimmy butler": {
+          "netRAPM": 5.49,
+          "possessions": 25645,
+          "simulatedCentered": 3,
+          "simulatedShrunk": 7,
+          "calibratedOVR": 12,
+          "expectedProductionOVR": 3
+        },
+        "neemias queta": {
+          "netRAPM": 5.41,
+          "possessions": 11841,
+          "simulatedCentered": 70,
+          "simulatedShrunk": 56,
+          "calibratedOVR": 59,
+          "expectedProductionOVR": 7
+        },
+        "herbert jones": {
+          "netRAPM": 5.3,
+          "possessions": 23791,
+          "simulatedCentered": 548,
+          "simulatedShrunk": 573,
+          "calibratedOVR": 568,
+          "expectedProductionOVR": 563
+        },
+        "moussa diabate": {
+          "netRAPM": 5.27,
+          "possessions": 13412,
+          "simulatedCentered": 42,
+          "simulatedShrunk": 47,
+          "calibratedOVR": 102,
+          "expectedProductionOVR": 32
+        },
+        "luka doncic": {
+          "netRAPM": 5.21,
+          "possessions": 34700,
+          "simulatedCentered": 7,
+          "simulatedShrunk": 2,
+          "calibratedOVR": 6,
+          "expectedProductionOVR": 17
+        },
+        "donovan mitchell": {
+          "netRAPM": 5.03,
+          "possessions": 33296,
+          "simulatedCentered": 56,
+          "simulatedShrunk": 32,
+          "calibratedOVR": 36,
+          "expectedProductionOVR": 116
+        },
+        "dean wade": {
+          "netRAPM": 4.92,
+          "possessions": 17128,
+          "simulatedCentered": 220,
+          "simulatedShrunk": 165,
+          "calibratedOVR": 234,
+          "expectedProductionOVR": 71
+        },
+        "steven adams": {
+          "netRAPM": 4.92,
+          "possessions": 9955,
+          "simulatedCentered": 112,
+          "simulatedShrunk": 91,
+          "calibratedOVR": 445,
+          "expectedProductionOVR": 10
+        },
+        "devin booker": {
+          "netRAPM": 4.87,
+          "possessions": 34105,
+          "simulatedCentered": 50,
+          "simulatedShrunk": 38,
+          "calibratedOVR": 183,
+          "expectedProductionOVR": 250
+        },
+        "aaron gordon": {
+          "netRAPM": 4.85,
+          "possessions": 25711,
+          "simulatedCentered": 79,
+          "simulatedShrunk": 53,
+          "calibratedOVR": 41,
+          "expectedProductionOVR": 64
+        },
+        "jarrett allen": {
+          "netRAPM": 4.81,
+          "possessions": 30785,
+          "simulatedCentered": 261,
+          "simulatedShrunk": 171,
+          "calibratedOVR": 84,
+          "expectedProductionOVR": 61
+        },
+        "zach edey": {
+          "netRAPM": 4.67,
+          "possessions": 6029,
+          "simulatedCentered": 5,
+          "simulatedShrunk": 12,
+          "calibratedOVR": 223,
+          "expectedProductionOVR": 23
+        },
+        "stephen curry": {
+          "netRAPM": 4.57,
+          "possessions": 29959,
+          "simulatedCentered": 84,
+          "simulatedShrunk": 54,
+          "calibratedOVR": 7,
+          "expectedProductionOVR": 135
+        },
+        "de'aaron fox": {
+          "netRAPM": 4.57,
+          "possessions": 34562,
+          "simulatedCentered": 96,
+          "simulatedShrunk": 59,
+          "calibratedOVR": 253,
+          "expectedProductionOVR": 142
+        },
+        "jalen brunson": {
+          "netRAPM": 2.57,
+          "possessions": 36792,
+          "simulatedCentered": 57,
+          "simulatedShrunk": 40,
+          "calibratedOVR": 337,
+          "expectedProductionOVR": 408
+        },
+        "cade cunningham": {
+          "netRAPM": 3.43,
+          "possessions": 27640,
+          "simulatedCentered": 71,
+          "simulatedShrunk": 42,
+          "calibratedOVR": 116,
+          "expectedProductionOVR": 85
+        },
+        "anthony edwards": {
+          "netRAPM": 3.1,
+          "possessions": 39460,
+          "simulatedCentered": 52,
+          "simulatedShrunk": 37,
+          "calibratedOVR": 19,
+          "expectedProductionOVR": 183
+        },
+        "cormac ryan": {
+          "netRAPM": 0.09,
+          "possessions": 1090,
+          "simulatedCentered": 4,
+          "simulatedShrunk": 13,
+          "calibratedOVR": 71,
+          "expectedProductionOVR": 34
+        },
+        "charles bassey": {
+          "netRAPM": -1.95,
+          "possessions": 5038,
+          "simulatedCentered": 6,
+          "simulatedShrunk": 79,
+          "calibratedOVR": 25,
+          "expectedProductionOVR": 213
+        },
+        "robert williams": {
+          "netRAPM": 2.83,
+          "possessions": 9279,
+          "simulatedCentered": 43,
+          "simulatedShrunk": 103,
+          "calibratedOVR": 64,
+          "expectedProductionOVR": 4
+        },
+        "john konchar": {
+          "netRAPM": 1.07,
+          "possessions": 17062,
+          "simulatedCentered": 177,
+          "simulatedShrunk": 140,
+          "calibratedOVR": 518,
+          "expectedProductionOVR": 8
+        }
+      },
+      "simulatedShrunk": {
+        "players": 478,
+        "spearmanWithNetRAPM": 0.368261103336529
+      },
+      "calibratedOVR": {
+        "players": 478,
+        "spearmanWithNetRAPM": 0.36831966678824346
+      },
+      "expectedProductionOVR": {
+        "players": 478,
+        "spearmanWithNetRAPM": 0.42341787621345417
+      }
+    },
+    "lastSeasonRAPM": {
+      "simulatedCentered": {
+        "players": 387,
+        "spearmanWithNetRAPM": 0.4285634132212344
+      },
+      "players": {
+        "shai gilgeous-alexander": {
+          "netRAPM": 6.51,
+          "possessions": 9407,
+          "simulatedCentered": 1,
+          "simulatedShrunk": 1,
+          "calibratedOVR": 1,
+          "expectedProductionOVR": 1
+        },
+        "victor wembanyama": {
+          "netRAPM": 6.12,
+          "possessions": 7774,
+          "simulatedCentered": 8,
+          "simulatedShrunk": 11,
+          "calibratedOVR": 13,
+          "expectedProductionOVR": 14
+        },
+        "kawhi leonard": {
+          "netRAPM": 5.77,
+          "possessions": 8286,
+          "simulatedCentered": 11,
+          "simulatedShrunk": 8,
+          "calibratedOVR": 5,
+          "expectedProductionOVR": 6
+        },
+        "chet holmgren": {
+          "netRAPM": 5.45,
+          "possessions": 8217,
+          "simulatedCentered": 26,
+          "simulatedShrunk": 28,
+          "calibratedOVR": 2,
+          "expectedProductionOVR": 49
+        },
+        "derrick white": {
+          "netRAPM": 5.19,
+          "possessions": 10464,
+          "simulatedCentered": 63,
+          "simulatedShrunk": 31,
+          "calibratedOVR": 248,
+          "expectedProductionOVR": 68
+        },
+        "dyson daniels": {
+          "netRAPM": 5.06,
+          "possessions": 10757,
+          "simulatedCentered": 334,
+          "simulatedShrunk": 285,
+          "calibratedOVR": 571,
+          "expectedProductionOVR": 38
+        },
+        "neemias queta": {
+          "netRAPM": 4.97,
+          "possessions": 7471,
+          "simulatedCentered": 70,
+          "simulatedShrunk": 56,
+          "calibratedOVR": 59,
+          "expectedProductionOVR": 7
+        },
+        "nikola jokic": {
+          "netRAPM": 4.94,
+          "possessions": 9700,
+          "simulatedCentered": 9,
+          "simulatedShrunk": 5,
+          "calibratedOVR": 9,
+          "expectedProductionOVR": 2
+        },
+        "moussa diabate": {
+          "netRAPM": 4.88,
+          "possessions": 7651,
+          "simulatedCentered": 42,
+          "simulatedShrunk": 47,
+          "calibratedOVR": 102,
+          "expectedProductionOVR": 32
+        },
+        "marcus smart": {
+          "netRAPM": 4.59,
+          "possessions": 7319,
+          "simulatedCentered": 436,
+          "simulatedShrunk": 497,
+          "calibratedOVR": 488,
+          "expectedProductionOVR": 254
+        },
+        "amen thompson": {
+          "netRAPM": 4.43,
+          "possessions": 12007,
+          "simulatedCentered": 272,
+          "simulatedShrunk": 127,
+          "calibratedOVR": 104,
+          "expectedProductionOVR": 29
+        },
+        "jimmy butler": {
+          "netRAPM": 4.41,
+          "possessions": 4852,
+          "simulatedCentered": 3,
+          "simulatedShrunk": 7,
+          "calibratedOVR": 12,
+          "expectedProductionOVR": 3
+        },
+        "ausar thompson": {
+          "netRAPM": 4.26,
+          "possessions": 7891,
+          "simulatedCentered": 33,
+          "simulatedShrunk": 34,
+          "calibratedOVR": 301,
+          "expectedProductionOVR": 141
+        },
+        "donovan mitchell": {
+          "netRAPM": 4.21,
+          "possessions": 9820,
+          "simulatedCentered": 56,
+          "simulatedShrunk": 32,
+          "calibratedOVR": 36,
+          "expectedProductionOVR": 116
+        },
+        "josh green": {
+          "netRAPM": 4.06,
+          "possessions": 3663,
+          "simulatedCentered": 98,
+          "simulatedShrunk": 116,
+          "calibratedOVR": 198,
+          "expectedProductionOVR": 88
+        },
+        "julian champagnie": {
+          "netRAPM": 3.98,
+          "possessions": 9476,
+          "simulatedCentered": 169,
+          "simulatedShrunk": 104,
+          "calibratedOVR": 87,
+          "expectedProductionOVR": 180
+        },
+        "alex caruso": {
+          "netRAPM": 3.83,
+          "possessions": 4218,
+          "simulatedCentered": 378,
+          "simulatedShrunk": 414,
+          "calibratedOVR": 517,
+          "expectedProductionOVR": 94
+        },
+        "devin booker": {
+          "netRAPM": 3.82,
+          "possessions": 8865,
+          "simulatedCentered": 50,
+          "simulatedShrunk": 38,
+          "calibratedOVR": 183,
+          "expectedProductionOVR": 250
+        },
+        "cade cunningham": {
+          "netRAPM": 3.81,
+          "possessions": 9099,
+          "simulatedCentered": 71,
+          "simulatedShrunk": 42,
+          "calibratedOVR": 116,
+          "expectedProductionOVR": 85
+        },
+        "og anunoby": {
+          "netRAPM": 3.77,
+          "possessions": 8962,
+          "simulatedCentered": 144,
+          "simulatedShrunk": 70,
+          "calibratedOVR": 112,
+          "expectedProductionOVR": 248
+        },
+        "hugo gonzalez": {
+          "netRAPM": 3.67,
+          "possessions": 4275,
+          "simulatedCentered": 372,
+          "simulatedShrunk": 410,
+          "calibratedOVR": 347,
+          "expectedProductionOVR": 206
+        },
+        "bam adebayo": {
+          "netRAPM": 3.6,
+          "possessions": 10168,
+          "simulatedCentered": 94,
+          "simulatedShrunk": 48,
+          "calibratedOVR": 229,
+          "expectedProductionOVR": 222
+        },
+        "jalen smith": {
+          "netRAPM": 3.52,
+          "possessions": 4677,
+          "simulatedCentered": 93,
+          "simulatedShrunk": 92,
+          "calibratedOVR": 31,
+          "expectedProductionOVR": 160
+        },
+        "donte divincenzo": {
+          "netRAPM": 3.48,
+          "possessions": 10570,
+          "simulatedCentered": 365,
+          "simulatedShrunk": 377,
+          "calibratedOVR": 415,
+          "expectedProductionOVR": 130
+        },
+        "devin vassell": {
+          "netRAPM": 3.44,
+          "possessions": 8464,
+          "simulatedCentered": 161,
+          "simulatedShrunk": 87,
+          "calibratedOVR": 310,
+          "expectedProductionOVR": 246
+        },
+        "jalen brunson": {
+          "netRAPM": 0.98,
+          "possessions": 10420,
+          "simulatedCentered": 57,
+          "simulatedShrunk": 40,
+          "calibratedOVR": 337,
+          "expectedProductionOVR": 408
+        },
+        "stephen curry": {
+          "netRAPM": 2.16,
+          "possessions": 5596,
+          "simulatedCentered": 84,
+          "simulatedShrunk": 54,
+          "calibratedOVR": 7,
+          "expectedProductionOVR": 135
+        },
+        "luka doncic": {
+          "netRAPM": 2.59,
+          "possessions": 9618,
+          "simulatedCentered": 7,
+          "simulatedShrunk": 2,
+          "calibratedOVR": 6,
+          "expectedProductionOVR": 17
+        },
+        "anthony edwards": {
+          "netRAPM": 0.57,
+          "possessions": 9051,
+          "simulatedCentered": 52,
+          "simulatedShrunk": 37,
+          "calibratedOVR": 19,
+          "expectedProductionOVR": 183
+        },
+        "cormac ryan": {
+          "netRAPM": -0.18,
+          "possessions": 1090,
+          "simulatedCentered": 4,
+          "simulatedShrunk": 13,
+          "calibratedOVR": 71,
+          "expectedProductionOVR": 34
+        },
+        "charles bassey": {
+          "netRAPM": -1.41,
+          "possessions": 631,
+          "simulatedCentered": 6,
+          "simulatedShrunk": 79,
+          "calibratedOVR": 25,
+          "expectedProductionOVR": 213
+        },
+        "robert williams": {
+          "netRAPM": 2.05,
+          "possessions": 4263,
+          "simulatedCentered": 43,
+          "simulatedShrunk": 103,
+          "calibratedOVR": 64,
+          "expectedProductionOVR": 4
+        },
+        "john konchar": {
+          "netRAPM": -0.67,
+          "possessions": 4850,
+          "simulatedCentered": 177,
+          "simulatedShrunk": 140,
+          "calibratedOVR": 518,
+          "expectedProductionOVR": 8
+        }
+      },
+      "simulatedShrunk": {
+        "players": 387,
+        "spearmanWithNetRAPM": 0.44111284885480756
+      },
+      "calibratedOVR": {
+        "players": 387,
+        "spearmanWithNetRAPM": 0.3805110043068163
+      },
+      "expectedProductionOVR": {
+        "players": 387,
+        "spearmanWithNetRAPM": 0.5216804575055415
+      }
+    }
+  }
+}

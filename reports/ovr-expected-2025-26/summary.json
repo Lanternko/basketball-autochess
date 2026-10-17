@@ -1,0 +1,89 @@
+{
+  "weights": {
+    "REPL": 0.92,
+    "W_AST": 0.25,
+    "W_OREB": 0.5,
+    "W_DREB": 0.2,
+    "W_PF": 0.35,
+    "W_ONOFF": 0.5
+  },
+  "league": {
+    "PPP": 1.1351964507163597,
+    "PTS_TSA": 1.16279916028397,
+    "PTS_FGM": 2.3169422728549702
+  },
+  "scaleAnchorsNetPer100": {
+    "PR1": -4.313651645780751,
+    "PR50": -0.11889061425458103,
+    "PR99": 5.805349379611947
+  },
+  "shrinkage": {
+    "offense": {
+      "priorIntercept": -4.0865240659860245,
+      "priorLogMpgSlope": 1.2903668055140236,
+      "tau2": 3.8667363019332868
+    },
+    "onoff": {
+      "priorIntercept": 2.446450273767775,
+      "priorLogMpgSlope": -0.7638592517727366,
+      "tau2": 1.8368380736737269
+    }
+  },
+  "players": 582,
+  "teamBoxCorrelation": 0.8793860713701308,
+  "spearmanWithSimulatedBoard": 0.4504379715310972,
+  "spearmanWithMedia": {
+    "r": 0.39976158653325145,
+    "matched": 94
+  },
+  "sensitivity": {
+    "REPLx0.5": {
+      "spearman": 0.9877935110497338,
+      "top20Overlap": 19
+    },
+    "REPLx1.5": {
+      "spearman": 0.9885340121148165,
+      "top20Overlap": 17
+    },
+    "W_ASTx0.5": {
+      "spearman": 0.9265421726009067,
+      "top20Overlap": 16
+    },
+    "W_ASTx1.5": {
+      "spearman": 0.9506934641817687,
+      "top20Overlap": 13
+    },
+    "W_OREBx0.5": {
+      "spearman": 0.9787357799370839,
+      "top20Overlap": 17
+    },
+    "W_OREBx1.5": {
+      "spearman": 0.982376744236867,
+      "top20Overlap": 16
+    },
+    "W_DREBx0.5": {
+      "spearman": 0.9946829406055144,
+      "top20Overlap": 19
+    },
+    "W_DREBx1.5": {
+      "spearman": 0.9950078114796901,
+      "top20Overlap": 17
+    },
+    "W_PFx0.5": {
+      "spearman": 0.9935012433448114,
+      "top20Overlap": 19
+    },
+    "W_PFx1.5": {
+      "spearman": 0.9944199151141685,
+      "top20Overlap": 19
+    },
+    "W_ONOFFx0.5": {
+      "spearman": 0.9536931478633318,
+      "top20Overlap": 14
+    },
+    "W_ONOFFx1.5": {
+      "spearman": 0.9696702572801404,
+      "top20Overlap": 18
+    }
+  }
+}

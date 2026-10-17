@@ -6,6 +6,11 @@
 // 24-seed run, compared with the local v47 24-seed board (resample-ranking.csv), about 7 hours:
 //   node reports/ovr-v53-2025-26/run.mjs --variant both --samples 24
 //   python3 reports/ovr-v53-2025-26/analyze.py --samples 24
+// Expected-points accounting (recommended; luck ledger in player-impact-v53/engine.mjs), 8 seeds per
+// variant, control = exact v47 with the same seeds and accounting, about 2.5 hours each:
+//   node reports/ovr-v53-2025-26/run.mjs --variant control --samples 8
+//   node reports/ovr-v53-2025-26/run.mjs --variant both --samples 8
+//   python3 reports/ovr-v53-2025-26/analyze.py --samples 8 --expected
 // Resumable through checkpoint-<variant>.jsonl (checkpoint-<variant>-s<N>.jsonl when samples != 4).
 import fs from 'node:fs';
 import {Worker} from 'node:worker_threads';

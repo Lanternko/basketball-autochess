@@ -2,6 +2,10 @@
 
   python3 reports/ovr-v53-2025-26/analyze.py [--variant both] [--samples 24]
 
+With --expected the per-game margin is the expected-points margin (actual margin minus the
+shooting and free-throw luck recorded by the luck ledger). It is unbiased and far less noisy;
+the result also reports the mean luck (should be ~0) and the noise reduction.
+
 With --samples 24 the v53 board (seeds 0..23) is compared with the local v47 24-seed board
 (reports/ovr-v47-2025-26/resample-ranking.csv, same seeds), so both sides carry the same
 Monte Carlo precision. The 4-seed comparison could not resolve the effect: the analytic
@@ -17,7 +21,7 @@ Gates, fixed before the run (players with >= 5000 pooled RAPM possessions):
   net       Spearman(v53, RAPM net) >= Spearman(v47, RAPM net)
 Adopt v53 only if all pass.
 """
-import csv, json, statistics as st, sys
+import csv, json, math, statistics as st, sys
 from collections import defaultdict
 from pathlib import Path
 import numpy as np
@@ -40,11 +44,11 @@ def load(variant, samples=4):
     return rows
 
 
-def parity():
-    f, saved = OUT / 'checkpoint-control.jsonl', ROOT / 'reports/ovr-v47-2025-26/healthy-checkpoint.jsonl'
+def parity(samples=4):
+    f, saved = OUT / f'checkpoint-control{"" if samples == 4 else f"-s{samples}"}.jsonl', ROOT / 'reports/ovr-v47-2025-26/healthy-checkpoint.jsonl'
     if not f.exists() or not saved.exists():
         return None
-    mine = load('control'); worst = 0.0; checked = 0
+    mine = load('control', samples); worst = 0.0; checked = 0
     for line in open(saved, encoding='utf-8'):
         row = json.loads(line); r = mine.get(row['playerId'])
         if not r:
@@ -56,7 +60,7 @@ def parity():
     return {'valuesChecked': checked, 'maxAbsDifference': worst, 'passed': checked > 0 and worst < 1e-9}
 
 
-def centered(board):
+def centered(board, column=2):
     comp = {r['name']: r for r in csv.DictReader(open(ROOT / 'reports/ovr-v47-2025-26/comparison.csv', encoding='utf-8-sig'))}
     ids = {int(r['playerId']): r for r in csv.DictReader(open(ROOT / 'reports/ovr-v47-2025-26/ranking.csv', encoding='utf-8-sig'))}
     work = {int(r['playerId']): r for r in csv.DictReader(open(ROOT / 'reports/player-impact-v29/2025-26-all-player-workload.csv', encoding='utf-8-sig'))}
@@ -64,7 +68,7 @@ def centered(board):
     for pid, r in board.items():
         info = ids[pid]; c = comp[info['name']]
         rows.append({'playerId': pid, 'name': info['name'], 'pos': info['position'], 'm': r['minutes'],
-                     'c': st.mean(d[2] for d in r['draws']), 'W': float(c['source_games_played']) * float(c['source_minutes_per_played_game']),
+                     'c': st.mean(d[column] for d in r['draws']), 'W': float(c['source_games_played']) * float(c['source_minutes_per_played_game']),
                      'confident': int(work[pid]['starts']) >= 5,
                      'oppTov': st.mean(d[4] for d in r['draws']), 'oppFga': st.mean(d[3] for d in r['draws'])})
     for pos in {r['pos'] for r in rows}:
@@ -79,22 +83,42 @@ def centered(board):
 def main():
     variant = sys.argv[sys.argv.index('--variant') + 1] if '--variant' in sys.argv else 'both'
     samples = int(sys.argv[sys.argv.index('--samples') + 1]) if '--samples' in sys.argv else 4
-    v53 = centered(load(variant, samples))
-    baseline = ROOT / ('reports/ovr-v47-2025-26/centered-ranking.csv' if samples == 4 else 'reports/ovr-v47-2025-26/resample-ranking.csv')
-    v47 = {r['name']: float(r['centered_contribution']) / float(r['healthy_minutes']) * 36
-           for r in csv.DictReader(open(baseline, encoding='utf-8'))}
+    expected = '--expected' in sys.argv
+    raw = load(variant, samples)
+    v53 = centered(raw, 5 if expected else 2)
+    if expected:
+        # Same seeds and the same expected-points accounting on the control (exact v47) variant.
+        baseline = OUT / f'checkpoint-control{"" if samples == 4 else f"-s{samples}"}.jsonl'
+        v47 = {r['name']: r['per36'] for r in centered(load('control', samples), 5).values()}
+    else:
+        baseline = ROOT / ('reports/ovr-v47-2025-26/centered-ranking.csv' if samples == 4 else 'reports/ovr-v47-2025-26/resample-ranking.csv')
+        v47 = {r['name']: float(r['centered_contribution']) / float(r['healthy_minutes']) * 36
+               for r in csv.DictReader(open(baseline, encoding='utf-8'))}
     rapm = {int(r['playerId']): r for r in csv.DictReader(open(ROOT / 'reports/impact-rapm/rapm.csv', encoding='utf-8'))}
     ff = {int(r['playerId']): float(r['tovNonSteal_defense']) for r in csv.DictReader(open(ROOT / 'reports/impact-rapm/four-factors.csv', encoding='utf-8'))}
     keep = [p for p in v53 if p in rapm and float(rapm[p]['pooledPoss']) >= 5000 and v53[p]['name'] in v47]
     D = [float(rapm[p]['pooledD']) for p in keep]; N = [float(rapm[p]['pooledNet']) for p in keep]
     new = [v53[p]['per36'] for p in keep]; old = [v47[v53[p]['name']] for p in keep]
     result = {
-        'variant': variant, 'samples': samples, 'v47Baseline': baseline.name, 'players': len(v53), 'comparedPlayers': len(keep), 'parity': parity(),
+        'variant': variant, 'samples': samples, 'expectedMargin': expected, 'v47Baseline': baseline.name, 'players': len(v53), 'comparedPlayers': len(keep), 'parity': parity(samples),
         'spearmanWithRAPMDefense': {'v47': spearman(old, D), 'v53': spearman(new, D)},
         'spearmanWithRAPMNet': {'v47': spearman(old, N), 'v53': spearman(new, N)},
         'mechanism': {'spearmanChangeVsTovNonStealCoefficient': spearman([a - b for a, b in zip(new, old)], [ff.get(p, 0.0) for p in keep]),
                       'spearmanOpponentTovVsTovNonStealCoefficient': spearman([v53[p]['oppTov'] for p in keep], [ff.get(p, 0.0) for p in keep])},
     }
+    if expected:
+        luck = [d[2] - d[5] for r in raw.values() for d in r['draws']]
+        def board_se(col):
+            ses = []
+            for r in raw.values():
+                by = defaultdict(list)
+                for d in r['draws']:
+                    by[d[0]].append(d[col])
+                vals = list(by.values())
+                ses.append(math.sqrt(sum(st.variance(v) / len(v) for v in vals) / len(vals) ** 2))
+            return st.median(ses)
+        result['expectedAccounting'] = {'meanLuckPerGame': st.mean(luck), 'meanLuckSE': st.stdev(luck) / math.sqrt(len(luck)),
+                                        'medianPlayerSEActual': board_se(2), 'medianPlayerSEExpected': board_se(5)}
     par = result['parity']
     result['gates'] = {'parity': par['passed'] if par else 'not run',
                        'defense': result['spearmanWithRAPMDefense']['v53'] > result['spearmanWithRAPMDefense']['v47'],
@@ -104,7 +128,7 @@ def main():
     rank_old = {n: k + 1 for k, n in enumerate(sorted(v47, key=lambda n: -v47[n]))}
     result['focus'] = {v53[p]['name']: {'v47Rank': rank_old.get(v53[p]['name']), 'v53Rank': rank_new[p], 'v47Per36': round(v47.get(v53[p]['name'], float('nan')), 2),
                                          'v53Per36': round(v53[p]['per36'], 2)} for p in v53 if v53[p]['name'] in FOCUS}
-    suffix = '' if samples == 4 else f'-s{samples}'
+    suffix = ('' if samples == 4 else f'-s{samples}') + ('-expected' if expected else '')
     (OUT / f'result-{variant}{suffix}.json').write_text(json.dumps(result, ensure_ascii=False, indent=2), encoding='utf-8')
     with open(OUT / f'ranking-{variant}{suffix}.csv', 'w', encoding='utf-8', newline='') as fh:
         w = csv.writer(fh); w.writerow(['rank', 'playerId', 'name', 'position', 'minutes', 'per36Centered', 'v47Per36Centered', 'opponentTovPerGame', 'opponentFgaPerGame'])

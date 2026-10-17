@@ -19,6 +19,10 @@ Extra derived card attribute 'creation': self-created field-goal attempts per 36
 scripts/build_season_league.js (GP >= 30 and MPG >= 20). Real-player simulations use this
 self-creation through opportunityMeasurement; without it the formula cannot see it.
 
+Extra derived card attribute 'pressure': the four-factor RAPM non-steal turnovers forced
+(reports/impact-rapm/four-factors.csv, tovNonSteal_defense), percentile-mapped the same way.
+It drives the v53 simulator's dead-ball pressure (reports/player-impact-v53), so a card needs it.
+
 --target lets the 24-seed local run (resample-ranking.csv: name, healthy_minutes,
 centered_contribution, standard_error) replace the saved 4-seed board.
 Calibrated on one engine version: the formula inherits the simulator's blind spots
@@ -30,7 +34,7 @@ import numpy as np
 
 ROOT = Path(__file__).resolve().parents[2]
 OUT = Path(__file__).parent
-ATTRS = ['long', 'mid', 'short', 'ft', 'drive', 'tovSkill', 'pass', 'rebound', 'physique', 'onBall', 'help', 'stamina', 'heightInches', 'creation']
+ATTRS = ['long', 'mid', 'short', 'ft', 'drive', 'tovSkill', 'pass', 'rebound', 'physique', 'onBall', 'help', 'stamina', 'heightInches', 'creation', 'pressure']
 POS = ['PG', 'SG', 'SF', 'PF', 'C']
 INTERACT = ['long', 'short', 'pass', 'rebound', 'help']
 SCALE_MIN_MINUTES = 500
@@ -65,10 +69,17 @@ def attach_creation(cards):
                 t[k] += p['observed'][k]
     raw = {n: (1 - received[n]) * t['FGA'] / max(t['MIN'], 1) * 36 for n, t in totals.items()}
     pool = [raw[n] for n, t in totals.items() if t['GP'] >= 30 and t['MIN'] / t['GP'] >= 20]
+    ff = {int(r['playerId']): float(r['tovNonSteal_defense']) for r in csv.DictReader(open(ROOT / 'reports/impact-rapm/four-factors.csv', encoding='utf-8'))}
+    regular = [n for n, t in totals.items() if t['GP'] >= 30 and t['MIN'] / t['GP'] >= 20]
+    pressure = {n: ff.get(cards[n]['card']['playerId'], 0.0) for n in cards}
     for n, c in cards.items():
-        x = raw[n]
-        pct = 100 * (sum(v < x for v in pool) + 0.5 * sum(v == x for v in pool)) / len(pool)
-        c['card'] = {**c['card'], 'creation': max(40, min(99, 40 + (pct - 1) * 30 / 49 if pct < 50 else 70 + (pct - 50) * 29 / 49))}
+        c['card'] = {**c['card'], 'creation': to_attribute(raw[n], pool), 'pressure': to_attribute(pressure[n], [pressure[m] for m in regular])}
+
+
+def to_attribute(x, pool):
+    """Percentile among regular players mapped PR1 = 40, PR50 = 70, PR99 = 99 (scripts/build_season_league.js)."""
+    pct = 100 * (sum(v < x for v in pool) + 0.5 * sum(v == x for v in pool)) / len(pool)
+    return max(40, min(99, 40 + (pct - 1) * 30 / 49 if pct < 50 else 70 + (pct - 50) * 29 / 49))
 
 
 def design(rows, form, mean=None, sd=None):

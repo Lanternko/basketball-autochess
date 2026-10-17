@@ -117,7 +117,17 @@ def main():
                 vals = list(by.values())
                 ses.append(math.sqrt(sum(st.variance(v) / len(v) for v in vals) / len(vals) ** 2))
             return st.median(ses)
+        # Draws are not independent: every player of one position shares the seed of each
+        # (opponent, seed index) pair, so the baseline games repeat with near-identical luck.
+        # Cluster by (position, opponent, seed index) for an honest standard error.
+        clusters = defaultdict(list)
+        for pid, r in raw.items():
+            for d in r['draws']:
+                clusters[(v53[pid]['pos'], d[0], d[1])].append(d[2] - d[5])
+        means = [st.mean(v) for v in clusters.values()]
         result['expectedAccounting'] = {'meanLuckPerGame': st.mean(luck), 'meanLuckSE': st.stdev(luck) / math.sqrt(len(luck)),
+                                        'meanLuckSEClustered': st.stdev(means) / math.sqrt(len(means)), 'clusters': len(means),
+                                        'note': 'Per-draw luck has expectation exactly 0 when every draw probability is in [0, 1]; use the clustered SE.',
                                         'medianPlayerSEActual': board_se(2), 'medianPlayerSEExpected': board_se(5)}
     par = result['parity']
     result['gates'] = {'parity': par['passed'] if par else 'not run',

@@ -28,6 +28,28 @@ const prior={long:safe(total(base,'FG3M'),total(base,'FG3A')),ft:safe(total(base
 const percentile=(x,values)=>100*(values.filter(v=>v<x).length+.5*values.filter(v=>v===x).length)/values.length;
 const attr=p=>Math.max(40,Math.min(99,p<50?40+(p-1)*30/49:70+(p-50)*29/49));
 const rank=(r,f)=>attr(percentile(f(r),pool.map(f)));
+// --shrink: empirical-Bayes pseudo-minutes toward the card-position mean before the percentile map
+// (reports/ovr-shrinkage-2025-26/preregistration.md). Writes season-league-shrunk.json instead.
+const SHRINK=process.argv.includes('--shrink'), shrinkage={};
+const posOfHeight=h=>h<=75?'PG':h<=78?'SG':h<=80?'SF':h<=82?'PF':'C';
+const posOf=r=>posOfHeight(Number(maps.bio.get(r.PLAYER_ID)?.PLAYER_HEIGHT_INCHES));
+function shrunk(name,f) {
+  if (!SHRINK) return f;
+  const rows=base.filter(r=>r.MIN>0&&Number.isFinite(f(r)));
+  const mu=new Map([...Map.groupBy(rows,posOf)].map(([p,g])=>[p,g.reduce((n,r)=>n+r.MIN*f(r),0)/total(g,'MIN')]));
+  const fit=rows.filter(r=>r.MIN>=50).map(r=>[1/r.MIN,(f(r)-mu.get(posOf(r)))**2]);
+  const mean=i=>fit.reduce((n,v)=>n+v[i],0)/fit.length, mu_u=mean(0), mu_d=mean(1);
+  const sigma2=fit.reduce((n,[u,d])=>n+(u-mu_u)*(d-mu_d),0)/fit.reduce((n,[u])=>n+(u-mu_u)**2,0);
+  const tau2=mu_d-sigma2*mu_u;
+  const k=tau2>0&&sigma2>0?Math.max(50,Math.min(2000,sigma2/tau2)):500;
+  shrinkage[name]={pseudoMinutes:k,tau2,sigma2,fitPlayers:fit.length,positionMeans:Object.fromEntries(mu)};
+  const value=new Map(base.map(r=>[r.PLAYER_ID,r.MIN>0&&Number.isFinite(f(r))?(r.MIN*f(r)+k*mu.get(posOf(r)))/(r.MIN+k):mu.get(posOf(r))]));
+  return r=>value.get(r.PLAYER_ID);
+}
+const driveRate=shrunk('drive',r=>safe(r.FTA,r.FGA));
+const tovRate=shrunk('tovSkill',r=>-safe(r.TOV,r.FGA+.44*r.FTA+r.AST+r.TOV));
+const astPct=shrunk('pass',r=>maps.advanced.get(r.PLAYER_ID)?.AST_PCT);
+const rebPct=shrunk('rebound',r=>maps.advanced.get(r.PLAYER_ID)?.REB_PCT);
 const sizeValue=r=>{const v=maps.bio.get(r.PLAYER_ID);return Number(v.PLAYER_HEIGHT_INCHES)+Number(v.PLAYER_WEIGHT)/10;};
 const sizePool=pool.filter(r=>Number(maps.bio.get(r.PLAYER_ID).PLAYER_WEIGHT)>0);
 function inverse(p,curve) {
@@ -56,16 +78,13 @@ function card(row) {
   const height=Number(bio.PLAYER_HEIGHT_INCHES),weight=Number(bio.PLAYER_WEIGHT);
   if (!(height>0)) throw new Error('Missing measured height: '+row.PLAYER_ID);
   if (!(weight>0)) missing.push('body-weight');
-  const pos=height<=75?'PG':height<=78?'SG':height<=80?'SF':height<=82?'PF':'C';
+  const pos=posOfHeight(height);
   return {playerId:row.PLAYER_ID,name:row.PLAYER_NAME,pos,courtPosition:pos,heightInches:height,
     long:shooting(b.FG3M,b.FG3A,prior.long,C.CURVE_3PT),
     mid:shooting(shot?.midM??0,shot?.midA??0,prior.mid,C.CURVE_MID),
     short:shooting(shot?.shortM??0,shot?.shortA??0,prior.short,C.CURVE_SHORT),
     ft:shooting(b.FTM,b.FTA,prior.ft,C.CURVE_FT),
-    drive:rank(b,r=>safe(r.FTA,r.FGA)),
-    tovSkill:rank(b,r=>-safe(r.TOV,r.FGA+.44*r.FTA+r.AST+r.TOV)),
-    pass:rank(b,r=>maps.advanced.get(r.PLAYER_ID).AST_PCT),
-    rebound:rank(b,r=>maps.advanced.get(r.PLAYER_ID).REB_PCT),
+    drive:rank(b,driveRate),tovSkill:rank(b,tovRate),pass:rank(b,astPct),rebound:rank(b,rebPct),
     stamina:rank(b,r=>safe(r.MIN,r.GP)),
     physique:weight>0?attr(percentile(sizeValue(b),sizePool.map(sizeValue))):70,
     onBall:defense('defense-long',C.CURVE_DEF_3PT),help:defense('defense-rim',C.CURVE_DEF_RIM),
@@ -129,7 +148,8 @@ const league={schemaVersion:1,season:'2025-26',sources,priors:prior,methodology:
   roles:'Top five rotation targets start, assigned PG/SG/SF/PF/C by height; bench roles use height bands. Not official starting lineups or positions.',
   schedule:'Observed regular-season games only, 1,230 unique 00225 IDs; NBA Cup championship/play-in/playoffs excluded.',
   neutral:'Five games have both teams marked away. Official summary supplies designated sides when available; otherwise team ID orders neutral A/B. Neutral games are counted separately, never forced into 41 home / 41 away.',
-  outcome:'Observed scores, wins and margins are stored for comparison only; none are inputs to basketball probabilities.'},teams,schedule};
+  outcome:'Observed scores, wins and margins are stored for comparison only; none are inputs to basketball probabilities.',
+  ...(SHRINK?{shrinkage:{rule:'x = (MIN*x + k*positionMean)/(MIN + k) before the percentile map; k = sigma2/tau2 by method of moments, clamped 50-2000.',stats:shrinkage}}:{})},teams,schedule};
 const validation=validateSeason(league);
-fs.writeFileSync(new URL('../data/season-league.json',import.meta.url),JSON.stringify(league,null,2)+'\n');
+fs.writeFileSync(new URL(SHRINK?'../data/season-league-shrunk.json':'../data/season-league.json',import.meta.url),JSON.stringify(league,null,2)+'\n');
 console.log(JSON.stringify({...validation,sources:sources.length,missingMeasurementCards:teams.flatMap(t=>t.roster).filter(p=>p.missingMeasurements.length).length}));

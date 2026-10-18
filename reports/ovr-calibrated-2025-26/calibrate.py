@@ -11,7 +11,7 @@ learned from the simulator instead of being set by hand:
   choose  model form and ridge strength by repeated 5-fold cross-validation only
   output  OVR = predicted per-36 value mapped PR1=40 / PR50=70 / PR99=99 (players >= 500 min)
 
-  python3 reports/ovr-calibrated-2025-26/calibrate.py [--target PATH]
+  python3 reports/ovr-calibrated-2025-26/calibrate.py [--target PATH] [--league PATH] [--out DIR]
 
 Extra derived card attribute 'creation': self-created field-goal attempts per 36 minutes
 = (1 - receivedShare) * FGA/36, receivedShare from the v41 validation export
@@ -22,6 +22,10 @@ self-creation through opportunityMeasurement; without it the formula cannot see 
 Extra derived card attribute 'pressure': the four-factor RAPM non-steal turnovers forced
 (reports/impact-rapm/four-factors.csv, tovNonSteal_defense), percentile-mapped the same way.
 It drives the v53 simulator's dead-ball pressure (reports/player-impact-v53), so a card needs it.
+
+--league / --out read another league file (e.g. data/season-league-shrunk.json) and write elsewhere.
+When the league carries methodology.shrinkage, 'creation' is shrunk by the same rule
+(reports/ovr-shrinkage-2025-26/preregistration.md).
 
 --target lets the 24-seed local run (resample-ranking.csv: name, healthy_minutes,
 centered_contribution, standard_error) replace the saved 4-seed board.
@@ -34,6 +38,7 @@ import numpy as np
 
 ROOT = Path(__file__).resolve().parents[2]
 OUT = Path(__file__).parent
+LEAGUE = ROOT / 'data/season-league.json'
 ATTRS = ['long', 'mid', 'short', 'ft', 'drive', 'tovSkill', 'pass', 'rebound', 'physique', 'onBall', 'help', 'stamina', 'heightInches', 'creation', 'pressure']
 POS = ['PG', 'SG', 'SF', 'PF', 'C']
 INTERACT = ['long', 'short', 'pass', 'rebound', 'help']
@@ -41,7 +46,7 @@ SCALE_MIN_MINUTES = 500
 
 
 def load(target_path):
-    league = json.loads((ROOT / 'data/season-league.json').read_text(encoding='utf-8'))
+    league = json.loads(LEAGUE.read_text(encoding='utf-8'))
     cards = {}
     for t in league['teams']:
         for p in t['roster']:
@@ -61,19 +66,36 @@ def load(target_path):
 def attach_creation(cards):
     received = {r['name']: float(r['creationDependence_sourceRole']) for r in csv.DictReader(open(ROOT / 'reports/player-impact-v41/2025-26-player-validation.csv', encoding='utf-8-sig'))}
     totals = {name: {'FGA': 0.0, 'MIN': 0.0, 'GP': 0} for name in cards}
-    league = json.loads((ROOT / 'data/season-league.json').read_text(encoding='utf-8'))
+    league = json.loads(LEAGUE.read_text(encoding='utf-8'))
     for team in league['teams']:
         for p in team['roster']:
             t = totals[p['name']]
             for k in ('FGA', 'MIN', 'GP'):
                 t[k] += p['observed'][k]
     raw = {n: (1 - received[n]) * t['FGA'] / max(t['MIN'], 1) * 36 for n, t in totals.items()}
+    if 'shrinkage' in league['methodology']:
+        raw = shrink(raw, {n: t['MIN'] for n, t in totals.items()}, {n: c['card']['pos'] for n, c in cards.items()})
     pool = [raw[n] for n, t in totals.items() if t['GP'] >= 30 and t['MIN'] / t['GP'] >= 20]
     ff = {int(r['playerId']): float(r['tovNonSteal_defense']) for r in csv.DictReader(open(ROOT / 'reports/impact-rapm/four-factors.csv', encoding='utf-8'))}
     regular = [n for n, t in totals.items() if t['GP'] >= 30 and t['MIN'] / t['GP'] >= 20]
     pressure = {n: ff.get(cards[n]['card']['playerId'], 0.0) for n in cards}
     for n, c in cards.items():
         c['card'] = {**c['card'], 'creation': to_attribute(raw[n], pool), 'pressure': to_attribute(pressure[n], [pressure[m] for m in regular])}
+
+
+def shrink(raw, minutes, pos):
+    """Pseudo-minutes toward the MIN-weighted position mean; k = sigma2 / tau2 by method of moments (as scripts/build_season_league.js --shrink)."""
+    live = [n for n in raw if minutes[n] > 0]
+    mu = {p: sum(minutes[n] * raw[n] for n in live if pos[n] == p) / sum(minutes[n] for n in live if pos[n] == p) for p in set(pos.values())}
+    fit = np.array([[1 / minutes[n], (raw[n] - mu[pos[n]]) ** 2] for n in live if minutes[n] >= 50])
+    sigma2 = float(np.cov(fit[:, 0], fit[:, 1], bias=True)[0, 1] / np.var(fit[:, 0]))
+    tau2 = float(fit[:, 1].mean() - sigma2 * fit[:, 0].mean())
+    k = min(2000, max(50, sigma2 / tau2)) if tau2 > 0 and sigma2 > 0 else 500
+    SHRINKAGE['creation'] = {'pseudoMinutes': k, 'tau2': tau2, 'sigma2': sigma2, 'fitPlayers': len(fit)}
+    return {n: (minutes[n] * raw[n] + k * mu[pos[n]]) / (minutes[n] + k) for n in raw}
+
+
+SHRINKAGE = {}
 
 
 def to_attribute(x, pool):
@@ -143,10 +165,19 @@ def ceiling(rows):
     return float(1 - np.average(mc, weights=w) / var)
 
 
+def configure(argv):
+    global LEAGUE, OUT
+    if '--league' in argv:
+        LEAGUE = Path(argv[argv.index('--league') + 1]).resolve()
+    if '--out' in argv:
+        OUT = Path(argv[argv.index('--out') + 1]).resolve(); OUT.mkdir(parents=True, exist_ok=True)
+
+
 def main():
     target = ROOT / 'reports/ovr-v47-2025-26/centered-ranking.csv'
     if '--target' in sys.argv:
         target = Path(sys.argv[sys.argv.index('--target') + 1])
+    configure(sys.argv)
     rows = load(target)
     grid = {}
     for form in ['linear', 'position-interactions']:
@@ -179,6 +210,7 @@ def main():
         'noiseCeilingR2': ceiling(rows), 'residualTrueVariancePer36': s2,
         'valuePer10AttributePoints': per10,
         'scaleAnchorsPer36': {'PR1': float(p1), 'PR50': float(p50), 'PR99': float(p99)},
+        'league': str(LEAGUE.relative_to(ROOT)), 'creationShrinkage': SHRINKAGE.get('creation'),
         'formula': {'intercept': float(b[0]), 'attributeMean': dict(zip(ATTRS, map(float, mean))), 'attributeSD': dict(zip(ATTRS, map(float, sd))),
                     'coefficientsOnStandardized': list(map(float, b[1:]))},
     }

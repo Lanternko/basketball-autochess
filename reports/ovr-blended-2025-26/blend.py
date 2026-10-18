@@ -1,6 +1,6 @@
 """Card OVR calibrated on a blend of the sim target and pooled RAPM (see preregistration.md).
 
-  python reports/ovr-blended-2025-26/blend.py
+  python reports/ovr-blended-2025-26/blend.py [--league PATH] [--out DIR]
 
 t = (1 - alpha) * sim + alpha * RAPM (per 36, position-centered) for players with >= 1000 pooled
 RAPM possessions; the sim target alone otherwise. Model form and ridge are fixed to the current
@@ -13,6 +13,7 @@ import numpy as np
 ROOT = Path(__file__).resolve().parents[2]
 OUT = Path(__file__).parent
 sys.path.insert(0, str(ROOT / 'reports/ovr-calibrated-2025-26'))
+import calibrate  # noqa: E402
 from calibrate import load, design, wfit, ATTRS, SCALE_MIN_MINUTES  # noqa: E402
 
 TARGET = ROOT / 'reports/ovr-v53-2025-26/calibration-target-s8-expected.csv'
@@ -21,7 +22,8 @@ ALPHAS = [0, 0.25, 0.5, 0.75, 1]
 BLEND_POSS, EVAL_POSS, PER36 = 1000, 5000, 0.75
 MAX_R2_DROP = 0.05
 FOCUS = ['Alex Caruso', 'Derrick White', 'Dyson Daniels', 'Herbert Jones', 'Marcus Smart',
-         'Karlo Matković', 'Isaiah Stewart', 'Mitchell Robinson', 'Zach Edey', 'Rudy Gobert']
+         'Karlo Matković', 'Isaiah Stewart', 'Mitchell Robinson', 'Zach Edey', 'Rudy Gobert',
+         'Norchad Omier', 'Javon Small', 'Ty Jerome', 'Dejounte Murray']
 
 
 def spearman(a, b):
@@ -80,6 +82,10 @@ def to_ovr(pred, rows):
 
 
 def main():
+    global OUT
+    calibrate.configure(sys.argv)
+    if '--out' in sys.argv:
+        OUT = calibrate.OUT
     rows = load(TARGET); attach_rapm(rows)
     X, _, sd = design(rows, FORM)
     y = np.array([r['y'] for r in rows]); mc = np.array([r['mc'] for r in rows])
@@ -123,7 +129,7 @@ def main():
         i = np.array([r['pos'] == pos for r in rows]) & ev
         posrho[pos] = {'alpha0': spearman(mean_pred[0][i], np.array([r['N'] for r in rows])[i]),
                        'chosen': spearman(mean_pred[chosen][i], np.array([r['N'] for r in rows])[i]), 'players': int(i.sum())}
-    summary = {'preregistration': 'preregistration.md', 'form': FORM, 'ridge': LAM, 'players': len(rows), 'evaluatedPlayers': int(ev.sum()),
+    summary = {'preregistration': 'preregistration.md', 'league': str(calibrate.LEAGUE.relative_to(ROOT)), 'form': FORM, 'ridge': LAM, 'players': len(rows), 'evaluatedPlayers': int(ev.sum()),
                'blendedPlayers': int(sum(r['poss'] >= BLEND_POSS for r in rows)),
                'heldOut': {str(a): v for a, v in res.items()}, 'simR2Floor': floor, 'chosenAlpha': chosen,
                'bootstrapGain95': ci, 'gates': gates, 'perPositionRhoNet': posrho,

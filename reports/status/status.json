@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-18T08:41:55+00:00",
+ "generatedAt": "2026-10-18T09:25:15+00:00",
  "simVersion": "v53",
  "evalPoss": 5000,
  "rapmPool": 415,
@@ -248,11 +248,11 @@
   {
    "version": "v53",
    "order": 53,
-   "winsMAE": null,
-   "netRMSE": null,
+   "winsMAE": 4.56,
+   "netRMSE": 2.019,
    "ptsMAE": null,
-   "source": "未跑全季球隊驗證",
-   "measured": false
+   "source": "player-impact-v53-team（壓迫係數為樣本內）",
+   "measured": true
   }
  ],
  "top20": [

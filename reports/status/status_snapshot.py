@@ -58,8 +58,10 @@ def team():
                 m = c['teamMetrics']; seen.add(c['variant'])
                 out.append({'version': c['variant'], 'order': int(c['variant'][1:]), 'winsMAE': round(m['winsMAE'], 2),
                             'netRMSE': round(m['netRMSE'], 3), 'ptsMAE': None, 'source': f'player-impact-v{v}', 'measured': True})
-    out.append({'version': LATEST_SIM, 'order': int(LATEST_SIM[1:]), 'winsMAE': None, 'netRMSE': None, 'ptsMAE': None,
-                'source': '未跑全季球隊驗證', 'measured': False})
+    v53 = json.loads((ROOT / 'reports/player-impact-v53-team/scores.json').read_text(encoding='utf-8'))
+    m = next(c['teamMetrics'] for c in v53['cells'] if c['season'] == '2025-26' and c['variant'] == 'v53')
+    out.append({'version': 'v53', 'order': 53, 'winsMAE': round(m['winsMAE'], 2), 'netRMSE': round(m['netRMSE'], 3), 'ptsMAE': None,
+                'source': 'player-impact-v53-team（壓迫係數為樣本內）', 'measured': True})
     return sorted(out, key=lambda r: r['order'])
 
 

@@ -38,7 +38,7 @@
 | v47 | 5.38 | 2.313 | — | player-impact-v47 |
 | v48 | 4.98 | 2.174 | — | player-impact-v48 |
 | v49 | 6.24 | 2.723 | — | player-impact-v49 |
-| v53 | — | — | — | 未跑全季球隊驗證 |
+| v53 | 4.56 | 2.019 | — | player-impact-v53-team（壓迫係數為樣本內） |
 
 ## 卡片 OVR 前 20（RAPM 名次在 415 人中）
 

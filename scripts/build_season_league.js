@@ -33,6 +33,27 @@ const rank=(r,f)=>attr(percentile(f(r),pool.map(f)));
 const SHRINK=process.argv.includes('--shrink'), shrinkage={};
 const posOfHeight=h=>h<=75?'PG':h<=78?'SG':h<=80?'SF':h<=82?'PF':'C';
 const posOf=r=>posOfHeight(Number(maps.bio.get(r.PLAYER_ID)?.PLAYER_HEIGHT_INCHES));
+// --shooting-eb (v54): reliability-aware shrinkage for long/short attempt accuracy only. Replaces the
+// fixed 100-attempt pseudo-count with k_z from method-of-moments on Var(p_i) = tau^2 + pbar(1-pbar)/n_i,
+// fit on players with attempts>=20; prior mean is the attempt-weighted rate by card position (posOfHeight).
+// mid and ft keep the original fixed-100 shrinkage. Writes season-league-v54.json instead.
+const SHOOTING_EB=process.argv.includes('--shooting-eb'), shootingEB={};
+function fitShootingEB(name,rows) {
+  const qualified=rows.filter(r=>r.attempts>=20);
+  const pbar=qualified.reduce((n,r)=>n+r.makes,0)/total(qualified,'attempts');
+  const rates=qualified.map(r=>r.makes/r.attempts);
+  const meanRate=rates.reduce((n,r)=>n+r,0)/rates.length;
+  const varRate=rates.reduce((n,r)=>n+(r-meanRate)**2,0)/rates.length;
+  const meanInvN=qualified.reduce((n,r)=>n+1/r.attempts,0)/qualified.length;
+  const tau2=varRate-pbar*(1-pbar)*meanInvN;
+  const k=tau2>0?Math.max(50,Math.min(2000,pbar*(1-pbar)/tau2-1)):500;
+  const byPos=Map.groupBy(rows,r=>posOfHeight(Number(maps.bio.get(r.playerId)?.PLAYER_HEIGHT_INCHES)));
+  const positionMeans=Object.fromEntries([...byPos].map(([pos,g])=>[pos,total(g,'makes')/total(g,'attempts')]));
+  shootingEB[name]={k,tau2,pbar,qualifiedPlayers:qualified.length,totalPlayers:rows.length,positionMeans};
+  return (makes,attempts,pos)=>(makes+k*(positionMeans[pos]??pbar))/(attempts+k);
+}
+const ebLong=SHOOTING_EB?fitShootingEB('long',base.filter(r=>r.FG3A>0).map(r=>({playerId:r.PLAYER_ID,makes:r.FG3M,attempts:r.FG3A}))):null;
+const ebShort=SHOOTING_EB?fitShootingEB('short',[...maps.shots.values()].filter(r=>r.shortA>0).map(r=>({playerId:r.PLAYER_ID,makes:r.shortM,attempts:r.shortA}))):null;
 function shrunk(name,f) {
   if (!SHRINK) return f;
   const rows=base.filter(r=>r.MIN>0&&Number.isFinite(f(r)));
@@ -80,9 +101,9 @@ function card(row) {
   if (!(weight>0)) missing.push('body-weight');
   const pos=posOfHeight(height);
   return {playerId:row.PLAYER_ID,name:row.PLAYER_NAME,pos,courtPosition:pos,heightInches:height,
-    long:shooting(b.FG3M,b.FG3A,prior.long,C.CURVE_3PT),
+    long:SHOOTING_EB?inverse(ebLong(b.FG3M,b.FG3A,pos),C.CURVE_3PT):shooting(b.FG3M,b.FG3A,prior.long,C.CURVE_3PT),
     mid:shooting(shot?.midM??0,shot?.midA??0,prior.mid,C.CURVE_MID),
-    short:shooting(shot?.shortM??0,shot?.shortA??0,prior.short,C.CURVE_SHORT),
+    short:SHOOTING_EB?inverse(ebShort(shot?.shortM??0,shot?.shortA??0,pos),C.CURVE_SHORT):shooting(shot?.shortM??0,shot?.shortA??0,prior.short,C.CURVE_SHORT),
     ft:shooting(b.FTM,b.FTA,prior.ft,C.CURVE_FT),
     drive:rank(b,driveRate),tovSkill:rank(b,tovRate),pass:rank(b,astPct),rebound:rank(b,rebPct),
     stamina:rank(b,r=>safe(r.MIN,r.GP)),
@@ -149,7 +170,8 @@ const league={schemaVersion:1,season:'2025-26',sources,priors:prior,methodology:
   schedule:'Observed regular-season games only, 1,230 unique 00225 IDs; NBA Cup championship/play-in/playoffs excluded.',
   neutral:'Five games have both teams marked away. Official summary supplies designated sides when available; otherwise team ID orders neutral A/B. Neutral games are counted separately, never forced into 41 home / 41 away.',
   outcome:'Observed scores, wins and margins are stored for comparison only; none are inputs to basketball probabilities.',
-  ...(SHRINK?{shrinkage:{rule:'x = (MIN*x + k*positionMean)/(MIN + k) before the percentile map; k = sigma2/tau2 by method of moments, clamped 50-2000.',stats:shrinkage}}:{})},teams,schedule};
+  ...(SHRINK?{shrinkage:{rule:'x = (MIN*x + k*positionMean)/(MIN + k) before the percentile map; k = sigma2/tau2 by method of moments, clamped 50-2000.',stats:shrinkage}}:{}),
+  ...(SHOOTING_EB?{shootingReliability:{rule:'long/short only: shrunk rate = (makes + k_z*positionMean)/(attempts + k_z), then the same inverse accuracy curve. k_z = pbar(1-pbar)/tau2 - 1 by method of moments on Var(p_i)=tau2+pbar(1-pbar)/n_i, fit on attempts>=20, clamped 50-2000 (k=500 if tau2<=0). positionMean is the attempt-weighted raw rate by posOfHeight. mid and ft unchanged (fixed 100-attempt pseudo-count).',zones:shootingEB}}:{})},teams,schedule};
 const validation=validateSeason(league);
-fs.writeFileSync(new URL(SHRINK?'../data/season-league-shrunk.json':'../data/season-league.json',import.meta.url),JSON.stringify(league,null,2)+'\n');
+fs.writeFileSync(new URL(SHOOTING_EB?'../data/season-league-v54.json':SHRINK?'../data/season-league-shrunk.json':'../data/season-league.json',import.meta.url),JSON.stringify(league,null,2)+'\n');
 console.log(JSON.stringify({...validation,sources:sources.length,missingMeasurementCards:teams.flatMap(t=>t.roster).filter(p=>p.missingMeasurements.length).length}));

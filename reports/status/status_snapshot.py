@@ -39,7 +39,8 @@ def personal(rapm_by_id, rapm_by_name):
     add('模擬板 v53（收縮修正版）', '先發不收縮、替補收縮（已採用）', [(float(r['v2Per36']), rapm_by_id.get(r['playerId'])) for r in sim])
     card = rows('reports/ovr-calibrated-2025-26/ranking.csv')
     add('卡片 OVR（正式卡片板）', '能力值公式校準到模擬與 RAPM 混合目標，α=0.5（遊戲本體不讀取任何 OVR，見 ovr-blended-2025-26/dataflow.md）',
-        [(float(r['ovr']), rapm_by_name.get(r['name'])) for r in card])
+        [(float(r['ovr']), rapm_by_name.get(r['name'])) for r in card],
+        '替補可靠度收縮已依預註冊跑完但不採用（G1、G2 未過，見 ovr-blended-bench-shrinkage/report.md），本板維持不變')
     legacy = rows('reports/ovr-calibrated-2025-26/legacy-sim-only/ranking.csv')
     add('卡片 OVR（舊版，sim-only）', '能力值公式校準到 v53 模擬，α=0（已被正式卡片板取代）',
         [(float(r['ovr']), rapm_by_name.get(r['name'])) for r in legacy])

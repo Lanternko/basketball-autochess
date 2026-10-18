@@ -1,0 +1,111 @@
+{
+  "results": [
+    {
+      "pace": 1,
+      "secondsPerGame": 2885.121951219512,
+      "states": {
+        "period": {
+          "drawsPerGame": 3.989430894308943,
+          "rawSeconds": 16.85571632361932,
+          "scaledDeadlineSeconds": 16.85571632361932,
+          "meanExcludedCDFShare": 0.1478120588828519,
+          "shortClockShare": 0,
+          "deadlineSecondsPerGame": 67.24471544715448,
+          "empiricalPositiveMean": 18.20669489816495
+        },
+        "dreb": {
+          "drawsPerGame": 74.35365853658537,
+          "rawSeconds": 10.056115029249339,
+          "scaledDeadlineSeconds": 10.056115029249339,
+          "meanExcludedCDFShare": 0.052028542320018425,
+          "shortClockShare": 0,
+          "deadlineSecondsPerGame": 747.7089430894295,
+          "empiricalPositiveMean": 10.702414937759325
+        },
+        "retained": {
+          "drawsPerGame": 40.017073170731706,
+          "rawSeconds": 4.5018427094128075,
+          "scaledDeadlineSeconds": 4.5018427094128075,
+          "meanExcludedCDFShare": 0.06636533227818092,
+          "shortClockShare": 1,
+          "deadlineSecondsPerGame": 180.15056910569737,
+          "empiricalPositiveMean": 5.170589032739101
+        },
+        "made": {
+          "drawsPerGame": 100.90243902439025,
+          "rawSeconds": 14.594977036499834,
+          "scaledDeadlineSeconds": 14.594977036499834,
+          "meanExcludedCDFShare": 0.16901218378906588,
+          "shortClockShare": 0,
+          "deadlineSecondsPerGame": 1472.6687804878004,
+          "empiricalPositiveMean": 16.63302479257536
+        },
+        "turnover": {
+          "drawsPerGame": 26.30650406504065,
+          "rawSeconds": 9.857205550576387,
+          "scaledDeadlineSeconds": 9.857205550576387,
+          "meanExcludedCDFShare": 0.06605644245277903,
+          "shortClockShare": 0,
+          "deadlineSecondsPerGame": 259.308617886179,
+          "empiricalPositiveMean": 10.7317926296065
+        }
+      }
+    },
+    {
+      "pace": 0.836,
+      "secondsPerGame": 2888.7804878048782,
+      "states": {
+        "period": {
+          "drawsPerGame": 3.995121951219512,
+          "rawSeconds": 15.218559218559218,
+          "scaledDeadlineSeconds": 18.204018204018812,
+          "meanExcludedCDFShare": 0.38112522686021066,
+          "shortClockShare": 0,
+          "deadlineSecondsPerGame": 72.72727272727515,
+          "empiricalPositiveMean": 18.20669489816495
+        },
+        "dreb": {
+          "drawsPerGame": 69.3,
+          "rawSeconds": 9.240232757305872,
+          "scaledDeadlineSeconds": 11.052909996784846,
+          "meanExcludedCDFShare": 0.12071415236769062,
+          "shortClockShare": 0,
+          "deadlineSecondsPerGame": 765.9666627771899,
+          "empiricalPositiveMean": 10.702414937759325
+        },
+        "retained": {
+          "drawsPerGame": 37.666666666666664,
+          "rawSeconds": 4.067273904597595,
+          "scaledDeadlineSeconds": 4.865160172965353,
+          "meanExcludedCDFShare": 0.11214532432605868,
+          "shortClockShare": 1,
+          "deadlineSecondsPerGame": 183.25436651502827,
+          "empiricalPositiveMean": 5.170589032739101
+        },
+        "made": {
+          "drawsPerGame": 94.16422764227643,
+          "rawSeconds": 13.007731691733888,
+          "scaledDeadlineSeconds": 15.55948766954925,
+          "meanExcludedCDFShare": 0.3427691003014825,
+          "shortClockShare": 0,
+          "deadlineSecondsPerGame": 1465.1471389126286,
+          "empiricalPositiveMean": 16.63302479257536
+        },
+        "turnover": {
+          "drawsPerGame": 24.4390243902439,
+          "rawSeconds": 8.932814371257496,
+          "scaledDeadlineSeconds": 10.685184654617206,
+          "meanExcludedCDFShare": 0.14029461943761654,
+          "shortClockShare": 0,
+          "deadlineSecondsPerGame": 261.13548838844974,
+          "empiricalPositiveMean": 10.7317926296065
+        }
+      }
+    }
+  ],
+  "provenance": {
+    "source": "eadeecdd518179c8559b3bb2afbfee30a636f8b8323cd93ea191721b00bbd3d0",
+    "audit": "715b1d4885bd987c108b662b8f1b56c3cf42585376e1347c8534b2591d2b49d9"
+  },
+  "definition": "Observational fork with optional callback; no new draws or probability changes. Raw durations positive-filtered then conditional CDF cut at remaining shot clock * pace, divided by pace. Sum deadlines is not elapsed time: pass steals and nonshooting fouls can preempt deadlines."
+}

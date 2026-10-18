@@ -1,0 +1,76 @@
+{
+  "version": "pure-oreb-putback-clock-1",
+  "registeredUTC": "2026-10-14T20:29:18.262150+00:00",
+  "seasons": [
+    "2022-23",
+    "2023-24",
+    "2024-25",
+    "2025-26"
+  ],
+  "seeds": [
+    20261012,
+    20261013,
+    20261014,
+    20261015,
+    20261016,
+    20261017,
+    20261018,
+    20261019,
+    20261020,
+    20261021,
+    20261022,
+    20261023,
+    20261024,
+    20261025,
+    20261026,
+    20261027,
+    20261028,
+    20261029,
+    20261030,
+    20261031
+  ],
+  "diagnosticSeeds": [
+    20261012,
+    20261013,
+    20261014
+  ],
+  "base": "frozen pure-oreb-putback-time-1: acquisition+allocation+physical putback timing; no card or probability change; five stint signals OFF no-map",
+  "mechanism": {
+    "switch": "clockRecalibration",
+    "scope": "override only league options.pace; frozen physical putback duration is not divided by pace; all other normal empirical durations use existing pace mechanism",
+    "noChanges": [
+      "cards",
+      "shotDelta",
+      "OREB acquisition",
+      "OREB recipient",
+      "putback probability",
+      "shooting/foul/steal/turnover formulas",
+      "putback CDF"
+    ]
+  },
+  "calibration": {
+    "seeds": [
+      20260101,
+      20260102,
+      20260103
+    ],
+    "iterations": 3,
+    "tolerance": 0.15,
+    "target": "full-season pooled official box FGA-OREB+TOV+.44FTA per team/game; no net/wins/rank input",
+    "start": "frozen acquisition calibration merged into T0 base; no initial estimate from evaluation seeds",
+    "update": "pace_next=clip(pace_current*targetPossessions/simPossessions,.5,2)",
+    "selection": "first iteration abs bias<.15 else last allowed iteration, even if failed; no after-evaluation correction"
+  },
+  "uncertainty": {
+    "bootstrap": 20000,
+    "seed": 20261015,
+    "unit": "franchise+seed paired across seasons, equal season weights, within-season centering; 20 seed accuracy; 3 seed event diagnostics"
+  },
+  "comparisons": [
+    "calibrated vs frozen putback uncalibrated",
+    "calibrated vs frozen allocation (before fast putback)"
+  ],
+  "decision": "eligible independent candidate if each season efficiency/possession proxy biases within +/-.5; no significant harm in netRMSE/winsMAE/OREB_RMSE/DREB_RMSE vs allocation; immediateProxy and meanSeconds closer to truth than allocation. Accuracy improvement only if upper paired joint95 below zero. Preserve all frozen baselines; stop after reporting.",
+  "label": "four seasons already seen; same-season reconstruction; no blind forecast/transferability claim",
+  "expectation": "pace adjustment should remove added game volume while preserving physical fast putbacks; may shift remaining OREB reorganization durations slightly; prediction gain not assumed"
+}

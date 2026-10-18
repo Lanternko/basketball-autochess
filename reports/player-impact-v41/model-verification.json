@@ -1,0 +1,18 @@
+{
+  "passed": true,
+  "sourceRows": 40,
+  "counterfactuals": 120,
+  "unmeasuredFallbackExact": true,
+  "putbackDefenseExact": true,
+  "sourceFreshLogitFormulaExact": true,
+  "scope": "Raw probability and source-relative attribute slopes; no full-season or ranking claim.",
+  "hashes": {
+    "reports/player-impact-v41/model.mjs": "81fa5ba285fb1f37b558c4d4bdb03f4d9a218dafda60b19214337085913375e6",
+    "reports/player-impact-v41/input.mjs": "eea3bd74d93c222879a6633e89ad1dc60732b090b4856e1029afb70b85e9227c",
+    "reports/player-impact-v41/engine.mjs": "fe4ecf2ce0aa923151a7dc74d909d19106b7cd8d745c23abd3774c882aa92f90",
+    "reports/player-impact-v41/verify-model.mjs": "ae35982bd7de4e606e2209b235d35e6dbddab69476759d365717194083b7eb0d",
+    "reports/player-impact-v41/fit.json": "b351e8ff42a59899b18ed65328b6a2ddc74d588f7d3e895dc55ef96219a962e6",
+    "src/source_fresh_defense.js": "4401ac5d6b7884b10f80f935031ae0abaf4204011ed12ca82923f4560abc36c6",
+    "test/source_fresh_defense.js": "c9cd159073e20effda6f5fe178d1c957b68d95b95fc5c2e15549512e0b8b3cc9"
+  }
+}

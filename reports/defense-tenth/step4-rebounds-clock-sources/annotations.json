@@ -1,0 +1,55 @@
+[
+  {
+    "game": "0022300806",
+    "season": "2023-24",
+    "date": "2024-02-23",
+    "sourcePage": "https://official.nba.com/archive/24-second-shot-clock-reset-suns-rockets/",
+    "videoFile": "clips/rim-yes-2024.mp4",
+    "shotAction": 671,
+    "reboundAction": 672,
+    "player": "Amen Thompson",
+    "officialRimContact": true,
+    "officialEvidence": "Replay Center explicitly determined ball hit rim",
+    "possessionObservation": "white jersey number 1 gains control in basket area around 3.5-4.1s of clip; coarse interval, not frame-exact",
+    "videoClockObservation": {
+      "clipSeconds": 3.8,
+      "broadcastGameClock": "1:38",
+      "broadcastShotClock": 2.8,
+      "status": "displayed count continues; not the legally required fresh14 state"
+    },
+    "legalReset": "14 on offensive control under Rule7; not inferred from displayed clock",
+    "inPriorIndividualAnchorPopulation": true,
+    "use": "independent validation only; not input feature or probability sample",
+    "uncertainty": "first contact frame and exact control time not adjudicated by a second annotator; displayed clock not ground truth",
+    "decodedFrames": 807,
+    "fps": 60.0,
+    "durationSeconds": 13.45
+  },
+  {
+    "game": "0022200722",
+    "season": "2022-23",
+    "date": "2023-01-25",
+    "sourcePage": "https://official.nba.com/archive/24-second-shot-clock-reset-wizards-rockets/",
+    "videoFile": "clips/rim-no-2023.mp4",
+    "shotAction": 659,
+    "reboundAction": 660,
+    "turnoverAction": 661,
+    "officialRimContact": false,
+    "officialEvidence": "Replay Center explicitly determined ball did not hit rim",
+    "possessionObservation": "no independently labeled new offensive control instant; retain unknown",
+    "videoClockObservation": {
+      "clipSeconds": 8.5,
+      "broadcastGameClock": "1:28",
+      "broadcastShotClock": 0.8,
+      "status": "screen reading before clock violation; not a rebound-time clock measurement"
+    },
+    "legalReset": "none from this missed shot",
+    "inPriorIndividualAnchorPopulation": false,
+    "exclusionReason": "TEAM offensive rebound, not individual FG OREB",
+    "use": "source/label demonstration only; cannot silently add to prior individual-anchor sample",
+    "uncertainty": "no new individual OREB control label; source shot and team placeholder must remain distinct",
+    "decodedFrames": 3192,
+    "fps": 60.0,
+    "durationSeconds": 53.2
+  }
+]

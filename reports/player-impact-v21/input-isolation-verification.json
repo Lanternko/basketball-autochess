@@ -1,0 +1,11 @@
+{
+  "legacy": {
+    "inputHash": "74eeb15bfa63cb9737a6b90d9e02f2cdd7fc93fdc95e49ec947251af1a635c2b",
+    "previousInputUnchanged": false
+  },
+  "isolated": {
+    "inputHash": "74eeb15bfa63cb9737a6b90d9e02f2cdd7fc93fdc95e49ec947251af1a635c2b",
+    "previousInputUnchanged": true
+  },
+  "interpretation": "Frozen original OVR worker is valid in its dedicated process: its complete candidate input equals isolated input. Its previous-version cache is mutated in that process, so do not import both versions for a mixed comparison there. Use ovr-input-isolated.mjs for future same-process comparisons. Existing sample outputs remain valid; original frozen sources unchanged."
+}

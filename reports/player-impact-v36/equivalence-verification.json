@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "games": 48,
+  "comparisons": 24,
+  "allGameAndPersonalCountersExactlyV30": true,
+  "scope": "Controlled symmetric roles: source self0.2, pass1-0.2*selfScale, terminal1. Candidate scaled diagonal and off-diagonals already sum to terminal1; old residual transport identical; original distinct shooting skills remain. Not unchanged behavior for actual inputs or a missing-data fallback.",
+  "hashes": {
+    "reports/player-impact-v36/model.mjs": "eccb53f1e16c4a723a150292855b2f2e29170f50940b7e6dddcf668c4d981a29",
+    "reports/player-impact-v36/engine.mjs": "ef354e22b9b590ced6608c3809ee1eeca80519e97ed3b19b240dfb74f050ed84",
+    "reports/player-impact-v36/verify-equivalence.mjs": "4e332985b2e61ca7dd0478fe39dfc4bfd4a2490f262841e2b29056ce6c44379f"
+  }
+}

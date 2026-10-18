@@ -1,0 +1,42 @@
+{
+  "version": "v48",
+  "adopted": false,
+  "gates": {
+    "nonzeroOlderThreeSelection": true,
+    "teammateTwoFGmaeImproved": true,
+    "teammateRAshareMAEimproved": true,
+    "teamPPGmeanNonRegression": false,
+    "individualPTS36within002": true,
+    "coarseDefenseWithin005pp": true,
+    "fitVerified": true,
+    "runtimeVerified": true,
+    "olderThreeHeldoutNLLimproved": true
+  },
+  "fourSeasonMean": {
+    "v47": {
+      "teammateTwoFGmae": 1.3048555934998938,
+      "teammateRAshareMAE": 2.0513800794444794,
+      "teamPPGmae": 2.323170731707317,
+      "pts36mae": 0.7355469762174685,
+      "onshortFGpct": 1.0705631933037958,
+      "onlongFGpct": 1.2158722194106393
+    },
+    "v48": {
+      "teammateTwoFGmae": 1.2455435094720289,
+      "teammateRAshareMAE": 1.4409471566782628,
+      "teamPPGmae": 2.3531504065040645,
+      "pts36mae": 0.7380532776896177,
+      "onshortFGpct": 1.0485545435380705,
+      "onlongFGpct": 1.2585682688891995
+    }
+  },
+  "gameDefaultChanged": false,
+  "ovrRecomputed": false,
+  "namedPlayerExceptions": false,
+  "scope": "Same-season reconstruction; older-three whole-game cross-validation selects shared regularization. Conditional lineup association is not causal gravity. Make-only prototype not included.",
+  "remainingWork": [
+    "Curry teammate shooting and off-court composition remain biased.",
+    "Observed game appearances and minute targets do not reproduce actual teammate co-occurrence.",
+    "Shooter allocation and rotation require separate measurement before attribution to spacing."
+  ]
+}

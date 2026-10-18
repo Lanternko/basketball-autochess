@@ -1,0 +1,28 @@
+{
+  "passed": true,
+  "auditedVersions": {
+    "v24": 582,
+    "v29": 582,
+    "v30": 582,
+    "v34": 582,
+    "v35": 582,
+    "v36": 582,
+    "v37": 582
+  },
+  "repeatedCorrectionPowersAboveCanonical": {
+    "v24": 0,
+    "v29": 1,
+    "v30": 2,
+    "v34": 3,
+    "v35": 3,
+    "v36": 3,
+    "v37": 3
+  },
+  "maxAbsoluteDifferenceToIndependentPowerReconstruction": 2.220446049250313e-16,
+  "scope": "Confirms non-idempotent OVR assembly for v29/v30/v34-v37; v24 source pass roles match canonical. Full-season source assembly is a separate path. No all-model or complete-ranking invalidity assertion.",
+  "hashes": {
+    "reports/player-impact-v38/input-assembly-audit.json": "f95be5f877d762bba8192f5078955d658f4ace645572683baccbec4c2161b0c2",
+    "reports/player-impact-v38/input-verification.json": "f4ec71105fe0dd4f6814dbd29121fd947498157de61c6d1510f13900648ace25",
+    "reports/player-impact-v38/verify-inputs.py": "33b8f39bf7f64fe32872846edd06ea5285a398b14208ae481e748ea7f17b0e7e"
+  }
+}

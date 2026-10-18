@@ -1,0 +1,37 @@
+{
+  "version": "oreb-state-time-diagnostic-1",
+  "registeredUTC": "2026-10-14T21:28:51.236566+00:00",
+  "seasons": [
+    "2022-23",
+    "2023-24",
+    "2024-25",
+    "2025-26"
+  ],
+  "seeds": [
+    20261012,
+    20261013,
+    20261014
+  ],
+  "baseline": "pure-oreb-putback-clock-1",
+  "intervention": "none; observer only, no extra RNG",
+  "states": [
+    "made",
+    "dreb",
+    "liveTurnover",
+    "deadTurnover",
+    "playerOreb",
+    "teamOreb",
+    "ftOreb",
+    "foulRetained"
+  ],
+  "anchor": "actual outcome event clock in both real and simulated games; made FG with and-one anchors only at final regular FT made or subsequent rebound",
+  "first": "next FG attempt, turnover, ordinary defensive foul, regular FT, or possession-ending defensive rebound; period end censored",
+  "segment": "next retained-ball anchor (OREB or nonshooting foul without same-clock regular FT), or possession end; excludes period-censored cases from means",
+  "full": "from anchor through repeated OREB and fouls until made FG without and-one, final regular FT made, DREB, turnover, opponent activity; overlapping tails descriptive, never sum as total game time",
+  "exclusions": "special FTs/fouls, nonfinal FT rebounds, missing or inconsistent rebound shot reference; unknown opponent event aborts full tail; missing games listed",
+  "clock": "game-clock seconds, not wall-clock stoppage time; negative time rejected",
+  "statistics": "per-state mean median P90 frequency; matched available official games; 20,000 franchise+seed paired bootstrap with cross-season shared resampling; 3 diagnostic seeds, not adoption test",
+  "decomposition": "first-event pooled mean difference = real frequency-weighted within-state difference plus composition difference weighted by simulated means; not causal total-game decomposition",
+  "parity": "all simulated matches scores, teams and players must exactly match frozen calibrated run with same seed",
+  "stop": "diagnosis only; no clock recalibration or mechanism repair"
+}

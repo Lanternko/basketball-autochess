@@ -1,0 +1,137 @@
+{
+  "kappaEvents": 208.22712456778444,
+  "fitSeasons": [
+    "2022-23",
+    "2023-24",
+    "2024-25"
+  ],
+  "excludedFitSeason": "2025-26",
+  "folds": 5,
+  "design": "Whole-game folds by numeric game ID mod 5. Minimize held-out categorical negative log likelihood of dead turnover, live non-pass turnover, other terminal event. Each source event uses actual opponent lineup pressure. Dead risk is (dead+kappa*leagueDead)/(N+kappa); neutral live risk is (live+kappa*leagueLive)/(sumNPressure+kappa). One shared prior strength, not fitted to player names, ranks, team wins, simulation errors or on/off. Source full-season defender STL covariate includes held-out games: conditional reconstruction, not prospective accuracy. 2025-26 source counts used only for its final descriptive cards.",
+  "nll": {
+    "fitted": 221700.2711951466,
+    "nearUnshrunk": 1e+100,
+    "pooledApprox": 223333.02161728442
+  },
+  "foldScores": [
+    {
+      "season": "2022-23",
+      "fold": 0,
+      "nll": 14506.343816563898,
+      "events": 43886
+    },
+    {
+      "season": "2022-23",
+      "fold": 1,
+      "nll": 15352.99914716695,
+      "events": 46081
+    },
+    {
+      "season": "2022-23",
+      "fold": 2,
+      "nll": 14954.470942659049,
+      "events": 44442
+    },
+    {
+      "season": "2022-23",
+      "fold": 3,
+      "nll": 15180.858882901794,
+      "events": 45042
+    },
+    {
+      "season": "2022-23",
+      "fold": 4,
+      "nll": 15378.861717227399,
+      "events": 46420
+    },
+    {
+      "season": "2023-24",
+      "fold": 0,
+      "nll": 13817.1834116477,
+      "events": 42541
+    },
+    {
+      "season": "2023-24",
+      "fold": 1,
+      "nll": 14683.110456159797,
+      "events": 45730
+    },
+    {
+      "season": "2023-24",
+      "fold": 2,
+      "nll": 14286.594814634715,
+      "events": 44348
+    },
+    {
+      "season": "2023-24",
+      "fold": 3,
+      "nll": 14653.845599206295,
+      "events": 45579
+    },
+    {
+      "season": "2023-24",
+      "fold": 4,
+      "nll": 13878.95190680906,
+      "events": 43489
+    },
+    {
+      "season": "2024-25",
+      "fold": 0,
+      "nll": 15064.359911926982,
+      "events": 46036
+    },
+    {
+      "season": "2024-25",
+      "fold": 1,
+      "nll": 14540.728477897106,
+      "events": 44710
+    },
+    {
+      "season": "2024-25",
+      "fold": 2,
+      "nll": 14868.06594963816,
+      "events": 46136
+    },
+    {
+      "season": "2024-25",
+      "fold": 3,
+      "nll": 15621.509079555057,
+      "events": 46694
+    },
+    {
+      "season": "2024-25",
+      "fold": 4,
+      "nll": 14912.387081152658,
+      "events": 45607
+    }
+  ],
+  "sourceHashes": {
+    "reports\\player-impact-v21\\2022-23-terminal-events.json": "af6465a7e31818ab668758e2269bba47ec9da3239a6f8d7550bdfbca5a7168a2",
+    "reports\\player-impact-v21\\2023-24-terminal-events.json": "531198eba0fa24070953cb3ec48ddc98f610e9c916b0a61daca3e88178df8ead",
+    "reports\\player-impact-v21\\2024-25-terminal-events.json": "3e7a8b9ab764bbea2bca7202edd61f3a212ee3ff5ed7990245dbe1a748372dfa",
+    "reports\\player-impact-v21\\2025-26-terminal-events.json": "556e6d0d556bfed4839e7698dcfc69b0f65a51975012e5c260ac1d0b03ea5ec4",
+    "reports\\player-impact-v21\\fit-terminal-risk.py": "c8f2c212427e34e9f2f2e7162956c6b74dc86c38d9334a630f1cb8c17602a390"
+  },
+  "references": {
+    "2022-23": {
+      "deadProbability": 0.058174798889631694,
+      "neutralLiveProbability": 0.024881962353758953,
+      "kappaEvents": 208.22712456778444
+    },
+    "2023-24": {
+      "deadProbability": 0.05177119091331472,
+      "neutralLiveProbability": 0.026646152081539975,
+      "kappaEvents": 208.22712456778444
+    },
+    "2024-25": {
+      "deadProbability": 0.05021314844469267,
+      "neutralLiveProbability": 0.029477083610456888,
+      "kappaEvents": 208.22712456778444
+    },
+    "2025-26": {
+      "deadProbability": 0.050778885667866584,
+      "neutralLiveProbability": 0.031030666657632777,
+      "kappaEvents": 208.22712456778444
+    }
+  }
+}

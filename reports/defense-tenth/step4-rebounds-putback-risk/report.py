@@ -1,0 +1,40 @@
+import pathlib,json,hashlib
+R=pathlib.Path(__file__).parent;load=lambda f:json.loads(pathlib.Path(f).read_text(encoding='utf8'));d=load(R/'analysis.json');p=load(R/'protocol.json');a=load(R/'audit.json');parity=load(R/'parity-sim.json');assert len(parity)==12 and sum(x['games'] for x in parity)==14760
+decision={'promoted':False,'productionBaselineChanged':False,'experiment':'skipGenericPutbackTouchRisk','role':'single-mechanism sensitivity ablation only','reasons':['early loss probability moves below observed truth, not just toward it','ordinary FT points already high and become higher','league TOV deficit increases; efficiency bias exceeds 0.5 in two seasons in 3seed diagnostic','quick putback proxy remains low; removing risk cannot explain the whole gap','3seed seen-data experiment is not a 20seed adoption test'],'frozenProtocolSHA':a['protocolSHA']};(R/'decision.json').write_text(json.dumps(decision,ensure_ascii=False,indent=2)+'\n',encoding='utf8')
+lines=['# 立即補籃／重攻風險：單因素消融','',
+'結論：一般持球失誤抽樣確實會壓低搶板後得分；但只在立即補籃時刪掉該風險會過頭，且惡化罰球與全聯盟失誤偏差。因此不採用、不換基準，不用其他參數補到過關。這次完成量測與一個可關閉的機制消融。','',
+f"版本 `{p['version']}`；UTC `{p['registeredUTC']}`；SHA-256 `{a['protocolSHA']}`。四季均已看過答案，當季in-sample；3 seeds（20261012–14），20,000次franchise＋seed跨季配對重抽，四季等權。不是20seed採用檢定。",'',
+'## 定義與可辨識限制','',
+'真實逐球資料能看到快速補籃成功走到FG的結果，不能看到原本打算補籃、卻先失誤的意圖。因此不把成功補籃者當失誤風險分母。主比較是所有首次FG進攻籃板後的可觀察事件；前三秒風險一律排除當節剩餘不足三秒的所有起點，與有沒有及時出手無關。普通FT含於完整得分，特殊FT球權排除。','',
+'快速補籃proxy＝首次FG由同一搶板者於三秒內在修正版short區出手；不宣稱官方putback或搶板落點。真實模式特定失誤率標not identifiable，沒有填零。模擬可另外觀察第一個durationObserver的putback旗標。','',
+'消融只在putback!==null時忽略一般pTovTouch失敗，仍消耗原本那次RNG抽樣；傳球、犯規、時鐘違例、投籃、分鐘、卡、籃板與時鐘常數不動。沒有重新校準。把風險歸零只測影響上限，不代表估計真實補籃不會失誤。','',
+'## 可觀察結果','',
+'| 指標 | 真實 | 原版 | 消融 | 消融−原版，聯合95%區間 |','|---|---:|---:|---:|---:|']
+for k,label,scale in [('points','完整得分／含OREB球權',1),('ftPoints','其中普通罰球得分',1),('quickProxy','快速補籃proxy',100),('earlyLoss','前三秒先失去球權',100),('lateLoss','三秒後先失去球權',100),('earlyFg','前三秒先FG',100),('earlyFt','前三秒先FT',100),('earlyNonShootingFoul','首次進攻嘗試前，前三秒發生防守非投籃犯規',100),('lossBeforeAttempt','全樣本出手／FT前先失去球權',100)]:
+ x={s:d['pooled'][s][k]*scale for s in ['real','baseline','ablation']};ci=d['intervals']['ablation-baseline'][k];suffix='%' if scale==100 else '';lines.append(f"| {label} | {x['real']:.4f}{suffix} | {x['baseline']:.4f}{suffix} | {x['ablation']:.4f}{suffix} | {ci['delta']*scale:+.4f} [{ci['joint95'][0]*scale:+.4f}, {ci['joint95'][1]*scale:+.4f}] |")
+lines+=['','earlyLoss／earlyFg／earlyFt以完整三秒風險樣本為分母；earlyNonShootingFoul可能與其後的FG／FT重疊，不是互斥結果。先失去球權包含失誤、被抄截或在己方嘗試前由對手拿回，不等同官方TOV。','',
+'完整得分缺口 −0.07609 縮為 −0.02451，但前三秒失去球權率從高於真實1.424百分點，變成低於真實1.665百分點，消融−真實95% [−1.903, −1.428]百分點。普通FT得分偏差由+0.03499變成+0.04603；快速補籃proxy仍少7.876百分點，95% [−9.164, −6.596]。不能為了完整得分變近就採用。','',
+'## 立即補籃與重攻：能說與不能說的部分','',
+'| 引擎內第一個意圖模式 | 原版比例 | 原版先失去球權率 | 消融先失去球權率 |','|---|---:|---:|---:|']
+for mode,label in [('putback','立即補籃'),('restart','重新組織')]:
+ b=d['pooled']['baseline'];c=d['pooled']['ablation'];lines.append(f"| {label} | {b[mode+'Share']*100:.3f}% | {b[mode+'LossRate']*100:.3f}% | {c[mode+'LossRate']*100:.3f}% |")
+lines+=['','意圖旗標缺失的少量樣本另留unknown，例如在第一個durationObserver前發生事件。真實資料沒有對應的意圖旗標，不以成功出手組反推各模式失誤率。原版補籃意圖比例39.08%、其轉為快速補籃proxy的比例72.56%；消融轉換率升至79.25%，但意圖比例未實質改變。','',
+'| 事後出手分組的第一球FG% | 真實 | 原版 | 消融 |','|---|---:|---:|---:|']
+for k,label in [('quickFgMake','快速補籃proxy組'),('otherFgMake','其餘有FG組')]:lines.append(f"| {label} | {d['pooled']['real'][k]*100:.3f}% | {d['pooled']['baseline'][k]*100:.3f}% | {d['pooled']['ablation'][k]*100:.3f}% |")
+lines+=['','這是結果選樣的條件FG%，不是同一球員同一防守的因果效果。快速補籃組偏低，其他FG組偏高，不支持全面提高投籃卡或全局命中率。消融幾乎沒有改善快速補籃組的FG%。','',
+'## 副作用與球隊準確度','',
+'| 球季 | 效率偏差 原版→消融（分／百回合） | TOV偏差 原版→消融（隊／場） | 球權代理偏差 原版→消融 |','|---|---:|---:|---:|']
+for season,x in d['leagueStats'].items():
+ b=x['baseline'];c=x['ablation'];lines.append(f"| {season} | {b['efficiencyBias']:+.3f} → {c['efficiencyBias']:+.3f} | {b['tovBias']:+.3f} → {c['tovBias']:+.3f} | {b['possessionBias']:+.3f} → {c['possessionBias']:+.3f} |")
+lines+=['','本次三seed的描述性全季淨勝分RMSE：2.81602→2.81647；勝場MAE：5.32778→5.35556。沒有20seed採用檢定，不以此宣稱球隊變好或變差；也不能拿這張3seed表和之前20seed的2.555直接相減。本批拒絕把消融當生產候選，因事件風險過頭且已有明確方向的副作用，沒有追加其他參數調校。','',
+'## 已驗證、推測、失敗與下一步','',
+'已驗證：一般持球抽樣會減少補籃與得分；刪掉它使早期失去球權低於真實、罰球得分更偏高；獨立非投籃犯規仍偏多（真實2.036%、原版3.331%）；快速補籃頻率與條件FG%缺口不能單靠刪除一般持球風險解釋。','',
+'推測：先選補籃、再套一般半場的犯規／持球失誤／投籃流程，可能錯配搶板後的結果分布。消融能隔離某分支影響，但不能識別真實的隱藏意圖，也不能證明所有真實早期失誤都來自同一路徑。','',
+'失敗：skipGenericPutbackTouchRisk不能採用；沒有球隊準確度提升證據；零風險不是可從真實資料估出的參數；沒有真正外推或換隊驗證。沒有把多個參數混改，沒有用球隊ID／勝場修補。','',
+'下一步建議先修一項可觀測的條件機制：搶板後的防守非投籃犯規，按首次搶板後事件與經過時間估計，而非照搬一般半場opportunity的機率；保留合理失誤風險。先登記條件率與選擇規則，再單獨測試，不能用wins或net挑常數。較長期才考慮把補籃、重整、犯規、失誤作競爭結果；這一批不實作。','',
+'## 稽核與重跑','',
+'真實犯規的shooting常在descriptor而非subType；本批實作核對時已修成讀取subType＋descriptor＋qualifiers，附測試及implementation-correction.json。這是對既定「非投籃犯規」定義的實作修正，沒有改登記定義、引擎或凍結輸出。','',
+'```powershell','node reports/defense-tenth/step4-rebounds-putback-risk/read.mjs','node reports/defense-tenth/step4-rebounds-putback-risk/run.mjs','python reports/defense-tenth/step4-rebounds-putback-risk/analyze.py','python reports/defense-tenth/step4-rebounds-putback-risk/report.py','```','',
+f"共24個season-seed、29,520場模擬；其中12個原版對照共14,760場比分、完整球隊與球員統計、舊fullOreb欄位逐筆完全等於凍結輸出。真實資料沿用1230／1230／1229／1227場，舊欄位逐筆不變；缺場不補值。{a['protectedFiles']}份受保護檔案雜湊未變。合成測試包含三秒邊界、期末不足三秒排除、非投籃犯規先於FT、快速同人籃下FG，以及personal＋descriptor=shooting的判定。",'',
+'個人籃板分配公式與能力卡保留；消融因後續事件變化可能改變實際出手／籃板數，不能宣稱消融後球員box完全不變。所有凍結輸出本身保持原樣。','']
+(R/'report.md').write_text('\n'.join(lines),encoding='utf8');hashes={str(f.relative_to(R)):hashlib.sha256(f.read_bytes()).hexdigest() for f in R.rglob('*') if f.is_file() and f.name!='deliverable-hashes.json'};(R/'deliverable-hashes.json').write_text(json.dumps(hashes,ensure_ascii=False,indent=2)+'\n',encoding='utf8');print('REPORT',len(hashes),'files')

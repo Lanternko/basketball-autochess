@@ -1,0 +1,13 @@
+import assert from 'node:assert/strict';
+import * as M from '../src/probability_model.js';
+import {ATTRIBUTES} from '../src/strength_benchmark.js';
+import {measuredContext} from '../src/measured_creation_context.js';
+import {freshZoneProbability} from '../reports/player-impact-v5/model.mjs';
+const measured=(spacing=70)=>{const p=Object.fromEntries(ATTRIBUTES.map(k=>[k,70]));return {...p,creationContextMeasurement:{spacing,self:70,creation:70,sourceLong:70,sourceMid:70,sourceDouble:M.doubleThreat(p),sourceCreation:M.selfCreation(p)}};};
+const low=[measured(),measured(40),measured(),measured(),measured()],high=structuredClone(low);high[1].creationContextMeasurement.spacing=99;
+const shot=(ls,i)=>M.possessionProbabilities(ls[i],measuredContext(ls,i),{onBall:70},70,70,70,70,{contextScale:1});
+assert.ok(shot(high,0).make.long>shot(low,0).make.long,'Measured outside production must open teammate three-point shots');
+low[4].opportunityMeasurement={freshZone:{long:0,mid:.1,short:.9}};high[4].opportunityMeasurement=structuredClone(low[4].opportunityMeasurement);
+const a=freshZoneProbability(shot(low,4),low[4],false),b=freshZoneProbability(shot(high,4),high[4],false);
+assert.ok(b.make.short>a.make.short,'A lone inside receiver must benefit from outside spacing');assert.deepEqual(a.zone,b.zone);
+console.log(JSON.stringify({threePointMakeDelta:shot(high,0).make.long-shot(low,0).make.long,insideMakeDelta:b.make.short-a.make.short,freshShotZonesUnchanged:true}));

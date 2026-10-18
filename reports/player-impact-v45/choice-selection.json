@@ -1,0 +1,135 @@
+{
+  "selected": {
+    "three": {
+      "sigma": 0.05,
+      "feature": false
+    },
+    "paintGivenTwo": {
+      "sigma": 0.05,
+      "feature": false
+    },
+    "raGivenPaint": {
+      "sigma": 0.05,
+      "feature": false
+    },
+    "cornerGivenThree": {
+      "sigma": 0.05,
+      "feature": false
+    }
+  },
+  "scores": [
+    {
+      "name": "three",
+      "sigma": 0,
+      "feature": false,
+      "nll": 333819.8916591752,
+      "trials": 551835
+    },
+    {
+      "name": "three",
+      "sigma": 0.05,
+      "feature": false,
+      "nll": 333236.88739605236,
+      "trials": 551835
+    },
+    {
+      "name": "three",
+      "sigma": 0.1,
+      "feature": false,
+      "nll": 333358.2389289,
+      "trials": 551835
+    },
+    {
+      "name": "three",
+      "sigma": 0.2,
+      "feature": false,
+      "nll": 333626.6342789858,
+      "trials": 551835
+    },
+    {
+      "name": "paintGivenTwo",
+      "sigma": 0,
+      "feature": false,
+      "nll": 158549.6937420033,
+      "trials": 321452
+    },
+    {
+      "name": "paintGivenTwo",
+      "sigma": 0.05,
+      "feature": false,
+      "nll": 158415.7509587895,
+      "trials": 321452
+    },
+    {
+      "name": "paintGivenTwo",
+      "sigma": 0.1,
+      "feature": false,
+      "nll": 158489.7479225124,
+      "trials": 321452
+    },
+    {
+      "name": "paintGivenTwo",
+      "sigma": 0.2,
+      "feature": false,
+      "nll": 158753.6664555705,
+      "trials": 321452
+    },
+    {
+      "name": "raGivenPaint",
+      "sigma": 0,
+      "feature": false,
+      "nll": 162586.65154765712,
+      "trials": 251299
+    },
+    {
+      "name": "raGivenPaint",
+      "sigma": 0.05,
+      "feature": false,
+      "nll": 161582.68597161042,
+      "trials": 251299
+    },
+    {
+      "name": "raGivenPaint",
+      "sigma": 0.1,
+      "feature": false,
+      "nll": 161621.27364168994,
+      "trials": 251299
+    },
+    {
+      "name": "raGivenPaint",
+      "sigma": 0.2,
+      "feature": false,
+      "nll": 161964.2631659033,
+      "trials": 251299
+    },
+    {
+      "name": "cornerGivenThree",
+      "sigma": 0,
+      "feature": false,
+      "nll": 121263.2209609803,
+      "trials": 230383
+    },
+    {
+      "name": "cornerGivenThree",
+      "sigma": 0.05,
+      "feature": false,
+      "nll": 120929.56978014314,
+      "trials": 230383
+    },
+    {
+      "name": "cornerGivenThree",
+      "sigma": 0.1,
+      "feature": false,
+      "nll": 120952.01279816804,
+      "trials": 230383
+    },
+    {
+      "name": "cornerGivenThree",
+      "sigma": 0.2,
+      "feature": false,
+      "nll": 121204.54278606434,
+      "trials": 230383
+    }
+  ],
+  "targetExcluded": true
+}

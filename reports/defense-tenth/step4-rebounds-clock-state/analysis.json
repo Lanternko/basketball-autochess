@@ -1,0 +1,204 @@
+{
+  "label": "all four seasons seen/in-sample; observation only; signed negative bounds retained as invalid/expired evidence, not legal clock states",
+  "perSeason": {
+    "2022-23": {
+      "games": 1230,
+      "anchors": 25069,
+      "firstAnchors": 22211,
+      "contactAll": {
+        "unknown": 25069
+      },
+      "contactFirst": {
+        "unknown": 22211
+      },
+      "exactPreClock": 9615,
+      "exactPreClockFirst": 9537,
+      "signedExpiredUpperBounds": 359,
+      "preClockReasons": {
+        "unresolved-jump-or-violation": 327,
+        "madeFG-inbound-start-unknown": 7754,
+        "official-turnover-next24": 3012,
+        "individual-defensive-rebound24": 6731,
+        "ownership-discontinuity": 2251,
+        "rim-unknown-reset-or-carry": 3097,
+        "foul-reset-or-FT-unresolved": 367,
+        "defensive-foul-location-penalty-unresolved": 680,
+        "team-defensive-rebound-control-unknown": 351,
+        "period-start-unknown": 313,
+        "FT-clock-stopped-next-control-unknown": 80,
+        "legal-final-FT-reset14": 106
+      },
+      "issues": {
+        "ownership-discontinuity": 24313,
+        "time-reversal": 2
+      },
+      "failures": []
+    },
+    "2023-24": {
+      "games": 1230,
+      "anchors": 25447,
+      "firstAnchors": 22459,
+      "contactAll": {
+        "unknown": 25447
+      },
+      "contactFirst": {
+        "unknown": 22459
+      },
+      "exactPreClock": 9578,
+      "exactPreClockFirst": 9505,
+      "signedExpiredUpperBounds": 332,
+      "preClockReasons": {
+        "madeFG-inbound-start-unknown": 7937,
+        "official-turnover-next24": 2878,
+        "individual-defensive-rebound24": 6845,
+        "ownership-discontinuity": 2134,
+        "rim-unknown-reset-or-carry": 3234,
+        "defensive-foul-location-penalty-unresolved": 690,
+        "foul-reset-or-FT-unresolved": 446,
+        "unresolved-jump-or-violation": 324,
+        "period-start-unknown": 376,
+        "team-defensive-rebound-control-unknown": 373,
+        "FT-clock-stopped-next-control-unknown": 127,
+        "legal-final-FT-reset14": 83
+      },
+      "issues": {
+        "ownership-discontinuity": 22620,
+        "time-reversal": 7
+      },
+      "failures": []
+    },
+    "2024-25": {
+      "games": 1229,
+      "anchors": 26718,
+      "firstAnchors": 23443,
+      "contactAll": {
+        "unknown": 26718
+      },
+      "contactFirst": {
+        "unknown": 23443
+      },
+      "exactPreClock": 10016,
+      "exactPreClockFirst": 9938,
+      "signedExpiredUpperBounds": 340,
+      "preClockReasons": {
+        "madeFG-inbound-start-unknown": 8320,
+        "individual-defensive-rebound24": 7047,
+        "rim-unknown-reset-or-carry": 3538,
+        "official-turnover-next24": 3054,
+        "foul-reset-or-FT-unresolved": 460,
+        "period-start-unknown": 337,
+        "ownership-discontinuity": 2233,
+        "defensive-foul-location-penalty-unresolved": 796,
+        "unresolved-jump-or-violation": 338,
+        "legal-final-FT-reset14": 123,
+        "team-defensive-rebound-control-unknown": 401,
+        "FT-clock-stopped-next-control-unknown": 71
+      },
+      "issues": {
+        "ownership-discontinuity": 22356,
+        "time-reversal": 2
+      },
+      "failures": [
+        {
+          "id": "0022400072",
+          "reason": "ENOENT: no such file or directory, open 'D:\\Projects\\CODING\\basketball-autochess\\data\\defense-seventh\\2024-25\\pbp\\0022400072.json'"
+        }
+      ]
+    },
+    "2025-26": {
+      "games": 1227,
+      "anchors": 27266,
+      "firstAnchors": 23977,
+      "contactAll": {
+        "unknown": 27266
+      },
+      "contactFirst": {
+        "unknown": 23977
+      },
+      "exactPreClock": 10173,
+      "exactPreClockFirst": 10072,
+      "signedExpiredUpperBounds": 341,
+      "preClockReasons": {
+        "ownership-discontinuity": 2454,
+        "individual-defensive-rebound24": 7060,
+        "madeFG-inbound-start-unknown": 8404,
+        "rim-unknown-reset-or-carry": 3535,
+        "official-turnover-next24": 3195,
+        "defensive-foul-location-penalty-unresolved": 787,
+        "unresolved-jump-or-violation": 367,
+        "period-start-unknown": 349,
+        "foul-reset-or-FT-unresolved": 477,
+        "legal-final-FT-reset14": 114,
+        "team-defensive-rebound-control-unknown": 423,
+        "FT-clock-stopped-next-control-unknown": 101
+      },
+      "issues": {
+        "ownership-discontinuity": 24074,
+        "time-reversal": 2
+      },
+      "failures": [
+        {
+          "id": "0022500029",
+          "reason": "ENOENT: no such file or directory, open 'D:\\Projects\\CODING\\basketball-autochess\\data\\defense-a-source\\pbp\\0022500029.json'"
+        },
+        {
+          "id": "0022501229",
+          "reason": "ENOENT: no such file or directory, open 'D:\\Projects\\CODING\\basketball-autochess\\data\\defense-a-source\\pbp\\0022501229.json'"
+        },
+        {
+          "id": "0022501230",
+          "reason": "ENOENT: no such file or directory, open 'D:\\Projects\\CODING\\basketball-autochess\\data\\defense-a-source\\pbp\\0022501230.json'"
+        }
+      ]
+    }
+  },
+  "equalSeasonExactPreClockRate": 0.3769779902199064,
+  "exactPreClock95": [
+    0.37362538489409974,
+    0.38057619680069604
+  ],
+  "equalSeasonFirstExactRate": 0.42414714030797857,
+  "firstExact95": [
+    0.421070556857203,
+    0.4273470135046799
+  ],
+  "clockEndpoints": 765,
+  "exactEndpointValidation": {
+    "2022-23": {
+      "n": 41,
+      "retainWithin1s": 12,
+      "reset14Within1s": 9,
+      "meanRetainDeadlineAbsError": 3.136585365853659,
+      "meanReset14DeadlineAbsError": 8.319512195121952
+    },
+    "2023-24": {
+      "n": 36,
+      "retainWithin1s": 12,
+      "reset14Within1s": 7,
+      "meanRetainDeadlineAbsError": 2.502777777777778,
+      "meanReset14DeadlineAbsError": 9.505555555555555
+    },
+    "2024-25": {
+      "n": 60,
+      "retainWithin1s": 32,
+      "reset14Within1s": 11,
+      "meanRetainDeadlineAbsError": 2.0616666666666665,
+      "meanReset14DeadlineAbsError": 9.620000000000001
+    },
+    "2025-26": {
+      "n": 45,
+      "retainWithin1s": 18,
+      "reset14Within1s": 15,
+      "meanRetainDeadlineAbsError": 2.588888888888889,
+      "meanReset14DeadlineAbsError": 6.886666666666666
+    },
+    "pooled": {
+      "n": 182,
+      "retainWithin1s": 74,
+      "reset14Within1s": 42,
+      "meanRetainDeadlineAbsError": 2.5214285714285714,
+      "meanReset14DeadlineAbsError": 8.62857142857143
+    }
+  },
+  "validationCaveat": "Outcome-selected endpoint compatibility is not shot-clock MAE, rim classification, fresh14 hazard or unconditional event rate. Exact preclock means exact under registered event-start assumptions, not observed shot-clock truth."
+}

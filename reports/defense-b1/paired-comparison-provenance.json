@@ -1,0 +1,35 @@
+{
+  "seeds": [
+    20261012,
+    20261013,
+    20261014,
+    20261015,
+    20261016,
+    20261017,
+    20261018,
+    20261019,
+    20261020,
+    20261021,
+    20261022,
+    20261023,
+    20261024,
+    20261025,
+    20261026,
+    20261027,
+    20261028,
+    20261029,
+    20261030,
+    20261031
+  ],
+  "repetitions": 2000,
+  "bootstrapSeed": 20261101,
+  "sources": {
+    "reports/defense-a/v1-seeds.json": "9b053559c8083e7e4d4421249396efb3589a899caebb034c8f84ca7a8f0502ac",
+    "reports/defense-a/a-accounting-clock-seeds.json": "541c89e399cd29e5a3f0e28dd3243181b119e7f87959fb8ef59ab21656f755a2",
+    "reports/defense-b1/c-empirical-seeds.json": "5f656330d6c3604673d6859da21d31666a0282c423fbab1bd1b998db2bc3572b",
+    "data/season-league.json": "497725ecb6a2ec181aeb3cf93263f53a81bdfed772a2c4c733ba3a2d65a79bf6",
+    "data/benchmark-source/teams.json": "cc6e6b95667fa6be0a0ed71b8f26c1f25c78dc5e12d03cbffaf2d688ee7eb613",
+    "data/diagnostic-source/opponents.json": "8696e4f4b729204c353a676d7c8145d97e8019660c1ab00da691f647f9f58eab"
+  },
+  "code": "604ed1ca3cf2e03bcf6246dac22e9ba49a0367eb6a3b06aebbfb2b2fbb8eaa5b"
+}

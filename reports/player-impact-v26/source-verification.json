@@ -1,0 +1,42 @@
+{
+  "sourceFilesHashed": 4444,
+  "seasons": [
+    {
+      "season": "2022-23",
+      "players": 539,
+      "games": 1079,
+      "sourceLedgersConserved": true,
+      "zeroMinuteEvents": 0
+    },
+    {
+      "season": "2023-24",
+      "players": 572,
+      "games": 1063,
+      "sourceLedgersConserved": true,
+      "zeroMinuteEvents": 0
+    },
+    {
+      "season": "2024-25",
+      "players": 569,
+      "games": 1091,
+      "sourceLedgersConserved": true,
+      "zeroMinuteEvents": 0
+    },
+    {
+      "season": "2025-26",
+      "players": 582,
+      "games": 1188,
+      "sourceLedgersConserved": true,
+      "zeroMinuteEvents": 0
+    }
+  ],
+  "priorSelectionExcludesTargetSeason": true,
+  "allRatesPositiveFinite": true,
+  "hashes": {
+    "reports\\player-impact-v26\\2022-23-contact-rates.json": "f393ef0cbf9f891fb2126695e78df783bac3b8f851ffdc0a80aa49bb5fd4190e",
+    "reports\\player-impact-v26\\2023-24-contact-rates.json": "561c6674a4763b96ca0339a0b94a2899d0f6e20f7dbf91f669d169d1387d2383",
+    "reports\\player-impact-v26\\2024-25-contact-rates.json": "fca185210641725a73c01d4241a564f4d9432dd40442e5eec5537593c927c096",
+    "reports\\player-impact-v26\\2025-26-contact-rates.json": "2429037bceddcd70177f3ef8b77cf15ed5a84c6ef00717b2472d0cd5e2355a59",
+    "reports\\player-impact-v26\\contact-intensity-prior.json": "008136e39e9837b193ca214768747ab2500b7d40fa7db92a971e00f4407cf1b5"
+  }
+}

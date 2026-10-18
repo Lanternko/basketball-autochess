@@ -1,0 +1,11 @@
+from pathlib import Path
+root=Path('reports/player-impact-v8')
+s=Path('reports/player-impact-v7/engine.mjs').read_text(encoding='utf-8').replace('player-impact-v7/model.mjs','player-impact-v8/model.mjs').replace("['space-half','space-full','space-control']","['elastic-flow','elastic-creation','elastic-space']")
+s=s.replace('pressureSignal(ls[1-off],opt.stealPriorRate).relative):null','pressureSignal(ls[1-off],opt.stealPriorRate).relative,opt.creationPolicy):null')
+(root/'engine.mjs').write_text(s,encoding='utf-8')
+s=Path('reports/player-impact-v7/worker.mjs').read_text(encoding='utf-8').replace("const scale={'space-half':.5,'space-full':1,'space-control':0}[job.version];", "b.options.creationPolicy=job.version;const scale=job.version==='elastic-space'?1:0;")
+(root/'worker.mjs').write_text(s,encoding='utf-8')
+s=Path('reports/player-impact-v7/ovr-worker.mjs').read_text(encoding='utf-8').replace("const scale={'space-half':.5,'space-full':1,'space-control':0}[v];return {...x.options,", "const scale=v==='elastic-space'?1:0;return {...x.options,creationPolicy:v,")
+(root/'ovr-worker.mjs').write_text(s,encoding='utf-8')
+s=Path('reports/player-impact-v7/ovr-run.mjs').read_text(encoding='utf-8').replace('player-impact-v7','player-impact-v8').replace("['space-half','space-full']","['elastic-flow','elastic-creation','elastic-space']").replace('centered-space-natural-role-ovr-7','source-fit-elastic-natural-role-ovr-8')
+(root/'ovr-run.mjs').write_text(s,encoding='utf-8')

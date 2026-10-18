@@ -1,0 +1,135 @@
+{
+  "passed": true,
+  "sourceJobs": 27,
+  "sourceZoneFits": 81,
+  "priorV40FitsVerifiedAndUnchanged": 104,
+  "selectedSigmaByZone": {
+    "long": 0,
+    "mid": 0.025,
+    "short": 0.05
+  },
+  "maxAbsoluteGradient": 1.074484501373263e-09,
+  "heldoutSummary": [
+    {
+      "season": "2022-23",
+      "zones": [
+        {
+          "zone": "long",
+          "sigma": 0,
+          "nullNll": 48209.074514293345,
+          "candidateNll": 48209.074514293345,
+          "fga": 73602
+        },
+        {
+          "zone": "mid",
+          "sigma": 0.025,
+          "nullNll": 17584.80819974905,
+          "candidateNll": 17584.2642037123,
+          "fga": 25368
+        },
+        {
+          "zone": "short",
+          "sigma": 0.05,
+          "nullNll": 57038.56867811833,
+          "candidateNll": 56987.652552439846,
+          "fga": 84407
+        }
+      ],
+      "nullNll": 122832.45139216073,
+      "candidateNll": 122780.99127044549
+    },
+    {
+      "season": "2023-24",
+      "zones": [
+        {
+          "zone": "long",
+          "sigma": 0,
+          "nullNll": 49131.22095409684,
+          "candidateNll": 49131.22095409684,
+          "fga": 74722
+        },
+        {
+          "zone": "mid",
+          "sigma": 0.025,
+          "nullNll": 16513.40328479843,
+          "candidateNll": 16513.962983119116,
+          "fga": 23846
+        },
+        {
+          "zone": "short",
+          "sigma": 0.05,
+          "nullNll": 56383.70340816155,
+          "candidateNll": 56314.67051423,
+          "fga": 83049
+        }
+      ],
+      "nullNll": 122028.32764705682,
+      "candidateNll": 121959.85445144595
+    },
+    {
+      "season": "2024-25",
+      "zones": [
+        {
+          "zone": "long",
+          "sigma": 0,
+          "nullNll": 53650.23917821917,
+          "candidateNll": 53650.23917821917,
+          "fga": 82059
+        },
+        {
+          "zone": "mid",
+          "sigma": 0.025,
+          "nullNll": 14562.985422034832,
+          "candidateNll": 14556.317725248138,
+          "fga": 20939
+        },
+        {
+          "zone": "short",
+          "sigma": 0.05,
+          "nullNll": 56970.33899168549,
+          "candidateNll": 56910.23206159553,
+          "fga": 83843
+        }
+      ],
+      "nullNll": 125183.56359193948,
+      "candidateNll": 125116.78896506283
+    },
+    {
+      "season": "2025-26",
+      "zones": [
+        {
+          "zone": "long",
+          "sigma": 0,
+          "nullNll": 57418.65921641193,
+          "candidateNll": 57418.65921641193,
+          "fga": 87807
+        },
+        {
+          "zone": "mid",
+          "sigma": 0.025,
+          "nullNll": 16409.319848926934,
+          "candidateNll": 16408.765309542465,
+          "fga": 23762
+        },
+        {
+          "zone": "short",
+          "sigma": 0.05,
+          "nullNll": 61997.33463384298,
+          "candidateNll": 61877.55252230844,
+          "fga": 91510
+        }
+      ],
+      "nullNll": 135825.31369918183,
+      "candidateNll": 135704.97704826284
+    }
+  ],
+  "scope": "Zone-separable source-only refinement; every selected/reused fit probability, penalty, gradient, whole-game score and assembled zone independently recomputed. Target excluded from prior selection. Source associations, not causal skill or OVR.",
+  "hashes": {
+    "reports/player-impact-v41/verify-fit.py": "05f026f3ceb7592a51ce44fb1c320f022905ff9de92a11b973c147b1b52cc75d",
+    "reports/player-impact-v41/selection.json": "92a1d2621b26b1a8deee8b858f66e0f5a6caf78782206859cb79a0880b5e4969",
+    "reports/player-impact-v41/fit.json": "b351e8ff42a59899b18ed65328b6a2ddc74d588f7d3e895dc55ef96219a962e6",
+    "reports/player-impact-v41/fit-protocol.json": "5ccadf11e461cff966e5c6e56b5d8cc30406cdd255faeef9c82dd6c72b83e545",
+    "reports/player-impact-v41/launcher-protocol.json": "8c7d40b233019466c77f885444497a4a88039c5896f4bd59b865693f785d29c4",
+    "reports/player-impact-v40/fit-verification.json": "9a43e4c14ceeccf496383cc0258a424fe113d5f31464e91b6d99b5103f376185"
+  }
+}

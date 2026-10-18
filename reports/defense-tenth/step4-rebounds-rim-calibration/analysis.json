@@ -1,0 +1,753 @@
+{
+  "selection": {
+    "selectedUTC": "2026-10-15T02:48:08.801321+00:00",
+    "pEffective": 0.2112781865697237,
+    "physicalNoRimIdentified": false,
+    "targetTrainRate": 0.005482446666033024,
+    "grid": [
+      {
+        "p": 0,
+        "rate": 0.0,
+        "counts": {
+          "misses": 146747,
+          "immediateClock": 0,
+          "fgOreb": 32415,
+          "postOrebClock": 0,
+          "clock": 1883,
+          "natural": 0
+        }
+      },
+      {
+        "p": 0.1,
+        "rate": 0.0024701635630403483,
+        "counts": {
+          "misses": 146549,
+          "immediateClock": 362,
+          "fgOreb": 32319,
+          "postOrebClock": 0,
+          "clock": 2244,
+          "natural": 362
+        }
+      },
+      {
+        "p": 0.25,
+        "rate": 0.006530640098266685,
+        "counts": {
+          "misses": 146540,
+          "immediateClock": 957,
+          "fgOreb": 32392,
+          "postOrebClock": 0,
+          "clock": 2841,
+          "natural": 957
+        }
+      },
+      {
+        "p": 0.5,
+        "rate": 0.013962860690272812,
+        "counts": {
+          "misses": 147391,
+          "immediateClock": 2058,
+          "fgOreb": 32352,
+          "postOrebClock": 0,
+          "clock": 3942,
+          "natural": 2058
+        }
+      },
+      {
+        "p": 1,
+        "rate": 0.03496204643969149,
+        "counts": {
+          "misses": 147417,
+          "immediateClock": 5154,
+          "fgOreb": 31280,
+          "postOrebClock": 0,
+          "clock": 7045,
+          "natural": 5154
+        }
+      }
+    ],
+    "seedwiseFits": [
+      0.210170347351742,
+      0.19763095309522943,
+      0.22703029631907531
+    ],
+    "parity": [
+      {
+        "season": "2022-23",
+        "seed": 20261012,
+        "games": 256,
+        "passed": true
+      },
+      {
+        "season": "2022-23",
+        "seed": 20261013,
+        "games": 256,
+        "passed": true
+      },
+      {
+        "season": "2022-23",
+        "seed": 20261014,
+        "games": 256,
+        "passed": true
+      },
+      {
+        "season": "2023-24",
+        "seed": 20261012,
+        "games": 256,
+        "passed": true
+      },
+      {
+        "season": "2023-24",
+        "seed": 20261013,
+        "games": 256,
+        "passed": true
+      },
+      {
+        "season": "2023-24",
+        "seed": 20261014,
+        "games": 256,
+        "passed": true
+      },
+      {
+        "season": "2024-25",
+        "seed": 20261012,
+        "games": 256,
+        "passed": true
+      },
+      {
+        "season": "2024-25",
+        "seed": 20261013,
+        "games": 256,
+        "passed": true
+      },
+      {
+        "season": "2024-25",
+        "seed": 20261014,
+        "games": 256,
+        "passed": true
+      },
+      {
+        "season": "2025-26",
+        "seed": 20261012,
+        "games": 256,
+        "passed": true
+      },
+      {
+        "season": "2025-26",
+        "seed": 20261013,
+        "games": 256,
+        "passed": true
+      },
+      {
+        "season": "2025-26",
+        "seed": 20261014,
+        "games": 256,
+        "passed": true
+      }
+    ]
+  },
+  "eventResults": [
+    {
+      "season": "2022-23",
+      "half": "train",
+      "realGames": 615,
+      "simGames": 1845,
+      "real": {
+        "misses": 57362,
+        "immediateClock": 289,
+        "fgOreb": 12641,
+        "postOrebClock": 92,
+        "clock": 752,
+        "natural": 0
+      },
+      "sim": {
+        "misses": 175962,
+        "immediateClock": 944,
+        "fgOreb": 37661,
+        "postOrebClock": 0,
+        "clock": 3234,
+        "natural": 944
+      },
+      "immediateRate": {
+        "real": 0.005038178585126041,
+        "sim": 0.005364794671576818,
+        "realGameBootstrap95": [
+          0.0044306951073740915,
+          0.005637241839092758
+        ],
+        "pass": true
+      },
+      "postOrebRate": {
+        "real": 0.007277905229016691,
+        "sim": 0.0,
+        "realGameBootstrap95": [
+          0.00585298431356835,
+          0.008831498388242733
+        ],
+        "pass": false
+      },
+      "clockPerTeamGame": {
+        "real": 0.6113821138211382,
+        "sim": 0.8764227642276423
+      }
+    },
+    {
+      "season": "2022-23",
+      "half": "test",
+      "realGames": 615,
+      "simGames": 1845,
+      "real": {
+        "misses": 56599,
+        "immediateClock": 278,
+        "fgOreb": 12428,
+        "postOrebClock": 79,
+        "clock": 795,
+        "natural": 0
+      },
+      "sim": {
+        "misses": 174827,
+        "immediateClock": 977,
+        "fgOreb": 37686,
+        "postOrebClock": 0,
+        "clock": 3270,
+        "natural": 977
+      },
+      "immediateRate": {
+        "real": 0.004911747557377339,
+        "sim": 0.0055883816572954974,
+        "realGameBootstrap95": [
+          0.004328885787243555,
+          0.005493756088405362
+        ],
+        "pass": false
+      },
+      "postOrebRate": {
+        "real": 0.006356614097199871,
+        "sim": 0.0,
+        "realGameBootstrap95": [
+          0.004982300781420093,
+          0.007780085967694096
+        ],
+        "pass": false
+      },
+      "clockPerTeamGame": {
+        "real": 0.6463414634146342,
+        "sim": 0.8861788617886179
+      }
+    },
+    {
+      "season": "2023-24",
+      "half": "train",
+      "realGames": 615,
+      "simGames": 1845,
+      "real": {
+        "misses": 57685,
+        "immediateClock": 305,
+        "fgOreb": 12956,
+        "postOrebClock": 97,
+        "clock": 788,
+        "natural": 0
+      },
+      "sim": {
+        "misses": 176903,
+        "immediateClock": 956,
+        "fgOreb": 38587,
+        "postOrebClock": 0,
+        "clock": 3337,
+        "natural": 956
+      },
+      "immediateRate": {
+        "real": 0.0052873363959434865,
+        "sim": 0.005404091507775447,
+        "realGameBootstrap95": [
+          0.004704603881241516,
+          0.005867091093509535
+        ],
+        "pass": true
+      },
+      "postOrebRate": {
+        "real": 0.007486878666255017,
+        "sim": 0.0,
+        "realGameBootstrap95": [
+          0.006066226873266376,
+          0.00898778552666224
+        ],
+        "pass": false
+      },
+      "clockPerTeamGame": {
+        "real": 0.640650406504065,
+        "sim": 0.9043360433604336
+      }
+    },
+    {
+      "season": "2023-24",
+      "half": "test",
+      "realGames": 615,
+      "simGames": 1845,
+      "real": {
+        "misses": 57269,
+        "immediateClock": 309,
+        "fgOreb": 12491,
+        "postOrebClock": 69,
+        "clock": 833,
+        "natural": 0
+      },
+      "sim": {
+        "misses": 177620,
+        "immediateClock": 983,
+        "fgOreb": 38167,
+        "postOrebClock": 0,
+        "clock": 3422,
+        "natural": 983
+      },
+      "immediateRate": {
+        "real": 0.005395589236759852,
+        "sim": 0.005534286679427992,
+        "realGameBootstrap95": [
+          0.0048049189478548094,
+          0.005995437710371232
+        ],
+        "pass": true
+      },
+      "postOrebRate": {
+        "real": 0.0055239772636298135,
+        "sim": 0.0,
+        "realGameBootstrap95": [
+          0.004399446032180728,
+          0.006853859559824775
+        ],
+        "pass": false
+      },
+      "clockPerTeamGame": {
+        "real": 0.6772357723577236,
+        "sim": 0.9273712737127371
+      }
+    },
+    {
+      "season": "2024-25",
+      "half": "train",
+      "realGames": 614,
+      "simGames": 1842,
+      "real": {
+        "misses": 58377,
+        "immediateClock": 345,
+        "fgOreb": 13130,
+        "postOrebClock": 115,
+        "clock": 883,
+        "natural": 0
+      },
+      "sim": {
+        "misses": 178759,
+        "immediateClock": 969,
+        "fgOreb": 39510,
+        "postOrebClock": 0,
+        "clock": 3651,
+        "natural": 969
+      },
+      "immediateRate": {
+        "real": 0.005909861760624904,
+        "sim": 0.005420706090322725,
+        "realGameBootstrap95": [
+          0.005288616195384867,
+          0.0064811099656170955
+        ],
+        "pass": true
+      },
+      "postOrebRate": {
+        "real": 0.008758568164508759,
+        "sim": 0.0,
+        "realGameBootstrap95": [
+          0.007140076365824433,
+          0.01033758097277119
+        ],
+        "pass": false
+      },
+      "clockPerTeamGame": {
+        "real": 0.7190553745928339,
+        "sim": 0.991042345276873
+      }
+    },
+    {
+      "season": "2024-25",
+      "half": "test",
+      "realGames": 615,
+      "simGames": 1845,
+      "real": {
+        "misses": 58485,
+        "immediateClock": 370,
+        "fgOreb": 13588,
+        "postOrebClock": 117,
+        "clock": 943,
+        "natural": 0
+      },
+      "sim": {
+        "misses": 178910,
+        "immediateClock": 914,
+        "fgOreb": 40006,
+        "postOrebClock": 0,
+        "clock": 3650,
+        "natural": 914
+      },
+      "immediateRate": {
+        "real": 0.006326408480807045,
+        "sim": 0.0051087138784863895,
+        "realGameBootstrap95": [
+          0.0057024097566883356,
+          0.006968790799514438
+        ],
+        "pass": false
+      },
+      "postOrebRate": {
+        "real": 0.008610538710627023,
+        "sim": 0.0,
+        "realGameBootstrap95": [
+          0.007044668511563993,
+          0.0102086030582186
+        ],
+        "pass": false
+      },
+      "clockPerTeamGame": {
+        "real": 0.7666666666666667,
+        "sim": 0.989159891598916
+      }
+    },
+    {
+      "season": "2025-26",
+      "half": "train",
+      "realGames": 612,
+      "simGames": 1836,
+      "real": {
+        "misses": 58042,
+        "immediateClock": 330,
+        "fgOreb": 13713,
+        "postOrebClock": 95,
+        "clock": 800,
+        "natural": 0
+      },
+      "sim": {
+        "misses": 174307,
+        "immediateClock": 931,
+        "fgOreb": 40216,
+        "postOrebClock": 0,
+        "clock": 3391,
+        "natural": 931
+      },
+      "immediateRate": {
+        "real": 0.0056855380586471865,
+        "sim": 0.00534115095779286,
+        "realGameBootstrap95": [
+          0.005051557622822676,
+          0.006347451451900147
+        ],
+        "pass": true
+      },
+      "postOrebRate": {
+        "real": 0.00692773280828411,
+        "sim": 0.0,
+        "realGameBootstrap95": [
+          0.005588578858329493,
+          0.00839757500690954
+        ],
+        "pass": false
+      },
+      "clockPerTeamGame": {
+        "real": 0.6535947712418301,
+        "sim": 0.9234749455337691
+      }
+    },
+    {
+      "season": "2025-26",
+      "half": "test",
+      "realGames": 615,
+      "simGames": 1845,
+      "real": {
+        "misses": 57589,
+        "immediateClock": 351,
+        "fgOreb": 13553,
+        "postOrebClock": 86,
+        "clock": 853,
+        "natural": 0
+      },
+      "sim": {
+        "misses": 175158,
+        "immediateClock": 924,
+        "fgOreb": 40550,
+        "postOrebClock": 0,
+        "clock": 3435,
+        "natural": 924
+      },
+      "immediateRate": {
+        "real": 0.006094913959263054,
+        "sim": 0.005275237214400713,
+        "realGameBootstrap95": [
+          0.005468987243482094,
+          0.006729747278529074
+        ],
+        "pass": false
+      },
+      "postOrebRate": {
+        "real": 0.00634545857005829,
+        "sim": 0.0,
+        "realGameBootstrap95": [
+          0.005089521884919405,
+          0.007634762589265961
+        ],
+        "pass": false
+      },
+      "clockPerTeamGame": {
+        "real": 0.6934959349593496,
+        "sim": 0.9308943089430894
+      }
+    },
+    {
+      "season": "pooled",
+      "half": "train",
+      "realGames": 2456,
+      "simGames": 7368,
+      "real": {
+        "misses": 231466,
+        "immediateClock": 1269,
+        "fgOreb": 52440,
+        "postOrebClock": 399,
+        "clock": 3223,
+        "natural": 0
+      },
+      "sim": {
+        "misses": 705931,
+        "immediateClock": 3800,
+        "fgOreb": 155974,
+        "postOrebClock": 0,
+        "clock": 13613,
+        "natural": 3800
+      },
+      "immediateRate": {
+        "real": 0.005482446666033024,
+        "sim": 0.005382962357510862,
+        "realGameBootstrap95": [
+          0.005155364218734141,
+          0.005784881967294345
+        ],
+        "pass": true
+      },
+      "postOrebRate": {
+        "real": 0.007608695652173913,
+        "sim": 0.0,
+        "realGameBootstrap95": [
+          0.006859712417723069,
+          0.008312487719009116
+        ],
+        "pass": false
+      },
+      "clockPerTeamGame": {
+        "real": 0.6561482084690554,
+        "sim": 0.9237920738327905
+      }
+    },
+    {
+      "season": "pooled",
+      "half": "test",
+      "realGames": 2460,
+      "simGames": 7380,
+      "real": {
+        "misses": 229942,
+        "immediateClock": 1308,
+        "fgOreb": 52060,
+        "postOrebClock": 351,
+        "clock": 3424,
+        "natural": 0
+      },
+      "sim": {
+        "misses": 706515,
+        "immediateClock": 3798,
+        "fgOreb": 156409,
+        "postOrebClock": 0,
+        "clock": 13777,
+        "natural": 3798
+      },
+      "immediateRate": {
+        "real": 0.005688390985552879,
+        "sim": 0.005375682044967198,
+        "realGameBootstrap95": [
+          0.005380067262769595,
+          0.005998043478713891
+        ],
+        "pass": false
+      },
+      "postOrebRate": {
+        "real": 0.006742220514790626,
+        "sim": 0.0,
+        "realGameBootstrap95": [
+          0.006077187621792739,
+          0.007426640799198261
+        ],
+        "pass": false
+      },
+      "clockPerTeamGame": {
+        "real": 0.6959349593495935,
+        "sim": 0.9334010840108401
+      }
+    }
+  ],
+  "league": [
+    {
+      "season": "2022-23",
+      "candidate": {
+        "eff": 111.5251428699947,
+        "tov": 13.768563685636856,
+        "fg": 47.13277932391484,
+        "three": 36.27083102629884,
+        "oreb": 10.44349593495935,
+        "ppg": 114.579945799458,
+        "poss": 102.73914363143632
+      },
+      "baselineSameSeeds": {
+        "eff": 111.81969321510128,
+        "tov": 13.465040650406506,
+        "fg": 47.128158258840934,
+        "three": 36.30701997489654,
+        "oreb": 10.424254742547426,
+        "ppg": 114.45528455284553,
+        "poss": 102.3570840108401
+      },
+      "baseline20seed": {
+        "eff": 112.03885361742108,
+        "tov": 13.47079268292683,
+        "fg": 47.21689454733721,
+        "three": 36.32161991609482
+      },
+      "target": {
+        "eff": 112.09232058720742,
+        "tov": 14.095121951219513,
+        "fg": 47.53727804657972,
+        "three": 36.070813283431356
+      },
+      "gates": {
+        "efficiency": false,
+        "turnovers": false,
+        "fg": true,
+        "three": true
+      }
+    },
+    {
+      "season": "2023-24",
+      "candidate": {
+        "eff": 112.31480084066679,
+        "tov": 13.261111111111111,
+        "fg": 47.01860697045034,
+        "three": 36.809549606554334,
+        "oreb": 10.604065040650406,
+        "ppg": 114.64634146341466,
+        "poss": 102.0760650406504
+      },
+      "baselineSameSeeds": {
+        "eff": 112.88872654236086,
+        "tov": 12.980081300813007,
+        "fg": 47.10993253587839,
+        "three": 36.88147643561488,
+        "oreb": 10.660704607046071,
+        "ppg": 114.80447154471545,
+        "poss": 101.69705149051491
+      },
+      "baseline20seed": {
+        "eff": 112.70591623863248,
+        "tov": 12.979268292682926,
+        "fg": 47.01759722281105,
+        "three": 36.83860250863538
+      },
+      "target": {
+        "eff": 112.51127275173675,
+        "tov": 13.604878048780488,
+        "fg": 47.43395122129656,
+        "three": 36.56881477621447
+      },
+      "gates": {
+        "efficiency": true,
+        "turnovers": false,
+        "fg": true,
+        "three": true
+      }
+    },
+    {
+      "season": "2024-25",
+      "candidate": {
+        "eff": 111.16361885550214,
+        "tov": 13.947018970189703,
+        "fg": 46.404167431737086,
+        "three": 36.19074428281534,
+        "oreb": 11.043089430894307,
+        "ppg": 113.81720867208672,
+        "poss": 102.3871056910569
+      },
+      "baselineSameSeeds": {
+        "eff": 111.65758466174732,
+        "tov": 13.706368563685638,
+        "fg": 46.50447965408722,
+        "three": 36.3604421408886,
+        "oreb": 11.061924119241192,
+        "ppg": 113.8780487804878,
+        "poss": 101.98858536585367
+      },
+      "baseline20seed": {
+        "eff": 111.68817327234525,
+        "tov": 13.720182926829269,
+        "fg": 46.51821700427491,
+        "three": 36.4112469476048
+      },
+      "target": {
+        "eff": 111.64438005451879,
+        "tov": 14.298373983739838,
+        "fg": 46.72136001494121,
+        "three": 36.022238085967075
+      },
+      "gates": {
+        "efficiency": true,
+        "turnovers": false,
+        "fg": false,
+        "three": true
+      }
+    },
+    {
+      "season": "2025-26",
+      "candidate": {
+        "eff": 112.59811930433675,
+        "tov": 14.721680216802168,
+        "fg": 47.13640852579357,
+        "three": 36.717008145842534,
+        "oreb": 11.248373983739839,
+        "ppg": 116.03699186991871,
+        "poss": 103.05410840108402
+      },
+      "baselineSameSeeds": {
+        "eff": 112.77921247742813,
+        "tov": 14.517615176151763,
+        "fg": 47.06083659862711,
+        "three": 36.69603888427951,
+        "oreb": 11.32208672086721,
+        "ppg": 115.76924119241193,
+        "poss": 102.65128997289973
+      },
+      "baseline20seed": {
+        "eff": 112.74187212472408,
+        "tov": 14.48959349593496,
+        "fg": 47.04486188145978,
+        "three": 36.67255353453308
+      },
+      "target": {
+        "eff": 112.72859851154409,
+        "tov": 14.510162601626016,
+        "fg": 47.10141951733673,
+        "three": 35.964603715510606
+      },
+      "gates": {
+        "efficiency": true,
+        "turnovers": false,
+        "fg": true,
+        "three": true
+      }
+    }
+  ],
+  "pooledHoldoutClockPass": false,
+  "allGatesPass": false,
+  "adopted": false,
+  "note": "Three diagnostic seeds; no franchise+seed accuracy claims. More seeds only if event and league gates pass."
+}

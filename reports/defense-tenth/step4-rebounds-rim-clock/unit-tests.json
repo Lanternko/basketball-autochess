@@ -1,0 +1,100 @@
+{
+  "cases": [
+    {
+      "remainingTicks": 0,
+      "reset": {
+        "clockTicks": 140,
+        "violation": false,
+        "periodEnded": false,
+        "reset": true
+      },
+      "carry": {
+        "clockTicks": 0,
+        "violation": true,
+        "periodEnded": false,
+        "reset": false
+      }
+    },
+    {
+      "remainingTicks": 1,
+      "reset": {
+        "clockTicks": 140,
+        "violation": false,
+        "periodEnded": false,
+        "reset": true
+      },
+      "carry": {
+        "clockTicks": 1,
+        "violation": false,
+        "periodEnded": false,
+        "reset": false
+      }
+    },
+    {
+      "remainingTicks": 60,
+      "reset": {
+        "clockTicks": 140,
+        "violation": false,
+        "periodEnded": false,
+        "reset": true
+      },
+      "carry": {
+        "clockTicks": 60,
+        "violation": false,
+        "periodEnded": false,
+        "reset": false
+      }
+    },
+    {
+      "remainingTicks": 139,
+      "reset": {
+        "clockTicks": 140,
+        "violation": false,
+        "periodEnded": false,
+        "reset": true
+      },
+      "carry": {
+        "clockTicks": 139,
+        "violation": false,
+        "periodEnded": false,
+        "reset": false
+      }
+    },
+    {
+      "remainingTicks": 200,
+      "reset": {
+        "clockTicks": 140,
+        "violation": false,
+        "periodEnded": false,
+        "reset": true
+      },
+      "carry": {
+        "clockTicks": 200,
+        "violation": false,
+        "periodEnded": false,
+        "reset": false
+      }
+    },
+    {
+      "remainingTicks": 240,
+      "reset": {
+        "clockTicks": 140,
+        "violation": false,
+        "periodEnded": false,
+        "reset": true
+      },
+      "carry": {
+        "clockTicks": 240,
+        "violation": false,
+        "periodEnded": false,
+        "reset": false
+      }
+    }
+  ],
+  "periodEndPriority": true,
+  "liveFinalFT14": true,
+  "unknownRejected": true,
+  "invalidClockRejected": true,
+  "missingResolverRejected": true,
+  "blockNotDeterministicContact": true
+}

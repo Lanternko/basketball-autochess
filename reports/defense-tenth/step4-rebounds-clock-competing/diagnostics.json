@@ -1,0 +1,734 @@
+{
+  "eventResults": [
+    {
+      "mode": "baseline",
+      "half": "train",
+      "realGames": 2456,
+      "simGames": 7368,
+      "real": {
+        "misses": 231466.0,
+        "immediateClock": 1269.0,
+        "fgOreb": 52440.0,
+        "postOrebClock": 399.0,
+        "clock": 3223.0,
+        "natural": 0.0
+      },
+      "simPerSeedMean": {
+        "misses": 234549.3333333333,
+        "immediateClock": 0.0,
+        "fgOreb": 52038.999999999985,
+        "postOrebClock": 0.0,
+        "clock": 3271.666666666668,
+        "natural": 0.0
+      },
+      "immediateRate": {
+        "real": 0.005482446666033024,
+        "sim": 0.0,
+        "difference": -0.005482446666033024,
+        "difference95": [
+          -0.005790919867452685,
+          -0.005173857139440106
+        ],
+        "pass": false
+      },
+      "postOrebRate": {
+        "real": 0.007608695652173913,
+        "sim": 0.0,
+        "difference": -0.007608695652173913,
+        "difference95": [
+          -0.008361343261772304,
+          -0.006865975492274137
+        ],
+        "pass": false
+      },
+      "clockPerTeamGame": {
+        "real": 0.6561482084690554,
+        "sim": 0.6660559174809991
+      },
+      "clockPass": true,
+      "eventGatesPass": false,
+      "clockPathsPerTeamGame": {
+        "real": {
+          "immediate": 0.25834690553745926,
+          "postOreb": 0.08122964169381107,
+          "other": 0.316571661237785
+        },
+        "sim": {
+          "immediate": 0.0,
+          "postOreb": 0.0,
+          "other": 0.6660559174809991
+        }
+      }
+    },
+    {
+      "mode": "baseline",
+      "half": "test",
+      "realGames": 2460,
+      "simGames": 7380,
+      "real": {
+        "misses": 229942.0,
+        "immediateClock": 1308.0,
+        "fgOreb": 52060.0,
+        "postOrebClock": 351.0,
+        "clock": 3424.0,
+        "natural": 0.0
+      },
+      "simPerSeedMean": {
+        "misses": 235548.66666666672,
+        "immediateClock": 0.0,
+        "fgOreb": 52439.666666666664,
+        "postOrebClock": 0.0,
+        "clock": 3320.999999999997,
+        "natural": 0.0
+      },
+      "immediateRate": {
+        "real": 0.005688390985552879,
+        "sim": 0.0,
+        "difference": -0.005688390985552879,
+        "difference95": [
+          -0.006001459276252527,
+          -0.005389206754955492
+        ],
+        "pass": false
+      },
+      "postOrebRate": {
+        "real": 0.006742220514790626,
+        "sim": 0.0,
+        "difference": -0.006742220514790626,
+        "difference95": [
+          -0.007442542346572794,
+          -0.006052991787737854
+        ],
+        "pass": false
+      },
+      "clockPerTeamGame": {
+        "real": 0.6959349593495935,
+        "sim": 0.6749999999999994
+      },
+      "clockPass": true,
+      "eventGatesPass": false,
+      "clockPathsPerTeamGame": {
+        "real": {
+          "immediate": 0.2658536585365854,
+          "postOreb": 0.07134146341463414,
+          "other": 0.358739837398374
+        },
+        "sim": {
+          "immediate": 0.0,
+          "postOreb": 0.0,
+          "other": 0.6749999999999994
+        }
+      }
+    },
+    {
+      "mode": "fresh",
+      "half": "train",
+      "realGames": 2456,
+      "simGames": 7368,
+      "real": {
+        "misses": 231466.0,
+        "immediateClock": 1269.0,
+        "fgOreb": 52440.0,
+        "postOrebClock": 399.0,
+        "clock": 3223.0,
+        "natural": 0.0
+      },
+      "simPerSeedMean": {
+        "misses": 235754.00000000015,
+        "immediateClock": 0.0,
+        "fgOreb": 52217.33333333333,
+        "postOrebClock": 0.0,
+        "clock": 1554.3333333333335,
+        "natural": 0.0
+      },
+      "immediateRate": {
+        "real": 0.005482446666033024,
+        "sim": 0.0,
+        "difference": -0.005482446666033024,
+        "difference95": [
+          -0.005798484724803538,
+          -0.005178493987179126
+        ],
+        "pass": false
+      },
+      "postOrebRate": {
+        "real": 0.007608695652173913,
+        "sim": 0.0,
+        "difference": -0.007608695652173913,
+        "difference95": [
+          -0.008362603472457849,
+          -0.006850612633278326
+        ],
+        "pass": false
+      },
+      "clockPerTeamGame": {
+        "real": 0.6561482084690554,
+        "sim": 0.3164359391965256
+      },
+      "clockPass": false,
+      "eventGatesPass": false,
+      "clockPathsPerTeamGame": {
+        "real": {
+          "immediate": 0.25834690553745926,
+          "postOreb": 0.08122964169381107,
+          "other": 0.316571661237785
+        },
+        "sim": {
+          "immediate": 0.0,
+          "postOreb": 0.0,
+          "other": 0.3164359391965256
+        }
+      }
+    },
+    {
+      "mode": "fresh",
+      "half": "test",
+      "realGames": 2460,
+      "simGames": 7380,
+      "real": {
+        "misses": 229942.0,
+        "immediateClock": 1308.0,
+        "fgOreb": 52060.0,
+        "postOrebClock": 351.0,
+        "clock": 3424.0,
+        "natural": 0.0
+      },
+      "simPerSeedMean": {
+        "misses": 237098.00000000012,
+        "immediateClock": 0.0,
+        "fgOreb": 52826.666666666664,
+        "postOrebClock": 0.0,
+        "clock": 1561.666666666667,
+        "natural": 0.0
+      },
+      "immediateRate": {
+        "real": 0.005688390985552879,
+        "sim": 0.0,
+        "difference": -0.005688390985552879,
+        "difference95": [
+          -0.005997205452959416,
+          -0.005366888847245191
+        ],
+        "pass": false
+      },
+      "postOrebRate": {
+        "real": 0.006742220514790626,
+        "sim": 0.0,
+        "difference": -0.006742220514790626,
+        "difference95": [
+          -0.007458523943364887,
+          -0.006042531317389377
+        ],
+        "pass": false
+      },
+      "clockPerTeamGame": {
+        "real": 0.6959349593495935,
+        "sim": 0.31741192411924124
+      },
+      "clockPass": false,
+      "eventGatesPass": false,
+      "clockPathsPerTeamGame": {
+        "real": {
+          "immediate": 0.2658536585365854,
+          "postOreb": 0.07134146341463414,
+          "other": 0.358739837398374
+        },
+        "sim": {
+          "immediate": 0.0,
+          "postOreb": 0.0,
+          "other": 0.31741192411924124
+        }
+      }
+    },
+    {
+      "mode": "post",
+      "half": "train",
+      "realGames": 2456,
+      "simGames": 7368,
+      "real": {
+        "misses": 231466.0,
+        "immediateClock": 1269.0,
+        "fgOreb": 52440.0,
+        "postOrebClock": 399.0,
+        "clock": 3223.0,
+        "natural": 0.0
+      },
+      "simPerSeedMean": {
+        "misses": 234163.33333333326,
+        "immediateClock": 0.0,
+        "fgOreb": 51972.0,
+        "postOrebClock": 425.66666666666595,
+        "clock": 3696.6666666666697,
+        "natural": 0.0
+      },
+      "immediateRate": {
+        "real": 0.005482446666033024,
+        "sim": 0.0,
+        "difference": -0.005482446666033024,
+        "difference95": [
+          -0.0058001044811609856,
+          -0.005170958125382055
+        ],
+        "pass": false
+      },
+      "postOrebRate": {
+        "real": 0.007608695652173913,
+        "sim": 0.008190307601529015,
+        "difference": 0.0005816119493551016,
+        "difference95": [
+          -0.0003801117489573112,
+          0.0015442487429769237
+        ],
+        "pass": true
+      },
+      "clockPerTeamGame": {
+        "real": 0.6561482084690554,
+        "sim": 0.7525787187839311
+      },
+      "clockPass": true,
+      "eventGatesPass": false,
+      "clockPathsPerTeamGame": {
+        "real": {
+          "immediate": 0.25834690553745926,
+          "postOreb": 0.08122964169381107,
+          "other": 0.316571661237785
+        },
+        "sim": {
+          "immediate": 0.0,
+          "postOreb": 0.08665852334419095,
+          "other": 0.6659201954397401
+        }
+      }
+    },
+    {
+      "mode": "post",
+      "half": "test",
+      "realGames": 2460,
+      "simGames": 7380,
+      "real": {
+        "misses": 229942.0,
+        "immediateClock": 1308.0,
+        "fgOreb": 52060.0,
+        "postOrebClock": 351.0,
+        "clock": 3424.0,
+        "natural": 0.0
+      },
+      "simPerSeedMean": {
+        "misses": 235142.33333333337,
+        "immediateClock": 0.0,
+        "fgOreb": 52382.66666666666,
+        "postOrebClock": 404.66666666666595,
+        "clock": 3719.666666666666,
+        "natural": 0.0
+      },
+      "immediateRate": {
+        "real": 0.005688390985552879,
+        "sim": 0.0,
+        "difference": -0.005688390985552879,
+        "difference95": [
+          -0.006008446699184959,
+          -0.005372103993107337
+        ],
+        "pass": false
+      },
+      "postOrebRate": {
+        "real": 0.006742220514790626,
+        "sim": 0.0077252017206709475,
+        "difference": 0.0009829812058803214,
+        "difference95": [
+          -0.00022410858024748894,
+          0.0021859293564575936
+        ],
+        "pass": true
+      },
+      "clockPerTeamGame": {
+        "real": 0.6959349593495935,
+        "sim": 0.7560298102981029
+      },
+      "clockPass": true,
+      "eventGatesPass": false,
+      "clockPathsPerTeamGame": {
+        "real": {
+          "immediate": 0.2658536585365854,
+          "postOreb": 0.07134146341463414,
+          "other": 0.358739837398374
+        },
+        "sim": {
+          "immediate": 0.0,
+          "postOreb": 0.08224932249322478,
+          "other": 0.6737804878048781
+        }
+      }
+    },
+    {
+      "mode": "combined",
+      "half": "train",
+      "realGames": 2456,
+      "simGames": 7368,
+      "real": {
+        "misses": 231466.0,
+        "immediateClock": 1269.0,
+        "fgOreb": 52440.0,
+        "postOrebClock": 399.0,
+        "clock": 3223.0,
+        "natural": 0.0
+      },
+      "simPerSeedMean": {
+        "misses": 235997.0,
+        "immediateClock": 1278.666666666667,
+        "fgOreb": 52054.66666666666,
+        "postOrebClock": 432.6666666666659,
+        "clock": 3267.333333333333,
+        "natural": 1278.666666666667
+      },
+      "immediateRate": {
+        "real": 0.005482446666033024,
+        "sim": 0.00541814797080754,
+        "difference": -6.429869522548391e-05,
+        "difference95": [
+          -0.00047034686196910234,
+          0.00034188985175872616
+        ],
+        "pass": true
+      },
+      "postOrebRate": {
+        "real": 0.007608695652173913,
+        "sim": 0.008311774800850375,
+        "difference": 0.0007030791486764615,
+        "difference95": [
+          -0.0003147295739473674,
+          0.001697366981808461
+        ],
+        "pass": true
+      },
+      "clockPerTeamGame": {
+        "real": 0.6561482084690554,
+        "sim": 0.6651737242128121
+      },
+      "clockPass": true,
+      "eventGatesPass": true,
+      "clockPathsPerTeamGame": {
+        "real": {
+          "immediate": 0.25834690553745926,
+          "postOreb": 0.08122964169381107,
+          "other": 0.316571661237785
+        },
+        "sim": {
+          "immediate": 0.2603148751357221,
+          "postOreb": 0.0880836047774157,
+          "other": 0.3167752442996743
+        }
+      }
+    },
+    {
+      "mode": "combined",
+      "half": "test",
+      "realGames": 2460,
+      "simGames": 7380,
+      "real": {
+        "misses": 229942.0,
+        "immediateClock": 1308.0,
+        "fgOreb": 52060.0,
+        "postOrebClock": 351.0,
+        "clock": 3424.0,
+        "natural": 0.0
+      },
+      "simPerSeedMean": {
+        "misses": 236874.33333333326,
+        "immediateClock": 1281.0000000000002,
+        "fgOreb": 52548.333333333314,
+        "postOrebClock": 410.66666666666583,
+        "clock": 3253.333333333335,
+        "natural": 1281.0000000000002
+      },
+      "immediateRate": {
+        "real": 0.005688390985552879,
+        "sim": 0.0054079307874921045,
+        "difference": -0.0002804601980607741,
+        "difference95": [
+          -0.0007063298623710453,
+          0.00014476011631122933
+        ],
+        "pass": true
+      },
+      "postOrebRate": {
+        "real": 0.006742220514790626,
+        "sim": 0.007815027435059773,
+        "difference": 0.0010728069202691473,
+        "difference95": [
+          -8.876497049159607e-05,
+          0.002183164632782007
+        ],
+        "pass": true
+      },
+      "clockPerTeamGame": {
+        "real": 0.6959349593495935,
+        "sim": 0.6612466124661249
+      },
+      "clockPass": true,
+      "eventGatesPass": true,
+      "clockPathsPerTeamGame": {
+        "real": {
+          "immediate": 0.2658536585365854,
+          "postOreb": 0.07134146341463414,
+          "other": 0.358739837398374
+        },
+        "sim": {
+          "immediate": 0.26036585365853665,
+          "postOreb": 0.08346883468834672,
+          "other": 0.31741192411924163
+        }
+      }
+    }
+  ],
+  "league": [
+    {
+      "season": "2022-23",
+      "baseline": {
+        "eff": 111.81969321510128,
+        "tov": 13.465040650406506,
+        "fg": 47.128158258840934,
+        "three": 36.30701997489654,
+        "oreb": 10.424254742547426,
+        "dreb": 33.28441734417344,
+        "ppg": 114.45528455284553,
+        "poss": 102.3570840108401,
+        "clock": 0.6212737127371274,
+        "nonClockTov": 12.843766937669377
+      },
+      "combined": {
+        "eff": 111.84729193959983,
+        "tov": 13.592005420054202,
+        "fg": 47.14840696482702,
+        "three": 36.29777693266351,
+        "oreb": 10.494850948509486,
+        "dreb": 33.17032520325204,
+        "ppg": 115.11016260162602,
+        "poss": 102.91729539295393,
+        "clock": 0.6612466124661247,
+        "nonClockTov": 12.930758807588077
+      },
+      "truth": {
+        "oreb": 10.434552845528454,
+        "dreb": 33.00365853658536,
+        "eff": 112.09232058720742,
+        "tov": 14.095121951219513,
+        "fg": 47.53727804657972,
+        "three": 36.070813283431356
+      },
+      "gates": {
+        "eff": true,
+        "tov": true,
+        "fg": true,
+        "three": true,
+        "oreb": true,
+        "dreb": true
+      }
+    },
+    {
+      "season": "2023-24",
+      "baseline": {
+        "eff": 112.88872654236086,
+        "tov": 12.980081300813007,
+        "fg": 47.10993253587839,
+        "three": 36.88147643561488,
+        "oreb": 10.660704607046071,
+        "dreb": 33.18306233062331,
+        "ppg": 114.80447154471545,
+        "poss": 101.69705149051491,
+        "clock": 0.6531165311653117,
+        "nonClockTov": 12.326964769647695
+      },
+      "combined": {
+        "eff": 112.60014106753233,
+        "tov": 13.085636856368561,
+        "fg": 47.06903673482311,
+        "three": 36.84760206249894,
+        "oreb": 10.615447154471545,
+        "dreb": 33.22235772357724,
+        "ppg": 115.16151761517615,
+        "poss": 102.27493224932249,
+        "clock": 0.660840108401084,
+        "nonClockTov": 12.424796747967479
+      },
+      "truth": {
+        "oreb": 10.553658536585365,
+        "dreb": 32.98780487804878,
+        "eff": 112.51127275173675,
+        "tov": 13.604878048780488,
+        "fg": 47.43395122129656,
+        "three": 36.56881477621447
+      },
+      "gates": {
+        "eff": true,
+        "tov": true,
+        "fg": true,
+        "three": true,
+        "oreb": true,
+        "dreb": true
+      }
+    },
+    {
+      "season": "2024-25",
+      "baseline": {
+        "eff": 111.65758466174732,
+        "tov": 13.706368563685638,
+        "fg": 46.50447965408722,
+        "three": 36.3604421408886,
+        "oreb": 11.061924119241192,
+        "dreb": 33.09376693766938,
+        "ppg": 113.8780487804878,
+        "poss": 101.98858536585367,
+        "clock": 0.7330623306233063,
+        "nonClockTov": 12.973306233062331
+      },
+      "combined": {
+        "eff": 111.58103468441216,
+        "tov": 13.705149051490515,
+        "fg": 46.41895716884926,
+        "three": 36.26188259511128,
+        "oreb": 11.102845528455285,
+        "dreb": 33.25013550135501,
+        "ppg": 114.5779132791328,
+        "poss": 102.68588075880758,
+        "clock": 0.6665311653116531,
+        "nonClockTov": 13.038617886178862
+      },
+      "truth": {
+        "oreb": 11.11910569105691,
+        "dreb": 32.99308943089431,
+        "eff": 111.64438005451879,
+        "tov": 14.298373983739838,
+        "fg": 46.72136001494121,
+        "three": 36.022238085967075
+      },
+      "gates": {
+        "eff": true,
+        "tov": true,
+        "fg": true,
+        "three": true,
+        "oreb": true,
+        "dreb": false
+      }
+    },
+    {
+      "season": "2025-26",
+      "baseline": {
+        "eff": 112.77921247742813,
+        "tov": 14.517615176151763,
+        "fg": 47.06083659862711,
+        "three": 36.69603888427951,
+        "oreb": 11.32208672086721,
+        "dreb": 32.106910569105686,
+        "ppg": 115.76924119241193,
+        "poss": 102.65128997289973,
+        "clock": 0.6739837398373983,
+        "nonClockTov": 13.843631436314363
+      },
+      "combined": {
+        "eff": 112.84544001879738,
+        "tov": 14.563956639566397,
+        "fg": 47.13238890528233,
+        "three": 36.68235375300334,
+        "oreb": 11.313685636856368,
+        "dreb": 32.07804878048781,
+        "ppg": 116.56382113821138,
+        "poss": 103.29520325203252,
+        "clock": 0.663550135501355,
+        "nonClockTov": 13.90040650406504
+      },
+      "truth": {
+        "oreb": 11.377642276422764,
+        "dreb": 32.391869918699186,
+        "eff": 112.72859851154409,
+        "tov": 14.510162601626016,
+        "fg": 47.10141951733673,
+        "three": 35.964603715510606
+      },
+      "gates": {
+        "eff": true,
+        "tov": true,
+        "fg": true,
+        "three": true,
+        "oreb": true,
+        "dreb": true
+      }
+    }
+  ],
+  "parity": [
+    {
+      "season": "2022-23",
+      "seed": 20261012,
+      "games": 1230,
+      "scoreAndPlayersIdentical": true
+    },
+    {
+      "season": "2022-23",
+      "seed": 20261013,
+      "games": 1230,
+      "scoreAndPlayersIdentical": true
+    },
+    {
+      "season": "2022-23",
+      "seed": 20261014,
+      "games": 1230,
+      "scoreAndPlayersIdentical": true
+    },
+    {
+      "season": "2023-24",
+      "seed": 20261012,
+      "games": 1230,
+      "scoreAndPlayersIdentical": true
+    },
+    {
+      "season": "2023-24",
+      "seed": 20261013,
+      "games": 1230,
+      "scoreAndPlayersIdentical": true
+    },
+    {
+      "season": "2023-24",
+      "seed": 20261014,
+      "games": 1230,
+      "scoreAndPlayersIdentical": true
+    },
+    {
+      "season": "2024-25",
+      "seed": 20261012,
+      "games": 1230,
+      "scoreAndPlayersIdentical": true
+    },
+    {
+      "season": "2024-25",
+      "seed": 20261013,
+      "games": 1230,
+      "scoreAndPlayersIdentical": true
+    },
+    {
+      "season": "2024-25",
+      "seed": 20261014,
+      "games": 1230,
+      "scoreAndPlayersIdentical": true
+    },
+    {
+      "season": "2025-26",
+      "seed": 20261012,
+      "games": 1230,
+      "scoreAndPlayersIdentical": true
+    },
+    {
+      "season": "2025-26",
+      "seed": 20261013,
+      "games": 1230,
+      "scoreAndPlayersIdentical": true
+    },
+    {
+      "season": "2025-26",
+      "seed": 20261014,
+      "games": 1230,
+      "scoreAndPlayersIdentical": true
+    }
+  ],
+  "eventGatesPass": true,
+  "leagueGatesPass": false
+}

@@ -1,0 +1,24 @@
+{
+  "method": "Diagnostic oracle approximation: least-squares team strength plus common home effect fitted to observed margins; centered empirical game residuals with 1230/(1230-30) variance correction, 5000 independent resampled seasons on actual schedule. Team IDs used only to estimate diagnostic latent strengths, never simulation probability inputs. Fixed strengths/independent games assumed; oracle knows these strengths. Not an information-theoretic lower bound and no parameter-estimation uncertainty included.",
+  "games": 1230,
+  "residualSD": 14.212218886087165,
+  "commonHomeMargin": 1.7391502751790409,
+  "netRMSE": 1.5528456312393668,
+  "winMAE": 3.2422328888888887,
+  "winRMSE": 4.032948515895363,
+  "seasonRealization95": {
+    "netRMSE": [
+      1.1661145364414272,
+      1.969506435756876
+    ],
+    "winMAE": [
+      2.4090474254742524,
+      4.16377506775068
+    ],
+    "winRMSE": [
+      3.0554464897874594,
+      5.102116557243134
+    ]
+  },
+  "sensitivity": "Net floor approximately proportional to residual SD; +/-10% residual SD implies +/-10% net floor. Real schedules/availability and changing strength violate stationarity; observed one-season team means are not exact latent targets."
+}

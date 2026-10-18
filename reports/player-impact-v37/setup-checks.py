@@ -1,0 +1,18 @@
+"""Build independent audits for both explicit allocation branches."""
+from pathlib import Path
+R=Path('reports/player-impact-v37')
+text=Path('reports/player-impact-v35/audit-flow.mjs').read_text(encoding='utf-8').replace('v35','v37').replace('joint_creator_transport','own_pool_transport').replace('jointFlow','sourceFlow')
+text=text.replace('assert.ok(Math.abs(flow.self[i]+flow.rows[i]-flow.creator[i])<1e-8);',"if(flow.branch==='fixed-pass-rows')assert.ok(Math.abs(flow.rows[i]-old.rows[i])<1e-8);")
+text=text.replace('if(sampleTag)transportSamples.push',"if(sampleTag||flow.branch==='relaxed-source-columns')transportSamples.push")
+text=text.replace('tag:sampleTag,','tag:sampleTag,branch:flow.branch,oldRows:old.rows,ownPool:flow.ownPool,prior:flow.prior,')
+text=text.replace('kernel:flow.kernel,','').replace(',creator:flow.creator','').replace(',normalization:flow.normalization','')
+text=text.replace('sourceCreator:flow.rawCreator[i],assignedCreator:flow.creator[i],creatorNormalization:flow.normalization',"branch:flow.branch")
+text=text.replace('let states=0;', 'let states=0;const flowBranches={};')
+text=text.replace('for(const r of rows){',"flowBranches[rows[0].branch]=(flowBranches[rows[0].branch]??0)+1;\n   for(const r of rows){")
+text=text.replace("if(k!=='playerId')", "if(k!=='playerId'&&typeof v==='number')")
+text=text.replace('seasons.push({season,states,','seasons.push({season,states,flowBranches,')
+text=text.replace('Joint creator and terminal marginals with positive source self/pass prior. No hard source role boundary;', 'Fixed passer rows plus separate own pool where strictly feasible; explicit unfitted source-column projection otherwise;')
+text=text.replace('creatorMarginalsConserved:true','passerRowsConservedWhenStrictlyFeasible:true,nonStrictRowsExplicitlyRelaxed:true')
+(R/'audit-flow.mjs').write_text(text,encoding='utf-8')
+p=R/'verify-validation.py';text=p.read_text(encoding='utf-8').replace('Terminal prior with older-only mark calibration','Fixed passer rows and separate own pool with explicit non-strict source-column branch');p.write_text(text,encoding='utf-8')
+print('Created full source and mean70 branch audit.')

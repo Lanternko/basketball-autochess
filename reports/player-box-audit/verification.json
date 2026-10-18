@@ -1,0 +1,17 @@
+{
+  "newRunnerSmokePassed": true,
+  "games": 1230,
+  "seed": 20261018,
+  "matchesAndAllNonTargetStatisticsIdentical": true,
+  "rawSourcesUnchanged": true,
+  "model": {
+    "version": "pure-oreb-turnover-time-individual-allocation-1",
+    "gameplayBaseline": "pure-oreb-turnover-time-1",
+    "sourceSHA256": {
+      "src/individual_box_allocation.js": "4442171ae4f94911d31e250a462955ce98f4377f4f01d6ff65186b9f48568121",
+      "reports/player-box-audit/allocation/adapter.mjs": "8ddec360510017ded67c7fcd0045758e2eb43708fb7b7a0cc81bea010a2b6747",
+      "reports/player-box-audit/allocation/worker.mjs": "7c995676b5e0e89b4fe3cbd61b0b70d2745a824b22de32a7b97a6acdac3071ad"
+    },
+    "scope": "Same-season conditional DREB/BLK recipient allocation only; no change to game outcomes, team event probabilities, OREB or other individual statistics."
+  }
+}

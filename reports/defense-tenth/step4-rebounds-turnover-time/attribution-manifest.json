@@ -1,0 +1,335 @@
+{
+  "finishedUTC": "2026-10-14T22:28:45.204Z",
+  "files": [
+    {
+      "season": "2022-23",
+      "version": "rawsplit",
+      "seed": 20261012,
+      "bundle": "reports/defense-tenth/step4-t0/2022-23/bundle.json",
+      "baseCalibration": {
+        "shotDelta": -0.09453739423263409,
+        "options": {
+          "pace": 0.9450023438636198,
+          "foulScale": 0.9310929086661873,
+          "passTurnoverScale": 1.392464046578307,
+          "touchTurnoverScale": 0.9820296647342158,
+          "touchLiveShare": 0.2942873252410259,
+          "clockViolationProbability": 0.006563453298609998
+        }
+      },
+      "calibration": {
+        "shotDelta": 0.08305195351775446,
+        "options": {
+          "leagueOrbLogit": 0.27007200373235896,
+          "pace": 0.9197816287380491
+        }
+      },
+      "clockCalibration": {
+        "pace": 0.9046023507088206
+      },
+      "diagnostic": true,
+      "file": "reports/defense-tenth/step4-rebounds-turnover-time/runs/2022-23-rawsplit-20261012.json",
+      "sha256": "533c11caa336dc3163b7a2f1e13c26b6e7e6961b286c2e14fb20d4acb2e6056d"
+    },
+    {
+      "season": "2022-23",
+      "version": "rawsplit",
+      "seed": 20261013,
+      "bundle": "reports/defense-tenth/step4-t0/2022-23/bundle.json",
+      "baseCalibration": {
+        "shotDelta": -0.09453739423263409,
+        "options": {
+          "pace": 0.9450023438636198,
+          "foulScale": 0.9310929086661873,
+          "passTurnoverScale": 1.392464046578307,
+          "touchTurnoverScale": 0.9820296647342158,
+          "touchLiveShare": 0.2942873252410259,
+          "clockViolationProbability": 0.006563453298609998
+        }
+      },
+      "calibration": {
+        "shotDelta": 0.08305195351775446,
+        "options": {
+          "leagueOrbLogit": 0.27007200373235896,
+          "pace": 0.9197816287380491
+        }
+      },
+      "clockCalibration": {
+        "pace": 0.9046023507088206
+      },
+      "diagnostic": true,
+      "file": "reports/defense-tenth/step4-rebounds-turnover-time/runs/2022-23-rawsplit-20261013.json",
+      "sha256": "9678b4ad4e491fdfa767f53a1fa301dd15a33b14b52a9bb0134538bc032e1bfe"
+    },
+    {
+      "season": "2022-23",
+      "version": "rawsplit",
+      "seed": 20261014,
+      "bundle": "reports/defense-tenth/step4-t0/2022-23/bundle.json",
+      "baseCalibration": {
+        "shotDelta": -0.09453739423263409,
+        "options": {
+          "pace": 0.9450023438636198,
+          "foulScale": 0.9310929086661873,
+          "passTurnoverScale": 1.392464046578307,
+          "touchTurnoverScale": 0.9820296647342158,
+          "touchLiveShare": 0.2942873252410259,
+          "clockViolationProbability": 0.006563453298609998
+        }
+      },
+      "calibration": {
+        "shotDelta": 0.08305195351775446,
+        "options": {
+          "leagueOrbLogit": 0.27007200373235896,
+          "pace": 0.9197816287380491
+        }
+      },
+      "clockCalibration": {
+        "pace": 0.9046023507088206
+      },
+      "diagnostic": true,
+      "file": "reports/defense-tenth/step4-rebounds-turnover-time/runs/2022-23-rawsplit-20261014.json",
+      "sha256": "ea1022686690ef2bbbf85e460fde168d075fba785ee0c2b982631035b0d6c5ce"
+    },
+    {
+      "season": "2023-24",
+      "version": "rawsplit",
+      "seed": 20261012,
+      "bundle": "reports/defense-tenth/step4-t0/2023-24/bundle.json",
+      "baseCalibration": {
+        "shotDelta": -0.09154945110229513,
+        "options": {
+          "pace": 0.9377752016361413,
+          "foulScale": 0.9347123813738025,
+          "passTurnoverScale": 1.378981363904315,
+          "touchTurnoverScale": 0.9392931499685824,
+          "touchLiveShare": 0.33453099314088686,
+          "clockViolationProbability": 0.0069504491928846735
+        }
+      },
+      "calibration": {
+        "shotDelta": 0.08202501943426402,
+        "options": {
+          "leagueOrbLogit": 0.26467175497001505,
+          "pace": 0.9131062435068816
+        }
+      },
+      "clockCalibration": {
+        "pace": 0.8993536781604933
+      },
+      "diagnostic": true,
+      "file": "reports/defense-tenth/step4-rebounds-turnover-time/runs/2023-24-rawsplit-20261012.json",
+      "sha256": "07ce116eae13a04f8be26f21065baa0602653722633fbfcf612c1d196635ec8c"
+    },
+    {
+      "season": "2023-24",
+      "version": "rawsplit",
+      "seed": 20261013,
+      "bundle": "reports/defense-tenth/step4-t0/2023-24/bundle.json",
+      "baseCalibration": {
+        "shotDelta": -0.09154945110229513,
+        "options": {
+          "pace": 0.9377752016361413,
+          "foulScale": 0.9347123813738025,
+          "passTurnoverScale": 1.378981363904315,
+          "touchTurnoverScale": 0.9392931499685824,
+          "touchLiveShare": 0.33453099314088686,
+          "clockViolationProbability": 0.0069504491928846735
+        }
+      },
+      "calibration": {
+        "shotDelta": 0.08202501943426402,
+        "options": {
+          "leagueOrbLogit": 0.26467175497001505,
+          "pace": 0.9131062435068816
+        }
+      },
+      "clockCalibration": {
+        "pace": 0.8993536781604933
+      },
+      "diagnostic": true,
+      "file": "reports/defense-tenth/step4-rebounds-turnover-time/runs/2023-24-rawsplit-20261013.json",
+      "sha256": "b46888a870af870e880c58010fa597be15b2d5a08aa0bb2a7763d5c64f4acc41"
+    },
+    {
+      "season": "2023-24",
+      "version": "rawsplit",
+      "seed": 20261014,
+      "bundle": "reports/defense-tenth/step4-t0/2023-24/bundle.json",
+      "baseCalibration": {
+        "shotDelta": -0.09154945110229513,
+        "options": {
+          "pace": 0.9377752016361413,
+          "foulScale": 0.9347123813738025,
+          "passTurnoverScale": 1.378981363904315,
+          "touchTurnoverScale": 0.9392931499685824,
+          "touchLiveShare": 0.33453099314088686,
+          "clockViolationProbability": 0.0069504491928846735
+        }
+      },
+      "calibration": {
+        "shotDelta": 0.08202501943426402,
+        "options": {
+          "leagueOrbLogit": 0.26467175497001505,
+          "pace": 0.9131062435068816
+        }
+      },
+      "clockCalibration": {
+        "pace": 0.8993536781604933
+      },
+      "diagnostic": true,
+      "file": "reports/defense-tenth/step4-rebounds-turnover-time/runs/2023-24-rawsplit-20261014.json",
+      "sha256": "d42bcb747776bec88d4037bd014ee4e3f120e30a3edfe05cb3169380e34d29dd"
+    },
+    {
+      "season": "2024-25",
+      "version": "rawsplit",
+      "seed": 20261012,
+      "bundle": "reports/defense-tenth/step4-t0/2024-25/bundle.json",
+      "baseCalibration": {
+        "shotDelta": -0.08264875569973788,
+        "options": {
+          "pace": 0.9335444028632219,
+          "foulScale": 0.9705126348032094,
+          "passTurnoverScale": 1.494295787768113,
+          "touchTurnoverScale": 0.9610388470359,
+          "touchLiveShare": 0.36304104788510644,
+          "clockViolationProbability": 0.0077926053374393475
+        }
+      },
+      "calibration": {
+        "shotDelta": 0.06634922319666907,
+        "options": {
+          "leagueOrbLogit": 0.26758242406076826,
+          "pace": 0.9102439534334894
+        }
+      },
+      "clockCalibration": {
+        "pace": 0.892678450706786
+      },
+      "diagnostic": true,
+      "file": "reports/defense-tenth/step4-rebounds-turnover-time/runs/2024-25-rawsplit-20261012.json",
+      "sha256": "3d875c2f7f9ea687e07cefdd93782701ba5a07b6b4a96f08d4a6f10a59e6f5dc"
+    },
+    {
+      "season": "2024-25",
+      "version": "rawsplit",
+      "seed": 20261013,
+      "bundle": "reports/defense-tenth/step4-t0/2024-25/bundle.json",
+      "baseCalibration": {
+        "shotDelta": -0.08264875569973788,
+        "options": {
+          "pace": 0.9335444028632219,
+          "foulScale": 0.9705126348032094,
+          "passTurnoverScale": 1.494295787768113,
+          "touchTurnoverScale": 0.9610388470359,
+          "touchLiveShare": 0.36304104788510644,
+          "clockViolationProbability": 0.0077926053374393475
+        }
+      },
+      "calibration": {
+        "shotDelta": 0.06634922319666907,
+        "options": {
+          "leagueOrbLogit": 0.26758242406076826,
+          "pace": 0.9102439534334894
+        }
+      },
+      "clockCalibration": {
+        "pace": 0.892678450706786
+      },
+      "diagnostic": true,
+      "file": "reports/defense-tenth/step4-rebounds-turnover-time/runs/2024-25-rawsplit-20261013.json",
+      "sha256": "dc7ae4879e3ec427882d86aaad365195f7c946c6b523eadd0208aa790abc1e97"
+    },
+    {
+      "season": "2024-25",
+      "version": "rawsplit",
+      "seed": 20261014,
+      "bundle": "reports/defense-tenth/step4-t0/2024-25/bundle.json",
+      "baseCalibration": {
+        "shotDelta": -0.08264875569973788,
+        "options": {
+          "pace": 0.9335444028632219,
+          "foulScale": 0.9705126348032094,
+          "passTurnoverScale": 1.494295787768113,
+          "touchTurnoverScale": 0.9610388470359,
+          "touchLiveShare": 0.36304104788510644,
+          "clockViolationProbability": 0.0077926053374393475
+        }
+      },
+      "calibration": {
+        "shotDelta": 0.06634922319666907,
+        "options": {
+          "leagueOrbLogit": 0.26758242406076826,
+          "pace": 0.9102439534334894
+        }
+      },
+      "clockCalibration": {
+        "pace": 0.892678450706786
+      },
+      "diagnostic": true,
+      "file": "reports/defense-tenth/step4-rebounds-turnover-time/runs/2024-25-rawsplit-20261014.json",
+      "sha256": "98d3ae2138d594ae693e3cf5d488d67a4b8df7d00b5ee80139ca6b645af9f71f"
+    },
+    {
+      "season": "2025-26",
+      "version": "rawsplit",
+      "seed": 20261012,
+      "bundle": "reports/defense-tenth/step4-t0/2025-26/bundle.json",
+      "baseCalibration": null,
+      "calibration": {
+        "shotDelta": 0.007590420933150613,
+        "options": {
+          "leagueOrbLogit": 0.29646443442901815,
+          "pace": 0.9080503236447782
+        }
+      },
+      "clockCalibration": {
+        "pace": 0.8917950861897552
+      },
+      "diagnostic": true,
+      "file": "reports/defense-tenth/step4-rebounds-turnover-time/runs/2025-26-rawsplit-20261012.json",
+      "sha256": "c14b01bb83cbdbf4ad0edd463c224ead87f0b0cb0e72effede2f450773a9a228"
+    },
+    {
+      "season": "2025-26",
+      "version": "rawsplit",
+      "seed": 20261013,
+      "bundle": "reports/defense-tenth/step4-t0/2025-26/bundle.json",
+      "baseCalibration": null,
+      "calibration": {
+        "shotDelta": 0.007590420933150613,
+        "options": {
+          "leagueOrbLogit": 0.29646443442901815,
+          "pace": 0.9080503236447782
+        }
+      },
+      "clockCalibration": {
+        "pace": 0.8917950861897552
+      },
+      "diagnostic": true,
+      "file": "reports/defense-tenth/step4-rebounds-turnover-time/runs/2025-26-rawsplit-20261013.json",
+      "sha256": "ecfe085f1b81db27e3fec43cbf939c2cda4ca50d47a05bb91012a743c6d2e90e"
+    },
+    {
+      "season": "2025-26",
+      "version": "rawsplit",
+      "seed": 20261014,
+      "bundle": "reports/defense-tenth/step4-t0/2025-26/bundle.json",
+      "baseCalibration": null,
+      "calibration": {
+        "shotDelta": 0.007590420933150613,
+        "options": {
+          "leagueOrbLogit": 0.29646443442901815,
+          "pace": 0.9080503236447782
+        }
+      },
+      "clockCalibration": {
+        "pace": 0.8917950861897552
+      },
+      "diagnostic": true,
+      "file": "reports/defense-tenth/step4-rebounds-turnover-time/runs/2025-26-rawsplit-20261014.json",
+      "sha256": "44fb3e0dfc20f87f78c6f7737bcaa284a9c9bfc20a69ec7bf486570cff6082e3"
+    }
+  ]
+}

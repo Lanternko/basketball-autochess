@@ -1,0 +1,136 @@
+{
+  "preset": "fouls",
+  "seeds": [
+    20261012,
+    20261013,
+    20261014,
+    20261015,
+    20261016,
+    20261017,
+    20261018,
+    20261019,
+    20261020,
+    20261021,
+    20261022,
+    20261023,
+    20261024,
+    20261025,
+    20261026,
+    20261027,
+    20261028,
+    20261029,
+    20261030,
+    20261031
+  ],
+  "files": [
+    {
+      "seed": 20261012,
+      "file": "reports/defense-third/runs/fouls-seed20261012.json",
+      "sha256": "f5fc2aa9e11feb2c8c445238b0cc0613dfd541129892fc16c53d35c920cf5342"
+    },
+    {
+      "seed": 20261013,
+      "file": "reports/defense-third/runs/fouls-seed20261013.json",
+      "sha256": "e008d08d7ccd1704143822e48cddafa7e1b6af22517139dc5e6f4c8434e906ca"
+    },
+    {
+      "seed": 20261014,
+      "file": "reports/defense-third/runs/fouls-seed20261014.json",
+      "sha256": "16c73c5d3d1755d20fd4510565ea68dbea0b2be56292ac0181e8254a7e1a80b8"
+    },
+    {
+      "seed": 20261015,
+      "file": "reports/defense-third/runs/fouls-seed20261015.json",
+      "sha256": "88aa3bcdeaf45fe1dd0906449796f15f356acdba0c233ce49f8ae098542ea37b"
+    },
+    {
+      "seed": 20261016,
+      "file": "reports/defense-third/runs/fouls-seed20261016.json",
+      "sha256": "8f25c4c433103356b19e7fd76f3f91cc5607a7ff8d061064d79b3e986887e88c"
+    },
+    {
+      "seed": 20261017,
+      "file": "reports/defense-third/runs/fouls-seed20261017.json",
+      "sha256": "4032c9c172a16c87dc816a53c778196b634d559e50dc46c21be8091db015d12d"
+    },
+    {
+      "seed": 20261018,
+      "file": "reports/defense-third/runs/fouls-seed20261018.json",
+      "sha256": "2edfb7717b0cc8f0c5e8f00d30fef3344c00d157e761d7d8cb9136be39332883"
+    },
+    {
+      "seed": 20261019,
+      "file": "reports/defense-third/runs/fouls-seed20261019.json",
+      "sha256": "5e332f767cc8ff5c220870319980be4e853c33b09796d3fe34d76fa74341be8f"
+    },
+    {
+      "seed": 20261020,
+      "file": "reports/defense-third/runs/fouls-seed20261020.json",
+      "sha256": "d783b741f3f0614c88a09e41d4172366a08d81bb782b70d4e6535906ad66b0e4"
+    },
+    {
+      "seed": 20261021,
+      "file": "reports/defense-third/runs/fouls-seed20261021.json",
+      "sha256": "c54615ba215c09360286976d7ad8e0a7a5dfdcea3bfe4e826826b0bf3c75e938"
+    },
+    {
+      "seed": 20261022,
+      "file": "reports/defense-third/runs/fouls-seed20261022.json",
+      "sha256": "998ea6cf10b5527498fec8c34ace02ff9941b1f4b5ed35f42e7517f615d04324"
+    },
+    {
+      "seed": 20261023,
+      "file": "reports/defense-third/runs/fouls-seed20261023.json",
+      "sha256": "bf0f1c4c28581f3514e79151bf9391b5f7057d50ee0957181c56111bf46a13a6"
+    },
+    {
+      "seed": 20261024,
+      "file": "reports/defense-third/runs/fouls-seed20261024.json",
+      "sha256": "90e1b009232ee2543aac0cdbf99982f27291ffcb142b79b40ebb32d113d29a2d"
+    },
+    {
+      "seed": 20261025,
+      "file": "reports/defense-third/runs/fouls-seed20261025.json",
+      "sha256": "e8756beb8f643590cb83f3875293f6727565d60aa9e62de454b6f7a927389b37"
+    },
+    {
+      "seed": 20261026,
+      "file": "reports/defense-third/runs/fouls-seed20261026.json",
+      "sha256": "c2fe8c0937a1ce398c0ee57220bec32b95837d78f4a11b73bfe6d479ebc13249"
+    },
+    {
+      "seed": 20261027,
+      "file": "reports/defense-third/runs/fouls-seed20261027.json",
+      "sha256": "ce00486491ebec043948e28703515e92bb2690b36e58376cb13b249141249e0e"
+    },
+    {
+      "seed": 20261028,
+      "file": "reports/defense-third/runs/fouls-seed20261028.json",
+      "sha256": "a0604df7e72c31611089c9b46c3a6888b357738f3d9475167b05e3c1779db1ed"
+    },
+    {
+      "seed": 20261029,
+      "file": "reports/defense-third/runs/fouls-seed20261029.json",
+      "sha256": "e11a23b4e7fdc266b60a4ee586c881528b9589d24abd8222342607729b7956f0"
+    },
+    {
+      "seed": 20261030,
+      "file": "reports/defense-third/runs/fouls-seed20261030.json",
+      "sha256": "79ce60d62dcae31641d03b71a785e17e6f0e41afaca93dd3ef4971c60b2c5760"
+    },
+    {
+      "seed": 20261031,
+      "file": "reports/defense-third/runs/fouls-seed20261031.json",
+      "sha256": "3aae37c9c11d397c4d5d577990e53fb5e1fce4c3ac5b0c24eaa4e825b58e2190"
+    }
+  ],
+  "seconds": 155.423,
+  "code": {
+    "src/defense_third_game.js": "eadeecdd518179c8559b3bb2afbfee30a636f8b8323cd93ea191721b00bbd3d0",
+    "src/defense_third_season.js": "92c10204741647e6a1cbbafbe9f13e22927deb418856860e821dbd4116c0f880",
+    "src/defense_third_jobs.js": "d15c933121632cf68733ca4e3cd24ed13c11311f23ebc3c29edc06f9e81fa6af",
+    "src/defense_third_minutes.js": "0894e14a649ad63ce96e57b315e090d22f0ac49590b0dd8a031195b0033de4c6",
+    "reports/defense-third/foul-audit.json": "571e7062d48746ad9bb39d57c6742189bbd423d833ddb557d3f3b05c5fe916b1",
+    "reports/defense-third/calibration.json": "a69c1a7d3e009bebf3d22f13ab1eba9003af14802d4fbf70d2dbf3e3863961e1"
+  }
+}

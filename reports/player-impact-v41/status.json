@@ -1,0 +1,28 @@
+{
+  "officialModelAdopted": false,
+  "goalComplete": false,
+  "fullOvrThisVersion": false,
+  "latestCompleteOvrVersion": 24,
+  "sourceFreshDefenseChanged": true,
+  "sourceRawAttributesPreserved": true,
+  "fullSeasonGames": 28023,
+  "workloadDiagnosticGames": 19200,
+  "sourceGames": 4421,
+  "sourceFreshFga": 754914,
+  "targetPlayers": 582,
+  "targetPlayerColumns": 170,
+  "failedWinGateSeasons": [
+    "2023-24",
+    "2025-26"
+  ],
+  "selectedSigmaByZone": {
+    "long": 0,
+    "mid": 0.025,
+    "short": 0.05
+  },
+  "mainOvrHealthOnly": true,
+  "availabilityDisplayedSeparately": true,
+  "injuryDeductionInMainOvr": false,
+  "stopFurtherMechanismVersionsForRanking": true,
+  "scope": "Close v41 as a verified, unadopted experiment. New display OVR is a separate transparent summary, not constrained to simulated replacement wins. Existing recurrence adjustments remain diagnostics only. User major goal still not achieved."
+}

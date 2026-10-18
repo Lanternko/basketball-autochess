@@ -1,0 +1,47 @@
+{
+  "label": "2023-24-eighth-c-ablation-55-minutes",
+  "extra": {
+    "bundle": "reports/defense-seventh/2023-24/calendar-55/bundle.json",
+    "cutoff": 55,
+    "calendarDate": "2024-02-22",
+    "cardFile": "reports/defense-eighth/c/ablation/2023-24/calendar-55/minutes/uniform-minute-league.json",
+    "neutralContests": true,
+    "calibration": {
+      "shotDelta": -0.11012118441530294,
+      "options": {
+        "pace": 0.9376642478262188,
+        "foulScale": 0.9395332356732872,
+        "passTurnoverScale": 1.362791644503273,
+        "touchTurnoverScale": 0.9490927374596487,
+        "touchLiveShare": 0.329860343304098,
+        "clockViolationProbability": 0.0064914428795312664
+      }
+    },
+    "options": {}
+  },
+  "files": [
+    {
+      "seed": 20261012,
+      "file": "reports/defense-seventh/runs/2023-24-eighth-c-ablation-55-minutes-seed20261012.json",
+      "sha256": "937c1f977372b93e3805f5ca471b6f78d2fb5b0655bd9af9fe48d46c5bb817da"
+    },
+    {
+      "seed": 20261013,
+      "file": "reports/defense-seventh/runs/2023-24-eighth-c-ablation-55-minutes-seed20261013.json",
+      "sha256": "fa6a2abb5662413527b01d31596ea8fc0dd9c2abf0329ed3d1631dfe797d74d9"
+    },
+    {
+      "seed": 20261014,
+      "file": "reports/defense-seventh/runs/2023-24-eighth-c-ablation-55-minutes-seed20261014.json",
+      "sha256": "ac31970753e8b19d2e5445ac045d36ec0c2b4feca7ec073c41d205a0f1fdb35f"
+    }
+  ],
+  "seconds": 35.938,
+  "sources": {
+    "src/defense_fifth_game.js": "bddd3f34b93e969513ce79d717b78358dc433c0f15eba3eeffa675177b9dfa86",
+    "src/defense_sixth_season.js": "1c30c6c59fbc3e2a40b08231dddf9be255b11fca386d93daf1eb986a99000bcf",
+    "src/defense_seventh_jobs.js": "ca1501845b601e0b742f601751ac74fba7e9717a6de66d8ab9d7a4d0c4c6d41d",
+    "scripts/run_defense_seventh.js": "0e40923369762bd8b0a0faa1545e704ba0587bc1341ea40058b7766f240f3f01",
+    "reports/defense-eighth/c/ablation/2023-24/calendar-55/minutes/uniform-minute-league.json": "b6270f72d96b5c7278722e717fc06a2b4fd79650c464c95a583a41e8d5d8177f"
+  }
+}

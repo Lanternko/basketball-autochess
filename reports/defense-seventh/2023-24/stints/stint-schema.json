@@ -1,0 +1,35 @@
+{
+  "stints": 32053,
+  "attempts": 194031,
+  "joinKey": [
+    "id",
+    "period",
+    "startIndex",
+    "endIndex"
+  ],
+  "fields": {
+    "opponent.fga/fgm": "Opponent attempts/makes",
+    "opponent.longA/longM": "Opponent 3P attempts/makes",
+    "opponent.midA/midM": "Opponent non-paint 2P attempts/makes",
+    "opponent.shortA/shortM": "Opponent restricted-area and non-RA paint 2P attempts/makes",
+    "opponent.oreb": "Opponent offensive player rebounds",
+    "opponent.dreb": "This defending team defensive player rebounds; not the opponent defensive rebounds",
+    "opponent.teamOreb": "Opponent retained offensive team rebounds, excluding dead FT bookkeeping",
+    "opponent.teamDreb": "This defending team defensive team rebounds",
+    "opponent.deadFtReb": "Opponent dead free-throw team rebounds; no rebound opportunity",
+    "opponent.reboundOpportunities": "Linked missed FG or final ordinary FT resolved by an offensive or defensive rebound. Heaves/nonfinal/technical/retained FTs excluded.",
+    "opponent.tov/liveTov/clockTov": "Opponent turnovers, official stolen live turnovers and shot-clock violations",
+    "opponent.fta/ftm": "All opponent FT attempts/makes, including technical",
+    "defensivePossessions": "Fractional defensive possessions by clock-time overlap; zero-duration possession attributed to its terminal lineup",
+    "defensivePossessionEnds": "Integer defensive possession completions at this lineup",
+    "opponentZones": "Raw NBA area categories (restricted, paint non-RA, midrange, corners, above break, backcourt/unknown); joined from stint-zones.jsonl"
+  },
+  "provenance": {
+    "sources": {
+      "reports/defense-seventh/2023-24/stints/stints.jsonl": "a83b1c42ba735810f2fd8dccd8355d2f41e4fd164389ee82fb4318b4a3d0adb6",
+      "data/defense-seventh/2023-24/manifest.json": "6449717fe38448a8656d4744ec615f1eaa760244bd16dd1fa9323b15c7f74614"
+    },
+    "code": "d666875624bc435ca53b10942c41087b69479cd74ae092bd9fbc5a10ee643c68",
+    "output": "86aec6626ffe6d681c8b6626c2d02f4c3f8985b1aff8efb68d32e321b06672f4"
+  }
+}

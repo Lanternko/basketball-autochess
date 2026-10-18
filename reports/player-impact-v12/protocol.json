@@ -1,0 +1,22 @@
+{
+  "version": "source-context-centered-12",
+  "season": "2025-26",
+  "seed": 20261012,
+  "variants": [
+    "centered-flow",
+    "centered-creation",
+    "centered-space"
+  ],
+  "design": "Observed zone FG is source-context centered before reapplying new context; source contexts come from actual lineup exposures and frozen model predictions, not fitted individual residuals. Successful creation supply is conserved subject to terminal capacity and zero self-assist. Receiving propensity is a soft allocation prior rather than a cap on team creation. Global alpha from 2022-25 fresh-FGA actor choices; global beta from assisted-make passer choices conditional on receiver. Source lineup total demand conserved. No target player names, OVR/on-off ranking fit or positional bonus. Third variant enables source-centered long context. Diagnostic single seed, not adoption.",
+  "hashes": {
+    "reports/player-impact-v12/engine.mjs": "500bddbe0b91310bdfe52366d25e2c30e5fecb6eab53419a6356bc9fcef48a3a",
+    "reports/player-impact-v12/model.mjs": "18b5fcc492704ca7a9f21c78eb7da5272da29da383dcbe864cce8e197f8f878b",
+    "reports/player-impact-v12/input.mjs": "2a548504deb65711f4f919815c7b59a032dea81ec3abde94b6933886b5fc2ee2",
+    "reports/player-impact-v12/ovr-input.mjs": "ef1b8019fafc08aa65deea89a669051e061505824c17281b04fb9f865f5977a8",
+    "reports/player-impact-v12/2025-26-contexts.json": "2e4f46b47f058174ba70a21cf885133a11d0bbe9e2e38d275f7c46bfcaf2d775",
+    "reports/player-impact-v12/../../src/opportunity_transport.js": "4bfea350db5ba749a22053daf4d7363c7e04095e516b68cf098318dd054f5721",
+    "reports/player-impact-v12/worker.mjs": "fb11ca55dbcc562539517b16bb3597f510837d9ee86703beccc32f9e0c793d64",
+    "reports/player-impact-v12/../player-impact-v8/usage-fit.json": "4ce55df2f01ac960dabfd4ef5afe8d87596c86f9d908bd24ceae05bc03ef9d1e",
+    "reports/player-impact-v12/../player-impact-v8/assist-fit.json": "c62007be8fc2e45aac89690122cf215c191691589d7a8d48cf6c4e5528750b01"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "createdAt": "2026-10-12T11:58:43.892Z",
+  "pseudoPlayerPossessions": 200,
+  "previousSeason": "2024-25",
+  "currentSeason": "2025-26",
+  "method": "Previous full-season centered joint player effects as prior offset. Mix with fold-rebuilt current box/position/MPG prior using n/(n+200), n=training MIN/48*100. Three forward folds choose current residual ridge. Prior affects joint likelihood; full defense residual deployment off. Current past-only league constants recalibrated by frozen v4 rule. No heldout selection of prior strength. No prior B1 factor replacement in this experiment.",
+  "frozenV4": "0e302eb3e2ae4894e3acd8f33d3d41044b9df27a98d998118da8fbebd77b8236"
+}

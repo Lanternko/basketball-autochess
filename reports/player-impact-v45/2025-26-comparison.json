@@ -1,0 +1,108 @@
+{
+  "aggregateDefenseMAE": {
+    "v41": {
+      "onshortShare": 2.0729533719141053,
+      "onlongShare": 1.994651981473174,
+      "onshortFGpct": 1.4561010989784284,
+      "onlongFGpct": 1.389536105718098,
+      "onFGA48": 2.276721905077506,
+      "deltashortShare": 1.8055485932262947,
+      "deltalongShare": 1.7979503370071073,
+      "deltashortFGpct": 1.9183037833318783,
+      "deltalongFGpct": 2.005072215869689
+    },
+    "v42": {
+      "onshortShare": 0.9642551637433954,
+      "onlongShare": 0.8789591404785384,
+      "onshortFGpct": 1.3932859105673336,
+      "onlongFGpct": 1.4538741113849931,
+      "onFGA48": 2.252001090269803,
+      "deltashortShare": 1.3395089053201628,
+      "deltalongShare": 1.412884166606931,
+      "deltashortFGpct": 1.8117145683207605,
+      "deltalongFGpct": 1.8846578430666185
+    },
+    "v44": {
+      "onshortShare": 0.9407668212833739,
+      "onlongShare": 0.8841345779859794,
+      "onshortFGpct": 1.233199464115546,
+      "onlongFGpct": 1.3347292620964504,
+      "onFGA48": 2.327245637983991,
+      "deltashortShare": 1.4237790324169821,
+      "deltalongShare": 1.482460951692144,
+      "deltashortFGpct": 1.800315443994134,
+      "deltalongFGpct": 1.9534264917658601
+    },
+    "v45": {
+      "onshortShare": 0.964470638164541,
+      "onlongShare": 0.9406818148578938,
+      "onshortFGpct": 1.4181262959614336,
+      "onlongFGpct": 1.1805643847945482,
+      "onFGA48": 2.297382526102026,
+      "deltashortShare": 1.4517891821017361,
+      "deltalongShare": 1.4462159362249505,
+      "deltashortFGpct": 1.9105485418029953,
+      "deltalongFGpct": 1.8784664930813761
+    }
+  },
+  "comparisons": [
+    {
+      "season": "2025-26",
+      "metric": "onshortShare",
+      "improved": 188,
+      "worsened": 187
+    },
+    {
+      "season": "2025-26",
+      "metric": "onlongShare",
+      "improved": 171,
+      "worsened": 204
+    },
+    {
+      "season": "2025-26",
+      "metric": "onshortFGpct",
+      "improved": 168,
+      "worsened": 207
+    },
+    {
+      "season": "2025-26",
+      "metric": "onlongFGpct",
+      "improved": 214,
+      "worsened": 161
+    },
+    {
+      "season": "2025-26",
+      "metric": "onFGA48",
+      "improved": 201,
+      "worsened": 174
+    },
+    {
+      "season": "2025-26",
+      "metric": "deltashortShare",
+      "improved": 175,
+      "worsened": 200
+    },
+    {
+      "season": "2025-26",
+      "metric": "deltalongShare",
+      "improved": 193,
+      "worsened": 182
+    },
+    {
+      "season": "2025-26",
+      "metric": "deltashortFGpct",
+      "improved": 176,
+      "worsened": 199
+    },
+    {
+      "season": "2025-26",
+      "metric": "deltalongFGpct",
+      "improved": 202,
+      "worsened": 173
+    }
+  ],
+  "seasons": [
+    "2025-26"
+  ],
+  "temporaryTeamRegressionAuthorized": true
+}

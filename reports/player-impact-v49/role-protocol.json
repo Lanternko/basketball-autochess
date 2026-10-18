@@ -1,0 +1,12 @@
+{
+  "purpose": "Remove manually imposed guard/big-height coverage restriction; historical phases and pair association determine small-ball lineup compatibility. No ability or height rule added. Older3 same60fixture cohort only; initialv49 remains frozen.",
+  "seasons": [
+    "2022-23",
+    "2023-24",
+    "2024-25"
+  ],
+  "pairWeights": [
+    0.25
+  ],
+  "decision": "Prefer unconstrained learned lineups if equal-season phase+pair normalized error improves and every-season minuteMAE <= initialv49+.05min. Otherwise retain prior controller as measured candidate and report limitation."
+}

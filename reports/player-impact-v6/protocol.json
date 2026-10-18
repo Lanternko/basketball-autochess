@@ -1,0 +1,34 @@
+{
+  "version": "conserved-terminal-opportunities-6",
+  "seasons": [
+    "2022-23",
+    "2023-24",
+    "2024-25",
+    "2025-26"
+  ],
+  "seeds": [
+    20261012,
+    20261013,
+    20261014
+  ],
+  "variants": [
+    "terminal-flow",
+    "terminal-contests"
+  ],
+  "design": "FROZEN source-context conversion, NOT counterfactual probability inversion. Self make-rate / predicted FG-event probability; AST-rate / expected receiver FG-event probability. Each passing opportunity adds observed pass-stolen rate, conditioned on current measured defense pressure. One creation pass ends with receiver shot. A decision is already conditioned on finding a receiver, replacing the extra legacy 70-default open gate. No player-name or ranking offsets.",
+  "limits": "Same-season role inputs, all seasons previously seen. Diagnostic mechanics, not prospective validation. Current model still lacks measured speed, handle/offBall/screen/breakDbl remain 70. No measured miss-level assisted shot labels.",
+  "hashes": {
+    "reports/player-impact-v6/engine.mjs": "7fcbed5df4a6fc58e2ab7f670da0c9f02b94bd69c0cc1cf0c11fa2756a3ff4fb",
+    "reports/player-impact-v6/model.mjs": "968737c50f3ca29d81238d94e8b328d229033305a049e04f2133643ed36f04b9",
+    "reports/player-impact-v6/input.mjs": "e3a7ba2567d42c674ae72063f72c4e844f9b67b5fa43e8e443b95930431b105d",
+    "reports/player-impact-v6/worker.mjs": "fb65bfa5faac10c559681b0c8db3291317266b754cb1d34a1e819d1e2bc9fd77",
+    "reports/player-impact-v6/run.mjs": "60824e7e1d8cd1a26dd5a76be511a86cd9df97a899ad3e13c84463fa45592163",
+    "reports/player-impact-v6/2022-23-cards.json": "303b89d728f2ca074369f0ec28f8de411c3577345bda9881b92afebd1efd22bd",
+    "reports/player-impact-v6/2023-24-cards.json": "cff03efb44401336866b7a73d29d96d8d0c375ef6fd8f06c03a27f0bac4e974b",
+    "reports/player-impact-v6/2024-25-cards.json": "aa388eb0c1c5bff1ae4ca59e62f60a2309539a55b0c8d08cabfde7feef381b57",
+    "reports/player-impact-v6/2025-26-cards.json": "cb1516bea2fd3249259b65e61a3fc8acc8bcf9a0d967f240460af011ed808441",
+    "reports/player-impact-v1/input.mjs": "81884844d893739e7a6f6b0938ac27a6efd3a8be5050bc9af17cfb3120b75e7c",
+    "src/probability_model.js": "13b175efac436d3c560fd39389f3486225ab90bfbc996d6802ee76ce461aad87",
+    "src/defense_fourth_game.js": "c3611d0c72f49fdd4b855184d7bc79c3e6cc9780c2c6eb836aa10cbf66ad022a"
+  }
+}

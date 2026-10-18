@@ -1,0 +1,30 @@
+{
+  "results": [
+    {
+      "season": "2022-23",
+      "games": 1230,
+      "teamPlayerStatsIdentical": true
+    },
+    {
+      "season": "2023-24",
+      "games": 1230,
+      "teamPlayerStatsIdentical": true
+    },
+    {
+      "season": "2024-25",
+      "games": 1230,
+      "teamPlayerStatsIdentical": true
+    },
+    {
+      "season": "2025-26",
+      "games": 1230,
+      "teamPlayerStatsIdentical": true
+    }
+  ],
+  "invariants": [
+    "stronger DREB lowers opposing ORB",
+    "defensive permutation invariance",
+    "recipient weights normalized",
+    "OFF probability unchanged"
+  ]
+}

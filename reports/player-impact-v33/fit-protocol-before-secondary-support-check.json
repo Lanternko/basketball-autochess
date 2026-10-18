@@ -1,0 +1,26 @@
+{
+  "trainingSeasons": [
+    "2022-23",
+    "2023-24",
+    "2024-25"
+  ],
+  "checkSeason": "2025-26",
+  "folds": 5,
+  "primary": "Conditional allocation of each player-team-game fresh FGA total across that same game's actual lineups. Expected mass in stint = observed team fresh FGA count * predicted shooter probability. Player-game normalization cancels a fixed player-game shooting-volume level. This is a working conditional score, not independent causal trials.",
+  "parameter": "lambda in[0,1]: v31 supported-self at0, v30 full residual-self at1. One common scalar, equal season weighting by NLL per actual FGA. Grid101 then bounded local refinement plus endpoints; extended[0,2] sensitivity is diagnostic only.",
+  "validation": "Five whole-game folds in older three seasons, then fixed older fit checked on previously seen2025-26. Source role/rate/FG/foul and usage descriptors are frozen same-season inputs and are NOT cross-fitted, so this is NOT a genuinely blind/prospective/causal validation. No ranks/names/wins/onoff/simulation residual fitting.",
+  "secondary": [
+    "Unassisted made-FG allocation within same player-team-game, conditioning on its actual total; exact model own/caught EV choice.",
+    "Assisted versus unassisted mark conditional on a made FG; scoring-only1e-12 probability floor with unsupported outcome counts reported.",
+    "Standard shooter-choice multinomial within the five, with all FGA independent of makes."
+  ],
+  "uncertainty": "Target whole-game block bootstrap2000, seed20261017, fixed source descriptors and fitted parameter; no refit or source/model uncertainty.",
+  "candidateGate": "Only consider an interior fitted mixture if older held-out primary gain>0, target primary gain>0 and its fixed-fit whole-game bootstrap95 lower bound>0. Any such candidate still needs ordinary four-season validation and complete OVR; boundaries or contradictory diagnostics do not justify a new adopted model.",
+  "hashes": {
+    "reports/player-impact-v33/2022-23-conditional-data.json": "3fc7b9e12bb9f68cd78bd2098d89d5de935f432fac9321b1c105f893254bae14",
+    "reports/player-impact-v33/2023-24-conditional-data.json": "4f75541b89e69ff0ca83a6fc165d4f49cd1b6b41bd4c9202d0cb1b4f3071eb97",
+    "reports/player-impact-v33/2024-25-conditional-data.json": "f2519a3da1f84a328b4dfc4944a4bfcc0d122d1c2a8d583a2c779be929cce8f8",
+    "reports/player-impact-v33/2025-26-conditional-data.json": "349a2738d87afc34b97c390098607fe74c4bb0e2e8685007eab78fa274229d44",
+    "D:/Projects/CODING/basketball-autochess/reports/player-impact-v33/fit-compensation.py": "40a214c86ccdf208c874e07801ea18cd6ad24fc9f839574da764f2e74770daa1"
+  }
+}

@@ -1,0 +1,810 @@
+{
+  "scope": "Mechanism-switch comparison uses same20seed complete1230 fixtures and FINAL scores including OT, because archived switch runs store final box scores only. Exact quoted negative values separately verified on1227 regulation fixtures. Do not mix final and regulation values into one covariance difference.",
+  "values": {
+    "v1": [
+      {
+        "covariance": 29.646487040718135
+      },
+      {
+        "covariance": 21.51349858694899
+      },
+      {
+        "covariance": 25.934187886614136
+      },
+      {
+        "covariance": 17.12922229799333
+      },
+      {
+        "covariance": 32.68753003035673
+      },
+      {
+        "covariance": 20.4666440562383
+      },
+      {
+        "covariance": 23.836400097374003
+      },
+      {
+        "covariance": 42.91102615071354
+      },
+      {
+        "covariance": 40.24520560577408
+      },
+      {
+        "covariance": 27.63678283026136
+      },
+      {
+        "covariance": 35.683574172684
+      },
+      {
+        "covariance": 21.50682606011068
+      },
+      {
+        "covariance": 29.57126874730976
+      },
+      {
+        "covariance": 33.897882890072225
+      },
+      {
+        "covariance": 33.77876146441423
+      },
+      {
+        "covariance": 26.406313186272847
+      },
+      {
+        "covariance": 18.17507581143628
+      },
+      {
+        "covariance": 15.165458786146482
+      },
+      {
+        "covariance": 30.532399502489966
+      },
+      {
+        "covariance": 28.41235061398803
+      }
+    ],
+    "accounting": [
+      {
+        "seed": 20261012,
+        "covariance": 27.876213587537407
+      },
+      {
+        "seed": 20261013,
+        "covariance": 26.776841762468795
+      },
+      {
+        "seed": 20261014,
+        "covariance": 38.67300405133738
+      },
+      {
+        "seed": 20261015,
+        "covariance": 26.80947868654771
+      },
+      {
+        "seed": 20261016,
+        "covariance": 27.844004915450697
+      },
+      {
+        "seed": 20261017,
+        "covariance": 25.434628898787487
+      },
+      {
+        "seed": 20261018,
+        "covariance": 24.603790781393865
+      },
+      {
+        "seed": 20261019,
+        "covariance": 25.42618314205152
+      },
+      {
+        "seed": 20261020,
+        "covariance": 23.454534329965558
+      },
+      {
+        "seed": 20261021,
+        "covariance": 23.244172700144606
+      },
+      {
+        "seed": 20261022,
+        "covariance": 32.01219961985463
+      },
+      {
+        "seed": 20261023,
+        "covariance": 26.82984985224633
+      },
+      {
+        "seed": 20261024,
+        "covariance": 28.47012270893085
+      },
+      {
+        "seed": 20261025,
+        "covariance": 26.703716936782698
+      },
+      {
+        "seed": 20261026,
+        "covariance": 21.71481236971799
+      },
+      {
+        "seed": 20261027,
+        "covariance": 28.982072509749482
+      },
+      {
+        "seed": 20261028,
+        "covariance": 30.989445258581064
+      },
+      {
+        "seed": 20261029,
+        "covariance": 23.695666576386184
+      },
+      {
+        "seed": 20261030,
+        "covariance": 25.620355068363317
+      },
+      {
+        "seed": 20261031,
+        "covariance": 38.89681422691678
+      }
+    ],
+    "independent": [
+      {
+        "seed": 20261012,
+        "covariance": 25.882162306602265
+      },
+      {
+        "seed": 20261013,
+        "covariance": 18.42632337507194
+      },
+      {
+        "seed": 20261014,
+        "covariance": 24.576620607491027
+      },
+      {
+        "seed": 20261015,
+        "covariance": 14.98102041951417
+      },
+      {
+        "seed": 20261016,
+        "covariance": 24.23963382391112
+      },
+      {
+        "seed": 20261017,
+        "covariance": 8.00766217037542
+      },
+      {
+        "seed": 20261018,
+        "covariance": 16.62125048163036
+      },
+      {
+        "seed": 20261019,
+        "covariance": 19.963883891218455
+      },
+      {
+        "seed": 20261020,
+        "covariance": 19.236571259525807
+      },
+      {
+        "seed": 20261021,
+        "covariance": 36.15699477179193
+      },
+      {
+        "seed": 20261022,
+        "covariance": 26.63428765462554
+      },
+      {
+        "seed": 20261023,
+        "covariance": 16.547280477325923
+      },
+      {
+        "seed": 20261024,
+        "covariance": 13.023348656835761
+      },
+      {
+        "seed": 20261025,
+        "covariance": 27.784792419339983
+      },
+      {
+        "seed": 20261026,
+        "covariance": 19.287425030913013
+      },
+      {
+        "seed": 20261027,
+        "covariance": 25.079230906883716
+      },
+      {
+        "seed": 20261028,
+        "covariance": 23.661915526472317
+      },
+      {
+        "seed": 20261029,
+        "covariance": 18.10156201383548
+      },
+      {
+        "seed": 20261030,
+        "covariance": 21.7543853268396
+      },
+      {
+        "seed": 20261031,
+        "covariance": 32.37218055616011
+      }
+    ],
+    "empirical": [
+      {
+        "seed": 20261012,
+        "covariance": -8.761656074829629
+      },
+      {
+        "seed": 20261013,
+        "covariance": -1.2361572105905538
+      },
+      {
+        "seed": 20261014,
+        "covariance": 2.01341314290597
+      },
+      {
+        "seed": 20261015,
+        "covariance": -0.7490200777379585
+      },
+      {
+        "seed": 20261016,
+        "covariance": 4.4384268784389205
+      },
+      {
+        "seed": 20261017,
+        "covariance": 8.33030861421048
+      },
+      {
+        "seed": 20261018,
+        "covariance": -2.169930959601089
+      },
+      {
+        "seed": 20261019,
+        "covariance": 15.080877703780011
+      },
+      {
+        "seed": 20261020,
+        "covariance": 8.763836566503658
+      },
+      {
+        "seed": 20261021,
+        "covariance": 5.658837058209967
+      },
+      {
+        "seed": 20261022,
+        "covariance": 8.637407950165173
+      },
+      {
+        "seed": 20261023,
+        "covariance": 0.23976735038022637
+      },
+      {
+        "seed": 20261024,
+        "covariance": 1.7394148130951816
+      },
+      {
+        "seed": 20261025,
+        "covariance": -2.448494685541752
+      },
+      {
+        "seed": 20261026,
+        "covariance": 2.868717323699115
+      },
+      {
+        "seed": 20261027,
+        "covariance": 3.5621839013750045
+      },
+      {
+        "seed": 20261028,
+        "covariance": -2.6021403732776185
+      },
+      {
+        "seed": 20261029,
+        "covariance": 5.97815932573365
+      },
+      {
+        "seed": 20261030,
+        "covariance": 0.29177285104202183
+      },
+      {
+        "seed": 20261031,
+        "covariance": 6.012939452416544
+      }
+    ],
+    "fouls": [
+      {
+        "seed": 20261012,
+        "covariance": 6.950049081960186
+      },
+      {
+        "seed": 20261013,
+        "covariance": -1.664660948364392
+      },
+      {
+        "seed": 20261014,
+        "covariance": 3.2274202831260927
+      },
+      {
+        "seed": 20261015,
+        "covariance": 2.4994186822593956
+      },
+      {
+        "seed": 20261016,
+        "covariance": 5.504418101884768
+      },
+      {
+        "seed": 20261017,
+        "covariance": 4.733649129679885
+      },
+      {
+        "seed": 20261018,
+        "covariance": 1.9758942363962628
+      },
+      {
+        "seed": 20261019,
+        "covariance": 3.658570077818568
+      },
+      {
+        "seed": 20261020,
+        "covariance": 0.675245651623678
+      },
+      {
+        "seed": 20261021,
+        "covariance": 1.509101942804085
+      },
+      {
+        "seed": 20261022,
+        "covariance": 4.893461378486483
+      },
+      {
+        "seed": 20261023,
+        "covariance": -5.2576726332403085
+      },
+      {
+        "seed": 20261024,
+        "covariance": 17.64124529050168
+      },
+      {
+        "seed": 20261025,
+        "covariance": 1.9617969688322736
+      },
+      {
+        "seed": 20261026,
+        "covariance": -1.4950010398378828
+      },
+      {
+        "seed": 20261027,
+        "covariance": 0.28264601661483146
+      },
+      {
+        "seed": 20261028,
+        "covariance": 2.5312003840145527
+      },
+      {
+        "seed": 20261029,
+        "covariance": 1.2093946128336988
+      },
+      {
+        "seed": 20261030,
+        "covariance": 1.105225499726745
+      },
+      {
+        "seed": 20261031,
+        "covariance": -1.4355477769233405
+      }
+    ],
+    "combined-grid": [
+      {
+        "seed": 20261012,
+        "covariance": 0.3762315872117704
+      },
+      {
+        "seed": 20261013,
+        "covariance": 2.1467553430739525
+      },
+      {
+        "seed": 20261014,
+        "covariance": 0.802870460382174
+      },
+      {
+        "seed": 20261015,
+        "covariance": 4.8562354886190136
+      },
+      {
+        "seed": 20261016,
+        "covariance": -2.162586189663203
+      },
+      {
+        "seed": 20261017,
+        "covariance": 3.2864836229563874
+      },
+      {
+        "seed": 20261018,
+        "covariance": -1.4530067113877594
+      },
+      {
+        "seed": 20261019,
+        "covariance": 0.9187254489439649
+      },
+      {
+        "seed": 20261020,
+        "covariance": -6.692586165480934
+      },
+      {
+        "seed": 20261021,
+        "covariance": -2.3264459550306404
+      },
+      {
+        "seed": 20261022,
+        "covariance": -7.223488188570156
+      },
+      {
+        "seed": 20261023,
+        "covariance": -3.9946295194659243
+      },
+      {
+        "seed": 20261024,
+        "covariance": 6.455470151816337
+      },
+      {
+        "seed": 20261025,
+        "covariance": -6.766595377316055
+      },
+      {
+        "seed": 20261026,
+        "covariance": -10.707645911824986
+      },
+      {
+        "seed": 20261027,
+        "covariance": -4.727511111755975
+      },
+      {
+        "seed": 20261028,
+        "covariance": -0.31913319436585336
+      },
+      {
+        "seed": 20261029,
+        "covariance": -6.565686478399588
+      },
+      {
+        "seed": 20261030,
+        "covariance": 2.8669697028320686
+      },
+      {
+        "seed": 20261031,
+        "covariance": 3.8080043415246783
+      }
+    ]
+  },
+  "summaries": {
+    "v1": {
+      "estimate": 27.756844790895848,
+      "standardError": 1.6530956479080505,
+      "ci95": [
+        24.519542320192677,
+        30.919364966572033
+      ],
+      "range": [
+        15.165458786146482,
+        42.91102615071354
+      ]
+    },
+    "accounting": {
+      "estimate": 27.702895399160717,
+      "standardError": 0.974876721444149,
+      "ci95": [
+        25.900176828462218,
+        29.76457600126715
+      ],
+      "range": [
+        21.71481236971799,
+        38.89681422691678
+      ]
+    },
+    "independent": {
+      "estimate": 21.6169265838182,
+      "standardError": 1.436255981022118,
+      "ci95": [
+        18.86984102289417,
+        24.452796122855652
+      ],
+      "range": [
+        8.00766217037542,
+        36.15699477179193
+      ]
+    },
+    "empirical": {
+      "estimate": 2.782433177518866,
+      "standardError": 1.163539352015184,
+      "ci95": [
+        0.4527082803338449,
+        4.996668104706034
+      ],
+      "range": [
+        -8.761656074829629,
+        15.080877703780011
+      ]
+    },
+    "fouls": {
+      "estimate": 2.525292747009863,
+      "standardError": 1.0081050955700663,
+      "ci95": [
+        0.6972474137055483,
+        4.667244850787297
+      ],
+      "range": [
+        -5.2576726332403085,
+        17.64124529050168
+      ]
+    },
+    "combined-grid": {
+      "estimate": -1.3710784327950363,
+      "standardError": 1.0354543564417407,
+      "ci95": [
+        -3.420738941041999,
+        0.6123365511882377
+      ],
+      "range": [
+        -10.707645911824986,
+        6.455470151816337
+      ]
+    }
+  },
+  "adjacent": [
+    {
+      "from": "v1",
+      "to": "accounting",
+      "estimate": -0.05394939173513782,
+      "standardError": 1.9517872726982073,
+      "ci95": [
+        -3.932277215136825,
+        3.796903775901228
+      ]
+    },
+    {
+      "from": "accounting",
+      "to": "independent",
+      "estimate": -6.085968815342522,
+      "standardError": 1.4140904724267143,
+      "ci95": [
+        -8.794525134654986,
+        -3.185884006084251
+      ]
+    },
+    {
+      "from": "independent",
+      "to": "empirical",
+      "estimate": -18.83449340629933,
+      "standardError": 1.8412232255205825,
+      "ci95": [
+        -22.384289228085642,
+        -15.14980692991493
+      ]
+    },
+    {
+      "from": "empirical",
+      "to": "fouls",
+      "estimate": -0.2571404305090028,
+      "standardError": 1.5613779537323755,
+      "ci95": [
+        -3.122008373516217,
+        3.0259214910307928
+      ]
+    },
+    {
+      "from": "fouls",
+      "to": "combined-grid",
+      "estimate": -3.8963711798048997,
+      "standardError": 1.1055973844462692,
+      "ci95": [
+        -6.048394707144574,
+        -1.7709101370490257
+      ]
+    }
+  ],
+  "quotedRegulation": {
+    "preset": "combined-grid",
+    "seeds": [
+      20261012,
+      20261031
+    ],
+    "mean": -8.383073196698081,
+    "range": [
+      -16.741972247377916,
+      -1.3241826934404168
+    ],
+    "perSeed": [
+      {
+        "seed": 20261012,
+        "preset": "combined-grid",
+        "regulationCovariance": -6.2109137011983195,
+        "paceCovariance": 0.6888815838953045,
+        "remainingCovariance": -6.899795285093624
+      },
+      {
+        "seed": 20261013,
+        "preset": "combined-grid",
+        "regulationCovariance": -4.888988929728159,
+        "paceCovariance": 1.0404432353843796,
+        "remainingCovariance": -5.929432165112538
+      },
+      {
+        "seed": 20261014,
+        "preset": "combined-grid",
+        "regulationCovariance": -6.7732797498583315,
+        "paceCovariance": 1.1649345528168278,
+        "remainingCovariance": -7.938214302675159
+      },
+      {
+        "seed": 20261015,
+        "preset": "combined-grid",
+        "regulationCovariance": -1.3241826934404168,
+        "paceCovariance": 0.8618474438891739,
+        "remainingCovariance": -2.186030137329591
+      },
+      {
+        "seed": 20261016,
+        "preset": "combined-grid",
+        "regulationCovariance": -9.926417109372629,
+        "paceCovariance": 1.5142370635239384,
+        "remainingCovariance": -11.440654172896567
+      },
+      {
+        "seed": 20261017,
+        "preset": "combined-grid",
+        "regulationCovariance": -4.918160983339428,
+        "paceCovariance": 0.8184099336794565,
+        "remainingCovariance": -5.736570917018884
+      },
+      {
+        "seed": 20261018,
+        "preset": "combined-grid",
+        "regulationCovariance": -9.258806272027307,
+        "paceCovariance": 0.7650617601011402,
+        "remainingCovariance": -10.023868032128448
+      },
+      {
+        "seed": 20261019,
+        "preset": "combined-grid",
+        "regulationCovariance": -5.559324675907695,
+        "paceCovariance": 1.575180955451337,
+        "remainingCovariance": -7.1345056313590325
+      },
+      {
+        "seed": 20261020,
+        "preset": "combined-grid",
+        "regulationCovariance": -12.078020426409523,
+        "paceCovariance": 0.6051387329937887,
+        "remainingCovariance": -12.683159159403312
+      },
+      {
+        "seed": 20261021,
+        "preset": "combined-grid",
+        "regulationCovariance": -11.018395842028848,
+        "paceCovariance": 0.9584457779121344,
+        "remainingCovariance": -11.976841619940982
+      },
+      {
+        "seed": 20261022,
+        "preset": "combined-grid",
+        "regulationCovariance": -11.452861412960159,
+        "paceCovariance": 3.2202730667006523,
+        "remainingCovariance": -14.673134479660812
+      },
+      {
+        "seed": 20261023,
+        "preset": "combined-grid",
+        "regulationCovariance": -10.008587862946483,
+        "paceCovariance": 1.4401787067114395,
+        "remainingCovariance": -11.448766569657922
+      },
+      {
+        "seed": 20261024,
+        "preset": "combined-grid",
+        "regulationCovariance": -1.8789882886100344,
+        "paceCovariance": 1.4354058654085777,
+        "remainingCovariance": -3.314394154018612
+      },
+      {
+        "seed": 20261025,
+        "preset": "combined-grid",
+        "regulationCovariance": -9.574481094960582,
+        "paceCovariance": 0.6020309236639969,
+        "remainingCovariance": -10.176512018624578
+      },
+      {
+        "seed": 20261026,
+        "preset": "combined-grid",
+        "regulationCovariance": -16.741972247377916,
+        "paceCovariance": 0.881077251383985,
+        "remainingCovariance": -17.6230494987619
+      },
+      {
+        "seed": 20261027,
+        "preset": "combined-grid",
+        "regulationCovariance": -12.727629228903165,
+        "paceCovariance": 0.9001268450041602,
+        "remainingCovariance": -13.627756073907324
+      },
+      {
+        "seed": 20261028,
+        "preset": "combined-grid",
+        "regulationCovariance": -8.766173050386753,
+        "paceCovariance": 1.3287119995987529,
+        "remainingCovariance": -10.094885049985505
+      },
+      {
+        "seed": 20261029,
+        "preset": "combined-grid",
+        "regulationCovariance": -12.051023546537051,
+        "paceCovariance": 1.6000357024273844,
+        "remainingCovariance": -13.651059248964435
+      },
+      {
+        "seed": 20261030,
+        "preset": "combined-grid",
+        "regulationCovariance": -7.147351813062877,
+        "paceCovariance": 1.5443801679231608,
+        "remainingCovariance": -8.691731980986038
+      },
+      {
+        "seed": 20261031,
+        "preset": "combined-grid",
+        "regulationCovariance": -5.355905004905983,
+        "paceCovariance": 1.6143580188880697,
+        "remainingCovariance": -6.970263023794053
+      }
+    ]
+  },
+  "timing": [
+    {
+      "pace": 0.877,
+      "discreteMean": 16.03694157602781,
+      "continuousConditionalMean": 16.231551746820774,
+      "discreteProbability": 0.7473846456563802,
+      "continuousProbability": 0.7670011199292155
+    },
+    {
+      "pace": 0.878,
+      "discreteMean": 16.01867626671571,
+      "continuousConditionalMean": 16.2244216859631,
+      "discreteProbability": 0.7473846456563802,
+      "continuousProbability": 0.7681380021644882
+    },
+    {
+      "pace": 0.8786,
+      "discreteMean": 16.007737038671056,
+      "continuousConditionalMean": 16.220154637058336,
+      "discreteProbability": 0.7473846456563802,
+      "continuousProbability": 0.7688201315056132
+    },
+    {
+      "pace": 0.8787,
+      "discreteMean": 16.43658092494201,
+      "continuousConditionalMean": 16.219444794368805,
+      "discreteProbability": 0.7905174958187124,
+      "continuousProbability": 0.7689338731019767
+    },
+    {
+      "pace": 0.879,
+      "discreteMean": 16.43097117036012,
+      "continuousConditionalMean": 16.21731914134316,
+      "discreteProbability": 0.7905174958187124,
+      "continuousProbability": 0.7692753492605426
+    },
+    {
+      "pace": 0.88,
+      "discreteMean": 16.412299612211985,
+      "continuousConditionalMean": 16.210248373615702,
+      "discreteProbability": 0.7905174958187124,
+      "continuousProbability": 0.7704136031220914
+    }
+  ],
+  "explanation": "Sequential toggles locate the experimental step that changes covariance. Global clock calibration and interactions travel with each switch, so this is not a unique causal allocation. Removing ability-dependent clock truncation can remove common pace covariance; fixed independent deadlines and score-dependent inbound/flight costs can still cause competitive clock coupling. Those microscopic explanations require separate experiments and are hypotheses, not proved by the switch table.",
+  "sources": {
+    "reports/defense-a/v1-seeds.json": "9b053559c8083e7e4d4421249396efb3589a899caebb034c8f84ca7a8f0502ac",
+    "reports/defense-third/accounting-seeds.json": "e39293ffb1e6c1b4d12d9222633e34b973bb137b1f6dd7215214e1fff27d7b34",
+    "reports/defense-third/independent-seeds.json": "dec3a2bcfaed582de64276526f4d9b239859f496462e2e7a824b31e966626b14",
+    "reports/defense-third/empirical-seeds.json": "e153d9f73bbab30c5de74a78292c008ea27912226b3e0c00f778ef9c5cc2aa9b",
+    "reports/defense-third/fouls-seeds.json": "a1645ca72d1b795146fc1a136402229fb650e9a6335c27f66b151acffa5d5a21",
+    "reports/defense-third/combined-grid-seeds.json": "5e7cfc793be55ca2c70675a7575af490d178890584ef436d82c3ca4fe3cc1cac"
+  }
+}

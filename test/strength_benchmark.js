@@ -1,0 +1,36 @@
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import crypto from 'node:crypto';
+import {BASELINE} from '../src/teams.js';
+import {validateLeague,measureStrength,rankTeams,probe,flatPlayer,winToOvr,summarizeStrata} from '../src/strength_benchmark.js';
+const league=JSON.parse(fs.readFileSync(new URL('../data/benchmark-league.json',import.meta.url)));
+validateLeague(league);
+for(const source of league.sources)assert.equal(crypto.createHash('sha256').update(fs.readFileSync(new URL('../data/'+source.file,import.meta.url))).digest('hex'),source.sha256);
+for(const team of league.teams){
+ const raw=JSON.parse(fs.readFileSync(new URL(`../data/benchmark-source/team-${team.id}.json`,import.meta.url))).data.resultSets[0];
+ const rows=raw.rowSet.map(r=>Object.fromEntries(raw.headers.map((h,i)=>[h,r[i]]))).sort((a,b)=>b.MIN-a.MIN||a.PLAYER_ID-b.PLAYER_ID).slice(0,5);
+ assert.deepEqual(team.roster.map(p=>p.playerId).sort((a,b)=>a-b),rows.map(p=>p.PLAYER_ID).sort((a,b)=>a-b));
+ for(const p of team.roster)assert.equal(p.teamMinutes,rows.find(r=>r.PLAYER_ID===p.playerId).MIN);
+}
+assert.throws(()=>validateLeague({...league,teams:league.teams.slice(1)}));
+assert.throws(()=>validateLeague({...league,teams:league.teams.map((t,i)=>i? t:{...t,season:'wrong'})}));
+const anchors={low:.2,mid:.5,high:.8};
+assert.equal(winToOvr(.2,anchors),40);assert.equal(winToOvr(.5,anchors),70);assert.equal(winToOvr(.8,anchors),99);
+for(let i=1;i<=1000;i++)assert.ok(winToOvr(i/1000,anchors)>=winToOvr((i-1)/1000,anchors));
+assert.throws(()=>winToOvr(.5,{low:.5,mid:.5,high:.8}));
+const s=summarizeStrata([[0,1],[.5,.5]]);
+assert.equal(s.games,8);assert.equal(s.independentPairs,4);assert.equal(s.winRate,.5);assert.equal(s.standardError,.25);
+assert.throws(()=>summarizeStrata([[.5]]));
+const options={samples:4,seed:12345,possessions:10,fatigue:false};
+const self=measureStrength([BASELINE],[BASELINE],options);
+assert.equal(self.winRate,.5);assert.equal(self.meanMargin,0);assert.equal(self.games,8);
+const result=measureStrength([league.teams[0]],league.teams.slice(0,2),options);
+assert.deepEqual(result,measureStrength([league.teams[0]],league.teams.slice(0,2),options));
+const player=flatPlayer(99),p=probe(player,3);
+assert.equal(p.roster[3].courtPosition,'PF');assert.equal(p.roster.filter(r=>r.long===70).length,4);
+assert.equal(BASELINE.roster[3].long,70);
+const rows=Array.from({length:30},(_,i)=>({id:i,winRate:1-i/30,conservative95:[1-i/30,1-i/30]}));
+const ranked=rankTeams(rows);assert.equal(ranked[2].pr,90);assert.equal(ranked[0].rank,1);
+const tied=rankTeams([{id:1,winRate:.5,conservative95:[.4,.6]},{id:2,winRate:.5,conservative95:[.4,.6]}]);
+assert.equal(tied[0].rank,1.5);assert.equal(tied[0].pr,tied[1].pr);
+console.log('PASS league provenance shape, monotonic win mapping, paired uncertainty, seat balance, fixed teammates, reproducibility, PR/ties');

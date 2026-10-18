@@ -1,0 +1,13 @@
+import fs from 'node:fs';
+import {fifthInputs} from '../src/defense_fifth_jobs.js';
+import {createRater} from './export_defense_sixth_cards.js';
+import {read} from './defense_io.js';
+const root='reports/defense-seventh/full';fs.mkdirSync(root,{recursive:true});const b=fifthInputs({cutoff:0});b.league=structuredClone(b.league);
+for(const t of b.league.teams)for(const p of t.roster)p.shotProfile={threeRate:p.observed.FGA?p.observed.FG3A/p.observed.FGA:.4,freeThrowsPerAttempt:p.observed.FGA?p.observed.FTA/p.observed.FGA:.26};
+const r=createRater(b.league,b.options);
+b.league.validGameIds=read('data/defense-a-source/manifest.json').sources.map(s=>s.id);
+fs.writeFileSync(root+'/bundle.json',JSON.stringify(b)+'\n');fs.writeFileSync(root+'/v3-league.json',JSON.stringify(b.league)+'\n');
+const players=b.league.teams.flatMap(t=>t.roster.map(p=>({id:p.playerId,teamId:t.id,name:p.name,pos:p.pos,minutes:p.observed.MIN,GP:p.observed.GP,...r.value(p),raw:p.observed,attributes:{long:p.long,mid:p.mid,short:p.short,ft:p.ft}})));
+fs.writeFileSync(root+'/card-values.json',JSON.stringify({players,baseline:r.baseline})+'\n');
+const config={root,k:82,paths:{'reports/defense-sixth/card-values-pre82.json':root+'/card-values.json','reports/defense-fifth/model-pre82/engine-signals.json':'reports/defense-fourth/model-full/engine-signals.json'}};
+fs.writeFileSync(root+'/config.json',JSON.stringify(config)+'\n');

@@ -1,0 +1,168 @@
+{
+  "version": "pure-oreb-allocation-1",
+  "interpretation": "已看過答案；四季全季當季重現，不是換隊／跨季盲測",
+  "confirmedPlayerOrebMAEImprovement": true,
+  "significantHarms": [],
+  "leagueDriftFailures": [],
+  "eligibleCandidate": true,
+  "baselinePromoted": false,
+  "primary": {
+    "MAE": {
+      "point": -0.3649765720906311,
+      "joint95": [
+        -0.3901665200141541,
+        -0.3312461902164249
+      ]
+    },
+    "RMSE": {
+      "point": -0.45418366659952014,
+      "joint95": [
+        -0.4888767549504394,
+        -0.4107626595930222
+      ]
+    }
+  },
+  "teamPaired": {
+    "netRMSE": {
+      "point": 0.015756456030007193,
+      "joint95": [
+        -0.0711767585655933,
+        0.10353568875766286
+      ]
+    },
+    "Pearson": {
+      "point": -0.0019679655700292065,
+      "joint95": [
+        -0.010565159783531567,
+        0.007855640384145905
+      ]
+    },
+    "Spearman": {
+      "point": 0.0005005700939114677,
+      "joint95": [
+        -0.025117915418727963,
+        0.022854212532368693
+      ]
+    },
+    "calibrationSlope": {
+      "point": -0.009077392852943955,
+      "joint95": [
+        -0.03256484617431226,
+        0.01645905950689227
+      ]
+    },
+    "SDRatio": {
+      "point": 0.005271472185961912,
+      "joint95": [
+        -0.012002632686908926,
+        0.023554849329322534
+      ]
+    },
+    "winsMAE": {
+      "point": -0.014166666666666217,
+      "joint95": [
+        -0.22542708333333433,
+        0.19333333333333336
+      ]
+    },
+    "winsRMSE": {
+      "point": -0.056485261878419735,
+      "joint95": [
+        -0.2924602359162252,
+        0.1774064633875179
+      ]
+    },
+    "OREB_MAE": {
+      "point": 0.0044881888604742515,
+      "joint95": [
+        -0.02865104659920068,
+        0.031654520921048736
+      ]
+    },
+    "OREB_RMSE": {
+      "point": 0.0033967090502314834,
+      "joint95": [
+        -0.02885638534441246,
+        0.03523680358977068
+      ]
+    },
+    "OREB_RawMAE": {
+      "point": 0.007346273225958488,
+      "joint95": [
+        -0.026522572212927694,
+        0.034717576111314416
+      ]
+    },
+    "OREB_Correlation": {
+      "point": -0.00013497759621283745,
+      "joint95": [
+        -0.0030134897836804203,
+        0.0028017106831529515
+      ]
+    },
+    "OREB_SDRatio": {
+      "point": -0.0011860943831663029,
+      "joint95": [
+        -0.012739743193451433,
+        0.010515305847621781
+      ]
+    },
+    "DREB_RMSE": {
+      "point": 0.0017707627990073416,
+      "joint95": [
+        -0.030101378292694464,
+        0.03318311721481449
+      ]
+    },
+    "DREB_Correlation": {
+      "point": -0.0019049051223654079,
+      "joint95": [
+        -0.03837881287770599,
+        0.03632146889738203
+      ]
+    },
+    "DREB_SDRatio": {
+      "point": 0.0042148498703583614,
+      "joint95": [
+        -0.019031085194222152,
+        0.026759783604071656
+      ]
+    },
+    "defenseProxyRMSE": {
+      "point": -0.018555960348415557,
+      "joint95": [
+        -0.07286980026767816,
+        0.040778154567755194
+      ]
+    },
+    "defenseCorrelation": {
+      "point": 0.007635560918052731,
+      "joint95": [
+        -0.01651138346659028,
+        0.03287441540710812
+      ]
+    },
+    "defenseSDRatio": {
+      "point": 0.001643019096450704,
+      "joint95": [
+        -0.01889684347909259,
+        0.023880572150193395
+      ]
+    },
+    "offenseRMSE": {
+      "point": -0.016781476371627413,
+      "joint95": [
+        -0.06971585784196817,
+        0.03677972930414435
+      ]
+    },
+    "defenseRMSE": {
+      "point": -0.027572176303851226,
+      "joint95": [
+        -0.0783468039578101,
+        0.030245064633687185
+      ]
+    }
+  },
+  "rule": "Player allocation improves only if four-season paired joint95 upper MAE difference <0. Retain candidate only if no significant deterioration in team OREB RMSE, DREB RMSE, net RMSE, wins MAE; each season absolute efficiency and possession proxy bias <=.5. Failures kept, no after-result retuning or extra calibration. No frozen baseline replacement."
+}

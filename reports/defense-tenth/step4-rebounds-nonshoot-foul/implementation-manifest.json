@@ -1,0 +1,11 @@
+{
+  "recordedUTC": "2026-10-15T01:57:20.446531+00:00",
+  "note": "implementation manifest recorded after diagnostic runs; protocol was registered before reading/running; rates file before candidate runs",
+  "files": {
+    "adapter.mjs": "c265c1b54787c9d5eb0803338009dc8184459ab6fc4e4f2900d37a030dee8498",
+    "worker.mjs": "cfe246655796e23aedf7d42ae1ed2d1d666207a957dc8f794fb1d1af122a2d59",
+    "run-candidate.mjs": "d29995aa1721bf3b442b9ea3cc9fb16346723b6c198212c5d3fee19920dc84d7",
+    "collector.mjs": "969e197d1c60bd4b30ce1387381ede8faa4e5130a3c27ccd9eb2ea9058179fec",
+    "rates.json": "560ac5099899b5e7786836f1285a2bebb82503be2282f08399269f9abf843580"
+  }
+}

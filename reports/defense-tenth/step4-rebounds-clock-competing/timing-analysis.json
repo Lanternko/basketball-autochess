@@ -1,0 +1,110 @@
+{
+  "note": "descriptive, no parameter refitting; anchor period clock >14 seconds",
+  "rows": [
+    {
+      "season": "2022-23",
+      "real": {
+        "n": 167,
+        "meanSeconds": 4.226946107784432,
+        "atLeast13Seconds": 0.17964071856287425,
+        "atMost3Seconds": 0.6706586826347305
+      },
+      "baseline": {
+        "n": 0,
+        "meanSeconds": null,
+        "atLeast13Seconds": null,
+        "atMost3Seconds": null
+      },
+      "combined": {
+        "n": 116,
+        "meanSeconds": 12.94051724137931,
+        "atLeast13Seconds": 0.8362068965517241,
+        "atMost3Seconds": 0.034482758620689655
+      }
+    },
+    {
+      "season": "2023-24",
+      "real": {
+        "n": 153,
+        "meanSeconds": 3.242483660130719,
+        "atLeast13Seconds": 0.11764705882352941,
+        "atMost3Seconds": 0.7320261437908496
+      },
+      "baseline": {
+        "n": 0,
+        "meanSeconds": null,
+        "atLeast13Seconds": null,
+        "atMost3Seconds": null
+      },
+      "combined": {
+        "n": 114,
+        "meanSeconds": 12.939473684210524,
+        "atLeast13Seconds": 0.8421052631578947,
+        "atMost3Seconds": 0.02631578947368421
+      }
+    },
+    {
+      "season": "2024-25",
+      "real": {
+        "n": 218,
+        "meanSeconds": 2.8876146788990824,
+        "atLeast13Seconds": 0.10550458715596331,
+        "atMost3Seconds": 0.7752293577981652
+      },
+      "baseline": {
+        "n": 0,
+        "meanSeconds": null,
+        "atLeast13Seconds": null,
+        "atMost3Seconds": null
+      },
+      "combined": {
+        "n": 119,
+        "meanSeconds": 12.90756302521008,
+        "atLeast13Seconds": 0.8487394957983193,
+        "atMost3Seconds": 0.025210084033613446
+      }
+    },
+    {
+      "season": "2025-26",
+      "real": {
+        "n": 176,
+        "meanSeconds": 4.215909090909091,
+        "atLeast13Seconds": 0.18181818181818182,
+        "atMost3Seconds": 0.6875
+      },
+      "baseline": {
+        "n": 0,
+        "meanSeconds": null,
+        "atLeast13Seconds": null,
+        "atMost3Seconds": null
+      },
+      "combined": {
+        "n": 122,
+        "meanSeconds": 13.08688524590164,
+        "atLeast13Seconds": 0.8360655737704918,
+        "atMost3Seconds": 0.00819672131147541
+      }
+    },
+    {
+      "season": "pooled",
+      "real": {
+        "n": 714,
+        "meanSeconds": 3.604341736694678,
+        "atLeast13Seconds": 0.14425770308123248,
+        "atMost3Seconds": 0.7198879551820728
+      },
+      "baseline": {
+        "n": 0,
+        "meanSeconds": null,
+        "atLeast13Seconds": null,
+        "atMost3Seconds": null
+      },
+      "combined": {
+        "n": 471,
+        "meanSeconds": 12.969851380042462,
+        "atLeast13Seconds": 0.8407643312101911,
+        "atMost3Seconds": 0.02335456475583864
+      }
+    }
+  ]
+}

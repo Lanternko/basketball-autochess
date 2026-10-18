@@ -1,0 +1,63 @@
+{
+  "version": "v49",
+  "rotationAdopted": true,
+  "combinedOffenseAdopted": false,
+  "rotationGates": {
+    "fullActualMinutesMAEImproved": true,
+    "fullRegulationTargetMinutesMAEImproved": true,
+    "phaseAbsoluteMinutesPerAppearanceImproved": true,
+    "pairOverlapMinutesMAEImproved": true,
+    "everySeasonActualMinutesNonRegression": true,
+    "runtimeVerified": true,
+    "fitVerified": true
+  },
+  "combinedOffenseGates": {
+    "teamPPGnonRegression": true,
+    "individualPTS36within002": false,
+    "coarseDefenseWithin005pp": false
+  },
+  "fourSeasonRotationMean": {
+    "v47": {
+      "fullActualMinutesMAE": 1.5566299795316147,
+      "fullRegulationTargetMinutesMAE": 1.43206164800137,
+      "phaseAbsoluteMinutesPerAppearance": 18.94452535264867,
+      "pairOverlapMinutesMAE": 4.021404190270965,
+      "strictRegulationSourceMinutesMAE": 1.433500870624636
+    },
+    "v49": {
+      "fullActualMinutesMAE": 1.0039517116747698,
+      "fullRegulationTargetMinutesMAE": 0.856929558723391,
+      "phaseAbsoluteMinutesPerAppearance": 15.051805953026058,
+      "pairOverlapMinutesMAE": 3.1680141373612853,
+      "strictRegulationSourceMinutesMAE": 0.8796323155179496
+    }
+  },
+  "fourSeasonGameplayMean": {
+    "v47": {
+      "teamPPGmae": 2.323170731707317,
+      "pts36mae": 0.7355469762174685,
+      "paintDefenseFGmae": 1.0705631933037958,
+      "threeDefenseFGmae": 1.2158722194106393
+    },
+    "v49": {
+      "teamPPGmae": 1.9773712737127358,
+      "pts36mae": 0.7988383452128602,
+      "paintDefenseFGmae": 0.8740278324340665,
+      "threeDefenseFGmae": 1.2659677731443642
+    }
+  },
+  "gameDefaultChanged": false,
+  "ovrRecomputed": false,
+  "healthyAbilityUnchanged": true,
+  "namedPlayerExceptions": false,
+  "scope": "Measured same-season reconstruction. Known game appearances/starters/minute totals retained. Source phase/pair profiles exclude tested game fold. Timing is a statistical plan, not exact target-game substitution replay.",
+  "remainingWork": [
+    "Residual per-game source timing/overlap differences are expected and reported.",
+    "Emergency minimum-five foul-exhaustion retains the existing engine fallback; technical-foul penalties for that rare case are not newly implemented.",
+    "Overtime retains the existing heuristic; actual minute errors include differences in actual versus simulated overtime duration.",
+    "Player offense/defense calibration must be assessed on the corrected rotation; no automatic OVR or game preset promotion.",
+    "Payton/Curry overlap remains below source; source pair targets are not exactly realized by the online controller.",
+    "Short playing segments remain more frequent than source; the duration distribution is reported, not declared fully accurate.",
+    "Guard/big role coverage currently uses positions and a height fallback; flexible small-ball role recognition remains limited."
+  ]
+}

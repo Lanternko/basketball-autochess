@@ -1,0 +1,4773 @@
+{
+  "prior": "2022-23",
+  "target": "2023-24",
+  "priors": {
+    "long": 0.36070053704671834,
+    "ft": 0.7817343077800238,
+    "mid": 0.44967113192603053,
+    "short": 0.5753470753374611
+  },
+  "players": [
+    {
+      "id": 1630180,
+      "name": "Saddiq Bey",
+      "teamId": 1610612737,
+      "priorOnly": false,
+      "MPG": 27.636363636363637,
+      "availability": 0.9013545644984206,
+      "availableAfter": 0
+    },
+    {
+      "id": 203992,
+      "name": "Bogdan Bogdanović",
+      "teamId": 1610612737,
+      "priorOnly": false,
+      "MPG": 27.90740740740741,
+      "availability": 0.6758643684199891,
+      "availableAfter": 0
+    },
+    {
+      "id": 1641723,
+      "name": "Kobe Bufkin",
+      "teamId": 1610612737,
+      "priorOnly": true,
+      "MPG": 12,
+      "availability": 0.5317944250871078,
+      "availableAfter": 0
+    },
+    {
+      "id": 203991,
+      "name": "Clint Capela",
+      "teamId": 1610612737,
+      "priorOnly": false,
+      "MPG": 26.553846153846155,
+      "availability": 0.7837075056748911,
+      "availableAfter": 0
+    },
+    {
+      "id": 1628981,
+      "name": "Bruno Fernando",
+      "teamId": 1610612737,
+      "priorOnly": false,
+      "MPG": 10.435897435897436,
+      "availability": 0.48662635786021724,
+      "availableAfter": 0
+    },
+    {
+      "id": 1631100,
+      "name": "AJ Griffin",
+      "teamId": 1610612737,
+      "priorOnly": false,
+      "MPG": 19.40277777777778,
+      "availability": 0.8101557696249231,
+      "availableAfter": 0
+    },
+    {
+      "id": 1631243,
+      "name": "Mouhamed Gueye",
+      "teamId": 1610612737,
+      "priorOnly": true,
+      "MPG": 12,
+      "availability": 0.5317944250871078,
+      "availableAfter": 0
+    },
+    {
+      "id": 1629631,
+      "name": "De'Andre Hunter",
+      "teamId": 1610612737,
+      "priorOnly": false,
+      "MPG": 31.71641791044776,
+      "availability": 0.8101821659927829,
+      "availableAfter": 0
+    },
+    {
+      "id": 1630552,
+      "name": "Jalen Johnson",
+      "teamId": 1610612737,
+      "priorOnly": false,
+      "MPG": 15.08695652173913,
+      "availability": 0.7807440049190407,
+      "availableAfter": 0
+    },
+    {
+      "id": 1629726,
+      "name": "Garrison Mathews",
+      "teamId": 1610612737,
+      "priorOnly": false,
+      "MPG": 12.722222222222221,
+      "availability": 0.633685181389629,
+      "availableAfter": 0
+    },
+    {
+      "id": 202083,
+      "name": "Wesley Matthews",
+      "teamId": 1610612737,
+      "priorOnly": false,
+      "MPG": 15.73076923076923,
+      "availability": 0.6140773382523741,
+      "availableAfter": 0
+    },
+    {
+      "id": 201988,
+      "name": "Patty Mills",
+      "teamId": 1610612737,
+      "priorOnly": false,
+      "MPG": 14.2,
+      "availability": 0.4964302794288447,
+      "availableAfter": 0
+    },
+    {
+      "id": 1627749,
+      "name": "Dejounte Murray",
+      "teamId": 1610612737,
+      "priorOnly": false,
+      "MPG": 36.41891891891892,
+      "availability": 0.8788096169731751,
+      "availableAfter": 0
+    },
+    {
+      "id": 1630168,
+      "name": "Onyeka Okongwu",
+      "teamId": 1610612737,
+      "priorOnly": false,
+      "MPG": 23.125,
+      "availability": 0.9307663292043028,
+      "availableAfter": 0
+    },
+    {
+      "id": 1629027,
+      "name": "Trae Young",
+      "teamId": 1610612737,
+      "priorOnly": false,
+      "MPG": 34.83561643835616,
+      "availability": 0.8690056954045476,
+      "availableAfter": 0
+    },
+    {
+      "id": 1630235,
+      "name": "Trent Forrest",
+      "teamId": 1610612737,
+      "priorOnly": false,
+      "MPG": 5,
+      "availability": 0.329763612762178,
+      "availableAfter": 0
+    },
+    {
+      "id": 1641754,
+      "name": "Seth Lundy",
+      "teamId": 1610612737,
+      "priorOnly": true,
+      "MPG": 5,
+      "availability": 0.5317944250871078,
+      "availableAfter": 0
+    },
+    {
+      "id": 1641936,
+      "name": "Miles Norris",
+      "teamId": 1610612737,
+      "priorOnly": true,
+      "MPG": 5,
+      "availability": 0.5317944250871078,
+      "availableAfter": 0
+    },
+    {
+      "id": 1630625,
+      "name": "Dalano Banton",
+      "teamId": 1610612738,
+      "priorOnly": false,
+      "MPG": 9,
+      "availability": 0.34388877502220394,
+      "availableAfter": 0
+    },
+    {
+      "id": 1629052,
+      "name": "Oshae Brissett",
+      "teamId": 1610612738,
+      "priorOnly": false,
+      "MPG": 16.723076923076924,
+      "availability": 0.741528318644531,
+      "availableAfter": 0
+    },
+    {
+      "id": 1627759,
+      "name": "Jaylen Brown",
+      "teamId": 1610612738,
+      "priorOnly": false,
+      "MPG": 35.95522388059702,
+      "availability": 0.8101821659927829,
+      "availableAfter": 0
+    },
+    {
+      "id": 1630573,
+      "name": "Sam Hauser",
+      "teamId": 1610612738,
+      "priorOnly": false,
+      "MPG": 16.1,
+      "availability": 0.8885871421739427,
+      "availableAfter": 0
+    },
+    {
+      "id": 201950,
+      "name": "Jrue Holiday",
+      "teamId": 1610612738,
+      "priorOnly": false,
+      "MPG": 32.53731343283582,
+      "availability": 0.8101821659927829,
+      "availableAfter": 0
+    },
+    {
+      "id": 201143,
+      "name": "Al Horford",
+      "teamId": 1610612738,
+      "priorOnly": false,
+      "MPG": 30.50793650793651,
+      "availability": 0.7709664797182731,
+      "availableAfter": 0
+    },
+    {
+      "id": 1628436,
+      "name": "Luke Kornet",
+      "teamId": 1610612738,
+      "priorOnly": false,
+      "MPG": 11.695652173913043,
+      "availability": 0.7807440049190407,
+      "availableAfter": 0
+    },
+    {
+      "id": 1629004,
+      "name": "Svi Mykhailiuk",
+      "teamId": 1610612738,
+      "priorOnly": false,
+      "MPG": 15.129032258064516,
+      "availability": 0.40819498531119763,
+      "availableAfter": 0
+    },
+    {
+      "id": 204001,
+      "name": "Kristaps Porziņģis",
+      "teamId": 1610612738,
+      "priorOnly": false,
+      "MPG": 32.646153846153844,
+      "availability": 0.7905743228555281,
+      "availableAfter": 0
+    },
+    {
+      "id": 1630202,
+      "name": "Payton Pritchard",
+      "teamId": 1610612738,
+      "priorOnly": false,
+      "MPG": 13.395833333333334,
+      "availability": 0.5748616519778643,
+      "availableAfter": 0
+    },
+    {
+      "id": 1630205,
+      "name": "Lamar Stevens",
+      "teamId": 1610612738,
+      "priorOnly": false,
+      "MPG": 18.42622950819672,
+      "availability": 0.7023126323700212,
+      "availableAfter": 0
+    },
+    {
+      "id": 1628369,
+      "name": "Jayson Tatum",
+      "teamId": 1610612738,
+      "priorOnly": false,
+      "MPG": 36.932432432432435,
+      "availability": 0.8788096169731751,
+      "availableAfter": 0
+    },
+    {
+      "id": 1641775,
+      "name": "Jordan Walsh",
+      "teamId": 1610612738,
+      "priorOnly": true,
+      "MPG": 12,
+      "availability": 0.5317944250871078,
+      "availableAfter": 0
+    },
+    {
+      "id": 1628401,
+      "name": "Derrick White",
+      "teamId": 1610612738,
+      "priorOnly": false,
+      "MPG": 28.317073170731707,
+      "availability": 0.9503741723415577,
+      "availableAfter": 0
+    },
+    {
+      "id": 1631120,
+      "name": "JD Davison",
+      "teamId": 1610612738,
+      "priorOnly": false,
+      "MPG": 5,
+      "availability": 0.15761426521828242,
+      "availableAfter": 0
+    },
+    {
+      "id": 1630233,
+      "name": "Nathan Knight",
+      "teamId": 1610612738,
+      "priorOnly": false,
+      "MPG": 5,
+      "availability": 0.41251622600259613,
+      "availableAfter": 0
+    },
+    {
+      "id": 1629674,
+      "name": "Neemias Queta",
+      "teamId": 1610612738,
+      "priorOnly": false,
+      "MPG": 5,
+      "availability": 0.08898681423789027,
+      "availableAfter": 0
+    },
+    {
+      "id": 1628969,
+      "name": "Mikal Bridges",
+      "teamId": 1610612751,
+      "priorOnly": false,
+      "MPG": 36.15853658536585,
+      "availability": 0.9572409895221947,
+      "availableAfter": 0
+    },
+    {
+      "id": 1629651,
+      "name": "Nic Claxton",
+      "teamId": 1610612751,
+      "priorOnly": false,
+      "MPG": 29.842105263157894,
+      "availability": 0.891550642929793,
+      "availableAfter": 0
+    },
+    {
+      "id": 1641730,
+      "name": "Noah Clowney",
+      "teamId": 1610612751,
+      "priorOnly": true,
+      "MPG": 12,
+      "availability": 0.5317944250871078,
+      "availableAfter": 0
+    },
+    {
+      "id": 203915,
+      "name": "Spencer Dinwiddie",
+      "teamId": 1610612751,
+      "priorOnly": false,
+      "MPG": 34.53164556962025,
+      "availability": 0.9278292248163124,
+      "availableAfter": 0
+    },
+    {
+      "id": 1627827,
+      "name": "Dorian Finney-Smith",
+      "teamId": 1610612751,
+      "priorOnly": false,
+      "MPG": 30.424242424242426,
+      "availability": 0.8003782444241555,
+      "availableAfter": 0
+    },
+    {
+      "id": 1628385,
+      "name": "Harry Giles III",
+      "teamId": 1610612751,
+      "priorOnly": true,
+      "MPG": 12,
+      "availability": 0.5317944250871078,
+      "availableAfter": 0
+    },
+    {
+      "id": 1629661,
+      "name": "Cameron Johnson",
+      "teamId": 1610612751,
+      "priorOnly": false,
+      "MPG": 28.5,
+      "availability": 0.5582173095964598,
+      "availableAfter": 0
+    },
+    {
+      "id": 1626220,
+      "name": "Royce O'Neale",
+      "teamId": 1610612751,
+      "priorOnly": false,
+      "MPG": 31.68421052631579,
+      "availability": 0.89841746011043,
+      "availableAfter": 0
+    },
+    {
+      "id": 1630549,
+      "name": "Day'Ron Sharpe",
+      "teamId": 1610612751,
+      "priorOnly": false,
+      "MPG": 11.829787234042554,
+      "availability": 0.5650577304092369,
+      "availableAfter": 0
+    },
+    {
+      "id": 1627732,
+      "name": "Ben Simmons",
+      "teamId": 1610612751,
+      "priorOnly": false,
+      "MPG": 26.261904761904763,
+      "availability": 0.5582173095964598,
+      "availableAfter": 0
+    },
+    {
+      "id": 1628372,
+      "name": "Dennis Smith Jr.",
+      "teamId": 1610612751,
+      "priorOnly": false,
+      "MPG": 25.74074074074074,
+      "availability": 0.6758643684199891,
+      "availableAfter": 0
+    },
+    {
+      "id": 1630560,
+      "name": "Cam Thomas",
+      "teamId": 1610612751,
+      "priorOnly": false,
+      "MPG": 16.63157894736842,
+      "availability": 0.6630969460955114,
+      "availableAfter": 0
+    },
+    {
+      "id": 1629022,
+      "name": "Lonnie Walker IV",
+      "teamId": 1610612751,
+      "priorOnly": false,
+      "MPG": 23.125,
+      "availability": 0.695472211557244,
+      "availableAfter": 0
+    },
+    {
+      "id": 1630570,
+      "name": "Trendon Watford",
+      "teamId": 1610612751,
+      "priorOnly": false,
+      "MPG": 19.112903225806452,
+      "availability": 0.7121165539386486,
+      "availableAfter": 0
+    },
+    {
+      "id": 1629717,
+      "name": "Armoni Brooks",
+      "teamId": 1610612751,
+      "priorOnly": true,
+      "MPG": 5,
+      "availability": 0.5317944250871078,
+      "availableAfter": 0
+    },
+    {
+      "id": 1641727,
+      "name": "Dariq Whitehead",
+      "teamId": 1610612751,
+      "priorOnly": true,
+      "MPG": 12,
+      "availability": 0.5317944250871078,
+      "availableAfter": 14
+    },
+    {
+      "id": 1630592,
+      "name": "Jalen Wilson",
+      "teamId": 1610612751,
+      "priorOnly": true,
+      "MPG": 5,
+      "availability": 0.5317944250871078,
+      "availableAfter": 0
+    },
+    {
+      "id": 1641735,
+      "name": "Amari Bailey",
+      "teamId": 1610612766,
+      "priorOnly": true,
+      "MPG": 5,
+      "availability": 0.5317944250871078,
+      "availableAfter": 0
+    },
+    {
+      "id": 1630163,
+      "name": "LaMelo Ball",
+      "teamId": 1610612766,
+      "priorOnly": false,
+      "MPG": 35.25,
+      "availability": 0.506260597365332,
+      "availableAfter": 0
+    },
+    {
+      "id": 1641778,
+      "name": "Leaky Black",
+      "teamId": 1610612766,
+      "priorOnly": true,
+      "MPG": 5,
+      "availability": 0.5317944250871078,
+      "availableAfter": 0
+    },
+    {
+      "id": 1628970,
+      "name": "Miles Bridges",
+      "teamId": 1610612766,
+      "priorOnly": true,
+      "MPG": 12,
+      "availability": 0.5317944250871078,
+      "availableAfter": 0
+    },
+    {
+      "id": 202330,
+      "name": "Gordon Hayward",
+      "teamId": 1610612766,
+      "priorOnly": false,
+      "MPG": 31.52,
+      "availability": 0.6435154993261163,
+      "availableAfter": 0
+    },
+    {
+      "id": 1630177,
+      "name": "Theo Maledon",
+      "teamId": 1610612766,
+      "priorOnly": false,
+      "MPG": 5,
+      "availability": 0.5356459657033545,
+      "availableAfter": 0
+    },
+    {
+      "id": 1631121,
+      "name": "Bryce McGowens",
+      "teamId": 1610612766,
+      "priorOnly": false,
+      "MPG": 17.533333333333335,
+      "availability": 0.545449887271982,
+      "availableAfter": 0
+    },
+    {
+      "id": 1641706,
+      "name": "Brandon Miller",
+      "teamId": 1610612766,
+      "priorOnly": true,
+      "MPG": 12,
+      "availability": 0.5317944250871078,
+      "availableAfter": 0
+    },
+    {
+      "id": 1630208,
+      "name": "Nick Richards",
+      "teamId": 1610612766,
+      "priorOnly": false,
+      "MPG": 18.70769230769231,
+      "availability": 0.741528318644531,
+      "availableAfter": 0
+    },
+    {
+      "id": 1626179,
+      "name": "Terry Rozier",
+      "teamId": 1610612766,
+      "priorOnly": false,
+      "MPG": 35.301587301587304,
+      "availability": 0.7709664797182731,
+      "availableAfter": 0
+    },
+    {
+      "id": 1641733,
+      "name": "Nick Smith Jr.",
+      "teamId": 1610612766,
+      "priorOnly": true,
+      "MPG": 12,
+      "availability": 0.5317944250871078,
+      "availableAfter": 0
+    },
+    {
+      "id": 1628410,
+      "name": "Edmond Sumner",
+      "teamId": 1610612766,
+      "priorOnly": false,
+      "MPG": 13.90566037735849,
+      "availability": 0.6238812598210015,
+      "availableAfter": 0
+    },
+    {
+      "id": 1630550,
+      "name": "JT Thor",
+      "teamId": 1610612766,
+      "priorOnly": false,
+      "MPG": 14,
+      "availability": 0.7807440049190407,
+      "availableAfter": 0
+    },
+    {
+      "id": 1629023,
+      "name": "P.J. Washington",
+      "teamId": 1610612766,
+      "priorOnly": false,
+      "MPG": 32.56164383561644,
+      "availability": 0.8690056954045476,
+      "availableAfter": 0
+    },
+    {
+      "id": 1631109,
+      "name": "Mark Williams",
+      "teamId": 1610612766,
+      "priorOnly": false,
+      "MPG": 19.25581395348837,
+      "availability": 0.525842044134727,
+      "availableAfter": 0
+    },
+    {
+      "id": 1630547,
+      "name": "James Bouknight",
+      "teamId": 1610612766,
+      "priorOnly": false,
+      "MPG": 15.117647058823529,
+      "availability": 0.43760675001708,
+      "availableAfter": 14
+    },
+    {
+      "id": 1628998,
+      "name": "Cody Martin",
+      "teamId": 1610612766,
+      "priorOnly": false,
+      "MPG": 19.285714285714285,
+      "availability": 0.1729008676641388,
+      "availableAfter": 14
+    },
+    {
+      "id": 1628373,
+      "name": "Frank Ntilikina",
+      "teamId": 1610612766,
+      "priorOnly": false,
+      "MPG": 13.26086956521739,
+      "availability": 0.5552538088406094,
+      "availableAfter": 14
+    },
+    {
+      "id": 1628975,
+      "name": "Jevon Carter",
+      "teamId": 1610612741,
+      "priorOnly": false,
+      "MPG": 22.333333333333332,
+      "availability": 0.9405702507729303,
+      "availableAfter": 0
+    },
+    {
+      "id": 1627936,
+      "name": "Alex Caruso",
+      "teamId": 1610612741,
+      "priorOnly": false,
+      "MPG": 23.507462686567163,
+      "availability": 0.803315348812146,
+      "availableAfter": 0
+    },
+    {
+      "id": 1628470,
+      "name": "Torrey Craig",
+      "teamId": 1610612741,
+      "priorOnly": false,
+      "MPG": 24.734177215189874,
+      "availability": 0.9209624076356754,
+      "availableAfter": 0
+    },
+    {
+      "id": 201942,
+      "name": "DeMar DeRozan",
+      "teamId": 1610612741,
+      "priorOnly": false,
+      "MPG": 36.310810810810814,
+      "availability": 0.8788096169731751,
+      "availableAfter": 0
+    },
+    {
+      "id": 1630245,
+      "name": "Ayo Dosunmu",
+      "teamId": 1610612741,
+      "priorOnly": false,
+      "MPG": 26.2375,
+      "availability": 0.9307663292043028,
+      "availableAfter": 0
+    },
+    {
+      "id": 203083,
+      "name": "Andre Drummond",
+      "teamId": 1610612741,
+      "priorOnly": false,
+      "MPG": 12.686567164179104,
+      "availability": 0.7611361617817859,
+      "availableAfter": 0
+    },
+    {
+      "id": 203897,
+      "name": "Zach LaVine",
+      "teamId": 1610612741,
+      "priorOnly": false,
+      "MPG": 35.935064935064936,
+      "availability": 0.9082213816790574,
+      "availableAfter": 0
+    },
+    {
+      "id": 1641763,
+      "name": "Julian Phillips",
+      "teamId": 1610612741,
+      "priorOnly": true,
+      "MPG": 12,
+      "availability": 0.5317944250871078,
+      "availableAfter": 0
+    },
+    {
+      "id": 1630678,
+      "name": "Terry Taylor",
+      "teamId": 1610612741,
+      "priorOnly": false,
+      "MPG": 9.068965517241379,
+      "availability": 0.32428093188494905,
+      "availableAfter": 0
+    },
+    {
+      "id": 1631207,
+      "name": "Dalen Terry",
+      "teamId": 1610612741,
+      "priorOnly": false,
+      "MPG": 5.837837837837838,
+      "availability": 0.40271230443396866,
+      "availableAfter": 0
+    },
+    {
+      "id": 202696,
+      "name": "Nikola Vučević",
+      "teamId": 1610612741,
+      "priorOnly": false,
+      "MPG": 33.46341463414634,
+      "availability": 0.9572409895221947,
+      "availableAfter": 0
+    },
+    {
+      "id": 1629632,
+      "name": "Coby White",
+      "teamId": 1610612741,
+      "priorOnly": false,
+      "MPG": 23.405405405405407,
+      "availability": 0.8719427997925382,
+      "availableAfter": 0
+    },
+    {
+      "id": 1630172,
+      "name": "Patrick Williams",
+      "teamId": 1610612741,
+      "priorOnly": false,
+      "MPG": 28.390243902439025,
+      "availability": 0.9503741723415577,
+      "availableAfter": 0
+    },
+    {
+      "id": 1628366,
+      "name": "Lonzo Ball",
+      "teamId": 1610612741,
+      "priorOnly": true,
+      "MPG": 12,
+      "availability": 0.5317944250871078,
+      "availableAfter": 14
+    },
+    {
+      "id": 1641931,
+      "name": "Onuralp Bitim",
+      "teamId": 1610612741,
+      "priorOnly": true,
+      "MPG": 5,
+      "availability": 0.5317944250871078,
+      "availableAfter": 0
+    },
+    {
+      "id": -953226712,
+      "name": "Justin Lewis",
+      "teamId": 1610612741,
+      "priorOnly": true,
+      "MPG": 5,
+      "availability": 0.5317944250871078,
+      "availableAfter": 0
+    },
+    {
+      "id": 1641766,
+      "name": "Adama Sanogo",
+      "teamId": 1610612741,
+      "priorOnly": true,
+      "MPG": 5,
+      "availability": 0.5317944250871078,
+      "availableAfter": 0
+    },
+    {
+      "id": 1628386,
+      "name": "Jarrett Allen",
+      "teamId": 1610612739,
+      "priorOnly": false,
+      "MPG": 32.76470588235294,
+      "availability": 0.8199860875614103,
+      "availableAfter": 0
+    },
+    {
+      "id": 1629636,
+      "name": "Darius Garland",
+      "teamId": 1610612739,
+      "priorOnly": false,
+      "MPG": 35.492753623188406,
+      "availability": 0.8297900091300379,
+      "availableAfter": 0
+    },
+    {
+      "id": 1629660,
+      "name": "Ty Jerome",
+      "teamId": 1610612739,
+      "priorOnly": false,
+      "MPG": 18.155555555555555,
+      "availability": 0.545449887271982,
+      "availableAfter": 0
+    },
+    {
+      "id": 1627745,
+      "name": "Damian Jones",
+      "teamId": 1610612739,
+      "priorOnly": false,
+      "MPG": 11.9,
+      "availability": 0.4964302794288447,
+      "availableAfter": 0
+    },
+    {
+      "id": 1627747,
+      "name": "Caris LeVert",
+      "teamId": 1610612739,
+      "priorOnly": false,
+      "MPG": 30.2027027027027,
+      "availability": 0.8788096169731751,
+      "availableAfter": 0
+    },
+    {
+      "id": 1630241,
+      "name": "Sam Merrill",
+      "teamId": 1610612739,
+      "priorOnly": false,
+      "MPG": 11.6,
+      "availability": 0.1532930245268839,
+      "availableAfter": 0
+    },
+    {
+      "id": 1628378,
+      "name": "Donovan Mitchell",
+      "teamId": 1610612739,
+      "priorOnly": false,
+      "MPG": 35.8235294117647,
+      "availability": 0.8199860875614103,
+      "availableAfter": 0
+    },
+    {
+      "id": 1630596,
+      "name": "Evan Mobley",
+      "teamId": 1610612739,
+      "priorOnly": false,
+      "MPG": 34.40506329113924,
+      "availability": 0.9278292248163124,
+      "availableAfter": 0
+    },
+    {
+      "id": 1627777,
+      "name": "Georges Niang",
+      "teamId": 1610612739,
+      "priorOnly": false,
+      "MPG": 19.384615384615383,
+      "availability": 0.8689792990366878,
+      "availableAfter": 0
+    },
+    {
+      "id": 1630171,
+      "name": "Isaac Okoro",
+      "teamId": 1610612739,
+      "priorOnly": false,
+      "MPG": 21.789473684210527,
+      "availability": 0.891550642929793,
+      "availableAfter": 0
+    },
+    {
+      "id": 1629622,
+      "name": "Max Strus",
+      "teamId": 1610612739,
+      "priorOnly": false,
+      "MPG": 28.4125,
+      "availability": 0.9307663292043028,
+      "availableAfter": 0
+    },
+    {
+      "id": 202684,
+      "name": "Tristan Thompson",
+      "teamId": 1610612739,
+      "priorOnly": true,
+      "MPG": 12,
+      "availability": 0.5317944250871078,
+      "availableAfter": 0
+    },
+    {
+      "id": 1629731,
+      "name": "Dean Wade",
+      "teamId": 1610612739,
+      "priorOnly": false,
+      "MPG": 20.204545454545453,
+      "availability": 0.5778251527337146,
+      "availableAfter": 0
+    },
+    {
+      "id": 1641734,
+      "name": "Emoni Bates",
+      "teamId": 1610612739,
+      "priorOnly": true,
+      "MPG": 5,
+      "availability": 0.5317944250871078,
+      "availableAfter": 0
+    },
+    {
+      "id": 1630600,
+      "name": "Isaiah Mobley",
+      "teamId": 1610612739,
+      "priorOnly": false,
+      "MPG": 5,
+      "availability": 0.14781034364965498,
+      "availableAfter": 0
+    },
+    {
+      "id": 1641854,
+      "name": "Craig Porter Jr.",
+      "teamId": 1610612739,
+      "priorOnly": true,
+      "MPG": 5,
+      "availability": 0.5317944250871078,
+      "availableAfter": 0
+    },
+    {
+      "id": 201937,
+      "name": "Ricky Rubio",
+      "teamId": 1610612739,
+      "priorOnly": false,
+      "MPG": 17.09090909090909,
+      "availability": 0.4278028284484525,
+      "availableAfter": 14
+    },
+    {
+      "id": 203552,
+      "name": "Seth Curry",
+      "teamId": 1610612742,
+      "priorOnly": false,
+      "MPG": 19.83606557377049,
+      "availability": 0.7023126323700212,
+      "availableAfter": 0
+    },
+    {
+      "id": 1629029,
+      "name": "Luka Dončić",
+      "teamId": 1610612742,
+      "priorOnly": false,
+      "MPG": 36.196969696969695,
+      "availability": 0.8003782444241555,
+      "availableAfter": 0
+    },
+    {
+      "id": 203957,
+      "name": "Dante Exum",
+      "teamId": 1610612742,
+      "priorOnly": true,
+      "MPG": 12,
+      "availability": 0.5317944250871078,
+      "availableAfter": 0
+    },
+    {
+      "id": 1630182,
+      "name": "Josh Green",
+      "teamId": 1610612742,
+      "priorOnly": false,
+      "MPG": 25.633333333333333,
+      "availability": 0.7346878978317538,
+      "availableAfter": 0
+    },
+    {
+      "id": 203501,
+      "name": "Tim Hardaway Jr.",
+      "teamId": 1610612742,
+      "priorOnly": false,
+      "MPG": 30.281690140845072,
+      "availability": 0.8493978522672927,
+      "availableAfter": 0
+    },
+    {
+      "id": 1630702,
+      "name": "Jaden Hardy",
+      "teamId": 1610612742,
+      "priorOnly": false,
+      "MPG": 15.042553191489361,
+      "availability": 0.5650577304092369,
+      "availableAfter": 0
+    },
+    {
+      "id": 1626158,
+      "name": "Richaun Holmes",
+      "teamId": 1610612742,
+      "priorOnly": false,
+      "MPG": 8.463414634146341,
+      "availability": 0.4419279907084785,
+      "availableAfter": 0
+    },
+    {
+      "id": 202681,
+      "name": "Kyrie Irving",
+      "teamId": 1610612742,
+      "priorOnly": false,
+      "MPG": 37.333333333333336,
+      "availability": 0.7415547150123908,
+      "availableAfter": 0
+    },
+    {
+      "id": 1627884,
+      "name": "Derrick Jones Jr.",
+      "teamId": 1610612742,
+      "priorOnly": false,
+      "MPG": 13.953125,
+      "availability": 0.7317243970759035,
+      "availableAfter": 0
+    },
+    {
+      "id": 1628467,
+      "name": "Maxi Kleber",
+      "teamId": 1610612742,
+      "priorOnly": false,
+      "MPG": 25.135135135135137,
+      "availability": 0.5091977017533225,
+      "availableAfter": 0
+    },
+    {
+      "id": 1641726,
+      "name": "Dereck Lively II",
+      "teamId": 1610612742,
+      "priorOnly": true,
+      "MPG": 12,
+      "availability": 0.5317944250871078,
+      "availableAfter": 0
+    },
+    {
+      "id": 202693,
+      "name": "Markieff Morris",
+      "teamId": 1610612742,
+      "priorOnly": false,
+      "MPG": 10.085714285714285,
+      "availability": 0.4474106715857074,
+      "availableAfter": 0
+    },
+    {
+      "id": 203939,
+      "name": "Dwight Powell",
+      "teamId": 1610612742,
+      "priorOnly": false,
+      "MPG": 19.18421052631579,
+      "availability": 0.849371455899433,
+      "availableAfter": 0
+    },
+    {
+      "id": 1641765,
+      "name": "Olivier-Maxence Prosper",
+      "teamId": 1610612742,
+      "priorOnly": true,
+      "MPG": 12,
+      "availability": 0.5317944250871078,
+      "availableAfter": 0
+    },
+    {
+      "id": 1629684,
+      "name": "Grant Williams",
+      "teamId": 1610612742,
+      "priorOnly": false,
+      "MPG": 25.88607594936709,
+      "availability": 0.9209624076356754,
+      "availableAfter": 0
+    },
+    {
+      "id": 1630535,
+      "name": "Greg Brown III",
+      "teamId": 1610612742,
+      "priorOnly": false,
+      "MPG": 5,
+      "availability": 0.18702602992416478,
+      "availableAfter": 0
+    },
+    {
+      "id": 1641926,
+      "name": "Dexter Dennis",
+      "teamId": 1610612742,
+      "priorOnly": true,
+      "MPG": 5,
+      "availability": 0.5317944250871078,
+      "availableAfter": 0
+    },
+    {
+      "id": 1630639,
+      "name": "A.J. Lawson",
+      "teamId": 1610612742,
+      "priorOnly": false,
+      "MPG": 5,
+      "availability": 0.18702602992416478,
+      "availableAfter": 0
+    },
+    {
+      "id": 1631128,
+      "name": "Christian Braun",
+      "teamId": 1610612743,
+      "priorOnly": false,
+      "MPG": 15.733333333333333,
+      "availability": 0.8395675343308054,
+      "availableAfter": 0
+    },
+    {
+      "id": 203484,
+      "name": "Kentavious Caldwell-Pope",
+      "teamId": 1610612743,
+      "priorOnly": false,
+      "MPG": 31.36842105263158,
+      "availability": 0.89841746011043,
+      "availableAfter": 0
+    },
+    {
+      "id": 203932,
+      "name": "Aaron Gordon",
+      "teamId": 1610612743,
+      "priorOnly": false,
+      "MPG": 30.235294117647058,
+      "availability": 0.8199860875614103,
+      "availableAfter": 0
+    },
+    {
+      "id": 203200,
+      "name": "Justin Holiday",
+      "teamId": 1610612743,
+      "priorOnly": false,
+      "MPG": 15.326086956521738,
+      "availability": 0.5552538088406094,
+      "availableAfter": 0
+    },
+    {
+      "id": 202704,
+      "name": "Reggie Jackson",
+      "teamId": 1610612743,
+      "priorOnly": false,
+      "MPG": 24.352941176470587,
+      "availability": 0.8131192703807735,
+      "availableAfter": 0
+    },
+    {
+      "id": 203999,
+      "name": "Nikola Jokić",
+      "teamId": 1610612743,
+      "priorOnly": false,
+      "MPG": 33.65217391304348,
+      "availability": 0.8297900091300379,
+      "availableAfter": 0
+    },
+    {
+      "id": 201599,
+      "name": "DeAndre Jordan",
+      "teamId": 1610612743,
+      "priorOnly": false,
+      "MPG": 15.076923076923077,
+      "availability": 0.48662635786021724,
+      "availableAfter": 0
+    },
+    {
+      "id": 1627750,
+      "name": "Jamal Murray",
+      "teamId": 1610612743,
+      "priorOnly": false,
+      "MPG": 32.784615384615385,
+      "availability": 0.7905743228555281,
+      "availableAfter": 0
+    },
+    {
+      "id": 1630192,
+      "name": "Zeke Nnaji",
+      "teamId": 1610612743,
+      "priorOnly": false,
+      "MPG": 13.716981132075471,
+      "availability": 0.6238812598210015,
+      "availableAfter": 0
+    },
+    {
+      "id": 1629618,
+      "name": "Jalen Pickett",
+      "teamId": 1610612743,
+      "priorOnly": true,
+      "MPG": 12,
+      "availability": 0.5317944250871078,
+      "availableAfter": 0
+    },
+    {
+      "id": 1629008,
+      "name": "Michael Porter Jr.",
+      "teamId": 1610612743,
+      "priorOnly": false,
+      "MPG": 29.016129032258064,
+      "availability": 0.7542957409690088,
+      "availableAfter": 0
+    },
+    {
+      "id": 1631124,
+      "name": "Julian Strawther",
+      "teamId": 1610612743,
+      "priorOnly": true,
+      "MPG": 12,
+      "availability": 0.5317944250871078,
+      "availableAfter": 0
+    },
+    {
+      "id": 1641816,
+      "name": "Hunter Tyson",
+      "teamId": 1610612743,
+      "priorOnly": true,
+      "MPG": 12,
+      "availability": 0.5317944250871078,
+      "availableAfter": 0
+    },
+    {
+      "id": 1631212,
+      "name": "Peyton Watson",
+      "teamId": 1610612743,
+      "priorOnly": false,
+      "MPG": 8.043478260869565,
+      "availability": 0.2654574024731844,
+      "availableAfter": 0
+    },
+    {
+      "id": 1628427,
+      "name": "Vlatko Cancar",
+      "teamId": 1610612743,
+      "priorOnly": false,
+      "MPG": 14.8,
+      "availability": 0.6925087108013938,
+      "availableAfter": 14
+    },
+    {
+      "id": 1631221,
+      "name": "Collin Gillespie",
+      "teamId": 1610612743,
+      "priorOnly": true,
+      "MPG": 5,
+      "availability": 0.5317944250871078,
+      "availableAfter": 0
+    },
+    {
+      "id": 1630643,
+      "name": "Jay Huff",
+      "teamId": 1610612743,
+      "priorOnly": false,
+      "MPG": 5,
+      "availability": 0.1729008676641388,
+      "availableAfter": 0
+    },
+    {
+      "id": 1630296,
+      "name": "Braxton Key",
+      "teamId": 1610612743,
+      "priorOnly": false,
+      "MPG": 3,
+      "availability": 0.06937897110063536,
+      "availableAfter": 0
+    },
+    {
+      "id": 1628963,
+      "name": "Marvin Bagley III",
+      "teamId": 1610612765,
+      "priorOnly": false,
+      "MPG": 23.571428571428573,
+      "availability": 0.5582173095964598,
+      "availableAfter": 0
+    },
+    {
+      "id": 202711,
+      "name": "Bojan Bogdanovic",
+      "teamId": 1610612765,
+      "priorOnly": false,
+      "MPG": 32.03389830508475,
+      "availability": 0.7317507934437634,
+      "availableAfter": 0
+    },
+    {
+      "id": 202692,
+      "name": "Alec Burks",
+      "teamId": 1610612765,
+      "priorOnly": false,
+      "MPG": 22.058823529411764,
+      "availability": 0.6464526037141067,
+      "availableAfter": 0
+    },
+    {
+      "id": 1630595,
+      "name": "Cade Cunningham",
+      "teamId": 1610612765,
+      "priorOnly": false,
+      "MPG": 33.25,
+      "availability": 0.2709664797182732,
+      "availableAfter": 0
+    },
+    {
+      "id": 1631105,
+      "name": "Jalen Duren",
+      "teamId": 1610612765,
+      "priorOnly": false,
+      "MPG": 24.970149253731343,
+      "availability": 0.803315348812146,
+      "availableAfter": 0
+    },
+    {
+      "id": 203925,
+      "name": "Joe Harris",
+      "teamId": 1610612765,
+      "priorOnly": false,
+      "MPG": 20.594594594594593,
+      "availability": 0.8719427997925382,
+      "availableAfter": 0
+    },
+    {
+      "id": 1630165,
+      "name": "Killian Hayes",
+      "teamId": 1610612765,
+      "priorOnly": false,
+      "MPG": 28.355263157894736,
+      "availability": 0.891550642929793,
+      "availableAfter": 0
+    },
+    {
+      "id": 1631093,
+      "name": "Jaden Ivey",
+      "teamId": 1610612765,
+      "priorOnly": false,
+      "MPG": 31.094594594594593,
+      "availability": 0.8788096169731751,
+      "availableAfter": 0
+    },
+    {
+      "id": 1630587,
+      "name": "Isaiah Livers",
+      "teamId": 1610612765,
+      "priorOnly": false,
+      "MPG": 23.057692307692307,
+      "availability": 0.6562565252827343,
+      "availableAfter": 0
+    },
+    {
+      "id": 1628420,
+      "name": "Monte Morris",
+      "teamId": 1610612765,
+      "priorOnly": false,
+      "MPG": 27.322580645161292,
+      "availability": 0.7542957409690088,
+      "availableAfter": 0
+    },
+    {
+      "id": 1631204,
+      "name": "Marcus Sasser",
+      "teamId": 1610612765,
+      "priorOnly": true,
+      "MPG": 12,
+      "availability": 0.5317944250871078,
+      "availableAfter": 0
+    },
+    {
+      "id": 1630191,
+      "name": "Isaiah Stewart",
+      "teamId": 1610612765,
+      "priorOnly": false,
+      "MPG": 28.26,
+      "availability": 0.6366486821454793,
+      "availableAfter": 0
+    },
+    {
+      "id": 1641709,
+      "name": "Ausar Thompson",
+      "teamId": 1610612765,
+      "priorOnly": true,
+      "MPG": 12,
+      "availability": 0.5317944250871078,
+      "availableAfter": 0
+    },
+    {
+      "id": 1630164,
+      "name": "James Wiseman",
+      "teamId": 1610612765,
+      "priorOnly": false,
+      "MPG": 19.333333333333332,
+      "availability": 0.545449887271982,
+      "availableAfter": 0
+    },
+    {
+      "id": 1630608,
+      "name": "Malcolm Cazalon",
+      "teamId": 1610612765,
+      "priorOnly": true,
+      "MPG": 5,
+      "availability": 0.5317944250871078,
+      "availableAfter": 0
+    },
+    {
+      "id": 1631197,
+      "name": "Jared Rhoden",
+      "teamId": 1610612765,
+      "priorOnly": false,
+      "MPG": 5,
+      "availability": 0.24152831864453098,
+      "availableAfter": 0
+    },
+    {
+      "id": 1630649,
+      "name": "Stanley Umude",
+      "teamId": 1610612765,
+      "priorOnly": false,
+      "MPG": 2,
+      "availability": 0.049771127963380464,
+      "availableAfter": 0
+    },
+    {
+      "id": 201939,
+      "name": "Stephen Curry",
+      "teamId": 1610612744,
+      "priorOnly": false,
+      "MPG": 34.660714285714285,
+      "availability": 0.702339028737881,
+      "availableAfter": 0
+    },
+    {
+      "id": 203110,
+      "name": "Draymond Green",
+      "teamId": 1610612744,
+      "priorOnly": false,
+      "MPG": 31.493150684931507,
+      "availability": 0.8690056954045476,
+      "availableAfter": 0
+    },
+    {
+      "id": 1631218,
+      "name": "Trayce Jackson-Davis",
+      "teamId": 1610612744,
+      "priorOnly": true,
+      "MPG": 12,
+      "availability": 0.5317944250871078,
+      "availableAfter": 0
+    },
+    {
+      "id": 202709,
+      "name": "Cory Joseph",
+      "teamId": 1610612744,
+      "priorOnly": false,
+      "MPG": 19.822580645161292,
+      "availability": 0.7121165539386486,
+      "availableAfter": 0
+    },
+    {
+      "id": 1630228,
+      "name": "Jonathan Kuminga",
+      "teamId": 1610612744,
+      "priorOnly": false,
+      "MPG": 20.83582089552239,
+      "availability": 0.803315348812146,
+      "availableAfter": 0
+    },
+    {
+      "id": 1626172,
+      "name": "Kevon Looney",
+      "teamId": 1610612744,
+      "priorOnly": false,
+      "MPG": 23.914634146341463,
+      "availability": 0.9503741723415577,
+      "availableAfter": 0
+    },
+    {
+      "id": 1630541,
+      "name": "Moses Moody",
+      "teamId": 1610612744,
+      "priorOnly": false,
+      "MPG": 12.952380952380953,
+      "availability": 0.7219204755072761,
+      "availableAfter": 0
+    },
+    {
+      "id": 101108,
+      "name": "Chris Paul",
+      "teamId": 1610612744,
+      "priorOnly": false,
+      "MPG": 32.03389830508475,
+      "availability": 0.7317507934437634,
+      "availableAfter": 0
+    },
+    {
+      "id": 1627780,
+      "name": "Gary Payton II",
+      "teamId": 1610612744,
+      "priorOnly": false,
+      "MPG": 16.681818181818183,
+      "availability": 0.31995969119355055,
+      "availableAfter": 0
+    },
+    {
+      "id": 1641764,
+      "name": "Brandin Podziemski",
+      "teamId": 1610612744,
+      "priorOnly": true,
+      "MPG": 12,
+      "availability": 0.5317944250871078,
+      "availableAfter": 0
+    },
+    {
+      "id": 203967,
+      "name": "Dario Saric",
+      "teamId": 1610612744,
+      "priorOnly": false,
+      "MPG": 14.157894736842104,
+      "availability": 0.6630969460955114,
+      "availableAfter": 0
+    },
+    {
+      "id": 202691,
+      "name": "Klay Thompson",
+      "teamId": 1610612744,
+      "priorOnly": false,
+      "MPG": 33.11594202898551,
+      "availability": 0.8297900091300379,
+      "availableAfter": 0
+    },
+    {
+      "id": 203952,
+      "name": "Andrew Wiggins",
+      "teamId": 1610612744,
+      "priorOnly": false,
+      "MPG": 32.16216216216216,
+      "availability": 0.5160645189339594,
+      "availableAfter": 0
+    },
+    {
+      "id": 1630586,
+      "name": "Usman Garuba",
+      "teamId": 1610612744,
+      "priorOnly": false,
+      "MPG": 5,
+      "availability": 0.8395675343308054,
+      "availableAfter": 0
+    },
+    {
+      "id": 1631311,
+      "name": "Lester Quinones",
+      "teamId": 1610612744,
+      "priorOnly": false,
+      "MPG": 4.5,
+      "availability": 0.07918289266926283,
+      "availableAfter": 0
+    },
+    {
+      "id": 1629010,
+      "name": "Jerome Robinson",
+      "teamId": 1610612744,
+      "priorOnly": true,
+      "MPG": 5,
+      "availability": 0.5317944250871078,
+      "availableAfter": 0
+    },
+    {
+      "id": 1628415,
+      "name": "Dillon Brooks",
+      "teamId": 1610612745,
+      "priorOnly": false,
+      "MPG": 30.315068493150687,
+      "availability": 0.8690056954045476,
+      "availableAfter": 0
+    },
+    {
+      "id": 203493,
+      "name": "Reggie Bullock Jr.",
+      "teamId": 1610612745,
+      "priorOnly": false,
+      "MPG": 30.358974358974358,
+      "availability": 0.9180253032476849,
+      "availableAfter": 0
+    },
+    {
+      "id": 1630224,
+      "name": "Jalen Green",
+      "teamId": 1610612745,
+      "priorOnly": false,
+      "MPG": 34.19736842105263,
+      "availability": 0.89841746011043,
+      "availableAfter": 0
+    },
+    {
+      "id": 201145,
+      "name": "Jeff Green",
+      "teamId": 1610612745,
+      "priorOnly": false,
+      "MPG": 19.482142857142858,
+      "availability": 0.6532930245268839,
+      "availableAfter": 0
+    },
+    {
+      "id": 1628988,
+      "name": "Aaron Holiday",
+      "teamId": 1610612745,
+      "priorOnly": false,
+      "MPG": 13.428571428571429,
+      "availability": 0.7219204755072761,
+      "availableAfter": 0
+    },
+    {
+      "id": 1629111,
+      "name": "Jock Landale",
+      "teamId": 1610612745,
+      "priorOnly": false,
+      "MPG": 14.202898550724637,
+      "availability": 0.7807440049190407,
+      "availableAfter": 0
+    },
+    {
+      "id": 1626246,
+      "name": "Boban Marjanovic",
+      "teamId": 1610612745,
+      "priorOnly": false,
+      "MPG": 5.548387096774194,
+      "availability": 0.34388877502220394,
+      "availableAfter": 0
+    },
+    {
+      "id": 1630578,
+      "name": "Alperen Sengun",
+      "teamId": 1610612745,
+      "priorOnly": false,
+      "MPG": 28.933333333333334,
+      "availability": 0.8817467213611656,
+      "availableAfter": 0
+    },
+    {
+      "id": 1631095,
+      "name": "Jabari Smith Jr.",
+      "teamId": 1610612745,
+      "priorOnly": false,
+      "MPG": 31.0126582278481,
+      "availability": 0.9278292248163124,
+      "availableAfter": 0
+    },
+    {
+      "id": 1630256,
+      "name": "Jae'Sean Tate",
+      "teamId": 1610612745,
+      "priorOnly": false,
+      "MPG": 21.774193548387096,
+      "availability": 0.45037417234155774,
+      "availableAfter": 0
+    },
+    {
+      "id": 1641708,
+      "name": "Amen Thompson",
+      "teamId": 1610612745,
+      "priorOnly": true,
+      "MPG": 12,
+      "availability": 0.5317944250871078,
+      "availableAfter": 0
+    },
+    {
+      "id": 1627832,
+      "name": "Fred VanVleet",
+      "teamId": 1610612745,
+      "priorOnly": false,
+      "MPG": 36.73913043478261,
+      "availability": 0.8297900091300379,
+      "availableAfter": 0
+    },
+    {
+      "id": 1641715,
+      "name": "Cam Whitmore",
+      "teamId": 1610612745,
+      "priorOnly": true,
+      "MPG": 12,
+      "availability": 0.5317944250871078,
+      "availableAfter": 0
+    },
+    {
+      "id": 1631106,
+      "name": "Tari Eason",
+      "teamId": 1610612745,
+      "priorOnly": false,
+      "MPG": 21.5609756097561,
+      "availability": 0.9503741723415577,
+      "availableAfter": 14
+    },
+    {
+      "id": 1631309,
+      "name": "Trevor Hudgins",
+      "teamId": 1610612745,
+      "priorOnly": false,
+      "MPG": 5,
+      "availability": 0.08898681423789027,
+      "availableAfter": 0
+    },
+    {
+      "id": 203506,
+      "name": "Victor Oladipo",
+      "teamId": 1610612745,
+      "priorOnly": false,
+      "MPG": 26.357142857142858,
+      "availability": 0.5582173095964598,
+      "availableAfter": 14
+    },
+    {
+      "id": 1631257,
+      "name": "Jermaine Samuels Jr.",
+      "teamId": 1610612745,
+      "priorOnly": true,
+      "MPG": 5,
+      "availability": 0.5317944250871078,
+      "availableAfter": 0
+    },
+    {
+      "id": 1631466,
+      "name": "Nate Williams",
+      "teamId": 1610612745,
+      "priorOnly": false,
+      "MPG": 5,
+      "availability": 0.19547221155724404,
+      "availableAfter": 0
+    },
+    {
+      "id": 1628971,
+      "name": "Bruce Brown",
+      "teamId": 1610612754,
+      "priorOnly": false,
+      "MPG": 28.5125,
+      "availability": 0.9307663292043028,
+      "availableAfter": 0
+    },
+    {
+      "id": 1630169,
+      "name": "Tyrese Haliburton",
+      "teamId": 1610612754,
+      "priorOnly": false,
+      "MPG": 33.535714285714285,
+      "availability": 0.702339028737881,
+      "availableAfter": 0
+    },
+    {
+      "id": 1627741,
+      "name": "Buddy Hield",
+      "teamId": 1610612754,
+      "priorOnly": false,
+      "MPG": 31.0875,
+      "availability": 0.9376331463849398,
+      "availableAfter": 0
+    },
+    {
+      "id": 1630543,
+      "name": "Isaiah Jackson",
+      "teamId": 1610612754,
+      "priorOnly": false,
+      "MPG": 16.555555555555557,
+      "availability": 0.7219204755072761,
+      "availableAfter": 0
+    },
+    {
+      "id": 1631097,
+      "name": "Bennedict Mathurin",
+      "teamId": 1610612754,
+      "priorOnly": false,
+      "MPG": 28.5,
+      "availability": 0.911158486067048,
+      "availableAfter": 0
+    },
+    {
+      "id": 204456,
+      "name": "T.J. McConnell",
+      "teamId": 1610612754,
+      "priorOnly": false,
+      "MPG": 20.373333333333335,
+      "availability": 0.8817467213611656,
+      "availableAfter": 0
+    },
+    {
+      "id": 1629614,
+      "name": "Andrew Nembhard",
+      "teamId": 1610612754,
+      "priorOnly": false,
+      "MPG": 27.68,
+      "availability": 0.8817467213611656,
+      "availableAfter": 0
+    },
+    {
+      "id": 1630174,
+      "name": "Aaron Nesmith",
+      "teamId": 1610612754,
+      "priorOnly": false,
+      "MPG": 24.931506849315067,
+      "availability": 0.8621388782239107,
+      "availableAfter": 0
+    },
+    {
+      "id": 1629670,
+      "name": "Jordan Nwora",
+      "teamId": 1610612754,
+      "priorOnly": false,
+      "MPG": 19.161290322580644,
+      "availability": 0.7121165539386486,
+      "availableAfter": 0
+    },
+    {
+      "id": 1641767,
+      "name": "Ben Sheppard",
+      "teamId": 1610612754,
+      "priorOnly": true,
+      "MPG": 12,
+      "availability": 0.5317944250871078,
+      "availableAfter": 0
+    },
+    {
+      "id": 1630188,
+      "name": "Jalen Smith",
+      "teamId": 1610612754,
+      "priorOnly": false,
+      "MPG": 18.808823529411764,
+      "availability": 0.7709400833504133,
+      "availableAfter": 0
+    },
+    {
+      "id": 1628464,
+      "name": "Daniel Theis",
+      "teamId": 1610612754,
+      "priorOnly": false,
+      "MPG": 15.428571428571429,
+      "availability": 0.1729008676641388,
+      "availableAfter": 0
+    },
+    {
+      "id": 1630167,
+      "name": "Obi Toppin",
+      "teamId": 1610612754,
+      "priorOnly": false,
+      "MPG": 15.656716417910447,
+      "availability": 0.7611361617817859,
+      "availableAfter": 0
+    },
+    {
+      "id": 1626167,
+      "name": "Myles Turner",
+      "teamId": 1610612754,
+      "priorOnly": false,
+      "MPG": 29.403225806451612,
+      "availability": 0.7542957409690088,
+      "availableAfter": 0
+    },
+    {
+      "id": 1641716,
+      "name": "Jarace Walker",
+      "teamId": 1610612754,
+      "priorOnly": true,
+      "MPG": 12,
+      "availability": 0.5317944250871078,
+      "availableAfter": 0
+    },
+    {
+      "id": 1631112,
+      "name": "Kendall Brown",
+      "teamId": 1610612754,
+      "priorOnly": false,
+      "MPG": 5,
+      "availability": 0.09879073580651773,
+      "availableAfter": 0
+    },
+    {
+      "id": 1631131,
+      "name": "Oscar Tshiebwe",
+      "teamId": 1610612754,
+      "priorOnly": true,
+      "MPG": 5,
+      "availability": 0.5317944250871078,
+      "availableAfter": 0
+    },
+    {
+      "id": 1631209,
+      "name": "Isaiah Wong",
+      "teamId": 1610612754,
+      "priorOnly": true,
+      "MPG": 5,
+      "availability": 0.5317944250871078,
+      "availableAfter": 0
+    },
+    {
+      "id": 201587,
+      "name": "Nicolas Batum",
+      "teamId": 1610612746,
+      "priorOnly": false,
+      "MPG": 21.91025641025641,
+      "availability": 0.911158486067048,
+      "availableAfter": 0
+    },
+    {
+      "id": 1641738,
+      "name": "Kobe Brown",
+      "teamId": 1610612746,
+      "priorOnly": true,
+      "MPG": 12,
+      "availability": 0.5317944250871078,
+      "availableAfter": 0
+    },
+    {
+      "id": 1629599,
+      "name": "Amir Coffey",
+      "teamId": 1610612746,
+      "priorOnly": false,
+      "MPG": 12.54,
+      "availability": 0.5944694951151192,
+      "availableAfter": 0
+    },
+    {
+      "id": 203496,
+      "name": "Robert Covington",
+      "teamId": 1610612746,
+      "priorOnly": false,
+      "MPG": 16.1875,
+      "availability": 0.5748616519778643,
+      "availableAfter": 0
+    },
+    {
+      "id": 1631217,
+      "name": "Moussa Diabaté",
+      "teamId": 1610612746,
+      "priorOnly": false,
+      "MPG": 5,
+      "availability": 0.2556534809045569,
+      "availableAfter": 0
+    },
+    {
+      "id": 202331,
+      "name": "Paul George",
+      "teamId": 1610612746,
+      "priorOnly": false,
+      "MPG": 34.67857142857143,
+      "availability": 0.702339028737881,
+      "availableAfter": 0
+    },
+    {
+      "id": 1630538,
+      "name": "Bones Hyland",
+      "teamId": 1610612746,
+      "priorOnly": false,
+      "MPG": 19.428571428571427,
+      "availability": 0.6532930245268839,
+      "availableAfter": 0
+    },
+    {
+      "id": 202695,
+      "name": "Kawhi Leonard",
+      "teamId": 1610612746,
+      "priorOnly": false,
+      "MPG": 33.59615384615385,
+      "availability": 0.6631233424633711,
+      "availableAfter": 0
+    },
+    {
+      "id": 1629611,
+      "name": "Terance Mann",
+      "teamId": 1610612746,
+      "priorOnly": false,
+      "MPG": 23.160493827160494,
+      "availability": 0.9405702507729303,
+      "availableAfter": 0
+    },
+    {
+      "id": 1630231,
+      "name": "KJ Martin",
+      "teamId": 1610612746,
+      "priorOnly": false,
+      "MPG": 28.036585365853657,
+      "availability": 0.9503741723415577,
+      "availableAfter": 0
+    },
+    {
+      "id": 202694,
+      "name": "Marcus Morris Sr.",
+      "teamId": 1610612746,
+      "priorOnly": false,
+      "MPG": 28.076923076923077,
+      "availability": 0.7837075056748911,
+      "availableAfter": 0
+    },
+    {
+      "id": 203486,
+      "name": "Mason Plumlee",
+      "teamId": 1610612746,
+      "priorOnly": false,
+      "MPG": 25.89873417721519,
+      "availability": 0.9209624076356754,
+      "availableAfter": 0
+    },
+    {
+      "id": 1626181,
+      "name": "Norman Powell",
+      "teamId": 1610612746,
+      "priorOnly": false,
+      "MPG": 26.116666666666667,
+      "availability": 0.7346878978317538,
+      "availableAfter": 0
+    },
+    {
+      "id": 201566,
+      "name": "Russell Westbrook",
+      "teamId": 1610612746,
+      "priorOnly": false,
+      "MPG": 29.164383561643834,
+      "availability": 0.8621388782239107,
+      "availableAfter": 0
+    },
+    {
+      "id": 1627826,
+      "name": "Ivica Zubac",
+      "teamId": 1610612746,
+      "priorOnly": false,
+      "MPG": 28.55263157894737,
+      "availability": 0.891550642929793,
+      "availableAfter": 0
+    },
+    {
+      "id": 1630527,
+      "name": "Brandon Boston",
+      "teamId": 1610612746,
+      "priorOnly": false,
+      "MPG": 11.318181818181818,
+      "availability": 0.31995969119355055,
+      "availableAfter": 14
+    },
+    {
+      "id": 1641757,
+      "name": "Jordan Miller",
+      "teamId": 1610612746,
+      "priorOnly": true,
+      "MPG": 5,
+      "availability": 0.5317944250871078,
+      "availableAfter": 0
+    },
+    {
+      "id": 1630563,
+      "name": "Joshua Primo",
+      "teamId": 1610612746,
+      "priorOnly": false,
+      "MPG": 5,
+      "availability": 0.1856682899886166,
+      "availableAfter": 0
+    },
+    {
+      "id": 1631108,
+      "name": "Max Christie",
+      "teamId": 1610612747,
+      "priorOnly": false,
+      "MPG": 12.85,
+      "availability": 0.4964302794288447,
+      "availableAfter": 0
+    },
+    {
+      "id": 203076,
+      "name": "Anthony Davis",
+      "teamId": 1610612747,
+      "priorOnly": false,
+      "MPG": 34.035714285714285,
+      "availability": 0.702339028737881,
+      "availableAfter": 0
+    },
+    {
+      "id": 1629060,
+      "name": "Rui Hachimura",
+      "teamId": 1610612747,
+      "priorOnly": false,
+      "MPG": 23.253968253968253,
+      "availability": 0.7640996625376362,
+      "availableAfter": 0
+    },
+    {
+      "id": 1629637,
+      "name": "Jaxson Hayes",
+      "teamId": 1610612747,
+      "priorOnly": false,
+      "MPG": 12.914893617021276,
+      "availability": 0.5650577304092369,
+      "availableAfter": 0
+    },
+    {
+      "id": 1641720,
+      "name": "Jalen Hood-Schifino",
+      "teamId": 1610612747,
+      "priorOnly": true,
+      "MPG": 12,
+      "availability": 0.5317944250871078,
+      "availableAfter": 0
+    },
+    {
+      "id": 2544,
+      "name": "LeBron James",
+      "teamId": 1610612747,
+      "priorOnly": false,
+      "MPG": 35.527272727272724,
+      "availability": 0.6925351071692535,
+      "availableAfter": 0
+    },
+    {
+      "id": 1641721,
+      "name": "Maxwell Lewis",
+      "teamId": 1610612747,
+      "priorOnly": true,
+      "MPG": 12,
+      "availability": 0.5317944250871078,
+      "availableAfter": 0
+    },
+    {
+      "id": 1627752,
+      "name": "Taurean Prince",
+      "teamId": 1610612747,
+      "priorOnly": false,
+      "MPG": 22.037037037037038,
+      "availability": 0.6758643684199891,
+      "availableAfter": 0
+    },
+    {
+      "id": 1630559,
+      "name": "Austin Reaves",
+      "teamId": 1610612747,
+      "priorOnly": false,
+      "MPG": 28.8125,
+      "availability": 0.7739035841062636,
+      "availableAfter": 0
+    },
+    {
+      "id": 1629629,
+      "name": "Cam Reddish",
+      "teamId": 1610612747,
+      "priorOnly": false,
+      "MPG": 24.7,
+      "availability": 0.5386094664592048,
+      "availableAfter": 0
+    },
+    {
+      "id": 1626156,
+      "name": "D'Angelo Russell",
+      "teamId": 1610612747,
+      "priorOnly": false,
+      "MPG": 32.49295774647887,
+      "availability": 0.8493978522672927,
+      "availableAfter": 0
+    },
+    {
+      "id": 1629020,
+      "name": "Jarred Vanderbilt",
+      "teamId": 1610612747,
+      "priorOnly": false,
+      "MPG": 24.08974358974359,
+      "availability": 0.911158486067048,
+      "availableAfter": 0
+    },
+    {
+      "id": 1629216,
+      "name": "Gabe Vincent",
+      "teamId": 1610612747,
+      "priorOnly": false,
+      "MPG": 25.823529411764707,
+      "availability": 0.8131192703807735,
+      "availableAfter": 0
+    },
+    {
+      "id": 1626174,
+      "name": "Christian Wood",
+      "teamId": 1610612747,
+      "priorOnly": false,
+      "MPG": 25.955223880597014,
+      "availability": 0.803315348812146,
+      "availableAfter": 0
+    },
+    {
+      "id": 1630658,
+      "name": "Colin Castleton",
+      "teamId": 1610612747,
+      "priorOnly": true,
+      "MPG": 5,
+      "availability": 0.5317944250871078,
+      "availableAfter": 0
+    },
+    {
+      "id": 1641788,
+      "name": "Alex Fudge",
+      "teamId": 1610612747,
+      "priorOnly": true,
+      "MPG": 5,
+      "availability": 0.5317944250871078,
+      "availableAfter": 0
+    },
+    {
+      "id": 1641793,
+      "name": "D'Moi Hodge",
+      "teamId": 1610612747,
+      "priorOnly": true,
+      "MPG": 5,
+      "availability": 0.5317944250871078,
+      "availableAfter": 0
+    },
+    {
+      "id": 203500,
+      "name": "Steven Adams",
+      "teamId": 1610612763,
+      "priorOnly": false,
+      "MPG": 26.952380952380953,
+      "availability": 0.5582173095964598,
+      "availableAfter": 0
+    },
+    {
+      "id": 1630583,
+      "name": "Santi Aldama",
+      "teamId": 1610612763,
+      "priorOnly": false,
+      "MPG": 21.87012987012987,
+      "availability": 0.9013545644984206,
+      "availableAfter": 0
+    },
+    {
+      "id": 1630217,
+      "name": "Desmond Bane",
+      "teamId": 1610612763,
+      "priorOnly": false,
+      "MPG": 31.689655172413794,
+      "availability": 0.7219468718751358,
+      "availableAfter": 0
+    },
+    {
+      "id": 1629634,
+      "name": "Brandon Clarke",
+      "teamId": 1610612763,
+      "priorOnly": false,
+      "MPG": 19.482142857142858,
+      "availability": 0.6532930245268839,
+      "availableAfter": 0
+    },
+    {
+      "id": 1628991,
+      "name": "Jaren Jackson Jr.",
+      "teamId": 1610612763,
+      "priorOnly": false,
+      "MPG": 28.41269841269841,
+      "availability": 0.7640996625376362,
+      "availableAfter": 0
+    },
+    {
+      "id": 1628379,
+      "name": "Luke Kennard",
+      "teamId": 1610612763,
+      "priorOnly": false,
+      "MPG": 22.338983050847457,
+      "availability": 0.7248839762631264,
+      "availableAfter": 0
+    },
+    {
+      "id": 1629723,
+      "name": "John Konchar",
+      "teamId": 1610612763,
+      "priorOnly": false,
+      "MPG": 20.75,
+      "availability": 0.8523349566552832,
+      "availableAfter": 0
+    },
+    {
+      "id": 1631222,
+      "name": "Jake LaRavia",
+      "teamId": 1610612763,
+      "priorOnly": false,
+      "MPG": 11.8,
+      "availability": 0.4474106715857074,
+      "availableAfter": 0
+    },
+    {
+      "id": 1631254,
+      "name": "Kenneth Lofton Jr.",
+      "teamId": 1610612763,
+      "priorOnly": false,
+      "MPG": 7.695652173913044,
+      "availability": 0.2654574024731844,
+      "availableAfter": 0
+    },
+    {
+      "id": 1629630,
+      "name": "Ja Morant",
+      "teamId": 1610612763,
+      "priorOnly": false,
+      "MPG": 31.950819672131146,
+      "availability": 0.7513586365810182,
+      "availableAfter": 0
+    },
+    {
+      "id": 1631223,
+      "name": "David Roddy",
+      "teamId": 1610612763,
+      "priorOnly": false,
+      "MPG": 18.02857142857143,
+      "availability": 0.7905479264876683,
+      "availableAfter": 0
+    },
+    {
+      "id": 201565,
+      "name": "Derrick Rose",
+      "teamId": 1610612763,
+      "priorOnly": false,
+      "MPG": 12.592592592592593,
+      "availability": 0.3689792990366878,
+      "availableAfter": 0
+    },
+    {
+      "id": 203935,
+      "name": "Marcus Smart",
+      "teamId": 1610612763,
+      "priorOnly": false,
+      "MPG": 32.14754098360656,
+      "availability": 0.7513586365810182,
+      "availableAfter": 0
+    },
+    {
+      "id": 1630214,
+      "name": "Xavier Tillman",
+      "teamId": 1610612763,
+      "priorOnly": false,
+      "MPG": 19.327868852459016,
+      "availability": 0.7023126323700212,
+      "availableAfter": 0
+    },
+    {
+      "id": 1630533,
+      "name": "Ziaire Williams",
+      "teamId": 1610612763,
+      "priorOnly": false,
+      "MPG": 15.297297297297296,
+      "availability": 0.46701851472296235,
+      "availableAfter": 0
+    },
+    {
+      "id": 1631367,
+      "name": "Jacob Gilyard",
+      "teamId": 1610612763,
+      "priorOnly": false,
+      "MPG": 5,
+      "availability": 0.16312334246337123,
+      "availableAfter": 0
+    },
+    {
+      "id": 1641713,
+      "name": "GG Jackson",
+      "teamId": 1610612763,
+      "priorOnly": true,
+      "MPG": 5,
+      "availability": 0.5317944250871078,
+      "availableAfter": 0
+    },
+    {
+      "id": 1631246,
+      "name": "Vince Williams Jr.",
+      "teamId": 1610612763,
+      "priorOnly": false,
+      "MPG": 5,
+      "availability": 0.18702602992416478,
+      "availableAfter": 0
+    },
+    {
+      "id": 1628389,
+      "name": "Bam Adebayo",
+      "teamId": 1610612748,
+      "priorOnly": false,
+      "MPG": 34.64,
+      "availability": 0.8886135385418026,
+      "availableAfter": 0
+    },
+    {
+      "id": 1628418,
+      "name": "Thomas Bryant",
+      "teamId": 1610612748,
+      "priorOnly": false,
+      "MPG": 18.338983050847457,
+      "availability": 0.6827047892327662,
+      "availableAfter": 0
+    },
+    {
+      "id": 202710,
+      "name": "Jimmy Butler III",
+      "teamId": 1610612748,
+      "priorOnly": false,
+      "MPG": 33.390625,
+      "availability": 0.7807704012869006,
+      "availableAfter": 0
+    },
+    {
+      "id": 1629639,
+      "name": "Tyler Herro",
+      "teamId": 1610612748,
+      "priorOnly": false,
+      "MPG": 34.865671641791046,
+      "availability": 0.8101821659927829,
+      "availableAfter": 0
+    },
+    {
+      "id": 1629312,
+      "name": "Haywood Highsmith",
+      "teamId": 1610612748,
+      "priorOnly": false,
+      "MPG": 18.673076923076923,
+      "availability": 0.6140773382523741,
+      "availableAfter": 0
+    },
+    {
+      "id": 1631170,
+      "name": "Jaime Jaquez Jr.",
+      "teamId": 1610612748,
+      "priorOnly": true,
+      "MPG": 12,
+      "availability": 0.5317944250871078,
+      "availableAfter": 0
+    },
+    {
+      "id": 1631107,
+      "name": "Nikola Jović",
+      "teamId": 1610612748,
+      "priorOnly": false,
+      "MPG": 14.571428571428571,
+      "availability": 0.24152831864453098,
+      "availableAfter": 0
+    },
+    {
+      "id": 201567,
+      "name": "Kevin Love",
+      "teamId": 1610612748,
+      "priorOnly": false,
+      "MPG": 19.967741935483872,
+      "availability": 0.7121165539386486,
+      "availableAfter": 0
+    },
+    {
+      "id": 200768,
+      "name": "Kyle Lowry",
+      "teamId": 1610612748,
+      "priorOnly": false,
+      "MPG": 31.21818181818182,
+      "availability": 0.6925351071692535,
+      "availableAfter": 0
+    },
+    {
+      "id": 1628997,
+      "name": "Caleb Martin",
+      "teamId": 1610612748,
+      "priorOnly": false,
+      "MPG": 29.253521126760564,
+      "availability": 0.8425310350866558,
+      "availableAfter": 0
+    },
+    {
+      "id": 1626196,
+      "name": "Josh Richardson",
+      "teamId": 1610612748,
+      "priorOnly": false,
+      "MPG": 23.584615384615386,
+      "availability": 0.7837075056748911,
+      "availableAfter": 0
+    },
+    {
+      "id": 1629130,
+      "name": "Duncan Robinson",
+      "teamId": 1610612748,
+      "priorOnly": false,
+      "MPG": 16.547619047619047,
+      "availability": 0.5160381225660996,
+      "availableAfter": 0
+    },
+    {
+      "id": 1631115,
+      "name": "Orlando Robinson",
+      "teamId": 1610612748,
+      "priorOnly": false,
+      "MPG": 13.741935483870968,
+      "availability": 0.40819498531119763,
+      "availableAfter": 0
+    },
+    {
+      "id": 1630696,
+      "name": "Dru Smith",
+      "teamId": 1610612748,
+      "priorOnly": false,
+      "MPG": 10.666666666666666,
+      "availability": 0.2513322402131584,
+      "availableAfter": 0
+    },
+    {
+      "id": 1631288,
+      "name": "Jamal Cain",
+      "teamId": 1610612748,
+      "priorOnly": false,
+      "MPG": 5,
+      "availability": 0.2709400833504133,
+      "availableAfter": 0
+    },
+    {
+      "id": 1630181,
+      "name": "R.J. Hampton",
+      "teamId": 1610612748,
+      "priorOnly": false,
+      "MPG": 5,
+      "availability": 0.5650577304092369,
+      "availableAfter": 0
+    },
+    {
+      "id": 1631306,
+      "name": "Cole Swider",
+      "teamId": 1610612748,
+      "priorOnly": false,
+      "MPG": 5,
+      "availability": 0.10859465737514518,
+      "availableAfter": 0
+    },
+    {
+      "id": 203507,
+      "name": "Giannis Antetokounmpo",
+      "teamId": 1610612749,
+      "priorOnly": false,
+      "MPG": 32.15873015873016,
+      "availability": 0.7709664797182731,
+      "availableAfter": 0
+    },
+    {
+      "id": 203648,
+      "name": "Thanasis Antetokounmpo",
+      "teamId": 1610612749,
+      "priorOnly": false,
+      "MPG": 5.648648648648648,
+      "availability": 0.40271230443396866,
+      "availableAfter": 0
+    },
+    {
+      "id": 1627736,
+      "name": "Malik Beasley",
+      "teamId": 1610612749,
+      "priorOnly": false,
+      "MPG": 25.82716049382716,
+      "availability": 0.9405702507729303,
+      "availableAfter": 0
+    },
+    {
+      "id": 1630699,
+      "name": "MarJon Beauchamp",
+      "teamId": 1610612749,
+      "priorOnly": false,
+      "MPG": 13.461538461538462,
+      "availability": 0.6140773382523741,
+      "availableAfter": 0
+    },
+    {
+      "id": 1626192,
+      "name": "Pat Connaughton",
+      "teamId": 1610612749,
+      "priorOnly": false,
+      "MPG": 23.672131147540984,
+      "availability": 0.7444918194003813,
+      "availableAfter": 0
+    },
+    {
+      "id": 203109,
+      "name": "Jae Crowder",
+      "teamId": 1610612749,
+      "priorOnly": false,
+      "MPG": 18.944444444444443,
+      "availability": 0.2807440049190408,
+      "availableAfter": 0
+    },
+    {
+      "id": 1631260,
+      "name": "AJ Green",
+      "teamId": 1610612749,
+      "priorOnly": false,
+      "MPG": 10.147058823529411,
+      "availability": 0.43760675001708,
+      "availableAfter": 0
+    },
+    {
+      "id": 1641748,
+      "name": "Andre Jackson Jr.",
+      "teamId": 1610612749,
+      "priorOnly": true,
+      "MPG": 12,
+      "availability": 0.5317944250871078,
+      "availableAfter": 0
+    },
+    {
+      "id": 203081,
+      "name": "Damian Lillard",
+      "teamId": 1610612749,
+      "priorOnly": false,
+      "MPG": 36.43103448275862,
+      "availability": 0.7219468718751358,
+      "availableAfter": 0
+    },
+    {
+      "id": 1641753,
+      "name": "Chris Livingston",
+      "teamId": 1610612749,
+      "priorOnly": true,
+      "MPG": 12,
+      "availability": 0.5317944250871078,
+      "availableAfter": 0
+    },
+    {
+      "id": 201572,
+      "name": "Brook Lopez",
+      "teamId": 1610612749,
+      "priorOnly": false,
+      "MPG": 30.384615384615383,
+      "availability": 0.9180253032476849,
+      "availableAfter": 0
+    },
+    {
+      "id": 201577,
+      "name": "Robin Lopez",
+      "teamId": 1610612749,
+      "priorOnly": false,
+      "MPG": 8.25,
+      "availability": 0.39290838286534124,
+      "availableAfter": 0
+    },
+    {
+      "id": 203114,
+      "name": "Khris Middleton",
+      "teamId": 1610612749,
+      "priorOnly": false,
+      "MPG": 24.272727272727273,
+      "availability": 0.46998201547881263,
+      "availableAfter": 0
+    },
+    {
+      "id": 1626166,
+      "name": "Cameron Payne",
+      "teamId": 1610612749,
+      "priorOnly": false,
+      "MPG": 20.229166666666668,
+      "availability": 0.6170408390082244,
+      "availableAfter": 0
+    },
+    {
+      "id": 1626171,
+      "name": "Bobby Portis Jr.",
+      "teamId": 1610612749,
+      "priorOnly": false,
+      "MPG": 25.928571428571427,
+      "availability": 0.8327271135180283,
+      "availableAfter": 0
+    },
+    {
+      "id": 1629716,
+      "name": "Marques Bolden",
+      "teamId": 1610612749,
+      "priorOnly": true,
+      "MPG": 5,
+      "availability": 0.5317944250871078,
+      "availableAfter": 0
+    },
+    {
+      "id": 1631102,
+      "name": "TyTy Washington Jr.",
+      "teamId": 1610612749,
+      "priorOnly": false,
+      "MPG": 5,
+      "availability": 0.40819498531119763,
+      "availableAfter": 0
+    },
+    {
+      "id": 1629623,
+      "name": "Lindell Wigginton",
+      "teamId": 1610612749,
+      "priorOnly": false,
+      "MPG": 5,
+      "availability": 0.1729008676641388,
+      "availableAfter": 0
+    },
+    {
+      "id": 1629638,
+      "name": "Nickeil Alexander-Walker",
+      "teamId": 1610612750,
+      "priorOnly": false,
+      "MPG": 14.94915254237288,
+      "availability": 0.6827047892327662,
+      "availableAfter": 0
+    },
+    {
+      "id": 203937,
+      "name": "Kyle Anderson",
+      "teamId": 1610612750,
+      "priorOnly": false,
+      "MPG": 28.333333333333332,
+      "availability": 0.8229231919494009,
+      "availableAfter": 0
+    },
+    {
+      "id": 1628972,
+      "name": "Troy Brown Jr.",
+      "teamId": 1610612750,
+      "priorOnly": false,
+      "MPG": 24.513157894736842,
+      "availability": 0.891550642929793,
+      "availableAfter": 0
+    },
+    {
+      "id": 201144,
+      "name": "Mike Conley",
+      "teamId": 1610612750,
+      "priorOnly": false,
+      "MPG": 30.238805970149254,
+      "availability": 0.8101821659927829,
+      "availableAfter": 0
+    },
+    {
+      "id": 1630162,
+      "name": "Anthony Edwards",
+      "teamId": 1610612750,
+      "priorOnly": false,
+      "MPG": 36.037974683544306,
+      "availability": 0.9278292248163124,
+      "availableAfter": 0
+    },
+    {
+      "id": 1630568,
+      "name": "Luka Garza",
+      "teamId": 1610612750,
+      "priorOnly": false,
+      "MPG": 5,
+      "availability": 0.31447701031632164,
+      "availableAfter": 0
+    },
+    {
+      "id": 203497,
+      "name": "Rudy Gobert",
+      "teamId": 1610612750,
+      "priorOnly": false,
+      "MPG": 30.65714285714286,
+      "availability": 0.8395939306986653,
+      "availableAfter": 0
+    },
+    {
+      "id": 1630183,
+      "name": "Jaden McDaniels",
+      "teamId": 1610612750,
+      "priorOnly": false,
+      "MPG": 30.60759493670886,
+      "availability": 0.9278292248163124,
+      "availableAfter": 0
+    },
+    {
+      "id": 1629162,
+      "name": "Jordan McLaughlin",
+      "teamId": 1610612750,
+      "priorOnly": false,
+      "MPG": 15.813953488372093,
+      "availability": 0.525842044134727,
+      "availableAfter": 0
+    },
+    {
+      "id": 1631159,
+      "name": "Leonard Miller",
+      "teamId": 1610612750,
+      "priorOnly": true,
+      "MPG": 12,
+      "availability": 0.5317944250871078,
+      "availableAfter": 0
+    },
+    {
+      "id": 1629003,
+      "name": "Shake Milton",
+      "teamId": 1610612750,
+      "priorOnly": false,
+      "MPG": 20.63157894736842,
+      "availability": 0.891550642929793,
+      "availableAfter": 0
+    },
+    {
+      "id": 1631169,
+      "name": "Josh Minott",
+      "teamId": 1610612750,
+      "priorOnly": false,
+      "MPG": 6.466666666666667,
+      "availability": 0.18702602992416478,
+      "availableAfter": 0
+    },
+    {
+      "id": 1631111,
+      "name": "Wendell Moore Jr.",
+      "teamId": 1610612750,
+      "priorOnly": false,
+      "MPG": 5.5,
+      "availability": 0.31447701031632164,
+      "availableAfter": 0
+    },
+    {
+      "id": 1629675,
+      "name": "Naz Reid",
+      "teamId": 1610612750,
+      "priorOnly": false,
+      "MPG": 18.397058823529413,
+      "availability": 0.7709400833504133,
+      "availableAfter": 0
+    },
+    {
+      "id": 1626157,
+      "name": "Karl-Anthony Towns",
+      "teamId": 1610612750,
+      "priorOnly": false,
+      "MPG": 33,
+      "availability": 0.4376331463849399,
+      "availableAfter": 0
+    },
+    {
+      "id": 1641740,
+      "name": "Jaylen Clark",
+      "teamId": 1610612750,
+      "priorOnly": true,
+      "MPG": 5,
+      "availability": 0.5317944250871078,
+      "availableAfter": 0
+    },
+    {
+      "id": 1630227,
+      "name": "Daishen Nix",
+      "teamId": 1610612750,
+      "priorOnly": false,
+      "MPG": 5,
+      "availability": 0.6630969460955114,
+      "availableAfter": 0
+    },
+    {
+      "id": 1630700,
+      "name": "Dyson Daniels",
+      "teamId": 1610612740,
+      "priorOnly": false,
+      "MPG": 17.93103448275862,
+      "availability": 0.6729008676641388,
+      "availableAfter": 0
+    },
+    {
+      "id": 1641722,
+      "name": "Jordan Hawkins",
+      "teamId": 1610612740,
+      "priorOnly": true,
+      "MPG": 12,
+      "availability": 0.5317944250871078,
+      "availableAfter": 0
+    },
+    {
+      "id": 1627742,
+      "name": "Brandon Ingram",
+      "teamId": 1610612740,
+      "priorOnly": false,
+      "MPG": 34.2,
+      "availability": 0.5944958914829791,
+      "availableAfter": 0
+    },
+    {
+      "id": 1630529,
+      "name": "Herbert Jones",
+      "teamId": 1610612740,
+      "priorOnly": false,
+      "MPG": 29.575757575757574,
+      "availability": 0.7935114272435185,
+      "availableAfter": 0
+    },
+    {
+      "id": 1630184,
+      "name": "Kira Lewis Jr.",
+      "teamId": 1610612740,
+      "priorOnly": false,
+      "MPG": 9.52,
+      "availability": 0.2850652456104393,
+      "availableAfter": 0
+    },
+    {
+      "id": 1630604,
+      "name": "E.J. Liddell",
+      "teamId": 1610612740,
+      "priorOnly": true,
+      "MPG": 12,
+      "availability": 0.5317944250871078,
+      "availableAfter": 0
+    },
+    {
+      "id": 203468,
+      "name": "CJ McCollum",
+      "teamId": 1610612740,
+      "priorOnly": false,
+      "MPG": 35.36,
+      "availability": 0.8886135385418026,
+      "availableAfter": 0
+    },
+    {
+      "id": 1626204,
+      "name": "Larry Nance Jr.",
+      "teamId": 1610612740,
+      "priorOnly": false,
+      "MPG": 21.26153846153846,
+      "availability": 0.7837075056748911,
+      "availableAfter": 0
+    },
+    {
+      "id": 202685,
+      "name": "Jonas Valanciunas",
+      "teamId": 1610612740,
+      "priorOnly": false,
+      "MPG": 24.89873417721519,
+      "availability": 0.9209624076356754,
+      "availableAfter": 0
+    },
+    {
+      "id": 1629627,
+      "name": "Zion Williamson",
+      "teamId": 1610612740,
+      "priorOnly": false,
+      "MPG": 33.03448275862069,
+      "availability": 0.4376331463849399,
+      "availableAfter": 0
+    },
+    {
+      "id": 203469,
+      "name": "Cody Zeller",
+      "teamId": 1610612740,
+      "priorOnly": false,
+      "MPG": 14.533333333333333,
+      "availability": 0.2513322402131584,
+      "availableAfter": 0
+    },
+    {
+      "id": 1630631,
+      "name": "Jose Alvarado",
+      "teamId": 1610612740,
+      "priorOnly": false,
+      "MPG": 21.491803278688526,
+      "availability": 0.7444918194003813,
+      "availableAfter": 14
+    },
+    {
+      "id": 1629232,
+      "name": "Kaiser Gates",
+      "teamId": 1610612740,
+      "priorOnly": true,
+      "MPG": 5,
+      "availability": 0.5317944250871078,
+      "availableAfter": 0
+    },
+    {
+      "id": 1630230,
+      "name": "Naji Marshall",
+      "teamId": 1610612740,
+      "priorOnly": false,
+      "MPG": 23.246753246753247,
+      "availability": 0.9013545644984206,
+      "availableAfter": 14
+    },
+    {
+      "id": 1630530,
+      "name": "Trey Murphy III",
+      "teamId": 1610612740,
+      "priorOnly": false,
+      "MPG": 31.063291139240505,
+      "availability": 0.9278292248163124,
+      "availableAfter": 14
+    },
+    {
+      "id": 1630346,
+      "name": "Matt Ryan",
+      "teamId": 1610612740,
+      "priorOnly": false,
+      "MPG": 5,
+      "availability": 0.3733005397280863,
+      "availableAfter": 0
+    },
+    {
+      "id": 1631220,
+      "name": "Dereon Seabron",
+      "teamId": 1610612740,
+      "priorOnly": false,
+      "MPG": 2.6,
+      "availability": 0.08898681423789027,
+      "availableAfter": 0
+    },
+    {
+      "id": 1627853,
+      "name": "Ryan Arcidiacono",
+      "teamId": 1610612752,
+      "priorOnly": false,
+      "MPG": 8.65,
+      "availability": 0.23604563776730203,
+      "availableAfter": 0
+    },
+    {
+      "id": 1629628,
+      "name": "RJ Barrett",
+      "teamId": 1610612752,
+      "priorOnly": false,
+      "MPG": 33.95890410958904,
+      "availability": 0.8690056954045476,
+      "availableAfter": 0
+    },
+    {
+      "id": 1628973,
+      "name": "Jalen Brunson",
+      "teamId": 1610612752,
+      "priorOnly": false,
+      "MPG": 34.94117647058823,
+      "availability": 0.8199860875614103,
+      "availableAfter": 0
+    },
+    {
+      "id": 1628978,
+      "name": "Donte DiVincenzo",
+      "teamId": 1610612752,
+      "priorOnly": false,
+      "MPG": 26.291666666666668,
+      "availability": 0.8523349566552832,
+      "availableAfter": 0
+    },
+    {
+      "id": 203095,
+      "name": "Evan Fournier",
+      "teamId": 1610612752,
+      "priorOnly": false,
+      "MPG": 17,
+      "availability": 0.3689792990366878,
+      "availableAfter": 0
+    },
+    {
+      "id": 1629656,
+      "name": "Quentin Grimes",
+      "teamId": 1610612752,
+      "priorOnly": false,
+      "MPG": 29.845070422535212,
+      "availability": 0.8425310350866558,
+      "availableAfter": 0
+    },
+    {
+      "id": 1628404,
+      "name": "Josh Hart",
+      "teamId": 1610612752,
+      "priorOnly": false,
+      "MPG": 32.31578947368421,
+      "availability": 0.89841746011043,
+      "availableAfter": 0
+    },
+    {
+      "id": 1628392,
+      "name": "Isaiah Hartenstein",
+      "teamId": 1610612752,
+      "priorOnly": false,
+      "MPG": 19.890243902439025,
+      "availability": 0.9081949853111976,
+      "availableAfter": 0
+    },
+    {
+      "id": 1629610,
+      "name": "DaQuan Jeffries",
+      "teamId": 1610612752,
+      "priorOnly": true,
+      "MPG": 12,
+      "availability": 0.5317944250871078,
+      "availableAfter": 0
+    },
+    {
+      "id": 1630540,
+      "name": "Miles McBride",
+      "teamId": 1610612752,
+      "priorOnly": false,
+      "MPG": 12.524590163934427,
+      "availability": 0.7023126323700212,
+      "availableAfter": 0
+    },
+    {
+      "id": 1630193,
+      "name": "Immanuel Quickley",
+      "teamId": 1610612752,
+      "priorOnly": false,
+      "MPG": 28.925925925925927,
+      "availability": 0.9405702507729303,
+      "availableAfter": 0
+    },
+    {
+      "id": 203944,
+      "name": "Julius Randle",
+      "teamId": 1610612752,
+      "priorOnly": false,
+      "MPG": 35.58441558441559,
+      "availability": 0.9082213816790574,
+      "availableAfter": 0
+    },
+    {
+      "id": 1629011,
+      "name": "Mitchell Robinson",
+      "teamId": 1610612752,
+      "priorOnly": false,
+      "MPG": 26.966101694915253,
+      "availability": 0.7248839762631264,
+      "availableAfter": 0
+    },
+    {
+      "id": 1630579,
+      "name": "Jericho Sims",
+      "teamId": 1610612752,
+      "priorOnly": false,
+      "MPG": 15.882352941176471,
+      "availability": 0.6042734166837467,
+      "availableAfter": 0
+    },
+    {
+      "id": 1629685,
+      "name": "Dylan Windler",
+      "teamId": 1610612752,
+      "priorOnly": false,
+      "MPG": 3.3333333333333335,
+      "availability": 0.06937897110063536,
+      "availableAfter": 0
+    },
+    {
+      "id": 1629718,
+      "name": "Charlie Brown Jr.",
+      "teamId": 1610612752,
+      "priorOnly": true,
+      "MPG": 5,
+      "availability": 0.5317944250871078,
+      "availableAfter": 0
+    },
+    {
+      "id": 1631210,
+      "name": "Jacob Toppin",
+      "teamId": 1610612752,
+      "priorOnly": true,
+      "MPG": 5,
+      "availability": 0.5317944250871078,
+      "availableAfter": 0
+    },
+    {
+      "id": 202722,
+      "name": "Davis Bertans",
+      "teamId": 1610612760,
+      "priorOnly": false,
+      "MPG": 10.911111111111111,
+      "availability": 0.545449887271982,
+      "availableAfter": 0
+    },
+    {
+      "id": 1631172,
+      "name": "Ousmane Dieng",
+      "teamId": 1610612760,
+      "priorOnly": false,
+      "MPG": 14.538461538461538,
+      "availability": 0.48662635786021724,
+      "availableAfter": 0
+    },
+    {
+      "id": 1629652,
+      "name": "Luguentz Dort",
+      "teamId": 1610612760,
+      "priorOnly": false,
+      "MPG": 30.716216216216218,
+      "availability": 0.8788096169731751,
+      "availableAfter": 0
+    },
+    {
+      "id": 1630581,
+      "name": "Josh Giddey",
+      "teamId": 1610612760,
+      "priorOnly": false,
+      "MPG": 31.18421052631579,
+      "availability": 0.89841746011043,
+      "availableAfter": 0
+    },
+    {
+      "id": 1628983,
+      "name": "Shai Gilgeous-Alexander",
+      "teamId": 1610612760,
+      "priorOnly": false,
+      "MPG": 35.544117647058826,
+      "availability": 0.8199860875614103,
+      "availableAfter": 0
+    },
+    {
+      "id": 1631096,
+      "name": "Chet Holmgren",
+      "teamId": 1610612760,
+      "priorOnly": true,
+      "MPG": 12,
+      "availability": 0.5317944250871078,
+      "availableAfter": 0
+    },
+    {
+      "id": 1630198,
+      "name": "Isaiah Joe",
+      "teamId": 1610612760,
+      "priorOnly": false,
+      "MPG": 19.6056338028169,
+      "availability": 0.8003518480562957,
+      "availableAfter": 0
+    },
+    {
+      "id": 1630544,
+      "name": "Tre Mann",
+      "teamId": 1610612760,
+      "priorOnly": false,
+      "MPG": 17.65671641791045,
+      "availability": 0.7611361617817859,
+      "availableAfter": 0
+    },
+    {
+      "id": 203995,
+      "name": "Vasilije Micic",
+      "teamId": 1610612760,
+      "priorOnly": true,
+      "MPG": 12,
+      "availability": 0.5317944250871078,
+      "availableAfter": 0
+    },
+    {
+      "id": 1630846,
+      "name": "Olivier Sarr",
+      "teamId": 1610612760,
+      "priorOnly": false,
+      "MPG": 5,
+      "availability": 0.1925087108013937,
+      "availableAfter": 0
+    },
+    {
+      "id": 1641717,
+      "name": "Cason Wallace",
+      "teamId": 1610612760,
+      "priorOnly": true,
+      "MPG": 12,
+      "availability": 0.5317944250871078,
+      "availableAfter": 0
+    },
+    {
+      "id": 1630322,
+      "name": "Lindy Waters III",
+      "teamId": 1610612760,
+      "priorOnly": false,
+      "MPG": 5,
+      "availability": 0.5062342009974722,
+      "availableAfter": 0
+    },
+    {
+      "id": 1630598,
+      "name": "Aaron Wiggins",
+      "teamId": 1610612760,
+      "priorOnly": false,
+      "MPG": 18.571428571428573,
+      "availability": 0.7905479264876683,
+      "availableAfter": 0
+    },
+    {
+      "id": 1631114,
+      "name": "Jalen Williams",
+      "teamId": 1610612760,
+      "priorOnly": false,
+      "MPG": 30.373333333333335,
+      "availability": 0.8886135385418026,
+      "availableAfter": 0
+    },
+    {
+      "id": 1630197,
+      "name": "Aleksej Pokusevski",
+      "teamId": 1610612760,
+      "priorOnly": false,
+      "MPG": 20.61764705882353,
+      "availability": 0.4797859370474401,
+      "availableAfter": 14
+    },
+    {
+      "id": 1631119,
+      "name": "Jaylin Williams",
+      "teamId": 1610612760,
+      "priorOnly": false,
+      "MPG": 18.714285714285715,
+      "availability": 0.5846655735464917,
+      "availableAfter": 14
+    },
+    {
+      "id": 1629026,
+      "name": "Kenrich Williams",
+      "teamId": 1610612760,
+      "priorOnly": false,
+      "MPG": 22.735849056603772,
+      "availability": 0.6660604468513617,
+      "availableAfter": 14
+    },
+    {
+      "id": 1641749,
+      "name": "Keyontae Johnson",
+      "teamId": 1610612760,
+      "priorOnly": true,
+      "MPG": 5,
+      "availability": 0.5317944250871078,
+      "availableAfter": 0
+    },
+    {
+      "id": 1630175,
+      "name": "Cole Anthony",
+      "teamId": 1610612753,
+      "priorOnly": false,
+      "MPG": 25.866666666666667,
+      "availability": 0.7346878978317538,
+      "availableAfter": 0
+    },
+    {
+      "id": 1631094,
+      "name": "Paolo Banchero",
+      "teamId": 1610612753,
+      "priorOnly": false,
+      "MPG": 33.791666666666664,
+      "availability": 0.8592017738359202,
+      "availableAfter": 0
+    },
+    {
+      "id": 1629048,
+      "name": "Goga Bitadze",
+      "teamId": 1610612753,
+      "priorOnly": false,
+      "MPG": 11.973684210526315,
+      "availability": 0.47682243629158977,
+      "availableAfter": 0
+    },
+    {
+      "id": 1641710,
+      "name": "Anthony Black",
+      "teamId": 1610612753,
+      "priorOnly": true,
+      "MPG": 12,
+      "availability": 0.5317944250871078,
+      "availableAfter": 0
+    },
+    {
+      "id": 1628976,
+      "name": "Wendell Carter Jr.",
+      "teamId": 1610612753,
+      "priorOnly": false,
+      "MPG": 29.649122807017545,
+      "availability": 0.7052761331258715,
+      "availableAfter": 0
+    },
+    {
+      "id": 1628365,
+      "name": "Markelle Fultz",
+      "teamId": 1610612753,
+      "priorOnly": false,
+      "MPG": 29.616666666666667,
+      "availability": 0.7346878978317538,
+      "availableAfter": 0
+    },
+    {
+      "id": 203914,
+      "name": "Gary Harris",
+      "teamId": 1610612753,
+      "priorOnly": false,
+      "MPG": 24.729166666666668,
+      "availability": 0.6170408390082244,
+      "availableAfter": 0
+    },
+    {
+      "id": 1631216,
+      "name": "Caleb Houstan",
+      "teamId": 1610612753,
+      "priorOnly": false,
+      "MPG": 15.941176470588236,
+      "availability": 0.6042734166837467,
+      "availableAfter": 0
+    },
+    {
+      "id": 1641724,
+      "name": "Jett Howard",
+      "teamId": 1610612753,
+      "priorOnly": true,
+      "MPG": 12,
+      "availability": 0.5317944250871078,
+      "availableAfter": 0
+    },
+    {
+      "id": 204060,
+      "name": "Joe Ingles",
+      "teamId": 1610612753,
+      "priorOnly": false,
+      "MPG": 22.58695652173913,
+      "availability": 0.5974329958709695,
+      "availableAfter": 0
+    },
+    {
+      "id": 1628371,
+      "name": "Jonathan Isaac",
+      "teamId": 1610612753,
+      "priorOnly": false,
+      "MPG": 11.272727272727273,
+      "availability": 0.21211655393864862,
+      "availableAfter": 0
+    },
+    {
+      "id": 1629643,
+      "name": "Chuma Okeke",
+      "teamId": 1610612753,
+      "priorOnly": false,
+      "MPG": 19.185185185185187,
+      "availability": 0.3689792990366878,
+      "availableAfter": 0
+    },
+    {
+      "id": 1630591,
+      "name": "Jalen Suggs",
+      "teamId": 1610612753,
+      "priorOnly": false,
+      "MPG": 23.547169811320753,
+      "availability": 0.6660604468513617,
+      "availableAfter": 0
+    },
+    {
+      "id": 1630532,
+      "name": "Franz Wagner",
+      "teamId": 1610612753,
+      "priorOnly": false,
+      "MPG": 32.6125,
+      "availability": 0.9376331463849398,
+      "availableAfter": 0
+    },
+    {
+      "id": 1629021,
+      "name": "Moritz Wagner",
+      "teamId": 1610612753,
+      "priorOnly": false,
+      "MPG": 19.473684210526315,
+      "availability": 0.6630969460955114,
+      "availableAfter": 0
+    },
+    {
+      "id": 1630284,
+      "name": "Kevon Harris",
+      "teamId": 1610612753,
+      "priorOnly": false,
+      "MPG": 5,
+      "availability": 0.43760675001708,
+      "availableAfter": 0
+    },
+    {
+      "id": 1630243,
+      "name": "Trevelin Queen",
+      "teamId": 1610612753,
+      "priorOnly": false,
+      "MPG": 5,
+      "availability": 0.1729008676641388,
+      "availableAfter": 0
+    },
+    {
+      "id": 1629678,
+      "name": "Admiral Schofield",
+      "teamId": 1610612753,
+      "priorOnly": false,
+      "MPG": 5,
+      "availability": 0.46701851472296235,
+      "availableAfter": 0
+    },
+    {
+      "id": 1628964,
+      "name": "Mo Bamba",
+      "teamId": 1610612755,
+      "priorOnly": false,
+      "MPG": 15.73469387755102,
+      "availability": 0.5846655735464917,
+      "availableAfter": 0
+    },
+    {
+      "id": 201976,
+      "name": "Patrick Beverley",
+      "teamId": 1610612755,
+      "priorOnly": false,
+      "MPG": 27.119402985074625,
+      "availability": 0.803315348812146,
+      "availableAfter": 0
+    },
+    {
+      "id": 203954,
+      "name": "Joel Embiid",
+      "teamId": 1610612755,
+      "priorOnly": false,
+      "MPG": 34.666666666666664,
+      "availability": 0.8003782444241555,
+      "availableAfter": 0
+    },
+    {
+      "id": 201980,
+      "name": "Danny Green",
+      "teamId": 1610612755,
+      "priorOnly": false,
+      "MPG": 12.636363636363637,
+      "availability": 0.21211655393864862,
+      "availableAfter": 0
+    },
+    {
+      "id": 201935,
+      "name": "James Harden",
+      "teamId": 1610612755,
+      "priorOnly": false,
+      "MPG": 36.793103448275865,
+      "availability": 0.7219468718751358,
+      "availableAfter": 0
+    },
+    {
+      "id": 202699,
+      "name": "Tobias Harris",
+      "teamId": 1610612755,
+      "priorOnly": false,
+      "MPG": 32.932432432432435,
+      "availability": 0.8788096169731751,
+      "availableAfter": 0
+    },
+    {
+      "id": 1627863,
+      "name": "Danuel House Jr.",
+      "teamId": 1610612755,
+      "priorOnly": false,
+      "MPG": 14.925925925925926,
+      "availability": 0.633685181389629,
+      "availableAfter": 0
+    },
+    {
+      "id": 1627788,
+      "name": "Furkan Korkmaz",
+      "teamId": 1610612755,
+      "priorOnly": false,
+      "MPG": 9.86111111111111,
+      "availability": 0.39290838286534124,
+      "availableAfter": 0
+    },
+    {
+      "id": 1630178,
+      "name": "Tyrese Maxey",
+      "teamId": 1610612755,
+      "priorOnly": false,
+      "MPG": 33.65,
+      "availability": 0.7415547150123908,
+      "availableAfter": 0
+    },
+    {
+      "id": 1629001,
+      "name": "De'Anthony Melton",
+      "teamId": 1610612755,
+      "priorOnly": false,
+      "MPG": 27.948051948051948,
+      "availability": 0.9013545644984206,
+      "availableAfter": 0
+    },
+    {
+      "id": 1626162,
+      "name": "Kelly Oubre Jr.",
+      "teamId": 1610612755,
+      "priorOnly": false,
+      "MPG": 32.291666666666664,
+      "availability": 0.6239076561888615,
+      "availableAfter": 0
+    },
+    {
+      "id": 1630196,
+      "name": "Filip Petrusev",
+      "teamId": 1610612755,
+      "priorOnly": true,
+      "MPG": 12,
+      "availability": 0.5317944250871078,
+      "availableAfter": 0
+    },
+    {
+      "id": 1630194,
+      "name": "Paul Reed",
+      "teamId": 1610612755,
+      "priorOnly": false,
+      "MPG": 10.884057971014492,
+      "availability": 0.7807440049190407,
+      "availableAfter": 0
+    },
+    {
+      "id": 1630531,
+      "name": "Jaden Springer",
+      "teamId": 1610612755,
+      "priorOnly": false,
+      "MPG": 5.933333333333334,
+      "availability": 0.18702602992416478,
+      "availableAfter": 0
+    },
+    {
+      "id": 200782,
+      "name": "P.J. Tucker",
+      "teamId": 1610612755,
+      "priorOnly": false,
+      "MPG": 25.56,
+      "availability": 0.8817467213611656,
+      "availableAfter": 0
+    },
+    {
+      "id": 1630606,
+      "name": "Javonte Smart",
+      "teamId": 1610612755,
+      "priorOnly": true,
+      "MPG": 5,
+      "availability": 0.5317944250871078,
+      "availableAfter": 0
+    },
+    {
+      "id": 1631173,
+      "name": "Terquavion Smith",
+      "teamId": 1610612755,
+      "priorOnly": true,
+      "MPG": 5,
+      "availability": 0.5317944250871078,
+      "availableAfter": 0
+    },
+    {
+      "id": -475505093,
+      "name": "Azuolas Tubelis",
+      "teamId": 1610612755,
+      "priorOnly": true,
+      "MPG": 5,
+      "availability": 0.5317944250871078,
+      "availableAfter": 0
+    },
+    {
+      "id": 1628960,
+      "name": "Grayson Allen",
+      "teamId": 1610612756,
+      "priorOnly": false,
+      "MPG": 27.38888888888889,
+      "availability": 0.8523349566552832,
+      "availableAfter": 0
+    },
+    {
+      "id": 1628966,
+      "name": "Keita Bates-Diop",
+      "teamId": 1610612756,
+      "priorOnly": false,
+      "MPG": 22.075757575757574,
+      "availability": 0.7935114272435185,
+      "availableAfter": 0
+    },
+    {
+      "id": 203078,
+      "name": "Bradley Beal",
+      "teamId": 1610612756,
+      "priorOnly": false,
+      "MPG": 33.54,
+      "availability": 0.6435154993261163,
+      "availableAfter": 0
+    },
+    {
+      "id": 1629626,
+      "name": "Bol Bol",
+      "teamId": 1610612756,
+      "priorOnly": false,
+      "MPG": 21.585714285714285,
+      "availability": 0.8327271135180283,
+      "availableAfter": 0
+    },
+    {
+      "id": 1626164,
+      "name": "Devin Booker",
+      "teamId": 1610612756,
+      "priorOnly": false,
+      "MPG": 34.62264150943396,
+      "availability": 0.6729272640319987,
+      "availableAfter": 0
+    },
+    {
+      "id": 201142,
+      "name": "Kevin Durant",
+      "teamId": 1610612756,
+      "priorOnly": false,
+      "MPG": 35.59574468085106,
+      "availability": 0.614103734620234,
+      "availableAfter": 0
+    },
+    {
+      "id": 1629234,
+      "name": "Drew Eubanks",
+      "teamId": 1610612756,
+      "priorOnly": false,
+      "MPG": 20.28205128205128,
+      "availability": 0.911158486067048,
+      "availableAfter": 0
+    },
+    {
+      "id": 1630692,
+      "name": "Jordan Goodwin",
+      "teamId": 1610612756,
+      "priorOnly": false,
+      "MPG": 18.131147540983605,
+      "availability": 0.7023126323700212,
+      "availableAfter": 0
+    },
+    {
+      "id": 201569,
+      "name": "Eric Gordon",
+      "teamId": 1610612756,
+      "priorOnly": false,
+      "MPG": 28.463768115942027,
+      "availability": 0.8229231919494009,
+      "availableAfter": 0
+    },
+    {
+      "id": 1630240,
+      "name": "Saben Lee",
+      "teamId": 1610612756,
+      "priorOnly": false,
+      "MPG": 5,
+      "availability": 0.3493714558994329,
+      "availableAfter": 0
+    },
+    {
+      "id": 1629642,
+      "name": "Nassir Little",
+      "teamId": 1610612756,
+      "priorOnly": false,
+      "MPG": 18.12962962962963,
+      "availability": 0.633685181389629,
+      "availableAfter": 0
+    },
+    {
+      "id": 1629002,
+      "name": "Chimezie Metu",
+      "teamId": 1610612756,
+      "priorOnly": false,
+      "MPG": 10.454545454545455,
+      "availability": 0.7513322402131584,
+      "availableAfter": 0
+    },
+    {
+      "id": 203994,
+      "name": "Jusuf Nurkić",
+      "teamId": 1610612756,
+      "priorOnly": false,
+      "MPG": 26.75,
+      "availability": 0.6562565252827343,
+      "availableAfter": 0
+    },
+    {
+      "id": 1629006,
+      "name": "Josh Okogie",
+      "teamId": 1610612756,
+      "priorOnly": false,
+      "MPG": 18.72222222222222,
+      "availability": 0.8101557696249231,
+      "availableAfter": 0
+    },
+    {
+      "id": 1629139,
+      "name": "Yuta Watanabe",
+      "teamId": 1610612756,
+      "priorOnly": false,
+      "MPG": 16,
+      "availability": 0.6729008676641388,
+      "availableAfter": 0
+    },
+    {
+      "id": 1628962,
+      "name": "Udoka Azubuike",
+      "teamId": 1610612756,
+      "priorOnly": false,
+      "MPG": 5,
+      "availability": 0.39290838286534124,
+      "availableAfter": 0
+    },
+    {
+      "id": 1627814,
+      "name": "Damion Lee",
+      "teamId": 1610612756,
+      "priorOnly": false,
+      "MPG": 20.43243243243243,
+      "availability": 0.8719427997925382,
+      "availableAfter": 14
+    },
+    {
+      "id": 1629028,
+      "name": "Deandre Ayton",
+      "teamId": 1610612757,
+      "priorOnly": false,
+      "MPG": 30.432835820895523,
+      "availability": 0.8101821659927829,
+      "availableAfter": 0
+    },
+    {
+      "id": 1627763,
+      "name": "Malcolm Brogdon",
+      "teamId": 1610612757,
+      "priorOnly": false,
+      "MPG": 26.074626865671643,
+      "availability": 0.803315348812146,
+      "availableAfter": 0
+    },
+    {
+      "id": 1629650,
+      "name": "Moses Brown",
+      "teamId": 1610612757,
+      "priorOnly": false,
+      "MPG": 8.194444444444445,
+      "availability": 0.39290838286534124,
+      "availableAfter": 0
+    },
+    {
+      "id": 1641739,
+      "name": "Toumani Camara",
+      "teamId": 1610612757,
+      "priorOnly": true,
+      "MPG": 12,
+      "availability": 0.5317944250871078,
+      "availableAfter": 0
+    },
+    {
+      "id": 203924,
+      "name": "Jerami Grant",
+      "teamId": 1610612757,
+      "priorOnly": false,
+      "MPG": 35.61904761904762,
+      "availability": 0.7709664797182731,
+      "availableAfter": 0
+    },
+    {
+      "id": 1630703,
+      "name": "Scoot Henderson",
+      "teamId": 1610612757,
+      "priorOnly": true,
+      "MPG": 12,
+      "availability": 0.5317944250871078,
+      "availableAfter": 0
+    },
+    {
+      "id": 1631200,
+      "name": "Kris Murray",
+      "teamId": 1610612757,
+      "priorOnly": true,
+      "MPG": 12,
+      "availability": 0.5317944250871078,
+      "availableAfter": 0
+    },
+    {
+      "id": 1641712,
+      "name": "Rayan Rupert",
+      "teamId": 1610612757,
+      "priorOnly": true,
+      "MPG": 12,
+      "availability": 0.5317944250871078,
+      "availableAfter": 0
+    },
+    {
+      "id": 1631101,
+      "name": "Shaedon Sharpe",
+      "teamId": 1610612757,
+      "priorOnly": false,
+      "MPG": 22.1875,
+      "availability": 0.9307663292043028,
+      "availableAfter": 0
+    },
+    {
+      "id": 1629014,
+      "name": "Anfernee Simons",
+      "teamId": 1610612757,
+      "priorOnly": false,
+      "MPG": 35.096774193548384,
+      "availability": 0.7611625581496457,
+      "availableAfter": 0
+    },
+    {
+      "id": 1629680,
+      "name": "Matisse Thybulle",
+      "teamId": 1610612757,
+      "priorOnly": false,
+      "MPG": 17.36231884057971,
+      "availability": 0.7807440049190407,
+      "availableAfter": 0
+    },
+    {
+      "id": 1631133,
+      "name": "Jabari Walker",
+      "teamId": 1610612757,
+      "priorOnly": false,
+      "MPG": 11.236363636363636,
+      "availability": 0.6434891029582565,
+      "availableAfter": 0
+    },
+    {
+      "id": 1629057,
+      "name": "Robert Williams III",
+      "teamId": 1610612757,
+      "priorOnly": false,
+      "MPG": 23.542857142857144,
+      "availability": 0.4895898586160676,
+      "availableAfter": 0
+    },
+    {
+      "id": 1630219,
+      "name": "Skylar Mays",
+      "teamId": 1610612757,
+      "priorOnly": false,
+      "MPG": 5,
+      "availability": 0.2121429503065085,
+      "availableAfter": 0
+    },
+    {
+      "id": 1631303,
+      "name": "Justin Minaya",
+      "teamId": 1610612757,
+      "priorOnly": false,
+      "MPG": 5,
+      "availability": 0.1856682899886166,
+      "availableAfter": 0
+    },
+    {
+      "id": 1641871,
+      "name": "Duop Reath",
+      "teamId": 1610612757,
+      "priorOnly": true,
+      "MPG": 5,
+      "availability": 0.5317944250871078,
+      "availableAfter": 0
+    },
+    {
+      "id": 1630688,
+      "name": "Ish Wainright",
+      "teamId": 1610612757,
+      "priorOnly": false,
+      "MPG": 15.216666666666667,
+      "availability": 0.6925087108013938,
+      "availableAfter": 14
+    },
+    {
+      "id": 203084,
+      "name": "Harrison Barnes",
+      "teamId": 1610612758,
+      "priorOnly": false,
+      "MPG": 32.4390243902439,
+      "availability": 0.9572409895221947,
+      "availableAfter": 0
+    },
+    {
+      "id": 1630537,
+      "name": "Chris Duarte",
+      "teamId": 1610612758,
+      "priorOnly": false,
+      "MPG": 19.565217391304348,
+      "availability": 0.5552538088406094,
+      "availableAfter": 0
+    },
+    {
+      "id": 1630556,
+      "name": "Kessler Edwards",
+      "teamId": 1610612758,
+      "priorOnly": false,
+      "MPG": 11.441176470588236,
+      "availability": 0.43760675001708,
+      "availableAfter": 0
+    },
+    {
+      "id": 1628368,
+      "name": "De'Aaron Fox",
+      "teamId": 1610612758,
+      "priorOnly": false,
+      "MPG": 33.397260273972606,
+      "availability": 0.8690056954045476,
+      "availableAfter": 0
+    },
+    {
+      "id": 1628989,
+      "name": "Kevin Huerter",
+      "teamId": 1610612758,
+      "priorOnly": false,
+      "MPG": 29.413333333333334,
+      "availability": 0.8817467213611656,
+      "availableAfter": 0
+    },
+    {
+      "id": 1641732,
+      "name": "Colby Jones",
+      "teamId": 1610612758,
+      "priorOnly": true,
+      "MPG": 12,
+      "availability": 0.5317944250871078,
+      "availableAfter": 0
+    },
+    {
+      "id": 203458,
+      "name": "Alex Len",
+      "teamId": 1610612758,
+      "priorOnly": false,
+      "MPG": 6.666666666666667,
+      "availability": 0.27526132404181186,
+      "availableAfter": 0
+    },
+    {
+      "id": 1626168,
+      "name": "Trey Lyles",
+      "teamId": 1610612758,
+      "priorOnly": false,
+      "MPG": 16.864864864864863,
+      "availability": 0.829763612762178,
+      "availableAfter": 0
+    },
+    {
+      "id": 201580,
+      "name": "JaVale McGee",
+      "teamId": 1610612758,
+      "priorOnly": false,
+      "MPG": 8.547619047619047,
+      "availability": 0.4517319122771059,
+      "availableAfter": 0
+    },
+    {
+      "id": 1630558,
+      "name": "Davion Mitchell",
+      "teamId": 1610612758,
+      "priorOnly": false,
+      "MPG": 18.075,
+      "availability": 0.8885871421739427,
+      "availableAfter": 0
+    },
+    {
+      "id": 1628370,
+      "name": "Malik Monk",
+      "teamId": 1610612758,
+      "priorOnly": false,
+      "MPG": 22.363636363636363,
+      "availability": 0.9013545644984206,
+      "availableAfter": 0
+    },
+    {
+      "id": 1631099,
+      "name": "Keegan Murray",
+      "teamId": 1610612758,
+      "priorOnly": false,
+      "MPG": 29.7625,
+      "availability": 0.9307663292043028,
+      "availableAfter": 0
+    },
+    {
+      "id": 1627734,
+      "name": "Domantas Sabonis",
+      "teamId": 1610612758,
+      "priorOnly": false,
+      "MPG": 34.63291139240506,
+      "availability": 0.9278292248163124,
+      "availableAfter": 0
+    },
+    {
+      "id": 1628426,
+      "name": "Sasha Vezenkov",
+      "teamId": 1610612758,
+      "priorOnly": true,
+      "MPG": 12,
+      "availability": 0.5317944250871078,
+      "availableAfter": 0
+    },
+    {
+      "id": 1631165,
+      "name": "Keon Ellis",
+      "teamId": 1610612758,
+      "priorOnly": false,
+      "MPG": 4.6,
+      "availability": 0.18702602992416478,
+      "availableAfter": 0
+    },
+    {
+      "id": 1630259,
+      "name": "Jordan Ford",
+      "teamId": 1610612758,
+      "priorOnly": true,
+      "MPG": 5,
+      "availability": 0.5317944250871078,
+      "availableAfter": 0
+    },
+    {
+      "id": 1641771,
+      "name": "Jalen Slawson",
+      "teamId": 1610612758,
+      "priorOnly": true,
+      "MPG": 5,
+      "availability": 0.5317944250871078,
+      "availableAfter": 0
+    },
+    {
+      "id": 1629646,
+      "name": "Charles Bassey",
+      "teamId": 1610612759,
+      "priorOnly": false,
+      "MPG": 14.571428571428571,
+      "availability": 0.4474106715857074,
+      "availableAfter": 0
+    },
+    {
+      "id": 1631103,
+      "name": "Malaki Branham",
+      "teamId": 1610612759,
+      "priorOnly": false,
+      "MPG": 23.545454545454547,
+      "availability": 0.7935114272435185,
+      "availableAfter": 0
+    },
+    {
+      "id": 1630577,
+      "name": "Julian Champagnie",
+      "teamId": 1610612759,
+      "priorOnly": false,
+      "MPG": 18.764705882352942,
+      "availability": 0.2709400833504133,
+      "availableAfter": 0
+    },
+    {
+      "id": 1631321,
+      "name": "Sidy Cissoko",
+      "teamId": 1610612759,
+      "priorOnly": true,
+      "MPG": 12,
+      "availability": 0.5317944250871078,
+      "availableAfter": 0
+    },
+    {
+      "id": 1628380,
+      "name": "Zach Collins",
+      "teamId": 1610612759,
+      "priorOnly": false,
+      "MPG": 22.873015873015873,
+      "availability": 0.7640996625376362,
+      "availableAfter": 0
+    },
+    {
+      "id": 1629640,
+      "name": "Keldon Johnson",
+      "teamId": 1610612759,
+      "priorOnly": false,
+      "MPG": 32.79365079365079,
+      "availability": 0.7709664797182731,
+      "availableAfter": 0
+    },
+    {
+      "id": 1630200,
+      "name": "Tre Jones",
+      "teamId": 1610612759,
+      "priorOnly": false,
+      "MPG": 29.176470588235293,
+      "availability": 0.8131192703807735,
+      "availableAfter": 0
+    },
+    {
+      "id": 1630572,
+      "name": "Sandro Mamukelashvili",
+      "teamId": 1610612759,
+      "priorOnly": false,
+      "MPG": 15.30232558139535,
+      "availability": 0.525842044134727,
+      "availableAfter": 0
+    },
+    {
+      "id": 203926,
+      "name": "Doug McDermott",
+      "teamId": 1610612759,
+      "priorOnly": false,
+      "MPG": 20.5,
+      "availability": 0.7739035841062636,
+      "availableAfter": 0
+    },
+    {
+      "id": 1626224,
+      "name": "Cedi Osman",
+      "teamId": 1610612759,
+      "priorOnly": false,
+      "MPG": 20.12987012987013,
+      "availability": 0.9013545644984206,
+      "availableAfter": 0
+    },
+    {
+      "id": 1631110,
+      "name": "Jeremy Sochan",
+      "teamId": 1610612759,
+      "priorOnly": false,
+      "MPG": 25.982142857142858,
+      "availability": 0.695472211557244,
+      "availableAfter": 0
+    },
+    {
+      "id": 1630170,
+      "name": "Devin Vassell",
+      "teamId": 1610612759,
+      "priorOnly": false,
+      "MPG": 31.05263157894737,
+      "availability": 0.525868440502587,
+      "availableAfter": 0
+    },
+    {
+      "id": 1641705,
+      "name": "Victor Wembanyama",
+      "teamId": 1610612759,
+      "priorOnly": true,
+      "MPG": 12,
+      "availability": 0.5317944250871078,
+      "availableAfter": 0
+    },
+    {
+      "id": 1631104,
+      "name": "Blake Wesley",
+      "teamId": 1610612759,
+      "priorOnly": false,
+      "MPG": 18.054054054054053,
+      "availability": 0.46701851472296235,
+      "availableAfter": 0
+    },
+    {
+      "id": 1631230,
+      "name": "Dominick Barlow",
+      "teamId": 1610612759,
+      "priorOnly": false,
+      "MPG": 5,
+      "availability": 0.3787832206053153,
+      "availableAfter": 0
+    },
+    {
+      "id": -2395109681,
+      "name": "Charles Bediako",
+      "teamId": 1610612759,
+      "priorOnly": true,
+      "MPG": 5,
+      "availability": 0.5317944250871078,
+      "availableAfter": 0
+    },
+    {
+      "id": 1628984,
+      "name": "Devonte' Graham",
+      "teamId": 1610612759,
+      "priorOnly": false,
+      "MPG": 18.34246575342466,
+      "availability": 0.8199596911935506,
+      "availableAfter": 14
+    },
+    {
+      "id": -428469970,
+      "name": "Sir'Jabari Rice",
+      "teamId": 1610612759,
+      "priorOnly": true,
+      "MPG": 5,
+      "availability": 0.5317944250871078,
+      "availableAfter": 0
+    },
+    {
+      "id": 1630173,
+      "name": "Precious Achiuwa",
+      "teamId": 1610612761,
+      "priorOnly": false,
+      "MPG": 20.78181818181818,
+      "availability": 0.6856682899886166,
+      "availableAfter": 0
+    },
+    {
+      "id": 1628384,
+      "name": "OG Anunoby",
+      "teamId": 1610612761,
+      "priorOnly": false,
+      "MPG": 35.64179104477612,
+      "availability": 0.8101821659927829,
+      "availableAfter": 0
+    },
+    {
+      "id": 1630567,
+      "name": "Scottie Barnes",
+      "teamId": 1610612761,
+      "priorOnly": false,
+      "MPG": 34.79220779220779,
+      "availability": 0.9082213816790574,
+      "availableAfter": 0
+    },
+    {
+      "id": 1628449,
+      "name": "Chris Boucher",
+      "teamId": 1610612761,
+      "priorOnly": false,
+      "MPG": 20.013157894736842,
+      "availability": 0.891550642929793,
+      "availableAfter": 0
+    },
+    {
+      "id": 1641711,
+      "name": "Gradey Dick",
+      "teamId": 1610612761,
+      "priorOnly": true,
+      "MPG": 12,
+      "availability": 0.5317944250871078,
+      "availableAfter": 0
+    },
+    {
+      "id": 1630201,
+      "name": "Malachi Flynn",
+      "teamId": 1610612761,
+      "priorOnly": false,
+      "MPG": 13,
+      "availability": 0.6238812598210015,
+      "availableAfter": 0
+    },
+    {
+      "id": 1631132,
+      "name": "Christian Koloko",
+      "teamId": 1610612761,
+      "priorOnly": false,
+      "MPG": 13.827586206896552,
+      "availability": 0.6729008676641388,
+      "availableAfter": 0
+    },
+    {
+      "id": 1629667,
+      "name": "Jalen McDaniels",
+      "teamId": 1610612761,
+      "priorOnly": false,
+      "MPG": 23.875,
+      "availability": 0.9307663292043028,
+      "availableAfter": 0
+    },
+    {
+      "id": 1627751,
+      "name": "Jakob Poeltl",
+      "teamId": 1610612761,
+      "priorOnly": false,
+      "MPG": 26.5,
+      "availability": 0.8523349566552832,
+      "availableAfter": 0
+    },
+    {
+      "id": 203490,
+      "name": "Otto Porter Jr.",
+      "teamId": 1610612761,
+      "priorOnly": false,
+      "MPG": 18.375,
+      "availability": 0.18270478923276626,
+      "availableAfter": 0
+    },
+    {
+      "id": 203471,
+      "name": "Dennis Schröder",
+      "teamId": 1610612761,
+      "priorOnly": false,
+      "MPG": 30.09090909090909,
+      "availability": 0.8003782444241555,
+      "availableAfter": 0
+    },
+    {
+      "id": 1627783,
+      "name": "Pascal Siakam",
+      "teamId": 1610612761,
+      "priorOnly": false,
+      "MPG": 37.33802816901409,
+      "availability": 0.8493978522672927,
+      "availableAfter": 0
+    },
+    {
+      "id": 202066,
+      "name": "Garrett Temple",
+      "teamId": 1610612761,
+      "priorOnly": false,
+      "MPG": 6.52,
+      "availability": 0.2850652456104393,
+      "availableAfter": 0
+    },
+    {
+      "id": 1629018,
+      "name": "Gary Trent Jr.",
+      "teamId": 1610612761,
+      "priorOnly": false,
+      "MPG": 32.03030303030303,
+      "availability": 0.8003782444241555,
+      "availableAfter": 0
+    },
+    {
+      "id": 201152,
+      "name": "Thaddeus Young",
+      "teamId": 1610612761,
+      "priorOnly": false,
+      "MPG": 15,
+      "availability": 0.6238812598210015,
+      "availableAfter": 0
+    },
+    {
+      "id": 1631241,
+      "name": "Javon Freeman-Liberty",
+      "teamId": 1610612761,
+      "priorOnly": true,
+      "MPG": 5,
+      "availability": 0.5317944250871078,
+      "availableAfter": 0
+    },
+    {
+      "id": 1631199,
+      "name": "Ron Harper Jr.",
+      "teamId": 1610612761,
+      "priorOnly": false,
+      "MPG": 5,
+      "availability": 0.1282025005124001,
+      "availableAfter": 0
+    },
+    {
+      "id": 1641806,
+      "name": "Markquis Nowell",
+      "teamId": 1610612761,
+      "priorOnly": true,
+      "MPG": 5,
+      "availability": 0.5317944250871078,
+      "availableAfter": 0
+    },
+    {
+      "id": 1630534,
+      "name": "Ochai Agbaji",
+      "teamId": 1610612762,
+      "priorOnly": false,
+      "MPG": 20.844827586206897,
+      "availability": 0.715080054694499,
+      "availableAfter": 0
+    },
+    {
+      "id": 203903,
+      "name": "Jordan Clarkson",
+      "teamId": 1610612762,
+      "priorOnly": false,
+      "MPG": 32.60655737704918,
+      "availability": 0.7513586365810182,
+      "availableAfter": 0
+    },
+    {
+      "id": 1628381,
+      "name": "John Collins",
+      "teamId": 1610612762,
+      "priorOnly": false,
+      "MPG": 30.028169014084508,
+      "availability": 0.8493978522672927,
+      "availableAfter": 0
+    },
+    {
+      "id": 1627739,
+      "name": "Kris Dunn",
+      "teamId": 1610612762,
+      "priorOnly": false,
+      "MPG": 25.772727272727273,
+      "availability": 0.3621388782239107,
+      "availableAfter": 0
+    },
+    {
+      "id": 1631323,
+      "name": "Simone Fontecchio",
+      "teamId": 1610612762,
+      "priorOnly": false,
+      "MPG": 15.058823529411764,
+      "availability": 0.6042734166837467,
+      "availableAfter": 0
+    },
+    {
+      "id": 1641718,
+      "name": "Keyonte George",
+      "teamId": 1610612762,
+      "priorOnly": true,
+      "MPG": 12,
+      "availability": 0.5317944250871078,
+      "availableAfter": 0
+    },
+    {
+      "id": 1641707,
+      "name": "Taylor Hendricks",
+      "teamId": 1610612762,
+      "priorOnly": true,
+      "MPG": 12,
+      "availability": 0.5317944250871078,
+      "availableAfter": 0
+    },
+    {
+      "id": 1629659,
+      "name": "Talen Horton-Tucker",
+      "teamId": 1610612762,
+      "priorOnly": false,
+      "MPG": 20.2,
+      "availability": 0.7837075056748911,
+      "availableAfter": 0
+    },
+    {
+      "id": 1631117,
+      "name": "Walker Kessler",
+      "teamId": 1610612762,
+      "priorOnly": false,
+      "MPG": 22.986486486486488,
+      "availability": 0.8719427997925382,
+      "availableAfter": 0
+    },
+    {
+      "id": 1628374,
+      "name": "Lauri Markkanen",
+      "teamId": 1610612762,
+      "priorOnly": false,
+      "MPG": 34.40909090909091,
+      "availability": 0.8003782444241555,
+      "availableAfter": 0
+    },
+    {
+      "id": 203482,
+      "name": "Kelly Olynyk",
+      "teamId": 1610612762,
+      "priorOnly": false,
+      "MPG": 28.485294117647058,
+      "availability": 0.8131192703807735,
+      "availableAfter": 0
+    },
+    {
+      "id": 1629677,
+      "name": "Luka Samanic",
+      "teamId": 1610612762,
+      "priorOnly": false,
+      "MPG": 23,
+      "availability": 0.21508005469449892,
+      "availableAfter": 0
+    },
+    {
+      "id": 1641729,
+      "name": "Brice Sensabaugh",
+      "teamId": 1610612762,
+      "priorOnly": true,
+      "MPG": 12,
+      "availability": 0.5317944250871078,
+      "availableAfter": 0
+    },
+    {
+      "id": 1629012,
+      "name": "Collin Sexton",
+      "teamId": 1610612762,
+      "priorOnly": false,
+      "MPG": 23.854166666666668,
+      "availability": 0.6170408390082244,
+      "availableAfter": 0
+    },
+    {
+      "id": 1630209,
+      "name": "Omer Yurtseven",
+      "teamId": 1610612762,
+      "priorOnly": false,
+      "MPG": 9.333333333333334,
+      "availability": 0.1282025005124001,
+      "availableAfter": 0
+    },
+    {
+      "id": 1630528,
+      "name": "Josh Christopher",
+      "teamId": 1610612762,
+      "priorOnly": false,
+      "MPG": 5,
+      "availability": 0.7317243970759035,
+      "availableAfter": 0
+    },
+    {
+      "id": 1630548,
+      "name": "Johnny Juzang",
+      "teamId": 1610612762,
+      "priorOnly": false,
+      "MPG": 5,
+      "availability": 0.2807440049190408,
+      "availableAfter": 0
+    },
+    {
+      "id": 1630695,
+      "name": "Micah Potter",
+      "teamId": 1610612762,
+      "priorOnly": false,
+      "MPG": 5,
+      "availability": 0.10859465737514518,
+      "availableAfter": 0
+    },
+    {
+      "id": 1630166,
+      "name": "Deni Avdija",
+      "teamId": 1610612764,
+      "priorOnly": false,
+      "MPG": 26.592105263157894,
+      "availability": 0.891550642929793,
+      "availableAfter": 0
+    },
+    {
+      "id": 1631116,
+      "name": "Patrick Baldwin Jr.",
+      "teamId": 1610612764,
+      "priorOnly": false,
+      "MPG": 7.290322580645161,
+      "availability": 0.34388877502220394,
+      "availableAfter": 0
+    },
+    {
+      "id": 1641731,
+      "name": "Bilal Coulibaly",
+      "teamId": 1610612764,
+      "priorOnly": true,
+      "MPG": 12,
+      "availability": 0.5317944250871078,
+      "availableAfter": 0
+    },
+    {
+      "id": 1631098,
+      "name": "Johnny Davis",
+      "teamId": 1610612764,
+      "priorOnly": false,
+      "MPG": 15.107142857142858,
+      "availability": 0.3787832206053153,
+      "availableAfter": 0
+    },
+    {
+      "id": 1629655,
+      "name": "Daniel Gafford",
+      "teamId": 1610612764,
+      "priorOnly": false,
+      "MPG": 20.58974358974359,
+      "availability": 0.911158486067048,
+      "availableAfter": 0
+    },
+    {
+      "id": 201568,
+      "name": "Danilo Gallinari",
+      "teamId": 1610612764,
+      "priorOnly": true,
+      "MPG": 12,
+      "availability": 0.5317944250871078,
+      "availableAfter": 0
+    },
+    {
+      "id": 1630264,
+      "name": "Anthony Gill",
+      "teamId": 1610612764,
+      "priorOnly": false,
+      "MPG": 10.627118644067796,
+      "availability": 0.6827047892327662,
+      "availableAfter": 0
+    },
+    {
+      "id": 1626145,
+      "name": "Tyus Jones",
+      "teamId": 1610612764,
+      "priorOnly": false,
+      "MPG": 24.2375,
+      "availability": 0.9307663292043028,
+      "availableAfter": 0
+    },
+    {
+      "id": 1630557,
+      "name": "Corey Kispert",
+      "teamId": 1610612764,
+      "priorOnly": false,
+      "MPG": 28.324324324324323,
+      "availability": 0.8719427997925382,
+      "availableAfter": 0
+    },
+    {
+      "id": 1628398,
+      "name": "Kyle Kuzma",
+      "teamId": 1610612764,
+      "priorOnly": false,
+      "MPG": 35,
+      "availability": 0.7807704012869006,
+      "availableAfter": 0
+    },
+    {
+      "id": 203488,
+      "name": "Mike Muscala",
+      "teamId": 1610612764,
+      "priorOnly": false,
+      "MPG": 15.031746031746032,
+      "availability": 0.7219204755072761,
+      "availableAfter": 0
+    },
+    {
+      "id": 1629673,
+      "name": "Jordan Poole",
+      "teamId": 1610612764,
+      "priorOnly": false,
+      "MPG": 30,
+      "availability": 0.9572409895221947,
+      "availableAfter": 0
+    },
+    {
+      "id": 1631157,
+      "name": "Ryan Rollins",
+      "teamId": 1610612764,
+      "priorOnly": false,
+      "MPG": 5.166666666666667,
+      "availability": 0.15761426521828242,
+      "availableAfter": 0
+    },
+    {
+      "id": 1629013,
+      "name": "Landry Shamet",
+      "teamId": 1610612764,
+      "priorOnly": false,
+      "MPG": 20.15,
+      "availability": 0.5386094664592048,
+      "availableAfter": 0
+    },
+    {
+      "id": 1626153,
+      "name": "Delon Wright",
+      "teamId": 1610612764,
+      "priorOnly": false,
+      "MPG": 24.5,
+      "availability": 0.6366486821454793,
+      "availableAfter": 0
+    },
+    {
+      "id": 1630215,
+      "name": "Jared Butler",
+      "teamId": 1610612764,
+      "priorOnly": false,
+      "MPG": 5,
+      "availability": 0.16309694609551137,
+      "availableAfter": 0
+    },
+    {
+      "id": 1631219,
+      "name": "John Butler Jr.",
+      "teamId": 1610612764,
+      "priorOnly": false,
+      "MPG": 5,
+      "availability": 0.2905479264876682,
+      "availableAfter": 0
+    },
+    {
+      "id": 1630647,
+      "name": "Eugene Omoruyi",
+      "teamId": 1610612764,
+      "priorOnly": false,
+      "MPG": 5,
+      "availability": 0.4964302794288447,
+      "availableAfter": 0
+    }
+  ],
+  "sourceHashes": {
+    "protocol": "8296c18e6b465cebf5de9cc0f9cf30417485971b4194e56c70c4b6aff36bd5a7",
+    "opening": "69ec5126fd726d2b704cc421178b7834525dd0bd68076b69fbefa6f71714b1c4"
+  },
+  "continuity": {
+    "1610612737": 0.7841410520142299,
+    "1610612738": 0.604675946021601,
+    "1610612739": 0.7489213087374819,
+    "1610612740": 0.8397419510799051,
+    "1610612741": 0.7802646536054791,
+    "1610612742": 0.4982697226540949,
+    "1610612743": 0.7257362900948494,
+    "1610612744": 0.59913315190001,
+    "1610612745": 0.4552749657349329,
+    "1610612746": 0.7187525257916668,
+    "1610612747": 0.38185749484587916,
+    "1610612748": 0.6750277581508023,
+    "1610612749": 0.47916246215943487,
+    "1610612750": 0.6724152450700693,
+    "1610612751": 0.526179325268609,
+    "1610612752": 0.8122807185687618,
+    "1610612753": 0.7544701484998484,
+    "1610612754": 0.8139264640884574,
+    "1610612755": 0.7283493937841994,
+    "1610612756": 0.2378735945579858,
+    "1610612757": 0.37591813991185863,
+    "1610612758": 0.8625291980098801,
+    "1610612759": 0.6609828479452743,
+    "1610612760": 0.8351201198576471,
+    "1610612761": 0.7547517851899507,
+    "1610612762": 0.6517126401939982,
+    "1610612763": 0.7364352834192179,
+    "1610612764": 0.4964341712609378,
+    "1610612765": 0.6944051706725914,
+    "1610612766": 0.5672131147540985
+  }
+}

@@ -1,0 +1,166 @@
+{
+  "design": "Older three seasons only; whole-game five-fold heldout binomial NLL. Each zone independently selected. Gaussian and convex pseudo-Huber at prespecified scales; target excluded.",
+  "candidates": [
+    {
+      "zone": "long",
+      "sigma": 0,
+      "tail": 0,
+      "nll": 150990.5346466094,
+      "fga": 230383.0
+    },
+    {
+      "zone": "long",
+      "sigma": 0.025,
+      "tail": 0,
+      "nll": 150992.79753833733,
+      "fga": 230383.0
+    },
+    {
+      "zone": "long",
+      "sigma": 0.05,
+      "tail": 0,
+      "nll": 151039.30771337816,
+      "fga": 230383.0
+    },
+    {
+      "zone": "long",
+      "sigma": 0.1,
+      "tail": 0,
+      "nll": 151195.93483862188,
+      "fga": 230383.0
+    },
+    {
+      "zone": "long",
+      "sigma": 0.025,
+      "tail": 1,
+      "nll": 150995.13943262224,
+      "fga": 230383.0
+    },
+    {
+      "zone": "long",
+      "sigma": 0.05,
+      "tail": 1,
+      "nll": 151060.70412309098,
+      "fga": 230383.0
+    },
+    {
+      "zone": "long",
+      "sigma": 0.1,
+      "tail": 1,
+      "nll": 151253.65581735654,
+      "fga": 230383.0
+    },
+    {
+      "zone": "mid",
+      "sigma": 0,
+      "tail": 0,
+      "nll": 48661.19688611336,
+      "fga": 70153.0
+    },
+    {
+      "zone": "mid",
+      "sigma": 0.025,
+      "tail": 0,
+      "nll": 48654.54491207958,
+      "fga": 70153.0
+    },
+    {
+      "zone": "mid",
+      "sigma": 0.05,
+      "tail": 0,
+      "nll": 48658.27897101046,
+      "fga": 70153.0
+    },
+    {
+      "zone": "mid",
+      "sigma": 0.1,
+      "tail": 0,
+      "nll": 48712.84622307861,
+      "fga": 70153.0
+    },
+    {
+      "zone": "mid",
+      "sigma": 0.025,
+      "tail": 1,
+      "nll": 48654.40919253389,
+      "fga": 70153.0
+    },
+    {
+      "zone": "mid",
+      "sigma": 0.05,
+      "tail": 1,
+      "nll": 48661.191949455824,
+      "fga": 70153.0
+    },
+    {
+      "zone": "mid",
+      "sigma": 0.1,
+      "tail": 1,
+      "nll": 48736.574588584175,
+      "fga": 70153.0
+    },
+    {
+      "zone": "short",
+      "sigma": 0,
+      "tail": 0,
+      "nll": 170392.61107796538,
+      "fga": 251299.0
+    },
+    {
+      "zone": "short",
+      "sigma": 0.025,
+      "tail": 0,
+      "nll": 170269.5473461505,
+      "fga": 251299.0
+    },
+    {
+      "zone": "short",
+      "sigma": 0.05,
+      "tail": 0,
+      "nll": 170212.5551282654,
+      "fga": 251299.0
+    },
+    {
+      "zone": "short",
+      "sigma": 0.1,
+      "tail": 0,
+      "nll": 170293.53511397055,
+      "fga": 251299.0
+    },
+    {
+      "zone": "short",
+      "sigma": 0.025,
+      "tail": 1,
+      "nll": 170246.96112050384,
+      "fga": 251299.0
+    },
+    {
+      "zone": "short",
+      "sigma": 0.05,
+      "tail": 1,
+      "nll": 170214.6477928272,
+      "fga": 251299.0
+    },
+    {
+      "zone": "short",
+      "sigma": 0.1,
+      "tail": 1,
+      "nll": 170349.9522015007,
+      "fga": 251299.0
+    }
+  ],
+  "selected": {
+    "long": {
+      "sigma": 0,
+      "tail": 0
+    },
+    "mid": {
+      "sigma": 0.025,
+      "tail": 1
+    },
+    "short": {
+      "sigma": 0.05,
+      "tail": 0
+    }
+  }
+}

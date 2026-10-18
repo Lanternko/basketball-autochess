@@ -1,0 +1,38 @@
+{
+  "version": "individual-box-audit-1",
+  "model": "pure-oreb-turnover-time-1",
+  "seasons": [
+    "2022-23",
+    "2023-24",
+    "2024-25",
+    "2025-26"
+  ],
+  "seeds": [
+    20261012,
+    20261013,
+    20261014,
+    20261015,
+    20261016,
+    20261017,
+    20261018,
+    20261019,
+    20261020,
+    20261021,
+    20261022,
+    20261023,
+    20261024,
+    20261025,
+    20261026,
+    20261027,
+    20261028,
+    20261029,
+    20261030,
+    20261031
+  ],
+  "scope": "Retrospective all-player box-stat reconstruction from archived adopted-model simulations; no new simulation or rating change.",
+  "aggregation": "Merge traded stints by player ID before rates; predicted per36 = 36 * seed-mean count / seed-mean simulated minutes; actual per36 uses official season minutes.",
+  "population": "Export every player; primary summary actual MIN>=500, weighted by actual MIN. Official starter-role classification and low-confidence sensitivity reported.",
+  "percentageSupport": "Actual FGA>=100 for FG%; 3PA>=100 for 3P%; FTA>=50 for FT%. Never infer missing denominator as measured accuracy.",
+  "separation": "Minutes error, event-volume error, shooting accuracy and AST/TOV distinguished. Guard total turnovers need not be lower: compare observed workload and turnover per100 used possessions.",
+  "limits": "Conditional same-season reconstruction, not forecast or transferable ability. PBP event-type truth and spacing/counterfactual tests require separate measurement."
+}

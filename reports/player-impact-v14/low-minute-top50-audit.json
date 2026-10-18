@@ -1,0 +1,105 @@
+{
+  "adopted": false,
+  "finding": "Role rates and empirical FG are smoothed, but shotProfile freeThrowsPerAttempt retains raw FTA/FGA. This creates inconsistent shrinkage for low-FGA players. Alex21min,8FGA,15FTA is a clear diagnostic, not a name-specific adjustment target. Need a source-estimated exposure prior and full validation; do not silently filter the ranking or mutate the frozen v14 experiment.",
+  "players": [
+    {
+      "playerId": 1630828,
+      "name": "Alex Antetokounmpo",
+      "rank": 7,
+      "minutes": 20.638333333333332,
+      "FGA": 8,
+      "FTA": 15,
+      "rawFtaPerFga": 1.875
+    },
+    {
+      "playerId": 1629660,
+      "name": "Ty Jerome",
+      "rank": 10,
+      "minutes": 338.68833333333333,
+      "FGA": 215,
+      "FTA": 56,
+      "rawFtaPerFga": 0.26046511627906976
+    },
+    {
+      "playerId": 1631223,
+      "name": "David Roddy",
+      "rank": 13,
+      "minutes": 73.01666666666667,
+      "FGA": 30,
+      "FTA": 7,
+      "rawFtaPerFga": 0.23333333333333334
+    },
+    {
+      "playerId": 1642396,
+      "name": "Blake Hinson",
+      "rank": 14,
+      "minutes": 285.43333333333334,
+      "FGA": 115,
+      "FTA": 16,
+      "rawFtaPerFga": 0.1391304347826087
+    },
+    {
+      "playerId": 1629646,
+      "name": "Charles Bassey",
+      "rank": 22,
+      "minutes": 152.70333333333335,
+      "FGA": 47,
+      "FTA": 20,
+      "rawFtaPerFga": 0.425531914893617
+    },
+    {
+      "playerId": 1641807,
+      "name": "Norchad Omier",
+      "rank": 38,
+      "minutes": 23.666666666666668,
+      "FGA": 10,
+      "FTA": 3,
+      "rawFtaPerFga": 0.3
+    },
+    {
+      "playerId": 1628380,
+      "name": "Zach Collins",
+      "rank": 40,
+      "minutes": 183.73666666666668,
+      "FGA": 64,
+      "FTA": 20,
+      "rawFtaPerFga": 0.3125
+    },
+    {
+      "playerId": 1641744,
+      "name": "Zach Edey",
+      "rank": 42,
+      "minutes": 283.8516666666667,
+      "FGA": 98,
+      "FTA": 32,
+      "rawFtaPerFga": 0.32653061224489793
+    },
+    {
+      "playerId": 1641803,
+      "name": "Tristen Newton",
+      "rank": 44,
+      "minutes": 12,
+      "FGA": 9,
+      "FTA": 3,
+      "rawFtaPerFga": 0.3333333333333333
+    },
+    {
+      "playerId": 1642066,
+      "name": "Myron Gardner",
+      "rank": 46,
+      "minutes": 410.505,
+      "FGA": 123,
+      "FTA": 26,
+      "rawFtaPerFga": 0.21138211382113822
+    },
+    {
+      "playerId": 1630167,
+      "name": "Obi Toppin",
+      "rank": 48,
+      "minutes": 423.725,
+      "FGA": 199,
+      "FTA": 46,
+      "rawFtaPerFga": 0.23115577889447236
+    }
+  ]
+}

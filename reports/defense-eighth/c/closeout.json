@@ -1,0 +1,28 @@
+{
+  "headline": "階段C完成。兩盲測季合併，達到「跨季確認」的改善項目：v4cal−v4。跨季確認的退步：v4−v3。單點成立：防守訊號：v3−signals-off，不得宣稱改善；30多個檢定中預期約1–2個偶然通過。v5凍結內容、c(K)、m4／ms與判準保持原樣。正式基準維持v3，完成C後停下。",
+  "stage": "C",
+  "baseline": "nba-defense-v3",
+  "nextBatchStarted": false,
+  "confirmed": [
+    "v4cal−v4"
+  ],
+  "worsened": [
+    "v4−v3"
+  ],
+  "single": [
+    "防守訊號：v3−signals-off"
+  ],
+  "sources": {
+    "reports/defense-eighth/c/prereg-supplement.json": "a355f424cde6d143d901e8aa6e6dad62661fd8c5d3b0dae0359be7d4bc4d7017",
+    "reports/defense-eighth/c/assessment.json": "d5b2742702e80dddf398bad676ca920d71c90403f16a3a97d905246f451bf4aa",
+    "reports/defense-eighth/c/quality.json": "9d180511b1aabab0ac85ad66e2953f30e7a46f997ac9310e555a59ed393c7959",
+    "reports/defense-eighth/c/execution-audit.json": "2cf6f62767c7023756cbf23bded3161cc3e90aba2ff1a835c40cb66cea84dff4"
+  },
+  "outputHashes": {
+    "reports/defense-eighth/c/closeout.md": "428621adb4fd3983d89d4fdc815664a4018d3096293fc36d9a7272b8a7d4c113",
+    "reports/defense-eighth/c/paired-intervals.md": "f8b1af48dd52b7874b21a2d973e34809232284da1cfb63e102f860ad02554c8f",
+    "reports/defense-eighth/c/quality.md": "d641a307f5f1070811d96612013c538425a2773c495935f007c80f61140e0391",
+    "reports/defense-eighth/c/season-tables.md": "c124a10b13e9b1f04c2a94274e9b738aa9346488f21939aded959eb8941d7cdd"
+  },
+  "reportCode": "499e314a657bcd8c6eec00df86bd8d8c6558302fa95da4b15936bac925e71fbd"
+}

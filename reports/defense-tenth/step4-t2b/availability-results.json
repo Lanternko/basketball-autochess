@@ -1,0 +1,262 @@
+[
+  {
+    "season": "2025-26",
+    "team": "Indiana Pacers",
+    "kind": "current",
+    "organizer": "Andrew Nembhard",
+    "subset": "all",
+    "playedGames": 57,
+    "dnpGames": 25,
+    "eligiblePlayers": 13,
+    "onMinusDnpPP": {
+      "catchFG": -2.14546797726986,
+      "catch3FG": -2.14546797726986,
+      "pullFG": 0.5736573179055386,
+      "pull3FG": -2.7665317139001377,
+      "catchShare": 6.419141922619061,
+      "pullShare": -3.203821827385246
+    },
+    "ci95": {
+      "catchFG": [
+        -6.7354171878168785,
+        2.7842187324368233
+      ],
+      "catch3FG": [
+        -6.7354171878168785,
+        2.7842187324368233
+      ],
+      "pullFG": [
+        -7.6084483515742365,
+        8.583451437193858
+      ],
+      "pull3FG": [
+        -16.392785640936427,
+        11.569149024233758
+      ],
+      "catchShare": [
+        1.9454209296135303,
+        11.04292228821971
+      ],
+      "pullShare": [
+        -5.677964078560974,
+        -0.7648572596625929
+      ]
+    },
+    "limitation": "whole-game availability, not on-court effect; conditional on observed lineups, roles and opponent schedules"
+  },
+  {
+    "season": "2025-26",
+    "team": "Indiana Pacers",
+    "kind": "current",
+    "organizer": "Andrew Nembhard",
+    "subset": "role",
+    "playedGames": 57,
+    "dnpGames": 25,
+    "eligiblePlayers": 8,
+    "onMinusDnpPP": {
+      "catchFG": -0.7438202452979873,
+      "catch3FG": -0.7438202452979873,
+      "pullFG": 2.814833016045063,
+      "pull3FG": -2.7665317139001377,
+      "catchShare": 7.141913853080376,
+      "pullShare": -3.774530745639214
+    },
+    "ci95": {
+      "catchFG": [
+        -6.565461373384901,
+        5.399633769122329
+      ],
+      "catch3FG": [
+        -6.565461373384901,
+        5.399633769122329
+      ],
+      "pullFG": [
+        -7.328719139242594,
+        13.617848015965958
+      ],
+      "pull3FG": [
+        -16.392785640936427,
+        11.569149024233758
+      ],
+      "catchShare": [
+        1.906568216511035,
+        12.316986097594441
+      ],
+      "pullShare": [
+        -6.566895564738785,
+        -0.9291735730159294
+      ]
+    },
+    "limitation": "whole-game availability, not on-court effect; conditional on observed lineups, roles and opponent schedules"
+  },
+  {
+    "season": "2025-26",
+    "team": "Indiana Pacers",
+    "kind": "prior",
+    "organizer": "Tyrese Haliburton",
+    "subset": "all",
+    "playedGames": 0,
+    "dnpGames": 82,
+    "eligiblePlayers": 0,
+    "onMinusDnpPP": {
+      "catchFG": null,
+      "catch3FG": null,
+      "pullFG": null,
+      "pull3FG": null,
+      "catchShare": null,
+      "pullShare": null
+    },
+    "ci95": null,
+    "limitation": "whole-game availability, not on-court effect; conditional on observed lineups, roles and opponent schedules"
+  },
+  {
+    "season": "2025-26",
+    "team": "Indiana Pacers",
+    "kind": "prior",
+    "organizer": "Tyrese Haliburton",
+    "subset": "role",
+    "playedGames": 0,
+    "dnpGames": 82,
+    "eligiblePlayers": 0,
+    "onMinusDnpPP": {
+      "catchFG": null,
+      "catch3FG": null,
+      "pullFG": null,
+      "pull3FG": null,
+      "catchShare": null,
+      "pullShare": null
+    },
+    "ci95": null,
+    "limitation": "whole-game availability, not on-court effect; conditional on observed lineups, roles and opponent schedules"
+  },
+  {
+    "season": "2024-25",
+    "team": "Memphis Grizzlies",
+    "kind": "current",
+    "organizer": "Ja Morant",
+    "subset": "all",
+    "playedGames": 50,
+    "dnpGames": 32,
+    "eligiblePlayers": 13,
+    "onMinusDnpPP": {
+      "catchFG": 0.0920724793668052,
+      "catch3FG": 0.0920724793668052,
+      "pullFG": -4.999575174158087,
+      "pull3FG": 0.020556712842991615,
+      "catchShare": 2.343535392583134,
+      "pullShare": -1.279676494845655
+    },
+    "ci95": {
+      "catchFG": [
+        -4.504617556343622,
+        4.68810809620092
+      ],
+      "catch3FG": [
+        -4.504617556343622,
+        4.68810809620092
+      ],
+      "pullFG": [
+        -10.629042295892445,
+        0.9576276050987272
+      ],
+      "pull3FG": [
+        -8.567409545835531,
+        8.957838461490672
+      ],
+      "catchShare": [
+        -0.2794486114286154,
+        4.810943937781696
+      ],
+      "pullShare": [
+        -3.079633870171995,
+        0.575663342821275
+      ]
+    },
+    "limitation": "whole-game availability, not on-court effect; conditional on observed lineups, roles and opponent schedules"
+  },
+  {
+    "season": "2024-25",
+    "team": "Memphis Grizzlies",
+    "kind": "current",
+    "organizer": "Ja Morant",
+    "subset": "role",
+    "playedGames": 50,
+    "dnpGames": 32,
+    "eligiblePlayers": 7,
+    "onMinusDnpPP": {
+      "catchFG": -0.33712896997828656,
+      "catch3FG": -0.33712896997828656,
+      "pullFG": -5.2840812813383335,
+      "pull3FG": 4.527630308880307,
+      "catchShare": 3.38521608299344,
+      "pullShare": -1.9748808086807617
+    },
+    "ci95": {
+      "catchFG": [
+        -6.437437245816624,
+        5.491723587930201
+      ],
+      "catch3FG": [
+        -6.437437245816624,
+        5.491723587930201
+      ],
+      "pullFG": [
+        -16.598696419763602,
+        6.372914301582769
+      ],
+      "pull3FG": [
+        -11.673673637692914,
+        20.197100110658944
+      ],
+      "catchShare": [
+        -0.3646554626852702,
+        6.823095853843901
+      ],
+      "pullShare": [
+        -4.484717670305046,
+        0.6382324274008276
+      ]
+    },
+    "limitation": "whole-game availability, not on-court effect; conditional on observed lineups, roles and opponent schedules"
+  },
+  {
+    "season": "2024-25",
+    "team": "Memphis Grizzlies",
+    "kind": "prior",
+    "organizer": "Scotty Pippen Jr.",
+    "subset": "all",
+    "playedGames": 79,
+    "dnpGames": 3,
+    "eligiblePlayers": 0,
+    "onMinusDnpPP": {
+      "catchFG": null,
+      "catch3FG": null,
+      "pullFG": null,
+      "pull3FG": null,
+      "catchShare": null,
+      "pullShare": null
+    },
+    "ci95": null,
+    "limitation": "whole-game availability, not on-court effect; conditional on observed lineups, roles and opponent schedules"
+  },
+  {
+    "season": "2024-25",
+    "team": "Memphis Grizzlies",
+    "kind": "prior",
+    "organizer": "Scotty Pippen Jr.",
+    "subset": "role",
+    "playedGames": 79,
+    "dnpGames": 3,
+    "eligiblePlayers": 0,
+    "onMinusDnpPP": {
+      "catchFG": null,
+      "catch3FG": null,
+      "pullFG": null,
+      "pull3FG": null,
+      "catchShare": null,
+      "pullShare": null
+    },
+    "ci95": null,
+    "limitation": "whole-game availability, not on-court effect; conditional on observed lineups, roles and opponent schedules"
+  }
+]

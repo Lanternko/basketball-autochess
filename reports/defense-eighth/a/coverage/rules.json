@@ -1,0 +1,12 @@
+{
+  "createdAt": "2026-10-12T12:43:08.715Z",
+  "target": 1091,
+  "fullGames": 1230,
+  "sourceStrict": 1188,
+  "maskSeeds": [
+    20261081,
+    20261082,
+    20261083
+  ],
+  "definition": "Three outcome-independent uniform subsets without replacement of1091 from1188 strict2025 games. Full-season masks determined by game IDs and RNG only; each calendar training sample intersects its fixed mask. Re-estimate B1 factors, old cards, and joint role ability with frozen methods; preserve all originally strict heldout stints as the common test sample. Offline model/card aggregation only; no simulation and no league calibration rerun. Same cutoff tracking reused (individual tracking and body/identity metadata do not become missing). Does not imitate non-random reasons why2024 games failed audit."
+}

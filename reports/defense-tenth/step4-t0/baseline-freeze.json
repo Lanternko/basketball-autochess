@@ -1,0 +1,31 @@
+{
+  "frozenAt": "2026-10-13T08:25:08.399Z",
+  "name": "T0 same-season reconstruction comparison baseline",
+  "scope": "Four already-observed seasons; pure/v3 identical cards/constants, five flags off and map deleted for pure. Not a new v3/v4 version or portability result.",
+  "protocolSHA": "1d8d8f68e3f3a6451ec5c9738513ba9238234b3f34df0700c4ced56d27d62db2",
+  "runManifestSHA": "6558cda21ada17eb3379157d277f32823262beecaac0de4490bf256faa334d1c",
+  "inputHashes": {
+    "reports/defense-tenth/step4-t0/2022-23/bundle.json": "b311dcfce6c80b98720784c28a4879b154a205a2ce0cbed61cb0c5014342c213",
+    "reports/defense-tenth/step4-t0/2022-23/config.json": "5d553a5e8bd5bc3a6ba01a7e04df09e2509dc365fd5ccfa78576e64c7a8ca29a",
+    "reports/defense-tenth/step4-t0/2022-23/v3-league.json": "1713951250b46a47c41f3c9e37af86b846640a9935775078d01d1af438498338",
+    "reports/defense-tenth/step4-t0/2022-23/factors/engine-signals.json": "5ec45044a5cd066db69b6047941b26dba727f88943fb0bd0d03858804591c582",
+    "reports/defense-tenth/step4-t0/2022-23/calibration-v3.json": "5f8cc5179d2dc659c73a4274cc3989ea44a484d94452d4750dc8486f4af8baf6",
+    "reports/defense-tenth/step4-t0/2023-24/bundle.json": "5e17a95310e7cea844b81005fbe214e9ecafe62b54a1ba45aad6aaa839baf971",
+    "reports/defense-tenth/step4-t0/2023-24/config.json": "b2aa0584b7780ce50e5a112d5dfe39d94ca3d5e05d544cf2f517ae8e032f56e1",
+    "reports/defense-tenth/step4-t0/2023-24/v3-league.json": "5682c331f6c3822eb2e3511cc6073b3c3034fb2bc80aed4512b7932d00263306",
+    "reports/defense-tenth/step4-t0/2023-24/factors/engine-signals.json": "fd53912411e8c976432e1fb9f9d8c990b708f9b00c5fe60ad7d3563e0404bd92",
+    "reports/defense-tenth/step4-t0/2023-24/calibration-v3.json": "853f1df493e5d6be7c444d904ed39ed8e95a60d8b257457e8afd09c7ac484f51",
+    "reports/defense-tenth/step4-t0/2023-24/v3-league-positive-minutes.json": "7c7199968977121748c44d977531ea9e126795235a1b29c172a54c901ec03220",
+    "reports/defense-tenth/step4-t0/2023-24/config-positive-minutes.json": "da5a2aa658db152b33cac0786082126ff7ed7798c0c51d764bf26a57764c08b3",
+    "reports/defense-tenth/step4-t0/2023-24/zero-minute-corrections.json": "e5190e2be42e81424e063e80daa59d763152c0a131ef2d3f483778fad7efa731",
+    "reports/defense-tenth/step4-t0/2024-25/bundle.json": "001cf3d44b29542c3d202cd375f2378e7c09b712ca958637c28d6538566215f8",
+    "reports/defense-tenth/step4-t0/2024-25/config.json": "cb78c0a8c7b0dba3fd51d9b0917f84ce25ac525ac85f397d98bf5f468e14a0ff",
+    "reports/defense-tenth/step4-t0/2024-25/v3-league.json": "ee2f719326606029a2e6c0ed34cab21528ec1aa2f55997189fbda60d5679e47f",
+    "reports/defense-tenth/step4-t0/2024-25/factors/engine-signals.json": "b8a6e2e710cace23bead24c7c5712147356a1032eb921c68e5137e939235dade",
+    "reports/defense-tenth/step4-t0/2024-25/calibration-v3.json": "0b9188c7fba1243d5dfc2c181b74a863bc6d1f515c702b1ebe9275d41b7c8a72",
+    "reports/defense-tenth/step4-t0/2025-26/bundle.json": "43b5a5141fa667a492a67dfc6aa95eec058aabbe39e9d787b0a92b870d7db051"
+  },
+  "analysisSHA": "348b0363636d4b992c985f957816a996bfb354e7f76880aa8e5d4256e7859fac",
+  "jointIntervalsSHA": "52e2aea77a848f8a65ee44ee838907bfbfeee9e816e5a4555e43b501316f706a",
+  "presentationRegistrationIssues": []
+}

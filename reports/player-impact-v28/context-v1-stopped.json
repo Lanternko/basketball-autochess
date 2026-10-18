@@ -1,0 +1,9 @@
+{
+  "script": "reports\\player-impact-v28\\prepare-contexts.mjs",
+  "sha256": "0c5e161d85df3e82de9cbbf73b50176372f02ba9540ca87f7331231133319d35",
+  "season": "2025-26",
+  "processId": 28972,
+  "sessionId": 64471,
+  "reason": "Detected end-of-run provenance hash points to absent local role-input.mjs rather than actual imported v20 role-input. Stopped verified process before publication; no contexts written. Source calculations unchanged in v2; provenance path repaired.",
+  "replacement": "reports\\player-impact-v28\\prepare-contexts-v2.mjs"
+}

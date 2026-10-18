@@ -1,0 +1,27 @@
+{
+  "version": "oreb-nonshoot-foul-1",
+  "registeredUTC": "2026-10-15T01:51:06.728994+00:00",
+  "seasons": [
+    "2022-23",
+    "2023-24",
+    "2024-25",
+    "2025-26"
+  ],
+  "seeds": [
+    20261012,
+    20261013,
+    20261014
+  ],
+  "bootstrapSeed": 20261019,
+  "bootstrapDraws": 20000,
+  "base": "pure-oreb-turnover-time-1; generic putback risk ablation OFF",
+  "status": "four seen seasons, in-sample mechanism experiment; no baseline promotion from three seeds",
+  "sample": "valid individual missed-FG OREB, same special-FT exclusion and PBP coverage as putback-risk; first anchor per possession for outcome table, all anchors for first-gate observation; require >=3 period seconds for first-boundary rates",
+  "firstBoundary": "first canonical event in FG, ordinary FT, ownership loss, foul; nonshooting defensive foul determined including descriptor; separate shooting foul, offensive foul and other. A foul is a boundary here, unlike prior early-window metric",
+  "hypothesis": "early-window 2.04% vs 3.33% does not by itself establish an elevated per-opportunity gate. First compare first-boundary nonshooting rate, full pre-attempt nonshooting incidence and time-to-foul distribution. No ratio of early-window proportions is a calibration factor",
+  "conditionalExperiment": "only if pooled real first-boundary nonshooting probability is below baseline with franchise+seed 95% interval excluding zero: test replacing first ordinary nonshooting gate after player FG OREB with per-season observed all-anchor first-boundary probability. No team or scoring inputs. This is a competing-event gate approximation, not an identified continuous hazard; intentional fouls unchanged. Otherwise stop after diagnosis, do not force candidate",
+  "guard": "only first opportunity following player FG OREB and >=3 seconds remaining. Other player/FT/team retained balls and all later opportunities retain old rate. Same one RNG gate draw; flag OFF exactly baseline",
+  "nonTargets": "no changes to card, OREB probability/recipient, generic turnover risk, shot probability, shooting foul outcome, pace or calibration",
+  "evaluation": "20k same franchise and seed draws across four seasons, equal-season ratio average. Three seeds are diagnostic only. If candidate worsens first-event foul distance or FT-point bias, reject; promotion would require a separate 20seed paired test. No scoring/wins parameter search",
+  "stop": "finish this one mechanism and report facts, inference and failures; do not start next batch"
+}

@@ -1,0 +1,30 @@
+{
+  "passed": true,
+  "sourceRoleCards": 2262,
+  "teamCards": 2581,
+  "sourceContextStates": 270090,
+  "allRawAttributesAndOtherInputsUnchanged": true,
+  "sourceContextExposureExactlyRetained": true,
+  "terminalConserved": true,
+  "sourceSelfFloorReserved": true,
+  "noSelfAssist": true,
+  "mean70PlayerLineups": 582,
+  "hashes": {
+    "reports/defense-seventh/2022-23/stints/stints.jsonl": "5936e16bbfcce88da4743cb72b828be2d602bdb67e470e549c68bd2d7c3eaec6",
+    "reports/player-impact-v34/2022-23-contexts.json": "66b7bfe66ed6e197ecd24ba3f32a6d930ce28d603e990b9274afd19728a515f6",
+    "reports/player-impact-v30/2022-23-contexts.json": "c4d790d63e9d22e7ee4eb634cc5496ecfd2f34c38352fe835076e52cdbc1413b",
+    "reports/defense-seventh/2023-24/stints/stints.jsonl": "a83b1c42ba735810f2fd8dccd8355d2f41e4fd164389ee82fb4318b4a3d0adb6",
+    "reports/player-impact-v34/2023-24-contexts.json": "187c9ef835a4393fa14b6555f6fa41d1cd24e4b2c26fd60fba6a8b67b5ff6b84",
+    "reports/player-impact-v30/2023-24-contexts.json": "f8ec8e9527dacf234f047b9fd32436652b990d0a5a8ebb0eaa89637cfc1917ba",
+    "reports/defense-seventh/2024-25/stints/stints.jsonl": "8790976ac74edf2054470427c50984d35d8c8ab0abf72fd92b5105489cf74ac0",
+    "reports/player-impact-v34/2024-25-contexts.json": "a5ef406135980252f9226aeac8d7f4bf95fdd7566451b055fe989db2f20cb176",
+    "reports/player-impact-v30/2024-25-contexts.json": "359f13f90b224f4dd9e61b5a7a3f36d756a71af50812b2ac80f3eca88c34d18e",
+    "reports/defense-b1/stints.jsonl": "5eff6aa81f37d0f3baef97be2fdc7346a05ffce5ccfa1f6e4456be229a296179",
+    "reports/player-impact-v34/2025-26-contexts.json": "7fc5892173754e01a73a77ce96448188312e8e65d6097f8205e2f2fb690f181c",
+    "reports/player-impact-v30/2025-26-contexts.json": "42bb1d5827638c629e10c3ddd1f1e20a7c24ad767692aaf87dafc3cac8b5b052",
+    "reports/player-impact-v34/model.mjs": "5ae06ef728e5a3fd4c305fc8c28bfa771d4bd2e10e79c316ff69ee2d368bc871",
+    "reports/player-impact-v34/input.mjs": "a3006e3a7afdf86fc655592b92259d4c81666f9f1b9104b6d926d738046c54ba",
+    "reports/player-impact-v34/audit-flow.mjs": "ce0b29e8e37f2a753cfdbd68e7d6dd3464016d143ae3d6c48d4789d865ee35b6",
+    "test/joint_source_opportunities.js": "005330c7205280cdc55c9881cdbebaf6e68200b51cbf8aa3732df8b500652f49"
+  }
+}

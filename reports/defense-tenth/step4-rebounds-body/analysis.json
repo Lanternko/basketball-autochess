@@ -1,0 +1,3274 @@
+{
+  "generatedAt": "2026-10-14T06:48:54.193288+00:00",
+  "protocolSHA256": "34989c96d91e35a79bc64cdca791d6f66e8024598cde007dedeb85b3a82368f6",
+  "scope": "Layer 1 only: existing height/mass/strength/jump inputs and old physique mapping. No cards, engine edits, simulation, parameter fitting or new player-data downloads. Stop after report.",
+  "localCandidateInventory": [
+    {
+      "path": "data/benchmark-source/bio.json",
+      "sha256": "d319d00ed383c8a30793907fd0edd56fd26e8cdb19a74bbb0c2667790644196e",
+      "bytes": 87375,
+      "rawNBADataSet": true,
+      "headers": [
+        "PLAYER_ID",
+        "PLAYER_NAME",
+        "TEAM_ID",
+        "TEAM_ABBREVIATION",
+        "AGE",
+        "PLAYER_HEIGHT",
+        "PLAYER_HEIGHT_INCHES",
+        "PLAYER_WEIGHT",
+        "COLLEGE",
+        "COUNTRY",
+        "DRAFT_YEAR",
+        "DRAFT_ROUND",
+        "DRAFT_NUMBER",
+        "GP",
+        "PTS",
+        "REB",
+        "AST",
+        "NET_RATING",
+        "OREB_PCT",
+        "DREB_PCT",
+        "USG_PCT",
+        "TS_PCT",
+        "AST_PCT"
+      ],
+      "topLevelKeys": [
+        "url",
+        "fetchedAt",
+        "season",
+        "data"
+      ],
+      "url": "https://stats.nba.com/stats/leaguedashplayerbiostats?LeagueID=00&Season=2025-26&SeasonType=Regular+Season&PerMode=Totals&MeasureType=Base&TeamID=0&LastNGames=0&Month=0&OpponentTeamID=0&PaceAdjust=N&PlusMinus=N&Rank=N&Period=0"
+    },
+    {
+      "path": "data/defense-seventh/2022-23/bio.json",
+      "sha256": "2b493e0aedcdfc610f9fe570ce0ca975a709753ad63e83fdddc31444d402927f",
+      "bytes": 80764,
+      "rawNBADataSet": true,
+      "headers": [
+        "PLAYER_ID",
+        "PLAYER_NAME",
+        "TEAM_ID",
+        "TEAM_ABBREVIATION",
+        "AGE",
+        "PLAYER_HEIGHT",
+        "PLAYER_HEIGHT_INCHES",
+        "PLAYER_WEIGHT",
+        "COLLEGE",
+        "COUNTRY",
+        "DRAFT_YEAR",
+        "DRAFT_ROUND",
+        "DRAFT_NUMBER",
+        "GP",
+        "PTS",
+        "REB",
+        "AST",
+        "NET_RATING",
+        "OREB_PCT",
+        "DREB_PCT",
+        "USG_PCT",
+        "TS_PCT",
+        "AST_PCT"
+      ],
+      "topLevelKeys": [
+        "url",
+        "season",
+        "fetchedAt",
+        "data"
+      ],
+      "url": "https://stats.nba.com/stats/leaguedashplayerbiostats?LeagueID=00&Season=2022-23&SeasonType=Regular+Season&PerMode=Totals&MeasureType=Base&TeamID=0&LastNGames=0&Month=0&OpponentTeamID=0&PaceAdjust=N&PlusMinus=N&Rank=N&Period=0"
+    },
+    {
+      "path": "data/defense-seventh/2023-24/bio.json",
+      "sha256": "1cb8eb0431bea1aaa43f1209571e39e9b2505a8c85cb14b356fddc54b9dfa1a6",
+      "bytes": 85622,
+      "rawNBADataSet": true,
+      "headers": [
+        "PLAYER_ID",
+        "PLAYER_NAME",
+        "TEAM_ID",
+        "TEAM_ABBREVIATION",
+        "AGE",
+        "PLAYER_HEIGHT",
+        "PLAYER_HEIGHT_INCHES",
+        "PLAYER_WEIGHT",
+        "COLLEGE",
+        "COUNTRY",
+        "DRAFT_YEAR",
+        "DRAFT_ROUND",
+        "DRAFT_NUMBER",
+        "GP",
+        "PTS",
+        "REB",
+        "AST",
+        "NET_RATING",
+        "OREB_PCT",
+        "DREB_PCT",
+        "USG_PCT",
+        "TS_PCT",
+        "AST_PCT"
+      ],
+      "topLevelKeys": [
+        "url",
+        "season",
+        "fetchedAt",
+        "data"
+      ],
+      "url": "https://stats.nba.com/stats/leaguedashplayerbiostats?LeagueID=00&Season=2023-24&SeasonType=Regular+Season&PerMode=Totals&MeasureType=Base&TeamID=0&LastNGames=0&Month=0&OpponentTeamID=0&PaceAdjust=N&PlusMinus=N&Rank=N&Period=0"
+    },
+    {
+      "path": "data/defense-seventh/2024-25/bio.json",
+      "sha256": "945c9d37fb0409b0d023ef7c5514cc492a1805f14fc10a7b0f707fd5ae9881d3",
+      "bytes": 85325,
+      "rawNBADataSet": true,
+      "headers": [
+        "PLAYER_ID",
+        "PLAYER_NAME",
+        "TEAM_ID",
+        "TEAM_ABBREVIATION",
+        "AGE",
+        "PLAYER_HEIGHT",
+        "PLAYER_HEIGHT_INCHES",
+        "PLAYER_WEIGHT",
+        "COLLEGE",
+        "COUNTRY",
+        "DRAFT_YEAR",
+        "DRAFT_ROUND",
+        "DRAFT_NUMBER",
+        "GP",
+        "PTS",
+        "REB",
+        "AST",
+        "NET_RATING",
+        "OREB_PCT",
+        "DREB_PCT",
+        "USG_PCT",
+        "TS_PCT",
+        "AST_PCT"
+      ],
+      "topLevelKeys": [
+        "url",
+        "season",
+        "fetchedAt",
+        "data"
+      ],
+      "url": "https://stats.nba.com/stats/leaguedashplayerbiostats?LeagueID=00&Season=2024-25&SeasonType=Regular+Season&PerMode=Totals&MeasureType=Base&TeamID=0&LastNGames=0&Month=0&OpponentTeamID=0&PaceAdjust=N&PlusMinus=N&Rank=N&Period=0"
+    },
+    {
+      "path": "reports/defense-fifth/variance-measurements.json",
+      "sha256": "ae547f45f57bfcb6d06a5a30ec7eacc216cd18d545e8ce277add7c3eff4cf875",
+      "bytes": 32329,
+      "rawNBADataSet": false,
+      "headers": [],
+      "topLevelKeys": [
+        "summary",
+        "cells",
+        "timeRemainingEdges",
+        "method",
+        "varianceGate",
+        "implemented2c",
+        "reason",
+        "sources"
+      ],
+      "url": null
+    },
+    {
+      "path": "reports/defense-tenth/step4-t2/measurement-supplement.json",
+      "sha256": "48a06db9923940b7bd238620c5c79d9c010a129c1b78332cd871f31a262c5543",
+      "bytes": 1985,
+      "rawNBADataSet": false,
+      "headers": [],
+      "topLevelKeys": [
+        "registeredAt",
+        "originalProtocolSHA",
+        "purpose",
+        "strictAudit",
+        "strictDefinition",
+        "tradeVerification",
+        "urls",
+        "statistics"
+      ],
+      "url": null
+    },
+    {
+      "path": "reports/defense-third/combined-grid-possession-audits-20.json",
+      "sha256": "a477747d5acac023a7b4057cd72b20c06cd41b64050c254e1d62914fd9c2018c",
+      "bytes": 185378,
+      "rawNBADataSet": false,
+      "headers": [],
+      "topLevelKeys": [
+        "seeds",
+        "optionsOverride",
+        "results",
+        "provenance"
+      ],
+      "url": null
+    },
+    {
+      "path": "reports/defense-third/combined-grid-seeds.json",
+      "sha256": "5e7cfc793be55ca2c70675a7575af490d178890584ef436d82c3ca4fe3cc1cac",
+      "bytes": 5059,
+      "rawNBADataSet": false,
+      "headers": [],
+      "topLevelKeys": [
+        "preset",
+        "seeds",
+        "files",
+        "seconds",
+        "code"
+      ],
+      "url": null
+    },
+    {
+      "path": "reports/defense-third/combined-seeds.json",
+      "sha256": "f03ed1584f43476c0d557d842689a46a7fc86c8a6a0159db075146ceb3bbdee5",
+      "bytes": 4835,
+      "rawNBADataSet": false,
+      "headers": [],
+      "topLevelKeys": [
+        "preset",
+        "seeds",
+        "files",
+        "seconds",
+        "code"
+      ],
+      "url": null
+    },
+    {
+      "path": "reports/defense-third/scoreboard-combined-20.json",
+      "sha256": "94e1f0d2488e7189200258974a3f3a5411a0fddc83c58282985ed933f90f3aad",
+      "bytes": 98420,
+      "rawNBADataSet": false,
+      "headers": [],
+      "topLevelKeys": [
+        "seeds",
+        "metrics",
+        "teams",
+        "wins",
+        "games",
+        "global",
+        "uncertainty",
+        "adoption",
+        "provenance"
+      ],
+      "url": null
+    },
+    {
+      "path": "reports/defense-third/scoreboard-combined-grid-20.json",
+      "sha256": "0c29d062d7809b48914a43227881d0998c68bf16a4d299406239ab2f5e0a3713",
+      "bytes": 98309,
+      "rawNBADataSet": false,
+      "headers": [],
+      "topLevelKeys": [
+        "seeds",
+        "metrics",
+        "teams",
+        "wins",
+        "games",
+        "global",
+        "uncertainty",
+        "adoption",
+        "provenance"
+      ],
+      "url": null
+    }
+  ],
+  "deployedCardFields": {
+    "2022-23": [
+      "bodyWeight",
+      "breakDbl",
+      "courtPosition",
+      "defenseMeasurement",
+      "drive",
+      "ft",
+      "handle",
+      "heightInches",
+      "help",
+      "long",
+      "mid",
+      "name",
+      "observed",
+      "offBall",
+      "offenseMeasurement",
+      "onBall",
+      "pass",
+      "physique",
+      "playerId",
+      "pos",
+      "rebound",
+      "screen",
+      "seasonMinutesPerGame",
+      "short",
+      "shotProfile",
+      "stamina",
+      "tovSkill"
+    ],
+    "2023-24": [
+      "bodyWeight",
+      "breakDbl",
+      "courtPosition",
+      "defenseMeasurement",
+      "drive",
+      "ft",
+      "handle",
+      "heightInches",
+      "help",
+      "long",
+      "mid",
+      "name",
+      "observed",
+      "offBall",
+      "offenseMeasurement",
+      "onBall",
+      "pass",
+      "physique",
+      "playerId",
+      "pos",
+      "rebound",
+      "screen",
+      "seasonMinutesPerGame",
+      "short",
+      "shotProfile",
+      "stamina",
+      "tovSkill"
+    ],
+    "2024-25": [
+      "bodyWeight",
+      "breakDbl",
+      "courtPosition",
+      "defenseMeasurement",
+      "drive",
+      "ft",
+      "handle",
+      "heightInches",
+      "help",
+      "long",
+      "mid",
+      "name",
+      "observed",
+      "offBall",
+      "offenseMeasurement",
+      "onBall",
+      "pass",
+      "physique",
+      "playerId",
+      "pos",
+      "rebound",
+      "screen",
+      "seasonMinutesPerGame",
+      "short",
+      "shotProfile",
+      "stamina",
+      "tovSkill"
+    ],
+    "2025-26": [
+      "breakDbl",
+      "courtPosition",
+      "defenseMeasurement",
+      "drive",
+      "ft",
+      "handle",
+      "heightInches",
+      "help",
+      "long",
+      "mid",
+      "missingMeasurements",
+      "name",
+      "observed",
+      "offBall",
+      "offenseMeasurement",
+      "onBall",
+      "pass",
+      "physique",
+      "playerId",
+      "pos",
+      "rebound",
+      "screen",
+      "seasonMinutesPerGame",
+      "short",
+      "shotProfile",
+      "stamina",
+      "tovSkill"
+    ]
+  },
+  "seasons": [
+    {
+      "season": "2022-23",
+      "players": 539,
+      "minutes": 595071,
+      "rotationPlayers": 234,
+      "zeroMinuteIds": [],
+      "bioSource": "data/defense-seventh/2022-23/bio.json",
+      "bioURL": "https://stats.nba.com/stats/leaguedashplayerbiostats?LeagueID=00&Season=2022-23&SeasonType=Regular+Season&PerMode=Totals&MeasureType=Base&TeamID=0&LastNGames=0&Month=0&OpponentTeamID=0&PaceAdjust=N&PlusMinus=N&Rank=N&Period=0",
+      "bioFetchedAt": "2026-10-12T15:53:06.421Z",
+      "bioHeaders": [
+        "PLAYER_ID",
+        "PLAYER_NAME",
+        "TEAM_ID",
+        "TEAM_ABBREVIATION",
+        "AGE",
+        "PLAYER_HEIGHT",
+        "PLAYER_HEIGHT_INCHES",
+        "PLAYER_WEIGHT",
+        "COLLEGE",
+        "COUNTRY",
+        "DRAFT_YEAR",
+        "DRAFT_ROUND",
+        "DRAFT_NUMBER",
+        "GP",
+        "PTS",
+        "REB",
+        "AST",
+        "NET_RATING",
+        "OREB_PCT",
+        "DREB_PCT",
+        "USG_PCT",
+        "TS_PCT",
+        "AST_PCT"
+      ],
+      "coverage": {
+        "rawHeightInches": {
+          "observedPlayers": 539,
+          "players": 539,
+          "playerCoverage": 1.0,
+          "minuteCoverage": 1.0
+        },
+        "rawWeightLb": {
+          "observedPlayers": 539,
+          "players": 539,
+          "playerCoverage": 1.0,
+          "minuteCoverage": 1.0
+        },
+        "deployedHeightInches": {
+          "observedPlayers": 539,
+          "players": 539,
+          "playerCoverage": 1.0,
+          "minuteCoverage": 1.0
+        },
+        "deployedWeightLb": {
+          "observedPlayers": 539,
+          "players": 539,
+          "playerCoverage": 1.0,
+          "minuteCoverage": 1.0
+        },
+        "wingspanInches": {
+          "observedPlayers": 0,
+          "players": 539,
+          "playerCoverage": 0.0,
+          "minuteCoverage": 0.0
+        },
+        "standingReachInches": {
+          "observedPlayers": 0,
+          "players": 539,
+          "playerCoverage": 0.0,
+          "minuteCoverage": 0.0
+        },
+        "strengthMeasurement": {
+          "observedPlayers": 0,
+          "players": 539,
+          "playerCoverage": 0.0,
+          "minuteCoverage": 0.0
+        },
+        "standingVerticalInches": {
+          "observedPlayers": 0,
+          "players": 539,
+          "playerCoverage": 0.0,
+          "minuteCoverage": 0.0
+        },
+        "maxVerticalInches": {
+          "observedPlayers": 0,
+          "players": 539,
+          "playerCoverage": 0.0,
+          "minuteCoverage": 0.0
+        }
+      },
+      "missingRawBody": [],
+      "rawHeightMismatches": [],
+      "rawWeightMismatches": [],
+      "duplicateCardConflicts": [],
+      "duplicateBioConflicts": [],
+      "rankReconstructionMismatches": [],
+      "correlations": {
+        "rawHeightInches vs rawWeightLb": {
+          "n": 539,
+          "Pearson": 0.7215613713224984,
+          "Spearman": 0.7252230051444575
+        },
+        "rawHeightInches vs deployedPhysique": {
+          "n": 539,
+          "Pearson": 0.9298461703347594,
+          "Spearman": 0.9443928896650973
+        },
+        "rawWeightLb vs deployedPhysique": {
+          "n": 539,
+          "Pearson": 0.8844770222190486,
+          "Spearman": 0.9062469785808304
+        },
+        "rawSizeIndex vs deployedPhysique": {
+          "n": 539,
+          "Pearson": 0.9796510408242586,
+          "Spearman": 0.9999977003349385
+        }
+      }
+    },
+    {
+      "season": "2023-24",
+      "players": 571,
+      "minutes": 593864,
+      "rotationPlayers": 228,
+      "zeroMinuteIds": [
+        {
+          "playerId": 1628382,
+          "name": "Justin Jackson",
+          "minutes": 0,
+          "GP": 2
+        }
+      ],
+      "bioSource": "data/defense-seventh/2023-24/bio.json",
+      "bioURL": "https://stats.nba.com/stats/leaguedashplayerbiostats?LeagueID=00&Season=2023-24&SeasonType=Regular+Season&PerMode=Totals&MeasureType=Base&TeamID=0&LastNGames=0&Month=0&OpponentTeamID=0&PaceAdjust=N&PlusMinus=N&Rank=N&Period=0",
+      "bioFetchedAt": "2026-10-12T15:53:06.305Z",
+      "bioHeaders": [
+        "PLAYER_ID",
+        "PLAYER_NAME",
+        "TEAM_ID",
+        "TEAM_ABBREVIATION",
+        "AGE",
+        "PLAYER_HEIGHT",
+        "PLAYER_HEIGHT_INCHES",
+        "PLAYER_WEIGHT",
+        "COLLEGE",
+        "COUNTRY",
+        "DRAFT_YEAR",
+        "DRAFT_ROUND",
+        "DRAFT_NUMBER",
+        "GP",
+        "PTS",
+        "REB",
+        "AST",
+        "NET_RATING",
+        "OREB_PCT",
+        "DREB_PCT",
+        "USG_PCT",
+        "TS_PCT",
+        "AST_PCT"
+      ],
+      "coverage": {
+        "rawHeightInches": {
+          "observedPlayers": 571,
+          "players": 571,
+          "playerCoverage": 1.0,
+          "minuteCoverage": 1.0
+        },
+        "rawWeightLb": {
+          "observedPlayers": 571,
+          "players": 571,
+          "playerCoverage": 1.0,
+          "minuteCoverage": 1.0
+        },
+        "deployedHeightInches": {
+          "observedPlayers": 571,
+          "players": 571,
+          "playerCoverage": 1.0,
+          "minuteCoverage": 1.0
+        },
+        "deployedWeightLb": {
+          "observedPlayers": 571,
+          "players": 571,
+          "playerCoverage": 1.0,
+          "minuteCoverage": 1.0
+        },
+        "wingspanInches": {
+          "observedPlayers": 0,
+          "players": 571,
+          "playerCoverage": 0.0,
+          "minuteCoverage": 0.0
+        },
+        "standingReachInches": {
+          "observedPlayers": 0,
+          "players": 571,
+          "playerCoverage": 0.0,
+          "minuteCoverage": 0.0
+        },
+        "strengthMeasurement": {
+          "observedPlayers": 0,
+          "players": 571,
+          "playerCoverage": 0.0,
+          "minuteCoverage": 0.0
+        },
+        "standingVerticalInches": {
+          "observedPlayers": 0,
+          "players": 571,
+          "playerCoverage": 0.0,
+          "minuteCoverage": 0.0
+        },
+        "maxVerticalInches": {
+          "observedPlayers": 0,
+          "players": 571,
+          "playerCoverage": 0.0,
+          "minuteCoverage": 0.0
+        }
+      },
+      "missingRawBody": [],
+      "rawHeightMismatches": [],
+      "rawWeightMismatches": [],
+      "duplicateCardConflicts": [],
+      "duplicateBioConflicts": [],
+      "rankReconstructionMismatches": [],
+      "correlations": {
+        "rawHeightInches vs rawWeightLb": {
+          "n": 571,
+          "Pearson": 0.7067062378621833,
+          "Spearman": 0.7151444517195943
+        },
+        "rawHeightInches vs deployedPhysique": {
+          "n": 571,
+          "Pearson": 0.922013440373961,
+          "Spearman": 0.9426248995781753
+        },
+        "rawWeightLb vs deployedPhysique": {
+          "n": 571,
+          "Pearson": 0.8795863273918497,
+          "Spearman": 0.9012815558137021
+        },
+        "rawSizeIndex vs deployedPhysique": {
+          "n": 571,
+          "Pearson": 0.9767044426618152,
+          "Spearman": 0.999998194548258
+        }
+      }
+    },
+    {
+      "season": "2024-25",
+      "players": 569,
+      "minutes": 593770,
+      "rotationPlayers": 243,
+      "zeroMinuteIds": [],
+      "bioSource": "data/defense-seventh/2024-25/bio.json",
+      "bioURL": "https://stats.nba.com/stats/leaguedashplayerbiostats?LeagueID=00&Season=2024-25&SeasonType=Regular+Season&PerMode=Totals&MeasureType=Base&TeamID=0&LastNGames=0&Month=0&OpponentTeamID=0&PaceAdjust=N&PlusMinus=N&Rank=N&Period=0",
+      "bioFetchedAt": "2026-10-12T11:17:17.634Z",
+      "bioHeaders": [
+        "PLAYER_ID",
+        "PLAYER_NAME",
+        "TEAM_ID",
+        "TEAM_ABBREVIATION",
+        "AGE",
+        "PLAYER_HEIGHT",
+        "PLAYER_HEIGHT_INCHES",
+        "PLAYER_WEIGHT",
+        "COLLEGE",
+        "COUNTRY",
+        "DRAFT_YEAR",
+        "DRAFT_ROUND",
+        "DRAFT_NUMBER",
+        "GP",
+        "PTS",
+        "REB",
+        "AST",
+        "NET_RATING",
+        "OREB_PCT",
+        "DREB_PCT",
+        "USG_PCT",
+        "TS_PCT",
+        "AST_PCT"
+      ],
+      "coverage": {
+        "rawHeightInches": {
+          "observedPlayers": 569,
+          "players": 569,
+          "playerCoverage": 1.0,
+          "minuteCoverage": 1.0
+        },
+        "rawWeightLb": {
+          "observedPlayers": 567,
+          "players": 569,
+          "playerCoverage": 0.9964850615114236,
+          "minuteCoverage": 0.9965188541017566
+        },
+        "deployedHeightInches": {
+          "observedPlayers": 569,
+          "players": 569,
+          "playerCoverage": 1.0,
+          "minuteCoverage": 1.0
+        },
+        "deployedWeightLb": {
+          "observedPlayers": 569,
+          "players": 569,
+          "playerCoverage": 1.0,
+          "minuteCoverage": 1.0
+        },
+        "wingspanInches": {
+          "observedPlayers": 0,
+          "players": 569,
+          "playerCoverage": 0.0,
+          "minuteCoverage": 0.0
+        },
+        "standingReachInches": {
+          "observedPlayers": 0,
+          "players": 569,
+          "playerCoverage": 0.0,
+          "minuteCoverage": 0.0
+        },
+        "strengthMeasurement": {
+          "observedPlayers": 0,
+          "players": 569,
+          "playerCoverage": 0.0,
+          "minuteCoverage": 0.0
+        },
+        "standingVerticalInches": {
+          "observedPlayers": 0,
+          "players": 569,
+          "playerCoverage": 0.0,
+          "minuteCoverage": 0.0
+        },
+        "maxVerticalInches": {
+          "observedPlayers": 0,
+          "players": 569,
+          "playerCoverage": 0.0,
+          "minuteCoverage": 0.0
+        }
+      },
+      "missingRawBody": [
+        {
+          "playerId": 1642377,
+          "name": "Jaylen Wells",
+          "minutes": 2045,
+          "GP": 79,
+          "rawHeightInches": 80.0,
+          "rawWeightLb": null,
+          "deployedHeightInches": 80.0,
+          "deployedWeightLb": 210.0,
+          "deployedPhysique": 77.79373477786176
+        },
+        {
+          "playerId": 1642449,
+          "name": "Tolu Smith",
+          "minutes": 22,
+          "GP": 1,
+          "rawHeightInches": 83.0,
+          "rawWeightLb": null,
+          "deployedHeightInches": 83.0,
+          "deployedWeightLb": 210.0,
+          "deployedPhysique": 86.19635508524397
+        }
+      ],
+      "rawHeightMismatches": [],
+      "rawWeightMismatches": [],
+      "duplicateCardConflicts": [],
+      "duplicateBioConflicts": [],
+      "rankReconstructionMismatches": [],
+      "correlations": {
+        "rawHeightInches vs rawWeightLb": {
+          "n": 567,
+          "Pearson": 0.7123550300154579,
+          "Spearman": 0.7172334165764367
+        },
+        "rawHeightInches vs deployedPhysique": {
+          "n": 569,
+          "Pearson": 0.9305322224361546,
+          "Spearman": 0.9470313569787552
+        },
+        "rawWeightLb vs deployedPhysique": {
+          "n": 567,
+          "Pearson": 0.8711677005425962,
+          "Spearman": 0.8971966207922947
+        },
+        "rawSizeIndex vs deployedPhysique": {
+          "n": 567,
+          "Pearson": 0.9765435276886495,
+          "Spearman": 0.9999992591262253
+        }
+      }
+    },
+    {
+      "season": "2025-26",
+      "players": 582,
+      "minutes": 593713,
+      "rotationPlayers": 252,
+      "zeroMinuteIds": [],
+      "bioSource": "data/benchmark-source/bio.json",
+      "bioURL": "https://stats.nba.com/stats/leaguedashplayerbiostats?LeagueID=00&Season=2025-26&SeasonType=Regular+Season&PerMode=Totals&MeasureType=Base&TeamID=0&LastNGames=0&Month=0&OpponentTeamID=0&PaceAdjust=N&PlusMinus=N&Rank=N&Period=0",
+      "bioFetchedAt": "2026-09-19T09:33:44.867Z",
+      "bioHeaders": [
+        "PLAYER_ID",
+        "PLAYER_NAME",
+        "TEAM_ID",
+        "TEAM_ABBREVIATION",
+        "AGE",
+        "PLAYER_HEIGHT",
+        "PLAYER_HEIGHT_INCHES",
+        "PLAYER_WEIGHT",
+        "COLLEGE",
+        "COUNTRY",
+        "DRAFT_YEAR",
+        "DRAFT_ROUND",
+        "DRAFT_NUMBER",
+        "GP",
+        "PTS",
+        "REB",
+        "AST",
+        "NET_RATING",
+        "OREB_PCT",
+        "DREB_PCT",
+        "USG_PCT",
+        "TS_PCT",
+        "AST_PCT"
+      ],
+      "coverage": {
+        "rawHeightInches": {
+          "observedPlayers": 582,
+          "players": 582,
+          "playerCoverage": 1.0,
+          "minuteCoverage": 1.0
+        },
+        "rawWeightLb": {
+          "observedPlayers": 576,
+          "players": 582,
+          "playerCoverage": 0.9896907216494846,
+          "minuteCoverage": 0.9957588936068437
+        },
+        "deployedHeightInches": {
+          "observedPlayers": 582,
+          "players": 582,
+          "playerCoverage": 1.0,
+          "minuteCoverage": 1.0
+        },
+        "deployedWeightLb": {
+          "observedPlayers": 0,
+          "players": 582,
+          "playerCoverage": 0.0,
+          "minuteCoverage": 0.0
+        },
+        "wingspanInches": {
+          "observedPlayers": 0,
+          "players": 582,
+          "playerCoverage": 0.0,
+          "minuteCoverage": 0.0
+        },
+        "standingReachInches": {
+          "observedPlayers": 0,
+          "players": 582,
+          "playerCoverage": 0.0,
+          "minuteCoverage": 0.0
+        },
+        "strengthMeasurement": {
+          "observedPlayers": 0,
+          "players": 582,
+          "playerCoverage": 0.0,
+          "minuteCoverage": 0.0
+        },
+        "standingVerticalInches": {
+          "observedPlayers": 0,
+          "players": 582,
+          "playerCoverage": 0.0,
+          "minuteCoverage": 0.0
+        },
+        "maxVerticalInches": {
+          "observedPlayers": 0,
+          "players": 582,
+          "playerCoverage": 0.0,
+          "minuteCoverage": 0.0
+        }
+      },
+      "missingRawBody": [
+        {
+          "playerId": 1642377,
+          "name": "Jaylen Wells",
+          "minutes": 1819,
+          "GP": 69,
+          "rawHeightInches": 79.0,
+          "rawWeightLb": null,
+          "deployedHeightInches": 79.0,
+          "deployedWeightLb": null,
+          "deployedPhysique": 70.0
+        },
+        {
+          "playerId": 1642449,
+          "name": "Tolu Smith",
+          "minutes": 137,
+          "GP": 15,
+          "rawHeightInches": 83.0,
+          "rawWeightLb": null,
+          "deployedHeightInches": 83.0,
+          "deployedWeightLb": null,
+          "deployedPhysique": 70.0
+        },
+        {
+          "playerId": 1642959,
+          "name": "Chris Youngblood",
+          "minutes": 187,
+          "GP": 34,
+          "rawHeightInches": 76.0,
+          "rawWeightLb": null,
+          "deployedHeightInches": 76.0,
+          "deployedWeightLb": null,
+          "deployedPhysique": 70.0
+        },
+        {
+          "playerId": 1643018,
+          "name": "LJ Cryer",
+          "minutes": 291,
+          "GP": 18,
+          "rawHeightInches": 72.0,
+          "rawWeightLb": null,
+          "deployedHeightInches": 72.0,
+          "deployedWeightLb": null,
+          "deployedPhysique": 70.0
+        },
+        {
+          "playerId": 1643133,
+          "name": "Lawson Lovering",
+          "minutes": 50,
+          "GP": 2,
+          "rawHeightInches": 84.0,
+          "rawWeightLb": null,
+          "deployedHeightInches": 84.0,
+          "deployedWeightLb": null,
+          "deployedPhysique": 70.0
+        },
+        {
+          "playerId": 1643141,
+          "name": "Jahmyl Telfort",
+          "minutes": 34,
+          "GP": 8,
+          "rawHeightInches": 79.0,
+          "rawWeightLb": null,
+          "deployedHeightInches": 79.0,
+          "deployedWeightLb": null,
+          "deployedPhysique": 70.0
+        }
+      ],
+      "rawHeightMismatches": [],
+      "rawWeightMismatches": [],
+      "duplicateCardConflicts": [],
+      "duplicateBioConflicts": [],
+      "rankReconstructionMismatches": [],
+      "correlations": {
+        "rawHeightInches vs rawWeightLb": {
+          "n": 576,
+          "Pearson": 0.71330856317342,
+          "Spearman": 0.7202804342197668
+        },
+        "rawHeightInches vs deployedPhysique": {
+          "n": 582,
+          "Pearson": 0.9234174991098837,
+          "Spearman": 0.9419287036465377
+        },
+        "rawWeightLb vs deployedPhysique": {
+          "n": 576,
+          "Pearson": 0.8717011630572321,
+          "Spearman": 0.8967163778072588
+        },
+        "rawSizeIndex vs deployedPhysique": {
+          "n": 576,
+          "Pearson": 0.9768369469271713,
+          "Spearman": 0.9999153329610664
+        }
+      }
+    }
+  ],
+  "adjacentSeasonMetadata": [
+    {
+      "from": "2022-23",
+      "to": "2023-24",
+      "changes": {
+        "rawHeightInches": {
+          "matchedObservedPlayers": 449,
+          "changedPlayers": 83,
+          "changedList": [
+            {
+              "id": 201142,
+              "name": "Kevin Durant",
+              "before": 82.0,
+              "after": 83.0,
+              "difference": 1.0
+            },
+            {
+              "id": 201144,
+              "name": "Mike Conley",
+              "before": 73.0,
+              "after": 72.0,
+              "difference": -1.0
+            },
+            {
+              "id": 201566,
+              "name": "Russell Westbrook",
+              "before": 75.0,
+              "after": 76.0,
+              "difference": 1.0
+            },
+            {
+              "id": 201577,
+              "name": "Robin Lopez",
+              "before": 84.0,
+              "after": 85.0,
+              "difference": 1.0
+            },
+            {
+              "id": 201950,
+              "name": "Jrue Holiday",
+              "before": 77.0,
+              "after": 76.0,
+              "difference": -1.0
+            },
+            {
+              "id": 201988,
+              "name": "Patty Mills",
+              "before": 72.0,
+              "after": 74.0,
+              "difference": 2.0
+            },
+            {
+              "id": 202066,
+              "name": "Garrett Temple",
+              "before": 78.0,
+              "after": 77.0,
+              "difference": -1.0
+            },
+            {
+              "id": 202692,
+              "name": "Alec Burks",
+              "before": 78.0,
+              "after": 77.0,
+              "difference": -1.0
+            },
+            {
+              "id": 202699,
+              "name": "Tobias Harris",
+              "before": 79.0,
+              "after": 80.0,
+              "difference": 1.0
+            },
+            {
+              "id": 202709,
+              "name": "Cory Joseph",
+              "before": 75.0,
+              "after": 74.0,
+              "difference": -1.0
+            },
+            {
+              "id": 203458,
+              "name": "Alex Len",
+              "before": 86.0,
+              "after": 84.0,
+              "difference": -2.0
+            },
+            {
+              "id": 203486,
+              "name": "Mason Plumlee",
+              "before": 84.0,
+              "after": 82.0,
+              "difference": -2.0
+            },
+            {
+              "id": 203488,
+              "name": "Mike Muscala",
+              "before": 83.0,
+              "after": 82.0,
+              "difference": -1.0
+            },
+            {
+              "id": 203507,
+              "name": "Giannis Antetokounmpo",
+              "before": 84.0,
+              "after": 83.0,
+              "difference": -1.0
+            },
+            {
+              "id": 203903,
+              "name": "Jordan Clarkson",
+              "before": 77.0,
+              "after": 75.0,
+              "difference": -2.0
+            },
+            {
+              "id": 203924,
+              "name": "Jerami Grant",
+              "before": 80.0,
+              "after": 79.0,
+              "difference": -1.0
+            },
+            {
+              "id": 203935,
+              "name": "Marcus Smart",
+              "before": 76.0,
+              "after": 75.0,
+              "difference": -1.0
+            },
+            {
+              "id": 204001,
+              "name": "Kristaps Porziņģis",
+              "before": 87.0,
+              "after": 86.0,
+              "difference": -1.0
+            },
+            {
+              "id": 1626145,
+              "name": "Tyus Jones",
+              "before": 74.0,
+              "after": 73.0,
+              "difference": -1.0
+            },
+            {
+              "id": 1626156,
+              "name": "D'Angelo Russell",
+              "before": 76.0,
+              "after": 75.0,
+              "difference": -1.0
+            },
+            {
+              "id": 1626158,
+              "name": "Richaun Holmes",
+              "before": 80.0,
+              "after": 81.0,
+              "difference": 1.0
+            },
+            {
+              "id": 1626162,
+              "name": "Kelly Oubre Jr.",
+              "before": 78.0,
+              "after": 79.0,
+              "difference": 1.0
+            },
+            {
+              "id": 1626164,
+              "name": "Devin Booker",
+              "before": 77.0,
+              "after": 78.0,
+              "difference": 1.0
+            },
+            {
+              "id": 1626166,
+              "name": "Cameron Payne",
+              "before": 73.0,
+              "after": 75.0,
+              "difference": 2.0
+            },
+            {
+              "id": 1626171,
+              "name": "Bobby Portis Jr.",
+              "before": 83.0,
+              "after": 82.0,
+              "difference": -1.0
+            },
+            {
+              "id": 1626174,
+              "name": "Christian Wood",
+              "before": 81.0,
+              "after": 80.0,
+              "difference": -1.0
+            },
+            {
+              "id": 1626196,
+              "name": "Josh Richardson",
+              "before": 78.0,
+              "after": 77.0,
+              "difference": -1.0
+            },
+            {
+              "id": 1627734,
+              "name": "Domantas Sabonis",
+              "before": 85.0,
+              "after": 82.0,
+              "difference": -3.0
+            },
+            {
+              "id": 1627745,
+              "name": "Damian Jones",
+              "before": 83.0,
+              "after": 82.0,
+              "difference": -1.0
+            },
+            {
+              "id": 1627751,
+              "name": "Jakob Poeltl",
+              "before": 85.0,
+              "after": 84.0,
+              "difference": -1.0
+            },
+            {
+              "id": 1628372,
+              "name": "Dennis Smith Jr.",
+              "before": 74.0,
+              "after": 75.0,
+              "difference": 1.0
+            },
+            {
+              "id": 1628378,
+              "name": "Donovan Mitchell",
+              "before": 73.0,
+              "after": 75.0,
+              "difference": 2.0
+            },
+            {
+              "id": 1628436,
+              "name": "Luke Kornet",
+              "before": 86.0,
+              "after": 85.0,
+              "difference": -1.0
+            },
+            {
+              "id": 1628470,
+              "name": "Torrey Craig",
+              "before": 79.0,
+              "after": 77.0,
+              "difference": -2.0
+            },
+            {
+              "id": 1628981,
+              "name": "Bruno Fernando",
+              "before": 82.0,
+              "after": 81.0,
+              "difference": -1.0
+            },
+            {
+              "id": 1629001,
+              "name": "De'Anthony Melton",
+              "before": 74.0,
+              "after": 75.0,
+              "difference": 1.0
+            },
+            {
+              "id": 1629002,
+              "name": "Chimezie Metu",
+              "before": 81.0,
+              "after": 82.0,
+              "difference": 1.0
+            },
+            {
+              "id": 1629012,
+              "name": "Collin Sexton",
+              "before": 74.0,
+              "after": 75.0,
+              "difference": 1.0
+            },
+            {
+              "id": 1629048,
+              "name": "Goga Bitadze",
+              "before": 83.0,
+              "after": 82.0,
+              "difference": -1.0
+            },
+            {
+              "id": 1629139,
+              "name": "Yuta Watanabe",
+              "before": 80.0,
+              "after": 81.0,
+              "difference": 1.0
+            },
+            {
+              "id": 1629614,
+              "name": "Andrew Nembhard",
+              "before": 75.0,
+              "after": 76.0,
+              "difference": 1.0
+            },
+            {
+              "id": 1629626,
+              "name": "Bol Bol",
+              "before": 86.0,
+              "after": 87.0,
+              "difference": 1.0
+            },
+            {
+              "id": 1629642,
+              "name": "Nassir Little",
+              "before": 77.0,
+              "after": 78.0,
+              "difference": 1.0
+            },
+            {
+              "id": 1629643,
+              "name": "Chuma Okeke",
+              "before": 80.0,
+              "after": 79.0,
+              "difference": -1.0
+            },
+            {
+              "id": 1629646,
+              "name": "Charles Bassey",
+              "before": 81.0,
+              "after": 82.0,
+              "difference": 1.0
+            },
+            {
+              "id": 1629670,
+              "name": "Jordan Nwora",
+              "before": 81.0,
+              "after": 80.0,
+              "difference": -1.0
+            },
+            {
+              "id": 1630164,
+              "name": "James Wiseman",
+              "before": 84.0,
+              "after": 83.0,
+              "difference": -1.0
+            },
+            {
+              "id": 1630168,
+              "name": "Onyeka Okongwu",
+              "before": 81.0,
+              "after": 82.0,
+              "difference": 1.0
+            },
+            {
+              "id": 1630174,
+              "name": "Aaron Nesmith",
+              "before": 77.0,
+              "after": 78.0,
+              "difference": 1.0
+            },
+            {
+              "id": 1630175,
+              "name": "Cole Anthony",
+              "before": 75.0,
+              "after": 74.0,
+              "difference": -1.0
+            },
+            {
+              "id": 1630177,
+              "name": "Theo Maledon",
+              "before": 77.0,
+              "after": 76.0,
+              "difference": -1.0
+            },
+            {
+              "id": 1630182,
+              "name": "Josh Green",
+              "before": 79.0,
+              "after": 77.0,
+              "difference": -2.0
+            },
+            {
+              "id": 1630205,
+              "name": "Lamar Stevens",
+              "before": 78.0,
+              "after": 79.0,
+              "difference": 1.0
+            },
+            {
+              "id": 1630219,
+              "name": "Skylar Mays",
+              "before": 76.0,
+              "after": 75.0,
+              "difference": -1.0
+            },
+            {
+              "id": 1630227,
+              "name": "Daishen Nix",
+              "before": 76.0,
+              "after": 75.0,
+              "difference": -1.0
+            },
+            {
+              "id": 1630230,
+              "name": "Naji Marshall",
+              "before": 79.0,
+              "after": 78.0,
+              "difference": -1.0
+            },
+            {
+              "id": 1630231,
+              "name": "KJ Martin",
+              "before": 79.0,
+              "after": 78.0,
+              "difference": -1.0
+            },
+            {
+              "id": 1630243,
+              "name": "Trevelin Queen",
+              "before": 78.0,
+              "after": 77.0,
+              "difference": -1.0
+            },
+            {
+              "id": 1630256,
+              "name": "Jae'Sean Tate",
+              "before": 77.0,
+              "after": 76.0,
+              "difference": -1.0
+            },
+            {
+              "id": 1630284,
+              "name": "Kevon Harris",
+              "before": 78.0,
+              "after": 77.0,
+              "difference": -1.0
+            },
+            {
+              "id": 1630540,
+              "name": "Miles McBride",
+              "before": 74.0,
+              "after": 73.0,
+              "difference": -1.0
+            },
+            {
+              "id": 1630548,
+              "name": "Johnny Juzang",
+              "before": 78.0,
+              "after": 77.0,
+              "difference": -1.0
+            },
+            {
+              "id": 1630553,
+              "name": "Keon Johnson",
+              "before": 75.0,
+              "after": 77.0,
+              "difference": 2.0
+            },
+            {
+              "id": 1630563,
+              "name": "Joshua Primo",
+              "before": 78.0,
+              "after": 76.0,
+              "difference": -2.0
+            },
+            {
+              "id": 1630567,
+              "name": "Scottie Barnes",
+              "before": 80.0,
+              "after": 79.0,
+              "difference": -1.0
+            },
+            {
+              "id": 1630572,
+              "name": "Sandro Mamukelashvili",
+              "before": 82.0,
+              "after": 81.0,
+              "difference": -1.0
+            },
+            {
+              "id": 1630595,
+              "name": "Cade Cunningham",
+              "before": 79.0,
+              "after": 78.0,
+              "difference": -1.0
+            },
+            {
+              "id": 1630625,
+              "name": "Dalano Banton",
+              "before": 79.0,
+              "after": 80.0,
+              "difference": 1.0
+            },
+            {
+              "id": 1630692,
+              "name": "Jordan Goodwin",
+              "before": 75.0,
+              "after": 76.0,
+              "difference": 1.0
+            },
+            {
+              "id": 1630695,
+              "name": "Micah Potter",
+              "before": 80.0,
+              "after": 81.0,
+              "difference": 1.0
+            },
+            {
+              "id": 1630696,
+              "name": "Dru Smith",
+              "before": 75.0,
+              "after": 74.0,
+              "difference": -1.0
+            },
+            {
+              "id": 1630846,
+              "name": "Olivier Sarr",
+              "before": 83.0,
+              "after": 82.0,
+              "difference": -1.0
+            },
+            {
+              "id": 1631104,
+              "name": "Blake Wesley",
+              "before": 76.0,
+              "after": 75.0,
+              "difference": -1.0
+            },
+            {
+              "id": 1631105,
+              "name": "Jalen Duren",
+              "before": 83.0,
+              "after": 82.0,
+              "difference": -1.0
+            },
+            {
+              "id": 1631197,
+              "name": "Jared Rhoden",
+              "before": 78.0,
+              "after": 77.0,
+              "difference": -1.0
+            },
+            {
+              "id": 1631199,
+              "name": "Ron Harper Jr.",
+              "before": 77.0,
+              "after": 76.0,
+              "difference": -1.0
+            },
+            {
+              "id": 1631205,
+              "name": "Buddy Boeheim",
+              "before": 78.0,
+              "after": 77.0,
+              "difference": -1.0
+            },
+            {
+              "id": 1631217,
+              "name": "Moussa Diabaté",
+              "before": 82.0,
+              "after": 81.0,
+              "difference": -1.0
+            },
+            {
+              "id": 1631260,
+              "name": "AJ Green",
+              "before": 77.0,
+              "after": 76.0,
+              "difference": -1.0
+            },
+            {
+              "id": 1631298,
+              "name": "Jack White",
+              "before": 79.0,
+              "after": 78.0,
+              "difference": -1.0
+            },
+            {
+              "id": 1631303,
+              "name": "Justin Minaya",
+              "before": 79.0,
+              "after": 77.0,
+              "difference": -2.0
+            },
+            {
+              "id": 1631306,
+              "name": "Cole Swider",
+              "before": 81.0,
+              "after": 80.0,
+              "difference": -1.0
+            },
+            {
+              "id": 1631367,
+              "name": "Jacob Gilyard",
+              "before": 69.0,
+              "after": 68.0,
+              "difference": -1.0
+            }
+          ],
+          "note": "Metadata changes do not identify physical growth, training or measurement methodology."
+        },
+        "rawWeightLb": {
+          "matchedObservedPlayers": 449,
+          "changedPlayers": 19,
+          "changedList": [
+            {
+              "id": 201152,
+              "name": "Thaddeus Young",
+              "before": 235.0,
+              "after": 225.0,
+              "difference": -10.0
+            },
+            {
+              "id": 203471,
+              "name": "Dennis Schröder",
+              "before": 172.0,
+              "after": 175.0,
+              "difference": 3.0
+            },
+            {
+              "id": 203490,
+              "name": "Otto Porter Jr.",
+              "before": 198.0,
+              "after": 230.0,
+              "difference": 32.0
+            },
+            {
+              "id": 1627751,
+              "name": "Jakob Poeltl",
+              "before": 245.0,
+              "after": 260.0,
+              "difference": 15.0
+            },
+            {
+              "id": 1627783,
+              "name": "Pascal Siakam",
+              "before": 230.0,
+              "after": 245.0,
+              "difference": 15.0
+            },
+            {
+              "id": 1628384,
+              "name": "OG Anunoby",
+              "before": 232.0,
+              "after": 240.0,
+              "difference": 8.0
+            },
+            {
+              "id": 1629014,
+              "name": "Anfernee Simons",
+              "before": 181.0,
+              "after": 193.0,
+              "difference": 12.0
+            },
+            {
+              "id": 1629018,
+              "name": "Gary Trent Jr.",
+              "before": 209.0,
+              "after": 204.0,
+              "difference": -5.0
+            },
+            {
+              "id": 1629028,
+              "name": "Deandre Ayton",
+              "before": 250.0,
+              "after": 247.0,
+              "difference": -3.0
+            },
+            {
+              "id": 1629057,
+              "name": "Robert Williams III",
+              "before": 237.0,
+              "after": 249.0,
+              "difference": 12.0
+            },
+            {
+              "id": 1629650,
+              "name": "Moses Brown",
+              "before": 245.0,
+              "after": 258.0,
+              "difference": 13.0
+            },
+            {
+              "id": 1629667,
+              "name": "Jalen McDaniels",
+              "before": 205.0,
+              "after": 190.0,
+              "difference": -15.0
+            },
+            {
+              "id": 1630173,
+              "name": "Precious Achiuwa",
+              "before": 225.0,
+              "after": 243.0,
+              "difference": 18.0
+            },
+            {
+              "id": 1630201,
+              "name": "Malachi Flynn",
+              "before": 175.0,
+              "after": 185.0,
+              "difference": 10.0
+            },
+            {
+              "id": 1630567,
+              "name": "Scottie Barnes",
+              "before": 225.0,
+              "after": 237.0,
+              "difference": 12.0
+            },
+            {
+              "id": 1631101,
+              "name": "Shaedon Sharpe",
+              "before": 200.0,
+              "after": 205.0,
+              "difference": 5.0
+            },
+            {
+              "id": 1631133,
+              "name": "Jabari Walker",
+              "before": 200.0,
+              "after": 227.0,
+              "difference": 27.0
+            },
+            {
+              "id": 1631199,
+              "name": "Ron Harper Jr.",
+              "before": 245.0,
+              "after": 233.0,
+              "difference": -12.0
+            },
+            {
+              "id": 1631303,
+              "name": "Justin Minaya",
+              "before": 210.0,
+              "after": 205.0,
+              "difference": -5.0
+            }
+          ],
+          "note": "Metadata changes do not identify physical growth, training or measurement methodology."
+        }
+      }
+    },
+    {
+      "from": "2023-24",
+      "to": "2024-25",
+      "changes": {
+        "rawHeightInches": {
+          "matchedObservedPlayers": 447,
+          "changedPlayers": 18,
+          "changedList": [
+            {
+              "id": 202691,
+              "name": "Klay Thompson",
+              "before": 78.0,
+              "after": 77.0,
+              "difference": -1.0
+            },
+            {
+              "id": 203944,
+              "name": "Julius Randle",
+              "before": 80.0,
+              "after": 81.0,
+              "difference": 1.0
+            },
+            {
+              "id": 204060,
+              "name": "Joe Ingles",
+              "before": 81.0,
+              "after": 80.0,
+              "difference": -1.0
+            },
+            {
+              "id": 1626162,
+              "name": "Kelly Oubre Jr.",
+              "before": 79.0,
+              "after": 80.0,
+              "difference": 1.0
+            },
+            {
+              "id": 1627749,
+              "name": "Dejounte Murray",
+              "before": 77.0,
+              "after": 76.0,
+              "difference": -1.0
+            },
+            {
+              "id": 1628995,
+              "name": "Kevin Knox II",
+              "before": 79.0,
+              "after": 80.0,
+              "difference": 1.0
+            },
+            {
+              "id": 1629023,
+              "name": "P.J. Washington",
+              "before": 79.0,
+              "after": 78.0,
+              "difference": -1.0
+            },
+            {
+              "id": 1629029,
+              "name": "Luka Dončić",
+              "before": 79.0,
+              "after": 78.0,
+              "difference": -1.0
+            },
+            {
+              "id": 1629656,
+              "name": "Quentin Grimes",
+              "before": 77.0,
+              "after": 76.0,
+              "difference": -1.0
+            },
+            {
+              "id": 1630227,
+              "name": "Daishen Nix",
+              "before": 75.0,
+              "after": 76.0,
+              "difference": 1.0
+            },
+            {
+              "id": 1630692,
+              "name": "Jordan Goodwin",
+              "before": 76.0,
+              "after": 77.0,
+              "difference": 1.0
+            },
+            {
+              "id": 1631095,
+              "name": "Jabari Smith Jr.",
+              "before": 83.0,
+              "after": 82.0,
+              "difference": -1.0
+            },
+            {
+              "id": 1631165,
+              "name": "Keon Ellis",
+              "before": 75.0,
+              "after": 76.0,
+              "difference": 1.0
+            },
+            {
+              "id": 1631230,
+              "name": "Dominick Barlow",
+              "before": 81.0,
+              "after": 80.0,
+              "difference": -1.0
+            },
+            {
+              "id": 1641705,
+              "name": "Victor Wembanyama",
+              "before": 88.0,
+              "after": 87.0,
+              "difference": -1.0
+            },
+            {
+              "id": 1641723,
+              "name": "Kobe Bufkin",
+              "before": 77.0,
+              "after": 76.0,
+              "difference": -1.0
+            },
+            {
+              "id": 1641774,
+              "name": "Tristan Vukcevic",
+              "before": 82.0,
+              "after": 84.0,
+              "difference": 2.0
+            },
+            {
+              "id": 1641998,
+              "name": "Trey Jemison III",
+              "before": 82.0,
+              "after": 83.0,
+              "difference": 1.0
+            }
+          ],
+          "note": "Metadata changes do not identify physical growth, training or measurement methodology."
+        },
+        "rawWeightLb": {
+          "matchedObservedPlayers": 447,
+          "changedPlayers": 21,
+          "changedList": [
+            {
+              "id": 1629014,
+              "name": "Anfernee Simons",
+              "before": 193.0,
+              "after": 200.0,
+              "difference": 7.0
+            },
+            {
+              "id": 1629028,
+              "name": "Deandre Ayton",
+              "before": 247.0,
+              "after": 252.0,
+              "difference": 5.0
+            },
+            {
+              "id": 1629655,
+              "name": "Daniel Gafford",
+              "before": 234.0,
+              "after": 265.0,
+              "difference": 31.0
+            },
+            {
+              "id": 1630166,
+              "name": "Deni Avdija",
+              "before": 210.0,
+              "after": 240.0,
+              "difference": 30.0
+            },
+            {
+              "id": 1630227,
+              "name": "Daishen Nix",
+              "before": 226.0,
+              "after": 238.0,
+              "difference": 12.0
+            },
+            {
+              "id": 1630548,
+              "name": "Johnny Juzang",
+              "before": 209.0,
+              "after": 226.0,
+              "difference": 17.0
+            },
+            {
+              "id": 1630625,
+              "name": "Dalano Banton",
+              "before": 204.0,
+              "after": 203.0,
+              "difference": -1.0
+            },
+            {
+              "id": 1630692,
+              "name": "Jordan Goodwin",
+              "before": 200.0,
+              "after": 215.0,
+              "difference": 15.0
+            },
+            {
+              "id": 1630703,
+              "name": "Scoot Henderson",
+              "before": 202.0,
+              "after": 206.0,
+              "difference": 4.0
+            },
+            {
+              "id": 1631101,
+              "name": "Shaedon Sharpe",
+              "before": 205.0,
+              "after": 208.0,
+              "difference": 3.0
+            },
+            {
+              "id": 1631121,
+              "name": "Bryce McGowens",
+              "before": 175.0,
+              "after": 190.0,
+              "difference": 15.0
+            },
+            {
+              "id": 1631133,
+              "name": "Jabari Walker",
+              "before": 227.0,
+              "after": 237.0,
+              "difference": 10.0
+            },
+            {
+              "id": 1631159,
+              "name": "Leonard Miller",
+              "before": 210.0,
+              "after": 220.0,
+              "difference": 10.0
+            },
+            {
+              "id": 1631200,
+              "name": "Kris Murray",
+              "before": 210.0,
+              "after": 216.0,
+              "difference": 6.0
+            },
+            {
+              "id": 1641705,
+              "name": "Victor Wembanyama",
+              "before": 210.0,
+              "after": 235.0,
+              "difference": 25.0
+            },
+            {
+              "id": 1641712,
+              "name": "Rayan Rupert",
+              "before": 185.0,
+              "after": 195.0,
+              "difference": 10.0
+            },
+            {
+              "id": 1641720,
+              "name": "Jalen Hood-Schifino",
+              "before": 215.0,
+              "after": 210.0,
+              "difference": -5.0
+            },
+            {
+              "id": 1641721,
+              "name": "Maxwell Lewis",
+              "before": 195.0,
+              "after": 215.0,
+              "difference": 20.0
+            },
+            {
+              "id": 1641734,
+              "name": "Emoni Bates",
+              "before": 170.0,
+              "after": 202.0,
+              "difference": 32.0
+            },
+            {
+              "id": 1641739,
+              "name": "Toumani Camara",
+              "before": 226.0,
+              "after": 229.0,
+              "difference": 3.0
+            },
+            {
+              "id": 1641998,
+              "name": "Trey Jemison III",
+              "before": 260.0,
+              "after": 270.0,
+              "difference": 10.0
+            }
+          ],
+          "note": "Metadata changes do not identify physical growth, training or measurement methodology."
+        }
+      }
+    },
+    {
+      "from": "2024-25",
+      "to": "2025-26",
+      "changes": {
+        "rawHeightInches": {
+          "matchedObservedPlayers": 464,
+          "changedPlayers": 147,
+          "changedList": [
+            {
+              "id": 201143,
+              "name": "Al Horford",
+              "before": 81.0,
+              "after": 80.0,
+              "difference": -1.0
+            },
+            {
+              "id": 201144,
+              "name": "Mike Conley",
+              "before": 72.0,
+              "after": 73.0,
+              "difference": 1.0
+            },
+            {
+              "id": 201567,
+              "name": "Kevin Love",
+              "before": 80.0,
+              "after": 82.0,
+              "difference": 2.0
+            },
+            {
+              "id": 201587,
+              "name": "Nicolas Batum",
+              "before": 80.0,
+              "after": 79.0,
+              "difference": -1.0
+            },
+            {
+              "id": 202695,
+              "name": "Kawhi Leonard",
+              "before": 79.0,
+              "after": 78.0,
+              "difference": -1.0
+            },
+            {
+              "id": 202696,
+              "name": "Nikola Vučević",
+              "before": 82.0,
+              "after": 81.0,
+              "difference": -1.0
+            },
+            {
+              "id": 202710,
+              "name": "Jimmy Butler III",
+              "before": 79.0,
+              "after": 78.0,
+              "difference": -1.0
+            },
+            {
+              "id": 203084,
+              "name": "Harrison Barnes",
+              "before": 80.0,
+              "after": 79.0,
+              "difference": -1.0
+            },
+            {
+              "id": 203482,
+              "name": "Kelly Olynyk",
+              "before": 83.0,
+              "after": 84.0,
+              "difference": 1.0
+            },
+            {
+              "id": 203486,
+              "name": "Mason Plumlee",
+              "before": 82.0,
+              "after": 84.0,
+              "difference": 2.0
+            },
+            {
+              "id": 203903,
+              "name": "Jordan Clarkson",
+              "before": 75.0,
+              "after": 77.0,
+              "difference": 2.0
+            },
+            {
+              "id": 203926,
+              "name": "Doug McDermott",
+              "before": 78.0,
+              "after": 79.0,
+              "difference": 1.0
+            },
+            {
+              "id": 203937,
+              "name": "Kyle Anderson",
+              "before": 81.0,
+              "after": 80.0,
+              "difference": -1.0
+            },
+            {
+              "id": 203952,
+              "name": "Andrew Wiggins",
+              "before": 79.0,
+              "after": 78.0,
+              "difference": -1.0
+            },
+            {
+              "id": 203994,
+              "name": "Jusuf Nurkić",
+              "before": 84.0,
+              "after": 83.0,
+              "difference": -1.0
+            },
+            {
+              "id": 1626145,
+              "name": "Tyus Jones",
+              "before": 73.0,
+              "after": 72.0,
+              "difference": -1.0
+            },
+            {
+              "id": 1626164,
+              "name": "Devin Booker",
+              "before": 78.0,
+              "after": 77.0,
+              "difference": -1.0
+            },
+            {
+              "id": 1626166,
+              "name": "Cameron Payne",
+              "before": 75.0,
+              "after": 74.0,
+              "difference": -1.0
+            },
+            {
+              "id": 1626171,
+              "name": "Bobby Portis Jr.",
+              "before": 82.0,
+              "after": 81.0,
+              "difference": -1.0
+            },
+            {
+              "id": 1626181,
+              "name": "Norman Powell",
+              "before": 76.0,
+              "after": 75.0,
+              "difference": -1.0
+            },
+            {
+              "id": 1626204,
+              "name": "Larry Nance Jr.",
+              "before": 80.0,
+              "after": 78.0,
+              "difference": -2.0
+            },
+            {
+              "id": 1627747,
+              "name": "Caris LeVert",
+              "before": 78.0,
+              "after": 79.0,
+              "difference": 1.0
+            },
+            {
+              "id": 1627824,
+              "name": "Guerschon Yabusele",
+              "before": 80.0,
+              "after": 79.0,
+              "difference": -1.0
+            },
+            {
+              "id": 1628366,
+              "name": "Lonzo Ball",
+              "before": 78.0,
+              "after": 77.0,
+              "difference": -1.0
+            },
+            {
+              "id": 1628374,
+              "name": "Lauri Markkanen",
+              "before": 84.0,
+              "after": 85.0,
+              "difference": 1.0
+            },
+            {
+              "id": 1628378,
+              "name": "Donovan Mitchell",
+              "before": 75.0,
+              "after": 74.0,
+              "difference": -1.0
+            },
+            {
+              "id": 1628380,
+              "name": "Zach Collins",
+              "before": 83.0,
+              "after": 81.0,
+              "difference": -2.0
+            },
+            {
+              "id": 1628396,
+              "name": "Tony Bradley",
+              "before": 83.0,
+              "after": 82.0,
+              "difference": -1.0
+            },
+            {
+              "id": 1628398,
+              "name": "Kyle Kuzma",
+              "before": 81.0,
+              "after": 80.0,
+              "difference": -1.0
+            },
+            {
+              "id": 1628404,
+              "name": "Josh Hart",
+              "before": 76.0,
+              "after": 77.0,
+              "difference": 1.0
+            },
+            {
+              "id": 1628415,
+              "name": "Dillon Brooks",
+              "before": 78.0,
+              "after": 79.0,
+              "difference": 1.0
+            },
+            {
+              "id": 1628418,
+              "name": "Thomas Bryant",
+              "before": 82.0,
+              "after": 81.0,
+              "difference": -1.0
+            },
+            {
+              "id": 1628449,
+              "name": "Chris Boucher",
+              "before": 81.0,
+              "after": 80.0,
+              "difference": -1.0
+            },
+            {
+              "id": 1628960,
+              "name": "Grayson Allen",
+              "before": 76.0,
+              "after": 75.0,
+              "difference": -1.0
+            },
+            {
+              "id": 1628975,
+              "name": "Jevon Carter",
+              "before": 73.0,
+              "after": 72.0,
+              "difference": -1.0
+            },
+            {
+              "id": 1628989,
+              "name": "Kevin Huerter",
+              "before": 79.0,
+              "after": 78.0,
+              "difference": -1.0
+            },
+            {
+              "id": 1629001,
+              "name": "De'Anthony Melton",
+              "before": 75.0,
+              "after": 74.0,
+              "difference": -1.0
+            },
+            {
+              "id": 1629013,
+              "name": "Landry Shamet",
+              "before": 76.0,
+              "after": 77.0,
+              "difference": 1.0
+            },
+            {
+              "id": 1629023,
+              "name": "P.J. Washington",
+              "before": 78.0,
+              "after": 79.0,
+              "difference": 1.0
+            },
+            {
+              "id": 1629026,
+              "name": "Kenrich Williams",
+              "before": 78.0,
+              "after": 79.0,
+              "difference": 1.0
+            },
+            {
+              "id": 1629027,
+              "name": "Trae Young",
+              "before": 73.0,
+              "after": 74.0,
+              "difference": 1.0
+            },
+            {
+              "id": 1629029,
+              "name": "Luka Dončić",
+              "before": 78.0,
+              "after": 80.0,
+              "difference": 2.0
+            },
+            {
+              "id": 1629048,
+              "name": "Goga Bitadze",
+              "before": 82.0,
+              "after": 83.0,
+              "difference": 1.0
+            },
+            {
+              "id": 1629162,
+              "name": "Jordan McLaughlin",
+              "before": 72.0,
+              "after": 71.0,
+              "difference": -1.0
+            },
+            {
+              "id": 1629611,
+              "name": "Terance Mann",
+              "before": 77.0,
+              "after": 78.0,
+              "difference": 1.0
+            },
+            {
+              "id": 1629631,
+              "name": "De'Andre Hunter",
+              "before": 80.0,
+              "after": 79.0,
+              "difference": -1.0
+            },
+            {
+              "id": 1629632,
+              "name": "Coby White",
+              "before": 77.0,
+              "after": 76.0,
+              "difference": -1.0
+            },
+            {
+              "id": 1629640,
+              "name": "Keldon Johnson",
+              "before": 77.0,
+              "after": 78.0,
+              "difference": 1.0
+            },
+            {
+              "id": 1629645,
+              "name": "Kevin Porter Jr.",
+              "before": 76.0,
+              "after": 77.0,
+              "difference": 1.0
+            },
+            {
+              "id": 1629656,
+              "name": "Quentin Grimes",
+              "before": 76.0,
+              "after": 77.0,
+              "difference": 1.0
+            },
+            {
+              "id": 1629684,
+              "name": "Grant Williams",
+              "before": 78.0,
+              "after": 79.0,
+              "difference": 1.0
+            },
+            {
+              "id": 1629726,
+              "name": "Garrison Mathews",
+              "before": 78.0,
+              "after": 77.0,
+              "difference": -1.0
+            },
+            {
+              "id": 1630165,
+              "name": "Killian Hayes",
+              "before": 77.0,
+              "after": 76.0,
+              "difference": -1.0
+            },
+            {
+              "id": 1630166,
+              "name": "Deni Avdija",
+              "before": 81.0,
+              "after": 80.0,
+              "difference": -1.0
+            },
+            {
+              "id": 1630171,
+              "name": "Isaac Okoro",
+              "before": 77.0,
+              "after": 76.0,
+              "difference": -1.0
+            },
+            {
+              "id": 1630172,
+              "name": "Patrick Williams",
+              "before": 79.0,
+              "after": 78.0,
+              "difference": -1.0
+            },
+            {
+              "id": 1630174,
+              "name": "Aaron Nesmith",
+              "before": 78.0,
+              "after": 77.0,
+              "difference": -1.0
+            },
+            {
+              "id": 1630182,
+              "name": "Josh Green",
+              "before": 77.0,
+              "after": 78.0,
+              "difference": 1.0
+            },
+            {
+              "id": 1630188,
+              "name": "Jalen Smith",
+              "before": 81.0,
+              "after": 80.0,
+              "difference": -1.0
+            },
+            {
+              "id": 1630192,
+              "name": "Zeke Nnaji",
+              "before": 81.0,
+              "after": 82.0,
+              "difference": 1.0
+            },
+            {
+              "id": 1630198,
+              "name": "Isaiah Joe",
+              "before": 75.0,
+              "after": 76.0,
+              "difference": 1.0
+            },
+            {
+              "id": 1630208,
+              "name": "Nick Richards",
+              "before": 84.0,
+              "after": 83.0,
+              "difference": -1.0
+            },
+            {
+              "id": 1630214,
+              "name": "Xavier Tillman",
+              "before": 79.0,
+              "after": 80.0,
+              "difference": 1.0
+            },
+            {
+              "id": 1630217,
+              "name": "Desmond Bane",
+              "before": 77.0,
+              "after": 78.0,
+              "difference": 1.0
+            },
+            {
+              "id": 1630245,
+              "name": "Ayo Dosunmu",
+              "before": 77.0,
+              "after": 76.0,
+              "difference": -1.0
+            },
+            {
+              "id": 1630264,
+              "name": "Anthony Gill",
+              "before": 80.0,
+              "after": 79.0,
+              "difference": -1.0
+            },
+            {
+              "id": 1630311,
+              "name": "Pat Spencer",
+              "before": 75.0,
+              "after": 74.0,
+              "difference": -1.0
+            },
+            {
+              "id": 1630322,
+              "name": "Lindy Waters III",
+              "before": 78.0,
+              "after": 77.0,
+              "difference": -1.0
+            },
+            {
+              "id": 1630526,
+              "name": "Jeremiah Robinson-Earl",
+              "before": 80.0,
+              "after": 81.0,
+              "difference": 1.0
+            },
+            {
+              "id": 1630540,
+              "name": "Miles McBride",
+              "before": 73.0,
+              "after": 74.0,
+              "difference": 1.0
+            },
+            {
+              "id": 1630543,
+              "name": "Isaiah Jackson",
+              "before": 81.0,
+              "after": 80.0,
+              "difference": -1.0
+            },
+            {
+              "id": 1630544,
+              "name": "Tre Mann",
+              "before": 75.0,
+              "after": 76.0,
+              "difference": 1.0
+            },
+            {
+              "id": 1630548,
+              "name": "Johnny Juzang",
+              "before": 77.0,
+              "after": 79.0,
+              "difference": 2.0
+            },
+            {
+              "id": 1630549,
+              "name": "Day'Ron Sharpe",
+              "before": 81.0,
+              "after": 82.0,
+              "difference": 1.0
+            },
+            {
+              "id": 1630567,
+              "name": "Scottie Barnes",
+              "before": 79.0,
+              "after": 80.0,
+              "difference": 1.0
+            },
+            {
+              "id": 1630574,
+              "name": "Ariel Hukporti",
+              "before": 83.0,
+              "after": 84.0,
+              "difference": 1.0
+            },
+            {
+              "id": 1630581,
+              "name": "Josh Giddey",
+              "before": 80.0,
+              "after": 79.0,
+              "difference": -1.0
+            },
+            {
+              "id": 1630590,
+              "name": "Scotty Pippen Jr.",
+              "before": 73.0,
+              "after": 74.0,
+              "difference": 1.0
+            },
+            {
+              "id": 1630611,
+              "name": "Gui Santos",
+              "before": 78.0,
+              "after": 79.0,
+              "difference": 1.0
+            },
+            {
+              "id": 1630623,
+              "name": "Tyson Etienne",
+              "before": 74.0,
+              "after": 72.0,
+              "difference": -2.0
+            },
+            {
+              "id": 1630692,
+              "name": "Jordan Goodwin",
+              "before": 77.0,
+              "after": 75.0,
+              "difference": -2.0
+            },
+            {
+              "id": 1631093,
+              "name": "Jaden Ivey",
+              "before": 76.0,
+              "after": 75.0,
+              "difference": -1.0
+            },
+            {
+              "id": 1631095,
+              "name": "Jabari Smith Jr.",
+              "before": 82.0,
+              "after": 83.0,
+              "difference": 1.0
+            },
+            {
+              "id": 1631104,
+              "name": "Blake Wesley",
+              "before": 75.0,
+              "after": 76.0,
+              "difference": 1.0
+            },
+            {
+              "id": 1631109,
+              "name": "Mark Williams",
+              "before": 84.0,
+              "after": 85.0,
+              "difference": 1.0
+            },
+            {
+              "id": 1631116,
+              "name": "Patrick Baldwin Jr.",
+              "before": 81.0,
+              "after": 84.0,
+              "difference": 3.0
+            },
+            {
+              "id": 1631117,
+              "name": "Walker Kessler",
+              "before": 84.0,
+              "after": 86.0,
+              "difference": 2.0
+            },
+            {
+              "id": 1631132,
+              "name": "Christian Koloko",
+              "before": 84.0,
+              "after": 83.0,
+              "difference": -1.0
+            },
+            {
+              "id": 1631166,
+              "name": "Drew Timme",
+              "before": 82.0,
+              "after": 81.0,
+              "difference": -1.0
+            },
+            {
+              "id": 1631199,
+              "name": "Ron Harper Jr.",
+              "before": 76.0,
+              "after": 77.0,
+              "difference": 1.0
+            },
+            {
+              "id": 1631204,
+              "name": "Marcus Sasser",
+              "before": 74.0,
+              "after": 73.0,
+              "difference": -1.0
+            },
+            {
+              "id": 1631207,
+              "name": "Dalen Terry",
+              "before": 79.0,
+              "after": 78.0,
+              "difference": -1.0
+            },
+            {
+              "id": 1631210,
+              "name": "Jacob Toppin",
+              "before": 80.0,
+              "after": 81.0,
+              "difference": 1.0
+            },
+            {
+              "id": 1631212,
+              "name": "Peyton Watson",
+              "before": 79.0,
+              "after": 80.0,
+              "difference": 1.0
+            },
+            {
+              "id": 1631217,
+              "name": "Moussa Diabaté",
+              "before": 81.0,
+              "after": 82.0,
+              "difference": 1.0
+            },
+            {
+              "id": 1631223,
+              "name": "David Roddy",
+              "before": 76.0,
+              "after": 77.0,
+              "difference": 1.0
+            },
+            {
+              "id": 1631230,
+              "name": "Dominick Barlow",
+              "before": 80.0,
+              "after": 81.0,
+              "difference": 1.0
+            },
+            {
+              "id": 1631243,
+              "name": "Mouhamed Gueye",
+              "before": 82.0,
+              "after": 83.0,
+              "difference": 1.0
+            },
+            {
+              "id": 1631245,
+              "name": "Quenton Jackson",
+              "before": 77.0,
+              "after": 76.0,
+              "difference": -1.0
+            },
+            {
+              "id": 1631247,
+              "name": "Luke Travers",
+              "before": 79.0,
+              "after": 78.0,
+              "difference": -1.0
+            },
+            {
+              "id": 1631250,
+              "name": "Pete Nance",
+              "before": 82.0,
+              "after": 81.0,
+              "difference": -1.0
+            },
+            {
+              "id": 1631288,
+              "name": "Jamal Cain",
+              "before": 78.0,
+              "after": 79.0,
+              "difference": 1.0
+            },
+            {
+              "id": 1631342,
+              "name": "Daeqwon Plowden",
+              "before": 78.0,
+              "after": 76.0,
+              "difference": -2.0
+            },
+            {
+              "id": 1641705,
+              "name": "Victor Wembanyama",
+              "before": 87.0,
+              "after": 88.0,
+              "difference": 1.0
+            },
+            {
+              "id": 1641709,
+              "name": "Ausar Thompson",
+              "before": 78.0,
+              "after": 79.0,
+              "difference": 1.0
+            },
+            {
+              "id": 1641711,
+              "name": "Gradey Dick",
+              "before": 78.0,
+              "after": 79.0,
+              "difference": 1.0
+            },
+            {
+              "id": 1641712,
+              "name": "Rayan Rupert",
+              "before": 78.0,
+              "after": 79.0,
+              "difference": 1.0
+            },
+            {
+              "id": 1641715,
+              "name": "Cam Whitmore",
+              "before": 79.0,
+              "after": 78.0,
+              "difference": -1.0
+            },
+            {
+              "id": 1641724,
+              "name": "Jett Howard",
+              "before": 78.0,
+              "after": 80.0,
+              "difference": 2.0
+            },
+            {
+              "id": 1641725,
+              "name": "Trey Alexander",
+              "before": 76.0,
+              "after": 77.0,
+              "difference": 1.0
+            },
+            {
+              "id": 1641729,
+              "name": "Brice Sensabaugh",
+              "before": 77.0,
+              "after": 78.0,
+              "difference": 1.0
+            },
+            {
+              "id": 1641730,
+              "name": "Noah Clowney",
+              "before": 81.0,
+              "after": 82.0,
+              "difference": 1.0
+            },
+            {
+              "id": 1641731,
+              "name": "Bilal Coulibaly",
+              "before": 80.0,
+              "after": 79.0,
+              "difference": -1.0
+            },
+            {
+              "id": 1641740,
+              "name": "Jaylen Clark",
+              "before": 76.0,
+              "after": 77.0,
+              "difference": 1.0
+            },
+            {
+              "id": 1641744,
+              "name": "Zach Edey",
+              "before": 88.0,
+              "after": 87.0,
+              "difference": -1.0
+            },
+            {
+              "id": 1641763,
+              "name": "Julian Phillips",
+              "before": 80.0,
+              "after": 78.0,
+              "difference": -2.0
+            },
+            {
+              "id": 1641772,
+              "name": "Nae'Qwan Tomlin",
+              "before": 82.0,
+              "after": 80.0,
+              "difference": -2.0
+            },
+            {
+              "id": 1641787,
+              "name": "Tosan Evbuomwan",
+              "before": 79.0,
+              "after": 80.0,
+              "difference": 1.0
+            },
+            {
+              "id": 1641790,
+              "name": "PJ Hall",
+              "before": 82.0,
+              "after": 80.0,
+              "difference": -2.0
+            },
+            {
+              "id": 1641801,
+              "name": "Emanuel Miller",
+              "before": 79.0,
+              "after": 77.0,
+              "difference": -2.0
+            },
+            {
+              "id": 1641809,
+              "name": "Drew Peterson",
+              "before": 81.0,
+              "after": 80.0,
+              "difference": -1.0
+            },
+            {
+              "id": 1641815,
+              "name": "Isaiah Stevens",
+              "before": 72.0,
+              "after": 71.0,
+              "difference": -1.0
+            },
+            {
+              "id": 1641824,
+              "name": "Matas Buzelis",
+              "before": 82.0,
+              "after": 80.0,
+              "difference": -2.0
+            },
+            {
+              "id": 1641998,
+              "name": "Trey Jemison III",
+              "before": 83.0,
+              "after": 82.0,
+              "difference": -1.0
+            },
+            {
+              "id": 1642262,
+              "name": "Cody Williams",
+              "before": 79.0,
+              "after": 80.0,
+              "difference": 1.0
+            },
+            {
+              "id": 1642265,
+              "name": "Rob Dillingham",
+              "before": 75.0,
+              "after": 74.0,
+              "difference": -1.0
+            },
+            {
+              "id": 1642266,
+              "name": "Ja'Kobe Walter",
+              "before": 77.0,
+              "after": 76.0,
+              "difference": -1.0
+            },
+            {
+              "id": 1642268,
+              "name": "Isaiah Collier",
+              "before": 75.0,
+              "after": 76.0,
+              "difference": 1.0
+            },
+            {
+              "id": 1642275,
+              "name": "Tidjane Salaün",
+              "before": 80.0,
+              "after": 82.0,
+              "difference": 2.0
+            },
+            {
+              "id": 1642277,
+              "name": "Johnny Furphy",
+              "before": 81.0,
+              "after": 80.0,
+              "difference": -1.0
+            },
+            {
+              "id": 1642278,
+              "name": "Tyler Kolek",
+              "before": 75.0,
+              "after": 74.0,
+              "difference": -1.0
+            },
+            {
+              "id": 1642285,
+              "name": "Cam Spencer",
+              "before": 76.0,
+              "after": 75.0,
+              "difference": -1.0
+            },
+            {
+              "id": 1642345,
+              "name": "Oso Ighodaro",
+              "before": 84.0,
+              "after": 83.0,
+              "difference": -1.0
+            },
+            {
+              "id": 1642346,
+              "name": "Ryan Dunn",
+              "before": 80.0,
+              "after": 79.0,
+              "difference": -1.0
+            },
+            {
+              "id": 1642349,
+              "name": "Ajay Mitchell",
+              "before": 77.0,
+              "after": 76.0,
+              "difference": -1.0
+            },
+            {
+              "id": 1642352,
+              "name": "Keshad Johnson",
+              "before": 79.0,
+              "after": 78.0,
+              "difference": -1.0
+            },
+            {
+              "id": 1642353,
+              "name": "Cam Christie",
+              "before": 78.0,
+              "after": 77.0,
+              "difference": -1.0
+            },
+            {
+              "id": 1642354,
+              "name": "KJ Simpson",
+              "before": 72.0,
+              "after": 74.0,
+              "difference": 2.0
+            },
+            {
+              "id": 1642355,
+              "name": "Bronny James",
+              "before": 75.0,
+              "after": 74.0,
+              "difference": -1.0
+            },
+            {
+              "id": 1642359,
+              "name": "Pacôme Dadiet",
+              "before": 80.0,
+              "after": 81.0,
+              "difference": 1.0
+            },
+            {
+              "id": 1642377,
+              "name": "Jaylen Wells",
+              "before": 80.0,
+              "after": 79.0,
+              "difference": -1.0
+            },
+            {
+              "id": 1642402,
+              "name": "Enrique Freeman",
+              "before": 79.0,
+              "after": 81.0,
+              "difference": 2.0
+            },
+            {
+              "id": 1642403,
+              "name": "Isaac Jones",
+              "before": 81.0,
+              "after": 80.0,
+              "difference": -1.0
+            },
+            {
+              "id": 1642443,
+              "name": "Jahmir Young",
+              "before": 73.0,
+              "after": 72.0,
+              "difference": -1.0
+            },
+            {
+              "id": 1642450,
+              "name": "Daniss Jenkins",
+              "before": 75.0,
+              "after": 76.0,
+              "difference": 1.0
+            },
+            {
+              "id": 1642484,
+              "name": "RayJ Dennis",
+              "before": 74.0,
+              "after": 73.0,
+              "difference": -1.0
+            },
+            {
+              "id": 1642530,
+              "name": "Yuki Kawamura",
+              "before": 68.0,
+              "after": 67.0,
+              "difference": -1.0
+            }
+          ],
+          "note": "Metadata changes do not identify physical growth, training or measurement methodology."
+        },
+        "rawWeightLb": {
+          "matchedObservedPlayers": 462,
+          "changedPlayers": 32,
+          "changedList": [
+            {
+              "id": 201950,
+              "name": "Jrue Holiday",
+              "before": 205.0,
+              "after": 220.0,
+              "difference": 15.0
+            },
+            {
+              "id": 202331,
+              "name": "Paul George",
+              "before": 220.0,
+              "after": 230.0,
+              "difference": 10.0
+            },
+            {
+              "id": 202696,
+              "name": "Nikola Vučević",
+              "before": 260.0,
+              "after": 265.0,
+              "difference": 5.0
+            },
+            {
+              "id": 203924,
+              "name": "Jerami Grant",
+              "before": 210.0,
+              "after": 213.0,
+              "difference": 3.0
+            },
+            {
+              "id": 203954,
+              "name": "Joel Embiid",
+              "before": 280.0,
+              "after": 270.0,
+              "difference": -10.0
+            },
+            {
+              "id": 1626162,
+              "name": "Kelly Oubre Jr.",
+              "before": 203.0,
+              "after": 210.0,
+              "difference": 7.0
+            },
+            {
+              "id": 1627751,
+              "name": "Jakob Poeltl",
+              "before": 260.0,
+              "after": 253.0,
+              "difference": -7.0
+            },
+            {
+              "id": 1628380,
+              "name": "Zach Collins",
+              "before": 250.0,
+              "after": 240.0,
+              "difference": -10.0
+            },
+            {
+              "id": 1628975,
+              "name": "Jevon Carter",
+              "before": 200.0,
+              "after": 190.0,
+              "difference": -10.0
+            },
+            {
+              "id": 1628989,
+              "name": "Kevin Huerter",
+              "before": 198.0,
+              "after": 190.0,
+              "difference": -8.0
+            },
+            {
+              "id": 1629632,
+              "name": "Coby White",
+              "before": 195.0,
+              "after": 210.0,
+              "difference": 15.0
+            },
+            {
+              "id": 1629656,
+              "name": "Quentin Grimes",
+              "before": 210.0,
+              "after": 207.0,
+              "difference": -3.0
+            },
+            {
+              "id": 1629680,
+              "name": "Matisse Thybulle",
+              "before": 201.0,
+              "after": 202.0,
+              "difference": 1.0
+            },
+            {
+              "id": 1630166,
+              "name": "Deni Avdija",
+              "before": 240.0,
+              "after": 228.0,
+              "difference": -12.0
+            },
+            {
+              "id": 1630172,
+              "name": "Patrick Williams",
+              "before": 215.0,
+              "after": 235.0,
+              "difference": 20.0
+            },
+            {
+              "id": 1630188,
+              "name": "Jalen Smith",
+              "before": 215.0,
+              "after": 244.0,
+              "difference": 29.0
+            },
+            {
+              "id": 1630200,
+              "name": "Tre Jones",
+              "before": 185.0,
+              "after": 190.0,
+              "difference": 5.0
+            },
+            {
+              "id": 1630245,
+              "name": "Ayo Dosunmu",
+              "before": 200.0,
+              "after": 201.0,
+              "difference": 1.0
+            },
+            {
+              "id": 1630570,
+              "name": "Trendon Watford",
+              "before": 237.0,
+              "after": 245.0,
+              "difference": 8.0
+            },
+            {
+              "id": 1630581,
+              "name": "Josh Giddey",
+              "before": 216.0,
+              "after": 214.0,
+              "difference": -2.0
+            },
+            {
+              "id": 1630703,
+              "name": "Scoot Henderson",
+              "before": 206.0,
+              "after": 207.0,
+              "difference": 1.0
+            },
+            {
+              "id": 1631101,
+              "name": "Shaedon Sharpe",
+              "before": 208.0,
+              "after": 210.0,
+              "difference": 2.0
+            },
+            {
+              "id": 1631104,
+              "name": "Blake Wesley",
+              "before": 185.0,
+              "after": 190.0,
+              "difference": 5.0
+            },
+            {
+              "id": 1631200,
+              "name": "Kris Murray",
+              "before": 216.0,
+              "after": 218.0,
+              "difference": 2.0
+            },
+            {
+              "id": 1631207,
+              "name": "Dalen Terry",
+              "before": 195.0,
+              "after": 210.0,
+              "difference": 15.0
+            },
+            {
+              "id": 1631230,
+              "name": "Dominick Barlow",
+              "before": 215.0,
+              "after": 224.0,
+              "difference": 9.0
+            },
+            {
+              "id": 1631321,
+              "name": "Sidy Cissoko",
+              "before": 200.0,
+              "after": 220.0,
+              "difference": 20.0
+            },
+            {
+              "id": 1641712,
+              "name": "Rayan Rupert",
+              "before": 195.0,
+              "after": 205.0,
+              "difference": 10.0
+            },
+            {
+              "id": 1641739,
+              "name": "Toumani Camara",
+              "before": 229.0,
+              "after": 230.0,
+              "difference": 1.0
+            },
+            {
+              "id": 1641763,
+              "name": "Julian Phillips",
+              "before": 198.0,
+              "after": 201.0,
+              "difference": 3.0
+            },
+            {
+              "id": 1641824,
+              "name": "Matas Buzelis",
+              "before": 209.0,
+              "after": 196.0,
+              "difference": -13.0
+            },
+            {
+              "id": 1642348,
+              "name": "Justin Edwards",
+              "before": 203.0,
+              "after": 217.0,
+              "difference": 14.0
+            }
+          ],
+          "note": "Metadata changes do not identify physical growth, training or measurement methodology."
+        }
+      }
+    }
+  ],
+  "noOutcomeAnalysis": true,
+  "noImputation": true
+}

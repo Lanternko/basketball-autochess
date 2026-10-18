@@ -1,0 +1,71 @@
+{
+  "version": "pure-oreb-allocation-1",
+  "registeredUTC": "2026-10-14T18:59:09.129969+00:00",
+  "label": "已看過答案；四季全季當季重現，不是換隊／跨季盲測",
+  "seasons": [
+    "2022-23",
+    "2023-24",
+    "2024-25",
+    "2025-26"
+  ],
+  "seeds": [
+    20261012,
+    20261013,
+    20261014,
+    20261015,
+    20261016,
+    20261017,
+    20261018,
+    20261019,
+    20261020,
+    20261021,
+    20261022,
+    20261023,
+    20261024,
+    20261025,
+    20261026,
+    20261027,
+    20261028,
+    20261029,
+    20261030,
+    20261031
+  ],
+  "base": "pure-oreb-acquisition-1 frozen cards, individualOrebCard ON, five stint signals OFF/no-map, observed appearances and game soft minute targets",
+  "mechanism": {
+    "switch": "individualOrebAllocation",
+    "formula": "FG player offensive rebound recipient weight = individual posterior OREB share / sum five shares. No .30 uniform floor, no additional body/slot/zone multiplier. Prior shrinkage already in frozen share.",
+    "scope": "FG player OREB recipient only; FT, DREB, team-board and putback formulas unchanged",
+    "acquisition": "re-export previous function unchanged",
+    "constants": "reuse prior season-specific calibration exactly; NO recalibration, even if selected recipient changes downstream scores/clock/lineups",
+    "trace": "non-random observer of old/new conditional expected putback probability; OFF-parity first seed each season supplies fixed-path diagnostic"
+  },
+  "primary": "Observed-minute-weighted player OREB36 MAE: seed-mean OREB / seed-mean simulated MIN, aggregated across traded teams per player. Cohort actual MIN>0 and both versions mean simulated MIN>0, exclusions reported.",
+  "secondary": [
+    "player OREB36 weighted RMSE",
+    "team OREB MAE/RMSE/correlation",
+    "DREB RMSE",
+    "net RMSE/ranking/SD ratio",
+    "wins MAE",
+    "FG/3P/TOV/efficiency/possessions/minutes",
+    "fixed-path expected putback probability"
+  ],
+  "uncertainty": {
+    "bootstrap": 20000,
+    "seed": 20261014,
+    "unit": "franchise plus seed paired across seasons. Player cluster assigned to season team with most observed minutes (ties ascending team ID); traded players aggregated before scoring. Equal season weights; no independent player bootstrap."
+  },
+  "decision": "Player allocation improves only if four-season paired joint95 upper MAE difference <0. Retain candidate only if no significant deterioration in team OREB RMSE, DREB RMSE, net RMSE, wins MAE; each season absolute efficiency and possession proxy bias <=.5. Failures kept, no after-result retuning or extra calibration. No frozen baseline replacement.",
+  "expectation": "Likely reduces low-OREB guard overallocation caused by 6% minimum recipient share; may increase big-man putback opportunities and drift efficiency. No numerical improvement target promised.",
+  "codeHashes": {
+    "reports/defense-tenth/step4-rebounds-allocation/adapter.mjs": "681fb1d234f576a61984af59031fd97e7351a07f446d092a7b06596eed1a58b3",
+    "reports/defense-tenth/step4-rebounds-allocation/analyze.mjs": "b0e324c564f799f6933746b72cc0cd01e3d2cf1b0a476abf70543cd30188a3b6",
+    "reports/defense-tenth/step4-rebounds-allocation/bootstrap.py": "7d4b4d2fee5f8f5e47d8d573385638d7770cd41b9e8d4422dbfe77d2ea208079",
+    "reports/defense-tenth/step4-rebounds-allocation/model.mjs": "75556915f6792ada3992b4a069ccee89f9c3318882566f3601da01fa45c6e428",
+    "reports/defense-tenth/step4-rebounds-allocation/parity.mjs": "4ceb36bdb47f9ba71a3f23b319ff9817317896e92c32b5a02191a9119a33d385",
+    "reports/defense-tenth/step4-rebounds-allocation/player-diagnostic.mjs": "162103a9bf7db27e57cb991b34f416be193199b0cab349799bdbad716e1a0beb",
+    "reports/defense-tenth/step4-rebounds-allocation/run.mjs": "62b7faef7703245828a04d5aa5bd269b5ce9c338babe770926476b57002c4f66",
+    "reports/defense-tenth/step4-rebounds-allocation/setup.py": "5b729e245b18d5f4c97b730d7fd957b75699acd6abce116fc118f45a4d7ea9ee",
+    "reports/defense-tenth/step4-rebounds-allocation/worker.mjs": "36af0d7a445cc3a852b120acb413b7e5461b641b5433a3067b2eb51764210e9f"
+  },
+  "protectedManifestSHA": "226de292214134ac6718eb76bab2e6fc3a58e12caeb60307a5715deaf5c5391b"
+}

@@ -1,0 +1,45 @@
+{
+  "version": "putback-risk-diagnostic-1",
+  "registeredUTC": "2026-10-15T01:37:18.096916+00:00",
+  "seasons": [
+    "2022-23",
+    "2023-24",
+    "2024-25",
+    "2025-26"
+  ],
+  "seeds": [
+    20261012,
+    20261013,
+    20261014
+  ],
+  "bootstrapSeed": 20261018,
+  "bootstrapDraws": 20000,
+  "base": "pure-oreb-turnover-time-1; retain individual OREB allocation; source verifier oreb-zone-reader-1",
+  "scope": "seen-data diagnosis plus one single-mechanism ablation, not baseline adoption or a calibrated production candidate",
+  "sampling": "first eligible player FG OREB per possession, same previous full-possession sample and exclusions; ordinary FT included; raw zone repaired with frozen reader",
+  "observableGroups": {
+    "early": "first FG/ordinary FT/ownership loss <=3 seconds after rebound",
+    "later": "first decisive event >3 seconds; landmark survivors not assigned putback intent",
+    "quickProxy": "first own FG, same rebounder, repaired short zone, <=3 sec; ex-post outcome, never denominator for loss hazard",
+    "foul": "any defensive nonshooting foul before first decisive event, report <=3sec separately; first decisive event does not close at ordinary nonshooting foul",
+    "window": "3-second risks exclude every anchor with <3 seconds remaining in period, regardless of observed outcome; keep full sample for points and quickProxy"
+  },
+  "latent": "simulation first durationObserver after anchor marks putback vs restart; real intent unobserved, so no real mode-specific failure rates claimed",
+  "ablation": {
+    "name": "skipGenericPutbackTouchRisk",
+    "on": "keep and consume same touch turnover RNG draw but ignore generic pTovTouch failure only when putback!==null; pass, foul, shot-clock, cards, timing and rebound logic unchanged",
+    "off": "exact baseline scores/teams and fullOreb projection parity",
+    "interpretation": "zeroing a nonidentified generic risk gives mechanism sensitivity only; not evidence of zero real putback losses; cannot promote from these 3-seed results"
+  },
+  "metrics": [
+    "full points and ordinary FT",
+    "quickProxy",
+    "early loss and late loss before first attempt",
+    "early nonshooting defensive foul before attempt",
+    "conditional shot make/zone distribution, interpreted as selection",
+    "latent sim mode counts and losses",
+    "3seed descriptive net/wins error; no adoption claim"
+  ],
+  "interval": "20000 franchise+seed paired across seasons, equal-season ratios; 95% descriptive only",
+  "stop": "report facts/inference/failures and stop; no further mechanism or calibration"
+}

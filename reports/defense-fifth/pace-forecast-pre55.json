@@ -1,0 +1,26 @@
+{
+  "cutoff": 55,
+  "trainingGames": 813,
+  "trainingPace": 102.75109471094713,
+  "futureScheduleMeanDay": 147.45679012345678,
+  "linearCoefficients": [
+    104.34991615896482,
+    -0.028004176086659584
+  ],
+  "chronologicalCV": {
+    "constant": [
+      33.372025155548236,
+      28.792994577832197,
+      32.0333572316963
+    ],
+    "linear": [
+      33.56151971212611,
+      26.3541181876896,
+      30.093169661073922
+    ]
+  },
+  "useTrend": true,
+  "predictedPace": 100.22051024317393,
+  "ratio": 0.9753717030957959,
+  "method": "Shared league pace target; only pre-cutoff pair box proxies. Past-only chronological3fold CV constant vs linear calendar trend, fixed before heldout scoring. Future schedule dates only. No future outcomes. This predicts rather than forces actual later pace."
+}

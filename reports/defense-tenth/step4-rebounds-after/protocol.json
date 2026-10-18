@@ -1,0 +1,37 @@
+{
+  "version": "oreb-after-diagnostic-1",
+  "registeredUTC": "2026-10-14T19:59:30.397939+00:00",
+  "seasons": [
+    "2022-23",
+    "2023-24",
+    "2024-25",
+    "2025-26"
+  ],
+  "seeds": [
+    20261012,
+    20261013,
+    20261014
+  ],
+  "scope": "measurement only; all seasons already seen; no mechanism/card/calibration changes",
+  "primary": "player offensive rebound linked to missed field goal; FT/team rebounds excluded and counted separately",
+  "classification": {
+    "firstOutcome": "first subsequent same-team FG, turnover, regular FT or nontechnical defensive foul; opposing offensive event/defensive rebound ends as lost; period boundary ends as periodEnd",
+    "fastThresholdSeconds": 3,
+    "immediateProxy": "next outcome FG by same rebounder, zone short, elapsed game-clock seconds <=3",
+    "otherShot": "all other first FG; no assertion of adequate space",
+    "earlyLoss": "first turnover/loss <=3sec; pressure not observable",
+    "officialPutback": "real next FG descriptor/subType contains putback or tip; separate label not equivalent to timing proxy",
+    "latency": "period game-clock difference, excludes stopped wall time; timeout/substitution/violation interruption flagged",
+    "points": "points on first FG only; FT yield and full second-chance PPP not estimated",
+    "invalid": "missing/mismatched/nonmiss FG reference; negative time; no next event marked unknown; technical fouls ignored"
+  },
+  "simulation": "frozen allocation candidate; three diagnostic seeds; nonrandom emit observer, full stats parity against existing allocation runs",
+  "aggregation": "season pooled counts, four-season equal weight rates; descriptive only, no accuracy/adoption claim",
+  "uncertainty": "game-cluster bootstrap real, seed+game hierarchical simulated, 20000 draws of per-season means with normal standard error approximation for descriptive gap; not adoption criterion",
+  "limits": [
+    "no rebound landing coordinates",
+    "no double-team/pressure truth",
+    "short zone includes entire paint in both definitions; explicit tip/putback label separate",
+    "first-outcome metrics not full possession PPP"
+  ]
+}

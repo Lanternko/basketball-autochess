@@ -1,0 +1,572 @@
+{
+  "finishedUTC": "2026-10-14T09:46:39.640292+00:00",
+  "protocolSHA": "bde81cd9fd22242d9589f814c4357b86882e262c6933458a7b03c638ea9611a6",
+  "protectedFiles": 4168,
+  "newEvaluationSeasons": 80,
+  "newEvaluationGames": 98400,
+  "parityGames": 4920,
+  "bootstrapReplicates": 20000,
+  "issues": [],
+  "reboundLedger": [
+    {
+      "season": "2022-23",
+      "seed": 20261012,
+      "effectiveMisses": 121450,
+      "recovered": 121450,
+      "difference": 0
+    },
+    {
+      "season": "2022-23",
+      "seed": 20261013,
+      "effectiveMisses": 121295,
+      "recovered": 121295,
+      "difference": 0
+    },
+    {
+      "season": "2022-23",
+      "seed": 20261014,
+      "effectiveMisses": 120944,
+      "recovered": 120944,
+      "difference": 0
+    },
+    {
+      "season": "2022-23",
+      "seed": 20261015,
+      "effectiveMisses": 121059,
+      "recovered": 121059,
+      "difference": 0
+    },
+    {
+      "season": "2022-23",
+      "seed": 20261016,
+      "effectiveMisses": 121020,
+      "recovered": 121020,
+      "difference": 0
+    },
+    {
+      "season": "2022-23",
+      "seed": 20261017,
+      "effectiveMisses": 121698,
+      "recovered": 121698,
+      "difference": 0
+    },
+    {
+      "season": "2022-23",
+      "seed": 20261018,
+      "effectiveMisses": 121359,
+      "recovered": 121359,
+      "difference": 0
+    },
+    {
+      "season": "2022-23",
+      "seed": 20261019,
+      "effectiveMisses": 120443,
+      "recovered": 120443,
+      "difference": 0
+    },
+    {
+      "season": "2022-23",
+      "seed": 20261020,
+      "effectiveMisses": 120833,
+      "recovered": 120833,
+      "difference": 0
+    },
+    {
+      "season": "2022-23",
+      "seed": 20261021,
+      "effectiveMisses": 120719,
+      "recovered": 120719,
+      "difference": 0
+    },
+    {
+      "season": "2022-23",
+      "seed": 20261022,
+      "effectiveMisses": 121167,
+      "recovered": 121167,
+      "difference": 0
+    },
+    {
+      "season": "2022-23",
+      "seed": 20261023,
+      "effectiveMisses": 121224,
+      "recovered": 121224,
+      "difference": 0
+    },
+    {
+      "season": "2022-23",
+      "seed": 20261024,
+      "effectiveMisses": 121105,
+      "recovered": 121105,
+      "difference": 0
+    },
+    {
+      "season": "2022-23",
+      "seed": 20261025,
+      "effectiveMisses": 120742,
+      "recovered": 120742,
+      "difference": 0
+    },
+    {
+      "season": "2022-23",
+      "seed": 20261026,
+      "effectiveMisses": 120817,
+      "recovered": 120817,
+      "difference": 0
+    },
+    {
+      "season": "2022-23",
+      "seed": 20261027,
+      "effectiveMisses": 121750,
+      "recovered": 121750,
+      "difference": 0
+    },
+    {
+      "season": "2022-23",
+      "seed": 20261028,
+      "effectiveMisses": 120740,
+      "recovered": 120740,
+      "difference": 0
+    },
+    {
+      "season": "2022-23",
+      "seed": 20261029,
+      "effectiveMisses": 121296,
+      "recovered": 121296,
+      "difference": 0
+    },
+    {
+      "season": "2022-23",
+      "seed": 20261030,
+      "effectiveMisses": 120984,
+      "recovered": 120984,
+      "difference": 0
+    },
+    {
+      "season": "2022-23",
+      "seed": 20261031,
+      "effectiveMisses": 120668,
+      "recovered": 120668,
+      "difference": 0
+    },
+    {
+      "season": "2023-24",
+      "seed": 20261012,
+      "effectiveMisses": 121315,
+      "recovered": 121315,
+      "difference": 0
+    },
+    {
+      "season": "2023-24",
+      "seed": 20261013,
+      "effectiveMisses": 121494,
+      "recovered": 121494,
+      "difference": 0
+    },
+    {
+      "season": "2023-24",
+      "seed": 20261014,
+      "effectiveMisses": 121077,
+      "recovered": 121077,
+      "difference": 0
+    },
+    {
+      "season": "2023-24",
+      "seed": 20261015,
+      "effectiveMisses": 120747,
+      "recovered": 120747,
+      "difference": 0
+    },
+    {
+      "season": "2023-24",
+      "seed": 20261016,
+      "effectiveMisses": 121409,
+      "recovered": 121409,
+      "difference": 0
+    },
+    {
+      "season": "2023-24",
+      "seed": 20261017,
+      "effectiveMisses": 121354,
+      "recovered": 121354,
+      "difference": 0
+    },
+    {
+      "season": "2023-24",
+      "seed": 20261018,
+      "effectiveMisses": 121999,
+      "recovered": 121999,
+      "difference": 0
+    },
+    {
+      "season": "2023-24",
+      "seed": 20261019,
+      "effectiveMisses": 121485,
+      "recovered": 121485,
+      "difference": 0
+    },
+    {
+      "season": "2023-24",
+      "seed": 20261020,
+      "effectiveMisses": 121941,
+      "recovered": 121941,
+      "difference": 0
+    },
+    {
+      "season": "2023-24",
+      "seed": 20261021,
+      "effectiveMisses": 121000,
+      "recovered": 121000,
+      "difference": 0
+    },
+    {
+      "season": "2023-24",
+      "seed": 20261022,
+      "effectiveMisses": 121506,
+      "recovered": 121506,
+      "difference": 0
+    },
+    {
+      "season": "2023-24",
+      "seed": 20261023,
+      "effectiveMisses": 122363,
+      "recovered": 122363,
+      "difference": 0
+    },
+    {
+      "season": "2023-24",
+      "seed": 20261024,
+      "effectiveMisses": 121906,
+      "recovered": 121906,
+      "difference": 0
+    },
+    {
+      "season": "2023-24",
+      "seed": 20261025,
+      "effectiveMisses": 121960,
+      "recovered": 121960,
+      "difference": 0
+    },
+    {
+      "season": "2023-24",
+      "seed": 20261026,
+      "effectiveMisses": 121956,
+      "recovered": 121956,
+      "difference": 0
+    },
+    {
+      "season": "2023-24",
+      "seed": 20261027,
+      "effectiveMisses": 121829,
+      "recovered": 121829,
+      "difference": 0
+    },
+    {
+      "season": "2023-24",
+      "seed": 20261028,
+      "effectiveMisses": 120943,
+      "recovered": 120943,
+      "difference": 0
+    },
+    {
+      "season": "2023-24",
+      "seed": 20261029,
+      "effectiveMisses": 121284,
+      "recovered": 121284,
+      "difference": 0
+    },
+    {
+      "season": "2023-24",
+      "seed": 20261030,
+      "effectiveMisses": 121296,
+      "recovered": 121296,
+      "difference": 0
+    },
+    {
+      "season": "2023-24",
+      "seed": 20261031,
+      "effectiveMisses": 121406,
+      "recovered": 121406,
+      "difference": 0
+    },
+    {
+      "season": "2024-25",
+      "seed": 20261012,
+      "effectiveMisses": 122980,
+      "recovered": 122980,
+      "difference": 0
+    },
+    {
+      "season": "2024-25",
+      "seed": 20261013,
+      "effectiveMisses": 123572,
+      "recovered": 123572,
+      "difference": 0
+    },
+    {
+      "season": "2024-25",
+      "seed": 20261014,
+      "effectiveMisses": 122884,
+      "recovered": 122884,
+      "difference": 0
+    },
+    {
+      "season": "2024-25",
+      "seed": 20261015,
+      "effectiveMisses": 122867,
+      "recovered": 122867,
+      "difference": 0
+    },
+    {
+      "season": "2024-25",
+      "seed": 20261016,
+      "effectiveMisses": 123297,
+      "recovered": 123297,
+      "difference": 0
+    },
+    {
+      "season": "2024-25",
+      "seed": 20261017,
+      "effectiveMisses": 123065,
+      "recovered": 123065,
+      "difference": 0
+    },
+    {
+      "season": "2024-25",
+      "seed": 20261018,
+      "effectiveMisses": 122845,
+      "recovered": 122845,
+      "difference": 0
+    },
+    {
+      "season": "2024-25",
+      "seed": 20261019,
+      "effectiveMisses": 122707,
+      "recovered": 122707,
+      "difference": 0
+    },
+    {
+      "season": "2024-25",
+      "seed": 20261020,
+      "effectiveMisses": 123374,
+      "recovered": 123374,
+      "difference": 0
+    },
+    {
+      "season": "2024-25",
+      "seed": 20261021,
+      "effectiveMisses": 123023,
+      "recovered": 123023,
+      "difference": 0
+    },
+    {
+      "season": "2024-25",
+      "seed": 20261022,
+      "effectiveMisses": 122798,
+      "recovered": 122798,
+      "difference": 0
+    },
+    {
+      "season": "2024-25",
+      "seed": 20261023,
+      "effectiveMisses": 123418,
+      "recovered": 123418,
+      "difference": 0
+    },
+    {
+      "season": "2024-25",
+      "seed": 20261024,
+      "effectiveMisses": 122780,
+      "recovered": 122780,
+      "difference": 0
+    },
+    {
+      "season": "2024-25",
+      "seed": 20261025,
+      "effectiveMisses": 123143,
+      "recovered": 123143,
+      "difference": 0
+    },
+    {
+      "season": "2024-25",
+      "seed": 20261026,
+      "effectiveMisses": 122793,
+      "recovered": 122793,
+      "difference": 0
+    },
+    {
+      "season": "2024-25",
+      "seed": 20261027,
+      "effectiveMisses": 123327,
+      "recovered": 123327,
+      "difference": 0
+    },
+    {
+      "season": "2024-25",
+      "seed": 20261028,
+      "effectiveMisses": 122996,
+      "recovered": 122996,
+      "difference": 0
+    },
+    {
+      "season": "2024-25",
+      "seed": 20261029,
+      "effectiveMisses": 123244,
+      "recovered": 123244,
+      "difference": 0
+    },
+    {
+      "season": "2024-25",
+      "seed": 20261030,
+      "effectiveMisses": 123085,
+      "recovered": 123085,
+      "difference": 0
+    },
+    {
+      "season": "2024-25",
+      "seed": 20261031,
+      "effectiveMisses": 123436,
+      "recovered": 123436,
+      "difference": 0
+    },
+    {
+      "season": "2025-26",
+      "seed": 20261012,
+      "effectiveMisses": 121128,
+      "recovered": 121128,
+      "difference": 0
+    },
+    {
+      "season": "2025-26",
+      "seed": 20261013,
+      "effectiveMisses": 121322,
+      "recovered": 121322,
+      "difference": 0
+    },
+    {
+      "season": "2025-26",
+      "seed": 20261014,
+      "effectiveMisses": 120877,
+      "recovered": 120877,
+      "difference": 0
+    },
+    {
+      "season": "2025-26",
+      "seed": 20261015,
+      "effectiveMisses": 120914,
+      "recovered": 120914,
+      "difference": 0
+    },
+    {
+      "season": "2025-26",
+      "seed": 20261016,
+      "effectiveMisses": 120952,
+      "recovered": 120952,
+      "difference": 0
+    },
+    {
+      "season": "2025-26",
+      "seed": 20261017,
+      "effectiveMisses": 120886,
+      "recovered": 120886,
+      "difference": 0
+    },
+    {
+      "season": "2025-26",
+      "seed": 20261018,
+      "effectiveMisses": 121769,
+      "recovered": 121769,
+      "difference": 0
+    },
+    {
+      "season": "2025-26",
+      "seed": 20261019,
+      "effectiveMisses": 120972,
+      "recovered": 120972,
+      "difference": 0
+    },
+    {
+      "season": "2025-26",
+      "seed": 20261020,
+      "effectiveMisses": 120850,
+      "recovered": 120850,
+      "difference": 0
+    },
+    {
+      "season": "2025-26",
+      "seed": 20261021,
+      "effectiveMisses": 120436,
+      "recovered": 120436,
+      "difference": 0
+    },
+    {
+      "season": "2025-26",
+      "seed": 20261022,
+      "effectiveMisses": 121723,
+      "recovered": 121723,
+      "difference": 0
+    },
+    {
+      "season": "2025-26",
+      "seed": 20261023,
+      "effectiveMisses": 121090,
+      "recovered": 121090,
+      "difference": 0
+    },
+    {
+      "season": "2025-26",
+      "seed": 20261024,
+      "effectiveMisses": 121166,
+      "recovered": 121166,
+      "difference": 0
+    },
+    {
+      "season": "2025-26",
+      "seed": 20261025,
+      "effectiveMisses": 120890,
+      "recovered": 120890,
+      "difference": 0
+    },
+    {
+      "season": "2025-26",
+      "seed": 20261026,
+      "effectiveMisses": 121414,
+      "recovered": 121414,
+      "difference": 0
+    },
+    {
+      "season": "2025-26",
+      "seed": 20261027,
+      "effectiveMisses": 121044,
+      "recovered": 121044,
+      "difference": 0
+    },
+    {
+      "season": "2025-26",
+      "seed": 20261028,
+      "effectiveMisses": 121061,
+      "recovered": 121061,
+      "difference": 0
+    },
+    {
+      "season": "2025-26",
+      "seed": 20261029,
+      "effectiveMisses": 121008,
+      "recovered": 121008,
+      "difference": 0
+    },
+    {
+      "season": "2025-26",
+      "seed": 20261030,
+      "effectiveMisses": 121177,
+      "recovered": 121177,
+      "difference": 0
+    },
+    {
+      "season": "2025-26",
+      "seed": 20261031,
+      "effectiveMisses": 120864,
+      "recovered": 120864,
+      "difference": 0
+    }
+  ]
+}

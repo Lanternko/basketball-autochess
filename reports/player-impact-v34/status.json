@@ -1,0 +1,28 @@
+{
+  "officialModelAdopted": false,
+  "goalComplete": false,
+  "fullOvrThisVersion": false,
+  "latestCompleteOvrVersion": 24,
+  "failedWinGateSeasons": [
+    "2023-24"
+  ],
+  "targetPlayerColumns": 176,
+  "fullValidationSeasons": 4,
+  "seeds": 3,
+  "games": 28023,
+  "probePlayers": 10,
+  "probeGames": 9600,
+  "sourceRoleCards": 2262,
+  "sourceContextStates": 270090,
+  "sourceUnsupportedSelfMakesBefore": 891,
+  "sourceUnsupportedSelfMakesAfter": 0,
+  "worsenedIndividualMetrics": [
+    "ast36",
+    "stl36",
+    "blk36",
+    "fta36",
+    "threePct"
+  ],
+  "healthyProbeChangeIntervalsOverlappingZero": 9,
+  "scope": "Fixed descriptive source-self floor hypothesis; no full OVR, skill certification or adoption."
+}

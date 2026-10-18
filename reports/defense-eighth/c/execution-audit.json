@@ -1,0 +1,1118 @@
+{
+  "auditedAt": "2026-10-12T17:30:51.391Z",
+  "preregHash": "a355f424cde6d143d901e8aa6e6dad62661fd8c5d3b0dae0359be7d4bc4d7017",
+  "registeredAt": "2026-10-12T15:52:26.886Z",
+  "v5FreezeHash": "c21ca1e02c267f8143ed2561729d36f27fa11406c6d44a3682cbd699ce590d98",
+  "downloadChronology": {
+    "2023-24": {
+      "rawDocuments": 2463,
+      "earliestFetchedAt": "2026-10-12T15:52:53.521Z",
+      "latestFetchedAt": "2026-10-12T15:55:17.380Z",
+      "allAfterRegistration": true,
+      "basicSources": {
+        "data/defense-seventh/2023-24/team-games.json": "befe8941b51e8c2f440df88e2aea79aab63826d389ec258d5fe8e209967586c5",
+        "data/defense-seventh/2023-24/player-games.json": "a33074c9c9b1f59e15f160464292b3ab9c791065ae542c20f2ed64f3e170afd5",
+        "data/defense-seventh/2023-24/bio.json": "1cb8eb0431bea1aaa43f1209571e39e9b2505a8c85cb14b356fddc54b9dfa1a6"
+      },
+      "pbpManifestHash": "6449717fe38448a8656d4744ec615f1eaa760244bd16dd1fa9323b15c7f74614"
+    },
+    "2022-23": {
+      "rawDocuments": 2463,
+      "earliestFetchedAt": "2026-10-12T15:52:55.280Z",
+      "latestFetchedAt": "2026-10-12T15:55:16.555Z",
+      "allAfterRegistration": true,
+      "basicSources": {
+        "data/defense-seventh/2022-23/team-games.json": "732bbf1991c0ce13e3b70db5f2d7769dd66d5d05d4fabef6306963cff066e020",
+        "data/defense-seventh/2022-23/player-games.json": "f41f7f4b105af8d280381f0c3315219ee074b2329e5d9b5f979b6fc72dbd7f56",
+        "data/defense-seventh/2022-23/bio.json": "2b493e0aedcdfc610f9fe570ce0ca975a709753ad63e83fdddc31444d402927f"
+      },
+      "pbpManifestHash": "aff068be58cf00c222eb8a517615d4a73fd7a53eeb98d163b40c0a23c8afbad0"
+    }
+  },
+  "cells": {
+    "2024-25": {
+      "25": {
+        "date": "2024-12-14",
+        "strictTrainGames": 319,
+        "allTrainGames": 376,
+        "configHash": "d9929df70bd7017302d46e345a26e7f39bc5bbcb6a3f50039a1db114d8db0e2a",
+        "versions": {
+          "v1": {
+            "manifest": "reports/defense-seventh/2024-25-eighth-a-calendar-25-v1-seeds.json",
+            "sha256": "a629e6239f6b4d57092bcd4759d5cfca3efefbae243a3c30bc2975fd6530a7ab",
+            "trainingCalibrationManifests": 5,
+            "calibration": {
+              "shotDelta": -0.06471196523305091,
+              "options": {
+                "pace": 1.1952377198728827,
+                "foulScale": null,
+                "passTurnoverScale": null,
+                "touchTurnoverScale": null,
+                "touchLiveShare": 0.3799222829208474,
+                "clockViolationProbability": null
+              }
+            }
+          },
+          "v3-signals-off": {
+            "manifest": "reports/defense-seventh/2024-25-eighth-a-calendar-25-v3-signals-off-seeds.json",
+            "sha256": "442799c102ac42c1f8cef46113690f00cce6dd92d8884ef2e90970d52f387314",
+            "trainingCalibrationManifests": 5,
+            "calibration": {
+              "shotDelta": -0.03692400934538005,
+              "options": {
+                "pace": 0.9223101634329675,
+                "foulScale": 1.0131539104634506,
+                "passTurnoverScale": 1.503750876326677,
+                "touchTurnoverScale": 1.021736725709914,
+                "touchLiveShare": 0.36096949234747294,
+                "clockViolationProbability": 0.007951664178354264
+              }
+            }
+          },
+          "v3": {
+            "manifest": "reports/defense-seventh/2024-25-calendar-25-v3-seeds.json",
+            "sha256": "3ca77142c089c3b3b3a30bff30e129edd29f56dfc856a3bfacfa5c43afcbb464",
+            "trainingCalibrationManifests": 5,
+            "calibration": {
+              "shotDelta": -0.07812181007767852,
+              "options": {
+                "pace": 0.9315038039706364,
+                "foulScale": 0.9637449265751389,
+                "passTurnoverScale": 1.430369297618218,
+                "touchTurnoverScale": 0.9966701975519716,
+                "touchLiveShare": 0.36022256792434476,
+                "clockViolationProbability": 0.007948682679361465
+              }
+            }
+          },
+          "v4": {
+            "manifest": "reports/defense-seventh/2024-25-calendar-25-v4-seeds.json",
+            "sha256": "b92191b75abe4f94b6a5322cee796959aa7c3c6c2be1c7e0cef4a99a30286b71",
+            "trainingCalibrationManifests": 5,
+            "calibration": {
+              "shotDelta": -0.0892579306280468,
+              "options": {
+                "pace": 0.9332870590171876,
+                "foulScale": 0.97849048608548,
+                "passTurnoverScale": 1.3974211432901402,
+                "touchTurnoverScale": 0.999762442681606,
+                "touchLiveShare": 0.34944369684585785,
+                "clockViolationProbability": 0.00793741475337956
+              }
+            }
+          },
+          "v5": {
+            "manifest": "reports/defense-seventh/2024-25-eighth-b-calendar-25-c0p500000-seeds.json",
+            "sha256": "7444ea125fa1979d79eeec419d3fbd61a76aecd533501315d14930cb7545e3b9",
+            "trainingCalibrationManifests": 5,
+            "calibration": {
+              "shotDelta": -0.09169083074209863,
+              "options": {
+                "pace": 0.9350064314180615,
+                "foulScale": 0.9766741411483243,
+                "passTurnoverScale": 1.403735090876902,
+                "touchTurnoverScale": 1.0070136146842688,
+                "touchLiveShare": 0.35659704396939235,
+                "clockViolationProbability": 0.007932457169724393
+              }
+            }
+          }
+        }
+      },
+      "41": {
+        "date": "2025-01-18",
+        "strictTrainGames": 539,
+        "allTrainGames": 617,
+        "configHash": "4c0accf1ae657aa4bab987ce8cc92a59a26a5a27b530edbfa759185aa8019558",
+        "versions": {
+          "v1": {
+            "manifest": "reports/defense-seventh/2024-25-eighth-a-calendar-41-v1-seeds.json",
+            "sha256": "0e69f3cccb8a7a9cb0f71980289969b207c821cc03d9398c215f67ef1890ded7",
+            "trainingCalibrationManifests": 5,
+            "calibration": {
+              "shotDelta": -0.06326224842373165,
+              "options": {
+                "pace": 1.1910422818578383,
+                "foulScale": null,
+                "passTurnoverScale": null,
+                "touchTurnoverScale": null,
+                "touchLiveShare": 0.3749029728828317,
+                "clockViolationProbability": null
+              }
+            }
+          },
+          "v3-signals-off": {
+            "manifest": "reports/defense-seventh/2024-25-eighth-a-calendar-41-v3-signals-off-seeds.json",
+            "sha256": "9d64bdccf950880415e3e8eb710a3e973d318af0c65b84d4282392f403b83b15",
+            "trainingCalibrationManifests": 5,
+            "calibration": {
+              "shotDelta": -0.036341005484461474,
+              "options": {
+                "pace": 0.9182115073873869,
+                "foulScale": 1.0138088184768705,
+                "passTurnoverScale": 1.5584318865631797,
+                "touchTurnoverScale": 0.9939599180371066,
+                "touchLiveShare": 0.36518056927737147,
+                "clockViolationProbability": 0.007681515258752417
+              }
+            }
+          },
+          "v3": {
+            "manifest": "reports/defense-seventh/2024-25-calendar-41-v3-seeds.json",
+            "sha256": "39a848c364b12f649efebe258f37d8c0715689895fa6e71238c20d26a175788a",
+            "trainingCalibrationManifests": 5,
+            "calibration": {
+              "shotDelta": -0.08242140309300658,
+              "options": {
+                "pace": 0.9287015927329652,
+                "foulScale": 0.9500147335437896,
+                "passTurnoverScale": 1.501114111974828,
+                "touchTurnoverScale": 0.9797938881748328,
+                "touchLiveShare": 0.3602797393169898,
+                "clockViolationProbability": 0.0077059351515899556
+              }
+            }
+          },
+          "v4": {
+            "manifest": "reports/defense-seventh/2024-25-calendar-41-v4-seeds.json",
+            "sha256": "88f4b50e94e9d8a3af739296fe381ef55b6789aa44c7008a366989f6f7322b1b",
+            "trainingCalibrationManifests": 5,
+            "calibration": {
+              "shotDelta": -0.09861868001457874,
+              "options": {
+                "pace": 0.9316593828767108,
+                "foulScale": 0.974541698968548,
+                "passTurnoverScale": 1.4658433748568263,
+                "touchTurnoverScale": 0.9892816118892929,
+                "touchLiveShare": 0.3618571172563434,
+                "clockViolationProbability": 0.007650720185634655
+              }
+            }
+          },
+          "v5": {
+            "manifest": "reports/defense-seventh/2024-25-eighth-b-calendar-41-c0p424513-seeds.json",
+            "sha256": "140c5e7cba608eb1767e8efd4a3c0f0c7f4243f4099de5c13b94a53fe78353f6",
+            "trainingCalibrationManifests": 5,
+            "calibration": {
+              "shotDelta": -0.09158896863468416,
+              "options": {
+                "pace": 0.932282029561337,
+                "foulScale": 0.9781307859757014,
+                "passTurnoverScale": 1.4712724952405205,
+                "touchTurnoverScale": 1.005572463705819,
+                "touchLiveShare": 0.36808775237807034,
+                "clockViolationProbability": 0.007706925570389664
+              }
+            }
+          }
+        }
+      },
+      "55": {
+        "date": "2025-02-21",
+        "strictTrainGames": 726,
+        "allTrainGames": 833,
+        "configHash": "fb420bdac1768ed10c4ae8964a3efbf8ebf22b90c132322c94128d530d778f1c",
+        "versions": {
+          "v1": {
+            "manifest": "reports/defense-seventh/2024-25-eighth-a-calendar-55-v1-seeds.json",
+            "sha256": "f19ebccd5eb5dca28178b2133c3f4bda251c079aa33436c3db1473a34ea612c8",
+            "trainingCalibrationManifests": 5,
+            "calibration": {
+              "shotDelta": -0.060155884736577014,
+              "options": {
+                "pace": 1.1909016160121768,
+                "foulScale": null,
+                "passTurnoverScale": null,
+                "touchTurnoverScale": null,
+                "touchLiveShare": 0.37819858153830094,
+                "clockViolationProbability": null
+              }
+            }
+          },
+          "v3-signals-off": {
+            "manifest": "reports/defense-seventh/2024-25-eighth-a-calendar-55-v3-signals-off-seeds.json",
+            "sha256": "058126c4d2a478fafdc5c5b1b33fa64d03c55a93dfbf3c163947ad3489638c6b",
+            "trainingCalibrationManifests": 5,
+            "calibration": {
+              "shotDelta": -0.02670607434408772,
+              "options": {
+                "pace": 0.9217747285705391,
+                "foulScale": 1.0164391440055076,
+                "passTurnoverScale": 1.535322697176191,
+                "touchTurnoverScale": 0.9943819060596142,
+                "touchLiveShare": 0.3715738363825702,
+                "clockViolationProbability": 0.007886702652776741
+              }
+            }
+          },
+          "v3": {
+            "manifest": "reports/defense-seventh/2024-25-calendar-55-v3-seeds.json",
+            "sha256": "cb90b54cb918dd5d417bcca97662decd1b27a179c254e873a45be7a37d855979",
+            "trainingCalibrationManifests": 5,
+            "calibration": {
+              "shotDelta": -0.07896782524931671,
+              "options": {
+                "pace": 0.9305509340595229,
+                "foulScale": 0.9741829036632508,
+                "passTurnoverScale": 1.4667284535321699,
+                "touchTurnoverScale": 0.9718356640634136,
+                "touchLiveShare": 0.36316921887960296,
+                "clockViolationProbability": 0.007896848056430867
+              }
+            }
+          },
+          "v4": {
+            "manifest": "reports/defense-seventh/2024-25-calendar-55-v4-seeds.json",
+            "sha256": "4a47b8efc66de2e2cc57c510f593ddc8bff3b682fa3b3f2cd3108e9c66c86465",
+            "trainingCalibrationManifests": 5,
+            "calibration": {
+              "shotDelta": -0.09740662007723565,
+              "options": {
+                "pace": 0.9328799745240655,
+                "foulScale": 0.983491013031715,
+                "passTurnoverScale": 1.455075474135973,
+                "touchTurnoverScale": 0.9878418872257715,
+                "touchLiveShare": 0.36981978668374105,
+                "clockViolationProbability": 0.00791342686000682
+              }
+            }
+          },
+          "v5": {
+            "manifest": "reports/defense-seventh/2024-25-eighth-b-calendar-55-c0p000000-seeds.json",
+            "sha256": "ece5485c914271072372c540c69b3c5aabbb95c7d044418ced7a53fe20cfd579",
+            "trainingCalibrationManifests": 5,
+            "calibration": {
+              "shotDelta": -0.09327241080812594,
+              "options": {
+                "pace": 0.9348239293941029,
+                "foulScale": 0.9851123114937838,
+                "passTurnoverScale": 1.466815340321122,
+                "touchTurnoverScale": 0.9930546927286888,
+                "touchLiveShare": 0.366871768795021,
+                "clockViolationProbability": 0.00788972543260805
+              }
+            }
+          }
+        }
+      }
+    },
+    "2025-26": {
+      "25": {
+        "date": "2025-12-14",
+        "strictTrainGames": 366,
+        "allTrainGames": 382,
+        "configHash": "fc618e6c54dd39a323ce0182efebc512d806fb9e86e4a578d29986400ddf4108",
+        "versions": {
+          "v1": {
+            "manifest": "reports/defense-seventh/2025-26-eighth-c-calendar-25-v1-seeds.json",
+            "sha256": "ea2489d4bdb97f532e0b51f6ff358f895ade1555ad2b2b66196f3b56b5610812",
+            "trainingCalibrationManifests": 5,
+            "calibration": {
+              "shotDelta": -0.06245865787744505,
+              "options": {
+                "pace": 1.1903374265094582,
+                "foulScale": null,
+                "passTurnoverScale": null,
+                "touchTurnoverScale": null,
+                "touchLiveShare": 0.37989254725923405,
+                "clockViolationProbability": null
+              }
+            }
+          },
+          "v3-signals-off": {
+            "manifest": "reports/defense-seventh/2025-26-eighth-c-calendar-25-v3-signals-off-seeds.json",
+            "sha256": "a36480042e04a3423eec464529f59768754df42671c88bf2c10ceaeee7308fa6",
+            "trainingCalibrationManifests": 5,
+            "calibration": {
+              "shotDelta": -0.024090976705790888,
+              "options": {
+                "pace": 0.924187645186699,
+                "foulScale": 1.00253084930448,
+                "passTurnoverScale": 1.6459623741880711,
+                "touchTurnoverScale": 1.0205584085524821,
+                "touchLiveShare": 0.35983929156357225,
+                "clockViolationProbability": 0.007313725309566604
+              }
+            }
+          },
+          "v3": {
+            "manifest": "reports/defense-seventh/2025-26-calendar-25-v3-seeds.json",
+            "sha256": "13c4505eb28f3cc2a116c2ff28f941d2781b438e905c270400f8d381c1c0c24d",
+            "trainingCalibrationManifests": 5,
+            "calibration": {
+              "shotDelta": -0.07158739884895292,
+              "options": {
+                "pace": 0.9341764743416391,
+                "foulScale": 0.9650823271887196,
+                "passTurnoverScale": 1.55802595330421,
+                "touchTurnoverScale": 0.993106093429803,
+                "touchLiveShare": 0.3568650267811139,
+                "clockViolationProbability": 0.007291039463722496
+              }
+            }
+          },
+          "v4": {
+            "manifest": "reports/defense-seventh/2025-26-calendar-25-v4-seeds.json",
+            "sha256": "a8c2468805931db44a886f59fe0da033867cd6e346887e22c9e18c52c8b2200a",
+            "trainingCalibrationManifests": 5,
+            "calibration": {
+              "shotDelta": -0.08945094315092618,
+              "options": {
+                "pace": 0.9346827489873333,
+                "foulScale": 0.959967307660237,
+                "passTurnoverScale": 1.4832865670977713,
+                "touchTurnoverScale": 1.0294628435835802,
+                "touchLiveShare": 0.35971557892484607,
+                "clockViolationProbability": 0.007296959232425497
+              }
+            }
+          },
+          "v5": {
+            "manifest": "reports/defense-seventh/2025-26-eighth-b-calendar-25-c0p500000-seeds.json",
+            "sha256": "ca6c9ecf588f6b020d3a0898fee78aaf1d59dceacd4091249eeb4f245e37967b",
+            "trainingCalibrationManifests": 5,
+            "calibration": {
+              "shotDelta": -0.09271657779768637,
+              "options": {
+                "pace": 0.9355231410330855,
+                "foulScale": 0.953623626927867,
+                "passTurnoverScale": 1.539219472540589,
+                "touchTurnoverScale": 1.0219007368924482,
+                "touchLiveShare": 0.3537468870891236,
+                "clockViolationProbability": 0.007317607013770544
+              }
+            }
+          }
+        }
+      },
+      "41": {
+        "date": "2026-01-16",
+        "strictTrainGames": 588,
+        "allTrainGames": 617,
+        "configHash": "61891be58d11f596a5e4a9638e490b2fb97820727db5b3550a59ae7a2d46f281",
+        "versions": {
+          "v1": {
+            "manifest": "reports/defense-seventh/2025-26-eighth-c-calendar-41-v1-seeds.json",
+            "sha256": "3ee9c30de5a949de82bf80cf9526f9c0be9abe325ce57bbcf8e40ea581867f97",
+            "trainingCalibrationManifests": 5,
+            "calibration": {
+              "shotDelta": -0.05108346783388089,
+              "options": {
+                "pace": 1.1829014300312553,
+                "foulScale": null,
+                "passTurnoverScale": null,
+                "touchTurnoverScale": null,
+                "touchLiveShare": 0.374472318366797,
+                "clockViolationProbability": null
+              }
+            }
+          },
+          "v3-signals-off": {
+            "manifest": "reports/defense-seventh/2025-26-eighth-c-calendar-41-v3-signals-off-seeds.json",
+            "sha256": "3ab00df6823caecf50b8c202f0bc60d053679cbc3fcc02a251228155e571be20",
+            "trainingCalibrationManifests": 5,
+            "calibration": {
+              "shotDelta": -0.020279888232790838,
+              "options": {
+                "pace": 0.9231597912959945,
+                "foulScale": 1.0079807914392838,
+                "passTurnoverScale": 1.5575512904626438,
+                "touchTurnoverScale": 1.0080269007947054,
+                "touchLiveShare": 0.3696335507224259,
+                "clockViolationProbability": 0.006941156942456642
+              }
+            }
+          },
+          "v3": {
+            "manifest": "reports/defense-seventh/2025-26-calendar-41-v3-seeds.json",
+            "sha256": "5c0fc04ee7161c11bf25ee0978e3a96906b160d2f8005ebc3ec62b7aef12994f",
+            "trainingCalibrationManifests": 5,
+            "calibration": {
+              "shotDelta": -0.07441716033371698,
+              "options": {
+                "pace": 0.9323376630389821,
+                "foulScale": 0.9603530042834384,
+                "passTurnoverScale": 1.5120437225543417,
+                "touchTurnoverScale": 0.9950085102736183,
+                "touchLiveShare": 0.3652933283806712,
+                "clockViolationProbability": 0.006926097795411296
+              }
+            }
+          },
+          "v4": {
+            "manifest": "reports/defense-seventh/2025-26-calendar-41-v4-seeds.json",
+            "sha256": "8de80cda8d55cf6f556f044e75b311c9d10c482f295b1f24bc2830a71d1919d0",
+            "trainingCalibrationManifests": 5,
+            "calibration": {
+              "shotDelta": -0.08617950581850353,
+              "options": {
+                "pace": 0.9345447404624676,
+                "foulScale": 0.9563872570825447,
+                "passTurnoverScale": 1.4978130535144465,
+                "touchTurnoverScale": 1.007807206314971,
+                "touchLiveShare": 0.3650829966074995,
+                "clockViolationProbability": 0.0069741981231289316
+              }
+            }
+          },
+          "v5": {
+            "manifest": "reports/defense-seventh/2025-26-eighth-b-calendar-41-c0p424513-seeds.json",
+            "sha256": "3b965419769687c743fb57f7adb5efcc2b873e7518b72824082f52151e457e20",
+            "trainingCalibrationManifests": 5,
+            "calibration": {
+              "shotDelta": -0.0845429734678156,
+              "options": {
+                "pace": 0.9360044374848113,
+                "foulScale": 0.9692068700937176,
+                "passTurnoverScale": 1.5132388732246544,
+                "touchTurnoverScale": 1.0097223261399062,
+                "touchLiveShare": 0.370225435800782,
+                "clockViolationProbability": 0.006929237543665001
+              }
+            }
+          }
+        }
+      },
+      "55": {
+        "date": "2026-02-19",
+        "strictTrainGames": 796,
+        "allTrainGames": 829,
+        "configHash": "3cb7ff966566c6e1ef2de04307a7834ed9543e858b61a68a7106f84e5176c8eb",
+        "versions": {
+          "v1": {
+            "manifest": "reports/defense-seventh/2025-26-eighth-c-calendar-55-v1-seeds.json",
+            "sha256": "824e5f3ec9100217786507140ba02e6d6d116f81c9f808bc2497a1938b4086a1",
+            "trainingCalibrationManifests": 5,
+            "calibration": {
+              "shotDelta": -0.048921284050349914,
+              "options": {
+                "pace": 1.1794779583507273,
+                "foulScale": null,
+                "passTurnoverScale": null,
+                "touchTurnoverScale": null,
+                "touchLiveShare": 0.3833697476112338,
+                "clockViolationProbability": null
+              }
+            }
+          },
+          "v3-signals-off": {
+            "manifest": "reports/defense-seventh/2025-26-eighth-c-calendar-55-v3-signals-off-seeds.json",
+            "sha256": "9b838a4716911642dab98b6f765fde4c3fdbc4ac0a4a313e8b16ffbaae4d356f",
+            "trainingCalibrationManifests": 5,
+            "calibration": {
+              "shotDelta": -0.020023926278741135,
+              "options": {
+                "pace": 0.9210028929485558,
+                "foulScale": 1.0239961877054764,
+                "passTurnoverScale": 1.5782347404435793,
+                "touchTurnoverScale": 1.0035341632646628,
+                "touchLiveShare": 0.3806638378530584,
+                "clockViolationProbability": 0.00689964142123388
+              }
+            }
+          },
+          "v3": {
+            "manifest": "reports/defense-seventh/2025-26-calendar-55-v3-seeds.json",
+            "sha256": "943ba1a5c4e95e99b39d0a327ac266b87edf78eadb83de7ff4478335c7987cbf",
+            "trainingCalibrationManifests": 5,
+            "calibration": {
+              "shotDelta": -0.070667574270497,
+              "options": {
+                "pace": 0.9308447785971798,
+                "foulScale": 0.9637843803732176,
+                "passTurnoverScale": 1.5221505420507322,
+                "touchTurnoverScale": 0.9779715401773899,
+                "touchLiveShare": 0.37214287809087326,
+                "clockViolationProbability": 0.006887542866497574
+              }
+            }
+          },
+          "v4": {
+            "manifest": "reports/defense-seventh/2025-26-calendar-55-v4-seeds.json",
+            "sha256": "d8f75ff70337dd2e3dd87f364b28a34ebb57464065dfdbe6c86f34fbe316173a",
+            "trainingCalibrationManifests": 5,
+            "calibration": {
+              "shotDelta": -0.08375601261455161,
+              "options": {
+                "pace": 0.9338847701244425,
+                "foulScale": 0.9768610883873464,
+                "passTurnoverScale": 1.5053325331691592,
+                "touchTurnoverScale": 0.9989467542639129,
+                "touchLiveShare": 0.36952246064997213,
+                "clockViolationProbability": 0.006890391007355004
+              }
+            }
+          },
+          "v5": {
+            "manifest": "reports/defense-seventh/2025-26-eighth-b-calendar-55-c0p000000-seeds.json",
+            "sha256": "0a93270c454a7d0ce090301cf53fec699aa59b041383ebf5551c69b7ae9461ad",
+            "trainingCalibrationManifests": 5,
+            "calibration": {
+              "shotDelta": -0.07982081419111921,
+              "options": {
+                "pace": 0.9348430619467794,
+                "foulScale": 0.9633502128254454,
+                "passTurnoverScale": 1.5041594916075907,
+                "touchTurnoverScale": 1.0084967400503573,
+                "touchLiveShare": 0.37589111966537336,
+                "clockViolationProbability": 0.006899527117652775
+              }
+            }
+          }
+        }
+      }
+    },
+    "2023-24": {
+      "25": {
+        "date": "2023-12-17",
+        "strictTrainGames": 322,
+        "allTrainGames": 378,
+        "configHash": "63deb93216418cb34d2ec1188ab95acb62d04526e56090cae89f8f7a0d191ae4",
+        "versions": {
+          "v1": {
+            "manifest": "reports/defense-seventh/2023-24-eighth-c-calendar-25-v1-seeds.json",
+            "sha256": "a3322624f279f3e6e572c0dfaabeb70bc6acd1ff01c6b1b9bbd27064bc73dccb",
+            "trainingCalibrationManifests": 5,
+            "calibration": {
+              "shotDelta": -0.0581169742134906,
+              "options": {
+                "pace": 1.1715701252127877,
+                "foulScale": null,
+                "passTurnoverScale": null,
+                "touchTurnoverScale": null,
+                "touchLiveShare": 0.3292388213718599,
+                "clockViolationProbability": null
+              }
+            }
+          },
+          "v3-signals-off": {
+            "manifest": "reports/defense-seventh/2023-24-eighth-c-calendar-25-v3-signals-off-seeds.json",
+            "sha256": "ab8bf23cc54babac9fbc027a7e9d99c9d64ea5d3bd60129533a360ee18085fe8",
+            "trainingCalibrationManifests": 5,
+            "calibration": {
+              "shotDelta": -0.03986531105805813,
+              "options": {
+                "pace": 0.9276161188448361,
+                "foulScale": 1.001294242737909,
+                "passTurnoverScale": 1.4396603452264902,
+                "touchTurnoverScale": 0.9929916105105909,
+                "touchLiveShare": 0.3254033108051799,
+                "clockViolationProbability": 0.006569870548211676
+              }
+            }
+          },
+          "v3": {
+            "manifest": "reports/defense-seventh/2023-24-calendar-25-v3-seeds.json",
+            "sha256": "301df8de9dda99f88a10672c9c641c1a46c6c9c04d2b941c664c982dd13b0f17",
+            "trainingCalibrationManifests": 5,
+            "calibration": {
+              "shotDelta": -0.09219473905270525,
+              "options": {
+                "pace": 0.9372676049810507,
+                "foulScale": 0.9316376843741342,
+                "passTurnoverScale": 1.3928265150750954,
+                "touchTurnoverScale": 0.9740170969140202,
+                "touchLiveShare": 0.3127802870532365,
+                "clockViolationProbability": 0.006627640776248149
+              }
+            }
+          },
+          "v4": {
+            "manifest": "reports/defense-seventh/2023-24-calendar-25-v4-seeds.json",
+            "sha256": "5977575f7abc1bef73d510215f8bd59332433e6a75b6fb66df73bc42f75c04a1",
+            "trainingCalibrationManifests": 5,
+            "calibration": {
+              "shotDelta": -0.09538560869936223,
+              "options": {
+                "pace": 0.9368410787860856,
+                "foulScale": 0.9717740668427416,
+                "passTurnoverScale": 1.3583370206689092,
+                "touchTurnoverScale": 0.998788444681561,
+                "touchLiveShare": 0.3175839205920957,
+                "clockViolationProbability": 0.006572285187710705
+              }
+            }
+          },
+          "v5": {
+            "manifest": "reports/defense-seventh/2023-24-eighth-c-calendar-25-v5-seeds.json",
+            "sha256": "759c1d0928527742e36ae90c6ea00c2109d566c32bab3eb73e5085cf7208acb8",
+            "trainingCalibrationManifests": 5,
+            "calibration": {
+              "shotDelta": -0.10019928812190196,
+              "options": {
+                "pace": 0.9387578088932214,
+                "foulScale": 0.9624045827653138,
+                "passTurnoverScale": 1.372857900418034,
+                "touchTurnoverScale": 1.0041760345103992,
+                "touchLiveShare": 0.3215626628533419,
+                "clockViolationProbability": 0.006622068981284354
+              }
+            }
+          }
+        }
+      },
+      "41": {
+        "date": "2024-01-19",
+        "strictTrainGames": 530,
+        "allTrainGames": 619,
+        "configHash": "822075e481938cc955e9410143560fe516442a8b6c6a93cf77e60ee7b85e6b89",
+        "versions": {
+          "v1": {
+            "manifest": "reports/defense-seventh/2023-24-eighth-c-calendar-41-v1-seeds.json",
+            "sha256": "faa77c119e4c5afb328d1b9dbf7a7bfe724a282d0c3d3328c2022bf1bca78a90",
+            "trainingCalibrationManifests": 5,
+            "calibration": {
+              "shotDelta": -0.059649577658761097,
+              "options": {
+                "pace": 1.1669799650795785,
+                "foulScale": null,
+                "passTurnoverScale": null,
+                "touchTurnoverScale": null,
+                "touchLiveShare": 0.33447782351441024,
+                "clockViolationProbability": null
+              }
+            }
+          },
+          "v3-signals-off": {
+            "manifest": "reports/defense-seventh/2023-24-eighth-c-calendar-41-v3-signals-off-seeds.json",
+            "sha256": "e2c6c5c2b200a9ae9b4c029f41bfe77ee8c4841545c6465d63613a8006bdb295",
+            "trainingCalibrationManifests": 5,
+            "calibration": {
+              "shotDelta": -0.03505987355717365,
+              "options": {
+                "pace": 0.9264203905576133,
+                "foulScale": 1.0064774103998402,
+                "passTurnoverScale": 1.435977887724306,
+                "touchTurnoverScale": 0.9732715167202408,
+                "touchLiveShare": 0.32530722557258,
+                "clockViolationProbability": 0.006824707872152483
+              }
+            }
+          },
+          "v3": {
+            "manifest": "reports/defense-seventh/2023-24-calendar-41-v3-seeds.json",
+            "sha256": "59eddc332d6f725447f1a21da5edaaa182d0362744a06a096f4459ec430ef85d",
+            "trainingCalibrationManifests": 5,
+            "calibration": {
+              "shotDelta": -0.09775431308086274,
+              "options": {
+                "pace": 0.938182601672536,
+                "foulScale": 0.9421213834705189,
+                "passTurnoverScale": 1.4021636719821478,
+                "touchTurnoverScale": 0.9577708232470952,
+                "touchLiveShare": 0.32829283269930193,
+                "clockViolationProbability": 0.006880171354634643
+              }
+            }
+          },
+          "v4": {
+            "manifest": "reports/defense-seventh/2023-24-calendar-41-v4-seeds.json",
+            "sha256": "ec108fadd23119bf5aa0f670e09ab4e43498c14e5b374f1c609e025e38fc1ac6",
+            "trainingCalibrationManifests": 5,
+            "calibration": {
+              "shotDelta": -0.1112809541990073,
+              "options": {
+                "pace": 0.9411304963466919,
+                "foulScale": 0.9570811299558667,
+                "passTurnoverScale": 1.355784650819443,
+                "touchTurnoverScale": 0.9744195887245413,
+                "touchLiveShare": 0.32479971955579195,
+                "clockViolationProbability": 0.006831796809386131
+              }
+            }
+          },
+          "v5": {
+            "manifest": "reports/defense-seventh/2023-24-eighth-c-calendar-41-v5-seeds.json",
+            "sha256": "99ac370a91f63848c34c3b792a741a1e2795ccddbe27259d76e9d0cfbeae5d46",
+            "trainingCalibrationManifests": 5,
+            "calibration": {
+              "shotDelta": -0.11148175817210368,
+              "options": {
+                "pace": 0.9410015614853676,
+                "foulScale": 0.9478254255709769,
+                "passTurnoverScale": 1.3732248820165267,
+                "touchTurnoverScale": 0.9697421739094543,
+                "touchLiveShare": 0.32390462765764844,
+                "clockViolationProbability": 0.006866022218157396
+              }
+            }
+          }
+        }
+      },
+      "55": {
+        "date": "2024-02-22",
+        "strictTrainGames": 715,
+        "allTrainGames": 832,
+        "configHash": "58ad8343d31faa1cf065df46bf32fe1b3f81defbfbc7d58cd547f2a87bf74816",
+        "versions": {
+          "v1": {
+            "manifest": "reports/defense-seventh/2023-24-eighth-c-calendar-55-v1-seeds.json",
+            "sha256": "5266902c4025d3f99591dd86342119da7d46a5c45e7abf640cd5d3ac22ccd8f4",
+            "trainingCalibrationManifests": 5,
+            "calibration": {
+              "shotDelta": -0.05392580093783731,
+              "options": {
+                "pace": 1.1635787047691148,
+                "foulScale": null,
+                "passTurnoverScale": null,
+                "touchTurnoverScale": null,
+                "touchLiveShare": 0.32949560804145234,
+                "clockViolationProbability": null
+              }
+            }
+          },
+          "v3-signals-off": {
+            "manifest": "reports/defense-seventh/2023-24-eighth-c-calendar-55-v3-signals-off-seeds.json",
+            "sha256": "4ca787875766c6d3e3f2d04459519122be329942da4e566cbe60d72327354510",
+            "trainingCalibrationManifests": 5,
+            "calibration": {
+              "shotDelta": -0.04916821233439197,
+              "options": {
+                "pace": 0.9274277173184554,
+                "foulScale": 0.9941376846620277,
+                "passTurnoverScale": 1.4460888825116827,
+                "touchTurnoverScale": 0.9507972410720168,
+                "touchLiveShare": 0.3364456803938771,
+                "clockViolationProbability": 0.006488008444636406
+              }
+            }
+          },
+          "v3": {
+            "manifest": "reports/defense-seventh/2023-24-calendar-55-v3-seeds.json",
+            "sha256": "bd3293c97b0c6f2a7c91679b3483b8df848a68453e5bab1d1fb5a42ae4989d42",
+            "trainingCalibrationManifests": 5,
+            "calibration": {
+              "shotDelta": -0.09846363814769676,
+              "options": {
+                "pace": 0.9368844629518988,
+                "foulScale": 0.9315854463290685,
+                "passTurnoverScale": 1.3911080867230408,
+                "touchTurnoverScale": 0.9423739577041568,
+                "touchLiveShare": 0.3285198493786081,
+                "clockViolationProbability": 0.006488318999202398
+              }
+            }
+          },
+          "v4": {
+            "manifest": "reports/defense-seventh/2023-24-calendar-55-v4-seeds.json",
+            "sha256": "accf456f805fea91d829886e5623f7f0b3539e57f41e246a00d08fcb30ef48c0",
+            "trainingCalibrationManifests": 5,
+            "calibration": {
+              "shotDelta": -0.11012118441530294,
+              "options": {
+                "pace": 0.9376642478262188,
+                "foulScale": 0.9395332356732872,
+                "passTurnoverScale": 1.362791644503273,
+                "touchTurnoverScale": 0.9490927374596487,
+                "touchLiveShare": 0.329860343304098,
+                "clockViolationProbability": 0.0064914428795312664
+              }
+            }
+          },
+          "v5": {
+            "manifest": "reports/defense-seventh/2023-24-eighth-c-calendar-55-v5-seeds.json",
+            "sha256": "6c4cc199db293185c0bd0e71e2fac21eb9ed7cb3fc3c3392291f5ad31dabdb8f",
+            "trainingCalibrationManifests": 5,
+            "calibration": {
+              "shotDelta": -0.10723908092716491,
+              "options": {
+                "pace": 0.9376292224850582,
+                "foulScale": 0.9378077214639915,
+                "passTurnoverScale": 1.3725322040947803,
+                "touchTurnoverScale": 0.9425417725344517,
+                "touchLiveShare": 0.3336959959206803,
+                "clockViolationProbability": 0.006488444268552525
+              }
+            }
+          }
+        }
+      }
+    },
+    "2022-23": {
+      "25": {
+        "date": "2022-12-08",
+        "strictTrainGames": 315,
+        "allTrainGames": 376,
+        "configHash": "33f837e181dfc9a72bd5d11fab659334e5daf6a3557118b458e388878b1a82e8",
+        "versions": {
+          "v1": {
+            "manifest": "reports/defense-seventh/2022-23-eighth-c-calendar-25-v1-seeds.json",
+            "sha256": "9455e52eb934fe738caa98d27e3b180d40cb0a1fca463052baf380309bdf4b5d",
+            "trainingCalibrationManifests": 5,
+            "calibration": {
+              "shotDelta": -0.082361679448113,
+              "options": {
+                "pace": 1.187512914046872,
+                "foulScale": null,
+                "passTurnoverScale": null,
+                "touchTurnoverScale": null,
+                "touchLiveShare": 0.29398127351060865,
+                "clockViolationProbability": null
+              }
+            }
+          },
+          "v3-signals-off": {
+            "manifest": "reports/defense-seventh/2022-23-eighth-c-calendar-25-v3-signals-off-seeds.json",
+            "sha256": "bf58648988d4d63aac25fe3761c1a5c3340ffeef734a39379655558ac9b299cc",
+            "trainingCalibrationManifests": 5,
+            "calibration": {
+              "shotDelta": -0.03853701160291791,
+              "options": {
+                "pace": 0.9270690979328895,
+                "foulScale": 0.9554740931827612,
+                "passTurnoverScale": 1.4287349261982887,
+                "touchTurnoverScale": 1.0530686499961497,
+                "touchLiveShare": 0.2598785998948357,
+                "clockViolationProbability": 0.00623072646220923
+              }
+            }
+          },
+          "v3": {
+            "manifest": "reports/defense-seventh/2022-23-calendar-25-v3-seeds.json",
+            "sha256": "5be08d0d705b39a6ac86c9dd1398dda31b6317d3c86c87f39f5418d00e3461bf",
+            "trainingCalibrationManifests": 5,
+            "calibration": {
+              "shotDelta": -0.09391488484275626,
+              "options": {
+                "pace": 0.9388866703154545,
+                "foulScale": 0.905925582317339,
+                "passTurnoverScale": 1.3557399296271615,
+                "touchTurnoverScale": 1.0515474681589576,
+                "touchLiveShare": 0.267983941220996,
+                "clockViolationProbability": 0.006292402454906074
+              }
+            }
+          },
+          "v4": {
+            "manifest": "reports/defense-seventh/2022-23-calendar-25-v4-seeds.json",
+            "sha256": "5efab678107533584e85740665e2fb6dd57b5a44a8124557660cbd7e1c7ce71d",
+            "trainingCalibrationManifests": 5,
+            "calibration": {
+              "shotDelta": -0.09674293974467914,
+              "options": {
+                "pace": 0.9371888051071083,
+                "foulScale": 0.9121911577152662,
+                "passTurnoverScale": 1.3505953417801926,
+                "touchTurnoverScale": 1.0581586692850777,
+                "touchLiveShare": 0.26504971778457836,
+                "clockViolationProbability": 0.006271537567609091
+              }
+            }
+          },
+          "v5": {
+            "manifest": "reports/defense-seventh/2022-23-eighth-c-calendar-25-v5-seeds.json",
+            "sha256": "db7c0ba2c9f82bce3c8c1c5699bfbc85ccef4d6c95a76080ce8b6eb0d1a90c64",
+            "trainingCalibrationManifests": 5,
+            "calibration": {
+              "shotDelta": -0.10085300732387754,
+              "options": {
+                "pace": 0.9378389364090728,
+                "foulScale": 0.8986066248804994,
+                "passTurnoverScale": 1.3365095502397912,
+                "touchTurnoverScale": 1.0610360545917554,
+                "touchLiveShare": 0.2676476867033432,
+                "clockViolationProbability": 0.006223690356733249
+              }
+            }
+          }
+        }
+      },
+      "41": {
+        "date": "2023-01-10",
+        "strictTrainGames": 532,
+        "allTrainGames": 617,
+        "configHash": "87153c8548ea8dfac5b98bee5b65916d954ddf7608e8d9f5f274ba63bf0d8715",
+        "versions": {
+          "v1": {
+            "manifest": "reports/defense-seventh/2022-23-eighth-c-calendar-41-v1-seeds.json",
+            "sha256": "1f52035e860dc20485ae0d4cc2a50ffabd7d0f29a8feebb965732feef7b2443a",
+            "trainingCalibrationManifests": 5,
+            "calibration": {
+              "shotDelta": -0.05647480268577566,
+              "options": {
+                "pace": 1.1781535103170324,
+                "foulScale": null,
+                "passTurnoverScale": null,
+                "touchTurnoverScale": null,
+                "touchLiveShare": 0.2927731099292743,
+                "clockViolationProbability": null
+              }
+            }
+          },
+          "v3-signals-off": {
+            "manifest": "reports/defense-seventh/2022-23-eighth-c-calendar-41-v3-signals-off-seeds.json",
+            "sha256": "245360a155d1369a311c35c6c66830ed56b26d713aeec3f33b4b2f662244b4b5",
+            "trainingCalibrationManifests": 5,
+            "calibration": {
+              "shotDelta": -0.04117177659109096,
+              "options": {
+                "pace": 0.9293428175581248,
+                "foulScale": 0.9674226123257392,
+                "passTurnoverScale": 1.4273192468551716,
+                "touchTurnoverScale": 1.0284243388301564,
+                "touchLiveShare": 0.2895698998168902,
+                "clockViolationProbability": 0.006618199046178834
+              }
+            }
+          },
+          "v3": {
+            "manifest": "reports/defense-seventh/2022-23-calendar-41-v3-seeds.json",
+            "sha256": "e533f18224b6a03b6177fd04bbddd35b09f4df483819db5784183128a0c5eacf",
+            "trainingCalibrationManifests": 5,
+            "calibration": {
+              "shotDelta": -0.09573294317433328,
+              "options": {
+                "pace": 0.9398931955005475,
+                "foulScale": 0.9265609866152151,
+                "passTurnoverScale": 1.3860980692154905,
+                "touchTurnoverScale": 1.005027250123518,
+                "touchLiveShare": 0.2761704035011268,
+                "clockViolationProbability": 0.006615528590334531
+              }
+            }
+          },
+          "v4": {
+            "manifest": "reports/defense-seventh/2022-23-calendar-41-v4-seeds.json",
+            "sha256": "f94db20702f1b979ba49b1654bfdcccd9ec3665cdbc5db6b44cd029088729710",
+            "trainingCalibrationManifests": 5,
+            "calibration": {
+              "shotDelta": -0.09903119704289487,
+              "options": {
+                "pace": 0.9400669620922331,
+                "foulScale": 0.9274548379066259,
+                "passTurnoverScale": 1.3694400469165249,
+                "touchTurnoverScale": 1.0113381352609978,
+                "touchLiveShare": 0.2770338215393346,
+                "clockViolationProbability": 0.006621590339450017
+              }
+            }
+          },
+          "v5": {
+            "manifest": "reports/defense-seventh/2022-23-eighth-c-calendar-41-v5-seeds.json",
+            "sha256": "29961b56c6d9efd68c7df2b6f160f6ebd885bf6081069dc69b93a3ce5f5f54d0",
+            "trainingCalibrationManifests": 5,
+            "calibration": {
+              "shotDelta": -0.09927549313684747,
+              "options": {
+                "pace": 0.939951772476766,
+                "foulScale": 0.9154510131201028,
+                "passTurnoverScale": 1.3463327343151492,
+                "touchTurnoverScale": 1.0109495328373683,
+                "touchLiveShare": 0.2774495763005653,
+                "clockViolationProbability": 0.006655799154534607
+              }
+            }
+          }
+        }
+      },
+      "55": {
+        "date": "2023-02-08",
+        "strictTrainGames": 725,
+        "allTrainGames": 829,
+        "configHash": "587b1bd559324af5c3fa2babdf2df9bc81679f46436942f668f78213c93b4414",
+        "versions": {
+          "v1": {
+            "manifest": "reports/defense-seventh/2022-23-eighth-c-calendar-55-v1-seeds.json",
+            "sha256": "955b36c66d198ef36b19446c630efeba5282b696649430b5830e0116afebf371",
+            "trainingCalibrationManifests": 5,
+            "calibration": {
+              "shotDelta": -0.056837840574749304,
+              "options": {
+                "pace": 1.1713557978315832,
+                "foulScale": null,
+                "passTurnoverScale": null,
+                "touchTurnoverScale": null,
+                "touchLiveShare": 0.29461035557342136,
+                "clockViolationProbability": null
+              }
+            }
+          },
+          "v3-signals-off": {
+            "manifest": "reports/defense-seventh/2022-23-eighth-c-calendar-55-v3-signals-off-seeds.json",
+            "sha256": "9983ad2f857ca2eb81f2d7e4a8a1e06d695850105ac22ddd85d8e109d902b340",
+            "trainingCalibrationManifests": 5,
+            "calibration": {
+              "shotDelta": -0.03949416950614783,
+              "options": {
+                "pace": 0.9282370999092882,
+                "foulScale": 0.9842064339913773,
+                "passTurnoverScale": 1.4357284984635121,
+                "touchTurnoverScale": 1.005788854705654,
+                "touchLiveShare": 0.2898898079033313,
+                "clockViolationProbability": 0.006567534637804194
+              }
+            }
+          },
+          "v3": {
+            "manifest": "reports/defense-seventh/2022-23-calendar-55-v3-seeds.json",
+            "sha256": "02251b1a431995fceaab0ec2e3a33f5bff2c6dbcf48996c6a57fa0f0dff8cf12",
+            "trainingCalibrationManifests": 5,
+            "calibration": {
+              "shotDelta": -0.09379919110483084,
+              "options": {
+                "pace": 0.9375141971491897,
+                "foulScale": 0.9387401750979201,
+                "passTurnoverScale": 1.4144718747288896,
+                "touchTurnoverScale": 1.0007301429339714,
+                "touchLiveShare": 0.2874560063326477,
+                "clockViolationProbability": 0.006583495996517187
+              }
+            }
+          },
+          "v4": {
+            "manifest": "reports/defense-seventh/2022-23-calendar-55-v4-seeds.json",
+            "sha256": "26f30ba5f36c9ea02e33099bd3c553ba06ab96a8f5b07a5f4738dfedcb27c7ce",
+            "trainingCalibrationManifests": 5,
+            "calibration": {
+              "shotDelta": -0.10414898020567828,
+              "options": {
+                "pace": 0.9391376390955036,
+                "foulScale": 0.9303831281334985,
+                "passTurnoverScale": 1.382474327810698,
+                "touchTurnoverScale": 1.0063063878569471,
+                "touchLiveShare": 0.2882558213785775,
+                "clockViolationProbability": 0.0065886592488655985
+              }
+            }
+          },
+          "v5": {
+            "manifest": "reports/defense-seventh/2022-23-eighth-c-calendar-55-v5-seeds.json",
+            "sha256": "74ad58b6733812808c15c91c101ff1fedcf01eb90fd20e8dd602e3a697a5bdb7",
+            "trainingCalibrationManifests": 5,
+            "calibration": {
+              "shotDelta": -0.10187694059375273,
+              "options": {
+                "pace": 0.938104136254203,
+                "foulScale": 0.9337772103495624,
+                "passTurnoverScale": 1.3762180612183208,
+                "touchTurnoverScale": 1.0039243728535288,
+                "touchLiveShare": 0.2830887009185974,
+                "clockViolationProbability": 0.006567327372689186
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "sourceHashes": {
+    "reports/defense-eighth/c/ablation/2024-25/calendar-25/diagnostic.json": "292f5965e93fc560c4141f17f2298718713c3569b63fd84cece7069114856dbd",
+    "reports/defense-eighth/c/ablation/2024-25/calendar-41/diagnostic.json": "ce5b5473cc5d3a17bc6c96403c8ddab96829844b837221d3c51ae3a9259cd089",
+    "reports/defense-eighth/c/ablation/2024-25/calendar-55/diagnostic.json": "4834fa61f01534e878e140246973ff15e3363cbef92d44ec115a6771b58607e0",
+    "reports/defense-eighth/c/ablation/2025-26/calendar-25/diagnostic.json": "3889a34a1fde6d8e393b7d73c970814db65c3cf21ad2fa17a238bdea9a7e5125",
+    "reports/defense-eighth/c/ablation/2025-26/calendar-41/diagnostic.json": "23afd5968746474662a75294c0bd5cc267923f2d70bcf220bc33d74ce92fc9cb",
+    "reports/defense-eighth/c/ablation/2025-26/calendar-55/diagnostic.json": "54647f8bc083a8c18a7886d778159b561bdcb969bb09659bca340de4fabb3d27",
+    "reports/defense-eighth/c/ablation/2023-24/calendar-25/diagnostic.json": "15fbb28978bd33f37cde17d2499e6f54fef7bc279ea3e31d0e88bea38b0668df",
+    "reports/defense-eighth/c/ablation/2023-24/calendar-41/diagnostic.json": "3285821110b447c68416a19d6b8d6a39ccb6bb2ffa93df47284315ff77acf1de",
+    "reports/defense-eighth/c/ablation/2023-24/calendar-55/diagnostic.json": "d97f1b9a478e6a85247f2086295b76d5579fd4e90588d03031cf23550069488a",
+    "reports/defense-eighth/c/ablation/2022-23/calendar-25/diagnostic.json": "908ad54044434927d2a8f9ab251b9f7f46ae2f40c76bde6e54471b7b425ca03e",
+    "reports/defense-eighth/c/ablation/2022-23/calendar-41/diagnostic.json": "a672a7c42037ffd8930ee791de00238306a0363946856864ff13d61c364696d4",
+    "reports/defense-eighth/c/ablation/2022-23/calendar-55/diagnostic.json": "58519ef0bbbfa90322df7e5dd573a89dfd4bd5bbc9be09394e0a9b9653914597",
+    "scripts/audit_defense_eighth_c_execution.js": "f000023ea85466615bb4c89e1e29f3f62fe4a5d5840a52fbb8ad7d7bbf96589e",
+    "scripts/run_defense_eighth_c_versions.js": "4124e782cd7332fc0909ba410e74c31f1a8d8d625727506f8736b432ee0e5775",
+    "scripts/diagnose_defense_eighth_c_ablation.js": "1a7e5ad2579ff786a6a50acd1c7f7e02709ee5bf9e533f130dedc52802b16ba8",
+    "scripts/assess_defense_eighth_c.js": "81e99807fde2a0a61cfe1e31c9c98df5f2325914c6d1fcf5188e2e89e1b247ae",
+    "scripts/defense_eighth_c_data.js": "ef7768d13b7a87fb18641c8f77cf65d0b84368750b53920bda7b326be397136b",
+    "src/defense_eighth_c_statistics.js": "1ef1a4b2887a001dd0e05bafc922dc62bd04a587c5ddd7dfc1f1814f52ec079a"
+  }
+}

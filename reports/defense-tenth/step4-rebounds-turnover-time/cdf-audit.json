@@ -1,0 +1,76 @@
+{
+  "2022-23": {
+    "games": 1230,
+    "missing": [],
+    "failures": [],
+    "zeroExcluded": 460,
+    "unionExactlyFrozen": true,
+    "states": {
+      "liveTurnover": {
+        "n": 17627,
+        "mean": 7.740420945140973
+      },
+      "deadTurnover": {
+        "n": 16569,
+        "mean": 14.841571609632462
+      }
+    }
+  },
+  "2023-24": {
+    "games": 1230,
+    "missing": [],
+    "failures": [],
+    "zeroExcluded": 386,
+    "unionExactlyFrozen": true,
+    "states": {
+      "liveTurnover": {
+        "n": 18113,
+        "mean": 7.862203941920157
+      },
+      "deadTurnover": {
+        "n": 14973,
+        "mean": 14.904494757229699
+      }
+    }
+  },
+  "2024-25": {
+    "games": 1229,
+    "missing": [
+      "0022400072"
+    ],
+    "failures": [],
+    "zeroExcluded": 361,
+    "unionExactlyFrozen": true,
+    "states": {
+      "liveTurnover": {
+        "n": 19938,
+        "mean": 7.785525127896482
+      },
+      "deadTurnover": {
+        "n": 14886,
+        "mean": 14.834213354830036
+      }
+    }
+  },
+  "2025-26": {
+    "games": 1227,
+    "missing": [
+      "0022500029",
+      "0022501229",
+      "0022501230"
+    ],
+    "failures": [],
+    "zeroExcluded": 423,
+    "unionExactlyFrozen": true,
+    "states": {
+      "liveTurnover": {
+        "n": 20370,
+        "mean": 7.789518900343644
+      },
+      "deadTurnover": {
+        "n": 14852,
+        "mean": 14.767216536493407
+      }
+    }
+  }
+}

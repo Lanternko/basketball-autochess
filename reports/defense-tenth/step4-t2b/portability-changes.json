@@ -1,0 +1,478 @@
+[
+  {
+    "metric": "assistedMakeShare",
+    "group": "same",
+    "n": 520,
+    "meanChangePP": 0.36860962237992867,
+    "meanAbsoluteChangePP": 5.435590098568439,
+    "changeCI95": [
+      -0.6707116172916945,
+      1.4082415832727546
+    ],
+    "absoluteChangeCI95": [
+      4.720255549320007,
+      6.244816858018382
+    ],
+    "validBootstrap": 20000,
+    "label": "descriptive before-after change; not organizer or trade causal effect"
+  },
+  {
+    "metric": "assistedMakeShare",
+    "group": "moved",
+    "n": 148,
+    "meanChangePP": 1.499965738424782,
+    "meanAbsoluteChangePP": 6.977945527623594,
+    "changeCI95": [
+      -0.33126306375284686,
+      3.347485945747177
+    ],
+    "absoluteChangeCI95": [
+      5.715205341993029,
+      8.416548505854673
+    ],
+    "validBootstrap": 20000,
+    "label": "descriptive before-after change; not organizer or trade causal effect"
+  },
+  {
+    "metric": "assistedMakeShare",
+    "group": "seasonMove",
+    "n": 109,
+    "meanChangePP": -0.6132808971136607,
+    "meanAbsoluteChangePP": 8.413340871156336,
+    "changeCI95": [
+      -3.2169917387970535,
+      2.1526653240062967
+    ],
+    "absoluteChangeCI95": [
+      6.794951479641374,
+      10.21722280672815
+    ],
+    "validBootstrap": 20000,
+    "label": "descriptive before-after change; not organizer or trade causal effect"
+  },
+  {
+    "metric": "assistedMakeShare",
+    "group": "officialTradeParticipant",
+    "n": 103,
+    "meanChangePP": -0.6013614507313806,
+    "meanAbsoluteChangePP": 8.076762226868992,
+    "changeCI95": [
+      -3.1373190641101005,
+      2.040053397510219
+    ],
+    "absoluteChangeCI95": [
+      6.663524466008689,
+      9.65980677397156
+    ],
+    "validBootstrap": 20000,
+    "label": "descriptive before-after change; not organizer or trade causal effect"
+  },
+  {
+    "metric": "catch3FG",
+    "group": "same",
+    "n": 445,
+    "meanChangePP": 0.3949220447829879,
+    "meanAbsoluteChangePP": 3.980580700470463,
+    "changeCI95": [
+      -0.25504234792662306,
+      1.0656171271873438
+    ],
+    "absoluteChangeCI95": [
+      3.4921287562957604,
+      4.490866821973703
+    ],
+    "validBootstrap": 20000,
+    "label": "descriptive before-after change; not organizer or trade causal effect"
+  },
+  {
+    "metric": "catch3FG",
+    "group": "moved",
+    "n": 134,
+    "meanChangePP": -0.018722516575523374,
+    "meanAbsoluteChangePP": 4.220901148618751,
+    "changeCI95": [
+      -1.2605039463295262,
+      1.2614874994815406
+    ],
+    "absoluteChangeCI95": [
+      3.4519216263789723,
+      5.056179578038214
+    ],
+    "validBootstrap": 20000,
+    "label": "descriptive before-after change; not organizer or trade causal effect"
+  },
+  {
+    "metric": "catch3FG",
+    "group": "seasonMove",
+    "n": 94,
+    "meanChangePP": 0.44525750236904316,
+    "meanAbsoluteChangePP": 5.192349521853703,
+    "changeCI95": [
+      -1.2646306687020723,
+      2.2159751377742958
+    ],
+    "absoluteChangeCI95": [
+      3.9662583669993814,
+      6.554607279934114
+    ],
+    "validBootstrap": 20000,
+    "label": "descriptive before-after change; not organizer or trade causal effect"
+  },
+  {
+    "metric": "catch3FG",
+    "group": "officialTradeParticipant",
+    "n": 90,
+    "meanChangePP": 0.5358017937927234,
+    "meanAbsoluteChangePP": 5.21410814129583,
+    "changeCI95": [
+      -1.1868994813559732,
+      2.3722325954012464
+    ],
+    "absoluteChangeCI95": [
+      3.9796140492028877,
+      6.606297865199905
+    ],
+    "validBootstrap": 20000,
+    "label": "descriptive before-after change; not organizer or trade causal effect"
+  },
+  {
+    "metric": "catchFG",
+    "group": "same",
+    "n": 420,
+    "meanChangePP": 0.1581200495509129,
+    "meanAbsoluteChangePP": 3.887667291492497,
+    "changeCI95": [
+      -0.4959615998515451,
+      0.8065304822874849
+    ],
+    "absoluteChangeCI95": [
+      3.3983803859082533,
+      4.409141914666324
+    ],
+    "validBootstrap": 20000,
+    "label": "descriptive before-after change; not organizer or trade causal effect"
+  },
+  {
+    "metric": "catchFG",
+    "group": "moved",
+    "n": 121,
+    "meanChangePP": 0.14840643238903461,
+    "meanAbsoluteChangePP": 3.860173199245247,
+    "changeCI95": [
+      -1.0504799920657129,
+      1.3578880005346707
+    ],
+    "absoluteChangeCI95": [
+      3.1238960683826993,
+      4.684068091532218
+    ],
+    "validBootstrap": 20000,
+    "label": "descriptive before-after change; not organizer or trade causal effect"
+  },
+  {
+    "metric": "catchFG",
+    "group": "seasonMove",
+    "n": 83,
+    "meanChangePP": 0.3693105154360821,
+    "meanAbsoluteChangePP": 4.788506916574964,
+    "changeCI95": [
+      -1.3610602783489885,
+      2.170137946960543
+    ],
+    "absoluteChangeCI95": [
+      3.720109966477041,
+      5.9094386193047335
+    ],
+    "validBootstrap": 19999,
+    "label": "descriptive before-after change; not organizer or trade causal effect"
+  },
+  {
+    "metric": "catchFG",
+    "group": "officialTradeParticipant",
+    "n": 80,
+    "meanChangePP": 0.498068297493149,
+    "meanAbsoluteChangePP": 4.843863015942676,
+    "changeCI95": [
+      -1.210044094915177,
+      2.296288950290654
+    ],
+    "absoluteChangeCI95": [
+      3.7393592818942065,
+      5.976047147668596
+    ],
+    "validBootstrap": 20000,
+    "label": "descriptive before-after change; not organizer or trade causal effect"
+  },
+  {
+    "metric": "catchShare",
+    "group": "same",
+    "n": 538,
+    "meanChangePP": 0.2576427152010923,
+    "meanAbsoluteChangePP": 5.228449963246301,
+    "changeCI95": [
+      -0.7483032792153963,
+      1.2777512968587228
+    ],
+    "absoluteChangeCI95": [
+      4.548020269968965,
+      5.96403827364678
+    ],
+    "validBootstrap": 20000,
+    "label": "descriptive before-after change; not organizer or trade causal effect"
+  },
+  {
+    "metric": "catchShare",
+    "group": "moved",
+    "n": 160,
+    "meanChangePP": 1.2786549386942385,
+    "meanAbsoluteChangePP": 6.50067550858191,
+    "changeCI95": [
+      -0.38709504484625573,
+      2.9045668718456743
+    ],
+    "absoluteChangeCI95": [
+      5.405014787958893,
+      7.631088519370378
+    ],
+    "validBootstrap": 20000,
+    "label": "descriptive before-after change; not organizer or trade causal effect"
+  },
+  {
+    "metric": "catchShare",
+    "group": "seasonMove",
+    "n": 115,
+    "meanChangePP": -2.0427704307573213,
+    "meanAbsoluteChangePP": 7.514883416052502,
+    "changeCI95": [
+      -4.140616646981526,
+      0.1803609601128522
+    ],
+    "absoluteChangeCI95": [
+      6.153279432884541,
+      8.996492111577938
+    ],
+    "validBootstrap": 20000,
+    "label": "descriptive before-after change; not organizer or trade causal effect"
+  },
+  {
+    "metric": "catchShare",
+    "group": "officialTradeParticipant",
+    "n": 109,
+    "meanChangePP": -1.9718949247881539,
+    "meanAbsoluteChangePP": 7.306862092426747,
+    "changeCI95": [
+      -4.122332068350622,
+      0.185752695315393
+    ],
+    "absoluteChangeCI95": [
+      6.002931194110127,
+      8.801083922330319
+    ],
+    "validBootstrap": 20000,
+    "label": "descriptive before-after change; not organizer or trade causal effect"
+  },
+  {
+    "metric": "pull3FG",
+    "group": "same",
+    "n": 157,
+    "meanChangePP": -0.46283570625725606,
+    "meanAbsoluteChangePP": 3.951593045013169,
+    "changeCI95": [
+      -1.6584665605976474,
+      0.676945615785792
+    ],
+    "absoluteChangeCI95": [
+      3.1083113188225187,
+      4.941602523635751
+    ],
+    "validBootstrap": 20000,
+    "label": "descriptive before-after change; not organizer or trade causal effect"
+  },
+  {
+    "metric": "pull3FG",
+    "group": "moved",
+    "n": 43,
+    "meanChangePP": 0.7562202232621247,
+    "meanAbsoluteChangePP": 4.2957435361662215,
+    "changeCI95": [
+      -1.4345743027902351,
+      2.9128176577594287
+    ],
+    "absoluteChangeCI95": [
+      2.936205415520603,
+      5.827692661169911
+    ],
+    "validBootstrap": 19997,
+    "label": "descriptive before-after change; not organizer or trade causal effect"
+  },
+  {
+    "metric": "pull3FG",
+    "group": "seasonMove",
+    "n": 25,
+    "meanChangePP": -0.7213779911140326,
+    "meanAbsoluteChangePP": 7.867877065109031,
+    "changeCI95": [
+      -5.401624513931274,
+      4.375513128031098
+    ],
+    "absoluteChangeCI95": [
+      5.123844451593939,
+      11.55743331147762
+    ],
+    "validBootstrap": 19112,
+    "label": "descriptive before-after change; not organizer or trade causal effect"
+  },
+  {
+    "metric": "pull3FG",
+    "group": "officialTradeParticipant",
+    "n": 25,
+    "meanChangePP": -0.7213779911140326,
+    "meanAbsoluteChangePP": 7.867877065109031,
+    "changeCI95": [
+      -5.465887391028491,
+      4.22968512498575
+    ],
+    "absoluteChangeCI95": [
+      5.102147797504535,
+      11.540527130306364
+    ],
+    "validBootstrap": 19104,
+    "label": "descriptive before-after change; not organizer or trade causal effect"
+  },
+  {
+    "metric": "pullFG",
+    "group": "same",
+    "n": 252,
+    "meanChangePP": -0.2672391028485341,
+    "meanAbsoluteChangePP": 3.8173259454285766,
+    "changeCI95": [
+      -1.0188726408851798,
+      0.5237620527671909
+    ],
+    "absoluteChangeCI95": [
+      3.1332729118268405,
+      4.585517969042702
+    ],
+    "validBootstrap": 20000,
+    "label": "descriptive before-after change; not organizer or trade causal effect"
+  },
+  {
+    "metric": "pullFG",
+    "group": "moved",
+    "n": 66,
+    "meanChangePP": -0.8251361312192124,
+    "meanAbsoluteChangePP": 4.208941291719534,
+    "changeCI95": [
+      -2.3500474838680496,
+      0.7093401489468923
+    ],
+    "absoluteChangeCI95": [
+      3.2743931576487952,
+      5.104446218950242
+    ],
+    "validBootstrap": 20000,
+    "label": "descriptive before-after change; not organizer or trade causal effect"
+  },
+  {
+    "metric": "pullFG",
+    "group": "seasonMove",
+    "n": 47,
+    "meanChangePP": -1.1812155500465578,
+    "meanAbsoluteChangePP": 7.363739736817842,
+    "changeCI95": [
+      -4.530708014635258,
+      2.2361970659304293
+    ],
+    "absoluteChangeCI95": [
+      5.644023032022689,
+      9.233538363199287
+    ],
+    "validBootstrap": 19980,
+    "label": "descriptive before-after change; not organizer or trade causal effect"
+  },
+  {
+    "metric": "pullFG",
+    "group": "officialTradeParticipant",
+    "n": 45,
+    "meanChangePP": -0.8427188696021337,
+    "meanAbsoluteChangePP": 7.241689274286942,
+    "changeCI95": [
+      -4.204753942541265,
+      2.583891841132304
+    ],
+    "absoluteChangeCI95": [
+      5.517303131713982,
+      9.107071285649159
+    ],
+    "validBootstrap": 19973,
+    "label": "descriptive before-after change; not organizer or trade causal effect"
+  },
+  {
+    "metric": "pullShare",
+    "group": "same",
+    "n": 538,
+    "meanChangePP": 0.4283873585134774,
+    "meanAbsoluteChangePP": 4.059640761351184,
+    "changeCI95": [
+      -0.4368936821000894,
+      1.3046058188722855
+    ],
+    "absoluteChangeCI95": [
+      3.5213711460498547,
+      4.65082870156024
+    ],
+    "validBootstrap": 20000,
+    "label": "descriptive before-after change; not organizer or trade causal effect"
+  },
+  {
+    "metric": "pullShare",
+    "group": "moved",
+    "n": 160,
+    "meanChangePP": -0.9532526765510957,
+    "meanAbsoluteChangePP": 4.6795070756725865,
+    "changeCI95": [
+      -2.2516895250303586,
+      0.2895901146986422
+    ],
+    "absoluteChangeCI95": [
+      3.77378728218256,
+      5.762153767142152
+    ],
+    "validBootstrap": 20000,
+    "label": "descriptive before-after change; not organizer or trade causal effect"
+  },
+  {
+    "metric": "pullShare",
+    "group": "seasonMove",
+    "n": 115,
+    "meanChangePP": 0.746422030054308,
+    "meanAbsoluteChangePP": 5.9831765403452355,
+    "changeCI95": [
+      -1.168260938954798,
+      2.6689589530938447
+    ],
+    "absoluteChangeCI95": [
+      4.842605430773108,
+      7.254876554331259
+    ],
+    "validBootstrap": 20000,
+    "label": "descriptive before-after change; not organizer or trade causal effect"
+  },
+  {
+    "metric": "pullShare",
+    "group": "officialTradeParticipant",
+    "n": 109,
+    "meanChangePP": 0.6561498104236856,
+    "meanAbsoluteChangePP": 5.729090478959538,
+    "changeCI95": [
+      -1.223072904904416,
+      2.5373451097683652
+    ],
+    "absoluteChangeCI95": [
+      4.657788419656502,
+      6.949282125607538
+    ],
+    "validBootstrap": 20000,
+    "label": "descriptive before-after change; not organizer or trade causal effect"
+  }
+]

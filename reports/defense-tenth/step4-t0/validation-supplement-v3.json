@@ -1,0 +1,16 @@
+{
+  "registeredAt": "2026-10-13T07:45:02.605Z",
+  "parentProtocolSHA": "1d8d8f68e3f3a6451ec5c9738513ba9238234b3f34df0700c4ced56d27d62db2",
+  "scope": "Validation-only correction before2023-24 fitting. No card/model/probability/fold/ridge rule changes. No ranking outputs inspected.",
+  "reason": "Leaguewide traded player GP can exceed82 while each franchise has82. Original per-team GP assertion invalid for full-season individual tracking. Adapter path resolver corrected before execution.",
+  "rule": "Check each tracker GP against its player official logged GP, precomputed once. No estimator changes.",
+  "code": {
+    "file": "reports/defense-tenth/step4-t0/full-factor-adapter-v3.py",
+    "sha256": "883aa689d4c6b68d579a505171833507cd3da1026faa8655abc0e5be49949357"
+  },
+  "supersedes": {
+    "file": "reports/defense-tenth/step4-t0/validation-supplement-v2.json",
+    "sha256": "4b43456ad4a5b477fe66546f798f63cce812ab8250018c349b806e9b5286048a"
+  },
+  "executionNote": "v2 stopped during validation before fitting due to slow repeated counting. No scores inspected."
+}

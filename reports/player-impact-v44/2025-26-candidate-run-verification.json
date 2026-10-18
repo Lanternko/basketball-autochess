@@ -1,0 +1,54 @@
+{
+  "passed": true,
+  "allSourceHashesPassed": true,
+  "jobs": [
+    {
+      "variant": "v44",
+      "season": "2025-26",
+      "seed": 20261012,
+      "strict": false,
+      "file": "reports/player-impact-v44/runs/2025-26-v44-full-20261012.json",
+      "sha256": "6617a62b2ebeda47120dd14a92218583b7ab0da1a72c75ee44fab837fc58b5d4"
+    },
+    {
+      "variant": "v44",
+      "season": "2025-26",
+      "seed": 20261012,
+      "strict": true,
+      "file": "reports/player-impact-v44/runs/2025-26-v44-strict-20261012.json",
+      "sha256": "4608134fc2421f095d24c5c37c02020489f40737983cef2abcd55b9737e93593"
+    },
+    {
+      "variant": "v44",
+      "season": "2025-26",
+      "seed": 20261013,
+      "strict": false,
+      "file": "reports/player-impact-v44/runs/2025-26-v44-full-20261013.json",
+      "sha256": "21f9a8e0e4c3ca1e75309a59ea19705d6cdf2839a8b1adf092edba7068e5b00c"
+    },
+    {
+      "variant": "v44",
+      "season": "2025-26",
+      "seed": 20261013,
+      "strict": true,
+      "file": "reports/player-impact-v44/runs/2025-26-v44-strict-20261013.json",
+      "sha256": "4d9a715a0ef11b5437ed05d10fba595c3505336d57fe915c6d81964e2f49f053"
+    },
+    {
+      "variant": "v44",
+      "season": "2025-26",
+      "seed": 20261014,
+      "strict": false,
+      "file": "reports/player-impact-v44/runs/2025-26-v44-full-20261014.json",
+      "sha256": "3e93cc64769fd1bee599a4c78013788132097699c08a5fa433f85702a593f94c"
+    },
+    {
+      "variant": "v44",
+      "season": "2025-26",
+      "seed": 20261014,
+      "strict": true,
+      "file": "reports/player-impact-v44/runs/2025-26-v44-strict-20261014.json",
+      "sha256": "181a19bec02d6fb8958f700d57301d3afcf1c9a95d661be6fc290b6ca4aa00df"
+    }
+  ]
+}

@@ -1,0 +1,1160 @@
+{
+  "scope": "Diagnostic Hall feasibility, no new transport implementation, fitted parameter, runtime change, OVR or adoption. Uses exact frozen v30 roles and v33 source probabilities. A separate own row plus five fixed passer rows may preserve legacy passing without zero own support in strictly feasible states; KL-prior choice and non-strict cases still require implementation and source/full-game verification.",
+  "totals": {
+    "sourceShotStates": 228816,
+    "legacyUnsupportedSelfMakes": 891,
+    "unsupportedMakesInStrictlyFeasibleStates": 850,
+    "unsupportedMakesNeedingSupplyAdjustment": 41
+  },
+  "seasons": [
+    {
+      "season": "2022-23",
+      "sourceShotStates": 54643,
+      "uniqueTeamFives": 14228,
+      "strictlyFeasibleShotStates": 54632,
+      "nonStrictShotStates": 11,
+      "legacyUnsupportedSelfMakes": 211,
+      "unsupportedMakesInStrictlyFeasibleStates": 207,
+      "unsupportedMakesNeedingSupplyAdjustment": 4,
+      "allZeroSelfStates": 9,
+      "allZeroSelfMakes": 4,
+      "exceptions": [
+        {
+          "gameId": "0022200513",
+          "teamId": 1610612744,
+          "startIndex": 472,
+          "endIndex": 477,
+          "playerIds": [
+            203110,
+            1628978,
+            1629660,
+            1630228,
+            1630237
+          ],
+          "unsupportedSelfMakes": 1,
+          "remainingOwn": 0,
+          "minPassRowSlack": 0.8767884197678835,
+          "strictlyFeasible": false,
+          "terminal": [
+            0.2602082792567084,
+            0.3304703713883259,
+            0.3471589613979066,
+            0.4517663432031357,
+            0.3002342107638591
+          ],
+          "passerRows": [
+            0.5528414669853439,
+            0.32045680572857504,
+            0.4118657237911048,
+            0.21464530244795774,
+            0.19002886705695438
+          ]
+        },
+        {
+          "gameId": "0022200594",
+          "teamId": 1610612744,
+          "startIndex": 358,
+          "endIndex": 366,
+          "playerIds": [
+            2738,
+            203110,
+            1629660,
+            1629673,
+            1630237
+          ],
+          "unsupportedSelfMakes": 1,
+          "remainingOwn": 0,
+          "minPassRowSlack": 0.7696402705430926,
+          "strictlyFeasible": false,
+          "terminal": [
+            0.2353224839182662,
+            0.2529719977075664,
+            0.3375046183687033,
+            0.7209564141159901,
+            0.291884825087209
+          ],
+          "passerRows": [
+            0.35640490040401057,
+            0.5430056899987804,
+            0.4045380907361729,
+            0.3480436545386524,
+            0.1866480035201187
+          ]
+        },
+        {
+          "gameId": "0022201050",
+          "teamId": 1610612750,
+          "startIndex": 177,
+          "endIndex": 188,
+          "playerIds": [
+            201144,
+            203497,
+            203937,
+            1629162,
+            1630183
+          ],
+          "unsupportedSelfMakes": 1,
+          "remainingOwn": 0,
+          "minPassRowSlack": 0.7182364641753558,
+          "strictlyFeasible": false,
+          "terminal": [
+            0.36764501182321807,
+            0.3248806280513005,
+            0.3074488918848598,
+            0.24926922661704137,
+            0.34577038124436577
+          ],
+          "passerRows": [
+            0.5091326636222118,
+            0.08211387572789376,
+            0.3897075833902349,
+            0.48934490390460544,
+            0.12471511297583963
+          ]
+        },
+        {
+          "gameId": "0022201050",
+          "teamId": 1610612750,
+          "startIndex": 190,
+          "endIndex": 205,
+          "playerIds": [
+            201144,
+            203497,
+            203937,
+            1629162,
+            1630183
+          ],
+          "unsupportedSelfMakes": 1,
+          "remainingOwn": 0,
+          "minPassRowSlack": 0.7182364641753558,
+          "strictlyFeasible": false,
+          "terminal": [
+            0.36764501182321807,
+            0.3248806280513005,
+            0.3074488918848598,
+            0.24926922661704137,
+            0.34577038124436577
+          ],
+          "passerRows": [
+            0.5091326636222118,
+            0.08211387572789376,
+            0.3897075833902349,
+            0.48934490390460544,
+            0.12471511297583963
+          ]
+        }
+      ]
+    },
+    {
+      "season": "2023-24",
+      "sourceShotStates": 53450,
+      "uniqueTeamFives": 13492,
+      "strictlyFeasibleShotStates": 53388,
+      "nonStrictShotStates": 62,
+      "legacyUnsupportedSelfMakes": 194,
+      "unsupportedMakesInStrictlyFeasibleStates": 178,
+      "unsupportedMakesNeedingSupplyAdjustment": 16,
+      "allZeroSelfStates": 16,
+      "allZeroSelfMakes": 7,
+      "exceptions": [
+        {
+          "gameId": "0022300448",
+          "teamId": 1610612759,
+          "startIndex": 353,
+          "endIndex": 377,
+          "playerIds": [
+            203926,
+            1626224,
+            1630200,
+            1631104,
+            1631230
+          ],
+          "unsupportedSelfMakes": 1,
+          "remainingOwn": -2.220446049250313e-16,
+          "minPassRowSlack": 0.7410002371122826,
+          "strictlyFeasible": false,
+          "terminal": [
+            0.3398375657303162,
+            0.34943798819158256,
+            0.3289968800854534,
+            0.31397761513866546,
+            0.3131228986377908
+          ],
+          "passerRows": [
+            0.1716610529184713,
+            0.2192414855939434,
+            0.5753758305860723,
+            0.4723802775258789,
+            0.20671430115944253
+          ]
+        },
+        {
+          "gameId": "0022300730",
+          "teamId": 1610612759,
+          "startIndex": 494,
+          "endIndex": 500,
+          "playerIds": [
+            1626224,
+            1630200,
+            1630572,
+            1630577,
+            1631104
+          ],
+          "unsupportedSelfMakes": 1,
+          "remainingOwn": 2.220446049250313e-16,
+          "minPassRowSlack": 0.8006414708195835,
+          "strictlyFeasible": false,
+          "terminal": [
+            0.3468754896157458,
+            0.3265842802389493,
+            0.4037818493175891,
+            0.3194998266663849,
+            0.31167515456246636
+          ],
+          "passerRows": [
+            0.22145724316172266,
+            0.5811908493426026,
+            0.266528597905916,
+            0.1620855352089139,
+            0.4771543747819802
+          ]
+        },
+        {
+          "gameId": "0022300921",
+          "teamId": 1610612744,
+          "startIndex": 0,
+          "endIndex": 41,
+          "playerIds": [
+            101108,
+            203110,
+            1630228,
+            1631218,
+            1641764
+          ],
+          "unsupportedSelfMakes": 2,
+          "remainingOwn": -2.220446049250313e-16,
+          "minPassRowSlack": 0.891431689526131,
+          "strictlyFeasible": false,
+          "terminal": [
+            0.34157524843579423,
+            0.30150540808876475,
+            0.5657188064836127,
+            0.3159831437013525,
+            0.33627046923116805
+          ],
+          "passerRows": [
+            0.6280461379787671,
+            0.5462837244144096,
+            0.1904762655139549,
+            0.167040189576798,
+            0.3292067584567628
+          ]
+        },
+        {
+          "gameId": "0022300936",
+          "teamId": 1610612744,
+          "startIndex": 263,
+          "endIndex": 275,
+          "playerIds": [
+            101108,
+            203110,
+            203952,
+            1631218,
+            1641764
+          ],
+          "unsupportedSelfMakes": 1,
+          "remainingOwn": -4.440892098500626e-16,
+          "minPassRowSlack": 0.8218104804672371,
+          "strictlyFeasible": false,
+          "terminal": [
+            0.3449113035279484,
+            0.3044501139963874,
+            0.48043796961378116,
+            0.31906924897510136,
+            0.3395547142587482
+          ],
+          "passerRows": [
+            0.621701566376781,
+            0.5407651231605253,
+            0.13472283859500847,
+            0.16535273641198744,
+            0.3258810858276648
+          ]
+        },
+        {
+          "gameId": "0022300936",
+          "teamId": 1610612744,
+          "startIndex": 382,
+          "endIndex": 406,
+          "playerIds": [
+            101108,
+            203110,
+            1630541,
+            1631218,
+            1641764
+          ],
+          "unsupportedSelfMakes": 1,
+          "remainingOwn": -2.220446049250313e-16,
+          "minPassRowSlack": 0.7723485219830173,
+          "strictlyFeasible": false,
+          "terminal": [
+            0.3474351803938801,
+            0.30667791746842843,
+            0.41342421009784636,
+            0.32140402747578106,
+            0.3420393944628177
+          ],
+          "passerRows": [
+            0.6111970275218561,
+            0.5316281214947045,
+            0.10522185800153548,
+            0.16255886498179195,
+            0.3203748578988659
+          ]
+        },
+        {
+          "gameId": "0022300987",
+          "teamId": 1610612750,
+          "startIndex": 127,
+          "endIndex": 150,
+          "playerIds": [
+            201144,
+            203937,
+            1629162,
+            1629638,
+            1629675
+          ],
+          "unsupportedSelfMakes": 1,
+          "remainingOwn": 2.220446049250313e-16,
+          "minPassRowSlack": 0.8819870842361553,
+          "strictlyFeasible": false,
+          "terminal": [
+            0.3310433715544522,
+            0.2940686235512273,
+            0.24810823536012908,
+            0.3063668234539624,
+            0.5276459488239615
+          ],
+          "passerRows": [
+            0.49420254695312515,
+            0.4467125712623317,
+            0.4092263700661487,
+            0.24156540157760287,
+            0.11552611288452387
+          ]
+        },
+        {
+          "gameId": "0022300995",
+          "teamId": 1610612750,
+          "startIndex": 171,
+          "endIndex": 176,
+          "playerIds": [
+            201144,
+            203937,
+            1628420,
+            1629638,
+            1630183
+          ],
+          "unsupportedSelfMakes": 1,
+          "remainingOwn": 0,
+          "minPassRowSlack": 0.7995278465910176,
+          "strictlyFeasible": false,
+          "terminal": [
+            0.33549068312968955,
+            0.29801920799366005,
+            0.3538118992193152,
+            0.31048262469721855,
+            0.3354288212547086
+          ],
+          "passerRows": [
+            0.49821470657388495,
+            0.45033918579832377,
+            0.338321713447207,
+            0.2435265386780845,
+            0.1028310917970919
+          ]
+        },
+        {
+          "gameId": "0022301014",
+          "teamId": 1610612750,
+          "startIndex": 171,
+          "endIndex": 191,
+          "playerIds": [
+            201144,
+            203497,
+            203937,
+            1628420,
+            1629162
+          ],
+          "unsupportedSelfMakes": 1,
+          "remainingOwn": -2.220446049250313e-16,
+          "minPassRowSlack": 0.774085365138069,
+          "strictlyFeasible": false,
+          "terminal": [
+            0.33865343396008013,
+            0.2936299892953189,
+            0.3008287062746896,
+            0.35714736853136575,
+            0.2538117754901577
+          ],
+          "passerRows": [
+            0.43133247445346307,
+            0.07278417231741341,
+            0.38988394519611036,
+            0.29290412325650217,
+            0.35716655832812333
+          ]
+        },
+        {
+          "gameId": "0022301014",
+          "teamId": 1610612750,
+          "startIndex": 425,
+          "endIndex": 436,
+          "playerIds": [
+            201144,
+            203497,
+            203937,
+            1629162,
+            1629638
+          ],
+          "unsupportedSelfMakes": 1,
+          "remainingOwn": 0,
+          "minPassRowSlack": 0.7224558006008016,
+          "strictlyFeasible": false,
+          "terminal": [
+            0.34026284847950095,
+            0.29502543467020614,
+            0.3022583627883576,
+            0.2550179890279835,
+            0.31489906455026145
+          ],
+          "passerRows": [
+            0.444745050436007,
+            0.07504744554480221,
+            0.4020076510356554,
+            0.36827289482196074,
+            0.21739065767788407
+          ]
+        },
+        {
+          "gameId": "0022301031",
+          "teamId": 1610612750,
+          "startIndex": 414,
+          "endIndex": 436,
+          "playerIds": [
+            201144,
+            203497,
+            203937,
+            1628420,
+            1629638
+          ],
+          "unsupportedSelfMakes": 2,
+          "remainingOwn": -2.220446049250313e-16,
+          "minPassRowSlack": 0.7660963149187463,
+          "strictlyFeasible": false,
+          "terminal": [
+            0.33687761019530427,
+            0.29209025852411713,
+            0.29925122702257506,
+            0.355274566660885,
+            0.31176616780958927
+          ],
+          "passerRows": [
+            0.4922859050984201,
+            0.08306961397125928,
+            0.4449801074853176,
+            0.33429565350276785,
+            0.24062855015470602
+          ]
+        },
+        {
+          "gameId": "0022301143",
+          "teamId": 1610612750,
+          "startIndex": 167,
+          "endIndex": 170,
+          "playerIds": [
+            201144,
+            203497,
+            203937,
+            1629162,
+            1629638
+          ],
+          "unsupportedSelfMakes": 1,
+          "remainingOwn": 0,
+          "minPassRowSlack": 0.7224558006008016,
+          "strictlyFeasible": false,
+          "terminal": [
+            0.34026284847950095,
+            0.29502543467020614,
+            0.3022583627883576,
+            0.2550179890279835,
+            0.31489906455026145
+          ],
+          "passerRows": [
+            0.444745050436007,
+            0.07504744554480221,
+            0.4020076510356554,
+            0.36827289482196074,
+            0.21739065767788407
+          ]
+        },
+        {
+          "gameId": "0022301194",
+          "teamId": 1610612750,
+          "startIndex": 158,
+          "endIndex": 161,
+          "playerIds": [
+            201144,
+            203497,
+            203937,
+            1629162,
+            1630183
+          ],
+          "unsupportedSelfMakes": 1,
+          "remainingOwn": 0,
+          "minPassRowSlack": 0.6973052134392168,
+          "strictlyFeasible": false,
+          "terminal": [
+            0.33934476602064617,
+            0.2942294098391173,
+            0.30144282238434883,
+            0.25432991055140214,
+            0.3392821934827289
+          ],
+          "passerRows": [
+            0.49197912281838035,
+            0.08301784672520943,
+            0.4447028051889634,
+            0.40738525493351996,
+            0.10154407261217015
+          ]
+        },
+        {
+          "gameId": "0022301197",
+          "teamId": 1610612759,
+          "startIndex": 31,
+          "endIndex": 55,
+          "playerIds": [
+            1630200,
+            1630572,
+            1630577,
+            1631104,
+            1631321
+          ],
+          "unsupportedSelfMakes": 1,
+          "remainingOwn": 2.220446049250313e-16,
+          "minPassRowSlack": 0.7805305387309496,
+          "strictlyFeasible": false,
+          "terminal": [
+            0.32709851452929883,
+            0.40441763764330985,
+            0.3200029058914852,
+            0.31216591318627007,
+            0.3298070326582605
+          ],
+          "passerRows": [
+            0.5858629506483759,
+            0.2686711791452985,
+            0.1633885151879571,
+            0.4809901433251291,
+            0.1945792156018636
+          ]
+        },
+        {
+          "gameId": "0022301197",
+          "teamId": 1610612759,
+          "startIndex": 329,
+          "endIndex": 347,
+          "playerIds": [
+            1630200,
+            1630564,
+            1630577,
+            1631104,
+            1631321
+          ],
+          "unsupportedSelfMakes": 1,
+          "remainingOwn": 4.440892098500626e-16,
+          "minPassRowSlack": 0.8158611708161344,
+          "strictlyFeasible": false,
+          "terminal": [
+            0.3257217907883661,
+            0.4427414415677773,
+            0.31865604683178506,
+            0.31085203921649096,
+            0.3284189090452854
+          ],
+          "passerRows": [
+            0.5848072658452043,
+            0.304136831963619,
+            0.16309410030422739,
+            0.48012343211865716,
+            0.1942285972179965
+          ]
+        }
+      ]
+    },
+    {
+      "season": "2024-25",
+      "sourceShotStates": 56213,
+      "uniqueTeamFives": 15483,
+      "strictlyFeasibleShotStates": 56181,
+      "nonStrictShotStates": 32,
+      "legacyUnsupportedSelfMakes": 269,
+      "unsupportedMakesInStrictlyFeasibleStates": 260,
+      "unsupportedMakesNeedingSupplyAdjustment": 9,
+      "allZeroSelfStates": 8,
+      "allZeroSelfMakes": 3,
+      "exceptions": [
+        {
+          "gameId": "0022400320",
+          "teamId": 1610612751,
+          "startIndex": 90,
+          "endIndex": 117,
+          "playerIds": [
+            203471,
+            1627732,
+            1629003,
+            1630549,
+            1630570
+          ],
+          "unsupportedSelfMakes": 2,
+          "remainingOwn": -4.440892098500626e-16,
+          "minPassRowSlack": 0.9965842990052962,
+          "strictlyFeasible": false,
+          "terminal": [
+            0.48848087513060096,
+            0.24404180815374887,
+            0.3449343975847061,
+            0.3455970377884378,
+            0.5156375388660228
+          ],
+          "passerRows": [
+            0.4536264833876196,
+            0.6450060495721298,
+            0.292173144518784,
+            0.2489466817373454,
+            0.2989392983076382
+          ]
+        },
+        {
+          "gameId": "0022400320",
+          "teamId": 1610612751,
+          "startIndex": 364,
+          "endIndex": 384,
+          "playerIds": [
+            203471,
+            1627732,
+            1629003,
+            1629661,
+            1630549
+          ],
+          "unsupportedSelfMakes": 1,
+          "remainingOwn": -2.220446049250313e-16,
+          "minPassRowSlack": 0.9822036143118946,
+          "strictlyFeasible": false,
+          "terminal": [
+            0.4886803939981728,
+            0.24414148645781764,
+            0.34507528523025477,
+            0.5115825819342743,
+            0.34573819608782325
+          ],
+          "passerRows": [
+            0.4643339353982754,
+            0.6602308470107634,
+            0.29906963323428976,
+            0.25676068004211977,
+            0.2548228480228947
+          ]
+        },
+        {
+          "gameId": "0022401004",
+          "teamId": 1610612746,
+          "startIndex": 101,
+          "endIndex": 122,
+          "playerIds": [
+            201587,
+            201935,
+            203992,
+            1627732,
+            1641738
+          ],
+          "unsupportedSelfMakes": 1,
+          "remainingOwn": 0,
+          "minPassRowSlack": 0.5856711923132454,
+          "strictlyFeasible": false,
+          "terminal": [
+            0.17642055044129668,
+            0.6617965203272147,
+            0.41435534088737735,
+            0.2447833793243902,
+            0.2977969754752785
+          ],
+          "passerRows": [
+            0.1339124210214734,
+            0.5476850538150972,
+            0.2420313324779425,
+            0.6568228275156411,
+            0.21470113162540308
+          ]
+        },
+        {
+          "gameId": "0022401004",
+          "teamId": 1610612746,
+          "startIndex": 375,
+          "endIndex": 400,
+          "playerIds": [
+            201587,
+            201935,
+            203992,
+            1627732,
+            1627739
+          ],
+          "unsupportedSelfMakes": 1,
+          "remainingOwn": -2.220446049250313e-16,
+          "minPassRowSlack": 0.5711168203905145,
+          "strictlyFeasible": false,
+          "terminal": [
+            0.17686802669489501,
+            0.6634751129107868,
+            0.41540631921804777,
+            0.24540425228533064,
+            0.2567181585033811
+          ],
+          "passerRows": [
+            0.12794521715585205,
+            0.5232799363111399,
+            0.23124629631962926,
+            0.6275544767123115,
+            0.2478459431135088
+          ]
+        },
+        {
+          "gameId": "0022400813",
+          "teamId": 1610612746,
+          "startIndex": 334,
+          "endIndex": 347,
+          "playerIds": [
+            201935,
+            203992,
+            1627732,
+            1627739,
+            1627826
+          ],
+          "unsupportedSelfMakes": 1,
+          "remainingOwn": -2.220446049250313e-16,
+          "minPassRowSlack": 0.7188579024066468,
+          "strictlyFeasible": false,
+          "terminal": [
+            0.6564341744590901,
+            0.41099793935700335,
+            0.24279997037256204,
+            0.2539938110210389,
+            0.3712490301087789
+          ],
+          "passerRows": [
+            0.5601828484527365,
+            0.24755432031212343,
+            0.6718110707667988,
+            0.26532461261466594,
+            0.19060207317214892
+          ]
+        },
+        {
+          "gameId": "0022400813",
+          "teamId": 1610612746,
+          "startIndex": 482,
+          "endIndex": 497,
+          "playerIds": [
+            201935,
+            203992,
+            1627732,
+            1627739,
+            1641738
+          ],
+          "unsupportedSelfMakes": 2,
+          "remainingOwn": -2.220446049250313e-16,
+          "minPassRowSlack": 0.6763380770313316,
+          "strictlyFeasible": false,
+          "terminal": [
+            0.6597926376039522,
+            0.4131006961689596,
+            0.24404218898913818,
+            0.25529329981447374,
+            0.29689526294602603
+          ],
+          "passerRows": [
+            0.5329933708872658,
+            0.23553882812604,
+            0.6392035175593039,
+            0.25244660747370296,
+            0.20894176147623716
+          ]
+        },
+        {
+          "gameId": "0022401150",
+          "teamId": 1610612740,
+          "startIndex": 342,
+          "endIndex": 349,
+          "playerIds": [
+            203482,
+            203901,
+            1630631,
+            1631255,
+            1641810
+          ],
+          "unsupportedSelfMakes": 1,
+          "remainingOwn": 4.440892098500626e-16,
+          "minPassRowSlack": 0.7734733236602725,
+          "strictlyFeasible": false,
+          "terminal": [
+            0.38361766200439024,
+            0.2798947131153281,
+            0.4435070481945605,
+            0.3251457664629122,
+            0.41999512726714305
+          ],
+          "passerRows": [
+            0.33419939586639985,
+            0.7987922802687332,
+            0.4465215776491257,
+            0.1332744933490913,
+            0.13937256991098332
+          ]
+        }
+      ]
+    },
+    {
+      "season": "2025-26",
+      "sourceShotStates": 64510,
+      "uniqueTeamFives": 17543,
+      "strictlyFeasibleShotStates": 64470,
+      "nonStrictShotStates": 40,
+      "legacyUnsupportedSelfMakes": 217,
+      "unsupportedMakesInStrictlyFeasibleStates": 205,
+      "unsupportedMakesNeedingSupplyAdjustment": 12,
+      "allZeroSelfStates": 25,
+      "allZeroSelfMakes": 10,
+      "exceptions": [
+        {
+          "gameId": "0022500034",
+          "teamId": 1610612763,
+          "startIndex": 170,
+          "endIndex": 172,
+          "playerIds": [
+            203484,
+            1629111,
+            1629723,
+            1631246,
+            1642285
+          ],
+          "unsupportedSelfMakes": 1,
+          "remainingOwn": -2.220446049250313e-16,
+          "minPassRowSlack": 0.837913875228317,
+          "strictlyFeasible": false,
+          "terminal": [
+            0.410492811496422,
+            0.38987035082142424,
+            0.18805852354910602,
+            0.4341366488563403,
+            0.38707799765190226
+          ],
+          "passerRows": [
+            0.3019203206085497,
+            0.1777424952139285,
+            0.25352859241218184,
+            0.4918004646455593,
+            0.5846444594949757
+          ]
+        },
+        {
+          "gameId": "0022500475",
+          "teamId": 1610612762,
+          "startIndex": 216,
+          "endIndex": 236,
+          "playerIds": [
+            203937,
+            1642262,
+            1642268,
+            1642271,
+            1642383
+          ],
+          "unsupportedSelfMakes": 1,
+          "remainingOwn": 0,
+          "minPassRowSlack": 0.804987064817063,
+          "strictlyFeasible": false,
+          "terminal": [
+            0.2774936857054348,
+            0.3676531599318284,
+            0.4678510148866506,
+            0.44107786649656616,
+            0.41471776958236917
+          ],
+          "passerRows": [
+            0.34459051681612196,
+            0.1939061948025838,
+            0.6959554168991358,
+            0.2561303621475339,
+            0.47821100593747373
+          ]
+        },
+        {
+          "gameId": "0022500475",
+          "teamId": 1610612762,
+          "startIndex": 252,
+          "endIndex": 275,
+          "playerIds": [
+            203937,
+            1642262,
+            1642268,
+            1642271,
+            1642383
+          ],
+          "unsupportedSelfMakes": 1,
+          "remainingOwn": 0,
+          "minPassRowSlack": 0.804987064817063,
+          "strictlyFeasible": false,
+          "terminal": [
+            0.2774936857054348,
+            0.3676531599318284,
+            0.4678510148866506,
+            0.44107786649656616,
+            0.41471776958236917
+          ],
+          "passerRows": [
+            0.34459051681612196,
+            0.1939061948025838,
+            0.6959554168991358,
+            0.2561303621475339,
+            0.47821100593747373
+          ]
+        },
+        {
+          "gameId": "0022500475",
+          "teamId": 1610612762,
+          "startIndex": 277,
+          "endIndex": 292,
+          "playerIds": [
+            203937,
+            1642262,
+            1642268,
+            1642271,
+            1642383
+          ],
+          "unsupportedSelfMakes": 2,
+          "remainingOwn": 0,
+          "minPassRowSlack": 0.804987064817063,
+          "strictlyFeasible": false,
+          "terminal": [
+            0.2774936857054348,
+            0.3676531599318284,
+            0.4678510148866506,
+            0.44107786649656616,
+            0.41471776958236917
+          ],
+          "passerRows": [
+            0.34459051681612196,
+            0.1939061948025838,
+            0.6959554168991358,
+            0.2561303621475339,
+            0.47821100593747373
+          ]
+        },
+        {
+          "gameId": "0022500509",
+          "teamId": 1610612762,
+          "startIndex": 510,
+          "endIndex": 530,
+          "playerIds": [
+            203994,
+            1642262,
+            1642268,
+            1642271,
+            1642383
+          ],
+          "unsupportedSelfMakes": 1,
+          "remainingOwn": -8.881784197001252e-16,
+          "minPassRowSlack": 0.9006814532144093,
+          "strictlyFeasible": false,
+          "terminal": [
+            0.38367112637204837,
+            0.3651822230985854,
+            0.4647066646371712,
+            0.43811345420413084,
+            0.4119305191954788
+          ],
+          "passerRows": [
+            0.4341256208008551,
+            0.19453599921525055,
+            0.6982158696558342,
+            0.256962269722548,
+            0.47976422811292746
+          ]
+        },
+        {
+          "gameId": "0022500602",
+          "teamId": 1610612763,
+          "startIndex": 380,
+          "endIndex": 400,
+          "playerIds": [
+            203484,
+            1629111,
+            1629723,
+            1631246,
+            1642285
+          ],
+          "unsupportedSelfMakes": 1,
+          "remainingOwn": -2.220446049250313e-16,
+          "minPassRowSlack": 0.837913875228317,
+          "strictlyFeasible": false,
+          "terminal": [
+            0.410492811496422,
+            0.38987035082142424,
+            0.18805852354910602,
+            0.4341366488563403,
+            0.38707799765190226
+          ],
+          "passerRows": [
+            0.3019203206085497,
+            0.1777424952139285,
+            0.25352859241218184,
+            0.4918004646455593,
+            0.5846444594949757
+          ]
+        },
+        {
+          "gameId": "0022500786",
+          "teamId": 1610612762,
+          "startIndex": 213,
+          "endIndex": 220,
+          "playerIds": [
+            201567,
+            203994,
+            1629723,
+            1642262,
+            1642268
+          ],
+          "unsupportedSelfMakes": 1,
+          "remainingOwn": -2.220446049250313e-16,
+          "minPassRowSlack": 0.6232975222831739,
+          "strictlyFeasible": false,
+          "terminal": [
+            0.3518536777992339,
+            0.39196045308876876,
+            0.1885222947359291,
+            0.3730720916613478,
+            0.47474678782037766
+          ],
+          "passerRows": [
+            0.24384637337770315,
+            0.42411218654532007,
+            0.24003687023477244,
+            0.1900488799457562,
+            0.6821109950021055
+          ]
+        },
+        {
+          "gameId": "0022500848",
+          "teamId": 1610612754,
+          "startIndex": 381,
+          "endIndex": 403,
+          "playerIds": [
+            204456,
+            1630695,
+            1631245,
+            1641738,
+            1642880
+          ],
+          "unsupportedSelfMakes": 1,
+          "remainingOwn": 0,
+          "minPassRowSlack": 0.7035326332074932,
+          "strictlyFeasible": false,
+          "terminal": [
+            0.5321873166460339,
+            0.39114465103169427,
+            0.4684340379274189,
+            0.30468610840695975,
+            0.3095116883017095
+          ],
+          "passerRows": [
+            0.7702438524602893,
+            0.17676136356394698,
+            0.3834995968020744,
+            0.19804104721136523,
+            0.47741794227614043
+          ]
+        },
+        {
+          "gameId": "0022500872",
+          "teamId": 1610612763,
+          "startIndex": 538,
+          "endIndex": 562,
+          "playerIds": [
+            1641712,
+            1642285,
+            1642383,
+            1642914,
+            1642942
+          ],
+          "unsupportedSelfMakes": 2,
+          "remainingOwn": -2.220446049250313e-16,
+          "minPassRowSlack": 0.9406752023523478,
+          "strictlyFeasible": false,
+          "terminal": [
+            0.3335827338539953,
+            0.38537470292942166,
+            0.41794787844637,
+            0.4236122661355273,
+            0.3425567421022294
+          ],
+          "passerRows": [
+            0.1531570223703345,
+            0.5770244181857741,
+            0.48858996263724025,
+            0.43641720943714457,
+            0.2478857108370505
+          ]
+        },
+        {
+          "gameId": "0022500967",
+          "teamId": 1610612762,
+          "startIndex": 574,
+          "endIndex": 583,
+          "playerIds": [
+            1641989,
+            1642262,
+            1642268,
+            1643016,
+            1643158
+          ],
+          "unsupportedSelfMakes": 1,
+          "remainingOwn": -4.440892098500626e-16,
+          "minPassRowSlack": 0.5597198263101256,
+          "strictlyFeasible": false,
+          "terminal": [
+            0.3827507980382089,
+            0.3748839071559133,
+            0.4770523839917174,
+            0.25025024882586855,
+            0.2623843153836113
+          ],
+          "passerRows": [
+            0.32543212569357877,
+            0.19797236343562988,
+            0.7105494430934761,
+            0.3014102542800933,
+            0.21195746689254114
+          ]
+        }
+      ]
+    }
+  ],
+  "hashes": {
+    "reports/player-impact-v33/2022-23-conditional-data.json": "3fc7b9e12bb9f68cd78bd2098d89d5de935f432fac9321b1c105f893254bae14",
+    "reports/player-impact-v33/2023-24-conditional-data.json": "4f75541b89e69ff0ca83a6fc165d4f49cd1b6b41bd4c9202d0cb1b4f3071eb97",
+    "reports/player-impact-v33/2024-25-conditional-data.json": "f2519a3da1f84a328b4dfc4944a4bfcc0d122d1c2a8d583a2c779be929cce8f8",
+    "reports/player-impact-v33/2025-26-conditional-data.json": "349a2738d87afc34b97c390098607fe74c4bb0e2e8685007eab78fa274229d44",
+    "reports/player-impact-diagnostics/pass-row-feasibility-v36/audit.mjs": "54358b657e12465368e6e9078d067a8b6c6335d63b7222f03f86f402330c588d",
+    "reports/player-impact-v30/validation-protocol.json": "eb68320065269b4145505e19d8839adc2747206bbb52e0fdf0dcd6a21cfde407"
+  }
+}

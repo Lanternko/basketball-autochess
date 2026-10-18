@@ -1,0 +1,30 @@
+{
+  "preset": "a-rebounds",
+  "mode": "fast",
+  "workers": 4,
+  "seeds": [
+    20261012,
+    20261013,
+    20261014,
+    20261015
+  ],
+  "elapsedSeconds": 37.5089242,
+  "files": [
+    {
+      "file": "reports/defense-a/runs/a-rebounds-seed20261012.json",
+      "sha256": "756fc9dacb3a209ed8215b748c166d11096fd6b52b4a2ae77ca05916b827c507"
+    },
+    {
+      "file": "reports/defense-a/runs/a-rebounds-seed20261013.json",
+      "sha256": "623a20d1963ce1815062c0078842680dcbdc18abbfcfca9e1623dfbd8b2667e1"
+    },
+    {
+      "file": "reports/defense-a/runs/a-rebounds-seed20261014.json",
+      "sha256": "41736ebf9f306d68bd7809011dfb28375bfddf42ced9810be625d040dcae5b09"
+    },
+    {
+      "file": "reports/defense-a/runs/a-rebounds-seed20261015.json",
+      "sha256": "5f31df8ebd5cdabcdc8daf4bfc9f20b5bbc65aca749630a2550ae7d3b927d8d6"
+    }
+  ]
+}

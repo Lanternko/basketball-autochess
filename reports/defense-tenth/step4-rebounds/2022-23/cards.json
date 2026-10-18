@@ -1,0 +1,5412 @@
+{
+  "season": "2022-23",
+  "mu": 0.13510285552462933,
+  "kappa": 43.576730327115804,
+  "variance": 0.0027136746430666213,
+  "noise": 0.00009235017408372814,
+  "fitPlayers": 367,
+  "opportunitiesPerMinute": 1.0110218750380797,
+  "players": {
+    "2544": {
+      "id": 2544,
+      "name": "LeBron James",
+      "share": 0.1898378373354853,
+      "rawShare": 0.191,
+      "dreb": 392,
+      "minutes": 1954,
+      "opportunities": 2052.356020942408,
+      "flag": null
+    },
+    "2617": {
+      "id": 2617,
+      "name": "Udonis Haslem",
+      "share": 0.11416480104517189,
+      "rawShare": 0.101,
+      "dreb": 7,
+      "minutes": 71,
+      "opportunities": 69.3069306930693,
+      "flag": null
+    },
+    "2738": {
+      "id": 2738,
+      "name": "Andre Iguodala",
+      "share": 0.11875128138805593,
+      "rawShare": 0.113,
+      "dreb": 14,
+      "minutes": 113,
+      "opportunities": 123.8938053097345,
+      "flag": null
+    },
+    "101108": {
+      "id": 101108,
+      "name": "Chris Paul",
+      "share": 0.1183837960257084,
+      "rawShare": 0.118,
+      "dreb": 224,
+      "minutes": 1890,
+      "opportunities": 1898.3050847457628,
+      "flag": null
+    },
+    "200752": {
+      "id": 200752,
+      "name": "Rudy Gay",
+      "share": 0.14739040916256518,
+      "rawShare": 0.148,
+      "dreb": 130,
+      "minutes": 816,
+      "opportunities": 878.3783783783784,
+      "flag": null
+    },
+    "200768": {
+      "id": 200768,
+      "name": "Kyle Lowry",
+      "share": 0.11260335667319638,
+      "rawShare": 0.112,
+      "dreb": 182,
+      "minutes": 1717,
+      "opportunities": 1625,
+      "flag": null
+    },
+    "200782": {
+      "id": 200782,
+      "name": "P.J. Tucker",
+      "share": 0.10862310647702368,
+      "rawShare": 0.108,
+      "dreb": 200,
+      "minutes": 1917,
+      "opportunities": 1851.851851851852,
+      "flag": null
+    },
+    "201142": {
+      "id": 201142,
+      "name": "Kevin Durant",
+      "share": 0.1652629387928152,
+      "rawShare": 0.166,
+      "dreb": 296,
+      "minutes": 1673,
+      "opportunities": 1783.1325301204818,
+      "flag": null
+    },
+    "201143": {
+      "id": 201143,
+      "name": "Al Horford",
+      "share": 0.15848885002230473,
+      "rawShare": 0.159,
+      "dreb": 317,
+      "minutes": 1922,
+      "opportunities": 1993.7106918238994,
+      "flag": null
+    },
+    "201144": {
+      "id": 201144,
+      "name": "Mike Conley",
+      "share": 0.0762900354366203,
+      "rawShare": 0.075,
+      "dreb": 149,
+      "minutes": 2026,
+      "opportunities": 1986.6666666666667,
+      "flag": null
+    },
+    "201145": {
+      "id": 201145,
+      "name": "Jeff Green",
+      "share": 0.09748463027073825,
+      "rawShare": 0.096,
+      "dreb": 106,
+      "minutes": 1091,
+      "opportunities": 1104.1666666666667,
+      "flag": null
+    },
+    "201152": {
+      "id": 201152,
+      "name": "Thaddeus Young",
+      "share": 0.13594731936491256,
+      "rawShare": 0.136,
+      "dreb": 95,
+      "minutes": 795,
+      "opportunities": 698.5294117647059,
+      "flag": null
+    },
+    "201565": {
+      "id": 201565,
+      "name": "Derrick Rose",
+      "share": 0.0873341142398914,
+      "rawShare": 0.082,
+      "dreb": 32,
+      "minutes": 340,
+      "opportunities": 390.2439024390244,
+      "flag": null
+    },
+    "201566": {
+      "id": 201566,
+      "name": "Russell Westbrook",
+      "share": 0.14677611871736077,
+      "rawShare": 0.147,
+      "dreb": 334,
+      "minutes": 2129,
+      "opportunities": 2272.108843537415,
+      "flag": null
+    },
+    "201567": {
+      "id": 201567,
+      "name": "Kevin Love",
+      "share": 0.28161086589176926,
+      "rawShare": 0.287,
+      "dreb": 340,
+      "minutes": 1238,
+      "opportunities": 1184.6689895470383,
+      "flag": null
+    },
+    "201569": {
+      "id": 201569,
+      "name": "Eric Gordon",
+      "share": 0.06062279867602005,
+      "rawShare": 0.059,
+      "dreb": 118,
+      "minutes": 1964,
+      "opportunities": 2000,
+      "flag": null
+    },
+    "201572": {
+      "id": 201572,
+      "name": "Brook Lopez",
+      "share": 0.13500164031614081,
+      "rawShare": 0.135,
+      "dreb": 363,
+      "minutes": 2370,
+      "opportunities": 2688.8888888888887,
+      "flag": null
+    },
+    "201577": {
+      "id": 201577,
+      "name": "Robin Lopez",
+      "share": 0.10199763794537658,
+      "rawShare": 0.097,
+      "dreb": 28,
+      "minutes": 297,
+      "opportunities": 288.659793814433,
+      "flag": null
+    },
+    "201580": {
+      "id": 201580,
+      "name": "JaVale McGee",
+      "share": 0.1925322767072265,
+      "rawShare": 0.199,
+      "dreb": 77,
+      "minutes": 359,
+      "opportunities": 386.93467336683415,
+      "flag": null
+    },
+    "201586": {
+      "id": 201586,
+      "name": "Serge Ibaka",
+      "share": 0.14965450554208148,
+      "rawShare": 0.153,
+      "dreb": 29,
+      "minutes": 187,
+      "opportunities": 189.54248366013073,
+      "flag": null
+    },
+    "201587": {
+      "id": 201587,
+      "name": "Nicolas Batum",
+      "share": 0.13500249126064526,
+      "rawShare": 0.135,
+      "dreb": 237,
+      "minutes": 1709,
+      "opportunities": 1755.5555555555554,
+      "flag": null
+    },
+    "201588": {
+      "id": 201588,
+      "name": "George Hill",
+      "share": 0.07965772905646179,
+      "rawShare": 0.077,
+      "dreb": 70,
+      "minutes": 834,
+      "opportunities": 909.0909090909091,
+      "flag": null
+    },
+    "201599": {
+      "id": 201599,
+      "name": "DeAndre Jordan",
+      "share": 0.24402586549818087,
+      "rawShare": 0.252,
+      "dreb": 150,
+      "minutes": 588,
+      "opportunities": 595.2380952380952,
+      "flag": null
+    },
+    "201609": {
+      "id": 201609,
+      "name": "Goran Dragic",
+      "share": 0.07787734680167557,
+      "rawShare": 0.075,
+      "dreb": 65,
+      "minutes": 868,
+      "opportunities": 866.6666666666667,
+      "flag": null
+    },
+    "201933": {
+      "id": 201933,
+      "name": "Blake Griffin",
+      "share": 0.19063103158363365,
+      "rawShare": 0.195,
+      "dreb": 108,
+      "minutes": 569,
+      "opportunities": 553.8461538461538,
+      "flag": null
+    },
+    "201935": {
+      "id": 201935,
+      "name": "James Harden",
+      "share": 0.15067370218325796,
+      "rawShare": 0.151,
+      "dreb": 314,
+      "minutes": 2134,
+      "opportunities": 2079.4701986754967,
+      "flag": null
+    },
+    "201937": {
+      "id": 201937,
+      "name": "Ricky Rubio",
+      "share": 0.11371151543816022,
+      "rawShare": 0.112,
+      "dreb": 61,
+      "minutes": 564,
+      "opportunities": 544.6428571428571,
+      "flag": null
+    },
+    "201939": {
+      "id": 201939,
+      "name": "Stephen Curry",
+      "share": 0.1467528889288031,
+      "rawShare": 0.147,
+      "dreb": 302,
+      "minutes": 1941,
+      "opportunities": 2054.421768707483,
+      "flag": null
+    },
+    "201942": {
+      "id": 201942,
+      "name": "DeMar DeRozan",
+      "share": 0.11630747183975003,
+      "rawShare": 0.116,
+      "dreb": 309,
+      "minutes": 2687,
+      "opportunities": 2663.793103448276,
+      "flag": null
+    },
+    "201949": {
+      "id": 201949,
+      "name": "James Johnson",
+      "share": 0.1644815604879426,
+      "rawShare": 0.173,
+      "dreb": 26,
+      "minutes": 163,
+      "opportunities": 150.28901734104048,
+      "flag": null
+    },
+    "201950": {
+      "id": 201950,
+      "name": "Jrue Holiday",
+      "share": 0.10749139030157964,
+      "rawShare": 0.107,
+      "dreb": 262,
+      "minutes": 2180,
+      "opportunities": 2448.5981308411215,
+      "flag": null
+    },
+    "201959": {
+      "id": 201959,
+      "name": "Taj Gibson",
+      "share": 0.14226803866784563,
+      "rawShare": 0.143,
+      "dreb": 61,
+      "minutes": 482,
+      "opportunities": 426.5734265734266,
+      "flag": null
+    },
+    "201976": {
+      "id": 201976,
+      "name": "Patrick Beverley",
+      "share": 0.11156094879134179,
+      "rawShare": 0.111,
+      "dreb": 203,
+      "minutes": 1817,
+      "opportunities": 1828.8288288288288,
+      "flag": null
+    },
+    "201980": {
+      "id": 201980,
+      "name": "Danny Green",
+      "share": 0.09326068938351724,
+      "rawShare": 0.08,
+      "dreb": 11,
+      "minutes": 139,
+      "opportunities": 137.5,
+      "flag": null
+    },
+    "201988": {
+      "id": 201988,
+      "name": "Patty Mills",
+      "share": 0.06710328693068522,
+      "rawShare": 0.062,
+      "dreb": 36,
+      "minutes": 568,
+      "opportunities": 580.6451612903226,
+      "flag": null
+    },
+    "202066": {
+      "id": 202066,
+      "name": "Garrett Temple",
+      "share": 0.08224451379321754,
+      "rawShare": 0.069,
+      "dreb": 12,
+      "minutes": 163,
+      "opportunities": 173.91304347826085,
+      "flag": null
+    },
+    "202083": {
+      "id": 202083,
+      "name": "Wesley Matthews",
+      "share": 0.08920272713859813,
+      "rawShare": 0.087,
+      "dreb": 79,
+      "minutes": 818,
+      "opportunities": 908.0459770114943,
+      "flag": null
+    },
+    "202322": {
+      "id": 202322,
+      "name": "John Wall",
+      "share": 0.09799044610121085,
+      "rawShare": 0.096,
+      "dreb": 78,
+      "minutes": 753,
+      "opportunities": 812.5,
+      "flag": null
+    },
+    "202330": {
+      "id": 202330,
+      "name": "Gordon Hayward",
+      "share": 0.11260335667319638,
+      "rawShare": 0.112,
+      "dreb": 182,
+      "minutes": 1576,
+      "opportunities": 1625,
+      "flag": null
+    },
+    "202331": {
+      "id": 202331,
+      "name": "Paul George",
+      "share": 0.15260705490331544,
+      "rawShare": 0.153,
+      "dreb": 297,
+      "minutes": 1942,
+      "opportunities": 1941.1764705882354,
+      "flag": null
+    },
+    "202397": {
+      "id": 202397,
+      "name": "Ish Smith",
+      "share": 0.11778638822426325,
+      "rawShare": 0.116,
+      "dreb": 49,
+      "minutes": 398,
+      "opportunities": 422.41379310344826,
+      "flag": null
+    },
+    "202681": {
+      "id": 202681,
+      "name": "Kyrie Irving",
+      "share": 0.1075248499845335,
+      "rawShare": 0.107,
+      "dreb": 245,
+      "minutes": 2240,
+      "opportunities": 2289.7196261682243,
+      "flag": null
+    },
+    "202685": {
+      "id": 202685,
+      "name": "Jonas Valanciunas",
+      "share": 0.289593212276351,
+      "rawShare": 0.293,
+      "dreb": 579,
+      "minutes": 1967,
+      "opportunities": 1976.109215017065,
+      "flag": null
+    },
+    "202687": {
+      "id": 202687,
+      "name": "Bismack Biyombo",
+      "share": 0.18180992507124838,
+      "rawShare": 0.184,
+      "dreb": 171,
+      "minutes": 870,
+      "opportunities": 929.3478260869565,
+      "flag": null
+    },
+    "202689": {
+      "id": 202689,
+      "name": "Kemba Walker",
+      "share": 0.10045326397182434,
+      "rawShare": 0.09,
+      "dreb": 13,
+      "minutes": 144,
+      "opportunities": 144.44444444444446,
+      "flag": null
+    },
+    "202691": {
+      "id": 202691,
+      "name": "Klay Thompson",
+      "share": 0.1015970343621529,
+      "rawShare": 0.101,
+      "dreb": 247,
+      "minutes": 2285,
+      "opportunities": 2445.5445544554455,
+      "flag": null
+    },
+    "202692": {
+      "id": 202692,
+      "name": "Alec Burks",
+      "share": 0.1244154638595447,
+      "rawShare": 0.124,
+      "dreb": 139,
+      "minutes": 1125,
+      "opportunities": 1120.967741935484,
+      "flag": null
+    },
+    "202693": {
+      "id": 202693,
+      "name": "Markieff Morris",
+      "share": 0.14849115906953317,
+      "rawShare": 0.15,
+      "dreb": 58,
+      "minutes": 353,
+      "opportunities": 386.6666666666667,
+      "flag": null
+    },
+    "202694": {
+      "id": 202694,
+      "name": "Marcus Morris Sr.",
+      "share": 0.12719120101504663,
+      "rawShare": 0.127,
+      "dreb": 229,
+      "minutes": 1825,
+      "opportunities": 1803.1496062992126,
+      "flag": null
+    },
+    "202695": {
+      "id": 202695,
+      "name": "Kawhi Leonard",
+      "share": 0.1593971996679251,
+      "rawShare": 0.16,
+      "dreb": 281,
+      "minutes": 1747,
+      "opportunities": 1756.25,
+      "flag": null
+    },
+    "202696": {
+      "id": 202696,
+      "name": "Nikola Vučević",
+      "share": 0.27180612852752706,
+      "rawShare": 0.274,
+      "dreb": 744,
+      "minutes": 2744,
+      "opportunities": 2715.3284671532842,
+      "flag": null
+    },
+    "202699": {
+      "id": 202699,
+      "name": "Tobias Harris",
+      "share": 0.14973214429758958,
+      "rawShare": 0.15,
+      "dreb": 357,
+      "minutes": 2437,
+      "opportunities": 2380,
+      "flag": null
+    },
+    "202704": {
+      "id": 202704,
+      "name": "Reggie Jackson",
+      "share": 0.07262441214919559,
+      "rawShare": 0.071,
+      "dreb": 119,
+      "minutes": 1656,
+      "opportunities": 1676.0563380281692,
+      "flag": null
+    },
+    "202709": {
+      "id": 202709,
+      "name": "Cory Joseph",
+      "share": 0.07225538936381487,
+      "rawShare": 0.07,
+      "dreb": 85,
+      "minutes": 1229,
+      "opportunities": 1214.2857142857142,
+      "flag": null
+    },
+    "202710": {
+      "id": 202710,
+      "name": "Jimmy Butler III",
+      "share": 0.1213107805025659,
+      "rawShare": 0.121,
+      "dreb": 234,
+      "minutes": 2137,
+      "opportunities": 1933.8842975206612,
+      "flag": null
+    },
+    "202711": {
+      "id": 202711,
+      "name": "Bojan Bogdanovic",
+      "share": 0.09981411249110546,
+      "rawShare": 0.099,
+      "dreb": 187,
+      "minutes": 1890,
+      "opportunities": 1888.8888888888887,
+      "flag": null
+    },
+    "202722": {
+      "id": 202722,
+      "name": "Davis Bertans",
+      "share": 0.08993641186994968,
+      "rawShare": 0.086,
+      "dreb": 43,
+      "minutes": 491,
+      "opportunities": 500.00000000000006,
+      "flag": null
+    },
+    "203076": {
+      "id": 203076,
+      "name": "Anthony Davis",
+      "share": 0.24564375016285891,
+      "rawShare": 0.248,
+      "dreb": 507,
+      "minutes": 1906,
+      "opportunities": 2044.3548387096773,
+      "flag": null
+    },
+    "203078": {
+      "id": 203078,
+      "name": "Bradley Beal",
+      "share": 0.09210017028415486,
+      "rawShare": 0.091,
+      "dreb": 155,
+      "minutes": 1677,
+      "opportunities": 1703.2967032967033,
+      "flag": null
+    },
+    "203081": {
+      "id": 203081,
+      "name": "Damian Lillard",
+      "share": 0.11247400105892832,
+      "rawShare": 0.112,
+      "dreb": 233,
+      "minutes": 2113,
+      "opportunities": 2080.3571428571427,
+      "flag": null
+    },
+    "203082": {
+      "id": 203082,
+      "name": "Terrence Ross",
+      "share": 0.10014259052988049,
+      "rawShare": 0.099,
+      "dreb": 132,
+      "minutes": 1328,
+      "opportunities": 1333.3333333333333,
+      "flag": null
+    },
+    "203083": {
+      "id": 203083,
+      "name": "Andre Drummond",
+      "share": 0.3425706187276479,
+      "rawShare": 0.353,
+      "dreb": 306,
+      "minutes": 850,
+      "opportunities": 866.8555240793202,
+      "flag": null
+    },
+    "203084": {
+      "id": 203084,
+      "name": "Harrison Barnes",
+      "share": 0.10746194111834868,
+      "rawShare": 0.107,
+      "dreb": 279,
+      "minutes": 2660,
+      "opportunities": 2607.4766355140187,
+      "flag": null
+    },
+    "203085": {
+      "id": 203085,
+      "name": "Austin Rivers",
+      "share": 0.08038444923482055,
+      "rawShare": 0.078,
+      "dreb": 78,
+      "minutes": 1016,
+      "opportunities": 1000,
+      "flag": null
+    },
+    "203086": {
+      "id": 203086,
+      "name": "Meyers Leonard",
+      "share": 0.1783109480727628,
+      "rawShare": 0.195,
+      "dreb": 22,
+      "minutes": 115,
+      "opportunities": 112.82051282051282,
+      "flag": null
+    },
+    "203095": {
+      "id": 203095,
+      "name": "Evan Fournier",
+      "share": 0.0993259529307186,
+      "rawShare": 0.096,
+      "dreb": 45,
+      "minutes": 459,
+      "opportunities": 468.75,
+      "flag": null
+    },
+    "203109": {
+      "id": 203109,
+      "name": "Jae Crowder",
+      "share": 0.1341113410135098,
+      "rawShare": 0.134,
+      "dreb": 52,
+      "minutes": 341,
+      "opportunities": 388.0597014925373,
+      "flag": null
+    },
+    "203110": {
+      "id": 203110,
+      "name": "Draymond Green",
+      "share": 0.18413875282461206,
+      "rawShare": 0.185,
+      "dreb": 459,
+      "minutes": 2299,
+      "opportunities": 2481.0810810810813,
+      "flag": null
+    },
+    "203114": {
+      "id": 203114,
+      "name": "Khris Middleton",
+      "share": 0.12259377490706119,
+      "rawShare": 0.122,
+      "dreb": 112,
+      "minutes": 801,
+      "opportunities": 918.032786885246,
+      "flag": null
+    },
+    "203115": {
+      "id": 203115,
+      "name": "Will Barton",
+      "share": 0.12543179625194992,
+      "rawShare": 0.125,
+      "dreb": 122,
+      "minutes": 990,
+      "opportunities": 976,
+      "flag": null
+    },
+    "203200": {
+      "id": 203200,
+      "name": "Justin Holiday",
+      "share": 0.07075731734132383,
+      "rawShare": 0.067,
+      "dreb": 50,
+      "minutes": 705,
+      "opportunities": 746.2686567164179,
+      "flag": null
+    },
+    "203210": {
+      "id": 203210,
+      "name": "JaMychal Green",
+      "share": 0.16252642955502958,
+      "rawShare": 0.164,
+      "dreb": 133,
+      "minutes": 797,
+      "opportunities": 810.9756097560976,
+      "flag": null
+    },
+    "203457": {
+      "id": 203457,
+      "name": "Nerlens Noel",
+      "share": 0.178965255198936,
+      "rawShare": 0.189,
+      "dreb": 36,
+      "minutes": 195,
+      "opportunities": 190.47619047619048,
+      "flag": null
+    },
+    "203458": {
+      "id": 203458,
+      "name": "Alex Len",
+      "share": 0.18279941047173093,
+      "rawShare": 0.194,
+      "dreb": 36,
+      "minutes": 160,
+      "opportunities": 185.56701030927834,
+      "flag": null
+    },
+    "203468": {
+      "id": 203468,
+      "name": "CJ McCollum",
+      "share": 0.10450789648736608,
+      "rawShare": 0.104,
+      "dreb": 273,
+      "minutes": 2652,
+      "opportunities": 2625,
+      "flag": null
+    },
+    "203469": {
+      "id": 203469,
+      "name": "Cody Zeller",
+      "share": 0.18814634872426333,
+      "rawShare": 0.2,
+      "dreb": 39,
+      "minutes": 218,
+      "opportunities": 195,
+      "flag": null
+    },
+    "203471": {
+      "id": 203471,
+      "name": "Dennis Schröder",
+      "share": 0.06835336489599958,
+      "rawShare": 0.067,
+      "dreb": 144,
+      "minutes": 1986,
+      "opportunities": 2149.2537313432836,
+      "flag": null
+    },
+    "203473": {
+      "id": 203473,
+      "name": "Dewayne Dedmon",
+      "share": 0.22222962373340863,
+      "rawShare": 0.231,
+      "dreb": 100,
+      "minutes": 427,
+      "opportunities": 432.90043290043286,
+      "flag": null
+    },
+    "203476": {
+      "id": 203476,
+      "name": "Gorgui Dieng",
+      "share": 0.21091497786984914,
+      "rawShare": 0.22,
+      "dreb": 80,
+      "minutes": 359,
+      "opportunities": 363.6363636363636,
+      "flag": null
+    },
+    "203482": {
+      "id": 203482,
+      "name": "Kelly Olynyk",
+      "share": 0.16340165751735253,
+      "rawShare": 0.164,
+      "dreb": 338,
+      "minutes": 1937,
+      "opportunities": 2060.9756097560976,
+      "flag": null
+    },
+    "203484": {
+      "id": 203484,
+      "name": "Kentavious Caldwell-Pope",
+      "share": 0.07511810127182737,
+      "rawShare": 0.074,
+      "dreb": 173,
+      "minutes": 2384,
+      "opportunities": 2337.837837837838,
+      "flag": null
+    },
+    "203486": {
+      "id": 203486,
+      "name": "Mason Plumlee",
+      "share": 0.2357830558026387,
+      "rawShare": 0.238,
+      "dreb": 471,
+      "minutes": 2046,
+      "opportunities": 1978.9915966386554,
+      "flag": null
+    },
+    "203487": {
+      "id": 203487,
+      "name": "Michael Carter-Williams",
+      "share": 0.1308251978992088,
+      "rawShare": 0.125,
+      "dreb": 4,
+      "minutes": 45,
+      "opportunities": 32,
+      "flag": null
+    },
+    "203488": {
+      "id": 203488,
+      "name": "Mike Muscala",
+      "share": 0.1599498617029246,
+      "rawShare": 0.161,
+      "dreb": 166,
+      "minutes": 947,
+      "opportunities": 1031.055900621118,
+      "flag": null
+    },
+    "203490": {
+      "id": 203490,
+      "name": "Otto Porter Jr.",
+      "share": 0.1055197622864051,
+      "rawShare": 0.096,
+      "dreb": 13,
+      "minutes": 147,
+      "opportunities": 135.41666666666666,
+      "flag": null
+    },
+    "203493": {
+      "id": 203493,
+      "name": "Reggie Bullock Jr.",
+      "share": 0.11244065730693013,
+      "rawShare": 0.112,
+      "dreb": 251,
+      "minutes": 2368,
+      "opportunities": 2241.0714285714284,
+      "flag": null
+    },
+    "203496": {
+      "id": 203496,
+      "name": "Robert Covington",
+      "share": 0.16254716266596128,
+      "rawShare": 0.164,
+      "dreb": 135,
+      "minutes": 777,
+      "opportunities": 823.170731707317,
+      "flag": null
+    },
+    "203497": {
+      "id": 203497,
+      "name": "Rudy Gobert",
+      "share": 0.2576190357090947,
+      "rawShare": 0.26,
+      "dreb": 583,
+      "minutes": 2146,
+      "opportunities": 2242.3076923076924,
+      "flag": null
+    },
+    "203500": {
+      "id": 203500,
+      "name": "Steven Adams",
+      "share": 0.21900490305674405,
+      "rawShare": 0.222,
+      "dreb": 271,
+      "minutes": 1132,
+      "opportunities": 1220.7207207207207,
+      "flag": null
+    },
+    "203501": {
+      "id": 203501,
+      "name": "Tim Hardaway Jr.",
+      "share": 0.10854346142550174,
+      "rawShare": 0.108,
+      "dreb": 230,
+      "minutes": 2150,
+      "opportunities": 2129.6296296296296,
+      "flag": null
+    },
+    "203506": {
+      "id": 203506,
+      "name": "Victor Oladipo",
+      "share": 0.11006197129170879,
+      "rawShare": 0.109,
+      "dreb": 112,
+      "minutes": 1107,
+      "opportunities": 1027.5229357798164,
+      "flag": null
+    },
+    "203507": {
+      "id": 203507,
+      "name": "Giannis Antetokounmpo",
+      "share": 0.26548321433195465,
+      "rawShare": 0.268,
+      "dreb": 605,
+      "minutes": 2026,
+      "opportunities": 2257.462686567164,
+      "flag": null
+    },
+    "203521": {
+      "id": 203521,
+      "name": "Matthew Dellavedova",
+      "share": 0.06729650561094587,
+      "rawShare": 0.054,
+      "dreb": 12,
+      "minutes": 214,
+      "opportunities": 222.22222222222223,
+      "flag": null
+    },
+    "203526": {
+      "id": 203526,
+      "name": "Raul Neto",
+      "share": 0.07607318659605956,
+      "rawShare": 0.071,
+      "dreb": 36,
+      "minutes": 504,
+      "opportunities": 507.0422535211268,
+      "flag": null
+    },
+    "203552": {
+      "id": 203552,
+      "name": "Seth Curry",
+      "share": 0.07320137863820929,
+      "rawShare": 0.071,
+      "dreb": 87,
+      "minutes": 1210,
+      "opportunities": 1225.3521126760565,
+      "flag": null
+    },
+    "203585": {
+      "id": 203585,
+      "name": "Rodney McGruder",
+      "share": 0.11111038793710813,
+      "rawShare": 0.109,
+      "dreb": 54,
+      "minutes": 523,
+      "opportunities": 495.41284403669727,
+      "flag": null
+    },
+    "203648": {
+      "id": 203648,
+      "name": "Thanasis Antetokounmpo",
+      "share": 0.13832665266064936,
+      "rawShare": 0.139,
+      "dreb": 29,
+      "minutes": 209,
+      "opportunities": 208.63309352517985,
+      "flag": null
+    },
+    "203897": {
+      "id": 203897,
+      "name": "Zach LaVine",
+      "share": 0.10841453105991028,
+      "rawShare": 0.108,
+      "dreb": 303,
+      "minutes": 2767,
+      "opportunities": 2805.5555555555557,
+      "flag": null
+    },
+    "203903": {
+      "id": 203903,
+      "name": "Jordan Clarkson",
+      "share": 0.08406098696862606,
+      "rawShare": 0.083,
+      "dreb": 174,
+      "minutes": 1989,
+      "opportunities": 2096.3855421686744,
+      "flag": null
+    },
+    "203914": {
+      "id": 203914,
+      "name": "Gary Harris",
+      "share": 0.07148426020356642,
+      "rawShare": 0.069,
+      "dreb": 77,
+      "minutes": 1187,
+      "opportunities": 1115.9420289855072,
+      "flag": null
+    },
+    "203915": {
+      "id": 203915,
+      "name": "Spencer Dinwiddie",
+      "share": 0.09270242087681337,
+      "rawShare": 0.092,
+      "dreb": 242,
+      "minutes": 2728,
+      "opportunities": 2630.4347826086955,
+      "flag": null
+    },
+    "203920": {
+      "id": 203920,
+      "name": "Khem Birch",
+      "share": 0.12197179995166865,
+      "rawShare": 0.118,
+      "dreb": 17,
+      "minutes": 162,
+      "opportunities": 144.0677966101695,
+      "flag": null
+    },
+    "203924": {
+      "id": 203924,
+      "name": "Jerami Grant",
+      "share": 0.10460101619309245,
+      "rawShare": 0.104,
+      "dreb": 230,
+      "minutes": 2244,
+      "opportunities": 2211.5384615384614,
+      "flag": null
+    },
+    "203925": {
+      "id": 203925,
+      "name": "Joe Harris",
+      "share": 0.09023415311840181,
+      "rawShare": 0.089,
+      "dreb": 141,
+      "minutes": 1524,
+      "opportunities": 1584.2696629213483,
+      "flag": null
+    },
+    "203926": {
+      "id": 203926,
+      "name": "Doug McDermott",
+      "share": 0.08656340181045133,
+      "rawShare": 0.085,
+      "dreb": 115,
+      "minutes": 1312,
+      "opportunities": 1352.941176470588,
+      "flag": null
+    },
+    "203932": {
+      "id": 203932,
+      "name": "Aaron Gordon",
+      "share": 0.13598153393347154,
+      "rawShare": 0.136,
+      "dreb": 282,
+      "minutes": 2056,
+      "opportunities": 2073.529411764706,
+      "flag": null
+    },
+    "203933": {
+      "id": 203933,
+      "name": "T.J. Warren",
+      "share": 0.13123256577896858,
+      "rawShare": 0.131,
+      "dreb": 95,
+      "minutes": 686,
+      "opportunities": 725.1908396946565,
+      "flag": null
+    },
+    "203935": {
+      "id": 203935,
+      "name": "Marcus Smart",
+      "share": 0.07433320290882842,
+      "rawShare": 0.073,
+      "dreb": 145,
+      "minutes": 1961,
+      "opportunities": 1986.3013698630139,
+      "flag": null
+    },
+    "203937": {
+      "id": 203937,
+      "name": "Kyle Anderson",
+      "share": 0.1516373544732767,
+      "rawShare": 0.152,
+      "dreb": 302,
+      "minutes": 1955,
+      "opportunities": 1986.842105263158,
+      "flag": null
+    },
+    "203939": {
+      "id": 203939,
+      "name": "Dwight Powell",
+      "share": 0.1204639389948363,
+      "rawShare": 0.12,
+      "dreb": 165,
+      "minutes": 1458,
+      "opportunities": 1375,
+      "flag": null
+    },
+    "203943": {
+      "id": 203943,
+      "name": "Noah Vonleh",
+      "share": 0.1661523854455448,
+      "rawShare": 0.174,
+      "dreb": 30,
+      "minutes": 171,
+      "opportunities": 172.41379310344828,
+      "flag": null
+    },
+    "203944": {
+      "id": 203944,
+      "name": "Julius Randle",
+      "share": 0.2245921390026152,
+      "rawShare": 0.226,
+      "dreb": 626,
+      "minutes": 2740,
+      "opportunities": 2769.9115044247787,
+      "flag": null
+    },
+    "203952": {
+      "id": 203952,
+      "name": "Andrew Wiggins",
+      "share": 0.10215992067365326,
+      "rawShare": 0.101,
+      "dreb": 125,
+      "minutes": 1190,
+      "opportunities": 1237.6237623762374,
+      "flag": null
+    },
+    "203954": {
+      "id": 203954,
+      "name": "Joel Embiid",
+      "share": 0.2409870324023777,
+      "rawShare": 0.243,
+      "dreb": 557,
+      "minutes": 2288,
+      "opportunities": 2292.1810699588477,
+      "flag": null
+    },
+    "203967": {
+      "id": 203967,
+      "name": "Dario Saric",
+      "share": 0.1918678050333081,
+      "rawShare": 0.195,
+      "dreb": 154,
+      "minutes": 807,
+      "opportunities": 789.7435897435897,
+      "flag": null
+    },
+    "203991": {
+      "id": 203991,
+      "name": "Clint Capela",
+      "share": 0.264702531428904,
+      "rawShare": 0.268,
+      "dreb": 459,
+      "minutes": 1726,
+      "opportunities": 1712.686567164179,
+      "flag": null
+    },
+    "203992": {
+      "id": 203992,
+      "name": "Bogdan Bogdanović",
+      "share": 0.09416826063135489,
+      "rawShare": 0.093,
+      "dreb": 142,
+      "minutes": 1507,
+      "opportunities": 1526.8817204301076,
+      "flag": null
+    },
+    "203994": {
+      "id": 203994,
+      "name": "Jusuf Nurkić",
+      "share": 0.2542478354230078,
+      "rawShare": 0.258,
+      "dreb": 357,
+      "minutes": 1391,
+      "opportunities": 1383.7209302325582,
+      "flag": null
+    },
+    "203999": {
+      "id": 203999,
+      "name": "Nikola Jokić",
+      "share": 0.28024624697972145,
+      "rawShare": 0.283,
+      "dreb": 650,
+      "minutes": 2322,
+      "opportunities": 2296.819787985866,
+      "flag": null
+    },
+    "204001": {
+      "id": 204001,
+      "name": "Kristaps Porziņģis",
+      "share": 0.19286955310723522,
+      "rawShare": 0.194,
+      "dreb": 432,
+      "minutes": 2122,
+      "opportunities": 2226.8041237113403,
+      "flag": null
+    },
+    "204060": {
+      "id": 204060,
+      "name": "Joe Ingles",
+      "share": 0.10323183610007675,
+      "rawShare": 0.102,
+      "dreb": 115,
+      "minutes": 1039,
+      "opportunities": 1127.450980392157,
+      "flag": null
+    },
+    "204456": {
+      "id": 204456,
+      "name": "T.J. McConnell",
+      "share": 0.12333376504388982,
+      "rawShare": 0.123,
+      "dreb": 189,
+      "minutes": 1528,
+      "opportunities": 1536.5853658536585,
+      "flag": null
+    },
+    "1626145": {
+      "id": 1626145,
+      "name": "Tyus Jones",
+      "share": 0.08506489090004259,
+      "rawShare": 0.084,
+      "dreb": 172,
+      "minutes": 1939,
+      "opportunities": 2047.6190476190475,
+      "flag": null
+    },
+    "1626149": {
+      "id": 1626149,
+      "name": "Montrezl Harrell",
+      "share": 0.13312462234964695,
+      "rawShare": 0.133,
+      "dreb": 92,
+      "minutes": 683,
+      "opportunities": 691.7293233082706,
+      "flag": null
+    },
+    "1626153": {
+      "id": 1626153,
+      "name": "Delon Wright",
+      "share": 0.09827594465003606,
+      "rawShare": 0.097,
+      "dreb": 122,
+      "minutes": 1225,
+      "opportunities": 1257.7319587628865,
+      "flag": null
+    },
+    "1626156": {
+      "id": 1626156,
+      "name": "D'Angelo Russell",
+      "share": 0.07607182471275856,
+      "rawShare": 0.075,
+      "dreb": 180,
+      "minutes": 2307,
+      "opportunities": 2400,
+      "flag": null
+    },
+    "1626157": {
+      "id": 1626157,
+      "name": "Karl-Anthony Towns",
+      "share": 0.17915195557713112,
+      "rawShare": 0.181,
+      "dreb": 188,
+      "minutes": 957,
+      "opportunities": 1038.6740331491712,
+      "flag": null
+    },
+    "1626158": {
+      "id": 1626158,
+      "name": "Richaun Holmes",
+      "share": 0.1474305336147072,
+      "rawShare": 0.149,
+      "dreb": 51,
+      "minutes": 347,
+      "opportunities": 342.2818791946309,
+      "flag": null
+    },
+    "1626159": {
+      "id": 1626159,
+      "name": "Justise Winslow",
+      "share": 0.12364000190379933,
+      "rawShare": 0.123,
+      "dreb": 96,
+      "minutes": 774,
+      "opportunities": 780.4878048780488,
+      "flag": null
+    },
+    "1626162": {
+      "id": 1626162,
+      "name": "Kelly Oubre Jr.",
+      "share": 0.12139287907357837,
+      "rawShare": 0.121,
+      "dreb": 184,
+      "minutes": 1550,
+      "opportunities": 1520.6611570247935,
+      "flag": null
+    },
+    "1626163": {
+      "id": 1626163,
+      "name": "Frank Kaminsky",
+      "share": 0.19499453549935575,
+      "rawShare": 0.207,
+      "dreb": 45,
+      "minutes": 234,
+      "opportunities": 217.3913043478261,
+      "flag": null
+    },
+    "1626164": {
+      "id": 1626164,
+      "name": "Devin Booker",
+      "share": 0.10569362676914257,
+      "rawShare": 0.105,
+      "dreb": 194,
+      "minutes": 1835,
+      "opportunities": 1847.6190476190477,
+      "flag": null
+    },
+    "1626166": {
+      "id": 1626166,
+      "name": "Cameron Payne",
+      "share": 0.10155520929048387,
+      "rawShare": 0.1,
+      "dreb": 94,
+      "minutes": 971,
+      "opportunities": 940,
+      "flag": null
+    },
+    "1626167": {
+      "id": 1626167,
+      "name": "Myles Turner",
+      "share": 0.2033862661559941,
+      "rawShare": 0.205,
+      "dreb": 378,
+      "minutes": 1823,
+      "opportunities": 1843.9024390243903,
+      "flag": null
+    },
+    "1626168": {
+      "id": 1626168,
+      "name": "Trey Lyles",
+      "share": 0.18236652709594317,
+      "rawShare": 0.184,
+      "dreb": 232,
+      "minutes": 1248,
+      "opportunities": 1260.8695652173913,
+      "flag": null
+    },
+    "1626169": {
+      "id": 1626169,
+      "name": "Stanley Johnson",
+      "share": 0.14877571535802656,
+      "rawShare": 0.15,
+      "dreb": 73,
+      "minutes": 470,
+      "opportunities": 486.6666666666667,
+      "flag": null
+    },
+    "1626171": {
+      "id": 1626171,
+      "name": "Bobby Portis Jr.",
+      "share": 0.2602315446441467,
+      "rawShare": 0.263,
+      "dreb": 518,
+      "minutes": 1815,
+      "opportunities": 1969.5817490494296,
+      "flag": null
+    },
+    "1626172": {
+      "id": 1626172,
+      "name": "Kevon Looney",
+      "share": 0.23196764226047556,
+      "rawShare": 0.234,
+      "dreb": 486,
+      "minutes": 1961,
+      "opportunities": 2076.9230769230767,
+      "flag": null
+    },
+    "1626174": {
+      "id": 1626174,
+      "name": "Christian Wood",
+      "share": 0.2354245964332037,
+      "rawShare": 0.238,
+      "dreb": 404,
+      "minutes": 1739,
+      "opportunities": 1697.4789915966387,
+      "flag": null
+    },
+    "1626179": {
+      "id": 1626179,
+      "name": "Terry Rozier",
+      "share": 0.0957825848038034,
+      "rawShare": 0.095,
+      "dreb": 208,
+      "minutes": 2224,
+      "opportunities": 2189.4736842105262,
+      "flag": null
+    },
+    "1626181": {
+      "id": 1626181,
+      "name": "Norman Powell",
+      "share": 0.09410044917094483,
+      "rawShare": 0.093,
+      "dreb": 151,
+      "minutes": 1567,
+      "opportunities": 1623.6559139784947,
+      "flag": null
+    },
+    "1626192": {
+      "id": 1626192,
+      "name": "Pat Connaughton",
+      "share": 0.1437666701178241,
+      "rawShare": 0.144,
+      "dreb": 233,
+      "minutes": 1444,
+      "opportunities": 1618.0555555555557,
+      "flag": null
+    },
+    "1626195": {
+      "id": 1626195,
+      "name": "Willy Hernangomez",
+      "share": 0.2511408389447939,
+      "rawShare": 0.262,
+      "dreb": 122,
+      "minutes": 457,
+      "opportunities": 465.64885496183206,
+      "flag": null
+    },
+    "1626196": {
+      "id": 1626196,
+      "name": "Josh Richardson",
+      "share": 0.08832349817382973,
+      "rawShare": 0.087,
+      "dreb": 134,
+      "minutes": 1533,
+      "opportunities": 1540.2298850574714,
+      "flag": null
+    },
+    "1626204": {
+      "id": 1626204,
+      "name": "Larry Nance Jr.",
+      "share": 0.18246861192740066,
+      "rawShare": 0.184,
+      "dreb": 248,
+      "minutes": 1382,
+      "opportunities": 1347.8260869565217,
+      "flag": null
+    },
+    "1626220": {
+      "id": 1626220,
+      "name": "Royce O'Neale",
+      "share": 0.1291025235723679,
+      "rawShare": 0.129,
+      "dreb": 329,
+      "minutes": 2408,
+      "opportunities": 2550.3875968992247,
+      "flag": null
+    },
+    "1626224": {
+      "id": 1626224,
+      "name": "Cedi Osman",
+      "share": 0.10098461031183595,
+      "rawShare": 0.1,
+      "dreb": 151,
+      "minutes": 1550,
+      "opportunities": 1510,
+      "flag": null
+    },
+    "1626246": {
+      "id": 1626246,
+      "name": "Boban Marjanovic",
+      "share": 0.20804180799812014,
+      "rawShare": 0.226,
+      "dreb": 40,
+      "minutes": 172,
+      "opportunities": 176.99115044247787,
+      "flag": null
+    },
+    "1627732": {
+      "id": 1627732,
+      "name": "Ben Simmons",
+      "share": 0.18421494685686063,
+      "rawShare": 0.186,
+      "dreb": 223,
+      "minutes": 1103,
+      "opportunities": 1198.9247311827958,
+      "flag": null
+    },
+    "1627734": {
+      "id": 1627734,
+      "name": "Domantas Sabonis",
+      "share": 0.27271592779985265,
+      "rawShare": 0.275,
+      "dreb": 722,
+      "minutes": 2736,
+      "opportunities": 2625.454545454545,
+      "flag": null
+    },
+    "1627736": {
+      "id": 1627736,
+      "name": "Malik Beasley",
+      "share": 0.11638158928292751,
+      "rawShare": 0.116,
+      "dreb": 248,
+      "minutes": 2092,
+      "opportunities": 2137.9310344827586,
+      "flag": null
+    },
+    "1627739": {
+      "id": 1627739,
+      "name": "Kris Dunn",
+      "share": 0.14714644610714606,
+      "rawShare": 0.148,
+      "dreb": 91,
+      "minutes": 567,
+      "opportunities": 614.8648648648649,
+      "flag": null
+    },
+    "1627741": {
+      "id": 1627741,
+      "name": "Buddy Hield",
+      "share": 0.13205268756089686,
+      "rawShare": 0.132,
+      "dreb": 333,
+      "minutes": 2487,
+      "opportunities": 2522.7272727272725,
+      "flag": null
+    },
+    "1627742": {
+      "id": 1627742,
+      "name": "Brandon Ingram",
+      "share": 0.1447272949236113,
+      "rawShare": 0.145,
+      "dreb": 223,
+      "minutes": 1539,
+      "opportunities": 1537.9310344827588,
+      "flag": null
+    },
+    "1627745": {
+      "id": 1627745,
+      "name": "Damian Jones",
+      "share": 0.15070796284822457,
+      "rawShare": 0.152,
+      "dreb": 80,
+      "minutes": 476,
+      "opportunities": 526.3157894736843,
+      "flag": null
+    },
+    "1627747": {
+      "id": 1627747,
+      "name": "Caris LeVert",
+      "share": 0.10558969064986448,
+      "rawShare": 0.105,
+      "dreb": 229,
+      "minutes": 2235,
+      "opportunities": 2180.952380952381,
+      "flag": null
+    },
+    "1627749": {
+      "id": 1627749,
+      "name": "Dejounte Murray",
+      "share": 0.1271312992367495,
+      "rawShare": 0.127,
+      "dreb": 336,
+      "minutes": 2695,
+      "opportunities": 2645.6692913385828,
+      "flag": null
+    },
+    "1627750": {
+      "id": 1627750,
+      "name": "Jamal Murray",
+      "share": 0.09973014956922274,
+      "rawShare": 0.099,
+      "dreb": 209,
+      "minutes": 2131,
+      "opportunities": 2111.111111111111,
+      "flag": null
+    },
+    "1627751": {
+      "id": 1627751,
+      "name": "Jakob Poeltl",
+      "share": 0.237433533042651,
+      "rawShare": 0.24,
+      "dreb": 417,
+      "minutes": 1908,
+      "opportunities": 1737.5,
+      "flag": null
+    },
+    "1627752": {
+      "id": 1627752,
+      "name": "Taurean Prince",
+      "share": 0.09734986810409645,
+      "rawShare": 0.096,
+      "dreb": 117,
+      "minutes": 1190,
+      "opportunities": 1218.75,
+      "flag": null
+    },
+    "1627759": {
+      "id": 1627759,
+      "name": "Jaylen Brown",
+      "share": 0.15171126378105396,
+      "rawShare": 0.152,
+      "dreb": 381,
+      "minutes": 2409,
+      "opportunities": 2506.5789473684213,
+      "flag": null
+    },
+    "1627763": {
+      "id": 1627763,
+      "name": "Malcolm Brogdon",
+      "share": 0.13207322202071056,
+      "rawShare": 0.132,
+      "dreb": 238,
+      "minutes": 1747,
+      "opportunities": 1803.030303030303,
+      "flag": null
+    },
+    "1627777": {
+      "id": 1627777,
+      "name": "Georges Niang",
+      "share": 0.10972612065885137,
+      "rawShare": 0.109,
+      "dreb": 166,
+      "minutes": 1512,
+      "opportunities": 1522.9357798165138,
+      "flag": null
+    },
+    "1627780": {
+      "id": 1627780,
+      "name": "Gary Payton II",
+      "share": 0.12247915650802343,
+      "rawShare": 0.121,
+      "dreb": 45,
+      "minutes": 367,
+      "opportunities": 371.90082644628103,
+      "flag": null
+    },
+    "1627783": {
+      "id": 1627783,
+      "name": "Pascal Siakam",
+      "share": 0.17625318624691313,
+      "rawShare": 0.177,
+      "dreb": 425,
+      "minutes": 2651,
+      "opportunities": 2401.129943502825,
+      "flag": null
+    },
+    "1627788": {
+      "id": 1627788,
+      "name": "Furkan Korkmaz",
+      "share": 0.10286344256252401,
+      "rawShare": 0.099,
+      "dreb": 36,
+      "minutes": 355,
+      "opportunities": 363.6363636363636,
+      "flag": null
+    },
+    "1627814": {
+      "id": 1627814,
+      "name": "Damion Lee",
+      "share": 0.1243134448269087,
+      "rawShare": 0.124,
+      "dreb": 186,
+      "minutes": 1512,
+      "opportunities": 1500,
+      "flag": null
+    },
+    "1627823": {
+      "id": 1627823,
+      "name": "Juancho Hernangomez",
+      "share": 0.16658491072883036,
+      "rawShare": 0.169,
+      "dreb": 96,
+      "minutes": 616,
+      "opportunities": 568.0473372781065,
+      "flag": null
+    },
+    "1627826": {
+      "id": 1627826,
+      "name": "Ivica Zubac",
+      "share": 0.23598787509337166,
+      "rawShare": 0.238,
+      "dreb": 520,
+      "minutes": 2170,
+      "opportunities": 2184.8739495798322,
+      "flag": null
+    },
+    "1627827": {
+      "id": 1627827,
+      "name": "Dorian Finney-Smith",
+      "share": 0.10566676485845863,
+      "rawShare": 0.105,
+      "dreb": 202,
+      "minutes": 2008,
+      "opportunities": 1923.8095238095239,
+      "flag": null
+    },
+    "1627832": {
+      "id": 1627832,
+      "name": "Fred VanVleet",
+      "share": 0.11047226113851845,
+      "rawShare": 0.11,
+      "dreb": 250,
+      "minutes": 2535,
+      "opportunities": 2272.7272727272725,
+      "flag": null
+    },
+    "1627853": {
+      "id": 1627853,
+      "name": "Ryan Arcidiacono",
+      "share": 0.09934837907055774,
+      "rawShare": 0.09,
+      "dreb": 15,
+      "minutes": 173,
+      "opportunities": 166.66666666666669,
+      "flag": null
+    },
+    "1627854": {
+      "id": 1627854,
+      "name": "Bryn Forbes",
+      "share": 0.053008707460460394,
+      "rawShare": 0.04,
+      "dreb": 11,
+      "minutes": 268,
+      "opportunities": 275,
+      "flag": null
+    },
+    "1627863": {
+      "id": 1627863,
+      "name": "Danuel House Jr.",
+      "share": 0.10846142659915464,
+      "rawShare": 0.107,
+      "dreb": 85,
+      "minutes": 806,
+      "opportunities": 794.392523364486,
+      "flag": null
+    },
+    "1627884": {
+      "id": 1627884,
+      "name": "Derrick Jones Jr.",
+      "share": 0.09962894648238996,
+      "rawShare": 0.098,
+      "dreb": 93,
+      "minutes": 893,
+      "opportunities": 948.9795918367347,
+      "flag": null
+    },
+    "1627885": {
+      "id": 1627885,
+      "name": "Shaquille Harrison",
+      "share": 0.17048902428062312,
+      "rawShare": 0.184,
+      "dreb": 21,
+      "minutes": 119,
+      "opportunities": 114.1304347826087,
+      "flag": null
+    },
+    "1627936": {
+      "id": 1627936,
+      "name": "Alex Caruso",
+      "share": 0.09998381129136368,
+      "rawShare": 0.099,
+      "dreb": 154,
+      "minutes": 1575,
+      "opportunities": 1555.5555555555554,
+      "flag": null
+    },
+    "1628221": {
+      "id": 1628221,
+      "name": "Gabe York",
+      "share": 0.11067615794219646,
+      "rawShare": 0.094,
+      "dreb": 6,
+      "minutes": 55,
+      "opportunities": 63.829787234042556,
+      "flag": null
+    },
+    "1628365": {
+      "id": 1628365,
+      "name": "Markelle Fultz",
+      "share": 0.09598153944769106,
+      "rawShare": 0.095,
+      "dreb": 165,
+      "minutes": 1777,
+      "opportunities": 1736.842105263158,
+      "flag": null
+    },
+    "1628368": {
+      "id": 1628368,
+      "name": "De'Aaron Fox",
+      "share": 0.11143046524726304,
+      "rawShare": 0.111,
+      "dreb": 266,
+      "minutes": 2438,
+      "opportunities": 2396.3963963963965,
+      "flag": null
+    },
+    "1628369": {
+      "id": 1628369,
+      "name": "Jayson Tatum",
+      "share": 0.19902434690301127,
+      "rawShare": 0.2,
+      "dreb": 571,
+      "minutes": 2733,
+      "opportunities": 2855,
+      "flag": null
+    },
+    "1628370": {
+      "id": 1628370,
+      "name": "Malik Monk",
+      "share": 0.09791914285438846,
+      "rawShare": 0.097,
+      "dreb": 171,
+      "minutes": 1722,
+      "opportunities": 1762.8865979381442,
+      "flag": null
+    },
+    "1628371": {
+      "id": 1628371,
+      "name": "Jonathan Isaac",
+      "share": 0.21862423568965614,
+      "rawShare": 0.25,
+      "dreb": 29,
+      "minutes": 124,
+      "opportunities": 116,
+      "flag": null
+    },
+    "1628372": {
+      "id": 1628372,
+      "name": "Dennis Smith Jr.",
+      "share": 0.09418448054463714,
+      "rawShare": 0.093,
+      "dreb": 140,
+      "minutes": 1390,
+      "opportunities": 1505.3763440860216,
+      "flag": null
+    },
+    "1628373": {
+      "id": 1628373,
+      "name": "Frank Ntilikina",
+      "share": 0.0891323459438908,
+      "rawShare": 0.086,
+      "dreb": 55,
+      "minutes": 610,
+      "opportunities": 639.5348837209303,
+      "flag": null
+    },
+    "1628374": {
+      "id": 1628374,
+      "name": "Lauri Markkanen",
+      "share": 0.18214736723180386,
+      "rawShare": 0.183,
+      "dreb": 440,
+      "minutes": 2271,
+      "opportunities": 2404.3715846994537,
+      "flag": null
+    },
+    "1628378": {
+      "id": 1628378,
+      "name": "Donovan Mitchell",
+      "share": 0.09769956448372784,
+      "rawShare": 0.097,
+      "dreb": 226,
+      "minutes": 2436,
+      "opportunities": 2329.8969072164946,
+      "flag": null
+    },
+    "1628379": {
+      "id": 1628379,
+      "name": "Luke Kennard",
+      "share": 0.10495543703673149,
+      "rawShare": 0.104,
+      "dreb": 143,
+      "minutes": 1318,
+      "opportunities": 1375,
+      "flag": null
+    },
+    "1628380": {
+      "id": 1628380,
+      "name": "Zach Collins",
+      "share": 0.18845546458434875,
+      "rawShare": 0.19,
+      "dreb": 286,
+      "minutes": 1441,
+      "opportunities": 1505.2631578947369,
+      "flag": null
+    },
+    "1628381": {
+      "id": 1628381,
+      "name": "John Collins",
+      "share": 0.17910355025067307,
+      "rawShare": 0.18,
+      "dreb": 385,
+      "minutes": 2132,
+      "opportunities": 2138.888888888889,
+      "flag": null
+    },
+    "1628382": {
+      "id": 1628382,
+      "name": "Justin Jackson",
+      "share": 0.12313677757743863,
+      "rawShare": 0.119,
+      "dreb": 15,
+      "minutes": 108,
+      "opportunities": 126.05042016806723,
+      "flag": null
+    },
+    "1628384": {
+      "id": 1628384,
+      "name": "OG Anunoby",
+      "share": 0.11049765221113071,
+      "rawShare": 0.11,
+      "dreb": 237,
+      "minutes": 2388,
+      "opportunities": 2154.5454545454545,
+      "flag": null
+    },
+    "1628386": {
+      "id": 1628386,
+      "name": "Jarrett Allen",
+      "share": 0.20849082774453273,
+      "rawShare": 0.21,
+      "dreb": 445,
+      "minutes": 2228,
+      "opportunities": 2119.0476190476193,
+      "flag": null
+    },
+    "1628389": {
+      "id": 1628389,
+      "name": "Bam Adebayo",
+      "share": 0.2047593397291481,
+      "rawShare": 0.206,
+      "dreb": 504,
+      "minutes": 2598,
+      "opportunities": 2446.601941747573,
+      "flag": null
+    },
+    "1628392": {
+      "id": 1628392,
+      "name": "Isaiah Hartenstein",
+      "share": 0.19058052953281163,
+      "rawShare": 0.192,
+      "dreb": 327,
+      "minutes": 1631,
+      "opportunities": 1703.125,
+      "flag": null
+    },
+    "1628396": {
+      "id": 1628396,
+      "name": "Tony Bradley",
+      "share": 0.1997202949015908,
+      "rawShare": 0.278,
+      "dreb": 10,
+      "minutes": 33,
+      "opportunities": 35.97122302158273,
+      "flag": null
+    },
+    "1628398": {
+      "id": 1628398,
+      "name": "Kyle Kuzma",
+      "share": 0.17133440532909805,
+      "rawShare": 0.172,
+      "dreb": 408,
+      "minutes": 2240,
+      "opportunities": 2372.093023255814,
+      "flag": null
+    },
+    "1628401": {
+      "id": 1628401,
+      "name": "Derrick White",
+      "share": 0.0986460151467596,
+      "rawShare": 0.098,
+      "dreb": 241,
+      "minutes": 2322,
+      "opportunities": 2459.1836734693875,
+      "flag": null
+    },
+    "1628402": {
+      "id": 1628402,
+      "name": "Frank Jackson",
+      "share": 0.1478613166977204,
+      "rawShare": 0.333,
+      "dreb": 1,
+      "minutes": 5,
+      "opportunities": 3.003003003003003,
+      "flag": null
+    },
+    "1628404": {
+      "id": 1628404,
+      "name": "Josh Hart",
+      "share": 0.18412374399796308,
+      "rawShare": 0.185,
+      "dreb": 451,
+      "minutes": 2456,
+      "opportunities": 2437.837837837838,
+      "flag": null
+    },
+    "1628408": {
+      "id": 1628408,
+      "name": "PJ Dozier",
+      "share": 0.15792074760186375,
+      "rawShare": 0.171,
+      "dreb": 13,
+      "minutes": 78,
+      "opportunities": 76.0233918128655,
+      "flag": null
+    },
+    "1628410": {
+      "id": 1628410,
+      "name": "Edmond Sumner",
+      "share": 0.08863833889602694,
+      "rawShare": 0.086,
+      "dreb": 66,
+      "minutes": 737,
+      "opportunities": 767.4418604651163,
+      "flag": null
+    },
+    "1628415": {
+      "id": 1628415,
+      "name": "Dillon Brooks",
+      "share": 0.08492301785593744,
+      "rawShare": 0.084,
+      "dreb": 199,
+      "minutes": 2213,
+      "opportunities": 2369.047619047619,
+      "flag": null
+    },
+    "1628416": {
+      "id": 1628416,
+      "name": "Tyler Dorsey",
+      "share": 0.12855097090787374,
+      "rawShare": 0.1,
+      "dreb": 1,
+      "minutes": 8,
+      "opportunities": 10,
+      "flag": null
+    },
+    "1628418": {
+      "id": 1628418,
+      "name": "Thomas Bryant",
+      "share": 0.2197487895342446,
+      "rawShare": 0.223,
+      "dreb": 253,
+      "minutes": 1082,
+      "opportunities": 1134.5291479820628,
+      "flag": null
+    },
+    "1628420": {
+      "id": 1628420,
+      "name": "Monte Morris",
+      "share": 0.10671270591685261,
+      "rawShare": 0.106,
+      "dreb": 184,
+      "minutes": 1694,
+      "opportunities": 1735.8490566037735,
+      "flag": null
+    },
+    "1628424": {
+      "id": 1628424,
+      "name": "Kobi Simmons",
+      "share": 0.11442784624605844,
+      "rawShare": 0.088,
+      "dreb": 3,
+      "minutes": 28,
+      "opportunities": 34.09090909090909,
+      "flag": null
+    },
+    "1628425": {
+      "id": 1628425,
+      "name": "Sterling Brown",
+      "share": 0.1423712804872416,
+      "rawShare": 0.152,
+      "dreb": 5,
+      "minutes": 25,
+      "opportunities": 32.89473684210527,
+      "flag": null
+    },
+    "1628427": {
+      "id": 1628427,
+      "name": "Vlatko Cancar",
+      "share": 0.11976478438266433,
+      "rawShare": 0.119,
+      "dreb": 104,
+      "minutes": 888,
+      "opportunities": 873.9495798319329,
+      "flag": null
+    },
+    "1628432": {
+      "id": 1628432,
+      "name": "Davon Reed",
+      "share": 0.1447477044278309,
+      "rawShare": 0.146,
+      "dreb": 49,
+      "minutes": 346,
+      "opportunities": 335.6164383561644,
+      "flag": null
+    },
+    "1628435": {
+      "id": 1628435,
+      "name": "Chance Comanche",
+      "share": 0.11772808658340234,
+      "rawShare": 0.067,
+      "dreb": 1,
+      "minutes": 21,
+      "opportunities": 14.925373134328357,
+      "flag": null
+    },
+    "1628436": {
+      "id": 1628436,
+      "name": "Luke Kornet",
+      "share": 0.12547258523790736,
+      "rawShare": 0.125,
+      "dreb": 111,
+      "minutes": 807,
+      "opportunities": 888,
+      "flag": null
+    },
+    "1628449": {
+      "id": 1628449,
+      "name": "Chris Boucher",
+      "share": 0.18833066720035543,
+      "rawShare": 0.19,
+      "dreb": 264,
+      "minutes": 1521,
+      "opportunities": 1389.4736842105262,
+      "flag": null
+    },
+    "1628464": {
+      "id": 1628464,
+      "name": "Daniel Theis",
+      "share": 0.14343972400043878,
+      "rawShare": 0.147,
+      "dreb": 15,
+      "minutes": 108,
+      "opportunities": 102.04081632653062,
+      "flag": null
+    },
+    "1628467": {
+      "id": 1628467,
+      "name": "Maxi Kleber",
+      "share": 0.1168774078889384,
+      "rawShare": 0.116,
+      "dreb": 105,
+      "minutes": 930,
+      "opportunities": 905.1724137931034,
+      "flag": null
+    },
+    "1628470": {
+      "id": 1628470,
+      "name": "Torrey Craig",
+      "share": 0.1457587370900477,
+      "rawShare": 0.146,
+      "dreb": 281,
+      "minutes": 1954,
+      "opportunities": 1924.6575342465756,
+      "flag": null
+    },
+    "1628960": {
+      "id": 1628960,
+      "name": "Grayson Allen",
+      "share": 0.08305668276623737,
+      "rawShare": 0.082,
+      "dreb": 176,
+      "minutes": 1972,
+      "opportunities": 2146.341463414634,
+      "flag": null
+    },
+    "1628962": {
+      "id": 1628962,
+      "name": "Udoka Azubuike",
+      "share": 0.21512386290415556,
+      "rawShare": 0.224,
+      "dreb": 88,
+      "minutes": 357,
+      "opportunities": 392.85714285714283,
+      "flag": null
+    },
+    "1628963": {
+      "id": 1628963,
+      "name": "Marvin Bagley III",
+      "share": 0.17712687313378134,
+      "rawShare": 0.179,
+      "dreb": 175,
+      "minutes": 990,
+      "opportunities": 977.6536312849163,
+      "flag": null
+    },
+    "1628964": {
+      "id": 1628964,
+      "name": "Mo Bamba",
+      "share": 0.19491001388345017,
+      "rawShare": 0.198,
+      "dreb": 167,
+      "minutes": 771,
+      "opportunities": 843.4343434343434,
+      "flag": null
+    },
+    "1628966": {
+      "id": 1628966,
+      "name": "Keita Bates-Diop",
+      "share": 0.13015322159659554,
+      "rawShare": 0.13,
+      "dreb": 183,
+      "minutes": 1457,
+      "opportunities": 1407.6923076923076,
+      "flag": null
+    },
+    "1628969": {
+      "id": 1628969,
+      "name": "Mikal Bridges",
+      "share": 0.09458238755616384,
+      "rawShare": 0.094,
+      "dreb": 285,
+      "minutes": 2965,
+      "opportunities": 3031.9148936170213,
+      "flag": null
+    },
+    "1628971": {
+      "id": 1628971,
+      "name": "Bruce Brown",
+      "share": 0.11635756817539523,
+      "rawShare": 0.116,
+      "dreb": 265,
+      "minutes": 2281,
+      "opportunities": 2284.4827586206898,
+      "flag": null
+    },
+    "1628972": {
+      "id": 1628972,
+      "name": "Troy Brown Jr.",
+      "share": 0.12325807833078055,
+      "rawShare": 0.123,
+      "dreb": 246,
+      "minutes": 1863,
+      "opportunities": 2000,
+      "flag": null
+    },
+    "1628973": {
+      "id": 1628973,
+      "name": "Jalen Brunson",
+      "share": 0.08590658737986963,
+      "rawShare": 0.085,
+      "dreb": 201,
+      "minutes": 2376,
+      "opportunities": 2364.705882352941,
+      "flag": null
+    },
+    "1628975": {
+      "id": 1628975,
+      "name": "Jevon Carter",
+      "share": 0.08509609001293233,
+      "rawShare": 0.084,
+      "dreb": 167,
+      "minutes": 1809,
+      "opportunities": 1988.095238095238,
+      "flag": null
+    },
+    "1628976": {
+      "id": 1628976,
+      "name": "Wendell Carter Jr.",
+      "share": 0.21886041483537888,
+      "rawShare": 0.221,
+      "dreb": 377,
+      "minutes": 1690,
+      "opportunities": 1705.8823529411764,
+      "flag": null
+    },
+    "1628977": {
+      "id": 1628977,
+      "name": "Hamidou Diallo",
+      "share": 0.1359627999628065,
+      "rawShare": 0.136,
+      "dreb": 137,
+      "minutes": 996,
+      "opportunities": 1007.3529411764705,
+      "flag": null
+    },
+    "1628978": {
+      "id": 1628978,
+      "name": "Donte DiVincenzo",
+      "share": 0.12325910915996598,
+      "rawShare": 0.123,
+      "dreb": 245,
+      "minutes": 1893,
+      "opportunities": 1991.869918699187,
+      "flag": null
+    },
+    "1628981": {
+      "id": 1628981,
+      "name": "Bruno Fernando",
+      "share": 0.18502051567650823,
+      "rawShare": 0.19,
+      "dreb": 83,
+      "minutes": 407,
+      "opportunities": 436.84210526315786,
+      "flag": null
+    },
+    "1628983": {
+      "id": 1628983,
+      "name": "Shai Gilgeous-Alexander",
+      "share": 0.1094512650227848,
+      "rawShare": 0.109,
+      "dreb": 270,
+      "minutes": 2417,
+      "opportunities": 2477.064220183486,
+      "flag": null
+    },
+    "1628984": {
+      "id": 1628984,
+      "name": "Devonte' Graham",
+      "share": 0.08279262348420324,
+      "rawShare": 0.081,
+      "dreb": 103,
+      "minutes": 1339,
+      "opportunities": 1271.6049382716049,
+      "flag": null
+    },
+    "1628988": {
+      "id": 1628988,
+      "name": "Aaron Holiday",
+      "share": 0.0627940392924129,
+      "rawShare": 0.059,
+      "dreb": 49,
+      "minutes": 846,
+      "opportunities": 830.5084745762713,
+      "flag": null
+    },
+    "1628989": {
+      "id": 1628989,
+      "name": "Kevin Huerter",
+      "share": 0.10071694992130606,
+      "rawShare": 0.1,
+      "dreb": 209,
+      "minutes": 2206,
+      "opportunities": 2090,
+      "flag": null
+    },
+    "1628991": {
+      "id": 1628991,
+      "name": "Jaren Jackson Jr.",
+      "share": 0.15849042313658335,
+      "rawShare": 0.159,
+      "dreb": 318,
+      "minutes": 1790,
+      "opportunities": 2000,
+      "flag": null
+    },
+    "1628993": {
+      "id": 1628993,
+      "name": "Alize Johnson",
+      "share": 0.17041475427397176,
+      "rawShare": 0.211,
+      "dreb": 8,
+      "minutes": 30,
+      "opportunities": 37.91469194312796,
+      "flag": null
+    },
+    "1628995": {
+      "id": 1628995,
+      "name": "Kevin Knox II",
+      "share": 0.15125198335223108,
+      "rawShare": 0.152,
+      "dreb": 143,
+      "minutes": 951,
+      "opportunities": 940.7894736842105,
+      "flag": null
+    },
+    "1628997": {
+      "id": 1628997,
+      "name": "Caleb Martin",
+      "share": 0.13011047542258455,
+      "rawShare": 0.13,
+      "dreb": 256,
+      "minutes": 2077,
+      "opportunities": 1969.230769230769,
+      "flag": null
+    },
+    "1628998": {
+      "id": 1628998,
+      "name": "Cody Martin",
+      "share": 0.11497522016608969,
+      "rawShare": 0.109,
+      "dreb": 16,
+      "minutes": 135,
+      "opportunities": 146.78899082568807,
+      "flag": null
+    },
+    "1629001": {
+      "id": 1629001,
+      "name": "De'Anthony Melton",
+      "share": 0.11442277132333954,
+      "rawShare": 0.114,
+      "dreb": 243,
+      "minutes": 2152,
+      "opportunities": 2131.578947368421,
+      "flag": null
+    },
+    "1629002": {
+      "id": 1629002,
+      "name": "Chimezie Metu",
+      "share": 0.2020217361643791,
+      "rawShare": 0.206,
+      "dreb": 151,
+      "minutes": 690,
+      "opportunities": 733.0097087378641,
+      "flag": null
+    },
+    "1629003": {
+      "id": 1629003,
+      "name": "Shake Milton",
+      "share": 0.09704736864580153,
+      "rawShare": 0.096,
+      "dreb": 152,
+      "minutes": 1568,
+      "opportunities": 1583.3333333333333,
+      "flag": null
+    },
+    "1629004": {
+      "id": 1629004,
+      "name": "Svi Mykhailiuk",
+      "share": 0.08366036686809909,
+      "rawShare": 0.079,
+      "dreb": 38,
+      "minutes": 469,
+      "opportunities": 481.0126582278481,
+      "flag": null
+    },
+    "1629006": {
+      "id": 1629006,
+      "name": "Josh Okogie",
+      "share": 0.10300472275303352,
+      "rawShare": 0.102,
+      "dreb": 142,
+      "minutes": 1348,
+      "opportunities": 1392.1568627450981,
+      "flag": null
+    },
+    "1629008": {
+      "id": 1629008,
+      "name": "Michael Porter Jr.",
+      "share": 0.15063112860421066,
+      "rawShare": 0.151,
+      "dreb": 277,
+      "minutes": 1799,
+      "opportunities": 1834.4370860927154,
+      "flag": null
+    },
+    "1629011": {
+      "id": 1629011,
+      "name": "Mitchell Robinson",
+      "share": 0.17687495861953523,
+      "rawShare": 0.178,
+      "dreb": 288,
+      "minutes": 1591,
+      "opportunities": 1617.9775280898878,
+      "flag": null
+    },
+    "1629012": {
+      "id": 1629012,
+      "name": "Collin Sexton",
+      "share": 0.058740398060268484,
+      "rawShare": 0.056,
+      "dreb": 68,
+      "minutes": 1145,
+      "opportunities": 1214.2857142857142,
+      "flag": null
+    },
+    "1629013": {
+      "id": 1629013,
+      "name": "Landry Shamet",
+      "share": 0.07336302493505466,
+      "rawShare": 0.07,
+      "dreb": 56,
+      "minutes": 806,
+      "opportunities": 799.9999999999999,
+      "flag": null
+    },
+    "1629014": {
+      "id": 1629014,
+      "name": "Anfernee Simons",
+      "share": 0.06836263962342734,
+      "rawShare": 0.067,
+      "dreb": 143,
+      "minutes": 2176,
+      "opportunities": 2134.3283582089553,
+      "flag": null
+    },
+    "1629018": {
+      "id": 1629018,
+      "name": "Gary Trent Jr.",
+      "share": 0.07435144333658338,
+      "rawShare": 0.073,
+      "dreb": 143,
+      "minutes": 2114,
+      "opportunities": 1958.9041095890411,
+      "flag": null
+    },
+    "1629020": {
+      "id": 1629020,
+      "name": "Jarred Vanderbilt",
+      "share": 0.21419310009709744,
+      "rawShare": 0.216,
+      "dreb": 412,
+      "minutes": 1879,
+      "opportunities": 1907.4074074074074,
+      "flag": null
+    },
+    "1629021": {
+      "id": 1629021,
+      "name": "Moritz Wagner",
+      "share": 0.17059970575154898,
+      "rawShare": 0.172,
+      "dreb": 190,
+      "minutes": 1110,
+      "opportunities": 1104.6511627906978,
+      "flag": null
+    },
+    "1629022": {
+      "id": 1629022,
+      "name": "Lonnie Walker IV",
+      "share": 0.07102799914593932,
+      "rawShare": 0.069,
+      "dreb": 95,
+      "minutes": 1295,
+      "opportunities": 1376.8115942028985,
+      "flag": null
+    },
+    "1629023": {
+      "id": 1629023,
+      "name": "P.J. Washington",
+      "share": 0.118303106042195,
+      "rawShare": 0.118,
+      "dreb": 285,
+      "minutes": 2377,
+      "opportunities": 2415.2542372881358,
+      "flag": null
+    },
+    "1629026": {
+      "id": 1629026,
+      "name": "Kenrich Williams",
+      "share": 0.13693336486094948,
+      "rawShare": 0.137,
+      "dreb": 164,
+      "minutes": 1205,
+      "opportunities": 1197.0802919708028,
+      "flag": null
+    },
+    "1629027": {
+      "id": 1629027,
+      "name": "Trae Young",
+      "share": 0.06320650001199957,
+      "rawShare": 0.062,
+      "dreb": 161,
+      "minutes": 2543,
+      "opportunities": 2596.7741935483873,
+      "flag": null
+    },
+    "1629028": {
+      "id": 1629028,
+      "name": "Deandre Ayton",
+      "share": 0.244618650415459,
+      "rawShare": 0.247,
+      "dreb": 495,
+      "minutes": 2039,
+      "opportunities": 2004.0485829959514,
+      "flag": null
+    },
+    "1629029": {
+      "id": 1629029,
+      "name": "Luka Dončić",
+      "share": 0.22234640647165577,
+      "rawShare": 0.224,
+      "dreb": 515,
+      "minutes": 2389,
+      "opportunities": 2299.1071428571427,
+      "flag": null
+    },
+    "1629033": {
+      "id": 1629033,
+      "name": "Theo Pinson",
+      "share": 0.15970309983734676,
+      "rawShare": 0.163,
+      "dreb": 53,
+      "minutes": 325,
+      "opportunities": 325.15337423312883,
+      "flag": null
+    },
+    "1629048": {
+      "id": 1629048,
+      "name": "Goga Bitadze",
+      "share": 0.1642126198135908,
+      "rawShare": 0.167,
+      "dreb": 76,
+      "minutes": 455,
+      "opportunities": 455.0898203592814,
+      "flag": null
+    },
+    "1629052": {
+      "id": 1629052,
+      "name": "Oshae Brissett",
+      "share": 0.1436559543853701,
+      "rawShare": 0.144,
+      "dreb": 156,
+      "minutes": 1087,
+      "opportunities": 1083.3333333333335,
+      "flag": null
+    },
+    "1629056": {
+      "id": 1629056,
+      "name": "Terence Davis",
+      "share": 0.13976118274241764,
+      "rawShare": 0.14,
+      "dreb": 119,
+      "minutes": 837,
+      "opportunities": 849.9999999999999,
+      "flag": null
+    },
+    "1629057": {
+      "id": 1629057,
+      "name": "Robert Williams III",
+      "share": 0.20558551386589066,
+      "rawShare": 0.209,
+      "dreb": 188,
+      "minutes": 824,
+      "opportunities": 899.5215311004785,
+      "flag": null
+    },
+    "1629060": {
+      "id": 1629060,
+      "name": "Rui Hachimura",
+      "share": 0.14084656020156625,
+      "rawShare": 0.141,
+      "dreb": 230,
+      "minutes": 1465,
+      "opportunities": 1631.2056737588655,
+      "flag": null
+    },
+    "1629111": {
+      "id": 1629111,
+      "name": "Jock Landale",
+      "share": 0.16277181052877993,
+      "rawShare": 0.164,
+      "dreb": 161,
+      "minutes": 980,
+      "opportunities": 981.7073170731707,
+      "flag": null
+    },
+    "1629117": {
+      "id": 1629117,
+      "name": "Wenyen Gabriel",
+      "share": 0.1513663307117276,
+      "rawShare": 0.152,
+      "dreb": 170,
+      "minutes": 1023,
+      "opportunities": 1118.421052631579,
+      "flag": null
+    },
+    "1629126": {
+      "id": 1629126,
+      "name": "Deonte Burton",
+      "share": 0.11859390282019701,
+      "rawShare": 0,
+      "dreb": 0,
+      "minutes": 6,
+      "opportunities": 6.066131250228478,
+      "flag": null
+    },
+    "1629130": {
+      "id": 1629130,
+      "name": "Duncan Robinson",
+      "share": 0.0965864183172253,
+      "rawShare": 0.094,
+      "dreb": 61,
+      "minutes": 695,
+      "opportunities": 648.936170212766,
+      "flag": null
+    },
+    "1629134": {
+      "id": 1629134,
+      "name": "Kendrick Nunn",
+      "share": 0.09180643081012856,
+      "rawShare": 0.09,
+      "dreb": 94,
+      "minutes": 964,
+      "opportunities": 1044.4444444444446,
+      "flag": null
+    },
+    "1629139": {
+      "id": 1629139,
+      "name": "Yuta Watanabe",
+      "share": 0.11779498889796193,
+      "rawShare": 0.117,
+      "dreb": 111,
+      "minutes": 928,
+      "opportunities": 948.7179487179486,
+      "flag": null
+    },
+    "1629162": {
+      "id": 1629162,
+      "name": "Jordan McLaughlin",
+      "share": 0.06898465880491614,
+      "rawShare": 0.065,
+      "dreb": 47,
+      "minutes": 680,
+      "opportunities": 723.0769230769231,
+      "flag": null
+    },
+    "1629216": {
+      "id": 1629216,
+      "name": "Gabe Vincent",
+      "share": 0.07263782662760672,
+      "rawShare": 0.071,
+      "dreb": 118,
+      "minutes": 1756,
+      "opportunities": 1661.9718309859156,
+      "flag": null
+    },
+    "1629234": {
+      "id": 1629234,
+      "name": "Drew Eubanks",
+      "share": 0.181700711390229,
+      "rawShare": 0.183,
+      "dreb": 286,
+      "minutes": 1582,
+      "opportunities": 1562.8415300546449,
+      "flag": null
+    },
+    "1629308": {
+      "id": 1629308,
+      "name": "Juan Toscano-Anderson",
+      "share": 0.12839003061445822,
+      "rawShare": 0.128,
+      "dreb": 96,
+      "minutes": 699,
+      "opportunities": 750,
+      "flag": null
+    },
+    "1629312": {
+      "id": 1629312,
+      "name": "Haywood Highsmith",
+      "share": 0.13500442045492939,
+      "rawShare": 0.135,
+      "dreb": 131,
+      "minutes": 971,
+      "opportunities": 970.3703703703703,
+      "flag": null
+    },
+    "1629599": {
+      "id": 1629599,
+      "name": "Amir Coffey",
+      "share": 0.060000013764447045,
+      "rawShare": 0.055,
+      "dreb": 36,
+      "minutes": 627,
+      "opportunities": 654.5454545454545,
+      "flag": null
+    },
+    "1629603": {
+      "id": 1629603,
+      "name": "Mamadi Diakite",
+      "share": 0.13343846811946591,
+      "rawShare": 0.133,
+      "dreb": 22,
+      "minutes": 176,
+      "opportunities": 165.41353383458645,
+      "flag": null
+    },
+    "1629611": {
+      "id": 1629611,
+      "name": "Terance Mann",
+      "share": 0.10764339450979957,
+      "rawShare": 0.107,
+      "dreb": 199,
+      "minutes": 1876,
+      "opportunities": 1859.8130841121497,
+      "flag": null
+    },
+    "1629614": {
+      "id": 1629614,
+      "name": "Andrew Nembhard",
+      "share": 0.0791594559396891,
+      "rawShare": 0.078,
+      "dreb": 164,
+      "minutes": 2076,
+      "opportunities": 2102.5641025641025,
+      "flag": null
+    },
+    "1629622": {
+      "id": 1629622,
+      "name": "Max Strus",
+      "share": 0.09775533884350093,
+      "rawShare": 0.097,
+      "dreb": 209,
+      "minutes": 2273,
+      "opportunities": 2154.639175257732,
+      "flag": null
+    },
+    "1629623": {
+      "id": 1629623,
+      "name": "Lindell Wigginton",
+      "share": 0.09582676138761971,
+      "rawShare": 0.077,
+      "dreb": 7,
+      "minutes": 86,
+      "opportunities": 90.9090909090909,
+      "flag": null
+    },
+    "1629626": {
+      "id": 1629626,
+      "name": "Bol Bol",
+      "share": 0.2176448793660991,
+      "rawShare": 0.22,
+      "dreb": 336,
+      "minutes": 1511,
+      "opportunities": 1527.2727272727273,
+      "flag": null
+    },
+    "1629627": {
+      "id": 1629627,
+      "name": "Zion Williamson",
+      "share": 0.14744713437526114,
+      "rawShare": 0.148,
+      "dreb": 144,
+      "minutes": 958,
+      "opportunities": 972.972972972973,
+      "flag": null
+    },
+    "1629628": {
+      "id": 1629628,
+      "name": "RJ Barrett",
+      "share": 0.12123736921905415,
+      "rawShare": 0.121,
+      "dreb": 308,
+      "minutes": 2479,
+      "opportunities": 2545.4545454545455,
+      "flag": null
+    },
+    "1629629": {
+      "id": 1629629,
+      "name": "Cam Reddish",
+      "share": 0.07271850597687503,
+      "rawShare": 0.07,
+      "dreb": 70,
+      "minutes": 988,
+      "opportunities": 999.9999999999999,
+      "flag": null
+    },
+    "1629630": {
+      "id": 1629630,
+      "name": "Ja Morant",
+      "share": 0.13892185039184643,
+      "rawShare": 0.139,
+      "dreb": 296,
+      "minutes": 1949,
+      "opportunities": 2129.4964028776976,
+      "flag": null
+    },
+    "1629631": {
+      "id": 1629631,
+      "name": "De'Andre Hunter",
+      "share": 0.11246424315584683,
+      "rawShare": 0.112,
+      "dreb": 238,
+      "minutes": 2125,
+      "opportunities": 2125,
+      "flag": null
+    },
+    "1629632": {
+      "id": 1629632,
+      "name": "Coby White",
+      "share": 0.1105992677849374,
+      "rawShare": 0.11,
+      "dreb": 196,
+      "minutes": 1732,
+      "opportunities": 1781.8181818181818,
+      "flag": null
+    },
+    "1629633": {
+      "id": 1629633,
+      "name": "Jarrett Culver",
+      "share": 0.1976738015703509,
+      "rawShare": 0.219,
+      "dreb": 28,
+      "minutes": 139,
+      "opportunities": 127.85388127853881,
+      "flag": null
+    },
+    "1629634": {
+      "id": 1629634,
+      "name": "Brandon Clarke",
+      "share": 0.17556828820723994,
+      "rawShare": 0.177,
+      "dreb": 218,
+      "minutes": 1091,
+      "opportunities": 1231.638418079096,
+      "flag": null
+    },
+    "1629636": {
+      "id": 1629636,
+      "name": "Darius Garland",
+      "share": 0.06824334874322768,
+      "rawShare": 0.067,
+      "dreb": 157,
+      "minutes": 2449,
+      "opportunities": 2343.283582089552,
+      "flag": null
+    },
+    "1629637": {
+      "id": 1629637,
+      "name": "Jaxson Hayes",
+      "share": 0.15180277056743213,
+      "rawShare": 0.153,
+      "dreb": 93,
+      "minutes": 607,
+      "opportunities": 607.843137254902,
+      "flag": null
+    },
+    "1629638": {
+      "id": 1629638,
+      "name": "Nickeil Alexander-Walker",
+      "share": 0.09684177682898534,
+      "rawShare": 0.095,
+      "dreb": 86,
+      "minutes": 882,
+      "opportunities": 905.2631578947369,
+      "flag": null
+    },
+    "1629639": {
+      "id": 1629639,
+      "name": "Tyler Herro",
+      "share": 0.15362669640694396,
+      "rawShare": 0.154,
+      "dreb": 333,
+      "minutes": 2336,
+      "opportunities": 2162.3376623376626,
+      "flag": null
+    },
+    "1629640": {
+      "id": 1629640,
+      "name": "Keldon Johnson",
+      "share": 0.13304551055272915,
+      "rawShare": 0.133,
+      "dreb": 262,
+      "minutes": 2066,
+      "opportunities": 1969.9248120300751,
+      "flag": null
+    },
+    "1629641": {
+      "id": 1629641,
+      "name": "Romeo Langford",
+      "share": 0.07031837576924146,
+      "rawShare": 0.067,
+      "dreb": 57,
+      "minutes": 846,
+      "opportunities": 850.7462686567163,
+      "flag": null
+    },
+    "1629642": {
+      "id": 1629642,
+      "name": "Nassir Little",
+      "share": 0.12258382195674343,
+      "rawShare": 0.122,
+      "dreb": 114,
+      "minutes": 979,
+      "opportunities": 934.4262295081968,
+      "flag": null
+    },
+    "1629643": {
+      "id": 1629643,
+      "name": "Chuma Okeke",
+      "share": 0.1322356108504198,
+      "rawShare": 0.132,
+      "dreb": 70,
+      "minutes": 518,
+      "opportunities": 530.3030303030303,
+      "flag": null
+    },
+    "1629644": {
+      "id": 1629644,
+      "name": "KZ Okpala",
+      "share": 0.10667919418391371,
+      "rawShare": 0.102,
+      "dreb": 27,
+      "minutes": 247,
+      "opportunities": 264.7058823529412,
+      "flag": null
+    },
+    "1629645": {
+      "id": 1629645,
+      "name": "Kevin Porter Jr.",
+      "share": 0.11737966918431768,
+      "rawShare": 0.117,
+      "dreb": 238,
+      "minutes": 2026,
+      "opportunities": 2034.1880341880342,
+      "flag": null
+    },
+    "1629646": {
+      "id": 1629646,
+      "name": "Charles Bassey",
+      "share": 0.22435334939738355,
+      "rawShare": 0.232,
+      "dreb": 118,
+      "minutes": 510,
+      "opportunities": 508.6206896551724,
+      "flag": null
+    },
+    "1629647": {
+      "id": 1629647,
+      "name": "Darius Bazley",
+      "share": 0.1556484279569246,
+      "rawShare": 0.157,
+      "dreb": 104,
+      "minutes": 619,
+      "opportunities": 662.4203821656051,
+      "flag": null
+    },
+    "1629650": {
+      "id": 1629650,
+      "name": "Moses Brown",
+      "share": 0.24649108609813578,
+      "rawShare": 0.262,
+      "dreb": 82,
+      "minutes": 295,
+      "opportunities": 312.9770992366412,
+      "flag": null
+    },
+    "1629651": {
+      "id": 1629651,
+      "name": "Nic Claxton",
+      "share": 0.21162876160520774,
+      "rawShare": 0.213,
+      "dreb": 518,
+      "minutes": 2268,
+      "opportunities": 2431.924882629108,
+      "flag": null
+    },
+    "1629652": {
+      "id": 1629652,
+      "name": "Luguentz Dort",
+      "share": 0.09278543083496861,
+      "rawShare": 0.092,
+      "dreb": 216,
+      "minutes": 2273,
+      "opportunities": 2347.826086956522,
+      "flag": null
+    },
+    "1629653": {
+      "id": 1629653,
+      "name": "Devon Dotson",
+      "share": 0.10908898639568444,
+      "rawShare": 0.085,
+      "dreb": 4,
+      "minutes": 53,
+      "opportunities": 47.05882352941176,
+      "flag": null
+    },
+    "1629655": {
+      "id": 1629655,
+      "name": "Daniel Gafford",
+      "share": 0.1584020982737821,
+      "rawShare": 0.159,
+      "dreb": 270,
+      "minutes": 1606,
+      "opportunities": 1698.1132075471698,
+      "flag": null
+    },
+    "1629656": {
+      "id": 1629656,
+      "name": "Quentin Grimes",
+      "share": 0.08601022329791828,
+      "rawShare": 0.085,
+      "dreb": 180,
+      "minutes": 2119,
+      "opportunities": 2117.6470588235293,
+      "flag": null
+    },
+    "1629659": {
+      "id": 1629659,
+      "name": "Talen Horton-Tucker",
+      "share": 0.11753014249173477,
+      "rawShare": 0.117,
+      "dreb": 169,
+      "minutes": 1313,
+      "opportunities": 1444.4444444444443,
+      "flag": null
+    },
+    "1629660": {
+      "id": 1629660,
+      "name": "Ty Jerome",
+      "share": 0.09333292835942782,
+      "rawShare": 0.091,
+      "dreb": 71,
+      "minutes": 817,
+      "opportunities": 780.2197802197802,
+      "flag": null
+    },
+    "1629661": {
+      "id": 1629661,
+      "name": "Cameron Johnson",
+      "share": 0.12050551346113396,
+      "rawShare": 0.12,
+      "dreb": 151,
+      "minutes": 1197,
+      "opportunities": 1258.3333333333335,
+      "flag": null
+    },
+    "1629662": {
+      "id": 1629662,
+      "name": "Mfiondu Kabengele",
+      "share": 0.1423712804872416,
+      "rawShare": 0.152,
+      "dreb": 5,
+      "minutes": 37,
+      "opportunities": 32.89473684210527,
+      "flag": null
+    },
+    "1629663": {
+      "id": 1629663,
+      "name": "Louis King",
+      "share": 0.11171276143361304,
+      "rawShare": 0.074,
+      "dreb": 2,
+      "minutes": 29,
+      "opportunities": 27.027027027027028,
+      "flag": null
+    },
+    "1629667": {
+      "id": 1629667,
+      "name": "Jalen McDaniels",
+      "share": 0.14478384954235585,
+      "rawShare": 0.145,
+      "dreb": 283,
+      "minutes": 1910,
+      "opportunities": 1951.7241379310346,
+      "flag": null
+    },
+    "1629669": {
+      "id": 1629669,
+      "name": "Jaylen Nowell",
+      "share": 0.10794499429169652,
+      "rawShare": 0.107,
+      "dreb": 134,
+      "minutes": 1251,
+      "opportunities": 1252.3364485981308,
+      "flag": null
+    },
+    "1629670": {
+      "id": 1629670,
+      "name": "Jordan Nwora",
+      "share": 0.14658672400200368,
+      "rawShare": 0.147,
+      "dreb": 178,
+      "minutes": 1188,
+      "opportunities": 1210.8843537414966,
+      "flag": null
+    },
+    "1629673": {
+      "id": 1629673,
+      "name": "Jordan Poole",
+      "share": 0.07400700563908541,
+      "rawShare": 0.073,
+      "dreb": 193,
+      "minutes": 2460,
+      "opportunities": 2643.8356164383563,
+      "flag": null
+    },
+    "1629674": {
+      "id": 1629674,
+      "name": "Neemias Queta",
+      "share": 0.1659915918786349,
+      "rawShare": 0.214,
+      "dreb": 6,
+      "minutes": 28,
+      "opportunities": 28.037383177570096,
+      "flag": null
+    },
+    "1629675": {
+      "id": 1629675,
+      "name": "Naz Reid",
+      "share": 0.20267820715639392,
+      "rawShare": 0.205,
+      "dreb": 260,
+      "minutes": 1251,
+      "opportunities": 1268.2926829268295,
+      "flag": null
+    },
+    "1629676": {
+      "id": 1629676,
+      "name": "Isaiah Roby",
+      "share": 0.18339924889512196,
+      "rawShare": 0.188,
+      "dreb": 86,
+      "minutes": 476,
+      "opportunities": 457.4468085106383,
+      "flag": null
+    },
+    "1629677": {
+      "id": 1629677,
+      "name": "Luka Samanic",
+      "share": 0.15609154710041798,
+      "rawShare": 0.161,
+      "dreb": 30,
+      "minutes": 161,
+      "opportunities": 186.33540372670808,
+      "flag": null
+    },
+    "1629678": {
+      "id": 1629678,
+      "name": "Admiral Schofield",
+      "share": 0.09601780234942073,
+      "rawShare": 0.092,
+      "dreb": 39,
+      "minutes": 451,
+      "opportunities": 423.9130434782609,
+      "flag": null
+    },
+    "1629680": {
+      "id": 1629680,
+      "name": "Matisse Thybulle",
+      "share": 0.08678953602093714,
+      "rawShare": 0.085,
+      "dreb": 100,
+      "minutes": 1198,
+      "opportunities": 1176.4705882352941,
+      "flag": null
+    },
+    "1629684": {
+      "id": 1629684,
+      "name": "Grant Williams",
+      "share": 0.13402284949145774,
+      "rawShare": 0.134,
+      "dreb": 276,
+      "minutes": 2045,
+      "opportunities": 2059.7014925373132,
+      "flag": null
+    },
+    "1629685": {
+      "id": 1629685,
+      "name": "Dylan Windler",
+      "share": 0.1096605562950083,
+      "rawShare": 0,
+      "dreb": 0,
+      "minutes": 10,
+      "opportunities": 10.110218750380797,
+      "flag": null
+    },
+    "1629714": {
+      "id": 1629714,
+      "name": "Jarrell Brantley",
+      "share": 0.1118483825209985,
+      "rawShare": 0.093,
+      "dreb": 5,
+      "minutes": 40,
+      "opportunities": 53.763440860215056,
+      "flag": null
+    },
+    "1629723": {
+      "id": 1629723,
+      "name": "John Konchar",
+      "share": 0.15155696552928563,
+      "rawShare": 0.152,
+      "dreb": 246,
+      "minutes": 1494,
+      "opportunities": 1618.421052631579,
+      "flag": null
+    },
+    "1629726": {
+      "id": 1629726,
+      "name": "Garrison Mathews",
+      "share": 0.0848937391635122,
+      "rawShare": 0.082,
+      "dreb": 62,
+      "minutes": 687,
+      "opportunities": 756.0975609756098,
+      "flag": null
+    },
+    "1629731": {
+      "id": 1629731,
+      "name": "Dean Wade",
+      "share": 0.14549157581881006,
+      "rawShare": 0.146,
+      "dreb": 130,
+      "minutes": 889,
+      "opportunities": 890.4109589041096,
+      "flag": null
+    },
+    "1629735": {
+      "id": 1629735,
+      "name": "Chris Silva",
+      "share": 0.12631123096213384,
+      "rawShare": 0,
+      "dreb": 0,
+      "minutes": 3,
+      "opportunities": 3.033065625114239,
+      "flag": null
+    },
+    "1629750": {
+      "id": 1629750,
+      "name": "Javonte Green",
+      "share": 0.12026165550110725,
+      "rawShare": 0.119,
+      "dreb": 61,
+      "minutes": 483,
+      "opportunities": 512.6050420168067,
+      "flag": null
+    },
+    "1629875": {
+      "id": 1629875,
+      "name": "Xavier Moon",
+      "share": 0.13978920677255344,
+      "rawShare": 0.15,
+      "dreb": 3,
+      "minutes": 20,
+      "opportunities": 20,
+      "flag": null
+    },
+    "1630162": {
+      "id": 1630162,
+      "name": "Anthony Edwards",
+      "share": 0.1389433994879435,
+      "rawShare": 0.139,
+      "dreb": 411,
+      "minutes": 2847,
+      "opportunities": 2956.8345323741005,
+      "flag": null
+    },
+    "1630163": {
+      "id": 1630163,
+      "name": "LaMelo Ball",
+      "share": 0.14660998859526644,
+      "rawShare": 0.147,
+      "dreb": 189,
+      "minutes": 1269,
+      "opportunities": 1285.7142857142858,
+      "flag": null
+    },
+    "1630164": {
+      "id": 1630164,
+      "name": "James Wiseman",
+      "share": 0.22626956405302345,
+      "rawShare": 0.231,
+      "dreb": 194,
+      "minutes": 870,
+      "opportunities": 839.8268398268398,
+      "flag": null
+    },
+    "1630165": {
+      "id": 1630165,
+      "name": "Killian Hayes",
+      "share": 0.09287712666499055,
+      "rawShare": 0.092,
+      "dreb": 193,
+      "minutes": 2155,
+      "opportunities": 2097.826086956522,
+      "flag": null
+    },
+    "1630166": {
+      "id": 1630166,
+      "name": "Deni Avdija",
+      "share": 0.19476613461933626,
+      "rawShare": 0.196,
+      "dreb": 413,
+      "minutes": 2021,
+      "opportunities": 2107.142857142857,
+      "flag": null
+    },
+    "1630167": {
+      "id": 1630167,
+      "name": "Obi Toppin",
+      "share": 0.13885611326972003,
+      "rawShare": 0.139,
+      "dreb": 158,
+      "minutes": 1049,
+      "opportunities": 1136.6906474820144,
+      "flag": null
+    },
+    "1630168": {
+      "id": 1630168,
+      "name": "Onyeka Okongwu",
+      "share": 0.18876245438683806,
+      "rawShare": 0.19,
+      "dreb": 359,
+      "minutes": 1850,
+      "opportunities": 1889.4736842105262,
+      "flag": null
+    },
+    "1630169": {
+      "id": 1630169,
+      "name": "Tyrese Haliburton",
+      "share": 0.09298177843717523,
+      "rawShare": 0.092,
+      "dreb": 172,
+      "minutes": 1878,
+      "opportunities": 1869.5652173913045,
+      "flag": null
+    },
+    "1630170": {
+      "id": 1630170,
+      "name": "Devin Vassell",
+      "share": 0.1253783587272382,
+      "rawShare": 0.125,
+      "dreb": 140,
+      "minutes": 1180,
+      "opportunities": 1120,
+      "flag": null
+    },
+    "1630171": {
+      "id": 1630171,
+      "name": "Isaac Okoro",
+      "share": 0.08633797189327497,
+      "rawShare": 0.085,
+      "dreb": 135,
+      "minutes": 1656,
+      "opportunities": 1588.2352941176468,
+      "flag": null
+    },
+    "1630172": {
+      "id": 1630172,
+      "name": "Patrick Williams",
+      "share": 0.10751657364018262,
+      "rawShare": 0.107,
+      "dreb": 249,
+      "minutes": 2328,
+      "opportunities": 2327.102803738318,
+      "flag": null
+    },
+    "1630173": {
+      "id": 1630173,
+      "name": "Precious Achiuwa",
+      "share": 0.20995286795686072,
+      "rawShare": 0.213,
+      "dreb": 228,
+      "minutes": 1143,
+      "opportunities": 1070.4225352112676,
+      "flag": null
+    },
+    "1630174": {
+      "id": 1630174,
+      "name": "Aaron Nesmith",
+      "share": 0.1193792412110899,
+      "rawShare": 0.119,
+      "dreb": 215,
+      "minutes": 1820,
+      "opportunities": 1806.7226890756303,
+      "flag": null
+    },
+    "1630175": {
+      "id": 1630175,
+      "name": "Cole Anthony",
+      "share": 0.15154801980767466,
+      "rawShare": 0.152,
+      "dreb": 241,
+      "minutes": 1552,
+      "opportunities": 1585.5263157894738,
+      "flag": null
+    },
+    "1630176": {
+      "id": 1630176,
+      "name": "Vernon Carey Jr.",
+      "share": 0.19669407439553485,
+      "rawShare": 0.296,
+      "dreb": 8,
+      "minutes": 28,
+      "opportunities": 27.027027027027028,
+      "flag": null
+    },
+    "1630177": {
+      "id": 1630177,
+      "name": "Theo Maledon",
+      "share": 0.1283457777396664,
+      "rawShare": 0.128,
+      "dreb": 109,
+      "minutes": 854,
+      "opportunities": 851.5625,
+      "flag": null
+    },
+    "1630178": {
+      "id": 1630178,
+      "name": "Tyrese Maxey",
+      "share": 0.08023455880140823,
+      "rawShare": 0.079,
+      "dreb": 153,
+      "minutes": 2019,
+      "opportunities": 1936.7088607594937,
+      "flag": null
+    },
+    "1630180": {
+      "id": 1630180,
+      "name": "Saddiq Bey",
+      "share": 0.12716637286924723,
+      "rawShare": 0.127,
+      "dreb": 264,
+      "minutes": 2128,
+      "opportunities": 2078.740157480315,
+      "flag": null
+    },
+    "1630181": {
+      "id": 1630181,
+      "name": "R.J. Hampton",
+      "share": 0.09533567950699698,
+      "rawShare": 0.093,
+      "dreb": 69,
+      "minutes": 746,
+      "opportunities": 741.9354838709678,
+      "flag": null
+    },
+    "1630182": {
+      "id": 1630182,
+      "name": "Josh Green",
+      "share": 0.08839433236565244,
+      "rawShare": 0.087,
+      "dreb": 127,
+      "minutes": 1538,
+      "opportunities": 1459.7701149425288,
+      "flag": null
+    },
+    "1630183": {
+      "id": 1630183,
+      "name": "Jaden McDaniels",
+      "share": 0.08684123347567066,
+      "rawShare": 0.086,
+      "dreb": 215,
+      "minutes": 2418,
+      "opportunities": 2500,
+      "flag": null
+    },
+    "1630184": {
+      "id": 1630184,
+      "name": "Kira Lewis Jr.",
+      "share": 0.11278581739921241,
+      "rawShare": 0.109,
+      "dreb": 28,
+      "minutes": 238,
+      "opportunities": 256.8807339449541,
+      "flag": null
+    },
+    "1630188": {
+      "id": 1630188,
+      "name": "Jalen Smith",
+      "share": 0.19889161940357716,
+      "rawShare": 0.201,
+      "dreb": 265,
+      "minutes": 1279,
+      "opportunities": 1318.407960199005,
+      "flag": null
+    },
+    "1630191": {
+      "id": 1630191,
+      "name": "Isaiah Stewart",
+      "share": 0.2000159800423492,
+      "rawShare": 0.202,
+      "dreb": 288,
+      "minutes": 1413,
+      "opportunities": 1425.7425742574258,
+      "flag": null
+    },
+    "1630192": {
+      "id": 1630192,
+      "name": "Zeke Nnaji",
+      "share": 0.10101452520268961,
+      "rawShare": 0.099,
+      "dreb": 73,
+      "minutes": 727,
+      "opportunities": 737.3737373737373,
+      "flag": null
+    },
+    "1630193": {
+      "id": 1630193,
+      "name": "Immanuel Quickley",
+      "share": 0.11042400219003529,
+      "rawShare": 0.11,
+      "dreb": 279,
+      "minutes": 2343,
+      "opportunities": 2536.3636363636365,
+      "flag": null
+    },
+    "1630194": {
+      "id": 1630194,
+      "name": "Paul Reed",
+      "share": 0.2029216562078934,
+      "rawShare": 0.207,
+      "dreb": 150,
+      "minutes": 751,
+      "opportunities": 724.6376811594204,
+      "flag": null
+    },
+    "1630195": {
+      "id": 1630195,
+      "name": "Leandro Bolmaro",
+      "share": 0.07495012450674504,
+      "rawShare": 0.04,
+      "dreb": 3,
+      "minutes": 69,
+      "opportunities": 75,
+      "flag": null
+    },
+    "1630197": {
+      "id": 1630197,
+      "name": "Aleksej Pokusevski",
+      "share": 0.15856504491250634,
+      "rawShare": 0.16,
+      "dreb": 114,
+      "minutes": 701,
+      "opportunities": 712.5,
+      "flag": null
+    },
+    "1630198": {
+      "id": 1630198,
+      "name": "Isaiah Joe",
+      "share": 0.10883528855196133,
+      "rawShare": 0.108,
+      "dreb": 148,
+      "minutes": 1392,
+      "opportunities": 1370.3703703703704,
+      "flag": null
+    },
+    "1630200": {
+      "id": 1630200,
+      "name": "Tre Jones",
+      "share": 0.09980568979967552,
+      "rawShare": 0.099,
+      "dreb": 189,
+      "minutes": 1984,
+      "opportunities": 1909.090909090909,
+      "flag": null
+    },
+    "1630201": {
+      "id": 1630201,
+      "name": "Malachi Flynn",
+      "share": 0.09946920345171034,
+      "rawShare": 0.097,
+      "dreb": 61,
+      "minutes": 689,
+      "opportunities": 628.8659793814433,
+      "flag": null
+    },
+    "1630202": {
+      "id": 1630202,
+      "name": "Payton Pritchard",
+      "share": 0.0965093225106203,
+      "rawShare": 0.094,
+      "dreb": 63,
+      "minutes": 643,
+      "opportunities": 670.2127659574468,
+      "flag": null
+    },
+    "1630205": {
+      "id": 1630205,
+      "name": "Lamar Stevens",
+      "share": 0.14462172227688666,
+      "rawShare": 0.145,
+      "dreb": 159,
+      "minutes": 1124,
+      "opportunities": 1096.5517241379312,
+      "flag": null
+    },
+    "1630206": {
+      "id": 1630206,
+      "name": "Jay Scrubb",
+      "share": 0.18697628268168498,
+      "rawShare": 0.3,
+      "dreb": 6,
+      "minutes": 31,
+      "opportunities": 20,
+      "flag": null
+    },
+    "1630208": {
+      "id": 1630208,
+      "name": "Nick Richards",
+      "share": 0.20753589963460942,
+      "rawShare": 0.21,
+      "dreb": 269,
+      "minutes": 1216,
+      "opportunities": 1280.952380952381,
+      "flag": null
+    },
+    "1630209": {
+      "id": 1630209,
+      "name": "Omer Yurtseven",
+      "share": 0.16398225852068468,
+      "rawShare": 0.179,
+      "dreb": 15,
+      "minutes": 84,
+      "opportunities": 83.79888268156425,
+      "flag": null
+    },
+    "1630214": {
+      "id": 1630214,
+      "name": "Xavier Tillman",
+      "share": 0.1543027752305603,
+      "rawShare": 0.155,
+      "dreb": 186,
+      "minutes": 1179,
+      "opportunities": 1200,
+      "flag": null
+    },
+    "1630215": {
+      "id": 1630215,
+      "name": "Jared Butler",
+      "share": 0.0674243547890002,
+      "rawShare": 0.034,
+      "dreb": 3,
+      "minutes": 78,
+      "opportunities": 88.23529411764706,
+      "flag": null
+    },
+    "1630217": {
+      "id": 1630217,
+      "name": "Desmond Bane",
+      "share": 0.12325604108422145,
+      "rawShare": 0.123,
+      "dreb": 248,
+      "minutes": 1838,
+      "opportunities": 2016.260162601626,
+      "flag": null
+    },
+    "1630219": {
+      "id": 1630219,
+      "name": "Skylar Mays",
+      "share": 0.10458746059713728,
+      "rawShare": 0.097,
+      "dreb": 17,
+      "minutes": 190,
+      "opportunities": 175.2577319587629,
+      "flag": null
+    },
+    "1630224": {
+      "id": 1630224,
+      "name": "Jalen Green",
+      "share": 0.09369628936661122,
+      "rawShare": 0.093,
+      "dreb": 241,
+      "minutes": 2599,
+      "opportunities": 2591.3978494623657,
+      "flag": null
+    },
+    "1630225": {
+      "id": 1630225,
+      "name": "Isaiah Todd",
+      "share": 0.1452673688845844,
+      "rawShare": 0.152,
+      "dreb": 10,
+      "minutes": 61,
+      "opportunities": 65.78947368421053,
+      "flag": null
+    },
+    "1630227": {
+      "id": 1630227,
+      "name": "Daishen Nix",
+      "share": 0.09308286899432011,
+      "rawShare": 0.091,
+      "dreb": 80,
+      "minutes": 915,
+      "opportunities": 879.1208791208792,
+      "flag": null
+    },
+    "1630228": {
+      "id": 1630228,
+      "name": "Jonathan Kuminga",
+      "share": 0.11365595162772524,
+      "rawShare": 0.113,
+      "dreb": 161,
+      "minutes": 1396,
+      "opportunities": 1424.7787610619469,
+      "flag": null
+    },
+    "1630230": {
+      "id": 1630230,
+      "name": "Naji Marshall",
+      "share": 0.13207538696067722,
+      "rawShare": 0.132,
+      "dreb": 231,
+      "minutes": 1790,
+      "opportunities": 1750,
+      "flag": null
+    },
+    "1630231": {
+      "id": 1630231,
+      "name": "KJ Martin",
+      "share": 0.142851877855621,
+      "rawShare": 0.143,
+      "dreb": 326,
+      "minutes": 2299,
+      "opportunities": 2279.72027972028,
+      "flag": null
+    },
+    "1630233": {
+      "id": 1630233,
+      "name": "Nathan Knight",
+      "share": 0.12024678575414391,
+      "rawShare": 0.118,
+      "dreb": 34,
+      "minutes": 293,
+      "opportunities": 288.135593220339,
+      "flag": null
+    },
+    "1630235": {
+      "id": 1630235,
+      "name": "Trent Forrest",
+      "share": 0.1194878918756262,
+      "rawShare": 0.117,
+      "dreb": 32,
+      "minutes": 277,
+      "opportunities": 273.5042735042735,
+      "flag": null
+    },
+    "1630237": {
+      "id": 1630237,
+      "name": "Anthony Lamb",
+      "share": 0.12920839685185537,
+      "rawShare": 0.129,
+      "dreb": 159,
+      "minutes": 1194,
+      "opportunities": 1232.5581395348836,
+      "flag": null
+    },
+    "1630240": {
+      "id": 1630240,
+      "name": "Saben Lee",
+      "share": 0.0873341142398914,
+      "rawShare": 0.082,
+      "dreb": 32,
+      "minutes": 370,
+      "opportunities": 390.2439024390244,
+      "flag": null
+    },
+    "1630241": {
+      "id": 1630241,
+      "name": "Sam Merrill",
+      "share": 0.15273932189138784,
+      "rawShare": 0.167,
+      "dreb": 9,
+      "minutes": 58,
+      "opportunities": 53.89221556886227,
+      "flag": null
+    },
+    "1630243": {
+      "id": 1630243,
+      "name": "Trevelin Queen",
+      "share": 0.1368395688882017,
+      "rawShare": 0.138,
+      "dreb": 9,
+      "minutes": 70,
+      "opportunities": 65.21739130434781,
+      "flag": null
+    },
+    "1630245": {
+      "id": 1630245,
+      "name": "Ayo Dosunmu",
+      "share": 0.08206966881668756,
+      "rawShare": 0.081,
+      "dreb": 175,
+      "minutes": 2099,
+      "opportunities": 2160.4938271604938,
+      "flag": null
+    },
+    "1630249": {
+      "id": 1630249,
+      "name": "Vít Krejčí",
+      "share": 0.12716257236287848,
+      "rawShare": 0.125,
+      "dreb": 20,
+      "minutes": 166,
+      "opportunities": 160,
+      "flag": null
+    },
+    "1630250": {
+      "id": 1630250,
+      "name": "Marko Simonovic",
+      "share": 0.11379166027980392,
+      "rawShare": 0.059,
+      "dreb": 1,
+      "minutes": 20,
+      "opportunities": 16.949152542372882,
+      "flag": null
+    },
+    "1630256": {
+      "id": 1630256,
+      "name": "Jae'Sean Tate",
+      "share": 0.11527896222796541,
+      "rawShare": 0.114,
+      "dreb": 77,
+      "minutes": 675,
+      "opportunities": 675.438596491228,
+      "flag": null
+    },
+    "1630264": {
+      "id": 1630264,
+      "name": "Anthony Gill",
+      "share": 0.10230518581951241,
+      "rawShare": 0.1,
+      "dreb": 62,
+      "minutes": 627,
+      "opportunities": 620,
+      "flag": null
+    },
+    "1630267": {
+      "id": 1630267,
+      "name": "Facundo Campazzo",
+      "share": 0.08540037109333172,
+      "rawShare": 0.041,
+      "dreb": 2,
+      "minutes": 52,
+      "opportunities": 48.78048780487805,
+      "flag": null
+    },
+    "1630270": {
+      "id": 1630270,
+      "name": "Xavier Sneed",
+      "share": 0.10632141685365501,
+      "rawShare": 0.085,
+      "dreb": 5,
+      "minutes": 48,
+      "opportunities": 58.8235294117647,
+      "flag": null
+    },
+    "1630284": {
+      "id": 1630284,
+      "name": "Kevon Harris",
+      "share": 0.09575582335527391,
+      "rawShare": 0.092,
+      "dreb": 42,
+      "minutes": 459,
+      "opportunities": 456.5217391304348,
+      "flag": null
+    },
+    "1630288": {
+      "id": 1630288,
+      "name": "Jeff Dowtin Jr.",
+      "share": 0.07893450981823404,
+      "rawShare": 0.069,
+      "dreb": 17,
+      "minutes": 259,
+      "opportunities": 246.37681159420288,
+      "flag": null
+    },
+    "1630296": {
+      "id": 1630296,
+      "name": "Braxton Key",
+      "share": 0.11772808658340234,
+      "rawShare": 0.067,
+      "dreb": 1,
+      "minutes": 9,
+      "opportunities": 14.925373134328357,
+      "flag": null
+    },
+    "1630322": {
+      "id": 1630322,
+      "name": "Lindy Waters III",
+      "share": 0.10526955716178292,
+      "rawShare": 0.103,
+      "dreb": 59,
+      "minutes": 531,
+      "opportunities": 572.8155339805826,
+      "flag": null
+    },
+    "1630346": {
+      "id": 1630346,
+      "name": "Matt Ryan",
+      "share": 0.0749790830499269,
+      "rawShare": 0.067,
+      "dreb": 22,
+      "minutes": 311,
+      "opportunities": 328.35820895522386,
+      "flag": null
+    },
+    "1630526": {
+      "id": 1630526,
+      "name": "Jeremiah Robinson-Earl",
+      "share": 0.12929930346052787,
+      "rawShare": 0.129,
+      "dreb": 109,
+      "minutes": 817,
+      "opportunities": 844.9612403100775,
+      "flag": null
+    },
+    "1630527": {
+      "id": 1630527,
+      "name": "Brandon Boston",
+      "share": 0.10381024759277045,
+      "rawShare": 0.098,
+      "dreb": 23,
+      "minutes": 249,
+      "opportunities": 234.6938775510204,
+      "flag": null
+    },
+    "1630528": {
+      "id": 1630528,
+      "name": "Josh Christopher",
+      "share": 0.0716847388886653,
+      "rawShare": 0.068,
+      "dreb": 51,
+      "minutes": 783,
+      "opportunities": 750,
+      "flag": null
+    },
+    "1630529": {
+      "id": 1630529,
+      "name": "Herbert Jones",
+      "share": 0.09001662349500716,
+      "rawShare": 0.089,
+      "dreb": 172,
+      "minutes": 1952,
+      "opportunities": 1932.5842696629215,
+      "flag": null
+    },
+    "1630530": {
+      "id": 1630530,
+      "name": "Trey Murphy III",
+      "share": 0.09276457952473044,
+      "rawShare": 0.092,
+      "dreb": 222,
+      "minutes": 2454,
+      "opportunities": 2413.0434782608695,
+      "flag": null
+    },
+    "1630531": {
+      "id": 1630531,
+      "name": "Jaden Springer",
+      "share": 0.1056161344180331,
+      "rawShare": 0.091,
+      "dreb": 8,
+      "minutes": 89,
+      "opportunities": 87.91208791208791,
+      "flag": null
+    },
+    "1630532": {
+      "id": 1630532,
+      "name": "Franz Wagner",
+      "share": 0.09860184661372152,
+      "rawShare": 0.098,
+      "dreb": 259,
+      "minutes": 2609,
+      "opportunities": 2642.8571428571427,
+      "flag": null
+    },
+    "1630533": {
+      "id": 1630533,
+      "name": "Ziaire Williams",
+      "share": 0.10703827135982084,
+      "rawShare": 0.105,
+      "dreb": 63,
+      "minutes": 566,
+      "opportunities": 600,
+      "flag": null
+    },
+    "1630534": {
+      "id": 1630534,
+      "name": "Ochai Agbaji",
+      "share": 0.06041996535348933,
+      "rawShare": 0.058,
+      "dreb": 78,
+      "minutes": 1209,
+      "opportunities": 1344.8275862068965,
+      "flag": null
+    },
+    "1630535": {
+      "id": 1630535,
+      "name": "Greg Brown III",
+      "share": 0.1626450241442316,
+      "rawShare": 0.175,
+      "dreb": 17,
+      "minutes": 92,
+      "opportunities": 97.14285714285715,
+      "flag": null
+    },
+    "1630537": {
+      "id": 1630537,
+      "name": "Chris Duarte",
+      "share": 0.1073360279288258,
+      "rawShare": 0.106,
+      "dreb": 96,
+      "minutes": 900,
+      "opportunities": 905.6603773584906,
+      "flag": null
+    },
+    "1630538": {
+      "id": 1630538,
+      "name": "Bones Hyland",
+      "share": 0.11197287070701135,
+      "rawShare": 0.111,
+      "dreb": 115,
+      "minutes": 1088,
+      "opportunities": 1036.036036036036,
+      "flag": null
+    },
+    "1630539": {
+      "id": 1630539,
+      "name": "Kai Jones",
+      "share": 0.1452493699885473,
+      "rawShare": 0.146,
+      "dreb": 86,
+      "minutes": 551,
+      "opportunities": 589.041095890411,
+      "flag": null
+    },
+    "1630540": {
+      "id": 1630540,
+      "name": "Miles McBride",
+      "share": 0.05162106956429503,
+      "rawShare": 0.047,
+      "dreb": 37,
+      "minutes": 764,
+      "opportunities": 787.2340425531914,
+      "flag": null
+    },
+    "1630541": {
+      "id": 1630541,
+      "name": "Moses Moody",
+      "share": 0.09316004517845593,
+      "rawShare": 0.091,
+      "dreb": 77,
+      "minutes": 816,
+      "opportunities": 846.1538461538462,
+      "flag": null
+    },
+    "1630543": {
+      "id": 1630543,
+      "name": "Isaiah Jackson",
+      "share": 0.15805884515870694,
+      "rawShare": 0.159,
+      "dreb": 169,
+      "minutes": 1043,
+      "opportunities": 1062.8930817610062,
+      "flag": null
+    },
+    "1630544": {
+      "id": 1630544,
+      "name": "Tre Mann",
+      "share": 0.10506357362048996,
+      "rawShare": 0.104,
+      "dreb": 128,
+      "minutes": 1183,
+      "opportunities": 1230.7692307692307,
+      "flag": null
+    },
+    "1630547": {
+      "id": 1630547,
+      "name": "James Bouknight",
+      "share": 0.1173983517042573,
+      "rawShare": 0.116,
+      "dreb": 64,
+      "minutes": 514,
+      "opportunities": 551.7241379310344,
+      "flag": null
+    },
+    "1630548": {
+      "id": 1630548,
+      "name": "Johnny Juzang",
+      "share": 0.1239181302668849,
+      "rawShare": 0.122,
+      "dreb": 31,
+      "minutes": 234,
+      "opportunities": 254.0983606557377,
+      "flag": null
+    },
+    "1630549": {
+      "id": 1630549,
+      "name": "Day'Ron Sharpe",
+      "share": 0.1858407120831757,
+      "rawShare": 0.19,
+      "dreb": 101,
+      "minutes": 556,
+      "opportunities": 531.578947368421,
+      "flag": null
+    },
+    "1630550": {
+      "id": 1630550,
+      "name": "JT Thor",
+      "share": 0.11583249995777674,
+      "rawShare": 0.115,
+      "dreb": 116,
+      "minutes": 966,
+      "opportunities": 1008.695652173913,
+      "flag": null
+    },
+    "1630551": {
+      "id": 1630551,
+      "name": "Justin Champagnie",
+      "share": 0.15224986314061018,
+      "rawShare": 0.179,
+      "dreb": 5,
+      "minutes": 34,
+      "opportunities": 27.932960893854748,
+      "flag": null
+    },
+    "1630552": {
+      "id": 1630552,
+      "name": "Jalen Johnson",
+      "share": 0.21093853013540526,
+      "rawShare": 0.214,
+      "dreb": 231,
+      "minutes": 1041,
+      "opportunities": 1079.4392523364486,
+      "flag": null
+    },
+    "1630553": {
+      "id": 1630553,
+      "name": "Keon Johnson",
+      "share": 0.09100761434238949,
+      "rawShare": 0.086,
+      "dreb": 33,
+      "minutes": 418,
+      "opportunities": 383.72093023255815,
+      "flag": null
+    },
+    "1630554": {
+      "id": 1630554,
+      "name": "Jason Preston",
+      "share": 0.1639866959181506,
+      "rawShare": 0.175,
+      "dreb": 20,
+      "minutes": 124,
+      "opportunities": 114.28571428571429,
+      "flag": null
+    },
+    "1630556": {
+      "id": 1630556,
+      "name": "Kessler Edwards",
+      "share": 0.1054665343552513,
+      "rawShare": 0.102,
+      "dreb": 38,
+      "minutes": 389,
+      "opportunities": 372.54901960784315,
+      "flag": null
+    },
+    "1630557": {
+      "id": 1630557,
+      "name": "Corey Kispert",
+      "share": 0.08306858413670822,
+      "rawShare": 0.082,
+      "dreb": 174,
+      "minutes": 2096,
+      "opportunities": 2121.951219512195,
+      "flag": null
+    },
+    "1630558": {
+      "id": 1630558,
+      "name": "Davion Mitchell",
+      "share": 0.06415378830221698,
+      "rawShare": 0.062,
+      "dreb": 89,
+      "minutes": 1446,
+      "opportunities": 1435.483870967742,
+      "flag": null
+    },
+    "1630559": {
+      "id": 1630559,
+      "name": "Austin Reaves",
+      "share": 0.08018168449792089,
+      "rawShare": 0.079,
+      "dreb": 160,
+      "minutes": 1844,
+      "opportunities": 2025.3164556962024,
+      "flag": null
+    },
+    "1630560": {
+      "id": 1630560,
+      "name": "Cam Thomas",
+      "share": 0.09096748821740379,
+      "rawShare": 0.089,
+      "dreb": 87,
+      "minutes": 948,
+      "opportunities": 977.5280898876405,
+      "flag": null
+    },
+    "1630561": {
+      "id": 1630561,
+      "name": "David Duke Jr.",
+      "share": 0.08707013803360186,
+      "rawShare": 0.078,
+      "dreb": 18,
+      "minutes": 229,
+      "opportunities": 230.76923076923077,
+      "flag": null
+    },
+    "1630563": {
+      "id": 1630563,
+      "name": "Joshua Primo",
+      "share": 0.1198347817270502,
+      "rawShare": 0.113,
+      "dreb": 11,
+      "minutes": 94,
+      "opportunities": 97.34513274336283,
+      "flag": null
+    },
+    "1630564": {
+      "id": 1630564,
+      "name": "RaiQuan Gray",
+      "share": 0.15305397190765244,
+      "rawShare": 0.176,
+      "dreb": 6,
+      "minutes": 35,
+      "opportunities": 34.09090909090909,
+      "flag": null
+    },
+    "1630567": {
+      "id": 1630567,
+      "name": "Scottie Barnes",
+      "share": 0.13500178552703887,
+      "rawShare": 0.135,
+      "dreb": 333,
+      "minutes": 2679,
+      "opportunities": 2466.6666666666665,
+      "flag": null
+    },
+    "1630568": {
+      "id": 1630568,
+      "name": "Luka Garza",
+      "share": 0.12911357183991973,
+      "rawShare": 0.128,
+      "dreb": 30,
+      "minutes": 243,
+      "opportunities": 234.375,
+      "flag": null
+    },
+    "1630570": {
+      "id": 1630570,
+      "name": "Trendon Watford",
+      "share": 0.17159634597143889,
+      "rawShare": 0.173,
+      "dreb": 196,
+      "minutes": 1185,
+      "opportunities": 1132.9479768786127,
+      "flag": null
+    },
+    "1630572": {
+      "id": 1630572,
+      "name": "Sandro Mamukelashvili",
+      "share": 0.1752894465830051,
+      "rawShare": 0.178,
+      "dreb": 115,
+      "minutes": 658,
+      "opportunities": 646.0674157303371,
+      "flag": null
+    },
+    "1630573": {
+      "id": 1630573,
+      "name": "Sam Hauser",
+      "share": 0.12142669494520167,
+      "rawShare": 0.121,
+      "dreb": 169,
+      "minutes": 1288,
+      "opportunities": 1396.6942148760331,
+      "flag": null
+    },
+    "1630577": {
+      "id": 1630577,
+      "name": "Julian Champagnie",
+      "share": 0.14564888875984353,
+      "rawShare": 0.147,
+      "dreb": 50,
+      "minutes": 319,
+      "opportunities": 340.13605442176873,
+      "flag": null
+    },
+    "1630578": {
+      "id": 1630578,
+      "name": "Alperen Sengun",
+      "share": 0.20262331771024344,
+      "rawShare": 0.204,
+      "dreb": 436,
+      "minutes": 2170,
+      "opportunities": 2137.2549019607845,
+      "flag": null
+    },
+    "1630579": {
+      "id": 1630579,
+      "name": "Jericho Sims",
+      "share": 0.17298007721569844,
+      "rawShare": 0.175,
+      "dreb": 143,
+      "minutes": 810,
+      "opportunities": 817.1428571428572,
+      "flag": null
+    },
+    "1630580": {
+      "id": 1630580,
+      "name": "Joe Wieskamp",
+      "share": 0.09655581662422211,
+      "rawShare": 0.068,
+      "dreb": 4,
+      "minutes": 51,
+      "opportunities": 58.8235294117647,
+      "flag": null
+    },
+    "1630581": {
+      "id": 1630581,
+      "name": "Josh Giddey",
+      "share": 0.1880334011500737,
+      "rawShare": 0.189,
+      "dreb": 451,
+      "minutes": 2370,
+      "opportunities": 2386.2433862433863,
+      "flag": null
+    },
+    "1630583": {
+      "id": 1630583,
+      "name": "Santi Aldama",
+      "share": 0.16135208187349717,
+      "rawShare": 0.162,
+      "dreb": 286,
+      "minutes": 1684,
+      "opportunities": 1765.432098765432,
+      "flag": null
+    },
+    "1630586": {
+      "id": 1630586,
+      "name": "Usman Garuba",
+      "share": 0.19145254628867595,
+      "rawShare": 0.194,
+      "dreb": 187,
+      "minutes": 969,
+      "opportunities": 963.9175257731958,
+      "flag": null
+    },
+    "1630587": {
+      "id": 1630587,
+      "name": "Isaiah Livers",
+      "share": 0.09737252005878003,
+      "rawShare": 0.096,
+      "dreb": 115,
+      "minutes": 1199,
+      "opportunities": 1197.9166666666667,
+      "flag": null
+    },
+    "1630590": {
+      "id": 1630590,
+      "name": "Scotty Pippen Jr.",
+      "share": 0.10026563128812868,
+      "rawShare": 0.057,
+      "dreb": 2,
+      "minutes": 31,
+      "opportunities": 35.08771929824561,
+      "flag": null
+    },
+    "1630591": {
+      "id": 1630591,
+      "name": "Jalen Suggs",
+      "share": 0.08471916225475429,
+      "rawShare": 0.083,
+      "dreb": 106,
+      "minutes": 1248,
+      "opportunities": 1277.1084337349396,
+      "flag": null
+    },
+    "1630593": {
+      "id": 1630593,
+      "name": "McKinley Wright IV",
+      "share": 0.11190024325232516,
+      "rawShare": 0.109,
+      "dreb": 38,
+      "minutes": 337,
+      "opportunities": 348.6238532110092,
+      "flag": null
+    },
+    "1630595": {
+      "id": 1630595,
+      "name": "Cade Cunningham",
+      "share": 0.1467848201648831,
+      "rawShare": 0.148,
+      "dreb": 62,
+      "minutes": 399,
+      "opportunities": 418.91891891891896,
+      "flag": null
+    },
+    "1630596": {
+      "id": 1630596,
+      "name": "Evan Mobley",
+      "share": 0.19893826773165424,
+      "rawShare": 0.2,
+      "dreb": 524,
+      "minutes": 2718,
+      "opportunities": 2620,
+      "flag": null
+    },
+    "1630598": {
+      "id": 1630598,
+      "name": "Aaron Wiggins",
+      "share": 0.10984487304051807,
+      "rawShare": 0.109,
+      "dreb": 142,
+      "minutes": 1300,
+      "opportunities": 1302.7522935779816,
+      "flag": null
+    },
+    "1630600": {
+      "id": 1630600,
+      "name": "Isaiah Mobley",
+      "share": 0.16149353682591303,
+      "rawShare": 0.174,
+      "dreb": 16,
+      "minutes": 84,
+      "opportunities": 91.95402298850576,
+      "flag": null
+    },
+    "1630613": {
+      "id": 1630613,
+      "name": "Duane Washington Jr.",
+      "share": 0.08992207655303544,
+      "rawShare": 0.085,
+      "dreb": 34,
+      "minutes": 392,
+      "opportunities": 399.99999999999994,
+      "flag": null
+    },
+    "1630620": {
+      "id": 1630620,
+      "name": "Darius Days",
+      "share": 0.16595756000484424,
+      "rawShare": 0.227,
+      "dreb": 5,
+      "minutes": 25,
+      "opportunities": 22.026431718061673,
+      "flag": null
+    },
+    "1630625": {
+      "id": 1630625,
+      "name": "Dalano Banton",
+      "share": 0.1307287928134138,
+      "rawShare": 0.13,
+      "dreb": 34,
+      "minutes": 279,
+      "opportunities": 261.53846153846155,
+      "flag": null
+    },
+    "1630631": {
+      "id": 1630631,
+      "name": "Jose Alvarado",
+      "share": 0.088561473872955,
+      "rawShare": 0.087,
+      "dreb": 113,
+      "minutes": 1311,
+      "opportunities": 1298.8505747126437,
+      "flag": null
+    },
+    "1630637": {
+      "id": 1630637,
+      "name": "Carlik Jones",
+      "share": 0.09736642324414717,
+      "rawShare": 0.069,
+      "dreb": 4,
+      "minutes": 56,
+      "opportunities": 57.97101449275362,
+      "flag": null
+    },
+    "1630639": {
+      "id": 1630639,
+      "name": "A.J. Lawson",
+      "share": 0.1468241428484565,
+      "rawShare": 0.152,
+      "dreb": 15,
+      "minutes": 109,
+      "opportunities": 98.6842105263158,
+      "flag": null
+    },
+    "1630643": {
+      "id": 1630643,
+      "name": "Jay Huff",
+      "share": 0.14749285860537967,
+      "rawShare": 0.153,
+      "dreb": 15,
+      "minutes": 96,
+      "opportunities": 98.03921568627452,
+      "flag": null
+    },
+    "1630644": {
+      "id": 1630644,
+      "name": "Mac McClung",
+      "share": 0.1437848092138238,
+      "rawShare": 0.152,
+      "dreb": 7,
+      "minutes": 41,
+      "opportunities": 46.05263157894737,
+      "flag": null
+    },
+    "1630647": {
+      "id": 1630647,
+      "name": "Eugene Omoruyi",
+      "share": 0.1116530203774505,
+      "rawShare": 0.11,
+      "dreb": 68,
+      "minutes": 648,
+      "opportunities": 618.1818181818181,
+      "flag": null
+    },
+    "1630648": {
+      "id": 1630648,
+      "name": "Jordan Schakel",
+      "share": 0.11859390282019701,
+      "rawShare": 0,
+      "dreb": 0,
+      "minutes": 6,
+      "opportunities": 6.066131250228478,
+      "flag": null
+    },
+    "1630649": {
+      "id": 1630649,
+      "name": "Stanley Umude",
+      "share": 0.12911181979703368,
+      "rawShare": 0,
+      "dreb": 0,
+      "minutes": 2,
+      "opportunities": 2.0220437500761594,
+      "flag": null
+    },
+    "1630678": {
+      "id": 1630678,
+      "name": "Terry Taylor",
+      "share": 0.08439653885250885,
+      "rawShare": 0.076,
+      "dreb": 20,
+      "minutes": 263,
+      "opportunities": 263.15789473684214,
+      "flag": null
+    },
+    "1630688": {
+      "id": 1630688,
+      "name": "Ish Wainright",
+      "share": 0.09863965799759056,
+      "rawShare": 0.097,
+      "dreb": 94,
+      "minutes": 913,
+      "opportunities": 969.0721649484536,
+      "flag": null
+    },
+    "1630692": {
+      "id": 1630692,
+      "name": "Jordan Goodwin",
+      "share": 0.13115237514447758,
+      "rawShare": 0.131,
+      "dreb": 148,
+      "minutes": 1106,
+      "opportunities": 1129.7709923664122,
+      "flag": null
+    },
+    "1630695": {
+      "id": 1630695,
+      "name": "Micah Potter",
+      "share": 0.18396586118745512,
+      "rawShare": 0.22,
+      "dreb": 13,
+      "minutes": 52,
+      "opportunities": 59.09090909090909,
+      "flag": null
+    },
+    "1630696": {
+      "id": 1630696,
+      "name": "Dru Smith",
+      "share": 0.13264312268720038,
+      "rawShare": 0.132,
+      "dreb": 22,
+      "minutes": 160,
+      "opportunities": 166.66666666666666,
+      "flag": null
+    },
+    "1630699": {
+      "id": 1630699,
+      "name": "MarJon Beauchamp",
+      "share": 0.10476823393914043,
+      "rawShare": 0.103,
+      "dreb": 77,
+      "minutes": 700,
+      "opportunities": 747.5728155339806,
+      "flag": null
+    },
+    "1630700": {
+      "id": 1630700,
+      "name": "Dyson Daniels",
+      "share": 0.13981103051282193,
+      "rawShare": 0.14,
+      "dreb": 152,
+      "minutes": 1040,
+      "opportunities": 1085.7142857142856,
+      "flag": null
+    },
+    "1630701": {
+      "id": 1630701,
+      "name": "Michael Foster Jr.",
+      "share": 0.13203941465646843,
+      "rawShare": 0,
+      "dreb": 0,
+      "minutes": 1,
+      "opportunities": 1.0110218750380797,
+      "flag": null
+    },
+    "1630702": {
+      "id": 1630702,
+      "name": "Jaden Hardy",
+      "share": 0.10762710460471105,
+      "rawShare": 0.106,
+      "dreb": 78,
+      "minutes": 707,
+      "opportunities": 735.8490566037736,
+      "flag": null
+    },
+    "1630792": {
+      "id": 1630792,
+      "name": "Malcolm Hill",
+      "share": 0.15430637377042042,
+      "rawShare": 0.214,
+      "dreb": 3,
+      "minutes": 9,
+      "opportunities": 14.018691588785048,
+      "flag": null
+    },
+    "1630846": {
+      "id": 1630846,
+      "name": "Olivier Sarr",
+      "share": 0.1440002698430804,
+      "rawShare": 0.147,
+      "dreb": 19,
+      "minutes": 114,
+      "opportunities": 129.2517006802721,
+      "flag": null
+    },
+    "1631093": {
+      "id": 1631093,
+      "name": "Jaden Ivey",
+      "share": 0.09476845708442379,
+      "rawShare": 0.094,
+      "dreb": 215,
+      "minutes": 2301,
+      "opportunities": 2287.2340425531916,
+      "flag": null
+    },
+    "1631094": {
+      "id": 1631094,
+      "name": "Paolo Banchero",
+      "share": 0.17329875372909329,
+      "rawShare": 0.174,
+      "dreb": 413,
+      "minutes": 2433,
+      "opportunities": 2373.5632183908046,
+      "flag": null
+    },
+    "1631095": {
+      "id": 1631095,
+      "name": "Jabari Smith Jr.",
+      "share": 0.17922574578913714,
+      "rawShare": 0.18,
+      "dreb": 447,
+      "minutes": 2450,
+      "opportunities": 2483.3333333333335,
+      "flag": null
+    },
+    "1631097": {
+      "id": 1631097,
+      "name": "Bennedict Mathurin",
+      "share": 0.10361187964355774,
+      "rawShare": 0.103,
+      "dreb": 231,
+      "minutes": 2223,
+      "opportunities": 2242.7184466019417,
+      "flag": null
+    },
+    "1631098": {
+      "id": 1631098,
+      "name": "Johnny Davis",
+      "share": 0.1259104023893639,
+      "rawShare": 0.125,
+      "dreb": 55,
+      "minutes": 423,
+      "opportunities": 440,
+      "flag": null
+    },
+    "1631099": {
+      "id": 1631099,
+      "name": "Keegan Murray",
+      "share": 0.12322574668435048,
+      "rawShare": 0.123,
+      "dreb": 282,
+      "minutes": 2381,
+      "opportunities": 2292.682926829268,
+      "flag": null
+    },
+    "1631100": {
+      "id": 1631100,
+      "name": "AJ Griffin",
+      "share": 0.08160768591709706,
+      "rawShare": 0.08,
+      "dreb": 116,
+      "minutes": 1397,
+      "opportunities": 1450,
+      "flag": null
+    },
+    "1631101": {
+      "id": 1631101,
+      "name": "Shaedon Sharpe",
+      "share": 0.10282919548656118,
+      "rawShare": 0.102,
+      "dreb": 173,
+      "minutes": 1775,
+      "opportunities": 1696.0784313725492,
+      "flag": null
+    },
+    "1631102": {
+      "id": 1631102,
+      "name": "TyTy Washington Jr.",
+      "share": 0.10229185607876601,
+      "rawShare": 0.099,
+      "dreb": 43,
+      "minutes": 433,
+      "opportunities": 434.3434343434343,
+      "flag": null
+    },
+    "1631103": {
+      "id": 1631103,
+      "name": "Malaki Branham",
+      "share": 0.09900748996778476,
+      "rawShare": 0.098,
+      "dreb": 153,
+      "minutes": 1554,
+      "opportunities": 1561.2244897959183,
+      "flag": null
+    },
+    "1631104": {
+      "id": 1631104,
+      "name": "Blake Wesley",
+      "share": 0.10301737451016962,
+      "rawShare": 0.101,
+      "dreb": 70,
+      "minutes": 668,
+      "opportunities": 693.0693069306931,
+      "flag": null
+    },
+    "1631105": {
+      "id": 1631105,
+      "name": "Jalen Duren",
+      "share": 0.21879775900876247,
+      "rawShare": 0.221,
+      "dreb": 366,
+      "minutes": 1673,
+      "opportunities": 1656.1085972850678,
+      "flag": null
+    },
+    "1631106": {
+      "id": 1631106,
+      "name": "Tari Eason",
+      "share": 0.17110354718175305,
+      "rawShare": 0.172,
+      "dreb": 301,
+      "minutes": 1768,
+      "opportunities": 1750.0000000000002,
+      "flag": null
+    },
+    "1631107": {
+      "id": 1631107,
+      "name": "Nikola Jović",
+      "share": 0.12207160299535594,
+      "rawShare": 0.119,
+      "dreb": 22,
+      "minutes": 204,
+      "opportunities": 184.87394957983193,
+      "flag": null
+    },
+    "1631108": {
+      "id": 1631108,
+      "name": "Max Christie",
+      "share": 0.12668009665820984,
+      "rawShare": 0.126,
+      "dreb": 68,
+      "minutes": 514,
+      "opportunities": 539.6825396825396,
+      "flag": null
+    },
+    "1631109": {
+      "id": 1631109,
+      "name": "Mark Williams",
+      "share": 0.227569572746259,
+      "rawShare": 0.232,
+      "dreb": 211,
+      "minutes": 828,
+      "opportunities": 909.4827586206897,
+      "flag": null
+    },
+    "1631110": {
+      "id": 1631110,
+      "name": "Jeremy Sochan",
+      "share": 0.139855040715239,
+      "rawShare": 0.14,
+      "dreb": 200,
+      "minutes": 1455,
+      "opportunities": 1428.5714285714284,
+      "flag": null
+    },
+    "1631111": {
+      "id": 1631111,
+      "name": "Wendell Moore Jr.",
+      "share": 0.09636860280815339,
+      "rawShare": 0.086,
+      "dreb": 14,
+      "minutes": 154,
+      "opportunities": 162.79069767441862,
+      "flag": null
+    },
+    "1631112": {
+      "id": 1631112,
+      "name": "Kendall Brown",
+      "share": 0.1116954271068427,
+      "rawShare": 0.089,
+      "dreb": 4,
+      "minutes": 40,
+      "opportunities": 44.943820224719104,
+      "flag": null
+    },
+    "1631113": {
+      "id": 1631113,
+      "name": "Kennedy Chandler",
+      "share": 0.10730270022921101,
+      "rawShare": 0.103,
+      "dreb": 29,
+      "minutes": 284,
+      "opportunities": 281.55339805825247,
+      "flag": null
+    },
+    "1631114": {
+      "id": 1631114,
+      "name": "Jalen Williams",
+      "share": 0.10948102839600263,
+      "rawShare": 0.109,
+      "dreb": 253,
+      "minutes": 2278,
+      "opportunities": 2321.1009174311926,
+      "flag": null
+    },
+    "1631115": {
+      "id": 1631115,
+      "name": "Orlando Robinson",
+      "share": 0.19434722029365212,
+      "rawShare": 0.201,
+      "dreb": 78,
+      "minutes": 426,
+      "opportunities": 388.0597014925373,
+      "flag": null
+    },
+    "1631116": {
+      "id": 1631116,
+      "name": "Patrick Baldwin Jr.",
+      "share": 0.1788172571761584,
+      "rawShare": 0.188,
+      "dreb": 39,
+      "minutes": 226,
+      "opportunities": 207.4468085106383,
+      "flag": null
+    },
+    "1631117": {
+      "id": 1631117,
+      "name": "Walker Kessler",
+      "share": 0.2034308743237932,
+      "rawShare": 0.205,
+      "dreb": 389,
+      "minutes": 1701,
+      "opportunities": 1897.5609756097563,
+      "flag": null
+    },
+    "1631119": {
+      "id": 1631119,
+      "name": "Jaylin Williams",
+      "share": 0.22540571680328625,
+      "rawShare": 0.23,
+      "dreb": 197,
+      "minutes": 917,
+      "opportunities": 856.5217391304348,
+      "flag": null
+    },
+    "1631120": {
+      "id": 1631120,
+      "name": "JD Davison",
+      "share": 0.10843772416642941,
+      "rawShare": 0.093,
+      "dreb": 7,
+      "minutes": 67,
+      "opportunities": 75.26881720430107,
+      "flag": null
+    },
+    "1631121": {
+      "id": 1631121,
+      "name": "Bryce McGowens",
+      "share": 0.09035086047336369,
+      "rawShare": 0.088,
+      "dreb": 73,
+      "minutes": 789,
+      "opportunities": 829.5454545454546,
+      "flag": null
+    },
+    "1631123": {
+      "id": 1631123,
+      "name": "Jamaree Bouyea",
+      "share": 0.10703637888250084,
+      "rawShare": 0.086,
+      "dreb": 5,
+      "minutes": 70,
+      "opportunities": 58.139534883720934,
+      "flag": null
+    },
+    "1631128": {
+      "id": 1631128,
+      "name": "Christian Braun",
+      "share": 0.11281777754398424,
+      "rawShare": 0.112,
+      "dreb": 133,
+      "minutes": 1180,
+      "opportunities": 1187.5,
+      "flag": null
+    },
+    "1631132": {
+      "id": 1631132,
+      "name": "Christian Koloko",
+      "share": 0.11131086752800284,
+      "rawShare": 0.11,
+      "dreb": 87,
+      "minutes": 802,
+      "opportunities": 790.9090909090909,
+      "flag": null
+    },
+    "1631133": {
+      "id": 1631133,
+      "name": "Jabari Walker",
+      "share": 0.1350068076625414,
+      "rawShare": 0.135,
+      "dreb": 83,
+      "minutes": 618,
+      "opportunities": 614.8148148148148,
+      "flag": null
+    },
+    "1631157": {
+      "id": 1631157,
+      "name": "Ryan Rollins",
+      "share": 0.1453838177713866,
+      "rawShare": 0.153,
+      "dreb": 9,
+      "minutes": 62,
+      "opportunities": 58.82352941176471,
+      "flag": null
+    },
+    "1631160": {
+      "id": 1631160,
+      "name": "Jordan Hall",
+      "share": 0.13134632698169957,
+      "rawShare": 0.129,
+      "dreb": 9,
+      "minutes": 85,
+      "opportunities": 69.76744186046511,
+      "flag": null
+    },
+    "1631165": {
+      "id": 1631165,
+      "name": "Keon Ellis",
+      "share": 0.09234568121051286,
+      "rawShare": 0.063,
+      "dreb": 4,
+      "minutes": 69,
+      "opportunities": 63.492063492063494,
+      "flag": null
+    },
+    "1631169": {
+      "id": 1631169,
+      "name": "Josh Minott",
+      "share": 0.17650116936519286,
+      "rawShare": 0.194,
+      "dreb": 20,
+      "minutes": 97,
+      "opportunities": 103.09278350515464,
+      "flag": null
+    },
+    "1631172": {
+      "id": 1631172,
+      "name": "Ousmane Dieng",
+      "share": 0.14060676971616284,
+      "rawShare": 0.141,
+      "dreb": 86,
+      "minutes": 567,
+      "opportunities": 609.9290780141845,
+      "flag": null
+    },
+    "1631197": {
+      "id": 1631197,
+      "name": "Jared Rhoden",
+      "share": 0.13501897836435325,
+      "rawShare": 0.135,
+      "dreb": 26,
+      "minutes": 198,
+      "opportunities": 192.59259259259258,
+      "flag": null
+    },
+    "1631199": {
+      "id": 1631199,
+      "name": "Ron Harper Jr.",
+      "share": 0.11418903006886522,
+      "rawShare": 0.093,
+      "dreb": 4,
+      "minutes": 49,
+      "opportunities": 43.01075268817204,
+      "flag": null
+    },
+    "1631205": {
+      "id": 1631205,
+      "name": "Buddy Boeheim",
+      "share": 0.07238171086934973,
+      "rawShare": 0.043,
+      "dreb": 4,
+      "minutes": 91,
+      "opportunities": 93.0232558139535,
+      "flag": null
+    },
+    "1631207": {
+      "id": 1631207,
+      "name": "Dalen Terry",
+      "share": 0.12006650064941926,
+      "rawShare": 0.117,
+      "dreb": 25,
+      "minutes": 216,
+      "opportunities": 213.67521367521366,
+      "flag": null
+    },
+    "1631211": {
+      "id": 1631211,
+      "name": "Trevor Keels",
+      "share": 0.15292440314839795,
+      "rawShare": 0.25,
+      "dreb": 2,
+      "minutes": 8,
+      "opportunities": 8,
+      "flag": null
+    },
+    "1631212": {
+      "id": 1631212,
+      "name": "Peyton Watson",
+      "share": 0.13832665266064936,
+      "rawShare": 0.139,
+      "dreb": 29,
+      "minutes": 185,
+      "opportunities": 208.63309352517985,
+      "flag": null
+    },
+    "1631213": {
+      "id": 1631213,
+      "name": "Tyrese Martin",
+      "share": 0.11955203767645825,
+      "rawShare": 0.109,
+      "dreb": 7,
+      "minutes": 66,
+      "opportunities": 64.22018348623853,
+      "flag": null
+    },
+    "1631214": {
+      "id": 1631214,
+      "name": "Alondes Williams",
+      "share": 0.1447628000971454,
+      "rawShare": 0.25,
+      "dreb": 1,
+      "minutes": 5,
+      "opportunities": 4,
+      "flag": null
+    },
+    "1631216": {
+      "id": 1631216,
+      "name": "Caleb Houstan",
+      "share": 0.0857463973044649,
+      "rawShare": 0.083,
+      "dreb": 65,
+      "minutes": 813,
+      "opportunities": 783.1325301204819,
+      "flag": null
+    },
+    "1631217": {
+      "id": 1631217,
+      "name": "Moussa Diabaté",
+      "share": 0.11169157089957982,
+      "rawShare": 0.106,
+      "dreb": 19,
+      "minutes": 196,
+      "opportunities": 179.24528301886792,
+      "flag": null
+    },
+    "1631219": {
+      "id": 1631219,
+      "name": "John Butler Jr.",
+      "share": 0.0767965606873163,
+      "rawShare": 0.065,
+      "dreb": 14,
+      "minutes": 223,
+      "opportunities": 215.3846153846154,
+      "flag": null
+    },
+    "1631220": {
+      "id": 1631220,
+      "name": "Dereon Seabron",
+      "share": 0.10379652989316068,
+      "rawShare": 0,
+      "dreb": 0,
+      "minutes": 13,
+      "opportunities": 13.143284375495035,
+      "flag": null
+    },
+    "1631222": {
+      "id": 1631222,
+      "name": "Jake LaRavia",
+      "share": 0.10316323671710534,
+      "rawShare": 0.1,
+      "dreb": 44,
+      "minutes": 413,
+      "opportunities": 440,
+      "flag": null
+    },
+    "1631223": {
+      "id": 1631223,
+      "name": "David Roddy",
+      "share": 0.10788739715957753,
+      "rawShare": 0.107,
+      "dreb": 143,
+      "minutes": 1262,
+      "opportunities": 1336.4485981308412,
+      "flag": null
+    },
+    "1631230": {
+      "id": 1631230,
+      "name": "Dominick Barlow",
+      "share": 0.13137954808748004,
+      "rawShare": 0.131,
+      "dreb": 56,
+      "minutes": 408,
+      "opportunities": 427.48091603053433,
+      "flag": null
+    },
+    "1631245": {
+      "id": 1631245,
+      "name": "Quenton Jackson",
+      "share": 0.06606266798405383,
+      "rawShare": 0.044,
+      "dreb": 6,
+      "minutes": 135,
+      "opportunities": 136.36363636363637,
+      "flag": null
+    },
+    "1631246": {
+      "id": 1631246,
+      "name": "Vince Williams Jr.",
+      "share": 0.12486628609599638,
+      "rawShare": 0.12,
+      "dreb": 11,
+      "minutes": 106,
+      "opportunities": 91.66666666666667,
+      "flag": null
+    },
+    "1631254": {
+      "id": 1631254,
+      "name": "Kenneth Lofton Jr.",
+      "share": 0.1846425592173703,
+      "rawShare": 0.198,
+      "dreb": 32,
+      "minutes": 177,
+      "opportunities": 161.6161616161616,
+      "flag": null
+    },
+    "1631260": {
+      "id": 1631260,
+      "name": "AJ Green",
+      "share": 0.1081608849615255,
+      "rawShare": 0.105,
+      "dreb": 39,
+      "minutes": 345,
+      "opportunities": 371.42857142857144,
+      "flag": null
+    },
+    "1631288": {
+      "id": 1631288,
+      "name": "Jamal Cain",
+      "share": 0.1410117876782883,
+      "rawShare": 0.142,
+      "dreb": 37,
+      "minutes": 243,
+      "opportunities": 260.5633802816902,
+      "flag": null
+    },
+    "1631298": {
+      "id": 1631298,
+      "name": "Jack White",
+      "share": 0.1597310064224536,
+      "rawShare": 0.177,
+      "dreb": 11,
+      "minutes": 67,
+      "opportunities": 62.14689265536723,
+      "flag": null
+    },
+    "1631303": {
+      "id": 1631303,
+      "name": "Justin Minaya",
+      "share": 0.135033836005795,
+      "rawShare": 0.135,
+      "dreb": 12,
+      "minutes": 89,
+      "opportunities": 88.88888888888889,
+      "flag": null
+    },
+    "1631306": {
+      "id": 1631306,
+      "name": "Cole Swider",
+      "share": 0.14576498600456617,
+      "rawShare": 0.158,
+      "dreb": 6,
+      "minutes": 41,
+      "opportunities": 37.974683544303794,
+      "flag": null
+    },
+    "1631309": {
+      "id": 1631309,
+      "name": "Trevor Hudgins",
+      "share": 0.07965835316590637,
+      "rawShare": 0,
+      "dreb": 0,
+      "minutes": 30,
+      "opportunities": 30.330656251142393,
+      "flag": null
+    },
+    "1631311": {
+      "id": 1631311,
+      "name": "Lester Quinones",
+      "share": 0.11849038877925809,
+      "rawShare": 0.087,
+      "dreb": 2,
+      "minutes": 18,
+      "opportunities": 22.98850574712644,
+      "flag": null
+    },
+    "1631320": {
+      "id": 1631320,
+      "name": "Chima Moneke",
+      "share": 0.11395241439638203,
+      "rawShare": 0,
+      "dreb": 0,
+      "minutes": 8,
+      "opportunities": 8.088175000304638,
+      "flag": null
+    },
+    "1631323": {
+      "id": 1631323,
+      "name": "Simone Fontecchio",
+      "share": 0.07342095781076245,
+      "rawShare": 0.07,
+      "dreb": 55,
+      "minutes": 768,
+      "opportunities": 785.7142857142857,
+      "flag": null
+    },
+    "1631367": {
+      "id": 1631367,
+      "name": "Jacob Gilyard",
+      "share": 0.11539578270141183,
+      "rawShare": 0.095,
+      "dreb": 4,
+      "minutes": 41,
+      "opportunities": 42.10526315789474,
+      "flag": null
+    },
+    "1631466": {
+      "id": 1631466,
+      "name": "Nate Williams",
+      "share": 0.0633788736170675,
+      "rawShare": 0.039,
+      "dreb": 5,
+      "minutes": 126,
+      "opportunities": 128.2051282051282,
+      "flag": null
+    },
+    "1631495": {
+      "id": 1631495,
+      "name": "Donovan Williams",
+      "share": 0.16236870304993134,
+      "rawShare": 0.4,
+      "dreb": 2,
+      "minutes": 5,
+      "opportunities": 5,
+      "flag": null
+    },
+    "1641645": {
+      "id": 1641645,
+      "name": "Xavier Cooks",
+      "share": 0.148089913761442,
+      "rawShare": 0.152,
+      "dreb": 22,
+      "minutes": 126,
+      "opportunities": 144.73684210526315,
+      "flag": null
+    }
+  },
+  "missing": [],
+  "boxSummary": {
+    "players": 535,
+    "minuteCoverage": 0.9999680710369014,
+    "totalBoxouts": 13967,
+    "defensiveBoxouts": 11267,
+    "selfRebounds": 6615,
+    "teamRebounds": 12662,
+    "teammateRebounds": 6047,
+    "note": "Offense and defense not separated for rebound recipients; teammate recovery already counted elsewhere, not an additional rebound."
+  }
+}

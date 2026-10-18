@@ -1,0 +1,1550 @@
+[
+  {
+    "season": "2022-23",
+    "version": "T0",
+    "label": "事後探索；非採用判準；交易球員跨隊加總後比較，實際分鐘加權",
+    "minutesWeightedOreb36MAE": 0.5912416511372364,
+    "players": 539,
+    "largestErrors": [
+      {
+        "id": 1630549,
+        "name": "Day'Ron Sharpe",
+        "minutes": 556,
+        "actualPer36": 6.410071942446043,
+        "simulatedPer36": 3.510297663754594,
+        "errorPer36": -2.8997742786914498
+      },
+      {
+        "id": 1630586,
+        "name": "Usman Garuba",
+        "minutes": 969,
+        "actualPer36": 4.458204334365325,
+        "simulatedPer36": 1.7326451451940386,
+        "errorPer36": -2.7255591891712863
+      },
+      {
+        "id": 203488,
+        "name": "Mike Muscala",
+        "minutes": 947,
+        "actualPer36": 1.4065469904963042,
+        "simulatedPer36": 3.840227143653274,
+        "errorPer36": 2.4336801531569696
+      },
+      {
+        "id": 203500,
+        "name": "Steven Adams",
+        "minutes": 1132,
+        "actualPer36": 6.80565371024735,
+        "simulatedPer36": 4.475803156864123,
+        "errorPer36": -2.329850553383227
+      },
+      {
+        "id": 202696,
+        "name": "Nikola Vučević",
+        "minutes": 2744,
+        "actualPer36": 2.08600583090379,
+        "simulatedPer36": 4.383124140500316,
+        "errorPer36": 2.2971183095965255
+      },
+      {
+        "id": 1630194,
+        "name": "Paul Reed",
+        "minutes": 751,
+        "actualPer36": 5.36884154460719,
+        "simulatedPer36": 3.1008471447078367,
+        "errorPer36": -2.267994399899354
+      },
+      {
+        "id": 1631119,
+        "name": "Jaylin Williams",
+        "minutes": 917,
+        "actualPer36": 1.7273718647764449,
+        "simulatedPer36": 3.9604962746987042,
+        "errorPer36": 2.2331244099222594
+      },
+      {
+        "id": 1626167,
+        "name": "Myles Turner",
+        "minutes": 1823,
+        "actualPer36": 1.7377948436642896,
+        "simulatedPer36": 3.9194318983559864,
+        "errorPer36": 2.1816370546916963
+      },
+      {
+        "id": 1631106,
+        "name": "Tari Eason",
+        "minutes": 1768,
+        "actualPer36": 3.9705882352941178,
+        "simulatedPer36": 1.7987086723358288,
+        "errorPer36": -2.1718795629582885
+      },
+      {
+        "id": 201143,
+        "name": "Al Horford",
+        "minutes": 1922,
+        "actualPer36": 1.3673257023933403,
+        "simulatedPer36": 3.5131416344334068,
+        "errorPer36": 2.1458159320400667
+      },
+      {
+        "id": 203954,
+        "name": "Joel Embiid",
+        "minutes": 2288,
+        "actualPer36": 1.777972027972028,
+        "simulatedPer36": 3.8927916158267895,
+        "errorPer36": 2.114819587854761
+      },
+      {
+        "id": 1630167,
+        "name": "Obi Toppin",
+        "minutes": 1049,
+        "actualPer36": 0.9952335557673975,
+        "simulatedPer36": 3.03639274627547,
+        "errorPer36": 2.0411591905080724
+      },
+      {
+        "id": 203110,
+        "name": "Draymond Green",
+        "minutes": 2299,
+        "actualPer36": 1.0334928229665072,
+        "simulatedPer36": 3.0200970585648355,
+        "errorPer36": 1.9866042355983287
+      },
+      {
+        "id": 1629646,
+        "name": "Charles Bassey",
+        "minutes": 510,
+        "actualPer36": 5.294117647058823,
+        "simulatedPer36": 3.367094626790506,
+        "errorPer36": -1.9270230202683178
+      },
+      {
+        "id": 2544,
+        "name": "LeBron James",
+        "minutes": 1954,
+        "actualPer36": 1.1975435005117707,
+        "simulatedPer36": 3.003230887946228,
+        "errorPer36": 1.8056873874344572
+      }
+    ]
+  },
+  {
+    "season": "2022-23",
+    "version": "pooled",
+    "label": "事後探索；非採用判準；交易球員跨隊加總後比較，實際分鐘加權",
+    "minutesWeightedOreb36MAE": 0.5320371359073977,
+    "players": 539,
+    "largestErrors": [
+      {
+        "id": 1630549,
+        "name": "Day'Ron Sharpe",
+        "minutes": 556,
+        "actualPer36": 6.410071942446043,
+        "simulatedPer36": 3.0564793859698516,
+        "errorPer36": -3.3535925564761917
+      },
+      {
+        "id": 1630586,
+        "name": "Usman Garuba",
+        "minutes": 969,
+        "actualPer36": 4.458204334365325,
+        "simulatedPer36": 1.5048808319324378,
+        "errorPer36": -2.9533235024328874
+      },
+      {
+        "id": 203500,
+        "name": "Steven Adams",
+        "minutes": 1132,
+        "actualPer36": 6.80565371024735,
+        "simulatedPer36": 3.853536223937951,
+        "errorPer36": -2.9521174863093997
+      },
+      {
+        "id": 1630194,
+        "name": "Paul Reed",
+        "minutes": 751,
+        "actualPer36": 5.36884154460719,
+        "simulatedPer36": 2.764689580738815,
+        "errorPer36": -2.604151963868376
+      },
+      {
+        "id": 1631106,
+        "name": "Tari Eason",
+        "minutes": 1768,
+        "actualPer36": 3.9705882352941178,
+        "simulatedPer36": 1.5316968986429798,
+        "errorPer36": -2.438891336651138
+      },
+      {
+        "id": 1629011,
+        "name": "Mitchell Robinson",
+        "minutes": 1591,
+        "actualPer36": 6.041483343808925,
+        "simulatedPer36": 3.6219271284031542,
+        "errorPer36": -2.419556215405771
+      },
+      {
+        "id": 1629646,
+        "name": "Charles Bassey",
+        "minutes": 510,
+        "actualPer36": 5.294117647058823,
+        "simulatedPer36": 2.931769917547484,
+        "errorPer36": -2.36234772951134
+      },
+      {
+        "id": 203083,
+        "name": "Andre Drummond",
+        "minutes": 850,
+        "actualPer36": 5.844705882352941,
+        "simulatedPer36": 3.7563655268745824,
+        "errorPer36": -2.088340355478359
+      },
+      {
+        "id": 1629006,
+        "name": "Josh Okogie",
+        "minutes": 1348,
+        "actualPer36": 2.9109792284866467,
+        "simulatedPer36": 0.9972928839059737,
+        "errorPer36": -1.9136863445806733
+      },
+      {
+        "id": 203488,
+        "name": "Mike Muscala",
+        "minutes": 947,
+        "actualPer36": 1.4065469904963042,
+        "simulatedPer36": 3.302478325517861,
+        "errorPer36": 1.8959313350215568
+      },
+      {
+        "id": 1626149,
+        "name": "Montrezl Harrell",
+        "minutes": 683,
+        "actualPer36": 3.5314787701317716,
+        "simulatedPer36": 1.7057699839185658,
+        "errorPer36": -1.8257087862132062
+      },
+      {
+        "id": 1631119,
+        "name": "Jaylin Williams",
+        "minutes": 917,
+        "actualPer36": 1.7273718647764449,
+        "simulatedPer36": 3.5388916902646073,
+        "errorPer36": 1.811519825488162
+      },
+      {
+        "id": 203991,
+        "name": "Clint Capela",
+        "minutes": 1726,
+        "actualPer36": 5.381228273464658,
+        "simulatedPer36": 3.679227628104647,
+        "errorPer36": -1.7020006453600116
+      },
+      {
+        "id": 202696,
+        "name": "Nikola Vučević",
+        "minutes": 2744,
+        "actualPer36": 2.08600583090379,
+        "simulatedPer36": 3.73232931406046,
+        "errorPer36": 1.64632348315667
+      },
+      {
+        "id": 203110,
+        "name": "Draymond Green",
+        "minutes": 2299,
+        "actualPer36": 1.0334928229665072,
+        "simulatedPer36": 2.660042486789719,
+        "errorPer36": 1.626549663823212
+      }
+    ]
+  },
+  {
+    "season": "2022-23",
+    "version": "oreb",
+    "label": "事後探索；非採用判準；交易球員跨隊加總後比較，實際分鐘加權",
+    "minutesWeightedOreb36MAE": 0.43565417014099095,
+    "players": 539,
+    "largestErrors": [
+      {
+        "id": 1630549,
+        "name": "Day'Ron Sharpe",
+        "minutes": 556,
+        "actualPer36": 6.410071942446043,
+        "simulatedPer36": 3.9923187575722485,
+        "errorPer36": -2.417753184873795
+      },
+      {
+        "id": 1630194,
+        "name": "Paul Reed",
+        "minutes": 751,
+        "actualPer36": 5.36884154460719,
+        "simulatedPer36": 3.1644832741108475,
+        "errorPer36": -2.204358270496343
+      },
+      {
+        "id": 1630586,
+        "name": "Usman Garuba",
+        "minutes": 969,
+        "actualPer36": 4.458204334365325,
+        "simulatedPer36": 2.323056208777231,
+        "errorPer36": -2.135148125588094
+      },
+      {
+        "id": 203500,
+        "name": "Steven Adams",
+        "minutes": 1132,
+        "actualPer36": 6.80565371024735,
+        "simulatedPer36": 4.909557564860137,
+        "errorPer36": -1.8960961453872138
+      },
+      {
+        "id": 1631106,
+        "name": "Tari Eason",
+        "minutes": 1768,
+        "actualPer36": 3.9705882352941178,
+        "simulatedPer36": 2.1579240420169126,
+        "errorPer36": -1.8126641932772047
+      },
+      {
+        "id": 1629646,
+        "name": "Charles Bassey",
+        "minutes": 510,
+        "actualPer36": 5.294117647058823,
+        "simulatedPer36": 3.6208703784991094,
+        "errorPer36": -1.6732472685597142
+      },
+      {
+        "id": 1629011,
+        "name": "Mitchell Robinson",
+        "minutes": 1591,
+        "actualPer36": 6.041483343808925,
+        "simulatedPer36": 4.386088969905892,
+        "errorPer36": -1.6553943739030337
+      },
+      {
+        "id": 1631119,
+        "name": "Jaylin Williams",
+        "minutes": 917,
+        "actualPer36": 1.7273718647764449,
+        "simulatedPer36": 3.3672977718493513,
+        "errorPer36": 1.6399259070729066
+      },
+      {
+        "id": 203488,
+        "name": "Mike Muscala",
+        "minutes": 947,
+        "actualPer36": 1.4065469904963042,
+        "simulatedPer36": 3.0031887650501816,
+        "errorPer36": 1.5966417745538777
+      },
+      {
+        "id": 1629006,
+        "name": "Josh Okogie",
+        "minutes": 1348,
+        "actualPer36": 2.9109792284866467,
+        "simulatedPer36": 1.351339623292976,
+        "errorPer36": -1.559639605193671
+      },
+      {
+        "id": 203083,
+        "name": "Andre Drummond",
+        "minutes": 850,
+        "actualPer36": 5.844705882352941,
+        "simulatedPer36": 4.286577107077474,
+        "errorPer36": -1.558128775275467
+      },
+      {
+        "id": 1627884,
+        "name": "Derrick Jones Jr.",
+        "minutes": 893,
+        "actualPer36": 2.4188129899216126,
+        "simulatedPer36": 0.976100908157562,
+        "errorPer36": -1.4427120817640506
+      },
+      {
+        "id": 203110,
+        "name": "Draymond Green",
+        "minutes": 2299,
+        "actualPer36": 1.0334928229665072,
+        "simulatedPer36": 2.4582292680306286,
+        "errorPer36": 1.4247364450641216
+      },
+      {
+        "id": 1626149,
+        "name": "Montrezl Harrell",
+        "minutes": 683,
+        "actualPer36": 3.5314787701317716,
+        "simulatedPer36": 2.1182830188176323,
+        "errorPer36": -1.413195751314139
+      },
+      {
+        "id": 1631095,
+        "name": "Jabari Smith Jr.",
+        "minutes": 2450,
+        "actualPer36": 1.7926530612244898,
+        "simulatedPer36": 3.199504298129269,
+        "errorPer36": 1.406851236904779
+      }
+    ]
+  },
+  {
+    "season": "2023-24",
+    "version": "T0",
+    "label": "事後探索；非採用判準；交易球員跨隊加總後比較，實際分鐘加權",
+    "minutesWeightedOreb36MAE": 0.6067842371130779,
+    "players": 571,
+    "largestErrors": [
+      {
+        "id": 1630549,
+        "name": "Day'Ron Sharpe",
+        "minutes": 922,
+        "actualPer36": 6.286334056399133,
+        "simulatedPer36": 3.648889618595308,
+        "errorPer36": -2.6374444378038246
+      },
+      {
+        "id": 203083,
+        "name": "Andre Drummond",
+        "minutes": 1349,
+        "actualPer36": 7.071905114899926,
+        "simulatedPer36": 4.734438822550327,
+        "errorPer36": -2.337466292349599
+      },
+      {
+        "id": 1629011,
+        "name": "Mitchell Robinson",
+        "minutes": 766,
+        "actualPer36": 6.673629242819843,
+        "simulatedPer36": 4.368928698780457,
+        "errorPer36": -2.304700544039387
+      },
+      {
+        "id": 1630173,
+        "name": "Precious Achiuwa",
+        "minutes": 1624,
+        "actualPer36": 4.233990147783251,
+        "simulatedPer36": 1.9711769085067428,
+        "errorPer36": -2.262813239276508
+      },
+      {
+        "id": 201142,
+        "name": "Kevin Durant",
+        "minutes": 2790,
+        "actualPer36": 0.5290322580645161,
+        "simulatedPer36": 2.6199918748474484,
+        "errorPer36": 2.090959616782932
+      },
+      {
+        "id": 1631096,
+        "name": "Chet Holmgren",
+        "minutes": 2412,
+        "actualPer36": 1.9253731343283582,
+        "simulatedPer36": 3.954602037415812,
+        "errorPer36": 2.0292289030874544
+      },
+      {
+        "id": 203991,
+        "name": "Clint Capela",
+        "minutes": 1882,
+        "actualPer36": 6.4080765143464395,
+        "simulatedPer36": 4.400182136499263,
+        "errorPer36": -2.007894377847178
+      },
+      {
+        "id": 1631119,
+        "name": "Jaylin Williams",
+        "minutes": 898,
+        "actualPer36": 1.443207126948775,
+        "simulatedPer36": 3.439202528025224,
+        "errorPer36": 1.995995401076449
+      },
+      {
+        "id": 1626167,
+        "name": "Myles Turner",
+        "minutes": 2079,
+        "actualPer36": 1.9567099567099566,
+        "simulatedPer36": 3.91992509841335,
+        "errorPer36": 1.963215141703393
+      },
+      {
+        "id": 1641708,
+        "name": "Amen Thompson",
+        "minutes": 1388,
+        "actualPer36": 3.838616714697406,
+        "simulatedPer36": 1.8988759868715024,
+        "errorPer36": -1.939740727825904
+      },
+      {
+        "id": 1631107,
+        "name": "Nikola Jović",
+        "minutes": 896,
+        "actualPer36": 1.0044642857142858,
+        "simulatedPer36": 2.939094670662112,
+        "errorPer36": 1.9346303849478264
+      },
+      {
+        "id": 1630692,
+        "name": "Jordan Goodwin",
+        "minutes": 1059,
+        "actualPer36": 2.991501416430595,
+        "simulatedPer36": 1.076985445715089,
+        "errorPer36": -1.914515970715506
+      },
+      {
+        "id": 1628970,
+        "name": "Miles Bridges",
+        "minutes": 2586,
+        "actualPer36": 0.988399071925754,
+        "simulatedPer36": 2.8975401632772555,
+        "errorPer36": 1.909141091351502
+      },
+      {
+        "id": 204001,
+        "name": "Kristaps Porziņģis",
+        "minutes": 1689,
+        "actualPer36": 2.0674955595026643,
+        "simulatedPer36": 3.9734280426310176,
+        "errorPer36": 1.9059324831283533
+      },
+      {
+        "id": 1628398,
+        "name": "Kyle Kuzma",
+        "minutes": 2280,
+        "actualPer36": 0.9789473684210527,
+        "simulatedPer36": 2.88390126859881,
+        "errorPer36": 1.9049539001777576
+      }
+    ]
+  },
+  {
+    "season": "2023-24",
+    "version": "pooled",
+    "label": "事後探索；非採用判準；交易球員跨隊加總後比較，實際分鐘加權",
+    "minutesWeightedOreb36MAE": 0.5244992710554823,
+    "players": 571,
+    "largestErrors": [
+      {
+        "id": 203083,
+        "name": "Andre Drummond",
+        "minutes": 1349,
+        "actualPer36": 7.071905114899926,
+        "simulatedPer36": 3.956098245173795,
+        "errorPer36": -3.1158068697261316
+      },
+      {
+        "id": 1629011,
+        "name": "Mitchell Robinson",
+        "minutes": 766,
+        "actualPer36": 6.673629242819843,
+        "simulatedPer36": 3.679606632653674,
+        "errorPer36": -2.9940226101661698
+      },
+      {
+        "id": 1630549,
+        "name": "Day'Ron Sharpe",
+        "minutes": 922,
+        "actualPer36": 6.286334056399133,
+        "simulatedPer36": 3.312733652420056,
+        "errorPer36": -2.973600403979077
+      },
+      {
+        "id": 203991,
+        "name": "Clint Capela",
+        "minutes": 1882,
+        "actualPer36": 6.4080765143464395,
+        "simulatedPer36": 3.848084804546552,
+        "errorPer36": -2.5599917097998883
+      },
+      {
+        "id": 1630173,
+        "name": "Precious Achiuwa",
+        "minutes": 1624,
+        "actualPer36": 4.233990147783251,
+        "simulatedPer36": 1.6967175618986703,
+        "errorPer36": -2.537272585884581
+      },
+      {
+        "id": 1641708,
+        "name": "Amen Thompson",
+        "minutes": 1388,
+        "actualPer36": 3.838616714697406,
+        "simulatedPer36": 1.6432997368514206,
+        "errorPer36": -2.1953169778459856
+      },
+      {
+        "id": 1630692,
+        "name": "Jordan Goodwin",
+        "minutes": 1059,
+        "actualPer36": 2.991501416430595,
+        "simulatedPer36": 0.9325270763456908,
+        "errorPer36": -2.0589743400849043
+      },
+      {
+        "id": 1629052,
+        "name": "Oshae Brissett",
+        "minutes": 630,
+        "actualPer36": 3.4857142857142858,
+        "simulatedPer36": 1.4572296080360838,
+        "errorPer36": -2.028484677678202
+      },
+      {
+        "id": 1629006,
+        "name": "Josh Okogie",
+        "minutes": 964,
+        "actualPer36": 2.763485477178423,
+        "simulatedPer36": 0.8310027404961003,
+        "errorPer36": -1.932482736682323
+      },
+      {
+        "id": 202684,
+        "name": "Tristan Thompson",
+        "minutes": 553,
+        "actualPer36": 4.752260397830018,
+        "simulatedPer36": 3.008969251321552,
+        "errorPer36": -1.743291146508466
+      },
+      {
+        "id": 1641709,
+        "name": "Ausar Thompson",
+        "minutes": 1585,
+        "actualPer36": 2.9299684542586752,
+        "simulatedPer36": 1.1882729097163547,
+        "errorPer36": -1.7416955445423206
+      },
+      {
+        "id": 201142,
+        "name": "Kevin Durant",
+        "minutes": 2790,
+        "actualPer36": 0.5290322580645161,
+        "simulatedPer36": 2.252401413050049,
+        "errorPer36": 1.723369154985533
+      },
+      {
+        "id": 1627780,
+        "name": "Gary Payton II",
+        "minutes": 685,
+        "actualPer36": 2.4175182481751825,
+        "simulatedPer36": 0.7087974436998604,
+        "errorPer36": -1.7087208044753222
+      },
+      {
+        "id": 1630543,
+        "name": "Isaiah Jackson",
+        "minutes": 769,
+        "actualPer36": 4.400520156046814,
+        "simulatedPer36": 2.7680866141268172,
+        "errorPer36": -1.6324335419199967
+      },
+      {
+        "id": 1641748,
+        "name": "Andre Jackson Jr.",
+        "minutes": 576,
+        "actualPer36": 2.6875,
+        "simulatedPer36": 1.086002186118368,
+        "errorPer36": -1.6014978138816318
+      }
+    ]
+  },
+  {
+    "season": "2023-24",
+    "version": "oreb",
+    "label": "事後探索；非採用判準；交易球員跨隊加總後比較，實際分鐘加權",
+    "minutesWeightedOreb36MAE": 0.44676748499967284,
+    "players": 571,
+    "largestErrors": [
+      {
+        "id": 1629011,
+        "name": "Mitchell Robinson",
+        "minutes": 766,
+        "actualPer36": 6.673629242819843,
+        "simulatedPer36": 4.585504246878448,
+        "errorPer36": -2.088124995941396
+      },
+      {
+        "id": 203083,
+        "name": "Andre Drummond",
+        "minutes": 1349,
+        "actualPer36": 7.071905114899926,
+        "simulatedPer36": 5.0076882252305275,
+        "errorPer36": -2.0642168896693986
+      },
+      {
+        "id": 203991,
+        "name": "Clint Capela",
+        "minutes": 1882,
+        "actualPer36": 6.4080765143464395,
+        "simulatedPer36": 4.403616262689372,
+        "errorPer36": -2.0044602516570684
+      },
+      {
+        "id": 1641708,
+        "name": "Amen Thompson",
+        "minutes": 1388,
+        "actualPer36": 3.838616714697406,
+        "simulatedPer36": 1.860458728084773,
+        "errorPer36": -1.978157986612633
+      },
+      {
+        "id": 1630173,
+        "name": "Precious Achiuwa",
+        "minutes": 1624,
+        "actualPer36": 4.233990147783251,
+        "simulatedPer36": 2.2854524486889414,
+        "errorPer36": -1.9485376990943095
+      },
+      {
+        "id": 1630549,
+        "name": "Day'Ron Sharpe",
+        "minutes": 922,
+        "actualPer36": 6.286334056399133,
+        "simulatedPer36": 4.3997144790764775,
+        "errorPer36": -1.8866195773226548
+      },
+      {
+        "id": 1630692,
+        "name": "Jordan Goodwin",
+        "minutes": 1059,
+        "actualPer36": 2.991501416430595,
+        "simulatedPer36": 1.1775706382764128,
+        "errorPer36": -1.8139307781541822
+      },
+      {
+        "id": 1629006,
+        "name": "Josh Okogie",
+        "minutes": 964,
+        "actualPer36": 2.763485477178423,
+        "simulatedPer36": 1.0088299994667318,
+        "errorPer36": -1.7546554777116916
+      },
+      {
+        "id": 1641748,
+        "name": "Andre Jackson Jr.",
+        "minutes": 576,
+        "actualPer36": 2.6875,
+        "simulatedPer36": 1.0826790726227453,
+        "errorPer36": -1.604820927377255
+      },
+      {
+        "id": 1641709,
+        "name": "Ausar Thompson",
+        "minutes": 1585,
+        "actualPer36": 2.9299684542586752,
+        "simulatedPer36": 1.4130360191771878,
+        "errorPer36": -1.5169324350814875
+      },
+      {
+        "id": 1629052,
+        "name": "Oshae Brissett",
+        "minutes": 630,
+        "actualPer36": 3.4857142857142858,
+        "simulatedPer36": 2.0097308209476656,
+        "errorPer36": -1.4759834647666201
+      },
+      {
+        "id": 1631109,
+        "name": "Mark Williams",
+        "minutes": 508,
+        "actualPer36": 5.3858267716535435,
+        "simulatedPer36": 3.914250329591307,
+        "errorPer36": -1.4715764420622364
+      },
+      {
+        "id": 1628365,
+        "name": "Markelle Fultz",
+        "minutes": 910,
+        "actualPer36": 2.2153846153846155,
+        "simulatedPer36": 0.7607056100804694,
+        "errorPer36": -1.454679005304146
+      },
+      {
+        "id": 201142,
+        "name": "Kevin Durant",
+        "minutes": 2790,
+        "actualPer36": 0.5290322580645161,
+        "simulatedPer36": 1.888110795481801,
+        "errorPer36": 1.3590785374172851
+      },
+      {
+        "id": 1627780,
+        "name": "Gary Payton II",
+        "minutes": 685,
+        "actualPer36": 2.4175182481751825,
+        "simulatedPer36": 1.095812729531865,
+        "errorPer36": -1.3217055186433178
+      }
+    ]
+  },
+  {
+    "season": "2024-25",
+    "version": "T0",
+    "label": "事後探索；非採用判準；交易球員跨隊加總後比較，實際分鐘加權",
+    "minutesWeightedOreb36MAE": 0.5766057518514245,
+    "players": 569,
+    "largestErrors": [
+      {
+        "id": 203500,
+        "name": "Steven Adams",
+        "minutes": 793,
+        "actualPer36": 7.5359394703657,
+        "simulatedPer36": 4.496225582846342,
+        "errorPer36": -3.0397138875193583
+      },
+      {
+        "id": 1629020,
+        "name": "Jarred Vanderbilt",
+        "minutes": 580,
+        "actualPer36": 4.220689655172414,
+        "simulatedPer36": 1.8255410495618953,
+        "errorPer36": -2.395148605610519
+      },
+      {
+        "id": 1641705,
+        "name": "Victor Wembanyama",
+        "minutes": 1526,
+        "actualPer36": 1.9344692005242463,
+        "simulatedPer36": 4.249593591827734,
+        "errorPer36": 2.315124391303488
+      },
+      {
+        "id": 1630611,
+        "name": "Gui Santos",
+        "minutes": 764,
+        "actualPer36": 3.392670157068063,
+        "simulatedPer36": 1.1040532965967216,
+        "errorPer36": -2.288616860471341
+      },
+      {
+        "id": 1626172,
+        "name": "Kevon Looney",
+        "minutes": 1145,
+        "actualPer36": 5.816593886462882,
+        "simulatedPer36": 3.5853417650673607,
+        "errorPer36": -2.231252121395521
+      },
+      {
+        "id": 1630549,
+        "name": "Day'Ron Sharpe",
+        "minutes": 906,
+        "actualPer36": 5.920529801324503,
+        "simulatedPer36": 3.694333583748407,
+        "errorPer36": -2.226196217576097
+      },
+      {
+        "id": 1626167,
+        "name": "Myles Turner",
+        "minutes": 2174,
+        "actualPer36": 1.4903403863845446,
+        "simulatedPer36": 3.6733116932434697,
+        "errorPer36": 2.182971306858925
+      },
+      {
+        "id": 204001,
+        "name": "Kristaps Porziņģis",
+        "minutes": 1208,
+        "actualPer36": 2.0264900662251657,
+        "simulatedPer36": 4.079372293134531,
+        "errorPer36": 2.0528822269093654
+      },
+      {
+        "id": 1631217,
+        "name": "Moussa Diabaté",
+        "minutes": 1242,
+        "actualPer36": 5.420289855072464,
+        "simulatedPer36": 3.3732732053829597,
+        "errorPer36": -2.0470166496895046
+      },
+      {
+        "id": 201142,
+        "name": "Kevin Durant",
+        "minutes": 2268,
+        "actualPer36": 0.36507936507936506,
+        "simulatedPer36": 2.370744798029957,
+        "errorPer36": 2.0056654329505914
+      },
+      {
+        "id": 1641774,
+        "name": "Tristan Vukcevic",
+        "minutes": 512,
+        "actualPer36": 1.828125,
+        "simulatedPer36": 3.8327915433722075,
+        "errorPer36": 2.0046665433722075
+      },
+      {
+        "id": 1642366,
+        "name": "Quinten Post",
+        "minutes": 687,
+        "actualPer36": 1.834061135371179,
+        "simulatedPer36": 3.806381770831354,
+        "errorPer36": 1.972320635460175
+      },
+      {
+        "id": 1630643,
+        "name": "Jay Huff",
+        "minutes": 750,
+        "actualPer36": 1.44,
+        "simulatedPer36": 3.358667969136971,
+        "errorPer36": 1.9186679691369712
+      },
+      {
+        "id": 1628369,
+        "name": "Jayson Tatum",
+        "minutes": 2623,
+        "actualPer36": 0.658787647731605,
+        "simulatedPer36": 2.5673427755116025,
+        "errorPer36": 1.9085551277799977
+      },
+      {
+        "id": 1629675,
+        "name": "Naz Reid",
+        "minutes": 2205,
+        "actualPer36": 1.5020408163265306,
+        "simulatedPer36": 3.363879882943667,
+        "errorPer36": 1.8618390666171363
+      }
+    ]
+  },
+  {
+    "season": "2024-25",
+    "version": "pooled",
+    "label": "事後探索；非採用判準；交易球員跨隊加總後比較，實際分鐘加權",
+    "minutesWeightedOreb36MAE": 0.5418121903315424,
+    "players": 569,
+    "largestErrors": [
+      {
+        "id": 203500,
+        "name": "Steven Adams",
+        "minutes": 793,
+        "actualPer36": 7.5359394703657,
+        "simulatedPer36": 4.193615239893869,
+        "errorPer36": -3.3423242304718306
+      },
+      {
+        "id": 1630549,
+        "name": "Day'Ron Sharpe",
+        "minutes": 906,
+        "actualPer36": 5.920529801324503,
+        "simulatedPer36": 3.175288478984373,
+        "errorPer36": -2.7452413223401297
+      },
+      {
+        "id": 1629020,
+        "name": "Jarred Vanderbilt",
+        "minutes": 580,
+        "actualPer36": 4.220689655172414,
+        "simulatedPer36": 1.6928257567198568,
+        "errorPer36": -2.527863898452557
+      },
+      {
+        "id": 1631217,
+        "name": "Moussa Diabaté",
+        "minutes": 1242,
+        "actualPer36": 5.420289855072464,
+        "simulatedPer36": 3.0091112175358954,
+        "errorPer36": -2.411178637536568
+      },
+      {
+        "id": 1626172,
+        "name": "Kevon Looney",
+        "minutes": 1145,
+        "actualPer36": 5.816593886462882,
+        "simulatedPer36": 3.422648188445495,
+        "errorPer36": -2.3939456980173865
+      },
+      {
+        "id": 1630611,
+        "name": "Gui Santos",
+        "minutes": 764,
+        "actualPer36": 3.392670157068063,
+        "simulatedPer36": 1.0567049503987815,
+        "errorPer36": -2.3359652066692815
+      },
+      {
+        "id": 1641705,
+        "name": "Victor Wembanyama",
+        "minutes": 1526,
+        "actualPer36": 1.9344692005242463,
+        "simulatedPer36": 3.944602930804216,
+        "errorPer36": 2.0101337302799696
+      },
+      {
+        "id": 1630256,
+        "name": "Jae'Sean Tate",
+        "minutes": 590,
+        "actualPer36": 3.0508474576271185,
+        "simulatedPer36": 1.0444560105907656,
+        "errorPer36": -2.006391447036353
+      },
+      {
+        "id": 1641744,
+        "name": "Zach Edey",
+        "minutes": 1419,
+        "actualPer36": 5.885835095137421,
+        "simulatedPer36": 3.936361737211983,
+        "errorPer36": -1.9494733579254389
+      },
+      {
+        "id": 201142,
+        "name": "Kevin Durant",
+        "minutes": 2268,
+        "actualPer36": 0.36507936507936506,
+        "simulatedPer36": 2.266725023600523,
+        "errorPer36": 1.901645658521158
+      },
+      {
+        "id": 1642270,
+        "name": "Donovan Clingan",
+        "minutes": 1326,
+        "actualPer36": 5.891402714932127,
+        "simulatedPer36": 4.019754464357652,
+        "errorPer36": -1.871648250574475
+      },
+      {
+        "id": 1626167,
+        "name": "Myles Turner",
+        "minutes": 2174,
+        "actualPer36": 1.4903403863845446,
+        "simulatedPer36": 3.3372627148091922,
+        "errorPer36": 1.8469223284246472
+      },
+      {
+        "id": 1629634,
+        "name": "Brandon Clarke",
+        "minutes": 1209,
+        "actualPer36": 3.7816377171215882,
+        "simulatedPer36": 1.9481687279354147,
+        "errorPer36": -1.8334689891861737
+      },
+      {
+        "id": 1628369,
+        "name": "Jayson Tatum",
+        "minutes": 2623,
+        "actualPer36": 0.658787647731605,
+        "simulatedPer36": 2.4030319701725333,
+        "errorPer36": 1.7442443224409285
+      },
+      {
+        "id": 1642366,
+        "name": "Quinten Post",
+        "minutes": 687,
+        "actualPer36": 1.834061135371179,
+        "simulatedPer36": 3.556145416472057,
+        "errorPer36": 1.7220842811008785
+      }
+    ]
+  },
+  {
+    "season": "2024-25",
+    "version": "oreb",
+    "label": "事後探索；非採用判準；交易球員跨隊加總後比較，實際分鐘加權",
+    "minutesWeightedOreb36MAE": 0.4417071553867163,
+    "players": 569,
+    "largestErrors": [
+      {
+        "id": 1629020,
+        "name": "Jarred Vanderbilt",
+        "minutes": 580,
+        "actualPer36": 4.220689655172414,
+        "simulatedPer36": 2.0764331621821612,
+        "errorPer36": -2.1442564929902526
+      },
+      {
+        "id": 203500,
+        "name": "Steven Adams",
+        "minutes": 793,
+        "actualPer36": 7.5359394703657,
+        "simulatedPer36": 5.441642862065361,
+        "errorPer36": -2.094296608300338
+      },
+      {
+        "id": 1630611,
+        "name": "Gui Santos",
+        "minutes": 764,
+        "actualPer36": 3.392670157068063,
+        "simulatedPer36": 1.423366007221489,
+        "errorPer36": -1.969304149846574
+      },
+      {
+        "id": 1642366,
+        "name": "Quinten Post",
+        "minutes": 687,
+        "actualPer36": 1.834061135371179,
+        "simulatedPer36": 3.6875482519025033,
+        "errorPer36": 1.8534871165313245
+      },
+      {
+        "id": 1630549,
+        "name": "Day'Ron Sharpe",
+        "minutes": 906,
+        "actualPer36": 5.920529801324503,
+        "simulatedPer36": 4.095105056284099,
+        "errorPer36": -1.8254247450404044
+      },
+      {
+        "id": 1630256,
+        "name": "Jae'Sean Tate",
+        "minutes": 590,
+        "actualPer36": 3.0508474576271185,
+        "simulatedPer36": 1.4349611421960817,
+        "errorPer36": -1.6158863154310368
+      },
+      {
+        "id": 1629634,
+        "name": "Brandon Clarke",
+        "minutes": 1209,
+        "actualPer36": 3.7816377171215882,
+        "simulatedPer36": 2.203241435011578,
+        "errorPer36": -1.5783962821100102
+      },
+      {
+        "id": 1629006,
+        "name": "Josh Okogie",
+        "minutes": 627,
+        "actualPer36": 2.583732057416268,
+        "simulatedPer36": 1.0433695145319402,
+        "errorPer36": -1.5403625428843277
+      },
+      {
+        "id": 1631217,
+        "name": "Moussa Diabaté",
+        "minutes": 1242,
+        "actualPer36": 5.420289855072464,
+        "simulatedPer36": 3.8850146856129353,
+        "errorPer36": -1.5352751694595284
+      },
+      {
+        "id": 203110,
+        "name": "Draymond Green",
+        "minutes": 1981,
+        "actualPer36": 1.3447753659767794,
+        "simulatedPer36": 2.8149068790199476,
+        "errorPer36": 1.470131513043168
+      },
+      {
+        "id": 1641748,
+        "name": "Andre Jackson Jr.",
+        "minutes": 977,
+        "actualPer36": 2.3950870010235414,
+        "simulatedPer36": 0.9459656550924477,
+        "errorPer36": -1.4491213459310939
+      },
+      {
+        "id": 1641705,
+        "name": "Victor Wembanyama",
+        "minutes": 1526,
+        "actualPer36": 1.9344692005242463,
+        "simulatedPer36": 3.3796218821031943,
+        "errorPer36": 1.4451526815789473
+      },
+      {
+        "id": 1628970,
+        "name": "Miles Bridges",
+        "minutes": 2029,
+        "actualPer36": 1.2774765894529325,
+        "simulatedPer36": 2.719722195326488,
+        "errorPer36": 1.4422456058735553
+      },
+      {
+        "id": 202699,
+        "name": "Tobias Harris",
+        "minutes": 2307,
+        "actualPer36": 1.0143042912873863,
+        "simulatedPer36": 2.4439253801856524,
+        "errorPer36": 1.4296210888982663
+      },
+      {
+        "id": 1626172,
+        "name": "Kevon Looney",
+        "minutes": 1145,
+        "actualPer36": 5.816593886462882,
+        "simulatedPer36": 4.420078786841818,
+        "errorPer36": -1.396515099621064
+      }
+    ]
+  },
+  {
+    "season": "2025-26",
+    "version": "T0",
+    "label": "事後探索；非採用判準；交易球員跨隊加總後比較，實際分鐘加權",
+    "minutesWeightedOreb36MAE": 0.6181211943535462,
+    "players": 582,
+    "largestErrors": [
+      {
+        "id": 1629011,
+        "name": "Mitchell Robinson",
+        "minutes": 1176,
+        "actualPer36": 7.714285714285714,
+        "simulatedPer36": 4.155184974671977,
+        "errorPer36": -3.559100739613737
+      },
+      {
+        "id": 203500,
+        "name": "Steven Adams",
+        "minutes": 730,
+        "actualPer36": 7.1506849315068495,
+        "simulatedPer36": 3.9780834762729467,
+        "errorPer36": -3.1726014552339024
+      },
+      {
+        "id": 203991,
+        "name": "Clint Capela",
+        "minutes": 925,
+        "actualPer36": 6.227027027027027,
+        "simulatedPer36": 3.1430554461864144,
+        "errorPer36": -3.0839715808406134
+      },
+      {
+        "id": 1630551,
+        "name": "Justin Champagnie",
+        "minutes": 1377,
+        "actualPer36": 3.7908496732026142,
+        "simulatedPer36": 1.3387617711677884,
+        "errorPer36": -2.452087902034826
+      },
+      {
+        "id": 1628369,
+        "name": "Jayson Tatum",
+        "minutes": 522,
+        "actualPer36": 0.5517241379310345,
+        "simulatedPer36": 2.9348534249430474,
+        "errorPer36": 2.3831292870120127
+      },
+      {
+        "id": 1630543,
+        "name": "Isaiah Jackson",
+        "minutes": 908,
+        "actualPer36": 4.4801762114537445,
+        "simulatedPer36": 2.105399386170908,
+        "errorPer36": -2.374776825282837
+      },
+      {
+        "id": 1642928,
+        "name": "Dylan Cardwell",
+        "minutes": 911,
+        "actualPer36": 5.809001097694841,
+        "simulatedPer36": 3.457645307773452,
+        "errorPer36": -2.351355789921388
+      },
+      {
+        "id": 1627780,
+        "name": "Gary Payton II",
+        "minutes": 1142,
+        "actualPer36": 3.183887915936953,
+        "simulatedPer36": 0.8529148774836846,
+        "errorPer36": -2.3309730384532683
+      },
+      {
+        "id": 1630194,
+        "name": "Paul Reed",
+        "minutes": 899,
+        "actualPer36": 5.205784204671858,
+        "simulatedPer36": 2.8894097771553935,
+        "errorPer36": -2.3163744275164646
+      },
+      {
+        "id": 1630619,
+        "name": "Moussa Cisse",
+        "minutes": 530,
+        "actualPer36": 6.0452830188679245,
+        "simulatedPer36": 3.8476897061467974,
+        "errorPer36": -2.1975933127211267
+      },
+      {
+        "id": 201572,
+        "name": "Brook Lopez",
+        "minutes": 1635,
+        "actualPer36": 1.034862385321101,
+        "simulatedPer36": 3.202525428284202,
+        "errorPer36": 2.1676630429631008
+      },
+      {
+        "id": 1631119,
+        "name": "Jaylin Williams",
+        "minutes": 1279,
+        "actualPer36": 0.9007036747458952,
+        "simulatedPer36": 3.0019148289586655,
+        "errorPer36": 2.1012111542127707
+      },
+      {
+        "id": 1630692,
+        "name": "Jordan Goodwin",
+        "minutes": 1576,
+        "actualPer36": 3.1522842639593907,
+        "simulatedPer36": 1.0951015431841395,
+        "errorPer36": -2.0571827207752515
+      },
+      {
+        "id": 1626167,
+        "name": "Myles Turner",
+        "minutes": 1910,
+        "actualPer36": 1.4136125654450262,
+        "simulatedPer36": 3.4154644194450205,
+        "errorPer36": 2.0018518539999945
+      },
+      {
+        "id": 1641708,
+        "name": "Amen Thompson",
+        "minutes": 2954,
+        "actualPer36": 2.863913337846987,
+        "simulatedPer36": 0.9084162840625376,
+        "errorPer36": -1.9554970537844498
+      }
+    ]
+  },
+  {
+    "season": "2025-26",
+    "version": "pooled",
+    "label": "事後探索；非採用判準；交易球員跨隊加總後比較，實際分鐘加權",
+    "minutesWeightedOreb36MAE": 0.6195453014485737,
+    "players": 582,
+    "largestErrors": [
+      {
+        "id": 1629011,
+        "name": "Mitchell Robinson",
+        "minutes": 1176,
+        "actualPer36": 7.714285714285714,
+        "simulatedPer36": 3.9629191769566194,
+        "errorPer36": -3.751366537329094
+      },
+      {
+        "id": 203500,
+        "name": "Steven Adams",
+        "minutes": 730,
+        "actualPer36": 7.1506849315068495,
+        "simulatedPer36": 3.866568038017251,
+        "errorPer36": -3.284116893489598
+      },
+      {
+        "id": 203991,
+        "name": "Clint Capela",
+        "minutes": 925,
+        "actualPer36": 6.227027027027027,
+        "simulatedPer36": 3.262832656629729,
+        "errorPer36": -2.964194370397298
+      },
+      {
+        "id": 1642928,
+        "name": "Dylan Cardwell",
+        "minutes": 911,
+        "actualPer36": 5.809001097694841,
+        "simulatedPer36": 3.2564852138299782,
+        "errorPer36": -2.5525158838648627
+      },
+      {
+        "id": 1630551,
+        "name": "Justin Champagnie",
+        "minutes": 1377,
+        "actualPer36": 3.7908496732026142,
+        "simulatedPer36": 1.2455188343139303,
+        "errorPer36": -2.5453308388886837
+      },
+      {
+        "id": 1630543,
+        "name": "Isaiah Jackson",
+        "minutes": 908,
+        "actualPer36": 4.4801762114537445,
+        "simulatedPer36": 2.0190018304515567,
+        "errorPer36": -2.4611743810021878
+      },
+      {
+        "id": 1628369,
+        "name": "Jayson Tatum",
+        "minutes": 522,
+        "actualPer36": 0.5517241379310345,
+        "simulatedPer36": 3.0033959967806734,
+        "errorPer36": 2.4516718588496387
+      },
+      {
+        "id": 1630619,
+        "name": "Moussa Cisse",
+        "minutes": 530,
+        "actualPer36": 6.0452830188679245,
+        "simulatedPer36": 3.7594699918122383,
+        "errorPer36": -2.2858130270556853
+      },
+      {
+        "id": 1627780,
+        "name": "Gary Payton II",
+        "minutes": 1142,
+        "actualPer36": 3.183887915936953,
+        "simulatedPer36": 0.9190598342232176,
+        "errorPer36": -2.2648280817137354
+      },
+      {
+        "id": 1630194,
+        "name": "Paul Reed",
+        "minutes": 899,
+        "actualPer36": 5.205784204671858,
+        "simulatedPer36": 2.9433474529688617,
+        "errorPer36": -2.262436751702997
+      },
+      {
+        "id": 1631119,
+        "name": "Jaylin Williams",
+        "minutes": 1279,
+        "actualPer36": 0.9007036747458952,
+        "simulatedPer36": 3.076297833912031,
+        "errorPer36": 2.175594159166136
+      },
+      {
+        "id": 201572,
+        "name": "Brook Lopez",
+        "minutes": 1635,
+        "actualPer36": 1.034862385321101,
+        "simulatedPer36": 3.150079652528665,
+        "errorPer36": 2.1152172672075644
+      },
+      {
+        "id": 1630692,
+        "name": "Jordan Goodwin",
+        "minutes": 1576,
+        "actualPer36": 3.1522842639593907,
+        "simulatedPer36": 1.0885312621163725,
+        "errorPer36": -2.0637530018430184
+      },
+      {
+        "id": 1641708,
+        "name": "Amen Thompson",
+        "minutes": 2954,
+        "actualPer36": 2.863913337846987,
+        "simulatedPer36": 0.862774099507435,
+        "errorPer36": -2.0011392383395523
+      },
+      {
+        "id": 1629057,
+        "name": "Robert Williams III",
+        "minutes": 1008,
+        "actualPer36": 5.035714285714286,
+        "simulatedPer36": 3.0670016876097224,
+        "errorPer36": -1.9687125981045632
+      }
+    ]
+  },
+  {
+    "season": "2025-26",
+    "version": "oreb",
+    "label": "事後探索；非採用判準；交易球員跨隊加總後比較，實際分鐘加權",
+    "minutesWeightedOreb36MAE": 0.5180471942776235,
+    "players": 582,
+    "largestErrors": [
+      {
+        "id": 1629011,
+        "name": "Mitchell Robinson",
+        "minutes": 1176,
+        "actualPer36": 7.714285714285714,
+        "simulatedPer36": 5.123101038545762,
+        "errorPer36": -2.5911846757399513
+      },
+      {
+        "id": 1630543,
+        "name": "Isaiah Jackson",
+        "minutes": 908,
+        "actualPer36": 4.4801762114537445,
+        "simulatedPer36": 2.251908459809113,
+        "errorPer36": -2.2282677516446316
+      },
+      {
+        "id": 1628369,
+        "name": "Jayson Tatum",
+        "minutes": 522,
+        "actualPer36": 0.5517241379310345,
+        "simulatedPer36": 2.7643633290700547,
+        "errorPer36": 2.21263919113902
+      },
+      {
+        "id": 1630551,
+        "name": "Justin Champagnie",
+        "minutes": 1377,
+        "actualPer36": 3.7908496732026142,
+        "simulatedPer36": 1.58381500004151,
+        "errorPer36": -2.207034673161104
+      },
+      {
+        "id": 203500,
+        "name": "Steven Adams",
+        "minutes": 730,
+        "actualPer36": 7.1506849315068495,
+        "simulatedPer36": 5.038467042474423,
+        "errorPer36": -2.1122178890324257
+      },
+      {
+        "id": 1642928,
+        "name": "Dylan Cardwell",
+        "minutes": 911,
+        "actualPer36": 5.809001097694841,
+        "simulatedPer36": 3.761899025781877,
+        "errorPer36": -2.0471020719129633
+      },
+      {
+        "id": 1630619,
+        "name": "Moussa Cisse",
+        "minutes": 530,
+        "actualPer36": 6.0452830188679245,
+        "simulatedPer36": 4.0100856459154635,
+        "errorPer36": -2.0351973729524606
+      },
+      {
+        "id": 1627780,
+        "name": "Gary Payton II",
+        "minutes": 1142,
+        "actualPer36": 3.183887915936953,
+        "simulatedPer36": 1.2123686752434886,
+        "errorPer36": -1.9715192406934643
+      },
+      {
+        "id": 203991,
+        "name": "Clint Capela",
+        "minutes": 925,
+        "actualPer36": 6.227027027027027,
+        "simulatedPer36": 4.308720185931001,
+        "errorPer36": -1.918306841096026
+      },
+      {
+        "id": 203110,
+        "name": "Draymond Green",
+        "minutes": 1870,
+        "actualPer36": 1.0588235294117647,
+        "simulatedPer36": 2.8890053299317855,
+        "errorPer36": 1.8301818005200208
+      },
+      {
+        "id": 1630692,
+        "name": "Jordan Goodwin",
+        "minutes": 1576,
+        "actualPer36": 3.1522842639593907,
+        "simulatedPer36": 1.3416230524729165,
+        "errorPer36": -1.8106612114864744
+      },
+      {
+        "id": 1630549,
+        "name": "Day'Ron Sharpe",
+        "minutes": 1159,
+        "actualPer36": 5.311475409836065,
+        "simulatedPer36": 3.5165619345009276,
+        "errorPer36": -1.7949134753351375
+      },
+      {
+        "id": 1641708,
+        "name": "Amen Thompson",
+        "minutes": 2954,
+        "actualPer36": 2.863913337846987,
+        "simulatedPer36": 1.1485986124234984,
+        "errorPer36": -1.715314725423489
+      },
+      {
+        "id": 1642869,
+        "name": "Noah Penda",
+        "minutes": 761,
+        "actualPer36": 3.169513797634691,
+        "simulatedPer36": 1.493179009443853,
+        "errorPer36": -1.6763347881908384
+      },
+      {
+        "id": 1642366,
+        "name": "Quinten Post",
+        "minutes": 1161,
+        "actualPer36": 2.108527131782946,
+        "simulatedPer36": 3.7708101483565604,
+        "errorPer36": 1.6622830165736142
+      }
+    ]
+  }
+]

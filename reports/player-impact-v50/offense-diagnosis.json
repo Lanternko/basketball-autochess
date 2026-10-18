@@ -1,0 +1,863 @@
+{
+  "description": "Arithmetic scoring-error decomposition only, not causal attribution. PTS/FGA includes FT scoring. Separate absolute terms can cancel. Actual-minute weights and eligibility inherited from frozen v49 scorer.",
+  "cells": [
+    {
+      "season": "2022-23",
+      "role": "ALL",
+      "players": 367,
+      "pts36BaselineMAE": 0.7805370928365275,
+      "pts36RotationMAE": 0.8739028014776548,
+      "fga36MAEbaseline": 0.4770506897717499,
+      "fga36MAErotation": 0.5133785966066408,
+      "volumeAbsoluteTerm": 0.6706693719880664,
+      "efficiencyAbsoluteTerm": 0.5194799570735529
+    },
+    {
+      "season": "2022-23",
+      "role": "G",
+      "players": 158,
+      "pts36BaselineMAE": 0.7525624969672093,
+      "pts36RotationMAE": 0.8622342161559119,
+      "fga36MAEbaseline": 0.47334844905608514,
+      "fga36MAErotation": 0.5291591425951379,
+      "volumeAbsoluteTerm": 0.6643022223136437,
+      "efficiencyAbsoluteTerm": 0.567089136859276
+    },
+    {
+      "season": "2022-23",
+      "role": "F",
+      "players": 138,
+      "pts36BaselineMAE": 0.7108688890532606,
+      "pts36RotationMAE": 0.8285971456369963,
+      "fga36MAEbaseline": 0.4256639392866938,
+      "fga36MAErotation": 0.47643555613686994,
+      "volumeAbsoluteTerm": 0.6122847454031011,
+      "efficiencyAbsoluteTerm": 0.49546494352480647
+    },
+    {
+      "season": "2022-23",
+      "role": "C",
+      "players": 71,
+      "pts36BaselineMAE": 1.0042690177798956,
+      "pts36RotationMAE": 1.0031483812092261,
+      "fga36MAEbaseline": 0.5999004230156864,
+      "fga36MAErotation": 0.5557621515163298,
+      "volumeAbsoluteTerm": 0.8156308120314325,
+      "efficiencyAbsoluteTerm": 0.45399782072804196
+    },
+    {
+      "season": "2023-24",
+      "role": "ALL",
+      "players": 360,
+      "pts36BaselineMAE": 0.7644275211081225,
+      "pts36RotationMAE": 0.7952504457117923,
+      "fga36MAEbaseline": 0.4867933071807677,
+      "fga36MAErotation": 0.5181686817154766,
+      "volumeAbsoluteTerm": 0.6687049290685062,
+      "efficiencyAbsoluteTerm": 0.46967012032763594
+    },
+    {
+      "season": "2023-24",
+      "role": "G",
+      "players": 145,
+      "pts36BaselineMAE": 0.7419851979932416,
+      "pts36RotationMAE": 0.7700023709973288,
+      "fga36MAEbaseline": 0.43917008966787663,
+      "fga36MAErotation": 0.5045433254964525,
+      "volumeAbsoluteTerm": 0.612378209768246,
+      "efficiencyAbsoluteTerm": 0.5046310958452658
+    },
+    {
+      "season": "2023-24",
+      "role": "F",
+      "players": 150,
+      "pts36BaselineMAE": 0.7199440482210304,
+      "pts36RotationMAE": 0.7118449702587374,
+      "fga36MAEbaseline": 0.4984521026377472,
+      "fga36MAErotation": 0.5026992878806104,
+      "volumeAbsoluteTerm": 0.6468939904491935,
+      "efficiencyAbsoluteTerm": 0.45496559401708153
+    },
+    {
+      "season": "2023-24",
+      "role": "C",
+      "players": 65,
+      "pts36BaselineMAE": 0.9281982591177186,
+      "pts36RotationMAE": 1.0621339046705571,
+      "fga36MAEbaseline": 0.5716119903488937,
+      "fga36MAErotation": 0.589018145088039,
+      "volumeAbsoluteTerm": 0.8572111407904581,
+      "efficiencyAbsoluteTerm": 0.4226267174371262
+    },
+    {
+      "season": "2024-25",
+      "role": "ALL",
+      "players": 375,
+      "pts36BaselineMAE": 0.6919034201396981,
+      "pts36RotationMAE": 0.7569528287184969,
+      "fga36MAEbaseline": 0.4621659071407916,
+      "fga36MAErotation": 0.5024208648136127,
+      "volumeAbsoluteTerm": 0.6395911761826406,
+      "efficiencyAbsoluteTerm": 0.48589676227523565
+    },
+    {
+      "season": "2024-25",
+      "role": "G",
+      "players": 145,
+      "pts36BaselineMAE": 0.6997952272811575,
+      "pts36RotationMAE": 0.7690160024466463,
+      "fga36MAEbaseline": 0.47782079579266834,
+      "fga36MAErotation": 0.5090796844759466,
+      "volumeAbsoluteTerm": 0.6207218911868091,
+      "efficiencyAbsoluteTerm": 0.5257564048569774
+    },
+    {
+      "season": "2024-25",
+      "role": "F",
+      "players": 156,
+      "pts36BaselineMAE": 0.5783153476337969,
+      "pts36RotationMAE": 0.6740885250066441,
+      "fga36MAEbaseline": 0.40158844161848045,
+      "fga36MAErotation": 0.47104700458044413,
+      "volumeAbsoluteTerm": 0.5918161800947477,
+      "efficiencyAbsoluteTerm": 0.4476379303071661
+    },
+    {
+      "season": "2024-25",
+      "role": "C",
+      "players": 74,
+      "pts36BaselineMAE": 0.9386593779648935,
+      "pts36RotationMAE": 0.9226833189000135,
+      "fga36MAEbaseline": 0.5678395028983733,
+      "fga36MAErotation": 0.5604324413372117,
+      "volumeAbsoluteTerm": 0.7936295388702692,
+      "efficiencyAbsoluteTerm": 0.4847545547569442
+    },
+    {
+      "season": "2025-26",
+      "role": "ALL",
+      "players": 378,
+      "pts36BaselineMAE": 0.7053198707855255,
+      "pts36RotationMAE": 0.769247304943497,
+      "fga36MAEbaseline": 0.4669866127498463,
+      "fga36MAErotation": 0.46059506126585115,
+      "volumeAbsoluteTerm": 0.6020066393514295,
+      "efficiencyAbsoluteTerm": 0.45865948655020244
+    },
+    {
+      "season": "2025-26",
+      "role": "G",
+      "players": 164,
+      "pts36BaselineMAE": 0.6873560226748782,
+      "pts36RotationMAE": 0.743516800980336,
+      "fga36MAEbaseline": 0.44899552536344683,
+      "fga36MAErotation": 0.4448838968530686,
+      "volumeAbsoluteTerm": 0.5595778985823257,
+      "efficiencyAbsoluteTerm": 0.46822473858734565
+    },
+    {
+      "season": "2025-26",
+      "role": "F",
+      "players": 139,
+      "pts36BaselineMAE": 0.6707031964340265,
+      "pts36RotationMAE": 0.7508649092641204,
+      "fga36MAEbaseline": 0.4592848009534077,
+      "fga36MAErotation": 0.46193335706637306,
+      "volumeAbsoluteTerm": 0.5893442266640908,
+      "efficiencyAbsoluteTerm": 0.4326419087128582
+    },
+    {
+      "season": "2025-26",
+      "role": "C",
+      "players": 75,
+      "pts36BaselineMAE": 0.8181686260396425,
+      "pts36RotationMAE": 0.8682049648843873,
+      "fga36MAEbaseline": 0.5258300937533862,
+      "fga36MAErotation": 0.49578113384630274,
+      "volumeAbsoluteTerm": 0.7297272482192636,
+      "efficiencyAbsoluteTerm": 0.4878690116976425
+    }
+  ],
+  "drivers": [
+    {
+      "season": "2022-23",
+      "largestWeightedRegressions": [
+        {
+          "playerId": 1628374,
+          "name": "Lauri Markkanen",
+          "role": "F",
+          "minutes": 2271,
+          "baselineError": -0.2640557396287484,
+          "rotationError": -1.695479111860724,
+          "absoluteErrorChange": 1.4314233722319756,
+          "shotVolumeTerm": -0.2986409756140456,
+          "pointsPerFGATermIncludingFT": -1.3968381362466762
+        },
+        {
+          "playerId": 1630530,
+          "name": "Trey Murphy III",
+          "role": "F",
+          "minutes": 2454,
+          "baselineError": -0.032656101186681497,
+          "rotationError": -1.3304878712542685,
+          "absoluteErrorChange": 1.297831770067587,
+          "shotVolumeTerm": -0.4494514979867246,
+          "pointsPerFGATermIncludingFT": -0.8810363732675426
+        },
+        {
+          "playerId": 1626164,
+          "name": "Devin Booker",
+          "role": "G",
+          "minutes": 1835,
+          "baselineError": -0.9145355676868618,
+          "rotationError": -2.608055672630485,
+          "absoluteErrorChange": 1.693520104943623,
+          "shotVolumeTerm": -1.4339481286971572,
+          "pointsPerFGATermIncludingFT": -1.1741075439333286
+        },
+        {
+          "playerId": 201950,
+          "name": "Jrue Holiday",
+          "role": "G",
+          "minutes": 2180,
+          "baselineError": -0.35229487670962456,
+          "rotationError": -1.6934846927171918,
+          "absoluteErrorChange": 1.3411898160075673,
+          "shotVolumeTerm": -2.0782368915270677,
+          "pointsPerFGATermIncludingFT": 0.38475219880987754
+        },
+        {
+          "playerId": 1631095,
+          "name": "Jabari Smith Jr.",
+          "role": "F",
+          "minutes": 2450,
+          "baselineError": -0.09845042470607623,
+          "rotationError": -1.287444729020482,
+          "absoluteErrorChange": 1.1889943043144058,
+          "shotVolumeTerm": -0.21198066177735791,
+          "pointsPerFGATermIncludingFT": -1.075464067243126
+        },
+        {
+          "playerId": 1628381,
+          "name": "John Collins",
+          "role": "F",
+          "minutes": 2132,
+          "baselineError": -0.25063703296858897,
+          "rotationError": -1.5697458348036335,
+          "absoluteErrorChange": 1.3191088018350445,
+          "shotVolumeTerm": -1.6666914696453177,
+          "pointsPerFGATermIncludingFT": 0.09694563484168242
+        },
+        {
+          "playerId": 1628384,
+          "name": "OG Anunoby",
+          "role": "F",
+          "minutes": 2388,
+          "baselineError": 0.40484301749668816,
+          "rotationError": -1.5607723080373592,
+          "absoluteErrorChange": 1.155929290540671,
+          "shotVolumeTerm": -0.5727720499256073,
+          "pointsPerFGATermIncludingFT": -0.9880002581117522
+        },
+        {
+          "playerId": 1629028,
+          "name": "Deandre Ayton",
+          "role": "C",
+          "minutes": 2039,
+          "baselineError": 0.08316217836628681,
+          "rotationError": -1.2716613452269847,
+          "absoluteErrorChange": 1.188499166860698,
+          "shotVolumeTerm": -1.4060568168088756,
+          "pointsPerFGATermIncludingFT": 0.13439547158189064
+        },
+        {
+          "playerId": 1627814,
+          "name": "Damion Lee",
+          "role": "G",
+          "minutes": 1512,
+          "baselineError": 0.5773193915988273,
+          "rotationError": 2.0414698377394433,
+          "absoluteErrorChange": 1.464150446140616,
+          "shotVolumeTerm": 1.7685825110463322,
+          "pointsPerFGATermIncludingFT": 0.27288732669311316
+        },
+        {
+          "playerId": 1629652,
+          "name": "Luguentz Dort",
+          "role": "F",
+          "minutes": 2273,
+          "baselineError": -0.18389876728661037,
+          "rotationError": -1.1242174861728458,
+          "absoluteErrorChange": 0.9403187188862354,
+          "shotVolumeTerm": -1.243427235760768,
+          "pointsPerFGATermIncludingFT": 0.11920974958792298
+        },
+        {
+          "playerId": 1627832,
+          "name": "Fred VanVleet",
+          "role": "G",
+          "minutes": 2535,
+          "baselineError": -0.739059616084262,
+          "rotationError": -1.5749664522212008,
+          "absoluteErrorChange": 0.8359068361369388,
+          "shotVolumeTerm": 0.1217178190585446,
+          "pointsPerFGATermIncludingFT": -1.6966842712797479
+        },
+        {
+          "playerId": 202681,
+          "name": "Kyrie Irving",
+          "role": "G",
+          "minutes": 2240,
+          "baselineError": -0.10223151426963284,
+          "rotationError": -1.0346003266484516,
+          "absoluteErrorChange": 0.9323688123788187,
+          "shotVolumeTerm": 0.8887690130926272,
+          "pointsPerFGATermIncludingFT": -1.9233693397410776
+        },
+        {
+          "playerId": 1629003,
+          "name": "Shake Milton",
+          "role": "G",
+          "minutes": 1568,
+          "baselineError": 1.710335817403287,
+          "rotationError": 3.0295686667882578,
+          "absoluteErrorChange": 1.3192328493849708,
+          "shotVolumeTerm": 2.057116143491133,
+          "pointsPerFGATermIncludingFT": 0.9724525232971247
+        },
+        {
+          "playerId": 1629111,
+          "name": "Jock Landale",
+          "role": "F",
+          "minutes": 980,
+          "baselineError": 0.02301607548935891,
+          "rotationError": 2.07621068487526,
+          "absoluteErrorChange": 2.0531946093859013,
+          "shotVolumeTerm": 1.9496498956245096,
+          "pointsPerFGATermIncludingFT": 0.12656078925075046
+        },
+        {
+          "playerId": 1630169,
+          "name": "Tyrese Haliburton",
+          "role": "G",
+          "minutes": 1878,
+          "baselineError": -0.47762352816108944,
+          "rotationError": -1.515623155693806,
+          "absoluteErrorChange": 1.0379996275327166,
+          "shotVolumeTerm": -1.0074833934998693,
+          "pointsPerFGATermIncludingFT": -0.5081397621939348
+        }
+      ]
+    },
+    {
+      "season": "2023-24",
+      "largestWeightedRegressions": [
+        {
+          "playerId": 203081,
+          "name": "Damian Lillard",
+          "role": "G",
+          "minutes": 2579,
+          "baselineError": -0.4933203022523607,
+          "rotationError": -2.395156823640459,
+          "absoluteErrorChange": 1.9018365213880983,
+          "shotVolumeTerm": -1.0396556607095164,
+          "pointsPerFGATermIncludingFT": -1.3555011629309421
+        },
+        {
+          "playerId": 201939,
+          "name": "Stephen Curry",
+          "role": "G",
+          "minutes": 2420,
+          "baselineError": 0.35494312478310874,
+          "rotationError": -1.8013716826721229,
+          "absoluteErrorChange": 1.4464285578890141,
+          "shotVolumeTerm": -0.9653671949845447,
+          "pointsPerFGATermIncludingFT": -0.8360044876875807
+        },
+        {
+          "playerId": 1628381,
+          "name": "John Collins",
+          "role": "C",
+          "minutes": 1899,
+          "baselineError": -0.22544487330522855,
+          "rotationError": -1.7883382236346996,
+          "absoluteErrorChange": 1.562893350329471,
+          "shotVolumeTerm": -1.301753540497198,
+          "pointsPerFGATermIncludingFT": -0.4865846831375017
+        },
+        {
+          "playerId": 1626166,
+          "name": "Cameron Payne",
+          "role": "G",
+          "minutes": 1304,
+          "baselineError": -0.08463336866148907,
+          "rotationError": 2.281993706157433,
+          "absoluteErrorChange": 2.197360337495944,
+          "shotVolumeTerm": 1.839232489103939,
+          "pointsPerFGATermIncludingFT": 0.44276121705349597
+        },
+        {
+          "playerId": 203084,
+          "name": "Harrison Barnes",
+          "role": "F",
+          "minutes": 2379,
+          "baselineError": 0.10417383905810063,
+          "rotationError": -1.2302095231410544,
+          "absoluteErrorChange": 1.1260356840829537,
+          "shotVolumeTerm": -0.6449272812328313,
+          "pointsPerFGATermIncludingFT": -0.5852822419082222
+        },
+        {
+          "playerId": 1629652,
+          "name": "Luguentz Dort",
+          "role": "F",
+          "minutes": 2246,
+          "baselineError": 0.23217515787960963,
+          "rotationError": -1.334669989131104,
+          "absoluteErrorChange": 1.1024948312514944,
+          "shotVolumeTerm": -1.0079372092518748,
+          "pointsPerFGATermIncludingFT": -0.3267327798792295
+        },
+        {
+          "playerId": 1630228,
+          "name": "Jonathan Kuminga",
+          "role": "F",
+          "minutes": 1951,
+          "baselineError": -0.011656215241334422,
+          "rotationError": -1.2176337087755904,
+          "absoluteErrorChange": 1.205977493534256,
+          "shotVolumeTerm": -0.3827494327737766,
+          "pointsPerFGATermIncludingFT": -0.8348842760018133
+        },
+        {
+          "playerId": 1629014,
+          "name": "Anfernee Simons",
+          "role": "G",
+          "minutes": 1583,
+          "baselineError": -0.053192672896237525,
+          "rotationError": -1.464651059525881,
+          "absoluteErrorChange": 1.4114583866296435,
+          "shotVolumeTerm": 0.16621354496141036,
+          "pointsPerFGATermIncludingFT": -1.6308646044872948
+        },
+        {
+          "playerId": 202681,
+          "name": "Kyrie Irving",
+          "role": "G",
+          "minutes": 2029,
+          "baselineError": 0.34561108557989684,
+          "rotationError": -1.4283347700502311,
+          "absoluteErrorChange": 1.0827236844703343,
+          "shotVolumeTerm": -0.8390118262715105,
+          "pointsPerFGATermIncludingFT": -0.5893229437787187
+        },
+        {
+          "playerId": 204001,
+          "name": "Kristaps Porzi\u0146\u0123is",
+          "role": "C",
+          "minutes": 1689,
+          "baselineError": -1.0381213518107337,
+          "rotationError": -2.3147720982693194,
+          "absoluteErrorChange": 1.2766507464585857,
+          "shotVolumeTerm": -0.7293468810562448,
+          "pointsPerFGATermIncludingFT": -1.5854252172130738
+        },
+        {
+          "playerId": 1628371,
+          "name": "Jonathan Isaac",
+          "role": "C",
+          "minutes": 915,
+          "baselineError": 0.9288089088163574,
+          "rotationError": 3.2295306829843575,
+          "absoluteErrorChange": 2.300721774168,
+          "shotVolumeTerm": 2.0571712002076468,
+          "pointsPerFGATermIncludingFT": 1.1723594827767105
+        },
+        {
+          "playerId": 203944,
+          "name": "Julius Randle",
+          "role": "F",
+          "minutes": 1628,
+          "baselineError": -0.682436821972825,
+          "rotationError": -1.9712802919115902,
+          "absoluteErrorChange": 1.2888434699387652,
+          "shotVolumeTerm": -0.5903468443728677,
+          "pointsPerFGATermIncludingFT": -1.3809334475387216
+        },
+        {
+          "playerId": 1628369,
+          "name": "Jayson Tatum",
+          "role": "F",
+          "minutes": 2648,
+          "baselineError": 0.0554267975624434,
+          "rotationError": -0.840344967913154,
+          "absoluteErrorChange": 0.7849181703507107,
+          "shotVolumeTerm": 0.4053659042824305,
+          "pointsPerFGATermIncludingFT": -1.2457108721955805
+        },
+        {
+          "playerId": 1628978,
+          "name": "Donte DiVincenzo",
+          "role": "G",
+          "minutes": 2363,
+          "baselineError": 0.8311073786400023,
+          "rotationError": 1.6884294164631761,
+          "absoluteErrorChange": 0.8573220378231738,
+          "shotVolumeTerm": 1.0052263860386665,
+          "pointsPerFGATermIncludingFT": 0.6832030304245104
+        },
+        {
+          "playerId": 1630198,
+          "name": "Isaiah Joe",
+          "role": "G",
+          "minutes": 1444,
+          "baselineError": 0.9035030559804422,
+          "rotationError": 2.304472447771774,
+          "absoluteErrorChange": 1.4009693917913317,
+          "shotVolumeTerm": 0.7255288499020189,
+          "pointsPerFGATermIncludingFT": 1.5789435978697566
+        }
+      ]
+    },
+    {
+      "season": "2024-25",
+      "largestWeightedRegressions": [
+        {
+          "playerId": 1630217,
+          "name": "Desmond Bane",
+          "role": "G",
+          "minutes": 2203,
+          "baselineError": -0.25902846569924876,
+          "rotationError": -1.6201034447007814,
+          "absoluteErrorChange": 1.3610749790015326,
+          "shotVolumeTerm": -1.0750856253250571,
+          "pointsPerFGATermIncludingFT": -0.5450178193757237
+        },
+        {
+          "playerId": 1629048,
+          "name": "Goga Bitadze",
+          "role": "C",
+          "minutes": 1435,
+          "baselineError": 0.4420166372913297,
+          "rotationError": 2.4530961673905516,
+          "absoluteErrorChange": 2.011079530099222,
+          "shotVolumeTerm": 2.3593386070794637,
+          "pointsPerFGATermIncludingFT": 0.09375756031108792
+        },
+        {
+          "playerId": 1630202,
+          "name": "Payton Pritchard",
+          "role": "G",
+          "minutes": 2275,
+          "baselineError": 0.8964788675443138,
+          "rotationError": 2.145912925439113,
+          "absoluteErrorChange": 1.249434057894799,
+          "shotVolumeTerm": 1.3293630888896306,
+          "pointsPerFGATermIncludingFT": 0.8165498365494821
+        },
+        {
+          "playerId": 1629652,
+          "name": "Luguentz Dort",
+          "role": "F",
+          "minutes": 2077,
+          "baselineError": 0.11128791417271167,
+          "rotationError": -1.3958415281048708,
+          "absoluteErrorChange": 1.2845536139321592,
+          "shotVolumeTerm": -1.0104780767127703,
+          "pointsPerFGATermIncludingFT": -0.38536345139210104
+        },
+        {
+          "playerId": 1629060,
+          "name": "Rui Hachimura",
+          "role": "F",
+          "minutes": 1866,
+          "baselineError": -0.11507894906058524,
+          "rotationError": -1.5121465880976181,
+          "absoluteErrorChange": 1.397067639037033,
+          "shotVolumeTerm": -1.4403696823429832,
+          "pointsPerFGATermIncludingFT": -0.07177690575463504
+        },
+        {
+          "playerId": 1630700,
+          "name": "Dyson Daniels",
+          "role": "G",
+          "minutes": 2573,
+          "baselineError": -0.2304421495935376,
+          "rotationError": -1.167304081552702,
+          "absoluteErrorChange": 0.9368619319591645,
+          "shotVolumeTerm": -0.5761791771487419,
+          "pointsPerFGATermIncludingFT": -0.5911249044039605
+        },
+        {
+          "playerId": 1641731,
+          "name": "Bilal Coulibaly",
+          "role": "F",
+          "minutes": 1948,
+          "baselineError": -0.10613696019856,
+          "rotationError": -1.3094227029840955,
+          "absoluteErrorChange": 1.2032857427855355,
+          "shotVolumeTerm": 0.008568345215310332,
+          "pointsPerFGATermIncludingFT": -1.3179910481994068
+        },
+        {
+          "playerId": 1641810,
+          "name": "Antonio Reeves",
+          "role": "G",
+          "minutes": 660,
+          "baselineError": 0.05717977014304765,
+          "rotationError": 3.5276401514388347,
+          "absoluteErrorChange": 3.470460381295787,
+          "shotVolumeTerm": 2.543552646607839,
+          "pointsPerFGATermIncludingFT": 0.9840875048309937
+        },
+        {
+          "playerId": 203552,
+          "name": "Seth Curry",
+          "role": "G",
+          "minutes": 1059,
+          "baselineError": -0.05910053042663144,
+          "rotationError": 2.1818792676085206,
+          "absoluteErrorChange": 2.122778737181889,
+          "shotVolumeTerm": 2.014945006722615,
+          "pointsPerFGATermIncludingFT": 0.16693426088590713
+        },
+        {
+          "playerId": 1631096,
+          "name": "Chet Holmgren",
+          "role": "F",
+          "minutes": 878,
+          "baselineError": -0.5300706921773042,
+          "rotationError": -2.9964733810755924,
+          "absoluteErrorChange": 2.466402688898288,
+          "shotVolumeTerm": -1.8610069273927554,
+          "pointsPerFGATermIncludingFT": -1.1354664536828363
+        },
+        {
+          "playerId": 1629027,
+          "name": "Trae Young",
+          "role": "G",
+          "minutes": 2738,
+          "baselineError": 0.03554009022191451,
+          "rotationError": -0.803628295405094,
+          "absoluteErrorChange": 0.7680882051831794,
+          "shotVolumeTerm": 0.7377963264127909,
+          "pointsPerFGATermIncludingFT": -1.5414246218178873
+        },
+        {
+          "playerId": 201942,
+          "name": "DeMar DeRozan",
+          "role": "F",
+          "minutes": 2767,
+          "baselineError": -0.8251735526031645,
+          "rotationError": -1.558313857801128,
+          "absoluteErrorChange": 0.7331403051979635,
+          "shotVolumeTerm": -0.41817080430561127,
+          "pointsPerFGATermIncludingFT": -1.140143053495517
+        },
+        {
+          "playerId": 203897,
+          "name": "Zach LaVine",
+          "role": "F",
+          "minutes": 2610,
+          "baselineError": -0.5473061883977337,
+          "rotationError": -1.3038324981254412,
+          "absoluteErrorChange": 0.7565263097277075,
+          "shotVolumeTerm": -1.0457159011609094,
+          "pointsPerFGATermIncludingFT": -0.25811659696453026
+        },
+        {
+          "playerId": 203468,
+          "name": "CJ McCollum",
+          "role": "G",
+          "minutes": 1834,
+          "baselineError": -0.3718743819295476,
+          "rotationError": -1.4196095933913213,
+          "absoluteErrorChange": 1.0477352114617737,
+          "shotVolumeTerm": -1.073525213372646,
+          "pointsPerFGATermIncludingFT": -0.3460843800186786
+        },
+        {
+          "playerId": 203903,
+          "name": "Jordan Clarkson",
+          "role": "G",
+          "minutes": 965,
+          "baselineError": -0.42132309656471634,
+          "rotationError": -2.3983779219409023,
+          "absoluteErrorChange": 1.977054825376186,
+          "shotVolumeTerm": -1.4903546217306964,
+          "pointsPerFGATermIncludingFT": -0.9080233002102074
+        }
+      ]
+    },
+    {
+      "season": "2025-26",
+      "largestWeightedRegressions": [
+        {
+          "playerId": 1627750,
+          "name": "Jamal Murray",
+          "role": "G",
+          "minutes": 2651.891666666667,
+          "baselineError": -0.21365236742679627,
+          "rotationError": -1.7746564711528023,
+          "absoluteErrorChange": 1.561004103726006,
+          "shotVolumeTerm": -0.289466040313311,
+          "pointsPerFGATermIncludingFT": -1.4851904308394894
+        },
+        {
+          "playerId": 1629638,
+          "name": "Nickeil Alexander-Walker",
+          "role": "G",
+          "minutes": 2603.1766666666667,
+          "baselineError": 0.14320893151225533,
+          "rotationError": -1.3683988600633192,
+          "absoluteErrorChange": 1.225189928551064,
+          "shotVolumeTerm": -0.3637288070675704,
+          "pointsPerFGATermIncludingFT": -1.0046700529957495
+        },
+        {
+          "playerId": 1630202,
+          "name": "Payton Pritchard",
+          "role": "G",
+          "minutes": 2555.5233333333335,
+          "baselineError": 0.011908387010258537,
+          "rotationError": 1.1789738541174444,
+          "absoluteErrorChange": 1.1670654671071858,
+          "shotVolumeTerm": 0.7220113994017372,
+          "pointsPerFGATermIncludingFT": 0.4569624547157076
+        },
+        {
+          "playerId": 1630577,
+          "name": "Julian Champagnie",
+          "role": "F",
+          "minutes": 2265.963333333333,
+          "baselineError": -0.13808929942215364,
+          "rotationError": -1.400138158463749,
+          "absoluteErrorChange": 1.2620488590415953,
+          "shotVolumeTerm": -0.9673787040556732,
+          "pointsPerFGATermIncludingFT": -0.4327594544080755
+        },
+        {
+          "playerId": 1631221,
+          "name": "Collin Gillespie",
+          "role": "G",
+          "minutes": 2281.8016666666667,
+          "baselineError": 0.10609809406708415,
+          "rotationError": 1.3585366188398442,
+          "absoluteErrorChange": 1.25243852477276,
+          "shotVolumeTerm": 0.7222806978502246,
+          "pointsPerFGATermIncludingFT": 0.6362559209896218
+        },
+        {
+          "playerId": 1630166,
+          "name": "Deni Avdija",
+          "role": "G",
+          "minutes": 2199.385,
+          "baselineError": -0.1439032366019326,
+          "rotationError": -1.4396576350315549,
+          "absoluteErrorChange": 1.2957543984296223,
+          "shotVolumeTerm": -0.04806664089615535,
+          "pointsPerFGATermIncludingFT": -1.391590994135397
+        },
+        {
+          "playerId": 1630217,
+          "name": "Desmond Bane",
+          "role": "G",
+          "minutes": 2756.045,
+          "baselineError": -0.08021324767962668,
+          "rotationError": -1.0821045525910336,
+          "absoluteErrorChange": 1.0018913049114069,
+          "shotVolumeTerm": -0.05945640448501135,
+          "pointsPerFGATermIncludingFT": -1.0226481481060212
+        },
+        {
+          "playerId": 1630163,
+          "name": "LaMelo Ball",
+          "role": "G",
+          "minutes": 2017.4466666666667,
+          "baselineError": 0.07261976328736353,
+          "rotationError": -1.2935524235636038,
+          "absoluteErrorChange": 1.2209326602762403,
+          "shotVolumeTerm": -0.5689422397701529,
+          "pointsPerFGATermIncludingFT": -0.724610183793449
+        },
+        {
+          "playerId": 1631170,
+          "name": "Jaime Jaquez Jr.",
+          "role": "F",
+          "minutes": 2121.21,
+          "baselineError": -0.36378109448834195,
+          "rotationError": -1.4640910402157346,
+          "absoluteErrorChange": 1.1003099457273926,
+          "shotVolumeTerm": -0.5776130272845216,
+          "pointsPerFGATermIncludingFT": -0.8864780129312151
+        },
+        {
+          "playerId": 1626162,
+          "name": "Kelly Oubre Jr.",
+          "role": "F",
+          "minutes": 1574.3116666666667,
+          "baselineError": 0.24907458432802443,
+          "rotationError": -1.6377689450698565,
+          "absoluteErrorChange": 1.388694360741832,
+          "shotVolumeTerm": -0.900995121857458,
+          "pointsPerFGATermIncludingFT": -0.7367738232123976
+        },
+        {
+          "playerId": 1631248,
+          "name": "Baylor Scheierman",
+          "role": "G",
+          "minutes": 1429.3033333333333,
+          "baselineError": 0.32354480593955337,
+          "rotationError": 1.6720790810646537,
+          "absoluteErrorChange": 1.3485342751251004,
+          "shotVolumeTerm": 0.8438726320409028,
+          "pointsPerFGATermIncludingFT": 0.8282064490237506
+        },
+        {
+          "playerId": 202699,
+          "name": "Tobias Harris",
+          "role": "F",
+          "minutes": 1745.45,
+          "baselineError": -0.25993122681078873,
+          "rotationError": -1.3493430171047631,
+          "absoluteErrorChange": 1.0894117902939744,
+          "shotVolumeTerm": -0.12911836249594194,
+          "pointsPerFGATermIncludingFT": -1.2202246546088218
+        },
+        {
+          "playerId": 1630568,
+          "name": "Luka Garza",
+          "role": "C",
+          "minutes": 1117.9083333333333,
+          "baselineError": 0.8919536273766191,
+          "rotationError": 2.5294433019862304,
+          "absoluteErrorChange": 1.6374896746096113,
+          "shotVolumeTerm": 1.7040368477651548,
+          "pointsPerFGATermIncludingFT": 0.8254064542210744
+        },
+        {
+          "playerId": 1630170,
+          "name": "Devin Vassell",
+          "role": "F",
+          "minutes": 2044.2316666666666,
+          "baselineError": -0.4119107266661928,
+          "rotationError": -1.2830972217889993,
+          "absoluteErrorChange": 0.8711864951228065,
+          "shotVolumeTerm": -0.7925254493303004,
+          "pointsPerFGATermIncludingFT": -0.49057177245870126
+        },
+        {
+          "playerId": 1628379,
+          "name": "Luke Kennard",
+          "role": "G",
+          "minutes": 1680.4766666666667,
+          "baselineError": -0.05670621541134935,
+          "rotationError": 1.1151284552183824,
+          "absoluteErrorChange": 1.058422239807033,
+          "shotVolumeTerm": 0.6647965843243451,
+          "pointsPerFGATermIncludingFT": 0.45033187089403764
+        }
+      ]
+    }
+  ]
+}

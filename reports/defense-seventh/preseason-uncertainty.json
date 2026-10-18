@@ -1,0 +1,165 @@
+{
+  "uncertainty": {
+    "netRMSE": {
+      "standardError": 0.07008093774340556,
+      "ci95": [
+        6.897440998010716,
+        7.173403807759125
+      ]
+    },
+    "netCorrelation": {
+      "standardError": 0.007219677331687668,
+      "ci95": [
+        0.5088807807203637,
+        0.5373044272859723
+      ]
+    },
+    "netSDRatio": {
+      "standardError": 0.011772853475038116,
+      "ci95": [
+        1.2766017489789458,
+        1.3228424292148624
+      ]
+    },
+    "calibrationSlope": {
+      "standardError": 0.006720965650873666,
+      "ci95": [
+        0.39066197675531183,
+        0.4170666431361833
+      ]
+    },
+    "calibrationError": {
+      "standardError": 0.006720965650873671,
+      "ci95": [
+        0.5829390078867048,
+        0.6094404373879354
+      ]
+    },
+    "residualSD": {
+      "standardError": 0.09027105267070014,
+      "ci95": [
+        17.302375641909542,
+        17.65371175653297
+      ]
+    },
+    "winMAE": {
+      "standardError": 0.15992525141973865,
+      "ci95": [
+        10.923333333333334,
+        11.533333333333333
+      ]
+    },
+    "winRMSE": {
+      "standardError": 0.16441833530908578,
+      "ci95": [
+        12.567928760672274,
+        13.213629327327144
+      ]
+    },
+    "winSlope": {
+      "standardError": 0.013805787550715588,
+      "ci95": [
+        1.6002106779942284,
+        1.6540315928196556
+      ]
+    },
+    "defenseCorrelation": {
+      "standardError": 0.014034910015331241,
+      "ci95": [
+        0.4713518519528124,
+        0.5271553877238326
+      ]
+    },
+    "defenseSDRatio": {
+      "standardError": 0.011033585768735374,
+      "ci95": [
+        0.8498631401274976,
+        0.8931238396870117
+      ]
+    }
+  },
+  "simple": {
+    "metrics": {
+      "netRMSE": 5.863764988247601,
+      "netCorrelation": 0.5235102862644447,
+      "netSDRatio": 0.9639891344670283,
+      "calibrationSlope": 0.5430665839961815,
+      "calibrationError": 0.45693341600381854,
+      "residualSD": null,
+      "winMAE": 10.347117480487295,
+      "winRMSE": 13.14125915868674,
+      "winSlope": 2.186662456351056,
+      "defenseCorrelation": null,
+      "defenseSDRatio": null
+    },
+    "exponent": 13.332023554698662,
+    "definition": "Previous2024-25 full team net margin and training-season fitted Pythagorean exponent; evaluation comparator only, no team numbers in player simulator inputs."
+  },
+  "pairedSimple": {
+    "netRMSE": {
+      "estimate": 1.1617636323876797,
+      "standardError": 0.07172112369065889,
+      "ci95": [
+        1.0265956428235006,
+        1.3084925318614653
+      ]
+    },
+    "netCorrelation": {
+      "estimate": 0.0011484001349768569,
+      "standardError": 0.0072007397508023286,
+      "ci95": [
+        -0.014915661213914966,
+        0.013402918114932105
+      ]
+    },
+    "netSDRatio": {
+      "estimate": 0.33259732610169757,
+      "standardError": 0.011723984592217039,
+      "ci95": [
+        0.31123232368758236,
+        0.3574499940831045
+      ]
+    },
+    "calibrationSlope": {
+      "estimate": -0.13842045945675907,
+      "standardError": 0.0068785364098698015,
+      "ci95": [
+        -0.15225382784600877,
+        -0.1253918567238959
+      ]
+    },
+    "calibrationError": {
+      "estimate": 0.13842045945675907,
+      "standardError": 0.006878536409869808,
+      "ci95": [
+        0.12539471794798485,
+        0.15232818312860275
+      ]
+    },
+    "winMAE": {
+      "estimate": 0.8662158528460395,
+      "standardError": 0.16195409835814578,
+      "ci95": [
+        0.5728825195127047,
+        1.2028825195127002
+      ]
+    },
+    "winRMSE": {
+      "estimate": -0.28729738290206974,
+      "standardError": 0.1662210513151708,
+      "ci95": [
+        -0.5947789085661253,
+        0.056909906250512066
+      ]
+    },
+    "winSlope": {
+      "estimate": -0.5580697246316633,
+      "standardError": 0.014454170684950397,
+      "ci95": [
+        -0.5859777863542204,
+        -0.5304316871078829
+      ]
+    }
+  },
+  "scope": "Seed bootstrap includes assumed availability randomness and engine randomness. Does not quantify uncertainty in injuries, rotation rules, roster changes or abilities."
+}

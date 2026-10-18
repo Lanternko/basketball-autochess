@@ -1,0 +1,40 @@
+{
+  "version": "oreb-full-possession-diagnostic-1",
+  "registeredUTC": "2026-10-14T23:20:48.404486+00:00",
+  "seasons": [
+    "2022-23",
+    "2023-24",
+    "2024-25",
+    "2025-26"
+  ],
+  "seeds": [
+    20261012,
+    20261013,
+    20261014
+  ],
+  "status": "all seasons seen-data; descriptive diagnosis, no engine/card changes or adoption test",
+  "base": "pure-oreb-turnover-time-1; retain individual OREB allocation improvement",
+  "definitions": {
+    "anchor": "valid individual offensive rebound of missed FG; exclude FT and team rebound anchors",
+    "remainingPoints": "own-team FG and ordinary FT points strictly after anchor through end of same possession, including subsequent offensive rebounds",
+    "firstAnchor": "first eligible player FG OREB in each possession; one record per possession avoids counting the same scoring outcome twice",
+    "allAnchors": "each eligible anchor separately; overlap intentional, never sum as team scoring contribution",
+    "specialFT": "exclude whole anchored possession containing technical/flagrant/clearpath/awayfromplay/transitiontake FTs in either source",
+    "end": "real: frozen normalizeRealGame possession boundaries; sim: next POSSESSION or PERIOD_END; period end zero-points retained",
+    "pointAudit": "real require frozen pointsValid; exclude invalid game and list; sim assert rerun matches and full teams stats equal frozen same-seed output",
+    "offenseError": "center(predicted points/game - actual points/game)",
+    "defenseError": "center(actual allowed points/game - predicted allowed points/game); positive = defense too strong",
+    "identity": "net MSE = offense MSE + defense MSE + 2*covariance; repeat in efficiency proxy space to distinguish pace effect",
+    "interval": "20000 franchise + seed bootstrap draws; same franchise sample across four seasons, paired seed sample; equal-season pooled ratio for OREB; 95% only descriptive, no selection",
+    "acceptancePolicy": "individual box-score accuracy is an independent objective; retain supported improvements absent significant team harm; no requirement for each change to improve wins"
+  },
+  "bootstrapSeed": 20261016,
+  "bootstrapDraws": 20000,
+  "inputHashes": {
+    "reports\\defense-tenth\\step4-rebounds-turnover-time\\protocol.json": "3f3bdd930871a5b5aa0fed2aa643430295c48d2ba79477da800aad585e4a0f5c",
+    "reports\\defense-tenth\\step4-rebounds-turnover-time\\seed-arrays.json": "9eff9876cb9659bc5b46d0e22dceed0014c9fc38a938aba85d4a9cd15f3c78fc",
+    "reports\\defense-tenth\\step4-rebounds-turnover-time\\adapter.mjs": "f79c352899be469dd04e71be6b711bf81e83056d4f0981fa35fd94af6e71d1bc",
+    "reports\\defense-tenth\\step4-rebounds-turnover-time\\worker.mjs": "5d90a867ed3b10388d39119de45991979c18371e9f07ab039f9fde79fb116c18",
+    "src\\defense_pbp_analysis.js": "9fa9ecacd1b8a649d708098277e2b579be57a83299e094d730c6b92305cc8e00"
+  }
+}

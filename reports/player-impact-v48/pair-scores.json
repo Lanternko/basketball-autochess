@@ -1,0 +1,558 @@
+{
+  "scope": "2025-26 strict games with Curry active. All3 baseline seeds exact gameplay parity. Real stint seconds vs exact simulated player-second intervals. Conditional rates are descriptive; neither a causal rotation experiment nor a gameplay change.",
+  "curryGames": 41,
+  "rows": [
+    {
+      "playerId": 201143,
+      "name": "Al Horford",
+      "arms": {
+        "on": {
+          "actualMinutes": 291.52666666666664,
+          "predictedMinutes": 313.06388888888944,
+          "actualTwoAttempts": 29,
+          "predictedTwoAttempts": 27.333333333333332,
+          "actualRAattempts": 13,
+          "predictedRAattempts": 8.666666666666666,
+          "actualRAper36": 1.6053419927279382,
+          "predictedRAper36": 0.9966016876214459
+        },
+        "off": {
+          "actualMinutes": 245.25333333333327,
+          "predictedMinutes": 248.03777777777876,
+          "actualTwoAttempts": 29,
+          "predictedTwoAttempts": 31.333333333333332,
+          "actualRAattempts": 5,
+          "predictedRAattempts": 9.666666666666666,
+          "actualRAper36": 0.7339349787974341,
+          "predictedRAper36": 1.4030120859725614
+        }
+      }
+    },
+    {
+      "playerId": 201939,
+      "name": "Stephen Curry",
+      "arms": {
+        "on": {
+          "actualMinutes": 1280.1416666666664,
+          "predictedMinutes": 1221.3305555555464,
+          "actualTwoAttempts": 302,
+          "predictedTwoAttempts": 276.0,
+          "actualRAattempts": 126,
+          "predictedRAattempts": 107.66666666666667,
+          "actualRAper36": 3.543357831490005,
+          "predictedRAper36": 3.173588003975651
+        },
+        "off": {
+          "actualMinutes": 0.0,
+          "predictedMinutes": 0.0,
+          "actualTwoAttempts": 0,
+          "predictedTwoAttempts": 0,
+          "actualRAattempts": 0,
+          "predictedRAattempts": 0,
+          "actualRAper36": null,
+          "predictedRAper36": null
+        }
+      }
+    },
+    {
+      "playerId": 202710,
+      "name": "Jimmy Butler III",
+      "arms": {
+        "on": {
+          "actualMinutes": 568.1049999999997,
+          "predictedMinutes": 659.7305555555547,
+          "actualTwoAttempts": 152,
+          "predictedTwoAttempts": 171.33333333333334,
+          "actualRAattempts": 98,
+          "predictedRAattempts": 83.0,
+          "actualRAper36": 6.210119608171028,
+          "predictedRAper36": 4.529121737409638
+        },
+        "off": {
+          "actualMinutes": 418.3383333333334,
+          "predictedMinutes": 286.3233333333344,
+          "actualTwoAttempts": 139,
+          "predictedTwoAttempts": 90.0,
+          "actualRAattempts": 48,
+          "predictedRAattempts": 47.333333333333336,
+          "actualRAper36": 4.130627920781822,
+          "predictedRAper36": 5.951313782786339
+        }
+      }
+    },
+    {
+      "playerId": 203110,
+      "name": "Draymond Green",
+      "arms": {
+        "on": {
+          "actualMinutes": 848.1949999999997,
+          "predictedMinutes": 676.9194444444407,
+          "actualTwoAttempts": 91,
+          "predictedTwoAttempts": 56.333333333333336,
+          "actualRAattempts": 62,
+          "predictedRAattempts": 41.333333333333336,
+          "actualRAper36": 2.631470357641817,
+          "predictedRAper36": 2.1981936140440266
+        },
+        "off": {
+          "actualMinutes": 162.40999999999997,
+          "predictedMinutes": 342.05888888888927,
+          "actualTwoAttempts": 12,
+          "predictedTwoAttempts": 37.666666666666664,
+          "actualRAattempts": 9,
+          "predictedRAattempts": 23.666666666666668,
+          "actualRAper36": 1.994951049812204,
+          "predictedRAper36": 2.4907991801281755
+        }
+      }
+    },
+    {
+      "playerId": 203552,
+      "name": "Seth Curry",
+      "arms": {
+        "on": {
+          "actualMinutes": 16.55,
+          "predictedMinutes": 19.551666666666666,
+          "actualTwoAttempts": 1,
+          "predictedTwoAttempts": 3.0,
+          "actualRAattempts": 0,
+          "predictedRAattempts": 0,
+          "actualRAper36": null,
+          "predictedRAper36": null
+        },
+        "off": {
+          "actualMinutes": 24.566666666666666,
+          "predictedMinutes": 22.746666666666673,
+          "actualTwoAttempts": 3,
+          "predictedTwoAttempts": 3.3333333333333335,
+          "actualRAattempts": 0,
+          "predictedRAattempts": 0.3333333333333333,
+          "actualRAper36": 0.0,
+          "predictedRAper36": 0.5275498241500585
+        }
+      }
+    },
+    {
+      "playerId": 204001,
+      "name": "Kristaps Porzi\u0146\u0123is",
+      "arms": {
+        "on": {
+          "actualMinutes": 51.43333333333333,
+          "predictedMinutes": 40.91055555555551,
+          "actualTwoAttempts": 10,
+          "predictedTwoAttempts": 8.666666666666666,
+          "actualRAattempts": 1,
+          "predictedRAattempts": 3.0,
+          "actualRAper36": 0.6999351911860013,
+          "predictedRAper36": 2.6399054848653596
+        },
+        "off": {
+          "actualMinutes": 21.028333333333332,
+          "predictedMinutes": 32.925000000000004,
+          "actualTwoAttempts": 8,
+          "predictedTwoAttempts": 8.0,
+          "actualRAattempts": 4,
+          "predictedRAattempts": 2.0,
+          "actualRAper36": 6.84790362209717,
+          "predictedRAper36": 2.186788154897494
+        }
+      }
+    },
+    {
+      "playerId": 1627741,
+      "name": "Buddy Hield",
+      "arms": {
+        "on": {
+          "actualMinutes": 204.82333333333332,
+          "predictedMinutes": 230.12777777777833,
+          "actualTwoAttempts": 19,
+          "predictedTwoAttempts": 26.666666666666664,
+          "actualRAattempts": 15,
+          "predictedRAattempts": 16.333333333333332,
+          "actualRAper36": 2.6364183768125375,
+          "predictedRAper36": 2.5551022378871577
+        },
+        "off": {
+          "actualMinutes": 257.02000000000004,
+          "predictedMinutes": 226.09500000000025,
+          "actualTwoAttempts": 29,
+          "predictedTwoAttempts": 39.666666666666664,
+          "actualRAattempts": 17,
+          "predictedRAattempts": 21.333333333333332,
+          "actualRAper36": 2.381137654657225,
+          "predictedRAper36": 3.3968022291514592
+        }
+      }
+    },
+    {
+      "playerId": 1627780,
+      "name": "Gary Payton II",
+      "arms": {
+        "on": {
+          "actualMinutes": 413.7749999999999,
+          "predictedMinutes": 215.07666666666736,
+          "actualTwoAttempts": 94,
+          "predictedTwoAttempts": 44.33333333333333,
+          "actualRAattempts": 74,
+          "predictedRAattempts": 31.333333333333332,
+          "actualRAper36": 6.4382816748232745,
+          "predictedRAper36": 5.2446414456860175
+        },
+        "off": {
+          "actualMinutes": 53.88666666666667,
+          "predictedMinutes": 305.1166666666672,
+          "actualTwoAttempts": 8,
+          "predictedTwoAttempts": 68.33333333333333,
+          "actualRAattempts": 3,
+          "predictedRAattempts": 48.666666666666664,
+          "actualRAper36": 2.0042063590251145,
+          "predictedRAper36": 5.742065876440695
+        }
+      }
+    },
+    {
+      "playerId": 1629001,
+      "name": "De'Anthony Melton",
+      "arms": {
+        "on": {
+          "actualMinutes": 242.42333333333337,
+          "predictedMinutes": 251.61111111111148,
+          "actualTwoAttempts": 38,
+          "predictedTwoAttempts": 52.0,
+          "actualRAattempts": 15,
+          "predictedRAattempts": 20.333333333333332,
+          "actualRAper36": 2.227508353156324,
+          "predictedRAper36": 2.9092514903952265
+        },
+        "off": {
+          "actualMinutes": 280.74,
+          "predictedMinutes": 238.69055555555605,
+          "actualTwoAttempts": 74,
+          "predictedTwoAttempts": 60.66666666666667,
+          "actualRAattempts": 34,
+          "predictedRAattempts": 28.0,
+          "actualRAper36": 4.359905962812566,
+          "predictedRAper36": 4.223040989845049
+        }
+      }
+    },
+    {
+      "playerId": 1629646,
+      "name": "Charles Bassey",
+      "arms": {
+        "on": {
+          "actualMinutes": 23.52,
+          "predictedMinutes": 35.99333333333332,
+          "actualTwoAttempts": 10,
+          "predictedTwoAttempts": 10.333333333333334,
+          "actualRAattempts": 5,
+          "predictedRAattempts": 6.0,
+          "actualRAper36": 7.653061224489796,
+          "predictedRAper36": 6.001111316910542
+        },
+        "off": {
+          "actualMinutes": 47.1,
+          "predictedMinutes": 35.661111111111104,
+          "actualTwoAttempts": 8,
+          "predictedTwoAttempts": 13.333333333333332,
+          "actualRAattempts": 4,
+          "predictedRAattempts": 6.0,
+          "actualRAper36": 3.0573248407643314,
+          "predictedRAper36": 6.057018227138185
+        }
+      }
+    },
+    {
+      "playerId": 1630228,
+      "name": "Jonathan Kuminga",
+      "arms": {
+        "on": {
+          "actualMinutes": 246.4516666666667,
+          "predictedMinutes": 158.33111111111117,
+          "actualTwoAttempts": 59,
+          "predictedTwoAttempts": 29.0,
+          "actualRAattempts": 35,
+          "predictedRAattempts": 16.333333333333332,
+          "actualRAper36": 5.112564329719823,
+          "predictedRAper36": 3.7137363331415165
+        },
+        "off": {
+          "actualMinutes": 47.0,
+          "predictedMinutes": 121.52277777777782,
+          "actualTwoAttempts": 15,
+          "predictedTwoAttempts": 38.666666666666664,
+          "actualRAattempts": 8,
+          "predictedRAattempts": 17.0,
+          "actualRAper36": 6.127659574468085,
+          "predictedRAper36": 5.036092913537012
+        }
+      }
+    },
+    {
+      "playerId": 1630311,
+      "name": "Pat Spencer",
+      "arms": {
+        "on": {
+          "actualMinutes": 52.61833333333333,
+          "predictedMinutes": 124.7877777777778,
+          "actualTwoAttempts": 10,
+          "predictedTwoAttempts": 24.666666666666668,
+          "actualRAattempts": 1,
+          "predictedRAattempts": 6.0,
+          "actualRAper36": 0.6841721833328055,
+          "predictedRAper36": 1.7309387493433293
+        },
+        "off": {
+          "actualMinutes": 200.815,
+          "predictedMinutes": 122.99833333333342,
+          "actualTwoAttempts": 36,
+          "predictedTwoAttempts": 28.333333333333332,
+          "actualRAattempts": 10,
+          "predictedRAattempts": 7.0,
+          "actualRAper36": 1.7926947688170705,
+          "predictedRAper36": 2.048808249434273
+        }
+      }
+    },
+    {
+      "playerId": 1630541,
+      "name": "Moses Moody",
+      "arms": {
+        "on": {
+          "actualMinutes": 599.6266666666666,
+          "predictedMinutes": 448.08722222222144,
+          "actualTwoAttempts": 61,
+          "predictedTwoAttempts": 40.0,
+          "actualRAattempts": 31,
+          "predictedRAattempts": 15.666666666666666,
+          "actualRAper36": 1.861158053900205,
+          "predictedRAper36": 1.258683515238231
+        },
+        "off": {
+          "actualMinutes": 273.2483333333333,
+          "predictedMinutes": 389.57500000000107,
+          "actualTwoAttempts": 29,
+          "predictedTwoAttempts": 36.666666666666664,
+          "actualRAattempts": 10,
+          "predictedRAattempts": 18.333333333333332,
+          "actualRAper36": 1.317482875772344,
+          "predictedRAper36": 1.694153885644608
+        }
+      }
+    },
+    {
+      "playerId": 1630611,
+      "name": "Gui Santos",
+      "arms": {
+        "on": {
+          "actualMinutes": 212.11666666666667,
+          "predictedMinutes": 230.71833333333413,
+          "actualTwoAttempts": 22,
+          "predictedTwoAttempts": 26.666666666666668,
+          "actualRAattempts": 14,
+          "predictedRAattempts": 18.0,
+          "actualRAper36": 2.376050915376758,
+          "predictedRAper36": 2.8086194566245903
+        },
+        "off": {
+          "actualMinutes": 183.07833333333332,
+          "predictedMinutes": 204.12666666666715,
+          "actualTwoAttempts": 25,
+          "predictedTwoAttempts": 34.333333333333336,
+          "actualRAattempts": 14,
+          "predictedRAattempts": 23.0,
+          "actualRAper36": 2.752919970504429,
+          "predictedRAper36": 4.0563049087168
+        }
+      }
+    },
+    {
+      "playerId": 1631218,
+      "name": "Trayce Jackson-Davis",
+      "arms": {
+        "on": {
+          "actualMinutes": 106.37833333333333,
+          "predictedMinutes": 101.74222222222221,
+          "actualTwoAttempts": 18,
+          "predictedTwoAttempts": 24.333333333333332,
+          "actualRAattempts": 17,
+          "predictedRAattempts": 19.333333333333332,
+          "actualRAper36": 5.753051216569791,
+          "predictedRAper36": 6.840817752926787
+        },
+        "off": {
+          "actualMinutes": 112.64166666666665,
+          "predictedMinutes": 161.66166666666692,
+          "actualTwoAttempts": 28,
+          "predictedTwoAttempts": 47.333333333333336,
+          "actualRAattempts": 21,
+          "predictedRAattempts": 37.333333333333336,
+          "actualRAper36": 6.71154842050751,
+          "predictedRAper36": 8.313659185335617
+        }
+      }
+    },
+    {
+      "playerId": 1631466,
+      "name": "Nate Williams",
+      "arms": {
+        "on": {
+          "actualMinutes": 0.0,
+          "predictedMinutes": 7.201666666666669,
+          "actualTwoAttempts": 0,
+          "predictedTwoAttempts": 1.3333333333333333,
+          "actualRAattempts": 0,
+          "predictedRAattempts": 0.6666666666666666,
+          "actualRAper36": null,
+          "predictedRAper36": 3.332561906965979
+        },
+        "off": {
+          "actualMinutes": 12.516666666666667,
+          "predictedMinutes": 4.424444444444445,
+          "actualTwoAttempts": 3,
+          "predictedTwoAttempts": 0.6666666666666666,
+          "actualRAattempts": 2,
+          "predictedRAattempts": 0.3333333333333333,
+          "actualRAper36": 5.752330226364847,
+          "predictedRAper36": 2.7122049221496733
+        }
+      }
+    },
+    {
+      "playerId": 1641764,
+      "name": "Brandin Podziemski",
+      "arms": {
+        "on": {
+          "actualMinutes": 589.0649999999997,
+          "predictedMinutes": 677.6272222222177,
+          "actualTwoAttempts": 93,
+          "predictedTwoAttempts": 118.66666666666667,
+          "actualRAattempts": 44,
+          "predictedRAattempts": 38.333333333333336,
+          "actualRAper36": 2.6890071554072996,
+          "predictedRAper36": 2.0365179478392466
+        },
+        "off": {
+          "actualMinutes": 523.1683333333335,
+          "predictedMinutes": 408.2272222222225,
+          "actualTwoAttempts": 97,
+          "predictedTwoAttempts": 77.0,
+          "actualRAattempts": 27,
+          "predictedRAattempts": 25.333333333333332,
+          "actualRAper36": 1.8579106151302476,
+          "predictedRAper36": 2.2340499367862927
+        }
+      }
+    },
+    {
+      "playerId": 1642366,
+      "name": "Quinten Post",
+      "arms": {
+        "on": {
+          "actualMinutes": 370.1883333333333,
+          "predictedMinutes": 382.0233333333336,
+          "actualTwoAttempts": 49,
+          "predictedTwoAttempts": 42.333333333333336,
+          "actualRAattempts": 19,
+          "predictedRAattempts": 18.0,
+          "actualRAper36": 1.847708148555015,
+          "predictedRAper36": 1.6962314692819798
+        },
+        "off": {
+          "actualMinutes": 245.3033333333333,
+          "predictedMinutes": 268.95777777777886,
+          "actualTwoAttempts": 17,
+          "predictedTwoAttempts": 38.0,
+          "actualRAattempts": 5,
+          "predictedRAattempts": 13.333333333333334,
+          "actualRAper36": 0.7337853813645691,
+          "predictedRAper36": 1.784666738273658
+        }
+      }
+    },
+    {
+      "playerId": 1642502,
+      "name": "Malevy Leons",
+      "arms": {
+        "on": {
+          "actualMinutes": 4.765,
+          "predictedMinutes": 22.801111111111123,
+          "actualTwoAttempts": 0,
+          "predictedTwoAttempts": 3.3333333333333335,
+          "actualRAattempts": 0,
+          "predictedRAattempts": 1.6666666666666667,
+          "actualRAper36": 0.0,
+          "predictedRAper36": 2.631450709029773
+        },
+        "off": {
+          "actualMinutes": 53.233333333333334,
+          "predictedMinutes": 37.17499999999998,
+          "actualTwoAttempts": 9,
+          "predictedTwoAttempts": 6.0,
+          "actualRAattempts": 6,
+          "predictedRAattempts": 2.6666666666666665,
+          "actualRAper36": 4.057608015028178,
+          "predictedRAper36": 2.58238063214526
+        }
+      }
+    },
+    {
+      "playerId": 1642954,
+      "name": "Will Richard",
+      "arms": {
+        "on": {
+          "actualMinutes": 279.00500000000005,
+          "predictedMinutes": 284.9155555555561,
+          "actualTwoAttempts": 23,
+          "predictedTwoAttempts": 16.0,
+          "actualRAattempts": 17,
+          "predictedRAattempts": 11.0,
+          "actualRAper36": 2.193509076898263,
+          "predictedRAper36": 1.3898855021370826
+        },
+        "off": {
+          "actualMinutes": 320.01,
+          "predictedMinutes": 295.28444444444557,
+          "actualTwoAttempts": 17,
+          "predictedTwoAttempts": 28.333333333333336,
+          "actualRAattempts": 12,
+          "predictedRAattempts": 20.666666666666668,
+          "actualRAper36": 1.3499578138183184,
+          "predictedRAper36": 2.519604449193988
+        }
+      }
+    },
+    {
+      "playerId": 1643018,
+      "name": "LJ Cryer",
+      "arms": {
+        "on": {
+          "actualMinutes": 0.0,
+          "predictedMinutes": 4.1016666666666675,
+          "actualTwoAttempts": 0,
+          "predictedTwoAttempts": 0.3333333333333333,
+          "actualRAattempts": 0,
+          "predictedRAattempts": 0,
+          "actualRAper36": null,
+          "predictedRAper36": null
+        },
+        "off": {
+          "actualMinutes": 7.933333333333334,
+          "predictedMinutes": 6.738888888888888,
+          "actualTwoAttempts": 1,
+          "predictedTwoAttempts": 0.6666666666666666,
+          "actualRAattempts": 0,
+          "predictedRAattempts": 0.3333333333333333,
+          "actualRAper36": 0.0,
+          "predictedRAper36": 1.780708985985161
+        }
+      }
+    }
+  ],
+  "sourceSHA256": {
+    "reports/defense-b1/stints.jsonl": "5eff6aa81f37d0f3baef97be2fdc7346a05ffce5ccfa1f6e4456be229a296179",
+    "reports/player-impact-v48/pair-20261012.json": "1746ee36e8e542f5beb725c3e2a45adc1eb913b5be609566666be23e3ce55fb3",
+    "reports/player-impact-v48/pair-20261013.json": "c4df32a3cd016180834f791149d271bffceb6342ea51e805da02a455680b8913",
+    "reports/player-impact-v48/pair-20261014.json": "0d2149dd451b17f51d3ca0b28185251baed3fdd614e96940ec2dafd385496752"
+  }
+}

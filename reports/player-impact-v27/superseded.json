@@ -1,0 +1,17 @@
+{
+  "files": [
+    "rotation-replay-2025-26-20261012.json",
+    "rotation-replay-scores.json",
+    "rotation-replay-all-players.csv"
+  ],
+  "reason": "Initial budget/source replay kept pre-substitution creationPlan after a live-clock change of five. Data retained for traceability; no conclusions use these files. V2 replay and general v27 engine recompute the current-five role plan at each budget refresh.",
+  "cancelledSeeds": [
+    20261013,
+    20261014
+  ],
+  "cancelledLegacySessions": [
+    45734,
+    65381
+  ],
+  "replacement": "rotation-replay-v2-scores-3-seeds.json"
+}

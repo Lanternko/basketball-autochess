@@ -1,0 +1,70 @@
+{
+  "label": "事後資料品質檢查，不改原始表或模型",
+  "rows": [
+    {
+      "season": "2022-23",
+      "componentMismatchRows": [
+        {
+          "PLAYER_ID": 1628386,
+          "PLAYER_NAME": "Jarrett Allen",
+          "OFF_BOXOUTS": 23,
+          "DEF_BOXOUTS": 83,
+          "BOX_OUTS": 107
+        }
+      ],
+      "totalMinusComponents": 1
+    },
+    {
+      "season": "2023-24",
+      "componentMismatchRows": [
+        {
+          "PLAYER_ID": 1627826,
+          "PLAYER_NAME": "Ivica Zubac",
+          "OFF_BOXOUTS": 41,
+          "DEF_BOXOUTS": 93,
+          "BOX_OUTS": 135
+        }
+      ],
+      "totalMinusComponents": 1
+    },
+    {
+      "season": "2024-25",
+      "componentMismatchRows": [],
+      "totalMinusComponents": 0
+    },
+    {
+      "season": "2025-26",
+      "componentMismatchRows": [
+        {
+          "PLAYER_ID": 1631133,
+          "PLAYER_NAME": "Jabari Walker",
+          "OFF_BOXOUTS": 12,
+          "DEF_BOXOUTS": 7,
+          "BOX_OUTS": 21
+        },
+        {
+          "PLAYER_ID": 1631169,
+          "PLAYER_NAME": "Josh Minott",
+          "OFF_BOXOUTS": 1,
+          "DEF_BOXOUTS": 11,
+          "BOX_OUTS": 13
+        },
+        {
+          "PLAYER_ID": 1630202,
+          "PLAYER_NAME": "Payton Pritchard",
+          "OFF_BOXOUTS": 3,
+          "DEF_BOXOUTS": 28,
+          "BOX_OUTS": 32
+        },
+        {
+          "PLAYER_ID": 1630214,
+          "PLAYER_NAME": "Xavier Tillman",
+          "OFF_BOXOUTS": 7,
+          "DEF_BOXOUTS": 4,
+          "BOX_OUTS": 12
+        }
+      ],
+      "totalMinusComponents": 5
+    }
+  ]
+}

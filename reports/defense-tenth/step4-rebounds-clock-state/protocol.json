@@ -1,0 +1,63 @@
+{
+  "version": "oreb-clock-state-1",
+  "registeredUTC": "2026-10-15T02:19:31.132282+00:00",
+  "seasons": [
+    "2022-23",
+    "2023-24",
+    "2024-25",
+    "2025-26"
+  ],
+  "scope": "observation only; no simulation, engine/card/calibration changes or candidate combination; all four seasons seen/in-sample",
+  "source": "same game/sample exclusions and anchor references as oreb-clock14-1; process original action array order, never sort by actionNumber; no new season downloads",
+  "bootstrapDraws": 20000,
+  "bootstrapSeed": 20261022,
+  "clockToleranceSeconds": 1,
+  "states": {
+    "reset": "explicit current/past evidence of rim/ring contact in shot/rebound structured fields or unambiguous contact text; all FG offensive rebounds alone insufficient",
+    "retain": "explicit current/past no-rim/airball evidence; blocked alone insufficient",
+    "unknown": "neither, contradictory contact evidence, or nonidentifiable reference; retain both reset14 and remaining-clock possibilities"
+  },
+  "contactPatterns": {
+    "resetText": [
+      "hits the rim",
+      "hits rim",
+      "hit the rim",
+      "hit rim",
+      "off the rim",
+      "rimmed out"
+    ],
+    "retainText": [
+      "airball",
+      "air ball",
+      "does not hit the rim",
+      "did not hit the rim",
+      "misses the rim",
+      "no rim",
+      "without touching the rim"
+    ],
+    "structuredFields": [
+      "rimContact",
+      "hitRim",
+      "touchesRim",
+      "touchedRim",
+      "ballTouchedRim"
+    ]
+  },
+  "chronology": {
+    "fresh24": "confirmed individual defensive rebound of a valid missed FG or live final FT; official turnover establishes next team24 at its current clock. Period start unknown without opening control evidence. Made FG opens uncertain inbound delay rather than exact24",
+    "elapsed": "subtract game-clock elapsed from known bounds within period. Uncertain bounds retained, no inferred point estimate; timestamp reversal or inconsistent ownership invalidates state until fresh evidence",
+    "fgMiss": "carry pre-existing clock through flight until rebound; rim unknown keeps reset14 and retained-clock branches. Made FG and ordinary FT stop old clock; made FG inbound start uncertain; no hidden fixed inbound seconds",
+    "fouls": "ordinary defensive personal/looseball where penalty/frontcourt unresolved uses union including carry/max14/backcourt24 as applicable; shooting/technical/unknown foul not treated as confirmed14; no later FT looked ahead to classify",
+    "unknownEvents": "jumpball or unresolved possession/clock corrections widen/invalidate clock; timeout/substitution alone do not imply reset",
+    "noRimRule": "never assume every block is no-rim or every unblocked miss hits rim; do not use following violation or timing to choose an earlier branch"
+  },
+  "outputs": [
+    "exact anchor reset/retain/unknown counts and coverage, all anchors plus first anchors",
+    "pre-rebound remaining-clock interval informativeness and fresh evidence sources",
+    "first endpoint time support for reset vs retain branches; use endpoint only for validation, no relabeling past anchors",
+    "held-out clock-event validation: interval residual/error bounds only, never claim actual shot-clock MAE without an independent shot-clock trace",
+    "timestamp/ownership failures, source-action references and failure list",
+    "franchise bootstrap95 for descriptive rates; real data only so seed uncertainty inapplicable"
+  ],
+  "stop": "one batch then report facts/inference/failures; insufficient identification explicitly reported, no invented event rate"
+}

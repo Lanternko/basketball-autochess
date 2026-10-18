@@ -1,0 +1,527 @@
+[
+  {
+    "metric": "load",
+    "group": "same",
+    "n": 596,
+    "players": 326,
+    "franchises": 30,
+    "pearson": 0.7869372448351237,
+    "spearman": 0.7607143111336593,
+    "ci95": [
+      0.7141155600080653,
+      0.8450627757143228
+    ],
+    "validBootstrap": 20000,
+    "label": "descriptive association, not portability proof"
+  },
+  {
+    "metric": "load",
+    "group": "moved",
+    "n": 184,
+    "players": 148,
+    "franchises": 30,
+    "pearson": 0.6542354514123523,
+    "spearman": 0.6500071504428965,
+    "ci95": [
+      0.5115930318424615,
+      0.7627993413981827
+    ],
+    "validBootstrap": 20000,
+    "label": "descriptive association, not portability proof"
+  },
+  {
+    "metric": "load",
+    "group": "seasonMove",
+    "n": 71,
+    "players": 64,
+    "franchises": 27,
+    "pearson": 0.6748984706054397,
+    "spearman": 0.6907124512549643,
+    "ci95": [
+      0.48602845031195263,
+      0.8145621953875055
+    ],
+    "validBootstrap": 20000,
+    "label": "descriptive association, not portability proof"
+  },
+  {
+    "metric": "load",
+    "group": "officialTradeParticipant",
+    "n": 69,
+    "players": 63,
+    "franchises": 27,
+    "pearson": 0.6747882443679271,
+    "spearman": 0.6873309932367391,
+    "ci95": [
+      0.48301075108818786,
+      0.8171248140163357
+    ],
+    "validBootstrap": 19998,
+    "label": "descriptive association, not portability proof"
+  },
+  {
+    "metric": "load",
+    "group": "team",
+    "n": 119,
+    "players": 30,
+    "franchises": 30,
+    "pearson": 0.20122792147470203,
+    "spearman": 0.2166213648339946,
+    "ci95": [
+      0.007017061142513103,
+      0.39206435565726333
+    ],
+    "validBootstrap": 20000,
+    "label": "descriptive association, not portability proof"
+  },
+  {
+    "metric": "highUsageShare",
+    "group": "same",
+    "n": 596,
+    "players": 326,
+    "franchises": 30,
+    "pearson": 0.7364883939858102,
+    "spearman": 0.703454812411244,
+    "ci95": [
+      0.6501275387286285,
+      0.8075613211166559
+    ],
+    "validBootstrap": 20000,
+    "label": "descriptive association, not portability proof"
+  },
+  {
+    "metric": "highUsageShare",
+    "group": "moved",
+    "n": 184,
+    "players": 148,
+    "franchises": 30,
+    "pearson": 0.6224286619652797,
+    "spearman": 0.5972435707471909,
+    "ci95": [
+      0.4646687349902505,
+      0.74662917933232
+    ],
+    "validBootstrap": 20000,
+    "label": "descriptive association, not portability proof"
+  },
+  {
+    "metric": "highUsageShare",
+    "group": "seasonMove",
+    "n": 71,
+    "players": 64,
+    "franchises": 27,
+    "pearson": 0.6250058632185221,
+    "spearman": 0.6217234846748426,
+    "ci95": [
+      0.3468173035943172,
+      0.8206332404540709
+    ],
+    "validBootstrap": 20000,
+    "label": "descriptive association, not portability proof"
+  },
+  {
+    "metric": "highUsageShare",
+    "group": "officialTradeParticipant",
+    "n": 69,
+    "players": 63,
+    "franchises": 27,
+    "pearson": 0.6249388946157746,
+    "spearman": 0.6200285167950824,
+    "ci95": [
+      0.34208106035188607,
+      0.823050141580706
+    ],
+    "validBootstrap": 19995,
+    "label": "descriptive association, not portability proof"
+  },
+  {
+    "metric": "highUsageShare",
+    "group": "team",
+    "n": 119,
+    "players": 30,
+    "franchises": 30,
+    "pearson": 0.09615692802291631,
+    "spearman": 0.0828703701509691,
+    "ci95": [
+      -0.06180060123401273,
+      0.24940477848296688
+    ],
+    "validBootstrap": 20000,
+    "label": "descriptive association, not portability proof"
+  },
+  {
+    "metric": "diversity",
+    "group": "same",
+    "n": 596,
+    "players": 326,
+    "franchises": 30,
+    "pearson": 0.9425181571242255,
+    "spearman": 0.943682105545785,
+    "ci95": [
+      0.9262781057299662,
+      0.9570885993564292
+    ],
+    "validBootstrap": 20000,
+    "label": "descriptive association, not portability proof"
+  },
+  {
+    "metric": "diversity",
+    "group": "moved",
+    "n": 184,
+    "players": 148,
+    "franchises": 30,
+    "pearson": 0.9101800130325214,
+    "spearman": 0.9076033965459243,
+    "ci95": [
+      0.870635750638439,
+      0.9398626142092315
+    ],
+    "validBootstrap": 20000,
+    "label": "descriptive association, not portability proof"
+  },
+  {
+    "metric": "diversity",
+    "group": "seasonMove",
+    "n": 71,
+    "players": 64,
+    "franchises": 27,
+    "pearson": 0.7805535138260105,
+    "spearman": 0.7734349127988549,
+    "ci95": [
+      0.635157967059307,
+      0.8795714644897366
+    ],
+    "validBootstrap": 20000,
+    "label": "descriptive association, not portability proof"
+  },
+  {
+    "metric": "diversity",
+    "group": "officialTradeParticipant",
+    "n": 69,
+    "players": 63,
+    "franchises": 27,
+    "pearson": 0.797953744933828,
+    "spearman": 0.7658936962548817,
+    "ci95": [
+      0.6544038512924164,
+      0.8881223718113965
+    ],
+    "validBootstrap": 19995,
+    "label": "descriptive association, not portability proof"
+  },
+  {
+    "metric": "diversity",
+    "group": "team",
+    "n": 119,
+    "players": 30,
+    "franchises": 30,
+    "pearson": 0.061566975996738556,
+    "spearman": 0.028277232281629663,
+    "ci95": [
+      -0.17688441622441334,
+      0.27559361899077955
+    ],
+    "validBootstrap": 20000,
+    "label": "descriptive association, not portability proof"
+  },
+  {
+    "metric": "effectivePositions",
+    "group": "same",
+    "n": 596,
+    "players": 326,
+    "franchises": 30,
+    "pearson": 0.945686567557951,
+    "spearman": 0.9436574808834817,
+    "ci95": [
+      0.9296230158784095,
+      0.9595470626019498
+    ],
+    "validBootstrap": 20000,
+    "label": "descriptive association, not portability proof"
+  },
+  {
+    "metric": "effectivePositions",
+    "group": "moved",
+    "n": 184,
+    "players": 148,
+    "franchises": 30,
+    "pearson": 0.9137165654980951,
+    "spearman": 0.9083578266650569,
+    "ci95": [
+      0.8745015613697028,
+      0.9419086748625649
+    ],
+    "validBootstrap": 20000,
+    "label": "descriptive association, not portability proof"
+  },
+  {
+    "metric": "effectivePositions",
+    "group": "seasonMove",
+    "n": 71,
+    "players": 64,
+    "franchises": 27,
+    "pearson": 0.7723508715754972,
+    "spearman": 0.7731852333002178,
+    "ci95": [
+      0.6282344796567418,
+      0.8726978297408395
+    ],
+    "validBootstrap": 20000,
+    "label": "descriptive association, not portability proof"
+  },
+  {
+    "metric": "effectivePositions",
+    "group": "officialTradeParticipant",
+    "n": 69,
+    "players": 63,
+    "franchises": 27,
+    "pearson": 0.7884720607128071,
+    "spearman": 0.7665113577275722,
+    "ci95": [
+      0.6510607483620139,
+      0.8839160616369306
+    ],
+    "validBootstrap": 19998,
+    "label": "descriptive association, not portability proof"
+  },
+  {
+    "metric": "effectivePositions",
+    "group": "team",
+    "n": 119,
+    "players": 30,
+    "franchises": 30,
+    "pearson": 0.06123556815766734,
+    "spearman": 0.02626410372111206,
+    "ci95": [
+      -0.18108962800658218,
+      0.2755165623998872
+    ],
+    "validBootstrap": 20000,
+    "label": "descriptive association, not portability proof"
+  },
+  {
+    "metric": "guardShare",
+    "group": "same",
+    "n": 596,
+    "players": 326,
+    "franchises": 30,
+    "pearson": 0.9694520616896717,
+    "spearman": 0.9582708485766503,
+    "ci95": [
+      0.9596408213292463,
+      0.9772158797493344
+    ],
+    "validBootstrap": 20000,
+    "label": "descriptive association, not portability proof"
+  },
+  {
+    "metric": "guardShare",
+    "group": "moved",
+    "n": 184,
+    "players": 148,
+    "franchises": 30,
+    "pearson": 0.947570839672622,
+    "spearman": 0.9312402987243148,
+    "ci95": [
+      0.9214187868546816,
+      0.9656410871681992
+    ],
+    "validBootstrap": 20000,
+    "label": "descriptive association, not portability proof"
+  },
+  {
+    "metric": "guardShare",
+    "group": "seasonMove",
+    "n": 71,
+    "players": 64,
+    "franchises": 27,
+    "pearson": 0.8736722255451104,
+    "spearman": 0.8304607984568053,
+    "ci95": [
+      0.7629616520946676,
+      0.9422350798414681
+    ],
+    "validBootstrap": 19998,
+    "label": "descriptive association, not portability proof"
+  },
+  {
+    "metric": "guardShare",
+    "group": "officialTradeParticipant",
+    "n": 69,
+    "players": 63,
+    "franchises": 27,
+    "pearson": 0.894631779577787,
+    "spearman": 0.8351712762491872,
+    "ci95": [
+      0.8075532603742804,
+      0.9482504584349707
+    ],
+    "validBootstrap": 19999,
+    "label": "descriptive association, not portability proof"
+  },
+  {
+    "metric": "guardShare",
+    "group": "team",
+    "n": 119,
+    "players": 30,
+    "franchises": 30,
+    "pearson": -0.12531318525026466,
+    "spearman": -0.13814779733085808,
+    "ci95": [
+      -0.356956053488212,
+      0.13421388457488467
+    ],
+    "validBootstrap": 20000,
+    "label": "descriptive association, not portability proof"
+  },
+  {
+    "metric": "forwardShare",
+    "group": "same",
+    "n": 596,
+    "players": 326,
+    "franchises": 30,
+    "pearson": 0.8760220428092937,
+    "spearman": 0.8627324566862303,
+    "ci95": [
+      0.8356775070026363,
+      0.907418695463054
+    ],
+    "validBootstrap": 20000,
+    "label": "descriptive association, not portability proof"
+  },
+  {
+    "metric": "forwardShare",
+    "group": "moved",
+    "n": 184,
+    "players": 148,
+    "franchises": 30,
+    "pearson": 0.7833880403676918,
+    "spearman": 0.7663340571591065,
+    "ci95": [
+      0.688050197302985,
+      0.8526768729788514
+    ],
+    "validBootstrap": 20000,
+    "label": "descriptive association, not portability proof"
+  },
+  {
+    "metric": "forwardShare",
+    "group": "seasonMove",
+    "n": 71,
+    "players": 64,
+    "franchises": 27,
+    "pearson": 0.7815314495137616,
+    "spearman": 0.7364379725060664,
+    "ci95": [
+      0.624812851219089,
+      0.8808970887969221
+    ],
+    "validBootstrap": 19999,
+    "label": "descriptive association, not portability proof"
+  },
+  {
+    "metric": "forwardShare",
+    "group": "officialTradeParticipant",
+    "n": 69,
+    "players": 63,
+    "franchises": 27,
+    "pearson": 0.8042487371569058,
+    "spearman": 0.7468758680546503,
+    "ci95": [
+      0.666239650614405,
+      0.8896094141053137
+    ],
+    "validBootstrap": 19997,
+    "label": "descriptive association, not portability proof"
+  },
+  {
+    "metric": "forwardShare",
+    "group": "team",
+    "n": 119,
+    "players": 30,
+    "franchises": 30,
+    "pearson": 0.10016031763019963,
+    "spearman": 0.0663183816486194,
+    "ci95": [
+      -0.14479514076955674,
+      0.3078145873644354
+    ],
+    "validBootstrap": 20000,
+    "label": "descriptive association, not portability proof"
+  },
+  {
+    "metric": "centerShare",
+    "group": "same",
+    "n": 596,
+    "players": 326,
+    "franchises": 30,
+    "pearson": 0.9744801612973055,
+    "spearman": 0.9308269736024609,
+    "ci95": [
+      0.9629680241617651,
+      0.9835835517995462
+    ],
+    "validBootstrap": 20000,
+    "label": "descriptive association, not portability proof"
+  },
+  {
+    "metric": "centerShare",
+    "group": "moved",
+    "n": 184,
+    "players": 148,
+    "franchises": 30,
+    "pearson": 0.9371329074302854,
+    "spearman": 0.9150353806303327,
+    "ci95": [
+      0.8954767584794633,
+      0.9660419700069264
+    ],
+    "validBootstrap": 20000,
+    "label": "descriptive association, not portability proof"
+  },
+  {
+    "metric": "centerShare",
+    "group": "seasonMove",
+    "n": 71,
+    "players": 64,
+    "franchises": 27,
+    "pearson": 0.8154642661226303,
+    "spearman": 0.8203409982071033,
+    "ci95": [
+      0.5509911150770744,
+      0.9604881238619224
+    ],
+    "validBootstrap": 19999,
+    "label": "descriptive association, not portability proof"
+  },
+  {
+    "metric": "centerShare",
+    "group": "officialTradeParticipant",
+    "n": 69,
+    "players": 63,
+    "franchises": 27,
+    "pearson": 0.8177835719137453,
+    "spearman": 0.8242126781620096,
+    "ci95": [
+      0.5538651337804795,
+      0.9613013017847908
+    ],
+    "validBootstrap": 19997,
+    "label": "descriptive association, not portability proof"
+  },
+  {
+    "metric": "centerShare",
+    "group": "team",
+    "n": 119,
+    "players": 30,
+    "franchises": 30,
+    "pearson": 0.07112622310652524,
+    "spearman": 0.06568133187885143,
+    "ci95": [
+      -0.09878426685504622,
+      0.22379630267662884
+    ],
+    "validBootstrap": 20000,
+    "label": "descriptive association, not portability proof"
+  }
+]

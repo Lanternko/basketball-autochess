@@ -1,0 +1,61 @@
+import pathlib,json,hashlib
+R=pathlib.Path(__file__).parent;load=lambda f:json.loads(pathlib.Path(f).read_text(encoding='utf8'));d=load(R/'analysis.json');p=load(R/'protocol.json');b=load(R/'first-boundary-analysis.json');c=load(R/'first-boundary-analysis-candidate.json');a=load(R/'accuracy-joint.json');audit=load(R/'audit.json');rates=load(R/'rates.json')
+assert hashlib.sha256((R/'rates.json').read_bytes()).hexdigest()==(R/'rates.sha256').read_text().strip();assert rates['sourceSHA']==hashlib.sha256((R/'first-boundary-analysis.json').read_bytes()).hexdigest();assert len(load(R/'parity-sim.json'))==12;assert len(load(R/'new-adapter-off-parity.json'))==12
+status={'promoted':False,'baselineChanged':False,'retainedAsIndependentCandidate':True,'switch':'postOrebNonshootFoul','genericRiskAblation':False,'localResult':'first nonshooting event probability brought close to real; postOREB FT point excess modestly reduced; timing mismatch remains','teamAccuracy':'not established: net RMSE and wins MAE paired joint95 span zero; three diagnostic seeds only','nextRequiredBeforeAdoption':'separately registered 20seed paired assessment; do not combine with timing or turnover changes','protocolSHA':(R/'protocol.sha256').read_text().strip()};(R/'decision.json').write_text(json.dumps(status,ensure_ascii=False,indent=2)+'\n',encoding='utf8')
+L=['# 搶板後防守非投籃犯規：單因素條件率試驗','',
+'結論：局部修正有效，保留為獨立候選；基準不變。第一事件為防守非投籃犯規的比例已接近真實，搶板後普通罰球得分偏高略有改善，但完整得分沒有可辨識的變化，也沒有證據顯示球隊淨勝分或勝場更準。這一項不是主要得分缺口的解答。','',
+f"版本 `{p['version']}`；登記 UTC `{p['registeredUTC']}`；protocol SHA-256 `{status['protocolSHA']}`。規則先登記，先量測、確認觸發條件成立，再存 rates.json 與 SHA，最後才產生候選輸出。",'',
+'四季皆已看過答案／當季 in-sample；20261012–14 共三個診斷 seed。24 個完整賽季共29,520場模擬，另12組各一場的開關關閉對照。20,000次franchise＋seed跨季配對重抽，四季等權。三seed區間只用於這次診斷，不能取代20seed採用驗收。','',
+'## 已驗證事實：先修分母','',
+'先前三秒內曾發生犯規的2.04%／3.33%，不是每次抽樣的機率，不能直接當倍率。本次把搶板後的第一個可觀察事件分成FG、普通FT、失去球權、非投籃防守犯規、投籃防守犯規、進攻／其他犯規及節末。分類讀取subType、descriptor、qualifiers；personal＋descriptor=shooting不會誤列為非投籃犯規。','',
+'校準用所有有效個人FG進攻籃板起點，當節至少剩三秒。完整得分表仍用每球權第一個有效起點，避免同一球權重複計值；排除特殊FT的球權，FT／團隊籃板不作個人FG進攻籃板起點。真實意圖不可觀察，不用成功補籃者當風險分母。','',
+'| 第一事件為非投籃防守犯規，所有有效起點 | 比例 |','|---|---:|',
+f"| 真實 | {100*b['pooled']['allAnchors']['real']['nonshoot']:.3f}% |",
+f"| 基準 | {100*b['pooled']['allAnchors']['baseline']['nonshoot']:.3f}% |",
+f"| 候選 | {100*c['pooled']['allAnchors']['baseline']['nonshoot']:.3f}% |"]
+x=b['pooled']['allAnchors']['baselineMinusReal']['nonshoot'];y=c['pooled']['allAnchors']['baselineMinusReal']['nonshoot'];L +=['',f"基準−真實 {100*x['delta']:+.3f}百分點，聯合95% [{100*x['joint95'][0]:+.3f}, {100*x['joint95'][1]:+.3f}]，達預先登記的試驗條件。候選−真實 {100*y['delta']:+.3f}百分點，95% [{100*y['joint95'][0]:+.3f}, {100*y['joint95'][1]:+.3f}]。",'',
+'## 只改一個條件率','',
+'只在個人FG進攻籃板後的下一次機會、當節至少剩三秒時，替換普通非投籃犯規抽樣率；隨即清除狀態。故意犯規、團隊留球、FT籃板、後續機會維持舊機率。開關為postOrebNonshootFoul，機率為postOrebNonshootRate。每季一個聯盟常數，沒有球隊／球員別率。',
+'','| 球季 | 實測條件率 |','|---|---:|']
+for s,v in rates['rates'].items():L.append(f'| {s} | {100*v:.5f}% |')
+L+=['',
+'這是把可觀察的競爭事件機率對應至引擎第一道犯規門檻的近似，沒有辨識真實連續時間hazard；故意犯規仍可能使最終觀察率略高。沒有為得分或勝場搜尋參數，沒有校準時鐘、投籃、失誤或籃板。一般持球風險清零消融維持關閉。','',
+'## 搶板後結果：每球權第一次有效起點','',
+'| 指標 | 真實 | 基準 | 候選 | 候選−基準，聯合95% |','|---|---:|---:|---:|---:|']
+for k,label,scale in [('earlyNonShootingFoul','前三秒非投籃犯規',100),('ftPoints','普通罰球得分',1),('points','完整剩餘球權得分',1),('quickProxy','同一搶板者三秒內short出手proxy',100),('earlyLoss','前三秒先失去球權',100),('quickFgMake','快速出手命中率',100)]:
+ x=d['intervals']['candidate-baseline'][k];v=[d['pooled'][side][k]*scale for side in ['real','baseline','candidate']];u='%' if scale==100 else '';L.append(f'| {label} | {v[0]:.4f}{u} | {v[1]:.4f}{u} | {v[2]:.4f}{u} | {x["delta"]*scale:+.4f} [{x["joint95"][0]*scale:+.4f}, {x["joint95"][1]*scale:+.4f}] |')
+L+=['','完整得分含普通FT及後續重複OREB，不是只看第一次出手。FT得分超額由+0.03499降到+0.03164，只消除約9.6%的缺口。完整得分仍少約0.0748分／含OREB球權；快速出手proxy仍少約10.06百分點。條件命中率的差異也可能含選擇組成變化，沒有改投籃能力。','',
+'## 球隊準確度：三seed描述與聯合區間','',
+'| 指標 | 基準 | 候選 | 差值，聯合95% |','|---|---:|---:|---:|']
+for k in ['netRMSE','winsMAE','winsRMSE']:
+ x=a['candidateMinusBaseline'][k];L.append(f'| {k} | {a["versions"]["baseline"][k]:.4f} | {a["versions"]["candidate"][k]:.4f} | {x["delta"]:+.4f} [{x["joint95"][0]:+.4f}, {x["joint95"][1]:+.4f}] |')
+L+=['','三項區間都跨零，不宣稱改善，也不把不顯著當成非劣性證明。這裡的基準2.816是同樣三seed子集；不能與先前20seed的2.555直接相減判定退步。','',
+'## 副作用與尚未改善','',
+'| 球季 | 效率偏差：基準→候選 | 球權代理偏差：基準→候選 | TOV偏差：基準→候選 | FG%：基準→候選 |','|---|---:|---:|---:|---:|']
+for s in p['seasons']:
+ q=d['leagueStats'][s];u=q['baseline'];v=q['candidate'];L.append(f"| {s} | {u['efficiencyBias']:+.3f}→{v['efficiencyBias']:+.3f} | {u['possessionBias']:+.3f}→{v['possessionBias']:+.3f} | {u['tovBias']:+.3f}→{v['tovBias']:+.3f} | {u['fg']:.3f}→{v['fg']:.3f} |")
+L+=['','候選四季聯盟效率與球權偏差仍在±0.5內；歷史三季原有TOV不足約0.6／隊／場仍在，這次沒有拿失誤率補帳。FG與3P的完整值見analysis.json。','',
+'籃板取得與歸屬公式完全不動；事件鏈改變後總數會隨機變動。OREB／隊／場改變依序−0.001、+0.040、−0.011、+0.007，DREB依序−0.005、+0.017、+0.016、−0.009；這不是新的籃板準確度驗收。','',
+'犯規時點仍過早：在真的出現非投籃犯規的首次起點中，三秒內比例真實77.86%、基準81.19%、候選81.46%；候選−真實95%為+1.53～+5.72百分點。平均耗時真實1.887秒、候選1.650秒。這次按規則不改耗時。','',
+'## 推測、失敗與後續優先序','',
+'- 已驗證：非投籃犯規機率過高；單獨降低可以修好該局部比例，並小幅降低FT偏高，沒有消除完整得分缺口。',
+'- 推測：較大的剩餘缺口仍與補籃／重攻在出手前失去球權、快速出手比例及禁區命中有關；不能把各條件平均差直接當因果貢獻相加。',
+'- 未達成：整體淨勝分與勝場改善未成立；犯規時點、快速出手與FT總缺口仍未解。',
+'- 下一個值得獨立驗證的是搶板後失誤的事件類型與合理非零風險。前批清零消融已證明會過頭，不能照搬。候選保留，不升級基準；要採用需另登記20seed驗收。','',
+'## 完整性與重跑','',
+f"真實逐球可用1230／1230／1229／1227場；缺場完整清單在temporal-qa.json、real.json。所有第一事件／犯規耗時負值為零。基準完整14,760場的比分及球員統計與原輸出逐場一致；新adapter關閉開關另以12組比賽完整球員統計對照。{audit['protectedFiles']}份受保護檔案SHA未改；protocol及rates SHA驗證通過。測試涵蓋shooting descriptor、looseball罰球、犯規先後與3秒邊界。凍結版本及舊輸出未改。",'',
+'```powershell',
+'node reports/defense-tenth/step4-rebounds-nonshoot-foul/test.mjs',
+'node reports/defense-tenth/step4-rebounds-nonshoot-foul/read.mjs',
+'node reports/defense-tenth/step4-rebounds-nonshoot-foul/run.mjs',
+'python reports/defense-tenth/step4-rebounds-nonshoot-foul/diagnose.py',
+'# rates.json 為已鎖定的實測輸入；重跑前核對 rates.sha256，不重新調參',
+'node reports/defense-tenth/step4-rebounds-nonshoot-foul/run-candidate.mjs',
+'node reports/defense-tenth/step4-rebounds-nonshoot-foul/smoke.mjs',
+'python reports/defense-tenth/step4-rebounds-nonshoot-foul/diagnose.py candidate',
+'python reports/defense-tenth/step4-rebounds-nonshoot-foul/analyze.py',
+'python reports/defense-tenth/step4-rebounds-nonshoot-foul/accuracy.py',
+'python reports/defense-tenth/step4-rebounds-nonshoot-foul/report.py','```','',
+'本批到此停止，未合併其他機制、未下載新資料、未開始下一批。']
+(R/'report.md').write_text('\n'.join(L)+'\n',encoding='utf8')
+files={str(f.relative_to(R)).replace('\\','/'):hashlib.sha256(f.read_bytes()).hexdigest() for f in R.rglob('*') if f.is_file() and f.name!='deliverable-hashes.json'};(R/'deliverable-hashes.json').write_text(json.dumps(files,indent=2)+'\n',encoding='utf8');print('Report complete; files',len(files),'protected',audit['protectedFiles'])

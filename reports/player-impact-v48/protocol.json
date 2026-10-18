@@ -1,0 +1,11 @@
+{
+ "version":"offensive-lineup-make-v48",
+ "seasons":["2022-23","2023-24","2024-25","2025-26"],
+ "seeds":[20261012,20261013,20261014],
+ "teammateSigmaGrid":[0,0.025,0.05,0.1,0.2],
+ "zones":["ra","paint","mid"],
+ "equation":"logit(make) = intercept_zone + shooter_zone + sum(frozen training-only v46/v45 five-defender logits) + sum(other four teammates' regularized zone coefficients). Shooter prior remains60 equivalent source minutes; fit shooter and teammate jointly, defense coefficients fixed.",
+ "selection":"Older-three seasons, whole-game fivefold heldout Bernoulli NLL per FGA, equal season and all two-point attempts. One common teammate sigma for all three two-point zones. Zero is an explicit baseline; choose lower sigma on ties. No2025-26 selection, no name or raw on/off residual target.",
+ "runtime":"Keep v47 measured FT and v46 defense/choice/source neutral contexts. Add fitted shooter delta and four teammate coefficients to fine-zone source make logits. Existing generic lineup effects are retained, so these observational coefficients are not separately identified physical gravity; full runtime validation is required before adoption. Putbacks unchanged.",
+ "adoptionRule":"Require selected nonzero sigma and older-three heldout NLL improvement; four-season mean all-player teammate two-point FG% MAE improves, four-season mean teamPPG MAE does not increase, all-player PTS36 MAE increases by no more0.02, mean coarse paint/three defense FG% MAE increases by no more0.05pp. Report fine-zone, role, seed and Curry changes; no automatic adoption for Curry alone. Healthy OVR and product game preset unchanged."
+}

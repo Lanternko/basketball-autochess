@@ -1,0 +1,71 @@
+{
+  "version": "oreb-clock-competing-1",
+  "registeredUTC": "2026-10-15T03:39:51.367263+00:00",
+  "baseline": "pure-oreb-turnover-time-1",
+  "seasons": [
+    "2022-23",
+    "2023-24",
+    "2024-25",
+    "2025-26"
+  ],
+  "diagnosticSeeds": [
+    20261012,
+    20261013,
+    20261014
+  ],
+  "fullSeeds": [
+    20261012,
+    20261013,
+    20261014,
+    20261015,
+    20261016,
+    20261017,
+    20261018,
+    20261019,
+    20261020,
+    20261021,
+    20261022,
+    20261023,
+    20261024,
+    20261025,
+    20261026,
+    20261027,
+    20261028,
+    20261029,
+    20261030,
+    20261031
+  ],
+  "pEffective": 0.2112781865697237,
+  "pEffectiveSource": "prior rim-calibration training-only fit, effective parameter not physical rate; fixed this batch",
+  "split": "existing chronological schedule midpoint; use first halves pooled for two new hazard estimates; second halves validate",
+  "calibrationPilot": "baseline with rim flag off, four seasons x 256 uniformly spaced schedule games x three seeds; estimate eligible opportunity exposures in train half",
+  "parameters": {
+    "freshClockProbability": "real train other clock events per game divided by simulated eligible fresh possessions per game; one league constant",
+    "postOrebClockProbability": "real train individual-FG-OREB-following clock events per game divided by simulated eligible individual FG OREB opportunities per game; one league constant"
+  },
+  "eligible": "period clock > current shot clock; strict period-priority exclusion; post draw once immediately after individual FG OREB, no repeat after foul/team rebound",
+  "mechanisms": {
+    "competingFreshClock": "replace original total-target fresh-clock probability with residual-path probability",
+    "postOrebDeadline": "independent RNG, choose failure to release before deadline versus existing conditional successful-release timing; timeout consumes remaining clock and no FG/OREB emitted",
+    "rimContactClock": "previous module, fixed pEffective; separately switchable"
+  },
+  "ablation": "diagnostic three seeds, full schedule: baseline / fresh-only / post-only / combined; pilot is separately cached",
+  "validation": {
+    "eventRate": "heldout differences and uncertainty reported; immediate and post-OREB rates tested using 95% interval of difference with season-stratified game and seed resampling; interval must include 0",
+    "totalClock": "heldout absolute bias <= 0.1 per team-game",
+    "existingBias": "do not retune non-clock TOV, FG, pace, or rebound; compare their changes to baseline, explicitly report historical bias",
+    "fullEvaluation": "if combined event gates pass, run full 20 seeds; centered net RMSE and wins MAE differences use franchise+seed paired bootstrap 20000; no significant worsening for adoption",
+    "leagueGates": "efficiency abs bias <=0.5 each season; no existing TOV/FG/3P/OREB/DREB absolute-error deterioration beyond 0.1 in corresponding units versus paired baseline"
+  },
+  "bootstrapSeed": 910152,
+  "eventBootstrap": 4000,
+  "predictionBootstrap": 20000,
+  "restrictions": [
+    "no frozen files edited",
+    "no team/player IDs or net/wins calibration",
+    "all four seasons already seen",
+    "not a measurement of physical rim contact",
+    "no new seasons or new source hunt",
+    "no unbounded sampling from mixed event CDF tail"
+  ]
+}

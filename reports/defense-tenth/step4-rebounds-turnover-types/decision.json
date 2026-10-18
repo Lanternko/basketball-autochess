@@ -1,0 +1,19 @@
+{
+  "promoted": false,
+  "baselineChanged": false,
+  "candidate": "postOrebTurnoverRisk",
+  "multiplier": 0.5608421069023797,
+  "registeredGuardResults": {
+    "matchedIncidenceCloser": true,
+    "categorySquaredErrorReduced": true,
+    "ftExcessNotSignificantlyIncreased": false
+  },
+  "failed": [
+    "FT point excess significantly increases",
+    "holding-live rate undershoots truth while offensive fouls remain high",
+    "postOREB total turnover undershoots truth and independent14sec clock remains absent",
+    "net RMSE and wins MAE joint95 include zero; three seeds only"
+  ],
+  "retention": "sensitivity experiment only, not a calibrated production parameter",
+  "protocolSHA": "f37d031f9eae912505f66f9cb8a6d5adef80fc774bc9c9aa8830e005da992db9"
+}

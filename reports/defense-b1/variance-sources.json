@@ -1,0 +1,1365 @@
+{
+  "scope": "Same 1227 fixtures; one full frozen-v1 seed 20261012. Regulation only; original A4 identical-roster IID17.604 and final SD16.792 are reference values, not mixed into this decomposition.",
+  "real": {
+    "games": 1227,
+    "excluded": [],
+    "regulationPossessions": 247062,
+    "pointsDistribution": {
+      "0": {
+        "count": 120715,
+        "share": 0.4886020513069594
+      },
+      "1": {
+        "count": 8421,
+        "share": 0.0340845617699201
+      },
+      "2": {
+        "count": 80327,
+        "share": 0.325128915009188
+      },
+      "3": {
+        "count": 37168,
+        "share": 0.1504399705337122
+      },
+      "4": {
+        "count": 382,
+        "share": 0.001546170596854231
+      },
+      "5": {
+        "count": 26,
+        "share": 0.00010523674219426703
+      },
+      "6": {
+        "count": 4,
+        "share": 0.000016190268029887235
+      },
+      "-1": {
+        "count": 19,
+        "share": 0.00007690377314196437
+      }
+    },
+    "pointMean": 1.1423934073228583,
+    "pointVariance": 1.41152666103903,
+    "teamCenteredPointVariance": 1.4104922157339796,
+    "meanCombinedPossessions": 201.35452322738385,
+    "independentSD": 16.858744848186504,
+    "teamCenteredIndependentSD": 16.852566202660405,
+    "withinTeamScoreVariance": 149.01365590582466,
+    "withinTeamScoreCovariance": 28.82485010618806,
+    "strengthAdjustedScoreVariance": 126.35076300784863,
+    "scoreCovariance": 27.966054231830846,
+    "paceCovariance": 7.286852871655825,
+    "remainingCovariance": 20.67920136017502,
+    "meanPossessionCount": 100.67726161369193,
+    "possessionCountVariance": 24.9488146691296,
+    "paceBetas": [
+      0.6435301898765257,
+      0.45385921555599595
+    ],
+    "marginResidualSD": 14.027452283006898,
+    "decomposition": {
+      "iidVariance": 284.0089876150517,
+      "individualPaceVariance": 15.471241309508027,
+      "paceCovarianceReduction": -14.57370574331165,
+      "remainingCovarianceReduction": -41.35840272035004,
+      "withinTeamSerialAndHeterogeneityVariance": -46.77870290886247,
+      "total": 196.76941755203546
+    },
+    "scoreBuckets": {
+      "-5..5": {
+        "n": 104359,
+        "ppp": 1.1461206029187707,
+        "duration": 14.347529202081303,
+        "starterShare": 0.6950919147893556,
+        "lineupN": 103525
+      },
+      "-9..-6": {
+        "n": 26377,
+        "ppp": 1.1558175683360503,
+        "duration": 14.317079273609618,
+        "starterShare": 0.62049283876282,
+        "lineupN": 26179
+      },
+      "6..9": {
+        "n": 23517,
+        "ppp": 1.1377301526555257,
+        "duration": 14.213062890674859,
+        "starterShare": 0.616358531196972,
+        "lineupN": 23370
+      },
+      "-19..-10": {
+        "n": 33988,
+        "ppp": 1.136165705543133,
+        "duration": 14.120410144756947,
+        "starterShare": 0.575511987084855,
+        "lineupN": 33891
+      },
+      "10..19": {
+        "n": 30368,
+        "ppp": 1.1394230769230769,
+        "duration": 14.578981164383544,
+        "starterShare": 0.5855453942199887,
+        "lineupN": 30297
+      },
+      "<=-20": {
+        "n": 15324,
+        "ppp": 1.1408901070216653,
+        "duration": 13.97102584181676,
+        "starterShare": 0.4406120156774032,
+        "lineupN": 15324
+      },
+      ">=20": {
+        "n": 13129,
+        "ppp": 1.118897098027268,
+        "duration": 14.306093381064853,
+        "starterShare": 0.41808181628048746,
+        "lineupN": 13129
+      }
+    },
+    "q3Q4Correlation": -0.10539309948194163,
+    "perTeam": [
+      {
+        "teamId": 1610612760,
+        "games": 81,
+        "mean": 117.95061728395062,
+        "scoreVariance": 139.5037341868618
+      },
+      {
+        "teamId": 1610612745,
+        "games": 82,
+        "mean": 114.0609756097561,
+        "scoreVariance": 130.93530636525878
+      },
+      {
+        "teamId": 1610612747,
+        "games": 82,
+        "mean": 116.23170731707317,
+        "scoreVariance": 174.20240928019032
+      },
+      {
+        "teamId": 1610612744,
+        "games": 82,
+        "mean": 113.96341463414635,
+        "scoreVariance": 148.15719809637136
+      },
+      {
+        "teamId": 1610612752,
+        "games": 81,
+        "mean": 115.81481481481481,
+        "scoreVariance": 193.7064471879287
+      },
+      {
+        "teamId": 1610612739,
+        "games": 81,
+        "mean": 118.98765432098766,
+        "scoreVariance": 140.55540313976522
+      },
+      {
+        "teamId": 1610612742,
+        "games": 82,
+        "mean": 113.42682926829268,
+        "scoreVariance": 159.29342653182636
+      },
+      {
+        "teamId": 1610612759,
+        "games": 81,
+        "mean": 119.65432098765432,
+        "scoreVariance": 131.85581466239907
+      },
+      {
+        "teamId": 1610612754,
+        "games": 82,
+        "mean": 112,
+        "scoreVariance": 133.1219512195122
+      },
+      {
+        "teamId": 1610612743,
+        "games": 82,
+        "mean": 120.63414634146342,
+        "scoreVariance": 134.3783462224866
+      },
+      {
+        "teamId": 1610612765,
+        "games": 82,
+        "mean": 117.29268292682927,
+        "scoreVariance": 122.74360499702559
+      },
+      {
+        "teamId": 1610612750,
+        "games": 82,
+        "mean": 117.15853658536585,
+        "scoreVariance": 166.79193932183222
+      },
+      {
+        "teamId": 1610612737,
+        "games": 82,
+        "mean": 118.02439024390245,
+        "scoreVariance": 145.9750148720999
+      },
+      {
+        "teamId": 1610612749,
+        "games": 82,
+        "mean": 110.15853658536585,
+        "scoreVariance": 156.8407198096371
+      },
+      {
+        "teamId": 1610612738,
+        "games": 82,
+        "mean": 114.53658536585365,
+        "scoreVariance": 190.24866151100534
+      },
+      {
+        "teamId": 1610612755,
+        "games": 82,
+        "mean": 114.84146341463415,
+        "scoreVariance": 170.81632956573466
+      },
+      {
+        "teamId": 1610612761,
+        "games": 82,
+        "mean": 114.10975609756098,
+        "scoreVariance": 187.1220999405116
+      },
+      {
+        "teamId": 1610612741,
+        "games": 82,
+        "mean": 115.91463414634147,
+        "scoreVariance": 145.51710291493163
+      },
+      {
+        "teamId": 1610612763,
+        "games": 82,
+        "mean": 114.4390243902439,
+        "scoreVariance": 100.29506246281973
+      },
+      {
+        "teamId": 1610612756,
+        "games": 82,
+        "mean": 112.2560975609756,
+        "scoreVariance": 158.06856038072576
+      },
+      {
+        "teamId": 1610612762,
+        "games": 82,
+        "mean": 116.7560975609756,
+        "scoreVariance": 133.28197501487216
+      },
+      {
+        "teamId": 1610612757,
+        "games": 82,
+        "mean": 114.97560975609755,
+        "scoreVariance": 151.8530636525878
+      },
+      {
+        "teamId": 1610612746,
+        "games": 82,
+        "mean": 113.1951219512195,
+        "scoreVariance": 134.86436644854257
+      },
+      {
+        "teamId": 1610612740,
+        "games": 82,
+        "mean": 114.90243902439025,
+        "scoreVariance": 149.6734086853064
+      },
+      {
+        "teamId": 1610612753,
+        "games": 81,
+        "mean": 114.96296296296296,
+        "scoreVariance": 149.9862825788752
+      },
+      {
+        "teamId": 1610612751,
+        "games": 82,
+        "mean": 105.53658536585365,
+        "scoreVariance": 133.54134443783462
+      },
+      {
+        "teamId": 1610612748,
+        "games": 82,
+        "mean": 120.71951219512195,
+        "scoreVariance": 187.71400951814394
+      },
+      {
+        "teamId": 1610612766,
+        "games": 82,
+        "mean": 115.6829268292683,
+        "scoreVariance": 149.6311719214754
+      },
+      {
+        "teamId": 1610612758,
+        "games": 82,
+        "mean": 110.42682926829268,
+        "scoreVariance": 123.36659726353359
+      },
+      {
+        "teamId": 1610612764,
+        "games": 81,
+        "mean": 112.58024691358025,
+        "scoreVariance": 126.21886907483609
+      }
+    ],
+    "sideCenteredWithinTeamScoreVariance": 148.25734561252514,
+    "scoreLedgerDifferences": [],
+    "offensivePoints": {
+      "variance": 1.4112677090228647,
+      "distribution": {
+        "0": {
+          "count": 120729,
+          "share": 0.488658717245064
+        },
+        "1": {
+          "count": 8423,
+          "share": 0.034092656903935044
+        },
+        "2": {
+          "count": 80329,
+          "share": 0.3251370101432029
+        },
+        "3": {
+          "count": 37169,
+          "share": 0.15044401810071967
+        },
+        "4": {
+          "count": 382,
+          "share": 0.001546170596854231
+        },
+        "5": {
+          "count": 26,
+          "share": 0.00010523674219426703
+        },
+        "6": {
+          "count": 4,
+          "share": 0.000016190268029887235
+        }
+      }
+    }
+  },
+  "simulation": {
+    "games": 1227,
+    "excluded": [],
+    "regulationPossessions": 244422,
+    "pointsDistribution": {
+      "0": {
+        "count": 123115,
+        "share": 0.5036985214096931
+      },
+      "1": {
+        "count": 4361,
+        "share": 0.017842092773972883
+      },
+      "2": {
+        "count": 72374,
+        "share": 0.29610264215168847
+      },
+      "3": {
+        "count": 41342,
+        "share": 0.16914189393753426
+      },
+      "4": {
+        "count": 3149,
+        "share": 0.012883455662747217
+      },
+      "5": {
+        "count": 63,
+        "share": 0.00025775093894984903
+      },
+      "6": {
+        "count": 17,
+        "share": 0.00006955184066900689
+      },
+      "7": {
+        "count": 1,
+        "share": 0.000004091284745235699
+      }
+    },
+    "pointMean": 1.1707415862729214,
+    "pointVariance": 1.5691772482779835,
+    "teamCenteredPointVariance": 1.5675984172942934,
+    "meanCombinedPossessions": 199.20293398533008,
+    "independentSD": 17.680065378838425,
+    "teamCenteredIndependentSD": 17.671168722973107,
+    "withinTeamScoreVariance": 177.1670143467259,
+    "withinTeamScoreCovariance": 17.018745073471354,
+    "strengthAdjustedScoreVariance": 170.91635072367728,
+    "scoreCovariance": 16.784666696974547,
+    "paceCovariance": 14.008356605254592,
+    "remainingCovariance": 2.776310091719955,
+    "meanPossessionCount": 99.60146699266504,
+    "possessionCountVariance": 8.70302963277357,
+    "paceBetas": [
+      1.2596500430140125,
+      1.2778115836814685
+    ],
+    "marginResidualSD": 17.557430565245173,
+    "decomposition": {
+      "iidVariance": 312.270204035783,
+      "individualPaceVariance": 28.0195838313749,
+      "paceCovarianceReduction": -28.016713210509185,
+      "remainingCovarianceReduction": -5.55262018343991,
+      "withinTeamSerialAndHeterogeneityVariance": 1.5429135801966254,
+      "total": 308.2633680534055
+    },
+    "scoreBuckets": {
+      "-5..5": {
+        "n": 93841,
+        "ppp": 1.1811788024424292,
+        "duration": 14.502346522309024,
+        "starterShare": 0.608718591988174,
+        "lineupN": 93841
+      },
+      "-9..-6": {
+        "n": 24981,
+        "ppp": 1.1609623313718427,
+        "duration": 14.354725591449542,
+        "starterShare": 0.5919137278392307,
+        "lineupN": 24981
+      },
+      "6..9": {
+        "n": 22648,
+        "ppp": 1.1753797244789828,
+        "duration": 14.466897739314689,
+        "starterShare": 0.5989463638075607,
+        "lineupN": 22648
+      },
+      "-19..-10": {
+        "n": 35367,
+        "ppp": 1.1546074023807504,
+        "duration": 14.343192806853764,
+        "starterShare": 0.5988273043632887,
+        "lineupN": 35367
+      },
+      "10..19": {
+        "n": 31909,
+        "ppp": 1.1685104515967282,
+        "duration": 14.591952113823629,
+        "starterShare": 0.6062536698806346,
+        "lineupN": 31909
+      },
+      "<=-20": {
+        "n": 18950,
+        "ppp": 1.15778364116095,
+        "duration": 14.190290237467034,
+        "starterShare": 0.5978934646307636,
+        "lineupN": 18950
+      },
+      ">=20": {
+        "n": 16726,
+        "ppp": 1.1735621188568695,
+        "duration": 14.636332655745539,
+        "starterShare": 0.6127913669241162,
+        "lineupN": 16726
+      }
+    },
+    "q3Q4Correlation": 0.02359469034570801,
+    "perTeam": [
+      {
+        "teamId": 1610612760,
+        "games": 81,
+        "mean": 121.9753086419753,
+        "scoreVariance": 170.59198292943148
+      },
+      {
+        "teamId": 1610612745,
+        "games": 82,
+        "mean": 114.8170731707317,
+        "scoreVariance": 194.34458655562165
+      },
+      {
+        "teamId": 1610612747,
+        "games": 82,
+        "mean": 123.52439024390245,
+        "scoreVariance": 178.27379535990485
+      },
+      {
+        "teamId": 1610612744,
+        "games": 82,
+        "mean": 114.34146341463415,
+        "scoreVariance": 232.5419393218323
+      },
+      {
+        "teamId": 1610612752,
+        "games": 81,
+        "mean": 119.23456790123457,
+        "scoreVariance": 174.7474470355129
+      },
+      {
+        "teamId": 1610612739,
+        "games": 81,
+        "mean": 120.30864197530865,
+        "scoreVariance": 182.9788142051517
+      },
+      {
+        "teamId": 1610612742,
+        "games": 82,
+        "mean": 111.57317073170732,
+        "scoreVariance": 108.02513384889949
+      },
+      {
+        "teamId": 1610612759,
+        "games": 81,
+        "mean": 122.12345679012346,
+        "scoreVariance": 172.89833866788598
+      },
+      {
+        "teamId": 1610612766,
+        "games": 82,
+        "mean": 119.1951219512195,
+        "scoreVariance": 171.81558596073768
+      },
+      {
+        "teamId": 1610612751,
+        "games": 82,
+        "mean": 109.97560975609755,
+        "scoreVariance": 153.3652587745389
+      },
+      {
+        "teamId": 1610612753,
+        "games": 81,
+        "mean": 117.34567901234568,
+        "scoreVariance": 220.5718640451151
+      },
+      {
+        "teamId": 1610612748,
+        "games": 82,
+        "mean": 116.46341463414635,
+        "scoreVariance": 161.49256395002973
+      },
+      {
+        "teamId": 1610612737,
+        "games": 82,
+        "mean": 118.78048780487805,
+        "scoreVariance": 205.39083878643663
+      },
+      {
+        "teamId": 1610612761,
+        "games": 82,
+        "mean": 118.14634146341463,
+        "scoreVariance": 160.14931588340275
+      },
+      {
+        "teamId": 1610612738,
+        "games": 82,
+        "mean": 116.26829268292683,
+        "scoreVariance": 164.8792385484831
+      },
+      {
+        "teamId": 1610612755,
+        "games": 82,
+        "mean": 116.51219512195122,
+        "scoreVariance": 181.24985127900058
+      },
+      {
+        "teamId": 1610612741,
+        "games": 82,
+        "mean": 113.01219512195122,
+        "scoreVariance": 177.84131469363473
+      },
+      {
+        "teamId": 1610612765,
+        "games": 82,
+        "mean": 115.67073170731707,
+        "scoreVariance": 170.00133848899463
+      },
+      {
+        "teamId": 1610612763,
+        "games": 82,
+        "mean": 115.3780487804878,
+        "scoreVariance": 196.25951814396188
+      },
+      {
+        "teamId": 1610612740,
+        "games": 82,
+        "mean": 111.59756097560975,
+        "scoreVariance": 167.1429208804283
+      },
+      {
+        "teamId": 1610612749,
+        "games": 82,
+        "mean": 117.3170731707317,
+        "scoreVariance": 197.65556216537775
+      },
+      {
+        "teamId": 1610612764,
+        "games": 81,
+        "mean": 109.45679012345678,
+        "scoreVariance": 157.2604785855815
+      },
+      {
+        "teamId": 1610612762,
+        "games": 82,
+        "mean": 117.42682926829268,
+        "scoreVariance": 226.22025580011896
+      },
+      {
+        "teamId": 1610612746,
+        "games": 82,
+        "mean": 116.96341463414635,
+        "scoreVariance": 184.25475907198089
+      },
+      {
+        "teamId": 1610612756,
+        "games": 82,
+        "mean": 114.01219512195122,
+        "scoreVariance": 158.40229030339086
+      },
+      {
+        "teamId": 1610612758,
+        "games": 82,
+        "mean": 112.82926829268293,
+        "scoreVariance": 199.65377751338482
+      },
+      {
+        "teamId": 1610612757,
+        "games": 82,
+        "mean": 108.5,
+        "scoreVariance": 151.07926829268294
+      },
+      {
+        "teamId": 1610612750,
+        "games": 82,
+        "mean": 122.2560975609756,
+        "scoreVariance": 147.87343842950622
+      },
+      {
+        "teamId": 1610612754,
+        "games": 82,
+        "mean": 112.82926829268293,
+        "scoreVariance": 161.21475312314095
+      },
+      {
+        "teamId": 1610612743,
+        "games": 82,
+        "mean": 130.52439024390245,
+        "scoreVariance": 187.02989292088046
+      }
+    ],
+    "sideCenteredWithinTeamScoreVariance": 177.11385256693552,
+    "scoreLedgerDifferences": [],
+    "offensivePoints": {
+      "variance": 1.5691772482779835,
+      "distribution": {
+        "0": {
+          "count": 123115,
+          "share": 0.5036985214096931
+        },
+        "1": {
+          "count": 4361,
+          "share": 0.017842092773972883
+        },
+        "2": {
+          "count": 72374,
+          "share": 0.29610264215168847
+        },
+        "3": {
+          "count": 41342,
+          "share": 0.16914189393753426
+        },
+        "4": {
+          "count": 3149,
+          "share": 0.012883455662747217
+        },
+        "5": {
+          "count": 63,
+          "share": 0.00025775093894984903
+        },
+        "6": {
+          "count": 17,
+          "share": 0.00006955184066900689
+        },
+        "7": {
+          "count": 1,
+          "share": 0.000004091284745235699
+        }
+      }
+    }
+  },
+  "strict": {
+    "ids": 1219,
+    "real": {
+      "games": 1219,
+      "excluded": [],
+      "regulationPossessions": 245456,
+      "pointsDistribution": {
+        "0": {
+          "count": 119914,
+          "share": 0.48853562349260155
+        },
+        "1": {
+          "count": 8368,
+          "share": 0.03409164982726028
+        },
+        "2": {
+          "count": 79818,
+          "share": 0.3251825174369337
+        },
+        "3": {
+          "count": 36926,
+          "share": 0.15043836777263542
+        },
+        "4": {
+          "count": 381,
+          "share": 0.0015522130239228212
+        },
+        "5": {
+          "count": 26,
+          "share": 0.00010592529822045499
+        },
+        "6": {
+          "count": 4,
+          "share": 0.000016296199726223845
+        },
+        "-1": {
+          "count": 19,
+          "share": 0.00007740694869956327
+        }
+      },
+      "pointMean": 1.1425306368554853,
+      "pointVariance": 1.4115383843524691,
+      "teamCenteredPointVariance": 1.4104896193154084,
+      "meanCombinedPossessions": 201.35849056603774,
+      "independentSD": 16.85898094337961,
+      "teamCenteredIndependentSD": 16.852716715841865,
+      "withinTeamScoreVariance": 148.86743249575744,
+      "withinTeamScoreCovariance": 28.80633981562346,
+      "strengthAdjustedScoreVariance": 126.29544042092371,
+      "scoreCovariance": 27.976468344814727,
+      "paceCovariance": 7.183419520075569,
+      "remainingCovariance": 20.79304882473916,
+      "meanPossessionCount": 100.67924528301887,
+      "possessionCountVariance": 25.022218954602536,
+      "paceBetas": [
+        0.637373844212597,
+        0.4504132657112381
+      ],
+      "marginResidualSD": 14.022765210621545,
+      "decomposition": {
+        "iidVariance": 284.01406070441584,
+        "individualPaceVariance": 15.241472135059954,
+        "paceCovarianceReduction": -14.366839040151138,
+        "remainingCovarianceReduction": -41.58609764947832,
+        "withinTeamSerialAndHeterogeneityVariance": -46.66465199762837,
+        "total": 196.6379441522179
+      },
+      "scoreBuckets": {
+        "-5..5": {
+          "n": 103705,
+          "ppp": 1.1460103177281713,
+          "duration": 14.348919531363018,
+          "starterShare": 0.6952220702145039,
+          "lineupN": 102871
+        },
+        "-9..-6": {
+          "n": 26199,
+          "ppp": 1.156685369670598,
+          "duration": 14.319664872705099,
+          "starterShare": 0.6199234967057986,
+          "lineupN": 26001
+        },
+        "6..9": {
+          "n": 23361,
+          "ppp": 1.1389923376567783,
+          "duration": 14.210449038996643,
+          "starterShare": 0.615730497757893,
+          "lineupN": 23214
+        },
+        "-19..-10": {
+          "n": 33809,
+          "ppp": 1.1364429589754208,
+          "duration": 14.116782513531874,
+          "starterShare": 0.5755429486890513,
+          "lineupN": 33712
+        },
+        "10..19": {
+          "n": 30193,
+          "ppp": 1.1385089259099792,
+          "duration": 14.577547775974546,
+          "starterShare": 0.5853441934697065,
+          "lineupN": 30122
+        },
+        "<=-20": {
+          "n": 15182,
+          "ppp": 1.1409563957317876,
+          "duration": 13.97329732578053,
+          "starterShare": 0.44148748929692655,
+          "lineupN": 15182
+        },
+        ">=20": {
+          "n": 13007,
+          "ppp": 1.119627892673176,
+          "duration": 14.298224033212914,
+          "starterShare": 0.4182668231084258,
+          "lineupN": 13007
+        }
+      },
+      "q3Q4Correlation": -0.10225878517868141,
+      "perTeam": [
+        {
+          "teamId": 1610612760,
+          "games": 79,
+          "mean": 117.77215189873418,
+          "scoreVariance": 141.72023714148372
+        },
+        {
+          "teamId": 1610612745,
+          "games": 81,
+          "mean": 114.0246913580247,
+          "scoreVariance": 132.44383478128336
+        },
+        {
+          "teamId": 1610612747,
+          "games": 82,
+          "mean": 116.23170731707317,
+          "scoreVariance": 174.20240928019032
+        },
+        {
+          "teamId": 1610612744,
+          "games": 81,
+          "mean": 114.11111111111111,
+          "scoreVariance": 148.19753086419763
+        },
+        {
+          "teamId": 1610612752,
+          "games": 80,
+          "mean": 115.65,
+          "scoreVariance": 193.9275
+        },
+        {
+          "teamId": 1610612739,
+          "games": 79,
+          "mean": 119.30379746835443,
+          "scoreVariance": 138.9963146931582
+        },
+        {
+          "teamId": 1610612742,
+          "games": 81,
+          "mean": 113.23456790123457,
+          "scoreVariance": 158.22892851699442
+        },
+        {
+          "teamId": 1610612759,
+          "games": 80,
+          "mean": 119.9625,
+          "scoreVariance": 125.81109375000001
+        },
+        {
+          "teamId": 1610612754,
+          "games": 82,
+          "mean": 112,
+          "scoreVariance": 133.1219512195122
+        },
+        {
+          "teamId": 1610612743,
+          "games": 81,
+          "mean": 120.79012345679013,
+          "scoreVariance": 134.0423715896967
+        },
+        {
+          "teamId": 1610612765,
+          "games": 81,
+          "mean": 117.29629629629629,
+          "scoreVariance": 124.25788751714676
+        },
+        {
+          "teamId": 1610612750,
+          "games": 82,
+          "mean": 117.15853658536585,
+          "scoreVariance": 166.79193932183222
+        },
+        {
+          "teamId": 1610612737,
+          "games": 82,
+          "mean": 118.02439024390245,
+          "scoreVariance": 145.9750148720999
+        },
+        {
+          "teamId": 1610612749,
+          "games": 82,
+          "mean": 110.15853658536585,
+          "scoreVariance": 156.8407198096371
+        },
+        {
+          "teamId": 1610612738,
+          "games": 82,
+          "mean": 114.53658536585365,
+          "scoreVariance": 190.24866151100534
+        },
+        {
+          "teamId": 1610612755,
+          "games": 82,
+          "mean": 114.84146341463415,
+          "scoreVariance": 170.81632956573466
+        },
+        {
+          "teamId": 1610612761,
+          "games": 82,
+          "mean": 114.10975609756098,
+          "scoreVariance": 187.1220999405116
+        },
+        {
+          "teamId": 1610612741,
+          "games": 82,
+          "mean": 115.91463414634147,
+          "scoreVariance": 145.51710291493163
+        },
+        {
+          "teamId": 1610612763,
+          "games": 82,
+          "mean": 114.4390243902439,
+          "scoreVariance": 100.29506246281973
+        },
+        {
+          "teamId": 1610612756,
+          "games": 82,
+          "mean": 112.2560975609756,
+          "scoreVariance": 158.06856038072576
+        },
+        {
+          "teamId": 1610612762,
+          "games": 81,
+          "mean": 116.60493827160494,
+          "scoreVariance": 133.05380277396742
+        },
+        {
+          "teamId": 1610612757,
+          "games": 82,
+          "mean": 114.97560975609755,
+          "scoreVariance": 151.8530636525878
+        },
+        {
+          "teamId": 1610612746,
+          "games": 82,
+          "mean": 113.1951219512195,
+          "scoreVariance": 134.86436644854257
+        },
+        {
+          "teamId": 1610612740,
+          "games": 81,
+          "mean": 115.03703703703704,
+          "scoreVariance": 150.03566529492457
+        },
+        {
+          "teamId": 1610612753,
+          "games": 81,
+          "mean": 114.96296296296296,
+          "scoreVariance": 149.9862825788752
+        },
+        {
+          "teamId": 1610612751,
+          "games": 82,
+          "mean": 105.53658536585365,
+          "scoreVariance": 133.54134443783462
+        },
+        {
+          "teamId": 1610612748,
+          "games": 81,
+          "mean": 120.82716049382717,
+          "scoreVariance": 189.08123761621707
+        },
+        {
+          "teamId": 1610612766,
+          "games": 81,
+          "mean": 115.8641975308642,
+          "scoreVariance": 148.78402682517898
+        },
+        {
+          "teamId": 1610612758,
+          "games": 82,
+          "mean": 110.42682926829268,
+          "scoreVariance": 123.36659726353359
+        },
+        {
+          "teamId": 1610612764,
+          "games": 80,
+          "mean": 112.8,
+          "scoreVariance": 123.88499999999999
+        }
+      ],
+      "sideCenteredWithinTeamScoreVariance": 148.1018233430581,
+      "scoreLedgerDifferences": []
+    },
+    "simulation": {
+      "games": 1219,
+      "excluded": [],
+      "regulationPossessions": 242845,
+      "pointsDistribution": {
+        "0": {
+          "count": 122321,
+          "share": 0.5036998908768968
+        },
+        "1": {
+          "count": 4339,
+          "share": 0.017867363956433117
+        },
+        "2": {
+          "count": 71909,
+          "share": 0.2961106878873355
+        },
+        "3": {
+          "count": 41063,
+          "share": 0.1690913957462579
+        },
+        "4": {
+          "count": 3132,
+          "share": 0.012897115444007495
+        },
+        "5": {
+          "count": 63,
+          "share": 0.0002594247359426795
+        },
+        "6": {
+          "count": 17,
+          "share": 0.00007000350017500875
+        },
+        "7": {
+          "count": 1,
+          "share": 0.000004117852951471103
+        }
+      },
+      "pointMean": 1.1706973583973317,
+      "pointVariance": 1.569161738568793,
+      "teamCenteredPointVariance": 1.5675695270160737,
+      "meanCombinedPossessions": 199.2165709598031,
+      "independentSD": 17.680583158906213,
+      "teamCenteredIndependentSD": 17.67161073341145,
+      "withinTeamScoreVariance": 176.74425039130588,
+      "withinTeamScoreCovariance": 17.465997870895613,
+      "strengthAdjustedScoreVariance": 170.37918705222376,
+      "scoreCovariance": 17.242869957234248,
+      "paceCovariance": 14.073649103323168,
+      "remainingCovariance": 3.1692208539110798,
+      "meanPossessionCount": 99.60828547990155,
+      "possessionCountVariance": 8.679824706032,
+      "paceBetas": [
+        1.2561290382220414,
+        1.2908075850945773
+      ],
+      "marginResidualSD": 17.50064667919386,
+      "decomposition": {
+        "iidVariance": 312.28582591322265,
+        "individualPaceVariance": 28.157736577840026,
+        "paceCovarianceReduction": -28.147298206646337,
+        "remainingCovarianceReduction": -6.3384417078221595,
+        "withinTeamSerialAndHeterogeneityVariance": 0.31481161338484753,
+        "total": 306.27263418997904
+      },
+      "scoreBuckets": {
+        "-5..5": {
+          "n": 93430,
+          "ppp": 1.1807984587391631,
+          "duration": 14.501135609547266,
+          "starterShare": 0.6088368739330454,
+          "lineupN": 93430
+        },
+        "-9..-6": {
+          "n": 24795,
+          "ppp": 1.162048800161323,
+          "duration": 14.347989514014952,
+          "starterShare": 0.5918915758559751,
+          "lineupN": 24795
+        },
+        "6..9": {
+          "n": 22467,
+          "ppp": 1.175368317977478,
+          "duration": 14.46474384653042,
+          "starterShare": 0.5990656638543894,
+          "lineupN": 22467
+        },
+        "-19..-10": {
+          "n": 35113,
+          "ppp": 1.1545581408595107,
+          "duration": 14.34576937316657,
+          "starterShare": 0.599034548750008,
+          "lineupN": 35113
+        },
+        "10..19": {
+          "n": 31680,
+          "ppp": 1.168276515151515,
+          "duration": 14.591792929292865,
+          "starterShare": 0.6061942855659567,
+          "lineupN": 31680
+        },
+        "<=-20": {
+          "n": 18781,
+          "ppp": 1.1585112613811832,
+          "duration": 14.187849422288524,
+          "starterShare": 0.5984675488437372,
+          "lineupN": 18781
+        },
+        ">=20": {
+          "n": 16579,
+          "ppp": 1.1729899270161046,
+          "duration": 14.638283370528976,
+          "starterShare": 0.613136779265247,
+          "lineupN": 16579
+        }
+      },
+      "q3Q4Correlation": 0.01916913638909895,
+      "perTeam": [
+        {
+          "teamId": 1610612760,
+          "games": 79,
+          "mean": 121.68354430379746,
+          "scoreVariance": 171.40618490626505
+        },
+        {
+          "teamId": 1610612745,
+          "games": 81,
+          "mean": 114.90123456790124,
+          "scoreVariance": 196.16308489559523
+        },
+        {
+          "teamId": 1610612747,
+          "games": 82,
+          "mean": 123.52439024390245,
+          "scoreVariance": 178.27379535990485
+        },
+        {
+          "teamId": 1610612744,
+          "games": 81,
+          "mean": 114.80246913580247,
+          "scoreVariance": 217.98567291571408
+        },
+        {
+          "teamId": 1610612752,
+          "games": 80,
+          "mean": 119.1,
+          "scoreVariance": 175.46499999999997
+        },
+        {
+          "teamId": 1610612739,
+          "games": 79,
+          "mean": 120.59493670886076,
+          "scoreVariance": 184.2663034770069
+        },
+        {
+          "teamId": 1610612742,
+          "games": 81,
+          "mean": 111.64197530864197,
+          "scoreVariance": 108.97058375247678
+        },
+        {
+          "teamId": 1610612759,
+          "games": 80,
+          "mean": 122.4,
+          "scoreVariance": 168.86499999999995
+        },
+        {
+          "teamId": 1610612766,
+          "games": 81,
+          "mean": 119.30864197530865,
+          "scoreVariance": 172.8800487730529
+        },
+        {
+          "teamId": 1610612751,
+          "games": 82,
+          "mean": 109.97560975609755,
+          "scoreVariance": 153.3652587745389
+        },
+        {
+          "teamId": 1610612753,
+          "games": 81,
+          "mean": 117.34567901234568,
+          "scoreVariance": 220.5718640451151
+        },
+        {
+          "teamId": 1610612748,
+          "games": 81,
+          "mean": 116.30864197530865,
+          "scoreVariance": 161.52202408169487
+        },
+        {
+          "teamId": 1610612737,
+          "games": 82,
+          "mean": 118.78048780487805,
+          "scoreVariance": 205.39083878643663
+        },
+        {
+          "teamId": 1610612761,
+          "games": 82,
+          "mean": 118.14634146341463,
+          "scoreVariance": 160.14931588340275
+        },
+        {
+          "teamId": 1610612738,
+          "games": 82,
+          "mean": 116.26829268292683,
+          "scoreVariance": 164.8792385484831
+        },
+        {
+          "teamId": 1610612755,
+          "games": 82,
+          "mean": 116.51219512195122,
+          "scoreVariance": 181.24985127900058
+        },
+        {
+          "teamId": 1610612741,
+          "games": 82,
+          "mean": 113.01219512195122,
+          "scoreVariance": 177.84131469363473
+        },
+        {
+          "teamId": 1610612765,
+          "games": 81,
+          "mean": 115.5679012345679,
+          "scoreVariance": 171.23304374333188
+        },
+        {
+          "teamId": 1610612763,
+          "games": 82,
+          "mean": 115.3780487804878,
+          "scoreVariance": 196.25951814396188
+        },
+        {
+          "teamId": 1610612740,
+          "games": 81,
+          "mean": 111.39506172839506,
+          "scoreVariance": 165.84392623075746
+        },
+        {
+          "teamId": 1610612749,
+          "games": 82,
+          "mean": 117.3170731707317,
+          "scoreVariance": 197.65556216537775
+        },
+        {
+          "teamId": 1610612764,
+          "games": 80,
+          "mean": 109.475,
+          "scoreVariance": 159.19937499999997
+        },
+        {
+          "teamId": 1610612762,
+          "games": 81,
+          "mean": 117.18518518518519,
+          "scoreVariance": 224.22496570644714
+        },
+        {
+          "teamId": 1610612746,
+          "games": 82,
+          "mean": 116.96341463414635,
+          "scoreVariance": 184.25475907198089
+        },
+        {
+          "teamId": 1610612756,
+          "games": 82,
+          "mean": 114.01219512195122,
+          "scoreVariance": 158.40229030339086
+        },
+        {
+          "teamId": 1610612758,
+          "games": 82,
+          "mean": 112.82926829268293,
+          "scoreVariance": 199.65377751338482
+        },
+        {
+          "teamId": 1610612757,
+          "games": 82,
+          "mean": 108.5,
+          "scoreVariance": 151.07926829268294
+        },
+        {
+          "teamId": 1610612750,
+          "games": 82,
+          "mean": 122.2560975609756,
+          "scoreVariance": 147.87343842950622
+        },
+        {
+          "teamId": 1610612754,
+          "games": 82,
+          "mean": 112.82926829268293,
+          "scoreVariance": 161.21475312314095
+        },
+        {
+          "teamId": 1610612743,
+          "games": 81,
+          "mean": 130.71604938271605,
+          "scoreVariance": 186.32677945435154
+        }
+      ],
+      "sideCenteredWithinTeamScoreVariance": 176.688132297155,
+      "scoreLedgerDifferences": []
+    }
+  },
+  "gap": {
+    "marginVariance": 111.49395050137002,
+    "sd": 3.5299782822382753,
+    "components": {
+      "singlePossessionVariance": 31.29601629810514,
+      "meanPossessionCount": -3.034799877373821,
+      "sharedPaceNet": -0.8946649453306623,
+      "remainingSameGameCovariance": 35.80578253691013,
+      "withinTeamSerialAndHeterogeneity": 48.321616489059096
+    },
+    "shares": {
+      "singlePossessionVariance": 0.2806969899027892,
+      "meanPossessionCount": -0.027219412925336518,
+      "sharedPaceNet": -0.008024336220104325,
+      "remainingSameGameCovariance": 0.32114551844200867,
+      "withinTeamSerialAndHeterogeneity": 0.4334012408006417
+    }
+  },
+  "uncertainty": {
+    "definition": "Paired fixture-block bootstrap, 1000 resamples; fitted team scoring and allowed-score centers held fixed. One seed, not 20-seed engine uncertainty.",
+    "realResidual": {
+      "standardError": 0.2956906141523471,
+      "ci95": [
+        13.448758965976102,
+        14.58970515843054
+      ]
+    },
+    "simResidual": {
+      "standardError": 0.3575385078182127,
+      "ci95": [
+        16.889120730858597,
+        18.230455951382364
+      ]
+    },
+    "sdDifference": {
+      "standardError": 0.4491774602420116,
+      "ci95": [
+        2.6327044472591545,
+        4.387443518776086
+      ]
+    },
+    "realRemainingCovariance": {
+      "standardError": 3.516143994539092,
+      "ci95": [
+        13.385396469312104,
+        27.418728131831596
+      ]
+    },
+    "simRemainingCovariance": {
+      "standardError": 4.280741934339935,
+      "ci95": [
+        -5.842875561993042,
+        11.075054965247848
+      ]
+    }
+  },
+  "definitions": {
+    "strengthAdjustment": "Y_A = regulation points_A - season own points mean_A - season opponent allowed mean_B + league mean. Y_B symmetric. Var(Y_A-Y_B)=Var(Y_A)+Var(Y_B)-2Cov(Y_A,Y_B). Score covariance uses actual team scores including opposing technical FTs; within-team variance is the game-count-weighted population variance across each team, with per-team values supplied.",
+    "pace": "Shared N=(N_A+N_B)/2. Linear score projections on N partition covariance into beta_A*beta_B*Var(N) and residual covariance. Statistical partition, not intervention causality.",
+    "iid": "Mean combined regulation possession count times within-team signed possession point variance. Technical opposing points remain signed only for margin IID theory; ordinary offensive point distribution also shown.",
+    "serial": "Remainder after IID, marginal pace variance and both covariance components. Contains within-team serial dependence, remaining schedule/lineup heterogeneity and strength fitting effects; cannot identify garbage time causally.",
+    "gap": "Components in points squared, not additive SD. Replacing simulation terms with real terms yields the observed variance exactly. Own vs opponent technical bookkeeping is retained, not forced into 0–4."
+  },
+  "suggestions": [
+    "B2 should model state-dependent efficiency/rotation only after matchup and time controls, then validate covariance and residual SD jointly.",
+    "Observed >=20-point leads have substantially lower starter exposure in NBA, unlike v1; descriptive association alone does not establish how much variance a substitution rule will remove.",
+    "Do not cap game margins or tune wins. Do not infer that all residual covariance is a leader slowdown effect."
+  ],
+  "provenance": {
+    "sources": {
+      "reports/defense-b1/real-games.jsonl": "b9451a56eeb3f7714e10d49abbd5f9846723ceb6551c5f04e179bcf04904fc26",
+      "reports/defense-b1/v1-instrumented-replay-seed20261012.jsonl": "837305dd706555b163b24a174d30d631491af4daf20dbd0a652d4dee7f1bf28a",
+      "reports/defense-b1/preparation.json": "9c95c376c8c073d4e0f236b3ff7fb27b21969dcbaf73e9e265f85ae8ace7c7da",
+      "data/defense-a-source/manifest.json": "0bb849fc0a3301cd8bff4c3733f0623c24e1328b5c43342dbfb848ce5dd3efed"
+    },
+    "code": {
+      "src/defense_variance_sources.js": "c0d90f2c2c17c1005b3c439e3b1a1b8c0a3504c6ca8fbf7292e6ab93f00fb4d4",
+      "src/defense_pbp_analysis.js": "9fa9ecacd1b8a649d708098277e2b579be57a83299e094d730c6b92305cc8e00",
+      "scripts/report_defense_variance_sources.js": "c37e487b34e73519ed0005b7827dd2601a8e096404698908b5184dbef97b17b5"
+    }
+  }
+}

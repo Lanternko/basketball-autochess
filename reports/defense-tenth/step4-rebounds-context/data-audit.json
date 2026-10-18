@@ -1,0 +1,178 @@
+{
+  "at": "2026-10-14T08:59:39.285336+00:00",
+  "seasons": [
+    {
+      "season": "2022-23",
+      "cutoff": "2023-01-10",
+      "games": 1230,
+      "jobs": [
+        {
+          "half": "first",
+          "rows": 486,
+          "trackingMIN": 285037,
+          "boxMIN": 298710,
+          "trackingOREB": 12988,
+          "boxOREB": 12988
+        },
+        {
+          "half": "second",
+          "rows": 507,
+          "trackingMIN": 281369,
+          "boxMIN": 296361,
+          "trackingOREB": 12585,
+          "boxOREB": 12681
+        }
+      ],
+      "errors": [],
+      "reconcile": {
+        "OREB": {
+          "absoluteDifference": 0,
+          "fullTotal": 25573,
+          "relativeDifference": 0.0,
+          "rows": []
+        },
+        "OREB_CHANCES": {
+          "absoluteDifference": 0,
+          "fullTotal": 59574,
+          "relativeDifference": 0.0,
+          "rows": []
+        }
+      },
+      "usable": true,
+      "strictGames": 1079,
+      "strictCoverage": 0.8772357723577235,
+      "cohort": 328,
+      "movers": 40
+    },
+    {
+      "season": "2023-24",
+      "cutoff": "2024-01-19",
+      "games": 1230,
+      "jobs": [
+        {
+          "half": "first",
+          "rows": 511,
+          "trackingMIN": 282783,
+          "boxMIN": 298899,
+          "trackingOREB": 13231,
+          "boxOREB": 13306
+        },
+        {
+          "half": "second",
+          "rows": 529,
+          "trackingMIN": 278052,
+          "boxMIN": 294965,
+          "trackingOREB": 12453,
+          "boxOREB": 12656
+        }
+      ],
+      "errors": [],
+      "reconcile": {
+        "OREB": {
+          "absoluteDifference": 0,
+          "fullTotal": 25684,
+          "relativeDifference": 0.0,
+          "rows": []
+        },
+        "OREB_CHANCES": {
+          "absoluteDifference": 0,
+          "fullTotal": 59442,
+          "relativeDifference": 0.0,
+          "rows": []
+        }
+      },
+      "usable": true,
+      "strictGames": 1063,
+      "strictCoverage": 0.8642276422764228,
+      "cohort": 296,
+      "movers": 33
+    },
+    {
+      "season": "2024-25",
+      "cutoff": "2025-01-18",
+      "games": 1230,
+      "jobs": [
+        {
+          "half": "first",
+          "rows": 513,
+          "trackingMIN": 283687,
+          "boxMIN": 297725,
+          "trackingOREB": 13490,
+          "boxOREB": 13523
+        },
+        {
+          "half": "second",
+          "rows": 534,
+          "trackingMIN": 283021,
+          "boxMIN": 296045,
+          "trackingOREB": 13830,
+          "boxOREB": 13830
+        }
+      ],
+      "errors": [],
+      "reconcile": {
+        "OREB": {
+          "absoluteDifference": 0,
+          "fullTotal": 27320,
+          "relativeDifference": 0.0,
+          "rows": []
+        },
+        "OREB_CHANCES": {
+          "absoluteDifference": 0,
+          "fullTotal": 52961,
+          "relativeDifference": 0.0,
+          "rows": []
+        }
+      },
+      "usable": true,
+      "strictGames": 1091,
+      "strictCoverage": 0.8869918699186992,
+      "cohort": 312,
+      "movers": 42
+    },
+    {
+      "season": "2025-26",
+      "cutoff": "2026-01-16",
+      "games": 1230,
+      "jobs": [
+        {
+          "half": "first",
+          "rows": 504,
+          "trackingMIN": 284161,
+          "boxMIN": 298274,
+          "trackingOREB": 14178,
+          "boxOREB": 14180
+        },
+        {
+          "half": "second",
+          "rows": 545,
+          "trackingMIN": 282557,
+          "boxMIN": 295439,
+          "trackingOREB": 13809,
+          "boxOREB": 13809
+        }
+      ],
+      "errors": [],
+      "reconcile": {
+        "OREB": {
+          "absoluteDifference": 0,
+          "fullTotal": 27987,
+          "relativeDifference": 0.0,
+          "rows": []
+        },
+        "OREB_CHANCES": {
+          "absoluteDifference": 0,
+          "fullTotal": 46937,
+          "relativeDifference": 0.0,
+          "rows": []
+        }
+      },
+      "usable": true,
+      "strictGames": 1188,
+      "strictCoverage": 0.9658536585365853,
+      "cohort": 339,
+      "movers": 38
+    }
+  ],
+  "fetchFailures": []
+}

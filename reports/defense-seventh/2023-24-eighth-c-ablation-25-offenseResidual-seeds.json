@@ -1,0 +1,47 @@
+{
+  "label": "2023-24-eighth-c-ablation-25-offenseResidual",
+  "extra": {
+    "bundle": "reports/defense-seventh/2023-24/calendar-25/bundle.json",
+    "cutoff": 25,
+    "calendarDate": "2023-12-17",
+    "cardFile": "reports/defense-eighth/c/ablation/2023-24/calendar-25/offenseResidual/pre25-ablation-league.json",
+    "neutralContests": true,
+    "calibration": {
+      "shotDelta": -0.09538560869936223,
+      "options": {
+        "pace": 0.9368410787860856,
+        "foulScale": 0.9717740668427416,
+        "passTurnoverScale": 1.3583370206689092,
+        "touchTurnoverScale": 0.998788444681561,
+        "touchLiveShare": 0.3175839205920957,
+        "clockViolationProbability": 0.006572285187710705
+      }
+    },
+    "options": {}
+  },
+  "files": [
+    {
+      "seed": 20261012,
+      "file": "reports/defense-seventh/runs/2023-24-eighth-c-ablation-25-offenseResidual-seed20261012.json",
+      "sha256": "9033f6cb661bbf4c14908caa79d6511dffca1e3138f24c2366baec4615e6e288"
+    },
+    {
+      "seed": 20261013,
+      "file": "reports/defense-seventh/runs/2023-24-eighth-c-ablation-25-offenseResidual-seed20261013.json",
+      "sha256": "7616921dadc0554139e82c375e3ab2ec2c3b23a044e3fb89d438d8f32530e04f"
+    },
+    {
+      "seed": 20261014,
+      "file": "reports/defense-seventh/runs/2023-24-eighth-c-ablation-25-offenseResidual-seed20261014.json",
+      "sha256": "af5bfa89d993d46601e067bea0acfdc0456e5b6d2754524055ba65f63d940b04"
+    }
+  ],
+  "seconds": 72.565,
+  "sources": {
+    "src/defense_fifth_game.js": "bddd3f34b93e969513ce79d717b78358dc433c0f15eba3eeffa675177b9dfa86",
+    "src/defense_sixth_season.js": "1c30c6c59fbc3e2a40b08231dddf9be255b11fca386d93daf1eb986a99000bcf",
+    "src/defense_seventh_jobs.js": "ca1501845b601e0b742f601751ac74fba7e9717a6de66d8ab9d7a4d0c4c6d41d",
+    "scripts/run_defense_seventh.js": "0e40923369762bd8b0a0faa1545e704ba0587bc1341ea40058b7766f240f3f01",
+    "reports/defense-eighth/c/ablation/2023-24/calendar-25/offenseResidual/pre25-ablation-league.json": "08c3476c7b37a0b19a1c345cd48a549d77dfd695fc2aec80457cf58e3f6d1a5d"
+  }
+}

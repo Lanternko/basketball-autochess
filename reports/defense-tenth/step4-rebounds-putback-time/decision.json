@@ -1,0 +1,34 @@
+{
+  "version": "pure-oreb-putback-time-1",
+  "fidelityGapReduced": {
+    "immediateProxy": true,
+    "meanSeconds": true
+  },
+  "accuracySignificantlyImproved": [],
+  "significantHarm": [],
+  "driftFailures": [
+    {
+      "season": "2022-23",
+      "efficiencyBias": -0.08517717127661228,
+      "possessionsBias": 1.1020398373983653
+    },
+    {
+      "season": "2023-24",
+      "efficiencyBias": 0.2753591204481012,
+      "possessionsBias": 1.0136886178861886
+    },
+    {
+      "season": "2024-25",
+      "efficiencyBias": 0.031101709545978906,
+      "possessionsBias": 1.2317357723577231
+    },
+    {
+      "season": "2025-26",
+      "efficiencyBias": 0.07372379123488315,
+      "possessionsBias": 1.2341747967479648
+    }
+  ],
+  "eligible": false,
+  "promoted": false,
+  "noRetuning": true
+}

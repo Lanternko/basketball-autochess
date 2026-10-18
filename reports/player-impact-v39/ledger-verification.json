@@ -1,0 +1,11 @@
+{
+  "files": 24,
+  "teamSeasons": 720,
+  "games": 28023,
+  "passed": true,
+  "scope": "All full and strict runs: team-player basic stat conservation, team-only shot clock violations, scoring identity, AST no more than FGM, paired steals/live turnovers. On-court 5/4/1 ledgers independently checked in scorer.",
+  "hashes": {
+    "reports/player-impact-v39/verify-ledgers.mjs": "583845a14bc77ccb506f8b9d495b8a47178943c7b195f8c5dc11ce7cd5ceffab",
+    "reports/player-impact-v39/validation-manifest.json": "82152a8be6ff5605272b2acd81f4366eb569699055f6ebb708103735cb09b2fe"
+  }
+}

@@ -1,0 +1,1611 @@
+{
+  "scope": "Full official per-game minute error includes overtime-duration differences. Regulation target error uses the existing48-minute-normalized official game targets. Strict phase discrepancy sums absolute bin-minute differences per appearance; pair overlap MAE averages all pairs of actual participants per game, including zero overlap. Source phase/pairs exclude overtime; baseline is exact-parity observer rerun. Curry on/off conditional minutes are regulation only.",
+  "cells": [
+    {
+      "season": "2022-23",
+      "variant": "v47",
+      "phaseAbsoluteMinutesPerAppearance": 19.13470789672944,
+      "pairOverlapMinutesMAE": 4.169785946060854,
+      "strictRegulationSourceMinutesMAE": 1.470041718570626,
+      "fullActualMinutesMAE": 1.6175055268058667,
+      "fullRegulationTargetMinutesMAE": 1.4728767711095667,
+      "phaseErrorP90": 25.584999999999997,
+      "pairErrorP90": 9.001666666666667,
+      "strictMinuteErrorP90": 2.843333333333333,
+      "stintDurationSeconds": {
+        "count": 379154,
+        "median": 211.2,
+        "p90": 404.7,
+        "under60Share": 0.027213216793176388,
+        "over900Share": 0.0023842554740290227
+      },
+      "curryTeammates": [
+        {
+          "playerId": 202691,
+          "name": "Klay Thompson",
+          "actualOn": 1143.351666666666,
+          "predictedOn": 869.2449999999997,
+          "actualOff": 254.775,
+          "predictedOff": 427.36
+        },
+        {
+          "playerId": 203110,
+          "name": "Draymond Green",
+          "actualOn": 1227.5016666666666,
+          "predictedOn": 1056.2688888888888,
+          "actualOff": 249.11000000000004,
+          "predictedOff": 437.7911111111109
+        },
+        {
+          "playerId": 203210,
+          "name": "JaMychal Green",
+          "actualOn": 246.95833333333334,
+          "predictedOn": 277.19499999999994,
+          "actualOff": 240.53166666666667,
+          "predictedOff": 240.19111111111098
+        },
+        {
+          "playerId": 203952,
+          "name": "Andrew Wiggins",
+          "actualOn": 703.7766666666668,
+          "predictedOn": 575.036111111111,
+          "actualOff": 182.45166666666677,
+          "predictedOff": 276.78444444444443
+        },
+        {
+          "playerId": 1626172,
+          "name": "Kevon Looney",
+          "actualOn": 927.1633333333333,
+          "predictedOn": 813.7394444444441,
+          "actualOff": 217.7366666666667,
+          "predictedOff": 381.4083333333334
+        },
+        {
+          "playerId": 1628978,
+          "name": "Donte DiVincenzo",
+          "actualOn": 578.105,
+          "predictedOn": 674.3227777777778,
+          "actualOff": 430.82999999999964,
+          "predictedOff": 336.40611111111116
+        },
+        {
+          "playerId": 1629673,
+          "name": "Jordan Poole",
+          "actualOn": 751.3283333333335,
+          "predictedOn": 857.6016666666667,
+          "actualOff": 623.4650000000004,
+          "predictedOff": 447.5905555555554
+        },
+        {
+          "playerId": 1630164,
+          "name": "James Wiseman",
+          "actualOn": 58.58166666666667,
+          "predictedOn": 74.16722222222221,
+          "actualOff": 67.21333333333334,
+          "predictedOff": 49.77944444444445
+        },
+        {
+          "playerId": 1630228,
+          "name": "Jonathan Kuminga",
+          "actualOn": 404.7516666666667,
+          "predictedOn": 514.913888888889,
+          "actualOff": 344.64833333333337,
+          "predictedOff": 262.00444444444435
+        },
+        {
+          "playerId": 1630541,
+          "name": "Moses Moody",
+          "actualOn": 179.315,
+          "predictedOn": 225.17277777777775,
+          "actualOff": 226.1233333333334,
+          "predictedOff": 191.85722222222228
+        },
+        {
+          "playerId": 1631157,
+          "name": "Ryan Rollins",
+          "actualOn": 0.0,
+          "predictedOn": 4.285,
+          "actualOff": 14.85333333333333,
+          "predictedOff": 18.266111111111112
+        },
+        {
+          "playerId": 1629660,
+          "name": "Ty Jerome",
+          "actualOn": 69.42666666666668,
+          "predictedOn": 113.56055555555555,
+          "actualOff": 120.73833333333333,
+          "predictedOff": 85.03944444444444
+        },
+        {
+          "playerId": 1630237,
+          "name": "Anthony Lamb",
+          "actualOn": 275.69166666666666,
+          "predictedOn": 436.95888888888913,
+          "actualOff": 310.93500000000006,
+          "predictedOff": 194.04888888888888
+        },
+        {
+          "playerId": 1631116,
+          "name": "Patrick Baldwin Jr.",
+          "actualOn": 10.116666666666667,
+          "predictedOn": 38.94055555555556,
+          "actualOff": 44.169999999999995,
+          "predictedOff": 31.692777777777778
+        },
+        {
+          "playerId": 2738,
+          "name": "Andre Iguodala",
+          "actualOn": 63.56666666666667,
+          "predictedOn": 51.53555555555554,
+          "actualOff": 26.559999999999995,
+          "predictedOff": 44.17277777777778
+        },
+        {
+          "playerId": 1627780,
+          "name": "Gary Payton II",
+          "actualOn": 55.29833333333333,
+          "predictedOn": 26.36944444444445,
+          "actualOff": 22.141666666666662,
+          "predictedOff": 55.392777777777766
+        },
+        {
+          "playerId": 1631311,
+          "name": "Lester Quinones",
+          "actualOn": 0.0,
+          "predictedOn": 6.329444444444445,
+          "actualOff": 15.05,
+          "predictedOff": 10.661666666666667
+        }
+      ],
+      "seeds": [
+        {
+          "seed": 20261012,
+          "phaseAbsoluteMinutesPerAppearance": 19.164794460320948,
+          "pairOverlapMinutesMAE": 4.180620592977643,
+          "strictRegulationSourceMinutesMAE": 1.4771258151974793,
+          "fullActualMinutesMAE": 1.625690893643315,
+          "fullRegulationTargetMinutesMAE": 1.4814179604026674
+        },
+        {
+          "seed": 20261013,
+          "phaseAbsoluteMinutesPerAppearance": 19.10838059646809,
+          "pairOverlapMinutesMAE": 4.15957662503309,
+          "strictRegulationSourceMinutesMAE": 1.457490437458782,
+          "fullActualMinutesMAE": 1.6161988491542443,
+          "fullRegulationTargetMinutesMAE": 1.4650265183697642
+        },
+        {
+          "seed": 20261014,
+          "phaseAbsoluteMinutesPerAppearance": 19.13094863339928,
+          "pairOverlapMinutesMAE": 4.169160620171828,
+          "strictRegulationSourceMinutesMAE": 1.4755089030556165,
+          "fullActualMinutesMAE": 1.6106268376200408,
+          "fullRegulationTargetMinutesMAE": 1.4721858345562684
+        }
+      ]
+    },
+    {
+      "season": "2022-23",
+      "variant": "v49",
+      "phaseAbsoluteMinutesPerAppearance": 15.139405779047898,
+      "pairOverlapMinutesMAE": 3.2687801823374167,
+      "strictRegulationSourceMinutesMAE": 0.9689632397840795,
+      "fullActualMinutesMAE": 1.1110936639118456,
+      "fullRegulationTargetMinutesMAE": 0.9396609682208661,
+      "phaseErrorP90": 22.202666666666662,
+      "pairErrorP90": 7.0266666666666655,
+      "strictMinuteErrorP90": 2.005999999999998,
+      "stintDurationSeconds": {
+        "count": 285887,
+        "median": 303.8,
+        "p90": 594.5,
+        "under60Share": 0.09705582975091558,
+        "over900Share": 0.02352677806266112
+      },
+      "curryTeammates": [
+        {
+          "playerId": 202691,
+          "name": "Klay Thompson",
+          "actualOn": 1143.351666666666,
+          "predictedOn": 1043.3127777777777,
+          "actualOff": 254.775,
+          "predictedOff": 347.9138888888887
+        },
+        {
+          "playerId": 203110,
+          "name": "Draymond Green",
+          "actualOn": 1227.5016666666666,
+          "predictedOn": 1068.929444444445,
+          "actualOff": 249.11000000000004,
+          "predictedOff": 388.65666666666675
+        },
+        {
+          "playerId": 203210,
+          "name": "JaMychal Green",
+          "actualOn": 246.95833333333334,
+          "predictedOn": 255.0883333333333,
+          "actualOff": 240.53166666666667,
+          "predictedOff": 249.80777777777772
+        },
+        {
+          "playerId": 203952,
+          "name": "Andrew Wiggins",
+          "actualOn": 703.7766666666668,
+          "predictedOn": 632.593888888889,
+          "actualOff": 182.45166666666677,
+          "predictedOff": 249.2116666666667
+        },
+        {
+          "playerId": 1626172,
+          "name": "Kevon Looney",
+          "actualOn": 927.1633333333333,
+          "predictedOn": 848.015,
+          "actualOff": 217.7366666666667,
+          "predictedOff": 312.16222222222217
+        },
+        {
+          "playerId": 1628978,
+          "name": "Donte DiVincenzo",
+          "actualOn": 578.105,
+          "predictedOn": 610.3105555555554,
+          "actualOff": 430.82999999999964,
+          "predictedOff": 399.1855555555556
+        },
+        {
+          "playerId": 1629673,
+          "name": "Jordan Poole",
+          "actualOn": 751.3283333333335,
+          "predictedOn": 827.5472222222219,
+          "actualOff": 623.4650000000004,
+          "predictedOff": 539.023888888889
+        },
+        {
+          "playerId": 1630164,
+          "name": "James Wiseman",
+          "actualOn": 58.58166666666667,
+          "predictedOn": 65.74444444444445,
+          "actualOff": 67.21333333333334,
+          "predictedOff": 63.558888888888895
+        },
+        {
+          "playerId": 1630228,
+          "name": "Jonathan Kuminga",
+          "actualOn": 404.7516666666667,
+          "predictedOn": 402.4672222222223,
+          "actualOff": 344.64833333333337,
+          "predictedOff": 359.4777777777778
+        },
+        {
+          "playerId": 1630541,
+          "name": "Moses Moody",
+          "actualOn": 179.315,
+          "predictedOn": 192.25555555555556,
+          "actualOff": 226.1233333333334,
+          "predictedOff": 228.3722222222223
+        },
+        {
+          "playerId": 1631157,
+          "name": "Ryan Rollins",
+          "actualOn": 0.0,
+          "predictedOn": 6.374444444444445,
+          "actualOff": 14.85333333333333,
+          "predictedOff": 8.988888888888887
+        },
+        {
+          "playerId": 1629660,
+          "name": "Ty Jerome",
+          "actualOn": 69.42666666666668,
+          "predictedOn": 93.27444444444441,
+          "actualOff": 120.73833333333333,
+          "predictedOff": 102.70833333333331
+        },
+        {
+          "playerId": 1630237,
+          "name": "Anthony Lamb",
+          "actualOn": 275.69166666666666,
+          "predictedOn": 311.0172222222224,
+          "actualOff": 310.93500000000006,
+          "predictedOff": 284.37111111111113
+        },
+        {
+          "playerId": 1631116,
+          "name": "Patrick Baldwin Jr.",
+          "actualOn": 10.116666666666667,
+          "predictedOn": 29.33777777777777,
+          "actualOff": 44.169999999999995,
+          "predictedOff": 29.547777777777778
+        },
+        {
+          "playerId": 2738,
+          "name": "Andre Iguodala",
+          "actualOn": 63.56666666666667,
+          "predictedOn": 54.44944444444444,
+          "actualOff": 26.559999999999995,
+          "predictedOff": 41.28055555555556
+        },
+        {
+          "playerId": 1627780,
+          "name": "Gary Payton II",
+          "actualOn": 55.29833333333333,
+          "predictedOn": 37.064444444444455,
+          "actualOff": 22.141666666666662,
+          "predictedOff": 40.95222222222222
+        },
+        {
+          "playerId": 1631311,
+          "name": "Lester Quinones",
+          "actualOn": 0.0,
+          "predictedOn": 5.246666666666667,
+          "actualOff": 15.05,
+          "predictedOff": 10.994444444444444
+        }
+      ],
+      "seeds": [
+        {
+          "seed": 20261012,
+          "phaseAbsoluteMinutesPerAppearance": 15.138683373635232,
+          "pairOverlapMinutesMAE": 3.27530647606671,
+          "strictRegulationSourceMinutesMAE": 0.9922042939840257,
+          "fullActualMinutesMAE": 1.141308797404804,
+          "fullRegulationTargetMinutesMAE": 0.9634070955948608
+        },
+        {
+          "seed": 20261013,
+          "phaseAbsoluteMinutesPerAppearance": 15.165833956180844,
+          "pairOverlapMinutesMAE": 3.256476457776815,
+          "strictRegulationSourceMinutesMAE": 0.9576876969297281,
+          "fullActualMinutesMAE": 1.0932866944723354,
+          "fullRegulationTargetMinutesMAE": 0.922810046085322
+        },
+        {
+          "seed": 20261014,
+          "phaseAbsoluteMinutesPerAppearance": 15.113700007327619,
+          "pairOverlapMinutesMAE": 3.2745576131687244,
+          "strictRegulationSourceMinutesMAE": 0.9569977284384846,
+          "fullActualMinutesMAE": 1.0986854998583968,
+          "fullRegulationTargetMinutesMAE": 0.9327657629824155
+        }
+      ]
+    },
+    {
+      "season": "2023-24",
+      "variant": "v47",
+      "phaseAbsoluteMinutesPerAppearance": 18.7129504854604,
+      "pairOverlapMinutesMAE": 3.9645335856287884,
+      "strictRegulationSourceMinutesMAE": 1.418166824047844,
+      "fullActualMinutesMAE": 1.5497927645838334,
+      "fullRegulationTargetMinutesMAE": 1.4237552870472083,
+      "phaseErrorP90": 25.55933333333333,
+      "pairErrorP90": 8.646666666666667,
+      "strictMinuteErrorP90": 2.796666666666666,
+      "stintDurationSeconds": {
+        "count": 368746,
+        "median": 214.0,
+        "p90": 411.6,
+        "under60Share": 0.02648435508452973,
+        "over900Share": 0.002695622460989407
+      },
+      "curryTeammates": [
+        {
+          "playerId": 101108,
+          "name": "Chris Paul",
+          "actualOn": 553.691666666667,
+          "predictedOn": 664.9672222222226,
+          "actualOff": 660.2333333333333,
+          "predictedOff": 557.7677777777776
+        },
+        {
+          "playerId": 202691,
+          "name": "Klay Thompson",
+          "actualOn": 1258.8033333333333,
+          "predictedOn": 1030.263888888889,
+          "actualOff": 592.2799999999996,
+          "predictedOff": 714.5533333333332
+        },
+        {
+          "playerId": 202709,
+          "name": "Cory Joseph",
+          "actualOn": 36.33333333333333,
+          "predictedOn": 93.56166666666668,
+          "actualOff": 179.205,
+          "predictedOff": 127.12555555555552
+        },
+        {
+          "playerId": 203952,
+          "name": "Andrew Wiggins",
+          "actualOn": 1233.3850000000007,
+          "predictedOn": 795.9722222222223,
+          "actualOff": 242.12500000000009,
+          "predictedOff": 589.923888888889
+        },
+        {
+          "playerId": 203967,
+          "name": "Dario Saric",
+          "actualOn": 392.69999999999993,
+          "predictedOn": 540.6250000000001,
+          "actualOff": 500.7049999999999,
+          "predictedOff": 416.69833333333344
+        },
+        {
+          "playerId": 1626172,
+          "name": "Kevon Looney",
+          "actualOn": 786.5716666666668,
+          "predictedOn": 715.5516666666667,
+          "actualOff": 199.02500000000003,
+          "predictedOff": 347.1055555555556
+        },
+        {
+          "playerId": 1627780,
+          "name": "Gary Payton II",
+          "actualOn": 361.1166666666667,
+          "predictedOn": 246.03222222222215,
+          "actualOff": 185.86166666666657,
+          "predictedOff": 320.6238888888887
+        },
+        {
+          "playerId": 1630228,
+          "name": "Jonathan Kuminga",
+          "actualOn": 980.6583333333333,
+          "predictedOn": 926.0166666666661,
+          "actualOff": 540.3866666666661,
+          "predictedOff": 571.9666666666668
+        },
+        {
+          "playerId": 1630541,
+          "name": "Moses Moody",
+          "actualOn": 516.8583333333332,
+          "predictedOn": 522.4883333333335,
+          "actualOff": 442.07166666666654,
+          "predictedOff": 432.197222222222
+        },
+        {
+          "playerId": 1631218,
+          "name": "Trayce Jackson-Davis",
+          "actualOn": 417.6583333333335,
+          "predictedOn": 640.511666666667,
+          "actualOff": 456.1516666666665,
+          "predictedOff": 309.9738888888887
+        },
+        {
+          "playerId": 203110,
+          "name": "Draymond Green",
+          "actualOn": 1076.3,
+          "predictedOn": 811.481111111111,
+          "actualOff": 107.16166666666662,
+          "predictedOff": 400.6844444444445
+        },
+        {
+          "playerId": 1629010,
+          "name": "Jerome Robinson",
+          "actualOn": 4.066666666666666,
+          "predictedOn": 36.960555555555544,
+          "actualOff": 62.28333333333334,
+          "predictedOff": 25.820555555555554
+        },
+        {
+          "playerId": 1631311,
+          "name": "Lester Quinones",
+          "actualOn": 65.43333333333334,
+          "predictedOn": 166.6888888888889,
+          "actualOff": 219.58,
+          "predictedOff": 135.2811111111111
+        },
+        {
+          "playerId": 1641764,
+          "name": "Brandin Podziemski",
+          "actualOn": 771.3533333333336,
+          "predictedOn": 955.1838888888891,
+          "actualOff": 720.2300000000002,
+          "predictedOff": 497.5849999999999
+        },
+        {
+          "playerId": 1630611,
+          "name": "Gui Santos",
+          "actualOn": 33.949999999999996,
+          "predictedOn": 87.45666666666665,
+          "actualOff": 105.9,
+          "predictedOff": 70.93666666666667
+        },
+        {
+          "playerId": 1630586,
+          "name": "Usman Garuba",
+          "actualOn": 0.0,
+          "predictedOn": 14.204444444444444,
+          "actualOff": 9.583333333333332,
+          "predictedOff": 0.6294444444444444
+        },
+        {
+          "playerId": 1630311,
+          "name": "Pat Spencer",
+          "actualOn": 0.0,
+          "predictedOn": 3.4183333333333334,
+          "actualOff": 6.116666666666666,
+          "predictedOff": 6.896111111111111
+        }
+      ],
+      "seeds": [
+        {
+          "seed": 20261012,
+          "phaseAbsoluteMinutesPerAppearance": 18.720585603254158,
+          "pairOverlapMinutesMAE": 3.9711665005561088,
+          "strictRegulationSourceMinutesMAE": 1.4386483620251325,
+          "fullActualMinutesMAE": 1.5666182467835814,
+          "fullRegulationTargetMinutesMAE": 1.4420683559966168
+        },
+        {
+          "seed": 20261013,
+          "phaseAbsoluteMinutesPerAppearance": 18.726171424420716,
+          "pairOverlapMinutesMAE": 3.9632097470786207,
+          "strictRegulationSourceMinutesMAE": 1.4186522844483185,
+          "fullActualMinutesMAE": 1.5446604421549694,
+          "fullRegulationTargetMinutesMAE": 1.4213778518490467
+        },
+        {
+          "seed": 20261014,
+          "phaseAbsoluteMinutesPerAppearance": 18.692094428706326,
+          "pairOverlapMinutesMAE": 3.959224509251636,
+          "strictRegulationSourceMinutesMAE": 1.3971998256700806,
+          "fullActualMinutesMAE": 1.538099604812949,
+          "fullRegulationTargetMinutesMAE": 1.4078196532959613
+        }
+      ]
+    },
+    {
+      "season": "2023-24",
+      "variant": "v49",
+      "phaseAbsoluteMinutesPerAppearance": 14.680363429456914,
+      "pairOverlapMinutesMAE": 3.0972475528785273,
+      "strictRegulationSourceMinutesMAE": 0.8762557807317014,
+      "fullActualMinutesMAE": 1.006435858911068,
+      "fullRegulationTargetMinutesMAE": 0.8635946028980382,
+      "phaseErrorP90": 21.90666666666667,
+      "pairErrorP90": 6.779999999999999,
+      "strictMinuteErrorP90": 1.8216666666666697,
+      "stintDurationSeconds": {
+        "count": 281498,
+        "median": 298.9,
+        "p90": 597.6,
+        "under60Share": 0.09563123006202531,
+        "over900Share": 0.025918478994522164
+      },
+      "curryTeammates": [
+        {
+          "playerId": 101108,
+          "name": "Chris Paul",
+          "actualOn": 553.691666666667,
+          "predictedOn": 628.6166666666666,
+          "actualOff": 660.2333333333333,
+          "predictedOff": 577.5438888888885
+        },
+        {
+          "playerId": 202691,
+          "name": "Klay Thompson",
+          "actualOn": 1258.8033333333333,
+          "predictedOn": 1222.246111111111,
+          "actualOff": 592.2799999999996,
+          "predictedOff": 619.5561111111107
+        },
+        {
+          "playerId": 202709,
+          "name": "Cory Joseph",
+          "actualOn": 36.33333333333333,
+          "predictedOn": 84.85277777777779,
+          "actualOff": 179.205,
+          "predictedOff": 134.9138888888889
+        },
+        {
+          "playerId": 203952,
+          "name": "Andrew Wiggins",
+          "actualOn": 1233.3850000000007,
+          "predictedOn": 1046.2144444444446,
+          "actualOff": 242.12500000000009,
+          "predictedOff": 431.34499999999997
+        },
+        {
+          "playerId": 203967,
+          "name": "Dario Saric",
+          "actualOn": 392.69999999999993,
+          "predictedOn": 465.30555555555526,
+          "actualOff": 500.7049999999999,
+          "predictedOff": 448.76444444444434
+        },
+        {
+          "playerId": 1626172,
+          "name": "Kevon Looney",
+          "actualOn": 786.5716666666668,
+          "predictedOn": 697.398333333333,
+          "actualOff": 199.02500000000003,
+          "predictedOff": 306.45722222222224
+        },
+        {
+          "playerId": 1627780,
+          "name": "Gary Payton II",
+          "actualOn": 361.1166666666667,
+          "predictedOn": 301.5177777777778,
+          "actualOff": 185.86166666666657,
+          "predictedOff": 256.0055555555556
+        },
+        {
+          "playerId": 1630228,
+          "name": "Jonathan Kuminga",
+          "actualOn": 980.6583333333333,
+          "predictedOn": 939.1755555555561,
+          "actualOff": 540.3866666666661,
+          "predictedOff": 575.1255555555557
+        },
+        {
+          "playerId": 1630541,
+          "name": "Moses Moody",
+          "actualOn": 516.8583333333332,
+          "predictedOn": 509.1161111111112,
+          "actualOff": 442.07166666666654,
+          "predictedOff": 453.80944444444424
+        },
+        {
+          "playerId": 1631218,
+          "name": "Trayce Jackson-Davis",
+          "actualOn": 417.6583333333335,
+          "predictedOn": 477.71722222222235,
+          "actualOff": 456.1516666666665,
+          "predictedOff": 405.1833333333335
+        },
+        {
+          "playerId": 203110,
+          "name": "Draymond Green",
+          "actualOn": 1076.3,
+          "predictedOn": 913.3711111111113,
+          "actualOff": 107.16166666666662,
+          "predictedOff": 271.57500000000005
+        },
+        {
+          "playerId": 1629010,
+          "name": "Jerome Robinson",
+          "actualOn": 4.066666666666666,
+          "predictedOn": 24.61388888888889,
+          "actualOff": 62.28333333333334,
+          "predictedOff": 37.64222222222222
+        },
+        {
+          "playerId": 1631311,
+          "name": "Lester Quinones",
+          "actualOn": 65.43333333333334,
+          "predictedOn": 126.01111111111109,
+          "actualOff": 219.58,
+          "predictedOff": 159.93333333333328
+        },
+        {
+          "playerId": 1641764,
+          "name": "Brandin Podziemski",
+          "actualOn": 771.3533333333336,
+          "predictedOn": 859.1555555555558,
+          "actualOff": 720.2300000000002,
+          "predictedOff": 626.7822222222222
+        },
+        {
+          "playerId": 1630611,
+          "name": "Gui Santos",
+          "actualOn": 33.949999999999996,
+          "predictedOn": 52.9861111111111,
+          "actualOff": 105.9,
+          "predictedOff": 83.82333333333332
+        },
+        {
+          "playerId": 1630586,
+          "name": "Usman Garuba",
+          "actualOn": 0.0,
+          "predictedOn": 3.6594444444444445,
+          "actualOff": 9.583333333333332,
+          "predictedOff": 4.614444444444445
+        },
+        {
+          "playerId": 1630311,
+          "name": "Pat Spencer",
+          "actualOn": 0.0,
+          "predictedOn": 2.673333333333333,
+          "actualOff": 6.116666666666666,
+          "predictedOff": 3.6361111111111106
+        }
+      ],
+      "seeds": [
+        {
+          "seed": 20261012,
+          "phaseAbsoluteMinutesPerAppearance": 14.665029418173892,
+          "pairOverlapMinutesMAE": 3.0923779231847006,
+          "strictRegulationSourceMinutesMAE": 0.8711270429287428,
+          "fullActualMinutesMAE": 0.9989900508819107,
+          "fullRegulationTargetMinutesMAE": 0.8582575154981503
+        },
+        {
+          "seed": 20261013,
+          "phaseAbsoluteMinutesPerAppearance": 14.687754775913415,
+          "pairOverlapMinutesMAE": 3.1170161921682484,
+          "strictRegulationSourceMinutesMAE": 0.9027343647853562,
+          "fullActualMinutesMAE": 1.0328856861482516,
+          "fullRegulationTargetMinutesMAE": 0.8870661464843498
+        },
+        {
+          "seed": 20261014,
+          "phaseAbsoluteMinutesPerAppearance": 14.688306094283432,
+          "pairOverlapMinutesMAE": 3.0823485432826336,
+          "strictRegulationSourceMinutesMAE": 0.8549059344810053,
+          "fullActualMinutesMAE": 0.9874318397030414,
+          "fullRegulationTargetMinutesMAE": 0.8454601467116147
+        }
+      ]
+    },
+    {
+      "season": "2024-25",
+      "variant": "v47",
+      "phaseAbsoluteMinutesPerAppearance": 18.8604207483235,
+      "pairOverlapMinutesMAE": 3.977713353842648,
+      "strictRegulationSourceMinutesMAE": 1.4221363000876757,
+      "fullActualMinutesMAE": 1.5340081054596755,
+      "fullRegulationTargetMinutesMAE": 1.4216330030326836,
+      "phaseErrorP90": 25.638333333333332,
+      "pairErrorP90": 8.67,
+      "strictMinuteErrorP90": 2.783333333333328,
+      "stintDurationSeconds": {
+        "count": 382093,
+        "median": 212.3,
+        "p90": 405.8,
+        "under60Share": 0.026862570107277547,
+        "over900Share": 0.002379001970724405
+      },
+      "curryTeammates": [
+        {
+          "playerId": 203110,
+          "name": "Draymond Green",
+          "actualOn": 1221.758333333333,
+          "predictedOn": 1023.1727777777776,
+          "actualOff": 267.665,
+          "predictedOff": 447.59777777777776
+        },
+        {
+          "playerId": 203937,
+          "name": "Kyle Anderson",
+          "actualOn": 133.69166666666663,
+          "predictedOn": 159.81833333333336,
+          "actualOff": 183.92999999999998,
+          "predictedOff": 183.54944444444436
+        },
+        {
+          "playerId": 203952,
+          "name": "Andrew Wiggins",
+          "actualOn": 719.6983333333334,
+          "predictedOn": 595.6155555555556,
+          "actualOff": 170.0666666666667,
+          "predictedOff": 250.08888888888902
+        },
+        {
+          "playerId": 1626172,
+          "name": "Kevon Looney",
+          "actualOn": 467.7366666666669,
+          "predictedOn": 438.95,
+          "actualOff": 305.2583333333334,
+          "predictedOff": 405.0527777777777
+        },
+        {
+          "playerId": 1627741,
+          "name": "Buddy Hield",
+          "actualOn": 790.5183333333333,
+          "predictedOn": 687.2066666666666,
+          "actualOff": 486.02000000000004,
+          "predictedOff": 549.8733333333333
+        },
+        {
+          "playerId": 1627780,
+          "name": "Gary Payton II",
+          "actualOn": 541.4333333333336,
+          "predictedOn": 305.1216666666668,
+          "actualOff": 121.14499999999998,
+          "predictedOff": 410.1422222222221
+        },
+        {
+          "playerId": 1629001,
+          "name": "De'Anthony Melton",
+          "actualOn": 44.35,
+          "predictedOn": 57.560555555555574,
+          "actualOff": 57.533333333333346,
+          "predictedOff": 44.83833333333333
+        },
+        {
+          "playerId": 1630228,
+          "name": "Jonathan Kuminga",
+          "actualOn": 500.3333333333334,
+          "predictedOn": 419.55333333333334,
+          "actualOff": 302.32166666666666,
+          "predictedOff": 365.59555555555573
+        },
+        {
+          "playerId": 1630322,
+          "name": "Lindy Waters III",
+          "actualOn": 177.0583333333333,
+          "predictedOn": 205.76277777777779,
+          "actualOff": 179.16833333333332,
+          "predictedOff": 131.51944444444447
+        },
+        {
+          "playerId": 1630541,
+          "name": "Moses Moody",
+          "actualOn": 662.3250000000002,
+          "predictedOn": 599.9516666666667,
+          "actualOff": 445.9133333333331,
+          "predictedOff": 446.8394444444446
+        },
+        {
+          "playerId": 1630611,
+          "name": "Gui Santos",
+          "actualOn": 298.12166666666667,
+          "predictedOn": 346.8722222222222,
+          "actualOff": 242.16,
+          "predictedOff": 229.39444444444445
+        },
+        {
+          "playerId": 1631218,
+          "name": "Trayce Jackson-Davis",
+          "actualOn": 346.9016666666667,
+          "predictedOn": 408.9355555555557,
+          "actualOff": 244.71,
+          "predictedOff": 231.1494444444444
+        },
+        {
+          "playerId": 1641764,
+          "name": "Brandin Podziemski",
+          "actualOn": 565.715,
+          "predictedOn": 760.9361111111112,
+          "actualOff": 643.2333333333335,
+          "predictedOff": 435.8688888888889
+        },
+        {
+          "playerId": 1630311,
+          "name": "Pat Spencer",
+          "actualOn": 24.948333333333334,
+          "predictedOn": 73.66555555555553,
+          "actualOff": 137.99666666666664,
+          "predictedOff": 117.86722222222224
+        },
+        {
+          "playerId": 203471,
+          "name": "Dennis Schr\u00f6der",
+          "actualOn": 194.88499999999996,
+          "predictedOn": 220.7722222222222,
+          "actualOff": 180.08166666666673,
+          "predictedOff": 131.31944444444446
+        },
+        {
+          "playerId": 1642366,
+          "name": "Quinten Post",
+          "actualOn": 265.8766666666667,
+          "predictedOn": 306.5188888888889,
+          "actualOff": 268.7983333333334,
+          "predictedOff": 256.63499999999993
+        },
+        {
+          "playerId": 1642050,
+          "name": "Jackson Rowe",
+          "actualOn": 11.266666666666667,
+          "predictedOn": 35.92166666666667,
+          "actualOff": 40.464999999999996,
+          "predictedOff": 21.888333333333332
+        },
+        {
+          "playerId": 202710,
+          "name": "Jimmy Butler III",
+          "actualOn": 427.22833333333335,
+          "predictedOn": 488.27555555555557,
+          "actualOff": 293.6183333333334,
+          "predictedOff": 208.49499999999992
+        },
+        {
+          "playerId": 1628995,
+          "name": "Kevin Knox II",
+          "actualOn": 11.433333333333334,
+          "predictedOn": 56.34555555555555,
+          "actualOff": 67.09833333333334,
+          "predictedOff": 33.67999999999999
+        },
+        {
+          "playerId": 1641879,
+          "name": "Yuri Collins",
+          "actualOn": 0.0,
+          "predictedOn": 6.2427777777777775,
+          "actualOff": 16.3,
+          "predictedOff": 13.395000000000001
+        },
+        {
+          "playerId": 1630296,
+          "name": "Braxton Key",
+          "actualOn": 0.0,
+          "predictedOn": 1.2383333333333333,
+          "actualOff": 9.916666666666666,
+          "predictedOff": 7.162777777777778
+        }
+      ],
+      "seeds": [
+        {
+          "seed": 20261012,
+          "phaseAbsoluteMinutesPerAppearance": 18.862748133930477,
+          "pairOverlapMinutesMAE": 3.986846949239446,
+          "strictRegulationSourceMinutesMAE": 1.4280926992251368,
+          "fullActualMinutesMAE": 1.5297604095390147,
+          "fullRegulationTargetMinutesMAE": 1.4247190754960841
+        },
+        {
+          "seed": 20261013,
+          "phaseAbsoluteMinutesPerAppearance": 18.87709049548589,
+          "pairOverlapMinutesMAE": 3.980132399020111,
+          "strictRegulationSourceMinutesMAE": 1.4274991113954643,
+          "fullActualMinutesMAE": 1.5530508882637677,
+          "fullRegulationTargetMinutesMAE": 1.432669859854533
+        },
+        {
+          "seed": 20261014,
+          "phaseAbsoluteMinutesPerAppearance": 18.84142361555413,
+          "pairOverlapMinutesMAE": 3.9661607132683874,
+          "strictRegulationSourceMinutesMAE": 1.4108170896424255,
+          "fullActualMinutesMAE": 1.5192130185762438,
+          "fullRegulationTargetMinutesMAE": 1.407510073747434
+        }
+      ]
+    },
+    {
+      "season": "2024-25",
+      "variant": "v49",
+      "phaseAbsoluteMinutesPerAppearance": 14.963361199971565,
+      "pairOverlapMinutesMAE": 3.1121307658709814,
+      "strictRegulationSourceMinutesMAE": 0.8188593635221914,
+      "fullActualMinutesMAE": 0.9334913454471727,
+      "fullRegulationTargetMinutesMAE": 0.7957166088006961,
+      "phaseErrorP90": 22.251666666666665,
+      "pairErrorP90": 6.781666666666666,
+      "strictMinuteErrorP90": 1.7383333333333364,
+      "stintDurationSeconds": {
+        "count": 293664,
+        "median": 295.0,
+        "p90": 580.1,
+        "under60Share": 0.09179538520213577,
+        "over900Share": 0.022818595401547348
+      },
+      "curryTeammates": [
+        {
+          "playerId": 203110,
+          "name": "Draymond Green",
+          "actualOn": 1221.758333333333,
+          "predictedOn": 1088.3205555555558,
+          "actualOff": 267.665,
+          "predictedOff": 391.891111111111
+        },
+        {
+          "playerId": 203937,
+          "name": "Kyle Anderson",
+          "actualOn": 133.69166666666663,
+          "predictedOn": 153.05333333333337,
+          "actualOff": 183.92999999999998,
+          "predictedOff": 171.61111111111111
+        },
+        {
+          "playerId": 203952,
+          "name": "Andrew Wiggins",
+          "actualOn": 719.6983333333334,
+          "predictedOn": 647.8999999999999,
+          "actualOff": 170.0666666666667,
+          "predictedOff": 231.49944444444446
+        },
+        {
+          "playerId": 1626172,
+          "name": "Kevon Looney",
+          "actualOn": 467.7366666666669,
+          "predictedOn": 432.8166666666666,
+          "actualOff": 305.2583333333334,
+          "predictedOff": 359.767777777778
+        },
+        {
+          "playerId": 1627741,
+          "name": "Buddy Hield",
+          "actualOn": 790.5183333333333,
+          "predictedOn": 772.8966666666669,
+          "actualOff": 486.02000000000004,
+          "predictedOff": 512.0977777777778
+        },
+        {
+          "playerId": 1627780,
+          "name": "Gary Payton II",
+          "actualOn": 541.4333333333336,
+          "predictedOn": 426.1244444444444,
+          "actualOff": 121.14499999999998,
+          "predictedOff": 247.92333333333343
+        },
+        {
+          "playerId": 1629001,
+          "name": "De'Anthony Melton",
+          "actualOn": 44.35,
+          "predictedOn": 47.291111111111114,
+          "actualOff": 57.533333333333346,
+          "predictedOff": 55.667222222222236
+        },
+        {
+          "playerId": 1630228,
+          "name": "Jonathan Kuminga",
+          "actualOn": 500.3333333333334,
+          "predictedOn": 448.8161111111112,
+          "actualOff": 302.32166666666666,
+          "predictedOff": 355.51055555555547
+        },
+        {
+          "playerId": 1630322,
+          "name": "Lindy Waters III",
+          "actualOn": 177.0583333333333,
+          "predictedOn": 183.30166666666673,
+          "actualOff": 179.16833333333332,
+          "predictedOff": 174.6377777777777
+        },
+        {
+          "playerId": 1630541,
+          "name": "Moses Moody",
+          "actualOn": 662.3250000000002,
+          "predictedOn": 636.2411111111111,
+          "actualOff": 445.9133333333331,
+          "predictedOff": 470.23388888888843
+        },
+        {
+          "playerId": 1630611,
+          "name": "Gui Santos",
+          "actualOn": 298.12166666666667,
+          "predictedOn": 282.1161111111111,
+          "actualOff": 242.16,
+          "predictedOff": 261.5427777777779
+        },
+        {
+          "playerId": 1631218,
+          "name": "Trayce Jackson-Davis",
+          "actualOn": 346.9016666666667,
+          "predictedOn": 377.21388888888885,
+          "actualOff": 244.71,
+          "predictedOff": 223.33444444444447
+        },
+        {
+          "playerId": 1641764,
+          "name": "Brandin Podziemski",
+          "actualOn": 565.715,
+          "predictedOn": 661.9605555555556,
+          "actualOff": 643.2333333333335,
+          "predictedOff": 536.5749999999998
+        },
+        {
+          "playerId": 1630311,
+          "name": "Pat Spencer",
+          "actualOn": 24.948333333333334,
+          "predictedOn": 64.56388888888891,
+          "actualOff": 137.99666666666664,
+          "predictedOff": 95.40555555555557
+        },
+        {
+          "playerId": 203471,
+          "name": "Dennis Schr\u00f6der",
+          "actualOn": 194.88499999999996,
+          "predictedOn": 218.39388888888885,
+          "actualOff": 180.08166666666673,
+          "predictedOff": 159.40888888888892
+        },
+        {
+          "playerId": 1642366,
+          "name": "Quinten Post",
+          "actualOn": 265.8766666666667,
+          "predictedOn": 292.61666666666673,
+          "actualOff": 268.7983333333334,
+          "predictedOff": 252.08444444444436
+        },
+        {
+          "playerId": 1642050,
+          "name": "Jackson Rowe",
+          "actualOn": 11.266666666666667,
+          "predictedOn": 18.392222222222223,
+          "actualOff": 40.464999999999996,
+          "predictedOff": 34.37833333333334
+        },
+        {
+          "playerId": 202710,
+          "name": "Jimmy Butler III",
+          "actualOn": 427.22833333333335,
+          "predictedOn": 457.8494444444444,
+          "actualOff": 293.6183333333334,
+          "predictedOff": 259.6266666666667
+        },
+        {
+          "playerId": 1628995,
+          "name": "Kevin Knox II",
+          "actualOn": 11.433333333333334,
+          "predictedOn": 29.141111111111115,
+          "actualOff": 67.09833333333334,
+          "predictedOff": 49.33166666666668
+        },
+        {
+          "playerId": 1641879,
+          "name": "Yuri Collins",
+          "actualOn": 0.0,
+          "predictedOn": 8.59388888888889,
+          "actualOff": 16.3,
+          "predictedOff": 6.921111111111112
+        },
+        {
+          "playerId": 1630296,
+          "name": "Braxton Key",
+          "actualOn": 0.0,
+          "predictedOn": 4.736666666666666,
+          "actualOff": 9.916666666666666,
+          "predictedOff": 5.126111111111112
+        }
+      ],
+      "seeds": [
+        {
+          "seed": 20261012,
+          "phaseAbsoluteMinutesPerAppearance": 14.973670149996446,
+          "pairOverlapMinutesMAE": 3.1220439526006953,
+          "strictRegulationSourceMinutesMAE": 0.8187150067533944,
+          "fullActualMinutesMAE": 0.9132963075597451,
+          "fullRegulationTargetMinutesMAE": 0.7900452368280999
+        },
+        {
+          "seed": 20261013,
+          "phaseAbsoluteMinutesPerAppearance": 14.919190872254214,
+          "pairOverlapMinutesMAE": 3.10257306443343,
+          "strictRegulationSourceMinutesMAE": 0.8170978886756238,
+          "fullActualMinutesMAE": 0.9331503332573047,
+          "fullRegulationTargetMinutesMAE": 0.7904375427659086
+        },
+        {
+          "seed": 20261014,
+          "phaseAbsoluteMinutesPerAppearance": 14.997222577664038,
+          "pairOverlapMinutesMAE": 3.1117752805788186,
+          "strictRegulationSourceMinutesMAE": 0.820765195137556,
+          "fullActualMinutesMAE": 0.9540273955244684,
+          "fullRegulationTargetMinutesMAE": 0.8066670468080794
+        }
+      ]
+    },
+    {
+      "season": "2025-26",
+      "variant": "v47",
+      "phaseAbsoluteMinutesPerAppearance": 19.07002228008135,
+      "pairOverlapMinutesMAE": 3.9735838755515673,
+      "strictRegulationSourceMinutesMAE": 1.423658639792398,
+      "fullActualMinutesMAE": 1.5252135212770837,
+      "fullRegulationTargetMinutesMAE": 1.4099815308160213,
+      "phaseErrorP90": 25.675,
+      "pairErrorP90": 8.656666666666666,
+      "strictMinuteErrorP90": 2.778333333333335,
+      "stintDurationSeconds": {
+        "count": 431870,
+        "median": 207.6,
+        "p90": 380.7,
+        "under60Share": 0.0272929353740709,
+        "over900Share": 0.001532868687336467
+      },
+      "curryTeammates": [
+        {
+          "playerId": 201143,
+          "name": "Al Horford",
+          "actualOn": 286.52666666666664,
+          "predictedOn": 312.1372222222222,
+          "actualOff": 245.25333333333336,
+          "predictedOff": 248.0377777777777
+        },
+        {
+          "playerId": 202710,
+          "name": "Jimmy Butler III",
+          "actualOn": 559.3883333333331,
+          "predictedOn": 656.8511111111111,
+          "actualOff": 418.33833333333337,
+          "predictedOff": 285.45888888888896
+        },
+        {
+          "playerId": 203110,
+          "name": "Draymond Green",
+          "actualOn": 839.4783333333334,
+          "predictedOn": 675.94,
+          "actualOff": 162.41,
+          "predictedOff": 341.19444444444457
+        },
+        {
+          "playerId": 1627741,
+          "name": "Buddy Hield",
+          "actualOn": 204.82333333333332,
+          "predictedOn": 228.91777777777773,
+          "actualOff": 255.73666666666676,
+          "predictedOff": 225.68500000000006
+        },
+        {
+          "playerId": 1627780,
+          "name": "Gary Payton II",
+          "actualOn": 413.7749999999999,
+          "predictedOn": 214.18833333333336,
+          "actualOff": 53.88666666666666,
+          "predictedOff": 305.03055555555545
+        },
+        {
+          "playerId": 1630228,
+          "name": "Jonathan Kuminga",
+          "actualOn": 241.45166666666668,
+          "predictedOn": 158.33111111111108,
+          "actualOff": 47.0,
+          "predictedOff": 121.5227777777778
+        },
+        {
+          "playerId": 1630611,
+          "name": "Gui Santos",
+          "actualOn": 212.11666666666665,
+          "predictedOn": 230.4349999999999,
+          "actualOff": 183.07833333333332,
+          "predictedOff": 203.7166666666667
+        },
+        {
+          "playerId": 1641764,
+          "name": "Brandin Podziemski",
+          "actualOn": 586.8983333333333,
+          "predictedOn": 676.0000000000003,
+          "actualOff": 521.885,
+          "predictedOff": 406.9527777777778
+        },
+        {
+          "playerId": 1642366,
+          "name": "Quinten Post",
+          "actualOn": 368.02166666666665,
+          "predictedOn": 381.17722222222216,
+          "actualOff": 244.02000000000024,
+          "predictedOff": 268.54777777777787
+        },
+        {
+          "playerId": 1642954,
+          "name": "Will Richard",
+          "actualOn": 277.45500000000004,
+          "predictedOn": 283.51833333333326,
+          "actualOff": 318.7266666666667,
+          "predictedOff": 294.5061111111111
+        },
+        {
+          "playerId": 1630311,
+          "name": "Pat Spencer",
+          "actualOn": 52.61833333333333,
+          "predictedOn": 124.50444444444445,
+          "actualOff": 200.815,
+          "predictedOff": 122.58833333333335
+        },
+        {
+          "playerId": 1630541,
+          "name": "Moses Moody",
+          "actualOn": 598.0766666666669,
+          "predictedOn": 445.068888888889,
+          "actualOff": 271.9650000000001,
+          "predictedOff": 389.4888888888888
+        },
+        {
+          "playerId": 1631218,
+          "name": "Trayce Jackson-Davis",
+          "actualOn": 106.37833333333334,
+          "predictedOn": 101.17944444444444,
+          "actualOff": 112.64166666666668,
+          "predictedOff": 161.66166666666672
+        },
+        {
+          "playerId": 1629001,
+          "name": "De'Anthony Melton",
+          "actualOn": 242.42333333333346,
+          "predictedOn": 251.61111111111111,
+          "actualOff": 280.7399999999999,
+          "predictedOff": 237.9122222222222
+        },
+        {
+          "playerId": 1642502,
+          "name": "Malevy Leons",
+          "actualOn": 4.765,
+          "predictedOn": 22.801111111111116,
+          "actualOff": 53.233333333333334,
+          "predictedOff": 37.175000000000004
+        },
+        {
+          "playerId": 1643018,
+          "name": "LJ Cryer",
+          "actualOn": 0.0,
+          "predictedOn": 4.101666666666667,
+          "actualOff": 7.933333333333334,
+          "predictedOff": 6.73888888888889
+        },
+        {
+          "playerId": 203552,
+          "name": "Seth Curry",
+          "actualOn": 16.55,
+          "predictedOn": 19.551666666666666,
+          "actualOff": 24.566666666666663,
+          "predictedOff": 22.746666666666666
+        },
+        {
+          "playerId": 204001,
+          "name": "Kristaps Porzi\u0146\u0123is",
+          "actualOn": 51.43333333333333,
+          "predictedOn": 40.910555555555554,
+          "actualOff": 21.028333333333332,
+          "predictedOff": 32.925
+        },
+        {
+          "playerId": 1629646,
+          "name": "Charles Bassey",
+          "actualOn": 23.519999999999996,
+          "predictedOn": 35.99333333333333,
+          "actualOff": 47.10000000000001,
+          "predictedOff": 35.66111111111111
+        },
+        {
+          "playerId": 1631466,
+          "name": "Nate Williams",
+          "actualOn": 0.0,
+          "predictedOn": 7.201666666666666,
+          "actualOff": 12.516666666666667,
+          "predictedOff": 4.424444444444444
+        }
+      ],
+      "seeds": [
+        {
+          "seed": 20261012,
+          "phaseAbsoluteMinutesPerAppearance": 19.072365574683612,
+          "pairOverlapMinutesMAE": 3.9886465562372506,
+          "strictRegulationSourceMinutesMAE": 1.4290604800580318,
+          "fullActualMinutesMAE": 1.5242433679786875,
+          "fullRegulationTargetMinutesMAE": 1.416347854364439
+        },
+        {
+          "seed": 20261013,
+          "phaseAbsoluteMinutesPerAppearance": 19.072198603608857,
+          "pairOverlapMinutesMAE": 3.9670527054175406,
+          "strictRegulationSourceMinutesMAE": 1.423648104250055,
+          "fullActualMinutesMAE": 1.5379815641689492,
+          "fullRegulationTargetMinutesMAE": 1.4078891348667346
+        },
+        {
+          "seed": 20261014,
+          "phaseAbsoluteMinutesPerAppearance": 19.06550266195158,
+          "pairOverlapMinutesMAE": 3.96505236499991,
+          "strictRegulationSourceMinutesMAE": 1.418267335069107,
+          "fullActualMinutesMAE": 1.5134156316836143,
+          "fullRegulationTargetMinutesMAE": 1.40570760321689
+        }
+      ]
+    },
+    {
+      "season": "2025-26",
+      "variant": "v49",
+      "phaseAbsoluteMinutesPerAppearance": 15.424093403627857,
+      "pairOverlapMinutesMAE": 3.1938980483582156,
+      "strictRegulationSourceMinutesMAE": 0.8544508780338261,
+      "fullActualMinutesMAE": 0.9647859784289933,
+      "fullRegulationTargetMinutesMAE": 0.8287460549739638,
+      "phaseErrorP90": 22.593666666666657,
+      "pairErrorP90": 6.891666666666667,
+      "strictMinuteErrorP90": 1.7866666666666622,
+      "stintDurationSeconds": {
+        "count": 343777,
+        "median": 273.4,
+        "p90": 530.1,
+        "under60Share": 0.09265017729516518,
+        "over900Share": 0.015815485038266085
+      },
+      "curryTeammates": [
+        {
+          "playerId": 201143,
+          "name": "Al Horford",
+          "actualOn": 286.52666666666664,
+          "predictedOn": 277.2100000000001,
+          "actualOff": 245.25333333333336,
+          "predictedOff": 260.9355555555555
+        },
+        {
+          "playerId": 202710,
+          "name": "Jimmy Butler III",
+          "actualOn": 559.3883333333331,
+          "predictedOn": 610.1044444444444,
+          "actualOff": 418.33833333333337,
+          "predictedOff": 342.37055555555554
+        },
+        {
+          "playerId": 203110,
+          "name": "Draymond Green",
+          "actualOn": 839.4783333333334,
+          "predictedOn": 757.0999999999998,
+          "actualOff": 162.41,
+          "predictedOff": 250.66888888888883
+        },
+        {
+          "playerId": 1627741,
+          "name": "Buddy Hield",
+          "actualOn": 204.82333333333332,
+          "predictedOn": 213.38055555555556,
+          "actualOff": 255.73666666666676,
+          "predictedOff": 249.91166666666675
+        },
+        {
+          "playerId": 1627780,
+          "name": "Gary Payton II",
+          "actualOn": 413.7749999999999,
+          "predictedOn": 278.96666666666664,
+          "actualOff": 53.88666666666666,
+          "predictedOff": 197.55499999999992
+        },
+        {
+          "playerId": 1630228,
+          "name": "Jonathan Kuminga",
+          "actualOn": 241.45166666666668,
+          "predictedOn": 189.13166666666663,
+          "actualOff": 47.0,
+          "predictedOff": 95.64944444444444
+        },
+        {
+          "playerId": 1630611,
+          "name": "Gui Santos",
+          "actualOn": 212.11666666666665,
+          "predictedOn": 197.8666666666667,
+          "actualOff": 183.07833333333332,
+          "predictedOff": 198.17055555555547
+        },
+        {
+          "playerId": 1641764,
+          "name": "Brandin Podziemski",
+          "actualOn": 586.8983333333333,
+          "predictedOn": 628.532777777778,
+          "actualOff": 521.885,
+          "predictedOff": 467.16277777777776
+        },
+        {
+          "playerId": 1642366,
+          "name": "Quinten Post",
+          "actualOn": 368.02166666666665,
+          "predictedOn": 377.6944444444446,
+          "actualOff": 244.02000000000024,
+          "predictedOff": 252.67111111111112
+        },
+        {
+          "playerId": 1642954,
+          "name": "Will Richard",
+          "actualOn": 277.45500000000004,
+          "predictedOn": 287.09722222222223,
+          "actualOff": 318.7266666666667,
+          "predictedOff": 307.47888888888883
+        },
+        {
+          "playerId": 1630311,
+          "name": "Pat Spencer",
+          "actualOn": 52.61833333333333,
+          "predictedOn": 109.61666666666666,
+          "actualOff": 200.815,
+          "predictedOff": 147.93444444444447
+        },
+        {
+          "playerId": 1630541,
+          "name": "Moses Moody",
+          "actualOn": 598.0766666666669,
+          "predictedOn": 569.9294444444444,
+          "actualOff": 271.9650000000001,
+          "predictedOff": 306.6783333333335
+        },
+        {
+          "playerId": 1631218,
+          "name": "Trayce Jackson-Davis",
+          "actualOn": 106.37833333333334,
+          "predictedOn": 108.78000000000002,
+          "actualOff": 112.64166666666668,
+          "predictedOff": 123.44944444444447
+        },
+        {
+          "playerId": 1629001,
+          "name": "De'Anthony Melton",
+          "actualOn": 242.42333333333346,
+          "predictedOn": 255.56944444444449,
+          "actualOff": 280.7399999999999,
+          "predictedOff": 266.3294444444444
+        },
+        {
+          "playerId": 1642502,
+          "name": "Malevy Leons",
+          "actualOn": 4.765,
+          "predictedOn": 21.618888888888893,
+          "actualOff": 53.233333333333334,
+          "predictedOff": 39.36277777777777
+        },
+        {
+          "playerId": 1643018,
+          "name": "LJ Cryer",
+          "actualOn": 0.0,
+          "predictedOn": 4.181666666666667,
+          "actualOff": 7.933333333333334,
+          "predictedOff": 4.373333333333333
+        },
+        {
+          "playerId": 203552,
+          "name": "Seth Curry",
+          "actualOn": 16.55,
+          "predictedOn": 19.240000000000002,
+          "actualOff": 24.566666666666663,
+          "predictedOff": 20.654444444444444
+        },
+        {
+          "playerId": 204001,
+          "name": "Kristaps Porzi\u0146\u0123is",
+          "actualOn": 51.43333333333333,
+          "predictedOn": 38.257777777777775,
+          "actualOff": 21.028333333333332,
+          "predictedOff": 34.336666666666666
+        },
+        {
+          "playerId": 1629646,
+          "name": "Charles Bassey",
+          "actualOn": 23.519999999999996,
+          "predictedOn": 37.940000000000005,
+          "actualOff": 47.10000000000001,
+          "predictedOff": 34.033888888888896
+        },
+        {
+          "playerId": 1631466,
+          "name": "Nate Williams",
+          "actualOn": 0.0,
+          "predictedOn": 4.672777777777778,
+          "actualOff": 12.516666666666667,
+          "predictedOff": 6.65888888888889
+        }
+      ],
+      "seeds": [
+        {
+          "seed": 20261012,
+          "phaseAbsoluteMinutesPerAppearance": 15.4383128019793,
+          "pairOverlapMinutesMAE": 3.186088524057469,
+          "strictRegulationSourceMinutesMAE": 0.8419745074418062,
+          "fullActualMinutesMAE": 0.9487226245419178,
+          "fullRegulationTargetMinutesMAE": 0.8162664315285229
+        },
+        {
+          "seed": 20261013,
+          "phaseAbsoluteMinutesPerAppearance": 15.425863547455279,
+          "pairOverlapMinutesMAE": 3.20516116969561,
+          "strictRegulationSourceMinutesMAE": 0.8831580719957511,
+          "fullActualMinutesMAE": 0.9980768701612192,
+          "fullRegulationTargetMinutesMAE": 0.8547725538754019
+        },
+        {
+          "seed": 20261014,
+          "phaseAbsoluteMinutesPerAppearance": 15.408103861448984,
+          "pairOverlapMinutesMAE": 3.190444451321569,
+          "strictRegulationSourceMinutesMAE": 0.8382200546639205,
+          "fullActualMinutesMAE": 0.9475584405838425,
+          "fullRegulationTargetMinutesMAE": 0.8151991795179666
+        }
+      ]
+    }
+  ],
+  "sourceSHA256": {
+    "reports/defense-seventh/2022-23/stints/stints.jsonl": "5936e16bbfcce88da4743cb72b828be2d602bdb67e470e549c68bd2d7c3eaec6",
+    "reports/player-impact-v49/runs/2022-23-v47-strict-20261012.json": "1a0135d4792a065c81458d0d329e94746f40aea16587c4e4232c1a8bbc417e27",
+    "reports/player-impact-v49/runs/2022-23-v47-strict-20261013.json": "2698db161aecb1fd0468f61ecdd0672b15d93696169b8d228fd9b2bd4d6c25f0",
+    "reports/player-impact-v49/runs/2022-23-v47-strict-20261014.json": "24994be8cd28bb05e3de93462f6b68de242438972bb43ebefc6c9bc8e13871e2",
+    "reports/player-impact-v49/runs/2022-23-v49-strict-20261012.json": "3c8c63a1dd0e25d8300d0372690e9b632a60ab82f2700e3e824d8db656c7b666",
+    "reports/player-impact-v49/runs/2022-23-v49-strict-20261013.json": "2f0406e2b5408bd30d94b6c0f03af68d6ce236e3fa69c9bc05f670110737242c",
+    "reports/player-impact-v49/runs/2022-23-v49-strict-20261014.json": "f08256c9b97f57094ea248632d83a40bc21f294f55eb500bf5a56122df0be096",
+    "reports/defense-seventh/2023-24/stints/stints.jsonl": "a83b1c42ba735810f2fd8dccd8355d2f41e4fd164389ee82fb4318b4a3d0adb6",
+    "reports/player-impact-v49/runs/2023-24-v47-strict-20261012.json": "cad9cb1a6e7529e55b9b2b2992f01e1daa5102283e83e9d02e0db889948d958c",
+    "reports/player-impact-v49/runs/2023-24-v47-strict-20261013.json": "b67fc58ce819228459df1a9e84d8a5f065420bb1ebc179188f12f16b58432b98",
+    "reports/player-impact-v49/runs/2023-24-v47-strict-20261014.json": "d19f24b1d0c4ba696321a7a5b60724fe401057b6baeb6c82032941599095b884",
+    "reports/player-impact-v49/runs/2023-24-v49-strict-20261012.json": "65c92ef4c08bd199a13c659500929cb4bfe1e941238989555ecdb6086ac6f7af",
+    "reports/player-impact-v49/runs/2023-24-v49-strict-20261013.json": "43e4baedfa8c2c026fd74a85a9c2634e7d5175d4a2ab3d0c20c0626db563dee5",
+    "reports/player-impact-v49/runs/2023-24-v49-strict-20261014.json": "31ccdc8c61e698f4fffb1c7e562948c3d425676dd1f4a7a484d2c4a374a7ea7a",
+    "reports/defense-seventh/2024-25/stints/stints.jsonl": "8790976ac74edf2054470427c50984d35d8c8ab0abf72fd92b5105489cf74ac0",
+    "reports/player-impact-v49/runs/2024-25-v47-strict-20261012.json": "47fe622901db8cfb052a2bc961ec586a9a4400b12e5d515e73fcd3a983d1b9c9",
+    "reports/player-impact-v49/runs/2024-25-v47-strict-20261013.json": "3bc8cb65eaaf99e76fc5b4ab298eecd54a374265e0339ee5c4961dc12476936f",
+    "reports/player-impact-v49/runs/2024-25-v47-strict-20261014.json": "76d88dfccc3d75990692eb7cf51d6c30976f9f13671bb0228d87400a60eff142",
+    "reports/player-impact-v49/runs/2024-25-v49-strict-20261012.json": "359a7fbdac094838ba330540badee5d9c1aa2beed4931dfb4bdc534847ea1625",
+    "reports/player-impact-v49/runs/2024-25-v49-strict-20261013.json": "87c609d32aa47de3239e04c5aef20aee493c6d55a946e908f5e759215caeb3cb",
+    "reports/player-impact-v49/runs/2024-25-v49-strict-20261014.json": "719e4c5a9f2a2e4bf38b8f97eb6121f2558d5b067710b0186cfc09681458f07f",
+    "reports/defense-b1/stints.jsonl": "5eff6aa81f37d0f3baef97be2fdc7346a05ffce5ccfa1f6e4456be229a296179",
+    "reports/player-impact-v49/runs/2025-26-v47-strict-20261012.json": "b11b76ce04613534dfcc23193feea42f47acef850ed9c3dd4d8c20184ca88aa4",
+    "reports/player-impact-v49/runs/2025-26-v47-strict-20261013.json": "be63ae1a4a9050a3afecd07b26885aa31fdfa1bbfeda7c703c507b527531e1fc",
+    "reports/player-impact-v49/runs/2025-26-v47-strict-20261014.json": "1a2c0149de7073fe64203db1e52b3c4c5ba941253b2193b2ef74b7a73098370c",
+    "reports/player-impact-v49/runs/2025-26-v49-strict-20261012.json": "efce66f665a3c34437f32e3dd3714bca965a427da8dad44ed278681b4eef0c8d",
+    "reports/player-impact-v49/runs/2025-26-v49-strict-20261013.json": "f46692ac39aa136712c4678264f400e07135affe091ca52d4e20d07fd77ec027",
+    "reports/player-impact-v49/runs/2025-26-v49-strict-20261014.json": "c484e9b735af9dfd557fcfceb1f709cad974f9a669bc0967812f43aadd4ad26a"
+  }
+}

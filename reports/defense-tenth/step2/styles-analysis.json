@@ -1,0 +1,2263 @@
+{
+  "label": "截止前真實區段作驗證答案；四個已看過答案的球季，觀測關聯非因果效應",
+  "points": [
+    {
+      "season": "2022-23",
+      "k": 25,
+      "date": "2022-12-08",
+      "allSides": 19484,
+      "eligibleSides": 19484,
+      "missingSides": 0,
+      "selectedSides": 1500,
+      "selectedGames": 312,
+      "allGroups": {
+        "noRim": {
+          "rows": 11660,
+          "games": 315,
+          "offPoss": 37995.93249752968,
+          "defPoss": 37924.02827160636
+        },
+        "lowSpacing": {
+          "rows": 3729,
+          "games": 275,
+          "offPoss": 11140.969462534633,
+          "defPoss": 11177.227690510565
+        },
+        "noCreator": {
+          "rows": 1709,
+          "games": 213,
+          "offPoss": 5587.179307290035,
+          "defPoss": 5586.201436034989
+        }
+      },
+      "groups": {
+        "noRim": {
+          "realOff": 2.2973629156572555,
+          "realDef": -0.6011337294062774,
+          "realNet": 2.898496645063533,
+          "simOff": -0.5161838076078257,
+          "simDef": 0.498314329276018,
+          "simNet": -1.0144981368838437,
+          "offGap": -2.8135467232650813,
+          "defGap": 1.0994480586822954,
+          "netGap": -3.9129947819473765,
+          "rows": 897,
+          "offPoss": 2937.298771658447,
+          "defPoss": 2929.709768251058,
+          "coverageInsufficient": false
+        },
+        "lowSpacing": {
+          "realOff": -6.4544945303091,
+          "realDef": -0.22785371992958425,
+          "realNet": -6.226640810379516,
+          "simOff": -0.7019440597428482,
+          "simDef": -1.6153054049704045,
+          "simNet": 0.9133613452275563,
+          "offGap": 5.752550470566252,
+          "defGap": -1.3874516850408203,
+          "netGap": 7.140002155607072,
+          "rows": 281,
+          "offPoss": 757.9239772730709,
+          "defPoss": 747.6707654799819,
+          "coverageInsufficient": false
+        },
+        "noCreator": {
+          "realOff": 0.5846447741586267,
+          "realDef": -12.155497443717172,
+          "realNet": 12.740142217875798,
+          "simOff": -1.0346752194427558,
+          "simDef": -1.781444240249937,
+          "simNet": 0.7467690208071813,
+          "offGap": -1.6193199936013825,
+          "defGap": 10.374053203467234,
+          "netGap": -11.993373197068617,
+          "rows": 120,
+          "offPoss": 359.87280895220727,
+          "defPoss": 354.2100934499063,
+          "coverageInsufficient": true
+        }
+      },
+      "selectedRealBaseline": {
+        "noRim": {
+          "realOff": -2.4726340297175593,
+          "realDef": -0.4118988433196015,
+          "realNet": -2.0607351863979577,
+          "simOff": -0.5161838076078257,
+          "simDef": 0.498314329276018,
+          "simNet": -1.0144981368838437,
+          "offGap": 1.9564502221097335,
+          "defGap": 0.9102131725956195,
+          "netGap": 1.046237049514114,
+          "rows": 897,
+          "offPoss": 2937.298771658447,
+          "defPoss": 2929.709768251058,
+          "coverageInsufficient": false
+        },
+        "lowSpacing": {
+          "realOff": -7.6391609173442845,
+          "realDef": -2.066581758607558,
+          "realNet": -5.572579158736726,
+          "simOff": -0.7019440597428482,
+          "simDef": -1.6153054049704045,
+          "simNet": 0.9133613452275563,
+          "offGap": 6.937216857601436,
+          "defGap": 0.45127635363715335,
+          "netGap": 6.485940503964282,
+          "rows": 281,
+          "offPoss": 757.9239772730709,
+          "defPoss": 747.6707654799819,
+          "coverageInsufficient": false
+        },
+        "noCreator": {
+          "realOff": -2.499948001647634,
+          "realDef": -5.359375075303801,
+          "realNet": 2.8594270736561676,
+          "simOff": -1.0346752194427558,
+          "simDef": -1.781444240249937,
+          "simNet": 0.7467690208071813,
+          "offGap": 1.465272782204878,
+          "defGap": 3.5779308350538646,
+          "netGap": -2.1126580528489862,
+          "rows": 120,
+          "offPoss": 359.87280895220727,
+          "defPoss": 354.2100934499063,
+          "coverageInsufficient": true
+        }
+      }
+    },
+    {
+      "season": "2022-23",
+      "k": 41,
+      "date": "2023-01-10",
+      "allSides": 32646,
+      "eligibleSides": 32646,
+      "missingSides": 0,
+      "selectedSides": 1500,
+      "selectedGames": 501,
+      "allGroups": {
+        "noRim": {
+          "rows": 20230,
+          "games": 531,
+          "offPoss": 65883.61822393516,
+          "defPoss": 65785.3959847693
+        },
+        "lowSpacing": {
+          "rows": 5428,
+          "games": 440,
+          "offPoss": 16991.25698573118,
+          "defPoss": 17032.560544530515
+        },
+        "noCreator": {
+          "rows": 2315,
+          "games": 329,
+          "offPoss": 7346.670498040637,
+          "defPoss": 7354.650412156731
+        }
+      },
+      "groups": {
+        "noRim": {
+          "realOff": 2.293415651928181,
+          "realDef": -0.32376113188702205,
+          "realNet": 2.617176783815203,
+          "simOff": -0.6062739143708533,
+          "simDef": 0.35885916036810817,
+          "simNet": -0.9651330747389615,
+          "offGap": -2.8996895662990347,
+          "defGap": 0.6826202922551302,
+          "netGap": -3.5823098585541646,
+          "rows": 923,
+          "offPoss": 3103.7801950975004,
+          "defPoss": 3107.3611134849903,
+          "coverageInsufficient": false
+        },
+        "lowSpacing": {
+          "realOff": -2.727249446610234,
+          "realDef": -10.575657829290101,
+          "realNet": 7.848408382679867,
+          "simOff": -1.5443572502599736,
+          "simDef": -0.39184791817610853,
+          "simNet": -1.152509332083865,
+          "offGap": 1.1828921963502605,
+          "defGap": 10.183809911113993,
+          "netGap": -9.000917714763732,
+          "rows": 230,
+          "offPoss": 698.3891010987273,
+          "defPoss": 690.3132831539423,
+          "coverageInsufficient": false
+        },
+        "noCreator": {
+          "realOff": 3.8767657792427017,
+          "realDef": -18.653523897369908,
+          "realNet": 22.53028967661261,
+          "simOff": -2.40755842282691,
+          "simDef": -0.8991088266058329,
+          "simNet": -1.5084495962210769,
+          "offGap": -6.2843242020696115,
+          "defGap": 17.754415070764075,
+          "netGap": -24.038739272833688,
+          "rows": 108,
+          "offPoss": 321.83536392770134,
+          "defPoss": 308.80466872980776,
+          "coverageInsufficient": true
+        }
+      },
+      "selectedRealBaseline": {
+        "noRim": {
+          "realOff": -0.7105860224761883,
+          "realDef": 0.17582421322007422,
+          "realNet": -0.8864102356962625,
+          "simOff": -0.6062739143708533,
+          "simDef": 0.35885916036810817,
+          "simNet": -0.9651330747389615,
+          "offGap": 0.10431210810533498,
+          "defGap": 0.18303494714803395,
+          "netGap": -0.07872283904269894,
+          "rows": 923,
+          "offPoss": 3103.7801950975004,
+          "defPoss": 3107.3611134849903,
+          "coverageInsufficient": false
+        },
+        "lowSpacing": {
+          "realOff": -5.78296980105039,
+          "realDef": -8.891957730262352,
+          "realNet": 3.1089879292119615,
+          "simOff": -1.5443572502599736,
+          "simDef": -0.39184791817610853,
+          "simNet": -1.152509332083865,
+          "offGap": 4.238612550790417,
+          "defGap": 8.500109812086244,
+          "netGap": -4.261497261295826,
+          "rows": 230,
+          "offPoss": 698.3891010987273,
+          "defPoss": 690.3132831539423,
+          "coverageInsufficient": false
+        },
+        "noCreator": {
+          "realOff": 4.283526710845917,
+          "realDef": -15.260355326959981,
+          "realNet": 19.5438820378059,
+          "simOff": -2.40755842282691,
+          "simDef": -0.8991088266058329,
+          "simNet": -1.5084495962210769,
+          "offGap": -6.691085133672827,
+          "defGap": 14.361246500354149,
+          "netGap": -21.052331634026977,
+          "rows": 108,
+          "offPoss": 321.83536392770134,
+          "defPoss": 308.80466872980776,
+          "coverageInsufficient": true
+        }
+      }
+    },
+    {
+      "season": "2022-23",
+      "k": 55,
+      "date": "2023-02-08",
+      "allSides": 44140,
+      "eligibleSides": 44140,
+      "missingSides": 0,
+      "selectedSides": 1500,
+      "selectedGames": 624,
+      "allGroups": {
+        "noRim": {
+          "rows": 27103,
+          "games": 725,
+          "offPoss": 88209.43516470466,
+          "defPoss": 88076.1361886511
+        },
+        "lowSpacing": {
+          "rows": 6476,
+          "games": 553,
+          "offPoss": 21258.852013958945,
+          "defPoss": 21290.64590503292
+        },
+        "noCreator": {
+          "rows": 3395,
+          "games": 437,
+          "offPoss": 10807.903915245044,
+          "defPoss": 10817.291084375405
+        }
+      },
+      "groups": {
+        "noRim": {
+          "realOff": 1.966885345491667,
+          "realDef": 1.1209098097846275,
+          "realNet": 0.8459755357070395,
+          "simOff": -0.28955803928016416,
+          "simDef": 0.38573785637530644,
+          "simNet": -0.6752958956554707,
+          "offGap": -2.2564433847718313,
+          "defGap": -0.7351719534093211,
+          "netGap": -1.5212714313625102,
+          "rows": 908,
+          "offPoss": 2960.0852324257585,
+          "defPoss": 2947.1687127931696,
+          "coverageInsufficient": false
+        },
+        "lowSpacing": {
+          "realOff": 1.9038244532542985,
+          "realDef": -2.790137093101224,
+          "realNet": 4.693961546355522,
+          "simOff": -0.8118494907438168,
+          "simDef": -1.2654567080965422,
+          "simNet": 0.45360721735272536,
+          "offGap": -2.7156739439981155,
+          "defGap": 1.524680385004682,
+          "netGap": -4.240354329002797,
+          "rows": 215,
+          "offPoss": 680.2319219851095,
+          "defPoss": 671.6116209542016,
+          "coverageInsufficient": false
+        },
+        "noCreator": {
+          "realOff": -5.86879379397434,
+          "realDef": -1.5051213019047405,
+          "realNet": -4.3636724920695995,
+          "simOff": -2.442959722969372,
+          "simDef": 0.21845736980795205,
+          "simNet": -2.661417092777324,
+          "offGap": 3.4258340710049677,
+          "defGap": 1.7235786717126924,
+          "netGap": 1.7022553992922753,
+          "rows": 115,
+          "offPoss": 353.18654118688636,
+          "defPoss": 332.5711242178542,
+          "coverageInsufficient": true
+        }
+      },
+      "selectedRealBaseline": {
+        "noRim": {
+          "realOff": 0.2721352350760667,
+          "realDef": 0.7655174693445129,
+          "realNet": -0.49338223426844624,
+          "simOff": -0.28955803928016416,
+          "simDef": 0.38573785637530644,
+          "simNet": -0.6752958956554707,
+          "offGap": -0.5616932743562308,
+          "defGap": -0.3797796129692065,
+          "netGap": -0.18191366138702442,
+          "rows": 908,
+          "offPoss": 2960.0852324257585,
+          "defPoss": 2947.1687127931696,
+          "coverageInsufficient": false
+        },
+        "lowSpacing": {
+          "realOff": 2.1645693523192913,
+          "realDef": -5.97256857411348,
+          "realNet": 8.137137926432771,
+          "simOff": -0.8118494907438168,
+          "simDef": -1.2654567080965422,
+          "simNet": 0.45360721735272536,
+          "offGap": -2.976418843063108,
+          "defGap": 4.7071118660169375,
+          "netGap": -7.683530709080046,
+          "rows": 215,
+          "offPoss": 680.2319219851095,
+          "defPoss": 671.6116209542016,
+          "coverageInsufficient": false
+        },
+        "noCreator": {
+          "realOff": -3.7986859375165434,
+          "realDef": -0.8682872090890088,
+          "realNet": -2.9303987284275346,
+          "simOff": -2.442959722969372,
+          "simDef": 0.21845736980795205,
+          "simNet": -2.661417092777324,
+          "offGap": 1.3557262145471713,
+          "defGap": 1.086744578896961,
+          "netGap": 0.2689816356502104,
+          "rows": 115,
+          "offPoss": 353.18654118688636,
+          "defPoss": 332.5711242178542,
+          "coverageInsufficient": true
+        }
+      }
+    },
+    {
+      "season": "2023-24",
+      "k": 25,
+      "date": "2023-12-17",
+      "allSides": 19716,
+      "eligibleSides": 19716,
+      "missingSides": 0,
+      "selectedSides": 1500,
+      "selectedGames": 322,
+      "allGroups": {
+        "noRim": {
+          "rows": 10577,
+          "games": 321,
+          "offPoss": 33125.93251197921,
+          "defPoss": 33085.69127131197
+        },
+        "lowSpacing": {
+          "rows": 2708,
+          "games": 273,
+          "offPoss": 9305.166703438996,
+          "defPoss": 9310.2083208965
+        },
+        "noCreator": {
+          "rows": 1604,
+          "games": 241,
+          "offPoss": 5279.067913867255,
+          "defPoss": 5300.879240569794
+        }
+      },
+      "groups": {
+        "noRim": {
+          "realOff": -5.812187752310504,
+          "realDef": 2.4250545593716977,
+          "realNet": -8.237242311682202,
+          "simOff": -0.7952294979096324,
+          "simDef": 0.9877252854493478,
+          "simNet": -1.78295478335898,
+          "offGap": 5.016958254400872,
+          "defGap": -1.4373292739223498,
+          "netGap": 6.454287528323222,
+          "rows": 786,
+          "offPoss": 2451.2965593781187,
+          "defPoss": 2421.4660718314203,
+          "coverageInsufficient": false
+        },
+        "lowSpacing": {
+          "realOff": -4.716270546086744,
+          "realDef": 1.9830081497031529,
+          "realNet": -6.699278695789896,
+          "simOff": -2.911979838743236,
+          "simDef": 0.38239866423121976,
+          "simNet": -3.2943785029744554,
+          "offGap": 1.8042907073435077,
+          "defGap": -1.600609485471933,
+          "netGap": 3.404900192815441,
+          "rows": 220,
+          "offPoss": 741.6959903971862,
+          "defPoss": 737.503123627096,
+          "coverageInsufficient": false
+        },
+        "noCreator": {
+          "realOff": -8.91224632963502,
+          "realDef": -6.420086257945523,
+          "realNet": -2.4921600716894963,
+          "simOff": -5.050621002548612,
+          "simDef": 1.3355427520410637,
+          "simNet": -6.386163754589675,
+          "offGap": 3.861625327086408,
+          "defGap": 7.7556290099865866,
+          "netGap": -3.8940036829001787,
+          "rows": 119,
+          "offPoss": 463.88498644792213,
+          "defPoss": 465.06415945648763,
+          "coverageInsufficient": true
+        }
+      },
+      "selectedRealBaseline": {
+        "noRim": {
+          "realOff": -0.7430838478294008,
+          "realDef": 1.1879309250384413,
+          "realNet": -1.9310147728678422,
+          "simOff": -0.7952294979096324,
+          "simDef": 0.9877252854493478,
+          "simNet": -1.78295478335898,
+          "offGap": -0.05214565008023153,
+          "defGap": -0.20020563958909354,
+          "netGap": 0.14805998950886212,
+          "rows": 786,
+          "offPoss": 2451.2965593781187,
+          "defPoss": 2421.4660718314203,
+          "coverageInsufficient": false
+        },
+        "lowSpacing": {
+          "realOff": -0.7922988853569575,
+          "realDef": 1.092799103335235,
+          "realNet": -1.8850979886921924,
+          "simOff": -2.911979838743236,
+          "simDef": 0.38239866423121976,
+          "simNet": -3.2943785029744554,
+          "offGap": -2.119680953386278,
+          "defGap": -0.7104004391040151,
+          "netGap": -1.409280514282263,
+          "rows": 220,
+          "offPoss": 741.6959903971862,
+          "defPoss": 737.503123627096,
+          "coverageInsufficient": false
+        },
+        "noCreator": {
+          "realOff": -6.616949328757794,
+          "realDef": -5.632780913909363,
+          "realNet": -0.9841684148484315,
+          "simOff": -5.050621002548612,
+          "simDef": 1.3355427520410637,
+          "simNet": -6.386163754589675,
+          "offGap": 1.5663283262091827,
+          "defGap": 6.968323665950426,
+          "netGap": -5.4019953397412435,
+          "rows": 119,
+          "offPoss": 463.88498644792213,
+          "defPoss": 465.06415945648763,
+          "coverageInsufficient": true
+        }
+      }
+    },
+    {
+      "season": "2023-24",
+      "k": 41,
+      "date": "2024-01-19",
+      "allSides": 31836,
+      "eligibleSides": 31836,
+      "missingSides": 0,
+      "selectedSides": 1500,
+      "selectedGames": 504,
+      "allGroups": {
+        "noRim": {
+          "rows": 16844,
+          "games": 527,
+          "offPoss": 54310.11353761379,
+          "defPoss": 54206.84062820054
+        },
+        "lowSpacing": {
+          "rows": 2154,
+          "games": 371,
+          "offPoss": 7459.326383756768,
+          "defPoss": 7443.044678349464
+        },
+        "noCreator": {
+          "rows": 1726,
+          "games": 334,
+          "offPoss": 5583.32526543679,
+          "defPoss": 5576.297525368249
+        }
+      },
+      "groups": {
+        "noRim": {
+          "realOff": -4.102108825492467,
+          "realDef": 0.05524189815361841,
+          "realNet": -4.157350723646085,
+          "simOff": -0.9506064163206663,
+          "simDef": 0.02915170927891265,
+          "simNet": -0.979758125599579,
+          "offGap": 3.1515024091718002,
+          "defGap": -0.026090188874705756,
+          "netGap": 3.1775925980465063,
+          "rows": 793,
+          "offPoss": 2516.9271169524136,
+          "defPoss": 2496.8326059613883,
+          "coverageInsufficient": false
+        },
+        "lowSpacing": {
+          "realOff": -0.7140629834812555,
+          "realDef": 5.8636971697190114,
+          "realNet": -6.577760153200267,
+          "simOff": -2.337802114035678,
+          "simDef": -4.0351806530854955,
+          "simNet": 1.6973785390498173,
+          "offGap": -1.6237391305544226,
+          "defGap": -9.898877822804508,
+          "netGap": 8.275138692250085,
+          "rows": 106,
+          "offPoss": 362.56694753467525,
+          "defPoss": 359.1733563077089,
+          "coverageInsufficient": true
+        },
+        "noCreator": {
+          "realOff": -3.809178661705729,
+          "realDef": -4.114226665018353,
+          "realNet": 0.3050480033126237,
+          "simOff": -8.277728437470607,
+          "simDef": -0.38064943653734623,
+          "simNet": -7.897079000933261,
+          "offGap": -4.4685497757648776,
+          "defGap": 3.7335772284810065,
+          "netGap": -8.202127004245884,
+          "rows": 91,
+          "offPoss": 367.3134899091604,
+          "defPoss": 371.73630523515146,
+          "coverageInsufficient": true
+        }
+      },
+      "selectedRealBaseline": {
+        "noRim": {
+          "realOff": -2.1528592302685614,
+          "realDef": 0.35160005582096143,
+          "realNet": -2.504459286089523,
+          "simOff": -0.9506064163206663,
+          "simDef": 0.02915170927891265,
+          "simNet": -0.979758125599579,
+          "offGap": 1.202252813947895,
+          "defGap": -0.3224483465420488,
+          "netGap": 1.5247011604899439,
+          "rows": 793,
+          "offPoss": 2516.9271169524136,
+          "defPoss": 2496.8326059613883,
+          "coverageInsufficient": false
+        },
+        "lowSpacing": {
+          "realOff": 0.04100751371716128,
+          "realDef": 6.668448983325363,
+          "realNet": -6.627441469608201,
+          "simOff": -2.337802114035678,
+          "simDef": -4.0351806530854955,
+          "simNet": 1.6973785390498173,
+          "offGap": -2.3788096277528394,
+          "defGap": -10.70362963641086,
+          "netGap": 8.324820008658019,
+          "rows": 106,
+          "offPoss": 362.56694753467525,
+          "defPoss": 359.1733563077089,
+          "coverageInsufficient": true
+        },
+        "noCreator": {
+          "realOff": 2.236729623396238,
+          "realDef": -4.051651511294412,
+          "realNet": 6.28838113469065,
+          "simOff": -8.277728437470607,
+          "simDef": -0.38064943653734623,
+          "simNet": -7.897079000933261,
+          "offGap": -10.514458060866845,
+          "defGap": 3.6710020747570655,
+          "netGap": -14.185460135623911,
+          "rows": 91,
+          "offPoss": 367.3134899091604,
+          "defPoss": 371.73630523515146,
+          "coverageInsufficient": true
+        }
+      }
+    },
+    {
+      "season": "2023-24",
+      "k": 55,
+      "date": "2024-02-22",
+      "allSides": 42468,
+      "eligibleSides": 42468,
+      "missingSides": 0,
+      "selectedSides": 1500,
+      "selectedGames": 642,
+      "allGroups": {
+        "noRim": {
+          "rows": 24382,
+          "games": 715,
+          "offPoss": 80323.83160225359,
+          "defPoss": 80211.14405696509
+        },
+        "lowSpacing": {
+          "rows": 2707,
+          "games": 476,
+          "offPoss": 9324.712931791008,
+          "defPoss": 9325.792966848863
+        },
+        "noCreator": {
+          "rows": 1849,
+          "games": 372,
+          "offPoss": 6147.247411421238,
+          "defPoss": 6127.383378812408
+        }
+      },
+      "groups": {
+        "noRim": {
+          "realOff": -4.813017067153543,
+          "realDef": -2.5901448833225795,
+          "realNet": -2.222872183830963,
+          "simOff": -0.9901706205568503,
+          "simDef": 0.7165594882357026,
+          "simNet": -1.706730108792553,
+          "offGap": 3.8228464465966923,
+          "defGap": 3.3067043715582822,
+          "netGap": 0.51614207503841,
+          "rows": 856,
+          "offPoss": 2825.4170584417075,
+          "defPoss": 2800.836227827845,
+          "coverageInsufficient": false
+        },
+        "lowSpacing": {
+          "realOff": -13.264833867227125,
+          "realDef": 4.657152862638393,
+          "realNet": -17.921986729865516,
+          "simOff": -4.165018938704337,
+          "simDef": -1.0854357333478197,
+          "simNet": -3.0795832053565175,
+          "offGap": 9.099814928522788,
+          "defGap": -5.742588595986213,
+          "netGap": 14.842403524508999,
+          "rows": 98,
+          "offPoss": 388.52105520134126,
+          "defPoss": 387.24586742286056,
+          "coverageInsufficient": true
+        },
+        "noCreator": {
+          "realOff": -5.396740849245948,
+          "realDef": -9.010149565175158,
+          "realNet": 3.6134087159292108,
+          "simOff": -7.020986231455903,
+          "simDef": -0.4257114571674838,
+          "simNet": -6.595274774288419,
+          "offGap": -1.6242453822099554,
+          "defGap": 8.584438108007674,
+          "netGap": -10.20868349021763,
+          "rows": 66,
+          "offPoss": 262.6544081836437,
+          "defPoss": 269.09555987142437,
+          "coverageInsufficient": true
+        }
+      },
+      "selectedRealBaseline": {
+        "noRim": {
+          "realOff": -0.9322937917490474,
+          "realDef": -1.2134247062060766,
+          "realNet": 0.2811309144570292,
+          "simOff": -0.9901706205568503,
+          "simDef": 0.7165594882357026,
+          "simNet": -1.706730108792553,
+          "offGap": -0.05787682880780298,
+          "defGap": 1.9299841944417793,
+          "netGap": -1.9878610232495824,
+          "rows": 856,
+          "offPoss": 2825.4170584417075,
+          "defPoss": 2800.836227827845,
+          "coverageInsufficient": false
+        },
+        "lowSpacing": {
+          "realOff": -7.443308339765227,
+          "realDef": 5.175234601069754,
+          "realNet": -12.618542940834981,
+          "simOff": -4.165018938704337,
+          "simDef": -1.0854357333478197,
+          "simNet": -3.0795832053565175,
+          "offGap": 3.2782894010608894,
+          "defGap": -6.260670334417574,
+          "netGap": 9.538959735478464,
+          "rows": 98,
+          "offPoss": 388.52105520134126,
+          "defPoss": 387.24586742286056,
+          "coverageInsufficient": true
+        },
+        "noCreator": {
+          "realOff": 1.4218954240875088,
+          "realDef": -7.786042126162288,
+          "realNet": 9.207937550249797,
+          "simOff": -7.020986231455903,
+          "simDef": -0.4257114571674838,
+          "simNet": -6.595274774288419,
+          "offGap": -8.442881655543411,
+          "defGap": 7.360330668994804,
+          "netGap": -15.803212324538215,
+          "rows": 66,
+          "offPoss": 262.6544081836437,
+          "defPoss": 269.09555987142437,
+          "coverageInsufficient": true
+        }
+      }
+    },
+    {
+      "season": "2024-25",
+      "k": 25,
+      "date": "2024-12-14",
+      "allSides": 19932,
+      "eligibleSides": 19932,
+      "missingSides": 0,
+      "selectedSides": 1500,
+      "selectedGames": 316,
+      "allGroups": {
+        "noRim": {
+          "rows": 12315,
+          "games": 319,
+          "offPoss": 39288.883048760035,
+          "defPoss": 39316.217632619315
+        },
+        "lowSpacing": {
+          "rows": 4553,
+          "games": 284,
+          "offPoss": 14696.288561293442,
+          "defPoss": 14710.638655244276
+        },
+        "noCreator": {
+          "rows": 2225,
+          "games": 247,
+          "offPoss": 6862.315000356182,
+          "defPoss": 6890.856005998621
+        }
+      },
+      "groups": {
+        "noRim": {
+          "realOff": 1.7977333163912579,
+          "realDef": 0.5632986504118312,
+          "realNet": 1.2344346659794265,
+          "simOff": -0.42205119506304845,
+          "simDef": 0.4026768587932799,
+          "simNet": -0.8247280538563284,
+          "offGap": -2.219784511454306,
+          "defGap": -0.16062179161855134,
+          "netGap": -2.059162719835755,
+          "rows": 951,
+          "offPoss": 3121.1929747155464,
+          "defPoss": 3114.698294319638,
+          "coverageInsufficient": false
+        },
+        "lowSpacing": {
+          "realOff": -1.811934317682911,
+          "realDef": -2.0264082404493786,
+          "realNet": 0.2144739227664676,
+          "simOff": -0.6119580201866953,
+          "simDef": -0.8645089542158367,
+          "simNet": 0.2525509340291414,
+          "offGap": 1.1999762974962156,
+          "defGap": 1.1618992862335418,
+          "netGap": 0.03807701126267382,
+          "rows": 359,
+          "offPoss": 1176.082461441089,
+          "defPoss": 1172.3336393412014,
+          "coverageInsufficient": false
+        },
+        "noCreator": {
+          "realOff": -4.680654940321388,
+          "realDef": -0.1032118297770408,
+          "realNet": -4.577443110544348,
+          "simOff": -0.763120277589256,
+          "simDef": -0.19725464569598544,
+          "simNet": -0.5658656318932707,
+          "offGap": 3.917534662732132,
+          "defGap": -0.09404281591894464,
+          "netGap": 4.011577478651077,
+          "rows": 180,
+          "offPoss": 542.1018125516623,
+          "defPoss": 540.6680213084777,
+          "coverageInsufficient": false
+        }
+      },
+      "selectedRealBaseline": {
+        "noRim": {
+          "realOff": 1.7381607605943548,
+          "realDef": 1.0435734420321037,
+          "realNet": 0.6945873185622511,
+          "simOff": -0.42205119506304845,
+          "simDef": 0.4026768587932799,
+          "simNet": -0.8247280538563284,
+          "offGap": -2.1602119556574033,
+          "defGap": -0.6408965832388238,
+          "netGap": -1.5193153724185795,
+          "rows": 951,
+          "offPoss": 3121.1929747155464,
+          "defPoss": 3114.698294319638,
+          "coverageInsufficient": false
+        },
+        "lowSpacing": {
+          "realOff": 2.0778481584435156,
+          "realDef": -0.5326784699239355,
+          "realNet": 2.610526628367451,
+          "simOff": -0.6119580201866953,
+          "simDef": -0.8645089542158367,
+          "simNet": 0.2525509340291414,
+          "offGap": -2.689806178630211,
+          "defGap": -0.3318304842919012,
+          "netGap": -2.3579756943383097,
+          "rows": 359,
+          "offPoss": 1176.082461441089,
+          "defPoss": 1172.3336393412014,
+          "coverageInsufficient": false
+        },
+        "noCreator": {
+          "realOff": -2.7455578303531407,
+          "realDef": -0.6694068091669217,
+          "realNet": -2.076151021186219,
+          "simOff": -0.763120277589256,
+          "simDef": -0.19725464569598544,
+          "simNet": -0.5658656318932707,
+          "offGap": 1.9824375527638847,
+          "defGap": 0.4721521634709363,
+          "netGap": 1.5102853892929482,
+          "rows": 180,
+          "offPoss": 542.1018125516623,
+          "defPoss": 540.6680213084777,
+          "coverageInsufficient": false
+        }
+      }
+    },
+    {
+      "season": "2024-25",
+      "k": 41,
+      "date": "2025-01-18",
+      "allSides": 33128,
+      "eligibleSides": 33128,
+      "missingSides": 0,
+      "selectedSides": 1500,
+      "selectedGames": 491,
+      "allGroups": {
+        "noRim": {
+          "rows": 19738,
+          "games": 538,
+          "offPoss": 63554.40001090321,
+          "defPoss": 63531.97738757203
+        },
+        "lowSpacing": {
+          "rows": 4271,
+          "games": 437,
+          "offPoss": 13619.956322354547,
+          "defPoss": 13612.270738782292
+        },
+        "noCreator": {
+          "rows": 3190,
+          "games": 395,
+          "offPoss": 9848.146875209392,
+          "defPoss": 9886.737665083361
+        }
+      },
+      "groups": {
+        "noRim": {
+          "realOff": 3.517330530483487,
+          "realDef": 0.16029080892480227,
+          "realNet": 3.357039721558685,
+          "simOff": -0.5823381426713147,
+          "simDef": 0.4967834544847464,
+          "simNet": -1.079121597156061,
+          "offGap": -4.0996686731548015,
+          "defGap": 0.3364926455599442,
+          "netGap": -4.436161318714746,
+          "rows": 871,
+          "offPoss": 2964.821292115752,
+          "defPoss": 2968.0812199765187,
+          "coverageInsufficient": false
+        },
+        "lowSpacing": {
+          "realOff": 1.4593558566162854,
+          "realDef": -6.464029403311744,
+          "realNet": 7.923385259928029,
+          "simOff": -2.657733423321138,
+          "simDef": -1.6969398848734831,
+          "simNet": -0.9607935384476549,
+          "offGap": -4.1170892799374235,
+          "defGap": 4.767089518438261,
+          "netGap": -8.884178798375684,
+          "rows": 186,
+          "offPoss": 603.5565726906079,
+          "defPoss": 594.4872908259478,
+          "coverageInsufficient": false
+        },
+        "noCreator": {
+          "realOff": -2.139967931512751,
+          "realDef": -7.795043053813502,
+          "realNet": 5.655075122300751,
+          "simOff": -1.935508998407652,
+          "simDef": -0.8526282998980809,
+          "simNet": -1.082880698509571,
+          "offGap": 0.204458933105099,
+          "defGap": 6.942414753915421,
+          "netGap": -6.737955820810322,
+          "rows": 134,
+          "offPoss": 423.251241184731,
+          "defPoss": 415.89634400636317,
+          "coverageInsufficient": true
+        }
+      },
+      "selectedRealBaseline": {
+        "noRim": {
+          "realOff": 3.313889783611897,
+          "realDef": 1.2074711631609618,
+          "realNet": 2.1064186204509348,
+          "simOff": -0.5823381426713147,
+          "simDef": 0.4967834544847464,
+          "simNet": -1.079121597156061,
+          "offGap": -3.8962279262832116,
+          "defGap": -0.7106877086762153,
+          "netGap": -3.185540217606996,
+          "rows": 871,
+          "offPoss": 2964.821292115752,
+          "defPoss": 2968.0812199765187,
+          "coverageInsufficient": false
+        },
+        "lowSpacing": {
+          "realOff": 2.0969161290031875,
+          "realDef": -4.7357686998260276,
+          "realNet": 6.8326848288292155,
+          "simOff": -2.657733423321138,
+          "simDef": -1.6969398848734831,
+          "simNet": -0.9607935384476549,
+          "offGap": -4.7546495523243255,
+          "defGap": 3.038828814952544,
+          "netGap": -7.793478367276871,
+          "rows": 186,
+          "offPoss": 603.5565726906079,
+          "defPoss": 594.4872908259478,
+          "coverageInsufficient": false
+        },
+        "noCreator": {
+          "realOff": -3.3135759399317806,
+          "realDef": -11.284510771983198,
+          "realNet": 7.970934832051418,
+          "simOff": -1.935508998407652,
+          "simDef": -0.8526282998980809,
+          "simNet": -1.082880698509571,
+          "offGap": 1.3780669415241287,
+          "defGap": 10.431882472085118,
+          "netGap": -9.053815530560989,
+          "rows": 134,
+          "offPoss": 423.251241184731,
+          "defPoss": 415.89634400636317,
+          "coverageInsufficient": true
+        }
+      }
+    },
+    {
+      "season": "2024-25",
+      "k": 55,
+      "date": "2025-02-21",
+      "allSides": 44426,
+      "eligibleSides": 44426,
+      "missingSides": 0,
+      "selectedSides": 1500,
+      "selectedGames": 619,
+      "allGroups": {
+        "noRim": {
+          "rows": 25785,
+          "games": 725,
+          "offPoss": 82057.75532828209,
+          "defPoss": 82038.81960141686
+        },
+        "lowSpacing": {
+          "rows": 4251,
+          "games": 529,
+          "offPoss": 13876.895847171621,
+          "defPoss": 13915.02848294414
+        },
+        "noCreator": {
+          "rows": 3387,
+          "games": 463,
+          "offPoss": 10604.271820751224,
+          "defPoss": 10663.194110532719
+        }
+      },
+      "groups": {
+        "noRim": {
+          "realOff": 3.9649232395500613,
+          "realDef": 0.26855087275372813,
+          "realNet": 3.696372366796333,
+          "simOff": -0.4802552802613434,
+          "simDef": 0.8403528406802543,
+          "simNet": -1.3206081209415976,
+          "offGap": -4.445178519811405,
+          "defGap": 0.5718019679265262,
+          "netGap": -5.01698048773793,
+          "rows": 872,
+          "offPoss": 3010.187506228133,
+          "defPoss": 3014.3517883291343,
+          "coverageInsufficient": false
+        },
+        "lowSpacing": {
+          "realOff": -0.7327849425712469,
+          "realDef": -0.12101816384863019,
+          "realNet": -0.6117667787226168,
+          "simOff": -2.0370260923577983,
+          "simDef": -1.935739845027457,
+          "simNet": -0.1012862473303413,
+          "offGap": -1.3042411497865514,
+          "defGap": -1.8147216811788267,
+          "netGap": 0.5104805313922754,
+          "rows": 137,
+          "offPoss": 497.74264469589644,
+          "defPoss": 503.12620173717113,
+          "coverageInsufficient": true
+        },
+        "noCreator": {
+          "realOff": 0.4859272177062518,
+          "realDef": -2.320209479440557,
+          "realNet": 2.806136697146809,
+          "simOff": -0.6855714199738817,
+          "simDef": -0.6301304364148667,
+          "simNet": -0.055440983559015056,
+          "offGap": -1.1714986376801335,
+          "defGap": 1.6900790430256905,
+          "netGap": -2.861577680705824,
+          "rows": 107,
+          "offPoss": 369.7593133070914,
+          "defPoss": 366.7861877872933,
+          "coverageInsufficient": true
+        }
+      },
+      "selectedRealBaseline": {
+        "noRim": {
+          "realOff": 2.9697003849313552,
+          "realDef": 1.369745484975138,
+          "realNet": 1.5999548999562172,
+          "simOff": -0.4802552802613434,
+          "simDef": 0.8403528406802543,
+          "simNet": -1.3206081209415976,
+          "offGap": -3.449955665192699,
+          "defGap": -0.5293926442948838,
+          "netGap": -2.9205630208978146,
+          "rows": 872,
+          "offPoss": 3010.187506228133,
+          "defPoss": 3014.3517883291343,
+          "coverageInsufficient": false
+        },
+        "lowSpacing": {
+          "realOff": -0.00403812548507891,
+          "realDef": 1.75979548295874,
+          "realNet": -1.763833608443819,
+          "simOff": -2.0370260923577983,
+          "simDef": -1.935739845027457,
+          "simNet": -0.1012862473303413,
+          "offGap": -2.0329879668727195,
+          "defGap": -3.695535327986197,
+          "netGap": 1.6625473611134778,
+          "rows": 137,
+          "offPoss": 497.74264469589644,
+          "defPoss": 503.12620173717113,
+          "coverageInsufficient": true
+        },
+        "noCreator": {
+          "realOff": -2.875554930599986,
+          "realDef": -3.4970527959346915,
+          "realNet": 0.6214978653347054,
+          "simOff": -0.6855714199738817,
+          "simDef": -0.6301304364148667,
+          "simNet": -0.055440983559015056,
+          "offGap": 2.1899835106261043,
+          "defGap": 2.8669223595198248,
+          "netGap": -0.6769388488937205,
+          "rows": 107,
+          "offPoss": 369.7593133070914,
+          "defPoss": 366.7861877872933,
+          "coverageInsufficient": true
+        }
+      }
+    },
+    {
+      "season": "2025-26",
+      "k": 25,
+      "date": "2025-12-14",
+      "allSides": 24726,
+      "eligibleSides": 24726,
+      "missingSides": 0,
+      "selectedSides": 1500,
+      "selectedGames": 362,
+      "allGroups": {
+        "noRim": {
+          "rows": 12538,
+          "games": 365,
+          "offPoss": 37106.42105980999,
+          "defPoss": 37009.42208840435
+        },
+        "lowSpacing": {
+          "rows": 3762,
+          "games": 311,
+          "offPoss": 10894.786183961764,
+          "defPoss": 10945.653157853494
+        },
+        "noCreator": {
+          "rows": 1924,
+          "games": 267,
+          "offPoss": 5605.20366248629,
+          "defPoss": 5641.199944736244
+        }
+      },
+      "groups": {
+        "noRim": {
+          "realOff": 3.4038524575262095,
+          "realDef": 3.133575208982334,
+          "realNet": 0.27027724854387536,
+          "simOff": -0.507928152271112,
+          "simDef": 0.3046430245615052,
+          "simNet": -0.8125711768326171,
+          "offGap": -3.9117806097973213,
+          "defGap": -2.828932184420829,
+          "netGap": -1.0828484253764925,
+          "rows": 786,
+          "offPoss": 2273.3526978742807,
+          "defPoss": 2277.029958940889,
+          "coverageInsufficient": false
+        },
+        "lowSpacing": {
+          "realOff": -3.655542254884901,
+          "realDef": 1.53585842294189,
+          "realNet": -5.191400677826791,
+          "simOff": -1.4742323101020325,
+          "simDef": -1.4064645974581103,
+          "simNet": -0.06776771264392223,
+          "offGap": 2.1813099447828685,
+          "defGap": -2.9423230204,
+          "netGap": 5.1236329651828685,
+          "rows": 234,
+          "offPoss": 703.0430523120591,
+          "defPoss": 697.8373511840183,
+          "coverageInsufficient": false
+        },
+        "noCreator": {
+          "realOff": -4.3337624786759,
+          "realDef": 0.5495921420260275,
+          "realNet": -4.883354620701928,
+          "simOff": -0.7818657856473286,
+          "simDef": -1.5810462108161898,
+          "simNet": 0.7991804251688612,
+          "offGap": 3.5518966930285716,
+          "defGap": -2.130638352842217,
+          "netGap": 5.6825350458707895,
+          "rows": 127,
+          "offPoss": 350.8857283063671,
+          "defPoss": 352.3514868694728,
+          "coverageInsufficient": true
+        }
+      },
+      "selectedRealBaseline": {
+        "noRim": {
+          "realOff": 2.4816386438113325,
+          "realDef": 2.0485377534886693,
+          "realNet": 0.4331008903226632,
+          "simOff": -0.507928152271112,
+          "simDef": 0.3046430245615052,
+          "simNet": -0.8125711768326171,
+          "offGap": -2.9895667960824444,
+          "defGap": -1.743894728927164,
+          "netGap": -1.2456720671552803,
+          "rows": 786,
+          "offPoss": 2273.3526978742807,
+          "defPoss": 2277.029958940889,
+          "coverageInsufficient": false
+        },
+        "lowSpacing": {
+          "realOff": -3.1894172572448203,
+          "realDef": -0.7312676336465347,
+          "realNet": -2.4581496235982856,
+          "simOff": -1.4742323101020325,
+          "simDef": -1.4064645974581103,
+          "simNet": -0.06776771264392223,
+          "offGap": 1.7151849471427878,
+          "defGap": -0.6751969638115756,
+          "netGap": 2.390381910954363,
+          "rows": 234,
+          "offPoss": 703.0430523120591,
+          "defPoss": 697.8373511840183,
+          "coverageInsufficient": false
+        },
+        "noCreator": {
+          "realOff": -1.845710265899391,
+          "realDef": 1.6948146353536515,
+          "realNet": -3.5405249012530424,
+          "simOff": -0.7818657856473286,
+          "simDef": -1.5810462108161898,
+          "simNet": 0.7991804251688612,
+          "offGap": 1.0638444802520624,
+          "defGap": -3.2758608461698415,
+          "netGap": 4.339705326421903,
+          "rows": 127,
+          "offPoss": 350.8857283063671,
+          "defPoss": 352.3514868694728,
+          "coverageInsufficient": true
+        }
+      }
+    },
+    {
+      "season": "2025-26",
+      "k": 41,
+      "date": "2026-01-16",
+      "allSides": 39282,
+      "eligibleSides": 39282,
+      "missingSides": 0,
+      "selectedSides": 1500,
+      "selectedGames": 538,
+      "allGroups": {
+        "noRim": {
+          "rows": 21503,
+          "games": 586,
+          "offPoss": 64316.33282030366,
+          "defPoss": 64208.94605334873
+        },
+        "lowSpacing": {
+          "rows": 4050,
+          "games": 449,
+          "offPoss": 11952.046409924233,
+          "defPoss": 11977.682534398813
+        },
+        "noCreator": {
+          "rows": 2005,
+          "games": 380,
+          "offPoss": 5820.682299251154,
+          "defPoss": 5835.726753365512
+        }
+      },
+      "groups": {
+        "noRim": {
+          "realOff": 1.9240507949413674,
+          "realDef": 1.5784639680252717,
+          "realNet": 0.34558682691609577,
+          "simOff": -0.3412715888728786,
+          "simDef": 1.1017986786371272,
+          "simNet": -1.4430702675100058,
+          "offGap": -2.265322383814246,
+          "defGap": -0.47666528938814445,
+          "netGap": -1.7886570944261015,
+          "rows": 834,
+          "offPoss": 2434.92678862381,
+          "defPoss": 2436.509881194804,
+          "coverageInsufficient": false
+        },
+        "lowSpacing": {
+          "realOff": -10.694742293519065,
+          "realDef": 1.7645340138593069,
+          "realNet": -12.45927630737837,
+          "simOff": -2.2503535621270476,
+          "simDef": -1.4197335734329175,
+          "simNet": -0.8306199886941301,
+          "offGap": 8.444388731392017,
+          "defGap": -3.1842675872922244,
+          "netGap": 11.628656318684241,
+          "rows": 187,
+          "offPoss": 508.8962970914634,
+          "defPoss": 485.02394948217005,
+          "coverageInsufficient": true
+        },
+        "noCreator": {
+          "realOff": -6.4544877900048645,
+          "realDef": 0.3599154581631734,
+          "realNet": -6.814403248168038,
+          "simOff": -0.4249811300182157,
+          "simDef": -3.3563245386180314,
+          "simNet": 2.931343408599816,
+          "offGap": 6.029506659986649,
+          "defGap": -3.716239996781205,
+          "netGap": 9.745746656767853,
+          "rows": 65,
+          "offPoss": 203.1021843896844,
+          "defPoss": 193.63814045609612,
+          "coverageInsufficient": true
+        }
+      },
+      "selectedRealBaseline": {
+        "noRim": {
+          "realOff": 2.0040917309224255,
+          "realDef": -0.24070505732528874,
+          "realNet": 2.2447967882477142,
+          "simOff": -0.3412715888728786,
+          "simDef": 1.1017986786371272,
+          "simNet": -1.4430702675100058,
+          "offGap": -2.3453633197953043,
+          "defGap": 1.342503735962416,
+          "netGap": -3.68786705575772,
+          "rows": 834,
+          "offPoss": 2434.92678862381,
+          "defPoss": 2436.509881194804,
+          "coverageInsufficient": false
+        },
+        "lowSpacing": {
+          "realOff": -8.495835827778254,
+          "realDef": 3.748660770192204,
+          "realNet": -12.244496597970459,
+          "simOff": -2.2503535621270476,
+          "simDef": -1.4197335734329175,
+          "simNet": -0.8306199886941301,
+          "offGap": 6.245482265651207,
+          "defGap": -5.168394343625121,
+          "netGap": 11.413876609276329,
+          "rows": 187,
+          "offPoss": 508.8962970914634,
+          "defPoss": 485.02394948217005,
+          "coverageInsufficient": true
+        },
+        "noCreator": {
+          "realOff": -5.927329199960775,
+          "realDef": 3.112803889994335,
+          "realNet": -9.040133089955111,
+          "simOff": -0.4249811300182157,
+          "simDef": -3.3563245386180314,
+          "simNet": 2.931343408599816,
+          "offGap": 5.50234806994256,
+          "defGap": -6.4691284286123665,
+          "netGap": 11.971476498554926,
+          "rows": 65,
+          "offPoss": 203.1021843896844,
+          "defPoss": 193.63814045609612,
+          "coverageInsufficient": true
+        }
+      }
+    },
+    {
+      "season": "2025-26",
+      "k": 55,
+      "date": "2026-02-19",
+      "allSides": 52366,
+      "eligibleSides": 52366,
+      "missingSides": 0,
+      "selectedSides": 1500,
+      "selectedGames": 666,
+      "allGroups": {
+        "noRim": {
+          "rows": 28675,
+          "games": 795,
+          "offPoss": 87036.81917832789,
+          "defPoss": 86933.53162313985
+        },
+        "lowSpacing": {
+          "rows": 5056,
+          "games": 567,
+          "offPoss": 15511.959343072032,
+          "defPoss": 15532.334971222044
+        },
+        "noCreator": {
+          "rows": 2404,
+          "games": 467,
+          "offPoss": 6928.282023242589,
+          "defPoss": 6958.1022994528075
+        }
+      },
+      "groups": {
+        "noRim": {
+          "realOff": 3.978880066120556,
+          "realDef": 1.4516840879360047,
+          "realNet": 2.527195978184551,
+          "simOff": 0.05512070319157029,
+          "simDef": 0.9726207333410373,
+          "simNet": -0.917500030149467,
+          "offGap": -3.9237593629289855,
+          "defGap": -0.4790633545949674,
+          "netGap": -3.444696008334018,
+          "rows": 811,
+          "offPoss": 2354.0975716472385,
+          "defPoss": 2358.8229861510827,
+          "coverageInsufficient": false
+        },
+        "lowSpacing": {
+          "realOff": 0.6117640002514088,
+          "realDef": -4.592955161693453,
+          "realNet": 5.204719161944862,
+          "simOff": -2.3087492503793374,
+          "simDef": -1.8409418049824393,
+          "simNet": -0.4678074453968981,
+          "offGap": -2.920513250630746,
+          "defGap": 2.752013356711014,
+          "netGap": -5.67252660734176,
+          "rows": 178,
+          "offPoss": 519.604048519218,
+          "defPoss": 505.2299272112991,
+          "coverageInsufficient": false
+        },
+        "noCreator": {
+          "realOff": -14.724059586174834,
+          "realDef": 11.946178127797124,
+          "realNet": -26.670237713971957,
+          "simOff": -2.5893309713440162,
+          "simDef": -0.3253709992797309,
+          "simNet": -2.2639599720642853,
+          "offGap": 12.134728614830816,
+          "defGap": -12.271549127076854,
+          "netGap": 24.406277741907672,
+          "rows": 61,
+          "offPoss": 184.65261535126066,
+          "defPoss": 175.6521246114127,
+          "coverageInsufficient": true
+        }
+      },
+      "selectedRealBaseline": {
+        "noRim": {
+          "realOff": 4.754141076991661,
+          "realDef": 0.34701644330697845,
+          "realNet": 4.407124633684682,
+          "simOff": 0.05512070319157029,
+          "simDef": 0.9726207333410373,
+          "simNet": -0.917500030149467,
+          "offGap": -4.69902037380009,
+          "defGap": 0.6256042900340588,
+          "netGap": -5.3246246638341495,
+          "rows": 811,
+          "offPoss": 2354.0975716472385,
+          "defPoss": 2358.8229861510827,
+          "coverageInsufficient": false
+        },
+        "lowSpacing": {
+          "realOff": -2.8291534775625293,
+          "realDef": -0.926851232393721,
+          "realNet": -1.9023022451688083,
+          "simOff": -2.3087492503793374,
+          "simDef": -1.8409418049824393,
+          "simNet": -0.4678074453968981,
+          "offGap": 0.5204042271831919,
+          "defGap": -0.9140905725887183,
+          "netGap": 1.4344947997719102,
+          "rows": 178,
+          "offPoss": 519.604048519218,
+          "defPoss": 505.2299272112991,
+          "coverageInsufficient": false
+        },
+        "noCreator": {
+          "realOff": -12.465445409226131,
+          "realDef": 11.834966370659235,
+          "realNet": -24.300411779885366,
+          "simOff": -2.5893309713440162,
+          "simDef": -0.3253709992797309,
+          "simNet": -2.2639599720642853,
+          "offGap": 9.876114437882116,
+          "defGap": -12.160337369938965,
+          "netGap": 22.03645180782108,
+          "rows": 61,
+          "offPoss": 184.65261535126066,
+          "defPoss": 175.6521246114127,
+          "coverageInsufficient": true
+        }
+      }
+    }
+  ],
+  "intervals": {
+    "25": {
+      "replicates": 2000,
+      "definition": "Shared franchise draw across4 seasons + shared3 simulation seed draw; real training baseline fixed, all associations descriptive. No claim of independent blind accuracy.",
+      "groups": {
+        "noRim": {
+          "realOff": {
+            "estimate": 0.4216902343160546,
+            "ci95": [
+              -2.0782601514092525,
+              3.1087368696726014
+            ]
+          },
+          "realDef": {
+            "estimate": 1.3801986723398962,
+            "ci95": [
+              -0.8506844923481407,
+              3.532638941169011
+            ]
+          },
+          "simOff": {
+            "estimate": -0.5603481632129046,
+            "ci95": [
+              -1.0004142221505967,
+              -0.17956064222612522
+            ]
+          },
+          "simDef": {
+            "estimate": 0.5483398745200377,
+            "ci95": [
+              0.21148749602356656,
+              0.9853142695671325
+            ]
+          },
+          "offGap": {
+            "estimate": -0.9820383975289593,
+            "ci95": [
+              -3.6503967553957666,
+              1.5047134812470777
+            ]
+          },
+          "defGap": {
+            "estimate": -0.8318587978198586,
+            "ci95": [
+              -3.061647026857898,
+              1.4969825161875343
+            ]
+          },
+          "netGap": {
+            "estimate": -0.15017959970910044,
+            "ci95": [
+              -3.583799017620714,
+              3.0122271086314236
+            ]
+          }
+        },
+        "lowSpacing": {
+          "realOff": {
+            "estimate": -4.159560412240913,
+            "ci95": [
+              -7.479479691825894,
+              -1.1096980576340587
+            ]
+          },
+          "realDef": {
+            "estimate": 0.31615115306652,
+            "ci95": [
+              -2.5865921282000572,
+              3.1938256601677852
+            ]
+          },
+          "simOff": {
+            "estimate": -1.425028557193703,
+            "ci95": [
+              -2.288405678535185,
+              -0.6893543004460859
+            ]
+          },
+          "simDef": {
+            "estimate": -0.8759700731032829,
+            "ci95": [
+              -1.7481401497509306,
+              0.05403631811244126
+            ]
+          },
+          "offGap": {
+            "estimate": 2.7345318550472113,
+            "ci95": [
+              -0.3980637330969098,
+              5.908036345652603
+            ]
+          },
+          "defGap": {
+            "estimate": -1.1921212261698029,
+            "ci95": [
+              -4.072954225679657,
+              1.9552688671514509
+            ]
+          },
+          "netGap": {
+            "estimate": 3.9266530812170135,
+            "ci95": [
+              -0.377673022198882,
+              8.12207923006676
+            ]
+          }
+        },
+        "noCreator": {
+          "realOff": {
+            "estimate": -4.33550474361842,
+            "ci95": [
+              -9.747215684254932,
+              1.3437814926012153
+            ]
+          },
+          "realDef": {
+            "estimate": -4.532300847353427,
+            "ci95": [
+              -9.257494275988556,
+              -0.044744885194118345
+            ]
+          },
+          "simOff": {
+            "estimate": -1.907570571306988,
+            "ci95": [
+              -3.1166254568423684,
+              -0.8575716344496828
+            ]
+          },
+          "simDef": {
+            "estimate": -0.5560505861802622,
+            "ci95": [
+              -1.7520512845855252,
+              0.37728047946550936
+            ]
+          },
+          "offGap": {
+            "estimate": 2.4279341723114323,
+            "ci95": [
+              -3.557558485939281,
+              8.019361885316721
+            ]
+          },
+          "defGap": {
+            "estimate": 3.9762502611731647,
+            "ci95": [
+              -0.7663243828549161,
+              8.442579702121598
+            ]
+          },
+          "netGap": {
+            "estimate": -1.5483160888617324,
+            "ci95": [
+              -9.850056716394668,
+              6.097265017466366
+            ]
+          }
+        }
+      }
+    },
+    "41": {
+      "replicates": 2000,
+      "definition": "Shared franchise draw across4 seasons + shared3 simulation seed draw; real training baseline fixed, all associations descriptive. No claim of independent blind accuracy.",
+      "groups": {
+        "noRim": {
+          "realOff": {
+            "estimate": 0.9081720379651423,
+            "ci95": [
+              -1.3368946502686212,
+              3.0539282790357163
+            ]
+          },
+          "realDef": {
+            "estimate": 0.36755888580416757,
+            "ci95": [
+              -1.5538024205896588,
+              2.2282127666696123
+            ]
+          },
+          "simOff": {
+            "estimate": -0.6201225155589283,
+            "ci95": [
+              -1.1717321035104569,
+              -0.13652370893816473
+            ]
+          },
+          "simDef": {
+            "estimate": 0.4966482506922236,
+            "ci95": [
+              0.17910728669689557,
+              0.8427372773341426
+            ]
+          },
+          "offGap": {
+            "estimate": -1.5282945535240704,
+            "ci95": [
+              -3.7007576445732027,
+              0.6057060176459418
+            ]
+          },
+          "defGap": {
+            "estimate": 0.12908936488805606,
+            "ci95": [
+              -1.7782265012435898,
+              2.1601728740955473
+            ]
+          },
+          "netGap": {
+            "estimate": -1.6573839184121266,
+            "ci95": [
+              -5.097629444264487,
+              1.3780188966708073
+            ]
+          }
+        },
+        "lowSpacing": {
+          "realOff": {
+            "estimate": -3.169174716748567,
+            "ci95": [
+              -7.984128694749579,
+              0.7612336902891257
+            ]
+          },
+          "realDef": {
+            "estimate": -2.352864012255882,
+            "ci95": [
+              -7.68852011165643,
+              2.469267032505471
+            ]
+          },
+          "simOff": {
+            "estimate": -2.1975615874359593,
+            "ci95": [
+              -3.961256950734562,
+              -0.5699048853710817
+            ]
+          },
+          "simDef": {
+            "estimate": -1.8859255073920012,
+            "ci95": [
+              -3.1374818094447106,
+              -0.8883718661272515
+            ]
+          },
+          "offGap": {
+            "estimate": 0.9716131293126078,
+            "ci95": [
+              -3.639415213786551,
+              5.963750967990844
+            ]
+          },
+          "defGap": {
+            "estimate": 0.46693850486388044,
+            "ci95": [
+              -4.595620671770426,
+              5.859510897076745
+            ]
+          },
+          "netGap": {
+            "estimate": 0.5046746244487275,
+            "ci95": [
+              -6.3941542904676,
+              7.401616808148576
+            ]
+          }
+        },
+        "noCreator": {
+          "realOff": {
+            "estimate": -2.1317171509951605,
+            "ci95": [
+              -7.7064591441763195,
+              3.9264727958356973
+            ]
+          },
+          "realDef": {
+            "estimate": -7.550719539509648,
+            "ci95": [
+              -15.095166284290421,
+              1.0233373333084623
+            ]
+          },
+          "simOff": {
+            "estimate": -3.261444247180846,
+            "ci95": [
+              -5.322683554914534,
+              -1.3357618973027228
+            ]
+          },
+          "simDef": {
+            "estimate": -1.3721777754148228,
+            "ci95": [
+              -3.124926363750772,
+              0.3933570597192564
+            ]
+          },
+          "offGap": {
+            "estimate": -1.1297270961856853,
+            "ci95": [
+              -6.959811054434902,
+              4.494121406310141
+            ]
+          },
+          "defGap": {
+            "estimate": 6.178541764094825,
+            "ci95": [
+              -2.8780505997089865,
+              13.660727269625959
+            ]
+          },
+          "netGap": {
+            "estimate": -7.308268860280511,
+            "ci95": [
+              -17.94563140928755,
+              4.905173294017148
+            ]
+          }
+        }
+      }
+    },
+    "55": {
+      "replicates": 2000,
+      "definition": "Shared franchise draw across4 seasons + shared3 simulation seed draw; real training baseline fixed, all associations descriptive. No claim of independent blind accuracy.",
+      "groups": {
+        "noRim": {
+          "realOff": {
+            "estimate": 1.2744178960021855,
+            "ci95": [
+              -0.5389304933471656,
+              3.212398068180248
+            ]
+          },
+          "realDef": {
+            "estimate": 0.06274997178794522,
+            "ci95": [
+              -2.1714601854132245,
+              2.183556316048932
+            ]
+          },
+          "simOff": {
+            "estimate": -0.4262158092266969,
+            "ci95": [
+              -0.9223789487962424,
+              0.0735202006233423
+            ]
+          },
+          "simDef": {
+            "estimate": 0.7288177296580751,
+            "ci95": [
+              0.2769394347768275,
+              1.2118374563103071
+            ]
+          },
+          "offGap": {
+            "estimate": -1.7006337052288822,
+            "ci95": [
+              -3.748197530633921,
+              0.13409845737486054
+            ]
+          },
+          "defGap": {
+            "estimate": 0.66606775787013,
+            "ci95": [
+              -1.5286168750857823,
+              2.972331086886085
+            ]
+          },
+          "netGap": {
+            "estimate": -2.366701463099012,
+            "ci95": [
+              -5.485434456147323,
+              0.4677081069817308
+            ]
+          }
+        },
+        "lowSpacing": {
+          "realOff": {
+            "estimate": -2.870507589073166,
+            "ci95": [
+              -7.519570460613638,
+              1.1026190744821804
+            ]
+          },
+          "realDef": {
+            "estimate": -0.7117393890012287,
+            "ci95": [
+              -4.9479493306701245,
+              3.711974333093422
+            ]
+          },
+          "simOff": {
+            "estimate": -2.3306609430463223,
+            "ci95": [
+              -3.700358419751727,
+              -1.1087088001226715
+            ]
+          },
+          "simDef": {
+            "estimate": -1.5318935228635646,
+            "ci95": [
+              -2.848464869707411,
+              -0.3953795074202896
+            ]
+          },
+          "offGap": {
+            "estimate": 0.5398466460268436,
+            "ci95": [
+              -3.529541243703801,
+              5.1482903717666115
+            ]
+          },
+          "defGap": {
+            "estimate": -0.8201541338623358,
+            "ci95": [
+              -5.460313064178592,
+              3.5326471376840414
+            ]
+          },
+          "netGap": {
+            "estimate": 1.360000779889179,
+            "ci95": [
+              -4.146707989675997,
+              8.05353781773113
+            ]
+          }
+        },
+        "noCreator": {
+          "realOff": {
+            "estimate": -6.375916752922217,
+            "ci95": [
+              -13.593580243018769,
+              0.6252926808112189
+            ]
+          },
+          "realDef": {
+            "estimate": -0.22232555468083293,
+            "ci95": [
+              -8.188433635507028,
+              6.987191702669901
+            ]
+          },
+          "simOff": {
+            "estimate": -3.184712086435793,
+            "ci95": [
+              -4.818831897907483,
+              -1.3779448918096662
+            ]
+          },
+          "simDef": {
+            "estimate": -0.29068888076353233,
+            "ci95": [
+              -2.134215829699243,
+              1.602513728011696
+            ]
+          },
+          "offGap": {
+            "estimate": 3.1912046664864238,
+            "ci95": [
+              -4.23488121496044,
+              11.082250586625644
+            ]
+          },
+          "defGap": {
+            "estimate": -0.06836332608269924,
+            "ci95": [
+              -7.4978145180506175,
+              7.832877658001098
+            ]
+          },
+          "netGap": {
+            "estimate": 3.259567992569123,
+            "ci95": [
+              -7.955420206477619,
+              13.196254367047915
+            ]
+          }
+        }
+      }
+    }
+  },
+  "gameSensitivity": [
+    {
+      "season": "2022-23",
+      "k": 25,
+      "netGap": {
+        "noRim": {
+          "ci95": [
+            -10.46183002307264,
+            2.397035023568302
+          ]
+        },
+        "lowSpacing": {
+          "ci95": [
+            -4.645954607950881,
+            18.966474108875712
+          ]
+        },
+        "noCreator": {
+          "ci95": [
+            -28.10532143871047,
+            5.015259111602037
+          ]
+        }
+      }
+    },
+    {
+      "season": "2022-23",
+      "k": 41,
+      "netGap": {
+        "noRim": {
+          "ci95": [
+            -9.86487683825449,
+            2.276840544305075
+          ]
+        },
+        "lowSpacing": {
+          "ci95": [
+            -21.980885909866522,
+            3.909080925889578
+          ]
+        },
+        "noCreator": {
+          "ci95": [
+            -42.66100233904695,
+            -6.484421764925171
+          ]
+        }
+      }
+    },
+    {
+      "season": "2022-23",
+      "k": 55,
+      "netGap": {
+        "noRim": {
+          "ci95": [
+            -7.8927484425464245,
+            5.001610047785076
+          ]
+        },
+        "lowSpacing": {
+          "ci95": [
+            -19.097092846564298,
+            10.503195287741747
+          ]
+        },
+        "noCreator": {
+          "ci95": [
+            -16.179876982088246,
+            18.725929003410172
+          ]
+        }
+      }
+    },
+    {
+      "season": "2023-24",
+      "k": 25,
+      "netGap": {
+        "noRim": {
+          "ci95": [
+            -0.4907352182551885,
+            13.449449510102763
+          ]
+        },
+        "lowSpacing": {
+          "ci95": [
+            -9.696899861895833,
+            16.645466762953628
+          ]
+        },
+        "noCreator": {
+          "ci95": [
+            -21.409533070041448,
+            15.278650118963823
+          ]
+        }
+      }
+    },
+    {
+      "season": "2023-24",
+      "k": 41,
+      "netGap": {
+        "noRim": {
+          "ci95": [
+            -3.220379576576254,
+            9.872493041920858
+          ]
+        },
+        "lowSpacing": {
+          "ci95": [
+            -10.496988108142888,
+            28.209196668999418
+          ]
+        },
+        "noCreator": {
+          "ci95": [
+            -29.895547388568897,
+            14.77491187450816
+          ]
+        }
+      }
+    },
+    {
+      "season": "2023-24",
+      "k": 55,
+      "netGap": {
+        "noRim": {
+          "ci95": [
+            -6.061821667637002,
+            7.020035353180875
+          ]
+        },
+        "lowSpacing": {
+          "ci95": [
+            -3.464640149491539,
+            35.4987564931194
+          ]
+        },
+        "noCreator": {
+          "ci95": [
+            -33.421700571268374,
+            14.590205129196836
+          ]
+        }
+      }
+    },
+    {
+      "season": "2024-25",
+      "k": 25,
+      "netGap": {
+        "noRim": {
+          "ci95": [
+            -8.15268668356952,
+            3.8418689219022637
+          ]
+        },
+        "lowSpacing": {
+          "ci95": [
+            -10.285719560486712,
+            10.68975546829721
+          ]
+        },
+        "noCreator": {
+          "ci95": [
+            -11.7214522305112,
+            20.10829975104862
+          ]
+        }
+      }
+    },
+    {
+      "season": "2024-25",
+      "k": 41,
+      "netGap": {
+        "noRim": {
+          "ci95": [
+            -10.689293722337297,
+            1.7167490113683574
+          ]
+        },
+        "lowSpacing": {
+          "ci95": [
+            -23.688739986127274,
+            7.245090289372863
+          ]
+        },
+        "noCreator": {
+          "ci95": [
+            -23.504454156118143,
+            10.655975952216188
+          ]
+        }
+      }
+    },
+    {
+      "season": "2024-25",
+      "k": 55,
+      "netGap": {
+        "noRim": {
+          "ci95": [
+            -11.1564535298367,
+            1.1077988592720818
+          ]
+        },
+        "lowSpacing": {
+          "ci95": [
+            -15.996161210526195,
+            17.313645999840457
+          ]
+        },
+        "noCreator": {
+          "ci95": [
+            -21.883291931068275,
+            17.852697708668792
+          ]
+        }
+      }
+    },
+    {
+      "season": "2025-26",
+      "k": 25,
+      "netGap": {
+        "noRim": {
+          "ci95": [
+            -7.76963758909837,
+            5.633310374762477
+          ]
+        },
+        "lowSpacing": {
+          "ci95": [
+            -8.187682238611842,
+            19.838337350971706
+          ]
+        },
+        "noCreator": {
+          "ci95": [
+            -12.789967904442541,
+            23.19294545171897
+          ]
+        }
+      }
+    },
+    {
+      "season": "2025-26",
+      "k": 41,
+      "netGap": {
+        "noRim": {
+          "ci95": [
+            -8.20621353434922,
+            5.568738132966789
+          ]
+        },
+        "lowSpacing": {
+          "ci95": [
+            -2.8125777667612457,
+            26.335447477322408
+          ]
+        },
+        "noCreator": {
+          "ci95": [
+            -13.805760799875753,
+            33.32798291097129
+          ]
+        }
+      }
+    },
+    {
+      "season": "2025-26",
+      "k": 55,
+      "netGap": {
+        "noRim": {
+          "ci95": [
+            -10.43643574959529,
+            3.3719523067572332
+          ]
+        },
+        "lowSpacing": {
+          "ci95": [
+            -18.73207005774796,
+            8.46139562404429
+          ]
+        },
+        "noCreator": {
+          "ci95": [
+            2.422711865993367,
+            48.41823079498596
+          ]
+        }
+      }
+    }
+  ],
+  "simulationGames": 53691
+}

@@ -1,0 +1,22 @@
+{
+  "hypothesis": "Preserve old successful passer rows and terminal columns; project a separate positive own row whose total is old residual supply onto source own-rate shape. Strict feasibility: ownPool>1e-10*max(1,total) and each passer row below all other terminal columns by that tolerance. Only non-strict inputs use unfitted source self/pass prior projected to terminal columns (diagonal scale exactly1), explicitly relaxing passer rows. Numerical nonconvergence throws, never selects fallback. No new fitted coefficients, unchanged frozen elastic exponents, raw attributes, source roles and v30 probabilities. Recenter on identical source FGA/energy. Four seasons,3seeds,full/strict; archived official winsMAE+0.5 per season and broad individual/role/on-court/workload review. Same-season descriptors contain outcomes, not blind/causal. No ranking/name/onoff/wins residual fit.",
+  "fittedParameter": false,
+  "fallbackSelfScale": 1,
+  "frozenElasticSource": "reports/player-impact-v8/model.mjs",
+  "injuryPolicy": "Healthy contribution primary, one injured season no penalty; recurrent injury is mild reliability deduction, bench load constrained by observed played-game workload. Existing v29 workload and reliability unchanged.",
+  "previousTurn": "v36 rejected: nine of14 individual MAEs worse and two failed win gates. Separate own-pool prototype independently solved on every strict source lineup and all582 mean70 subjects;850 of891 impossible own makes restored with passer rows unchanged,41 require relaxed infeasible margins.",
+  "hashes": {
+    "reports/player-impact-v37/input.mjs": "039c0155a2d139d3e77ad30b9fc750a74be2cd1c3a205bfc44b1a1b12a8417ef",
+    "reports/player-impact-v37/engine.mjs": "bbce18cac3563c76a8e4eebab2a6e7c5c8129700f260d349056de747a4803a35",
+    "reports/player-impact-v37/probability.mjs": "590b335a840cd1347c5a8a53693f9eaf2a6d03bc2f553a72d43c2698257ba6f3",
+    "reports/player-impact-v37/worker.mjs": "fcd429798598c2d7e42cb0a2e4c10aa784d54baed075aef61c970afc89f533b1",
+    "reports/player-impact-v37/prepare-contexts.mjs": "b2576be520d2e6d68a880758c91d3e4e39416d0eb5d2e35532c6f7cb9046b972",
+    "reports/player-impact-v37/run.mjs": "d6841ef04581e161e03789d9bf00c7de073cb648cb712d7fef4bf258e4c40c15",
+    "reports/player-impact-v37/validation-score.py": "7d75136241dba41c7197f15d5b68ea13fe51603b44c5937a39eccdf5ed17d610",
+    "reports/player-impact-v37/verify-ledgers.mjs": "0170ecbe5ac60e1f05b877c7938af7d6eeb6fe78611709460a5c724f7c2075e2",
+    "reports/player-impact-v37/ovr-input.mjs": "e7dbd7f92269a9866815e16b355fbb2e405a4595d1fb508f8f88f73d595ac628",
+    "reports/player-impact-v37/model.mjs": "5b9ed01a71a560db6051261cb690f04f0a24c56c067bb2da8c4eb2d3ae0f0c10",
+    "reports/player-impact-v37/scaffold.py": "1312fbddd9d61151ad7db72bfb09bd6bfd6df2ea893a9cad954e2bbbc9254f59",
+    "test/own_pool_transport.js": "3d03bef77af4598f47e90fa53f84ef7f7410a9df833a1d084d49bbbc4cdbbc49"
+  }
+}

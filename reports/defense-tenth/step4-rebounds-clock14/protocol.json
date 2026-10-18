@@ -1,0 +1,28 @@
+{
+  "version": "oreb-clock14-1",
+  "registeredUTC": "2026-10-15T02:11:50.999978+00:00",
+  "seasons": [
+    "2022-23",
+    "2023-24",
+    "2024-25",
+    "2025-26"
+  ],
+  "seeds": [
+    20261012,
+    20261013,
+    20261014
+  ],
+  "bootstrapSeed": 20261021,
+  "bootstrapDraws": 20000,
+  "baseline": "pure-oreb-turnover-time-1; turnover risk, putback risk ablation and nonshoot foul candidates OFF",
+  "firstTask": "verify that real shot-clock turnover after player missed-FG OREB is compatible with a fresh14sec clock; prior 0.73% was not conditioned on reset eligibility",
+  "sample": "same valid player FG OREB and special-FT exclusions as turnover-types; all anchors for rate estimation, first anchor per possession for main event table; eligible period remaining >14sec; first FG/ordinary FT/official turnover/ownership loss endpoint",
+  "timingAudit": "retain exact raw anchor and endpoint clocks/action references; tabulate shotClock losses at delta <13, 13-<14, 14-15, >15 sec, period remaining <=14 vs >14; negatives invalid, never clipped. Allow 1sec timestamp tolerance for fresh14 clock plausibility",
+  "conditionalImplementation": {
+    "guard": "at least95% of real postOREB shotClock endpoints with period remaining >14sec must have elapsed>=13sec, otherwise do NOT force a fresh14sec violation model; diagnose assumption/source/rim-contact instead and stop this batch",
+    "rate": "if guard passes use per-season count of shotClock first endpoints / all eligible individual FG OREB anchors; no team/player/score inputs. Estimate one league constant per season, lock before candidate outputs",
+    "mechanism": "independent draw only at first opportunity after player FG OREB with period remaining >14sec; selected outcome uses existing plannedViolation handler at current14sec deadline. Dedicated RNG stream; original24sec planned-violation RNG unchanged. Nonselected original event chain unchanged. Team and FT retained balls outside scope; no modification of other mechanism or recalibration",
+    "evaluation": "three diagnostic seeds; 20k franchise+seed joint95 across four seen seasons. Check clock rate and elapsed distribution, total/category TOV, full postOREB points/FT, net/wins and league efficiency/possession biases. Promotion requires separate20seed assessment; report failure rather than tuning"
+  },
+  "limits": "four seen seasons, same-season in-sample; no downloads; frozen code/output immutable; stop after this batch"
+}

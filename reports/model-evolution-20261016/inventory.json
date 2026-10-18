@@ -1,0 +1,2799 @@
+{
+  "scores": [
+    {
+      "v": 8,
+      "keys": [
+        "limits",
+        "cells"
+      ],
+      "aggregate": [],
+      "cells": [
+        {
+          "season": "2025-26",
+          "version": "elastic-flow",
+          "seeds": [
+            20261012
+          ]
+        },
+        {
+          "season": "2025-26",
+          "version": "elastic-creation",
+          "seeds": [
+            20261012
+          ]
+        },
+        {
+          "season": "2025-26",
+          "version": "elastic-space",
+          "seeds": [
+            20261012
+          ]
+        }
+      ],
+      "teamMetricKeys": [
+        "netRMSE",
+        "winsMAE",
+        "ptsPerGame",
+        "astPerGame",
+        "tovPerGame",
+        "threePct"
+      ]
+    },
+    {
+      "v": 9,
+      "keys": [
+        "limits",
+        "cells"
+      ],
+      "aggregate": [],
+      "cells": [
+        {
+          "season": "2025-26",
+          "version": "roundtrip-flow",
+          "seeds": [
+            20261012
+          ]
+        },
+        {
+          "season": "2025-26",
+          "version": "roundtrip-creation",
+          "seeds": [
+            20261012
+          ]
+        },
+        {
+          "season": "2025-26",
+          "version": "roundtrip-space",
+          "seeds": [
+            20261012
+          ]
+        }
+      ],
+      "teamMetricKeys": [
+        "netRMSE",
+        "winsMAE",
+        "ptsPerGame",
+        "astPerGame",
+        "tovPerGame",
+        "threePct"
+      ]
+    },
+    {
+      "v": 11,
+      "keys": [
+        "limits",
+        "cells"
+      ],
+      "aggregate": [],
+      "cells": [
+        {
+          "season": "2025-26",
+          "version": "supply-flow",
+          "seeds": [
+            20261012
+          ]
+        },
+        {
+          "season": "2025-26",
+          "version": "supply-creation",
+          "seeds": [
+            20261012
+          ]
+        },
+        {
+          "season": "2025-26",
+          "version": "supply-space",
+          "seeds": [
+            20261012
+          ]
+        }
+      ],
+      "teamMetricKeys": [
+        "netRMSE",
+        "winsMAE",
+        "ptsPerGame",
+        "astPerGame",
+        "tovPerGame",
+        "threePct"
+      ]
+    },
+    {
+      "v": 12,
+      "keys": [
+        "limits",
+        "cells"
+      ],
+      "aggregate": [],
+      "cells": [
+        {
+          "season": "2025-26",
+          "version": "centered-flow",
+          "seeds": [
+            20261012
+          ]
+        },
+        {
+          "season": "2025-26",
+          "version": "centered-creation",
+          "seeds": [
+            20261012
+          ]
+        },
+        {
+          "season": "2025-26",
+          "version": "centered-space",
+          "seeds": [
+            20261012
+          ]
+        }
+      ],
+      "teamMetricKeys": [
+        "netRMSE",
+        "winsMAE",
+        "ptsPerGame",
+        "astPerGame",
+        "tovPerGame",
+        "threePct"
+      ]
+    },
+    {
+      "v": 13,
+      "keys": [
+        "limits",
+        "cells"
+      ],
+      "aggregate": [],
+      "cells": [
+        {
+          "season": "2025-26",
+          "version": "threat-space",
+          "seeds": [
+            20261012
+          ]
+        }
+      ],
+      "teamMetricKeys": [
+        "netRMSE",
+        "winsMAE",
+        "ptsPerGame",
+        "astPerGame",
+        "tovPerGame",
+        "threePct"
+      ]
+    },
+    {
+      "v": 14,
+      "keys": [
+        "design",
+        "aggregate",
+        "cells"
+      ],
+      "aggregate": [
+        "control",
+        "rotation-space"
+      ],
+      "cells": [
+        {
+          "season": "2022-23",
+          "version": "control",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        },
+        {
+          "season": "2022-23",
+          "version": "rotation-space",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        },
+        {
+          "season": "2023-24",
+          "version": "control",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        },
+        {
+          "season": "2023-24",
+          "version": "rotation-space",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        },
+        {
+          "season": "2024-25",
+          "version": "control",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        },
+        {
+          "season": "2024-25",
+          "version": "rotation-space",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        },
+        {
+          "season": "2025-26",
+          "version": "control",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        },
+        {
+          "season": "2025-26",
+          "version": "rotation-space",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        }
+      ],
+      "teamMetricKeys": [
+        "netRMSE",
+        "winsMAE",
+        "ptsPerGame",
+        "astPerGame",
+        "tovPerGame",
+        "threePct"
+      ]
+    },
+    {
+      "v": 16,
+      "keys": [
+        "limits",
+        "cells",
+        "onCourt"
+      ],
+      "aggregate": [],
+      "cells": [
+        {
+          "season": "2022-23",
+          "version": "v14",
+          "seeds": [
+            20261012
+          ]
+        },
+        {
+          "season": "2022-23",
+          "version": "v16",
+          "seeds": [
+            20261012
+          ]
+        },
+        {
+          "season": "2023-24",
+          "version": "v14",
+          "seeds": [
+            20261012
+          ]
+        },
+        {
+          "season": "2023-24",
+          "version": "v16",
+          "seeds": [
+            20261012
+          ]
+        },
+        {
+          "season": "2024-25",
+          "version": "v14",
+          "seeds": [
+            20261012
+          ]
+        },
+        {
+          "season": "2024-25",
+          "version": "v16",
+          "seeds": [
+            20261012
+          ]
+        },
+        {
+          "season": "2025-26",
+          "version": "v14",
+          "seeds": [
+            20261012
+          ]
+        },
+        {
+          "season": "2025-26",
+          "version": "v16",
+          "seeds": [
+            20261012
+          ]
+        }
+      ],
+      "teamMetricKeys": [
+        "netRMSE",
+        "winsMAE",
+        "ptsPerGame",
+        "astPerGame",
+        "tovPerGame",
+        "threePct"
+      ]
+    },
+    {
+      "v": 17,
+      "keys": [
+        "design",
+        "aggregate",
+        "cells"
+      ],
+      "aggregate": [
+        "control",
+        "rotation-space"
+      ],
+      "cells": [
+        {
+          "season": "2022-23",
+          "version": "control",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        },
+        {
+          "season": "2022-23",
+          "version": "rotation-space",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        },
+        {
+          "season": "2023-24",
+          "version": "control",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        },
+        {
+          "season": "2023-24",
+          "version": "rotation-space",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        },
+        {
+          "season": "2024-25",
+          "version": "control",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        },
+        {
+          "season": "2024-25",
+          "version": "rotation-space",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        },
+        {
+          "season": "2025-26",
+          "version": "control",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        },
+        {
+          "season": "2025-26",
+          "version": "rotation-space",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        }
+      ],
+      "teamMetricKeys": [
+        "netRMSE",
+        "winsMAE",
+        "ptsPerGame",
+        "astPerGame",
+        "tovPerGame",
+        "threePct"
+      ]
+    },
+    {
+      "v": 18,
+      "keys": [
+        "limits",
+        "cells",
+        "onCourt"
+      ],
+      "aggregate": [],
+      "cells": [
+        {
+          "season": "2022-23",
+          "version": "v14",
+          "seeds": [
+            20261012
+          ]
+        },
+        {
+          "season": "2022-23",
+          "version": "v18",
+          "seeds": [
+            20261012
+          ]
+        },
+        {
+          "season": "2023-24",
+          "version": "v14",
+          "seeds": [
+            20261012
+          ]
+        },
+        {
+          "season": "2023-24",
+          "version": "v18",
+          "seeds": [
+            20261012
+          ]
+        },
+        {
+          "season": "2024-25",
+          "version": "v14",
+          "seeds": [
+            20261012
+          ]
+        },
+        {
+          "season": "2024-25",
+          "version": "v18",
+          "seeds": [
+            20261012
+          ]
+        },
+        {
+          "season": "2025-26",
+          "version": "v14",
+          "seeds": [
+            20261012
+          ]
+        },
+        {
+          "season": "2025-26",
+          "version": "v18",
+          "seeds": [
+            20261012
+          ]
+        }
+      ],
+      "teamMetricKeys": [
+        "netRMSE",
+        "winsMAE",
+        "ptsPerGame",
+        "astPerGame",
+        "tovPerGame",
+        "threePct"
+      ]
+    },
+    {
+      "v": 19,
+      "keys": [
+        "controlClockAccounting",
+        "design",
+        "aggregate",
+        "cells"
+      ],
+      "aggregate": [
+        "control",
+        "rotation-space"
+      ],
+      "cells": [
+        {
+          "season": "2022-23",
+          "version": "control",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        },
+        {
+          "season": "2022-23",
+          "version": "rotation-space",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        },
+        {
+          "season": "2023-24",
+          "version": "control",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        },
+        {
+          "season": "2023-24",
+          "version": "rotation-space",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        },
+        {
+          "season": "2024-25",
+          "version": "control",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        },
+        {
+          "season": "2024-25",
+          "version": "rotation-space",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        },
+        {
+          "season": "2025-26",
+          "version": "control",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        },
+        {
+          "season": "2025-26",
+          "version": "rotation-space",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        }
+      ],
+      "teamMetricKeys": [
+        "netRMSE",
+        "winsMAE",
+        "ptsPerGame",
+        "astPerGame",
+        "tovPerGame",
+        "threePct"
+      ]
+    },
+    {
+      "v": 20,
+      "keys": [
+        "controlClockAccounting",
+        "design",
+        "aggregate",
+        "cells"
+      ],
+      "aggregate": [
+        "control",
+        "rotation-space"
+      ],
+      "cells": [
+        {
+          "season": "2022-23",
+          "version": "control",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        },
+        {
+          "season": "2022-23",
+          "version": "rotation-space",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        },
+        {
+          "season": "2023-24",
+          "version": "control",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        },
+        {
+          "season": "2023-24",
+          "version": "rotation-space",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        },
+        {
+          "season": "2024-25",
+          "version": "control",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        },
+        {
+          "season": "2024-25",
+          "version": "rotation-space",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        },
+        {
+          "season": "2025-26",
+          "version": "control",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        },
+        {
+          "season": "2025-26",
+          "version": "rotation-space",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        }
+      ],
+      "teamMetricKeys": [
+        "netRMSE",
+        "winsMAE",
+        "ptsPerGame",
+        "astPerGame",
+        "tovPerGame",
+        "threePct"
+      ]
+    },
+    {
+      "v": 21,
+      "keys": [
+        "controlClockAccounting",
+        "design",
+        "aggregate",
+        "cells"
+      ],
+      "aggregate": [
+        "control",
+        "v20",
+        "rotation-space"
+      ],
+      "cells": [
+        {
+          "season": "2022-23",
+          "version": "control",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        },
+        {
+          "season": "2022-23",
+          "version": "v20",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        },
+        {
+          "season": "2022-23",
+          "version": "rotation-space",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        },
+        {
+          "season": "2023-24",
+          "version": "control",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        },
+        {
+          "season": "2023-24",
+          "version": "v20",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        },
+        {
+          "season": "2023-24",
+          "version": "rotation-space",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        },
+        {
+          "season": "2024-25",
+          "version": "control",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        },
+        {
+          "season": "2024-25",
+          "version": "v20",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        },
+        {
+          "season": "2024-25",
+          "version": "rotation-space",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        },
+        {
+          "season": "2025-26",
+          "version": "control",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        },
+        {
+          "season": "2025-26",
+          "version": "v20",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        },
+        {
+          "season": "2025-26",
+          "version": "rotation-space",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        }
+      ],
+      "teamMetricKeys": [
+        "netRMSE",
+        "winsMAE",
+        "ptsPerGame",
+        "astPerGame",
+        "tovPerGame",
+        "threePct"
+      ]
+    },
+    {
+      "v": 22,
+      "keys": [
+        "controlClockAccounting",
+        "design",
+        "aggregate",
+        "cells"
+      ],
+      "aggregate": [
+        "control",
+        "v21",
+        "rotation-space"
+      ],
+      "cells": [
+        {
+          "season": "2022-23",
+          "version": "control",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        },
+        {
+          "season": "2022-23",
+          "version": "v21",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        },
+        {
+          "season": "2022-23",
+          "version": "rotation-space",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        },
+        {
+          "season": "2023-24",
+          "version": "control",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        },
+        {
+          "season": "2023-24",
+          "version": "v21",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        },
+        {
+          "season": "2023-24",
+          "version": "rotation-space",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        },
+        {
+          "season": "2024-25",
+          "version": "control",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        },
+        {
+          "season": "2024-25",
+          "version": "v21",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        },
+        {
+          "season": "2024-25",
+          "version": "rotation-space",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        },
+        {
+          "season": "2025-26",
+          "version": "control",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        },
+        {
+          "season": "2025-26",
+          "version": "v21",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        },
+        {
+          "season": "2025-26",
+          "version": "rotation-space",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        }
+      ],
+      "teamMetricKeys": [
+        "netRMSE",
+        "winsMAE",
+        "ptsPerGame",
+        "astPerGame",
+        "tovPerGame",
+        "threePct"
+      ]
+    },
+    {
+      "v": 23,
+      "keys": [
+        "controlClockAccounting",
+        "design",
+        "aggregate",
+        "cells"
+      ],
+      "aggregate": [
+        "control",
+        "v22",
+        "rotation-space"
+      ],
+      "cells": [
+        {
+          "season": "2022-23",
+          "version": "control",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        },
+        {
+          "season": "2022-23",
+          "version": "v22",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        },
+        {
+          "season": "2022-23",
+          "version": "rotation-space",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        },
+        {
+          "season": "2023-24",
+          "version": "control",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        },
+        {
+          "season": "2023-24",
+          "version": "v22",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        },
+        {
+          "season": "2023-24",
+          "version": "rotation-space",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        },
+        {
+          "season": "2024-25",
+          "version": "control",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        },
+        {
+          "season": "2024-25",
+          "version": "v22",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        },
+        {
+          "season": "2024-25",
+          "version": "rotation-space",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        },
+        {
+          "season": "2025-26",
+          "version": "control",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        },
+        {
+          "season": "2025-26",
+          "version": "v22",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        },
+        {
+          "season": "2025-26",
+          "version": "rotation-space",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        }
+      ],
+      "teamMetricKeys": [
+        "netRMSE",
+        "winsMAE",
+        "ptsPerGame",
+        "astPerGame",
+        "tovPerGame",
+        "threePct"
+      ]
+    },
+    {
+      "v": 24,
+      "keys": [
+        "controlClockAccounting",
+        "design",
+        "aggregate",
+        "cells"
+      ],
+      "aggregate": [
+        "control",
+        "v23",
+        "rotation-space"
+      ],
+      "cells": [
+        {
+          "season": "2022-23",
+          "version": "control",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        },
+        {
+          "season": "2022-23",
+          "version": "v23",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        },
+        {
+          "season": "2022-23",
+          "version": "rotation-space",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        },
+        {
+          "season": "2023-24",
+          "version": "control",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        },
+        {
+          "season": "2023-24",
+          "version": "v23",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        },
+        {
+          "season": "2023-24",
+          "version": "rotation-space",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        },
+        {
+          "season": "2024-25",
+          "version": "control",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        },
+        {
+          "season": "2024-25",
+          "version": "v23",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        },
+        {
+          "season": "2024-25",
+          "version": "rotation-space",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        },
+        {
+          "season": "2025-26",
+          "version": "control",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        },
+        {
+          "season": "2025-26",
+          "version": "v23",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        },
+        {
+          "season": "2025-26",
+          "version": "rotation-space",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        }
+      ],
+      "teamMetricKeys": [
+        "netRMSE",
+        "winsMAE",
+        "ptsPerGame",
+        "astPerGame",
+        "tovPerGame",
+        "threePct"
+      ]
+    },
+    {
+      "v": 25,
+      "keys": [
+        "controlClockAccounting",
+        "design",
+        "aggregate",
+        "cells"
+      ],
+      "aggregate": [
+        "control",
+        "v24",
+        "rotation-space"
+      ],
+      "cells": [
+        {
+          "season": "2022-23",
+          "version": "control",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        },
+        {
+          "season": "2022-23",
+          "version": "v24",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        },
+        {
+          "season": "2022-23",
+          "version": "rotation-space",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        },
+        {
+          "season": "2023-24",
+          "version": "control",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        },
+        {
+          "season": "2023-24",
+          "version": "v24",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        },
+        {
+          "season": "2023-24",
+          "version": "rotation-space",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        },
+        {
+          "season": "2024-25",
+          "version": "control",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        },
+        {
+          "season": "2024-25",
+          "version": "v24",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        },
+        {
+          "season": "2024-25",
+          "version": "rotation-space",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        },
+        {
+          "season": "2025-26",
+          "version": "control",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        },
+        {
+          "season": "2025-26",
+          "version": "v24",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        },
+        {
+          "season": "2025-26",
+          "version": "rotation-space",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        }
+      ],
+      "teamMetricKeys": [
+        "netRMSE",
+        "winsMAE",
+        "ptsPerGame",
+        "astPerGame",
+        "tovPerGame",
+        "threePct"
+      ]
+    },
+    {
+      "v": 26,
+      "keys": [
+        "controlClockAccounting",
+        "design",
+        "aggregate",
+        "cells"
+      ],
+      "aggregate": [
+        "control",
+        "v25",
+        "rotation-space"
+      ],
+      "cells": [
+        {
+          "season": "2022-23",
+          "version": "control",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        },
+        {
+          "season": "2022-23",
+          "version": "v25",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        },
+        {
+          "season": "2022-23",
+          "version": "rotation-space",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        },
+        {
+          "season": "2023-24",
+          "version": "control",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        },
+        {
+          "season": "2023-24",
+          "version": "v25",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        },
+        {
+          "season": "2023-24",
+          "version": "rotation-space",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        },
+        {
+          "season": "2024-25",
+          "version": "control",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        },
+        {
+          "season": "2024-25",
+          "version": "v25",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        },
+        {
+          "season": "2024-25",
+          "version": "rotation-space",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        },
+        {
+          "season": "2025-26",
+          "version": "control",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        },
+        {
+          "season": "2025-26",
+          "version": "v25",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        },
+        {
+          "season": "2025-26",
+          "version": "rotation-space",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        }
+      ],
+      "teamMetricKeys": [
+        "netRMSE",
+        "winsMAE",
+        "ptsPerGame",
+        "astPerGame",
+        "tovPerGame",
+        "threePct"
+      ]
+    },
+    {
+      "v": 28,
+      "keys": [
+        "controlClockAccounting",
+        "design",
+        "aggregate",
+        "cells"
+      ],
+      "aggregate": [
+        "control",
+        "v26",
+        "rotation-space"
+      ],
+      "cells": [
+        {
+          "season": "2022-23",
+          "version": "control",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        },
+        {
+          "season": "2022-23",
+          "version": "v26",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        },
+        {
+          "season": "2022-23",
+          "version": "rotation-space",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        },
+        {
+          "season": "2023-24",
+          "version": "control",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        },
+        {
+          "season": "2023-24",
+          "version": "v26",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        },
+        {
+          "season": "2023-24",
+          "version": "rotation-space",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        },
+        {
+          "season": "2024-25",
+          "version": "control",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        },
+        {
+          "season": "2024-25",
+          "version": "v26",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        },
+        {
+          "season": "2024-25",
+          "version": "rotation-space",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        },
+        {
+          "season": "2025-26",
+          "version": "control",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        },
+        {
+          "season": "2025-26",
+          "version": "v26",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        },
+        {
+          "season": "2025-26",
+          "version": "rotation-space",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        }
+      ],
+      "teamMetricKeys": [
+        "netRMSE",
+        "winsMAE",
+        "ptsPerGame",
+        "astPerGame",
+        "tovPerGame",
+        "threePct"
+      ]
+    },
+    {
+      "v": 30,
+      "keys": [
+        "controlClockAccounting",
+        "design",
+        "aggregate",
+        "cells"
+      ],
+      "aggregate": [
+        "control",
+        "v28",
+        "rotation-space"
+      ],
+      "cells": [
+        {
+          "season": "2022-23",
+          "version": "control",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        },
+        {
+          "season": "2022-23",
+          "version": "v28",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        },
+        {
+          "season": "2022-23",
+          "version": "rotation-space",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        },
+        {
+          "season": "2023-24",
+          "version": "control",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        },
+        {
+          "season": "2023-24",
+          "version": "v28",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        },
+        {
+          "season": "2023-24",
+          "version": "rotation-space",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        },
+        {
+          "season": "2024-25",
+          "version": "control",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        },
+        {
+          "season": "2024-25",
+          "version": "v28",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        },
+        {
+          "season": "2024-25",
+          "version": "rotation-space",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        },
+        {
+          "season": "2025-26",
+          "version": "control",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        },
+        {
+          "season": "2025-26",
+          "version": "v28",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        },
+        {
+          "season": "2025-26",
+          "version": "rotation-space",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        }
+      ],
+      "teamMetricKeys": [
+        "netRMSE",
+        "winsMAE",
+        "ptsPerGame",
+        "astPerGame",
+        "tovPerGame",
+        "threePct"
+      ]
+    },
+    {
+      "v": 31,
+      "keys": [
+        "controlClockAccounting",
+        "design",
+        "aggregate",
+        "cells"
+      ],
+      "aggregate": [
+        "control",
+        "v30",
+        "rotation-space"
+      ],
+      "cells": [
+        {
+          "season": "2022-23",
+          "version": "control",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        },
+        {
+          "season": "2022-23",
+          "version": "v30",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        },
+        {
+          "season": "2022-23",
+          "version": "rotation-space",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        },
+        {
+          "season": "2023-24",
+          "version": "control",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        },
+        {
+          "season": "2023-24",
+          "version": "v30",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        },
+        {
+          "season": "2023-24",
+          "version": "rotation-space",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        },
+        {
+          "season": "2024-25",
+          "version": "control",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        },
+        {
+          "season": "2024-25",
+          "version": "v30",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        },
+        {
+          "season": "2024-25",
+          "version": "rotation-space",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        },
+        {
+          "season": "2025-26",
+          "version": "control",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        },
+        {
+          "season": "2025-26",
+          "version": "v30",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        },
+        {
+          "season": "2025-26",
+          "version": "rotation-space",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        }
+      ],
+      "teamMetricKeys": [
+        "netRMSE",
+        "winsMAE",
+        "ptsPerGame",
+        "astPerGame",
+        "tovPerGame",
+        "threePct"
+      ]
+    },
+    {
+      "v": 34,
+      "keys": [
+        "controlClockAccounting",
+        "design",
+        "aggregate",
+        "cells"
+      ],
+      "aggregate": [
+        "control",
+        "v30",
+        "rotation-space"
+      ],
+      "cells": [
+        {
+          "season": "2022-23",
+          "version": "control",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        },
+        {
+          "season": "2022-23",
+          "version": "v30",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        },
+        {
+          "season": "2022-23",
+          "version": "rotation-space",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        },
+        {
+          "season": "2023-24",
+          "version": "control",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        },
+        {
+          "season": "2023-24",
+          "version": "v30",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        },
+        {
+          "season": "2023-24",
+          "version": "rotation-space",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        },
+        {
+          "season": "2024-25",
+          "version": "control",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        },
+        {
+          "season": "2024-25",
+          "version": "v30",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        },
+        {
+          "season": "2024-25",
+          "version": "rotation-space",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        },
+        {
+          "season": "2025-26",
+          "version": "control",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        },
+        {
+          "season": "2025-26",
+          "version": "v30",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        },
+        {
+          "season": "2025-26",
+          "version": "rotation-space",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        }
+      ],
+      "teamMetricKeys": [
+        "netRMSE",
+        "winsMAE",
+        "ptsPerGame",
+        "astPerGame",
+        "tovPerGame",
+        "threePct"
+      ]
+    },
+    {
+      "v": 35,
+      "keys": [
+        "controlClockAccounting",
+        "design",
+        "aggregate",
+        "cells"
+      ],
+      "aggregate": [
+        "control",
+        "v30",
+        "rotation-space"
+      ],
+      "cells": [
+        {
+          "season": "2022-23",
+          "version": "control",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        },
+        {
+          "season": "2022-23",
+          "version": "v30",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        },
+        {
+          "season": "2022-23",
+          "version": "rotation-space",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        },
+        {
+          "season": "2023-24",
+          "version": "control",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        },
+        {
+          "season": "2023-24",
+          "version": "v30",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        },
+        {
+          "season": "2023-24",
+          "version": "rotation-space",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        },
+        {
+          "season": "2024-25",
+          "version": "control",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        },
+        {
+          "season": "2024-25",
+          "version": "v30",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        },
+        {
+          "season": "2024-25",
+          "version": "rotation-space",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        },
+        {
+          "season": "2025-26",
+          "version": "control",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        },
+        {
+          "season": "2025-26",
+          "version": "v30",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        },
+        {
+          "season": "2025-26",
+          "version": "rotation-space",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        }
+      ],
+      "teamMetricKeys": [
+        "netRMSE",
+        "winsMAE",
+        "ptsPerGame",
+        "astPerGame",
+        "tovPerGame",
+        "threePct"
+      ]
+    },
+    {
+      "v": 36,
+      "keys": [
+        "controlClockAccounting",
+        "design",
+        "aggregate",
+        "cells"
+      ],
+      "aggregate": [
+        "control",
+        "v30",
+        "rotation-space"
+      ],
+      "cells": [
+        {
+          "season": "2022-23",
+          "version": "control",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        },
+        {
+          "season": "2022-23",
+          "version": "v30",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        },
+        {
+          "season": "2022-23",
+          "version": "rotation-space",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        },
+        {
+          "season": "2023-24",
+          "version": "control",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        },
+        {
+          "season": "2023-24",
+          "version": "v30",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        },
+        {
+          "season": "2023-24",
+          "version": "rotation-space",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        },
+        {
+          "season": "2024-25",
+          "version": "control",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        },
+        {
+          "season": "2024-25",
+          "version": "v30",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        },
+        {
+          "season": "2024-25",
+          "version": "rotation-space",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        },
+        {
+          "season": "2025-26",
+          "version": "control",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        },
+        {
+          "season": "2025-26",
+          "version": "v30",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        },
+        {
+          "season": "2025-26",
+          "version": "rotation-space",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        }
+      ],
+      "teamMetricKeys": [
+        "netRMSE",
+        "winsMAE",
+        "ptsPerGame",
+        "astPerGame",
+        "tovPerGame",
+        "threePct"
+      ]
+    },
+    {
+      "v": 37,
+      "keys": [
+        "controlClockAccounting",
+        "design",
+        "aggregate",
+        "cells"
+      ],
+      "aggregate": [
+        "control",
+        "v30",
+        "rotation-space"
+      ],
+      "cells": [
+        {
+          "season": "2022-23",
+          "version": "control",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        },
+        {
+          "season": "2022-23",
+          "version": "v30",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        },
+        {
+          "season": "2022-23",
+          "version": "rotation-space",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        },
+        {
+          "season": "2023-24",
+          "version": "control",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        },
+        {
+          "season": "2023-24",
+          "version": "v30",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        },
+        {
+          "season": "2023-24",
+          "version": "rotation-space",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        },
+        {
+          "season": "2024-25",
+          "version": "control",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        },
+        {
+          "season": "2024-25",
+          "version": "v30",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        },
+        {
+          "season": "2024-25",
+          "version": "rotation-space",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        },
+        {
+          "season": "2025-26",
+          "version": "control",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        },
+        {
+          "season": "2025-26",
+          "version": "v30",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        },
+        {
+          "season": "2025-26",
+          "version": "rotation-space",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        }
+      ],
+      "teamMetricKeys": [
+        "netRMSE",
+        "winsMAE",
+        "ptsPerGame",
+        "astPerGame",
+        "tovPerGame",
+        "threePct"
+      ]
+    },
+    {
+      "v": 39,
+      "keys": [
+        "controlClockAccounting",
+        "design",
+        "aggregate",
+        "cells"
+      ],
+      "aggregate": [
+        "control",
+        "v30",
+        "rotation-space"
+      ],
+      "cells": [
+        {
+          "season": "2022-23",
+          "version": "control",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        },
+        {
+          "season": "2022-23",
+          "version": "v30",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        },
+        {
+          "season": "2022-23",
+          "version": "rotation-space",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        },
+        {
+          "season": "2023-24",
+          "version": "control",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        },
+        {
+          "season": "2023-24",
+          "version": "v30",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        },
+        {
+          "season": "2023-24",
+          "version": "rotation-space",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        },
+        {
+          "season": "2024-25",
+          "version": "control",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        },
+        {
+          "season": "2024-25",
+          "version": "v30",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        },
+        {
+          "season": "2024-25",
+          "version": "rotation-space",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        },
+        {
+          "season": "2025-26",
+          "version": "control",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        },
+        {
+          "season": "2025-26",
+          "version": "v30",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        },
+        {
+          "season": "2025-26",
+          "version": "rotation-space",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        }
+      ],
+      "teamMetricKeys": [
+        "netRMSE",
+        "winsMAE",
+        "ptsPerGame",
+        "astPerGame",
+        "tovPerGame",
+        "threePct"
+      ]
+    },
+    {
+      "v": 41,
+      "keys": [
+        "controlClockAccounting",
+        "design",
+        "aggregate",
+        "cells"
+      ],
+      "aggregate": [
+        "control",
+        "v39",
+        "rotation-space"
+      ],
+      "cells": [
+        {
+          "season": "2022-23",
+          "version": "control",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        },
+        {
+          "season": "2022-23",
+          "version": "v39",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        },
+        {
+          "season": "2022-23",
+          "version": "rotation-space",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        },
+        {
+          "season": "2023-24",
+          "version": "control",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        },
+        {
+          "season": "2023-24",
+          "version": "v39",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        },
+        {
+          "season": "2023-24",
+          "version": "rotation-space",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        },
+        {
+          "season": "2024-25",
+          "version": "control",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        },
+        {
+          "season": "2024-25",
+          "version": "v39",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        },
+        {
+          "season": "2024-25",
+          "version": "rotation-space",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        },
+        {
+          "season": "2025-26",
+          "version": "control",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        },
+        {
+          "season": "2025-26",
+          "version": "v39",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        },
+        {
+          "season": "2025-26",
+          "version": "rotation-space",
+          "seeds": [
+            20261012,
+            20261013,
+            20261014
+          ]
+        }
+      ],
+      "teamMetricKeys": [
+        "netRMSE",
+        "winsMAE",
+        "ptsPerGame",
+        "astPerGame",
+        "tovPerGame",
+        "threePct"
+      ]
+    }
+  ],
+  "rankings": [
+    {
+      "file": "reports/player-impact-v13/all-2025-26/ranking.json",
+      "keys": [
+        "label",
+        "season",
+        "players",
+        "guardCountTop50",
+        "qualifiedGuardCountTop50",
+        "qualifiedPlayers",
+        "lowMinutesTop50"
+      ],
+      "players": 582,
+      "games": 600,
+      "label": "Provisional all-player screen; not final Top50 or validated OVR. The 500-minute threshold is the original audit threshold; all-player and qualified ranks are both exported. Marginal overlap ranges are not simultaneous rank confidence.",
+      "firstRowKeys": [
+        "playerId",
+        "name",
+        "position",
+        "winRate",
+        "standardError",
+        "halfWidth95",
+        "ci95",
+        "conservative95",
+        "independentPairs",
+        "games",
+        "meanMargin",
+        "statsPerGame",
+        "minutes",
+        "roleGroup",
+        "rank",
+        "rankIntervalMarginal95",
+        "qualifiedRank"
+      ]
+    },
+    {
+      "file": "reports/player-impact-v14/all-2025-26/ranking.json",
+      "keys": [
+        "label",
+        "season",
+        "players",
+        "guardCountTop50",
+        "qualifiedGuardCountTop50",
+        "qualifiedPlayers",
+        "lowMinutesTop50"
+      ],
+      "players": 582,
+      "games": 600,
+      "label": "Provisional all-player screen; not final Top50 or validated OVR. The 500-minute threshold is the original audit threshold; all-player and qualified ranks are both exported. Marginal overlap ranges are not simultaneous rank confidence.",
+      "firstRowKeys": [
+        "playerId",
+        "name",
+        "position",
+        "winRate",
+        "standardError",
+        "halfWidth95",
+        "ci95",
+        "conservative95",
+        "independentPairs",
+        "games",
+        "meanMargin",
+        "statsPerGame",
+        "minutes",
+        "roleGroup",
+        "rank",
+        "rankIntervalMarginal95",
+        "qualifiedRank"
+      ]
+    },
+    {
+      "file": "reports/player-impact-v24/all-2025-26/ranking.json",
+      "keys": [
+        "label",
+        "season",
+        "samplesPerOpponent",
+        "gamesPerPlayer",
+        "players",
+        "guardCountTop50",
+        "sourceRoleGroupGuardCountTop50",
+        "lowMinutesUnder500Top50",
+        "protocolFingerprint"
+      ],
+      "players": 582,
+      "games": 2400,
+      "label": "Experimental full all-player conditional win-probability ranking. All four team-win adoption gates remain failed. No minute threshold or named-player adjustment. CI is fixed-model simulation sampling only, not input/model uncertainty. Marginal rank-overlap bounds are not simultaneous confidence intervals or a final Top50 guarantee.",
+      "firstRowKeys": [
+        "playerId",
+        "name",
+        "position",
+        "winRate",
+        "standardError",
+        "halfWidth95",
+        "ci95",
+        "conservative95",
+        "independentPairs",
+        "games",
+        "meanMargin",
+        "statsPerGame",
+        "actualMinutes",
+        "sourceRoleGroup",
+        "roleLowConfidence",
+        "rank",
+        "rankIntervalMarginal95"
+      ]
+    }
+  ]
+}

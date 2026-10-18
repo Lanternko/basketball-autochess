@@ -1,0 +1,7 @@
+{
+  "registeredUTC": "2026-10-14T09:20:06.098197+00:00",
+  "file": "reports/defense-tenth/step4-rebounds-oreb/analyze.mjs",
+  "beforeSHA": "1daa0d40341c3f3f50aa8509db3bcb7a36a0e376afdb93c5fb1ab73fa5eec1e3",
+  "afterSHA": "b562789758c86b0ff7e30272f274f88489ef39a5fbba4524f1ede3d6c7c59880",
+  "reason": "Clone version-name replacement inadvertently renamed DREB selector in scoreboard; restore DREB selector only. No simulation results or scoring have been inspected. Protocol, formulas, metrics and thresholds unchanged."
+}

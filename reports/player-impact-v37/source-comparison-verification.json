@@ -1,0 +1,41 @@
+{
+  "passed": true,
+  "independentFactorizedScores": true,
+  "allWholeGameBootstrapsRecomputed": true,
+  "all582PlayerRowsVerified": true,
+  "seasons": [
+    {
+      "season": "2022-23",
+      "games": 1079,
+      "passed": true,
+      "unsupportedSelf_v30": 211,
+      "unsupportedSelf_v37": 0
+    },
+    {
+      "season": "2023-24",
+      "games": 1063,
+      "passed": true,
+      "unsupportedSelf_v30": 194,
+      "unsupportedSelf_v37": 0
+    },
+    {
+      "season": "2024-25",
+      "games": 1091,
+      "passed": true,
+      "unsupportedSelf_v30": 269,
+      "unsupportedSelf_v37": 0
+    },
+    {
+      "season": "2025-26",
+      "games": 1188,
+      "passed": true,
+      "unsupportedSelf_v30": 217,
+      "unsupportedSelf_v37": 0
+    }
+  ],
+  "hashes": {
+    "reports/player-impact-v37/source-comparison.json": "e362f2192006cdc504e7b4d905ce46c86430816c5ff1af34215b1338be01d475",
+    "reports/player-impact-v37/2025-26-source-comparison.csv": "547f04f58943eb25ed7c18bfe6090bed374539599a4b89c010ad652bec3ef6be",
+    "reports/player-impact-v37/verify-source-comparison.py": "8d0687afaf3c29fcc581c892c80380955b139046aa8fddec9eb02cdf20eef805"
+  }
+}

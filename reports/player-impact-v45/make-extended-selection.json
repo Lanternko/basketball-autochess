@@ -1,0 +1,447 @@
+{
+  "selected": {
+    "ra": {
+      "sigma": 0.05,
+      "feature": 1
+    },
+    "paint": {
+      "sigma": 0.025,
+      "feature": 1
+    },
+    "mid": {
+      "sigma": 0.025,
+      "feature": 1
+    },
+    "corner": {
+      "sigma": 0,
+      "feature": 0
+    },
+    "arc": {
+      "sigma": 0.025,
+      "feature": 0
+    }
+  },
+  "scores": [
+    {
+      "name": "ra",
+      "sigma": 0,
+      "feature": 0,
+      "nll": 94484.58690743102,
+      "trials": 148976
+    },
+    {
+      "name": "ra",
+      "sigma": 0,
+      "feature": 1,
+      "nll": 94300.02258592316,
+      "trials": 148976
+    },
+    {
+      "name": "ra",
+      "sigma": 0,
+      "feature": 2,
+      "nll": 94433.28174977789,
+      "trials": 148976
+    },
+    {
+      "name": "ra",
+      "sigma": 0.025,
+      "feature": 0,
+      "nll": 94419.50867643049,
+      "trials": 148976
+    },
+    {
+      "name": "ra",
+      "sigma": 0.025,
+      "feature": 1,
+      "nll": 94278.42343342394,
+      "trials": 148976
+    },
+    {
+      "name": "ra",
+      "sigma": 0.025,
+      "feature": 2,
+      "nll": 94372.43690777555,
+      "trials": 148976
+    },
+    {
+      "name": "ra",
+      "sigma": 0.05,
+      "feature": 0,
+      "nll": 94363.30410732314,
+      "trials": 148976
+    },
+    {
+      "name": "ra",
+      "sigma": 0.05,
+      "feature": 1,
+      "nll": 94273.1210888874,
+      "trials": 148976
+    },
+    {
+      "name": "ra",
+      "sigma": 0.05,
+      "feature": 2,
+      "nll": 94324.92216696533,
+      "trials": 148976
+    },
+    {
+      "name": "ra",
+      "sigma": 0.1,
+      "feature": 0,
+      "nll": 94378.9331704475,
+      "trials": 148976
+    },
+    {
+      "name": "ra",
+      "sigma": 0.1,
+      "feature": 1,
+      "nll": 94341.09921191727,
+      "trials": 148976
+    },
+    {
+      "name": "ra",
+      "sigma": 0.1,
+      "feature": 2,
+      "nll": 94355.57811954965,
+      "trials": 148976
+    },
+    {
+      "name": "paint",
+      "sigma": 0,
+      "feature": 0,
+      "nll": 70297.52801303241,
+      "trials": 102323
+    },
+    {
+      "name": "paint",
+      "sigma": 0,
+      "feature": 1,
+      "nll": 70268.04219445433,
+      "trials": 102323
+    },
+    {
+      "name": "paint",
+      "sigma": 0,
+      "feature": 2,
+      "nll": 70293.78862299303,
+      "trials": 102323
+    },
+    {
+      "name": "paint",
+      "sigma": 0.025,
+      "feature": 0,
+      "nll": 70269.7065780815,
+      "trials": 102323
+    },
+    {
+      "name": "paint",
+      "sigma": 0.025,
+      "feature": 1,
+      "nll": 70251.68026031196,
+      "trials": 102323
+    },
+    {
+      "name": "paint",
+      "sigma": 0.025,
+      "feature": 2,
+      "nll": 70267.03376138848,
+      "trials": 102323
+    },
+    {
+      "name": "paint",
+      "sigma": 0.05,
+      "feature": 0,
+      "nll": 70258.30072778653,
+      "trials": 102323
+    },
+    {
+      "name": "paint",
+      "sigma": 0.05,
+      "feature": 1,
+      "nll": 70251.82585859264,
+      "trials": 102323
+    },
+    {
+      "name": "paint",
+      "sigma": 0.05,
+      "feature": 2,
+      "nll": 70257.05783791239,
+      "trials": 102323
+    },
+    {
+      "name": "paint",
+      "sigma": 0.1,
+      "feature": 0,
+      "nll": 70322.50263325551,
+      "trials": 102323
+    },
+    {
+      "name": "paint",
+      "sigma": 0.1,
+      "feature": 1,
+      "nll": 70323.58488359557,
+      "trials": 102323
+    },
+    {
+      "name": "paint",
+      "sigma": 0.1,
+      "feature": 2,
+      "nll": 70322.72673186677,
+      "trials": 102323
+    },
+    {
+      "name": "mid",
+      "sigma": 0,
+      "feature": 0,
+      "nll": 48661.19688611336,
+      "trials": 70153
+    },
+    {
+      "name": "mid",
+      "sigma": 0,
+      "feature": 1,
+      "nll": 48658.99386686726,
+      "trials": 70153
+    },
+    {
+      "name": "mid",
+      "sigma": 0,
+      "feature": 2,
+      "nll": 48661.19688611336,
+      "trials": 70153
+    },
+    {
+      "name": "mid",
+      "sigma": 0.025,
+      "feature": 0,
+      "nll": 48654.54491207958,
+      "trials": 70153
+    },
+    {
+      "name": "mid",
+      "sigma": 0.025,
+      "feature": 1,
+      "nll": 48652.962209753416,
+      "trials": 70153
+    },
+    {
+      "name": "mid",
+      "sigma": 0.025,
+      "feature": 2,
+      "nll": 48654.54491207953,
+      "trials": 70153
+    },
+    {
+      "name": "mid",
+      "sigma": 0.05,
+      "feature": 0,
+      "nll": 48658.27897101046,
+      "trials": 70153
+    },
+    {
+      "name": "mid",
+      "sigma": 0.05,
+      "feature": 1,
+      "nll": 48657.4796489009,
+      "trials": 70153
+    },
+    {
+      "name": "mid",
+      "sigma": 0.05,
+      "feature": 2,
+      "nll": 48658.27897101039,
+      "trials": 70153
+    },
+    {
+      "name": "mid",
+      "sigma": 0.1,
+      "feature": 0,
+      "nll": 48712.84622307861,
+      "trials": 70153
+    },
+    {
+      "name": "mid",
+      "sigma": 0.1,
+      "feature": 1,
+      "nll": 48712.815716870275,
+      "trials": 70153
+    },
+    {
+      "name": "mid",
+      "sigma": 0.1,
+      "feature": 2,
+      "nll": 48712.846223078595,
+      "trials": 70153
+    },
+    {
+      "name": "corner",
+      "sigma": 0,
+      "feature": 0,
+      "nll": 40110.6620179646,
+      "trials": 59143
+    },
+    {
+      "name": "corner",
+      "sigma": 0,
+      "feature": 1,
+      "nll": 40111.41435701967,
+      "trials": 59143
+    },
+    {
+      "name": "corner",
+      "sigma": 0,
+      "feature": 2,
+      "nll": 40112.03117430879,
+      "trials": 59143
+    },
+    {
+      "name": "corner",
+      "sigma": 0.025,
+      "feature": 0,
+      "nll": 40111.016516100324,
+      "trials": 59143
+    },
+    {
+      "name": "corner",
+      "sigma": 0.025,
+      "feature": 1,
+      "nll": 40111.8067655402,
+      "trials": 59143
+    },
+    {
+      "name": "corner",
+      "sigma": 0.025,
+      "feature": 2,
+      "nll": 40112.284900576866,
+      "trials": 59143
+    },
+    {
+      "name": "corner",
+      "sigma": 0.05,
+      "feature": 0,
+      "nll": 40121.1837188643,
+      "trials": 59143
+    },
+    {
+      "name": "corner",
+      "sigma": 0.05,
+      "feature": 1,
+      "nll": 40121.87390075374,
+      "trials": 59143
+    },
+    {
+      "name": "corner",
+      "sigma": 0.05,
+      "feature": 2,
+      "nll": 40122.19828500715,
+      "trials": 59143
+    },
+    {
+      "name": "corner",
+      "sigma": 0.1,
+      "feature": 0,
+      "nll": 40177.631729681445,
+      "trials": 59143
+    },
+    {
+      "name": "corner",
+      "sigma": 0.1,
+      "feature": 1,
+      "nll": 40178.145793394724,
+      "trials": 59143
+    },
+    {
+      "name": "corner",
+      "sigma": 0.1,
+      "feature": 2,
+      "nll": 40178.24362993517,
+      "trials": 59143
+    },
+    {
+      "name": "arc",
+      "sigma": 0,
+      "feature": 0,
+      "nll": 111493.37245224002,
+      "trials": 171240
+    },
+    {
+      "name": "arc",
+      "sigma": 0,
+      "feature": 1,
+      "nll": 111499.20567634479,
+      "trials": 171240
+    },
+    {
+      "name": "arc",
+      "sigma": 0,
+      "feature": 2,
+      "nll": 111493.72305644336,
+      "trials": 171240
+    },
+    {
+      "name": "arc",
+      "sigma": 0.025,
+      "feature": 0,
+      "nll": 111491.95751602705,
+      "trials": 171240
+    },
+    {
+      "name": "arc",
+      "sigma": 0.025,
+      "feature": 1,
+      "nll": 111497.09183380779,
+      "trials": 171240
+    },
+    {
+      "name": "arc",
+      "sigma": 0.025,
+      "feature": 2,
+      "nll": 111492.66688946974,
+      "trials": 171240
+    },
+    {
+      "name": "arc",
+      "sigma": 0.05,
+      "feature": 0,
+      "nll": 111522.53350117357,
+      "trials": 171240
+    },
+    {
+      "name": "arc",
+      "sigma": 0.05,
+      "feature": 1,
+      "nll": 111526.53933279746,
+      "trials": 171240
+    },
+    {
+      "name": "arc",
+      "sigma": 0.05,
+      "feature": 2,
+      "nll": 111523.29853988571,
+      "trials": 171240
+    },
+    {
+      "name": "arc",
+      "sigma": 0.1,
+      "feature": 0,
+      "nll": 111643.55309958097,
+      "trials": 171240
+    },
+    {
+      "name": "arc",
+      "sigma": 0.1,
+      "feature": 1,
+      "nll": 111645.87966918979,
+      "trials": 171240
+    },
+    {
+      "name": "arc",
+      "sigma": 0.1,
+      "feature": 2,
+      "nll": 111644.17246451517,
+      "trials": 171240
+    }
+  ],
+  "targetExcluded": true
+}

@@ -1,0 +1,11 @@
+{
+  "registeredAt": "2026-10-13T07:43:15.186Z",
+  "parentProtocolSHA": "1d8d8f68e3f3a6451ec5c9738513ba9238234b3f34df0700c4ced56d27d62db2",
+  "scope": "Validation-only correction before2023-24 fitting. No card/model/probability/fold/ridge rule changes. No ranking outputs inspected.",
+  "reason": "Leaguewide traded player GP can exceed82 while each franchise has82. Original per-team GP assertion invalid for full-season individual tracking.",
+  "rule": "Check global tracking GP <= maximum full-season individual official logged GP; all source dates and regular-season boundaries still fixed. Correct stale metadata strictGames to actual len(strict).",
+  "code": {
+    "file": "reports/defense-tenth/step4-t0/full-factor-adapter.py",
+    "sha256": "5073f68ddd04761f612278a4f395ee1e2a870ee3015917d7b6da42004c7a1cd7"
+  }
+}

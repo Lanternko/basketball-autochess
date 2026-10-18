@@ -1,0 +1,49 @@
+{
+  "passed": true,
+  "seasons": [
+    {
+      "season": "2022-23",
+      "games": 1079,
+      "fga": 190203,
+      "misses": 99647,
+      "blocks": 10043,
+      "rows": 46138
+    },
+    {
+      "season": "2023-24",
+      "games": 1063,
+      "fga": 188789,
+      "misses": 99126,
+      "blocks": 10860,
+      "rows": 45561
+    },
+    {
+      "season": "2024-25",
+      "games": 1091,
+      "fga": 194618,
+      "misses": 103713,
+      "blocks": 10587,
+      "rows": 47665
+    },
+    {
+      "season": "2025-26",
+      "games": 1188,
+      "fga": 211583,
+      "misses": 111900,
+      "blocks": 11442,
+      "rows": 54301
+    }
+  ],
+  "sourceGames": 4421,
+  "sourceFga": 785193,
+  "sourceMisses": 414386,
+  "sourceBlocks": 42932,
+  "scope": "Every grouped miss, blocked-player mark, source-five and minute exposure independently rejoined from source PBP/stints; full-source fitting includes outcomes.",
+  "hashes": {
+    "reports/player-impact-v39/verify-data.py": "aee064d37ab30a64f17fa1cb4cadfe5e983ba606190158ab582d10e63fc03da7",
+    "reports/player-impact-v39/2022-23-miss-data.json": "7c11cfbbf4ece0668e03590e833fe252eff07509de0dbe05e02ddb5c11f02bc3",
+    "reports/player-impact-v39/2023-24-miss-data.json": "9e3caf570e553078793a6b60a279577b741b56c3aabcfa396935eca0177e776b",
+    "reports/player-impact-v39/2024-25-miss-data.json": "d0f99f3a8b49729943d7faf251993df6d1c7429983e0d66851934909b4bec14c",
+    "reports/player-impact-v39/2025-26-miss-data.json": "85977600adf3194fe5e7ea14849ba90a882218a019f53a994042d749faf4301f"
+  }
+}

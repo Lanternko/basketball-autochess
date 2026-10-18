@@ -1,0 +1,77 @@
+{
+  "25": {
+    "residualMinuteMeanBeforeCentering": -0.00003506917912902066,
+    "totalTargetMinuteMeanAfterCentering": 0,
+    "minuteWeightedProjectionBias": 0.1510439017307506,
+    "trainingCardMean": {
+      "old": 104.09089639069077,
+      "candidate": 104.24183451552412
+    },
+    "heldoutActualMinuteWeightedCardMean": {
+      "old": 103.62377875676165,
+      "candidate": 102.2879527844734
+    },
+    "exposureDrift": {
+      "old": -0.46711763392912076,
+      "candidate": -1.9538817310507142,
+      "oldDefense": -0.05618869290493933,
+      "candidateDefense": 0.3082041170869303
+    },
+    "fixedApproxShotWeightsFG": {
+      "old": 0.44974686923974266,
+      "candidate": 0.4474723737113483,
+      "limitation": "Three shares observed in training; remaining two-point attempts split equally only for this rough diagnostic. Not engine FG% or calibration input."
+    },
+    "interpretation": "Post minutes used only in retrospective bias diagnosis, never calibration/estimation. Static card-mean changes cannot uniquely allocate nonlinear engine mean changes. Global residual centering is exact in the trained minute coordinate; clipping bias has the opposite sign to observed negative heldout efficiency bias."
+  },
+  "41": {
+    "residualMinuteMeanBeforeCentering": 0.00046883303748561806,
+    "totalTargetMinuteMeanAfterCentering": 0,
+    "minuteWeightedProjectionBias": 0.051682867922632415,
+    "trainingCardMean": {
+      "old": 103.59138179169778,
+      "candidate": 103.64120430702373
+    },
+    "heldoutActualMinuteWeightedCardMean": {
+      "old": 102.97335542071914,
+      "candidate": 101.76850057018268
+    },
+    "exposureDrift": {
+      "old": -0.6180263709786402,
+      "candidate": -1.8727037368410464,
+      "oldDefense": 0.005605002436396944,
+      "candidateDefense": 0.006345151667701998
+    },
+    "fixedApproxShotWeightsFG": {
+      "old": 0.44960823237391667,
+      "candidate": 0.4496766800123513,
+      "limitation": "Three shares observed in training; remaining two-point attempts split equally only for this rough diagnostic. Not engine FG% or calibration input."
+    },
+    "interpretation": "Post minutes used only in retrospective bias diagnosis, never calibration/estimation. Static card-mean changes cannot uniquely allocate nonlinear engine mean changes. Global residual centering is exact in the trained minute coordinate; clipping bias has the opposite sign to observed negative heldout efficiency bias."
+  },
+  "55": {
+    "residualMinuteMeanBeforeCentering": 0.00041742105804888727,
+    "totalTargetMinuteMeanAfterCentering": 0,
+    "minuteWeightedProjectionBias": 0.05772567981955683,
+    "trainingCardMean": {
+      "old": 103.53761667159301,
+      "candidate": 103.57222819364766
+    },
+    "heldoutActualMinuteWeightedCardMean": {
+      "old": 103.06817730126548,
+      "candidate": 101.89823261369921
+    },
+    "exposureDrift": {
+      "old": -0.46943937032753524,
+      "candidate": -1.6739955799484534,
+      "oldDefense": 0.16095103911615638,
+      "candidateDefense": -0.020007140335437157
+    },
+    "fixedApproxShotWeightsFG": {
+      "old": 0.44858498247538997,
+      "candidate": 0.44825988916748455,
+      "limitation": "Three shares observed in training; remaining two-point attempts split equally only for this rough diagnostic. Not engine FG% or calibration input."
+    },
+    "interpretation": "Post minutes used only in retrospective bias diagnosis, never calibration/estimation. Static card-mean changes cannot uniquely allocate nonlinear engine mean changes. Global residual centering is exact in the trained minute coordinate; clipping bias has the opposite sign to observed negative heldout efficiency bias."
+  }
+}

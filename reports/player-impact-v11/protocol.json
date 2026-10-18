@@ -1,0 +1,19 @@
+{
+  "version": "exact-conserved-creation-supply-11",
+  "season": "2025-26",
+  "seed": 20261012,
+  "variants": [
+    "supply-flow",
+    "supply-creation",
+    "supply-space"
+  ],
+  "design": "Successful creation supply is conserved subject to terminal capacity and zero self-assist. Receiving propensity is a soft allocation prior rather than a cap on team creation. Global alpha from 2022-25 fresh-FGA actor choices; global beta from assisted-make passer choices conditional on receiver. Source lineup total demand conserved. No target player names, OVR/on-off ranking fit or positional bonus. Third variant enables source-centered long context. Diagnostic single seed, not adoption.",
+  "hashes": {
+    "reports/player-impact-v11/engine.mjs": "73ebe2206087ff59078c58cc54a5d308d690d9db8cb2bbec221593bc5b6d42be",
+    "reports/player-impact-v11/model.mjs": "f42b78f4fbc8cf5865d52b57a306644be0ac96bd11d315fccc6bc989d62fe5ad",
+    "reports/player-impact-v11/../../src/opportunity_transport.js": "4bfea350db5ba749a22053daf4d7363c7e04095e516b68cf098318dd054f5721",
+    "reports/player-impact-v11/worker.mjs": "b6a2f0f6ab1e644ada552afa4fbc243e39012a1a89efcd305a0b5daa37ee9602",
+    "reports/player-impact-v11/../player-impact-v8/usage-fit.json": "4ce55df2f01ac960dabfd4ef5afe8d87596c86f9d908bd24ceae05bc03ef9d1e",
+    "reports/player-impact-v11/../player-impact-v8/assist-fit.json": "c62007be8fc2e45aac89690122cf215c191691589d7a8d48cf6c4e5528750b01"
+  }
+}

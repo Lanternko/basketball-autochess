@@ -1,0 +1,49 @@
+{
+  "jobs": [
+    {
+      "season": "2022-23",
+      "seed": 20261012,
+      "version": "rotation-space",
+      "strict": false,
+      "onCourt": false,
+      "file": "reports/player-impact-v16/runs/2022-23-rotation-space-full-20261012.json",
+      "sha256": "30c4bb5b8607b3606ae553f23fb0f44cf5fb342b010dbe93748f03f408f2a632"
+    },
+    {
+      "season": "2023-24",
+      "seed": 20261012,
+      "version": "rotation-space",
+      "strict": false,
+      "onCourt": false,
+      "file": "reports/player-impact-v16/runs/2023-24-rotation-space-full-20261012.json",
+      "sha256": "6578b19a26cd30566d1a39f2990c7811a7f314145917fccc478e94ccaa5e8cf2"
+    },
+    {
+      "season": "2024-25",
+      "seed": 20261012,
+      "version": "rotation-space",
+      "strict": false,
+      "onCourt": false,
+      "file": "reports/player-impact-v16/runs/2024-25-rotation-space-full-20261012.json",
+      "sha256": "f60cb096f1431deba68bfd189ed61a1c300374b0e0a1be8e9ccccc3406a21f00"
+    },
+    {
+      "season": "2025-26",
+      "seed": 20261012,
+      "version": "rotation-space",
+      "strict": false,
+      "onCourt": false,
+      "file": "reports/player-impact-v16/runs/2025-26-rotation-space-full-20261012.json",
+      "sha256": "4c52ea0c5219aa683cc35a7102c183217e84b8d8305bae78c283c5e97aedf43d"
+    },
+    {
+      "season": "2025-26",
+      "seed": 20261012,
+      "version": "rotation-space",
+      "strict": true,
+      "onCourt": true,
+      "file": "reports/player-impact-v16/runs/2025-26-rotation-space-strict-20261012.json",
+      "sha256": "20c6258f31423d9eebeb3884cecd07282a1f1f390b0f9793300b285919e55445"
+    }
+  ]
+}

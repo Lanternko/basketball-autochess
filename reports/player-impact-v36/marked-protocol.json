@@ -1,0 +1,23 @@
+{
+  "previousGoalTurn": "progress: v35 completed and independently verified full/strict 28,023 games, workload 9,600 games; two win gates fail and high-creator AST regresses; rejected, not adopted.",
+  "mechanism": "Positive source self/pass prior; preserve finisher columns, remove joint creator row constraints. One positive diagonal self scale. All pair cells positive, diagonal not an assist. No per-player/position/name or rank coefficient.",
+  "trainingSeasons": [
+    "2022-23",
+    "2023-24",
+    "2024-25"
+  ],
+  "checkSeason": "2025-26",
+  "criterion": "Equal-season mean exact conditional multinomial NLL per actual fresh FGA; categories unassisted make, assisted make by each other player, miss. Probabilities use frozen v30 centered source contexts, mean-stint fatigue and exact selected own/caught branch with recorded-FGA survival. No probability floor. If an observed event has zero support, report and stop instead of conceal.",
+  "fit": "One log(selfScale), unbounded scalar bracket search; all fitting restricted to older seasons. Five whole-game folds for stability and older out-of-game fit predictions; source descriptors remain full-season, not a blind cross-fit. 2025-26 not used to select scale or prior.",
+  "limits": "Scale is descriptive conditional mark calibration, not physiological capacity or pure skill. Recentered final mechanism must be rescored, source inputs contain made outcomes; no causal/predictive claim.",
+  "adoptionGate": "Unchanged each-season archived official winsMAE +0.5 and all individual/position/on-court/workload review. No ranking-driven fit or relaxed gate.",
+  "hashes": {
+    "reports/player-impact-v36/model.mjs": "eccb53f1e16c4a723a150292855b2f2e29170f50940b7e6dddcf668c4d981a29",
+    "reports/player-impact-v36/prepare-marked.py": "6ebb7e4835e3a8ee66e9c19e4a5c26e9e629639291ab6c70f3ced3cf97ebae49",
+    "reports/player-impact-v36/prepare-marked.mjs": "6385edefa78fb627a1d514b0d5533c55bf21d4d2ede0b7f8abd531cd287ffe55",
+    "reports/player-impact-v36/fit-marked.py": "1db47d4353390647f267aca5b7866a809de3568c74dfa2874aee2a065e01adc3",
+    "reports/player-impact-v36/pre-register.py": "0244d1af69e105f177af3bf1483a9b8f6515fae7619f47787ae3342ec8489812",
+    "reports/player-impact-v35/verification.json": "fbd623147f1425d2c09b7ecd9ee9650a8b440295f81788e9fe9caa1da12d8976",
+    "reports/player-impact-v30/verification.json": "4ba62c5c568a38cd30523669a1fe963f00da742316b8bdd4fce1887a82df156c"
+  }
+}

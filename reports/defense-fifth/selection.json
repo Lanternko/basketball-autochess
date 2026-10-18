@@ -1,0 +1,201 @@
+{
+  "policy": {
+    "scope": "Fifth batch phase1 switches. Main chronological41 test, 20 paired seeds. Policy fixed before neutral and clock accuracy tables are read.",
+    "rule": "Keep a switch only if at least netRMSE or winMAE improves significantly, neither significantly worsens, and |true-on-predicted calibrationSlope -1| does not significantly worsen. This is selection among mechanisms, not parameter fitting. Rotation remains diagnostic only: variance gate <0.3 means no2c implementation; previous3c directional failure remains.",
+    "clock": "Clock forecasts only pre-cutoff league counts, no post-cutoff actual pace; residual forecast bias reported rather than tuned to zero."
+  },
+  "results": [
+    {
+      "label": "neutral-41",
+      "paired": {
+        "netRMSE": {
+          "estimate": -0.27897915487425706,
+          "standardError": 0.13061957241544214,
+          "ci95": [
+            -0.5353789573918855,
+            -0.021342114270604284
+          ]
+        },
+        "netCorrelation": {
+          "estimate": 0.04730344360311456,
+          "standardError": 0.021135701328329974,
+          "ci95": [
+            0.004203046481498385,
+            0.08762908075759457
+          ]
+        },
+        "netSDRatio": {
+          "estimate": -0.028896805683871984,
+          "standardError": 0.015024332285496367,
+          "ci95": [
+            -0.0573681114085306,
+            0.0010838681200378009
+          ]
+        },
+        "calibrationSlope": {
+          "estimate": 0.12604814249213425,
+          "standardError": 0.04850213541120415,
+          "ci95": [
+            0.026419053561844486,
+            0.2151848078575207
+          ]
+        },
+        "calibrationError": {
+          "estimate": 0.12604814249213425,
+          "standardError": 0.041610906040411774,
+          "ci95": [
+            0.017342934807961896,
+            0.17980130184252707
+          ]
+        },
+        "residualSD": {
+          "estimate": -0.052002461825487956,
+          "standardError": 0.15054126542883872,
+          "ci95": [
+            -0.32980810375716985,
+            0.2452735651041209
+          ]
+        },
+        "winMAE": {
+          "estimate": -0.29666666666666686,
+          "standardError": 0.10974440987724873,
+          "ci95": [
+            -0.5033333333333321,
+            -0.07666666666666622
+          ]
+        },
+        "winRMSE": {
+          "estimate": -0.3537414556587404,
+          "standardError": 0.11616399178062364,
+          "ci95": [
+            -0.5895681084823075,
+            -0.1291585436898428
+          ]
+        },
+        "winSlope": {
+          "estimate": 0.010451173796819258,
+          "standardError": 0.020077443881179498,
+          "ci95": [
+            -0.027869920546286897,
+            0.04971040107876923
+          ]
+        },
+        "defenseCorrelation": {
+          "estimate": 0.041629841028425485,
+          "standardError": 0.020617430118321418,
+          "ci95": [
+            -0.0003301467311154216,
+            0.08050105920818496
+          ]
+        },
+        "defenseSDRatio": {
+          "estimate": -0.01972520209685824,
+          "standardError": 0.01824048224422221,
+          "ci95": [
+            -0.05439639506711341,
+            0.016836623752494895
+          ]
+        }
+      },
+      "accepted": false
+    },
+    {
+      "label": "clock-41",
+      "paired": {
+        "netRMSE": {
+          "estimate": -0.1664699754319452,
+          "standardError": 0.13145350598886732,
+          "ci95": [
+            -0.4102156698156527,
+            0.09977884409696713
+          ]
+        },
+        "netCorrelation": {
+          "estimate": 0.0266604567898856,
+          "standardError": 0.020832586751322678,
+          "ci95": [
+            -0.01546239041891817,
+            0.06494417496666982
+          ]
+        },
+        "netSDRatio": {
+          "estimate": -0.002365134882262865,
+          "standardError": 0.01359616229558328,
+          "ci95": [
+            -0.026134662693983346,
+            0.026767945678870864
+          ]
+        },
+        "calibrationSlope": {
+          "estimate": 0.04576194162185687,
+          "standardError": 0.03664662808178952,
+          "ci95": [
+            -0.031065869992718653,
+            0.11141955033982942
+          ]
+        },
+        "calibrationError": {
+          "estimate": 0.04576194162185687,
+          "standardError": 0.034631640504833645,
+          "ci95": [
+            -0.03714926493228643,
+            0.09569311581575013
+          ]
+        },
+        "residualSD": {
+          "estimate": 0.17160170251761997,
+          "standardError": 0.10257531456749482,
+          "ci95": [
+            -0.027133360378922333,
+            0.3732557348948973
+          ]
+        },
+        "winMAE": {
+          "estimate": -0.28500000000000103,
+          "standardError": 0.1155166747823782,
+          "ci95": [
+            -0.48999999999999755,
+            -0.0333333333333341
+          ]
+        },
+        "winRMSE": {
+          "estimate": -0.25271177789174093,
+          "standardError": 0.11466943366665426,
+          "ci95": [
+            -0.4616491072474833,
+            -0.02221770503632925
+          ]
+        },
+        "winSlope": {
+          "estimate": 0.01067024477792089,
+          "standardError": 0.029035073086923716,
+          "ci95": [
+            -0.04558838057226544,
+            0.06863355059753296
+          ]
+        },
+        "defenseCorrelation": {
+          "estimate": -0.002084930923718531,
+          "standardError": 0.021674551407497807,
+          "ci95": [
+            -0.047200589551523175,
+            0.038462926233815864
+          ]
+        },
+        "defenseSDRatio": {
+          "estimate": -0.0023739198340668732,
+          "standardError": 0.019080538305916273,
+          "ci95": [
+            -0.038506223759415925,
+            0.034468639330084094
+          ]
+        }
+      },
+      "accepted": true
+    }
+  ],
+  "valid": [
+    "clock-41"
+  ],
+  "note": "If both individually survive, test combined once with20 paired seeds before final. No2c mechanism implemented."
+}

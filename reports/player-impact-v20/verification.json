@@ -1,0 +1,21 @@
+{
+  "reports/player-box-audit/source-hashes.json": 85,
+  "reports/player-impact-v14/validation-protocol.json": 107,
+  "reports/player-impact-v19/validation-protocol.json": 139,
+  "reports/player-impact-v19/ovr-protocol.json": 144,
+  "reports\\player-impact-v20\\validation-protocol.json": 154,
+  "reports\\player-impact-v20\\ovr-protocol.json": 153,
+  "validation-manifest.json": 24,
+  "pilot-manifest-2025-26.json": 2,
+  "2022-23-raw-tracking-sources": 3,
+  "2023-24-raw-tracking-sources": 3,
+  "2024-25-raw-tracking-sources": 3,
+  "2025-26-raw-tracking-sources": 3,
+  "targetPlayerRows": 582,
+  "testsPassed": [
+    "defense_contest_exposure",
+    "source_fga_conditioning",
+    "ft_category_inputs",
+    "creation_supply"
+  ]
+}

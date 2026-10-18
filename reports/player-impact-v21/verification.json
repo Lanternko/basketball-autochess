@@ -1,0 +1,37 @@
+{
+  "groups": {
+    "validation-protocol": 4598,
+    "ovr-protocol": 1358,
+    "reports/player-box-audit/source-hashes.json": 85,
+    "reports/player-impact-v14/validation-protocol.json": 107,
+    "reports/player-impact-v19/validation-protocol.json": 139,
+    "reports/player-impact-v19/ovr-protocol.json": 144,
+    "reports/player-impact-v20/validation-protocol.json": 154,
+    "reports/player-impact-v20/ovr-protocol.json": 153
+  },
+  "resultFiles": 24,
+  "ovrRows": 36,
+  "artifacts": {
+    "reports/player-impact-v21/report.md": "16aa5a060d99dc5487adaaf4adfbfcd18de7f54653469ea26c90b3a530b979c1",
+    "reports/player-impact-v21/status.json": "5e67e20811656f646950d7944bc30e99ea723425278a642185f7b2ec6cf78736",
+    "reports/player-impact-v21/2025-26-player-validation.csv": "682c6cfe416a4142adda8cc9190b576884c2f03fff8922f4194fa608946b76a7",
+    "reports/player-impact-v21/scores.json": "6af4ac39d15b18a8d06c73a571589739fff7012333afb6470ed68a1887102be7",
+    "reports/player-impact-v21/all-players.csv": "46ffcf5816ccd8021ce5e1bc283da57fd1fc6abe1cac3d449c0299891fe29ef3",
+    "reports/player-impact-v21/all-players-on-court.csv": "cd6fdd83b63045ae4cc36d1d0781670387eb22077a5ae67d418cd66a6a8dca23",
+    "reports/player-impact-v21/team-impact-audit.json": "fa7bb24252dd4c97b7fd387cfa6535535ae4b7b8e889c92197e77a3a62a5fec8",
+    "reports/player-impact-v21/team-impact-audit.csv": "0825d2167a18539e5ee17576f240244488ba2d93ad663502920eb53b3625e5bf",
+    "reports/player-impact-v21/ovr-checkpoint.json": "b05838bb67f5545f3cc060ce1e54dd239b3e35edd2a92193eaa81bd8f0da2ee8",
+    "reports/player-impact-v21/ledger-verification.json": "ebf23a21f010119e38bb4c7b82de9709b8ea42c1973455b70e24da1b7e975414",
+    "reports/player-impact-v21/ovr-cache-verification.json": "406b3958278ac051c92fc400bd443396f47dd3d9b6e818751de670f5d2f82a65",
+    "reports/player-impact-v21/input-isolation-verification.json": "a7af5dcbfb00d5624a9d383135323ef14c69ef26b2583224135f252d9de9f651",
+    "reports/player-impact-v21/ovr-input-isolated.mjs": "a529103100275cf4417beed39beab067f44ca8c08c5dc75b5fb2ed14298951d3",
+    "reports/player-impact-v21/verify-input-isolation.mjs": "d9e1456994acbb5b5c672e185ba360c8a31eb82a6f52ef69c59de6ccbc604bc2",
+    "reports/player-impact-v21/report.py": "5039dba0e323c72b2133c97b8476c919df154087d8c2a49a8a702b3f9cbc988d",
+    "reports/player-impact-v21/validation-score.py": "c25add53f2154e49bbb973806966aa86409a3baece7d462d8dfbf3e9ab7768c6",
+    "reports/player-impact-v21/verify-ledgers.mjs": "a700a96ce367d23ac7662d4f287a4d0d8c1369f6ff13b3b322a9a5bf8a839fc4",
+    "reports/player-impact-v21/verify.mjs": "43789bbdefe32a791faf0581330e72ca1582130c81430976beedd53f72fba6df",
+    "reports/player-impact-v21/team-impact-audit.py": "b02fc9e91689ca95e71f334fab93fc15576e0a3ed2135e8833a18d543a605ee3",
+    "reports/player-impact-v21/../../test/measured_terminal_risk.js": "5a7eac0caaf5709c33f3fab93964feef7c40f76345792da2dd13b458ada70a9c"
+  },
+  "status": "All archived and candidate source hashes, full/strict run hashes and required ledgers passed. Candidate remains experimental, not adopted."
+}

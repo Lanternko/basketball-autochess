@@ -1,0 +1,9 @@
+{
+  "registeredUTC": "2026-10-14T20:34:38.571114+00:00",
+  "file": "calibrate.mjs",
+  "beforeSha256": "061b2b6efd13483a0603aa82b340c57a93e793f5caf0fd0ec715876b801cf984",
+  "afterSha256": "f268b39fd215b53079ca601eab51c9a93796ebcdeaffd0077d8cca4889f23ca5",
+  "issue": "Array.map passed row index as realCountStats prefix. Explicit arrow prevents prefix contamination. Target zero failed before any selected calibration persisted. Process stopped. OFF parity independent of bad target remains valid.",
+  "discarded": "all numerical outputs of interrupted calibration; no selected calibration files existed",
+  "rules": "protocol and mechanism unchanged; add positive range and equality with existing pooled official target assertion"
+}

@@ -1,0 +1,115 @@
+{
+  "l2Precision": 2.6562023072287033,
+  "fitSeasons": [
+    "2022-23",
+    "2023-24",
+    "2024-25"
+  ],
+  "excludedFitSeason": "2025-26",
+  "folds": 5,
+  "design": "Conditional multinomial choice P(drawnPlayer=i|ordinary defensive nonshooting personal contact, actual own five)=exp(z_i)/sum(exp(z_j)). Log strengths have independent zero-centered Gaussian prior, L2 precision chosen by whole-game held-out NLL. Only source recipients/lineups are inputs; no same-game held-out counts, team wins, simulated residuals, OVR, names or ON/OFF. Conditional strengths have no identified cross-disconnected-team absolute scale; the zero-centered prior selects that gauge. They describe recipient allocation, not causal contact-drawing skill or team offensive effect or portable cross-team ability. Source contact frequency and every runtime mechanism are unchanged at this preparation stage.",
+  "nll": {
+    "fitted": 67585.62384826483,
+    "weakRegularizationPrecision0_1": 67933.87177058641,
+    "uniform": 73446.69913393016
+  },
+  "foldScores": [
+    {
+      "season": "2022-23",
+      "fold": 0,
+      "events": 2952,
+      "nll": 4373.52440521903
+    },
+    {
+      "season": "2022-23",
+      "fold": 1,
+      "events": 3148,
+      "nll": 4622.4665234028025
+    },
+    {
+      "season": "2022-23",
+      "fold": 2,
+      "events": 2957,
+      "nll": 4374.988216585109
+    },
+    {
+      "season": "2022-23",
+      "fold": 3,
+      "events": 3160,
+      "nll": 4651.407604762764
+    },
+    {
+      "season": "2022-23",
+      "fold": 4,
+      "events": 3160,
+      "nll": 4655.793087214073
+    },
+    {
+      "season": "2023-24",
+      "fold": 0,
+      "events": 2899,
+      "nll": 4236.118258486668
+    },
+    {
+      "season": "2023-24",
+      "fold": 1,
+      "events": 3047,
+      "nll": 4474.719025536735
+    },
+    {
+      "season": "2023-24",
+      "fold": 2,
+      "events": 2945,
+      "nll": 4370.686320571733
+    },
+    {
+      "season": "2023-24",
+      "fold": 3,
+      "events": 2979,
+      "nll": 4375.7160419450365
+    },
+    {
+      "season": "2023-24",
+      "fold": 4,
+      "events": 2943,
+      "nll": 4338.249230786402
+    },
+    {
+      "season": "2024-25",
+      "fold": 0,
+      "events": 3208,
+      "nll": 4818.359354028482
+    },
+    {
+      "season": "2024-25",
+      "fold": 1,
+      "events": 2883,
+      "nll": 4293.819304024498
+    },
+    {
+      "season": "2024-25",
+      "fold": 2,
+      "events": 3127,
+      "nll": 4670.729043882107
+    },
+    {
+      "season": "2024-25",
+      "fold": 3,
+      "events": 3158,
+      "nll": 4759.186763376632
+    },
+    {
+      "season": "2024-25",
+      "fold": 4,
+      "events": 3069,
+      "nll": 4569.860668442767
+    }
+  ],
+  "sourceHashes": {
+    "reports\\player-impact-v25\\2022-23-contact-policy.json": "24a7b0fa3ab0b1399418ec0bc8e5ef644c282965219cf5472173dd156dc10918",
+    "reports\\player-impact-v25\\2023-24-contact-policy.json": "fa872b00a7bae5035a53636ca2f9acf7c789304926880b95eaa85a1692a56044",
+    "reports\\player-impact-v25\\2024-25-contact-policy.json": "4da9ceb3a6437fe0365ce65c4af27fdf0c3ea8ac48a35c31c964eb89a3859f11",
+    "reports\\player-impact-v25\\2025-26-contact-policy.json": "b07613c29e7a6ae109c7b2c7c9eb8099546b84dd0c1d57fdd1f95bcbbd867ecd"
+  },
+  "codeHash": "c7a06ffc71bc1eadccb4a0bed0853e78cf3849be9ea4b19691553b1137dbf177"
+}

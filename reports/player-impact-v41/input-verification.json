@@ -1,0 +1,205 @@
+{
+  "passed": true,
+  "actualPlayers": 582,
+  "opponentCards": 150,
+  "profiles": 5,
+  "attributeArithmeticMean": 70,
+  "actualRawAttributesAndCanonicalRolesUnchanged": true,
+  "independentPositionLogitPools": true,
+  "teammateChecks": 2328,
+  "smokeGames": 20,
+  "games": [
+    {
+      "name": "Shai Gilgeous-Alexander",
+      "playerId": 1628983,
+      "slot": 0,
+      "minutes": 32.239732592403115,
+      "side": 0,
+      "scoreA": 125,
+      "scoreB": 118
+    },
+    {
+      "name": "Shai Gilgeous-Alexander",
+      "playerId": 1628983,
+      "slot": 0,
+      "minutes": 32.239732592403115,
+      "side": 1,
+      "scoreA": 120,
+      "scoreB": 104
+    },
+    {
+      "name": "Shai Gilgeous-Alexander",
+      "playerId": 1628983,
+      "slot": 0,
+      "minutes": 34.983004987224845,
+      "side": 0,
+      "scoreA": 127,
+      "scoreB": 103
+    },
+    {
+      "name": "Shai Gilgeous-Alexander",
+      "playerId": 1628983,
+      "slot": 0,
+      "minutes": 34.983004987224845,
+      "side": 1,
+      "scoreA": 108,
+      "scoreB": 118
+    },
+    {
+      "name": "Luka Dončić",
+      "playerId": 1629029,
+      "slot": 0,
+      "minutes": 33.43662835079169,
+      "side": 0,
+      "scoreA": 119,
+      "scoreB": 110
+    },
+    {
+      "name": "Luka Dončić",
+      "playerId": 1629029,
+      "slot": 0,
+      "minutes": 33.43662835079169,
+      "side": 1,
+      "scoreA": 127,
+      "scoreB": 119
+    },
+    {
+      "name": "Luka Dončić",
+      "playerId": 1629029,
+      "slot": 0,
+      "minutes": 34.983004987224845,
+      "side": 0,
+      "scoreA": 119,
+      "scoreB": 110
+    },
+    {
+      "name": "Luka Dončić",
+      "playerId": 1629029,
+      "slot": 0,
+      "minutes": 34.983004987224845,
+      "side": 1,
+      "scoreA": 103,
+      "scoreB": 129
+    },
+    {
+      "name": "Nikola Jokić",
+      "playerId": 203999,
+      "slot": 4,
+      "minutes": 32.90332591580491,
+      "side": 0,
+      "scoreA": 122,
+      "scoreB": 125
+    },
+    {
+      "name": "Nikola Jokić",
+      "playerId": 203999,
+      "slot": 4,
+      "minutes": 32.90332591580491,
+      "side": 1,
+      "scoreA": 117,
+      "scoreB": 129
+    },
+    {
+      "name": "Nikola Jokić",
+      "playerId": 203999,
+      "slot": 4,
+      "minutes": 34.983004987224845,
+      "side": 0,
+      "scoreA": 125,
+      "scoreB": 132
+    },
+    {
+      "name": "Nikola Jokić",
+      "playerId": 203999,
+      "slot": 4,
+      "minutes": 34.983004987224845,
+      "side": 1,
+      "scoreA": 117,
+      "scoreB": 129
+    },
+    {
+      "name": "Victor Wembanyama",
+      "playerId": 1641705,
+      "slot": 4,
+      "minutes": 28.765912237587216,
+      "side": 0,
+      "scoreA": 120,
+      "scoreB": 97
+    },
+    {
+      "name": "Victor Wembanyama",
+      "playerId": 1641705,
+      "slot": 4,
+      "minutes": 28.765912237587216,
+      "side": 1,
+      "scoreA": 99,
+      "scoreB": 129
+    },
+    {
+      "name": "Victor Wembanyama",
+      "playerId": 1641705,
+      "slot": 4,
+      "minutes": 34.983004987224845,
+      "side": 0,
+      "scoreA": 114,
+      "scoreB": 107
+    },
+    {
+      "name": "Victor Wembanyama",
+      "playerId": 1641705,
+      "slot": 4,
+      "minutes": 34.983004987224845,
+      "side": 1,
+      "scoreA": 99,
+      "scoreB": 115
+    },
+    {
+      "name": "Mitchell Robinson",
+      "playerId": 1629011,
+      "slot": 4,
+      "minutes": 19.575027777777777,
+      "side": 0,
+      "scoreA": 127,
+      "scoreB": 106
+    },
+    {
+      "name": "Mitchell Robinson",
+      "playerId": 1629011,
+      "slot": 4,
+      "minutes": 19.575027777777777,
+      "side": 1,
+      "scoreA": 104,
+      "scoreB": 111
+    },
+    {
+      "name": "Mitchell Robinson",
+      "playerId": 1629011,
+      "slot": 4,
+      "minutes": 34.983004987224845,
+      "side": 0,
+      "scoreA": 130,
+      "scoreB": 100
+    },
+    {
+      "name": "Mitchell Robinson",
+      "playerId": 1629011,
+      "slot": 4,
+      "minutes": 34.983004987224845,
+      "side": 1,
+      "scoreA": 112,
+      "scoreB": 140
+    }
+  ],
+  "scope": "Input and arithmetic conservation smoke checks, not a full ranking, exposure uncertainty estimate or adoption test.",
+  "hashes": {
+    "reports/player-impact-v41/ovr-input.mjs": "96a48de27b3215e1f0ac7a4f7e080b774e8bcc1135d593c67bb890092450320e",
+    "reports/player-impact-v41/verify-input.mjs": "97b860d993cc7066cb8730774e2b2edb56bf7677e87ef031b83be8f0ccc29b1b",
+    "reports/player-impact-v41/input.mjs": "eea3bd74d93c222879a6633e89ad1dc60732b090b4856e1029afb70b85e9227c",
+    "reports/player-impact-v41/fit.json": "b351e8ff42a59899b18ed65328b6a2ddc74d588f7d3e895dc55ef96219a962e6",
+    "reports/player-impact-v41/2025-26-contexts.json": "a08b28426f99a30432ca376340f450f9734dfccddb61b101dcefc60cf4e0ff64",
+    "reports/player-impact-v41/engine.mjs": "fe4ecf2ce0aa923151a7dc74d909d19106b7cd8d745c23abd3774c882aa92f90",
+    "reports/player-impact-v41/model.mjs": "81fa5ba285fb1f37b558c4d4bdb03f4d9a218dafda60b19214337085913375e6",
+    "reports/player-impact-v39/ovr-input.mjs": "fab3f8beec25737b96630532697a3714bd1171268fc006d31dd54c7030431c46",
+    "src/source_fresh_defense.js": "4401ac5d6b7884b10f80f935031ae0abaf4204011ed12ca82923f4560abc36c6"
+  }
+}

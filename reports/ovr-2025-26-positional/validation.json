@@ -1,0 +1,22 @@
+{
+  "passed": true,
+  "profileMean70": true,
+  "anchorsExactMean": true,
+  "knownPlayerRoles": true,
+  "profilesHaveDistinctRoles": true,
+  "cacheNativeFullOutputParityGames": 48,
+  "roleAudit": {
+    "usableStarterTeamGames": 2460,
+    "exactFivePositionTeamGames": 2378,
+    "broadThreePositionTeamGames": 82,
+    "skippedStarterTeamGames": 0,
+    "fallbackPlayers": 133,
+    "lowConfidencePlayers": 248
+  },
+  "notValidated": [
+    "Individual ability truth",
+    "Counterfactual transfer",
+    "Four unmeasured attributes",
+    "Whole-league player ranking"
+  ]
+}

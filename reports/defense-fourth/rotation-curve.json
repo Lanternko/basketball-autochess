@@ -1,0 +1,140 @@
+{
+  "remainingEdges": [
+    2160,
+    1440,
+    720,
+    360,
+    120,
+    0
+  ],
+  "absoluteLeadEdges": [
+    5,
+    9,
+    19,
+    999
+  ],
+  "overallStarterShare": 0.6223736592716642,
+  "cells": {
+    "0:0": {
+      "rawShare": 0.7746061596738809,
+      "seconds": 89439.8,
+      "share": 0.773591724943447
+    },
+    "1:0": {
+      "rawShare": 0.5974333907554198,
+      "seconds": 44291.9,
+      "share": 0.5977667284201154
+    },
+    "1:1": {
+      "rawShare": 0.6107328197893392,
+      "seconds": 24029.1,
+      "share": 0.6110164072403381
+    },
+    "2:1": {
+      "rawShare": 0.665242378810595,
+      "seconds": 20810.4,
+      "share": 0.6640410359247377
+    },
+    "2:2": {
+      "rawShare": 0.6292407254957685,
+      "seconds": 34133.9,
+      "share": 0.6291221024867063
+    },
+    "2:0": {
+      "rawShare": 0.660454799604308,
+      "seconds": 32550.6,
+      "share": 0.6597655606704851
+    },
+    "3:0": {
+      "rawShare": 0.5320533993944399,
+      "seconds": 14532.0,
+      "share": 0.5356346943935368
+    },
+    "3:1": {
+      "rawShare": 0.5418509770238351,
+      "seconds": 9314.0,
+      "share": 0.5467242480898727
+    },
+    "4:1": {
+      "rawShare": 0.7405743740795288,
+      "seconds": 5432.0,
+      "share": 0.7288170085482425
+    },
+    "4:0": {
+      "rawShare": 0.7347361605697637,
+      "seconds": 9267.0,
+      "share": 0.7279035365929866
+    },
+    "5:0": {
+      "rawShare": 0.7636149390852807,
+      "seconds": 5007.0,
+      "share": 0.7485008374465845
+    },
+    "0:1": {
+      "rawShare": 0.5733695118576901,
+      "seconds": 22407.4,
+      "share": 0.5746474697516019
+    },
+    "3:2": {
+      "rawShare": 0.545581639191472,
+      "seconds": 17167.0,
+      "share": 0.5481749420590419
+    },
+    "5:1": {
+      "rawShare": 0.7322255912674349,
+      "seconds": 2473.5,
+      "share": 0.7107806069832435
+    },
+    "5:2": {
+      "rawShare": 0.38684492653086994,
+      "seconds": 4757.1,
+      "share": 0.4132243556332717
+    },
+    "0:2": {
+      "rawShare": 0.44057389271752706,
+      "seconds": 12406.5,
+      "share": 0.44896045789128497
+    },
+    "1:2": {
+      "rawShare": 0.6204816533163283,
+      "seconds": 30735.8,
+      "share": 0.620517880365684
+    },
+    "2:3": {
+      "rawShare": 0.5760243712828423,
+      "seconds": 15821.9,
+      "share": 0.5777178155732894
+    },
+    "3:3": {
+      "rawShare": 0.3878138075313807,
+      "seconds": 11472.0,
+      "share": 0.3994718518524684
+    },
+    "4:3": {
+      "rawShare": 0.21245923026744945,
+      "seconds": 9198.0,
+      "share": 0.2375611548849764
+    },
+    "5:3": {
+      "rawShare": 0.1115765729477161,
+      "seconds": 3723.9,
+      "share": 0.18245662378015182
+    },
+    "1:3": {
+      "rawShare": 0.6368004407585685,
+      "seconds": 6897.2,
+      "share": 0.6356458671988204
+    },
+    "4:2": {
+      "rawShare": 0.6109508020431939,
+      "seconds": 11159.0,
+      "share": 0.6115336504433199
+    },
+    "0:3": {
+      "rawShare": 0.35261942384830436,
+      "seconds": 822.7,
+      "share": 0.46638377420608595
+    }
+  },
+  "method": "League pooled starter player-seconds / all player-seconds, 6 remaining-time by4 absolute-lead cells, 600 possession-seconds shrinkage to overall league share. No team curve. Independent rotation utility switch; eligible official starters retained from original roster indices0..4."
+}

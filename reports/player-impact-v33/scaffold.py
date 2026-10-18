@@ -1,0 +1,11 @@
+from pathlib import Path
+R=Path('reports/player-impact-v33');O=Path('reports/player-impact-v32')
+p=(O/'prepare-data.mjs').read_text(encoding='utf-8').replace('player-impact-v32','player-impact-v33')
+p=p.replace('// observed made shots enter the opportunity/probability calculation.','// current-stint made outcome labels enter the probability call directly. Frozen\n// same-season source shooting/role inputs DO contain aggregate made outcomes.')
+p=p.replace("creationPolicy:'rotation-space',contextLongScale:1};","creationPolicy:'rotation-space',contextLongScale:1,pressureAttribute:pressure.attribute};")
+p=p.replace("return spaceProbability(q,os[i],false,options);","const p=spaceProbability(q,os[i],false,options);\n      for(const v of [q.pTovTouch,q.pFoul,q.ev,p.pTovTouch,p.pFoul,p.ev,...Object.values(p.make),...Object.values(p.zone)])assert.ok(Number.isFinite(v),'Nonfinite source probability or EV');\n      assert.ok(p.pTovTouch>=0&&p.pFoul>=0&&p.pTovTouch+p.pFoul<=1);\n      return p;")
+p=p.replace('No OVR, names, wins or made-shot outcomes in prediction. Source counts are same-season reconstruction inputs;','No OVR, names or wins in prediction. Local outcome labels do not directly enter the probability call, but frozen full-season FG/role inputs DO contain aggregate made outcomes. Source counts are same-season reconstruction inputs;')
+p=p.replace('assert.equal(joined,shots.totals.all);','assert.equal(joined,shots.totals.all);\n assert.ok(rows.some(r=>r[14].some(v=>v>0)),\'No predicted assisted makes in a season\');')
+f=R/'prepare-data.mjs';assert not f.exists();f.write_text(p,encoding='utf-8')
+f=R/'fit-compensation.py';assert not f.exists();f.write_text((O/'fit-compensation.py').read_text(encoding='utf-8').replace('player-impact-v32','player-impact-v33'),encoding='utf-8')
+print('Created corrected source extraction and fit with finite probability/EV assertions.')

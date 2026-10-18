@@ -1,0 +1,252 @@
+{
+  "passed": true,
+  "jobs": 24,
+  "games": 28023,
+  "onlyPermittedDifference": "Numeric dictionary field named blk; dictionary keys/list order/types/every other scalar exactly equal, including every match score, player plusMinus, minutes, all non-block counters, all on-court records and FT/contact/putback audits. No whole subtrees excluded.",
+  "rows": [
+    {
+      "season": "2022-23",
+      "strict": false,
+      "seed": 20261012,
+      "games": 1230,
+      "baselineBlocks": 11969,
+      "candidateBlocks": 11736,
+      "baselineSha256": "e56d58a09ffbaa0ac7f4303536e238e4f0e510bb771644900594ffeb5514a964",
+      "candidateSha256": "d86f9ce1060458d0fa9e29484a37dba13b9b333d9a6e6558a15c403e6fb29b9d"
+    },
+    {
+      "season": "2022-23",
+      "strict": true,
+      "seed": 20261012,
+      "games": 1079,
+      "baselineBlocks": 10448,
+      "candidateBlocks": 10296,
+      "baselineSha256": "9dc4f77e18963c8c760717a54a7284942247ac3555ab0701b9aafe58232ee236",
+      "candidateSha256": "0ee4740b77f798be0381bf837a18c14e8ee7b1cb46415b0f97a2a70824565ee4"
+    },
+    {
+      "season": "2022-23",
+      "strict": false,
+      "seed": 20261013,
+      "games": 1230,
+      "baselineBlocks": 12067,
+      "candidateBlocks": 11724,
+      "baselineSha256": "a2347aec76d3452d6f56b8246b3fad00080abe5cb9196f086b2989524ce729fb",
+      "candidateSha256": "34522ba18220a6d7be0a4d75b4bb8ee392bab830397ccb2202dd73afe9c61d1f"
+    },
+    {
+      "season": "2022-23",
+      "strict": true,
+      "seed": 20261013,
+      "games": 1079,
+      "baselineBlocks": 10547,
+      "candidateBlocks": 10289,
+      "baselineSha256": "d0b4812be41e896a8450536e8695c8c063a201b71eff4a5d5914928df138cec5",
+      "candidateSha256": "33e04a9f4d1688542831819cf5203cba4c03d27ce4b48794075e8ba45b2dcd0e"
+    },
+    {
+      "season": "2022-23",
+      "strict": false,
+      "seed": 20261014,
+      "games": 1230,
+      "baselineBlocks": 11727,
+      "candidateBlocks": 11485,
+      "baselineSha256": "130d148043d90b38b931d61323f219d04ba1bfbecf7f77c47ff1e5825f4d303f",
+      "candidateSha256": "a8b3be93f13d1c983e92c8ce7906dd74682dac8d0faea861836a1216c102a0f3"
+    },
+    {
+      "season": "2022-23",
+      "strict": true,
+      "seed": 20261014,
+      "games": 1079,
+      "baselineBlocks": 10301,
+      "candidateBlocks": 10099,
+      "baselineSha256": "bf171a015a281e9b7cfa4faec58bdbcc9e62615298e148e6138dfb5fbb332c37",
+      "candidateSha256": "47c2f0cc338afeebc86f542039034ace7be24266782f1abd4ff213b9819aebd3"
+    },
+    {
+      "season": "2023-24",
+      "strict": false,
+      "seed": 20261012,
+      "games": 1230,
+      "baselineBlocks": 12130,
+      "candidateBlocks": 12862,
+      "baselineSha256": "66cd36f3dafc010d9bb897c40da9375625df5ceef94345b4d465707b5aca939c",
+      "candidateSha256": "82fdea9c002663345b22eadfa4cabfc9868d4c310ea8f63f4ada47d7ac707550"
+    },
+    {
+      "season": "2023-24",
+      "strict": true,
+      "seed": 20261012,
+      "games": 1063,
+      "baselineBlocks": 10471,
+      "candidateBlocks": 11099,
+      "baselineSha256": "ab9a356fb48d0723a83d013f0a2e8760726fef3a8fe7efabd8d309ad8a028bc7",
+      "candidateSha256": "d2aae20eb2112be1c520030525f9a8902dd798b41eda640a846cb8fd9bdf538a"
+    },
+    {
+      "season": "2023-24",
+      "strict": false,
+      "seed": 20261013,
+      "games": 1230,
+      "baselineBlocks": 11879,
+      "candidateBlocks": 12686,
+      "baselineSha256": "2ba57b1780efccf4132b8e3c1a3a2dfa737057e08d444a1fea1e0cbb5a04b9f0",
+      "candidateSha256": "4851193dd4b3d0b19677b7412095e6ee815ec649c71a3bcd9a600842cc6c4cfa"
+    },
+    {
+      "season": "2023-24",
+      "strict": true,
+      "seed": 20261013,
+      "games": 1063,
+      "baselineBlocks": 10251,
+      "candidateBlocks": 10885,
+      "baselineSha256": "31cc7994b764ad855b2a3095c40fc1dcfefdc07d11a113d2c5aea39200f30585",
+      "candidateSha256": "7f501e143fee21bc1be34d8bd31d7c4e81f71ebf5a335a68f46710ab56b09216"
+    },
+    {
+      "season": "2023-24",
+      "strict": false,
+      "seed": 20261014,
+      "games": 1230,
+      "baselineBlocks": 12059,
+      "candidateBlocks": 12868,
+      "baselineSha256": "4aa3e97e1d66fa17749397c648be91c251cbbee01f686d9218a37173cd132d68",
+      "candidateSha256": "94e7c17514ba1caf669ea72150c11541253e517be8bd16e750443ef904fc72ce"
+    },
+    {
+      "season": "2023-24",
+      "strict": true,
+      "seed": 20261014,
+      "games": 1063,
+      "baselineBlocks": 10363,
+      "candidateBlocks": 11027,
+      "baselineSha256": "3bc3bc130486cdc581c679604cd7694246ea9cdc5a2824388fef28d23748fa73",
+      "candidateSha256": "b43722a39beb0c092205a32d420ac69f5da0109eff92d5a16d34154cb527d89e"
+    },
+    {
+      "season": "2024-25",
+      "strict": false,
+      "seed": 20261012,
+      "games": 1230,
+      "baselineBlocks": 11464,
+      "candidateBlocks": 12224,
+      "baselineSha256": "26e9b280ef5910605a3822a449fb176caaddf2d4f30b05c9a01a9054c8ca5fb6",
+      "candidateSha256": "7f8d262f6304b1ac65c7a6921539a5b3f7ebf008ff97430348b3d984f2f0a698"
+    },
+    {
+      "season": "2024-25",
+      "strict": true,
+      "seed": 20261012,
+      "games": 1091,
+      "baselineBlocks": 10125,
+      "candidateBlocks": 10825,
+      "baselineSha256": "23d94867d4448190e5b3debcc910cc3377c13aaa78897f7a02bcb36ad643cbf4",
+      "candidateSha256": "ff845440776d7bf896e020df6dc1c2ccdc3acb42998507847e1019e4395d66e5"
+    },
+    {
+      "season": "2024-25",
+      "strict": false,
+      "seed": 20261013,
+      "games": 1230,
+      "baselineBlocks": 11422,
+      "candidateBlocks": 12135,
+      "baselineSha256": "ac1adc700f14ea2276c622b9d346ccdb671f702d278977fb7a2806b32eb2254f",
+      "candidateSha256": "a365189c2fa45624b630c49cd23c191a4f18eb6ea113e52b01cc3aa05145a271"
+    },
+    {
+      "season": "2024-25",
+      "strict": true,
+      "seed": 20261013,
+      "games": 1091,
+      "baselineBlocks": 10111,
+      "candidateBlocks": 10767,
+      "baselineSha256": "352b86747f5653f35a29b433d4045062bd68191ed4365b107c0d8b09608e63fe",
+      "candidateSha256": "39d89f752262cd0899549b8364415c6e4a3d57e3d1a6e1a866cc279058d84c74"
+    },
+    {
+      "season": "2024-25",
+      "strict": false,
+      "seed": 20261014,
+      "games": 1230,
+      "baselineBlocks": 11509,
+      "candidateBlocks": 12272,
+      "baselineSha256": "d6374451d93bfe379562c385d39edf4488442bdcac04a8b6e34a64437ea508ac",
+      "candidateSha256": "0848318d48e86c127aeafb35c3a37792281d680ad7a6157c1678838c7c0bee89"
+    },
+    {
+      "season": "2024-25",
+      "strict": true,
+      "seed": 20261014,
+      "games": 1091,
+      "baselineBlocks": 10241,
+      "candidateBlocks": 10944,
+      "baselineSha256": "96f81d7925d4594f2e76e747e9f41c5c7ecb95ef9572b0cc42dd91aace411c15",
+      "candidateSha256": "adf8f7e835da9e30084935d2914acf33af335c7c8578779747e20af7f2f044be"
+    },
+    {
+      "season": "2025-26",
+      "strict": false,
+      "seed": 20261012,
+      "games": 1230,
+      "baselineBlocks": 11425,
+      "candidateBlocks": 11862,
+      "baselineSha256": "a5b5a06d3795fb3065f27bbaa2217ade18929039c8c34d9fd1db985154463b75",
+      "candidateSha256": "35de52555ba6a221e3026e069121b9cdccd7032bb6377a7812ee8609f78bad52"
+    },
+    {
+      "season": "2025-26",
+      "strict": true,
+      "seed": 20261012,
+      "games": 1188,
+      "baselineBlocks": 11046,
+      "candidateBlocks": 11484,
+      "baselineSha256": "d6d2444b349348dceca474497d30cc961b1b1260827249d67164d611c5f44add",
+      "candidateSha256": "9bec78ea67740b0d26b1dd137e599a45fcccd331545fd8819a2a5cc092810671"
+    },
+    {
+      "season": "2025-26",
+      "strict": false,
+      "seed": 20261013,
+      "games": 1230,
+      "baselineBlocks": 11304,
+      "candidateBlocks": 11768,
+      "baselineSha256": "0ed982521e76654abdacfeb3f5f0e36753c19f2db367536c84371653d1a2b43f",
+      "candidateSha256": "9543e7c3106f14f94061a33c32b3c896f37da76ee1d53fbd65e2789d05096cea"
+    },
+    {
+      "season": "2025-26",
+      "strict": true,
+      "seed": 20261013,
+      "games": 1188,
+      "baselineBlocks": 10914,
+      "candidateBlocks": 11378,
+      "baselineSha256": "b38fb1de83a9aed8f02273b87bb05252f9d6f3f5fc30b9094094deffaa8b02a7",
+      "candidateSha256": "9da46d8420bbfedd2d8fa684f748d1f898068ac5af55bae4b8a661e38fef0936"
+    },
+    {
+      "season": "2025-26",
+      "strict": false,
+      "seed": 20261014,
+      "games": 1230,
+      "baselineBlocks": 11219,
+      "candidateBlocks": 11714,
+      "baselineSha256": "825f09d9c5190f2f0450b9c5d196b5a68d3d0f6c102caf7a0061083020d31a52",
+      "candidateSha256": "452c2bc7fef2de729c93b1f2cb456897070119caefac68daa6a9ed694e5e9ab0"
+    },
+    {
+      "season": "2025-26",
+      "strict": true,
+      "seed": 20261014,
+      "games": 1188,
+      "baselineBlocks": 10825,
+      "candidateBlocks": 11307,
+      "baselineSha256": "52391b0b337c32e88b7d092404060c53bc6f3726e2515d6fb98a167f8acba924",
+      "candidateSha256": "bb9f0a499fb6649afd13aa646b07eb9a5bc2f49d6ec2ca8e94fbe29b32f82f92"
+    }
+  ],
+  "hashes": {
+    "reports/player-impact-v39/verify-isolation.py": "8d8d94fe8a438acad8991bfd43da826565c3ce04d4f8ec88f413787f1a997d63",
+    "reports/player-impact-v39/validation-manifest.json": "82152a8be6ff5605272b2acd81f4366eb569699055f6ebb708103735cb09b2fe"
+  }
+}

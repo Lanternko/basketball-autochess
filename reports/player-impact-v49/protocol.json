@@ -1,0 +1,11 @@
+{
+ "version":"v49-measured-rotation",
+ "baseline":"v47; v48 choice candidate excluded",
+ "seasons":["2022-23","2023-24","2024-25","2025-26"],
+ "seeds":[20261012,20261013,20261014],
+ "phaseBins":24,
+ "priorGameGrid":[1,3,10,30],
+ "measurement":"Regulation source stint occupancy in 2-minute bins and four-state teammate pair occupancy, conditioned on both players appearing. Whole-game5fold profiles; tested game fold excluded. Older-three equal-season heldout Bernoulli phase NLL and four-state pair NLL separately choose prior game equivalents. No game outcomes, FG counts, name exceptions, or exact target-game source substitutions used by rotation.",
+ "runtime":"Official game starters, appearances and minute targets already used by v47 retained. Replace linear-time/ability heuristic with phase-shaped cumulative minute debt and pair-overlap debt, observed-time substitution only, protected foul shooter retained, foul-outs and injury exclusions retained. Learned source stint/rest25th percentiles control minimum regular stints/rest. Near game end or infeasible remaining minutes may override minimum stint/rest. All probabilities and player ability inputs remain v47.",
+ "validation":"Compare full season per-appearance actual minute MAE, regulation target MAE; strict phase occupancy and teammate overlap MAE. Source and simulation timing use exact elapsed intervals. Test invariants no duplicate, five eligible, protected player, legal dead-ball substitution, disabled parity; report full individual/team/defense regression. Rotation acceptance requires four-season mean minutes, phase and overlap MAE improve, no season minutes MAE worsens, no disqualifying eligibility/clock failure. Offensive gameplay accuracy remains separately gated; if teamPPG worsens do not silently promote the combined offense baseline."
+}

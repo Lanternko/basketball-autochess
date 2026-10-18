@@ -1,0 +1,126 @@
+{
+  "selectedSigma": 0.025,
+  "targetExcluded": true,
+  "table": [
+    {
+      "sigma": 0,
+      "meanNllPerAttempt": 0.6637561969025111,
+      "cells": [
+        {
+          "season": "2022-23",
+          "nll": 72782.95180835536,
+          "attempts": 109775,
+          "nllPerAttempt": 0.6630193742505612
+        },
+        {
+          "season": "2023-24",
+          "nll": 70935.00276021664,
+          "attempts": 106895,
+          "nllPerAttempt": 0.6635951425250632
+        },
+        {
+          "season": "2024-25",
+          "nll": 69643.78317473325,
+          "attempts": 104782,
+          "nllPerAttempt": 0.6646540739319087
+        }
+      ]
+    },
+    {
+      "sigma": 0.025,
+      "meanNllPerAttempt": 0.66374321205899,
+      "cells": [
+        {
+          "season": "2022-23",
+          "nll": 72781.2738538146,
+          "attempts": 109775,
+          "nllPerAttempt": 0.663004088852786
+        },
+        {
+          "season": "2023-24",
+          "nll": 70932.3957414844,
+          "attempts": 106895,
+          "nllPerAttempt": 0.6635707539312822
+        },
+        {
+          "season": "2024-25",
+          "nll": 69643.85856129504,
+          "attempts": 104782,
+          "nllPerAttempt": 0.6646547933929019
+        }
+      ]
+    },
+    {
+      "sigma": 0.05,
+      "meanNllPerAttempt": 0.6637637562833595,
+      "cells": [
+        {
+          "season": "2022-23",
+          "nll": 72782.69328157246,
+          "attempts": 109775,
+          "nllPerAttempt": 0.6630170191899109
+        },
+        {
+          "season": "2023-24",
+          "nll": 70931.70850665412,
+          "attempts": 106895,
+          "nllPerAttempt": 0.663564324866964
+        },
+        {
+          "season": "2024-25",
+          "nll": 69649.63533968145,
+          "attempts": 104782,
+          "nllPerAttempt": 0.6647099247932036
+        }
+      ]
+    },
+    {
+      "sigma": 0.1,
+      "meanNllPerAttempt": 0.6641768618890592,
+      "cells": [
+        {
+          "season": "2022-23",
+          "nll": 72824.38599874938,
+          "attempts": 109775,
+          "nllPerAttempt": 0.6633968207583637
+        },
+        {
+          "season": "2023-24",
+          "nll": 70969.1357302725,
+          "attempts": 106895,
+          "nllPerAttempt": 0.6639144555898077
+        },
+        {
+          "season": "2024-25",
+          "nll": 69703.00966906414,
+          "attempts": 104782,
+          "nllPerAttempt": 0.6652193093190065
+        }
+      ]
+    },
+    {
+      "sigma": 0.2,
+      "meanNllPerAttempt": 0.6659398866404748,
+      "cells": [
+        {
+          "season": "2022-23",
+          "nll": 73007.69127022878,
+          "attempts": 109775,
+          "nllPerAttempt": 0.6650666478727286
+        },
+        {
+          "season": "2023-24",
+          "nll": 71145.53213304363,
+          "attempts": 106895,
+          "nllPerAttempt": 0.6655646394409807
+        },
+        {
+          "season": "2024-25",
+          "nll": 69909.3320585816,
+          "attempts": 104782,
+          "nllPerAttempt": 0.667188372607715
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,147 @@
+{
+  "version": "oreb-talent-increment-1",
+  "registeredAt": "2026-10-14T07:00:27.437459+00:00",
+  "goal": "Incremental out-of-sample prediction beyond own prior rebounding rates. Explanation alone is not adoption. No cards, engine edits, simulation or next-layer mechanisms.",
+  "label": "四季均已看過答案；回溯資料外診斷，不是新盲測。體測發生年份可核對，歷史發布快照無法保證。",
+  "seasons": [
+    "2022-23",
+    "2023-24",
+    "2024-25",
+    "2025-26"
+  ],
+  "acquisition": {
+    "combineYears": [
+      2000,
+      2001,
+      2002,
+      2003,
+      2004,
+      2005,
+      2006,
+      2007,
+      2008,
+      2009,
+      2010,
+      2011,
+      2012,
+      2013,
+      2014,
+      2015,
+      2016,
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ],
+    "endpoints": [
+      "draftcombineplayeranthro",
+      "draftcombinedrillresults"
+    ],
+    "combineParams": "LeagueID=00, SeasonYear=integer calendar year",
+    "tracking": [
+      "Rebounding",
+      "SpeedDistance"
+    ],
+    "trackingSeasons": [
+      "2022-23",
+      "2023-24",
+      "2024-25",
+      "2025-26"
+    ],
+    "source": "Official NBA stats API. No name-based/fuzzy IDs, no fabricated values. Public raw mirror permitted only if explicitly documented; mirror-only data remain exploratory and cannot confirm a predictive gain.",
+    "concurrency": 4,
+    "timeoutMS": 15000,
+    "attempts": 2,
+    "emptyResponse": "Record valid empty rows as empty, not zero coverage of NBA players. Failed requests recorded and not silently dropped."
+  },
+  "features": {
+    "static": [
+      "origin-season recorded height",
+      "origin-season recorded mass",
+      "combine wingspan",
+      "combine standing reach"
+    ],
+    "athletic": [
+      "standing vertical",
+      "maximum vertical",
+      "bench press repetitions",
+      "lane agility time",
+      "modified lane agility time",
+      "three-quarter sprint time",
+      "years since combine"
+    ],
+    "behaviorSeparate": [
+      "origin offensive average speed",
+      "origin defensive average speed",
+      "origin offensive rebound chances per36",
+      "origin contested offensive rebound fraction"
+    ],
+    "timeRule": "Latest available nonmissing NBA-ID-matched combine observation per field with combine year <= origin-season starting year. Never use a target-season performance or target-season body field as a cross-season predictor. Full-season tracking only used as an origin-season predictor for next season, never an early-season predictor of its own later games.",
+    "zeroRule": "Bench repetitions0 is observed0 if explicitly numeric; other body/test quantities must be positive finite. Store missing flags and dates. No strength rating is inferred from mass/OREB/BLK.",
+    "forbidden": [
+      "team/player identity as features",
+      "team net/wins/rank",
+      "stint/on-off outcomes",
+      "target-season rates as inputs",
+      "draft selection or country as talent proxy"
+    ]
+  },
+  "association": "Four separate seasons, >=500MIN, individual OREB% and OREB/36 versus each observed body/test variable. Pearson/Spearman and n. Descriptive association only, not causal coefficients; no fishing-based feature selection.",
+  "prediction": {
+    "crossSeasonMain": "Fit2022-23->2023-24 and2023-24->2024-25; evaluate2024-25->2025-26 once. Both source/target MIN>=100. Outcomes next-season OREB/36 and official OREB_PCT (percentage points). Source MIN<500 and main-team-change groups reported separately; >=500 both seasons sensitivity.",
+    "withinSeason": "First20 and first41 positive-minute appearances versus remaining appearances; both portions >=100MIN. Evaluate2023-24 using2022-23 training;2024-25 using2022-23+2023-24;2025-26 using all earlier seasons. Outcome later OREB/36; no full-season advanced/tracking inputs in this task.",
+    "mainTeamChange": "Source vs target team with greatest observed minutes differs. Grouping only, never a predictor. This is a portability stress test, not a causal trade effect.",
+    "models": {
+      "persistence": "Raw source outcome rate; no fitted slope. For OREB% forecast, source official OREB%.",
+      "orebPctOnly": "Cross-season: own source official OREB% and log1p(source MIN). Within-season: own early OREB/36 and log1p(early MIN).",
+      "history": "Own source outcome rate, log1p(source MIN), plus official source OREB% for cross-season OREB/36 outcome. This stronger baseline prevents claiming gain over a weak OREB%-only comparison.",
+      "static": "history + static dimensions",
+      "talent": "history + static dimensions + athletic tests",
+      "talentOnly": "Static + athletic tests + log1p(source MIN); no own rebound history. Diagnostic of explanation and missing/low-sample cases.",
+      "missingOnly": "history + availability flags and years since combine only; negative control for test participation/selection.",
+      "behavior": "talent + behaviorSeparate, cross-season only; must not be described as intrinsic talent."
+    },
+    "estimator": "Linear ridge; training-only median imputation plus missingness indicators and standardization. All-missing training columns neutral0 with indicator. Intercept unpenalized. Training weight=min(target MIN,1000); prediction lower clipped0, OREB% capped100; no post-result tuning.",
+    "ridge": {
+      "grid": [
+        0.1,
+        1,
+        10,
+        100,
+        1000
+      ],
+      "folds": 5,
+      "groupRule": "SHA256 of string playerID modulo5, same player stays in same fold across seasons. Select minimum weighted validation MSE; tie choose larger ridge. Training data only."
+    },
+    "metrics": "Target-minute-weighted MAE/RMSE for rates; Pearson. Also mean absolute player season-count error using given true target MIN, explicitly conditional exposure, not forecasting minutes. OREB% is a share and is not itself an absolute count.",
+    "uncertainty": {
+      "replicates": 20000,
+      "seed": 20261055,
+      "scheme": "Paired target-franchise resampling crossed with player Poisson weights, player/franchise weights matched across seasons and versions. No simulation seeds exist in this offline analysis. This does not replace franchise+simulation-seed acceptance required for future engine adoption; training refit uncertainty excluded."
+    },
+    "interpretation": "Confirm only incremental predictive gain against history with a wholly negative paired95 interval. Individual features/within-season/small-sample/mover groups exploratory; no multiplicity-free significance claim. Four seasons already seen; no engine adoption in this batch."
+  },
+  "failureRules": "Report fetch/schema/ID/coverage failures, complete-case selection and old-test age. If data unavailable, report unavailable rather than manufacture skill or assert no relationship. No post-result feature selection or change to tests.",
+  "expected": "Physical measurements may help low-sample priors or role transfer; no numerical gain promised. Role/context may dominate and existing OREB% may already subsume physical advantages.",
+  "inputHashes": {
+    "data/defense-seventh/2022-23/player-games.json": "f41f7f4b105af8d280381f0c3315219ee074b2329e5d9b5f979b6fc72dbd7f56",
+    "data/defense-seventh/2022-23/bio.json": "2b493e0aedcdfc610f9fe570ce0ca975a709753ad63e83fdddc31444d402927f",
+    "reports/defense-tenth/step4-t2/raw/2022-23/0-advanced.json": "5cce624bdcba6e4190c3520986006b5d8a87a0e1c11bdc2f268a7fb3815d3da2",
+    "data/defense-seventh/2023-24/player-games.json": "a33074c9c9b1f59e15f160464292b3ab9c791065ae542c20f2ed64f3e170afd5",
+    "data/defense-seventh/2023-24/bio.json": "1cb8eb0431bea1aaa43f1209571e39e9b2505a8c85cb14b356fddc54b9dfa1a6",
+    "reports/defense-tenth/step4-t2/raw/2023-24/0-advanced.json": "2a66adc5f1eccac6b23f60061e75115adfef8152c7b884dba7a940c4a372db23",
+    "data/defense-seventh/2024-25/player-games.json": "4c3f33c67ffaa1cf88ea01a7acaeef70af088e22f6020c3a02409989f6ad4ffa",
+    "data/defense-seventh/2024-25/bio.json": "945c9d37fb0409b0d023ef7c5514cc492a1805f14fc10a7b0f707fd5ae9881d3",
+    "reports/defense-tenth/step4-t2/raw/2024-25/0-advanced.json": "6e97d8807369be5668940b190a901a24439b60b82fe6f393a953c33c8e523508",
+    "data/season-source/player-games.json": "11fc5866b2f61b31e27659e14e4071924b5873ef0d2a4118a585c1a54be04357",
+    "data/benchmark-source/bio.json": "d319d00ed383c8a30793907fd0edd56fd26e8cdb19a74bbb0c2667790644196e",
+    "reports/defense-tenth/step4-t2/raw/2025-26/0-advanced.json": "182975df662b91cc08fc70f9978952a359604719b13d1a60776595db7e604ad5"
+  },
+  "protectedManifestSHA256": "10a00f208a9c412ac45cd3edd42c0fc5c00ed2dc4031d34e3364b1f1659e5819",
+  "registrationCodeSHA256": "5945c41b3a02bcb6fe9c18723cf985124743327b3a83479f5897a8086059e5e1"
+}

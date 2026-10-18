@@ -1,0 +1,10 @@
+import fs from 'node:fs';
+import crypto from 'node:crypto';
+import {Worker} from 'node:worker_threads';
+const root='reports/player-impact-v48',hash=f=>crypto.createHash('sha256').update(fs.readFileSync(f)).digest('hex');
+const seeds=[20261012,20261013,20261014],hashes={...JSON.parse(fs.readFileSync(root+'/candidate-run-protocol.json')).hashes,...Object.fromEntries(['pair-engine.mjs','pair-worker.mjs','pair-run.mjs'].map(f=>[root+'/'+f,hash(root+'/'+f)]))};
+const file=root+'/pair-protocol.json',protocol={scope:'Observer only. v47 strict2025-26 same3seeds; exact player-second interval attribution. Curry-active games only. No changes to rotations or gameplay.',hashes};
+if(fs.existsSync(file)&&JSON.stringify(JSON.parse(fs.readFileSync(file)))!==JSON.stringify(protocol))throw Error('Pair protocol drift');fs.writeFileSync(file,JSON.stringify(protocol,null,2));
+await Promise.all(seeds.map(seed=>new Promise((resolve,reject)=>{const w=new Worker(new URL('./pair-worker.mjs',import.meta.url));w.on('error',reject);w.on('message',m=>{w.terminate();if(m.error)reject(Error(m.error));else{console.log(JSON.stringify(m));resolve();}});w.postMessage({seed,file:root+`/pair-${seed}.json`});})));
+for(const[f,h]of Object.entries(hashes))if(hash(f)!==h)throw Error('Pair source drift '+f);
+fs.writeFileSync(root+'/pair-verification.json',JSON.stringify({passed:true,sourceHashes:hashes,outputHashes:Object.fromEntries(seeds.map(seed=>{const f=root+`/pair-${seed}.json`;return[f,hash(f)];}))},null,2));

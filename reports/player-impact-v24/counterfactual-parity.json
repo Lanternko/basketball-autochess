@@ -1,0 +1,16 @@
+{
+  "games": 96,
+  "changedRecipientGames": 32,
+  "allNonDrebCountersExact": true,
+  "cacheExactParity": true,
+  "previousInputUnchanged": true,
+  "syntheticAttributesUnchanged": true,
+  "scope": "Fixed-lineup counterfactual probes only; no new all-player OVR ranking. Full-season parity separately required.",
+  "hashes": {
+    "reports/player-impact-v24/engine.mjs": "c8f9d7fe52893fcd0ace3f3329bcd97d1dbc07566da87a651cf860cc13024b97",
+    "reports/player-impact-v24/input.mjs": "945b3db8cbea9dd03ccce17608e2b55c3bc4520c9ac91eb677688c8836871622",
+    "reports/player-impact-v24/model.mjs": "a12fc6248827bc2bef130bd8a2e89ab64ec66d9b95c8a0471b0363c764f0c323",
+    "reports/player-impact-v24/ovr-input.mjs": "44529060f8e4ea79728a24f7083a5fa3556c656dbaa457a7d3ce87ed7282be0a",
+    "reports/player-impact-v24/verify-counterfactual-parity.mjs": "07c420764d6dfbf465488f5e142102e74d5e83579d0712c4bb8b92725bfed7ea"
+  }
+}

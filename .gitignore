@@ -1,3 +1,11 @@
 node_modules/
 note_body.md
 .DS_Store
+
+# Research bulk stays local. Compact snapshots are explicitly staged by manifest.
+/data/
+/reports/
+__pycache__/
+*.pyc
+*.log
+/test/.defense_eighth_b_serialized.js

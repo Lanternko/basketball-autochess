@@ -1,0 +1,11 @@
+{
+  "games": 240,
+  "exactFullResultParity": true,
+  "rngCaching": false,
+  "cache": "Deterministic foul inputs only; key includes exact probability object, FT/FGA and foul rate object. No rounding or quantization.",
+  "hashes": {
+    "fast-model.mjs": "4730648d105136cc360909f2e0be8459bf1dddf6384d8e685f61792d862505a5",
+    "fast-engine.mjs": "5285fcb7975b24c8d28b02754a348aebf9a98f69bc7690f2f8d0fa6c6867782e",
+    "verify-fast.mjs": "55bc1c704d7537dd397ed6ca53a73915ab94fee09a0349a5d4f9f7f64eccc940"
+  }
+}

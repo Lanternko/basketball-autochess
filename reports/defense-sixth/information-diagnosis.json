@@ -1,0 +1,811 @@
+{
+  "decomposition": {
+    "v3": {
+      "RMSE": 5.615301118915259,
+      "trainingMetrics": {
+        "RMSE": 3.3192667115513004,
+        "correlation": 0.806244378129819,
+        "calibrationSlope": 0.9481998131391369,
+        "SDRatio": 0.8502895349247578
+      },
+      "componentRMSE": [
+        3.3192667115513004,
+        3.9664094826451604,
+        4.6976476506509295
+      ],
+      "signedMSEContributions": [
+        11.834001067486286,
+        2.1452349097759282,
+        17.55237067882874
+      ],
+      "signedMSEShares": [
+        0.375305996822725,
+        0.06803443075938326,
+        0.5566595724178918
+      ],
+      "crossCovariance": [
+        [
+          11.017531502412586,
+          -4.12758846916518,
+          4.944058034238879
+        ],
+        [
+          -4.12758846916518,
+          15.73240418401745,
+          -9.45958080507634
+        ],
+        [
+          4.944058034238879,
+          -9.45958080507634,
+          22.0678934496662
+        ]
+      ],
+      "teams": [
+        {
+          "id": 1610612737,
+          "trainMismatch": 3.572520325203252,
+          "modelRosterMinuteScheduleShift": -4.272682926829268,
+          "actualSeasonShift": -4.83089430894309,
+          "total": -5.531056910569106
+        },
+        {
+          "id": 1610612738,
+          "trainMismatch": -3.610406504065041,
+          "modelRosterMinuteScheduleShift": 0.3285365853658533,
+          "actualSeasonShift": -1.5382113821138201,
+          "total": -4.820081300813008
+        },
+        {
+          "id": 1610612739,
+          "trainMismatch": -0.43845528455284555,
+          "modelRosterMinuteScheduleShift": 0.09317073170731693,
+          "actualSeasonShift": -4.123577235772358,
+          "total": -4.468861788617887
+        },
+        {
+          "id": 1610612740,
+          "trainMismatch": -0.8945528455284553,
+          "modelRosterMinuteScheduleShift": 4.03341463414634,
+          "actualSeasonShift": -6.074796747967479,
+          "total": -2.935934959349594
+        },
+        {
+          "id": 1610612741,
+          "trainMismatch": 0.8054471544715449,
+          "modelRosterMinuteScheduleShift": -6.1409756097560955,
+          "actualSeasonShift": 3.5349593495934957,
+          "total": -1.8005691056910553
+        },
+        {
+          "id": 1610612742,
+          "trainMismatch": 3.490813008130081,
+          "modelRosterMinuteScheduleShift": -1.7690243902439025,
+          "actualSeasonShift": 3.0715447154471542,
+          "total": 4.793333333333333
+        },
+        {
+          "id": 1610612743,
+          "trainMismatch": -1.4835772357723584,
+          "modelRosterMinuteScheduleShift": 0.4541463414634155,
+          "actualSeasonShift": 0.38861788617886184,
+          "total": -0.6408130081300811
+        },
+        {
+          "id": 1610612744,
+          "trainMismatch": -4.66650406504065,
+          "modelRosterMinuteScheduleShift": 2.3687804878048784,
+          "actualSeasonShift": 5.7056910569105685,
+          "total": 3.4079674796747965
+        },
+        {
+          "id": 1610612745,
+          "trainMismatch": -5.326260162601626,
+          "modelRosterMinuteScheduleShift": 1.316341463414634,
+          "actualSeasonShift": 2.388617886178862,
+          "total": -1.6213008130081303
+        },
+        {
+          "id": 1610612746,
+          "trainMismatch": 0.05056910569105655,
+          "modelRosterMinuteScheduleShift": -3.1629268292682924,
+          "actualSeasonShift": -4.07479674796748,
+          "total": -7.187154471544716
+        },
+        {
+          "id": 1610612747,
+          "trainMismatch": 1.3359349593495933,
+          "modelRosterMinuteScheduleShift": 1.8639024390243903,
+          "actualSeasonShift": -4.294308943089431,
+          "total": -1.0944715447154474
+        },
+        {
+          "id": 1610612748,
+          "trainMismatch": -2.7408943089430897,
+          "modelRosterMinuteScheduleShift": 1.7590243902439027,
+          "actualSeasonShift": -1.4894308943089432,
+          "total": -2.4713008130081304
+        },
+        {
+          "id": 1610612749,
+          "trainMismatch": 6.996910569105691,
+          "modelRosterMinuteScheduleShift": -3.860487804878049,
+          "actualSeasonShift": 5.7300813008130085,
+          "total": 8.866504065040651
+        },
+        {
+          "id": 1610612750,
+          "trainMismatch": 3.548130081300812,
+          "modelRosterMinuteScheduleShift": 0.45048780487805296,
+          "actualSeasonShift": 4.852032520325203,
+          "total": 8.850650406504068
+        },
+        {
+          "id": 1610612751,
+          "trainMismatch": 4.263983739837399,
+          "modelRosterMinuteScheduleShift": -1.8860975609756105,
+          "actualSeasonShift": 9.242276422764228,
+          "total": 11.620162601626015
+        },
+        {
+          "id": 1610612752,
+          "trainMismatch": -3.161626016260163,
+          "modelRosterMinuteScheduleShift": 1.761463414634146,
+          "actualSeasonShift": -5.196747967479675,
+          "total": -6.596910569105692
+        },
+        {
+          "id": 1610612753,
+          "trainMismatch": 4.83349593495935,
+          "modelRosterMinuteScheduleShift": -0.10195121951219566,
+          "actualSeasonShift": 1.461788617886179,
+          "total": 6.193333333333333
+        },
+        {
+          "id": 1610612754,
+          "trainMismatch": 2.788373983739838,
+          "modelRosterMinuteScheduleShift": 3.677317073170731,
+          "actualSeasonShift": 0.510569105691058,
+          "total": 6.976260162601627
+        },
+        {
+          "id": 1610612755,
+          "trainMismatch": -1.4079674796747972,
+          "modelRosterMinuteScheduleShift": -1.3995121951219511,
+          "actualSeasonShift": 3.0471544715447156,
+          "total": 0.23967479674796732
+        },
+        {
+          "id": 1610612756,
+          "trainMismatch": -0.33845528455284546,
+          "modelRosterMinuteScheduleShift": -0.9299999999999999,
+          "actualSeasonShift": 2.1447154471544714,
+          "total": 0.876260162601626
+        },
+        {
+          "id": 1610612757,
+          "trainMismatch": -3.9384552845528455,
+          "modelRosterMinuteScheduleShift": 5.595609756097561,
+          "actualSeasonShift": -5.465040650406504,
+          "total": -3.8078861788617884
+        },
+        {
+          "id": 1610612758,
+          "trainMismatch": 1.09691056910569,
+          "modelRosterMinuteScheduleShift": 10.838292682926829,
+          "actualSeasonShift": -1.0260162601625993,
+          "total": 10.90918699186992
+        },
+        {
+          "id": 1610612759,
+          "trainMismatch": -0.8250406504065033,
+          "modelRosterMinuteScheduleShift": 3.5370731707317082,
+          "actualSeasonShift": -6.318699186991869,
+          "total": -3.606666666666664
+        },
+        {
+          "id": 1610612760,
+          "trainMismatch": -2.218943089430894,
+          "modelRosterMinuteScheduleShift": -4.361707317073171,
+          "actualSeasonShift": 4.144715447154473,
+          "total": -2.4359349593495923
+        },
+        {
+          "id": 1610612761,
+          "trainMismatch": -4.1555284552845535,
+          "modelRosterMinuteScheduleShift": 4.241951219512195,
+          "actualSeasonShift": -2.635772357723577,
+          "total": -2.549349593495935
+        },
+        {
+          "id": 1610612762,
+          "trainMismatch": 3.1713008130081306,
+          "modelRosterMinuteScheduleShift": -1.6665853658536598,
+          "actualSeasonShift": 0.7544715447154484,
+          "total": 2.2591869918699192
+        },
+        {
+          "id": 1610612763,
+          "trainMismatch": 2.3761788617886177,
+          "modelRosterMinuteScheduleShift": -11.295853658536586,
+          "actualSeasonShift": 10.120325203252033,
+          "total": 1.2006504065040637
+        },
+        {
+          "id": 1610612764,
+          "trainMismatch": 2.843252032520324,
+          "modelRosterMinuteScheduleShift": -1.0507317073170714,
+          "actualSeasonShift": 1.559349593495936,
+          "total": 3.3518699186991885
+        },
+        {
+          "id": 1610612765,
+          "trainMismatch": -6.527479674796748,
+          "modelRosterMinuteScheduleShift": -1.6885365853658536,
+          "actualSeasonShift": -1.7821138211382106,
+          "total": -9.998130081300813
+        },
+        {
+          "id": 1610612766,
+          "trainMismatch": 0.5603252032520324,
+          "modelRosterMinuteScheduleShift": 1.2675609756097561,
+          "actualSeasonShift": -9.80650406504065,
+          "total": -7.978617886178862
+        }
+      ],
+      "simpleRMSE": 4.6976476506509295,
+      "analyticActualMinuteShift": [
+        -1.921290022719016,
+        0.8850002370287829,
+        1.854272408213407,
+        2.363701701039463,
+        -1.6265353411240921,
+        0.2612211097205098,
+        -0.25578701642687307,
+        -1.0094107100402003,
+        0.01822217841381224,
+        0.2800206200595675,
+        2.5568179875765766,
+        0.2712635400438622,
+        -1.1523230436711902,
+        0.6023764734795395,
+        -1.812448389359361,
+        1.1226578299586372,
+        -0.01527646619225298,
+        0.22889454541801102,
+        0.5858479740520116,
+        0.8925454495593027,
+        2.30447738693116,
+        0.7617888898116004,
+        1.5100094896383425,
+        -1.9672797564619149,
+        1.146725081331427,
+        -3.918200936265394,
+        -3.1344238298575187,
+        -1.841113135610985,
+        -0.451375754747967,
+        1.459621500200753
+      ],
+      "inputShiftProxyParts": {
+        "simulatedMinuteAbilityShift": [
+          -2.093258165347633,
+          1.212116583892553,
+          1.5911216046156769,
+          1.6108213053854077,
+          -1.503029782792951,
+          -0.31775071787865816,
+          -0.25553952496440246,
+          -0.45396164402934513,
+          0.03754026108066355,
+          -0.5859056592381134,
+          1.9425203425681135,
+          0.5084683950506167,
+          -1.5504870044740615,
+          0.4285141943490708,
+          -1.292292302101389,
+          0.7502073114240558,
+          0.7816727642649964,
+          0.9817747409176659,
+          0.16842024450107107,
+          0.4649135414786877,
+          1.8471214480270013,
+          1.5494089338021744,
+          1.9940589031820268,
+          -2.1163626499374395,
+          1.4114988807742486,
+          -3.3087665646121778,
+          -2.8713070255120425,
+          -1.2572414324606744,
+          -0.6592540442405835,
+          0.9849770622754414
+        ],
+        "opponentScheduleAbilityShift": [
+          -0.010216987721304971,
+          0.12715273480598066,
+          -0.040767571136898884,
+          -0.3613027026747502,
+          0.3521145915344479,
+          0.797232559155534,
+          0.30789449633828925,
+          0.44084157622661335,
+          0.05674611252903938,
+          0.25578172406491495,
+          0.8317382876147099,
+          -0.9650906095135645,
+          -0.23410337636716738,
+          0.0049729326255767425,
+          -0.1778500111006216,
+          -0.20079076763070836,
+          0.44587508974169365,
+          -0.3539901359889437,
+          -0.19434404083835277,
+          0.40676282757348803,
+          -0.4292356774043209,
+          -1.6000282579257088,
+          0.17159696768557753,
+          1.3856718380116892,
+          -0.4115073986724789,
+          -0.46362847672316176,
+          -0.0540591864299258,
+          -0.6740037971019635,
+          0.5536482875229569,
+          0.03288897179935679
+        ],
+        "unrepresentedEngineTransferRemainder": [
+          -2.18964174920294,
+          -0.756427263720719,
+          -1.5387184440452588,
+          2.0612906260861825,
+          -4.285831235428697,
+          -0.6540411132097104,
+          1.017580362766107,
+          3.2635837080608368,
+          1.33554731486301,
+          -2.321239445965264,
+          0.7531203840709868,
+          0.28546538567972135,
+          -2.544104176771155,
+          0.02694654315455891,
+          -0.7716552699748431,
+          0.8104653355793818,
+          -0.43774889403549844,
+          2.3415521962641215,
+          -1.762276480461375,
+          -0.9881507139051995,
+          3.319252630666239,
+          7.688855491198945,
+          1.714611235235259,
+          -0.8596728291240425,
+          2.418944940065468,
+          1.1785527220353562,
+          -8.47860581945447,
+          -0.46749407195836046,
+          -0.47563425360231326,
+          0.31547288513367155
+        ],
+        "method": "Additive fixed card proxy only: model player-seconds weights, opponent phase-average ability exposure on schedule, then exact leftover against engine transfer. Mixed-cutoff boundary games use opponent phase averages. Diagnostic approximation, not causal or probability inputs."
+      },
+      "inputShiftCaveat": "Exact engine pre/post shift includes conditional active/starter lists, trained MPG redistribution, opponents/schedule and finite seed noise. Actual-minute analytic shift is a separate diagnostic, not the entire term or an engine input. Three signed MSE projections include correlations; they are not independent causal variance percentages."
+    },
+    "final": {
+      "RMSE": 3.559007484338933,
+      "trainingMetrics": {
+        "RMSE": 2.5068968061335415,
+        "correlation": 0.9128627677146786,
+        "calibrationSlope": 0.8318453190609328,
+        "SDRatio": 1.0973948482936777
+      },
+      "componentRMSE": [
+        2.5068968061335415,
+        5.364651180858484,
+        4.6976476506509295
+      ],
+      "signedMSEContributions": [
+        1.8494282487276101,
+        7.048887239738252,
+        3.7682187851146813
+      ],
+      "signedMSEShares": [
+        0.14600901941939154,
+        0.5564969144275398,
+        0.2974940661530686
+      ],
+      "crossCovariance": [
+        [
+          6.284531596602551,
+          -3.9330118679357526,
+          -0.5020914799391885
+        ],
+        [
+          -3.9330118679357526,
+          28.779482292286335,
+          -17.797583184612336
+        ],
+        [
+          -0.5020914799391885,
+          -17.797583184612336,
+          22.0678934496662
+        ]
+      ],
+      "teams": [
+        {
+          "id": 1610612737,
+          "trainMismatch": 2.7253252032520323,
+          "modelRosterMinuteScheduleShift": 0.14000000000000012,
+          "actualSeasonShift": -4.83089430894309,
+          "total": -1.9655691056910571
+        },
+        {
+          "id": 1610612738,
+          "trainMismatch": 1.630203252032521,
+          "modelRosterMinuteScheduleShift": 0.1753658536585352,
+          "actualSeasonShift": -1.5382113821138201,
+          "total": 0.267357723577236
+        },
+        {
+          "id": 1610612739,
+          "trainMismatch": 3.22410569105691,
+          "modelRosterMinuteScheduleShift": 0.39000000000000057,
+          "actualSeasonShift": -4.123577235772358,
+          "total": -0.5094715447154474
+        },
+        {
+          "id": 1610612740,
+          "trainMismatch": -0.2319918699186987,
+          "modelRosterMinuteScheduleShift": 6.336341463414634,
+          "actualSeasonShift": -6.074796747967479,
+          "total": 0.029552845528455274
+        },
+        {
+          "id": 1610612741,
+          "trainMismatch": 0.9326422764227642,
+          "modelRosterMinuteScheduleShift": -7.32951219512195,
+          "actualSeasonShift": 3.5349593495934957,
+          "total": -2.8619105691056905
+        },
+        {
+          "id": 1610612742,
+          "trainMismatch": -5.144186991869919,
+          "modelRosterMinuteScheduleShift": -2.881951219512194,
+          "actualSeasonShift": 3.0715447154471542,
+          "total": -4.954593495934959
+        },
+        {
+          "id": 1610612743,
+          "trainMismatch": 1.3826422764227644,
+          "modelRosterMinuteScheduleShift": -1.0709756097560978,
+          "actualSeasonShift": 0.38861788617886184,
+          "total": 0.7002845528455284
+        },
+        {
+          "id": 1610612744,
+          "trainMismatch": -3.652723577235772,
+          "modelRosterMinuteScheduleShift": -2.4112195121951228,
+          "actualSeasonShift": 5.7056910569105685,
+          "total": -0.3582520325203262
+        },
+        {
+          "id": 1610612745,
+          "trainMismatch": -2.5661382113821145,
+          "modelRosterMinuteScheduleShift": 2.266829268292683,
+          "actualSeasonShift": 2.388617886178862,
+          "total": 2.0893089430894305
+        },
+        {
+          "id": 1610612746,
+          "trainMismatch": -0.019796747967479655,
+          "modelRosterMinuteScheduleShift": -1.0600000000000005,
+          "actualSeasonShift": -4.07479674796748,
+          "total": -5.15459349593496
+        },
+        {
+          "id": 1610612747,
+          "trainMismatch": -0.889308943089431,
+          "modelRosterMinuteScheduleShift": 3.1241463414634145,
+          "actualSeasonShift": -4.294308943089431,
+          "total": -2.0594715447154472
+        },
+        {
+          "id": 1610612748,
+          "trainMismatch": -2.4027235772357725,
+          "modelRosterMinuteScheduleShift": 4.8290243902439025,
+          "actualSeasonShift": -1.4894308943089432,
+          "total": 0.9368699186991867
+        },
+        {
+          "id": 1610612749,
+          "trainMismatch": 1.5363008130081297,
+          "modelRosterMinuteScheduleShift": -3.980731707317073,
+          "actualSeasonShift": 5.7300813008130085,
+          "total": 3.2856504065040646
+        },
+        {
+          "id": 1610612750,
+          "trainMismatch": 3.792398373983742,
+          "modelRosterMinuteScheduleShift": 1.7765853658536574,
+          "actualSeasonShift": 4.852032520325203,
+          "total": 10.421016260162602
+        },
+        {
+          "id": 1610612751,
+          "trainMismatch": 0.4094715447154469,
+          "modelRosterMinuteScheduleShift": -4.753902439024388,
+          "actualSeasonShift": 9.242276422764228,
+          "total": 4.897845528455287
+        },
+        {
+          "id": 1610612752,
+          "trainMismatch": 1.4558130081300802,
+          "modelRosterMinuteScheduleShift": 3.597317073170734,
+          "actualSeasonShift": -5.196747967479675,
+          "total": -0.14361788617886084
+        },
+        {
+          "id": 1610612753,
+          "trainMismatch": 1.2497154471544718,
+          "modelRosterMinuteScheduleShift": 1.7582926829268288,
+          "actualSeasonShift": 1.461788617886179,
+          "total": 4.46979674796748
+        },
+        {
+          "id": 1610612754,
+          "trainMismatch": -1.081991869918701,
+          "modelRosterMinuteScheduleShift": 0.7351219512195115,
+          "actualSeasonShift": 0.510569105691058,
+          "total": 0.16369918699186847
+        },
+        {
+          "id": 1610612755,
+          "trainMismatch": -1.6039430894308946,
+          "modelRosterMinuteScheduleShift": -3.2904878048780493,
+          "actualSeasonShift": 3.0471544715447156,
+          "total": -1.847276422764228
+        },
+        {
+          "id": 1610612756,
+          "trainMismatch": -0.3539430894308939,
+          "modelRosterMinuteScheduleShift": 0.835121951219512,
+          "actualSeasonShift": 2.1447154471544714,
+          "total": 2.6258943089430895
+        },
+        {
+          "id": 1610612757,
+          "trainMismatch": -1.3185772357723575,
+          "modelRosterMinuteScheduleShift": 7.991219512195121,
+          "actualSeasonShift": -5.465040650406504,
+          "total": 1.2076016260162596
+        },
+        {
+          "id": 1610612758,
+          "trainMismatch": -4.155162601626017,
+          "modelRosterMinuteScheduleShift": 11.041219512195122,
+          "actualSeasonShift": -1.0260162601625993,
+          "total": 5.860040650406505
+        },
+        {
+          "id": 1610612759,
+          "trainMismatch": 1.3302032520325193,
+          "modelRosterMinuteScheduleShift": 7.553414634146343,
+          "actualSeasonShift": -6.318699186991869,
+          "total": 2.5649186991869932
+        },
+        {
+          "id": 1610612760,
+          "trainMismatch": 0.9265447154471573,
+          "modelRosterMinuteScheduleShift": -7.741707317073174,
+          "actualSeasonShift": 4.144715447154473,
+          "total": -2.6704471544715433
+        },
+        {
+          "id": 1610612761,
+          "trainMismatch": -3.8441869918699183,
+          "modelRosterMinuteScheduleShift": 5.943658536585366,
+          "actualSeasonShift": -2.635772357723577,
+          "total": -0.5363008130081299
+        },
+        {
+          "id": 1610612762,
+          "trainMismatch": 4.714349593495934,
+          "modelRosterMinuteScheduleShift": -5.452682926829265,
+          "actualSeasonShift": 0.7544715447154484,
+          "total": 0.016138211382116907
+        },
+        {
+          "id": 1610612763,
+          "trainMismatch": 0.9814227642276421,
+          "modelRosterMinuteScheduleShift": -14.839268292682927,
+          "actualSeasonShift": 10.120325203252033,
+          "total": -3.7375203252032527
+        },
+        {
+          "id": 1610612764,
+          "trainMismatch": 3.1119105691056888,
+          "modelRosterMinuteScheduleShift": -6.285609756097561,
+          "actualSeasonShift": 1.559349593495936,
+          "total": -1.6143495934959358
+        },
+        {
+          "id": 1610612765,
+          "trainMismatch": -3.9185772357723576,
+          "modelRosterMinuteScheduleShift": -1.3514634146341469,
+          "actualSeasonShift": -1.7821138211382106,
+          "total": -7.052154471544715
+        },
+        {
+          "id": 1610612766,
+          "trainMismatch": 1.7802032520325202,
+          "modelRosterMinuteScheduleShift": 3.9558536585365847,
+          "actualSeasonShift": -9.80650406504065,
+          "total": -4.0704471544715455
+        }
+      ],
+      "simpleRMSE": 4.6976476506509295,
+      "analyticActualMinuteShift": [
+        0.886542660141364,
+        -0.170282858263769,
+        3.0424545957168254,
+        3.916197451257294,
+        -4.631317665861809,
+        -0.26224367666278936,
+        -0.4947104316422817,
+        -2.6038986627705922,
+        1.2542388008315466,
+        0.44637075034518925,
+        3.4804417691593477,
+        1.0401284557072887,
+        -1.4247233065508549,
+        2.86108201480429,
+        -4.116816599717904,
+        1.0800579664765084,
+        1.0722858018879655,
+        -0.9862341206115672,
+        0.3167796097518927,
+        1.1999495796701314,
+        2.8453287625894763,
+        1.860891778868677,
+        2.859046478299983,
+        -2.556135130111363,
+        2.397705794757705,
+        -6.723968178906836,
+        -7.294408363801545,
+        -4.9261076110961906,
+        0.2699731726695729,
+        5.361371163062455
+      ],
+      "inputShiftProxyParts": {
+        "simulatedMinuteAbilityShift": [
+          -0.06648091077584084,
+          0.7277734327929037,
+          3.0960872144196463,
+          2.796055904767512,
+          -3.48865640809937,
+          -0.4235147252169389,
+          -0.07922831977983602,
+          -2.546227453153601,
+          1.14820387542514,
+          -0.7736816433684361,
+          2.6801515527161346,
+          1.2741882726313891,
+          -2.2841730795247637,
+          1.7599390593426554,
+          -3.231438287856923,
+          0.8927119177448875,
+          1.5922200522395258,
+          0.6241567262521581,
+          -0.3009140003542665,
+          1.2880010145626954,
+          1.7683089883484557,
+          2.8596105196522674,
+          3.8357150392153754,
+          -3.160984183842949,
+          2.6136103840202516,
+          -5.38588431005455,
+          -6.155641697026596,
+          -4.656418011853276,
+          -0.04850528801259113,
+          3.6450143647889393
+        ],
+        "opponentScheduleAbilityShift": [
+          -0.800709680296636,
+          0.20555035424698231,
+          -1.1139412291737016,
+          -0.6657347052140132,
+          0.27680972630884493,
+          1.2623286323144318,
+          0.9346526837108466,
+          0.9107117744043636,
+          0.583143267867684,
+          -0.43081152679033985,
+          0.46783532490592594,
+          -1.6603572198796501,
+          -0.14531912748032938,
+          0.4099965956650482,
+          -0.1545052408968577,
+          -0.11240746743245267,
+          -0.4175916647042357,
+          -0.5696744270614051,
+          0.3910274465872392,
+          0.5076427719177985,
+          -1.1554406209697252,
+          -1.8983381632563454,
+          0.06075702851943343,
+          1.9861045021203247,
+          -0.5277675000283193,
+          -0.6294278724957538,
+          0.6978661439268776,
+          0.029218149946404592,
+          0.8356136116466162,
+          0.722768431590955
+        ],
+        "unrepresentedEngineTransferRemainder": [
+          -0.5942287695207951,
+          -0.34685722488738624,
+          -3.8200284435933476,
+          2.8745508534331083,
+          -3.5640460607137348,
+          -1.1961078619808234,
+          -0.05709460626541518,
+          1.0457197153628417,
+          1.7017686607352271,
+          -0.7171298834219042,
+          0.9118301136532059,
+          1.8944788977328633,
+          -1.8418777552726386,
+          0.4266429021760503,
+          -1.6769693920643223,
+          2.5921976879933935,
+          -0.25151903401693265,
+          -0.45870920209405175,
+          -2.5985463579365433,
+          0.0547637085746151,
+          5.06746990287694,
+          6.283270829286509,
+          3.778456623450401,
+          -2.5946186311099,
+          2.802280652536795,
+          -0.696226489270469,
+          -7.985760451729454,
+          -1.5999735942978799,
+          -0.46734451497493956,
+          1.0336077253386005
+        ],
+        "method": "Additive fixed card proxy only: model player-seconds weights, opponent phase-average ability exposure on schedule, then exact leftover against engine transfer. Mixed-cutoff boundary games use opponent phase averages. Diagnostic approximation, not causal or probability inputs."
+      },
+      "inputShiftCaveat": "Exact engine pre/post shift includes conditional active/starter lists, trained MPG redistribution, opponents/schedule and finite seed noise. Actual-minute analytic shift is a separate diagnostic, not the entire term or an engine input. Three signed MSE projections include correlations; they are not independent causal variance percentages."
+    }
+  },
+  "incrementalInformation": {
+    "25": {
+      "simulationCoefficientMeanLOTO": 0.5390369040624744,
+      "simulationCoefficientFull": 0.5391397096361994,
+      "teamBootstrap95": [
+        0.3005702177439873,
+        0.7336891658726667
+      ],
+      "LOTONetRMSE": 3.9659406162804696,
+      "LOTOComparatorOnlyRMSE": 4.646814638170218,
+      "method": "Each prediction excludes that team, fit true post net on intercept+pre net+simulation net; coefficient average over30 leave-one-team fits, interval from2000 team resamples redoing leave-all-copies-of-one-team-out (not engine seeds). Same season and overlapping cutoffs; diagnostic only, no product regression output."
+    },
+    "41": {
+      "simulationCoefficientMeanLOTO": 0.6736164024715199,
+      "simulationCoefficientFull": 0.6734146456044099,
+      "teamBootstrap95": [
+        0.46061266981695476,
+        0.9020422983700073
+      ],
+      "LOTONetRMSE": 3.4338269636278445,
+      "LOTOComparatorOnlyRMSE": 4.973173869209593,
+      "method": "Each prediction excludes that team, fit true post net on intercept+pre net+simulation net; coefficient average over30 leave-one-team fits, interval from2000 team resamples redoing leave-all-copies-of-one-team-out (not engine seeds). Same season and overlapping cutoffs; diagnostic only, no product regression output."
+    },
+    "55": {
+      "simulationCoefficientMeanLOTO": 0.6511358502085279,
+      "simulationCoefficientFull": 0.6510341980108016,
+      "teamBootstrap95": [
+        0.4223879170850524,
+        0.8829051189017493
+      ],
+      "LOTONetRMSE": 3.9561976583046015,
+      "LOTOComparatorOnlyRMSE": 5.271261547122874,
+      "method": "Each prediction excludes that team, fit true post net on intercept+pre net+simulation net; coefficient average over30 leave-one-team fits, interval from2000 team resamples redoing leave-all-copies-of-one-team-out (not engine seeds). Same season and overlapping cutoffs; diagnostic only, no product regression output."
+    }
+  }
+}

@@ -1,0 +1,2384 @@
+{
+  "passed": true,
+  "branches": 396,
+  "selectionExcludedTarget": true,
+  "wholeGameFoldsPassed": true,
+  "checks": [
+    {
+      "file": "reports\\player-impact-v43\\fits\\2022-23-sigma0-tail0-fold0.json",
+      "zone": "long",
+      "nll": 10027.86398999613,
+      "maxGradient": 1.5148771126405336e-11
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2022-23-sigma0-tail0-fold0.json",
+      "zone": "mid",
+      "nll": 3696.9312344057817,
+      "maxGradient": 1.1617373729677638e-11
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2022-23-sigma0-tail0-fold0.json",
+      "zone": "short",
+      "nll": 11799.310088103011,
+      "maxGradient": 1.234923274751054e-10
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2022-23-sigma0-tail0-fold1.json",
+      "zone": "long",
+      "nll": 10082.390053466392,
+      "maxGradient": 8.972733667178545e-11
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2022-23-sigma0-tail0-fold1.json",
+      "zone": "mid",
+      "nll": 3715.6996227273544,
+      "maxGradient": 7.290168468898628e-12
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2022-23-sigma0-tail0-fold1.json",
+      "zone": "short",
+      "nll": 11910.624509774814,
+      "maxGradient": 6.66844357510854e-11
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2022-23-sigma0-tail0-fold2.json",
+      "zone": "long",
+      "nll": 8409.530836782822,
+      "maxGradient": 1.8843593352357857e-11
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2022-23-sigma0-tail0-fold2.json",
+      "zone": "mid",
+      "nll": 3100.4354156140716,
+      "maxGradient": 5.4001247917767614e-12
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2022-23-sigma0-tail0-fold2.json",
+      "zone": "short",
+      "nll": 9939.114805242258,
+      "maxGradient": 5.977085493213963e-11
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2022-23-sigma0-tail0-fold3.json",
+      "zone": "long",
+      "nll": 10173.235634681047,
+      "maxGradient": 6.679812258880702e-11
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2022-23-sigma0-tail0-fold3.json",
+      "zone": "mid",
+      "nll": 3564.123304951775,
+      "maxGradient": 1.8843593352357857e-11
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2022-23-sigma0-tail0-fold3.json",
+      "zone": "short",
+      "nll": 12002.111763131299,
+      "maxGradient": 7.386802280962002e-11
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2022-23-sigma0-tail0-fold4.json",
+      "zone": "long",
+      "nll": 9516.05399936695,
+      "maxGradient": 1.3085355021758005e-10
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2022-23-sigma0-tail0-fold4.json",
+      "zone": "mid",
+      "nll": 3507.618622050072,
+      "maxGradient": 1.9266366280135117e-11
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2022-23-sigma0-tail0-fold4.json",
+      "zone": "short",
+      "nll": 11387.407511866935,
+      "maxGradient": 6.231459792616079e-11
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2022-23-sigma0-tail0-foldNone.json",
+      "zone": "long",
+      "nll": 47761.16466920632,
+      "maxGradient": 8.618883384770015e-11
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2022-23-sigma0-tail0-foldNone.json",
+      "zone": "mid",
+      "nll": 17086.78833405408,
+      "maxGradient": 1.0656719950929983e-10
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2022-23-sigma0-tail0-foldNone.json",
+      "zone": "short",
+      "nll": 56578.65724004851,
+      "maxGradient": 1.3015011290917755e-10
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2022-23-sigma0.025-tail0-fold0.json",
+      "zone": "long",
+      "nll": 10028.907239710781,
+      "maxGradient": 2.689262146304827e-10
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2022-23-sigma0.025-tail0-fold0.json",
+      "zone": "mid",
+      "nll": 3696.6080891214174,
+      "maxGradient": 3.647215862656594e-11
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2022-23-sigma0.025-tail0-fold0.json",
+      "zone": "short",
+      "nll": 11789.778668572204,
+      "maxGradient": 2.0945378764736233e-10
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2022-23-sigma0.025-tail0-fold1.json",
+      "zone": "long",
+      "nll": 10081.317326449107,
+      "maxGradient": 2.645279550961277e-10
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2022-23-sigma0.025-tail0-fold1.json",
+      "zone": "mid",
+      "nll": 3714.8535438552244,
+      "maxGradient": 4.25757207267452e-11
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2022-23-sigma0.025-tail0-fold1.json",
+      "zone": "short",
+      "nll": 11905.166641363352,
+      "maxGradient": 4.517630713962717e-11
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2022-23-sigma0.025-tail0-fold2.json",
+      "zone": "long",
+      "nll": 8409.928780635926,
+      "maxGradient": 1.6652279555273708e-10
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2022-23-sigma0.025-tail0-fold2.json",
+      "zone": "mid",
+      "nll": 3100.1278886450564,
+      "maxGradient": 3.029754225281067e-11
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2022-23-sigma0.025-tail0-fold2.json",
+      "zone": "short",
+      "nll": 9931.582610989284,
+      "maxGradient": 8.08171307653538e-11
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2022-23-sigma0.025-tail0-fold3.json",
+      "zone": "long",
+      "nll": 10172.702254708374,
+      "maxGradient": 2.7285551595923607e-10
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2022-23-sigma0.025-tail0-fold3.json",
+      "zone": "mid",
+      "nll": 3565.084243975568,
+      "maxGradient": 2.7000623958883807e-11
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2022-23-sigma0.025-tail0-fold3.json",
+      "zone": "short",
+      "nll": 11995.594028174552,
+      "maxGradient": 5.88613602303667e-11
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2022-23-sigma0.025-tail0-fold4.json",
+      "zone": "long",
+      "nll": 9515.509334516102,
+      "maxGradient": 1.7404033769707894e-10
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2022-23-sigma0.025-tail0-fold4.json",
+      "zone": "mid",
+      "nll": 3507.590438115064,
+      "maxGradient": 2.028599510595086e-11
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2022-23-sigma0.025-tail0-fold4.json",
+      "zone": "short",
+      "nll": 11379.693154718245,
+      "maxGradient": 5.2480686463241e-11
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2022-23-sigma0.025-tail1-fold0.json",
+      "zone": "long",
+      "nll": 10029.045147216868,
+      "maxGradient": 9.289706781601126e-10
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2022-23-sigma0.025-tail1-fold0.json",
+      "zone": "mid",
+      "nll": 3696.6071362848697,
+      "maxGradient": 3.3580249692022335e-11
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2022-23-sigma0.025-tail1-fold0.json",
+      "zone": "short",
+      "nll": 11788.902133984418,
+      "maxGradient": 3.5694469602276513e-10
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2022-23-sigma0.025-tail1-fold1.json",
+      "zone": "long",
+      "nll": 10081.095143323784,
+      "maxGradient": 1.0894751767409616e-10
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2022-23-sigma0.025-tail1-fold1.json",
+      "zone": "mid",
+      "nll": 3714.829183900837,
+      "maxGradient": 4.0898839870351367e-11
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2022-23-sigma0.025-tail1-fold1.json",
+      "zone": "short",
+      "nll": 11904.394303133844,
+      "maxGradient": 8.001421747394488e-11
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2022-23-sigma0.025-tail1-fold2.json",
+      "zone": "long",
+      "nll": 8409.92157919884,
+      "maxGradient": 3.948699145439605e-10
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2022-23-sigma0.025-tail1-fold2.json",
+      "zone": "mid",
+      "nll": 3100.135103808914,
+      "maxGradient": 2.5153212845907547e-11
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2022-23-sigma0.025-tail1-fold2.json",
+      "zone": "short",
+      "nll": 9929.547202414273,
+      "maxGradient": 1.6222756471506727e-10
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2022-23-sigma0.025-tail1-fold3.json",
+      "zone": "long",
+      "nll": 10172.750345096976,
+      "maxGradient": 2.850697455869522e-10
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2022-23-sigma0.025-tail1-fold3.json",
+      "zone": "mid",
+      "nll": 3565.1697588437364,
+      "maxGradient": 2.602007498353487e-11
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2022-23-sigma0.025-tail1-fold3.json",
+      "zone": "short",
+      "nll": 11994.46020170661,
+      "maxGradient": 1.9208101775802788e-10
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2022-23-sigma0.025-tail1-fold4.json",
+      "zone": "long",
+      "nll": 9515.583696591913,
+      "maxGradient": 4.920082119497238e-10
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2022-23-sigma0.025-tail1-fold4.json",
+      "zone": "mid",
+      "nll": 3507.5975587075845,
+      "maxGradient": 2.901856532844249e-11
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2022-23-sigma0.025-tail1-fold4.json",
+      "zone": "short",
+      "nll": 11377.65189131245,
+      "maxGradient": 2.657927211657807e-10
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2022-23-sigma0.025-tail1-foldNone.json",
+      "zone": "long",
+      "nll": 47715.826050548974,
+      "maxGradient": 6.656257767190255e-10
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2022-23-sigma0.025-tail1-foldNone.json",
+      "zone": "mid",
+      "nll": 17069.65728457032,
+      "maxGradient": 5.0249582272954285e-11
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2022-23-sigma0.025-tail1-foldNone.json",
+      "zone": "short",
+      "nll": 56458.49774992136,
+      "maxGradient": 1.4841816664556973e-09
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2022-23-sigma0.05-tail0-fold0.json",
+      "zone": "long",
+      "nll": 10032.937705920916,
+      "maxGradient": 1.5981527212716173e-10
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2022-23-sigma0.05-tail0-fold0.json",
+      "zone": "mid",
+      "nll": 3697.05953763107,
+      "maxGradient": 3.013411742358585e-11
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2022-23-sigma0.05-tail0-fold0.json",
+      "zone": "short",
+      "nll": 11784.026327283778,
+      "maxGradient": 5.0874859880423173e-11
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2022-23-sigma0.05-tail0-fold1.json",
+      "zone": "long",
+      "nll": 10083.23840208993,
+      "maxGradient": 1.7572432398083038e-10
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2022-23-sigma0.05-tail0-fold1.json",
+      "zone": "mid",
+      "nll": 3714.332785423973,
+      "maxGradient": 3.8198777474462986e-11
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2022-23-sigma0.05-tail0-fold1.json",
+      "zone": "short",
+      "nll": 11906.475930358032,
+      "maxGradient": 1.6864731833265978e-10
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2022-23-sigma0.05-tail0-fold2.json",
+      "zone": "long",
+      "nll": 8413.998387971104,
+      "maxGradient": 1.3444889646052616e-10
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2022-23-sigma0.05-tail0-fold2.json",
+      "zone": "mid",
+      "nll": 3100.6636270723875,
+      "maxGradient": 4.668265773943858e-11
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2022-23-sigma0.05-tail0-fold2.json",
+      "zone": "short",
+      "nll": 9927.965815506916,
+      "maxGradient": 7.554490366601385e-11
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2022-23-sigma0.05-tail0-fold3.json",
+      "zone": "long",
+      "nll": 10176.999741159301,
+      "maxGradient": 2.1373836034399574e-10
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2022-23-sigma0.05-tail0-fold3.json",
+      "zone": "mid",
+      "nll": 3567.990652445671,
+      "maxGradient": 1.354294454358751e-11
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2022-23-sigma0.05-tail0-fold3.json",
+      "zone": "short",
+      "nll": 11993.823779860722,
+      "maxGradient": 5.367439825931797e-11
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2022-23-sigma0.05-tail0-fold4.json",
+      "zone": "long",
+      "nll": 9518.815807200097,
+      "maxGradient": 1.7047341316356324e-10
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2022-23-sigma0.05-tail0-fold4.json",
+      "zone": "mid",
+      "nll": 3508.8645174546964,
+      "maxGradient": 1.780264824446931e-11
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2022-23-sigma0.05-tail0-fold4.json",
+      "zone": "short",
+      "nll": 11375.360699430406,
+      "maxGradient": 6.770051186322235e-11
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2022-23-sigma0.05-tail0-foldNone.json",
+      "zone": "long",
+      "nll": 47669.41522326765,
+      "maxGradient": 1.922586534419679e-10
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2022-23-sigma0.05-tail0-foldNone.json",
+      "zone": "mid",
+      "nll": 17041.28709836203,
+      "maxGradient": 3.157651917717885e-11
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2022-23-sigma0.05-tail0-foldNone.json",
+      "zone": "short",
+      "nll": 56389.6569098163,
+      "maxGradient": 7.689493486395804e-11
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2022-23-sigma0.05-tail1-fold0.json",
+      "zone": "long",
+      "nll": 10034.161117301122,
+      "maxGradient": 2.473683480275213e-10
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2022-23-sigma0.05-tail1-fold0.json",
+      "zone": "mid",
+      "nll": 3697.321359242861,
+      "maxGradient": 4.9901416332431836e-11
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2022-23-sigma0.05-tail1-fold0.json",
+      "zone": "short",
+      "nll": 11784.78664614732,
+      "maxGradient": 8.142997387494688e-11
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2022-23-sigma0.05-tail1-fold1.json",
+      "zone": "long",
+      "nll": 10084.065030498365,
+      "maxGradient": 9.032419256982394e-11
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2022-23-sigma0.05-tail1-fold1.json",
+      "zone": "mid",
+      "nll": 3714.3391053622777,
+      "maxGradient": 3.035260931483208e-11
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2022-23-sigma0.05-tail1-fold1.json",
+      "zone": "short",
+      "nll": 11908.406847104237,
+      "maxGradient": 3.824141003860859e-11
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2022-23-sigma0.05-tail1-fold2.json",
+      "zone": "long",
+      "nll": 8415.367156498716,
+      "maxGradient": 1.8110313249053434e-10
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2022-23-sigma0.05-tail1-fold2.json",
+      "zone": "mid",
+      "nll": 3101.042393317568,
+      "maxGradient": 1.4864554032101296e-11
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2022-23-sigma0.05-tail1-fold2.json",
+      "zone": "short",
+      "nll": 9927.2585138688,
+      "maxGradient": 6.940581442904659e-11
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2022-23-sigma0.05-tail1-fold3.json",
+      "zone": "long",
+      "nll": 10180.055943337567,
+      "maxGradient": 1.4289724958871375e-10
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2022-23-sigma0.05-tail1-fold3.json",
+      "zone": "mid",
+      "nll": 3568.6629258302337,
+      "maxGradient": 2.388933495467427e-10
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2022-23-sigma0.05-tail1-fold3.json",
+      "zone": "short",
+      "nll": 11994.351423403463,
+      "maxGradient": 6.410871833395504e-11
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2022-23-sigma0.05-tail1-fold4.json",
+      "zone": "long",
+      "nll": 9520.257834777984,
+      "maxGradient": 1.0977885267493548e-10
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2022-23-sigma0.05-tail1-fold4.json",
+      "zone": "mid",
+      "nll": 3509.155527695839,
+      "maxGradient": 5.7912785678126966e-11
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2022-23-sigma0.05-tail1-fold4.json",
+      "zone": "short",
+      "nll": 11374.06869797139,
+      "maxGradient": 4.388844843106199e-11
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2022-23-sigma0.1-tail0-fold0.json",
+      "zone": "long",
+      "nll": 10042.623569425705,
+      "maxGradient": 2.04224193112168e-10
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2022-23-sigma0.1-tail0-fold0.json",
+      "zone": "mid",
+      "nll": 3700.8927053512853,
+      "maxGradient": 8.000711204658728e-12
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2022-23-sigma0.1-tail0-fold0.json",
+      "zone": "short",
+      "nll": 11787.198339939237,
+      "maxGradient": 6.66346977595822e-11
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2022-23-sigma0.1-tail0-fold1.json",
+      "zone": "long",
+      "nll": 10093.83009336272,
+      "maxGradient": 2.8678215358013404e-10
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2022-23-sigma0.1-tail0-fold1.json",
+      "zone": "mid",
+      "nll": 3716.6800723570623,
+      "maxGradient": 1.1894485396624077e-11
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2022-23-sigma0.1-tail0-fold1.json",
+      "zone": "short",
+      "nll": 11920.476389535186,
+      "maxGradient": 7.37827576813288e-11
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2022-23-sigma0.1-tail0-fold2.json",
+      "zone": "long",
+      "nll": 8425.690138466902,
+      "maxGradient": 1.0810197181854164e-10
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2022-23-sigma0.1-tail0-fold2.json",
+      "zone": "mid",
+      "nll": 3104.5596803912736,
+      "maxGradient": 1.4310330698208418e-11
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2022-23-sigma0.1-tail0-fold2.json",
+      "zone": "short",
+      "nll": 9932.430149641928,
+      "maxGradient": 1.21985976875294e-10
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2022-23-sigma0.1-tail0-fold3.json",
+      "zone": "long",
+      "nll": 10193.096696587862,
+      "maxGradient": 1.0929568361461861e-10
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2022-23-sigma0.1-tail0-fold3.json",
+      "zone": "mid",
+      "nll": 3575.362498485661,
+      "maxGradient": 7.212674901779792e-12
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2022-23-sigma0.1-tail0-fold3.json",
+      "zone": "short",
+      "nll": 12000.345691842893,
+      "maxGradient": 3.2528646443097387e-11
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2022-23-sigma0.1-tail0-fold4.json",
+      "zone": "long",
+      "nll": 9530.548949171676,
+      "maxGradient": 1.6655121726216748e-10
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2022-23-sigma0.1-tail0-fold4.json",
+      "zone": "mid",
+      "nll": 3515.0631187155527,
+      "maxGradient": 1.0366818514739862e-11
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2022-23-sigma0.1-tail0-fold4.json",
+      "zone": "short",
+      "nll": 11376.848769630935,
+      "maxGradient": 1.0900436109295697e-10
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2022-23-sigma0.1-tail1-fold0.json",
+      "zone": "long",
+      "nll": 10045.66765066937,
+      "maxGradient": 6.703260169160785e-11
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2022-23-sigma0.1-tail1-fold0.json",
+      "zone": "mid",
+      "nll": 3702.6850211303736,
+      "maxGradient": 2.8137492336099967e-11
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2022-23-sigma0.1-tail1-fold0.json",
+      "zone": "short",
+      "nll": 11791.453495362795,
+      "maxGradient": 1.1196732430107659e-10
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2022-23-sigma0.1-tail1-fold1.json",
+      "zone": "long",
+      "nll": 10097.8702556336,
+      "maxGradient": 1.6625278931314824e-10
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2022-23-sigma0.1-tail1-fold1.json",
+      "zone": "mid",
+      "nll": 3717.4118819136593,
+      "maxGradient": 8.030022632610212e-06
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2022-23-sigma0.1-tail1-fold1.json",
+      "zone": "short",
+      "nll": 11926.592632686214,
+      "maxGradient": 6.003375574437086e-11
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2022-23-sigma0.1-tail1-fold2.json",
+      "zone": "long",
+      "nll": 8429.601986382651,
+      "maxGradient": 2.9481839192158077e-10
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2022-23-sigma0.1-tail1-fold2.json",
+      "zone": "mid",
+      "nll": 3107.1391469512846,
+      "maxGradient": 1.7109869077103212e-11
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2022-23-sigma0.1-tail1-fold2.json",
+      "zone": "short",
+      "nll": 9935.610637581096,
+      "maxGradient": 3.772981926886132e-11
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2022-23-sigma0.1-tail1-fold3.json",
+      "zone": "long",
+      "nll": 10200.366044956916,
+      "maxGradient": 1.3855583347321954e-10
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2022-23-sigma0.1-tail1-fold3.json",
+      "zone": "mid",
+      "nll": 3577.4498434675165,
+      "maxGradient": 1.8118839761882555e-11
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2022-23-sigma0.1-tail1-fold3.json",
+      "zone": "short",
+      "nll": 12003.184023139922,
+      "maxGradient": 4.884270765614929e-11
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2022-23-sigma0.1-tail1-fold4.json",
+      "zone": "long",
+      "nll": 9533.882933740311,
+      "maxGradient": 1.6130741187225794e-10
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2022-23-sigma0.1-tail1-fold4.json",
+      "zone": "mid",
+      "nll": 3517.0768646431216,
+      "maxGradient": 6.0680349633912556e-12
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2022-23-sigma0.1-tail1-fold4.json",
+      "zone": "short",
+      "nll": 11378.681754539979,
+      "maxGradient": 8.878942026058212e-11
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2023-24-sigma0-tail0-fold0.json",
+      "zone": "long",
+      "nll": 9342.672239116848,
+      "maxGradient": 1.595736875970033e-10
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2023-24-sigma0-tail0-fold0.json",
+      "zone": "mid",
+      "nll": 3221.024030324335,
+      "maxGradient": 6.128431095930864e-12
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2023-24-sigma0-tail0-fold0.json",
+      "zone": "short",
+      "nll": 10918.94478859107,
+      "maxGradient": 2.1866952693017083e-11
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2023-24-sigma0-tail0-fold1.json",
+      "zone": "long",
+      "nll": 11057.29348308357,
+      "maxGradient": 9.753620133778895e-11
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2023-24-sigma0-tail0-fold1.json",
+      "zone": "mid",
+      "nll": 3714.0095534095963,
+      "maxGradient": 1.872280108727864e-12
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2023-24-sigma0-tail0-fold1.json",
+      "zone": "short",
+      "nll": 12494.635977594075,
+      "maxGradient": 6.121325668573263e-11
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2023-24-sigma0-tail0-fold2.json",
+      "zone": "long",
+      "nll": 9105.207173934596,
+      "maxGradient": 3.086455535594723e-10
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2023-24-sigma0-tail0-fold2.json",
+      "zone": "mid",
+      "nll": 3175.8447209808373,
+      "maxGradient": 4.60786964140425e-12
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2023-24-sigma0-tail0-fold2.json",
+      "zone": "short",
+      "nll": 10505.158994639985,
+      "maxGradient": 1.9817036900349194e-11
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2023-24-sigma0-tail0-fold3.json",
+      "zone": "long",
+      "nll": 10053.014202041475,
+      "maxGradient": 6.569678134837886e-11
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2023-24-sigma0-tail0-fold3.json",
+      "zone": "mid",
+      "nll": 3244.434157236271,
+      "maxGradient": 5.524469770534779e-12
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2023-24-sigma0-tail0-fold3.json",
+      "zone": "short",
+      "nll": 11188.944255568513,
+      "maxGradient": 3.510791657390655e-11
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2023-24-sigma0-tail0-fold4.json",
+      "zone": "long",
+      "nll": 9573.033855920406,
+      "maxGradient": 1.922018100231071e-11
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2023-24-sigma0-tail0-fold4.json",
+      "zone": "mid",
+      "nll": 3158.0908228473945,
+      "maxGradient": 1.5926815422062646e-11
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2023-24-sigma0-tail0-fold4.json",
+      "zone": "short",
+      "nll": 11276.019391767933,
+      "maxGradient": 3.9960923459148034e-11
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2023-24-sigma0-tail0-foldNone.json",
+      "zone": "long",
+      "nll": 48704.41424833666,
+      "maxGradient": 6.048139766789973e-11
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2023-24-sigma0-tail0-foldNone.json",
+      "zone": "mid",
+      "nll": 16024.844562390277,
+      "maxGradient": 7.212008767965017e-12
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2023-24-sigma0-tail0-foldNone.json",
+      "zone": "short",
+      "nll": 55887.69322969795,
+      "maxGradient": 2.8400393148331204e-11
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2023-24-sigma0.025-tail0-fold0.json",
+      "zone": "long",
+      "nll": 9341.898967195582,
+      "maxGradient": 1.8178525351686403e-10
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2023-24-sigma0.025-tail0-fold0.json",
+      "zone": "mid",
+      "nll": 3221.46839529543,
+      "maxGradient": 2.9601210371765774e-11
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2023-24-sigma0.025-tail0-fold0.json",
+      "zone": "short",
+      "nll": 10912.05761567896,
+      "maxGradient": 9.778489129530499e-11
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2023-24-sigma0.025-tail0-fold1.json",
+      "zone": "long",
+      "nll": 11057.591366518363,
+      "maxGradient": 2.3355539724434493e-10
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2023-24-sigma0.025-tail0-fold1.json",
+      "zone": "mid",
+      "nll": 3714.565599125202,
+      "maxGradient": 1.3990586467116373e-11
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2023-24-sigma0.025-tail0-fold1.json",
+      "zone": "short",
+      "nll": 12483.770110964655,
+      "maxGradient": 9.633538411435438e-11
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2023-24-sigma0.025-tail0-fold2.json",
+      "zone": "long",
+      "nll": 9104.906052028256,
+      "maxGradient": 5.394298341343529e-10
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2023-24-sigma0.025-tail0-fold2.json",
+      "zone": "mid",
+      "nll": 3176.000503492057,
+      "maxGradient": 3.338485043968831e-11
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2023-24-sigma0.025-tail0-fold2.json",
+      "zone": "short",
+      "nll": 10498.062669340976,
+      "maxGradient": 6.973266408749623e-11
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2023-24-sigma0.025-tail0-fold3.json",
+      "zone": "long",
+      "nll": 10051.784025446834,
+      "maxGradient": 1.475086719437968e-10
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2023-24-sigma0.025-tail0-fold3.json",
+      "zone": "mid",
+      "nll": 3244.1741315098566,
+      "maxGradient": 4.409628218127182e-11
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2023-24-sigma0.025-tail0-fold3.json",
+      "zone": "short",
+      "nll": 11177.564519742857,
+      "maxGradient": 1.5423751165144495e-10
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2023-24-sigma0.025-tail0-fold4.json",
+      "zone": "long",
+      "nll": 9571.406181054108,
+      "maxGradient": 2.2851764924780582e-10
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2023-24-sigma0.025-tail0-fold4.json",
+      "zone": "mid",
+      "nll": 3157.7543536965936,
+      "maxGradient": 3.1732838579046074e-11
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2023-24-sigma0.025-tail0-fold4.json",
+      "zone": "short",
+      "nll": 11265.896457437866,
+      "maxGradient": 8.068923307291698e-11
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2023-24-sigma0.025-tail1-fold0.json",
+      "zone": "long",
+      "nll": 9341.917646074846,
+      "maxGradient": 2.1007195982747362e-10
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2023-24-sigma0.025-tail1-fold0.json",
+      "zone": "mid",
+      "nll": 3221.511006425292,
+      "maxGradient": 7.270273272297345e-11
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2023-24-sigma0.025-tail1-fold0.json",
+      "zone": "short",
+      "nll": 10910.46379711045,
+      "maxGradient": 1.2514789204942645e-10
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2023-24-sigma0.025-tail1-fold1.json",
+      "zone": "long",
+      "nll": 11058.185696553262,
+      "maxGradient": 3.0451019483734854e-10
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2023-24-sigma0.025-tail1-fold1.json",
+      "zone": "mid",
+      "nll": 3714.6228309188873,
+      "maxGradient": 2.2950530365051236e-11
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2023-24-sigma0.025-tail1-fold1.json",
+      "zone": "short",
+      "nll": 12481.550412204606,
+      "maxGradient": 8.481748636768316e-11
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2023-24-sigma0.025-tail1-fold2.json",
+      "zone": "long",
+      "nll": 9104.96824630583,
+      "maxGradient": 1.5072032510943245e-10
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2023-24-sigma0.025-tail1-fold2.json",
+      "zone": "mid",
+      "nll": 3176.0337836180915,
+      "maxGradient": 4.737543690680468e-11
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2023-24-sigma0.025-tail1-fold2.json",
+      "zone": "short",
+      "nll": 10496.356723179164,
+      "maxGradient": 3.0875213496983633e-10
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2023-24-sigma0.025-tail1-fold3.json",
+      "zone": "long",
+      "nll": 10051.678104831948,
+      "maxGradient": 3.5218761240685126e-10
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2023-24-sigma0.025-tail1-fold3.json",
+      "zone": "mid",
+      "nll": 3244.172940994101,
+      "maxGradient": 3.949907068090397e-11
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2023-24-sigma0.025-tail1-fold3.json",
+      "zone": "short",
+      "nll": 11175.65130051262,
+      "maxGradient": 4.0690650848773657e-10
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2023-24-sigma0.025-tail1-fold4.json",
+      "zone": "long",
+      "nll": 9571.438751861366,
+      "maxGradient": 9.972183079298702e-10
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2023-24-sigma0.025-tail1-fold4.json",
+      "zone": "mid",
+      "nll": 3157.7531760278134,
+      "maxGradient": 2.6865620839089388e-11
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2023-24-sigma0.025-tail1-fold4.json",
+      "zone": "short",
+      "nll": 11263.240539503733,
+      "maxGradient": 6.834710575276404e-10
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2023-24-sigma0.025-tail1-foldNone.json",
+      "zone": "long",
+      "nll": 48658.636885150874,
+      "maxGradient": 3.389857283764286e-10
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2023-24-sigma0.025-tail1-foldNone.json",
+      "zone": "mid",
+      "nll": 16010.117789295397,
+      "maxGradient": 6.631140081481135e-11
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2023-24-sigma0.025-tail1-foldNone.json",
+      "zone": "short",
+      "nll": 55766.81929167484,
+      "maxGradient": 1.3998402437209734e-10
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2023-24-sigma0.05-tail0-fold0.json",
+      "zone": "long",
+      "nll": 9342.409155296325,
+      "maxGradient": 1.7540457974973833e-10
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2023-24-sigma0.05-tail0-fold0.json",
+      "zone": "mid",
+      "nll": 3223.0446971822184,
+      "maxGradient": 1.7561063714310876e-11
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2023-24-sigma0.05-tail0-fold0.json",
+      "zone": "short",
+      "nll": 10910.517863770829,
+      "maxGradient": 4.107647555429139e-11
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2023-24-sigma0.05-tail0-fold1.json",
+      "zone": "long",
+      "nll": 11061.031276671281,
+      "maxGradient": 4.113118734494492e-10
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2023-24-sigma0.05-tail0-fold1.json",
+      "zone": "mid",
+      "nll": 3716.0381665825744,
+      "maxGradient": 2.62492250158175e-11
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2023-24-sigma0.05-tail0-fold1.json",
+      "zone": "short",
+      "nll": 12478.779184530988,
+      "maxGradient": 3.490896460789372e-11
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2023-24-sigma0.05-tail0-fold2.json",
+      "zone": "long",
+      "nll": 9107.454353643705,
+      "maxGradient": 2.0050094917678507e-10
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2023-24-sigma0.05-tail0-fold2.json",
+      "zone": "mid",
+      "nll": 3177.3339682447713,
+      "maxGradient": 1.4455991959039238e-11
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2023-24-sigma0.05-tail0-fold2.json",
+      "zone": "short",
+      "nll": 10494.163962751914,
+      "maxGradient": 6.150457920739427e-11
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2023-24-sigma0.05-tail0-fold3.json",
+      "zone": "long",
+      "nll": 10051.755644051347,
+      "maxGradient": 1.532640681034536e-10
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2023-24-sigma0.05-tail0-fold3.json",
+      "zone": "mid",
+      "nll": 3244.3478618523395,
+      "maxGradient": 3.6003200420964276e-11
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2023-24-sigma0.05-tail0-fold3.json",
+      "zone": "short",
+      "nll": 11171.293041887177,
+      "maxGradient": 7.603517815368832e-11
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2023-24-sigma0.05-tail0-fold4.json",
+      "zone": "long",
+      "nll": 9572.69020186175,
+      "maxGradient": 1.0872724942601053e-10
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2023-24-sigma0.05-tail0-fold4.json",
+      "zone": "mid",
+      "nll": 3158.0077330786635,
+      "maxGradient": 2.7743141117753112e-11
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2023-24-sigma0.05-tail0-fold4.json",
+      "zone": "short",
+      "nll": 11259.916461289115,
+      "maxGradient": 6.181721801112872e-11
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2023-24-sigma0.05-tail0-foldNone.json",
+      "zone": "long",
+      "nll": 48607.460364144994,
+      "maxGradient": 2.417834821244469e-10
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2023-24-sigma0.05-tail0-foldNone.json",
+      "zone": "mid",
+      "nll": 15983.805316606096,
+      "maxGradient": 3.61808361049043e-11
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2023-24-sigma0.05-tail0-foldNone.json",
+      "zone": "short",
+      "nll": 55699.93674322403,
+      "maxGradient": 2.5929125513357576e-10
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2023-24-sigma0.05-tail1-fold0.json",
+      "zone": "long",
+      "nll": 9342.95865377977,
+      "maxGradient": 1.517292957942118e-10
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2023-24-sigma0.05-tail1-fold0.json",
+      "zone": "mid",
+      "nll": 3223.3943949597788,
+      "maxGradient": 9.546319290620886e-11
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2023-24-sigma0.05-tail1-fold0.json",
+      "zone": "short",
+      "nll": 10910.697573394677,
+      "maxGradient": 7.107914257176162e-11
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2023-24-sigma0.05-tail1-fold1.json",
+      "zone": "long",
+      "nll": 11062.67879991042,
+      "maxGradient": 2.8464341994549613e-10
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2023-24-sigma0.05-tail1-fold1.json",
+      "zone": "mid",
+      "nll": 3716.411389613826,
+      "maxGradient": 3.128874936919601e-11
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2023-24-sigma0.05-tail1-fold1.json",
+      "zone": "short",
+      "nll": 12479.201790844862,
+      "maxGradient": 6.510703087769798e-11
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2023-24-sigma0.05-tail1-fold2.json",
+      "zone": "long",
+      "nll": 9108.319830388538,
+      "maxGradient": 8.446932042716071e-11
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2023-24-sigma0.05-tail1-fold2.json",
+      "zone": "mid",
+      "nll": 3177.815682792034,
+      "maxGradient": 1.978150976356119e-11
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2023-24-sigma0.05-tail1-fold2.json",
+      "zone": "short",
+      "nll": 10494.374128766172,
+      "maxGradient": 1.0306777653568133e-10
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2023-24-sigma0.05-tail1-fold3.json",
+      "zone": "long",
+      "nll": 10051.655421907508,
+      "maxGradient": 1.1888801054737996e-10
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2023-24-sigma0.05-tail1-fold3.json",
+      "zone": "mid",
+      "nll": 3244.45518506316,
+      "maxGradient": 1.6910561839722504e-10
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2023-24-sigma0.05-tail1-fold3.json",
+      "zone": "short",
+      "nll": 11171.03090801865,
+      "maxGradient": 4.425260158313904e-11
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2023-24-sigma0.05-tail1-fold4.json",
+      "zone": "long",
+      "nll": 9574.696918547263,
+      "maxGradient": 4.0261483036374557e-10
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2023-24-sigma0.05-tail1-fold4.json",
+      "zone": "mid",
+      "nll": 3158.151770473591,
+      "maxGradient": 1.5905499139989843e-11
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2023-24-sigma0.05-tail1-fold4.json",
+      "zone": "short",
+      "nll": 11258.964980672108,
+      "maxGradient": 3.5569769352150615e-11
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2023-24-sigma0.1-tail0-fold0.json",
+      "zone": "long",
+      "nll": 9347.48876252052,
+      "maxGradient": 1.6694912119419314e-10
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2023-24-sigma0.1-tail0-fold0.json",
+      "zone": "mid",
+      "nll": 3227.746295068558,
+      "maxGradient": 1.9259260852777516e-11
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2023-24-sigma0.1-tail0-fold0.json",
+      "zone": "short",
+      "nll": 10919.872796003008,
+      "maxGradient": 3.490896460789372e-11
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2023-24-sigma0.1-tail0-fold1.json",
+      "zone": "long",
+      "nll": 11070.883402031737,
+      "maxGradient": 1.4641443613072624e-10
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2023-24-sigma0.1-tail0-fold1.json",
+      "zone": "mid",
+      "nll": 3719.2675357415096,
+      "maxGradient": 8.741066087128435e-06
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2023-24-sigma0.1-tail0-fold1.json",
+      "zone": "short",
+      "nll": 12486.54586876088,
+      "maxGradient": 9.103473530558404e-11
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2023-24-sigma0.1-tail0-fold2.json",
+      "zone": "long",
+      "nll": 9117.405778987508,
+      "maxGradient": 1.5870682545937598e-10
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2023-24-sigma0.1-tail0-fold2.json",
+      "zone": "mid",
+      "nll": 3182.3994743015646,
+      "maxGradient": 1.5567991340503795e-11
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2023-24-sigma0.1-tail0-fold2.json",
+      "zone": "short",
+      "nll": 10496.968260235019,
+      "maxGradient": 4.461497837837669e-11
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2023-24-sigma0.1-tail0-fold3.json",
+      "zone": "long",
+      "nll": 10055.711140884767,
+      "maxGradient": 1.2036593943776097e-10
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2023-24-sigma0.1-tail0-fold3.json",
+      "zone": "mid",
+      "nll": 3247.0292348645385,
+      "maxGradient": 8.810729923425242e-12
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2023-24-sigma0.1-tail0-fold3.json",
+      "zone": "short",
+      "nll": 11175.449815224523,
+      "maxGradient": 5.447731155072688e-11
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2023-24-sigma0.1-tail0-fold4.json",
+      "zone": "long",
+      "nll": 9582.365064086844,
+      "maxGradient": 1.1272049960098229e-10
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2023-24-sigma0.1-tail0-fold4.json",
+      "zone": "mid",
+      "nll": 3161.632569195544,
+      "maxGradient": 3.795008751694695e-11
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2023-24-sigma0.1-tail0-fold4.json",
+      "zone": "short",
+      "nll": 11262.42913944186,
+      "maxGradient": 5.2310156206658576e-11
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2023-24-sigma0.1-tail1-fold0.json",
+      "zone": "long",
+      "nll": 9349.60948139921,
+      "maxGradient": 1.1796430499089183e-10
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2023-24-sigma0.1-tail1-fold0.json",
+      "zone": "mid",
+      "nll": 3229.2103906563916,
+      "maxGradient": 2.2000179455972102e-11
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2023-24-sigma0.1-tail1-fold0.json",
+      "zone": "short",
+      "nll": 10924.143675603562,
+      "maxGradient": 6.936318186490098e-11
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2023-24-sigma0.1-tail1-fold1.json",
+      "zone": "long",
+      "nll": 11074.600139808945,
+      "maxGradient": 2.191455905631301e-10
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2023-24-sigma0.1-tail1-fold1.json",
+      "zone": "mid",
+      "nll": 3720.3371441012114,
+      "maxGradient": 7.890577080615913e-12
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2023-24-sigma0.1-tail1-fold1.json",
+      "zone": "short",
+      "nll": 12491.940707340513,
+      "maxGradient": 6.301092980720568e-11
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2023-24-sigma0.1-tail1-fold2.json",
+      "zone": "long",
+      "nll": 9120.316975033369,
+      "maxGradient": 1.0770406788651599e-10
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2023-24-sigma0.1-tail1-fold2.json",
+      "zone": "mid",
+      "nll": 3184.8079975959345,
+      "maxGradient": 1.0322409593754855e-11
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2023-24-sigma0.1-tail1-fold2.json",
+      "zone": "short",
+      "nll": 10499.909355331736,
+      "maxGradient": 3.137046178380842e-11
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2023-24-sigma0.1-tail1-fold3.json",
+      "zone": "long",
+      "nll": 10057.235066790585,
+      "maxGradient": 6.912159733474255e-11
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2023-24-sigma0.1-tail1-fold3.json",
+      "zone": "mid",
+      "nll": 3248.430907739645,
+      "maxGradient": 8.889137906642475e-06
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2023-24-sigma0.1-tail1-fold3.json",
+      "zone": "short",
+      "nll": 11178.704178826996,
+      "maxGradient": 2.9039881610515295e-11
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2023-24-sigma0.1-tail1-fold4.json",
+      "zone": "long",
+      "nll": 9587.32980415547,
+      "maxGradient": 1.6287060589093016e-10
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2023-24-sigma0.1-tail1-fold4.json",
+      "zone": "mid",
+      "nll": 3163.381822512491,
+      "maxGradient": 2.6719959578258567e-11
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2023-24-sigma0.1-tail1-fold4.json",
+      "zone": "short",
+      "nll": 11266.119324838906,
+      "maxGradient": 7.347455976969286e-11
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2024-25-sigma0-tail0-fold0.json",
+      "zone": "long",
+      "nll": 9888.680143672918,
+      "maxGradient": 3.5697667044587433e-11
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2024-25-sigma0-tail0-fold0.json",
+      "zone": "mid",
+      "nll": 2683.1496098989655,
+      "maxGradient": 5.044853423896711e-12
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2024-25-sigma0-tail0-fold0.json",
+      "zone": "short",
+      "nll": 10594.090350353934,
+      "maxGradient": 9.708145398690249e-11
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2024-25-sigma0-tail0-fold1.json",
+      "zone": "long",
+      "nll": 10344.298935090597,
+      "maxGradient": 1.0479439538357838e-10
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2024-25-sigma0-tail0-fold1.json",
+      "zone": "mid",
+      "nll": 2788.3886259961046,
+      "maxGradient": 3.504752044136694e-11
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2024-25-sigma0-tail0-fold1.json",
+      "zone": "short",
+      "nll": 11060.608725172986,
+      "maxGradient": 1.0088285762321902e-10
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2024-25-sigma0-tail0-fold2.json",
+      "zone": "long",
+      "nll": 10827.01799284339,
+      "maxGradient": 8.053504529925704e-10
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2024-25-sigma0-tail0-fold2.json",
+      "zone": "mid",
+      "nll": 2951.4430620743337,
+      "maxGradient": 9.351135143012557e-06
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2024-25-sigma0-tail0-fold2.json",
+      "zone": "short",
+      "nll": 11446.70575081593,
+      "maxGradient": 8.569145393266808e-12
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2024-25-sigma0-tail0-fold3.json",
+      "zone": "long",
+      "nll": 11192.447247384209,
+      "maxGradient": 5.971401151327882e-11
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2024-25-sigma0-tail0-fold3.json",
+      "zone": "mid",
+      "nll": 3044.5373351217677,
+      "maxGradient": 9.483259781659092e-06
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2024-25-sigma0-tail0-fold3.json",
+      "zone": "short",
+      "nll": 11900.929522978884,
+      "maxGradient": 3.731059905476286e-11
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2024-25-sigma0-tail0-fold4.json",
+      "zone": "long",
+      "nll": 11397.794859228026,
+      "maxGradient": 3.461124720161024e-10
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2024-25-sigma0-tail0-fold4.json",
+      "zone": "mid",
+      "nll": 3095.4667684746937,
+      "maxGradient": 1.6893153542696382e-11
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2024-25-sigma0-tail0-fold4.json",
+      "zone": "short",
+      "nll": 11968.004642363747,
+      "maxGradient": 3.5146996424373356e-11
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2024-25-sigma0-tail0-foldNone.json",
+      "zone": "long",
+      "nll": 53165.189082887286,
+      "maxGradient": 1.8241053112433292e-10
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2024-25-sigma0-tail0-foldNone.json",
+      "zone": "mid",
+      "nll": 14052.895197674829,
+      "maxGradient": 2.049915792667889e-11
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2024-25-sigma0-tail0-foldNone.json",
+      "zone": "short",
+      "nll": 56472.337181548355,
+      "maxGradient": 2.05702122002549e-11
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2024-25-sigma0.025-tail0-fold0.json",
+      "zone": "long",
+      "nll": 9890.66490634473,
+      "maxGradient": 2.8536817353597144e-10
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2024-25-sigma0.025-tail0-fold0.json",
+      "zone": "mid",
+      "nll": 2682.1107026251,
+      "maxGradient": 2.3803181647963356e-11
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2024-25-sigma0.025-tail0-fold0.json",
+      "zone": "short",
+      "nll": 10587.922760400332,
+      "maxGradient": 7.640821308996237e-11
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2024-25-sigma0.025-tail0-fold1.json",
+      "zone": "long",
+      "nll": 10347.300845832797,
+      "maxGradient": 2.857163394764939e-10
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2024-25-sigma0.025-tail0-fold1.json",
+      "zone": "mid",
+      "nll": 2787.284962581265,
+      "maxGradient": 4.001776687800884e-11
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2024-25-sigma0.025-tail0-fold1.json",
+      "zone": "short",
+      "nll": 11052.974611284535,
+      "maxGradient": 1.1335998806316638e-10
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2024-25-sigma0.025-tail0-fold2.json",
+      "zone": "long",
+      "nll": 10827.657448851907,
+      "maxGradient": 1.9825563413178315e-10
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2024-25-sigma0.025-tail0-fold2.json",
+      "zone": "mid",
+      "nll": 2949.8187883477826,
+      "maxGradient": 2.900435447372729e-11
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2024-25-sigma0.025-tail0-fold2.json",
+      "zone": "short",
+      "nll": 11438.927057692494,
+      "maxGradient": 3.462403697085392e-10
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2024-25-sigma0.025-tail0-fold3.json",
+      "zone": "long",
+      "nll": 11193.360800872608,
+      "maxGradient": 2.693596456992964e-10
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2024-25-sigma0.025-tail0-fold3.json",
+      "zone": "mid",
+      "nll": 3042.84369736388,
+      "maxGradient": 2.0874801887060812e-11
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2024-25-sigma0.025-tail0-fold3.json",
+      "zone": "short",
+      "nll": 11890.935321390702,
+      "maxGradient": 1.0303580211257213e-10
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2024-25-sigma0.025-tail0-fold4.json",
+      "zone": "long",
+      "nll": 11397.862008171855,
+      "maxGradient": 3.4020075645457837e-10
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2024-25-sigma0.025-tail0-fold4.json",
+      "zone": "mid",
+      "nll": 3094.259574330086,
+      "maxGradient": 6.553335651915404e-11
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2024-25-sigma0.025-tail0-fold4.json",
+      "zone": "short",
+      "nll": 11959.621118399478,
+      "maxGradient": 8.433076459368749e-11
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2024-25-sigma0.025-tail1-fold0.json",
+      "zone": "long",
+      "nll": 9891.131981657276,
+      "maxGradient": 2.0882851003989344e-10
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2024-25-sigma0.025-tail1-fold0.json",
+      "zone": "mid",
+      "nll": 2682.053022056483,
+      "maxGradient": 3.998934516857844e-11
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2024-25-sigma0.025-tail1-fold0.json",
+      "zone": "short",
+      "nll": 10587.155780904352,
+      "maxGradient": 3.7539038544309733e-10
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2024-25-sigma0.025-tail1-fold1.json",
+      "zone": "long",
+      "nll": 10347.921221370823,
+      "maxGradient": 1.4287948602031975e-10
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2024-25-sigma0.025-tail1-fold1.json",
+      "zone": "mid",
+      "nll": 2787.196555599697,
+      "maxGradient": 7.66089414128146e-11
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2024-25-sigma0.025-tail1-fold1.json",
+      "zone": "short",
+      "nll": 11051.989417530758,
+      "maxGradient": 3.036007001355756e-10
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2024-25-sigma0.025-tail1-fold2.json",
+      "zone": "long",
+      "nll": 10827.747336384211,
+      "maxGradient": 2.6994584345629846e-10
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2024-25-sigma0.025-tail1-fold2.json",
+      "zone": "mid",
+      "nll": 2949.755398792536,
+      "maxGradient": 6.747313818777911e-11
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2024-25-sigma0.025-tail1-fold2.json",
+      "zone": "short",
+      "nll": 11437.79546382492,
+      "maxGradient": 3.2006042260945833e-10
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2024-25-sigma0.025-tail1-fold3.json",
+      "zone": "long",
+      "nll": 11193.54433045187,
+      "maxGradient": 9.937473066656821e-10
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2024-25-sigma0.025-tail1-fold3.json",
+      "zone": "mid",
+      "nll": 3042.760249023273,
+      "maxGradient": 1.2912670932507808e-11
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2024-25-sigma0.025-tail1-fold3.json",
+      "zone": "short",
+      "nll": 11889.298938005186,
+      "maxGradient": 3.033733264601324e-10
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2024-25-sigma0.025-tail1-fold4.json",
+      "zone": "long",
+      "nll": 11398.210205702428,
+      "maxGradient": 1.033463092880993e-09
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2024-25-sigma0.025-tail1-fold4.json",
+      "zone": "mid",
+      "nll": 3094.211487531772,
+      "maxGradient": 6.986056177993305e-11
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2024-25-sigma0.025-tail1-fold4.json",
+      "zone": "short",
+      "nll": 11958.503015176457,
+      "maxGradient": 1.0681588946681586e-10
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2024-25-sigma0.025-tail1-foldNone.json",
+      "zone": "long",
+      "nll": 53126.37931565693,
+      "maxGradient": 3.651052793429699e-10
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2024-25-sigma0.025-tail1-foldNone.json",
+      "zone": "mid",
+      "nll": 14030.169641098006,
+      "maxGradient": 1.1818457323897746e-10
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2024-25-sigma0.025-tail1-foldNone.json",
+      "zone": "short",
+      "nll": 56362.92600855588,
+      "maxGradient": 4.862741320721398e-10
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2024-25-sigma0.05-tail0-fold0.json",
+      "zone": "long",
+      "nll": 9895.641151750766,
+      "maxGradient": 1.6109424905152991e-10
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2024-25-sigma0.05-tail0-fold0.json",
+      "zone": "mid",
+      "nll": 2681.236463552775,
+      "maxGradient": 2.191313797084149e-11
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2024-25-sigma0.05-tail0-fold0.json",
+      "zone": "short",
+      "nll": 10585.07723081339,
+      "maxGradient": 1.1110046216344927e-10
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2024-25-sigma0.05-tail0-fold1.json",
+      "zone": "long",
+      "nll": 10353.199732431078,
+      "maxGradient": 1.7619328218643204e-10
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2024-25-sigma0.05-tail0-fold1.json",
+      "zone": "mid",
+      "nll": 2786.5871151389715,
+      "maxGradient": 3.2294167340296553e-11
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2024-25-sigma0.05-tail0-fold1.json",
+      "zone": "short",
+      "nll": 11049.963616204868,
+      "maxGradient": 5.758948873335612e-11
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2024-25-sigma0.05-tail0-fold2.json",
+      "zone": "long",
+      "nll": 10829.985002500984,
+      "maxGradient": 1.7972467958315974e-10
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2024-25-sigma0.05-tail0-fold2.json",
+      "zone": "mid",
+      "nll": 2948.2328290919268,
+      "maxGradient": 2.6275870368408505e-11
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2024-25-sigma0.05-tail0-fold2.json",
+      "zone": "short",
+      "nll": 11433.981339515974,
+      "maxGradient": 3.2798652682686225e-11
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2024-25-sigma0.05-tail0-fold3.json",
+      "zone": "long",
+      "nll": 11198.051473241472,
+      "maxGradient": 4.770726036440465e-10
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2024-25-sigma0.05-tail0-fold3.json",
+      "zone": "mid",
+      "nll": 3041.0371756684926,
+      "maxGradient": 1.9028334463655483e-11
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2024-25-sigma0.05-tail0-fold3.json",
+      "zone": "short",
+      "nll": 11884.64564128709,
+      "maxGradient": 3.9818814911996014e-11
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2024-25-sigma0.05-tail0-fold4.json",
+      "zone": "long",
+      "nll": 11401.099677588116,
+      "maxGradient": 1.4775736190131283e-10
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2024-25-sigma0.05-tail0-fold4.json",
+      "zone": "mid",
+      "nll": 3093.501840589932,
+      "maxGradient": 1.0054179711005418e-11
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2024-25-sigma0.05-tail0-fold4.json",
+      "zone": "short",
+      "nll": 11956.56423377421,
+      "maxGradient": 5.2459370181168197e-11
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2024-25-sigma0.05-tail0-foldNone.json",
+      "zone": "long",
+      "nll": 53076.47733462954,
+      "maxGradient": 2.4371971107939316e-10
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2024-25-sigma0.05-tail0-foldNone.json",
+      "zone": "mid",
+      "nll": 13995.26535894861,
+      "maxGradient": 1.4928502878319705e-11
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2024-25-sigma0.05-tail0-foldNone.json",
+      "zone": "short",
+      "nll": 56291.468360615385,
+      "maxGradient": 8.149925179168349e-11
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2024-25-sigma0.05-tail1-fold0.json",
+      "zone": "long",
+      "nll": 9897.562873557119,
+      "maxGradient": 1.8560797343525337e-10
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2024-25-sigma0.05-tail1-fold0.json",
+      "zone": "mid",
+      "nll": 2681.079882905015,
+      "maxGradient": 1.878674993349705e-11
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2024-25-sigma0.05-tail1-fold0.json",
+      "zone": "short",
+      "nll": 10586.600374076486,
+      "maxGradient": 3.8188119333426584e-11
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2024-25-sigma0.05-tail1-fold1.json",
+      "zone": "long",
+      "nll": 10355.236007025633,
+      "maxGradient": 1.9667822925839573e-10
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2024-25-sigma0.05-tail1-fold1.json",
+      "zone": "mid",
+      "nll": 2786.4862121517845,
+      "maxGradient": 7.684874958613364e-11
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2024-25-sigma0.05-tail1-fold1.json",
+      "zone": "short",
+      "nll": 11050.601251164233,
+      "maxGradient": 8.629363890122477e-11
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2024-25-sigma0.05-tail1-fold2.json",
+      "zone": "long",
+      "nll": 10830.665210801808,
+      "maxGradient": 2.106705920823515e-10
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2024-25-sigma0.05-tail1-fold2.json",
+      "zone": "mid",
+      "nll": 2948.2028398671164,
+      "maxGradient": 2.2218671347218333e-11
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2024-25-sigma0.05-tail1-fold2.json",
+      "zone": "short",
+      "nll": 11432.96201308086,
+      "maxGradient": 5.498179689311655e-11
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2024-25-sigma0.05-tail1-fold3.json",
+      "zone": "long",
+      "nll": 11199.808365465073,
+      "maxGradient": 3.072671006520977e-10
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2024-25-sigma0.05-tail1-fold3.json",
+      "zone": "mid",
+      "nll": 3040.9676888693075,
+      "maxGradient": 2.5970336992031662e-11
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2024-25-sigma0.05-tail1-fold3.json",
+      "zone": "short",
+      "nll": 11883.78030511622,
+      "maxGradient": 6.393996443421202e-11
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2024-25-sigma0.05-tail1-fold4.json",
+      "zone": "long",
+      "nll": 11403.214959294095,
+      "maxGradient": 9.681500046099245e-11
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2024-25-sigma0.05-tail1-fold4.json",
+      "zone": "mid",
+      "nll": 3093.7055913114314,
+      "maxGradient": 8.377831761663401e-11
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2024-25-sigma0.05-tail1-fold4.json",
+      "zone": "short",
+      "nll": 11957.562339197706,
+      "maxGradient": 3.0034641440579435e-11
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2024-25-sigma0.1-tail0-fold0.json",
+      "zone": "long",
+      "nll": 9907.678819065419,
+      "maxGradient": 1.8283685676578898e-10
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2024-25-sigma0.1-tail0-fold0.json",
+      "zone": "mid",
+      "nll": 2683.16815219948,
+      "maxGradient": 1.4068746168049984e-11
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2024-25-sigma0.1-tail0-fold0.json",
+      "zone": "short",
+      "nll": 10590.844319897875,
+      "maxGradient": 5.2864379540551454e-11
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2024-25-sigma0.1-tail0-fold1.json",
+      "zone": "long",
+      "nll": 10366.164335525387,
+      "maxGradient": 2.035136503764079e-10
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2024-25-sigma0.1-tail0-fold1.json",
+      "zone": "mid",
+      "nll": 2789.654677780587,
+      "maxGradient": 1.2938983218191424e-11
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2024-25-sigma0.1-tail0-fold1.json",
+      "zone": "short",
+      "nll": 11055.616756491196,
+      "maxGradient": 4.53823645329976e-11
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2024-25-sigma0.1-tail0-fold2.json",
+      "zone": "long",
+      "nll": 10836.783496875163,
+      "maxGradient": 5.395115465489653e-10
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2024-25-sigma0.1-tail0-fold2.json",
+      "zone": "mid",
+      "nll": 2949.8990954618985,
+      "maxGradient": 2.389555220361217e-11
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2024-25-sigma0.1-tail0-fold2.json",
+      "zone": "short",
+      "nll": 11433.935980482436,
+      "maxGradient": 8.984812893686467e-11
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2024-25-sigma0.1-tail0-fold3.json",
+      "zone": "long",
+      "nll": 11211.900367729344,
+      "maxGradient": 2.418616418253805e-10
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2024-25-sigma0.1-tail0-fold3.json",
+      "zone": "mid",
+      "nll": 3042.8212257082837,
+      "maxGradient": 1.4239276424632408e-11
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2024-25-sigma0.1-tail0-fold3.json",
+      "zone": "short",
+      "nll": 11888.567262738703,
+      "maxGradient": 8.647305094200419e-11
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2024-25-sigma0.1-tail0-fold4.json",
+      "zone": "long",
+      "nll": 11413.764223900336,
+      "maxGradient": 2.6333424330005073e-10
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2024-25-sigma0.1-tail0-fold4.json",
+      "zone": "mid",
+      "nll": 3096.66988745581,
+      "maxGradient": 1.9888091173925204e-11
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2024-25-sigma0.1-tail0-fold4.json",
+      "zone": "short",
+      "nll": 11966.005574104869,
+      "maxGradient": 6.715339395668707e-11
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2024-25-sigma0.1-tail1-fold0.json",
+      "zone": "long",
+      "nll": 9911.719444597731,
+      "maxGradient": 1.9406343199079856e-10
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2024-25-sigma0.1-tail1-fold0.json",
+      "zone": "mid",
+      "nll": 2683.7680722037803,
+      "maxGradient": 1.2491341294662561e-11
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2024-25-sigma0.1-tail1-fold0.json",
+      "zone": "short",
+      "nll": 10595.934944501803,
+      "maxGradient": 2.1739055000580265e-11
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2024-25-sigma0.1-tail1-fold1.json",
+      "zone": "long",
+      "nll": 10370.546318719324,
+      "maxGradient": 1.6153478554770118e-10
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2024-25-sigma0.1-tail1-fold1.json",
+      "zone": "mid",
+      "nll": 2791.429775058385,
+      "maxGradient": 7.149809837514454e-06
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2024-25-sigma0.1-tail1-fold1.json",
+      "zone": "short",
+      "nll": 11059.521174606272,
+      "maxGradient": 2.7931434942729538e-11
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2024-25-sigma0.1-tail1-fold2.json",
+      "zone": "long",
+      "nll": 10838.97761514089,
+      "maxGradient": 1.2601830690073257e-10
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2024-25-sigma0.1-tail1-fold2.json",
+      "zone": "mid",
+      "nll": 2950.94823281347,
+      "maxGradient": 6.643574579356937e-12
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2024-25-sigma0.1-tail1-fold2.json",
+      "zone": "short",
+      "nll": 11434.979132575962,
+      "maxGradient": 2.9814373192493804e-11
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2024-25-sigma0.1-tail1-fold3.json",
+      "zone": "long",
+      "nll": 11216.90627338948,
+      "maxGradient": 1.553672746013035e-10
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2024-25-sigma0.1-tail1-fold3.json",
+      "zone": "mid",
+      "nll": 3044.2769051316623,
+      "maxGradient": 6.66489086142974e-12
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2024-25-sigma0.1-tail1-fold3.json",
+      "zone": "short",
+      "nll": 11892.020397714497,
+      "maxGradient": 1.1572609537324752e-10
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2024-25-sigma0.1-tail1-fold4.json",
+      "zone": "long",
+      "nll": 11419.025826938709,
+      "maxGradient": 2.4915891572163673e-10
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2024-25-sigma0.1-tail1-fold4.json",
+      "zone": "mid",
+      "nll": 3098.2205826652526,
+      "maxGradient": 1.743671873555286e-11
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2024-25-sigma0.1-tail1-fold4.json",
+      "zone": "short",
+      "nll": 11971.156766850449,
+      "maxGradient": 2.7743141117753112e-11
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2025-26-sigma0-tail0-fold0.json",
+      "zone": "long",
+      "nll": 12424.089801639304,
+      "maxGradient": 2.510880392492254e-11
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2025-26-sigma0-tail0-fold0.json",
+      "zone": "mid",
+      "nll": 3691.615376862572,
+      "maxGradient": 3.383604507689597e-11
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2025-26-sigma0-tail0-fold0.json",
+      "zone": "short",
+      "nll": 13509.923617014718,
+      "maxGradient": 7.361222742474638e-11
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2025-26-sigma0-tail0-fold1.json",
+      "zone": "long",
+      "nll": 11134.325199608465,
+      "maxGradient": 3.7844216649318696e-10
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2025-26-sigma0-tail0-fold1.json",
+      "zone": "mid",
+      "nll": 3144.172872084264,
+      "maxGradient": 2.496847173460992e-11
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2025-26-sigma0-tail0-fold1.json",
+      "zone": "short",
+      "nll": 11832.139810069173,
+      "maxGradient": 1.0915357506746659e-10
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2025-26-sigma0-tail0-fold2.json",
+      "zone": "long",
+      "nll": 11625.00484010072,
+      "maxGradient": 1.816360395423544e-10
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2025-26-sigma0-tail0-fold2.json",
+      "zone": "mid",
+      "nll": 3298.894389326785,
+      "maxGradient": 1.1553424883459229e-11
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2025-26-sigma0-tail0-fold2.json",
+      "zone": "short",
+      "nll": 12264.839012034072,
+      "maxGradient": 3.0667024475405924e-11
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2025-26-sigma0-tail0-fold3.json",
+      "zone": "long",
+      "nll": 10462.73390968114,
+      "maxGradient": 2.1225332602625713e-10
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2025-26-sigma0-tail0-fold3.json",
+      "zone": "mid",
+      "nll": 2982.699243737104,
+      "maxGradient": 4.998668146072305e-12
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2025-26-sigma0-tail0-fold3.json",
+      "zone": "short",
+      "nll": 11608.647001866942,
+      "maxGradient": 5.070432962384075e-11
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2025-26-sigma0-tail0-fold4.json",
+      "zone": "long",
+      "nll": 11772.505465382268,
+      "maxGradient": 3.1809577194508165e-10
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2025-26-sigma0-tail0-fold4.json",
+      "zone": "mid",
+      "nll": 3291.937966916209,
+      "maxGradient": 2.90896196020185e-11
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2025-26-sigma0-tail0-fold4.json",
+      "zone": "short",
+      "nll": 12781.785192858093,
+      "maxGradient": 1.2656187209358905e-10
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2025-26-sigma0-tail0-foldNone.json",
+      "zone": "long",
+      "nll": 56933.619880200866,
+      "maxGradient": 2.673949950349197e-10
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2025-26-sigma0-tail0-foldNone.json",
+      "zone": "mid",
+      "nll": 15924.196586805356,
+      "maxGradient": 3.461764208623208e-11
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2025-26-sigma0-tail0-foldNone.json",
+      "zone": "short",
+      "nll": 61483.717856734314,
+      "maxGradient": 8.455458555545192e-11
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2025-26-sigma0.025-tail1-fold0.json",
+      "zone": "long",
+      "nll": 12422.408902013696,
+      "maxGradient": 1.120898929229952e-10
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2025-26-sigma0.025-tail1-fold0.json",
+      "zone": "mid",
+      "nll": 3691.02646215908,
+      "maxGradient": 2.4300561562995426e-11
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2025-26-sigma0.025-tail1-fold0.json",
+      "zone": "short",
+      "nll": 13488.702827882975,
+      "maxGradient": 2.0967405589544796e-10
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2025-26-sigma0.025-tail1-fold1.json",
+      "zone": "long",
+      "nll": 11136.81494974809,
+      "maxGradient": 7.33571425826085e-10
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2025-26-sigma0.025-tail1-fold1.json",
+      "zone": "mid",
+      "nll": 3144.553367208815,
+      "maxGradient": 3.7257308349580853e-11
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2025-26-sigma0.025-tail1-fold1.json",
+      "zone": "short",
+      "nll": 11816.065876308996,
+      "maxGradient": 9.610801043891115e-11
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2025-26-sigma0.025-tail1-fold2.json",
+      "zone": "long",
+      "nll": 11628.309273296927,
+      "maxGradient": 4.78078021615147e-10
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2025-26-sigma0.025-tail1-fold2.json",
+      "zone": "mid",
+      "nll": 3299.47975913055,
+      "maxGradient": 8.959055719515163e-11
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2025-26-sigma0.025-tail1-fold2.json",
+      "zone": "short",
+      "nll": 12240.430088901572,
+      "maxGradient": 6.120330908743199e-10
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2025-26-sigma0.025-tail1-fold3.json",
+      "zone": "long",
+      "nll": 10462.676433127763,
+      "maxGradient": 2.3154456130214385e-10
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2025-26-sigma0.025-tail1-fold3.json",
+      "zone": "mid",
+      "nll": 2982.1041767250963,
+      "maxGradient": 5.869438268746308e-11
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2025-26-sigma0.025-tail1-fold3.json",
+      "zone": "short",
+      "nll": 11586.95457553475,
+      "maxGradient": 1.4154366567709076e-10
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2025-26-sigma0.025-tail1-fold4.json",
+      "zone": "long",
+      "nll": 11771.566246632514,
+      "maxGradient": 2.6352608983870596e-10
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2025-26-sigma0.025-tail1-fold4.json",
+      "zone": "mid",
+      "nll": 3291.6912786504777,
+      "maxGradient": 2.3504753698944114e-11
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2025-26-sigma0.025-tail1-fold4.json",
+      "zone": "short",
+      "nll": 12765.287534011528,
+      "maxGradient": 3.37713856879418e-10
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2025-26-sigma0.025-tail1-foldNone.json",
+      "zone": "long",
+      "nll": 56883.11246020355,
+      "maxGradient": 1.9990764599242539e-10
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2025-26-sigma0.025-tail1-foldNone.json",
+      "zone": "mid",
+      "nll": 15907.88797333397,
+      "maxGradient": 5.574918304773746e-11
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2025-26-sigma0.025-tail1-foldNone.json",
+      "zone": "short",
+      "nll": 61309.03053066243,
+      "maxGradient": 1.929194581862248e-10
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2025-26-sigma0.05-tail0-fold0.json",
+      "zone": "long",
+      "nll": 12423.388520484783,
+      "maxGradient": 1.7209522695793567e-10
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2025-26-sigma0.05-tail0-fold0.json",
+      "zone": "mid",
+      "nll": 3690.573135796775,
+      "maxGradient": 8.519407401763601e-12
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2025-26-sigma0.05-tail0-fold0.json",
+      "zone": "short",
+      "nll": 13484.468094710488,
+      "maxGradient": 5.985612006043084e-11
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2025-26-sigma0.05-tail0-fold1.json",
+      "zone": "long",
+      "nll": 11141.203551208537,
+      "maxGradient": 1.0186695931224676e-10
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2025-26-sigma0.05-tail0-fold1.json",
+      "zone": "mid",
+      "nll": 3145.9954726948795,
+      "maxGradient": 1.2711609542748192e-11
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2025-26-sigma0.05-tail0-fold1.json",
+      "zone": "short",
+      "nll": 11815.947374859767,
+      "maxGradient": 6.575362476723967e-11
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2025-26-sigma0.05-tail0-fold2.json",
+      "zone": "long",
+      "nll": 11633.91954741379,
+      "maxGradient": 2.4434854140054085e-10
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2025-26-sigma0.05-tail0-fold2.json",
+      "zone": "mid",
+      "nll": 3301.407108357628,
+      "maxGradient": 1.9170443010807503e-11
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2025-26-sigma0.05-tail0-fold2.json",
+      "zone": "short",
+      "nll": 12234.94356194723,
+      "maxGradient": 1.2353496003925102e-10
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2025-26-sigma0.05-tail0-fold3.json",
+      "zone": "long",
+      "nll": 10463.858352631112,
+      "maxGradient": 1.5991119539648935e-10
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2025-26-sigma0.05-tail0-fold3.json",
+      "zone": "mid",
+      "nll": 2981.58257593299,
+      "maxGradient": 7.66320340517268e-12
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2025-26-sigma0.05-tail0-fold3.json",
+      "zone": "short",
+      "nll": 11581.093868460084,
+      "maxGradient": 5.680078629666241e-11
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2025-26-sigma0.05-tail0-fold4.json",
+      "zone": "long",
+      "nll": 11772.302498508143,
+      "maxGradient": 2.2654944586975034e-10
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2025-26-sigma0.05-tail0-fold4.json",
+      "zone": "mid",
+      "nll": 3292.282457831093,
+      "maxGradient": 9.883649454422994e-12
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2025-26-sigma0.05-tail0-fold4.json",
+      "zone": "short",
+      "nll": 12761.099622330885,
+      "maxGradient": 8.29771806820645e-11
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2025-26-sigma0.05-tail0-foldNone.json",
+      "zone": "long",
+      "nll": 56824.048682549634,
+      "maxGradient": 2.8613911240427115e-10
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2025-26-sigma0.05-tail0-foldNone.json",
+      "zone": "mid",
+      "nll": 15878.189163538416,
+      "maxGradient": 1.5120349416974932e-11
+    },
+    {
+      "file": "reports\\player-impact-v43\\fits\\2025-26-sigma0.05-tail0-foldNone.json",
+      "zone": "short",
+      "nll": 61233.09683753233,
+      "maxGradient": 1.2461498499760637e-10
+    }
+  ]
+}

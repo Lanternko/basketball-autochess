@@ -1,0 +1,7 @@
+{
+  "registeredUTC": "2026-10-14T22:08:02.407846+00:00",
+  "scope": "only worker result transport after writing full run file; file jobs return lightweight completion to avoid retaining/cloning eighty season outputs; calibration jobs without file still return unchanged full result",
+  "beforeSHA": "ca8a94772754ff29ac53690b7eaba77a1d3ce9bc2ab3fc6c6c7d20d84d4ddc4e",
+  "afterSHA": "5d90a867ed3b10388d39119de45991979c18371e9f07ab039f9fde79fb116c18",
+  "noChanges": "no RNG, game calculations, saved result fields, protocol, constants or selection change"
+}

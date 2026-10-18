@@ -1,0 +1,22 @@
+{
+  "passed": true,
+  "probePlayers": 10,
+  "probeGames": 9600,
+  "allProbeEstimatesAndPairedIntervalsRecomputed": true,
+  "sourcePassingPairCountsAndFoldsRechecked": true,
+  "allStoredHeldoutLossesRecomputed": true,
+  "conditionalPairBootstrapRecomputed": true,
+  "trackingFiles": 12,
+  "allTrackingRowsExactlyPreserved": true,
+  "scope": "Accounting and conditional estimates only; no causal or OVR adoption certification.",
+  "hashes": {
+    "D:/Projects/CODING/basketball-autochess/reports/player-impact-v30/verify-supplement.py": "dbc3afd4e7abe7e85190eb61258235ba15608cea8cfb077da13ce6edfba43094",
+    "reports/player-impact-v30/ovr-probe-protocol.json": "ad15898fceac76b0d3c9884364b5762fe17ab5aab7f90224d4e24d1529b214bd",
+    "reports/player-impact-v30/ovr-probe-checkpoint.json": "c8f9bded9605713c468e67b28867e4f1510b3a6b4bbe9d51a901ee43f267d323",
+    "reports/player-impact-v30/ovr-probe-summary.json": "884d05d94a15aaf7a8a69bfd8094c132e6d138b97a76b5258f852568baa485ff",
+    "reports/player-impact-v30/fit-protocol.json": "80d0741a83b1c85bdb0968abfd9860adeff3ea11a9fffb3895e891ef3afa1315",
+    "reports/player-impact-v30/passing-fit.json": "828b2a71018e448e9850f153091f8b484d115cda511ed749c9776624d8b6c56a",
+    "reports/player-impact-v30/passing-summary.json": "a2663281088bed1958ebdd3885c6c47f7350f583a0a55351c940ee62815cde74",
+    "reports/player-impact-v30/shot-tracking-audit.json": "a94b91ba2daf60a26cfb161f95cbf00f84da28b9a6f8ec3482b649a912be9fa3"
+  }
+}

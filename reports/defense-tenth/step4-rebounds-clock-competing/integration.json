@@ -1,0 +1,33 @@
+{
+  "passed": true,
+  "forcedProbability": 1,
+  "trials": [
+    {
+      "fresh": 176,
+      "postOreb": 23
+    }
+  ],
+  "events": [
+    {
+      "misses": 77,
+      "immediateClock": 0,
+      "fgOreb": 23,
+      "postOrebClock": 23,
+      "clock": 23,
+      "natural": 0,
+      "fgReleases": 0,
+      "fgFlight": 0
+    }
+  ],
+  "matches": [
+    {
+      "id": "0022500001",
+      "homeId": 1610612760,
+      "awayId": 1610612745,
+      "scoreA": 114,
+      "scoreB": 85,
+      "overtimes": 0
+    }
+  ],
+  "accounting": "runDefenseSeason checks passed"
+}

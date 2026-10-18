@@ -1,0 +1,90 @@
+{
+  "games": 1227,
+  "turnovers": 35605,
+  "groups": {
+    "shotClock": {
+      "count": 1653,
+      "live": 0,
+      "dead": 1653,
+      "perTeamGame": 0.6735941320293398,
+      "share": 0.04642606375509058,
+      "livePerTeamGame": 0
+    },
+    "passing": {
+      "count": 16937,
+      "live": 12605,
+      "dead": 4332,
+      "perTeamGame": 6.901792991035045,
+      "share": 0.4756916163460188,
+      "livePerTeamGame": 5.136511817440913
+    },
+    "handling": {
+      "count": 10360,
+      "live": 8049,
+      "dead": 2311,
+      "perTeamGame": 4.221678891605542,
+      "share": 0.29097036933015025,
+      "livePerTeamGame": 3.279951100244499
+    },
+    "offensiveFoul": {
+      "count": 3618,
+      "live": 0,
+      "dead": 3618,
+      "perTeamGame": 1.4743276283618583,
+      "share": 0.10161494172166831,
+      "livePerTeamGame": 0
+    },
+    "otherViolation": {
+      "count": 2232,
+      "live": 0,
+      "dead": 2232,
+      "perTeamGame": 0.9095354523227384,
+      "share": 0.06268782474371577,
+      "livePerTeamGame": 0
+    },
+    "outOfBoundsUnclassified": {
+      "count": 805,
+      "live": 0,
+      "dead": 805,
+      "perTeamGame": 0.3280358598207009,
+      "share": 0.02260918410335627,
+      "livePerTeamGame": 0
+    }
+  },
+  "rawTypes": {
+    "shot clock": 1653,
+    "bad pass": 12723,
+    "lost ball": 8210,
+    "out-of-bounds": 7142,
+    "offensive foul": 3618,
+    "traveling": 1301,
+    "backcourt": 284,
+    "double dribble": 95,
+    "palming": 53,
+    "inbound": 27,
+    "discontinued dribble": 49,
+    "offensive goaltending": 145,
+    "5-second-violation": 53,
+    "3-second-violation": 123,
+    "8-second-violation": 49,
+    "offensive-kicked-ball": 35,
+    "LaneViolation": 21,
+    "too-many-players": 1,
+    "illegal assist": 9,
+    "": 3,
+    "10-second-freethrow-shooter": 2,
+    "jumpball violation": 4,
+    "excess timeout": 1,
+    "punched ball": 1,
+    "5-second-back-to-the-basket": 3
+  },
+  "liveTypes": {
+    "bad pass": 12605,
+    "lost ball": 8049
+  },
+  "definitions": "Live = official turnover has stealPersonId. Passing includes bad pass, inbound and out-of-bounds descriptor bad pass; handling includes lost ball and out-of-bounds descriptor lost ball. Unknown retained explicitly. Simulator pass interceptions and touch live turnovers can be compared with these live categories; generic dead touch turnovers cannot be resolved into passing/handling/fouls without a new engine mechanism.",
+  "provenance": {
+    "manifest": "0bb849fc0a3301cd8bff4c3733f0623c24e1328b5c43342dbfb848ce5dd3efed",
+    "code": "8caa00e1073a92a2da1cc8256118382625eae7df950e0aceca7c805f59c3d1fa"
+  }
+}

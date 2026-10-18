@@ -1,0 +1,96 @@
+{
+  "passed": true,
+  "sourceProbabilityPartitionsChecked": true,
+  "allNllsRecomputedFromDirectCategoryProbabilities": true,
+  "analyticScoreRootVerifiedAllSixFits": [
+    {
+      "excludedGameFold": null,
+      "independentLogSelfScale": -0.028076037799819088,
+      "reportedLogSelfScale": -0.028076042331856236
+    },
+    {
+      "excludedGameFold": 0,
+      "independentLogSelfScale": -0.025966442445226348,
+      "reportedLogSelfScale": -0.025966446996904504
+    },
+    {
+      "excludedGameFold": 1,
+      "independentLogSelfScale": -0.025496227834462894,
+      "reportedLogSelfScale": -0.02549622694114342
+    },
+    {
+      "excludedGameFold": 2,
+      "independentLogSelfScale": -0.03296557062971167,
+      "reportedLogSelfScale": -0.03296557500254702
+    },
+    {
+      "excludedGameFold": 3,
+      "independentLogSelfScale": -0.027635309789489682,
+      "reportedLogSelfScale": -0.02763533533098363
+    },
+    {
+      "excludedGameFold": 4,
+      "independentLogSelfScale": -0.028323961254930613,
+      "reportedLogSelfScale": -0.02832396231181854
+    }
+  ],
+  "seasons": [
+    {
+      "season": "2022-23",
+      "attempts": 183377,
+      "priorOneNll": 242641.22741864555,
+      "fittedNll": 242632.62741843102,
+      "gainPerFga": 4.689792184696093e-05,
+      "fixedSourceWholeGameBootstrap95": [
+        4.427120800477307e-06,
+        9.164084209812804e-05
+      ]
+    },
+    {
+      "season": "2023-24",
+      "attempts": 181617,
+      "priorOneNll": 243580.72407473385,
+      "fittedNll": 243572.554960059,
+      "gainPerFga": 4.4979900972094956e-05,
+      "fixedSourceWholeGameBootstrap95": [
+        2.5669825987330955e-06,
+        9.199239154591789e-05
+      ]
+    },
+    {
+      "season": "2024-25",
+      "attempts": 186841,
+      "priorOneNll": 248932.86906676367,
+      "fittedNll": 248929.66882328788,
+      "gainPerFga": 1.712816499477491e-05,
+      "fixedSourceWholeGameBootstrap95": [
+        -2.6586689959281134e-05,
+        6.084767546958249e-05
+      ]
+    },
+    {
+      "season": "2025-26",
+      "attempts": 203079,
+      "priorOneNll": 272069.4888111886,
+      "fittedNll": 272062.1907283686,
+      "gainPerFga": 3.5937161498842374e-05,
+      "fixedSourceWholeGameBootstrap95": [
+        -5.4202358118609164e-06,
+        7.756557452145171e-05
+      ]
+    }
+  ],
+  "allPlayers": 582,
+  "playersWithPbp": 581,
+  "scope": "Probabilities conditioned on actual shooter/stint FGA, with frozen v30 source contexts. Expected makes in CSV are conditional reconstruction, never full simulation, OVR or causal estimates. Whole-game bootstrap fixes descriptors and fitted scale, not parameter/model uncertainty.",
+  "hashes": {
+    "reports/player-impact-v36/marked-protocol.json": "8de10a57560fcbfd72ce58226ff41f323bd4cefa3df845bae601539217528a68",
+    "reports/player-impact-v36/marked-fit.json": "f3863692f261daa5a57a28ba9ea4276559fefe79ff033ea6d7106f400dc3a037",
+    "reports/player-impact-v36/verify-marked-fit.py": "2b01d49b7faa7251e6b65622b47ea270dc258f9bb961e98dba68c17189d2591b",
+    "reports/player-impact-v36/2025-26-conditional-mark-scores.csv": "91190200b8b7d732346b02b06f3deb45fe9102c9e02b7a4e67a02b9417307bd2",
+    "reports/player-impact-v36/2022-23-marked-data.json": "63af21a9c0a8e127653c8a8986c6b4eeda866c3a5699a4d3b48b34fea4efe7a2",
+    "reports/player-impact-v36/2023-24-marked-data.json": "7ce8ec296e58a69ce9225f435baa97d75c47a39d7b692d48976fb168bb715e6f",
+    "reports/player-impact-v36/2024-25-marked-data.json": "bb1c3908e5b556851a9b36806394414166fc5ef528f0fbfb6506b310e8575034",
+    "reports/player-impact-v36/2025-26-marked-data.json": "02e5f198d3ffbef607f46b6456100fb7039875bb144bfa250ac9e5623f2d6fb7"
+  }
+}

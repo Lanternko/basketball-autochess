@@ -1,0 +1,242 @@
+[
+  {
+    "season": "2022-23",
+    "feature": "deltaRole",
+    "n": 328,
+    "Pearson": -0.05555893248746036,
+    "weightedSlope": -0.38845815115613236,
+    "groups": {
+      "up": {
+        "n": 17,
+        "meanChanceDelta": 0.08880189440384549,
+        "meanContextDelta": 0.28386329244807235
+      },
+      "down": {
+        "n": 14,
+        "meanChanceDelta": 0.22390818165266335,
+        "meanContextDelta": -0.2700891847538286
+      },
+      "small": {
+        "n": 297,
+        "meanChanceDelta": -0.11024591917322275,
+        "meanContextDelta": 0.002669640459443785
+      }
+    }
+  },
+  {
+    "season": "2022-23",
+    "feature": "deltaCompetition",
+    "n": 328,
+    "Pearson": 0.014874869561834909,
+    "weightedSlope": -0.0009786790740909412,
+    "groups": {
+      "up": {
+        "n": 91,
+        "meanChanceDelta": -0.06778493876041294,
+        "meanContextDelta": 1.9449301917629709
+      },
+      "down": {
+        "n": 71,
+        "meanChanceDelta": -0.14450529769961026,
+        "meanContextDelta": -2.0939054720641326
+      },
+      "small": {
+        "n": 166,
+        "meanChanceDelta": -0.07143633179858412,
+        "meanContextDelta": 0.027873065090814712
+      }
+    }
+  },
+  {
+    "season": "2023-24",
+    "feature": "deltaRole",
+    "n": 296,
+    "Pearson": 0.004331291109140597,
+    "weightedSlope": -0.11789057480951905,
+    "groups": {
+      "up": {
+        "n": 20,
+        "meanChanceDelta": -0.08778538834962105,
+        "meanContextDelta": 0.29501165326932827
+      },
+      "down": {
+        "n": 13,
+        "meanChanceDelta": -0.036268515977619244,
+        "meanContextDelta": -0.2962340027564851
+      },
+      "small": {
+        "n": 263,
+        "meanChanceDelta": -0.17236128403180548,
+        "meanContextDelta": -0.0011941422550898338
+      }
+    }
+  },
+  {
+    "season": "2023-24",
+    "feature": "deltaCompetition",
+    "n": 296,
+    "Pearson": -0.12044489216838726,
+    "weightedSlope": -0.06377723823192467,
+    "groups": {
+      "up": {
+        "n": 70,
+        "meanChanceDelta": -0.2833726396299756,
+        "meanContextDelta": 2.203807561332953
+      },
+      "down": {
+        "n": 64,
+        "meanChanceDelta": 0.05059124793461811,
+        "meanContextDelta": -1.751238446825358
+      },
+      "small": {
+        "n": 162,
+        "meanChanceDelta": -0.19586112624331722,
+        "meanContextDelta": -0.17043354950794382
+      }
+    }
+  },
+  {
+    "season": "2024-25",
+    "feature": "deltaRole",
+    "n": 312,
+    "Pearson": -0.029656008300050954,
+    "weightedSlope": 0.11035046284765908,
+    "groups": {
+      "up": {
+        "n": 24,
+        "meanChanceDelta": -0.019143154960612647,
+        "meanContextDelta": 0.288618690025385
+      },
+      "down": {
+        "n": 11,
+        "meanChanceDelta": -0.0535590260069683,
+        "meanContextDelta": -0.404753331897143
+      },
+      "small": {
+        "n": 277,
+        "meanChanceDelta": 0.0025851336622795627,
+        "meanContextDelta": 0.004746766823428019
+      }
+    }
+  },
+  {
+    "season": "2024-25",
+    "feature": "deltaCompetition",
+    "n": 312,
+    "Pearson": -0.08079279606728447,
+    "weightedSlope": -0.021934162283260963,
+    "groups": {
+      "up": {
+        "n": 116,
+        "meanChanceDelta": -0.061127781790435196,
+        "meanContextDelta": 2.7638200123255543
+      },
+      "down": {
+        "n": 50,
+        "meanChanceDelta": 0.14077974465938747,
+        "meanContextDelta": -1.7763474307136349
+      },
+      "small": {
+        "n": 146,
+        "meanChanceDelta": 0.003548483408534084,
+        "meanContextDelta": 0.008080117004660839
+      }
+    }
+  },
+  {
+    "season": "2025-26",
+    "feature": "deltaRole",
+    "n": 339,
+    "Pearson": -0.002110902251664528,
+    "weightedSlope": 0.15483877045383893,
+    "groups": {
+      "up": {
+        "n": 23,
+        "meanChanceDelta": -0.19984205636180466,
+        "meanContextDelta": 0.2800233259452594
+      },
+      "down": {
+        "n": 12,
+        "meanChanceDelta": -0.053527452189002706,
+        "meanContextDelta": -0.3047758107733312
+      },
+      "small": {
+        "n": 304,
+        "meanChanceDelta": -0.2599663152596809,
+        "meanContextDelta": 0.006264550980033852
+      }
+    }
+  },
+  {
+    "season": "2025-26",
+    "feature": "deltaCompetition",
+    "n": 339,
+    "Pearson": -0.014930833946150662,
+    "weightedSlope": -0.026593757038963613,
+    "groups": {
+      "up": {
+        "n": 63,
+        "meanChanceDelta": -0.3565623586587558,
+        "meanContextDelta": 2.225525473343126
+      },
+      "down": {
+        "n": 61,
+        "meanChanceDelta": -0.2343510379647769,
+        "meanContextDelta": -1.8301601724608447
+      },
+      "small": {
+        "n": 215,
+        "meanChanceDelta": -0.22585783045599406,
+        "meanContextDelta": -0.12650996211340582
+      }
+    }
+  },
+  {
+    "season": "pooled-test",
+    "feature": "deltaRole",
+    "n": 651,
+    "Pearson": -0.014099530752865222,
+    "weightedSlope": 0.12852514317997377,
+    "groups": {
+      "up": {
+        "n": 47,
+        "meanChanceDelta": -0.10410140532608778,
+        "meanContextDelta": 0.28457745298498693
+      },
+      "down": {
+        "n": 23,
+        "meanChanceDelta": -0.053542419250122056,
+        "meanContextDelta": -0.35216854835269823
+      },
+      "small": {
+        "n": 581,
+        "meanChanceDelta": -0.1313329096755978,
+        "meanContextDelta": 0.005520933887812794
+      }
+    }
+  },
+  {
+    "season": "pooled-test",
+    "feature": "deltaCompetition",
+    "n": 651,
+    "Pearson": -0.016418489828870987,
+    "weightedSlope": -0.006235795997901223,
+    "groups": {
+      "up": {
+        "n": 179,
+        "meanChanceDelta": -0.15509429450737977,
+        "meanContextDelta": 2.5926089740681775
+      },
+      "down": {
+        "n": 111,
+        "meanChanceDelta": -0.07085572620974422,
+        "meanContextDelta": -1.8067066693204
+      },
+      "small": {
+        "n": 361,
+        "meanChanceDelta": -0.13002642062250938,
+        "meanContextDelta": -0.07028676226241463
+      }
+    }
+  }
+]

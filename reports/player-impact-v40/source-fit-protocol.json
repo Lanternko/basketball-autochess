@@ -1,0 +1,14 @@
+{
+  "stage": "Frozen source model, prior conversion and older-only whole-game selection before fitting any candidate. No source/model changes to pass numerical validation or rankings.",
+  "hashes": {
+    "reports/player-impact-v40/prepare-data.py": "68e1fde2a22d10c4e7be05234ccd1f780b5405fcdc00f7ce2daff566dfd7790e",
+    "reports/player-impact-v40/protocol-source.json": "32bbe4025fe0a7ac14c9ce8ad864e74e04f8621523d7b0a4cf0ff972a5270375",
+    "reports/player-impact-v40/fitlib.py": "003ccb527dae3b06f98f6bb1438065a930fbb0f44f14cf01c8ab7e2cddc22949",
+    "reports/player-impact-v40/fit.py": "caf513564617b89b6113a0592ca99218197119abbb11f28238384f725bca6493",
+    "reports/player-impact-v40/freeze-source.py": "5618e3de7809e029c571855a086da74f43d5d6adbb4dd959716810f1e0c84215",
+    "reports/player-impact-v40/2022-23-fga-data.json": "28caa01cebdea7dd35151d56d14908f68d2017605c11ec1d4a73dcc02659c04f",
+    "reports/player-impact-v40/2023-24-fga-data.json": "d253ae20016f3d4fa0ad914c5e37609c2da218750f17f0c7e7d27ada5ca16d01",
+    "reports/player-impact-v40/2024-25-fga-data.json": "dd9456e9886beac7336700ffbc16fa937d1587500771f1de0d08eea47e0f3f90",
+    "reports/player-impact-v40/2025-26-fga-data.json": "4bac601aade187340e80164a5caeec3673009699e17e4c0054735cc612e96d7b"
+  }
+}

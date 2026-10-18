@@ -1,0 +1,28 @@
+// NBA player IDs matched against data/reference-seasons.json. Sources: assets/players/sources.json.
+export const PLAYER_PORTRAITS = {
+  "Stephen Curry": "assets/players/201939.png",
+  "Klay Thompson": "assets/players/202691.png",
+  "Kevin Durant": "assets/players/201142.png",
+  "Draymond Green": "assets/players/203110.png",
+  "Andre Iguodala": "assets/players/2738.png",
+  "Kyrie Irving": "assets/players/202681.png",
+  "JR Smith": "assets/players/2747.png",
+  "LeBron James": "assets/players/2544.png",
+  "Kevin Love": "assets/players/201567.png",
+  "Tristan Thompson": "assets/players/202684.png",
+  "Shai Gilgeous-Alexander": "assets/players/1628983.png",
+  "Jalen Williams": "assets/players/1631114.png",
+  "Chet Holmgren": "assets/players/1631096.png",
+  "Luguentz Dort": "assets/players/1629652.png",
+  "Isaiah Hartenstein": "assets/players/1628392.png",
+  "Jalen Brunson": "assets/players/1628973.png",
+  "Mikal Bridges": "assets/players/1628969.png",
+  "OG Anunoby": "assets/players/1628384.png",
+  "Karl-Anthony Towns": "assets/players/1626157.png",
+  "Josh Hart": "assets/players/1628404.png",
+  "Shaquille O'Neal": "assets/players/406.png",
+  "Kobe Bryant": "assets/players/977.png",
+  "Derek Fisher": "assets/players/965.png",
+  "Rick Fox": "assets/players/296.jpg",
+  "Robert Horry": "assets/players/109.jpg"
+};

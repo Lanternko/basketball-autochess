@@ -1,0 +1,30 @@
+{
+  "preset": "legacy",
+  "mode": "fast",
+  "workers": 4,
+  "seeds": [
+    20261012,
+    20261013,
+    20261014,
+    20261015
+  ],
+  "elapsedSeconds": 30.9655357,
+  "files": [
+    {
+      "file": "reports/defense-a/runs/legacy-seed20261012.json",
+      "sha256": "651491c20be7b3208aa44c357a979d7c6e14b2b722d087444b595b46fe0a7414"
+    },
+    {
+      "file": "reports/defense-a/runs/legacy-seed20261013.json",
+      "sha256": "3a2337ad7a0b96d411935eaf8a88e914f505b55afba9d5a7f2f6b8a9e0c258bf"
+    },
+    {
+      "file": "reports/defense-a/runs/legacy-seed20261014.json",
+      "sha256": "5e8101e448a8f0324ae4087b508951b2c5d239a60be2514e2503b9cd0b15bde9"
+    },
+    {
+      "file": "reports/defense-a/runs/legacy-seed20261015.json",
+      "sha256": "638712a07817c00b8cc86093a293699850bd3d25baf2dd80eb9546e36b577038"
+    }
+  ]
+}

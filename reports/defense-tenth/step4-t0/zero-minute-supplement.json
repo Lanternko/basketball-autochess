@@ -1,0 +1,11 @@
+{
+  "registeredAt": "2026-10-13T07:48:26.832Z",
+  "parentProtocolSHA": "1d8d8f68e3f3a6451ec5c9738513ba9238234b3f34df0700c4ced56d27d62db2",
+  "scope": "Input measurement validation correction before2023-24 evaluation; no outcome/rank selection",
+  "case": "Justin Jackson official full-season logged MIN=0 despite two tiny positive box appearances. Existing volume model requires a positive denominator.",
+  "rule": "Only where logged offense/defense measurement minutes=0, replace that denominator with sum of already-downloaded exact positive box seconds/60 (team stint for offense, all teams for defense). Keep official observed MIN=0 and all counts/attributes unchanged. If exact seconds also0, use1 solely for inactive diagnostic rater; flag separately.",
+  "previousAdapters": {
+    "file": "reports/defense-tenth/step4-t0/validation-supplement-v3.json",
+    "sha256": "022017457cc209dc2946ae66c203a930c2af4a423743ca915050343a92a94f01"
+  }
+}

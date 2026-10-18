@@ -1,0 +1,21 @@
+{
+  "version": "conditional-dreb-recipient-24",
+  "officialModelAdopted": false,
+  "goalComplete": false,
+  "seasons": 4,
+  "fullSeasonSeeds": 3,
+  "strictOnCourtSeeds": 3,
+  "targetPlayers": 582,
+  "teamWinGatesFailed": [
+    "2022-23",
+    "2023-24",
+    "2024-25",
+    "2025-26"
+  ],
+  "ovrFullRanking": false,
+  "ovrLastSampleVersion": 23,
+  "conditionalRecipientOnly": true,
+  "teamAndNonDrebParityGames": 28023,
+  "counterfactualParityGames": 96,
+  "next": "Separate Curry/all-player FGA and FT categories; resolve team defense, fresh/FT-rebound partition and low-minute OVR extrapolation. No name/rank residual tuning."
+}

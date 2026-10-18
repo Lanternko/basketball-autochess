@@ -1,0 +1,7 @@
+{
+ "design":"Additional prespecified comparison before inspecting target results: prior-season closest-defender tracking as a learned population feature, alongside the original zero-centered and training-only blocked-shot families. This supplies real tracking information without using target heldout-game outcomes.",
+ "featureCode":2,
+ "feature":"10 * prior-season zone contest rate per player minute / prior-season zone opponent FGA per team minute * prior DFG-minus-normal difference * n/(n+200). RA/paint use the existing <6ft exposure, corner/arc use three-point exposure; each fine zone learns its own slope. Midrange has no lag feature. Previous-season missing players receive zero centered feature, with missingness and coverage reported, not an invented skill grade.",
+ "timing":"2022-23 has no archived 2021-22 tracking and therefore zero feature; 2023-24 uses 2022-23, 2024-25 uses 2023-24, 2025-26 uses 2024-25. Full previous season precedes every current-season heldout game.",
+ "selection":"Compare feature codes 0,1,2 at the original sigma grid using older-three-season whole-game heldout NLL only. Code 1 is measured blocked-shot activity from training games only. No target metric or Wembanyama result selects the family. Code 2 learns a slope with N(0,1) prior; no forced sign and no named players."
+}

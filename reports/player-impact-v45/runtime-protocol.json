@@ -1,0 +1,6 @@
+{
+ "transfer":"Fitted five-zone shooter-plus-five-defender logits plus source-centered runtime neutral-context logit. Old three-zone source defense coefficients are zeroed, not stacked. Source neutral context is reweighted by exact five-zone fresh source shot exposures at actual source rotation energy.",
+ "makeBounds":"Fine-zone fitted probabilities use only [1e-6,1-1e-6] numerical bounds. The old whole-paint 88% cap is not a physically justified cap for a restricted-area specialist. Existing raw contextual model clamps and putback model remain unchanged.",
+ "fineObservation":"The engine retains coarse rebound and foul geometry. Five-zone fresh shot choice and makes are collapsed with exact probability conservation. Fine area labels are sampled conditional on coarse area and make/miss, using an independent observation RNG, yielding the same modeled shot joint distribution without perturbing the game RNG. Do not claim five-zone rebound/foul mechanics were added.",
+ "validation":"Compare new full and strict simulations against frozen v41 and v42/v44 records with three same seeds, all four already-seen seasons. Fine-zone collector excludes putbacks to match training; coarse collector includes them to match prior team/player scoring validation. Do not equate fixed-shot source validation with free-rotation simulated on/off."
+}

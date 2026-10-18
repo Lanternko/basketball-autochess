@@ -1,0 +1,47 @@
+{
+  "preset": "a-rebounds-clock",
+  "mode": "fast",
+  "workers": 4,
+  "seeds": [
+    20261012,
+    20261013,
+    20261014,
+    20261015
+  ],
+  "elapsedSeconds": 40.7997388,
+  "files": [
+    {
+      "file": "reports/defense-a/runs/a-rebounds-clock-seed20261012.json",
+      "sha256": "5128c2826e163fdd04a438095d0f302d1d2c2cb47d03c4b49c72f5345720cf24"
+    },
+    {
+      "file": "reports/defense-a/runs/a-rebounds-clock-seed20261013.json",
+      "sha256": "8508667405b914ea6ba20ef543fb4b6592ccf52aec97238fb79c1d9066cc5608"
+    },
+    {
+      "file": "reports/defense-a/runs/a-rebounds-clock-seed20261014.json",
+      "sha256": "cc2e43103a710552e464f0904688287cb2a6ac14559a8762d07e5bb27c89a1f0"
+    },
+    {
+      "file": "reports/defense-a/runs/a-rebounds-clock-seed20261015.json",
+      "sha256": "075d66a3c2f4dd941f7d0fa1765f5a83de25848264d1fa0e6faa80680e4b2cf5"
+    }
+  ],
+  "provenance": {
+    "sources": {
+      "data/season-league.json": "497725ecb6a2ec181aeb3cf93263f53a81bdfed772a2c4c733ba3a2d65a79bf6",
+      "data/defense-source/game-exposure.json": "9943a7c303b24fe1d5086b4621f3d525fdb207d68d92b2152356477d7727191e",
+      "reports/defense-a/rebound-audit.json": "32d32a6192db4b2ce1662614fc08d33e009066dbd8c9a8d6020e98e1991678e5",
+      "reports/defense-a/clock-calibration.json": "4b0a051429fe53c143ec43b16461cd8724d43f96b57b6a2c6fad82c3c86b682e"
+    },
+    "code": {
+      "src/defense_a_game.js": "c283cac09b1a0eca87f8a3a7a385c12d9078f6a100d2d3c55e4f39b6621f8a7c",
+      "src/defense_a_season.js": "2e084aff44c2669bb1a16ba32c87e7844524f9a7c59110416618aaf909ca7cec",
+      "src/defense_a_jobs.js": "bc188b7c44045110f2ecf63d5504f476e631cdc599108e0cb65d8f4010c77e89",
+      "src/defense_a_presets.js": "1d214b0dbdeb98d3bb03f03a9fc29fcd02918907846b0c97b45b47a8e276e10e",
+      "src/defense_a_pool.js": "94058c9a99ee8999e61f7f87269ca2aab7052dd33de23f1af3a3048e029ee86c",
+      "scripts/defense_a_worker.js": "3f581412074cc4fa868fc555f319b9f1e58e626a7d6977c185c58a8e11b6044d",
+      "scripts/run_defense_a_seeds.js": "8df2e3c4144d4ed3d7db6af28911555e7143277e4d16717a6a3e71486e9249ad"
+    }
+  }
+}

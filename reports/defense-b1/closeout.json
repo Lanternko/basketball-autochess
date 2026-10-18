@@ -1,0 +1,161 @@
+{
+  "schemaVersion": 1,
+  "stage": "A closeout plus B1 data preparation",
+  "complete": true,
+  "adopted": false,
+  "production": "nba-defense-v1 remains unchanged",
+  "seeds": [
+    20261012,
+    20261013,
+    20261014,
+    20261015,
+    20261016,
+    20261017,
+    20261018,
+    20261019,
+    20261020,
+    20261021,
+    20261022,
+    20261023,
+    20261024,
+    20261025,
+    20261026,
+    20261027,
+    20261028,
+    20261029,
+    20261030,
+    20261031
+  ],
+  "adoption": {
+    "primary": [
+      "centered net RMSE",
+      "net correlation",
+      "net SD ratio",
+      "winPerNet"
+    ],
+    "winMAE": "Report only, no acceptance gate",
+    "rateAlignmentDiagnostic": "Candidate 20-seed bootstrap 95% interval covers the observed target. No new user tolerance imposed; efficiency and TOV failures already independently block adoption.",
+    "gates": {
+      "efficiency": {
+        "estimate": 3.109029238504661,
+        "limit": 0.5,
+        "passed": false
+      },
+      "possessions": {
+        "estimate": 0.14136016260162876,
+        "limit": 0.5,
+        "passed": true
+      },
+      "turnovers": {
+        "estimate": -2.1417479674796738,
+        "limit": 0.2,
+        "passed": false
+      },
+      "clockRate": {
+        "estimate": 0.654677812239389,
+        "target": 0.6655955932981409,
+        "ci95": [
+          0.647177118618219,
+          0.6617242217675332
+        ],
+        "passed": false
+      },
+      "liveShare": {
+        "estimate": 0.600035166944387,
+        "target": 0.5800870664232551,
+        "ci95": [
+          0.5987209942707776,
+          0.6013710464533488
+        ],
+        "passed": false
+      },
+      "fg": {
+        "candidateError": 0.2012725065537353,
+        "baselineError": 0.29328107145845195,
+        "passed": true
+      },
+      "three": {
+        "candidateError": 0.6341621698813142,
+        "baselineError": 0.5937451513994745,
+        "passed": false
+      }
+    }
+  },
+  "clockConclusion": "Uniform setup/pass/release clock overflow generates excess violations and directly preempts touch turnovers. Expected direct lost steals ~0.11/G in frozen v1, too small to explain ~1.0/G steal gap. Independent-clock ablation supports a small effect; altered possession chains make it non-exact causal attribution. Empirical candidate fails overall efficiency/TOV/live-share gates without any turnover coefficient adjustment.",
+  "varianceGap": {
+    "marginVariance": 111.49395050137002,
+    "sd": 3.5299782822382753,
+    "components": {
+      "singlePossessionVariance": 31.29601629810514,
+      "meanPossessionCount": -3.034799877373821,
+      "sharedPaceNet": -0.8946649453306623,
+      "remainingSameGameCovariance": 35.80578253691013,
+      "withinTeamSerialAndHeterogeneity": 48.321616489059096
+    },
+    "shares": {
+      "singlePossessionVariance": 0.2806969899027892,
+      "meanPossessionCount": -0.027219412925336518,
+      "sharedPaceNet": -0.008024336220104325,
+      "remainingSameGameCovariance": 0.32114551844200867,
+      "withinTeamSerialAndHeterogeneity": 0.4334012408006417
+    }
+  },
+  "dataCompleteness": {
+    "lineupGames": 1220,
+    "strictGames": 1188,
+    "stints": 39669,
+    "strictStints": 38623,
+    "samples": {
+      "players": 582,
+      "positiveSamples": 581,
+      "min": 0,
+      "p10": 137.33651106404483,
+      "p25": 612.0797570070885,
+      "median": 1946.5726926259294,
+      "p75": 3243.4111582532264,
+      "p90": 4379.678969146909,
+      "max": 5867.438759475371,
+      "under100": 46,
+      "under500": 132,
+      "under1000": 196
+    }
+  },
+  "nextMechanisms": [
+    "B2: first verify separate and-one frequencies by zone, then model score/time-dependent rotation and possession outcome coupling. No variance correction implemented in this batch.",
+    "Turnovers need identifiable passing, handling, offensive foul and violation outcomes. Do not add observed category rates on top of unclassified dead touch turnovers without checking overlap.",
+    "B1 defense estimation remains pending. Use strict stint quality masks and team-centered shrinkage for low exposure; no attribute or OVR estimated here."
+  ],
+  "limitations": [
+    "Same-season retrospective, not held-out predictive validation.",
+    "Seed-block errors measure simulation uncertainty only; no season/source/measurement uncertainty included.",
+    "Variance decomposition uses one full v1 seed and game-block intervals with fitted team centers held fixed; remainder is not uniquely identifiable score feedback.",
+    "3 missing PBP final-score validation failures, 7 lineup failures, 8 possession-anomaly games, 25 games with official-vs-PBP counters inconsistent; overlapping exclusions produce 1188 strict games.",
+    "Empirical timing uses positive game-clock durations; zero-time bookkeeping excluded and all draws conditional on the remaining clock. Rebound flight/inbound abstraction still affects the calibrated clock.",
+    "The v1 run manifest was expanded from fast two seeds to full twenty; the historical A report retains the older manifest fingerprint. Frozen engine/presets and original per-seed season artifacts are unchanged."
+  ],
+  "provenance": {
+    "sources": {
+      "reports/defense-b1/scoreboard-v1-20.json": "3f422a18dd134ef85e78a2c19af38ab31ce83f2f09b78d3965485da01ad3bcb4",
+      "reports/defense-b1/scoreboard-a-accounting-clock-20.json": "9386ce34be58ae1a792cf185809547001c82cdffeb0fec2159207c48f9c013d5",
+      "reports/defense-b1/scoreboard-c-empirical-20.json": "383e95488acf77178e79d6d384998f776905de7e2e2f893b46938fbf91c2605d",
+      "reports/defense-b1/paired-comparison.json": "c28197ce7d9b65b0705c00d5175be32c4b14eb604c92b06f2c557cb6ca5e9c90",
+      "reports/defense-b1/preparation.json": "9c95c376c8c073d4e0f236b3ff7fb27b21969dcbaf73e9e265f85ae8ace7c7da",
+      "reports/defense-b1/defensive-samples.json": "86e948971436b8c4f7c671ff8a7027a52204ecab7031d8e14d29282268d3eb09",
+      "reports/defense-b1/stint-schema.json": "d85d1ea3f7020fa228300a299d725a1498b248c5240672d33e046ed249aba81e",
+      "reports/defense-b1/stint-zones.jsonl": "988d364f88aec0cca936c80d657e3d85ca491e50ccec7ec814bd866b57a4d585",
+      "reports/defense-b1/empirical-timing.json": "ddc9544e5d3fadbacbbe4bebc342569d93cf5e50fa30ebe69081e67cc3649ca4",
+      "reports/defense-b1/turnover-types.json": "3493d731b109dde5d9f405c1afd8cbe0ac43a036d97f436585fe922be18d9754",
+      "reports/defense-b1/variance-sources.json": "6379b51f7c0744827c7071da0339c1b6e8bb4466079e346085f1af05497c02dd",
+      "reports/defense-b1/four-point-diagnosis.json": "d0aebd595270ba67f90e67513e4efdef30d690e0e9720ba34bad76edd3ed62a7",
+      "reports/defense-b1/clock-calibration.json": "a5db8c366dc94a936399cd18831562d26188a8a0d7ed3d1e1614a9af08ccaec2",
+      "reports/defense-b1/c-empirical-seeds.json": "5f656330d6c3604673d6859da21d31666a0282c423fbab1bd1b998db2bc3572b",
+      "reports/defense-b1/v1-instrumented-diagnosis.json": "75fe9748888c88a498a3beadf8af304ad4e69908d8500b258ac72c2ac12cf854",
+      "reports/defense-b1/a-instrumented-diagnosis.json": "0aeb670c0f6c8518f254ee49995966346a2ef46ec590032ba7ba50f5f3a294e1",
+      "reports/defense-b1/c-independent-diagnosis.json": "bea445d7976c86036ec411c2ebda05baead92b1a10abdd220a3d11f2eaa396fe",
+      "reports/defense-b1/c-time-only-diagnosis.json": "963cbd5cbb8b13caa959d1a4bfdc64e088aa9aa43555193f2c0908d1fa22f3e7",
+      "reports/defense-b1/c-empirical-diagnosis.json": "15718c6009780f2338e6311d475c9f746e448bd2fed846293e3c713e6f7b39d7",
+      "reports/defense-b1/paired-comparison-provenance.json": "8c301a5ebe4d078ec2d96f7d185eaf1740438422658d30df4244647d95472f31"
+    },
+    "code": "7754e61da170d4909c02b328a3d75e99b9f0f10d72daa67804483c7a93da4276"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "version": "source-choice-elasticity-8",
+  "season": "2025-26",
+  "seed": 20261012,
+  "variants": [
+    "elastic-flow",
+    "elastic-creation",
+    "elastic-space"
+  ],
+  "design": "Global alpha from 2022-25 fresh-FGA actor choices; global beta from assisted-make passer choices conditional on receiver. Source lineup total demand conserved. No target player names, OVR/on-off ranking fit or positional bonus. Third variant enables source-centered long context. Diagnostic single seed, not adoption.",
+  "hashes": {
+    "reports/player-impact-v8/engine.mjs": "b9d80829a88af657c5796c40a3c81e5560f32ac1a257b4f623f291dae29ecf6d",
+    "reports/player-impact-v8/model.mjs": "78324c51f82631de80190d04df67cbc9630eb084976d7da588d788b03ccbb372",
+    "reports/player-impact-v8/worker.mjs": "fa955d33e54a2b2f8c76c1871b311ab24f282e0abe4130fa34cba639861c696f",
+    "reports/player-impact-v8/usage-fit.json": "4ce55df2f01ac960dabfd4ef5afe8d87596c86f9d908bd24ceae05bc03ef9d1e",
+    "reports/player-impact-v8/assist-fit.json": "c62007be8fc2e45aac89690122cf215c191691589d7a8d48cf6c4e5528750b01"
+  }
+}

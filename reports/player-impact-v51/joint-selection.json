@@ -1,0 +1,75 @@
+{
+  "selectedVariant": "baseline",
+  "targetExcluded": true,
+  "games": 180,
+  "table": [
+    {
+      "variant": "baseline",
+      "eligible": true,
+      "score": 2.0,
+      "cells": [
+        {
+          "season": "2022-23",
+          "variant": "baseline",
+          "phaseMAE": 15.496097300187117,
+          "pairMAE": 3.2889749621912285,
+          "minuteMAE": 0.9399280940924885,
+          "regMinuteMAE": 0.8759957230686983,
+          "shortShare": 0.08637308637308637
+        },
+        {
+          "season": "2023-24",
+          "variant": "baseline",
+          "phaseMAE": 14.623193146417446,
+          "pairMAE": 3.026101264510779,
+          "minuteMAE": 0.8444774143302182,
+          "regMinuteMAE": 0.8445404984423677,
+          "shortShare": 0.09716834755624515
+        },
+        {
+          "season": "2024-25",
+          "variant": "baseline",
+          "phaseMAE": 14.98740797940798,
+          "pairMAE": 3.175647476462417,
+          "minuteMAE": 1.0257927927927928,
+          "regMinuteMAE": 0.8833873873873874,
+          "shortShare": 0.08900426478768775
+        }
+      ]
+    },
+    {
+      "variant": "jointExecute",
+      "eligible": false,
+      "score": 1.902337102691776,
+      "cells": [
+        {
+          "season": "2022-23",
+          "variant": "jointExecute",
+          "phaseMAE": 14.506645282010158,
+          "pairMAE": 3.2001781213241474,
+          "minuteMAE": 1.029688318631382,
+          "regMinuteMAE": 0.9935017375033413,
+          "shortShare": 0.09101672339795767
+        },
+        {
+          "season": "2023-24",
+          "variant": "jointExecute",
+          "phaseMAE": 13.747315680166148,
+          "pairMAE": 2.8847310323383084,
+          "minuteMAE": 1.064082814122534,
+          "regMinuteMAE": 0.9944029075804778,
+          "shortShare": 0.09704455227172475
+        },
+        {
+          "season": "2024-25",
+          "variant": "jointExecute",
+          "phaseMAE": 14.422208494208492,
+          "pairMAE": 2.9920517569583787,
+          "minuteMAE": 1.0370867438867437,
+          "regMinuteMAE": 0.9037245817245815,
+          "shortShare": 0.09622960045019696
+        }
+      ]
+    }
+  ]
+}

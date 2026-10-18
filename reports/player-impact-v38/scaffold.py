@@ -1,0 +1,14 @@
+"""Freeze a two-transport workload comparison with exactly shared source roles."""
+import json,hashlib
+from pathlib import Path
+R=Path('reports/player-impact-v38');sha=lambda p:hashlib.sha256(Path(p).read_bytes()).hexdigest()
+text=Path('reports/player-impact-v37/ovr-worker.mjs').read_text(encoding='utf-8')
+text=text.replace("import {ovrInput} from './ovr-input.mjs';","import {controlledInput} from './input.mjs';")
+text=text.replace("import {impactEngine} from './engine.mjs';","import {impactEngine as oldEngine} from '../player-impact-v30/engine.mjs';\nimport {impactEngine as nextEngine} from '../player-impact-v37/engine.mjs';")
+text=text.replace("const x=await ovrInput(),src=source(),run=await impactEngine('rotation-space',{game:true});","const inputs={v30:await controlledInput('v30'),v37:await controlledInput('v37')},runs={v30:await oldEngine('rotation-space',{game:true}),v37:await nextEngine('rotation-space',{game:true})},src=source();")
+text=text.replace("parentPort.on('message',job=>{try{","parentPort.on('message',job=>{try{\n const x=inputs[job.variant],run=runs[job.variant];if(!x||!run)throw Error('Unknown variant');")
+text=text.replace('result:{playerId:p.playerId','result:{variant:job.variant,playerId:p.playerId')
+(R/'worker.mjs').write_text(text,encoding='utf-8')
+files=['src/source_creation_roles.js','test/source_creation_roles.js',str(R/'input.mjs'),str(R/'audit-inputs.mjs'),str(R/'input-verification.json'),str(R/'input-assembly-audit.json'),'reports/player-impact-v6/2025-26-cards.json','reports/player-impact-v17/2025-26-creation-audit.json',str(R/'worker.mjs'),str(R/'run.mjs'),str(R/'scaffold.py')]
+protocol={'version':'canonical-source-role-workload-38','purpose':'Repair non-idempotent pass-rate correction in OVR assembly and isolate v30 vs v37 transport on exactly shared canonical source roles. Only intended shooting centering differs across transports. No new fitted coefficient, source roles rebuilt once from immutable v6 cards and v17 conditional-success audit, synthetic profile style and all attributes unchanged.','healthyPolicy':'Existing v29 supported played-game load, same cap and paired average70 baseline; single injured season no penalty, recurrence only mild reliability discount, no bench per36 extrapolation.','variants':['v30','v37'],'ids':json.loads(Path('reports/player-impact-v29/protocol.json').read_text())['ids'],'samples':4,'seed':20261016,'expectedGames':19200,'noFullOvr':True,'noAdoption':True,'hashes':{**json.loads(Path('reports/player-impact-v37/validation-protocol.json').read_text())['hashes'],**json.loads(Path('reports/player-impact-v30/ovr-probe-protocol.json').read_text())['hashes'],**{p.replace('\\','/'):sha(p) for p in files}}}
+(R/'protocol.json').write_text(json.dumps(protocol,indent=2),encoding='utf-8');print('Frozen canonical-role paired workload experiment.')

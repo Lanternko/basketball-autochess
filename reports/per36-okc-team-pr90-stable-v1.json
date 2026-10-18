@@ -1,0 +1,627 @@
+[
+  {
+    "schemaVersion": 2,
+    "team": "雷霆 2025-26",
+    "season": "2025-26",
+    "opponent": "Cleveland Cavaliers",
+    "benchmarkKind": "same-season-fixed-five",
+    "n": 1000,
+    "seed": 20260908,
+    "fatigue": false,
+    "exposure": {
+      "pace": 100.37,
+      "requestedMinutes": 36,
+      "requestedPossessions": 75.2775,
+      "possessions": 75,
+      "equivalentMinutes": 35.86729102321411,
+      "per36Scale": 1.0037
+    },
+    "reboundModel": "opportunity",
+    "leagueReboundShare": 0.25994687569655994,
+    "seasonStyle": false,
+    "freeThrowStyle": false,
+    "contextScale": 1,
+    "turnoverScale": 1,
+    "possessionModel": "stable",
+    "rollAccess": 0.75,
+    "turnoverFloor": 0.015,
+    "sources": {
+      "base": {
+        "url": "https://stats.nba.com/stats/leaguedashplayerstats?LeagueID=00&Season=2025-26&SeasonType=Regular+Season&PerMode=Totals&MeasureType=Base&TeamID=1610612760&LastNGames=0&Month=0&OpponentTeamID=0&PaceAdjust=N&PlusMinus=N&Rank=N&Period=0",
+        "fetchedAt": "2026-09-08T00:04:28.228Z"
+      },
+      "advanced": {
+        "url": "https://stats.nba.com/stats/leaguedashplayerstats?LeagueID=00&Season=2025-26&SeasonType=Regular+Season&PerMode=Totals&MeasureType=Advanced&TeamID=1610612760&LastNGames=0&Month=0&OpponentTeamID=0&PaceAdjust=N&PlusMinus=N&Rank=N&Period=0",
+        "fetchedAt": "2026-09-08T00:04:28.566Z"
+      },
+      "team": {
+        "url": "https://stats.nba.com/stats/leaguedashteamstats?LeagueID=00&Season=2025-26&SeasonType=Regular+Season&PerMode=PerGame&MeasureType=Advanced&TeamID=1610612760&LastNGames=0&Month=0&OpponentTeamID=0&PaceAdjust=N&PlusMinus=N&Rank=N&Period=0",
+        "fetchedAt": "2026-09-08T00:04:28.296Z"
+      }
+    },
+    "calibrationInputs": [],
+    "coverage": {
+      "blocks": "miss-decomposition-v1",
+      "steals": "pass-interceptions-only",
+      "rebounds": "live-field-goal-misses-only",
+      "teamRebounds": "League recorded OREB share proxy, adjusted by relative location/role/skill opportunity; FT rebounds omitted",
+      "defensiveReboundAttribution": "30% uniform luck + 70% shot-location opportunity and bounded skill; prototype assumptions",
+      "usage": "FGA + 0.44 FTA + TOV share; all five players share exposure",
+      "referenceUsage": "Official season USG%; normalized five-player values are a proxy, not lineup ground truth",
+      "doubleRate": "Model probability at shot opportunities, not sampled double-team event frequency"
+    },
+    "teamResult": {
+      "pointsPer36": 84.722317,
+      "opponentPointsPer36": 93.3461074,
+      "offRtg": 112.54666666666667,
+      "defRtg": 124.00266666666666,
+      "winRate": 0.2605,
+      "truncationsPerGame": 0,
+      "seasonOffRtg": 117.6,
+      "seasonDefRtg": 106.5,
+      "comparison": "Fixed five-player lineup vs the explicitly named opponent; not historical full-roster team strength"
+    },
+    "players": [
+      {
+        "name": "Shai Gilgeous-Alexander",
+        "pos": "PG",
+        "simulated": {
+          "name": "Shai Gilgeous-Alexander",
+          "pos": "PG",
+          "fga": 20.0208039,
+          "fg3a": 5.6046607999999996,
+          "fg3m": 1.9642409,
+          "mida": 3.5049204,
+          "midm": 1.575809,
+          "rima": 10.911222700000001,
+          "rimm": 6.746871400000001,
+          "tov": 2.4911834,
+          "oreb": 0.8581635,
+          "dreb": 3.3553691,
+          "fta": 4.8277969999999994,
+          "ftm": 4.3128988999999995,
+          "pts": 26.8509824,
+          "stl": 0.7808786000000001,
+          "blk": 0.381406,
+          "blka": 1.5607535,
+          "pf": 1.957,
+          "usageEvents": 24.834,
+          "firstTouches": 30.191,
+          "receptions": 13.584,
+          "passAttempts": 19.758,
+          "interceptedPasses": 0.577,
+          "shotOpportunities": 24.257,
+          "evSum": 26.832437695862883,
+          "doubleRateSum": 5.2908432895488104,
+          "fgm": 10.286921300000001,
+          "reb": 4.213532600000001,
+          "fgPct": 0.5138116007419662,
+          "twoPct": 0.577316716563392,
+          "ftPct": 0.8933471933471934,
+          "threePct": 0.35046561604584525,
+          "meanEv": 1.1061729684570591,
+          "meanDoubleRate": 0.2181161433626916,
+          "efg": 0.5628665964806738,
+          "longPct": 0.35046561604584525,
+          "midPct": 0.4495990836197022,
+          "shortPct": 0.6183423788059976,
+          "longRate": 0.27994184589161275,
+          "midRate": 0.1750639193863739,
+          "shortRate": 0.5449942347220134,
+          "usagePct": 29.03836716769505,
+          "eventSharePct": 29.05207005065453,
+          "teamPossessions": 75,
+          "standardError": {
+            "pts": 0.22621598013772085,
+            "reb": 0.06114355677039511,
+            "tov": 0.04964010616568158,
+            "blk": 0.01881366402256493
+          }
+        },
+        "real": {
+          "pts": 33.7378483186854,
+          "fgm": 11.649677430778947,
+          "fga": 21.052289857809836,
+          "fg3m": 1.8327125917094103,
+          "fg3a": 4.749116107212211,
+          "ftm": 8.605780865418101,
+          "fta": 9.785091576605025,
+          "oreb": 0.6055919868257181,
+          "dreb": 4.0479043329929585,
+          "reb": 4.653496319818676,
+          "tov": 2.4064313160706168,
+          "stl": 1.5139799670642955,
+          "blk": 0.8287048240772985,
+          "ast": 7.139610792050572,
+          "fgPct": 0.5533686601059803,
+          "threePct": 0.3859060402684564,
+          "twoPct": 0.6021505376344086,
+          "ftPct": 0.8794788273615635,
+          "usagePct": 32.300000000000004,
+          "minutesPerGame": 33.21980392156863
+        },
+        "ci95": {
+          "pts": [
+            26.40595856064211,
+            27.29600623935789
+          ],
+          "reb": [
+            4.093247815656327,
+            4.333817384343674
+          ],
+          "tov": [
+            2.393528801865351,
+            2.5888379981346494
+          ],
+          "blk": [
+            0.3443947818242811,
+            0.4184172181757189
+          ]
+        },
+        "normalizedSeasonUsageProxy": 29.879740980573544,
+        "error": {
+          "pts": -6.886865918685402,
+          "reb": -0.43996371981867544,
+          "tov": 0.08475208392938338,
+          "fgPercentagePoints": -3.95570593640141,
+          "usageProxyPercentagePoints": -0.8413738128784942
+        },
+        "diagnostics": {
+          "firstTouchShare": 0.36688540527403085,
+          "receptionShare": 0.17392640393331796,
+          "meanEv": 1.1061729684570591,
+          "meanDoubleRate": 0.2181161433626916,
+          "interceptedPassRate": 0.02920336066403482
+        }
+      },
+      {
+        "name": "Jalen Williams",
+        "pos": "SF",
+        "simulated": {
+          "name": "Jalen Williams",
+          "pos": "SF",
+          "fga": 13.140440400000001,
+          "fg3a": 3.3894949,
+          "fg3m": 0.9555224,
+          "mida": 1.9682557,
+          "midm": 0.7216603,
+          "rima": 7.7826898,
+          "rimm": 4.3189211,
+          "tov": 2.1840512000000003,
+          "oreb": 1.2184918,
+          "dreb": 4.096099700000001,
+          "fta": 3.1676772000000004,
+          "ftm": 2.6618124,
+          "pts": 15.6095424,
+          "stl": 0.2449028,
+          "blk": 0.4857908,
+          "blka": 1.0217666,
+          "pf": 1.551,
+          "usageEvents": 16.846,
+          "firstTouches": 27.904,
+          "receptions": 10.585,
+          "passAttempts": 22.672,
+          "interceptedPasses": 0.69,
+          "shotOpportunities": 16.156,
+          "evSum": 15.511507951711668,
+          "doubleRateSum": 1.5545764212127857,
+          "fgm": 5.9961038,
+          "reb": 5.3145915,
+          "fgPct": 0.4563091964558509,
+          "twoPct": 0.516932578486876,
+          "ftPct": 0.8403041825095057,
+          "threePct": 0.2819070180633699,
+          "meanEv": 0.9601081921089173,
+          "meanDoubleRate": 0.09622285350413382,
+          "efg": 0.4926672777268561,
+          "longPct": 0.2819070180633699,
+          "midPct": 0.36664966853646097,
+          "shortPct": 0.5549393861232912,
+          "longRate": 0.25794378246257255,
+          "midRate": 0.14978612893369997,
+          "shortRate": 0.5922700886037274,
+          "usagePct": 19.705591601689772,
+          "eventSharePct": 19.707303377358713,
+          "teamPossessions": 75,
+          "standardError": {
+            "pts": 0.17525984141272072,
+            "reb": 0.06987744885052585,
+            "tov": 0.04642390740964378,
+            "blk": 0.021638211853390574
+          }
+        },
+        "real": {
+          "pts": 21.65469445028117,
+          "fgm": 8.308017764228655,
+          "fga": 17.15451816132398,
+          "fg3m": 0.8846500397095327,
+          "fg3a": 2.9616544807666965,
+          "ftm": 4.1540088821143275,
+          "fta": 4.961732831414336,
+          "oreb": 1.0385022205285819,
+          "dreb": 4.846343695800049,
+          "reb": 5.884845916328631,
+          "tov": 2.4231718479000244,
+          "stl": 1.5000587629857294,
+          "blk": 0.3461674068428606,
+          "ast": 6.961811182061975,
+          "fgPct": 0.484304932735426,
+          "threePct": 0.2987012987012987,
+          "twoPct": 0.5230352303523035,
+          "ftPct": 0.8372093023255814,
+          "usagePct": 25.2,
+          "minutesPerGame": 28.362525252525252
+        },
+        "ci95": {
+          "pts": [
+            15.264762126461143,
+            15.954322673538858
+          ],
+          "reb": [
+            5.177124948993905,
+            5.4520580510060945
+          ],
+          "tov": [
+            2.092723675300564,
+            2.275378724699437
+          ],
+          "blk": [
+            0.4432229844549937,
+            0.5283586155450063
+          ]
+        },
+        "normalizedSeasonUsageProxy": 23.311748381128584,
+        "error": {
+          "pts": -6.045152050281169,
+          "reb": -0.5702544163286314,
+          "tov": -0.23912064790002407,
+          "fgPercentagePoints": -2.799573627957513,
+          "usageProxyPercentagePoints": -3.6061567794388125
+        },
+        "diagnostics": {
+          "firstTouchShare": 0.3390934499939239,
+          "receptionShare": 0.13552789941358737,
+          "meanEv": 0.9601081921089173,
+          "meanDoubleRate": 0.09622285350413382,
+          "interceptedPassRate": 0.030434015525758643
+        }
+      },
+      {
+        "name": "Chet Holmgren",
+        "pos": "C",
+        "simulated": {
+          "name": "Chet Holmgren",
+          "pos": "C",
+          "fga": 15.414824600000001,
+          "fg3a": 3.4487132000000003,
+          "fg3m": 1.1673031,
+          "mida": 2.0184407,
+          "midm": 0.8752264000000001,
+          "rima": 9.9476707,
+          "rimm": 6.623416300000001,
+          "tov": 3.4336577,
+          "oreb": 3.5530980000000003,
+          "dreb": 6.684642,
+          "fta": 4.1292218,
+          "ftm": 3.3513543,
+          "pts": 21.850549,
+          "stl": 0.31817290000000004,
+          "blk": 0.9886445,
+          "blka": 1.375069,
+          "pf": 0.581,
+          "usageEvents": 20.836,
+          "firstTouches": 8.078,
+          "receptions": 23.322,
+          "passAttempts": 12.221,
+          "interceptedPasses": 0.592,
+          "shotOpportunities": 20.244,
+          "evSum": 22.015496942325168,
+          "doubleRateSum": 5.48534735525374,
+          "fgm": 8.665945800000001,
+          "reb": 10.23774,
+          "fgPct": 0.5621825758562313,
+          "twoPct": 0.6266566012414024,
+          "ftPct": 0.8116188624210015,
+          "threePct": 0.33847497089639117,
+          "meanEv": 1.0875072585618044,
+          "meanDoubleRate": 0.2709616358058555,
+          "efg": 0.600045578851413,
+          "longPct": 0.33847497089639117,
+          "midPct": 0.43361511685728493,
+          "shortPct": 0.6658258500655837,
+          "longRate": 0.22372704779268135,
+          "midRate": 0.13094152884490168,
+          "shortRate": 0.645331423362417,
+          "usagePct": 24.357948444695147,
+          "eventSharePct": 24.375007311566314,
+          "teamPossessions": 75,
+          "standardError": {
+            "pts": 0.20858237367190602,
+            "reb": 0.09948817968933753,
+            "tov": 0.05468774771143672,
+            "blk": 0.03123700931188437
+          }
+        },
+        "real": {
+          "pts": 21.28707459605244,
+          "fgm": 7.822684483223336,
+          "fga": 14.04117790882714,
+          "fg3m": 1.5861664389945933,
+          "fg3a": 4.3799823258600705,
+          "ftm": 4.055539190611176,
+          "fta": 5.118991689482551,
+          "oreb": 2.3432004212420128,
+          "dreb": 8.723915414470264,
+          "reb": 11.067115835712276,
+          "tov": 1.928634192868426,
+          "stl": 0.7750586008723581,
+          "blk": 2.3612250398669516,
+          "ast": 2.0728311418679346,
+          "fgPct": 0.5571245186136072,
+          "threePct": 0.36213991769547327,
+          "twoPct": 0.6455223880597015,
+          "ftPct": 0.7922535211267606,
+          "usagePct": 21.4,
+          "minutesPerGame": 28.945917874396137
+        },
+        "ci95": {
+          "pts": [
+            21.440214908229198,
+            22.260883091770804
+          ],
+          "reb": [
+            10.042021679529793,
+            10.433458320470208
+          ],
+          "tov": [
+            3.326073118939181,
+            3.541242281060819
+          ],
+          "blk": [
+            0.9271934309571769,
+            1.050095569042823
+          ]
+        },
+        "normalizedSeasonUsageProxy": 19.796484736355225,
+        "error": {
+          "pts": 0.5634744039475592,
+          "reb": -0.8293758357122751,
+          "tov": 1.5050235071315738,
+          "fgPercentagePoints": 0.5058057242624092,
+          "usageProxyPercentagePoints": 4.561463708339922
+        },
+        "diagnostics": {
+          "firstTouchShare": 0.09816502612711142,
+          "receptionShare": 0.29860951063993235,
+          "meanEv": 1.0875072585618044,
+          "meanDoubleRate": 0.2709616358058555,
+          "interceptedPassRate": 0.048441207757139344
+        }
+      },
+      {
+        "name": "Luguentz Dort",
+        "pos": "SG",
+        "simulated": {
+          "name": "Luguentz Dort",
+          "pos": "SG",
+          "fga": 7.6351459,
+          "fg3a": 3.9214559,
+          "fg3m": 1.314847,
+          "mida": 1.0749627,
+          "midm": 0.39244670000000004,
+          "rima": 2.6387273,
+          "rimm": 1.3479691,
+          "tov": 1.1391995000000001,
+          "oreb": 0.8651894,
+          "dreb": 3.5611276000000003,
+          "fta": 1.1482328,
+          "ftm": 0.8089822000000001,
+          "pts": 8.2343548,
+          "stl": 0.260962,
+          "blk": 0.50185,
+          "blka": 0.3703653,
+          "pf": 2.488,
+          "usageEvents": 9.314,
+          "firstTouches": 8.039,
+          "receptions": 11.094,
+          "passAttempts": 10.443,
+          "interceptedPasses": 0.384,
+          "shotOpportunities": 8.93,
+          "evSum": 8.231694437675895,
+          "doubleRateSum": 0.23628358672801567,
+          "fgm": 3.0552628,
+          "reb": 4.426317,
+          "fgPct": 0.40015774944130406,
+          "twoPct": 0.46864864864864864,
+          "ftPct": 0.7045454545454546,
+          "threePct": 0.33529562324033785,
+          "meanEv": 0.9218022886535157,
+          "meanDoubleRate": 0.026459528189027512,
+          "efg": 0.48626265281977127,
+          "longPct": 0.33529562324033785,
+          "midPct": 0.36507936507936506,
+          "shortPct": 0.5108406238113351,
+          "longRate": 0.5136058893124753,
+          "midRate": 0.14079137636387537,
+          "shortRate": 0.3456027343236493,
+          "usagePct": 10.937697421004389,
+          "eventSharePct": 10.895988582258045,
+          "teamPossessions": 75,
+          "standardError": {
+            "pts": 0.13478334671075112,
+            "reb": 0.06562169005905143,
+            "tov": 0.034087196084995566,
+            "blk": 0.02241656758967578
+          }
+        },
+        "real": {
+          "pts": 11.216277738461747,
+          "fgm": 3.9334862902244323,
+          "fga": 10.203697109295062,
+          "fg3m": 2.4925061641026103,
+          "fg3a": 7.243846039423212,
+          "ftm": 0.8567989939102724,
+          "fta": 1.1294168556089954,
+          "oreb": 1.0904714467948922,
+          "dreb": 3.6803411329327607,
+          "reb": 4.770812579727653,
+          "tov": 1.0515260379807887,
+          "stl": 1.207307673237202,
+          "blk": 0.5257630189903943,
+          "ast": 1.6551798745993898,
+          "fgPct": 0.38549618320610685,
+          "threePct": 0.34408602150537637,
+          "twoPct": 0.4868421052631579,
+          "ftPct": 0.7586206896551724,
+          "usagePct": 13.900000000000002,
+          "minutesPerGame": 26.793357487922705
+        },
+        "ci95": {
+          "pts": [
+            7.969201991616582,
+            8.49950760838342
+          ],
+          "reb": [
+            4.297222598987951,
+            4.555411401012049
+          ],
+          "tov": [
+            1.0721413953274004,
+            1.2062576046726
+          ],
+          "blk": [
+            0.45775096257607517,
+            0.5459490374239249
+          ]
+        },
+        "normalizedSeasonUsageProxy": 12.858464384828864,
+        "error": {
+          "pts": -2.9819229384617465,
+          "reb": -0.34449557972765277,
+          "tov": 0.08767346201921145,
+          "fgPercentagePoints": 1.466156623519721,
+          "usageProxyPercentagePoints": -1.9207669638244749
+        },
+        "diagnostics": {
+          "firstTouchShare": 0.09769109247782233,
+          "receptionShare": 0.14204501805331488,
+          "meanEv": 0.9218022886535157,
+          "meanDoubleRate": 0.026459528189027512,
+          "interceptedPassRate": 0.036771042803792016
+        }
+      },
+      {
+        "name": "Isaiah Hartenstein",
+        "pos": "C",
+        "simulated": {
+          "name": "Isaiah Hartenstein",
+          "pos": "C",
+          "fga": 9.2209919,
+          "fg3a": 1.8688894000000003,
+          "fg3m": 0.5148981,
+          "mida": 1.2827286,
+          "midm": 0.46672050000000004,
+          "rima": 6.0693738999999995,
+          "rimm": 4.0730146,
+          "tov": 3.141581,
+          "oreb": 4.024837,
+          "dreb": 7.144336600000001,
+          "fta": 2.6778716000000005,
+          "ftm": 1.5527239,
+          "pts": 12.1768884,
+          "stl": 0.3593246,
+          "blk": 1.2676730999999999,
+          "blka": 0.8119933,
+          "pf": 2.48,
+          "usageEvents": 13.651,
+          "firstTouches": 8.078,
+          "receptions": 19.517,
+          "passAttempts": 15.954,
+          "interceptedPasses": 0.703,
+          "shotOpportunities": 12.948,
+          "evSum": 12.116475444935578,
+          "doubleRateSum": 1.2533763112038174,
+          "fgm": 5.0546332,
+          "reb": 11.1691736,
+          "fgPct": 0.5481658865788614,
+          "twoPct": 0.6174744027303755,
+          "ftPct": 0.5798350824587706,
+          "threePct": 0.2755102040816326,
+          "meanEv": 0.9357796914531648,
+          "meanDoubleRate": 0.09680076546214222,
+          "efg": 0.5760857733754218,
+          "longPct": 0.2755102040816326,
+          "midPct": 0.36384976525821594,
+          "shortPct": 0.671076566892674,
+          "longRate": 0.20267769674540112,
+          "midRate": 0.13910961140742353,
+          "shortRate": 0.6582126918471753,
+          "usagePct": 15.960395364915646,
+          "eventSharePct": 15.969630678162398,
+          "teamPossessions": 75,
+          "standardError": {
+            "pts": 0.1535713520164493,
+            "reb": 0.10257747383386925,
+            "tov": 0.05655349943459113,
+            "blk": 0.03554003508853212
+          }
+        },
+        "real": {
+          "pts": 13.672989427874366,
+          "fgm": 5.823680682242785,
+          "fga": 9.368529793173177,
+          "fg3m": 0,
+          "fg3a": 0.22155306943314945,
+          "ftm": 2.025628063388795,
+          "fta": 3.3232960414972417,
+          "oreb": 4.715915335077038,
+          "dreb": 9.305228916192277,
+          "reb": 14.021144251269314,
+          "tov": 2.5953359562168936,
+          "stl": 1.5192210475415961,
+          "blk": 1.139415785656197,
+          "ast": 5.253972789414687,
+          "fgPct": 0.6216216216216216,
+          "threePct": 0,
+          "twoPct": 0.6366782006920415,
+          "ftPct": 0.6095238095238096,
+          "usagePct": 15.299999999999999,
+          "minutesPerGame": 24.200531914893617
+        },
+        "ci95": {
+          "pts": [
+            11.874774850602936,
+            12.479001949397063
+          ],
+          "reb": [
+            10.967377859445374,
+            11.370969340554627
+          ],
+          "tov": [
+            3.0303260151303015,
+            3.2528359848696984
+          ],
+          "blk": [
+            1.197756894892015,
+            1.3375893051079848
+          ]
+        },
+        "normalizedSeasonUsageProxy": 14.153561517113783,
+        "error": {
+          "pts": -1.4961010278743672,
+          "reb": -2.8519706512693137,
+          "tov": 0.5462450437831063,
+          "fgPercentagePoints": -7.345573504276015,
+          "usageProxyPercentagePoints": 1.8068338478018635
+        },
+        "diagnostics": {
+          "firstTouchShare": 0.09816502612711142,
+          "receptionShare": 0.24989116795984737,
+          "meanEv": 0.9357796914531648,
+          "meanDoubleRate": 0.09680076546214222,
+          "interceptedPassRate": 0.044064184530525255
+        }
+      }
+    ]
+  }
+]

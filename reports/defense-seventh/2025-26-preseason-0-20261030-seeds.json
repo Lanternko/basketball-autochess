@@ -1,0 +1,34 @@
+{
+  "label": "2025-26-preseason-0-20261030",
+  "extra": {
+    "bundle": "reports/defense-seventh/prior/preseason-0/bundle-seed20261030.json",
+    "cutoff": 1,
+    "calendarDate": "2025-10-20",
+    "neutralContests": true,
+    "calibration": {
+      "shotDelta": -0.09056425228367852,
+      "options": {
+        "pace": 0.9340600964927285,
+        "foulScale": 0.9723167198482517,
+        "passTurnoverScale": 1.4725479244520816,
+        "touchTurnoverScale": 0.9718310319975304,
+        "touchLiveShare": 0.3666101105605854,
+        "clockViolationProbability": 0.007912622893204234
+      }
+    }
+  },
+  "files": [
+    {
+      "seed": 20261030,
+      "file": "reports/defense-seventh/runs/2025-26-preseason-0-20261030-seed20261030.json",
+      "sha256": "2f508dc35659a90d00841844d9c70eeb795ff635bd08e2f6c986c6ea55ac4750"
+    }
+  ],
+  "seconds": 43.46,
+  "sources": {
+    "src/defense_fifth_game.js": "bddd3f34b93e969513ce79d717b78358dc433c0f15eba3eeffa675177b9dfa86",
+    "src/defense_sixth_season.js": "1c30c6c59fbc3e2a40b08231dddf9be255b11fca386d93daf1eb986a99000bcf",
+    "src/defense_seventh_jobs.js": "ca1501845b601e0b742f601751ac74fba7e9717a6de66d8ab9d7a4d0c4c6d41d",
+    "scripts/run_defense_seventh.js": "0e40923369762bd8b0a0faa1545e704ba0587bc1341ea40058b7766f240f3f01"
+  }
+}

@@ -1,0 +1,80 @@
+{
+  "note": "three seeds; paired franchise and seed 20k bootstrap; development in-sample; no adoption or generalization claim",
+  "versions": {
+    "baseline": {
+      "netRMSE": 2.816024599838696,
+      "winsMAE": 5.327777777777778,
+      "winsRMSE": 6.710274046399133
+    },
+    "candidate": {
+      "netRMSE": 2.69487868158609,
+      "winsMAE": 5.244444444444444,
+      "winsRMSE": 6.611157796287078
+    }
+  },
+  "candidateMinusBaseline": {
+    "netRMSE": {
+      "delta": -0.12114591825260623,
+      "joint95": [
+        -0.3588086828647362,
+        0.05880077123564409
+      ]
+    },
+    "winsMAE": {
+      "delta": -0.08333333333333481,
+      "joint95": [
+        -0.5499999999999998,
+        0.2666666666666675
+      ]
+    },
+    "winsRMSE": {
+      "delta": -0.09911625011205505,
+      "joint95": [
+        -0.5396070029138242,
+        0.28733374890914043
+      ]
+    }
+  },
+  "reboundPerGame": {
+    "2022-23": {
+      "baseline": {
+        "orebPerGame": 10.424254742547426,
+        "drebPerGame": 33.28441734417344
+      },
+      "candidate": {
+        "orebPerGame": 10.441056910569104,
+        "drebPerGame": 33.3550135501355
+      }
+    },
+    "2023-24": {
+      "baseline": {
+        "orebPerGame": 10.660704607046071,
+        "drebPerGame": 33.18306233062331
+      },
+      "candidate": {
+        "orebPerGame": 10.712466124661248,
+        "drebPerGame": 33.28062330623306
+      }
+    },
+    "2024-25": {
+      "baseline": {
+        "orebPerGame": 11.061924119241192,
+        "drebPerGame": 33.09376693766938
+      },
+      "candidate": {
+        "orebPerGame": 11.11910569105691,
+        "drebPerGame": 33.19254742547426
+      }
+    },
+    "2025-26": {
+      "baseline": {
+        "orebPerGame": 11.32208672086721,
+        "drebPerGame": 32.106910569105686
+      },
+      "candidate": {
+        "orebPerGame": 11.295663956639567,
+        "drebPerGame": 32.15135501355014
+      }
+    }
+  }
+}

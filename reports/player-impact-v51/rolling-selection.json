@@ -1,0 +1,257 @@
+{
+  "selectedVariant": "rollingPlan",
+  "targetExcluded": true,
+  "games": 1080,
+  "rawCells": [
+    {
+      "season": "2022-23",
+      "variant": "baseline",
+      "seed": 20261012,
+      "phaseMAE": 15.496097300187117,
+      "pairMAE": 3.2889749621912285,
+      "minuteMAE": 0.9399280940924885,
+      "regMinuteMAE": 0.8759957230686983,
+      "shortShare": 0.08637308637308637
+    },
+    {
+      "season": "2022-23",
+      "variant": "baseline",
+      "seed": 20261013,
+      "phaseMAE": 15.640662924351776,
+      "pairMAE": 3.3102526186075165,
+      "minuteMAE": 1.2460013365410318,
+      "regMinuteMAE": 0.9380032076984763,
+      "shortShare": 0.08524101991438675
+    },
+    {
+      "season": "2022-23",
+      "variant": "baseline",
+      "seed": 20261014,
+      "phaseMAE": 15.425089548249133,
+      "pairMAE": 3.385060213969641,
+      "minuteMAE": 0.9626773589949211,
+      "regMinuteMAE": 0.9274632451216251,
+      "shortShare": 0.08392548492414058
+    },
+    {
+      "season": "2022-23",
+      "variant": "rollingPlan",
+      "seed": 20261012,
+      "phaseMAE": 13.97911253675488,
+      "pairMAE": 3.076734442390635,
+      "minuteMAE": 1.1166872493985565,
+      "regMinuteMAE": 1.029200748462978,
+      "shortShare": 0.08997888582101674
+    },
+    {
+      "season": "2022-23",
+      "variant": "rollingPlan",
+      "seed": 20261013,
+      "phaseMAE": 13.920975674953219,
+      "pairMAE": 3.01947011706716,
+      "minuteMAE": 0.9735819299652501,
+      "regMinuteMAE": 0.8789174017642339,
+      "shortShare": 0.08978675645342311
+    },
+    {
+      "season": "2022-23",
+      "variant": "rollingPlan",
+      "seed": 20261014,
+      "phaseMAE": 13.878497727880246,
+      "pairMAE": 3.059121156108217,
+      "minuteMAE": 0.9862940390269982,
+      "regMinuteMAE": 0.9608821170809946,
+      "shortShare": 0.08570954907161804
+    },
+    {
+      "season": "2023-24",
+      "variant": "baseline",
+      "seed": 20261012,
+      "phaseMAE": 14.623193146417446,
+      "pairMAE": 3.026101264510779,
+      "minuteMAE": 0.8444774143302182,
+      "regMinuteMAE": 0.8445404984423677,
+      "shortShare": 0.09716834755624515
+    },
+    {
+      "season": "2023-24",
+      "variant": "baseline",
+      "seed": 20261013,
+      "phaseMAE": 14.56157840083074,
+      "pairMAE": 3.1401642827529024,
+      "minuteMAE": 1.1825267393561787,
+      "regMinuteMAE": 1.1285617860851505,
+      "shortShare": 0.09537516791402802
+    },
+    {
+      "season": "2023-24",
+      "variant": "baseline",
+      "seed": 20261014,
+      "phaseMAE": 14.537767393561785,
+      "pairMAE": 3.0935214552238803,
+      "minuteMAE": 1.128993769470405,
+      "regMinuteMAE": 1.044327622014538,
+      "shortShare": 0.09223115193264447
+    },
+    {
+      "season": "2023-24",
+      "variant": "rollingPlan",
+      "seed": 20261012,
+      "phaseMAE": 13.292414330218067,
+      "pairMAE": 2.770455016583748,
+      "minuteMAE": 1.0101183800623055,
+      "regMinuteMAE": 0.9303608515057115,
+      "shortShare": 0.09231528714826395
+    },
+    {
+      "season": "2023-24",
+      "variant": "rollingPlan",
+      "seed": 20261013,
+      "phaseMAE": 13.020140186915889,
+      "pairMAE": 2.6836561981757874,
+      "minuteMAE": 0.9280654205607476,
+      "regMinuteMAE": 0.8028997923156802,
+      "shortShare": 0.08780567864762842
+    },
+    {
+      "season": "2023-24",
+      "variant": "rollingPlan",
+      "seed": 20261014,
+      "phaseMAE": 13.15861111111111,
+      "pairMAE": 2.7055742122719737,
+      "minuteMAE": 1.0636757528556595,
+      "regMinuteMAE": 0.9758592938733124,
+      "shortShare": 0.09573221757322176
+    },
+    {
+      "season": "2024-25",
+      "variant": "baseline",
+      "seed": 20261012,
+      "phaseMAE": 14.98740797940798,
+      "pairMAE": 3.175647476462417,
+      "minuteMAE": 1.0257927927927928,
+      "regMinuteMAE": 0.8833873873873874,
+      "shortShare": 0.08900426478768775
+    },
+    {
+      "season": "2024-25",
+      "variant": "baseline",
+      "seed": 20261013,
+      "phaseMAE": 15.047837837837838,
+      "pairMAE": 3.115092864125122,
+      "minuteMAE": 0.9655335907335907,
+      "regMinuteMAE": 0.8092046332046331,
+      "shortShare": 0.09946779225545972
+    },
+    {
+      "season": "2024-25",
+      "variant": "baseline",
+      "seed": 20261014,
+      "phaseMAE": 15.071660231660234,
+      "pairMAE": 3.176545763235067,
+      "minuteMAE": 0.9807289575289576,
+      "regMinuteMAE": 0.7658429858429858,
+      "shortShare": 0.08471420592068517
+    },
+    {
+      "season": "2024-25",
+      "variant": "rollingPlan",
+      "seed": 20261012,
+      "phaseMAE": 13.85104761904762,
+      "pairMAE": 2.856136749498379,
+      "minuteMAE": 1.1115207207207207,
+      "regMinuteMAE": 0.8477528957528959,
+      "shortShare": 0.08622828784119106
+    },
+    {
+      "season": "2024-25",
+      "variant": "rollingPlan",
+      "seed": 20261013,
+      "phaseMAE": 13.859248391248393,
+      "pairMAE": 2.8405113957915313,
+      "minuteMAE": 0.9750653796653797,
+      "regMinuteMAE": 0.8545045045045044,
+      "shortShare": 0.08884362268881228
+    },
+    {
+      "season": "2024-25",
+      "variant": "rollingPlan",
+      "seed": 20261014,
+      "phaseMAE": 13.897050193050193,
+      "pairMAE": 2.8966085301229616,
+      "minuteMAE": 0.9913196911196911,
+      "regMinuteMAE": 0.8885611325611326,
+      "shortShare": 0.08191287878787878
+    }
+  ],
+  "table": [
+    {
+      "variant": "baseline",
+      "eligible": true,
+      "score": 2.0,
+      "cells": [
+        {
+          "season": "2022-23",
+          "variant": "baseline",
+          "phaseMAE": 15.520616590929341,
+          "pairMAE": 3.328095931589462,
+          "minuteMAE": 1.049535596542814,
+          "regMinuteMAE": 0.9138207252962666,
+          "shortShare": 0.08517986373720457
+        },
+        {
+          "season": "2023-24",
+          "variant": "baseline",
+          "phaseMAE": 14.574179646936656,
+          "pairMAE": 3.086595667495854,
+          "minuteMAE": 1.051999307718934,
+          "regMinuteMAE": 1.005809968847352,
+          "shortShare": 0.09492488913430588
+        },
+        {
+          "season": "2024-25",
+          "variant": "baseline",
+          "phaseMAE": 15.035635349635351,
+          "pairMAE": 3.1557620346075352,
+          "minuteMAE": 0.9906851136851137,
+          "regMinuteMAE": 0.8194783354783355,
+          "shortShare": 0.09106208765461088
+        }
+      ]
+    },
+    {
+      "variant": "rollingPlan",
+      "eligible": true,
+      "score": 1.8094333061907584,
+      "cells": [
+        {
+          "season": "2022-23",
+          "variant": "rollingPlan",
+          "phaseMAE": 13.926195313196114,
+          "pairMAE": 3.051775238522004,
+          "minuteMAE": 1.0255210727969348,
+          "regMinuteMAE": 0.9563334224360688,
+          "shortShare": 0.08849173044868597
+        },
+        {
+          "season": "2023-24",
+          "variant": "rollingPlan",
+          "phaseMAE": 13.157055209415022,
+          "pairMAE": 2.7198951423438364,
+          "minuteMAE": 1.0006198511595708,
+          "regMinuteMAE": 0.903039979231568,
+          "shortShare": 0.09195106112303804
+        },
+        {
+          "season": "2024-25",
+          "variant": "rollingPlan",
+          "phaseMAE": 13.869115401115401,
+          "pairMAE": 2.8644188918042905,
+          "minuteMAE": 1.0259685971685972,
+          "regMinuteMAE": 0.8636061776061776,
+          "shortShare": 0.08566159643929404
+        }
+      ]
+    }
+  ]
+}

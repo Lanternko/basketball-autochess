@@ -1,0 +1,12 @@
+{
+ "version":"offensive-lineup-choice-v48",
+ "baseline":"v47",
+ "seasons":["2022-23","2023-24","2024-25","2025-26"],
+ "seeds":[20261012,20261013,20261014],
+ "sigmaGrid":[0,0.025,0.05,0.1,0.2],
+ "branches":["paintGivenTwo","raGivenPaint"],
+ "selection":"Joint shooter and four-other-teammate conditional two-point choice logits, fixed training-only v45 defender choice offsets. Preserve old0.5 pseudo-attempt shooter prior. Older-three seasons whole-game5fold, minimum equal-season joint3-zone multinomial NLL per actual two-point FGA; zero explicit baseline and lower sigma on ties.2025-26 excluded. No player-name or on/off residual fitting.",
+ "reasonForNewBranch":"Observer-only diagnosis found Curry teammate two-point error predominantly shooter/zone composition; prior make-only experiment is retained as source-only prototype, not adopted or included in this candidate. Choice gets a separate pre-fit protocol after that diagnosis.",
+ "runtime":"Add new-minus-old shooter logits and four teammates' logits to existing paintGivenTwo and raGivenPaint. Three/corner choice, all make coefficients, v47 FT, v46 defense, neutral source make contexts, putbacks, creation roles, fouls and rebounds unchanged.",
+ "adoptionRule":"Nonzero selected sigma and older-three heldout NLL improvement; four-season mean all-player teammate fresh two-point FG% MAE improves, mean fresh RA teammate two-point-conditional share MAE improves, four-season mean teamPPG MAE does not increase, mean individualPTS36 MAE increases by no more0.02; coarse defensive paint/three FG% MAE increases by no more0.05pp. Report all seasons, fine zones, roles and seeds. No promotion for Curry alone; no game preset or OVR promotion."
+}

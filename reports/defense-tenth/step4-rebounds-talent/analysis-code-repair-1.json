@@ -1,0 +1,7 @@
+{
+  "registeredAt": "2026-10-14T07:04:28.597867+00:00",
+  "beforeSHA256": "9c385ca0c7455c0d7b7313df165fbb7991b5ba01f7e0922113c1bd31881fe89f",
+  "afterSHA256": "ac0b537cba8e38fa0fbe6ed1d900f6c41e897fb17c3c5179bf8b7e6bbc91657c",
+  "reason": "Runtime implementation repair before any prediction output: make capped training-minute weights floating point before division; allow only this recorded hash transition. No feature, split, metric, ridge or acceptance rule change.",
+  "predictionOutputExisted": false
+}

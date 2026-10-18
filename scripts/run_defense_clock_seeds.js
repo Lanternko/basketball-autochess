@@ -1,0 +1,12 @@
+import fs from 'node:fs';
+import {performance} from 'node:perf_hooks';
+import {runClockJobs} from '../src/defense_clock_pool.js';
+import {read,hash,codeFiles} from './defense_io.js';
+const args=process.argv.slice(2),arg=(k,f)=>{const i=args.indexOf('--'+k);return i<0?f:args[i+1];};
+const mode=arg('mode','full'),preset=arg('preset','c-empirical'),workers=Number(arg('workers',4)),seeds=Array.from({length:mode==='full'?20:2},(_,i)=>20261012+i);
+const pace=Number(arg('pace',String(read('reports/defense-b1/clock-calibration.json').selected.pace)));
+const start=performance.now(),runs=await runClockJobs(seeds.map(seed=>({preset,seed,options:{pace}})),{workers,onProgress:(n,t)=>console.log(preset+' '+n+'/'+t)});
+fs.mkdirSync('reports/defense-b1/runs',{recursive:true});
+const files=runs.map(r=>{const file='reports/defense-b1/runs/'+preset+'-seed'+r.seed+'.json';fs.writeFileSync(file,JSON.stringify(r)+'\n');return {file,sha256:hash(file)};});
+const result={preset,mode,workers,seeds,pace,elapsedSeconds:(performance.now()-start)/1000,files,provenance:{sources:Object.fromEntries(['reports/defense-b1/clock-calibration.json','reports/defense-b1/empirical-timing.json','reports/defense-a/rebound-audit.json','data/season-league.json','data/defense-source/game-exposure.json'].map(f=>[f,hash(f)])),code:Object.fromEntries([...new Set([...codeFiles,'src/defense_clock_game.js','src/defense_clock_season.js','src/defense_clock_jobs.js','src/defense_clock_pool.js','scripts/defense_clock_worker.js','scripts/run_defense_clock_seeds.js'])].map(f=>[f,hash(f)]))}};
+fs.writeFileSync('reports/defense-b1/'+preset+'-seeds.json',JSON.stringify(result,null,2)+'\n');console.log({preset,seeds:seeds.length,pace,elapsedSeconds:result.elapsedSeconds});

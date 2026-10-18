@@ -1,0 +1,34 @@
+[
+ {
+  "layer": "模擬板 v53（原始）",
+  "description": "8 種子期望分差，位置置中每 36 分鐘",
+  "players": 414,
+  "rhoNet": 0.362,
+  "rhoDefense": 0.256,
+  "note": ""
+ },
+ {
+  "layer": "模擬板 v53（收縮修正版）",
+  "description": "先發不收縮、替補收縮（已採用）",
+  "players": 414,
+  "rhoNet": 0.398,
+  "rhoDefense": 0.276,
+  "note": ""
+ },
+ {
+  "layer": "卡片 OVR（遊戲現用）",
+  "description": "能力值公式校準到 v53 模擬",
+  "players": 414,
+  "rhoNet": 0.374,
+  "rhoDefense": 0.205,
+  "note": ""
+ },
+ {
+  "layer": "卡片 OVR（混合 α=0.5）",
+  "description": "校準目標 = 模擬與 RAPM 各半（未接進遊戲）",
+  "players": 414,
+  "rhoNet": 0.5,
+  "rhoDefense": 0.288,
+  "note": "目標含 RAPM，樣本內 ρ 偏高；留出 ρ 見 ovr-blended-2025-26/summary.json"
+ }
+]

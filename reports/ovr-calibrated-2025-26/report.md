@@ -1,6 +1,31 @@
 # 模擬校準的能力值 OVR（2025–26）
 
-## 目前版本：以 v53 期望分差為目標（2026-10-17）
+## 正式卡片板現為混合版，α = 0.5（2026-10-18）
+
+**本目錄的 `ranking.csv`、`summary.json` 自本次起改為 `calibrate.py --alpha 0.5` 的輸出**，
+依據 `reports/ovr-blended-2025-26/preregistration.md` 的門檻（simR2、net ρ、defense ρ 皆通過，
+`gates.adopt = true`，見該目錄 `summary.json`）選定 α = 0.5。
+
+- **資料流提醒**（`reports/ovr-blended-2025-26/dataflow.md`）：目前可玩的遊戲本體（`src/`、
+  `teams.js`、`index.html`、`calculator.html`）完全不讀取任何一層 OVR 產物；這裡說的「正式卡片板」
+  是指 `reports/status/status_snapshot.py` 審查表與 `reports/impact-rapm/rapm.py`、
+  `reports/ovr-shrinkage-2025-26/evaluate.py` 等分析腳本採用的那一份，不代表遊戲程式碼有任何改動。
+- 舊版（α = 0，純 sim 目標）的 `ranking.csv`、`summary.json` 保留在
+  `reports/ovr-calibrated-2025-26/legacy-sim-only/`，供審查表對照列「卡片 OVR（舊版，sim-only）」使用。
+- **重現方式**：
+  ```
+  python reports/ovr-calibrated-2025-26/calibrate.py --target reports/ovr-v53-2025-26/calibration-target-s8-expected.csv --alpha 0    # 舊版（純 sim），應與 legacy-sim-only/ 一致
+  python reports/ovr-calibrated-2025-26/calibrate.py --target reports/ovr-v53-2025-26/calibration-target-s8-expected.csv --alpha 0.5  # 正式卡片板（本目錄現狀）
+  ```
+- **與 `blend.py` 的一致性驗證**：`--alpha 0.5` 內部重用 `blend.py` 的 `attach_rapm`/`blended`
+  （現搬到 `calibrate.py`，`blend.py` 改為從這裡匯入，避免兩份邏輯分岔），兩者的模型形式、ridge、
+  全資料擬合與 `to_ovr` 尺標完全相同。實測比對 `reports/ovr-blended-2025-26/ranking.csv`（α = 0.5
+  欄位）與本次 `calibrate.py --alpha 0.5` 的 `ranking.csv`：
+  - 球員集合：**完全一致**（582 人，集合相同）。
+  - OVR 最大差：**0.0**；OVR 平均絕對差：**0.0**（所有 582 人四捨五入到小數一位後完全相同）。
+  - 結論：`--alpha 0.5` 與 `blend.py` 的 α = 0.5（chosen）輸出一致，符合驗收標準（誤差 ≤ 0.5）。
+
+## 歷史版本：以 v53 期望分差為目標（α = 0，純 sim，2026-10-17）
 
 **v53 已採用**（`reports/player-impact-v53/report.md`）：所有採用門檻都通過；平均運氣 0.162，群集標準誤 0.235，在兩倍門檻 0.470 以內。
 

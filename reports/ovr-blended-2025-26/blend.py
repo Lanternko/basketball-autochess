@@ -14,12 +14,12 @@ ROOT = Path(__file__).resolve().parents[2]
 OUT = Path(__file__).parent
 sys.path.insert(0, str(ROOT / 'reports/ovr-calibrated-2025-26'))
 import calibrate  # noqa: E402
-from calibrate import load, design, wfit, ATTRS, SCALE_MIN_MINUTES  # noqa: E402
+from calibrate import load, design, wfit, ATTRS, SCALE_MIN_MINUTES, attach_rapm, blended, BLEND_POSS  # noqa: E402
 
 TARGET = ROOT / 'reports/ovr-v53-2025-26/calibration-target-s8-expected.csv'
 FORM, LAM = 'position-interactions', 1.0
 ALPHAS = [0, 0.25, 0.5, 0.75, 1]
-BLEND_POSS, EVAL_POSS, PER36 = 1000, 5000, 0.75
+EVAL_POSS = 5000
 MAX_R2_DROP = 0.05
 FOCUS = ['Alex Caruso', 'Derrick White', 'Dyson Daniels', 'Herbert Jones', 'Marcus Smart',
          'Karlo Matković', 'Isaiah Stewart', 'Mitchell Robinson', 'Zach Edey', 'Rudy Gobert',
@@ -28,30 +28,6 @@ FOCUS = ['Alex Caruso', 'Derrick White', 'Dyson Daniels', 'Herbert Jones', 'Marc
 
 def spearman(a, b):
     return float(np.corrcoef(np.argsort(np.argsort(a)), np.argsort(np.argsort(b)))[0, 1])
-
-
-def attach_rapm(rows):
-    rapm = {int(r['playerId']): r for r in csv.DictReader(open(ROOT / 'reports/impact-rapm/rapm.csv', encoding='utf-8'))}
-    for r in rows:
-        x = rapm.get(int(r['card']['playerId']))
-        r['poss'] = float(x['pooledPoss']) if x else 0.0
-        r['N'] = float(x['pooledNet']) if x else np.nan
-        r['D'] = float(x['pooledD']) if x else np.nan
-        r['lastN'] = float(x['lastSeasonNet']) if x and x['lastSeasonNet'] else np.nan
-    for pos in {r['pos'] for r in rows}:
-        pool = [r for r in rows if r['pos'] == pos and r['poss'] >= BLEND_POSS]
-        mu = sum(r['MIN'] * PER36 * r['N'] for r in pool) / sum(r['MIN'] for r in pool)
-        for r in rows:
-            if r['pos'] == pos:
-                r['r'] = PER36 * r['N'] - mu if r['poss'] >= BLEND_POSS else np.nan
-
-
-def blended(rows, alpha):
-    has = np.array([r['poss'] >= BLEND_POSS for r in rows])
-    y = np.array([r['y'] for r in rows]); rr = np.array([r['r'] if h else 0.0 for r, h in zip(rows, has)])
-    mc = np.array([r['mc'] for r in rows])
-    t = np.where(has, (1 - alpha) * y + alpha * rr, y)
-    return t, np.where(has, (1 - alpha) ** 2 * mc, mc)
 
 
 def fit_weights(X, t, mc):

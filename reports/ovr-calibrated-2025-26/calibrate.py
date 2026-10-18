@@ -43,6 +43,10 @@ ATTRS = ['long', 'mid', 'short', 'ft', 'drive', 'tovSkill', 'pass', 'rebound', '
 POS = ['PG', 'SG', 'SF', 'PF', 'C']
 INTERACT = ['long', 'short', 'pass', 'rebound', 'help']
 SCALE_MIN_MINUTES = 500
+# Blend target (reports/ovr-blended-2025-26/preregistration.md): shared with blend.py so --alpha
+# reproduces blend.py exactly instead of drifting from a second copy of the same logic.
+BLEND_FORM, BLEND_LAM = 'position-interactions', 1.0
+BLEND_POSS, BLEND_PER36 = 1000, 0.75
 
 
 def load(target_path):
@@ -102,6 +106,32 @@ def to_attribute(x, pool):
     """Percentile among regular players mapped PR1 = 40, PR50 = 70, PR99 = 99 (scripts/build_season_league.js)."""
     pct = 100 * (sum(v < x for v in pool) + 0.5 * sum(v == x for v in pool)) / len(pool)
     return max(40, min(99, 40 + (pct - 1) * 30 / 49 if pct < 50 else 70 + (pct - 50) * 29 / 49))
+
+
+def attach_rapm(rows):
+    """Attach pooled RAPM (position-centered per-36 net) for the alpha blend; see blend.py."""
+    rapm = {int(r['playerId']): r for r in csv.DictReader(open(ROOT / 'reports/impact-rapm/rapm.csv', encoding='utf-8'))}
+    for r in rows:
+        x = rapm.get(int(r['card']['playerId']))
+        r['poss'] = float(x['pooledPoss']) if x else 0.0
+        r['N'] = float(x['pooledNet']) if x else np.nan
+        r['D'] = float(x['pooledD']) if x else np.nan
+        r['lastN'] = float(x['lastSeasonNet']) if x and x['lastSeasonNet'] else np.nan
+    for pos in {r['pos'] for r in rows}:
+        pool = [r for r in rows if r['pos'] == pos and r['poss'] >= BLEND_POSS]
+        mu = sum(r['MIN'] * BLEND_PER36 * r['N'] for r in pool) / sum(r['MIN'] for r in pool)
+        for r in rows:
+            if r['pos'] == pos:
+                r['r'] = BLEND_PER36 * r['N'] - mu if r['poss'] >= BLEND_POSS else np.nan
+
+
+def blended(rows, alpha):
+    """t = (1 - alpha) * sim + alpha * RAPM for players with >= BLEND_POSS pooled possessions."""
+    has = np.array([r['poss'] >= BLEND_POSS for r in rows])
+    y = np.array([r['y'] for r in rows]); rr = np.array([r['r'] if h else 0.0 for r, h in zip(rows, has)])
+    mc = np.array([r['mc'] for r in rows])
+    t = np.where(has, (1 - alpha) * y + alpha * rr, y)
+    return t, np.where(has, (1 - alpha) ** 2 * mc, mc)
 
 
 def design(rows, form, mean=None, sd=None):
@@ -177,14 +207,27 @@ def main():
     target = ROOT / 'reports/ovr-v47-2025-26/centered-ranking.csv'
     if '--target' in sys.argv:
         target = Path(sys.argv[sys.argv.index('--target') + 1])
+    alpha = float(sys.argv[sys.argv.index('--alpha') + 1]) if '--alpha' in sys.argv else 0.0
     configure(sys.argv)
     rows = load(target)
-    grid = {}
-    for form in ['linear', 'position-interactions']:
-        for lam in [0, 1, 3, 10, 30, 100]:
-            grid[f'{form}|{lam}'] = cv_score(rows, form, lam)
-    best = max(grid, key=lambda k: grid[k][0])
-    form, lam = best.split('|')[0], float(best.split('|')[1])
+    for r in rows:
+        r['simY'] = r['y']  # pure sim target, kept for display even when --alpha mutates r['y']
+    if alpha > 0:
+        # Reuse blend.py's fixed model form/ridge (reports/ovr-blended-2025-26/blend.py) instead of
+        # re-running the form/ridge grid search on a moving target, so --alpha reproduces blend.py exactly.
+        attach_rapm(rows)
+        t, mc = blended(rows, alpha)
+        for r, ti, mci in zip(rows, t, mc):
+            r['y'] = float(ti); r['mc'] = float(mci)
+        form, lam = BLEND_FORM, BLEND_LAM
+        grid = {f'{form}|{lam}': cv_score(rows, form, lam)}
+    else:
+        grid = {}
+        for form in ['linear', 'position-interactions']:
+            for lam in [0, 1, 3, 10, 30, 100]:
+                grid[f'{form}|{lam}'] = cv_score(rows, form, lam)
+        best = max(grid, key=lambda k: grid[k][0])
+        form, lam = best.split('|')[0], float(best.split('|')[1])
     y = np.array([r['y'] for r in rows])
     X, mean, sd = design(rows, form)
     s2 = residual_variance(rows, X, y, lam)
@@ -205,6 +248,7 @@ def main():
     order = np.argsort(-pred)
     summary = {
         'target': str(target.relative_to(ROOT)) if target.is_relative_to(ROOT) else str(target),
+        'alpha': alpha, 'blendPreregistration': 'reports/ovr-blended-2025-26/preregistration.md' if alpha > 0 else None,
         'players': len(rows), 'chosen': {'form': form, 'ridge': lam},
         'cvR2': {k: {'mean': v[0], 'sd': v[1]} for k, v in grid.items()},
         'noiseCeilingR2': ceiling(rows), 'residualTrueVariancePer36': s2,
@@ -220,7 +264,7 @@ def main():
         wr.writerow(['rank', 'ovr', 'name', 'pos', 'MIN', 'predictedPer36', 'simulatedPer36'] + ATTRS)
         for k, i in enumerate(order):
             r = rows[i]
-            wr.writerow([k + 1, round(float(ovr[i]), 1), r['name'], r['pos'], round(r['MIN']), round(float(pred[i]), 3), round(r['y'], 3)] + [round(r['card'][a], 1) for a in ATTRS])
+            wr.writerow([k + 1, round(float(ovr[i]), 1), r['name'], r['pos'], round(r['MIN']), round(float(pred[i]), 3), round(r['simY'], 3)] + [round(r['card'][a], 1) for a in ATTRS])
     print(json.dumps({k: summary[k] for k in ['chosen', 'noiseCeilingR2', 'residualTrueVariancePer36']}, indent=1))
     print('cv', {k: round(v[0], 3) for k, v in grid.items()})
     print('per10', {a: (round(v['per36'], 2), round(v['bootstrapSE'], 2)) for a, v in per10.items()})

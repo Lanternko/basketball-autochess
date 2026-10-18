@@ -38,9 +38,13 @@ def personal(rapm_by_id, rapm_by_name):
     add('模擬板 v53（原始）', '8 種子期望分差，位置置中每 36 分鐘', [(float(r['rawPer36']), rapm_by_id.get(r['playerId'])) for r in sim])
     add('模擬板 v53（收縮修正版）', '先發不收縮、替補收縮（已採用）', [(float(r['v2Per36']), rapm_by_id.get(r['playerId'])) for r in sim])
     card = rows('reports/ovr-calibrated-2025-26/ranking.csv')
-    add('卡片 OVR（遊戲現用）', '能力值公式校準到 v53 模擬', [(float(r['ovr']), rapm_by_name.get(r['name'])) for r in card])
+    add('卡片 OVR（正式卡片板）', '能力值公式校準到模擬與 RAPM 混合目標，α=0.5（遊戲本體不讀取任何 OVR，見 ovr-blended-2025-26/dataflow.md）',
+        [(float(r['ovr']), rapm_by_name.get(r['name'])) for r in card])
+    legacy = rows('reports/ovr-calibrated-2025-26/legacy-sim-only/ranking.csv')
+    add('卡片 OVR（舊版，sim-only）', '能力值公式校準到 v53 模擬，α=0（已被正式卡片板取代）',
+        [(float(r['ovr']), rapm_by_name.get(r['name'])) for r in legacy])
     blend = rows('reports/ovr-blended-2025-26/ranking.csv')
-    add('卡片 OVR（混合 α=0.5）', '校準目標 = 模擬與 RAPM 各半（未接進遊戲）', [(float(r['ovr']), rapm_by_name.get(r['name'])) for r in blend],
+    add('卡片 OVR（混合 α=0.5）', '校準目標 = 模擬與 RAPM 各半（與正式卡片板同一組數字，來源腳本不同）', [(float(r['ovr']), rapm_by_name.get(r['name'])) for r in blend],
         '目標含 RAPM，樣本內 ρ 偏高；留出 ρ 見 ovr-blended-2025-26/summary.json')
     return out
 

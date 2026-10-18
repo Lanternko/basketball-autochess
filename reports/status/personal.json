@@ -16,8 +16,16 @@
   "note": ""
  },
  {
-  "layer": "卡片 OVR（遊戲現用）",
-  "description": "能力值公式校準到 v53 模擬",
+  "layer": "卡片 OVR（正式卡片板）",
+  "description": "能力值公式校準到模擬與 RAPM 混合目標，α=0.5（遊戲本體不讀取任何 OVR，見 ovr-blended-2025-26/dataflow.md）",
+  "players": 414,
+  "rhoNet": 0.5,
+  "rhoDefense": 0.288,
+  "note": ""
+ },
+ {
+  "layer": "卡片 OVR（舊版，sim-only）",
+  "description": "能力值公式校準到 v53 模擬，α=0（已被正式卡片板取代）",
   "players": 414,
   "rhoNet": 0.374,
   "rhoDefense": 0.205,
@@ -25,7 +33,7 @@
  },
  {
   "layer": "卡片 OVR（混合 α=0.5）",
-  "description": "校準目標 = 模擬與 RAPM 各半（未接進遊戲）",
+  "description": "校準目標 = 模擬與 RAPM 各半（與正式卡片板同一組數字，來源腳本不同）",
   "players": 414,
   "rhoNet": 0.5,
   "rhoDefense": 0.288,

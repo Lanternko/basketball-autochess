@@ -8,7 +8,8 @@
 |---|---:|---:|---:|---|
 | 模擬板 v53（原始） | 414 | 0.362 | 0.256 |  |
 | 模擬板 v53（收縮修正版） | 414 | 0.398 | 0.276 |  |
-| 卡片 OVR（遊戲現用） | 414 | 0.374 | 0.205 |  |
+| 卡片 OVR（正式卡片板） | 414 | 0.500 | 0.288 |  |
+| 卡片 OVR（舊版，sim-only） | 414 | 0.374 | 0.205 |  |
 | 卡片 OVR（混合 α=0.5） | 414 | 0.500 | 0.288 | 目標含 RAPM，樣本內 ρ 偏高；留出 ρ 見 ovr-blended-2025-26/summary.json |
 
 ## 球隊準確度（30 隊、全季）
@@ -44,23 +45,23 @@
 
 | # | 球員 | 位置 | OVR | 分鐘 | 模擬名次 | RAPM 名次 | 旗標 |
 |---:|---|---|---:|---:|---:|---:|---|
-| 1 | Shai Gilgeous-Alexander | PG | 110.4 | 2259 | 1 | 2 |  |
-| 2 | Luka Dončić | PG | 106.1 | 2289 | 6 | 16 |  |
-| 3 | Chet Holmgren | PF | 105.0 | 1997 | 14 | 8 | 長人 |
-| 4 | Victor Wembanyama | C | 99.1 | 1866 | 5 | 5 | 長人 |
-| 5 | Karlo Matković | PF | 99.0 | 912 | 33 | 212 | 低分鐘、RAPM 差距大、長人 |
-| 6 | Giannis Antetokounmpo | PF | 98.1 | 1039 | 3 | 3 | 長人 |
-| 7 | Jamal Murray | PG | 96.7 | 2652 | 105 | 211 | RAPM 差距大 |
-| 8 | Evan Mobley | PF | 96.4 | 2074 | 10 | 47 | 長人 |
-| 9 | Javon Small | PG | 96.2 | 830 | 29 | — | 低分鐘、RAPM 樣本不足 |
-| 10 | Kawhi Leonard | SF | 93.5 | 2085 | 2 | 4 |  |
-| 11 | Luka Garza | C | 92.5 | 1118 | 112 | 174 | RAPM 差距大、長人 |
-| 12 | Ty Jerome | PG | 92.5 | 339 | 4 | 136 | 低分鐘、RAPM 差距大 |
-| 13 | Stephen Curry | PG | 91.2 | 1329 | 92 | 24 |  |
-| 14 | Nikola Jokić | C | 91.2 | 2265 | 8 | 1 | 長人 |
-| 15 | Ryan Rollins | PG | 91.1 | 2375 | 26 | 155 | RAPM 差距大 |
-| 16 | Isaiah Stewart | PF | 90.3 | 1317 | 32 | 261 | RAPM 差距大、長人 |
-| 17 | Marvin Bagley III | C | 90.2 | 1201 | 77 | 289 | RAPM 差距大、長人 |
-| 18 | Charles Bassey | PF | 89.2 | 153 | 36 | 353 | 低分鐘、RAPM 差距大、長人 |
-| 19 | Jalen Duren | C | 88.1 | 1976 | 16 | 180 | RAPM 差距大、長人 |
-| 20 | Donovan Mitchell | SG | 87.3 | 2342 | 66 | 17 |  |
+| 1 | Shai Gilgeous-Alexander | PG | 111.6 | 2259 | 1 | 2 |  |
+| 2 | Luka Dončić | PG | 104.3 | 2289 | 6 | 16 |  |
+| 3 | Victor Wembanyama | C | 102.3 | 1866 | 5 | 5 | 長人 |
+| 4 | Chet Holmgren | PF | 100.9 | 1997 | 14 | 8 | 長人 |
+| 5 | Evan Mobley | PF | 99.0 | 2074 | 10 | 47 | 長人 |
+| 6 | Giannis Antetokounmpo | PF | 96.2 | 1039 | 3 | 3 | 長人 |
+| 7 | Karlo Matković | PF | 95.4 | 912 | 33 | 212 | 低分鐘、RAPM 差距大、長人 |
+| 8 | Nikola Jokić | C | 95.3 | 2265 | 8 | 1 | 長人 |
+| 9 | Jamal Murray | PG | 94.7 | 2652 | 105 | 211 | RAPM 差距大 |
+| 10 | Kawhi Leonard | SF | 93.6 | 2085 | 2 | 4 |  |
+| 11 | Kevin Durant | SF | 91.4 | 2840 | 40 | 35 |  |
+| 12 | Ryan Rollins | PG | 90.7 | 2375 | 26 | 155 | RAPM 差距大 |
+| 13 | Stephen Curry | PG | 89.9 | 1329 | 92 | 24 |  |
+| 14 | Javon Small | PG | 89.9 | 830 | 29 | — | 低分鐘、RAPM 樣本不足 |
+| 15 | Aaron Gordon | PF | 89.3 | 1005 | 212 | 21 | 長人 |
+| 16 | Donovan Mitchell | SG | 89.2 | 2342 | 66 | 17 |  |
+| 17 | Joel Embiid | C | 88.3 | 1201 | 328 | 10 | 長人 |
+| 18 | Jimmy Butler III | SF | 88.2 | 1182 | 17 | 12 |  |
+| 19 | Scottie Barnes | PF | 88.1 | 2681 | 23 | 101 | RAPM 差距大、長人 |
+| 20 | Ty Jerome | PG | 87.3 | 339 | 4 | 136 | 低分鐘、RAPM 差距大 |

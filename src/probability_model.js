@@ -11,6 +11,7 @@
 // （見 evaluateLineup / chooseHandler）——這才是「傳球直到找到夠好的出手點」。
 
 import * as C from './constants.js';
+import { shotOriginAdjustment } from './source_shot_origin.js';
 
 // --- 輔助 ---------------------------------------------------------------
 
@@ -335,9 +336,13 @@ export function possessionProbabilities(
     * (1 + tanhEff(ctx.offBall, C.OFFBALL_CUT_SCALE) * C.OFFBALL_CUT_IMPACT)
     * (1 + physEdge * C.PHYS_MAX_IMPACT)
     * passBoost * gravBoost * createBoost - 1;
+  // 出手來源修正（v55 修正 B）：預設 0，只有掛了 shotOriginMeasurement 的球員才有作用。
+  // 模擬裡「自主出手」就是「出手前沒傳球」(assist === null)，而 centeredMake 把命中率水準
+  // 釘在實測總和上，於是吃餅長人會拿被餵進去的禁區命中率去打自己創造的球。見 source_shot_origin.js。
   let makeShort = interpolate(handler.short, C.CURVE_SHORT)
     + contextScale * ctxShort * C.LEAGUE_TARGETS.shortPct
-    + pmShort;
+    + pmShort
+    + shotOriginAdjustment(handler, assist, putback);
   makeShort = clamp(makeShort, C.CLAMP.makeShort);
 
   // --- L2: 出手區域 ---

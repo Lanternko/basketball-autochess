@@ -1,6 +1,6 @@
 {
- "generatedAt": "2026-10-18T12:00:03+00:00",
- "simVersion": "v53",
+ "generatedAt": "2026-10-19T00:46:32+00:00",
+ "simVersion": "v54",
  "evalPoss": 5000,
  "rapmPool": 415,
  "personal": [
@@ -19,6 +19,22 @@
    "rhoNet": 0.398,
    "rhoDefense": 0.276,
    "note": ""
+  },
+  {
+   "layer": "模擬板 v54（原始）",
+   "description": "三分／禁區命中率改用可靠度加權收縮",
+   "players": 414,
+   "rhoNet": 0.389,
+   "rhoDefense": 0.289,
+   "note": ""
+  },
+  {
+   "layer": "模擬板 v54（收縮修正版）",
+   "description": "同 v53 收縮規則",
+   "players": 414,
+   "rhoNet": 0.424,
+   "rhoDefense": 0.303,
+   "note": "已收束；球隊層 2025-26 勝場 MAE 變差，未切換對局資料，卡片板仍為 v53 校準"
   },
   {
    "layer": "卡片 OVR（正式卡片板）",
@@ -261,6 +277,15 @@
    "ptsMAE": null,
    "source": "player-impact-v53-team（壓迫係數為樣本內）",
    "measured": true
+  },
+  {
+   "version": "v54",
+   "order": 54,
+   "winsMAE": 6.29,
+   "netRMSE": 2.703,
+   "ptsMAE": null,
+   "source": "player-impact-v54-team（未採用）",
+   "measured": true
   }
  ],
  "top20": [
@@ -280,7 +305,7 @@
    "pos": "PG",
    "ovr": 104.3,
    "minutes": 2289,
-   "simRank": 6,
+   "simRank": 7,
    "rapmRank": 16,
    "flags": ""
   },
@@ -300,7 +325,7 @@
    "pos": "PF",
    "ovr": 100.9,
    "minutes": 1997,
-   "simRank": 14,
+   "simRank": 21,
    "rapmRank": 8,
    "flags": "長人"
   },
@@ -310,7 +335,7 @@
    "pos": "PF",
    "ovr": 99.0,
    "minutes": 2074,
-   "simRank": 10,
+   "simRank": 11,
    "rapmRank": 47,
    "flags": "長人"
   },
@@ -330,7 +355,7 @@
    "pos": "PF",
    "ovr": 95.4,
    "minutes": 912,
-   "simRank": 33,
+   "simRank": 20,
    "rapmRank": 212,
    "flags": "低分鐘、RAPM 差距大、長人"
   },
@@ -340,7 +365,7 @@
    "pos": "C",
    "ovr": 95.3,
    "minutes": 2265,
-   "simRank": 8,
+   "simRank": 6,
    "rapmRank": 1,
    "flags": "長人"
   },
@@ -350,7 +375,7 @@
    "pos": "PG",
    "ovr": 94.7,
    "minutes": 2652,
-   "simRank": 105,
+   "simRank": 130,
    "rapmRank": 211,
    "flags": "RAPM 差距大"
   },
@@ -370,7 +395,7 @@
    "pos": "SF",
    "ovr": 91.4,
    "minutes": 2840,
-   "simRank": 40,
+   "simRank": 56,
    "rapmRank": 35,
    "flags": ""
   },
@@ -390,7 +415,7 @@
    "pos": "PG",
    "ovr": 89.9,
    "minutes": 1329,
-   "simRank": 92,
+   "simRank": 115,
    "rapmRank": 24,
    "flags": ""
   },
@@ -400,7 +425,7 @@
    "pos": "PG",
    "ovr": 89.9,
    "minutes": 830,
-   "simRank": 29,
+   "simRank": 55,
    "rapmRank": null,
    "flags": "低分鐘、RAPM 樣本不足"
   },
@@ -410,7 +435,7 @@
    "pos": "PF",
    "ovr": 89.3,
    "minutes": 1005,
-   "simRank": 212,
+   "simRank": 204,
    "rapmRank": 21,
    "flags": "長人"
   },
@@ -420,7 +445,7 @@
    "pos": "SG",
    "ovr": 89.2,
    "minutes": 2342,
-   "simRank": 66,
+   "simRank": 70,
    "rapmRank": 17,
    "flags": ""
   },
@@ -430,7 +455,7 @@
    "pos": "C",
    "ovr": 88.3,
    "minutes": 1201,
-   "simRank": 328,
+   "simRank": 254,
    "rapmRank": 10,
    "flags": "長人"
   },
@@ -440,7 +465,7 @@
    "pos": "SF",
    "ovr": 88.2,
    "minutes": 1182,
-   "simRank": 17,
+   "simRank": 23,
    "rapmRank": 12,
    "flags": ""
   },
@@ -450,7 +475,7 @@
    "pos": "PF",
    "ovr": 88.1,
    "minutes": 2681,
-   "simRank": 23,
+   "simRank": 28,
    "rapmRank": 101,
    "flags": "RAPM 差距大、長人"
   },

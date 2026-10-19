@@ -14,7 +14,7 @@ ROOT = Path(__file__).resolve().parents[2]
 OUT = Path(__file__).parent
 EVAL_POSS = 5000
 LOW_MIN, RAPM_FAR, BIGS = 1000, 100, {'C', 'PF'}
-LATEST_SIM = 'v53'  # board version the cards and sim rows describe
+LATEST_SIM = 'v54'  # latest sim board measured (official card board is still calibrated to v53)
 
 
 def spearman(a, b):
@@ -37,6 +37,10 @@ def personal(rapm_by_id, rapm_by_name):
     sim = rows('reports/ovr-v53-shrinkage-2025-26/ranking-v2.csv')
     add('模擬板 v53（原始）', '8 種子期望分差，位置置中每 36 分鐘', [(float(r['rawPer36']), rapm_by_id.get(r['playerId'])) for r in sim])
     add('模擬板 v53（收縮修正版）', '先發不收縮、替補收縮（已採用）', [(float(r['v2Per36']), rapm_by_id.get(r['playerId'])) for r in sim])
+    sim = rows('reports/ovr-v54-shrinkage-2025-26/ranking-v2.csv')
+    add('模擬板 v54（原始）', '三分／禁區命中率改用可靠度加權收縮', [(float(r['rawPer36']), rapm_by_id.get(r['playerId'])) for r in sim])
+    add('模擬板 v54（收縮修正版）', '同 v53 收縮規則', [(float(r['v2Per36']), rapm_by_id.get(r['playerId'])) for r in sim],
+        '已收束；球隊層 2025-26 勝場 MAE 變差，未切換對局資料，卡片板仍為 v53 校準')
     card = rows('reports/ovr-calibrated-2025-26/ranking.csv')
     add('卡片 OVR（正式卡片板）', '能力值公式校準到模擬與 RAPM 混合目標，α=0.5（遊戲本體不讀取任何 OVR，見 ovr-blended-2025-26/dataflow.md）',
         [(float(r['ovr']), rapm_by_name.get(r['name'])) for r in card],
@@ -67,12 +71,16 @@ def team():
     m = next(c['teamMetrics'] for c in v53['cells'] if c['season'] == '2025-26' and c['variant'] == 'v53')
     out.append({'version': 'v53', 'order': 53, 'winsMAE': round(m['winsMAE'], 2), 'netRMSE': round(m['netRMSE'], 3), 'ptsMAE': None,
                 'source': 'player-impact-v53-team（壓迫係數為樣本內）', 'measured': True})
+    v54 = json.loads((ROOT / 'reports/player-impact-v54-team/scores.json').read_text(encoding='utf-8'))
+    m = next(c['teamMetrics'] for c in v54['cells'] if c['season'] == '2025-26' and c['variant'] == 'v54')
+    out.append({'version': 'v54', 'order': 54, 'winsMAE': round(m['winsMAE'], 2), 'netRMSE': round(m['netRMSE'], 3), 'ptsMAE': None,
+                'source': 'player-impact-v54-team（未採用）', 'measured': True})
     return sorted(out, key=lambda r: r['order'])
 
 
 def top20(rapm_by_name):
     card = rows('reports/ovr-calibrated-2025-26/ranking.csv')
-    sim = {r['name']: int(r['rank']) for r in rows('reports/ovr-v53-shrinkage-2025-26/ranking-v2.csv')}
+    sim = {r['name']: int(r['rank']) for r in rows('reports/ovr-v54-shrinkage-2025-26/ranking-v2.csv')}
     pool = sorted((r for r in rapm_by_name.values() if float(r['pooledPoss']) >= EVAL_POSS), key=lambda r: -float(r['pooledNet']))
     rapm_rank = {r['name']: i + 1 for i, r in enumerate(pool)}
     out = []

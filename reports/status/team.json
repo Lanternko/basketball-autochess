@@ -214,5 +214,14 @@
   "ptsMAE": null,
   "source": "player-impact-v53-team（壓迫係數為樣本內）",
   "measured": true
+ },
+ {
+  "version": "v54",
+  "order": 54,
+  "winsMAE": 6.29,
+  "netRMSE": 2.703,
+  "ptsMAE": null,
+  "source": "player-impact-v54-team（未採用）",
+  "measured": true
  }
 ]

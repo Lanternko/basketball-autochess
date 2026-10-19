@@ -16,6 +16,22 @@
   "note": ""
  },
  {
+  "layer": "模擬板 v54（原始）",
+  "description": "三分／禁區命中率改用可靠度加權收縮",
+  "players": 414,
+  "rhoNet": 0.389,
+  "rhoDefense": 0.289,
+  "note": ""
+ },
+ {
+  "layer": "模擬板 v54（收縮修正版）",
+  "description": "同 v53 收縮規則",
+  "players": 414,
+  "rhoNet": 0.424,
+  "rhoDefense": 0.303,
+  "note": "已收束；球隊層 2025-26 勝場 MAE 變差，未切換對局資料，卡片板仍為 v53 校準"
+ },
+ {
   "layer": "卡片 OVR（正式卡片板）",
   "description": "能力值公式校準到模擬與 RAPM 混合目標，α=0.5（遊戲本體不讀取任何 OVR，見 ovr-blended-2025-26/dataflow.md）",
   "players": 414,

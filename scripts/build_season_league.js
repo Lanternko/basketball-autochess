@@ -54,6 +54,16 @@ function fitShootingEB(name,rows) {
 }
 const ebLong=SHOOTING_EB?fitShootingEB('long',base.filter(r=>r.FG3A>0).map(r=>({playerId:r.PLAYER_ID,makes:r.FG3M,attempts:r.FG3A}))):null;
 const ebShort=SHOOTING_EB?fitShootingEB('short',[...maps.shots.values()].filter(r=>r.shortA>0).map(r=>({playerId:r.PLAYER_ID,makes:r.shortM,attempts:r.shortA}))):null;
+// --attr-deflate (v55 direction 2, reports/ovr-v55-attr-deflate-2025-26/): long only, decoupled from
+// short. Diagnosis (see report): the v54 SHOOTING_EB joint long+short shrinkage legitimately pulls down
+// catch-and-shoot big men's inflated 3PT rate (position-conditioned prior correctly lower for C/PF), but
+// applied to short it pushes every elite rim-runner toward the 99 ceiling without separating fed-dependent
+// finishers from genuinely good ones (both groups already near-ceiling under the fixed-100 global shrink,
+// and a self-vs-fed rim FG% split does not transfer losslessly into one scalar attribute). Short/mid/ft keep
+// the existing fixed-100 global-prior shrinkage; only long gets the reliability-fit, position-conditioned
+// prior. Writes reports/ovr-v55-attr-deflate-2025-26/season-league-D.json instead of data/season-league.json.
+const ATTR_DEFLATE=process.argv.includes('--attr-deflate');
+const ebLongDeflate=ATTR_DEFLATE?fitShootingEB('long-deflate',base.filter(r=>r.FG3A>0).map(r=>({playerId:r.PLAYER_ID,makes:r.FG3M,attempts:r.FG3A}))):null;
 function shrunk(name,f) {
   if (!SHRINK) return f;
   const rows=base.filter(r=>r.MIN>0&&Number.isFinite(f(r)));
@@ -101,7 +111,7 @@ function card(row) {
   if (!(weight>0)) missing.push('body-weight');
   const pos=posOfHeight(height);
   return {playerId:row.PLAYER_ID,name:row.PLAYER_NAME,pos,courtPosition:pos,heightInches:height,
-    long:SHOOTING_EB?inverse(ebLong(b.FG3M,b.FG3A,pos),C.CURVE_3PT):shooting(b.FG3M,b.FG3A,prior.long,C.CURVE_3PT),
+    long:ATTR_DEFLATE?inverse(ebLongDeflate(b.FG3M,b.FG3A,pos),C.CURVE_3PT):SHOOTING_EB?inverse(ebLong(b.FG3M,b.FG3A,pos),C.CURVE_3PT):shooting(b.FG3M,b.FG3A,prior.long,C.CURVE_3PT),
     mid:shooting(shot?.midM??0,shot?.midA??0,prior.mid,C.CURVE_MID),
     short:SHOOTING_EB?inverse(ebShort(shot?.shortM??0,shot?.shortA??0,pos),C.CURVE_SHORT):shooting(shot?.shortM??0,shot?.shortA??0,prior.short,C.CURVE_SHORT),
     ft:shooting(b.FTM,b.FTA,prior.ft,C.CURVE_FT),
@@ -171,7 +181,10 @@ const league={schemaVersion:1,season:'2025-26',sources,priors:prior,methodology:
   neutral:'Five games have both teams marked away. Official summary supplies designated sides when available; otherwise team ID orders neutral A/B. Neutral games are counted separately, never forced into 41 home / 41 away.',
   outcome:'Observed scores, wins and margins are stored for comparison only; none are inputs to basketball probabilities.',
   ...(SHRINK?{shrinkage:{rule:'x = (MIN*x + k*positionMean)/(MIN + k) before the percentile map; k = sigma2/tau2 by method of moments, clamped 50-2000.',stats:shrinkage}}:{}),
-  ...(SHOOTING_EB?{shootingReliability:{rule:'long/short only: shrunk rate = (makes + k_z*positionMean)/(attempts + k_z), then the same inverse accuracy curve. k_z = pbar(1-pbar)/tau2 - 1 by method of moments on Var(p_i)=tau2+pbar(1-pbar)/n_i, fit on attempts>=20, clamped 50-2000 (k=500 if tau2<=0). positionMean is the attempt-weighted raw rate by posOfHeight. mid and ft unchanged (fixed 100-attempt pseudo-count).',zones:shootingEB}}:{})},teams,schedule};
+  ...(SHOOTING_EB?{shootingReliability:{rule:'long/short only: shrunk rate = (makes + k_z*positionMean)/(attempts + k_z), then the same inverse accuracy curve. k_z = pbar(1-pbar)/tau2 - 1 by method of moments on Var(p_i)=tau2+pbar(1-pbar)/n_i, fit on attempts>=20, clamped 50-2000 (k=500 if tau2<=0). positionMean is the attempt-weighted raw rate by posOfHeight. mid and ft unchanged (fixed 100-attempt pseudo-count).',zones:shootingEB}}:{}),
+  ...(ATTR_DEFLATE?{attrDeflate:{rule:'v55 direction 2 (reports/ovr-v55-attr-deflate-2025-26/): long only, same reliability-fit position-conditioned shrinkage as --shooting-eb (k_z = pbar(1-pbar)/tau2 - 1 by method of moments, fit on attempts>=20, clamped 50-2000). short/mid/ft keep the default fixed-100 global-prior shrinkage, decoupled from long. Diagnosis: short is already near the 99 ceiling for every elite rim finisher regardless of fed-shot dependence, so shrinking it (jointly, as --shooting-eb does) does not separate fed-dependent box-score inflation from genuinely earned value; long cleanly does (see report.md).',zones:{long:shootingEB['long-deflate']}}}:{})},teams,schedule};
 const validation=validateSeason(league);
-fs.writeFileSync(new URL(SHOOTING_EB?'../data/season-league-v54.json':SHRINK?'../data/season-league-shrunk.json':'../data/season-league.json',import.meta.url),JSON.stringify(league,null,2)+'\n');
+const outPath=ATTR_DEFLATE?'../reports/ovr-v55-attr-deflate-2025-26/season-league-D.json':SHOOTING_EB?'../data/season-league-v54.json':SHRINK?'../data/season-league-shrunk.json':'../data/season-league.json';
+if (ATTR_DEFLATE) fs.mkdirSync(new URL('../reports/ovr-v55-attr-deflate-2025-26/',import.meta.url),{recursive:true});
+fs.writeFileSync(new URL(outPath,import.meta.url),JSON.stringify(league,null,2)+'\n');
 console.log(JSON.stringify({...validation,sources:sources.length,missingMeasurementCards:teams.flatMap(t=>t.roster).filter(p=>p.missingMeasurements.length).length}));

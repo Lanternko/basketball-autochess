@@ -61,7 +61,7 @@
   "players": 414,
   "rhoNet": 0.53,
   "rhoDefense": 0.297,
-  "note": "Karlo、Jalen Smith 兩條未過，正式卡片板維持 v53"
+  "note": "Karlo 未過（Jalen Smith 改 2K 基準後已過），正式卡片板維持 v53"
  },
  {
   "layer": "卡片 OVR 實驗 C1（未採用）",
@@ -69,7 +69,7 @@
   "players": 414,
   "rhoNet": 0.531,
   "rhoDefense": 0.298,
-  "note": "Karlo、Jalen Smith 兩條未過，正式卡片板維持 v53"
+  "note": "Karlo 未過（Jalen Smith 改 2K 基準後已過），正式卡片板維持 v53"
  },
  {
   "layer": "卡片 OVR 實驗 D1（未採用）",
@@ -77,6 +77,14 @@
   "players": 414,
   "rhoNet": 0.531,
   "rhoDefense": 0.299,
-  "note": "Karlo、Jalen Smith 兩條未過，正式卡片板維持 v53"
+  "note": "Karlo 未過（Jalen Smith 改 2K 基準後已過），正式卡片板維持 v53"
+ },
+ {
+  "layer": "卡片 OVR 實驗 E2（未採用）",
+  "description": "方向 E2：吃餅折扣 λ=0.4（禁區出手按非自創比例打折，PF/C 自創 ≥65 吸引包夾者豁免）",
+  "players": 414,
+  "rhoNet": 0.529,
+  "rhoDefense": 0.297,
+  "note": "7 人驗收僅 Gobert 未過（掉 23 名），待決定是否採用"
  }
 ]

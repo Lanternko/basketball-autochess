@@ -18,17 +18,19 @@ LATEST_SIM = 'v54'  # latest sim board measured (official card board is still ca
 OFFICIAL_CARD = 'reports/ovr-calibrated-2025-26/ranking.csv'
 V55_CARDS = {'B12': 'reports/ovr-v55-finisher-fix-2025-26/card/B12/ranking.csv',
              'C1': 'reports/ovr-v55-card-origin-attr-2025-26/card-C1/ranking.csv',
-             'D1': 'reports/ovr-v55-attr-deflate-2025-26/card/D1/ranking.csv'}
+             'D1': 'reports/ovr-v55-attr-deflate-2025-26/card/D1/ranking.csv',
+             'E2': 'reports/ovr-v55-card-E-2025-26/card-E2-lam0.4/ranking.csv'}
 V55_DESC = {'B12': '方向 B：吃餅長人禁區出手來源修正（模擬層）後重校卡片',
             'C1': '方向 1：自創禁區比例 s̃ 映成第 16 屬性 originShare 加進卡片回歸',
-            'D1': '方向 2：屬性建構層 long 去膨脹（--attr-deflate）後重校卡片'}
+            'D1': '方向 2：屬性建構層 long 去膨脹（--attr-deflate）後重校卡片',
+            'E2': '方向 E2：吃餅折扣 λ=0.4（禁區出手按非自創比例打折，PF/C 自創 ≥65 吸引包夾者豁免）'}
 V55_CHECKS = [('Karlo Matković', '下修 ≥ 10 名', lambda a, b: b - a >= 10),
               ('John Collins', '下修', lambda a, b: b > a),
               ('Isaiah Stewart', '下修', lambda a, b: b > a),
               ('Luka Garza', '下修', lambda a, b: b > a),
               ('Neemias Queta', '下滑 ≤ 15 名', lambda a, b: b - a <= 15),
               ('Rudy Gobert', '下滑 ≤ 15 名', lambda a, b: b - a <= 15),
-              ('Jalen Smith', '下滑 ≤ 15 名', lambda a, b: b - a <= 15)]
+              ('Jalen Smith', '名次 ≤ 2K27 名次（220）', lambda a, b: b <= 220)]
 
 
 def spearman(a, b):
@@ -67,7 +69,7 @@ def personal(rapm_by_id, rapm_by_name):
         '目標含 RAPM，樣本內 ρ 偏高；留出 ρ 見 ovr-blended-2025-26/summary.json')
     for key, desc in V55_DESC.items():
         add(f'卡片 OVR 實驗 {key}（未採用）', desc, [(float(r['ovr']), rapm_by_name.get(r['name'])) for r in rows(V55_CARDS[key])],
-            'Karlo、Jalen Smith 兩條未過，正式卡片板維持 v53')
+            '7 人驗收僅 Gobert 未過（掉 23 名），待決定是否採用' if key == 'E2' else 'Karlo 未過（Jalen Smith 改 2K 基準後已過），正式卡片板維持 v53')
     return out
 
 
@@ -135,8 +137,9 @@ def md(snap):
           '|---:|---|---|---:|---:|---:|---:|---|']
     L += [f"| {r['rank']} | {r['name']} | {r['pos']} | {r['ovr']:.1f} | {r['minutes']} | {r['simRank'] or '—'} | {r['rapmRank'] or '—'} | {r['flags']} |" for r in snap['top20']]
     mark = lambda r, k: f"{r[k]}{'' if r[k + 'Pass'] else ' ✗'}"
-    L += ['', '## v55 卡片修正三方向（7 人驗收，正式卡片名次 → 實驗名次，✗ = 未過）', '', '| 球員 | 條件 | v53 | B12 | C1 | D1 |', '|---|---|---:|---:|---:|---:|']
-    L += [f"| {r['name']} | {r['condition']} | {r['v53']} | {mark(r, 'B12')} | {mark(r, 'C1')} | {mark(r, 'D1')} |" for r in snap['v55fix']]
+    L += ['', '## v55 卡片修正各方向（7 人驗收，正式卡片名次 → 實驗名次，✗ = 未過）', '',
+          '| 球員 | 條件 | v53 | ' + ' | '.join(V55_CARDS) + ' |', '|---|---|---:|' + '---:|' * len(V55_CARDS)]
+    L += [f"| {r['name']} | {r['condition']} | {r['v53']} | " + ' | '.join(mark(r, k) for k in V55_CARDS) + ' |' for r in snap['v55fix']]
     return '\n'.join(L) + '\n'
 
 

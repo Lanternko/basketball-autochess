@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-20T03:19:53+00:00",
+ "generatedAt": "2026-10-20T03:58:32+00:00",
  "simVersion": "v54",
  "evalPoss": 5000,
  "rapmPool": 415,
@@ -66,7 +66,7 @@
    "players": 414,
    "rhoNet": 0.53,
    "rhoDefense": 0.297,
-   "note": "Karlo、Jalen Smith 兩條未過，正式卡片板維持 v53"
+   "note": "Karlo 未過（Jalen Smith 改 2K 基準後已過），正式卡片板維持 v53"
   },
   {
    "layer": "卡片 OVR 實驗 C1（未採用）",
@@ -74,7 +74,7 @@
    "players": 414,
    "rhoNet": 0.531,
    "rhoDefense": 0.298,
-   "note": "Karlo、Jalen Smith 兩條未過，正式卡片板維持 v53"
+   "note": "Karlo 未過（Jalen Smith 改 2K 基準後已過），正式卡片板維持 v53"
   },
   {
    "layer": "卡片 OVR 實驗 D1（未採用）",
@@ -82,7 +82,15 @@
    "players": 414,
    "rhoNet": 0.531,
    "rhoDefense": 0.299,
-   "note": "Karlo、Jalen Smith 兩條未過，正式卡片板維持 v53"
+   "note": "Karlo 未過（Jalen Smith 改 2K 基準後已過），正式卡片板維持 v53"
+  },
+  {
+   "layer": "卡片 OVR 實驗 E2（未採用）",
+   "description": "方向 E2：吃餅折扣 λ=0.4（禁區出手按非自創比例打折，PF/C 自創 ≥65 吸引包夾者豁免）",
+   "players": 414,
+   "rhoNet": 0.529,
+   "rhoDefense": 0.297,
+   "note": "7 人驗收僅 Gobert 未過（掉 23 名），待決定是否採用"
   }
  ],
  "team": [
@@ -524,7 +532,9 @@
    "C1": 12,
    "C1Pass": false,
    "D1": 12,
-   "D1Pass": false
+   "D1Pass": false,
+   "E2": 21,
+   "E2Pass": true
   },
   {
    "name": "John Collins",
@@ -535,7 +545,9 @@
    "C1": 46,
    "C1Pass": true,
    "D1": 42,
-   "D1Pass": true
+   "D1Pass": true,
+   "E2": 49,
+   "E2Pass": true
   },
   {
    "name": "Isaiah Stewart",
@@ -546,7 +558,9 @@
    "C1": 61,
    "C1Pass": true,
    "D1": 59,
-   "D1Pass": true
+   "D1Pass": true,
+   "E2": 81,
+   "E2Pass": true
   },
   {
    "name": "Luka Garza",
@@ -557,7 +571,9 @@
    "C1": 64,
    "C1Pass": true,
    "D1": 61,
-   "D1Pass": true
+   "D1Pass": true,
+   "E2": 73,
+   "E2Pass": true
   },
   {
    "name": "Neemias Queta",
@@ -568,7 +584,9 @@
    "C1": 51,
    "C1Pass": true,
    "D1": 52,
-   "D1Pass": true
+   "D1Pass": true,
+   "E2": 59,
+   "E2Pass": true
   },
   {
    "name": "Rudy Gobert",
@@ -579,18 +597,22 @@
    "C1": 76,
    "C1Pass": true,
    "D1": 72,
-   "D1Pass": true
+   "D1Pass": true,
+   "E2": 91,
+   "E2Pass": false
   },
   {
    "name": "Jalen Smith",
-   "condition": "下滑 ≤ 15 名",
+   "condition": "名次 ≤ 2K27 名次（220）",
    "v53": 104,
    "B12": 134,
-   "B12Pass": false,
+   "B12Pass": true,
    "C1": 129,
-   "C1Pass": false,
+   "C1Pass": true,
    "D1": 125,
-   "D1Pass": false
+   "D1Pass": true,
+   "E2": 141,
+   "E2Pass": true
   }
  ]
 }

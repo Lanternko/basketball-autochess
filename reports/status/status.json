@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-19T00:46:32+00:00",
+ "generatedAt": "2026-10-20T03:19:53+00:00",
  "simVersion": "v54",
  "evalPoss": 5000,
  "rapmPool": 415,
@@ -59,6 +59,30 @@
    "rhoNet": 0.5,
    "rhoDefense": 0.288,
    "note": "目標含 RAPM，樣本內 ρ 偏高；留出 ρ 見 ovr-blended-2025-26/summary.json"
+  },
+  {
+   "layer": "卡片 OVR 實驗 B12（未採用）",
+   "description": "方向 B：吃餅長人禁區出手來源修正（模擬層）後重校卡片",
+   "players": 414,
+   "rhoNet": 0.53,
+   "rhoDefense": 0.297,
+   "note": "Karlo、Jalen Smith 兩條未過，正式卡片板維持 v53"
+  },
+  {
+   "layer": "卡片 OVR 實驗 C1（未採用）",
+   "description": "方向 1：自創禁區比例 s̃ 映成第 16 屬性 originShare 加進卡片回歸",
+   "players": 414,
+   "rhoNet": 0.531,
+   "rhoDefense": 0.298,
+   "note": "Karlo、Jalen Smith 兩條未過，正式卡片板維持 v53"
+  },
+  {
+   "layer": "卡片 OVR 實驗 D1（未採用）",
+   "description": "方向 2：屬性建構層 long 去膨脹（--attr-deflate）後重校卡片",
+   "players": 414,
+   "rhoNet": 0.531,
+   "rhoDefense": 0.299,
+   "note": "Karlo、Jalen Smith 兩條未過，正式卡片板維持 v53"
   }
  ],
  "team": [
@@ -488,6 +512,85 @@
    "simRank": 4,
    "rapmRank": 136,
    "flags": "低分鐘、RAPM 差距大"
+  }
+ ],
+ "v55fix": [
+  {
+   "name": "Karlo Matković",
+   "condition": "下修 ≥ 10 名",
+   "v53": 7,
+   "B12": 11,
+   "B12Pass": false,
+   "C1": 12,
+   "C1Pass": false,
+   "D1": 12,
+   "D1Pass": false
+  },
+  {
+   "name": "John Collins",
+   "condition": "下修",
+   "v53": 29,
+   "B12": 45,
+   "B12Pass": true,
+   "C1": 46,
+   "C1Pass": true,
+   "D1": 42,
+   "D1Pass": true
+  },
+  {
+   "name": "Isaiah Stewart",
+   "condition": "下修",
+   "v53": 32,
+   "B12": 60,
+   "B12Pass": true,
+   "C1": 61,
+   "C1Pass": true,
+   "D1": 59,
+   "D1Pass": true
+  },
+  {
+   "name": "Luka Garza",
+   "condition": "下修",
+   "v53": 33,
+   "B12": 61,
+   "B12Pass": true,
+   "C1": 64,
+   "C1Pass": true,
+   "D1": 61,
+   "D1Pass": true
+  },
+  {
+   "name": "Neemias Queta",
+   "condition": "下滑 ≤ 15 名",
+   "v53": 51,
+   "B12": 53,
+   "B12Pass": true,
+   "C1": 51,
+   "C1Pass": true,
+   "D1": 52,
+   "D1Pass": true
+  },
+  {
+   "name": "Rudy Gobert",
+   "condition": "下滑 ≤ 15 名",
+   "v53": 68,
+   "B12": 79,
+   "B12Pass": true,
+   "C1": 76,
+   "C1Pass": true,
+   "D1": 72,
+   "D1Pass": true
+  },
+  {
+   "name": "Jalen Smith",
+   "condition": "下滑 ≤ 15 名",
+   "v53": 104,
+   "B12": 134,
+   "B12Pass": false,
+   "C1": 129,
+   "C1Pass": false,
+   "D1": 125,
+   "D1Pass": false
   }
  ]
 }

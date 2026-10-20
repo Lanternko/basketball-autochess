@@ -54,5 +54,29 @@
   "rhoNet": 0.5,
   "rhoDefense": 0.288,
   "note": "目標含 RAPM，樣本內 ρ 偏高；留出 ρ 見 ovr-blended-2025-26/summary.json"
+ },
+ {
+  "layer": "卡片 OVR 實驗 B12（未採用）",
+  "description": "方向 B：吃餅長人禁區出手來源修正（模擬層）後重校卡片",
+  "players": 414,
+  "rhoNet": 0.53,
+  "rhoDefense": 0.297,
+  "note": "Karlo、Jalen Smith 兩條未過，正式卡片板維持 v53"
+ },
+ {
+  "layer": "卡片 OVR 實驗 C1（未採用）",
+  "description": "方向 1：自創禁區比例 s̃ 映成第 16 屬性 originShare 加進卡片回歸",
+  "players": 414,
+  "rhoNet": 0.531,
+  "rhoDefense": 0.298,
+  "note": "Karlo、Jalen Smith 兩條未過，正式卡片板維持 v53"
+ },
+ {
+  "layer": "卡片 OVR 實驗 D1（未採用）",
+  "description": "方向 2：屬性建構層 long 去膨脹（--attr-deflate）後重校卡片",
+  "players": 414,
+  "rhoNet": 0.531,
+  "rhoDefense": 0.299,
+  "note": "Karlo、Jalen Smith 兩條未過，正式卡片板維持 v53"
  }
 ]

@@ -15,7 +15,8 @@ OUT = Path(__file__).parent
 EVAL_POSS = 5000
 LOW_MIN, RAPM_FAR, BIGS = 1000, 100, {'C', 'PF'}
 LATEST_SIM = 'v54'  # latest sim board measured (official card board is still calibrated to v53)
-OFFICIAL_CARD = 'reports/ovr-calibrated-2025-26/ranking.csv'
+OFFICIAL_CARD = 'reports/ovr-v55-card-E-2025-26/card-E2-lam0.4/ranking.csv'  # 2026-10-20 起正式卡片 = v55 E2-λ0.4
+V53_CARD = 'reports/ovr-calibrated-2025-26/ranking.csv'
 V55_CARDS = {'B12': 'reports/ovr-v55-finisher-fix-2025-26/card/B12/ranking.csv',
              'C1': 'reports/ovr-v55-card-origin-attr-2025-26/card-C1/ranking.csv',
              'D1': 'reports/ovr-v55-attr-deflate-2025-26/card/D1/ranking.csv',
@@ -58,10 +59,11 @@ def personal(rapm_by_id, rapm_by_name):
     add('模擬板 v54（原始）', '三分／禁區命中率改用可靠度加權收縮', [(float(r['rawPer36']), rapm_by_id.get(r['playerId'])) for r in sim])
     add('模擬板 v54（收縮修正版）', '同 v53 收縮規則', [(float(r['v2Per36']), rapm_by_id.get(r['playerId'])) for r in sim],
         '已收束；球隊層 2025-26 勝場 MAE 變差，未切換對局資料，卡片板仍為 v53 校準')
-    card = rows(OFFICIAL_CARD)
-    add('卡片 OVR（正式卡片板）', '能力值公式校準到模擬與 RAPM 混合目標，α=0.5（遊戲本體不讀取任何 OVR，見 ovr-blended-2025-26/dataflow.md）',
-        [(float(r['ovr']), rapm_by_name.get(r['name'])) for r in card],
-        '替補可靠度收縮已依預註冊跑完但不採用（G1、G2 未過，見 ovr-blended-bench-shrinkage/report.md），本板維持不變')
+    add('卡片 OVR（正式卡片板，v55 E2）', '吃餅折扣 λ=0.4（PF/C 自創 ≥65 豁免）後重校，目標同 v53：模擬與 RAPM 混合 α=0.5（遊戲本體不讀取任何 OVR）',
+        [(float(r['ovr']), rapm_by_name.get(r['name'])) for r in rows(OFFICIAL_CARD)],
+        '對 2K27 ρ .446→.475；Gobert 防守低估（第 91 名），下一輪修')
+    add('卡片 OVR v53（前正式版）', '能力值公式校準到模擬與 RAPM 混合目標，α=0.5，見 ovr-blended-2025-26/dataflow.md',
+        [(float(r['ovr']), rapm_by_name.get(r['name'])) for r in rows(V53_CARD)], '2026-10-20 由 E2 取代')
     legacy = rows('reports/ovr-calibrated-2025-26/legacy-sim-only/ranking.csv')
     add('卡片 OVR（舊版，sim-only）', '能力值公式校準到 v53 模擬，α=0（已被正式卡片板取代）',
         [(float(r['ovr']), rapm_by_name.get(r['name'])) for r in legacy])
@@ -69,14 +71,16 @@ def personal(rapm_by_id, rapm_by_name):
     add('卡片 OVR（混合 α=0.5）', '校準目標 = 模擬與 RAPM 各半（與正式卡片板同一組數字，來源腳本不同）', [(float(r['ovr']), rapm_by_name.get(r['name'])) for r in blend],
         '目標含 RAPM，樣本內 ρ 偏高；留出 ρ 見 ovr-blended-2025-26/summary.json')
     for key, desc in V55_DESC.items():
+        if key == 'E2':
+            continue
         add(f'卡片 OVR 實驗 {key}（未採用）', desc, [(float(r['ovr']), rapm_by_name.get(r['name'])) for r in rows(V55_CARDS[key])],
-            '7 人驗收僅 Gobert 未過（第 91 名，2K27 第 60、RAPM 第 29），待決定是否採用' if key == 'E2' else 'Karlo 未過，正式卡片板維持 v53')
+            'Karlo 未過，不採用')
     return out
 
 
 def v55fix(rapm_by_name):
     """7-player acceptance table for the v55 card experiments vs the official v53 card."""
-    ranks = {k: {r['name']: int(r['rank']) for r in rows(p)} for k, p in {'v53': OFFICIAL_CARD, **V55_CARDS}.items()}
+    ranks = {k: {r['name']: int(r['rank']) for r in rows(p)} for k, p in {'v53': V53_CARD, **V55_CARDS}.items()}
     rank2k = {r['name']: float(r['rank2k']) for r in rows('reports/ovr-v55-2k27-compare/merged.csv') if r['rank2k']}
     pool = sorted((r for r in rapm_by_name.values() if float(r['pooledPoss']) >= EVAL_POSS), key=lambda r: -float(r['pooledNet']))
     rapm_rank = {r['name']: i + 1 for i, r in enumerate(pool)}
@@ -142,7 +146,7 @@ def md(snap):
           '|---:|---|---|---:|---:|---:|---:|---|']
     L += [f"| {r['rank']} | {r['name']} | {r['pos']} | {r['ovr']:.1f} | {r['minutes']} | {r['simRank'] or '—'} | {r['rapmRank'] or '—'} | {r['flags']} |" for r in snap['top20']]
     mark = lambda r, k: f"{r[k]}{'' if r[k + 'Pass'] else ' ✗'}"
-    L += ['', '## v55 卡片修正各方向（7 人驗收，正式卡片名次 → 實驗名次，✗ = 未過）', '',
+    L += ['', '## v55 卡片修正各方向（7 人驗收，v53 名次 → 實驗名次，✗ = 未過；E2 已採用為正式卡片）', '',
           '| 球員 | 條件 | 2K27 | RAPM | v53 | ' + ' | '.join(V55_CARDS) + ' |', '|---|---|---:|---:|---:|' + '---:|' * len(V55_CARDS)]
     L += [f"| {r['name']} | {r['condition']} | {r['rank2k']:g} | {r['rapmRank'] or '—'} | {r['v53']} | " + ' | '.join(mark(r, k) for k in V55_CARDS) + ' |' for r in snap['v55fix']]
     return '\n'.join(L) + '\n'

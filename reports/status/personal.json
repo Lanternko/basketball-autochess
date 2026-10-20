@@ -32,12 +32,20 @@
   "note": "已收束；球隊層 2025-26 勝場 MAE 變差，未切換對局資料，卡片板仍為 v53 校準"
  },
  {
-  "layer": "卡片 OVR（正式卡片板）",
-  "description": "能力值公式校準到模擬與 RAPM 混合目標，α=0.5（遊戲本體不讀取任何 OVR，見 ovr-blended-2025-26/dataflow.md）",
+  "layer": "卡片 OVR（正式卡片板，v55 E2）",
+  "description": "吃餅折扣 λ=0.4（PF/C 自創 ≥65 豁免）後重校，目標同 v53：模擬與 RAPM 混合 α=0.5（遊戲本體不讀取任何 OVR）",
+  "players": 414,
+  "rhoNet": 0.529,
+  "rhoDefense": 0.297,
+  "note": "對 2K27 ρ .446→.475；Gobert 防守低估（第 91 名），下一輪修"
+ },
+ {
+  "layer": "卡片 OVR v53（前正式版）",
+  "description": "能力值公式校準到模擬與 RAPM 混合目標，α=0.5，見 ovr-blended-2025-26/dataflow.md",
   "players": 414,
   "rhoNet": 0.5,
   "rhoDefense": 0.288,
-  "note": "替補可靠度收縮已依預註冊跑完但不採用（G1、G2 未過，見 ovr-blended-bench-shrinkage/report.md），本板維持不變"
+  "note": "2026-10-20 由 E2 取代"
  },
  {
   "layer": "卡片 OVR（舊版，sim-only）",
@@ -61,7 +69,7 @@
   "players": 414,
   "rhoNet": 0.53,
   "rhoDefense": 0.297,
-  "note": "Karlo 未過，正式卡片板維持 v53"
+  "note": "Karlo 未過，不採用"
  },
  {
   "layer": "卡片 OVR 實驗 C1（未採用）",
@@ -69,7 +77,7 @@
   "players": 414,
   "rhoNet": 0.531,
   "rhoDefense": 0.298,
-  "note": "Karlo 未過，正式卡片板維持 v53"
+  "note": "Karlo 未過，不採用"
  },
  {
   "layer": "卡片 OVR 實驗 D1（未採用）",
@@ -77,14 +85,6 @@
   "players": 414,
   "rhoNet": 0.531,
   "rhoDefense": 0.299,
-  "note": "Karlo 未過，正式卡片板維持 v53"
- },
- {
-  "layer": "卡片 OVR 實驗 E2（未採用）",
-  "description": "方向 E2：吃餅折扣 λ=0.4（禁區出手按非自創比例打折，PF/C 自創 ≥65 吸引包夾者豁免）",
-  "players": 414,
-  "rhoNet": 0.529,
-  "rhoDefense": 0.297,
-  "note": "7 人驗收僅 Gobert 未過（第 91 名，2K27 第 60、RAPM 第 29），待決定是否採用"
+  "note": "Karlo 未過，不採用"
  }
 ]

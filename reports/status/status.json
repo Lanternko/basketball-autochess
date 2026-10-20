@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-20T03:58:32+00:00",
+ "generatedAt": "2026-10-20T04:02:57+00:00",
  "simVersion": "v54",
  "evalPoss": 5000,
  "rapmPool": 415,
@@ -66,7 +66,7 @@
    "players": 414,
    "rhoNet": 0.53,
    "rhoDefense": 0.297,
-   "note": "Karlo 未過（Jalen Smith 改 2K 基準後已過），正式卡片板維持 v53"
+   "note": "Karlo 未過，正式卡片板維持 v53"
   },
   {
    "layer": "卡片 OVR 實驗 C1（未採用）",
@@ -74,7 +74,7 @@
    "players": 414,
    "rhoNet": 0.531,
    "rhoDefense": 0.298,
-   "note": "Karlo 未過（Jalen Smith 改 2K 基準後已過），正式卡片板維持 v53"
+   "note": "Karlo 未過，正式卡片板維持 v53"
   },
   {
    "layer": "卡片 OVR 實驗 D1（未採用）",
@@ -82,7 +82,7 @@
    "players": 414,
    "rhoNet": 0.531,
    "rhoDefense": 0.299,
-   "note": "Karlo 未過（Jalen Smith 改 2K 基準後已過），正式卡片板維持 v53"
+   "note": "Karlo 未過，正式卡片板維持 v53"
   },
   {
    "layer": "卡片 OVR 實驗 E2（未採用）",
@@ -90,7 +90,7 @@
    "players": 414,
    "rhoNet": 0.529,
    "rhoDefense": 0.297,
-   "note": "7 人驗收僅 Gobert 未過（掉 23 名），待決定是否採用"
+   "note": "7 人驗收僅 Gobert 未過（第 91 名，2K27 第 60、RAPM 第 29），待決定是否採用"
   }
  ],
  "team": [
@@ -527,6 +527,8 @@
    "name": "Karlo Matković",
    "condition": "下修 ≥ 10 名",
    "v53": 7,
+   "rank2k": 294.5,
+   "rapmRank": 212,
    "B12": 11,
    "B12Pass": false,
    "C1": 12,
@@ -540,6 +542,8 @@
    "name": "John Collins",
    "condition": "下修",
    "v53": 29,
+   "rank2k": 142.0,
+   "rapmRank": 240,
    "B12": 45,
    "B12Pass": true,
    "C1": 46,
@@ -553,6 +557,8 @@
    "name": "Isaiah Stewart",
    "condition": "下修",
    "v53": 32,
+   "rank2k": 194.5,
+   "rapmRank": 261,
    "B12": 60,
    "B12Pass": true,
    "C1": 61,
@@ -566,6 +572,8 @@
    "name": "Luka Garza",
    "condition": "下修",
    "v53": 33,
+   "rank2k": 255.5,
+   "rapmRank": 174,
    "B12": 61,
    "B12Pass": true,
    "C1": 64,
@@ -577,8 +585,10 @@
   },
   {
    "name": "Neemias Queta",
-   "condition": "下滑 ≤ 15 名",
+   "condition": "名次 ≤ 2K27 或 RAPM 名次",
    "v53": 51,
+   "rank2k": 110.5,
+   "rapmRank": 13,
    "B12": 53,
    "B12Pass": true,
    "C1": 51,
@@ -590,21 +600,25 @@
   },
   {
    "name": "Rudy Gobert",
-   "condition": "下滑 ≤ 15 名",
+   "condition": "名次 ≤ 2K27 或 RAPM 名次",
    "v53": 68,
+   "rank2k": 60.5,
+   "rapmRank": 29,
    "B12": 79,
-   "B12Pass": true,
+   "B12Pass": false,
    "C1": 76,
-   "C1Pass": true,
+   "C1Pass": false,
    "D1": 72,
-   "D1Pass": true,
+   "D1Pass": false,
    "E2": 91,
    "E2Pass": false
   },
   {
    "name": "Jalen Smith",
-   "condition": "名次 ≤ 2K27 名次（220）",
+   "condition": "名次 ≤ 2K27 或 RAPM 名次",
    "v53": 104,
+   "rank2k": 220.0,
+   "rapmRank": 65,
    "B12": 134,
    "B12Pass": true,
    "C1": 129,

@@ -24,13 +24,14 @@ V55_DESC = {'B12': '方向 B：吃餅長人禁區出手來源修正（模擬層�
             'C1': '方向 1：自創禁區比例 s̃ 映成第 16 屬性 originShare 加進卡片回歸',
             'D1': '方向 2：屬性建構層 long 去膨脹（--attr-deflate）後重校卡片',
             'E2': '方向 E2：吃餅折扣 λ=0.4（禁區出手按非自創比例打折，PF/C 自創 ≥65 吸引包夾者豁免）'}
-V55_CHECKS = [('Karlo Matković', '下修 ≥ 10 名', lambda a, b: b - a >= 10),
-              ('John Collins', '下修', lambda a, b: b > a),
-              ('Isaiah Stewart', '下修', lambda a, b: b > a),
-              ('Luka Garza', '下修', lambda a, b: b > a),
-              ('Neemias Queta', '下滑 ≤ 15 名', lambda a, b: b - a <= 15),
-              ('Rudy Gobert', '下滑 ≤ 15 名', lambda a, b: b - a <= 15),
-              ('Jalen Smith', '名次 ≤ 2K27 名次（220）', lambda a, b: b <= 220)]
+# 驗收：下修類看方向；不誤傷類只要卡片名次不低於 2K27 或 RAPM 其中一個的名次（兩者擇一准即可）
+V55_CHECKS = [('Karlo Matković', '下修 ≥ 10 名', lambda a, b, ref: b - a >= 10),
+              ('John Collins', '下修', lambda a, b, ref: b > a),
+              ('Isaiah Stewart', '下修', lambda a, b, ref: b > a),
+              ('Luka Garza', '下修', lambda a, b, ref: b > a),
+              ('Neemias Queta', '名次 ≤ 2K27 或 RAPM 名次', lambda a, b, ref: b <= ref),
+              ('Rudy Gobert', '名次 ≤ 2K27 或 RAPM 名次', lambda a, b, ref: b <= ref),
+              ('Jalen Smith', '名次 ≤ 2K27 或 RAPM 名次', lambda a, b, ref: b <= ref)]
 
 
 def spearman(a, b):
@@ -69,18 +70,22 @@ def personal(rapm_by_id, rapm_by_name):
         '目標含 RAPM，樣本內 ρ 偏高；留出 ρ 見 ovr-blended-2025-26/summary.json')
     for key, desc in V55_DESC.items():
         add(f'卡片 OVR 實驗 {key}（未採用）', desc, [(float(r['ovr']), rapm_by_name.get(r['name'])) for r in rows(V55_CARDS[key])],
-            '7 人驗收僅 Gobert 未過（掉 23 名），待決定是否採用' if key == 'E2' else 'Karlo 未過（Jalen Smith 改 2K 基準後已過），正式卡片板維持 v53')
+            '7 人驗收僅 Gobert 未過（第 91 名，2K27 第 60、RAPM 第 29），待決定是否採用' if key == 'E2' else 'Karlo 未過，正式卡片板維持 v53')
     return out
 
 
-def v55fix():
-    """7-player acceptance table for the three v55 card experiments vs the official v53 card."""
+def v55fix(rapm_by_name):
+    """7-player acceptance table for the v55 card experiments vs the official v53 card."""
     ranks = {k: {r['name']: int(r['rank']) for r in rows(p)} for k, p in {'v53': OFFICIAL_CARD, **V55_CARDS}.items()}
+    rank2k = {r['name']: float(r['rank2k']) for r in rows('reports/ovr-v55-2k27-compare/merged.csv') if r['rank2k']}
+    pool = sorted((r for r in rapm_by_name.values() if float(r['pooledPoss']) >= EVAL_POSS), key=lambda r: -float(r['pooledNet']))
+    rapm_rank = {r['name']: i + 1 for i, r in enumerate(pool)}
     out = []
     for name, cond, ok in V55_CHECKS:
-        base = ranks['v53'][name]; row = {'name': name, 'condition': cond, 'v53': base}
+        base = ranks['v53'][name]; ref = max(rank2k[name], rapm_rank.get(name, 0))
+        row = {'name': name, 'condition': cond, 'v53': base, 'rank2k': rank2k[name], 'rapmRank': rapm_rank.get(name)}
         for k in V55_CARDS:
-            row[k] = ranks[k][name]; row[k + 'Pass'] = ok(base, ranks[k][name])
+            row[k] = ranks[k][name]; row[k + 'Pass'] = ok(base, ranks[k][name], ref)
         out.append(row)
     return out
 
@@ -138,8 +143,8 @@ def md(snap):
     L += [f"| {r['rank']} | {r['name']} | {r['pos']} | {r['ovr']:.1f} | {r['minutes']} | {r['simRank'] or '—'} | {r['rapmRank'] or '—'} | {r['flags']} |" for r in snap['top20']]
     mark = lambda r, k: f"{r[k]}{'' if r[k + 'Pass'] else ' ✗'}"
     L += ['', '## v55 卡片修正各方向（7 人驗收，正式卡片名次 → 實驗名次，✗ = 未過）', '',
-          '| 球員 | 條件 | v53 | ' + ' | '.join(V55_CARDS) + ' |', '|---|---|---:|' + '---:|' * len(V55_CARDS)]
-    L += [f"| {r['name']} | {r['condition']} | {r['v53']} | " + ' | '.join(mark(r, k) for k in V55_CARDS) + ' |' for r in snap['v55fix']]
+          '| 球員 | 條件 | 2K27 | RAPM | v53 | ' + ' | '.join(V55_CARDS) + ' |', '|---|---|---:|---:|---:|' + '---:|' * len(V55_CARDS)]
+    L += [f"| {r['name']} | {r['condition']} | {r['rank2k']:g} | {r['rapmRank'] or '—'} | {r['v53']} | " + ' | '.join(mark(r, k) for k in V55_CARDS) + ' |' for r in snap['v55fix']]
     return '\n'.join(L) + '\n'
 
 
@@ -148,7 +153,7 @@ def main():
     by_id = {r['playerId']: r for r in rapm}; by_name = {r['name']: r for r in rapm}
     t20, pool = top20(by_name)
     snap = {'generatedAt': datetime.now(timezone.utc).isoformat(timespec='seconds'), 'simVersion': LATEST_SIM, 'evalPoss': EVAL_POSS,
-            'rapmPool': pool, 'personal': personal(by_id, by_name), 'team': team(), 'top20': t20, 'v55fix': v55fix()}
+            'rapmPool': pool, 'personal': personal(by_id, by_name), 'team': team(), 'top20': t20, 'v55fix': v55fix(by_name)}
     for k in ('personal', 'team', 'top20', 'v55fix'):
         (OUT / f'{k}.json').write_text(json.dumps(snap[k], ensure_ascii=False, indent=1), encoding='utf-8')
     (OUT / 'status.json').write_text(json.dumps(snap, ensure_ascii=False, indent=1), encoding='utf-8')

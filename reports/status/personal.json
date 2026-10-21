@@ -5,7 +5,8 @@
   "players": 414,
   "rhoNet": 0.362,
   "rhoDefense": 0.256,
-  "note": ""
+  "holdoutRho": "未量測",
+  "note": "無額外備註；來源 reports/ovr-v53-shrinkage-2025-26/ranking-v2.csv，對全量 RAPM 計算（樣本外欄僅卡片有）"
  },
  {
   "layer": "模擬板 v53（收縮修正版）",
@@ -13,7 +14,8 @@
   "players": 414,
   "rhoNet": 0.398,
   "rhoDefense": 0.276,
-  "note": ""
+  "holdoutRho": "未量測",
+  "note": "無額外備註；來源 reports/ovr-v53-shrinkage-2025-26/ranking-v2.csv，對全量 RAPM 計算（樣本外欄僅卡片有）"
  },
  {
   "layer": "模擬板 v54（原始）",
@@ -21,7 +23,8 @@
   "players": 414,
   "rhoNet": 0.389,
   "rhoDefense": 0.289,
-  "note": ""
+  "holdoutRho": "未量測",
+  "note": "無額外備註；來源 reports/ovr-v54-shrinkage-2025-26/ranking-v2.csv，對全量 RAPM 計算（樣本外欄僅卡片有）"
  },
  {
   "layer": "模擬板 v54（收縮修正版）",
@@ -29,15 +32,44 @@
   "players": 414,
   "rhoNet": 0.424,
   "rhoDefense": 0.303,
+  "holdoutRho": "未量測",
   "note": "已收束；球隊層 2025-26 勝場 MAE 變差，未切換對局資料，卡片板仍為 v53 校準"
  },
  {
-  "layer": "卡片 OVR（正式卡片板，v55 E2）",
-  "description": "吃餅折扣 λ=0.4（PF/C 自創 ≥65 豁免）後重校，目標同 v53：模擬與 RAPM 混合 α=0.5（遊戲本體不讀取任何 OVR）",
+  "layer": "卡片 OVR（正式卡片板，v58 H1-m0）",
+  "description": "v57 G3（γ=1.0、δ=0.25：防守加分 + 往 RAPM align）再加上限：單人總 lift 不得超過其 RAPM 名次（margin=0）（遊戲本體不讀取任何 OVR）",
+  "players": 414,
+  "rhoNet": 0.852,
+  "rhoDefense": 0.66,
+  "holdoutRho": "0.563 / 0.391",
+  "note": "ρRAPM 樣本內（align/封頂用 RAPM）；樣本外 ρ 為 A/B 半場對調平均（ovr-v58-holdout-2025-26/report.md）；19/19 硬門檻全過；對 2K27 ρ .537；前十長人僅 Wemby/Giannis/Jokić/Chet"
+ },
+ {
+  "layer": "卡片 OVR v57 G3（γ=1.0、δ=0.25）",
+  "description": "E2 之上加防守加分（γ=1.0，全位置、PR 90–96 漸減）+ 往 RAPM align δ=0.25，無封頂（v58 的前身）",
+  "players": 414,
+  "rhoNet": 0.843,
+  "rhoDefense": 0.697,
+  "holdoutRho": "0.555 / 0.401",
+  "note": "ρRAPM 樣本內（align/封頂用 RAPM）；v58 加封頂後樣本外 ρ 幾乎不變"
+ },
+ {
+  "layer": "卡片 OVR v56 F2（PF/C 防守加分 γ=0.5）",
+  "description": "E2 之上只對 PF/C 加防守加分，無 align、無封頂",
+  "players": 414,
+  "rhoNet": 0.57,
+  "rhoDefense": 0.362,
+  "holdoutRho": "0.474 / 0.273",
+  "note": "ρRAPM 部分樣本內（防守加分用 RAPM pooledD，另有 RAPM 混合目標）"
+ },
+ {
+  "layer": "卡片 OVR v55 E2（前正式版）",
+  "description": "吃餅折扣 λ=0.4（PF/C 自創 ≥65 豁免）後重校，目標同 v53：模擬與 RAPM 混合 α=0.5",
   "players": 414,
   "rhoNet": 0.529,
   "rhoDefense": 0.297,
-  "note": "對 2K27 ρ .446→.475；Gobert 防守低估（第 91 名），下一輪修"
+  "holdoutRho": "0.457 / 0.245",
+  "note": "2026-10-21 由 v58 H1-m0 取代；RAPM 混合目標（α=0.5）→ ρRAPM 部分樣本內"
  },
  {
   "layer": "卡片 OVR v53（前正式版）",
@@ -45,7 +77,8 @@
   "players": 414,
   "rhoNet": 0.5,
   "rhoDefense": 0.288,
-  "note": "2026-10-20 由 E2 取代"
+  "holdoutRho": "未量測",
+  "note": "2026-10-20 由 E2 取代（E2 再於 10-21 由 v58 H1-m0 取代）；RAPM 混合目標（α=0.5）→ ρRAPM 部分樣本內；校準腳本無法半份重擬合故樣本外未量測"
  },
  {
   "layer": "卡片 OVR（舊版，sim-only）",
@@ -53,7 +86,8 @@
   "players": 414,
   "rhoNet": 0.374,
   "rhoDefense": 0.205,
-  "note": ""
+  "holdoutRho": "未量測",
+  "note": "目標不含 RAPM，ρRAPM 為純樣本外（全量 RAPM）"
  },
  {
   "layer": "卡片 OVR（混合 α=0.5）",
@@ -61,6 +95,7 @@
   "players": 414,
   "rhoNet": 0.5,
   "rhoDefense": 0.288,
+  "holdoutRho": "未量測",
   "note": "目標含 RAPM，樣本內 ρ 偏高；留出 ρ 見 ovr-blended-2025-26/summary.json"
  },
  {
@@ -69,7 +104,8 @@
   "players": 414,
   "rhoNet": 0.53,
   "rhoDefense": 0.297,
-  "note": "Karlo 未過，不採用"
+  "holdoutRho": "未量測",
+  "note": "Karlo 未過，不採用；RAPM 混合目標（α=0.5）→ ρRAPM 部分樣本內"
  },
  {
   "layer": "卡片 OVR 實驗 C1（未採用）",
@@ -77,7 +113,8 @@
   "players": 414,
   "rhoNet": 0.531,
   "rhoDefense": 0.298,
-  "note": "Karlo 未過，不採用"
+  "holdoutRho": "未量測",
+  "note": "Karlo 未過，不採用；RAPM 混合目標（α=0.5）→ ρRAPM 部分樣本內"
  },
  {
   "layer": "卡片 OVR 實驗 D1（未採用）",
@@ -85,6 +122,7 @@
   "players": 414,
   "rhoNet": 0.531,
   "rhoDefense": 0.299,
-  "note": "Karlo 未過，不採用"
+  "holdoutRho": "未量測",
+  "note": "Karlo 未過，不採用；RAPM 混合目標（α=0.5）→ ρRAPM 部分樣本內"
  }
 ]

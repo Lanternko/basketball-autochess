@@ -175,7 +175,7 @@
   "order": 46,
   "winsMAE": 5.24,
   "netRMSE": 2.302,
-  "ptsMAE": null,
+  "ptsMAE": "未量測",
   "source": "player-impact-v46",
   "measured": true
  },
@@ -184,7 +184,7 @@
   "order": 47,
   "winsMAE": 5.38,
   "netRMSE": 2.313,
-  "ptsMAE": null,
+  "ptsMAE": "未量測",
   "source": "player-impact-v47",
   "measured": true
  },
@@ -193,7 +193,7 @@
   "order": 48,
   "winsMAE": 4.98,
   "netRMSE": 2.174,
-  "ptsMAE": null,
+  "ptsMAE": "未量測",
   "source": "player-impact-v48",
   "measured": true
  },
@@ -202,7 +202,7 @@
   "order": 49,
   "winsMAE": 6.24,
   "netRMSE": 2.723,
-  "ptsMAE": null,
+  "ptsMAE": "未量測",
   "source": "player-impact-v49",
   "measured": true
  },
@@ -211,7 +211,7 @@
   "order": 53,
   "winsMAE": 4.56,
   "netRMSE": 2.019,
-  "ptsMAE": null,
+  "ptsMAE": "未量測",
   "source": "player-impact-v53-team（壓迫係數為樣本內）",
   "measured": true
  },
@@ -220,8 +220,17 @@
   "order": 54,
   "winsMAE": 6.29,
   "netRMSE": 2.703,
-  "ptsMAE": null,
+  "ptsMAE": "未量測",
   "source": "player-impact-v54-team（未採用）",
   "measured": true
+ },
+ {
+  "version": "v55–v58 卡片",
+  "order": 99,
+  "winsMAE": "不適用",
+  "netRMSE": "不適用",
+  "ptsMAE": "不適用",
+  "source": "卡片版本（v55–v58）只改顯示用 OVR，不影響模擬 winsMAE",
+  "measured": false
  }
 ]

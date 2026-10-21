@@ -1,0 +1,83 @@
+[
+ {
+  "version": "舊版 sim-only",
+  "order": 1,
+  "adopted": true,
+  "rhoNetIn": 0.374,
+  "rhoNetOut": 0.338,
+  "rhoDefOut": 0.183,
+  "rho2k": 0.337
+ },
+ {
+  "version": "v53",
+  "order": 2,
+  "adopted": true,
+  "rhoNetIn": 0.5,
+  "rhoNetOut": 0.425,
+  "rhoDefOut": 0.237,
+  "rho2k": 0.449
+ },
+ {
+  "version": "E2 (v55)",
+  "order": 3,
+  "adopted": true,
+  "rhoNetIn": 0.529,
+  "rhoNetOut": 0.457,
+  "rhoDefOut": 0.245,
+  "rho2k": 0.478
+ },
+ {
+  "version": "F2 (v56)",
+  "order": 4,
+  "adopted": true,
+  "rhoNetIn": 0.57,
+  "rhoNetOut": 0.474,
+  "rhoDefOut": 0.273,
+  "rho2k": 0.488
+ },
+ {
+  "version": "G3 (v57)",
+  "order": 5,
+  "adopted": true,
+  "rhoNetIn": 0.843,
+  "rhoNetOut": 0.555,
+  "rhoDefOut": 0.401,
+  "rho2k": 0.53
+ },
+ {
+  "version": "H1 (v58)",
+  "order": 6,
+  "adopted": true,
+  "rhoNetIn": 0.852,
+  "rhoNetOut": 0.563,
+  "rhoDefOut": 0.391,
+  "rho2k": 0.537
+ },
+ {
+  "version": "B12",
+  "order": 7,
+  "adopted": false,
+  "rhoNetIn": 0.53,
+  "rhoNetOut": 0.455,
+  "rhoDefOut": 0.243,
+  "rho2k": 0.483
+ },
+ {
+  "version": "C1",
+  "order": 8,
+  "adopted": false,
+  "rhoNetIn": 0.531,
+  "rhoNetOut": 0.455,
+  "rhoDefOut": 0.244,
+  "rho2k": 0.483
+ },
+ {
+  "version": "D1",
+  "order": 9,
+  "adopted": false,
+  "rhoNetIn": 0.531,
+  "rhoNetOut": 0.458,
+  "rhoDefOut": 0.247,
+  "rho2k": 0.485
+ }
+]

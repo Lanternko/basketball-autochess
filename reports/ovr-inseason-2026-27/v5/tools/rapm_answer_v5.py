@@ -1,8 +1,9 @@
 """v5 §R.3：答案卡 RAPM 季集 = 目標季（含）往前最多四季，最早 2021-22。
 
-  2023-24 答案卡  2020-21..2023-24；2020-21 stint 未到位時退回 2021-22..2023-24（三季）
-                  2020-21 stint 放 reports/defense-seventh/2020-21/stints/stints.jsonl
+  2023-24 答案卡  2021-22..2023-24（三季；使用者 2026-10-27 決定照 §R.3，最早 2021-22）
   2024-25 答案卡  2021-22..2024-25（四季）
+  對照（不是答案）2023-24 四季版 2020-21..2023-24 → v5/data/rapm-2020-21_2023-24.csv
+                  2020-21 stint 解壓到 reports/defense-seventh/2020-21/stints/stints.jsonl
 
 做法：用 v4 的 rapm_v4.build（= tools/rapm_2022_25.py 的 ridge + CV，λ 網格不變）
 從本機 stint 重算兩組 RAPM 到暫存目錄，逐位比對 §R.3 指定的現有檔：
@@ -25,11 +26,12 @@ import rapm_2022_25 as R  # noqa: E402
 V5 = C.REPORT / 'v5'
 V5_DATA = V5 / 'data'
 WANTED = {
-    '2023-24': ['2020-21', '2021-22', '2022-23', '2023-24'],
+    '2023-24': ['2021-22', '2022-23', '2023-24'],
     '2024-25': ['2021-22', '2022-23', '2023-24', '2024-25'],
 }
-# 已存在、§R.3 指定的檔（以季集 tag 為鍵）。季集沒有現成檔時（2020-21 stint 到位後的
-# 2020-21_2023-24），改寫入 v5/data/rapm-<tag>.csv，並重跑一次確認結果可重現。
+# 對照用季集（不進答案卡）。第一次跑時寫入 v5/data/rapm-<tag>.csv，之後逐位比對該檔。
+ALT = {'2023-24': ['2020-21', '2021-22', '2022-23', '2023-24']}
+# 已存在、§R.3 指定的檔（以季集 tag 為鍵）
 PINNED = {
     '2021-22_2023-24': C.V3_DATA / 'rapm-2021-22_2023-24.csv',
     '2021-22_2024-25': C.V4_DATA / 'rapm-2021-22_2024-25.csv',
@@ -54,10 +56,35 @@ STINT_SOURCES = {
 
 
 def answer_rapm_file(target):
-    """答案卡該讀的 RAPM 檔：依目前有 stint 的季決定。"""
-    have = [s for s in WANTED[target] if stint_file(s).exists()]
-    tag = f'{have[0]}_{have[-1]}'
-    return tag, have, PINNED.get(tag, V5_DATA / f'rapm-{tag}.csv')
+    """答案卡讀的 RAPM 檔（§R.3 指定的現有檔）。"""
+    seasons = WANTED[target]
+    tag = f'{seasons[0]}_{seasons[-1]}'
+    return tag, seasons, PINNED[tag]
+
+
+def alt_rapm_file(target):
+    """對照用 RAPM 檔；沒有對照季集或缺 stint 時回 None。"""
+    seasons = ALT.get(target)
+    if not seasons or not all(stint_file(s).exists() for s in seasons):
+        return None
+    tag = f'{seasons[0]}_{seasons[-1]}'
+    return tag, seasons, V5_DATA / f'rapm-{tag}.csv'
+
+
+def run_set(tag, seasons, final, tmp):
+    path, meta = RV.build(tag, seasons, outdir=tmp)
+    first = not final.exists()
+    if first:
+        shutil.copyfile(path, final)
+    chk = RV.compare(path, final)
+    return {'seasons': seasons, 'file': final.relative_to(C.ROOT).as_posix(),
+            'sha256': C.sha256_file(final), 'rerunSha256': meta['sha256'],
+            'rerun': {k: meta[k] for k in ('observations', 'players', 'pooled', 'lastSeason')},
+            'rerunVsFile': chk,
+            'rerunVsFileNote': ('第一次寫入：identical 只表示寫入無誤' if first
+                                else '從 stint 重跑，與檔案逐位比對'),
+            'stintSha256': {s: C.sha256_file(stint_file(s)) for s in seasons},
+            'stintSources': {s: STINT_SOURCES[s] for s in seasons if s in STINT_SOURCES}}
 
 
 def stint_file(season):
@@ -71,40 +98,29 @@ def main():
     tmp = V5_DATA / '_rapm_rerun'
     tmp.mkdir(exist_ok=True)
     out = {'spec': 'preregistration-v5 §R.3（答案端：含目標季、最多四季、最早 2021-22）',
+           'decision': '2026-10-27 使用者決定 2023-24 主卡用三季版（照 §R.3）；四季版只做對照',
            'method': 'v4/tools/rapm_v4.build → tools/rapm_2022_25.py fit_rapm（ridge，CV 選 λ，網格 100..30000）',
            'targets': {}}
     ok = True
-    for target, wanted in WANTED.items():
-        tag, have, final = answer_rapm_file(target)
-        missing = [s for s in wanted if s not in have]
-        path, meta = RV.build(tag, have, outdir=tmp)
-        if tag not in PINNED:  # 新季集：寫正式檔，再和這次重跑比對（可重現性）
-            shutil.copyfile(path, final)
-        chk = RV.compare(path, final)
-        out['targets'][target] = {
-            'wantedSeasons': wanted,
-            'usedSeasons': have,
-            'missingSeasons': missing,
-            'missingNote': ('本機無 stint/pbp（preregistration-v5 §4.3、§R.3 D1 列）' if missing else ''),
-            'pinnedFile': final.relative_to(C.ROOT).as_posix(),
-            'pinnedSha256': C.sha256_file(final),
-            'newFile': tag not in PINNED,
-            'rerunSha256': meta['sha256'],
-            'rerun': {k: meta[k] for k in ('observations', 'players', 'pooled', 'lastSeason')},
-            'rerunVsPinned': chk,
-            'stintSha256': {s: C.sha256_file(stint_file(s)) for s in have},
-            'stintSources': {s: STINT_SOURCES[s] for s in have if s in STINT_SOURCES},
-            'rerunVsPinnedNote': ('新季集：正式檔即本次重跑結果，identical 只表示寫入無誤，不是獨立重現'
-                                  if tag not in PINNED else '與既有指定檔逐位比對'),
-        }
-        ok = ok and chk['identical']
+    for target in WANTED:
+        tag, seasons, final = answer_rapm_file(target)
+        main_set = run_set(tag, seasons, final, tmp)
+        entry = {'usedSeasons': seasons, **main_set}
+        alt = alt_rapm_file(target)
+        if alt:
+            entry['comparison'] = {'note': '對照用，不進答案卡', **run_set(*alt, tmp)}
+            ok = ok and entry['comparison']['rerunVsFile']['identical']
+        out['targets'][target] = entry
+        ok = ok and main_set['rerunVsFile']['identical']
     shutil.rmtree(tmp)
     out['pass'] = bool(ok)
     C.write_json(V5_DATA / 'rapm-answer-v5.json', out)
-    print(json.dumps({t: {k: v[k] for k in ('usedSeasons', 'missingSeasons', 'pinnedSha256')}
-                      | {'identical': v['rerunVsPinned']['identical'],
-                         'maxAbsDiff': v['rerunVsPinned']['maxAbsDiff'],
-                         'lambda': v['rerun']['pooled']['lambda']}
+    brief = lambda v: {'seasons': v['seasons'], 'sha256': v['sha256'],
+                       'identical': v['rerunVsFile']['identical'],
+                       'maxAbsDiff': v['rerunVsFile']['maxAbsDiff'],
+                       'lambda': v['rerun']['pooled']['lambda']}
+    print(json.dumps({t: {'main': brief(v)} | ({'comparison': brief(v['comparison'])}
+                                                if 'comparison' in v else {})
                       for t, v in out['targets'].items()}, ensure_ascii=False, indent=1))
     return 0 if ok else 3
 

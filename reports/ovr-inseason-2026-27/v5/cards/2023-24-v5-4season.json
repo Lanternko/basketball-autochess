@@ -1,20 +1,21 @@
 {
   "season": "2023-24",
-  "file": "reports/ovr-inseason-2026-27/v5/cards/2023-24-v5.csv",
+  "file": "reports/ovr-inseason-2026-27/v5/cards/2023-24-v5-4season.csv",
   "rows": 572,
   "playersPass500": true,
   "ovrRange": {
-    "min": 37.6493,
-    "max": 104.7694
+    "min": 37.4469,
+    "max": 103.5099
   },
   "ovrRangeNote": "只記錄，不判定（v4 §6 移除 OVR 40–99 門檻）",
   "attrsIn40to99": true,
   "noRapm": false,
   "rapm": {
-    "file": "reports\\ovr-inseason-2026-27\\v3\\data\\rapm-2021-22_2023-24.csv",
-    "sha256": "b8c9f273f4d01c7a03be923b98f82a06812a551da158fabcb679801474e6e1d2",
-    "note": "preregistration-v5 §R.3：含目標季、最多四季（3 季；缺 2020-21 的 stint）",
+    "file": "reports\\ovr-inseason-2026-27\\v5\\data\\rapm-2020-21_2023-24.csv",
+    "sha256": "02d896dbab0987ad56a2716c71646a0d66bfbd40a8e00319862be6c8012c7cf5",
+    "note": "對照用，不是答案卡：4 季（含 2020-21，playbyplayv2 存檔重建）",
     "seasons": [
+      "2020-21",
       "2021-22",
       "2022-23",
       "2023-24"
@@ -50,9 +51,9 @@
   "rhoAttrMin": 0.986659,
   "rhoAttrJudgedMin": 0.986659,
   "constantAttrs": [],
-  "rhoOvrVsReference": 0.977962,
-  "medianOvrDiff": 0.100573,
-  "medianOvrAbsDiff": 0.100573,
+  "rhoOvrVsReference": 0.977965,
+  "medianOvrDiff": 0.181549,
+  "medianOvrAbsDiff": 0.181549,
   "checks": {
     "rows>=500": true,
     "rhoOvr>=0.90": true,
@@ -60,16 +61,6 @@
     "rhoAttrJudged>=0.90": true
   },
   "pass": true,
-  "replaces": {
-    "file": "reports/ovr-inseason-2026-27/v4/cards/2023-24.csv",
-    "sha256": "73050d7679f4350e10ec27b17ac8db58d821531ffd8bf07913dfc0bb88a9515b",
-    "rapmFile": "reports/ovr-inseason-2026-27/v3/data/rapm-2021-22_2022-23.csv",
-    "rapmSeasons": [
-      "2021-22",
-      "2022-23"
-    ]
-  },
-  "reproducesV4WithV4Rapm": true,
-  "crossTeamMinutes": "照 v4，不跨隊加總（§R.7 第 1 條未定案）",
-  "sha256": "866f6ecb7f1e001e593109869e1f26f84881a03265d7f357fd3cf5c3b867f0d1"
+  "sha256": "7f021058a094c7ced523aa66ad34ca5ee810cb4fc3514621e9cc8e54ef897435",
+  "role": "comparison only"
 }

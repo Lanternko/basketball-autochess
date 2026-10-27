@@ -2,7 +2,8 @@
 
 管線、summary、prior（season-cards 能力值）全部照 v4 的 build_cards_v4.build，
 只把 rapm_file 換成 §R.3 指定的檔：
-  2023-24  2020-21..2023-24（v5/data/rapm-2020-21_2023-24.csv）；2020-21 stint 缺時退回 v3 三季檔
+  2023-24  v3/data/rapm-2021-22_2023-24.csv（三季；使用者 2026-10-27 決定照 §R.3）
+           另建四季對照卡 2023-24-v5-4season（v5/data/rapm-2020-21_2023-24.csv），不是答案
   2024-25  v4/data/rapm-2021-22_2024-25.csv（四季）
 被交易球員分鐘數仍照 v4（不跨隊加總），因為 §R.7 第 1 條使用者尚未定案。
 
@@ -37,13 +38,12 @@ SEASONS = {
     '2024-25': {'start': 'D2', 'v4': C.V3_DATA / 'rapm-2021-22_2023-24.csv',
                 'v4Seasons': ['2021-22', '2022-23', '2023-24'], 'twokSame': '2K25'},
 }
-# v5 RAPM 檔與季集由 rapm_answer_v5 決定（先跑那支；2020-21 stint 到位後 2023-24 自動變四季）
+# v5 RAPM 檔與季集由 rapm_answer_v5 決定（先跑那支）
 for _s, _cfg in SEASONS.items():
     _tag, _have, _cfg['v5'] = RA.answer_rapm_file(_s)
     _cfg['v5Seasons'] = _have
-    _miss = [x for x in RA.WANTED[_s] if x not in _have]
-    _cfg['note'] = (f'{len(_have)} 季，含目標季' if not _miss
-                    else f"{len(_have)} 季；缺 {', '.join(_miss)} 的 stint")
+    _cfg['note'] = f'{len(_have)} 季，含目標季'
+    _cfg['alt'] = RA.alt_rapm_file(_s)  # (tag, seasons, path) 或 None
 MIN_CUT = 500
 
 
@@ -174,14 +174,25 @@ def main():
                   'rapmV5': meta['rapm']['file'], 'rapmV5Sha256': meta['rapm']['sha256'],
                   'rapmSeasonsV4': cfg['v4Seasons'], 'rapmSeasonsV5': cfg['v5Seasons'],
                   'buildChecksPass': meta['pass'], 'reproducesV4WithV4Rapm': repro})
-        three = V5_CARDS / f'{season}-v5-3season.csv'
-        if three.exists() and len(cfg['v5Seasons']) == 4:  # 2023-24：三季版留作對照
-            s3 = summarize(season, cfg, C.load_csv(three), new, k27, yearly,
-                           diff_name=f'diff-3season-4season-{season}.csv',
-                           labels=('3season', '4season'))
-            s3.update({'card3season': three.relative_to(C.ROOT).as_posix(),
-                       'card3seasonSha256': C.sha256_file(three)})
-            s['vs3season'] = s3
+        if cfg['alt']:  # 2023-24：四季版（2020-21..2023-24）只做對照
+            _, alt_seasons, alt_path = cfg['alt']
+            n, m = len(alt_seasons), len(cfg['v5Seasons'])
+            am = build_with(season, alt_path, tmp)
+            am['rapm']['seasons'] = alt_seasons
+            am['rapm']['note'] = f'對照用，不是答案卡：{n} 季（含 2020-21，playbyplayv2 存檔重建）'
+            alt_card = V5_CARDS / f'{season}-v5-{n}season.csv'
+            shutil.move(tmp / f'{season}.csv', alt_card)
+            am['file'] = alt_card.relative_to(C.ROOT).as_posix()
+            am['sha256'] = C.sha256_file(alt_card)
+            am['role'] = 'comparison only'
+            C.write_json(alt_card.with_suffix('.json'), am)
+            sa = summarize(season, cfg, new, C.load_csv(alt_card), k27, yearly,
+                           diff_name=f'diff-{m}season-{n}season-{season}.csv',
+                           labels=(f'{m}season', f'{n}season'))
+            sa.update({'altCard': am['file'], 'altSha256': am['sha256'],
+                       'altRapm': am['rapm']['file'], 'altRapmSeasons': alt_seasons,
+                       'altBuildChecksPass': am['pass']})
+            s[f'vs{n}season'] = sa
         report['seasons'][season] = s
         ok = ok and repro and meta['pass']
     shutil.rmtree(tmp, ignore_errors=True)

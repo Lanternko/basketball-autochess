@@ -6,29 +6,29 @@
       "start": "D1",
       "all": {
         "n": 572,
-        "pearson": 0.9448,
-        "spearman": 0.9389,
-        "meanDOvr": 0.089,
+        "pearson": 0.9596,
+        "spearman": 0.9555,
+        "meanDOvr": 0.053,
         "medianDOvr": 0.0,
-        "meanAbsDOvr": 2.342,
-        "maxAbsDOvr": 18.664,
-        "nAbsDOvrGt3": 165,
+        "meanAbsDOvr": 1.935,
+        "maxAbsDOvr": 16.105,
+        "nAbsDOvrGt3": 131,
         "medianOvr_v4": 67.846,
-        "medianOvr_v5": 68.18,
-        "meanAbsDRank": 34.86
+        "medianOvr_v5": 68.332,
+        "meanAbsDRank": 28.91
       },
       "MIN>=500": {
         "n": 360,
-        "pearson": 0.9343,
-        "spearman": 0.9282,
-        "meanDOvr": -0.002,
+        "pearson": 0.9447,
+        "spearman": 0.937,
+        "meanDOvr": 0.052,
         "medianDOvr": 0.0,
-        "meanAbsDOvr": 3.044,
-        "maxAbsDOvr": 18.664,
-        "nAbsDOvrGt3": 134,
+        "meanAbsDOvr": 2.769,
+        "maxAbsDOvr": 16.105,
+        "nAbsDOvrGt3": 121,
         "medianOvr_v4": 71.639,
-        "medianOvr_v5": 71.521,
-        "meanAbsDRank": 42.03
+        "medianOvr_v5": 71.349,
+        "meanAbsDRank": 38.16
       },
       "top10AbsDOvr_all": [
         {
@@ -36,100 +36,100 @@
           "pos": "PG",
           "MIN_season": "685.0",
           "ovr_v4": 70.9139,
-          "ovr_v5": 89.5781,
-          "dOvr": 18.6642,
+          "ovr_v5": 87.0187,
+          "dOvr": 16.1048,
           "rank_v4": 235,
-          "rank_v5": 33
+          "rank_v5": 44
         },
         {
           "name": "Toumani Camara",
           "pos": "SF",
           "MIN_season": "1741.0",
           "ovr_v4": 64.0709,
-          "ovr_v5": 79.3078,
-          "dOvr": 15.2369,
+          "ovr_v5": 79.4902,
+          "dOvr": 15.4193,
           "rank_v4": 365,
           "rank_v5": 103
-        },
-        {
-          "name": "Frank Ntilikina",
-          "pos": "SG",
-          "MIN_season": "43.0",
-          "ovr_v4": 63.7731,
-          "ovr_v5": 77.8172,
-          "dOvr": 14.0441,
-          "rank_v4": 368,
-          "rank_v5": 125
-        },
-        {
-          "name": "Jimmy Butler III",
-          "pos": "SF",
-          "MIN_season": "2042.0",
-          "ovr_v4": 81.6499,
-          "ovr_v5": 95.6372,
-          "dOvr": 13.9873,
-          "rank_v4": 74,
-          "rank_v5": 13
-        },
-        {
-          "name": "James Wiseman",
-          "pos": "C",
-          "MIN_season": "1089.0",
-          "ovr_v4": 66.4182,
-          "ovr_v5": 52.781,
-          "dOvr": -13.6372,
-          "rank_v4": 316,
-          "rank_v5": 537
         },
         {
           "name": "Marcus Smart",
           "pos": "PG",
           "MIN_season": "603.0",
           "ovr_v4": 72.3208,
-          "ovr_v5": 85.1397,
-          "dOvr": 12.8189,
+          "ovr_v5": 84.5101,
+          "dOvr": 12.1893,
           "rank_v4": 199,
-          "rank_v5": 52
+          "rank_v5": 55
         },
         {
-          "name": "Andre Drummond",
-          "pos": "C",
-          "MIN_season": "1349.0",
-          "ovr_v4": 67.8366,
-          "ovr_v5": 55.2372,
-          "dOvr": -12.5994,
-          "rank_v4": 287,
-          "rank_v5": 506
-        },
-        {
-          "name": "P.J. Tucker",
-          "pos": "SG",
-          "MIN_season": "487.0",
-          "ovr_v4": 76.741,
-          "ovr_v5": 64.2755,
-          "dOvr": -12.4655,
-          "rank_v4": 128,
-          "rank_v5": 363
-        },
-        {
-          "name": "Andrew Wiggins",
+          "name": "Sam Hauser",
           "pos": "SF",
-          "MIN_season": "1922.0",
-          "ovr_v4": 79.0422,
-          "ovr_v5": 67.0295,
-          "dOvr": -12.0127,
-          "rank_v4": 98,
-          "rank_v5": 320
+          "MIN_season": "1743.0",
+          "ovr_v4": 71.4392,
+          "ovr_v5": 83.0207,
+          "dOvr": 11.5815,
+          "rank_v4": 224,
+          "rank_v5": 65
+        },
+        {
+          "name": "James Wiseman",
+          "pos": "C",
+          "MIN_season": "1089.0",
+          "ovr_v4": 66.4182,
+          "ovr_v5": 54.951,
+          "dOvr": -11.4672,
+          "rank_v4": 316,
+          "rank_v5": 510
         },
         {
           "name": "Kris Murray",
           "pos": "SF",
           "MIN_season": "1347.0",
           "ovr_v4": 56.9601,
-          "ovr_v5": 68.491,
-          "dOvr": 11.5309,
+          "ovr_v5": 68.3434,
+          "dOvr": 11.3833,
           "rank_v4": 502,
-          "rank_v5": 279
+          "rank_v5": 286
+        },
+        {
+          "name": "Svi Mykhailiuk",
+          "pos": "SF",
+          "MIN_season": "414.0",
+          "ovr_v4": 63.4761,
+          "ovr_v5": 74.6988,
+          "dOvr": 11.2227,
+          "rank_v4": 373,
+          "rank_v5": 159
+        },
+        {
+          "name": "Dean Wade",
+          "pos": "PF",
+          "MIN_season": "1113.0",
+          "ovr_v4": 71.6192,
+          "ovr_v5": 82.5238,
+          "dOvr": 10.9046,
+          "rank_v4": 222,
+          "rank_v5": 74
+        },
+        {
+          "name": "Miles Bridges",
+          "pos": "SF",
+          "MIN_season": "2586.0",
+          "ovr_v4": 89.6643,
+          "ovr_v5": 78.9469,
+          "dOvr": -10.7174,
+          "rank_v4": 32,
+          "rank_v5": 111
+        },
+        {
+          "name": "Andrew Wiggins",
+          "pos": "SF",
+          "MIN_season": "1922.0",
+          "ovr_v4": 79.0422,
+          "ovr_v5": 68.6358,
+          "dOvr": -10.4064,
+          "rank_v4": 98,
+          "rank_v5": 278
         }
       ],
       "top10AbsDOvr_MIN>=500": [
@@ -138,100 +138,100 @@
           "pos": "PG",
           "MIN_season": "685.0",
           "ovr_v4": 70.9139,
-          "ovr_v5": 89.5781,
-          "dOvr": 18.6642,
+          "ovr_v5": 87.0187,
+          "dOvr": 16.1048,
           "rank_v4": 235,
-          "rank_v5": 33
+          "rank_v5": 44
         },
         {
           "name": "Toumani Camara",
           "pos": "SF",
           "MIN_season": "1741.0",
           "ovr_v4": 64.0709,
-          "ovr_v5": 79.3078,
-          "dOvr": 15.2369,
+          "ovr_v5": 79.4902,
+          "dOvr": 15.4193,
           "rank_v4": 365,
           "rank_v5": 103
-        },
-        {
-          "name": "Jimmy Butler III",
-          "pos": "SF",
-          "MIN_season": "2042.0",
-          "ovr_v4": 81.6499,
-          "ovr_v5": 95.6372,
-          "dOvr": 13.9873,
-          "rank_v4": 74,
-          "rank_v5": 13
-        },
-        {
-          "name": "James Wiseman",
-          "pos": "C",
-          "MIN_season": "1089.0",
-          "ovr_v4": 66.4182,
-          "ovr_v5": 52.781,
-          "dOvr": -13.6372,
-          "rank_v4": 316,
-          "rank_v5": 537
         },
         {
           "name": "Marcus Smart",
           "pos": "PG",
           "MIN_season": "603.0",
           "ovr_v4": 72.3208,
-          "ovr_v5": 85.1397,
-          "dOvr": 12.8189,
+          "ovr_v5": 84.5101,
+          "dOvr": 12.1893,
           "rank_v4": 199,
-          "rank_v5": 52
+          "rank_v5": 55
         },
         {
-          "name": "Andre Drummond",
-          "pos": "C",
-          "MIN_season": "1349.0",
-          "ovr_v4": 67.8366,
-          "ovr_v5": 55.2372,
-          "dOvr": -12.5994,
-          "rank_v4": 287,
-          "rank_v5": 506
-        },
-        {
-          "name": "Andrew Wiggins",
+          "name": "Sam Hauser",
           "pos": "SF",
-          "MIN_season": "1922.0",
-          "ovr_v4": 79.0422,
-          "ovr_v5": 67.0295,
-          "dOvr": -12.0127,
-          "rank_v4": 98,
-          "rank_v5": 320
+          "MIN_season": "1743.0",
+          "ovr_v4": 71.4392,
+          "ovr_v5": 83.0207,
+          "dOvr": 11.5815,
+          "rank_v4": 224,
+          "rank_v5": 65
+        },
+        {
+          "name": "James Wiseman",
+          "pos": "C",
+          "MIN_season": "1089.0",
+          "ovr_v4": 66.4182,
+          "ovr_v5": 54.951,
+          "dOvr": -11.4672,
+          "rank_v4": 316,
+          "rank_v5": 510
         },
         {
           "name": "Kris Murray",
           "pos": "SF",
           "MIN_season": "1347.0",
           "ovr_v4": 56.9601,
-          "ovr_v5": 68.491,
-          "dOvr": 11.5309,
+          "ovr_v5": 68.3434,
+          "dOvr": 11.3833,
           "rank_v4": 502,
-          "rank_v5": 279
+          "rank_v5": 286
         },
         {
-          "name": "Zeke Nnaji",
+          "name": "Dean Wade",
           "pos": "PF",
-          "MIN_season": "576.0",
-          "ovr_v4": 65.5406,
-          "ovr_v5": 54.106,
-          "dOvr": -11.4346,
-          "rank_v4": 332,
-          "rank_v5": 523
+          "MIN_season": "1113.0",
+          "ovr_v4": 71.6192,
+          "ovr_v5": 82.5238,
+          "dOvr": 10.9046,
+          "rank_v4": 222,
+          "rank_v5": 74
         },
         {
-          "name": "Austin Reaves",
+          "name": "Miles Bridges",
+          "pos": "SF",
+          "MIN_season": "2586.0",
+          "ovr_v4": 89.6643,
+          "ovr_v5": 78.9469,
+          "dOvr": -10.7174,
+          "rank_v4": 32,
+          "rank_v5": 111
+        },
+        {
+          "name": "Andrew Wiggins",
+          "pos": "SF",
+          "MIN_season": "1922.0",
+          "ovr_v4": 79.0422,
+          "ovr_v5": 68.6358,
+          "dOvr": -10.4064,
+          "rank_v4": 98,
+          "rank_v5": 278
+        },
+        {
+          "name": "Ausar Thompson",
           "pos": "SG",
-          "MIN_season": "2624.0",
-          "ovr_v4": 90.6008,
-          "ovr_v5": 79.5721,
-          "dOvr": -11.0287,
-          "rank_v4": 28,
-          "rank_v5": 100
+          "MIN_season": "1585.0",
+          "ovr_v4": 62.7683,
+          "ovr_v5": 72.7247,
+          "dOvr": 9.9564,
+          "rank_v4": 390,
+          "rank_v5": 200
         }
       ],
       "vs2k": {
@@ -278,59 +278,58 @@
             "2K27": {
               "ref": "2K27",
               "n": 377,
-              "rankRho": 0.5319,
-              "medianCardOvr": 71.166,
+              "rankRho": 0.5496,
+              "medianCardOvr": 71.022,
               "median2k": 76.0,
-              "medianCardMinus2k": -5.828
+              "medianCardMinus2k": -5.696
             },
             "2K24": {
               "ref": "2K24",
               "n": 376,
-              "rankRho": 0.5188,
-              "medianCardOvr": 71.094,
+              "rankRho": 0.5216,
+              "medianCardOvr": 70.995,
               "median2k": 76.0,
-              "medianCardMinus2k": -5.309
+              "medianCardMinus2k": -5.141
             }
           },
           "MIN>=500": {
             "2K27": {
               "ref": "2K27",
               "n": 299,
-              "rankRho": 0.5233,
-              "medianCardOvr": 72.562,
+              "rankRho": 0.5442,
+              "medianCardOvr": 72.725,
               "median2k": 77.0,
-              "medianCardMinus2k": -5.854
+              "medianCardMinus2k": -5.657
             },
             "2K24": {
               "ref": "2K24",
               "n": 299,
-              "rankRho": 0.533,
-              "medianCardOvr": 72.562,
+              "rankRho": 0.5309,
+              "medianCardOvr": 72.725,
               "median2k": 77.0,
-              "medianCardMinus2k": -5.598
+              "medianCardMinus2k": -5.501
             }
           }
         }
       },
       "v5Card": "reports/ovr-inseason-2026-27/v5/cards/2023-24-v5.csv",
-      "v5Sha256": "7f021058a094c7ced523aa66ad34ca5ee810cb4fc3514621e9cc8e54ef897435",
+      "v5Sha256": "866f6ecb7f1e001e593109869e1f26f84881a03265d7f357fd3cf5c3b867f0d1",
       "v4Card": "reports/ovr-inseason-2026-27/v4/cards/2023-24.csv",
       "rapmV4": "reports/ovr-inseason-2026-27/v3/data/rapm-2021-22_2022-23.csv",
-      "rapmV5": "reports\\ovr-inseason-2026-27\\v5\\data\\rapm-2020-21_2023-24.csv",
-      "rapmV5Sha256": "02d896dbab0987ad56a2716c71646a0d66bfbd40a8e00319862be6c8012c7cf5",
+      "rapmV5": "reports\\ovr-inseason-2026-27\\v3\\data\\rapm-2021-22_2023-24.csv",
+      "rapmV5Sha256": "b8c9f273f4d01c7a03be923b98f82a06812a551da158fabcb679801474e6e1d2",
       "rapmSeasonsV4": [
         "2021-22",
         "2022-23"
       ],
       "rapmSeasonsV5": [
-        "2020-21",
         "2021-22",
         "2022-23",
         "2023-24"
       ],
       "buildChecksPass": true,
       "reproducesV4WithV4Rapm": true,
-      "vs3season": {
+      "vs4season": {
         "start": "D1",
         "all": {
           "n": 572,
@@ -640,8 +639,16 @@
             }
           }
         },
-        "card3season": "reports/ovr-inseason-2026-27/v5/cards/2023-24-v5-3season.csv",
-        "card3seasonSha256": "866f6ecb7f1e001e593109869e1f26f84881a03265d7f357fd3cf5c3b867f0d1"
+        "altCard": "reports/ovr-inseason-2026-27/v5/cards/2023-24-v5-4season.csv",
+        "altSha256": "7f021058a094c7ced523aa66ad34ca5ee810cb4fc3514621e9cc8e54ef897435",
+        "altRapm": "reports\\ovr-inseason-2026-27\\v5\\data\\rapm-2020-21_2023-24.csv",
+        "altRapmSeasons": [
+          "2020-21",
+          "2021-22",
+          "2022-23",
+          "2023-24"
+        ],
+        "altBuildChecksPass": true
       }
     },
     "2024-25": {

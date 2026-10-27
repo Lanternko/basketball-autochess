@@ -2,7 +2,7 @@
 
 管線、summary、prior（season-cards 能力值）全部照 v4 的 build_cards_v4.build，
 只把 rapm_file 換成 §R.3 指定的檔：
-  2023-24  v3/data/rapm-2021-22_2023-24.csv（三季；本機無 2020-21）
+  2023-24  2020-21..2023-24（v5/data/rapm-2020-21_2023-24.csv）；2020-21 stint 缺時退回 v3 三季檔
   2024-25  v4/data/rapm-2021-22_2024-25.csv（四季）
 被交易球員分鐘數仍照 v4（不跨隊加總），因為 §R.7 第 1 條使用者尚未定案。
 
@@ -23,24 +23,27 @@ from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE.parents[1] / 'v4' / 'tools'))
+sys.path.insert(0, str(HERE))
 import v4_common as C  # noqa: E402
 import build_cards_v4 as B  # noqa: E402
+import rapm_answer_v5 as RA  # noqa: E402
 from scipy.stats import pearsonr, spearmanr  # noqa: E402
 
 V5_CARDS = C.REPORT / 'v5' / 'cards'
 TWOK = C.ROOT / 'reports/ovr-v55-2k27-compare'
 SEASONS = {
     '2023-24': {'start': 'D1', 'v4': C.V3_DATA / 'rapm-2021-22_2022-23.csv',
-                'v5': C.V3_DATA / 'rapm-2021-22_2023-24.csv',
-                'v4Seasons': ['2021-22', '2022-23'],
-                'v5Seasons': ['2021-22', '2022-23', '2023-24'], 'twokSame': '2K24',
-                'note': '理想 2020-21..2023-24；本機無 2020-21，只有三季'},
+                'v4Seasons': ['2021-22', '2022-23'], 'twokSame': '2K24'},
     '2024-25': {'start': 'D2', 'v4': C.V3_DATA / 'rapm-2021-22_2023-24.csv',
-                'v5': C.V4_DATA / 'rapm-2021-22_2024-25.csv',
-                'v4Seasons': ['2021-22', '2022-23', '2023-24'],
-                'v5Seasons': ['2021-22', '2022-23', '2023-24', '2024-25'], 'twokSame': '2K25',
-                'note': '四季，含目標季'},
+                'v4Seasons': ['2021-22', '2022-23', '2023-24'], 'twokSame': '2K25'},
 }
+# v5 RAPM 檔與季集由 rapm_answer_v5 決定（先跑那支；2020-21 stint 到位後 2023-24 自動變四季）
+for _s, _cfg in SEASONS.items():
+    _tag, _have, _cfg['v5'] = RA.answer_rapm_file(_s)
+    _cfg['v5Seasons'] = _have
+    _miss = [x for x in RA.WANTED[_s] if x not in _have]
+    _cfg['note'] = (f'{len(_have)} 季，含目標季' if not _miss
+                    else f"{len(_have)} 季；缺 {', '.join(_miss)} 的 stint")
 MIN_CUT = 500
 
 
@@ -90,24 +93,26 @@ def vs_2k(rows, ref, label):
             'medianCardMinus2k': round(statistics.median(x - y for x, y in pairs), 3)}
 
 
-def summarize(season, cfg, old, new, k27, yearly):
+def summarize(season, cfg, old, new, k27, yearly, diff_name=None, labels=('v4', 'v5')):
+    """old/new 兩張卡的差異；labels 決定欄位與 2K 區塊的名稱（v4/v5 或 3season/4season）。"""
+    la, lb = labels
     old_by = {int(r['playerId']): r for r in old}
     new_by = {int(r['playerId']): r for r in new}
-    assert set(old_by) == set(new_by), 'v4/v5 球員集合不同'
+    assert set(old_by) == set(new_by), f'{la}/{lb} 球員集合不同'
     ro, rn = ranks(old), ranks(new)
     diff = []
     for pid in sorted(old_by, key=lambda p: rn[p]):
         o, n = old_by[pid], new_by[pid]
         diff.append({'playerId': pid, 'name': n['name'], 'pos': n['pos'],
                      'MIN_season': n['MIN_season'],
-                     'ovr_v4': float(o['ovr']), 'ovr_v5': float(n['ovr']),
+                     f'ovr_{la}': float(o['ovr']), f'ovr_{lb}': float(n['ovr']),
                      'dOvr': round(float(n['ovr']) - float(o['ovr']), 4),
-                     'rank_v4': ro[pid], 'rank_v5': rn[pid], 'dRank': ro[pid] - rn[pid]})
-    C.write_csv(V5_CARDS / f'diff-v4-v5-{season}.csv', diff)
+                     f'rank_{la}': ro[pid], f'rank_{lb}': rn[pid], 'dRank': ro[pid] - rn[pid]})
+    C.write_csv(V5_CARDS / (diff_name or f'diff-v4-v5-{season}.csv'), diff)
 
     def stats(sub):
-        a = [d['ovr_v4'] for d in sub]
-        b = [d['ovr_v5'] for d in sub]
+        a = [d[f'ovr_{la}'] for d in sub]
+        b = [d[f'ovr_{lb}'] for d in sub]
         dv = [d['dOvr'] for d in sub]
         return {'n': len(sub), 'pearson': round(float(pearsonr(a, b).statistic), 4),
                 'spearman': round(float(spearmanr(a, b).statistic), 4),
@@ -116,17 +121,17 @@ def summarize(season, cfg, old, new, k27, yearly):
                 'meanAbsDOvr': round(statistics.fmean(abs(x) for x in dv), 3),
                 'maxAbsDOvr': round(max(abs(x) for x in dv), 3),
                 'nAbsDOvrGt3': sum(abs(x) > 3 for x in dv),
-                'medianOvr_v4': round(statistics.median(a), 3),
-                'medianOvr_v5': round(statistics.median(b), 3),
+                f'medianOvr_{la}': round(statistics.median(a), 3),
+                f'medianOvr_{lb}': round(statistics.median(b), 3),
                 'meanAbsDRank': round(statistics.fmean(abs(d['dRank']) for d in sub), 2)}
 
     big = [d for d in diff if float(d['MIN_season']) >= MIN_CUT]
-    top = lambda sub: [{k: d[k] for k in ('name', 'pos', 'MIN_season', 'ovr_v4', 'ovr_v5', 'dOvr',
-                                          'rank_v4', 'rank_v5')}
+    top = lambda sub: [{k: d[k] for k in ('name', 'pos', 'MIN_season', f'ovr_{la}', f'ovr_{lb}', 'dOvr',
+                                          f'rank_{la}', f'rank_{lb}')}
                        for d in sorted(sub, key=lambda d: -abs(d['dOvr']))[:10]]
     same = {k: v[cfg['twokSame']] for k, v in yearly.items() if cfg['twokSame'] in v}
     twok = {}
-    for tag, rows in (('v4', old), ('v5', new)):
+    for tag, rows in ((la, old), (lb, new)):
         rows_big = [r for r in rows if float(r['MIN_season']) >= MIN_CUT]
         twok[tag] = {'all': {'2K27': vs_2k(rows, k27, '2K27'),
                              cfg['twokSame']: vs_2k(rows, same, cfg['twokSame'])},
@@ -169,6 +174,14 @@ def main():
                   'rapmV5': meta['rapm']['file'], 'rapmV5Sha256': meta['rapm']['sha256'],
                   'rapmSeasonsV4': cfg['v4Seasons'], 'rapmSeasonsV5': cfg['v5Seasons'],
                   'buildChecksPass': meta['pass'], 'reproducesV4WithV4Rapm': repro})
+        three = V5_CARDS / f'{season}-v5-3season.csv'
+        if three.exists() and len(cfg['v5Seasons']) == 4:  # 2023-24：三季版留作對照
+            s3 = summarize(season, cfg, C.load_csv(three), new, k27, yearly,
+                           diff_name=f'diff-3season-4season-{season}.csv',
+                           labels=('3season', '4season'))
+            s3.update({'card3season': three.relative_to(C.ROOT).as_posix(),
+                       'card3seasonSha256': C.sha256_file(three)})
+            s['vs3season'] = s3
         report['seasons'][season] = s
         ok = ok and repro and meta['pass']
     shutil.rmtree(tmp, ignore_errors=True)

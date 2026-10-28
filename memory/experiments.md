@@ -630,6 +630,7 @@
   - 個人：White 樣本外不被高估（fit 卡池內第 6.5，答案第 4／第 6）；Kenrich 兩方向都高估（fit 71→答案 112、47→109）；Caruso 只有 AB 高估（2.5→116），BA 反而低估（85.5→15）。
   - WinImp 本身：前五 Jokić 16.6、SGA 15.5、Wemby 15.1、Giannis 11.6、Gobert 10.5；White 第 29（6.6±2.6）、Caruso 第 163；偏好長人（Mark Williams OVR 457→WinImp 13、Sengun 241→15）；ρ(WinImp, OVR)=0.543。
   - 示範：White 拿掉 BOS −0.6±1.7 勝、加入中位數隊 PHX +3.1；Luka −6.9／+7.1；Wemby −10.1／+13.0；Caruso +1.0／−0.5（拿掉與加入不對稱，示範只作參考）。
+  - 位置版（副表，2026-10-29 事後補記，探索性）：主版四個隊友是同一個全聯盟平均人（不分位置，缺控衛與內線）；位置版隊友＝PG/SG/SF/PF/C 各位置平均 profile（`winimp-core.mjs` variant 'pos'，沿用 v53 workloadTeam）。位置版 ρ 0.291／0.317，比主版 0.414／0.351 更差。主版長人偏差部分來自缺內線：Sengun 8.2→1.3、Mark Williams 8.5→4.4；但位置版仍高估護框長人（Mitchell Robinson OVR 115→第 8、Kalkbrenner 384→第 12）。White 位置版只有 0.6 勝（主版 6.6）。兩種隊友都是「位置平均」，不是使用者說的「各司其職、OVR 70」基準；要測後者需另設計基準陣容。
   - 結論：模擬器照 R-025 字面做的勝場貢獻目前預測力比卡片差、且有長人偏差；在模擬器修好前不能拿來當 OVR。defenseBonus 高估只在個人層看得到（Kenrich、Caruso 單向），群體層證據不足。
 - 狀態：完成（H1 否定；H2 未確立）
 - 相關：R-025、R-026、F-029、E-064、E-027、L-026、R-007、L-036

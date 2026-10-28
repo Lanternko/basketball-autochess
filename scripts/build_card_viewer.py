@@ -1,6 +1,7 @@
-"""2025-26 正式卡名單頁（card 0.2.1）：以正式卡名單頁為版型，換成 card 0.2.1 的 OVR／能力值（OVR 為每場、含上場時間、相對替補水準，R-028；能力值同 0.1.2），3PT 顯示 threeValue（R-024）。
+"""2025-26 正式卡名單頁（card 0.2.2）：以正式卡名單頁為版型，換成 card 0.2.2 的 OVR／能力值（OVR 為每場、含上場時間、相對替補水準，R-028；能力值同 0.1.2），3PT 顯示 threeValue（R-024）。
+PRES 顯示 presDisplay（逼失誤 − 0.25·犯規，E-071），tooltip 列逼失誤（卡片 pressure）與犯規紀律（foulDisc）。
 
-輸入：reports/card-0.2.1/ranking.csv（card 0.2.1）、
+輸入：reports/card-0.2.2/ranking.csv（card 0.2.2）、
       reports/card-0.1.1+E057-three-value/three-value.csv（以姓名對 tv_main）、data/season-source/player-games.json。
 版型：reports/ovr-v58-card-2025-26/roster-viewer.html（只讀；team／ht／gp 依姓名取自它）。
 輸出：reports/card-0.1.2-2025-26/roster-viewer.html（或 argv[1] 指定路徑）
@@ -19,7 +20,7 @@ from season_nav import add_season_nav, apply_common  # noqa: E402
 
 ROOT = er.ROOT
 BASE = ROOT / 'reports/ovr-v58-card-2025-26/roster-viewer.html'
-CARD = ROOT / 'reports/card-0.2.1/ranking.csv'
+CARD = ROOT / 'reports/card-0.2.2/ranking.csv'
 THREE_VALUE = ROOT / 'reports/card-0.1.1+E057-three-value/three-value.csv'
 DEFAULT_OUT = ROOT / 'reports/card-0.1.2-2025-26/roster-viewer.html'
 
@@ -40,7 +41,7 @@ def main(out=None):
         last_team[row[h['PLAYER_NAME']]] = row[h['TEAM_ABBREVIATION']]
         gp_src[row[h['PLAYER_NAME']]] = gp_src.get(row[h['PLAYER_NAME']], 0) + 1
     cols = ['rank', 'ovr', 'name', 'pos', 'team', 'ht', 'min', 'gp', 'imp', 'dbon', 'threeValue', 'mid', 'short', 'ft',
-            'drive', 'foulDraw', 'pass', 'tovSkill', 'creation', 'rebound', 'physique', 'stamina', 'onBall', 'help', 'pressure']
+            'drive', 'foulDraw', 'pass', 'tovSkill', 'creation', 'rebound', 'physique', 'stamina', 'onBall', 'help', 'pressure', 'force', 'foulDisc']
     data_rows, missing, no_tv = [], [], []
     for r in rows:
         num = lambda k: float(r[k])
@@ -56,11 +57,12 @@ def main(out=None):
             no_tv.append(r['name'])
             three = num('long')
         data_rows.append([int(r['rank']), num('ovr'), r['name'], r['pos'], team, ht, round(num('MIN') / gp, 1) if gp else 0.0, gp,
-                          num('predictedPer36'), num('defenseBonus'), three, *[num(a) for a in cols[11:25]]])
+                          num('predictedPer36'), num('defenseBonus'), three, *[num(a) for a in cols[11:24]],
+                          num('presDisplay'), num('pressure'), num('foulDisc')])
     s = base
     s = s.replace('<title>OVR 名單檢視</title>', '<title>2025-26 OVR 名單</title>', 1)
     s = re.sub(r'<div class="src">.*?</div>',
-               f'<div class="src">OVR：正式卡 card 0.2.1（2025-26 整季；OVR 為每場，含上場時間，相對替補水準；FD 以量為主）；3PT 顯示 threeValue；{len(rows)} 人</div>',
+               f'<div class="src">OVR：正式卡 card 0.2.2（2025-26 整季；OVR 為每場，含上場時間，相對替補水準；FD 以量為主；PRES＝逼失誤扣犯規）；3PT 顯示 threeValue；{len(rows)} 人</div>',
                s, count=1, flags=re.S)
     new_data = json.dumps({'cols': cols, 'rows': data_rows}, ensure_ascii=False, separators=(',', ':'))
     s = re.sub(r'const DATA=\{.*?\};\nconst COLS', lambda m: f'const DATA={new_data};\nconst COLS', s, count=1, flags=re.S)
@@ -68,6 +70,12 @@ def main(out=None):
         ("['long', '3PT', '三分']", "['threeValue', '3PT', '三分']"),
         ("['drive', 'DRV', '切入']", "['drive', 'DRV', '切入'], ['foulDraw', 'FD', '製造犯規']"),
         ('colspan="22"', 'colspan="23"'),
+        # PRES 改為壓迫（E-071）：顯示 presDisplay，tooltip 列逼失誤與犯規紀律
+        ("['pressure', 'PRES', '壓命中率']", "['pressure', 'PRES', '壓迫']"),
+        ('function cell(k, v, first) {', 'function cell(k, v, first, tip) {'),
+        ("""return `<td class="${cls.join(' ')}" title="${v}">${g}</td>`;""",
+         """return `<td class="${cls.join(' ')}" title="${tip || v}">${g}</td>`;"""),
+        ("cell(k, p[k], j === 0)", "cell(k, p[k], j === 0, k === 'pressure' ? `逼失誤 ${p.force}｜犯規紀律 ${p.foulDisc}` : null)"),
         # 分鐘改顯示場均（使用者 2026-10-29），篩選門檻改成場均分鐘
         ("th('min', 'MIN', '分鐘', 'gl')", "th('min', 'MPG', '場均分鐘', 'gl')"),
         ("[[0, '全部'], [500, '≥500'], [1000, '≥1000'], [1500, '≥1500']]",
@@ -80,6 +88,10 @@ def main(out=None):
         assert s.count(a) >= 1, a
         s = s.replace(a, b)
     s = apply_common(s)
+    # 數值模式的格子（apply_common 改過那行）也帶 PRES tooltip
+    a = """cls.push(gcls(grade(v))); return `<td class="${cls.join(' ')}">${v}</td>`; }"""
+    assert s.count(a) == 1, a
+    s = s.replace(a, """cls.push(gcls(grade(v))); return `<td class="${cls.join(' ')}"${tip ? ` title="${tip}"` : ''}>${v}</td>`; }""")
     s = add_season_nav(s, 'card')
     out.parent.mkdir(parents=True, exist_ok=True)
     out.write_text(s, encoding='utf-8')

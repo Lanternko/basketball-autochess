@@ -31,6 +31,7 @@
 - **樣本內不算證據**：卡片若用 RAPM 做 align／封頂／混合目標，它對 RAPM 的 ρ 只能寫「樣本內」，不能當驗證（R-007）。
 - **抓到錯誤就寫 lesson**：每個被抓到的錯誤（使用者指出的、測試抓到的、自己發現的）寫成一筆 lesson；能自動檢查的就加測試，把測試檔或 npm 指令寫進「對應測試或關卡」。
 - **收工**：新發現、實驗、裁決、教訓各寫進對應檔，然後**覆寫** `handoff.md`。模型或卡片輸出有變時，另照 L-021 重產審查表。
+- **commit 檢查**：`.githooks/pre-commit`（新 clone 先跑 `git config core.hooksPath .githooks`）會擋兩件事：改到 `src/`、`scripts/`、`test/` 或條目檔卻沒一起改 `handoff.md`（確定不需要時 `HANDOFF_OK=1 git commit`）；條目 ID 重複或刪掉既有 ID。
 - 欄位定義與範例寫在各檔檔頭。
 - 「來源」欄：commit、報告路徑或對話日期；沒有就省略。
 

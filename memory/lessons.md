@@ -231,3 +231,11 @@
 - 對應測試或關卡：G4；`npm run test:ability-eighth-b`（凍結雜湊）
 - 相關：E-009、E-010
 - 來源：README「已知限制」第八批段落
+
+### L-027
+- 日期：2026-10-28
+- 發生什麼：memory/ 與 role skills 在 App 對話途中建立，lead 沒重讀就繼續派工；v61、v62 的 spec 沒寫角色、沒寫收工要寫哪些 memory 條目，還禁止子 session 碰 memory/，handoff 一度寫「沒有在跑的工作」。
+- 規則：每次寫 spec 前先讀 handoff.md；spec 開頭寫「用 role-xxx skill」並列出收工條目。子 session 只在報告裡交出條目草稿，由 lead 審過後寫入 memory/（避免平行 session 同時改同一檔、搶 ID）；派工當下就先追加 E 條目（進行中）並更新 handoff。
+- 對應測試或關卡：無自動檢查；lead 收工清單
+- 相關：E-055、E-056
+- 來源：使用者 2026-10-28 提問

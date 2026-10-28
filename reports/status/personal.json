@@ -40,14 +40,24 @@
   "note": "已收束；球隊層 2025-26 勝場 MAE 變差，未切換對局資料，卡片板仍為 v53 校準；不讀 RAPM，樣本內即樣本外：同一份分數直接對 A 半、B 半 RAPM 各算一次 ρ 再平均（reports/ovr-metrics-backfill-2025-26）"
  },
  {
-  "layer": "卡片 OVR（正式卡片板，card 0.2.0）",
+  "layer": "卡片 OVR（正式卡片板，card 0.2.1）",
+  "description": "card 0.2.0 + E-070：foulDraw 改為池內百分位(0.75·z(FTA/36)+0.25·z(FTA/FGA))，其餘同 card 0.2.0（2026-10-29 使用者裁定 R-034、R-037）（遊戲本體不讀取任何 OVR）",
+  "players": 414,
+  "rhoNet": 0.828,
+  "rhoDefense": 0.567,
+  "holdoutRho": "未量測",
+  "rho2k": 0.699,
+  "note": "ρRAPM 樣本內（align/封頂用 RAPM）；每場 OVR；E-070 預註冊 A/B 半 RAPM 每場 ρ 對 card 0.2.0 差 +0.0007 [-0.0009, +0.0022]（不變差，不是變準）；對 2K27 ρ 取 E-070 verdict.json 每場值；來源 card-0.2.1"
+ },
+ {
+  "layer": "卡片 OVR card 0.2.0（前正式版）",
   "description": "card 0.1.2 的能力值不變，OVR 改為每場（含上場時間：g=(預測−替補水準)·MPG/36，替補水準＝PR10），兩段映射錨點取 MIN≥500 池 PR1/PR50/PR99（2026-10-29 使用者裁定 R-028，E-064 副版）（遊戲本體不讀取任何 OVR）",
   "players": 414,
   "rhoNet": 0.814,
   "rhoDefense": 0.557,
   "holdoutRho": "未量測",
   "rho2k": 0.695,
-  "note": "ρRAPM 樣本內（align/封頂用 RAPM）；每場 OVR 含上場時間，與每 36 分鐘版不可直接比；E-064 預註冊樣本外 ρ（A/B 半場對調平均，目標＝每場淨值）0.603，與其他卡片的樣本外目標不同、不併入下表樣本外欄；對 2K27 ρ 取 E-064 verdict.json 的 repl 值（2K27 評分本身含上場時間，故高於每 36 分鐘版）；來源 card-0.2.0"
+  "note": "2026-10-29 由 card 0.2.1 取代（只換 foulDraw）；ρRAPM 樣本內（align/封頂用 RAPM）；每場 OVR 含上場時間，與每 36 分鐘版不可直接比；E-064 預註冊樣本外 ρ（A/B 半場對調平均，目標＝每場淨值）0.603，與其他卡片的樣本外目標不同、不併入下表樣本外欄；對 2K27 ρ 取 E-064 verdict.json 的 repl 值（2K27 評分本身含上場時間，故高於每 36 分鐘版）；來源 card-0.2.0"
  },
  {
   "layer": "卡片 OVR card 0.1.2（前正式版，每 36 分鐘）",

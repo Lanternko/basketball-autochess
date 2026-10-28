@@ -1,6 +1,6 @@
-"""2025-26 正式卡名單頁（card 0.2.0）：以正式卡名單頁為版型，換成 card 0.2.0 的 OVR／能力值（OVR 為每場、含上場時間、相對替補水準，R-028；能力值同 0.1.2），3PT 顯示 threeValue（R-024）。
+"""2025-26 正式卡名單頁（card 0.2.1）：以正式卡名單頁為版型，換成 card 0.2.1 的 OVR／能力值（OVR 為每場、含上場時間、相對替補水準，R-028；能力值同 0.1.2），3PT 顯示 threeValue（R-024）。
 
-輸入：reports/card-0.2.0/ranking.csv（card 0.2.0）、
+輸入：reports/card-0.2.1/ranking.csv（card 0.2.1）、
       reports/card-0.1.1+E057-three-value/three-value.csv（以姓名對 tv_main）、data/season-source/player-games.json。
 版型：reports/ovr-v58-card-2025-26/roster-viewer.html（只讀；team／ht／gp 依姓名取自它）。
 輸出：reports/card-0.1.2-2025-26/roster-viewer.html（或 argv[1] 指定路徑）
@@ -19,7 +19,7 @@ from season_nav import add_season_nav, apply_common  # noqa: E402
 
 ROOT = er.ROOT
 BASE = ROOT / 'reports/ovr-v58-card-2025-26/roster-viewer.html'
-CARD = ROOT / 'reports/card-0.2.0/ranking.csv'
+CARD = ROOT / 'reports/card-0.2.1/ranking.csv'
 THREE_VALUE = ROOT / 'reports/card-0.1.1+E057-three-value/three-value.csv'
 DEFAULT_OUT = ROOT / 'reports/card-0.1.2-2025-26/roster-viewer.html'
 
@@ -60,7 +60,7 @@ def main(out=None):
     s = base
     s = s.replace('<title>OVR 名單檢視</title>', '<title>2025-26 OVR 名單</title>', 1)
     s = re.sub(r'<div class="src">.*?</div>',
-               f'<div class="src">OVR：正式卡 card 0.2.0（2025-26 整季；OVR 為每場，含上場時間，相對替補水準）；3PT 顯示 threeValue；{len(rows)} 人</div>',
+               f'<div class="src">OVR：正式卡 card 0.2.1（2025-26 整季；OVR 為每場，含上場時間，相對替補水準；FD 以量為主）；3PT 顯示 threeValue；{len(rows)} 人</div>',
                s, count=1, flags=re.S)
     new_data = json.dumps({'cols': cols, 'rows': data_rows}, ensure_ascii=False, separators=(',', ':'))
     s = re.sub(r'const DATA=\{.*?\};\nconst COLS', lambda m: f'const DATA={new_data};\nconst COLS', s, count=1, flags=re.S)

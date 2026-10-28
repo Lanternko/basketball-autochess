@@ -648,3 +648,90 @@
 - 狀態：完成（不採用，2026-10-29）
 - 相關：R-029、R-030、E-055、E-064、L-026、L-037
 - 來源：使用者 2026-10-29「寫預註冊」
+
+### E-067
+- 日期：2026-10-29
+- 內容：長人偏袒檢查的固定量尺。之後卡片或模擬每個版本都用同一支腳本、同一判準。S＝mean(殘差|C) − mean(殘差|PG/SG)，殘差＝答案名次 − 模型名次（正＝高估），答案與人群同 E-064 §3.2；兩方向 90% 下界都 > 0 → 偏袒長人。模擬改版宣稱修掉長人偏袒，須 (b1) 判定不再是偏袒長人、(b2) 兩方向 S 都變小、(b3) WinImp ρ 兩方向平均掉不超過 0.02。
+- 設定：`reports/bias-check-E067/preregistration.md`（凍結，sha256 2dc539163a49db8d2d9191ca75f854344cae0fd8427dc698d29794bd6383177d），腳本 `bias_check.py` → `baseline.json`。卡片一律用半季擬合卡（L-036）。
+- 結果（基準線，lead 自算）：
+  - card 0.1.2 fit 卡：未偵測到偏袒。S +3.0 [−17.6, 23.9]／+13.1 [−7.3, 33.3]；前 20 名 C 的人數：模型 4/3，答案 4。
+  - WinImp 主版：偏袒長人。S +81.8 [59.9, 104.3]／+95.2 [71.1, 119.2]；C 組平均高估約 +75 名；前 20 名 C 的人數：模型 11，答案 4。
+  - WinImp 位置版：偏袒長人。S +37.5 [9.9, 65.5]／+50.1 [22.5, 77.4]；另外 PG 組大幅低估（−72／−66），等於五個位置平均隊友裡已經有控衛，候選 PG 的邊際價值被壓低。
+  - 第二答案 2K27（只列）：三個模型的 S 都更大（fit 卡 +22.6／+17.2，區間含 0），RAPM 答案沒有比 2K27 更偏愛長人。
+- 狀態：完成（量尺凍結；模擬改版的驗收目標＝把 WinImp 主版／位置版的 S 壓下來）
+- 相關：E-065、E-064、L-036、L-026、R-025
+- 來源：使用者 2026-10-29「照這個順序」
+
+
+### E-068
+- 日期：2026-10-29
+- 內容：製造犯規（FD）定義比較，探索性、事後（使用者看到 SGA 不在 FD 榜前段才提出），不作採用依據（R-007、L-026）。候選：rate＝FTA/FGA（現行）、vol＝FTA/36、mix＝0.5·z(rate)＋0.5·z(vol)，都取池內百分位（GP≥30 且 MPG≥20，1–99），原始值、未做 v61 歷史拉回。
+- 設定：`reports/fd-volume-compare-2025-26/compare_fd.py` → `results.json`、`report.md`。價值檢驗：FD 只用一半比賽（gameId 偶／奇，同 RAPM 分半），答案＝另一半 RAPM pooledNet（pooledPoss≥2500 且在池內，n 242／241），OLS 控制 card 0.2.0 其他 14 屬性（全季值，三候選共用）。
+- 結果（lead 自算）：
+  - 排行：SGA rate 第 55、vol 第 8、mix 第 17；Luka 59／5／18、Embiid 51／6／14；Gobert 18／103／32、Adams 24／148／46。vol 前 15 名幾乎都是持球主攻，rate 前 15 名多是長人與低出手量的人。池內 Spearman rate~vol 0.868。
+  - 穩定度（2024-25→2025-26，n 178）：rate Spearman 0.832、vol 0.844、mix 0.840，差不多。
+  - 價值：三個候選都沒有可分辨的增量價值。FD_A→RAPM_B 係數／10 點 rate −0.029（SE 0.052）、vol −0.064（0.065）、mix −0.033（0.057）；FD_B→RAPM_A rate +0.029（0.056）、vol +0.014（0.068）、mix +0.029（0.060）；ΔR² 都 ≤ 0.003。卡片全季 foulDraw 在同一迴歸也是 ≈0（−0.024／−0.007）。
+  - 未拉回的原始榜會混進低分鐘的人（Alex Antetokounmpo 1.875 FTA/FGA、27 FTA/36）；正式卡有 v61 拉回，不會這樣。
+- 診斷（不算證據）：v60（E-054）回歸給 foulDraw +0.074/10 點，是 calibrate-wing 的樣本內擬合；這裡改成半樣本外、控制其他屬性後消失。資料沒有偏好哪個定義，選 rate 或 vol 是語意問題：rate 量「每次出手換到多少罰球」，vol 量「總共製造多少罰球」。
+- 狀態：完成（探索；卡片未改）
+- 相關：E-054、R-007、L-026、TODO.md 切入 B 階段
+- 來源：使用者 2026-10-29「SGA怎麼沒有在造犯規的排行榜？」→「試做比較」
+
+### E-069
+- 日期：2026-10-29
+- 內容：handle（控球）依 R-032 量測，並在模擬裡拆分失誤。現況：模擬 handle 全員 70，tovSkill 是總失誤率。第一階段（卡片）：控球失誤 ÷ 持球分鐘，收縮後與持球量（TIME_OF_POSS/36）各占 0.5 合成 handle；傳球失誤率做成 passSec。第二階段（模擬）：失誤拆成控球與傳球兩段，create 與出手品質改用 CRT，包夾脫困改用 handle＋pass。
+- 設定：凍結預註冊 `reports/handle-E069/preregistration.md`（sha256 fc6e375e…）。判定：第一階段 (h1)(h2)(h3)；第二階段 (m0)–(m3)，(m3)＝E-067 的 b1–b3。
+- 結果（第一階段，role-card 產出，lead 抽查 results.json／handle.csv 相符）：
+  - 補充 1（sha256 eb84d28b…）：只看過次數表後，把 out-of-bounds 依 description 拆開，offensive foul 用同刻 foul 的 descriptor=='charge' 判定。對不上比例各季 ≤0.03%。
+  - (h1) 通過：方法 c（k 64、λ 0.2、kh 256），測試季 MAE 差 −0.0261，90% CI [−0.0334, −0.0191]，n 361。
+  - (h2) 通過：方法 c，MAE 差 −0.00208，90% CI [−0.00260, −0.00162]，n 441。
+  - (h3) 通過：card 0.2.0 的 sha256 前後相同。
+  - handle 對 2K27 Ball Handle ρ 0.739（池內 n 249）。池內 handle 與 vol 的 ρ 0.85、與穩定度 0.90，vol 與穩定度 0.58。
+  - passSec 對 2K27 Pass Accuracy ρ −0.47：每次傳球失誤率最低的是少傳、傳安全球的人（Hauser 99、Gobert 96），最高的是 Luka、Westbrook（40）。適合當模擬的每次傳球風險，不適合當卡片上的「傳球好壞」。
+  - G5：Brunson 99、SGA 98.8、Luka 96.9、Pritchard 96.4、Westbrook 95、White 94.3、Jokić 82.6、Caruso 79.9、McCain 77.3、Hauser 69.2、Gobert 45.6。Haliburton 2025-26 沒有出賽紀錄。
+- 狀態：第一階段完成；第二階段（模擬）等使用者看過 handle 名單再開工
+- 相關：R-032、E-067、E-055、E-066、L-026、L-036
+- 來源：使用者 2026-10-29「handle要想辦法測量，例如看持球佔有 + 控球失誤」→ 定義討論 →「GO」
+
+### E-072
+- 編號：原記為 E-069，與 handle 實驗撞號，2026-10-29 改號；報告目錄與預註冊內文仍寫 E069（預註冊凍結不改）。
+- 日期：2026-10-29
+- 內容：R-033 修法（使用者選「改替補水準」）。替補水準 r_repl 從「MIN≥500 池 pred 的 PR10」改成邊緣池 F（可上場 ≥20 場、出賽率 <0.5）的未收縮 pred 依分鐘加權平均 r_new；MPG 改用可上場場次（扣掉傷病等不可上場場次，教練決定、下放 G League、雙向未啟用都算可上場）；小樣本 pred 往 r_new 收縮（K=500 分鐘）。需要先抓 2025-26 每場 DNP 原因。
+- 設定：`reports/card-0.2.0+E069-fringe-repl/preregistration.md`（凍結，sha256 a6c028db4101489af98650267bc18057aa5e51b97be6caecbd97b525c8527c78）。判定：(c0) 重現 card 0.2.0、(c1) npm test、(c2) E-064 RAPM 分半每場 ρ 差 90% 下界 > −0.02、(c3) evaluate 閘數不減、(R1) Sandfort < min(Drummond, Reed Sheppard)、(R2) F 的 OVR 中位數 < MIN≥1000 的 PR10。
+- 結果：不通過（`reports/card-0.2.0+E069-fringe-repl/report.md`；尚未經 role-audit）。(c0) 重現 card 0.2.0 sha256 相同、(c1) npm test 57/57、(c2) ρ 差 +0.0037 [−0.0048, +0.0122] 過；(c3) evaluate 18/19→16/19（big14of16 降為 13/16、Mobley 進前十）不過；(R1) Sandfort 59.6 對 min(Drummond 50.2, Reed Sheppard 39.6) 不過；(R2) F 的 OVR 中位數 59.4 對 MIN≥1000 的 PR10 53.0 不過。
+  - 關鍵數字：r_new = −1.03（MIN≥500 池 pred 的 PR≈27），比舊 r_repl −2.01 高。F 共 110 人、16,846 分鐘；F 裡已收縮的 pred 加權平均為 −0.97，和未收縮的 r_new 只差 0.06。
+  - 解讀（lead）：小樣本的 pred 往聯盟平均拉，不是主因。即使不收縮，box score 推出來的能力值仍把健康卻 DNP 的人估在 MIN≥500 池約第 27 百分位，看不到教練不用他們的原因。替補水準往上移後，pred 低的常上場球員 g_r 更負（MIN≥1000 且 g_r<0 的人從 22 增到 58，Reed Sheppard 46.7→39.6），與 R-033 方向相反。K=250、1000 結論相同。
+  - 資料：1230 場 box score 全到（`data/season-source/dnp-2025-26.json`）。沒列在分類表的原因碼 432 人次歸「不可上場」，其中無原因碼的 `INACTIVE|(none)` 354 人次；這部分若其實是雙向合約或 G League，A_p 會被低估。
+- 狀態：完成（不通過，2026-10-29；交使用者裁定）
+- 相關：R-033、R-028、E-064、E-066、L-026、L-037
+- 來源：使用者 2026-10-29「改替補水準」
+
+### E-070
+- 日期：2026-10-29
+- 內容：R-034 製造犯規改成以量為主（預註冊）。foulDraw＝池內百分位（0.75·z(vol)＋0.25·z(rate)），vol＝FTA/36 用 E-055 方法 (c) 收縮（k、λ、kh 只在擬合季重擬合，MIN_D2 300 分鐘），rate 沿用現行收縮後 FTA/FGA。卡片其他部分照 card 0.2.0 鏈路重算。
+- 設定：`reports/card-0.2.0+E070-foul-volume/preregistration.md`（凍結，sha256 c3fe3cd7a049a6a33fb9cb892e1ccf77e77eb6bafb1033e7e539e6f5cc04c817，git HEAD c920fdf）。判定 (c0) w_vol=0 重現 card 0.2.0、(c1) npm test、(c2) E-064 RAPM 分半每場 ρ 差 90% 下界 > −0.02、(c3) evaluate 閘數不減；G5 名單 SGA、Luka、Embiid、Gobert 等 13 人只列表。
+- 結果（`reports/card-0.2.0+E070-foul-volume/`，role-card 子代理；lead 抽驗 c0 逐位元、verdict.json、G5 名次；role-audit 2026-10-29 獨立重算成立，`audit/audit.md`：vol 擬合格點 argmin 相同、端對端重跑三組卡逐位元相同、c0–c3 全部重現、無事後調參；FD 名次差異只來自 99 分同分的排序）：(c0) 過，w_vol=0 的卡與 card 0.2.0 逐位元相同（per36 與 fitA 中間卡也與 E-064 相同）；(c1) 57 passed；(c2) 過，repl 每場 Δρ +0.0007 [−0.0009, +0.0022]；(c3) 18/19＝基準。vol 收縮後下半季 MAE 0.751（k=0 0.829）。foulDraw 係數／10 點 0.108→0.115（SE 0.046→0.050）；2K27 ρ 每場 0.6953→0.6987。OVR 平均變動 0.18、最大 1.2，前 20 只換第 20 名（Anunoby→Curry）。FD 名次 SGA 21→5、Luka 30→4、Embiid 13→2、Gobert 3→40、Adams 8→62。偏離預註冊 7 點已揭露於 report.md（z ddof=0、c0 保留原字串等，無參數調整）。
+- 狀態：完成、通過（2026-10-29）；同日使用者「現在發 0.2.1」→ 發為 card 0.2.1（R-037），網站已更新；賽中未換
+- 相關：R-034、E-068、E-055、E-064、E-066、R-016、L-026
+- 來源：使用者 2026-10-29「0.75 開始」
+
+### E-071
+- 日期：2026-10-29
+- 內容：壓迫（pressure）改用個人逼失誤事件（預註冊）。現行 pressure＝four-factors RAPM 的 `tovNonSteal_defense`，雜訊大、含 RAPM 評估半的洩漏，網站又誤標「壓命中率」；模擬不讀它，只在 OVR 迴歸當特徵。新 force＝(z(STL/36)＋z(DEFL/36)＋z(對位失誤調整後/100poss)＋0.5·z(造進攻犯規/36))/3.5，各分量用 2024-25 動差法定 k 收縮；P1 只換 pressure 來源，P2 再加 foulDisc（−PF/36）。顯示用 PRES＝force − 0.25·z(PF)（顯示層，不進 OVR）。
+- 設定：`reports/card-0.2.0+E071-pressure/preregistration.md`（凍結，sha256 ce64cd8ad67265aec20ef1653b05e588bf279c0f1f732c3c33235773ff604dde，git HEAD c920fdf）。判定 (c0) 重現 card 0.2.0、(c1) npm test、(c2) E-064 RAPM 分半每場 ρ 差 90% 下界 > −0.02、(c3) evaluate 閘數不減、(p1) force 相鄰季 Spearman ≥ 0.70；P2 要比 P1 的 ρ 差下界 > 0 才採。P0（拿掉 pressure）只報告，用來看洩漏優勢。
+- 探索（lead 自算，事後，不算證據）：Diabaté PRES 99，但造進攻犯規 0、deflection 276 人第 223、對位失誤調整後 279 人第 112，Hornets 逼失誤率 30 隊第 25。逼失誤分量和犯規正相關（合成 r +0.19／+0.22，同位置內 +0.21～+0.42），兩者相鄰季都穩定（0.72～0.83），所以分成兩個屬性、只在顯示層合併。對位失誤欄 `MATCHUP_TOV` 存在（`leagueseasonmatchups`、`matchupsrollup`），調整後相鄰季 0.66、訊號佔變異約 0.77。
+- 結果：P1（事件式 force 取代 tovNonSteal_defense）過 (c0) 逐位元重現、(c1) npm test、(c2) ρ 差 +0.0038 [−0.0055, +0.0135]、(c3) 18/19、(p1) 0.727；P2−P1 −0.0003 [−0.0018, +0.0013] 不採 P2。只是不變差，不是變準；P0（拿掉 pressure）−0.0122，屬性本身有用。2K27 每場 ρ 0.695→0.679（只報告）。stl 與 defl 相關 0.88。G5：Diabaté PRES 99→61.4、OVR 84.2→79.2（42→74 名）；Lowry 99→62.5；Dru Smith、Ausar Thompson 升到 99。audit（`audit/audit.md`）獨立重算全部逐位元相同；字面 k 敏感度 c2 +0.0016 [−0.0070, +0.0103]、p1 0.726，結論不變。
+- 狀態：通過 G1–G4（2026-10-29，含勘誤 1），待使用者 G5 與定版本號
+- 相關：R-022、R-031、E-067、E-070、L-026
+- 來源：使用者 2026-10-29「去確認對位失誤。寫預註冊」
+- 實作完成 2026-10-29：`reports/card-0.2.0+E071-pressure/report.md`（依採用規則 P1 過 c0–c3、p1；P2 − P1 CI 下界 −0.0018 不採 P2；結論由 lead 填）
+- 勘誤 1（使用者 2026-10-29 核可）：§2.3 k 字面公式少乘 d 單位，改 k=σ₁²/τ²，見 `reports/card-0.2.0+E071-pressure/errata.md`（sha256 05dcd741…）。role-audit 重算中。
+
+### E-073
+- 日期：2026-10-29
+- 內容：R-033／R-035／R-036 修法第二版。E-072 顯示 box score 看不到教練看到的東西，改成把用人當能力的直接證據：RAPM_另一半 ~ pred + ln(1+MPG_avail) + 出賽率 + 年輕(≤23)／老將(≥31) 與其和分鐘的交互項 + 年輕×練兵隊(勝率<0.35)×分鐘，交叉擬合（A 半特徵的係數只用 B 半答案估）。每場分五類：有出賽、輪休（REST 碼）、傷病／不可上場、疑似輪休（該隊有出賽 ≥10 場且平均 ≥24 分鐘、非連續 ≥3 場的教練決定）、教練不用；只有有出賽與教練不用算 A_p。
+- 設定：`reports/card-0.2.0+E073-usage-evidence/preregistration.md`（凍結，sha256 db42fc16b50631a41189ca41756ad5a881e569ab60737208acd9d672c360f4de；第一版 eaca2e72… 派工前加 (R4) 後重凍，2026-10-29）。判定 (c0) 重現 card 0.2.0、(c1) npm test、(c2) RAPM 分半每場 ρ 差下界 > −0.02、(c3) evaluate ≥18/19、(c4) 用人特徵讓另一半 RAPM 預測變準（下界 > 0）、(R1) Sandfort < min(Drummond, Sheppard)、(R2) F 中位數 < MIN≥1000 PR10、(R3) 隊內 ρ(MIN, 每場 OVR) 中位數 ≥ 0.675、(R4) MIN<100 組 OVR PR90 < MIN≥1000 且 MPG 12–22 組中位數（card 0.2.0 現況 Oduro 72.8 vs 62.5，會不過）。(c4) 單獨沒過記「語意版」交使用者。
+- 結果：（待填）
+- 狀態：進行中（預註冊已凍結，2026-10-29 派工）
+- 相關：R-033、R-035、R-036、E-072、E-064、L-026、L-036、L-037
+- 來源：使用者 2026-10-29「寫預註冊」「然後要分清楚DNP和輪休」；同日「高分鐘替補球員比低分鐘淘汰球員OVR低」→ (R4)

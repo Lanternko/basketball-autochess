@@ -81,8 +81,17 @@
   "rho2k": 0.695
  },
  {
-  "version": "B12",
+  "version": "card 0.2.1",
   "order": 10,
+  "adopted": true,
+  "rhoNetIn": 0.828,
+  "rhoNetOut": null,
+  "rhoDefOut": null,
+  "rho2k": 0.699
+ },
+ {
+  "version": "B12",
+  "order": 11,
   "adopted": false,
   "rhoNetIn": 0.53,
   "rhoNetOut": 0.455,
@@ -91,7 +100,7 @@
  },
  {
   "version": "C1",
-  "order": 11,
+  "order": 12,
   "adopted": false,
   "rhoNetIn": 0.531,
   "rhoNetOut": 0.455,
@@ -100,7 +109,7 @@
  },
  {
   "version": "D1",
-  "order": 12,
+  "order": 13,
   "adopted": false,
   "rhoNetIn": 0.531,
   "rhoNetOut": 0.458,

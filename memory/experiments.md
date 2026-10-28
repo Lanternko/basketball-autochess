@@ -623,9 +623,16 @@
 - 日期：2026-10-28
 - 內容：OVR 對 R-025 定義的進出勝場測試。模擬器照字面量「球員打 2025-26 場均分鐘＋四個聯盟平均隊友」對「同分鐘換成平均 profile」的每場勝場差（WinImp），對照 card 0.1.2 OVR；另檢驗 defenseBonus 是否高估（White 99.0、Caruso pred0 −0.31＋defenseBonus 3.86→98.9）。
 - 設定：`reports/card-0.1.2+E065-inout-wins/preregistration.md`（凍結，sha256 01ff0b679cde0c6fc935f79ab4f11f64697f4b1876bebc5495d99c65eaa68b5e，git HEAD 37f7d62）。答案沿用 E-064 §3.2（RAPM 分半 pooledNet × MPG 另一半，pooledPoss≥2500、兩半各 ≥5 場）。V1：ρ(WinImp)−ρ(OVR) bootstrap 90% 下界 > −0.02 不輸、> 0 較好；V2：前 60 名 defenseBonus≥1 組名次殘差 90% 下界 > 0 → 高估。示範（不作判準）：BOS 拿掉 White、White 加入中位數球隊，對照 Luka／Wemby／Caruso。
-- 結果：（待填；答案檔等 E-064 lead 核對後才讀）
-- 狀態：進行中
-- 相關：R-025、R-026、F-029、E-064、E-027、L-026、R-007
+- 結果（2026-10-29，lead 自算 `verdict_e065.py` → `verdict.json`；WinImp 由 sonnet 子代理在 5090 跑，baseSeed 20261028、30 對手 × 16 樣本 × 2 邊、379 人，HEAD b660a02，src 與 37f7d62 相同）：
+  - V1 不過：ρ(WinImp) 0.414／0.351 對 ρ(OVR 0.1.2) 0.759／0.765（AB n=345／BA n=344），差 −0.345 [−0.421, −0.268]／−0.414 [−0.488, −0.335]。定義版明顯比現行卡差。
+  - V2 字面通過：defenseBonus≥1 組殘差 +27.0 [14.4, 39.8]／+19.0 [10.0, 28.5]；但 <1 組也是 +15.7／+16.0（前 60 名整體回歸平均），高減低只有約 +11／+3，預註冊沒設對照，不能算「defenseBonus 高估」的證據。
+  - 比較對象有洩漏：OVR 0.1.2 的 align／defenseBonus 用全季 RAPM，對分半答案是樣本內。事後（探索性，不作判準）改用 E-064 fitA／fitB（只用一半 RAPM 擬合的卡）：ρ 0.584／0.596，WinImp 仍輸（差 90% CI [−0.254, −0.083]／[−0.320, −0.162]）；屬性 pred0×MPG 0.534／0.504 也贏 WinImp。fit 卡前 60 名高減低 CI [1.8, 61.6]／[−2.0, 60.2]，方向一致但一邊未過 0。
+  - 個人：White 樣本外不被高估（fit 卡池內第 6.5，答案第 4／第 6）；Kenrich 兩方向都高估（fit 71→答案 112、47→109）；Caruso 只有 AB 高估（2.5→116），BA 反而低估（85.5→15）。
+  - WinImp 本身：前五 Jokić 16.6、SGA 15.5、Wemby 15.1、Giannis 11.6、Gobert 10.5；White 第 29（6.6±2.6）、Caruso 第 163；偏好長人（Mark Williams OVR 457→WinImp 13、Sengun 241→15）；ρ(WinImp, OVR)=0.543。
+  - 示範：White 拿掉 BOS −0.6±1.7 勝、加入中位數隊 PHX +3.1；Luka −6.9／+7.1；Wemby −10.1／+13.0；Caruso +1.0／−0.5（拿掉與加入不對稱，示範只作參考）。
+  - 結論：模擬器照 R-025 字面做的勝場貢獻目前預測力比卡片差、且有長人偏差；在模擬器修好前不能拿來當 OVR。defenseBonus 高估只在個人層看得到（Kenrich、Caruso 單向），群體層證據不足。
+- 狀態：完成（H1 否定；H2 未確立）
+- 相關：R-025、R-026、F-029、E-064、E-027、L-026、R-007、L-036
 - 來源：使用者 2026-10-28「OVR99的球員要有這個強度」「GO」
 
 ### E-066

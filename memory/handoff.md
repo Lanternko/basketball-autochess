@@ -44,7 +44,7 @@
 - 2026-10-28 23:30：賽中先驗換成 card 0.1.2（inseason 0.1.2a，gh-pages 302b4a6），3P準 欄拿掉、新增 FD 製造犯規欄。drive 改 PBP 版、算不出本季值 → 凍結；foulDraw 用 FTA/FGA 百分位照 C4 更新（SGA ΔOVR −7.7 主要來自 foulDraw 96→82，未事後凍結）。f=0 檢查最大差 0.059；但 lastOVR 與 0.1.2 卡 ovr 有 2 人差 0.6–0.7（D.White、Caruso，pressure 高的防守者，原因未查），其餘 ≤0.4。見 L-034。
 - 2026-10-29：網站加賽季切換（gh-pages a247ab8）：首頁＝2026-27 賽中，`2025-26.html`＝card 0.1.2 正式卡（`scripts/build_card_viewer.py`，共用 `scripts/season_nav.py`）；數值模式套等第色、3PT 副標「三分」、3P%/3PA 欄拿掉。每日發布一次提交兩檔。
 - 未修：賽中 ΔOVR 對的是 lastOVR（White 98.3）不是正式卡 99.0，White 顯示 +0.55 實為 −0.1；要查 lastOVR 與正式卡差異原因，修好後 ΔOVR 改對 formalOVR。
-- E-065（OVR 對 R-025「四個平均隊友」的進出勝場測試）預註冊凍結；WinImp 與 BOS 拿掉 White 示範由 App 內 sonnet 子代理在 5090 跑；V1/V2 判準要等 E-064 lead（另一 session「2026-27 賽季數據更新策略」）核對答案檔後才算。
+- E-065 完成（2026-10-29）：WinImp（R-025 字面）V1 不過，ρ 0.41／0.35 輸卡片；事後用 fitA/fitB 卡仍輸。V2 字面過但無對照（L-036）。White 樣本外不高估；Kenrich 高估。輸出與 verdict_e065.py 未 commit。
 
 ## 2026-10-29 使用者抽查 McCain／收縮目標
 - R-029：使用者把 McCain 排在 2026 雷霆第 8（Wallace 之後、Joe 之前）；card 0.2.0 是 57.9（#359），費城 37 場的 TS .506 對雷霆 30 場 .593，整季等權平均把他拉低。lead 用 box score 粗估雷霆段每 36 約 66，非正式卡。

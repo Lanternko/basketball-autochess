@@ -2,7 +2,7 @@
 
 只記「目前狀態」，每次收工整份覆寫。歷史在 findings／experiments／rulings／lessons。
 
-- **更新**：2026-10-28 深夜，Claude Code App（lead；最後 commit 77c4b0f）
+- **更新**：2026-10-29，Claude Code App（lead；分支 claude/project-thread-63h2fz，已 push）
 
 ## 進行中的工作
 - 版本號改制（R-018）：正式卡片 = `card 0.1.0`；下列實驗都掛在它上面。
@@ -14,7 +14,7 @@
 - 下一版：`card 0.1.1` = 0.1.0 + E-054 + E-055（E-056 不含）。依 R-019 是 PATCH（2K27 ρ 沒變準），G1–G3 已在 v61 報告通過、前 20 名只換 1 人，不必重跑 G4；卡片就是 `reports/ovr-v61-shrink-history-2025-26/ranking.csv`。等使用者說發版再寫 R 條目定版。
 - 正式卡片仍是 v58 H1-m0（R-012）。v60 切入拆欄（E-054）完成、19/19 過，未升正式卡，待使用者決定。
 - 2026-27 賽中名單頁已部署 GitHub Pages（https://lanternko.github.io/basketball-autochess/，gh-pages 分支 80b948e，只含 index.html）：C4 S* 起點、數據截至 2026-10-27、N=1–4。產物在 `reports/ovr-inseason-2026-27/live/`（未 commit）。2026-10-28 修正（L-032）：2025-26 先驗卡缺 midA／shortA 讓近框、中距離被凍結，`run_c4_live.py` setup 改用同季出手分區補上（582/582），k、w、c 都沒動。修後 ΔOVR：≤−1 有 47 人、≥+1 有 14 人（修前 30／4）；Kessler −5.76→−2.45、Maxey −2.34→−1.39、Jerome −2.06→−0.92。中距離 4 場多半未達最低樣本門檻，仍是 x0。其餘已知問題：creation 映射重建中位差 3.4／最大 24、pass 最大 5.9；OVR 不含得分量與正負值（設計限制，C4R 已停，E-034）；罰球觀測值偏低已查明（2026-10-28）：視窗卡 `shooting()`（tools/ovr_common.py:84）先加 100 次「聯盟平均」虛擬出手再查曲線，C4 又再往 x0 收縮一次，等於雙重收縮且第一次拉向聯盟平均。Maxey 24/28 FT → 71.5（不加虛擬出手是 87.0）；全名單按 x0 分三組，高組 y−x0：ft −12.8、long −11.1、short −11.6，低組反而 +4～+10 → 好射手小樣本必降、差射手必升，是 ΔOVR 偏負的主因之一。回測（Y1..D3）也用同一函式，所以 C4 預註冊成績已含此偏差；已預註冊回測 E-062（以 x0 為中心 C4s／拿掉虛擬出手 C4r）：兩者都不採用，Y6 MAE 變差 0.3、C4s 合併差顯著為正；高組偏低大半是真實回歸平均。上線維持 C4，頁面不動。
-- E-064 → 每場 OVR 已上線（R-028，2026-10-29，gh-pages 2870ddb）：卡片 card 0.2.0（`reports/card-0.2.0/`，替補水準基準 r_repl −2.015、錨點 −0.661／1.237／4.769），賽中 inseason 0.2.0a（`run_c4_live.py` E064_MODE 預設 G1，新增「預測MPG」欄；`off` 可逐位元重現 2026-10-27）。狀態板已改記 card 0.2.0（樣本內 ρ 0.814、2K27 0.695，和每 36 版不可直接比）。未 commit：每日排程從工作樹跑，但 R-023 要求 git HEAD 可重現，待使用者同意 commit。待查：同截止日 2026-10-27 的賽中數據 sha256 與前次發布不同（子代理未查原因）；Dashboard artifact（Qk3xTJiB5iXHXgKXStEVCP）本帳號讀不到，沒更新。接戰場分鐘見 TODO.md（R-027）。
+- E-064 → 每場 OVR 已上線（R-028，2026-10-29，gh-pages 2870ddb）：卡片 card 0.2.0（`reports/card-0.2.0/`，替補水準基準 r_repl −2.015、錨點 −0.661／1.237／4.769），賽中 inseason 0.2.0a（`run_c4_live.py` E064_MODE 預設 G1，新增「預測MPG」欄；`off` 可逐位元重現 2026-10-27）。狀態板已改記 card 0.2.0（樣本內 ρ 0.814、2K27 0.695，和每 36 版不可直接比）。已 commit 47dcad0 並 push（分支 claude/project-thread-63h2fz，尚未合併 main）。待查：同截止日 2026-10-27 的賽中數據 sha256 與前次發布不同（子代理未查原因）；Dashboard artifact（Qk3xTJiB5iXHXgKXStEVCP）本帳號讀不到，沒更新。接戰場分鐘見 TODO.md（R-027）。
 - 其餘基準不變：防守 `nba-defense-v3`（R-010）；賽中 OVR 上線 C4（E-033），v5 之後沒有 v6（R-009）。
 
 ## 誰在做
@@ -45,3 +45,8 @@
 - 2026-10-29：網站加賽季切換（gh-pages a247ab8）：首頁＝2026-27 賽中，`2025-26.html`＝card 0.1.2 正式卡（`scripts/build_card_viewer.py`，共用 `scripts/season_nav.py`）；數值模式套等第色、3PT 副標「三分」、3P%/3PA 欄拿掉。每日發布一次提交兩檔。
 - 未修：賽中 ΔOVR 對的是 lastOVR（White 98.3）不是正式卡 99.0，White 顯示 +0.55 實為 −0.1；要查 lastOVR 與正式卡差異原因，修好後 ΔOVR 改對 formalOVR。
 - E-065（OVR 對 R-025「四個平均隊友」的進出勝場測試）預註冊凍結；WinImp 與 BOS 拿掉 White 示範由 App 內 sonnet 子代理在 5090 跑；V1/V2 判準要等 E-064 lead（另一 session「2026-27 賽季數據更新策略」）核對答案檔後才算。
+
+## 2026-10-29 使用者抽查 McCain／收縮目標
+- R-029：使用者把 McCain 排在 2026 雷霆第 8（Wallace 之後、Joe 之前）；card 0.2.0 是 57.9（#359），費城 37 場的 TS .506 對雷霆 30 場 .593，整季等權平均把他拉低。lead 用 box score 粗估雷霆段每 36 約 66，非正式卡。
+- R-030：小樣本往聯盟平均收縮是高估，目標要依人而定（Topić 往 40、受傷 Giannis 往 80）。MIN<100 那組每 36 中位 65.8，高於 MIN 100–1000 各組（約 62.5）。
+- TODO.md 新增兩題：「整季能力值依近期／交易後加權」「小樣本收縮目標依人而定」，可合併成一份預註冊；都還沒寫預註冊。

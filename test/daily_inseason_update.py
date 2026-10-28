@@ -147,5 +147,65 @@ class Publish(unittest.TestCase):
         self.assertEqual(self.show(), 'solo')
 
 
+class Shell(unittest.TestCase):
+    """--shell：只重建頁面並發布；不抓資料、不跑 C4，版號與 dataSha256 不動。"""
+
+    def setUp(self):
+        self.t = tempfile.TemporaryDirectory()
+        t = Path(self.t.name)
+        self.saved = {k: getattr(D, k) for k in ['LIVE', 'STATE_PATH', 'BUILD_ROOT', 'LOG_PATH', 'LOCK_PATH',
+                                                  'step_fetch_games', 'step_fetch_inseason', 'step_c4',
+                                                  'step_viewer', 'step_card_viewer', 'publish_html']}
+        D.LIVE, D.STATE_PATH, D.BUILD_ROOT = t / 'live', t / 'live/publish_state.json', t / 'build'
+        D.LOG_PATH, D.LOCK_PATH = t / 'daily.log', t / 'daily.lock'
+        (D.LIVE / '2026-10-27').mkdir(parents=True)
+        (D.LIVE / '2026-10-27/meta.json').write_text('{}', encoding='utf-8')
+        self.state = {'base': 'inseason 0.2.0', 'letter': 'a', 'displayVersion': 'inseason 0.2.0a',
+                      'dataSha256': 'h1', 'pbpCount': 5, 'dataCutoff': '2026-10-27', 'ghPagesCommit': 'old'}
+        D.save_json(D.STATE_PATH, self.state)
+
+        def boom(*a, **k):
+            raise AssertionError('shell 不該抓資料或跑 C4')
+        D.step_fetch_games = D.step_fetch_inseason = D.step_c4 = boom
+
+        def viewer(name):
+            def f(work):
+                (work / name).write_text('x' * 20_000, encoding='utf-8')
+                return work / name
+            return f
+        D.step_viewer, D.step_card_viewer = viewer('roster-viewer.html'), viewer('card-roster-viewer.html')
+        self.calls = []
+        D.publish_html = lambda repo, files, msg, **kw: self.calls.append((files, msg)) or 'new'
+
+    def tearDown(self):
+        for h in D.log.handlers[:]:  # main() 每次掛新的 log handler，關掉才刪得掉暫存 log
+            h.close()
+            D.log.removeHandler(h)
+        for k, v in self.saved.items():
+            setattr(D, k, v)
+        self.t.cleanup()
+
+    def test_shell_publish(self):
+        self.assertEqual(D.main(['--shell']), 0)
+        files, msg = self.calls[0]
+        self.assertEqual(sorted(files), ['2025-26.html', 'index.html'])
+        self.assertTrue(msg.startswith('inseason 0.2.0a 頁面更新（數據至 2026-10-27'))
+        st = D.load_json(D.STATE_PATH)
+        self.assertEqual(st['ghPagesCommit'], 'new')
+        for k in ['base', 'letter', 'displayVersion', 'dataSha256', 'pbpCount', 'dataCutoff']:
+            self.assertEqual(st[k], self.state[k])
+        self.assertTrue((D.LIVE / '2026-10-27/roster-viewer.html').exists())
+
+    def test_shell_dry_run(self):
+        self.assertEqual(D.main(['--shell', '--dry-run']), 0)
+        self.assertEqual(self.calls, [])
+        self.assertEqual(D.load_json(D.STATE_PATH), self.state)
+
+    def test_shell_without_state_fails(self):
+        D.save_json(D.STATE_PATH, {})
+        self.assertEqual(D.main(['--shell']), 1)
+        self.assertEqual(self.calls, [])
+
+
 if __name__ == '__main__':
     unittest.main()

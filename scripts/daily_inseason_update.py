@@ -11,6 +11,7 @@
 
 用法（工作目錄不限，會自動切到 repo 根）：
   pythonw scripts/daily_inseason_update.py [--dry-run] [--force]
+  python -I scripts/daily_inseason_update.py --shell   # deploy-shell：只改頁面（UI／顯示），資料與版號不動
 子程序一律 CREATE_NO_WINDOW；排程用 pythonw 啟動。
 """
 from __future__ import annotations
@@ -313,6 +314,10 @@ def commit_message(version: str, cutoff: str) -> str:
     return f'inseason {version.removeprefix("inseason ")} 數據至 {cutoff}\n\n{CO_AUTHOR}\n'
 
 
+def shell_commit_message(version: str, cutoff: str) -> str:
+    return f'inseason {version.removeprefix("inseason ")} 頁面更新（數據至 {cutoff}，資料不變）\n\n{CO_AUTHOR}\n'
+
+
 # ----------------------------------------------------------------- 主流程
 def setup_logging() -> None:
     LOG_PATH.parent.mkdir(parents=True, exist_ok=True)
@@ -332,14 +337,16 @@ def main(argv=None) -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument('--dry-run', action='store_true', help='照常建構（輸出到暫存夾），不 push、不寫 publish_state')
     ap.add_argument('--force', action='store_true', help='資料沒變也發布')
+    ap.add_argument('--shell', action='store_true',
+                    help='只重建頁面（UI／顯示改動）：沿用最後發布那天的 live 資料，不抓資料、不跑 C4、版號不動')
     ap.add_argument('--remote', default='origin')
     ap.add_argument('--branch', default='gh-pages')
     args = ap.parse_args(argv)
     setup_logging()
-    log.info('==== 開始 dry_run=%s force=%s ====', args.dry_run, args.force)
+    log.info('==== 開始 dry_run=%s force=%s shell=%s ====', args.dry_run, args.force, args.shell)
     try:
         with Lock(LOCK_PATH):
-            return _run(args)
+            return _run_shell(args) if args.shell else _run(args)
     except LockBusy as e:
         log.warning('%s', e)
         return 0
@@ -399,6 +406,39 @@ def _run(args) -> int:
             state['ghPagesCommit'] = sha
         save_json(STATE_PATH, state)
         log.info('已發布 %s 數據至 %s，gh-pages commit=%s', shown, cutoff, sha or '（內容未變）')
+        return 0
+    finally:
+        if work is not None:
+            shutil.rmtree(work, ignore_errors=True)
+
+
+def _run_shell(args) -> int:
+    """deploy-shell：OVR 數字不變的頁面改動。改公式會動到數字，要走完整流程並改版號（G2）。"""
+    state = load_json(STATE_PATH)
+    cutoff = state.get('dataCutoff')
+    if not cutoff or not (LIVE / cutoff / 'meta.json').exists():
+        raise RuntimeError(f'找不到最後發布的 live 資料（dataCutoff={cutoff}），先跑一次完整發布')
+    final = LIVE / cutoff
+    BUILD_ROOT.mkdir(parents=True, exist_ok=True)
+    work = Path(tempfile.mkdtemp(prefix='shell-', dir=BUILD_ROOT))
+    try:
+        shutil.copytree(final, work, dirs_exist_ok=True)
+        html = step_viewer(work)
+        card_html = step_card_viewer(work)
+        if args.dry_run:
+            log.info('dry-run（shell）：不 push、不寫 state。輸出夾 %s（保留）', work)
+            work = None
+            return 0
+        shutil.copyfile(html, final / html.name)
+        shutil.copyfile(card_html, final / card_html.name)
+        shown = state.get('displayVersion', '')
+        sha = publish_html(ROOT, {'index.html': final / html.name, '2025-26.html': final / card_html.name},
+                           shell_commit_message(shown, cutoff), remote=args.remote, branch=args.branch)
+        if sha:
+            state['ghPagesCommit'] = sha
+            state['lastShellPublished'] = dt.datetime.now().astimezone().isoformat(timespec='seconds')
+            save_json(STATE_PATH, state)
+        log.info('shell 發布 %s（數據至 %s），gh-pages commit=%s', shown, cutoff, sha or '（內容未變）')
         return 0
     finally:
         if work is not None:

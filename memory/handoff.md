@@ -52,4 +52,5 @@
 - TODO.md 新增兩題：「整季能力值依近期／交易後加權」「小樣本收縮目標依人而定」。已合併寫成 E-066 預註冊並凍結（`reports/card-0.2.0+E066-recency-target/preregistration.md`）：A 同季日期衰減 H＝∞／60／30 天；B 收縮目標改 MPG 分組平均（B1 本組、B2 一律 MPG<12 組）。尚未派工，等使用者看過預註冊；實作交 role-card。
 
 ## 2026-10-29 名單卡片影響力
-- 使用者要求：卡片「前三強項＋弱項」改成影響力。`scripts/enrich_roster_viewer.py` 新增 `impactChips`：進攻／防守／淨影響＝2025-26 單季 box-prior RAPM（`reports/impact-rapm/rapm-prior.csv` lastSeasonO/D，每 100 回合），團隊在場＝`onoff.csv` 2025-26 在場淨效率（交易球員依 onPoss 加權，tooltip 附在場減不在場）。賽中頁也用 2025-26 值（2026-27 無 RAPM）。已重建兩個名單頁；gh-pages 尚未重新發布（下次每日更新會帶上）。
+- 使用者要求：卡片「前三強項＋弱項」改成影響力。`scripts/enrich_roster_viewer.py` 新增 `impactChips`：進攻／防守／淨影響＝2025-26 單季 box-prior RAPM（`reports/impact-rapm/rapm-prior.csv` lastSeasonO/D，每 100 回合），團隊在場＝`onoff.csv` 2025-26 在場淨效率（交易球員依 onPoss 加權，tooltip 附在場減不在場）。賽中頁也用 2025-26 值（2026-27 無 RAPM）。已發布（gh-pages 30942278）。
+- 新增 deploy-shell：`python -I scripts/daily_inseason_update.py --shell`，只改頁面（UI／顯示）時用，沿用最後發布那天的 live 資料重建兩頁並發布，不抓資料、不跑 C4、版號與 dataSha256 不動。改公式會動到數字，仍走完整流程並改版號（G2）。網站顯示改動 push 後就跑它，不等每日排程。

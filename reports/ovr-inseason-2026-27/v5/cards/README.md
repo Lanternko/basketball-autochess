@@ -12,7 +12,7 @@
 - 規則：目標季（含）往前最多四季，最早 2021-22。D1 因此是三季（2021-22..2023-24）。2020-21 的 stint 後來補到了，使用者 2026-10-27 仍決定 D1 照 §R.3 用三季（§10 Q6）；含 2020-21 的四季版只做對照，見下方「四季版對照」。§R.7 第 3 條建議不排除 D1，只註明。
 - RAPM 方法沒變：`v4/tools/rapm_v4.build` → `tools/rapm_2022_25.py`（ridge，CV 選 λ，網格 100..30000，兩組都選到 λ=3000）。
 - `v5/tools/rapm_answer_v5.py` 從本機 stint 重跑兩組 RAPM，和上表兩個現有檔**逐位相同**（最大差 0.0），結果與 stint SHA 在 `v5/data/rapm-answer-v5.json`。同一支程式也重跑四季對照 RAPM（`v5/data/rapm-2020-21_2023-24.csv`，λ=3000），和 c8d3d48 commit 的檔逐位相同，記在同一個 JSON 的 `comparison` 區塊。
-- 被交易球員分鐘數仍不跨隊加總（照 v4）。§R.7 第 1 條使用者尚未定案，定案後要再重建一次。
+- 被交易球員分鐘數：上面 `-v5` 卡照 v4 舊做法（單隊）。§R.7 第 1 條已於 2026-10-28 定案為跨隊加總，據此重建的 `-v5-min` 卡見下方「§R.7 重建（-min 卡）」；**主答案卡改用 `-min` 版**。
 
 ### 2020-21 stint 的來源與管線差異（只用在四季對照卡）
 
@@ -31,7 +31,9 @@
 
 | 檔案 | 內容 |
 |---|---|
-| `2023-24-v5.csv`、`2024-25-v5.csv` | 新答案卡（欄位同 v4 卡） |
+| `2023-24-v5-min.csv`、`2024-25-v5-min.csv` | **§R.7 主答案卡**（MIN/GP 跨隊加總；欄位同 v4 卡） |
+| `2023-24-v5.csv`、`2024-25-v5.csv` | §R.7 之前的 v5 卡（保留對照） |
+| `2023-24-v5-4season-min.csv` | 四季對照卡的跨隊 MIN 版，**不是答案** |
 | `2023-24-v5.json`、`2024-25-v5.json` | 建卡檢查、RAPM/prior/summary SHA、取代的 v4 檔 |
 | `diff-v4-v5-<season>.csv` | 每位球員 v4 vs v5 OVR、名次（全卡內 OVR 由高到低）、變化（`dRank` 正數＝名次上升） |
 | `diff-summary-v5.json` | 相關係數、變動統計、前 10 名、對 2K27／同期 2K 的 rank ρ 與中位數；2023-24 另有 `vs4season` 區塊 |
@@ -106,7 +108,32 @@ MIN≥500 子集：Anthony Edwards −14.6、Evan Fournier −10.5、Clint Capel
 
 加入 2020-21 後，變動集中在當季樣本多、之後角色變很多的球員。例如 Edwards 2020-21 是新秀，淨效率差；Ntilikina 和 Mills 則是 2020-21 的數字較好。四季版對 2K27 的 ρ 比三季版低約 0.02，但驗收不以 2K 為準。
 
+## §R.7 重建（-min 卡）
+
+§R.7 第 1 條（2026-10-28 定案）：被交易球員的 MIN/GP 跨隊加總。只換 prior 的 `observed.MIN/GP` 與 `sample.min/gp`，管線、summary、season-cards 能力值、RAPM 季集全部不動；輸出另存 `-min`，`-v5` 卡原樣保留。產生程式：`v5/tools/build_prior_v5.py`、`v5/tools/build_answer_cards_min_v5.py`。
+
+| 卡 | 檔案 | SHA256 | 說明 |
+|---|---|---|---|
+| D1（主答案） | `2023-24-v5-min.csv` | `4c5e99529d59e64fc28b0a504615f2f72ac9931aa95111b849e300e0b38a5b8c` | v5 舊卡 `866f6ecb…f0d1` |
+| D2（主答案） | `2024-25-v5-min.csv` | `df7aa68c6a2f749833c23e29e74cefdb878e6738a624bc6bd9926ccac434d9f8` | 與 `2024-25-v5.csv` **位元相同** |
+| D1 四季對照 | `2023-24-v5-4season-min.csv` | 見同名 `.json` | 不是答案 |
+
+**為什麼 2024-25 完全沒變**：D2 答案卡用的 season 檔是 `prior-2024-25`（描述 2024-25 球季），舊版本來就是跨隊加總（逐場 player-games 按隊加總；與 box totals 的差只有進位，見 `v5/data/minutes-audit.json`），所以只換資料來源不會動到任何 MIN。
+
+**2023-24（D1）的差**：舊 prior 用逐場合計、新用官方 box totals（`teamId=ALL`），被交易球員的 MIN 差中位數 1.04 分、最大 5.42 分，只影響 78 人中少數。卡片層面：
+
+| | 全部（572 人） |
+|---|---|
+| Pearson／Spearman（v5 vs v5-min） | 1.0000／1.0000 |
+| 平均 \|ΔOVR\| / 最大 \|ΔOVR\| | 0.001 / 0.004 |
+| OVR 中位數 v5 → v5-min | 68.332 → 68.333 |
+| 對 2K27 rank ρ | 0.5496 → 0.5496 |
+| 對 2K24 rank ρ | 0.5216 → 0.5216 |
+| 前 10 大 \|ΔOVR\| | 0.0036（Andre Drummond）… 0.0026（Gabe Vincent／Seth Curry／Eric Gordon） |
+
+驗收：抽 3 位被交易球員，卡片 MIN 與 box total 相符（卡片存 1 位小數，容差 ±0.05）：Pascal Siakam 2657.9 vs 2657.95、OG Anunoby 1702.0 vs 1702.05、Terry Rozier 2040.4 vs 2040.383；另 P.J. Washington 2220.7 vs 2220.683、Daniel Gafford 1814.3 vs 1814.35。完整對照在 `v5/data/minutes-audit-cards.csv`。
+
 ## 影響
 
-- §R.4：D1、D2 的 A、B、C3 誤差必須用這兩張新卡重算；v4 的 D1、D2 數字只能標「v4 舊答案」並列。四季對照卡只做敏感度參考，不進主判定。
-- 新卡 SHA：見 `<season>-v5.json` 的 `sha256`；之後任何預測誤差都以這兩個 SHA 為準。
+- §R.4：D1、D2 的 A、B、C3 誤差用 `-min` 卡重算（`v5/backtest/`）；v4 的 D1、D2 數字標「舊答案」並列。四季對照卡只做敏感度參考，不進主判定。
+- 主答案卡 SHA 以上表 `-min` 為準；`-v5` 卡只保留作歷史對照。

@@ -738,6 +738,24 @@
   - 卡片係數：p 0.88，L 1.11，出賽率 −2.00，年輕 +0.24，老將 +0.11，年輕×L −0.15，老將×L +0.17，年輕×練兵隊×L −0.38。最後三項的方向和 R-035 一致；但年齡項在 A→B 與 B→A 兩個方向正負相反，個別不穩。拿掉年齡項（s3）後 (c2)、(c4) 都不過。
   - 個案：Kennedy Chandler 78.3→69.8、Cody Williams 35.8→32.5、McCain 57.9→57.7、Drummond 48.7→57.3。敏感度 s1–s3 的 (R1) 都不過。疑似輪休 43 組、84 人次。
   - 唯讀檢查：只有 `data/*2026-27*` 的 5 個檔在 04:01 被改，是現季資料更新，不是 e073.py 寫的。
-- 狀態：完成（不通過，只差 (R1)，2026-10-29）；使用者接受為 card 0.3.0 候選（R-038），等 role-audit
+- 狀態：完成（不通過，只差 (R1)，2026-10-29）；使用者接受為 card 0.3.0 候選（R-038）；role-audit 重算成立（2026-10-29，`audit/audit.md`：582 列 OVR 最大差 0、c2/c4/R1–R4 全部重現；18 條未寫到之處無事後挑選；10 個替代變體 (R1) 都不過，c4 下界只有 s3 變負；間接相依：fitA/fitB 卡用 RAPM 半季校準，p_B 含 RAPM_B 資訊，屬預註冊字面結果）；待以當時正式卡重跑 c0–c3、R1–R4
 - 相關：R-033、R-035、R-036、E-072、E-064、L-026、L-036、L-037
 - 來源：使用者 2026-10-29「寫預註冊」「然後要分清楚DNP和輪休」；同日「高分鐘替補球員比低分鐘淘汰球員OVR低」→ (R4)
+
+### E-074
+- 日期：2026-10-29
+- 內容：賽中 OVR（2026-27）改用 card 0.2.2 當先驗：x0 屬性、凍結迴歸係數、每場錨點與 r_repl 全換 0.2.2；pressure（= 逼失誤）維持凍結；foulDraw 賽中更新改 E-070 量為主公式（z／百分位母體凍結為 card 0.2.2 的 2025-26 母體）；頁面 PRES 標籤改「壓迫」加 tooltip。換版不擬合，版號 inseason 0.2.1（R-019 PATCH）。
+- 設定：`reports/ovr-inseason-2026-27/e074-card022/spec.md`（sha256 658cefed…7776）。判定 (c0) 開關關掉逐位元重現 inseason 0.2.0c、(c1) npm test、(c2) N=0 先驗 OVR 對 card 0.2.2 每場 OVR Spearman ≥ 0.99、(c3) 版號與頁面標籤。
+- 結果（2026-10-29，role-card；`reports/ovr-inseason-2026-27/e074-card022/report.md`）：c0 `CARD_MODE=020` ranking.csv／no-prior.csv 與已發佈 0.2.0c 逐位元相同（ranking sha256 7e6f1a53…）；c1 npm test 57/57；c2 N=0 先驗 OVR 對 card 0.2.2 每場 OVR Spearman 0.99999（362 人），r_repl −1.7593，兩份 summary 鍵與 card 0.1.2 版相同；c3 `probe_base_version()`＝inseason 0.2.1，頁面 PRES「壓迫」＋tooltip。前 20 名進 Maxey、Tatum，出 Markkanen、Davis；|ΔOVR| 中位數 1.20、最大 8.5，最大 10 人全由 pressure 換定義造成（Sheppard +8.5、Banchero −8.1、Nembhard −8.0、Mobley −6.3）。foulDraw 新公式使高出手量球員的視窗 y 大幅上升（Edwards 55→85、SGA 57→79）。新檔：`live/build_prior_022.py`、`live/prior-2025-26-card022.json`（sha256 0518184f…）、`CARD_MODE` 開關（預設 022）。
+- 狀態：完成（2026-10-29 lead 審過：c0 兩檔 sha256 自行核對相符、diff 已讀、npm test 由 dispatcher 重跑 57/57）；待使用者核可 commit 與發佈（R-031）
+- 相關：R-039、R-031、R-019、R-018、E-070、E-071、E-064、L-026
+- 來源：使用者 2026-10-29「賽中改跟 card 0.2.2：寫 spec 派工，含 c0 重現與新版號」
+
+### E-075
+- 日期：2026-10-29
+- 內容：E-073（用人當能力證據）移到正式卡 card 0.2.2 重跑；只換輸入（p 全季／半季、基準卡、(R4) MPG），方法照 E-073 凍結檔。(R1) 依 R-038 只報告。
+- 設定：`reports/card-0.2.2+E073-usage-evidence/preregistration.md`（sha256 faec88da…bcd5）
+- 結果：
+- 狀態：已派（App 內 sonnet 子代理，dispatch 路由 self，2026-10-29）
+- 相關：E-073、R-038、R-039、R-033、R-035、R-036、L-026
+- 來源：使用者 2026-10-29「等 0.2.2 再重跑」

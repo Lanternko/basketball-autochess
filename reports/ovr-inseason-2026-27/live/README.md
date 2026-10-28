@@ -2,6 +2,8 @@
 
 賽中 C4（E-033，c=1 凍結）用 2026-27 已打場次逐球員更新能力值與 OVR。先驗＝v5 先驗卡 2025-26（card 0.1.0）。
 
+**現行（inseason 0.2.1，E-074）**：先驗＝card 0.2.2（`prior-2025-26-card022.json`，`build_prior_022.py` 由 `reports/card-0.2.2/ranking.csv` 轉成）；凍結迴歸係數／每場錨點取 `reports/card-0.2.2/cards/P1/primary/{summary,pergame-summary}.json`；pressure＝逼失誤（賽中凍結）；foulDraw 賽中更新用 E-070 公式（常數凍結在先驗 JSON 的 `foulDrawFreeze`）。環境變數 `CARD_MODE=022`（預設）；`CARD_MODE=020` 逐位元重現 inseason 0.2.0c（先驗 `prior-2025-26-card012.json`）。輸出資料夾名要給絕對路徑才不會落在 live/ 底下。
+
 ## 怎麼跑
 1. `node scripts/fetch_season_games.js 2026-27`（使用者已跑）→ `data/season-source-2026-27/`。
 2. `node scripts/fetch_inseason_2026_27.js`：複製 player-games／team-games、重抓 bio、抓每場 PBP → `data/defense-seventh/2026-27/`。

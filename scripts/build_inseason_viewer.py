@@ -1,4 +1,4 @@
-"""賽中 OVR 名單頁：以正式卡名單頁為版型，換成 inseason 0.2.0（C4，先驗 card 0.2.0；OVR 為每場，R-028）的 OVR、現任球隊與 2026-27 場均真實數據。
+"""賽中 OVR 名單頁：以正式卡名單頁為版型，換成 inseason 0.2.1（C4，先驗 card 0.2.2；OVR 為每場，R-028）的 OVR、現任球隊與 2026-27 場均真實數據。
 
 輸入：reports/ovr-inseason-2026-27/live/<日期>/{ranking.csv,meta.json}、data/season-source-2026-27/player-games.json。
 版型：reports/ovr-v58-card-2025-26/roster-viewer.html（只讀）。
@@ -31,6 +31,10 @@ def main():
     cols = ['rank', 'ovr', 'name', 'pos', 'team', 'ht', 'min', 'gp', 'imp', 'dbon', 'threeValue', 'mid', 'short', 'ft',
             'drive', 'foulDraw', 'pass', 'tovSkill', 'creation', 'rebound', 'physique', 'stamina', 'onBall', 'help', 'pressure',
             'last', 'dovr', 'mpghat']
+    # card 0.2.2 先驗（E-074）：ranking.csv 帶 presDisplay／foulDisc → PRES 欄顯示 presDisplay，tooltip 列逼失誤與犯規紀律（同 build_card_viewer.py）
+    has_pd = 'presDisplay' in rows[0]
+    if has_pd:
+        cols += ['force', 'foulDisc']
     base = BASE.read_text(encoding='utf-8')
     old = json.loads(re.search(r'const DATA=(\{.*?\});\nconst COLS', base, re.S).group(1))
     ht = {r[old['cols'].index('name')]: r[old['cols'].index('ht')] for r in old['rows']}
@@ -39,13 +43,14 @@ def main():
         num = lambda k: float(r[k])
         data_rows.append([int(r['rank']), num('ovr'), r['name'], r['pos'], r['team'], ht.get(r['name'], 0),
                           round(num('MIN26') / int(r['N']), 1), int(r['N']), num('predictedPer36'), num('defenseBonus'),
-                          *[num(a) for a in cols[10:25]], num('lastOVR'), num('dOVR'), num('MPGhat')])
+                          *[num('presDisplay') if (a == 'pressure' and has_pd) else num(a) for a in cols[10:25]],
+                          num('lastOVR'), num('dOVR'), num('MPGhat'), *([num('pressure'), num('foulDisc')] if has_pd else [])])
     s = base
     s = s.replace('<title>OVR 名單檢視</title>', '<title>賽中 OVR 名單</title>', 1)
     s = s.replace('<h1>2025-26 <span>OVR</span> 名單</h1>', '<h1>2026-27 <span>OVR</span> 名單</h1>', 1)
     s = re.sub(r'<div class="src">.*?</div>',
                f'<div class="src">OVR：賽中 C4（{meta["version"]}），先驗 {meta["priorCard"]}；數據截至 {meta["dataCutoff"]}；'
-               f'N=已打場數 · {len(rows)} 人（另 {nopr} 人無先驗卡，未列入）· 樣本很小，只看趨勢</div>', s, count=1, flags=re.S)
+               f'{"PRES＝逼失誤扣犯規（2025-26，賽中凍結）· " if has_pd else ""}N=已打場數 · {len(rows)} 人（另 {nopr} 人無先驗卡，未列入）· 樣本很小，只看趨勢</div>', s, count=1, flags=re.S)
     new_data = json.dumps({'cols': cols, 'rows': data_rows}, ensure_ascii=False, separators=(',', ':'))
     s = re.sub(r'const DATA=\{.*?\};\nconst COLS', lambda m: f'const DATA={new_data};\nconst COLS', s, count=1, flags=re.S)
     for a, b in [
@@ -74,6 +79,19 @@ def main():
         assert s.count(a) >= 1, a
         s = s.replace(a, b)
     s = apply_common(s)
+    if has_pd:
+        for a, b in [
+            ("['pressure', 'PRES', '壓命中率']", "['pressure', 'PRES', '壓迫']"),
+            ('function cell(k, v, first) {', 'function cell(k, v, first, tip) {'),
+            ("""return `<td class="${cls.join(' ')}" title="${v}">${g}</td>`;""",
+             """return `<td class="${cls.join(' ')}" title="${tip || v}">${g}</td>`;"""),
+            ("cell(k, p[k], j === 0)", "cell(k, p[k], j === 0, k === 'pressure' ? `逼失誤 ${p.force}｜犯規紀律 ${p.foulDisc}（2025-26）` : null)"),
+            # 數值模式的格子（apply_common 改過那行）也帶 PRES tooltip
+            ("""cls.push(gcls(grade(v))); return `<td class="${cls.join(' ')}">${v}</td>`; }""",
+             """cls.push(gcls(grade(v))); return `<td class="${cls.join(' ')}"${tip ? ` title="${tip}"` : ''}>${v}</td>`; }"""),
+        ]:
+            assert s.count(a) == 1, a
+            s = s.replace(a, b)
     s = add_season_nav(s, 'inseason')
     out = live / 'roster-viewer.html'
     out.write_text(s, encoding='utf-8')

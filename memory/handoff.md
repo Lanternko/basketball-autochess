@@ -15,11 +15,11 @@
 - 正式卡片仍是 v58 H1-m0（R-012）。v60 切入拆欄（E-054）完成、19/19 過，未升正式卡，待使用者決定。
 - 2026-27 賽中名單頁已部署 GitHub Pages（https://lanternko.github.io/basketball-autochess/，gh-pages 分支 80b948e，只含 index.html）：C4 S* 起點、數據截至 2026-10-27、N=1–4。產物在 `reports/ovr-inseason-2026-27/live/`（未 commit）。2026-10-28 修正（L-032）：2025-26 先驗卡缺 midA／shortA 讓近框、中距離被凍結，`run_c4_live.py` setup 改用同季出手分區補上（582/582），k、w、c 都沒動。修後 ΔOVR：≤−1 有 47 人、≥+1 有 14 人（修前 30／4）；Kessler −5.76→−2.45、Maxey −2.34→−1.39、Jerome −2.06→−0.92。中距離 4 場多半未達最低樣本門檻，仍是 x0。其餘已知問題：creation 映射重建中位差 3.4／最大 24、pass 最大 5.9；OVR 不含得分量與正負值（設計限制，C4R 已停，E-034）；罰球觀測值偏低已查明（2026-10-28）：視窗卡 `shooting()`（tools/ovr_common.py:84）先加 100 次「聯盟平均」虛擬出手再查曲線，C4 又再往 x0 收縮一次，等於雙重收縮且第一次拉向聯盟平均。Maxey 24/28 FT → 71.5（不加虛擬出手是 87.0）；全名單按 x0 分三組，高組 y−x0：ft −12.8、long −11.1、short −11.6，低組反而 +4～+10 → 好射手小樣本必降、差射手必升，是 ΔOVR 偏負的主因之一。回測（Y1..D3）也用同一函式，所以 C4 預註冊成績已含此偏差；已預註冊回測 E-062（以 x0 為中心 C4s／拿掉虛擬出手 C4r）：兩者都不採用，Y6 MAE 變差 0.3、C4s 合併差顯著為正；高組偏低大半是真實回歸平均。上線維持 C4，頁面不動。
 - E-064 → 每場 OVR 已上線（R-028，2026-10-29，gh-pages 2870ddb）：卡片 card 0.2.0（`reports/card-0.2.0/`，替補水準基準 r_repl −2.015、錨點 −0.661／1.237／4.769），賽中 inseason 0.2.0a（`run_c4_live.py` E064_MODE 預設 G1，新增「預測MPG」欄；`off` 可逐位元重現 2026-10-27）。狀態板已改記 card 0.2.0（樣本內 ρ 0.814、2K27 0.695，和每 36 版不可直接比）。已 commit 47dcad0 並 push（分支 claude/project-thread-63h2fz，尚未合併 main）。待查：同截止日 2026-10-27 的賽中數據 sha256 與前次發布不同（子代理未查原因）；Dashboard artifact（Qk3xTJiB5iXHXgKXStEVCP）本帳號讀不到，沒更新。接戰場分鐘見 TODO.md（R-027）。
-- **正式卡 card 0.2.2**（2026-10-29，R-039）= card 0.2.0 + E-070 foulDraw 以量為主 + E-071 P1 pressure 改逼失誤。已發布（網站 2025-26 頁、狀態板）。PRES 欄改稱「壓迫」並加 tooltip。先前發布的 card 0.2.1 其實只含 E-071 P1（L-040，R-037 勘誤）。賽中先驗仍是 card 0.2.0。
+- **正式卡 card 0.2.2**（2026-10-29，R-039）= card 0.2.0 + E-070 foulDraw 以量為主 + E-071 P1 pressure 改逼失誤。已發布（網站 2025-26 頁、狀態板）。PRES 欄改稱「壓迫」並加 tooltip。先前發布的 card 0.2.1 其實只含 E-071 P1（L-040，R-037 勘誤）。賽中已跟上：inseason 0.2.1（E-074，2026-10-29）先驗改用 card 0.2.2，`run_c4_live.py` CARD_MODE 預設 022、`020` 逐位元重現 0.2.0c；pressure 凍結、foulDraw 賽中改 E-070 公式（常數凍結在 prior JSON 的 foulDrawFreeze）。
 - 其餘基準不變：防守 `nba-defense-v3`（R-010）；賽中 OVR 上線 C4（E-033），v5 之後沒有 v6（R-009）。
 
 ## 誰在做
-- E-073：使用者接受為 card 0.3.0 候選（R-038）；role-audit 重算在 App 內 sonnet 子代理跑（2026-10-29）。E-073 以 card 0.2.0 為基準，正式卡已改由另一 session 推到 0.2.1／0.2.2，audit 成立後要以當時的正式卡重跑 c0–c3 與 R1–R4 才能定 0.3.0。App（lead）等使用者決定 3PT 定義（拆「準度／投射威脅」兩欄或只留準度）與 card 0.1.1 何時發版。
+- E-073：使用者接受為 card 0.3.0 候選（R-038）；role-audit 重算成立（2026-10-29，`reports/card-0.2.0+E073-usage-evidence/audit/`）。使用者選「等 0.2.2 再重跑」；0.2.2 已發布，E-075（`reports/card-0.2.2+E073-usage-evidence/`，預註冊 sha256 faec88da…bcd5）已派 App 內 sonnet 子代理重跑，(R1) 依 R-038 只報告。結果出來後要再派 role-audit，之後才做 G5、定 0.3.0。App（lead）等使用者決定 3PT 定義（拆「準度／投射威脅」兩欄或只留準度）與 card 0.1.1 何時發版。
 
 ## 未 commit 的改動
 - memory/：README 版本號兩節、R-018、L-028、E-055／E-056 結果、本檔（77c4b0f 之後）。

@@ -1,6 +1,7 @@
-"""inseason 0.2.0（v5 Path A C4，E-033；先驗卡 x0＝card 0.1.2 能力值；OVR 為每場，R-028 / E-064 G1）的 2026-27 即時版：逐球員用自己的已打場數 N 更新能力值與 OVR。
+"""inseason 0.2.1（v5 Path A C4，E-033；先驗卡 x0＝card 0.2.2 能力值；OVR 為每場，R-028 / E-064 G1；E-074）的 2026-27 即時版：逐球員用自己的已打場數 N 更新能力值與 OVR。
 
-S*：先驗季 2025-26（card 0.1.2 先驗 live/prior-2025-26-card012.json，build_prior_012.py 由 card 0.1.2 ranking.csv 轉成）、目標季 2026-27。
+S*：先驗季 2025-26（CARD_MODE=022：card 0.2.2 先驗 live/prior-2025-26-card022.json，build_prior_022.py 由 card 0.2.2 ranking.csv 轉成；
+  CARD_MODE=020：card 0.2.0 階段的 prior-2025-26-card012.json，逐位元重現 inseason 0.2.0c）、目標季 2026-27。
 - c = 1 凍結；δ²、rel（σ²、nRef）沿用既有函式（c4_v5.delta2_info；只用嚴格早於 S* 的起點 Y1..Y6、D1..D3）。
 - 每位球員 f = min(GP / 82, 1)，GP 是他自己在 2026-27 已出賽場數（視窗＝他的全部已打場次）。
 - 沒有 2025-26 先驗卡的球員不給 OVR，列在 no-prior.csv。
@@ -37,6 +38,10 @@ import os  # noqa: E402
 if 'foulDraw' not in ATTRS:
     ATTRS.insert(ATTRS.index('drive') + 1, 'foulDraw')
 import e062_switch as _E062  # noqa: E402
+# E-074：賽中先驗換成 card 0.2.2（022，預設）；020＝inseason 0.2.0c 現行行為（先驗屬性 card 0.1.2、係數／錨點 card 0.1.2／0.2.0 階段）。
+CARD_MODE = os.environ.get('CARD_MODE', '022')   # 022 | 020
+if CARD_MODE not in ('022', '020'):
+    raise SystemExit('CARD_MODE 只接受 022 或 020')
 E062_MODE = os.environ.get('E062_MODE', 'off')   # off | C4s | C4r（E-062，預設關）
 _E062.install(E062_MODE)
 
@@ -48,27 +53,35 @@ if E064_MODE not in ('off', 'G0', 'G1'):
 if E064_MODE == 'G1':
     # 預註冊 §4.1：stamina 最小樣本 1 場（本身的能力值與 w 都用；其餘 15 屬性照 C4 現行）。只在 G1 生效，off 不動。
     SA.SEASON_MIN_SAMPLE['stamina'] = 1
-VERSION = 'inseason 0.2.0'  # 第一個字面值會被 daily_inseason_update.probe_base_version 以正規式讀取，勿改成括號／條件式開頭
-if E064_MODE != 'G1':
-    VERSION = 'inseason 0.1.2'  # off／G0：重現舊頁用
+if CARD_MODE == '022' and E064_MODE != 'G1':
+    raise SystemExit('CARD_MODE=022 只支援 E064_MODE=G1（card 0.2.2 的錨點是每場副版）')
+VERSION = 'inseason 0.2.1'  # 第一個字面值會被 daily_inseason_update.probe_base_version 以正規式讀取，勿改成括號／條件式開頭
+if CARD_MODE == '020':
+    VERSION = 'inseason 0.2.0' if E064_MODE == 'G1' else 'inseason 0.1.2'  # 020：重現 0.2.0c；off／G0：重現舊頁用
 VERSION += ('' if E062_MODE == 'off' else '+E062-' + E062_MODE) + ('+E064-G0' if E064_MODE == 'G0' else '')
-CARD_VERSION = 'card 0.2.0' if E064_MODE == 'G1' else 'card 0.1.2'
+CARD_VERSION = 'card 0.2.2' if CARD_MODE == '022' else ('card 0.2.0' if E064_MODE == 'G1' else 'card 0.1.2')
 PRIOR = '2025-26'
 TARGET = '2026-27'
 G_GAMES = 82
 C_PARAM = 1.0
 ALL_N = 99                      # 視窗＝全部已打場次
 DATA26 = ROOT / 'data/defense-seventh' / TARGET
-PRIOR_CARD = HERE / 'prior-2025-26-card012.json'      # build_prior_012.py 產出（x0＝card 0.1.2）
-CARD_DIR = ROOT / 'reports/card-0.1.1+E060-onball-targeting/primary'
-CARD_SUMMARY = CARD_DIR / 'summary.json'                # card 0.1.2 的凍結迴歸係數／錨點
+if CARD_MODE == '022':
+    PRIOR_CARD = HERE / 'prior-2025-26-card022.json'  # build_prior_022.py 產出（x0＝card 0.2.2）
+    CARD_DIR = ROOT / 'reports/card-0.2.2/cards/P1/primary'
+else:
+    PRIOR_CARD = HERE / 'prior-2025-26-card012.json'  # build_prior_012.py 產出（x0＝card 0.1.2）
+    CARD_DIR = ROOT / 'reports/card-0.1.1+E060-onball-targeting/primary'
+CARD_SUMMARY = CARD_DIR / 'summary.json'                # 凍結迴歸係數／錨點（022：card 0.2.2 P1 primary）
 RAPM_STAR = ROOT / 'reports/impact-rapm/rapm.csv'
 BIO25 = ROOT / 'data/benchmark-source/bio.json'
-FORMAL_RANKING = (ROOT / 'reports/card-0.2.0/ranking.csv') if E064_MODE == 'G1' else CARD_DIR / 'ranking.csv'
+FORMAL_RANKING = (ROOT / 'reports/card-0.2.2/ranking.csv') if CARD_MODE == '022' else (
+    (ROOT / 'reports/card-0.2.0/ranking.csv') if E064_MODE == 'G1' else CARD_DIR / 'ranking.csv')
 # E-064（預註冊 §2、§4、§5）：每場 g = pred × MPG_hat / 36，兩段式映射錨點＝V2.FROZEN_SUMMARY（此處＝card 0.1.2 摘要）
 # 原本算 scaleAnchorsPer36 的 MIN>=500 池，改用 g 重算的 PR1/PR50/PR99（card-0.1.2+E064-pergame/primary/pergame-summary.json
 # 的 anchors.main，與 summary.json 同一個 card 0.1.2 管線與池）。算一次、凍結。
-E064_ANCHORS_FILE = ROOT / 'reports/card-0.1.2+E064-pergame/primary/pergame-summary.json'
+E064_ANCHORS_FILE = (CARD_DIR / 'pergame-summary.json') if CARD_MODE == '022' else (
+    ROOT / 'reports/card-0.1.2+E064-pergame/primary/pergame-summary.json')
 THREE_PRIOR = ROOT / 'reports/ovr-v62-3pt-difficulty-2025-26/new-long.json'   # abilityC（難度調整準度）＝上季先驗
 THREE_K = 294.667                 # E-057：v62 方法 (c) 的 k（出手數單位）
 THREE_REP_GAP = 0.03              # rep = 聯盟 3P% − 0.03
@@ -203,6 +216,27 @@ def three_value_columns(prior_ids):
                   'leagueFG3M': m_all, 'leagueFG3A': a_all}
 
 
+# ------------------------------------------------------------------ foulDraw（E-070 公式，CARD_MODE=022）
+_FD = {}
+
+
+def foul_draw_y(rec):
+    """視窗觀測值：percentile_pool(0.75·z(FTA/36)+0.25·z(FTA/FGA))→attr()。常數取自 prior JSON 的 foulDrawFreeze
+    （2025-26 池；card 0.2.2 建 foulDraw 時的 z 平均／標準差與池內合成值），不用 2026-27 資料重估。"""
+    if not _FD:
+        fz = load_json(PRIOR_CARD)['foulDrawFreeze']
+        _FD.update(fz)
+        _FD['ref'] = sorted(fz['poolComposite'])
+    fz, smp = _FD, rec['sample']
+    fta, fga, mn = float(smp['fta']), float(smp['fga']), float(smp['min'])
+    z_vol = (fta / mn * 36.0 - fz['vol']['mean']) / fz['vol']['std']
+    z_rate = (fta / fga - fz['rate']['mean']) / fz['rate']['std']
+    comp = fz['wVol'] * z_vol + fz['wRate'] * z_rate
+    ref = fz['ref']
+    p = 100 * (sum(v < comp for v in ref) + .5 * sum(v == comp for v in ref)) / len(ref)
+    return max(40.0, min(99.0, 40 + (p - 1) * 30 / 49 if p < 50 else 70 + (p - 50) * 29 / 49))
+
+
 # ------------------------------------------------------------------ C4（逐球員 N）
 def live_predict(delta2, rel, undefined=(), frozen=(), f_force=None, k_max=False, diag=None):
     prior_cards, _ = F.load_prior(PRIOR)
@@ -235,13 +269,17 @@ def live_predict(delta2, rel, undefined=(), frozen=(), f_force=None, k_max=False
             if diag is not None:
                 diag.append({'pid': pid, 'attr': a, 'x0': x0[a], 'y': y, 'n': n, 'k': k, 'b': b,
                              'f': f, 'w': wt, 'xhat': vals[a]})
-        # foulDraw（card 0.1.2 新欄）：y 用舊 drive 的同一個原始量（FTA/FGA 百分位，視窗 rec['drive']），
-        # 樣本／最小樣本／δ²／rel 沿用 drive 的；不新增公式。drive 本身（0.1.2 改 PBP 版）凍結。
+        # foulDraw（card 0.1.2 新欄）：020：y 用舊 drive 的同一個原始量（FTA/FGA 百分位，視窗 rec['drive']）；
+        # 022（E-074，card 0.2.2 / E-070）：y＝百分位(0.75·z(FTA/36)+0.25·z(FTA/FGA))，常數凍結自 2025-26 池（foul_draw_y）。
+        # 樣本／最小樣本／δ²／rel 沿用 drive 的；不重估。drive 本身（0.1.2 改 PBP 版）凍結。
         a = 'foulDraw'
         vals[a] = x0[a]
         if not (pc is None or 'drive' in undefined or a in frozen or rec is None
                 or IC.sample_of(rec, 'drive') < SA.SEASON_MIN_SAMPLE['drive']):
-            y = C.usage_adjust({'drive': x0[a]}, rec, 'drive', usg.get(pid, 0.0))
+            if CARD_MODE == '022':
+                y = C.usage_adjust({a: x0[a]}, {**rec, a: foul_draw_y(rec)}, a, usg.get(pid, 0.0))
+            else:
+                y = C.usage_adjust({'drive': x0[a]}, rec, 'drive', usg.get(pid, 0.0))
             n = IC.sample_of(rec, 'drive')
             if k_max:
                 k = 50.0 * rel['drive']['nRef']
@@ -415,6 +453,8 @@ def main():
             if E064_MODE == 'G1':
                 row.update({'MPGwin': round(mpg_win[pid], 2) if pid in mpg_win else '',
                             'wMPG': round(w_mpg[pid], 4) if pid in w_mpg else ''})
+        if CARD_MODE == '022':      # 顯示用（2025-26 先驗卡的值，賽中不更新；不進 OVR）
+            row.update({'presDisplay': pc.get('presDisplay', ''), 'foulDisc': pc.get('foulDisc', '')})
         row.update({'playerId': pid, 'N': gp, 'team': team.get(pid, ''), 'MIN26': round(mins, 1),
                     'lastOVR': r1(ref[pid]['ovr']), 'dOVR': round(p['ovr'] - ref[pid]['ovr'], 2),
                     'formalOVR': formal.get(pc['name'], ''),
@@ -432,6 +472,8 @@ def main():
              'threeValue', 'fg3a26', 'fg3m26', 'fg3Pct26'])
     if E064_MODE != 'off':
         head = head + ['MPG0', 'MPGhat', 'g', 'ovrPer36'] + (['MPGwin', 'wMPG'] if E064_MODE == 'G1' else [])
+    if CARD_MODE == '022':
+        head = head + ['presDisplay', 'foulDisc']
     C.write_csv(out_dir / 'ranking.csv', [{k: r[k] for k in head} for r in rows], head)
     nopr.sort(key=lambda r: (-r['N'], -r['MIN26']))
     C.write_csv(out_dir / 'no-prior.csv', nopr, ['playerId', 'name', 'team', 'N', 'MIN26'])
@@ -481,7 +523,7 @@ def main():
     pbp_files = sorted(p.stem for p in (DATA26 / 'pbp').glob('*.json'))
     games = sorted({r['GAME_ID'] for r in sd26['teamRows']})
     meta = {
-        'version': VERSION, 'e064Mode': E064_MODE, 'e064Anchors': anc064, 'e064RRepl': r_repl064 if E064_MODE == 'G1' else None,
+        'version': VERSION, 'cardMode': CARD_MODE, 'e064Mode': E064_MODE, 'e064Anchors': anc064, 'e064RRepl': r_repl064 if E064_MODE == 'G1' else None,
         'e064MpgNoDataPlayers': len(mpg_nodata) if E064_MODE == 'G1' else None, 'priorCard': CARD_VERSION, 'dataCutoff': cutoff,
         'dataFirstDate': min(r['GAME_DATE'] for b in sd26['box'].values() for r in b['rows']),
         'games': len(games), 'pbpGames': len(pbp_files), 'missingPbp': sorted(set(games) - set(pbp_files)),
@@ -489,6 +531,8 @@ def main():
         'frozenAttrs': frozen + list(IC.FROZEN_ATTRS), 'updatableAttrs': list(C.UPD) + ['foulDraw'],
         'delta2Undefined': undefined, 'delta2': delta2,
         'players': {'ranked': len(rows), 'noPrior': len(nopr), 'priorCardNotPlayed': len(not_played)},
+        'foulDrawFreeze': ({k: v for k, v in load_json(PRIOR_CARD)['foulDrawFreeze'].items() if k != 'poolComposite'}
+                           if CARD_MODE == '022' else None),
         'inputs': sha, 'mapping2025_26': {'priors': mp['priors'], 'poolSize': mp['poolSize'],
                                           'boxPlayersDroppedNoBio': mp['boxPlayersDroppedNoBio'],
                                           'priorShotSampleFilled': [mp['priorShotSampleFilled'], mp['priorCards']]},
@@ -511,20 +555,29 @@ def main():
         mv_detail.append(f"- {r['name']}（{r['team']}，N={r['N']}，ΔOVR {r['_d']:+.2f}）：{txt}")
     OVR_NOTE = {
         'G1': (f"- OVR 為每場（R-028，E-064 副版）：g = (預測每 36 分鐘淨值 − r_repl)·MPG_hat/36，r_repl＝{r_repl064:.4f}（替補水準 PR10），"
-               f"兩段映射錨點 PR1/PR50/PR99＝{anc064[0]:.4f}/{anc064[1]:.4f}/{anc064[2]:.4f}（card 0.2.0 summary.json 同組）。"
+               f"兩段映射錨點 PR1/PR50/PR99＝{anc064[0]:.4f}/{anc064[1]:.4f}/{anc064[2]:.4f}（{CARD_VERSION} {'P1 primary 的 pergame-summary.json' if CARD_MODE == '022' else 'summary.json'} 同組）。"
                f"MPG_hat = MPG0 + w·(本季場均分鐘 − MPG0)，w＝stamina 的 C4 w（stamina 最小樣本 1 場）；"
                f"沒有本季視窗紀錄的 {len(mpg_nodata)} 人（含沒出賽者，不在排名內）退回 MPG0。`ovrPer36` 是同一預測的每 36 分鐘 OVR。"),
         'G0': '- OVR 為每場（E-064 G0 試跑）：g = pred·MPG0/36，MPG_hat＝MPG0 不更新，錨點為平均基準。',
         'off': '- OVR 為每 36 分鐘（inseason 0.1.x 做法）。'}[E064_MODE]
+    if CARD_MODE == '022':
+        fz = meta['foulDrawFreeze']
+        ATTR_NOTE = (f"- card 0.2.2 的屬性處理（E-074，換版不重擬合）：先驗屬性 x0、迴歸係數（card-0.2.2/cards/P1/primary/summary.json）、每場錨點與 r_repl 全部取自 card 0.2.2；"
+                     f"pressure＝逼失誤 force（E-071 P1），賽中凍結；foulDraw 用 E-070 公式做 C4 更新：y＝百分位(0.75·z(FTA/36)＋0.25·z(FTA/FGA))，"
+                     f"z 的平均／標準差與百分位對照母體凍結自 2025-26 池（GP≥30、MPG≥20，{fz['poolSize']} 人；FTA/36 mean {fz['vol']['mean']:.4f} std {fz['vol']['std']:.4f}、"
+                     f"FTA/FGA mean {fz['rate']['mean']:.4f} std {fz['rate']['std']:.4f}），不用 2026-27 資料重估，收縮 k／δ²／rel 沿用 drive 的；"
+                     f"drive（PBP 版）、onBall（E-060）、pressure、help、physique、heightInches 凍結。PRES 欄顯示 presDisplay、tooltip 列逼失誤與犯規紀律（2025-26，不進 OVR）。")
+    else:
+        ATTR_NOTE = '- card 0.1.2 的屬性處理：foulDraw 用舊 drive 的同一個原始量（FTA/FGA 百分位）做 C4 更新；drive（改 PBP 版）、onBall（E-060 重定義）、pressure、help、physique、heightInches 凍結。'
     md = f"""# {VERSION} 2026-27 即時結果（資料截至 {cutoff}）
 
-- OVR：賽中 C4（{VERSION}），先驗 {CARD_VERSION}（live/prior-2025-26-card012.json）；N = 該球員 2026-27 已打場數。
+- OVR：賽中 C4（{VERSION}），先驗 {CARD_VERSION}（live/{PRIOR_CARD.name}）；N = 該球員 2026-27 已打場數。
 - 資料：{meta['dataFirstDate']}..{cutoff}、{len(games)} 場、{len(pbp_files)} 份 PBP；缺 PBP：{', '.join(meta['missingPbp']) or '無'}。
 - git HEAD：`{meta['gitHead'][:12]}`；c={C_PARAM}（凍結）、G={G_GAMES}、f = min(N/{G_GAMES}, 1)。
 - 排名 {len(rows)} 人（有先驗卡且已出賽）；沒有先驗卡 {len(nopr)} 人（`no-prior.csv`，不給 OVR）；有先驗卡但 2026-27 還沒出賽 {len(not_played)} 人（不列入）。
 - N 分布：{', '.join(f'N={n}: {c} 人' for n, c in sorted(n_dist.items()))}。
 - 3PT 欄 = threeValue（R-024，顯示用、不進 OVR）：vol＝合併（2025-26＋2026-27）3PA/MIN×36；acc＝(k·上季 abilityC＋本季 3PM)/(k＋本季 3PA)，k={THREE_K}（本季沒有出手難度資料，用原始命中）；rep＝合併聯盟 3P%（{tv_info['mu']:.4f}）−0.03；value＝vol×(acc−rep)，在合併 MIN≥500 且有先驗卡的 {tv_info['poolSize']} 人池內取百分位並套 attr()。`long` 欄仍在 ranking.csv 並進 OVR 計算，只是表格不顯示。
-- card 0.1.2 的屬性處理：foulDraw 用舊 drive 的同一個原始量（FTA/FGA 百分位）做 C4 更新；drive（改 PBP 版）、onBall（E-060 重定義）、pressure、help、physique、heightInches 凍結。
+{ATTR_NOTE}
 - 降級的資料層見 `../README.md`。`simulatedPer36` 空白（此流程不跑模擬）。
 - `lastOVR` = 同一逐點管線對先驗卡算出的 OVR（ΔOVR 的基準）；`formalOVR` = {CARD_VERSION} `ranking.csv` 同名球員的 OVR（只供對照）。
 {OVR_NOTE}

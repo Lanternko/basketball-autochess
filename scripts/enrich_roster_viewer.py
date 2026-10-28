@@ -27,27 +27,30 @@ CSS = """
 .tag .rk{position:relative;z-index:1;color:var(--ink,#fff);text-shadow:0 0 8px var(--card,#000)}
 .tag .logo{position:absolute;right:30px;top:50%;transform:translateY(-50%);height:150px;width:150px;object-fit:contain;opacity:.9;pointer-events:none}
 .tag .shot{position:absolute;right:26px;bottom:7px;height:132px;width:auto;pointer-events:none}
+.tabbr{color:var(--tt);font-weight:600}
+tbody tr.sel .tabbr{color:inherit}
 .tdot{display:inline-block;width:9px;height:9px;border-radius:2px;margin-right:6px;vertical-align:1px;background:var(--tc);box-shadow:inset -4px 0 0 var(--tc2)}
 """
 
 # [主色, 副色, 卡片底色, 背號字色]。主色、副色是官方配色（表格色標、卡片底帶）；
-# 卡片底色刻意避開主色，讓同色系的球衣和隊徽在卡片上還看得出來（例：OKC 藍球衣放橘底）。
+# 卡片底色多半避開主色，讓球衣和隊徽看得出來；OKC／BOS／MEM 依使用者指定用隊色的淺色版。
+# 表格球隊縮寫的字色預設用卡片底色；卡片是灰／米色的隊另給第 5 欄（亮一點的隊色），不然跟預設灰字分不出來。
 TEAM_COLORS = {
-    'ATL': ['#E03A3E', '#C1D32F', '#C1D32F', '#111'], 'BOS': ['#007A33', '#BA9653', '#BA9653', '#111'],
-    'BKN': ['#000000', '#FFFFFF', '#A9AEB4', '#111'], 'CHA': ['#1D1160', '#00788C', '#A1A1A4', '#111'],
-    'CHI': ['#CE1141', '#000000', '#E6E6E6', '#111'], 'CLE': ['#860038', '#FDBB30', '#FDBB30', '#111'],
-    'DAL': ['#00538C', '#B8C4CA', '#B8C4CA', '#111'], 'DEN': ['#0E2240', '#FEC524', '#FEC524', '#111'],
-    'DET': ['#C8102E', '#1D42BA', '#BEC0C2', '#111'], 'GSW': ['#1D428A', '#FFC72C', '#FFC72C', '#111'],
-    'HOU': ['#CE1141', '#C4CED4', '#C4CED4', '#111'], 'IND': ['#002D62', '#FDBB30', '#FDBB30', '#111'],
-    'LAC': ['#C8102E', '#1D428A', '#BEC0C2', '#111'], 'LAL': ['#552583', '#FDB927', '#7C4DBF', '#fff'],
-    'MEM': ['#5D76A9', '#12173F', '#F5B112', '#111'], 'MIA': ['#98002E', '#F9A01B', '#41B6E6', '#111'],
-    'MIL': ['#00471B', '#EEE1C6', '#EEE1C6', '#111'], 'MIN': ['#0C2340', '#78BE20', '#78BE20', '#111'],
-    'NOP': ['#0C2340', '#C8102E', '#B4975A', '#111'], 'NYK': ['#006BB6', '#F58426', '#BEC0C2', '#111'],
-    'OKC': ['#007AC1', '#EF3B24', '#EF3B24', '#fff'], 'ORL': ['#0077C0', '#C4CED4', '#C4CED4', '#111'],
+    'ATL': ['#E03A3E', '#C1D32F', '#C1D32F', '#111'], 'BOS': ['#007A33', '#BA9653', '#2E9E52', '#fff'],
+    'BKN': ['#000000', '#FFFFFF', '#A9AEB4', '#111', '#FFFFFF'], 'CHA': ['#1D1160', '#00788C', '#A1A1A4', '#111', '#1FB5C4'],
+    'CHI': ['#CE1141', '#000000', '#E6E6E6', '#111', '#EF3A55'], 'CLE': ['#860038', '#FDBB30', '#FDBB30', '#111'],
+    'DAL': ['#00538C', '#B8C4CA', '#B8C4CA', '#111', '#3B95E0'], 'DEN': ['#0E2240', '#FEC524', '#FEC524', '#111'],
+    'DET': ['#C8102E', '#1D42BA', '#BEC0C2', '#111', '#EF3A55'], 'GSW': ['#1D428A', '#FFC72C', '#FFC72C', '#111'],
+    'HOU': ['#CE1141', '#C4CED4', '#C4CED4', '#111', '#EF3A55'], 'IND': ['#002D62', '#FDBB30', '#FDBB30', '#111'],
+    'LAC': ['#C8102E', '#1D428A', '#BEC0C2', '#111', '#EF3A55'], 'LAL': ['#552583', '#FDB927', '#7C4DBF', '#fff'],
+    'MEM': ['#5D76A9', '#12173F', '#7D9BC1', '#fff'], 'MIA': ['#98002E', '#F9A01B', '#41B6E6', '#111'],
+    'MIL': ['#00471B', '#EEE1C6', '#EEE1C6', '#111', '#4CAF62'], 'MIN': ['#0C2340', '#78BE20', '#78BE20', '#111'],
+    'NOP': ['#0C2340', '#C8102E', '#B4975A', '#111'], 'NYK': ['#006BB6', '#F58426', '#BEC0C2', '#111', '#F58426'],
+    'OKC': ['#007AC1', '#EF3B24', '#4FA3E0', '#fff'], 'ORL': ['#0077C0', '#C4CED4', '#C4CED4', '#111', '#3BA2E6'],
     'PHI': ['#006BB6', '#ED174C', '#ED174C', '#fff'], 'PHX': ['#1D1160', '#E56020', '#F9AD1B', '#111'],
-    'POR': ['#E03A3E', '#000000', '#BAC3C9', '#111'], 'SAC': ['#5A2D81', '#63727A', '#A2AAAD', '#111'],
-    'SAS': ['#000000', '#C4CED4', '#C4CED4', '#111'], 'TOR': ['#CE1141', '#000000', '#A1A1A4', '#111'],
-    'UTA': ['#002B5C', '#F9A01B', '#F9A01B', '#111'], 'WAS': ['#002B5C', '#E31837', '#C4CED4', '#111'],
+    'POR': ['#E03A3E', '#000000', '#BAC3C9', '#111', '#EF4B4F'], 'SAC': ['#5A2D81', '#63727A', '#A2AAAD', '#111', '#A57BE0'],
+    'SAS': ['#000000', '#C4CED4', '#C4CED4', '#111'], 'TOR': ['#CE1141', '#000000', '#A1A1A4', '#111', '#EF3A55'],
+    'UTA': ['#002B5C', '#F9A01B', '#F9A01B', '#111'], 'WAS': ['#002B5C', '#E31837', '#C4CED4', '#111', '#EF3A55'],
 }
 
 JS = r"""
@@ -55,10 +58,10 @@ JS = r"""
 const teamOf = t => TEAM_COLORS[t.split('/').pop()];
 function teamVars(t) {
   const c = teamOf(t);
-  return c ? `--tc:${c[0]};--tc2:${c[1]};--card:${c[2]};--ink:${c[3]}` : '';
+  return c ? `--tc:${c[0]};--tc2:${c[1]};--card:${c[2]};--ink:${c[3]};--tt:${c[4] || c[2]}` : '';
 }
-function teamDot(t) {
-  return teamOf(t) ? `<i class="tdot" style="${teamVars(t)}"></i>` : '';
+function teamCell(t) {
+  return teamOf(t) ? `<span class="tabbr" style="${teamVars(t)}"><i class="tdot"></i>${t}</span>` : t;
 }
 function headshot(p) {
   const r = REAL[p.name], tid = TEAM_IDS[p.team.split('/').pop()];
@@ -131,10 +134,11 @@ def inject(path, real):
     assert s.count('<script>const DATA=') == 1
     s = s.replace('<script>const DATA=', block + '<script>const DATA=', 1)
     hook = '<div class="strong">${tops.map(t => chip(t[0], t[1])).join(\'\')}${chip(\'弱項 \' + low[0], low[1], true)}</div>'
+    s = s.replace('${teamDot(p.team)}${p.team}', '${p.team}')  # 舊版注入
     for old, new in [
         (hook, hook + '\n      ${realBox(p)}'),
         ('<div class="tag"><span class="pos">', '<div class="tag" style="${teamVars(p.team)}">${headshot(p)}<span class="pos">'),
-        ("<td class=\"sub${sc('team')}\">${p.team}</td>", "<td class=\"sub${sc('team')}\">${teamDot(p.team)}${p.team}</td>"),
+        ("<td class=\"sub${sc('team')}\">${p.team}</td>", "<td class=\"sub${sc('team')}\">${teamCell(p.team)}</td>"),
     ]:
         if new not in s:
             assert s.count(old) == 1, old

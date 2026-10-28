@@ -55,7 +55,7 @@ def main(out=None):
         else:
             no_tv.append(r['name'])
             three = num('long')
-        data_rows.append([int(r['rank']), num('ovr'), r['name'], r['pos'], team, ht, int(r['MIN']), gp,
+        data_rows.append([int(r['rank']), num('ovr'), r['name'], r['pos'], team, ht, round(num('MIN') / gp, 1) if gp else 0.0, gp,
                           num('predictedPer36'), num('defenseBonus'), three, *[num(a) for a in cols[11:25]]])
     s = base
     s = s.replace('<title>OVR 名單檢視</title>', '<title>2025-26 OVR 名單</title>', 1)
@@ -68,6 +68,13 @@ def main(out=None):
         ("['long', '3PT', '三分']", "['threeValue', '3PT', '三分']"),
         ("['drive', 'DRV', '切入']", "['drive', 'DRV', '切入'], ['foulDraw', 'FD', '製造犯規']"),
         ('colspan="22"', 'colspan="23"'),
+        # 分鐘改顯示場均（使用者 2026-10-29），篩選門檻改成場均分鐘
+        ("th('min', 'MIN', '分鐘', 'gl')", "th('min', 'MPG', '場均分鐘', 'gl')"),
+        ("[[0, '全部'], [500, '≥500'], [1000, '≥1000'], [1500, '≥1500']]",
+         "[[0, '全部'], [10, '≥10'], [20, '≥20'], [30, '≥30']]"),
+        ('<td class="sub gl${sc(\'min\')}">${p.min.toLocaleString()}</td>',
+         '<td class="sub gl${sc(\'min\')}">${p.min.toFixed(1)}</td>'),
+        ('<span>上場 <b>${p.min.toLocaleString()}</b> 分鐘</span>', '<span>場均 <b>${p.min.toFixed(1)}</b> 分鐘</span>'),
     ]:
         assert s.count(a) >= 1, a
         s = s.replace(a, b)

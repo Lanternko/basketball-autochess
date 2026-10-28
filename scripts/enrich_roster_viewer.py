@@ -6,6 +6,7 @@
 
 用法：python -I scripts/enrich_roster_viewer.py reports/ovr-v58-card-2025-26/roster-viewer.html [...]
 """
+import csv
 import json
 import re
 import sys
@@ -13,6 +14,8 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 SRC = ROOT / 'data' / 'season-source' / 'player-games.json'
+RAPM = ROOT / 'reports' / 'impact-rapm' / 'rapm-prior.csv'  # 2025-26 單季 box-prior RAPM（每 100 回合）
+ONOFF = ROOT / 'reports' / 'impact-rapm' / 'onoff.csv'
 
 CSS = """
 /* real box score */
@@ -29,6 +32,10 @@ CSS = """
 .tag .shot{position:absolute;right:26px;bottom:7px;height:132px;width:auto;pointer-events:none}
 .tabbr{color:var(--tt);font-weight:600}
 tbody tr.sel .tabbr{color:inherit}
+/* impact chips：RAPM 攻守、在場淨效率（每 100 回合，對聯盟平均） */
+.chip i.up{color:var(--g-a)}
+.chip i.dn{color:var(--g-f)}
+.chip i.flat{color:var(--muted)}
 """
 
 # [主色, 副色, 卡片底色, 背號字色]。主色、副色是官方配色（表格色標、卡片底帶）；
@@ -78,6 +85,17 @@ function realBox(p) {
   return `<div class="real-h">2025-26 例行賽真實數據 · 場均 · ${r.gp} 場${r.teams.length > 1 ? ' · ' + r.teams.join('/') : ''}</div>
       <div class="real">${s.map(([l, v]) => `<div class="st"><b>${v}</b><span>${l}</span></div>`).join('')}</div>`;
 }
+function impactChips(p) {
+  const r = REAL[p.name], m = r && IMPACT[r.id];
+  if (!m) return '<div class="strong"><span class="chip dim">影響力<i class="flat">無 2025-26 RAPM</i></span></div>';
+  const sg = v => (v > 0 ? '+' : '') + v.toFixed(1);
+  const cls = v => (v >= 0.5 ? 'up' : v <= -0.5 ? 'dn' : 'flat');
+  const chip = (lab, v, tip) => v == null ? '' : `<span class="chip" title="${tip}">${lab}<i class="${cls(v)}">${sg(v)}</i></span>`;
+  return `<div class="strong">${chip('進攻影響', m.o, '2025-26 RAPM 進攻：在場時球隊每 100 回合多得幾分（控制隊友與對手，對聯盟平均）')}${
+    chip('防守影響', m.d, '2025-26 RAPM 防守：在場時對手每 100 回合少得幾分（正值＝少失分）')}${
+    chip('淨影響', m.o + m.d, '2025-26 RAPM 淨值＝進攻＋防守')}${
+    chip('團隊在場', m.on, '2025-26 他在場時球隊每 100 回合淨效率（聯盟平均＝0）' + (m.onoff == null ? '' : '；在場減不在場 ' + sg(m.onoff)))}</div>`;
+}
 """
 
 BEGIN, END = '<!-- real-stats:begin -->', '<!-- real-stats:end -->'
@@ -114,6 +132,26 @@ def aggregate():
     return out
 
 
+def impact():
+    """playerId → {o, d, on, onoff}：2025-26 單季 box-prior RAPM 攻守，與在場淨效率（交易球員依在場回合加權）。"""
+    out = {}
+    for r in csv.DictReader(RAPM.open(encoding='utf-8')):
+        out[int(r['playerId'])] = {'o': float(r['lastSeasonO']), 'd': float(r['lastSeasonD'])}
+    acc = {}
+    for r in csv.DictReader(ONOFF.open(encoding='utf-8')):
+        if r['season'] != '2025-26':
+            continue
+        a = acc.setdefault(int(r['playerId']), [0.0, 0.0, 0.0])
+        w = float(r['onPoss'])
+        a[0] += w
+        a[1] += w * float(r['onNet'])
+        a[2] += w * float(r['onOffNet']) if r['onOffNet'] else 0
+    for pid, (w, on, onoff) in acc.items():
+        if pid in out and w > 0:
+            out[pid].update(on=round(on / w, 2), onoff=round(onoff / w, 2))
+    return out
+
+
 def team_ids():
     rs = json.loads(SRC.read_text(encoding='utf-8'))['data']['resultSets'][0]
     h = {k: i for i, k in enumerate(rs['headers'])}
@@ -127,15 +165,19 @@ def inject(path, real):
     col = names['cols'].index('name')
     roster = [r[col] for r in names['rows']]
     sub = {n: real[n] for n in roster if n in real}
+    ids = {v['id'] for v in sub.values()}
+    imp = {pid: v for pid, v in impact().items() if pid in ids}
     js_json = lambda o: json.dumps(o, ensure_ascii=False, separators=(',', ':'))
-    block = (f'{BEGIN}\n<style>{CSS}</style>\n<script>const REAL={js_json(sub)};\n'
+    block = (f'{BEGIN}\n<style>{CSS}</style>\n<script>const REAL={js_json(sub)};\nconst IMPACT={js_json(imp)};\n'
              f'const TEAM_COLORS={js_json(TEAM_COLORS)};\nconst TEAM_IDS={js_json(team_ids())};{JS}</script>\n{END}\n')
     assert s.count('<script>const DATA=') == 1
     s = s.replace('<script>const DATA=', block + '<script>const DATA=', 1)
     hook = '<div class="strong">${tops.map(t => chip(t[0], t[1])).join(\'\')}${chip(\'弱項 \' + low[0], low[1], true)}</div>'
     s = s.replace('${teamDot(p.team)}${p.team}', '${p.team}')  # 舊版注入
+    # 能力值前三／弱項改成影響力（使用者 2026-10-29）；樣板可能已含 realBox
+    s = s.replace(hook + '\n      ${realBox(p)}', hook)
     for old, new in [
-        (hook, hook + '\n      ${realBox(p)}'),
+        (hook, '${impactChips(p)}\n      ${realBox(p)}'),
         ('<div class="tag"><span class="pos">', '<div class="tag" style="${teamVars(p.team)}">${headshot(p)}<span class="pos">'),
         ("<td class=\"sub${sc('team')}\">${p.team}</td>", "<td class=\"sub${sc('team')}\">${teamCell(p.team)}</td>"),
     ]:

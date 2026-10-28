@@ -50,3 +50,6 @@
 - R-029：使用者把 McCain 排在 2026 雷霆第 8（Wallace 之後、Joe 之前）；card 0.2.0 是 57.9（#359），費城 37 場的 TS .506 對雷霆 30 場 .593，整季等權平均把他拉低。lead 用 box score 粗估雷霆段每 36 約 66，非正式卡。
 - R-030：小樣本往聯盟平均收縮是高估，目標要依人而定（Topić 往 40、受傷 Giannis 往 80）。MIN<100 那組每 36 中位 65.8，高於 MIN 100–1000 各組（約 62.5）。
 - TODO.md 新增兩題：「整季能力值依近期／交易後加權」「小樣本收縮目標依人而定」。已合併寫成 E-066 預註冊並凍結（`reports/card-0.2.0+E066-recency-target/preregistration.md`）：A 同季日期衰減 H＝∞／60／30 天；B 收縮目標改 MPG 分組平均（B1 本組、B2 一律 MPG<12 組）。尚未派工，等使用者看過預註冊；實作交 role-card。
+
+## 2026-10-29 名單卡片影響力
+- 使用者要求：卡片「前三強項＋弱項」改成影響力。`scripts/enrich_roster_viewer.py` 新增 `impactChips`：進攻／防守／淨影響＝2025-26 單季 box-prior RAPM（`reports/impact-rapm/rapm-prior.csv` lastSeasonO/D，每 100 回合），團隊在場＝`onoff.csv` 2025-26 在場淨效率（交易球員依 onPoss 加權，tooltip 附在場減不在場）。賽中頁也用 2025-26 值（2026-27 無 RAPM）。已重建兩個名單頁；gh-pages 尚未重新發布（下次每日更新會帶上）。

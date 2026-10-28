@@ -156,7 +156,7 @@ th.noh{cursor:default}
 .tag .shot{position:absolute;right:26px;bottom:7px;height:132px;width:auto;pointer-events:none}
 .tabbr{color:var(--tt);font-weight:600}
 tbody tr.sel .tabbr{color:inherit}
-/* impact chips：RAPM 攻守、在場淨效率（每 100 回合，對聯盟平均） */
+/* impact chips：RAPM 攻守淨（對聯盟平均）、在場減不在場（每 100 回合） */
 .chip i.up{color:var(--g-a)}
 .chip i.dn{color:var(--g-f)}
 .chip i.flat{color:var(--muted)}
@@ -199,7 +199,7 @@ function impactChips(p) {
   return `<div class="strong">${chip('進攻影響', m.o, '2025-26 RAPM 進攻：在場時球隊每 100 回合多得幾分（控制隊友與對手，對聯盟平均）')}${
     chip('防守影響', m.d, '2025-26 RAPM 防守：在場時對手每 100 回合少得幾分（正值＝少失分）')}${
     chip('淨影響', m.o + m.d, '2025-26 RAPM 淨值＝進攻＋防守')}${
-    chip('團隊在場', m.on, '2025-26 他在場時球隊每 100 回合淨效率（聯盟平均＝0）' + (m.onoff == null ? '' : '；在場減不在場 ' + sg(m.onoff)))}</div>`;
+    chip('在場增益', m.onoff, '2025-26 他在場減不在場的球隊每 100 回合淨效率（扣掉球隊本身強弱；會受替補好壞影響）' + (m.on == null ? '' : '；在場時球隊淨效率 ' + sg(m.on)))}</div>`;
 }
 </script>
 <!-- real-stats:end -->

@@ -29,7 +29,6 @@ CSS = """
 .tag .shot{position:absolute;right:26px;bottom:7px;height:132px;width:auto;pointer-events:none}
 .tabbr{color:var(--tt);font-weight:600}
 tbody tr.sel .tabbr{color:inherit}
-.tdot{display:inline-block;width:9px;height:9px;border-radius:2px;margin-right:6px;vertical-align:1px;background:var(--tc);box-shadow:inset -4px 0 0 var(--tc2)}
 """
 
 # [主色, 副色, 卡片底色, 背號字色]。主色、副色是官方配色（表格色標、卡片底帶）；
@@ -61,7 +60,7 @@ function teamVars(t) {
   return c ? `--tc:${c[0]};--tc2:${c[1]};--card:${c[2]};--ink:${c[3]};--tt:${c[4] || c[2]}` : '';
 }
 function teamCell(t) {
-  return teamOf(t) ? `<span class="tabbr" style="${teamVars(t)}"><i class="tdot"></i>${t}</span>` : t;
+  return teamOf(t) ? `<span class="tabbr" style="${teamVars(t)}">${t}</span>` : t;
 }
 function headshot(p) {
   const r = REAL[p.name], tid = TEAM_IDS[p.team.split('/').pop()];

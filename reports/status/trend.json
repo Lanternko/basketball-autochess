@@ -54,8 +54,26 @@
   "rho2k": 0.537
  },
  {
-  "version": "B12",
+  "version": "card 0.1.1",
   "order": 7,
+  "adopted": false,
+  "rhoNetIn": 0.868,
+  "rhoNetOut": null,
+  "rhoDefOut": null,
+  "rho2k": 0.509
+ },
+ {
+  "version": "card 0.1.2",
+  "order": 8,
+  "adopted": true,
+  "rhoNetIn": 0.867,
+  "rhoNetOut": null,
+  "rhoDefOut": null,
+  "rho2k": 0.518
+ },
+ {
+  "version": "B12",
+  "order": 9,
   "adopted": false,
   "rhoNetIn": 0.53,
   "rhoNetOut": 0.455,
@@ -64,7 +82,7 @@
  },
  {
   "version": "C1",
-  "order": 8,
+  "order": 10,
   "adopted": false,
   "rhoNetIn": 0.531,
   "rhoNetOut": 0.455,
@@ -73,7 +91,7 @@
  },
  {
   "version": "D1",
-  "order": 9,
+  "order": 11,
   "adopted": false,
   "rhoNetIn": 0.531,
   "rhoNetOut": 0.458,

@@ -1,11 +1,11 @@
 # 共用記憶（memory/）
 
 所有 agent（Claude Code、Codex、派工子 session、雲端 thread）**只透過這個資料夾溝通**。不靠對話交接：要交給別的 agent 的事，一律寫進 `handoff.md` 或對應欄位檔。
-記憶不是逐日敘述，而是固定欄位的條目。架構照 jev-hearthstone 的 `memory/`，源自 AutoTavern 論文（arXiv 2610.33845 §4、附錄 A）的 typed research memory。
+記憶不是逐日敘述，而是固定欄位的條目。架構照 jev-hearthstone 的 `memory/`，源自 AutoTavern 論文（arXiv 2610.33845 §4、附錄 A）的 typed research memory（S-001）。
 
 2026-10-28 建立時，從 README「踩過的坑／已知限制」、`reports/status/status.md`、git log（`8d18901`…`560ddcc`）、`reports/ovr-inseason-2026-27/v5/pathA/` 與 Claude 的 auto-memory 搬入初始條目。逐份報告仍在 `reports/`，條目只寫結論並指向報告。
 
-## 五個檔
+## 六個檔
 
 | 檔案 | 用途 | ID |
 | --- | --- | --- |
@@ -14,13 +14,14 @@
 | [rulings.md](rulings.md) | 裁決：使用者對球員評價與驗收方式的裁定、籃球規則、硬規則。 | `R-001`… |
 | [findings.md](findings.md) | 發現帳本：關於模型、資料、球員、程式的事實，附證據與狀態（已證實／被推翻／待驗）。已知限制與還沒修的也在這裡（狀態「待驗」）。 | `F-001`… |
 | [experiments.md](experiments.md) | 實驗登記：模擬版本、卡片版本、預註冊、回測、量測。 | `E-001`… |
+| [references.md](references.md) | 外部參考：論文、外部 repo、資料來源；寫借了什麼、用在哪個檔或條目。不必讀，要實踐先蒸餾成 README 流程或 R／L 條目。 | `S-001`… |
 
 ## 開工必讀順序
 
 1. `handoff.md`（現在在做什麼、下一步）
 2. `lessons.md`（不要再犯的錯）
 3. `rulings.md`（使用者的裁定，卡片與驗收不得違反）
-4. 其餘按需查：`grep -n "關鍵字" memory/findings.md memory/experiments.md`
+4. 其餘按需查：`grep -n "關鍵字" memory/findings.md memory/experiments.md memory/references.md`
 
 ## 寫入規則
 
@@ -34,6 +35,38 @@
 - **commit 檢查**：`.githooks/pre-commit`（新 clone 先跑 `git config core.hooksPath .githooks`）會擋兩件事：改到 `src/`、`scripts/`、`test/` 或條目檔卻沒一起改 `handoff.md`（確定不需要時 `HANDOFF_OK=1 git commit`）；條目 ID 重複或刪掉既有 ID。
 - 欄位定義與範例寫在各檔檔頭。
 - 「來源」欄：commit、報告路徑或對話日期；沒有就省略。
+
+## 版本號
+
+四條軌道各自編號：`card`（卡片 OVR）、`inseason`（賽中 OVR）、`defense`（防守）、`sim`（模擬引擎）。格式 `0.MINOR.PATCH`，接進正式對局（F-010）才發 1.0。
+
+| 情況 | 寫法 | 例 |
+|---|---|---|
+| 實驗（還沒採用） | 基準版本＋`+E編號` | `card 0.1.0+E055` |
+| 實驗採用，且樣本外更準（OVR）或球隊 MAE 進步 | 升 MINOR，PATCH 歸零 | `card 0.2.0` |
+| 實驗採用但沒有變準：數值更直觀、改某個數值的公式、重擬合、更新資料、修 bug | 升 PATCH | `card 0.1.1` |
+
+- 實驗不佔版號：失敗的只留 E 條目。平行實驗都掛在同一個基準上（`0.1.0+E055`、`0.1.0+E056`），不會假裝彼此有先後。
+- 多個實驗一起採用時合成一版，在 R 條目寫明「0.2.0 = 0.1.0 + E-054 + E-055」。
+- 新報告目錄用 `reports/<軌道>-<基準>+E<編號>-<短名>/`；舊目錄（`ovr-v58…` 等）不改名，對照見 R-018。
+
+### 各位數什麼時候升
+
+判斷問題：這次改動有沒有讓模型更準？（R-019）
+
+| 位數 | 升的條件 | 例 |
+|---|---|---|
+| MAJOR | 對局依賴的介面改了，舊存檔、卡組、對照表會失效；1.0 前固定 0 | 0→1：卡片接進對局（F-010）；1→2：屬性欄位改名或刪除 |
+| MINOR | 卡片／賽中 OVR 在樣本外更準（2K27 ρ、RAPM 分半、沒看過的季；樣本內 RAPM 擬合不算，R-007），或球隊端 winsMAE 進步 | 新方法讓 2K27 ρ 與分半 RAPM ρ 都上升 |
+| PATCH | 沒有變準，但數值更直觀或公式修正；含重擬合、資料更新、修 bug | drive 拆成 foulDraw＋新 drive；拉回目標改成本人歷史 |
+| 不升 | 輸出完全沒變 | 重構、註解、報告排版 |
+
+- 1.0 前新增或拆分屬性本身不決定位數，看有沒有變準（還沒有遊戲端依賴欄位）。
+- 不採用里程表式進位：0.1.9 之後是 0.1.10。上一位升了，下面歸零。
+- 一次發版只升一位，取影響最大的那個。
+- 升 MINOR 要過 G1–G5；升 PATCH 過 G1–G3 即可，但若前 20 名換掉超過 3 人，要重跑 G4。
+- 批次發版：驗收通過的實驗先排隊，使用者 G5 抽查後合成一版。預期 MINOR 約一批研究一版（1–2 週），PATCH 主要在賽季資料更新時升；數字長太快通常是把實驗當成發版。
+- 跨軌道各自升版，相依寫在 R 條目，例如「card ≥ 0.3 需要 sim ≥ 0.2」。
 
 ## 五道門
 

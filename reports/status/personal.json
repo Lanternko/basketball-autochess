@@ -40,14 +40,34 @@
   "note": "已收束；球隊層 2025-26 勝場 MAE 變差，未切換對局資料，卡片板仍為 v53 校準；不讀 RAPM，樣本內即樣本外：同一份分數直接對 A 半、B 半 RAPM 各算一次 ρ 再平均（reports/ovr-metrics-backfill-2025-26）"
  },
  {
-  "layer": "卡片 OVR（正式卡片板，v58 H1-m0）",
-  "description": "v57 G3（γ=1.0、δ=0.25：防守加分 + 往 RAPM align）再加上限：單人總 lift 不得超過其 RAPM 名次（margin=0）（遊戲本體不讀取任何 OVR）",
+  "layer": "卡片 OVR（正式卡片板，card 0.1.2）",
+  "description": "card 0.1.1（v61 收縮歷史，E-054+E-055）+ E-060 onBall 對位目標（2026-10-28 使用者裁定發版）（遊戲本體不讀取任何 OVR）",
+  "players": 414,
+  "rhoNet": 0.867,
+  "rhoDefense": 0.667,
+  "holdoutRho": "未量測",
+  "rho2k": 0.518,
+  "note": "ρRAPM 樣本內（align/封頂用 RAPM）；樣本外 ρ（A/B 半 RAPM）尚未量測，不以 v58 數字代替；對 2K27 ρ 取 evaluation.json 的 E060 值；來源 card-0.1.1+E060-onball-targeting/primary"
+ },
+ {
+  "layer": "卡片 OVR card 0.1.1（v61 收縮歷史）",
+  "description": "v58 H1-m0 之後的 E-054+E-055（收縮歷史）卡片；未曾正式發版，直接併入 0.1.2",
+  "players": 414,
+  "rhoNet": 0.868,
+  "rhoDefense": 0.667,
+  "holdoutRho": "未量測",
+  "rho2k": 0.509,
+  "note": "ρRAPM 樣本內（align/封頂用 RAPM）；未曾正式發版（2026-10-28 與 E-060 一併發為 card 0.1.2）；樣本外 ρ 未量測；對 2K27 ρ 取 evaluation.json 的 v61-shrink 值"
+ },
+ {
+  "layer": "卡片 OVR v58 H1-m0（前正式版）",
+  "description": "v57 G3（γ=1.0、δ=0.25：防守加分 + 往 RAPM align）再加上限：單人總 lift 不得超過其 RAPM 名次（margin=0）",
   "players": 414,
   "rhoNet": 0.852,
   "rhoDefense": 0.66,
   "holdoutRho": "0.563 / 0.391",
   "rho2k": 0.537,
-  "note": "ρRAPM 樣本內（align/封頂用 RAPM）；樣本外 ρ 為 A/B 半場對調平均（ovr-v58-holdout-2025-26/report.md）；19/19 硬門檻全過；對 2K27 ρ .537；前十長人僅 Wemby/Giannis/Jokić/Chet"
+  "note": "2026-10-28 由 card 0.1.2 取代；ρRAPM 樣本內（align/封頂用 RAPM）；樣本外 ρ 為 A/B 半場對調平均（ovr-v58-holdout-2025-26/report.md）；19/19 硬門檻全過；對 2K27 ρ .537；前十長人僅 Wemby/Giannis/Jokić/Chet（皆為 v58 當時數字）"
  },
  {
   "layer": "卡片 OVR v57 G3（γ=1.0、δ=0.25）",
@@ -57,7 +77,7 @@
   "rhoDefense": 0.697,
   "holdoutRho": "0.555 / 0.401",
   "rho2k": 0.53,
-  "note": "ρRAPM 樣本內（align/封頂用 RAPM）；v58 加封頂後樣本外 ρ 幾乎不變"
+  "note": "ρRAPM 樣本內（align/封頂用 RAPM）；v58 加封頂後樣本外 ρ 幾乎不變；v58 已於 2026-10-28 由 card 0.1.2 取代"
  },
  {
   "layer": "卡片 OVR v56 F2（PF/C 防守加分 γ=0.5）",
@@ -77,7 +97,7 @@
   "rhoDefense": 0.297,
   "holdoutRho": "0.457 / 0.245",
   "rho2k": 0.478,
-  "note": "2026-10-21 由 v58 H1-m0 取代；RAPM 混合目標（α=0.5）→ ρRAPM 部分樣本內"
+  "note": "2026-10-21 由 v58 H1-m0 取代（v58 於 10-28 由 card 0.1.2 取代）；RAPM 混合目標（α=0.5）→ ρRAPM 部分樣本內"
  },
  {
   "layer": "卡片 OVR v53（前正式版）",
@@ -87,7 +107,7 @@
   "rhoDefense": 0.288,
   "holdoutRho": "0.425 / 0.237",
   "rho2k": 0.449,
-  "note": "2026-10-20 由 E2 取代（E2 再於 10-21 由 v58 H1-m0 取代）；RAPM 混合目標（α=0.5）→ ρRAPM 部分樣本內；樣本外為 backfill 以 A/B 半 RAPM 重擬合（calibrate.py 複本加 --rapm，全量重現 OVR 最大差 0.0）"
+  "note": "2026-10-20 由 E2 取代（E2 再於 10-21 由 v58 H1-m0 取代，v58 於 10-28 由 card 0.1.2 取代）；RAPM 混合目標（α=0.5）→ ρRAPM 部分樣本內；樣本外為 backfill 以 A/B 半 RAPM 重擬合（calibrate.py 複本加 --rapm，全量重現 OVR 最大差 0.0）"
  },
  {
   "layer": "卡片 OVR（舊版，sim-only）",

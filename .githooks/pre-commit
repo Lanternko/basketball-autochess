@@ -7,7 +7,7 @@ staged=$(git diff --cached --name-only --diff-filter=ACMRD)
 fail=0
 
 if [ "$HANDOFF_OK" != "1" ]; then
-  if echo "$staged" | grep -Eq '^(src/|scripts/|test/|memory/(findings|experiments|lessons|rulings)\.md)' &&
+  if echo "$staged" | grep -Eq '^(src/|scripts/|test/|memory/(findings|experiments|lessons|rulings|references)\.md)' &&
      ! echo "$staged" | grep -qx 'memory/handoff.md'; then
     echo "pre-commit: 改到 src/scripts/test 或 memory 條目，但 memory/handoff.md 沒有一起更新。" >&2
     echo "  收工要整份覆寫 handoff.md；確定不需要時用 HANDOFF_OK=1 git commit ..." >&2
@@ -15,7 +15,7 @@ if [ "$HANDOFF_OK" != "1" ]; then
   fi
 fi
 
-for f in findings experiments lessons rulings; do
+for f in findings experiments lessons rulings references; do
   p="memory/$f.md"
   git cat-file -e ":$p" 2>/dev/null || continue
   new=$(git show ":$p" | grep -Eo '^### [A-Z]-[0-9]+' | cut -c5-)

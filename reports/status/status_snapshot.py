@@ -26,7 +26,11 @@ TEAM_NOTE = '卡片版本（v55–v58）只改顯示用 OVR，不影響模擬 wi
 EVAL_POSS = 5000
 LOW_MIN, RAPM_FAR, BIGS = 1000, 100, {'C', 'PF'}
 LATEST_SIM = 'v54'  # latest sim board measured
-OFFICIAL_CARD = 'reports/ovr-v58-card-2025-26/card-H1-m0/ranking.csv'  # 2026-10-21 起正式卡片 = v58 H1-m0
+OFFICIAL_CARD = 'reports/card-0.1.1+E060-onball-targeting/primary/ranking.csv'  # 2026-10-28 起正式卡片 = card 0.1.2（= 0.1.1 + E-060 onBall）
+C011_CARD = 'reports/ovr-v61-shrink-history-2025-26/ranking.csv'  # card 0.1.1（E-054+E-055），未曾正式發版
+V58_CARD = 'reports/ovr-v58-card-2025-26/card-H1-m0/ranking.csv'  # 2026-10-21 ~ 10-28 正式卡片 = v58 H1-m0
+THREE_VALUE = 'reports/card-0.1.1+E057-three-value/three-value.csv'  # E-057 threeValue（R-024：card 0.1.2 的 3PT 顯示欄；OVR 與模擬仍用 long）
+CARD_EVAL = 'reports/card-0.1.1+E060-onball-targeting/evaluation.json'  # 0.1.1（label v61-shrink）與 0.1.2（label E060）的對 2K27 ρ
 E2_CARD = 'reports/ovr-v55-card-E-2025-26/card-E2-lam0.4/ranking.csv'  # 2026-10-20 ~ 10-21 正式卡片
 V53_CARD = 'reports/ovr-calibrated-2025-26/ranking.csv'
 F2_CARD = 'reports/ovr-v56-card-defense-2025-26/card-F2-gamma0.5/ranking.csv'  # v56
@@ -35,7 +39,7 @@ V55_CARDS = {'B12': 'reports/ovr-v55-finisher-fix-2025-26/card/B12/ranking.csv',
              'C1': 'reports/ovr-v55-card-origin-attr-2025-26/card-C1/ranking.csv',
              'D1': 'reports/ovr-v55-attr-deflate-2025-26/card/D1/ranking.csv',
              'E2': 'reports/ovr-v55-card-E-2025-26/card-E2-lam0.4/ranking.csv',
-             'v58': 'reports/ovr-v58-card-2025-26/card-H1-m0/ranking.csv'}
+             'v58': V58_CARD}
 V55_DESC = {'B12': '方向 B：吃餅長人禁區出手來源修正（模擬層）後重校卡片',
             'C1': '方向 1：自創禁區比例 s̃ 映成第 16 屬性 originShare 加進卡片回歸',
             'D1': '方向 2：屬性建構層 long 去膨脹（--attr-deflate）後重校卡片',
@@ -85,10 +89,19 @@ def backfill_layer(backfill, key):
     return backfill.get('layers', {}).get(key)
 
 
+def card_eval_2k(label):
+    """card 0.1.1 / 0.1.2 的對 2K27 ρ（evaluation.json 候選表，label v61-shrink / E060）；讀不到 = None。"""
+    try:
+        d = json.loads((ROOT / CARD_EVAL).read_text(encoding='utf-8'))
+        return next(c['rho2k'] for c in d['candidates'] if c['label'] == label)
+    except (OSError, ValueError, StopIteration, KeyError):
+        return None
+
+
 def personal(rapm_by_id, rapm_by_name, holdout, backfill):
     out = []
 
-    def add(layer, desc, scores, note='', src='', hold=None, bk=None):
+    def add(layer, desc, scores, note='', src='', hold=None, bk=None, k2=None):
         b = backfill_layer(backfill, bk or hold)
         keep = [(s, r) for s, r in scores if r and float(r['pooledPoss']) >= EVAL_POSS]
         s = [k[0] for k in keep]
@@ -96,7 +109,7 @@ def personal(rapm_by_id, rapm_by_name, holdout, backfill):
                     'rhoNet': round(spearman(s, [float(r['pooledNet']) for _, r in keep]), 3),
                     'rhoDefense': round(spearman(s, [float(r['pooledD']) for _, r in keep]), 3),
                     'holdoutRho': holdout_cell(holdout, hold) if hold and holdout_cell(holdout, hold) != NA else (b['holdoutRho'] if b else NA),
-                    'rho2k': round(b['rho2k'], 3) if b else NA,
+                    'rho2k': round(k2, 3) if k2 is not None else (round(b['rho2k'], 3) if b else NA),
                     'note': note or f'無額外備註；來源 {src}，對全量 RAPM 計算'})
     sim = rows('reports/ovr-v53-shrinkage-2025-26/ranking-v2.csv')
     src = 'reports/ovr-v53-shrinkage-2025-26/ranking-v2.csv'
@@ -110,18 +123,24 @@ def personal(rapm_by_id, rapm_by_name, holdout, backfill):
         '不讀 RAPM，樣本內即樣本外：同一份分數直接對 A 半、B 半 RAPM 各算一次 ρ 再平均（reports/ovr-metrics-backfill-2025-26）', src=src, bk='sim_v54_raw')
     add('模擬板 v54（收縮修正版）', '同 v53 收縮規則', [(float(r['v2Per36']), rapm_by_id.get(r['playerId'])) for r in sim],
         '已收束；球隊層 2025-26 勝場 MAE 變差，未切換對局資料，卡片板仍為 v53 校準；不讀 RAPM，樣本內即樣本外：同一份分數直接對 A 半、B 半 RAPM 各算一次 ρ 再平均（reports/ovr-metrics-backfill-2025-26）', src=src, bk='sim_v54_v2')
-    add('卡片 OVR（正式卡片板，v58 H1-m0）', 'v57 G3（γ=1.0、δ=0.25：防守加分 + 往 RAPM align）再加上限：單人總 lift 不得超過其 RAPM 名次（margin=0）（遊戲本體不讀取任何 OVR）',
+    add('卡片 OVR（正式卡片板，card 0.1.2）', 'card 0.1.1（v61 收縮歷史，E-054+E-055）+ E-060 onBall 對位目標（2026-10-28 使用者裁定發版）（遊戲本體不讀取任何 OVR）',
         [(float(r['ovr']), rapm_by_name.get(r['name'])) for r in rows(OFFICIAL_CARD)],
-        f'{CIRC}；樣本外 ρ 為 A/B 半場對調平均（ovr-v58-holdout-2025-26/report.md）；19/19 硬門檻全過；對 2K27 ρ .537；前十長人僅 Wemby/Giannis/Jokić/Chet', src=OFFICIAL_CARD, hold='H1')
+        f'{CIRC}；樣本外 ρ（A/B 半 RAPM）尚未量測，不以 v58 數字代替；對 2K27 ρ 取 evaluation.json 的 E060 值；來源 card-0.1.1+E060-onball-targeting/primary', src=OFFICIAL_CARD, k2=card_eval_2k('E060'))
+    add('卡片 OVR card 0.1.1（v61 收縮歷史）', 'v58 H1-m0 之後的 E-054+E-055（收縮歷史）卡片；未曾正式發版，直接併入 0.1.2',
+        [(float(r['ovr']), rapm_by_name.get(r['name'])) for r in rows(C011_CARD)],
+        f'{CIRC}；未曾正式發版（2026-10-28 與 E-060 一併發為 card 0.1.2）；樣本外 ρ 未量測；對 2K27 ρ 取 evaluation.json 的 v61-shrink 值', src=C011_CARD, k2=card_eval_2k('v61-shrink'))
+    add('卡片 OVR v58 H1-m0（前正式版）', 'v57 G3（γ=1.0、δ=0.25：防守加分 + 往 RAPM align）再加上限：單人總 lift 不得超過其 RAPM 名次（margin=0）',
+        [(float(r['ovr']), rapm_by_name.get(r['name'])) for r in rows(V58_CARD)],
+        f'2026-10-28 由 card 0.1.2 取代；{CIRC}；樣本外 ρ 為 A/B 半場對調平均（ovr-v58-holdout-2025-26/report.md）；19/19 硬門檻全過；對 2K27 ρ .537；前十長人僅 Wemby/Giannis/Jokić/Chet（皆為 v58 當時數字）', src=V58_CARD, hold='H1')
     add('卡片 OVR v57 G3（γ=1.0、δ=0.25）', 'E2 之上加防守加分（γ=1.0，全位置、PR 90–96 漸減）+ 往 RAPM align δ=0.25，無封頂（v58 的前身）',
-        [(float(r['ovr']), rapm_by_name.get(r['name'])) for r in rows(G3_CARD)], f'{CIRC}；v58 加封頂後樣本外 ρ 幾乎不變', src=G3_CARD, hold='G3')
+        [(float(r['ovr']), rapm_by_name.get(r['name'])) for r in rows(G3_CARD)], f'{CIRC}；v58 加封頂後樣本外 ρ 幾乎不變；v58 已於 2026-10-28 由 card 0.1.2 取代', src=G3_CARD, hold='G3')
     add('卡片 OVR v56 F2（PF/C 防守加分 γ=0.5）', 'E2 之上只對 PF/C 加防守加分，無 align、無封頂',
         [(float(r['ovr']), rapm_by_name.get(r['name'])) for r in rows(F2_CARD)], 'ρRAPM 部分樣本內（防守加分用 RAPM pooledD，另有 RAPM 混合目標）', src=F2_CARD, hold='F2')
     add('卡片 OVR v55 E2（前正式版）', '吃餅折扣 λ=0.4（PF/C 自創 ≥65 豁免）後重校，目標同 v53：模擬與 RAPM 混合 α=0.5',
-        [(float(r['ovr']), rapm_by_name.get(r['name'])) for r in rows(E2_CARD)], f'2026-10-21 由 v58 H1-m0 取代；{BLEND_NOTE}', src=E2_CARD, hold='E2')
+        [(float(r['ovr']), rapm_by_name.get(r['name'])) for r in rows(E2_CARD)], f'2026-10-21 由 v58 H1-m0 取代（v58 於 10-28 由 card 0.1.2 取代）；{BLEND_NOTE}', src=E2_CARD, hold='E2')
     add('卡片 OVR v53（前正式版）', '能力值公式校準到模擬與 RAPM 混合目標，α=0.5，見 ovr-blended-2025-26/dataflow.md',
         [(float(r['ovr']), rapm_by_name.get(r['name'])) for r in rows(V53_CARD)],
-        f'2026-10-20 由 E2 取代（E2 再於 10-21 由 v58 H1-m0 取代）；{BLEND_NOTE}；樣本外為 backfill 以 A/B 半 RAPM 重擬合（calibrate.py 複本加 --rapm，全量重現 OVR 最大差 0.0）', src=V53_CARD, hold='v53')
+        f'2026-10-20 由 E2 取代（E2 再於 10-21 由 v58 H1-m0 取代，v58 於 10-28 由 card 0.1.2 取代）；{BLEND_NOTE}；樣本外為 backfill 以 A/B 半 RAPM 重擬合（calibrate.py 複本加 --rapm，全量重現 OVR 最大差 0.0）', src=V53_CARD, hold='v53')
     legacy = rows('reports/ovr-calibrated-2025-26/legacy-sim-only/ranking.csv')
     add('卡片 OVR（舊版，sim-only）', '能力值公式校準到 v53 模擬，α=0（已被正式卡片板取代）',
         [(float(r['ovr']), rapm_by_name.get(r['name'])) for r in legacy], f'目標不含 RAPM，ρRAPM 為純樣本外（全量 RAPM）；不讀 RAPM，樣本內即樣本外：同一份分數直接對 A 半、B 半 RAPM 各算一次 ρ 再平均（reports/ovr-metrics-backfill-2025-26）',
@@ -178,9 +197,10 @@ def team():
 
 
 TREND = [('舊版 sim-only', 'legacy', 1, True), ('v53', 'v53', 2, True), ('E2 (v55)', 'E2', 3, True), ('F2 (v56)', 'F2', 4, True),
-         ('G3 (v57)', 'G3', 5, True), ('H1 (v58)', 'H1', 6, True), ('B12', 'B12', 7, False), ('C1', 'C1', 8, False), ('D1', 'D1', 9, False)]
+         ('G3 (v57)', 'G3', 5, True), ('H1 (v58)', 'H1', 6, True), ('card 0.1.1', 'c011', 7, False), ('card 0.1.2', 'c012', 8, True),
+         ('B12', 'B12', 9, False), ('C1', 'C1', 10, False), ('D1', 'D1', 11, False)]
 TREND_LAYER = {'legacy': '卡片 OVR（舊版，sim-only）', 'v53': '卡片 OVR v53（前正式版）', 'E2': '卡片 OVR v55 E2（前正式版）',
-               'F2': '卡片 OVR v56 F2（PF/C 防守加分 γ=0.5）', 'G3': '卡片 OVR v57 G3（γ=1.0、δ=0.25）', 'H1': '卡片 OVR（正式卡片板，v58 H1-m0）',
+               'F2': '卡片 OVR v56 F2（PF/C 防守加分 γ=0.5）', 'G3': '卡片 OVR v57 G3（γ=1.0、δ=0.25）', 'H1': '卡片 OVR v58 H1-m0（前正式版）', 'c011': '卡片 OVR card 0.1.1（v61 收縮歷史）', 'c012': '卡片 OVR（正式卡片板，card 0.1.2）',
                'B12': '卡片 OVR 實驗 B12（未採用）', 'C1': '卡片 OVR 實驗 C1（未採用）', 'D1': '卡片 OVR 實驗 D1（未採用）'}
 
 
@@ -197,7 +217,7 @@ def trend(personal_rows, backfill, holdout):
             net, df = (b['out']['net'], b['out']['def']) if b else (None, None)
         out.append({'version': version, 'order': order, 'adopted': adopted, 'rhoNetIn': row['rhoNet'] if row else None,
                     'rhoNetOut': None if net is None else round(net, 3), 'rhoDefOut': None if df is None else round(df, 3),
-                    'rho2k': round(b['rho2k'], 3) if b else None})
+                    'rho2k': round(b['rho2k'], 3) if b else (row['rho2k'] if row and row['rho2k'] != NA else None)})
     return out
 
 
@@ -213,8 +233,14 @@ def team_card(backfill):
     return sorted(rows_, key=lambda r: r['order']), tc['teams']
 
 
+def three_value_by_name():
+    # three-value.csv 以 playerId 為鍵；正式卡 ranking.csv 沒有 playerId，改用姓名對（兩邊 582 人姓名皆唯一且完全對上）。對不上的給 None。
+    return {r['name']: float(r['tv_main']) for r in rows(THREE_VALUE)}
+
+
 def top20(rapm_by_name):
     card = rows(OFFICIAL_CARD)
+    tv = three_value_by_name()
     sim = {r['name']: int(r['rank']) for r in rows('reports/ovr-v54-shrinkage-2025-26/ranking-v2.csv')}
     pool = sorted((r for r in rapm_by_name.values() if float(r['pooledPoss']) >= EVAL_POSS), key=lambda r: -float(r['pooledNet']))
     rapm_rank = {r['name']: i + 1 for i, r in enumerate(pool)}
@@ -226,25 +252,29 @@ def top20(rapm_by_name):
         elif rr > RAPM_FAR: flags.append('RAPM 差距大')
         if r['pos'] in BIGS: flags.append('長人')
         out.append({'rank': int(r['rank']), 'name': r['name'], 'pos': r['pos'], 'ovr': float(r['ovr']), 'minutes': int(r['MIN']),
+                    'threeValue': round(tv[r['name']], 1) if r['name'] in tv else None, 'threeAcc': float(r['long']),
                     'simRank': sim.get(r['name'], '—'), 'rapmRank': rr if rr is not None else '—', 'flags': '、'.join(flags) or '—'})
     return out, len(pool)
 
 
 def kpi(holdout, personal_rows):
-    """頂部 KPI；第一格 = v58 樣本外 ρ（淨值）。遊戲本體不讀 OVR，所以標籤是「正式卡片」而非「遊戲現用」。"""
+    """頂部 KPI；正式卡片 = card 0.1.2。樣本外 ρ 尚未量測（顯示未量測，不拿 v58 代替）。遊戲本體不讀 OVR，所以標籤是「正式卡片」而非「遊戲現用」。"""
     def cell(key, field):
         try:
             return holdout['cards'][key]['holdout_scale0.5']['avg'][field]
         except (KeyError, TypeError):
             return None
-    v58, e2 = cell('H1', 'net'), cell('E2', 'net')
     fmt = lambda v: NA if v is None else f'{v:.3f}'
-    inS = next((f"{r['rhoNet']:.3f}" for r in personal_rows if 'v58 H1-m0' in r['layer']), NA)
-    k2 = lambda key: fmt(holdout['cards'][key]['rho2k']) if key in holdout.get('cards', {}) else NA
-    return [{'label': '正式卡片 v58 H1-m0 樣本外 ρ（淨值）', 'value': fmt(v58),
-             'sub': f'E2 同法 {fmt(e2)}；樣本內 {inS}（align/封頂讀 RAPM，循環）；RAPM 分半 A→B／B→A 平均'},
-            {'label': '正式卡片 v58 H1-m0 樣本外 ρ（防守）', 'value': fmt(cell('H1', 'def')), 'sub': f"E2 同法 {fmt(cell('E2', 'def'))}"},
-            {'label': '正式卡片 v58 H1-m0 對 2K27 ρ（外部基準）', 'value': k2('H1'), 'sub': f"E2 {k2('E2')}；2K27 不參與擬合（H1 的封頂只讀 RAPM）"}]
+    row = lambda name: next((r for r in personal_rows if name in r['layer']), {})
+    inS = f"{row('card 0.1.2')['rhoNet']:.3f}" if row('card 0.1.2') else NA
+    k2 = row('card 0.1.2').get('rho2k', NA)
+    k2 = fmt(k2) if not isinstance(k2, str) else k2
+    k2old = row('v58 H1-m0（前').get('rho2k', NA)
+    return [{'label': '正式卡片 card 0.1.2 樣本外 ρ（淨值）', 'value': NA,
+             'sub': f'A/B 半 RAPM 樣本外尚未量測；樣本內 {inS}（循環）；前正式版 v58 H1-m0 為 {fmt(cell("H1", "net"))}（不同卡片，僅供參考）'},
+            {'label': '正式卡片 card 0.1.2 樣本外 ρ（防守）', 'value': NA, 'sub': f'尚未量測；v58 H1-m0 為 {fmt(cell("H1", "def"))}（僅供參考）'},
+            {'label': '正式卡片 card 0.1.2 對 2K27 ρ（外部基準）', 'value': k2,
+             'sub': f"v58 H1-m0 {k2old if isinstance(k2old, str) else fmt(k2old)}；來源 {CARD_EVAL}（E060）；2K27 不參與擬合"}]
 
 
 def md(snap):
@@ -254,7 +284,7 @@ def md(snap):
          f"## 個人準確度（RAPM，pooledPoss ≥ {EVAL_POSS}）", '',
          '樣本外 ρ = 只用 A 半（gameId 偶數）RAPM 擬合的卡片對 B 半 RAPM 的 ρ，再對調取平均（`reports/ovr-v58-holdout-2025-26/report.md`）；不讀 RAPM 的層（模擬板、舊版 sim-only）直接對 A／B 半 RAPM 各算一次再平均；讀 RAPM 的卡片層（v53／混合／B12／C1／D1）以 A／B 半重擬合（`reports/ovr-metrics-backfill-2025-26/`）；人群 = 評估半 pooledPoss ≥ 2500 的共同球員（約 408 人，各層共用）。對 2K27 ρ 的人群 = 所有層共有且有 2K 值的 575 人。', '',
          '| 層 | 人數 | 淨值 ρ（全量 RAPM） | 防守 ρ（全量 RAPM） | 樣本外 ρ（淨值 / 防守） | 對 2K27 ρ | 備註 |', '|---|---:|---:|---:|---:|---:|---|']
-    L += [f"| {r['layer']} | {r['players']} | {r['rhoNet']:.3f} | {r['rhoDefense']:.3f} | {r['holdoutRho']} | {r['rho2k']:.3f} | {r['note']} |" for r in snap['personal']]
+    L += [f"| {r['layer']} | {r['players']} | {r['rhoNet']:.3f} | {r['rhoDefense']:.3f} | {r['holdoutRho']} | {r['rho2k'] if isinstance(r['rho2k'], str) else format(r['rho2k'], '.3f')} | {r['note']} |" for r in snap['personal']]
     L += ['', '## 球隊準確度（30 隊、全季）', '', f"說明：{TEAM_NOTE}。球隊 winsMAE 只來自模擬模型版本（v53/v54 等）。", '',
           '| 版本 | 勝場 MAE | 淨分 RMSE | 得分 MAE | 來源 |', '|---|---:|---:|---:|---|']
     f = lambda v, p: v if isinstance(v, str) else f'{v:.{p}f}'
@@ -266,11 +296,11 @@ def md(snap):
     L += ['', '## 卡片版本趨勢', '', '| 版本 | 序 | 採用 | 樣本內 ρ 淨值 | 樣本外 ρ 淨值 | 樣本外 ρ 防守 | 對 2K27 ρ |', '|---|---:|---|---:|---:|---:|---:|']
     g = lambda v: '—' if v is None else f'{v:.3f}'
     L += [f"| {r['version']} | {r['order']} | {'是' if r['adopted'] else '否'} | {g(r['rhoNetIn'])} | {g(r['rhoNetOut'])} | {g(r['rhoDefOut'])} | {g(r['rho2k'])} |" for r in snap['trend']]
-    L += ['', f"## 卡片 OVR 前 20（RAPM 名次在 {snap['rapmPool']} 人中）", '', '| # | 球員 | 位置 | OVR | 分鐘 | 模擬名次 | RAPM 名次 | 旗標 |',
-          '|---:|---|---|---:|---:|---:|---:|---|']
-    L += [f"| {r['rank']} | {r['name']} | {r['pos']} | {r['ovr']:.1f} | {r['minutes']} | {r['simRank']} | {r['rapmRank']} | {r['flags']} |" for r in snap['top20']]
+    L += ['', f"## 卡片 OVR 前 20（RAPM 名次在 {snap['rapmPool']} 人中）", '', '| # | 球員 | 位置 | OVR | 3PT | 3P準 | 分鐘 | 模擬名次 | RAPM 名次 | 旗標 |',
+          '|---:|---|---|---:|---:|---:|---:|---:|---:|---|']
+    L += [f"| {r['rank']} | {r['name']} | {r['pos']} | {r['ovr']:.1f} | {'' if r['threeValue'] is None else format(r['threeValue'], '.1f')} | {r['threeAcc']:.1f} | {r['minutes']} | {r['simRank']} | {r['rapmRank']} | {r['flags']} |" for r in snap['top20']]
     mark = lambda r, k: f"{r[k]}{'' if r[k + 'Pass'] else ' ✗'}"
-    L += ['', '## v55 卡片修正各方向（7 人驗收，v53 名次 → 實驗名次，✗ = 未過；E2 曾為正式卡片，10-21 起正式卡片為 v58 H1-m0）', '',
+    L += ['', '## v55 卡片修正各方向（7 人驗收，v53 名次 → 實驗名次，✗ = 未過；E2 曾為正式卡片，10-21 ~ 10-28 正式卡片為 v58 H1-m0，10-28 起為 card 0.1.2）', '',
           '| 球員 | 條件 | 2K27 | RAPM | v53 | ' + ' | '.join(V55_CARDS) + ' |', '|---|---|---:|---:|---:|' + '---:|' * len(V55_CARDS)]
     L += [f"| {r['name']} | {r['condition']} | {r['rank2k']:g} | {r['rapmRank']} | {r['v53']} | " + ' | '.join(mark(r, k) for k in V55_CARDS) + ' |' for r in snap['v55fix']]
     return '\n'.join(L) + '\n'

@@ -519,8 +519,8 @@
 - 日期：2026-10-28
 - 內容：v61 低分鐘球員膨脹修正：比率型屬性（rebound、pass、tovSkill、foulDraw、drive 等）改為往球員自己的歷史（上季）拉回，沒有歷史才往聯盟平均拉回。不設最少出場分鐘篩選（R-014）。
 - 設定：派工 20261028-173721-31b6f1（role-card、worker 帳號）；long 欄應與 v60 相同。
-- 結果：待回報。抽驗項目：重跑雜湊、低分鐘組（如 Darius Brown II）與傷停明星組抽查、evaluate 門檻。
-- 狀態：進行中
+- 結果：rebound、pass、tovSkill、foulDraw、drive、mid、short、ft 八欄先往本人前 3 季歷史拉回（k、λ、kh 各欄擬合；歷史季回測，2025-26 前 41→後 41 為測試）。測試集 MAE 八欄都是「往本人歷史」最低，對聯盟平均版的區間全不含 0；對另一候選在 drive、mid 含 0。long 與 v60 逐人相同（lead 重算 582 人 0 差）。evaluate 19/19；16 名長人達標 15/16（v60 16/16）；對 2K27 ρ 0.5376→0.5092（樣本外訊號，變差）；對 RAPM ρ 0.8520→0.8685（樣本內，R-007 不算證據）。抽查：Darius Brown II 籃板 99→53.5、名次 172→359；Colby Jones 107→316；但 N'Faly Dante 513→222（歷史好）、Taj Gibson 293→513；MIN<100 的 79 人名次中位 369→316、前 200 人數 12→8。傷停明星組只有 Holiday（27→27），樣本不足。ranking.csv sha256 6238984a…a62c，子 session 重跑一致、lead 重算一致。子 session 另加 kh 參數（spec 外）；2024-25 用本機存檔。
+- 狀態：參考（2026-10-28，等使用者 G5 抽查；2K27 ρ 下降要判斷）
 - 相關：E-054、R-014
 - 來源：reports/ovr-v61-shrink-history-2025-26/
 
@@ -528,7 +528,79 @@
 - 日期：2026-10-28
 - 內容：v62 3PT 第二階段（卡片端）：研究投籃難度（持球自投／接球、防守距離）與出手量對 3PT 屬性的影響。
 - 設定：派工 20261028-173433-e327a1（role-card、worker 帳號）；資料抓不到就回報失敗，不硬做。
-- 結果：待回報。直覺驗收：Curry、Edwards、Knueppel、LaMelo 進 3PT 前 15；前十長人門檻不得破壞。
-- 狀態：進行中
+- 結果：資料取自 stats.nba.com CatchShoot／PullUp＋最近防守者距離四段，manifest 1101 筆，2025-26 切點與 seventh-base 30/30 相同。擬合季選法勝出 (b)（v59 方法）；難度調整 (c)、(c)+出手量 (d) 都沒比 (b) 低 0.05 pp。測試集中位誤差 (a) 3.387、(b) 3.155、(c) 3.362、(d) 3.381 pp，中位差的 90% 區間全含 0；(b)−(a) MAE −0.178 [−0.32, −0.05] 是唯一有訊號的比較。控制難度後出手量沒有額外預測力。直覺驗收未過：(b) 下 Curry 13、Edwards 26、Knueppel 2、LaMelo 52；(c) 下 27／7／5／72；加「承擔分數」旋鈕 w 0–40 都無法四人同時進前 15（LaMelo 實際 36.8%、期望 34.9%）。前十長人門檻未過（Giannis 掉出）。子 session 撞 max_turns 60 截斷，但 report.md 已產出；雜湊未由 lead 重跑。
+- 狀態：參考（2026-10-28，直覺驗收未過；等使用者決定 3PT 的定義是「命中能力」還是「投射威脅／承擔」）
 - 相關：E-048、R-017
 - 來源：reports/ovr-v62-3pt-difficulty-2025-26/
+
+### E-057
+- 日期：2026-10-28
+- 內容：`card 0.1.1+E057` 三分價值（預註冊，公式在派工前凍結）：卡片顯示的 3PT 與 OVR 改用新屬性 `threeValue`，模擬用的 `long` 不動（模擬已用 `shotProfile.threeRate` 決定出手量，`long` 混入出手量會重複計算）。
+- 設定：準度 acc = v62 方法 (c) 的 abilityC（2025-26 全季、依出手類型調整難度、k=294.667，`reports/ovr-v62-3pt-difficulty-2025-26/new-long.json`）；出手量 vol = v62 `Ds.feat('r36')`（每 36 分鐘 3PA，含偽分鐘拉回）；替補水準 rep = 聯盟三分命中率 mu − 0.03；value = vol × (acc − rep)；`threeValue` = value 在 MIN≥500 池內的百分位，套用卡片既有的 `attr()`（40–99）。基準卡 = card 0.1.1（`reports/ovr-v61-shrink-history-2025-26/ranking.csv`）。主要版本：OVR 迴歸裡用 `threeValue` 取代 `long`；次要版本（參考）：兩者並列。rep ±0.02 只當敏感度參考，不得用來挑版本（L-026）。
+- 驗收（事先訂定）：(1) Curry、Edwards、Knueppel、LaMelo 在 MIN≥500 池的 threeValue 名次都 ≤15；(2) Portis 的名次比基準卡 `long` 名次後退（不設門檻，R-020）；(3) 主要版本 OVR 對 2K27 的 Spearman 高於基準 0.5092（樣本外，決定 MINOR 或 PATCH，R-019）；(4) 前十長人門檻與 evaluate.mjs 其他門檻不比基準差；(5) `npm test` 過。
+- 結果：App 內 sonnet 子代理執行；lead 抽查 evaluation.json 與 ranking.csv 數字相符。驗收 5 項過 3 項：(1) 過，threeValue 池內 Curry 1、Knueppel 2–3（同分排序差異）、Edwards 7、LaMelo 10；(2) 過，Portis long 第 2 → threeValue 第 18（Kennard 1→25）；(3) 未過，主要版本（取代 long）2K27 ρ 0.4956 < 0.5092；(4) 未過，noMobleyTop10 失敗（Mobley 進 OVR 第 10，前十長人 4→5 人），其餘 18 門檻持平；(5) 過，npm test 57/0。次要版本（並列）2K27 ρ 0.5175、19/19 門檻，但它是看結果前就標為參考的版本，不能事後改當主要版本（L-026）。RAPM ρ 0.8785／0.8684 為樣本內。對照重跑 v61 位元組相同（sanity-v61-repro/）。
+- 狀態：不採用進 OVR（2026-10-28，主要版本驗收未過）；threeValue 本身可作為顯示用屬性，並列版需另行預註冊樣本外檢驗
+- 相關：E-056、R-017、R-019、R-020
+- 來源：使用者 2026-10-28
+
+### E-058
+- 日期：2026-10-28
+- 內容：`card 0.1.1+E058` 單防／協防拉回（預註冊）：`onBall`（最近防守者時對手三分命中率差，`leaguedashptdefend` 3 Pointers）與 `help`（6 呎內）現在用 k=200 往 0 拉回（`scripts/.seventh-base-2025-26-25.js:24`），雜訊太大。例：Luka 128 次被防三分、對手低 4.8 pp（約 1.1 個抽樣標準差；更正：正式卡是全季 418 次、約 2 個標準差，見 L-029）→ onBall 83、全聯盟第 9；他的 pooledD 是 478 人第 246。
+- 設定：方法 (a) 現行 k=200 往 0；(b) 往 0、k 用擬合季最大概似估計；(c) 往本人前兩季（衰減 λ 擬合或固定 0.5，二選一寫明）、k 與 kh 擬合；(d) 先驗中心 = 本人前一季以前的 pooledD 換算值、k 擬合（會汙染 RAPM ρ，只看 2K27 ρ）。擬合季 2023-24、2024-25：每隊第 41 場前預測之後的對手命中率（按被防出手數加權的 log-likelihood）；測試季 2025-26 同切法。選擇規則：擬合季分數最好者勝，與更簡單的方法差距 < 0.5% 相對 log-lik 時選簡單的（a<b<c<d）。只用一次測試季，不得看測試季再換方法（L-026）。卡片用 2025-26 全季（正式卡的窗，`scripts/build_season_league.js:100-106`，輸入 `data/benchmark-source/defense-long.json`／`defense-rim.json`）＋勝出方法重算 onBall／help，基準卡 = card 0.1.1。（2026-10-28 更正：原寫「前 25 場」是 lead 把回測卡 `.seventh-base-2025-26-25.js` 誤當正式卡，見 L-029；回測設計不變。）另附參考表：Luka 與 pooledD 前 15 名的 FREQ（被防三分出手佔對手三分出手比）對同位置隊友，只作參考，不進驗收。
+- 驗收（事先訂定）：(1) 勝出方法在測試季的加權 log-lik 優於 (a)，附 bootstrap 90% 區間；(2) OVR 對 2K27 Spearman 不低於基準 0.5092 − 0.005；高於 0.5092 才算變準（R-019）；(3) evaluate.mjs 其他門檻不比基準差；(4) 直覺抽查：Luka onBall 池內（MIN≥500）名次 > 30；(5) `npm test` 過。
+- 結果（2026-10-28，`reports/card-0.1.1+E058-defense-shrink/`，lead 已核對 evaluation.json、fit_results.json）：擬合季 log-lik 合計 (a) −1.31526、(b) −1.31462（long k≈2081／short k≈98）、(c) −1.31415（λ=0.5 固定；long k≈2195 kh≈1618、short k≈147 kh≈155）；(d) 不可用（rapm.csv 沒有逐季窗）。依選擇規則差距 < 0.5% → 主勝出 (a)＝現行，驗收 (1)(4) 不過。備選 (c) 測試季勝過 (a) +0.00128 [0.00098, 0.00160]，主要來自 rim；2K27 ρ 0.5007（不過 (2)），RAPM ρ 0.8697（樣本內），19/19 閘，Luka onBall 9→39。關鍵發現：三分區測試季所有方法都不贏「人人聯盟平均」（null），(c) 只是輸得最少 → 對手三分命中差幾乎沒有可預測的個人成分。偏離：2023-24 只有前一季歷史（沒抓 2021-22）；FREQ 用 NBA 定義（被防出手中 3PA 比例），無隊內對手 3PA 總數。
+- 狀態：不採用（2026-10-28，主勝出＝現行、備選 (c) 2K27 ρ 未過）；選擇規則的 0.5% 門檻設計有誤，見 L-030
+- 相關：E-055、R-019
+- 來源：使用者 2026-10-28
+
+### E-059
+- 日期：2026-10-28
+- 內容：`card 0.1.1+E059` onBall 改成看可延續的行為（預註冊）：E-058 顯示對手三分命中差在測試季沒有任何方法贏過「人人聯盟平均」，現行 onBall 基本是雜訊。改用 defense-tenth step4-t2 的建議：三分干擾／36（換隊相鄰季 r 0.72）、對位負擔（PARTIAL_POSS 加權對手 USG，r 0.65），加上使用者提的「被針對程度」（對手透過對位選擇打他的程度）。help 不動。
+- 設定：資料用 `reports/defense-tenth/step4-t2/raw/<season>/`（hustle、matchups，四季全季，已有 sha256）。三個分量：(i) C3＝CONTESTED_SHOTS_3PT/36，往同位置組（G／F／C，取主位置）平均拉回、k=500 分鐘；(ii) B＝對位負擔，往全聯盟平均拉回、k=1000 PARTIAL_POSS；(iii) T＝被針對＝對位 FGA／100 PARTIAL_POSS 減同位置組平均，k=1000 拉回，越高越差。T 先過穩定性門檻才納入：只用擬合季（2022-23→2023-24、2023-24→2024-25 相鄰季，兩季各 ≥500 分鐘）r ≥ 0.5，不過就丟掉、不再找替代。合成：onBall_z＝z(C3, 同位置組內)＋z(B)－z(T)（T 不過時只用前兩項），等權、不擬合權重；再用正式卡同一個百分位池與 attr() 對應到 40–99。卡片窗＝2025-26 全季（`scripts/build_season_league.js`），基準卡＝card 0.1.1，OVR 依 v61 流程重擬。只改卡片，模擬端 onBall 語意另列 TODO。
+- 驗收（事先訂定）：(0) 新 onBall 在擬合季的相鄰季 r ≥ 0.5（同時列舊 onBall 的 r 對照），不過就停，不建卡；(1) OVR 對 2K27 Spearman ≥ 0.5092 − 0.005；高於 0.5092 才算變準（R-019）；(2) evaluate.mjs 其他門檻不比基準差（基準 19/19）；(3) 直覺抽查：Luka onBall 池內（MIN≥500）名次 > 30；(4) `npm test` 過。另列參考（不進驗收）：onBall 新舊前 15、pooledD 前 15 的新名次、OVR 前 20 差異、RAPM 樣本內 ρ。只看一次 2025-26，不得看結果再改分量、k 或權重（L-026）。
+- 結果（2026-10-28，`reports/card-0.1.1+E059-onball-contest/`，lead 已核對 evaluation.json、stability.json，並自己重做 2K27 ρ 配對 bootstrap）：(0) 新 onBall 相鄰季 r 0.770／0.746（舊 onBall 0.067／0.105）；T 的 r 0.822／0.790，納入。(1) 2K27 ρ 0.5124（基準 0.5092，+0.0032；lead 配對 bootstrap 2000 次 90% 區間 [−0.0036, +0.0106]，P(差≤0)=0.22，在雜訊內）。(2) 19/19（bigPass 14/16，基準 15/16）。(3) Luka onBall 9→269。(4) npm test 57 過。不換 onBall 的重跑與 v61 byte-identical。樣本內 RAPM ρ 0.8657（基準 0.8685）。抽查問題：Wembanyama onBall 14→373（分在 F 組；T 的 z +3.26。原先 lead 說是「協防出手被算進對位」，查欄位後更正：matchups 有獨立的 HELP_FGA，MATCHUP_FGA 不含協防；真正原因是他被列 F 卻守中鋒，T 拿 F 組平均 20.3 比，而他守的中鋒本來就每回合出手多，C 組平均 26.5，他 27.2），Embiid 186→339、Gobert 215→312；外線防守者 Caruso 254→20、Herbert Jones 113→5、Ausar Thompson 214→6、Dyson Daniels 第 2。偏離 10 點見 report.md（位置取 PLAYER_POSITION 首字母、7 人缺分量給 70 等）。
+- 狀態：預註冊驗收全過（2026-10-28）；+0.0032 是否算 R-019 的「變準」與 Wembanyama 的 T 問題，待使用者裁定
+- 相關：E-058、R-019、L-029、L-030
+- 來源：使用者 2026-10-28 GO
+
+### E-060
+- 日期：2026-10-28
+- 內容：`card 0.1.1+E060` 修正 E-059 的「被針對」T（預註冊）。E-059 的 T＝對位 FGA／100 回合減同位置組平均，位置組錯置時會誤判：Wembanyama 被列 F 卻守中鋒，onBall 14→373。改成和位置無關的定義：T＝實際對位 FGA 減「這些對手平常的出手率」預期值，也就是對手在他面前是不是比平常更愛出手。
+- 設定：沿用 E-059 的資料、C3、B、合成方式（z(C3)＋z(B)－z(T)）、k、百分位池與 attr()，只換 T。對每位防守者 d：預期 FGA＝Σ_o PARTIAL_POSS(d,o)×r_o；r_o＝進攻者 o 當季所有對位的 ΣMATCHUP_FGA／ΣPARTIAL_POSS，計算時排除 d 自己的那幾列（leave-one-out）。T_raw＝100×(實際 FGA－預期 FGA)／ΣPARTIAL_POSS(d)，往 0 拉回，k=1000 回合；z 的母體＝當季 MIN≥500。T 照樣先過擬合季相鄰季 r ≥ 0.5 才納入，不過就只用 z(C3)＋z(B)。lead 預註冊前已看過 E-059 的 Wembanyama 數字，所以下面 (5) 屬於看過問題才設的抽查，只當必要條件，不當變準的證據。
+- 驗收（事先訂定）：(0) 新 onBall 擬合季相鄰季 r ≥ 0.5；(1) 2K27 ρ ≥ 0.5092 − 0.005；「變準」要對基準 card 0.1.1 做配對 bootstrap（2000 次、以球員重抽），90% 區間下界 > 0 才算（L-031）；(2) evaluate.mjs 其他門檻不比基準差（19/19）；(3) Luka onBall 池內（MIN≥500）名次 > 30；(4) `npm test` 過；(5) Wembanyama、Gobert、Embiid 的 onBall 池內名次都 ≤ 200。另列參考：與 E-059 並排的 onBall 前 15、pooledD 前 15、OVR 前 20 差異。只看一次 2025-26，不得看結果再改（L-026）。
+- 結果（`reports/card-0.1.1+E060-onball-targeting/`，lead 已核對 evaluation.json、bootstrap.json）：(0) 過，新 onBall 相鄰季 r 0.808／0.785，T r 0.905／0.884；(1) 過，2K27 ρ 0.5181，差 +0.0089，bootstrap 90% 區間 [+0.0003, +0.0181]，P(差≤0)=0.045，按 L-031 算「變準」但很勉強；(2) 過，19/19；(3) 過，Luka onBall 9→276；(4) 過；(5) **不過**：Wembanyama 344、Gobert 356、Embiid 368（zT 各 +2.54、+2.12、+1.33），Holmgren 63→332、Brook Lopez 141→371。OVR：Luka 3→8、Kawhi 10→4、Wembanyama 維持 5。v61 重現逐位元相同。
+- 診斷（lead 事後看，不算證據）：長人的超額出手主要來自守其他長人：Wembanyama 對 Draymond Green 106 回合 33 次出手（平常 13/100）、Nurkić 103 回合 28 次（平常 15/100）、Adebayo 60 回合 25 次。長人在籃下對位，對手的補籃與禁區出手都記在他頭上；對手的「平常出手率」大多是被外線防守者守時量到的，所以長人永遠顯得「被針對」。Caruso 則是 −3.5/100。T 這個概念對外線有用，對內線是結構偏差，不是能力。
+- 狀態：不採用（2026-10-28，預註冊驗收 (5) 不過）→ 採用（2026-10-28，使用者裁定 (5) 與 onBall 定義矛盾，見 R-022）
+- 相關：E-059、L-031、R-019
+- 來源：使用者 2026-10-28「先修長人」
+
+### E-061
+- 日期：2026-10-28
+- 內容：`card 0.1.1+E061` 被針對的 T 只看三分出手（預註冊）。E-060 的 T 算全部出手，長人守長人時對手籃下補籃、禁區出手多，造成結構偏差（Wembanyama 344、Gobert 356）。改成只問「對手在他面前是不是比平常更愛投三分」，衡量外線被針對的程度，籃下出手不計入。
+- 設定：除了 T 以外，全部沿用 E-060（資料、C3、B、合成 z(C3)＋z(B)－z(T)、k、百分位池、attr()、leave-one-out）。T3：預期 3PA＝Σ_o PARTIAL_POSS(d,o)×r3_o；r3_o＝進攻者 o 當季所有對位的 ΣMATCHUP_FG3A／ΣPARTIAL_POSS，排除 d 自己的那幾列。T3_raw＝100×(實際 MATCHUP_FG3A－預期)／ΣPARTIAL_POSS(d)，往 0 拉回，k=1000 回合；z 的母體＝當季 MIN≥500。T3 先過擬合季相鄰季 r ≥ 0.5 才納入，不過就只用 z(C3)＋z(B)。lead 預註冊前看過 E-060 長人的全出手分解，沒看過任何人的三分版 T。這是同一問題的第三次嘗試（E-059、E-060、E-061），所以 (1) 的「變準」就算達標，也只記錄、不當 MINOR 的依據，要等另一個樣本外檢驗。
+- 驗收（事先訂定）：(0) 新 onBall 擬合季相鄰季 r ≥ 0.5；(1) 2K27 ρ ≥ 0.5092 − 0.005；「變準」以基準 card 0.1.1 做配對 bootstrap（2000 次、以球員重抽、seed 1），90% 區間下界 > 0；同時列出對 E-060 的配對差，只參考；(2) evaluate.mjs 19/19；(3) Luka onBall 池內（MIN≥500）名次 > 30；(4) `npm test` 過；(5) Wembanyama、Gobert、Embiid 的 onBall 池內名次都 ≤ 200（必要條件，看過問題才設）。另列參考：Holmgren、Brook Lopez、Jarrett Allen、Bam Adebayo 名次；和 E-059、E-060 並排的 onBall 前 15、OVR 前 20 差異。只看一次 2025-26，不得看結果再改（L-026）。
+- 結果（`reports/card-0.1.1+E061-onball-3pt-targeting/`，lead 已核對 evaluation.json、bootstrap.json）：(0) 過，新 onBall 相鄰季 r 0.799／0.810，T3 r 0.836／0.806（納入）；(1) ρ 門檻過，2K27 ρ 0.5143（+0.0050），但「變準」不過：90% 區間 [−0.0022, +0.0123]，P=0.128；對 E-060 差 −0.0039 [−0.0075, −0.0004]，比 E-060 差；(2) 19/19（bigPass 14/16，基準 15/16）；(3) 過，Luka 9→316；(4) 過；(5) **不過**：Wembanyama 369、Gobert 326、Embiid 361（Wembanyama zT3 +3.24）。Holmgren 299、Brook Lopez 366、Jarrett Allen 357、Adebayo 263。OVR 前 20 名單和 E-060 相同；Luka OVR 回到 3、Wembanyama 5→8。v61 重現逐位元相同。
+- 診斷（事後，不算證據）：長人守禁區，對手就改投外線，三分版 T 一樣把「站在籃下」當成「被針對」。E-059～E-061 三版 T 都讓長人掉到 300 名後，問題不在 T 的細節，而是外線單防指標本來就不適用於守禁區的人。
+- 狀態：不採用（2026-10-28，預註冊驗收 (5) 與「變準」不過）
+- 相關：E-059、E-060、L-026、L-031、R-019
+- 來源：使用者 2026-10-28「預註冊 E-061」
+
+### E-062
+- 日期：2026-10-28
+- 內容：`inseason 0.1.0+E062` 投籃類視窗觀測值的虛擬出手改以球員自己為中心（預註冊）。現行 `shooting()` 先加 100 次聯盟平均虛擬出手，C4 再往 x0 收縮，小樣本時好射手必降（Maxey FT 24/28 → y 71.5、x0 90.9）。
+- 設定：`reports/ovr-inseason-2026-27/v5/pathA/preregistration-e062-shooting-center.md`（凍結）。候選 C4s（中心＝forward(x0)、m0=100）、C4r（m0=0）；其他沿用 E-033，δ² 與 c 照凍結程序重估。主判定 Y5、Y6，N=3/5/10/20；(0) 重現 E-033、(1) V1∧V2、(2) 每格 MAE 差 ≤ +0.05、(3) 合併 MAE 差 bootstrap 90% 上界 < 0 才算變準。
+- 結果（`reports/ovr-inseason-2026-27/v5/pathA/backtest-e062/`，lead 已核對 verdict.json 與 results.csv）：(0) 過，開關關掉時 results.csv 與 E-033 逐位元相同；(1) 兩候選都過；(2) 兩候選都不過，Y6 全面變差：C4／C4s／C4r MAE Y6 N10 5.589／5.886／5.885、N20 5.147／5.452／5.481（Y5 小幅改善，N20 C4r 5.578）；(3) 合併差 C4s +0.0845 [+0.0104, +0.1633]（顯著變差）、C4r +0.0483 [−0.0287, +0.1294]。重估 c：C4s Y3–Y5 0.7、Y6 0.35；C4r 1.4（D 組 2）。三分位：Y6 高組 C4 本來就高估（+3.22／+2.69），C4s 推到 +3.75／+3.46 → 賽中「好射手偏低」有一大部分是真實的回歸平均，雙重收縮在預測整季卡上是有益的。賽中參考重算（`live/2026-10-27-e062/`，未部署）：C4s 對現行 ΔOVR ≤−1 0 人、≥+1 7 人；Maxey 79.0→80.1、Jerome 80.0→81.3、Kessler 78.6→78.4。偏離預註冊（已揭露）：開關實際裝在 `v4/tools/inseason_common_v4.window_cards`；δ² 由先驗卡→答案卡算、不用視窗 y，所以三版 δ² 相同、只有 c 重估；bootstrap 以每起點重抽球員、8 格等權平均。注意本 ID 與下方「模擬改吃 E-060 onBall」撞號。
+- 狀態：不採用（2026-10-28，閘門 (2)(3) 不過；上線維持 C4）
+- 相關：E-033、R-009、L-026、L-031、L-032
+- 來源：使用者 2026-10-28「預註冊回測」
+
+### E-063
+- 日期：2026-10-28
+- 內容：（原登記為 E-062，與上方賽中投籃 E-062 撞號，2026-10-28 改號；報告目錄仍為 `reports/player-impact-e062-team/`）模擬改吃 E-060 的 onBall（預註冊）。卡片 v55～0.1.1 一直只改顯示用 OVR，模擬讀的 `data/season-league.json` 還是 v53 時代的 onBall（對手三分命中差）。這次只換 onBall，其他屬性與引擎不動，量球隊準度。
+- 設定：沿用 `reports/player-impact-v54-team/` 的整季球隊流程（v47 協定、v53 引擎、壓迫係數、spread scale 1、seed 20261012／13／14、四季 2022-23～2025-26）。在 loadInput 之後把每季名單球員的 onBall 換成該季的 E-060 onBall：attr(percentile(zC3+zB−zT, 該季卡片池))，分量用 `reports/card-0.1.1+E060-onball-targeting/components-<season>.csv`，卡片池定義同 build_card.py（GP≥30 且 MIN/GP≥20，用該季 base）。缺分量的人 onBall 不變（保留原值，不給 70）。基準＝`reports/player-impact-v53-team/runs`（不重跑；另抽一個 v53 run 重跑，需逐位元相同）。
+- 驗收（事先訂定）：(1) `npm test` 過；(2) 主指標＝四季合併 winsMAE 差（E062−v53）：每季每 seed 配對，以球隊在季內重抽做 bootstrap（2000 次、seed 1）。90% 區間上界 ≤ +0.25 勝 → 「不比基準差」，接進模擬（PATCH）；區間上界 < 0 → 「變準」，MINOR 候選（R-019）；上界 > +0.25 → 不接；(3) 每季聯盟三分%差 ≤ 0.5 個百分點、每場得分差 ≤ 1.0，否則不接；(4) 2025-26 單季與 netRMSE 另列參考。只跑一次，不得看結果再改（L-026）。
+- 接進模擬的做法（驗收過才做）：`scripts/build_season_league.js` 的 onBall 改讀 E-060 2025-26 onBall 的資料檔，重產 `data/season-league.json`，確認和舊檔只差 onBall 欄。
+- 結果（`reports/player-impact-e062-team/`，App 內 sonnet 子代理在 5090 執行；lead 核對 scores.json 與 13 個 run 檔）：(1) 過，57/0（未改 src）；(2) 不過，合併 winsMAE 差 +0.378 [−0.053, +0.831]，上界 > +0.25 → 不接；各季 +0.51／+0.69／−0.67／+0.98，netRMSE 四季都變差；(3) 不過，聯盟三分% 四季都高 0.62–0.86 pp（得分差 0.44–0.82 在門檻內）。新 onBall 讓整體外線防守變弱（全聯盟三分% 約 +0.7 pp）。v53 重跑 1 個 run 逐位元相同。偏離（已揭露）：2022-23～2024-25 無 base 檔，卡片池改用 defense-tenth step4-t2 的 advanced 檔 GP／MIN；`freshDefenseMeasurement.sourceOnBall` 未換；5090 環境 `basketball-e062-20261028` 換成本機 src。
+- 狀態：不接進模擬（2026-10-28，驗收 (2)(3) 不過）；卡片顯示仍用 E-060 onBall（R-022），模擬維持 v53 onBall
+- 相關：E-060、R-019、R-022
+- 來源：使用者 2026-10-28「接進模擬並發版」

@@ -6,7 +6,7 @@ NBA 球員數值模型＋自走棋原型。對使用者用繁體中文。
 1. `memory/handoff.md`：目前狀態、誰在做、下一步。
 2. `memory/lessons.md`：踩過的坑，每條都是硬規則。
 3. `memory/rulings.md`：使用者對球員評價、驗收方式、流程的裁定。
-4. 其他（`findings.md`、`experiments.md`）用 grep 查 ID 或關鍵字，不要整份讀。
+4. 其他（`findings.md`、`experiments.md`、`references.md`）用 grep 查 ID 或關鍵字，不要整份讀。
 
 寫入規則見 `memory/README.md`：ID 只追加不刪；改狀態只改狀態欄並註明日期；樣本內結果不算證據（R-007）；被抓到的錯一律寫成 lesson；收工整份覆寫 `handoff.md`。
 

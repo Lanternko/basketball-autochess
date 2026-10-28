@@ -14,6 +14,7 @@
 - 下一版：`card 0.1.1` = 0.1.0 + E-054 + E-055（E-056 不含）。依 R-019 是 PATCH（2K27 ρ 沒變準），G1–G3 已在 v61 報告通過、前 20 名只換 1 人，不必重跑 G4；卡片就是 `reports/ovr-v61-shrink-history-2025-26/ranking.csv`。等使用者說發版再寫 R 條目定版。
 - 正式卡片仍是 v58 H1-m0（R-012）。v60 切入拆欄（E-054）完成、19/19 過，未升正式卡，待使用者決定。
 - 2026-27 賽中名單頁已部署 GitHub Pages（https://lanternko.github.io/basketball-autochess/，gh-pages 分支 80b948e，只含 index.html）：C4 S* 起點、數據截至 2026-10-27、N=1–4。產物在 `reports/ovr-inseason-2026-27/live/`（未 commit）。2026-10-28 修正（L-032）：2025-26 先驗卡缺 midA／shortA 讓近框、中距離被凍結，`run_c4_live.py` setup 改用同季出手分區補上（582/582），k、w、c 都沒動。修後 ΔOVR：≤−1 有 47 人、≥+1 有 14 人（修前 30／4）；Kessler −5.76→−2.45、Maxey −2.34→−1.39、Jerome −2.06→−0.92。中距離 4 場多半未達最低樣本門檻，仍是 x0。其餘已知問題：creation 映射重建中位差 3.4／最大 24、pass 最大 5.9；OVR 不含得分量與正負值（設計限制，C4R 已停，E-034）；罰球觀測值偏低已查明（2026-10-28）：視窗卡 `shooting()`（tools/ovr_common.py:84）先加 100 次「聯盟平均」虛擬出手再查曲線，C4 又再往 x0 收縮一次，等於雙重收縮且第一次拉向聯盟平均。Maxey 24/28 FT → 71.5（不加虛擬出手是 87.0）；全名單按 x0 分三組，高組 y−x0：ft −12.8、long −11.1、short −11.6，低組反而 +4～+10 → 好射手小樣本必降、差射手必升，是 ΔOVR 偏負的主因之一。回測（Y1..D3）也用同一函式，所以 C4 預註冊成績已含此偏差；已預註冊回測 E-062（以 x0 為中心 C4s／拿掉虛擬出手 C4r）：兩者都不採用，Y6 MAE 變差 0.3、C4s 合併差顯著為正；高組偏低大半是真實回歸平均。上線維持 C4，頁面不動。
+- E-064（R-025／R-026：OVR 改每場影響力含上場時間）：預註冊已凍結 `reports/card-0.1.2+E064-pergame/preregistration.md`（sha256 c86a2811…），2026-10-28 派給 App 內 sonnet 子代理（role-card）執行卡片端與賽中端；結果未出，lead 收到後要自己核對 verdict.json。
 - 其餘基準不變：防守 `nba-defense-v3`（R-010）；賽中 OVR 上線 C4（E-033），v5 之後沒有 v6（R-009）。
 
 ## 誰在做
@@ -40,3 +41,4 @@
 - R-024：E-057 threeValue 上線為 3PT 顯示欄（正式卡＋賽中），原 long 顯示為「3P準」，OVR 不變。賽中 inseason 0.1.1。
 - 每日自動更新：`scripts/daily_inseason_update.py`（測試 `python -I test/daily_inseason_update.py`），排程 "Basketball Inseason Daily" 每天 14:30（主）＋16:30（補跑）pythonw；最後一場美東約 0:45–1:00 結束＝台北 EDT 12:45／EST 13:45，registry `basketball-inseason-daily`。狀態 `reports/ovr-inseason-2026-27/live/publish_state.json`，log `live/logs/daily.log`。首次發布 inseason 0.1.1a（gh-pages 1e53a79）已在線上確認。
 - 注意：排程跑的是工作樹裡尚未 commit 的腳本（fetch_inseason_2026_27.js、build_inseason_viewer.py、daily_inseason_update.py 等），R-023 的「同 git HEAD 可重現」要等使用者同意 commit 後才成立。
+- 2026-10-28 23:30：賽中先驗換成 card 0.1.2（inseason 0.1.2a，gh-pages 302b4a6），3P準 欄拿掉、新增 FD 製造犯規欄。drive 改 PBP 版、算不出本季值 → 凍結；foulDraw 用 FTA/FGA 百分位照 C4 更新（SGA ΔOVR −7.7 主要來自 foulDraw 96→82，未事後凍結）。f=0 檢查最大差 0.059；但 lastOVR 與 0.1.2 卡 ovr 有 2 人差 0.6–0.7（D.White、Caruso，pressure 高的防守者，原因未查），其餘 ≤0.4。見 L-034。

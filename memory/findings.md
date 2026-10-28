@@ -247,3 +247,11 @@
 - 狀態：已證實
 - 相關：E-050、E-051、E-052、E-053、E-033
 - 來源：reports/ovr-inseason-2026-27/{backtest,v2,v3,v4}/report.md
+
+### F-029
+- 日期：2026-10-28
+- 說法：現行卡片 OVR 的模擬目標符合 R-025 的「四個平均隊友」，但有三處偏離定義：(1) 目標換成每 36 分鐘，上場時間被除掉，只剩 stamina 當迴歸變數；(2) 基準是同位置平均球員，結果再做位置中心化，量的是「比同位置平均多多少」；(3) 最後的 OVR 是 16 項屬性的 ridge 迴歸預測值＋RAPM 對齊，再用 MIN≥500 球員的 PR1/50/99 → 40/70/99 映射，不是直接用模擬勝率或分差。賽中 OVR 只更新屬性、套上季迴歸權重，所以得分量只能經由 creation 表現（attr() 上限 99）。
+- 證據：模擬板 `reports/ovr-v53-2025-26/worker.mjs`（`workloadTeam`：候選球員取代他位置的平均 profile、打他上季的 supportedMinutes，其他四個位置都是平均 profile；對 30 隊、雙座位，和「同分鐘換成平均 profile」的對照組比分差）；平均 profile＝同位置球員依上場分鐘加權平均（`reports/ovr-v47-2025-26/input.mjs`）；`reports/ovr-v55-finisher-fix-2025-26/card-target.py` 註解「位置中心化後的每場分差貢獻 = per36Centered/36*minutes」；`reports/card-0.1.1+E060-onball-targeting/calibrate-wing.py` load() `y = centered_contribution / m * 36`、L421 的 PR 錨點映射。文件上的正式定義 `docs/OVR與球隊PR基準.md`（四名全 70 平均隊友、勝率兩段映射）自 2026-10-12 起標為失效待重建。
+- 狀態：已證
+- 相關：R-025、E-033
+- 來源：使用者 2026-10-28「先查定義」

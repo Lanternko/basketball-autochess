@@ -1,4 +1,4 @@
-"""賽中 OVR 名單頁：以正式卡名單頁為版型，換成 inseason 0.1.0（C4）的 OVR、現任球隊與 2026-27 場均真實數據。
+"""賽中 OVR 名單頁：以正式卡名單頁為版型，換成 inseason 0.1.2（C4，先驗 card 0.1.2）的 OVR、現任球隊與 2026-27 場均真實數據。
 
 輸入：reports/ovr-inseason-2026-27/live/<日期>/{ranking.csv,meta.json}、data/season-source-2026-27/player-games.json。
 版型：reports/ovr-v58-card-2025-26/roster-viewer.html（只讀）。
@@ -27,8 +27,8 @@ def main():
     meta = json.loads((live / 'meta.json').read_text(encoding='utf-8'))
     rows = list(csv.DictReader((live / 'ranking.csv').open(encoding='utf-8')))
     nopr = len(list(csv.DictReader((live / 'no-prior.csv').open(encoding='utf-8'))))
-    cols = ['rank', 'ovr', 'name', 'pos', 'team', 'ht', 'min', 'gp', 'imp', 'dbon', 'threeValue', 'long', 'mid', 'short', 'ft',
-            'drive', 'pass', 'tovSkill', 'creation', 'rebound', 'physique', 'stamina', 'onBall', 'help', 'pressure',
+    cols = ['rank', 'ovr', 'name', 'pos', 'team', 'ht', 'min', 'gp', 'imp', 'dbon', 'threeValue', 'mid', 'short', 'ft',
+            'drive', 'foulDraw', 'pass', 'tovSkill', 'creation', 'rebound', 'physique', 'stamina', 'onBall', 'help', 'pressure',
             'last', 'dovr', 'fg3Pct26', 'fg3a26']
     base = BASE.read_text(encoding='utf-8')
     old = json.loads(re.search(r'const DATA=(\{.*?\});\nconst COLS', base, re.S).group(1))
@@ -49,8 +49,8 @@ def main():
     new_data = json.dumps({'cols': cols, 'rows': data_rows}, ensure_ascii=False, separators=(',', ':'))
     s = re.sub(r'const DATA=\{.*?\};\nconst COLS', lambda m: f'const DATA={new_data};\nconst COLS', s, count=1, flags=re.S)
     for a, b in [
-        ("['long', '3PT', '三分']", "['threeValue', '3PT', '三分（量×準）'], ['long', '3P準', '三分準度（舊 3PT）']"),
-        ("const ATTR = GROUPS.flatMap(g => g[1]);", "const ATTR = GROUPS.flatMap(g => g[1]).filter(a => a[0] !== 'long');"),
+        ("['long', '3PT', '三分']", "['threeValue', '3PT', '三分（量×準）']"),
+        ("['drive', 'DRV', '切入']", "['drive', 'DRV', '切入'], ['foulDraw', 'FD', '製造犯規']"),
         ('<th class="g" colspan="2">出場</th>', '<th class="g" colspan="4">出場</th>'),
         ('colspan="22"', 'colspan="26"'),
         ("th('min', 'MIN', '分鐘', 'gl') + th('gp', 'GP', '場數')",

@@ -252,7 +252,7 @@ def top20(rapm_by_name):
         elif rr > RAPM_FAR: flags.append('RAPM 差距大')
         if r['pos'] in BIGS: flags.append('長人')
         out.append({'rank': int(r['rank']), 'name': r['name'], 'pos': r['pos'], 'ovr': float(r['ovr']), 'minutes': int(r['MIN']),
-                    'threeValue': round(tv[r['name']], 1) if r['name'] in tv else None, 'threeAcc': float(r['long']),
+                    'threeValue': round(tv[r['name']], 1) if r['name'] in tv else None,
                     'simRank': sim.get(r['name'], '—'), 'rapmRank': rr if rr is not None else '—', 'flags': '、'.join(flags) or '—'})
     return out, len(pool)
 
@@ -296,9 +296,9 @@ def md(snap):
     L += ['', '## 卡片版本趨勢', '', '| 版本 | 序 | 採用 | 樣本內 ρ 淨值 | 樣本外 ρ 淨值 | 樣本外 ρ 防守 | 對 2K27 ρ |', '|---|---:|---|---:|---:|---:|---:|']
     g = lambda v: '—' if v is None else f'{v:.3f}'
     L += [f"| {r['version']} | {r['order']} | {'是' if r['adopted'] else '否'} | {g(r['rhoNetIn'])} | {g(r['rhoNetOut'])} | {g(r['rhoDefOut'])} | {g(r['rho2k'])} |" for r in snap['trend']]
-    L += ['', f"## 卡片 OVR 前 20（RAPM 名次在 {snap['rapmPool']} 人中）", '', '| # | 球員 | 位置 | OVR | 3PT | 3P準 | 分鐘 | 模擬名次 | RAPM 名次 | 旗標 |',
-          '|---:|---|---|---:|---:|---:|---:|---:|---:|---|']
-    L += [f"| {r['rank']} | {r['name']} | {r['pos']} | {r['ovr']:.1f} | {'' if r['threeValue'] is None else format(r['threeValue'], '.1f')} | {r['threeAcc']:.1f} | {r['minutes']} | {r['simRank']} | {r['rapmRank']} | {r['flags']} |" for r in snap['top20']]
+    L += ['', f"## 卡片 OVR 前 20（RAPM 名次在 {snap['rapmPool']} 人中）", '', '| # | 球員 | 位置 | OVR | 3PT | 分鐘 | 模擬名次 | RAPM 名次 | 旗標 |',
+          '|---:|---|---|---:|---:|---:|---:|---:|---|']
+    L += [f"| {r['rank']} | {r['name']} | {r['pos']} | {r['ovr']:.1f} | {'' if r['threeValue'] is None else format(r['threeValue'], '.1f')} | {r['minutes']} | {r['simRank']} | {r['rapmRank']} | {r['flags']} |" for r in snap['top20']]
     mark = lambda r, k: f"{r[k]}{'' if r[k + 'Pass'] else ' ✗'}"
     L += ['', '## v55 卡片修正各方向（7 人驗收，v53 名次 → 實驗名次，✗ = 未過；E2 曾為正式卡片，10-21 ~ 10-28 正式卡片為 v58 H1-m0，10-28 起為 card 0.1.2）', '',
           '| 球員 | 條件 | 2K27 | RAPM | v53 | ' + ' | '.join(V55_CARDS) + ' |', '|---|---|---:|---:|---:|' + '---:|' * len(V55_CARDS)]

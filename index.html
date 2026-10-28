@@ -208,7 +208,7 @@ const COLS = DATA.cols;
 const P = DATA.rows.map(r => Object.fromEntries(COLS.map((c, i) => [c, r[i]])));
 const GROUPS = [
   ['投籃', [['threeValue', '3PT', '三分'], ['mid', 'MID', '中距離'], ['short', 'INS', '近框'], ['ft', 'FT', '罰球']]],
-  ['進攻', [['drive', 'DRV', '切入'], ['foulDraw', 'FD', '製造犯規'], ['pass', 'PASS', '傳球'], ['tovSkill', 'HDL', '護球'], ['creation', 'CRT', '自主創造']]],
+  ['進攻', [['drive', 'DRV', '切入'], ['foulDraw', 'FD', '製造犯規'], ['pass', 'PASS', '傳球'], ['tovSkill', 'TO', '少失誤'], ['creation', 'CRT', '自主創造']]],
   ['身體', [['rebound', 'REB', '籃板'], ['physique', 'PHYS', '身體'], ['stamina', 'STA', '體力']]],
   ['防守', [['onBall', 'PER D', '單防'], ['help', 'HELP', '協防'], ['pressure', 'PRES', '壓命中率']]],
 ];

@@ -1,4 +1,4 @@
-"""名單頁加料：卡片顯示 2025-26 例行賽真實場均、球隊配色、球員頭像；表格球隊欄加色標。
+"""名單頁加料：卡片顯示 2025-26 例行賽真實場均、球隊配色、隊徽＋球員頭像；表格球隊欄加色標。
 
 資料：data/season-source/player-games.json（stats.nba.com leaguegamelog，每人每場一列）。
 依 PLAYER_NAME 跨隊合計；交易球員列出所有球隊。重跑會先移除舊的注入再寫入。
@@ -22,25 +22,32 @@ CSS = """
 .real .st span{display:block;font-size:.68rem;color:var(--muted)}
 .real-h{color:var(--muted);font-size:.72rem;letter-spacing:.08em}
 /* team colors + headshot */
-.card .tag{background:var(--tc,var(--red));box-shadow:inset 0 -7px 0 var(--tc2,transparent);position:relative;min-width:230px}
-.tag .pos{color:var(--tc,var(--red))}
-.tag .rk{position:relative;z-index:1;text-shadow:0 2px 6px rgba(0,0,0,.55)}
+.card .tag{background:var(--card,var(--red));box-shadow:inset 0 -7px 0 var(--tc,transparent);position:relative;min-width:230px}
+.tag .pos{background:var(--tc,#fff);color:#fff;position:relative;z-index:1}
+.tag .rk{position:relative;z-index:1;color:var(--ink,#fff);text-shadow:0 0 8px var(--card,#000)}
+.tag .logo{position:absolute;right:30px;top:50%;transform:translateY(-50%);height:150px;width:150px;object-fit:contain;opacity:.9;pointer-events:none}
 .tag .shot{position:absolute;right:26px;bottom:7px;height:132px;width:auto;pointer-events:none}
 .tdot{display:inline-block;width:9px;height:9px;border-radius:2px;margin-right:6px;vertical-align:1px;background:var(--tc);box-shadow:inset -4px 0 0 var(--tc2)}
 """
 
-# 主色、副色（官方配色）。主色太暗時副色帶在卡片底部補辨識度。
+# [主色, 副色, 卡片底色, 背號字色]。主色、副色是官方配色（表格色標、卡片底帶）；
+# 卡片底色刻意避開主色，讓同色系的球衣和隊徽在卡片上還看得出來（例：OKC 藍球衣放橘底）。
 TEAM_COLORS = {
-    'ATL': ['#E03A3E', '#C1D32F'], 'BOS': ['#007A33', '#BA9653'], 'BKN': ['#000000', '#FFFFFF'],
-    'CHA': ['#1D1160', '#00788C'], 'CHI': ['#CE1141', '#000000'], 'CLE': ['#860038', '#FDBB30'],
-    'DAL': ['#00538C', '#B8C4CA'], 'DEN': ['#0E2240', '#FEC524'], 'DET': ['#C8102E', '#1D42BA'],
-    'GSW': ['#1D428A', '#FFC72C'], 'HOU': ['#CE1141', '#C4CED4'], 'IND': ['#002D62', '#FDBB30'],
-    'LAC': ['#C8102E', '#1D428A'], 'LAL': ['#552583', '#FDB927'], 'MEM': ['#5D76A9', '#12173F'],
-    'MIA': ['#98002E', '#F9A01B'], 'MIL': ['#00471B', '#EEE1C6'], 'MIN': ['#0C2340', '#78BE20'],
-    'NOP': ['#0C2340', '#C8102E'], 'NYK': ['#006BB6', '#F58426'], 'OKC': ['#007AC1', '#EF3B24'],
-    'ORL': ['#0077C0', '#C4CED4'], 'PHI': ['#006BB6', '#ED174C'], 'PHX': ['#1D1160', '#E56020'],
-    'POR': ['#E03A3E', '#000000'], 'SAC': ['#5A2D81', '#63727A'], 'SAS': ['#000000', '#C4CED4'],
-    'TOR': ['#CE1141', '#000000'], 'UTA': ['#002B5C', '#F9A01B'], 'WAS': ['#002B5C', '#E31837'],
+    'ATL': ['#E03A3E', '#C1D32F', '#C1D32F', '#111'], 'BOS': ['#007A33', '#BA9653', '#BA9653', '#111'],
+    'BKN': ['#000000', '#FFFFFF', '#A9AEB4', '#111'], 'CHA': ['#1D1160', '#00788C', '#A1A1A4', '#111'],
+    'CHI': ['#CE1141', '#000000', '#E6E6E6', '#111'], 'CLE': ['#860038', '#FDBB30', '#FDBB30', '#111'],
+    'DAL': ['#00538C', '#B8C4CA', '#B8C4CA', '#111'], 'DEN': ['#0E2240', '#FEC524', '#FEC524', '#111'],
+    'DET': ['#C8102E', '#1D42BA', '#BEC0C2', '#111'], 'GSW': ['#1D428A', '#FFC72C', '#FFC72C', '#111'],
+    'HOU': ['#CE1141', '#C4CED4', '#C4CED4', '#111'], 'IND': ['#002D62', '#FDBB30', '#FDBB30', '#111'],
+    'LAC': ['#C8102E', '#1D428A', '#BEC0C2', '#111'], 'LAL': ['#552583', '#FDB927', '#7C4DBF', '#fff'],
+    'MEM': ['#5D76A9', '#12173F', '#F5B112', '#111'], 'MIA': ['#98002E', '#F9A01B', '#41B6E6', '#111'],
+    'MIL': ['#00471B', '#EEE1C6', '#EEE1C6', '#111'], 'MIN': ['#0C2340', '#78BE20', '#78BE20', '#111'],
+    'NOP': ['#0C2340', '#C8102E', '#B4975A', '#111'], 'NYK': ['#006BB6', '#F58426', '#BEC0C2', '#111'],
+    'OKC': ['#007AC1', '#EF3B24', '#EF3B24', '#fff'], 'ORL': ['#0077C0', '#C4CED4', '#C4CED4', '#111'],
+    'PHI': ['#006BB6', '#ED174C', '#ED174C', '#fff'], 'PHX': ['#1D1160', '#E56020', '#F9AD1B', '#111'],
+    'POR': ['#E03A3E', '#000000', '#BAC3C9', '#111'], 'SAC': ['#5A2D81', '#63727A', '#A2AAAD', '#111'],
+    'SAS': ['#000000', '#C4CED4', '#C4CED4', '#111'], 'TOR': ['#CE1141', '#000000', '#A1A1A4', '#111'],
+    'UTA': ['#002B5C', '#F9A01B', '#F9A01B', '#111'], 'WAS': ['#002B5C', '#E31837', '#C4CED4', '#111'],
 }
 
 JS = r"""
@@ -48,14 +55,15 @@ JS = r"""
 const teamOf = t => TEAM_COLORS[t.split('/').pop()];
 function teamVars(t) {
   const c = teamOf(t);
-  return c ? `--tc:${c[0]};--tc2:${c[1]}` : '';
+  return c ? `--tc:${c[0]};--tc2:${c[1]};--card:${c[2]};--ink:${c[3]}` : '';
 }
 function teamDot(t) {
   return teamOf(t) ? `<i class="tdot" style="${teamVars(t)}"></i>` : '';
 }
 function headshot(p) {
-  const r = REAL[p.name];
-  return r && r.id ? `<img class="shot" alt="" loading="lazy" src="https://cdn.nba.com/headshots/nba/latest/260x190/${r.id}.png" onerror="this.remove()">` : '';
+  const r = REAL[p.name], tid = TEAM_IDS[p.team.split('/').pop()];
+  const logo = tid ? `<img class="logo" alt="" src="https://cdn.nba.com/logos/nba/${tid}/global/L/logo.svg" onerror="this.remove()">` : '';
+  return logo + (r && r.id ? `<img class="shot" alt="" loading="lazy" src="https://cdn.nba.com/headshots/nba/latest/260x190/${r.id}.png" onerror="this.remove()">` : '');
 }
 function realBox(p) {
   const r = REAL[p.name];
@@ -104,6 +112,12 @@ def aggregate():
     return out
 
 
+def team_ids():
+    rs = json.loads(SRC.read_text(encoding='utf-8'))['data']['resultSets'][0]
+    h = {k: i for i, k in enumerate(rs['headers'])}
+    return {row[h['TEAM_ABBREVIATION']]: row[h['TEAM_ID']] for row in rs['rowSet']}
+
+
 def inject(path, real):
     s = path.read_text(encoding='utf-8')
     s = re.sub(re.escape(BEGIN) + r'.*?' + re.escape(END) + r'\n?', '', s, flags=re.S)
@@ -113,7 +127,7 @@ def inject(path, real):
     sub = {n: real[n] for n in roster if n in real}
     js_json = lambda o: json.dumps(o, ensure_ascii=False, separators=(',', ':'))
     block = (f'{BEGIN}\n<style>{CSS}</style>\n<script>const REAL={js_json(sub)};\n'
-             f'const TEAM_COLORS={js_json(TEAM_COLORS)};{JS}</script>\n{END}\n')
+             f'const TEAM_COLORS={js_json(TEAM_COLORS)};\nconst TEAM_IDS={js_json(team_ids())};{JS}</script>\n{END}\n')
     assert s.count('<script>const DATA=') == 1
     s = s.replace('<script>const DATA=', block + '<script>const DATA=', 1)
     hook = '<div class="strong">${tops.map(t => chip(t[0], t[1])).join(\'\')}${chip(\'弱項 \' + low[0], low[1], true)}</div>'

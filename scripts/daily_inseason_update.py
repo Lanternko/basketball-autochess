@@ -1,4 +1,4 @@
-"""賽中名單每日自動更新並發布到 GitHub Pages（gh-pages 分支的 index.html）。
+"""賽中名單每日自動更新並發布到 GitHub Pages（gh-pages 分支的 index.html＝2026-27 賽中頁、2025-26.html＝2025-26 正式卡頁）。
 
 流程：抓比賽 → 抓 PBP/bio → run_c4_live → 依資料 sha256 決定是否發布 → 字母版號 → build viewer
       → 在可丟棄的 git worktree 中把 roster-viewer.html 提交成 gh-pages 的 index.html 並 push。
@@ -41,6 +41,7 @@ PBP_DIR = ROOT / f'data/defense-seventh/{SEASON}/pbp'
 BUILD_ROOT = ROOT / 'data/_inseason_build'
 RUN_C4 = LIVE / 'run_c4_live.py'
 VIEWER = ROOT / 'scripts/build_inseason_viewer.py'
+CARD_VIEWER = ROOT / 'scripts/build_card_viewer.py'
 CREATE_NO_WINDOW = getattr(subprocess, 'CREATE_NO_WINDOW', 0)
 
 TIMEOUTS = {'games': 900, 'inseason': 3600, 'c4': 3600, 'viewer': 600, 'git': 180}
@@ -239,6 +240,15 @@ def step_viewer(out_dir: Path) -> Path:
     return html
 
 
+def step_card_viewer(out_dir: Path) -> Path:
+    """建 2025-26 正式卡頁（含賽季切換列），輸出到工作夾，與賽中頁一起發布成 2025-26.html。"""
+    html = out_dir / 'card-roster-viewer.html'
+    checked([py_exe(), '-I', str(CARD_VIEWER), str(html)], ROOT, TIMEOUTS['viewer'])
+    if not html.exists() or html.stat().st_size < 10_000:
+        raise RuntimeError(f'card-roster-viewer.html 不存在或太小：{html}')
+    return html
+
+
 # ----------------------------------------------------------------- 發布（仿 arammeta static_publish）
 class GitRunner:
     def __init__(self, cwd: Path, timeout: int = TIMEOUTS['git']):
@@ -254,14 +264,19 @@ class GitRunner:
         return r
 
 
-def publish_html(repo: Path, html: Path, message: str, *, remote: str = 'origin', branch: str = 'gh-pages',
+def publish_html(repo: Path, html, message: str, *, remote: str = 'origin', branch: str = 'gh-pages',
                  target_name: str = 'index.html', before_push=None) -> str | None:
-    """把 html 提交成 <branch>:<target_name> 並 push。回傳新 commit sha；內容沒變回傳 None。
+    """把一或多個檔案提交成 <branch> 上的檔案並 push。回傳新 commit sha；內容都沒變回傳 None。
 
+    html：Path（發布成 target_name，向下相容）或 {目標檔名: 來源 Path}。
     在 temp 目錄開 detached worktree（開發中的 checkout 有未 commit 改動也不受影響），只 stage 白名單
-    檔案 target_name；push 非快轉時 fetch＋merge（-X ours：index.html 以我們為準）後再推一次；最後一律移除工作樹。
+    檔名（files 的鍵）；push 非快轉時 fetch＋merge（-X ours：以我們為準）後再推一次；最後一律移除工作樹。
     before_push：測試用掛鉤，在第一次 push 前呼叫（模擬競態）。
     """
+    files = dict(html) if isinstance(html, dict) else {target_name: html}
+    for name in files:
+        if '/' in name or chr(92) in name or name.startswith('.'):
+            raise ValueError(f'不合法的目標檔名：{name}')
     main_git = GitRunner(repo)
     main_git('fetch', remote, branch)
     tmp = Path(tempfile.mkdtemp(prefix='inseason-pages-'))
@@ -269,10 +284,11 @@ def publish_html(repo: Path, html: Path, message: str, *, remote: str = 'origin'
     try:
         main_git('worktree', 'add', '--detach', str(wt), f'{remote}/{branch}')
         g = GitRunner(wt)
-        shutil.copyfile(html, wt / target_name)
-        g('add', '--', target_name)
+        for name, src in files.items():
+            shutil.copyfile(src, wt / name)
+        g('add', '--', *files)
         if g('diff', '--cached', '--quiet', check=False).returncode == 0:
-            log.info('%s:%s 內容與上次相同，不提交', branch, target_name)
+            log.info('%s:%s 內容與上次相同，不提交', branch, ','.join(files))
             return None
         g('commit', '-m', message)
         if before_push:
@@ -363,6 +379,7 @@ def _run(args) -> int:
         meta['dataSha256'] = data_sha
         save_json(work / 'meta.json', meta)
         html = step_viewer(work)
+        card_html = step_card_viewer(work)
         cutoff = meta['dataCutoff']
 
         if args.dry_run:
@@ -372,7 +389,8 @@ def _run(args) -> int:
 
         final = LIVE / cutoff
         shutil.copytree(work, final, dirs_exist_ok=True)
-        sha = publish_html(ROOT, final / 'roster-viewer.html', commit_message(shown, cutoff),
+        sha = publish_html(ROOT, {'index.html': final / 'roster-viewer.html', '2025-26.html': final / card_html.name},
+                           commit_message(shown, cutoff),
                            remote=args.remote, branch=args.branch)
         state.update({'base': base, 'letter': letter, 'displayVersion': shown, 'dataSha256': data_sha,
                       'pbpCount': pbp_count, 'dataCutoff': cutoff,

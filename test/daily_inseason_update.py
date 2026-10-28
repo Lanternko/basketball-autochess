@@ -93,17 +93,22 @@ class Publish(unittest.TestCase):
 
     def pub(self, text, **kw):
         self.html.write_text(text, encoding='utf-8')
-        return D.publish_html(self.dev, self.html, D.commit_message('inseason 0.1.1a', '2026-10-28'), **kw)
+        self.card = self.html.with_name('card.html')
+        self.card.write_text(text + '-card', encoding='utf-8')
+        return D.publish_html(self.dev, {'index.html': self.html, '2025-26.html': self.card},
+                              D.commit_message('inseason 0.1.1a', '2026-10-28'), **kw)
 
-    def show(self, ref='gh-pages'):
-        return git(self.bare, 'show', f'{ref}:index.html')
+    def show(self, ref='gh-pages', name='index.html'):
+        return git(self.bare, 'show', f'{ref}:{name}')
 
     def test_publish_and_noop(self):
         sha = self.pub('v1')
         self.assertTrue(sha)
         self.assertEqual(self.show(), 'v1')
         self.assertEqual(git(self.bare, 'rev-parse', 'gh-pages'), sha)
-        self.assertEqual(git(self.bare, 'ls-tree', '--name-only', 'gh-pages'), 'index.html')
+        self.assertEqual(self.show(name='2025-26.html'), 'v1-card')
+        self.assertEqual(git(self.bare, 'ls-tree', '--name-only', 'gh-pages').splitlines(), ['2025-26.html', 'index.html'])
+        self.assertNotIn('wip.txt', git(self.bare, 'ls-tree', '--name-only', 'gh-pages'))
         self.assertIsNone(self.pub('v1'))  # 內容相同不提交
         self.assertTrue((self.dev / 'wip.txt').exists())
         self.assertNotIn('inseason-pages', git(self.dev, 'worktree', 'list'))  # 工作樹已清掉
@@ -120,6 +125,7 @@ class Publish(unittest.TestCase):
         sha = self.pub('v2', before_push=race)
         self.assertTrue(sha)
         self.assertEqual(self.show(), 'v2')
+        self.assertEqual(self.show(name='2025-26.html'), 'v2-card')
         self.assertIn('extra.txt', git(self.bare, 'ls-tree', '--name-only', 'gh-pages'))
         self.assertEqual(git(self.bare, 'rev-parse', 'gh-pages'), sha)
 
@@ -133,6 +139,12 @@ class Publish(unittest.TestCase):
 
         self.pub('ours', before_push=race)
         self.assertEqual(self.show(), 'ours')
+        self.assertEqual(self.show(name='2025-26.html'), 'ours-card')
+
+    def test_single_file_backward_compat(self):
+        self.html.write_text('solo', encoding='utf-8')
+        self.assertTrue(D.publish_html(self.dev, self.html, 'm'))
+        self.assertEqual(self.show(), 'solo')
 
 
 if __name__ == '__main__':

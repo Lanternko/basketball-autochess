@@ -15,6 +15,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import enrich_roster_viewer as er  # noqa: E402
+from season_nav import add_season_nav, apply_common  # noqa: E402
 
 ROOT = er.ROOT
 BASE = ROOT / 'reports/ovr-v58-card-2025-26/roster-viewer.html'
@@ -29,7 +30,7 @@ def main():
     nopr = len(list(csv.DictReader((live / 'no-prior.csv').open(encoding='utf-8'))))
     cols = ['rank', 'ovr', 'name', 'pos', 'team', 'ht', 'min', 'gp', 'imp', 'dbon', 'threeValue', 'mid', 'short', 'ft',
             'drive', 'foulDraw', 'pass', 'tovSkill', 'creation', 'rebound', 'physique', 'stamina', 'onBall', 'help', 'pressure',
-            'last', 'dovr', 'fg3Pct26', 'fg3a26']
+            'last', 'dovr']
     base = BASE.read_text(encoding='utf-8')
     old = json.loads(re.search(r'const DATA=(\{.*?\});\nconst COLS', base, re.S).group(1))
     ht = {r[old['cols'].index('name')]: r[old['cols'].index('ht')] for r in old['rows']}
@@ -38,8 +39,7 @@ def main():
         num = lambda k: float(r[k])
         data_rows.append([int(r['rank']), num('ovr'), r['name'], r['pos'], r['team'], ht.get(r['name'], 0),
                           round(num('MIN26') / int(r['N']), 1), int(r['N']), num('predictedPer36'), num('defenseBonus'),
-                          *[num(a) for a in cols[10:25]], num('lastOVR'), num('dOVR'),
-                          round(num('fg3Pct26') * 100, 1) if r['fg3Pct26'] != '' else -1, int(r['fg3a26'])])
+                          *[num(a) for a in cols[10:25]], num('lastOVR'), num('dOVR')])
     s = base
     s = s.replace('<title>OVR 名單檢視</title>', '<title>賽中 OVR 名單</title>', 1)
     s = s.replace('<h1>2025-26 <span>OVR</span> 名單</h1>', '<h1>2026-27 <span>OVR</span> 名單</h1>', 1)
@@ -49,18 +49,17 @@ def main():
     new_data = json.dumps({'cols': cols, 'rows': data_rows}, ensure_ascii=False, separators=(',', ':'))
     s = re.sub(r'const DATA=\{.*?\};\nconst COLS', lambda m: f'const DATA={new_data};\nconst COLS', s, count=1, flags=re.S)
     for a, b in [
-        ("['long', '3PT', '三分']", "['threeValue', '3PT', '三分（量×準）']"),
+        ("['long', '3PT', '三分']", "['threeValue', '3PT', '三分']"),
         ("['drive', 'DRV', '切入']", "['drive', 'DRV', '切入'], ['foulDraw', 'FD', '製造犯規']"),
-        ('<th class="g" colspan="2">出場</th>', '<th class="g" colspan="4">出場</th>'),
-        ('colspan="22"', 'colspan="26"'),
+        ('<th class="g" colspan="2">出場</th>', '<th class="g" colspan="3">出場</th>'),
+        ('colspan="22"', 'colspan="25"'),
         ("th('min', 'MIN', '分鐘', 'gl') + th('gp', 'GP', '場數')",
-         "th('min', 'MPG', '場均分鐘', 'gl') + th('gp', 'N', '已打場數') + th('dovr', 'ΔOVR', '相對上季卡') + th('fg3Pct26', '3P%/3PA', '本季 3P%／3PA')"),
+         "th('min', 'MPG', '場均分鐘', 'gl') + th('gp', 'N', '已打場數') + th('dovr', 'ΔOVR', '相對上季卡')"),
         ("[[0, '全部'], [500, '≥500'], [1000, '≥1000'], [1500, '≥1500']]",
          "[[0, '全部'], [10, '≥10'], [20, '≥20'], [30, '≥30']]"),
         ('<td class="sub${sc(\'gp\')}">${p.gp}</td>',
          '<td class="sub${sc(\'gp\')}">${p.gp}</td>\n'
-         '      <td class="sub${sc(\'dovr\')}">${(v => (v > 0 ? \'+\' : \'\') + v.toFixed(1))(Math.abs(p.dovr) < 0.05 ? 0 : p.dovr)}</td>\n'
-         '      <td class="sub${sc(\'fg3Pct26\')}">${p.fg3a26 ? p.fg3Pct26.toFixed(1) + \'% / \' + p.fg3a26 : \'—\'}</td>'),
+         '      <td class="sub${sc(\'dovr\')}">${(v => (v > 0 ? \'+\' : \'\') + v.toFixed(1))(Math.abs(p.dovr) < 0.05 ? 0 : p.dovr)}</td>'),
         ('<td class="sub gl${sc(\'min\')}">${p.min.toLocaleString()}</td>',
          '<td class="sub gl${sc(\'min\')}">${p.min.toFixed(1)}</td>'),
         ('<span>上場 <b>${p.min.toLocaleString()}</b> 分鐘</span><span>出賽 <b>${p.gp}</b> 場</span>',
@@ -71,6 +70,8 @@ def main():
     ]:
         assert s.count(a) >= 1, a
         s = s.replace(a, b)
+    s = apply_common(s)
+    s = add_season_nav(s, 'inseason')
     out = live / 'roster-viewer.html'
     out.write_text(s, encoding='utf-8')
     # 注入隊色／頭像／2026-27 場均（換資料來源與年份文字）

@@ -613,3 +613,12 @@
 - 狀態：進行中
 - 相關：R-025、R-026、F-029、E-033、E-060、E-062、L-026、L-031
 - 來源：使用者 2026-10-28「每場，含上場時間」
+
+### E-065
+- 日期：2026-10-28
+- 內容：OVR 對 R-025 定義的進出勝場測試。模擬器照字面量「球員打 2025-26 場均分鐘＋四個聯盟平均隊友」對「同分鐘換成平均 profile」的每場勝場差（WinImp），對照 card 0.1.2 OVR；另檢驗 defenseBonus 是否高估（White 99.0、Caruso pred0 −0.31＋defenseBonus 3.86→98.9）。
+- 設定：`reports/card-0.1.2+E065-inout-wins/preregistration.md`（凍結，sha256 01ff0b679cde0c6fc935f79ab4f11f64697f4b1876bebc5495d99c65eaa68b5e，git HEAD 37f7d62）。答案沿用 E-064 §3.2（RAPM 分半 pooledNet × MPG 另一半，pooledPoss≥2500、兩半各 ≥5 場）。V1：ρ(WinImp)−ρ(OVR) bootstrap 90% 下界 > −0.02 不輸、> 0 較好；V2：前 60 名 defenseBonus≥1 組名次殘差 90% 下界 > 0 → 高估。示範（不作判準）：BOS 拿掉 White、White 加入中位數球隊，對照 Luka／Wemby／Caruso。
+- 結果：（待填；答案檔等 E-064 lead 核對後才讀）
+- 狀態：進行中
+- 相關：R-025、R-026、F-029、E-064、E-027、L-026、R-007
+- 來源：使用者 2026-10-28「OVR99的球員要有這個強度」「GO」

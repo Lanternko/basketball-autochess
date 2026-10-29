@@ -385,7 +385,7 @@ function teamPick() {
 function render() {
   seg('posSeg', [['ALL', '全部'], ['PG', 'PG'], ['SG', 'SG'], ['SF', 'SF'], ['PF', 'PF'], ['C', 'C']], 'pos');
   teamPick();
-  seg('modeSeg', [['grade', '等第'], ['num', '數值']], 'mode');
+  seg('modeSeg', [['grade', 'A+'], ['num', '99']], 'mode');
   head();
   const a = list();
   const start = st.page * SIZE, end = Math.min(a.length, start + SIZE * (1 + st.extra));

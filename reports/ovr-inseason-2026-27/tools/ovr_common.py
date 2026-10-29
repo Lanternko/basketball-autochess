@@ -5,6 +5,7 @@
 """
 import hashlib
 import json
+import os
 import re
 from pathlib import Path
 
@@ -32,15 +33,27 @@ def sha256_file(path):
     return h.hexdigest()
 
 
+def _curve_body(text, name):
+    """曲線本體文字。支援 `NAME = [...]` 與實驗旗標 `NAME = FLAG ? [...] : [...]`；
+    後者照 JS 同樣規則判斷：環境變數 FLAG === '1' 取前一組，否則取後一組。"""
+    m = re.search(r'export const ' + name + r'\s*=\s*\[(.*?)\];', text, re.S)
+    if m:
+        return m.group(1)
+    m = re.search(r'export const ' + name + r'\s*=\s*(\w+)\s*\?\s*\[(.*?)\]\s*:\s*\[(.*?)\];', text, re.S)
+    if not m:
+        raise RuntimeError('Missing curve in src/constants.js: ' + name)
+    flag = m.group(1)
+    if not re.search(r'export const ' + flag + r"\s*=\s*globalThis\.process\?\.env\?\." + flag + r"\s*===\s*'1';", text):
+        raise RuntimeError('Unrecognized flag for ' + name + ' in src/constants.js: ' + flag)
+    return m.group(2) if os.environ.get(flag) == '1' else m.group(3)
+
+
 def load_constants():
     text = (ROOT / 'src/constants.js').read_text(encoding='utf-8')
     out = {}
     for name in _CURVE_NAMES:
-        m = re.search(r'export const ' + name + r'\s*=\s*\[(.*?)\];', text, re.S)
-        if not m:
-            raise RuntimeError('Missing curve in src/constants.js: ' + name)
         out[name] = [tuple(float(v) for v in pair.split(','))
-                     for pair in re.findall(r'\[\s*([^\[\]]+?)\s*\]', m.group(1))]
+                     for pair in re.findall(r'\[\s*([^\[\]]+?)\s*\]', _curve_body(text, name))]
     m = re.search(r'export const ATTR_MIDPOINT\s*=\s*(-?[\d.]+)', text)
     if not m:
         raise RuntimeError('Missing ATTR_MIDPOINT in src/constants.js')

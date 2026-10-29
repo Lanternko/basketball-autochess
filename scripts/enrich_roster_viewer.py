@@ -16,6 +16,8 @@ ROOT = Path(__file__).resolve().parent.parent
 SRC = ROOT / 'data' / 'season-source' / 'player-games.json'
 RAPM = ROOT / 'reports' / 'impact-rapm' / 'rapm-prior.csv'  # 2025-26 單季 box-prior RAPM（每 100 回合）
 ONOFF = ROOT / 'reports' / 'impact-rapm' / 'onoff.csv'
+GC = ROOT / 'reports' / 'game-contribution'  # 單場貢獻值：box → RAPM 權重與 2025-26 基準（scripts/fit_game_contribution.py）
+E089 = ROOT / 'reports' / 'card-0.2.4+E089-minutes-saturation' / 'results.json'  # card 0.2.5 的 OVR 錨點（換算 OVR 傾向）
 
 CSS = """
 /* real box score */
@@ -174,6 +176,10 @@ CSS = """
 .g5 tfoot td{color:var(--muted);border-bottom:0}
 .g5 .up{color:var(--g-a)}
 .g5 .dn{color:var(--g-f)}
+.g5 .gcn{position:sticky;left:0;max-width:0;min-width:100%;box-sizing:border-box;padding:6px 10px 7px;border-top:1px solid var(--line);color:var(--muted);font-size:.74rem;line-height:1.5;white-space:normal}
+.g5 .gcn b{font:600 .86rem var(--f-disp);font-variant-numeric:tabular-nums;color:var(--fg)}
+.g5 .gcn b.up{color:var(--g-a)}
+.g5 .gcn b.dn{color:var(--g-f)}
 @media (max-width:1099px){.g5 th,.g5 td{padding-inline:7px}}
 @media (max-width:640px){
   .g5 td{font-size:.84rem}
@@ -273,9 +279,9 @@ function realBox(p) {
       <div class="real rx"><div class="rmain">${main.map(([l, v]) => `<div class="st"><b>${v}</b><span>${l}</span></div>`).join('')}</div>
       <div class="rsub">${sub.map(g => `<div>${g.map(([l, v]) => `<span>${l}<b>${v}</b></span>`).join('')}</div>`).join('')}</div>
       <button type="button" class="g5t" aria-expanded="${G5_OPEN}" aria-label="近 ${n} 場比賽" title="近 ${n} 場比賽" onclick="toggleG5(this)"><i>▼</i>近 ${n} 場比賽</button></div>
-      <div class="g5"${G5_OPEN ? '' : ' hidden'}>${gameLog(r.g5)}</div>`;
+      <div class="g5"${G5_OPEN ? '' : ' hidden'}>${gameLog(r, p)}</div>`;
 }
-// 近 N 場逐場（新到舊）：[日期, 對手, 勝負, 分鐘, 得分, 籃板, 助攻, 抄截, 阻攻, 失誤, 投進, 出手, 三分進, 三分出手, 罰進, 罰球, 正負值]
+// 近 N 場逐場（新到舊）：[日期, 對手, 勝負, 分鐘, 得分, 籃板, 助攻, 抄截, 阻攻, 失誤, 投進, 出手, 三分進, 三分出手, 罰進, 罰球, 正負值, 貢獻值]
 let G5_OPEN = false;
 function toggleG5(b) {
   G5_OPEN = !G5_OPEN;
@@ -283,19 +289,44 @@ function toggleG5(b) {
   document.querySelector('.card .g5').hidden = !G5_OPEN;
   if (typeof fitTable === 'function') fitTable();
 }
-function gameLog(gs) {
+// 貢獻值（使用者 2026-10-30 選 A）：box score 換算的每 36 分鐘淨影響（權重擬合 2025-26 RAPM），和 2025-26 整季比；
+// OVR 傾向＝把差值當成 pred 的變動，照 card 0.2.5 的錨點與分鐘權重 W(MPG) 換算（只顯示，不改 OVR）
+const sg1 = v => (v > 0 ? '+' : '') + v.toFixed(1);
+function gcCell(v, b) {
+  if (v == null) return '<td>—</td>';
+  const c = b == null ? '' : v >= b + 1 ? 'up' : v <= b - 1 ? 'dn' : '';
+  return `<td><span class="${c}">${sg1(v)}</span></td>`;
+}
+function gcNote(r, p, n) {
+  const c = r.gc;
+  if (c.r == null) return '';
+  if (c.b == null) return `<div class="gcn">貢獻值近 ${n} 場 <b>${sg1(c.r)}</b>／每 36 分鐘；沒有 2025-26 紀錄，無平均可比。</div>`;
+  const d = c.r - c.b, cls = d >= 1 ? 'up' : d <= -1 ? 'dn' : '';
+  const [p1, p50, p99] = GC_ANC, w = (1 - Math.exp(-r.mpg / 15)) / (1 - Math.exp(-36 / 15));
+  const toG = o => o <= 70 ? p1 + (o - 40) * (p50 - p1) / 30 : p50 + (o - 70) * (p99 - p50) / 29;
+  const toO = g => g <= p50 ? 40 + 30 * (g - p1) / (p50 - p1) : 70 + 29 * (g - p50) / (p99 - p50);
+  // 照 5 場水準直接換算的 OVR 會跳到 150 這種數字（5 場起伏太大），正文只講方向與強弱，換算值放 tooltip
+  const o2 = toO(toG(p.ovr) + d * w), big = Math.abs(d) >= 2.4;
+  const tip = `若整季都維持這個差距，OVR 約 ${o2.toFixed(0)}（目前 ${p.ovr.toFixed(1)}）；5 場樣本很小，不會真的差這麼多`;
+  const dir = cls === 'up' ? `<b class="up">${big ? '明顯升 ↑↑' : '升 ↑'}</b>` : cls === 'dn' ? `<b class="dn">${big ? '明顯降 ↓↓' : '降 ↓'}</b>` : '<b>持平</b>';
+  return `<div class="gcn" title="${tip}">貢獻值近 ${n} 場 <b class="${cls}">${sg1(c.r)}</b>，2025-26 平均 <b>${sg1(c.b)}</b>（${d >= 0 ? '高' : '低'} ${Math.abs(d).toFixed(1)}）→ OVR 傾向 ${dir}。` +
+    `${n} 場的正常起伏約 ±1.2：差不到 1 算持平，超過 2.4 算明顯。</div>`;
+}
+function gameLog(r, p) {
+  const gs = r.g5;
   const pm = v => `<span class="${v > 0 ? 'up' : v < 0 ? 'dn' : ''}">${v > 0 ? '+' : ''}${v}</span>`;
   const ma = (m, a) => `${m}-${a}`;
   const row = g => `<td>${g[0]}</td><td>${g[1]}</td><td><span class="${g[2] === 'W' ? 'w' : 'l'}">${g[2] === 'W' ? '勝' : '負'}</span></td>` +
     [3, 4, 5, 6, 7, 8, 9].map(i => `<td>${g[i]}</td>`).join('') +
-    `<td>${ma(g[10], g[11])}</td><td>${ma(g[12], g[13])}</td><td>${ma(g[14], g[15])}</td><td>${pm(g[16])}</td>`;
+    `<td>${ma(g[10], g[11])}</td><td>${ma(g[12], g[13])}</td><td>${ma(g[14], g[15])}</td><td>${pm(g[16])}</td>${gcCell(g[17], r.gc.b)}`;
   const n = gs.length, sum = i => gs.reduce((s, g) => s + g[i], 0), avg = i => (sum(i) / n).toFixed(1);
   // 平均列的投籃／三分／罰球改顯示 N 場合計命中率（使用者 2026-10-30），滑過看合計進球-出手
   const pct = (m, a) => `<td title="合計 ${sum(m)}-${sum(a)}">${sum(a) ? (sum(m) / sum(a) * 100).toFixed(1) + '%' : '—'}</td>`;
   const head = ['日期', '對手', '勝負', '分鐘', '得分', '籃板', '助攻', '抄截', '阻攻', '失誤', '投籃', '三分', '罰球', '正負'];
-  return `<table><thead><tr>${head.map(h => `<th>${h}</th>`).join('')}</tr></thead><tbody>${gs.map(g => `<tr>${row(g)}</tr>`).join('')}</tbody>` +
+  const gcTip = 'box score 換算的每 36 分鐘淨影響（每 100 回合淨分，權重擬合 2025-26 RAPM）；綠／紅＝比 2025-26 平均高／低 1 以上';
+  return `<table><thead><tr>${head.map(h => `<th>${h}</th>`).join('')}<th title="${gcTip}">貢獻</th></tr></thead><tbody>${gs.map(g => `<tr>${row(g)}</tr>`).join('')}</tbody>` +
     `<tfoot><tr><td colspan="3">${n} 場平均</td>${[3, 4, 5, 6, 7, 8, 9].map(i => `<td>${avg(i)}</td>`).join('')}` +
-    `${pct(10, 11)}${pct(12, 13)}${pct(14, 15)}<td>${pm(+avg(16))}</td></tr></tfoot></table>`;
+    `${pct(10, 11)}${pct(12, 13)}${pct(14, 15)}<td>${pm(+avg(16))}</td>${gcCell(r.gc.r, r.gc.b)}</tr></tfoot></table>${gcNote(r, p, n)}`;
 }
 function impactChips(p) {
   const r = REAL[p.name], m = r && IMPACT[r.id];
@@ -394,9 +425,15 @@ def aggregate():
         for k in a:
             if k.isupper():
                 a[k] += row[h[k]] or 0
+    gc = json.loads((GC / 'weights.json').read_text(encoding='utf-8'))
+    base = json.loads((GC / 'baseline-2025-26.json').read_text(encoding='utf-8'))
+    box = lambda r: gc['intercept'] + sum(b * (r[h[k]] or 0) for k, b in gc['per36'].items()) * 36 / r[h['MIN']]
     out = {}
     for name, a in acc.items():
         n = a['gp']
+        last = sorted(games[name], key=lambda r: (r[h['GAME_DATE']], r[h['GAME_ID']]), reverse=True)[:5]
+        rm = sum(r[h['MIN']] or 0 for r in last)
+        b = base.get(str(a['id']))
         pct = lambda m, t: round(m / t, 4) if t else None
         tsa = 2 * (a['FGA'] + 0.44 * a['FTA'])
         out[name] = {
@@ -406,8 +443,11 @@ def aggregate():
             'tov': round(a['TOV'] / n, 2), 'pm': round(a['PLUS_MINUS'] / n, 2),
             'fg': pct(a['FGM'], a['FGA']), 'fg3': pct(a['FG3M'], a['FG3A']), 'ft': pct(a['FTM'], a['FTA']),
             'ts': pct(a['PTS'], tsa),
-            'g5': [game_row(r, h, log_keys) for r in sorted(games[name], key=lambda r: (r[h['GAME_DATE']], r[h['GAME_ID']]),
-                                                             reverse=True)[:5]],
+            # 每列最後一格＝該場貢獻值（每 36 分鐘，沒上場為 null）
+            'g5': [game_row(r, h, log_keys) + [round(box(r), 2) if r[h['MIN']] else None] for r in last],
+            # 貢獻值：r＝近 N 場合計換算每 36 分鐘，b＝2025-26 整季（沒有 2025-26 紀錄＝null）
+            'gc': {'r': round(sum(box(r) * r[h['MIN']] for r in last if r[h['MIN']]) / rm, 2) if rm else None,
+                   'b': b['box36'] if b else None},
         }
     return out
 
@@ -455,7 +495,9 @@ def inject(path, real):
     ids = {v['id'] for v in sub.values()}
     imp = {pid: v for pid, v in impact().items() if pid in ids}
     js_json = lambda o: json.dumps(o, ensure_ascii=False, separators=(',', ':'))
+    a = json.loads(E089.read_text(encoding='utf-8'))['report_only']['card']['new']['anchors']
     block = (f'{BEGIN}\n<style>{CSS}</style>\n<script>const REAL={js_json(sub)};\nconst IMPACT={js_json(imp)};\n'
+             f'const GC_ANC={js_json([a["PR1"], a["PR50"], a["PR99"]])};\n'
              f'const TEAM_COLORS={js_json(TEAM_COLORS)};\nconst TEAM_IDS={js_json(team_ids())};{JS}</script>\n{END}\n')
     assert s.count('<script>const DATA=') == 1
     s = s.replace('<script>const DATA=', block + '<script>const DATA=', 1)

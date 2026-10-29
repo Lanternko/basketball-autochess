@@ -381,7 +381,7 @@ function card(p) {
       <div class="facts">
         <span>球隊 <b>${p.team}</b></span><span>身高 <b>${ht(p.ht)}</b></span>
         <span>場均 <b>${p.min.toFixed(1)}</b> 分鐘</span><span>已打 N=<b>${p.gp}</b> 場</span><span>上季卡 OVR <b>${p.last.toFixed(1)}</b>（<b>${(p.dovr > 0 ? '+' : '') + p.dovr.toFixed(2)}</b>）</span>
-        <span>新賽季預測每 36 分鐘淨值 <b>${p.imp > 0 ? '+' : ''}${p.imp.toFixed(2)}</b></span>
+        <span>預測每 36 分鐘影響力 <b>${p.imp > 0 ? '+' : ''}${p.imp.toFixed(2)}</b></span>
         ${p.dbon > 0 ? `<span>防守加分 <b>+${p.dbon.toFixed(2)}</b></span>` : ''}
       </div>
       ${impactChips(p)}

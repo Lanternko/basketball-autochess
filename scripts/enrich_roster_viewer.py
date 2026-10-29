@@ -24,6 +24,13 @@ CSS = """
 .real .st b{display:block;font:700 1.15rem var(--f-disp);font-variant-numeric:tabular-nums;color:var(--fg)}
 .real .st span{display:block;font-size:.68rem;color:var(--muted)}
 .real-h{color:var(--muted);font-size:.72rem;letter-spacing:.08em}
+.real.rx{display:flex;flex-wrap:wrap;align-items:center;gap:8px 18px}
+.rx .rmain{display:flex;gap:4px}
+.rx .rmain .st{min-width:68px;padding:4px 12px}
+.rx .rmain .st b{font-size:1.7rem;line-height:1.1}
+.rx .rsub{display:grid;gap:4px;font-size:.74rem;color:var(--muted)}
+.rx .rsub>div{display:flex;flex-wrap:wrap;gap:2px 14px}
+.rx .rsub b{margin-left:5px;font:600 .92rem var(--f-disp);font-variant-numeric:tabular-nums;color:var(--fg)}
 /* team colors + headshot */
 .card .tag{background:var(--card,var(--red));box-shadow:inset 0 -7px 0 var(--tc,transparent);position:relative;min-width:230px}
 .tag .pos{background:var(--tc,#fff);color:#fff;position:relative;z-index:1}
@@ -79,11 +86,14 @@ function realBox(p) {
   if (!r) return '<div class="real-h">真實數據：找不到這位球員的 2025-26 例行賽紀錄</div>';
   const f1 = v => v.toFixed(1), pc = v => (v == null ? '—' : (v * 100).toFixed(1) + '%');
   const pm = v => (v > 0 ? '+' : '') + v.toFixed(1);
-  const s = [['得分', f1(r.pts)], ['籃板', f1(r.reb)], ['助攻', f1(r.ast)], ['抄截', f1(r.stl)], ['阻攻', f1(r.blk)],
-    ['失誤', f1(r.tov)], ['命中率', pc(r.fg)], ['三分', pc(r.fg3)], ['罰球', pc(r.ft)], ['真實命中', pc(r.ts)],
-    ['分鐘', f1(r.mpg)], ['正負值', pm(r.pm)]];
+  // 主次分明（使用者 2026-10-29：十二格一樣大太雜）：得分／籃板／助攻大格，其餘分三行小字
+  const main = [['得分', f1(r.pts)], ['籃板', f1(r.reb)], ['助攻', f1(r.ast)]];
+  const sub = [[['命中率', pc(r.fg)], ['三分', pc(r.fg3)], ['罰球', pc(r.ft)], ['真實命中', pc(r.ts)]],
+    [['抄截', f1(r.stl)], ['阻攻', f1(r.blk)], ['失誤', f1(r.tov)]],
+    [['分鐘', f1(r.mpg)], ['正負值', pm(r.pm)]]];
   return `<div class="real-h">2025-26 例行賽真實數據 · 場均 · ${r.gp} 場${r.teams.length > 1 ? ' · ' + r.teams.join('/') : ''}</div>
-      <div class="real">${s.map(([l, v]) => `<div class="st"><b>${v}</b><span>${l}</span></div>`).join('')}</div>`;
+      <div class="real rx"><div class="rmain">${main.map(([l, v]) => `<div class="st"><b>${v}</b><span>${l}</span></div>`).join('')}</div>
+      <div class="rsub">${sub.map(g => `<div>${g.map(([l, v]) => `<span>${l}<b>${v}</b></span>`).join('')}</div>`).join('')}</div></div>`;
 }
 function impactChips(p) {
   const r = REAL[p.name], m = r && IMPACT[r.id];

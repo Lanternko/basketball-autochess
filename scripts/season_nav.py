@@ -188,10 +188,11 @@ COMMON_REPLACEMENTS = [
     # 資訊列每一項整塊換行，不要把「防守加分 +1.77」斷在中間
     ('.facts b{', '.facts>span{white-space:nowrap}\n.facts b{'),
     # 選中列原本整列金底＋深色字（!important），能力值顏色全被蓋掉；hover 時底色又被蓋回深色，整列變黑（使用者 2026-10-29）。
-    # 改成每格保留原本顏色，選中列只加微金底和上下金線（名字格仍是金色，見 enrich_roster_viewer）
+    # 改成每格保留原本顏色，選中列整列提亮成藍灰（名字格仍是金色，見 enrich_roster_viewer）。
+    # 不用半透明金底：金疊深藍會混成橄欖綠，使用者 2026-10-29 嫌髒、廉價，demo 比較後選藍灰（A）
     ('tbody tr.sel td{background:var(--gold);color:var(--gold-ink)!important}',
-     'tbody tr.sel td:not(.nm){background:rgba(242,194,48,.13);box-shadow:inset 0 1px 0 var(--gold),inset 0 -1px 0 var(--gold)}\n'
-     'tbody tr.sel:hover td:not(.nm){background:rgba(242,194,48,.2)}'),
+     'tbody tr.sel td:not(.nm){background:#273649}\n'
+     'tbody tr.sel:hover td:not(.nm){background:#2d3e53}'),
 ] + [
     # 上場篩選拿掉（手機太擠，門檻也還是整季總分鐘），換成球隊篩選：仿 arammeta 的彈出格子（使用者 2026-10-29）
     ('''    <span class="lbl">上場</span>

@@ -62,7 +62,7 @@ CSS = """
   #tbl tbody td.ovr{background:var(--panel);font-size:1rem}
   #tbl tbody td.ovr.sortcol{background:linear-gradient(rgba(242,194,48,.07),rgba(242,194,48,.07)) var(--panel)}
   #tbl tbody tr:hover td.ovr{background:var(--panel-2)}
-  #tbl tbody tr.sel td.ovr{background:linear-gradient(rgba(242,194,48,.2),rgba(242,194,48,.2)) var(--panel)}
+  #tbl tbody tr.sel td.ovr{background:#273649}
   #tbl tbody{-webkit-user-select:none;user-select:none;-webkit-touch-callout:none}
 }
 /* team colors + headshot */

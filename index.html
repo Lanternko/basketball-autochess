@@ -93,6 +93,21 @@ td.sortcol{background:rgba(242,194,48,.07)}
   .ring{padding:10px 12px}.ring svg{width:92px;height:92px}
   h1{font-size:1.6rem}
 }
+.tgrp{display:flex;gap:10px;align-items:center}
+.tpick{position:relative}
+.tpick summary{list-style:none;display:flex;align-items:center;gap:6px;background:var(--panel);color:var(--muted);border:1px solid var(--line);border-radius:3px;font:600 .9rem var(--f-disp);letter-spacing:.04em;padding:6px 11px;cursor:pointer;user-select:none}
+.tpick summary::-webkit-details-marker{display:none}
+.tpick summary::after{content:"▾";font-size:.8em;opacity:.8}
+.tpick summary:focus-visible{outline:2px solid var(--gold);outline-offset:1px}
+.tpick.on summary{background:var(--gold);color:var(--gold-ink);border-color:var(--gold)}
+.tpick summary img{width:18px;height:18px;object-fit:contain;margin:-2px 0}
+.tpop{position:absolute;left:0;top:calc(100% + 6px);z-index:20;width:min(360px,calc(100vw - 24px));background:var(--panel-2);border:1px solid var(--line);border-radius:6px;padding:10px;box-shadow:0 12px 32px rgba(0,0,0,.55)}
+.tgrid{display:grid;grid-template-columns:repeat(6,1fr);gap:6px}
+.tgrid button{display:flex;flex-direction:column;align-items:center;gap:2px;background:var(--panel);border:1px solid var(--line);border-radius:4px;padding:5px 2px 3px;cursor:pointer;color:var(--muted);font:600 .72rem var(--f-disp);letter-spacing:.04em}
+.tgrid button img{width:30px;height:30px;object-fit:contain}
+.tgrid button.all{grid-column:1/-1;font-size:.9rem;padding:7px}
+.tgrid button:hover{border-color:var(--muted);color:var(--fg)}
+.tgrid button[aria-pressed="true"]{border-color:var(--gold);color:var(--gold);background:#2a2410}
 @media (prefers-reduced-motion:reduce){*{transition:none!important}}
 .pager-r{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
 .chip.dim{opacity:.7}
@@ -119,8 +134,8 @@ th.noh{cursor:default}
   <div class="ctrl">
     <span class="lbl">位置</span>
     <div class="seg" id="posSeg"></div>
-    <span class="lbl">上場</span>
-    <div class="seg" id="minSeg"></div>
+    <span class="tgrp"><span class="lbl">球隊</span>
+    <details class="tpick" id="teamPick"><summary aria-label="選擇球隊"></summary><div class="tpop"><div class="tgrid" id="teamGrid"></div></div></details></span>
     <span class="lbl">顯示</span>
     <div class="seg" id="modeSeg"></div>
     <input type="search" id="q" placeholder="搜尋球員或球隊" aria-label="搜尋球員或球隊">
@@ -217,7 +232,7 @@ const GROUPS = [
 const ATTR = GROUPS.flatMap(g => g[1]);
 const TEXT_KEYS = new Set(['name', 'pos', 'team']);
 const SIZE = 20;
-const st = { sort: 'ovr', asc: false, pos: 'ALL', min: 0, mode: 'grade', q: '', page: 0, extra: 0, sel: P[0].name };
+const st = { sort: 'ovr', asc: false, pos: 'ALL', team: 'ALL', mode: 'grade', q: '', page: 0, extra: 0, sel: P[0].name };
 
 function grade(v) {
   const t = [[93, 'A+'], [87, 'A'], [82, 'A-'], [77, 'B+'], [72, 'B'], [68, 'B-'], [64, 'C+'], [60, 'C'], [56, 'C-'], [52, 'D+'], [48, 'D'], [44, 'D-']];
@@ -243,7 +258,7 @@ function seg(id, opts, key) {
 
 function list() {
   const q = st.q.trim().toLowerCase();
-  const a = P.filter(p => (st.pos === 'ALL' || p.pos === st.pos) && p.min >= st.min &&
+  const a = P.filter(p => (st.pos === 'ALL' || p.pos === st.pos) && (st.team === 'ALL' || p.team.split('/').pop() === st.team) &&
     (!q || p.name.toLowerCase().includes(q) || p.team.toLowerCase().includes(q)));
   const k = st.sort, d = st.asc ? 1 : -1;
   a.sort((x, y) => {
@@ -339,9 +354,37 @@ function pages(n) {
   mk('›', st.page + 1, st.page >= tot - 1);
 }
 
+function teamPick() {
+  const d = document.getElementById('teamPick'), grid = document.getElementById('teamGrid');
+  const logo = t => `<img alt="" src="https://cdn.nba.com/logos/nba/${TEAM_IDS[t]}/global/D/logo.svg" onerror="this.style.visibility='hidden'">`;
+  if (!grid.childElementCount) {
+    const teams = [...new Set(P.map(p => p.team.split('/').pop()))].filter(t => TEAM_IDS[t]).sort();
+    grid.innerHTML = '<button type="button" class="all" data-t="ALL">全部球隊</button>' +
+      teams.map(t => `<button type="button" data-t="${t}" title="${t}">${logo(t)}<span>${t}</span></button>`).join('');
+    grid.onclick = e => {
+      const b = e.target.closest('button[data-t]');
+      if (!b) return;
+      st.team = b.dataset.t; st.page = 0; st.extra = 0; d.open = false; render();
+    };
+    // 面板靠左展開，超出螢幕右緣就往左推
+    d.addEventListener('toggle', () => {
+      if (!d.open) return;
+      const pop = d.querySelector('.tpop');
+      pop.style.left = '0';
+      const over = pop.getBoundingClientRect().right - (document.documentElement.clientWidth - 12);
+      if (over > 0) pop.style.left = -over + 'px';
+    });
+    document.addEventListener('click', e => { if (d.open && !d.contains(e.target)) d.open = false; });
+    d.addEventListener('keydown', e => { if (e.key === 'Escape') { d.open = false; d.querySelector('summary').focus(); } });
+  }
+  d.querySelector('summary').innerHTML = st.team === 'ALL' ? '全部' : logo(st.team) + st.team;
+  d.classList.toggle('on', st.team !== 'ALL');
+  grid.querySelectorAll('button').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.t === st.team)));
+}
+
 function render() {
   seg('posSeg', [['ALL', '全部'], ['PG', 'PG'], ['SG', 'SG'], ['SF', 'SF'], ['PF', 'PF'], ['C', 'C']], 'pos');
-  seg('minSeg', [[0, '全部'], [10, '≥10'], [20, '≥20'], [30, '≥30']], 'min');
+  teamPick();
   seg('modeSeg', [['grade', '等第'], ['num', '數值']], 'mode');
   head();
   const a = list();
@@ -361,7 +404,7 @@ function render() {
       <td class="sub${sc('gp')}">${p.gp}</td>
       <td class="sub${sc('dovr')}">${(v => (v > 0 ? '+' : '') + v.toFixed(1))(Math.abs(p.dovr) < 0.05 ? 0 : p.dovr)}</td>
       <td class="sub${sc('mpghat')}">${p.mpghat.toFixed(1)}</td>
-    </tr>`).join('') || '<tr><td colspan="26" class="empty">沒有符合條件的球員。放寬位置或上場分鐘試試。</td></tr>';
+    </tr>`).join('') || '<tr><td colspan="26" class="empty">沒有符合條件的球員。放寬位置或球隊試試。</td></tr>';
   document.querySelectorAll('#tbl tbody tr[data-n]').forEach(tr => {
     tr.onclick = () => { st.sel = decodeURIComponent(tr.dataset.n); render(); };
   });

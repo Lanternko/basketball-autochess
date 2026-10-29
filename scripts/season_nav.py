@@ -1,26 +1,33 @@
 """名單頁的賽季切換列（靜態相對連結，沿用頁面既有 CSS 變數，不需 JS）。"""
 import re
 
-PAGES = [('inseason', '2026-27 賽中', 'index.html'), ('card', '2025-26 正式卡', '2025-26.html')]
+# 標籤用年份（使用者 2026-10-29）：2027 beta＝2026-27 賽中，2026＝2025-26 正式卡
+PAGES = [('inseason', '2027 beta', 'index.html'), ('card', '2026', '2025-26.html')]
 CSS = """<style>
-.snav{display:flex;flex-wrap:wrap;align-items:center;gap:6px 10px;margin:6px 0 4px}
+.snav{position:relative;z-index:5;display:flex;flex-wrap:wrap;align-items:center;gap:6px 10px;margin:6px 0 4px}
 .snav .seg a{display:block;background:var(--panel);color:var(--muted);border-right:1px solid var(--line);font:600 .9rem var(--f-disp);letter-spacing:.04em;padding:6px 11px;text-decoration:none;white-space:nowrap}
 .snav .seg a:last-child{border-right:0}
 .snav .seg a[aria-current="page"]{background:var(--gold);color:var(--gold-ink)}
 .snav .seg a:focus-visible{outline:2px solid var(--gold);outline-offset:1px}
 .snav .note{color:var(--muted);font-size:.8rem}
+.pnote summary{list-style:none;cursor:pointer;color:var(--muted);font-size:.8rem;border-bottom:1px dotted var(--muted)}
+.pnote summary::-webkit-details-marker{display:none}
+.pnote summary:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+.pnote[open] summary{color:var(--fg)}
+.pnote p{position:absolute;left:0;top:calc(100% + 6px);margin:0;width:min(440px,100%);box-sizing:border-box;background:var(--panel-2);border:1px solid var(--line);border-radius:6px;padding:10px 12px;color:var(--muted);font-size:.8rem;line-height:1.55;box-shadow:0 12px 32px rgba(0,0,0,.55)}
 </style>
 """
 
 
 def add_season_nav(html_str, current):
-    """current：'inseason' 或 'card'。插在 <div class="src">…</div> 後面。"""
+    """current：'inseason' 或 'card'。取代 <div class="src">…</div>，原說明收進切換列的「更新說明」（點開才看，使用者 2026-10-29）。"""
     assert current in ('inseason', 'card'), current
     links = ''.join(f'<a href="{href}"' + (' aria-current="page"' if key == current else '') + f'>{label}</a>'
                     for key, label, href in PAGES)
-    note = '<span class="note">開季樣本少，數字大多來自 2025-26 卡</span>' if current == 'inseason' else ''
-    block = f'\n<nav class="snav" aria-label="賽季切換"><div class="seg">{links}</div>{note}</nav>'
-    s, n = re.subn(r'(<div class="src">.*?</div>)', lambda m: m.group(1) + block, html_str, count=1, flags=re.S)
+    note = '<span class="note">開季樣本少，數字大多來自 2026 卡</span>' if current == 'inseason' else ''
+    block = lambda m: (f'\n<nav class="snav" aria-label="賽季切換"><div class="seg">{links}</div>{note}'
+                       f'<details class="pnote"><summary>更新說明</summary><p>{m.group(1)}</p></details></nav>')
+    s, n = re.subn(r'<div class="src">(.*?)</div>', block, html_str, count=1, flags=re.S)
     assert n == 1, 'src div not found'
     assert '</head>' in s or True
     return s.replace('<nav class="snav"', CSS + '<nav class="snav"', 1) if CSS not in s else s
@@ -71,6 +78,17 @@ addEventListener('load', fitTable);
 document.fonts && document.fonts.ready.then(fitTable);
 
 document.getElementById('q').oninput'''),
+    # 手機卡片：右欄只放 OVR 會把左欄擠成一長條。改成名字＋資訊列在左、OVR 在右上，
+    # 長處標籤與真實數據佔滿整寬（使用者 2026-10-29，Jokić）
+    ('@media (prefers-reduced-motion', '''@media (max-width:640px){
+  .card{grid-template-columns:1fr auto;gap:8px 10px;padding:12px 14px;align-items:start}
+  .card .who{display:contents}
+  .card .who>*{grid-column:1/-1}
+  .card .who>.nm{grid-column:1;grid-row:1}
+  .card .who>.facts{grid-column:1;grid-row:2;gap:2px 14px}
+  .card .ring{grid-column:2;grid-row:1/3;padding:0;align-self:start}
+}
+@media (prefers-reduced-motion'''),
     # 顯示切換直接用範例當標籤（使用者 2026-10-29）
     ("seg('modeSeg', [['grade', '等第'], ['num', '數值']], 'mode');", "seg('modeSeg', [['grade', 'A+'], ['num', '99']], 'mode');"),
     ('function render() {', '''function teamPick() {

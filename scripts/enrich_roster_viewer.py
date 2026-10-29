@@ -74,6 +74,8 @@ CSS = """
 /* 手機名字欄縮寫（使用者 2026-10-29：全名佔四成寬）：Stephen Curry → S. Curry，太長的截成 … */
 #tbl td.nm .ns{display:none}
 @media (max-width:640px){#tbl td.nm .nf{display:none}#tbl td.nm .ns{display:inline}}
+/* E-116：2027 頁的 2026 新秀沒有先驗卡，起點由順位估 */
+#tbl td.nm .rkp{margin-left:6px;padding:0 5px;border:1px solid currentColor;border-radius:8px;font-size:10px;opacity:.7;white-space:nowrap}
 /* 手機表格（使用者 2026-10-29：很難用）：名字欄變窄可換行、列變矮；OVR 往右滑時釘在名字旁邊，長按不選字 */
 @media (max-width:640px){
   #tbl td{padding:5px 3px;font-size:.92rem}
@@ -269,6 +271,9 @@ TEAM_COLORS = {
 JS = r"""
 // 手機表格用的縮寫名：名縮成首字母，姓（含 Jr. 等）照留
 const shortName = n => { const i = n.indexOf(' '); return i > 0 ? n[0] + '. ' + n.slice(i + 1) : n; };
+// E-116：2027 頁（近 5 場）的新秀都是新秀先驗，起點由選秀順位估，打越多場越靠自己的數據
+const rookieTag = p => REAL_VIEW === 'g5' && ROOKIES.has(p.name)
+  ? `<span class="rkp" title="新秀先驗：沒有上季卡，起點由選秀順位與位置估，已打 ${p.gp} 場，打越多場越看自己的數據">新秀先驗</span>` : '';
 // 交易球員的 team 是「舊/新」，最後一段是現在的球隊
 const teamOf = t => TEAM_COLORS[t.split('/').pop()];
 function teamVars(t) {
@@ -572,7 +577,7 @@ def inject(path, real, view='g5'):
         ("<td class=\"sub${sc('team')}\">${p.team}</td>", "<td class=\"sub${sc('team')}\">${teamCell(p.team)}</td>"),
         ('<tr class="grp"><th colspan="6"></th>', '<tr class="grp"><th colspan="3"></th><th class="gx" colspan="3"></th>'),
         ('<td class="nm" title="${esc(p.name)}">${esc(p.name)}</td>',
-         '<td class="nm" title="${esc(p.name)}"><span class="nf">${esc(p.name)}</span><span class="ns">${esc(shortName(p.name))}</span></td>'),
+         '<td class="nm" title="${esc(p.name)}"><span class="nf">${esc(p.name)}</span><span class="ns">${esc(shortName(p.name))}</span>${rookieTag(p)}</td>'),
     ]:
         if new not in s:
             assert s.count(old) == 1, old

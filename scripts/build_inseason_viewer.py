@@ -41,10 +41,13 @@ def main():
     data_rows = []
     for r in rows:
         num = lambda k: float(r[k])
+        # E-116 新秀先驗列沒有 threeValue／presDisplay／foulDisc（無上季卡）：3PT 退回 long、PRES 退回 pressure、犯規紀律留空
+        alt = {'threeValue': 'long', 'presDisplay': 'pressure'}
+        opt = lambda k: num(k) if r[k] != '' else (num(alt[k]) if k in alt else None)
         data_rows.append([int(r['rank']), num('ovr'), r['name'], r['pos'], r['team'], ht.get(r['name'], 0),
                           round(num('MIN26') / int(r['N']), 1), int(r['N']), num('predictedPer36'), num('defenseBonus'),
-                          *[num('presDisplay') if (a == 'pressure' and has_pd) else num(a) for a in cols[10:25]],
-                          num('lastOVR'), num('dOVR'), *([num('pressure'), num('foulDisc')] if has_pd else [])])
+                          *[opt('presDisplay') if (a == 'pressure' and has_pd) else opt(a) for a in cols[10:25]],
+                          num('lastOVR'), num('dOVR'), *([num('pressure'), opt('foulDisc')] if has_pd else [])])
     # ΔOVR 五色：≥+4 深綠、+1～+4 淺綠、±1 內灰、−1～−4 橘、≤−4 紅（沿用等第色）
     dcol = ("(v => v >= 4 ? 'var(--g-a)' : v >= 1 ? 'var(--g-b)' : v > -1 ? 'var(--muted)'"
             " : v > -4 ? 'var(--g-d)' : 'var(--g-f)')(p.dovr)")
@@ -88,7 +91,7 @@ def main():
             ('function cell(k, v, first) {', 'function cell(k, v, first, tip) {'),
             ("""return `<td class="${cls.join(' ')}" title="${v}">${g}</td>`;""",
              """return `<td class="${cls.join(' ')}" title="${tip || v}">${g}</td>`;"""),
-            ("cell(k, p[k], j === 0)", "cell(k, p[k], j === 0, k === 'pressure' ? `逼失誤 ${p.force}｜犯規紀律 ${p.foulDisc}（2025-26）` : null)"),
+            ("cell(k, p[k], j === 0)", "cell(k, p[k], j === 0, k === 'pressure' ? `逼失誤 ${p.force}｜犯規紀律 ${p.foulDisc ?? '—'}（2025-26）` : null)"),
             # 數值模式的格子（apply_common 改過那行）也帶 PRES tooltip
             ("""cls.push(gcls(grade(v))); return `<td class="${cls.join(' ')}">${v}</td>`; }""",
              """cls.push(gcls(grade(v))); return `<td class="${cls.join(' ')}"${tip ? ` title="${tip}"` : ''}>${v}</td>`; }"""),

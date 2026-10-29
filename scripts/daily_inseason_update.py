@@ -39,6 +39,7 @@ PLAYER_GAMES = ROOT / f'data/season-source-{SEASON}/player-games.json'
 PBP_DIR = ROOT / f'data/defense-seventh/{SEASON}/pbp'
 BUILD_ROOT = ROOT / 'data/_inseason_build'
 RUN_C4 = LIVE / 'run_c4_live.py'
+RUN_LIVE = LIVE / 'run_c4_live_rookie.py'   # E-116：包 run_c4_live，補上沒有先驗卡的當季新秀（版號仍讀 RUN_C4）
 VIEWER = ROOT / 'scripts/build_inseason_viewer.py'
 CARD_VIEWER = ROOT / 'scripts/build_card_viewer.py'
 CREATE_NO_WINDOW = getattr(subprocess, 'CREATE_NO_WINDOW', 0)
@@ -218,7 +219,7 @@ def probe_base_version() -> str | None:
 
 
 def step_c4(out_dir: Path) -> dict:
-    checked([py_exe(), '-I', str(RUN_C4), str(out_dir)], ROOT, TIMEOUTS['c4'])
+    checked([py_exe(), '-I', str(RUN_LIVE), str(out_dir)], ROOT, TIMEOUTS['c4'])
     meta = load_json(out_dir / 'meta.json')
     if not meta.get('version') or not meta.get('dataCutoff'):
         raise RuntimeError(f'meta.json 缺 version/dataCutoff：{out_dir}')

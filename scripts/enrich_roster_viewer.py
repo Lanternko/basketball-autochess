@@ -51,13 +51,16 @@ CSS = """
 #tbl td.nm{background:var(--panel);color:var(--fg);box-shadow:inset -1px 0 0 var(--line)}
 #tbl tbody tr:hover td.nm{background:var(--panel-2)}
 #tbl tbody tr.sel td.nm{background:var(--gold);color:var(--gold-ink)}
+/* 手機名字欄縮寫（使用者 2026-10-29：全名佔四成寬）：Stephen Curry → S. Curry，太長的截成 … */
+#tbl td.nm .ns{display:none}
+@media (max-width:640px){#tbl td.nm .nf{display:none}#tbl td.nm .ns{display:inline}}
 /* 手機表格（使用者 2026-10-29：很難用）：名字欄變窄可換行、列變矮；OVR 往右滑時釘在名字旁邊，長按不選字 */
 @media (max-width:640px){
   #tbl td{padding:5px 3px;font-size:.92rem}
-  #tbl th.nm,#tbl td.nm{width:112px;min-width:112px;max-width:112px;box-sizing:border-box;padding-left:8px}
-  #tbl td.nm{white-space:normal;overflow-wrap:anywhere;line-height:1.1;font-size:.86rem}
+  #tbl th.nm,#tbl td.nm{width:88px;min-width:88px;max-width:88px;box-sizing:border-box;padding-left:6px}
+  #tbl td.nm{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;line-height:1.1;font-size:.86rem}
   #tbl td.no{width:28px;font-size:.78rem}
-  #tbl th[data-k="ovr"],#tbl td.ovr{position:sticky;left:112px;z-index:1;box-shadow:6px 0 6px -5px rgba(0,0,0,.7)}
+  #tbl th[data-k="ovr"],#tbl td.ovr{position:sticky;left:88px;z-index:1;box-shadow:6px 0 6px -5px rgba(0,0,0,.7)}
   #tbl th[data-k="ovr"]{z-index:2}
   #tbl tbody td.ovr{background:var(--panel);font-size:1rem}
   #tbl tbody td.ovr.sortcol{background:linear-gradient(rgba(255,255,255,.035),rgba(255,255,255,.035)) var(--panel)}
@@ -192,6 +195,8 @@ TEAM_COLORS = {
 }
 
 JS = r"""
+// 手機表格用的縮寫名：名縮成首字母，姓（含 Jr. 等）照留
+const shortName = n => { const i = n.indexOf(' '); return i > 0 ? n[0] + '. ' + n.slice(i + 1) : n; };
 // 交易球員的 team 是「舊/新」，最後一段是現在的球隊
 const teamOf = t => TEAM_COLORS[t.split('/').pop()];
 function teamVars(t) {
@@ -338,6 +343,8 @@ def inject(path, real):
         (hook, '${impactChips(p)}\n      ${realBox(p)}'),
         ('<div class="tag"><span class="pos">', '<div class="tag" style="${teamVars(p.team)}">${headshot(p)}<div class="tnm"><span>${esc(first)}</span>${esc(last)}</div><span class="tht">${ht(p.ht)}</span><span class="pos">'),
         ("<td class=\"sub${sc('team')}\">${p.team}</td>", "<td class=\"sub${sc('team')}\">${teamCell(p.team)}</td>"),
+        ('<td class="nm" title="${esc(p.name)}">${esc(p.name)}</td>',
+         '<td class="nm" title="${esc(p.name)}"><span class="nf">${esc(p.name)}</span><span class="ns">${esc(shortName(p.name))}</span></td>'),
     ]:
         if new not in s:
             assert s.count(old) == 1, old

@@ -138,6 +138,30 @@ CSS = """
 .chip i.up{color:var(--g-a)}
 .chip i.dn{color:var(--g-f)}
 .chip i.flat{color:var(--muted)}
+/* 手機篩選列（使用者 2026-10-29：卡片和表格要能同時看到，篩選擋在中間）：整排移到卡片上方，擠成一排、一樣高；
+   位置改成點了才展開的下拉（.pbtn），球隊沒選時顯示「球隊」 */
+.pbtn{display:none}
+@media (max-width:640px){
+  .wrap>.top{order:-2}
+  .wrap>.ctrl{order:-1;position:relative;flex-wrap:nowrap;gap:6px}
+  .ctrl .lbl{display:none}
+  .ctrl .tgrp{display:contents}
+  .ctrl .pbtn,.ctrl .tpick summary,.ctrl input[type=search]{height:32px;box-sizing:border-box;padding:0 10px}
+  .ctrl .pbtn,.ctrl .tpick summary,.ctrl .seg button{font:600 .85rem var(--f-disp);letter-spacing:.04em}
+  .ctrl .pbtn{display:flex;align-items:center;gap:6px;flex:none;background:var(--panel);color:var(--muted);border:1px solid var(--line);border-radius:3px;cursor:pointer}
+  .ctrl .pbtn::after{content:"▾";font-size:.8em;opacity:.8}
+  .ctrl .pbtn.on{background:var(--gold);color:var(--gold-ink);border-color:var(--gold)}
+  .ctrl.popen .pbtn:not(.on){color:var(--fg);border-color:var(--muted)}
+  #teamPick:not(.on) summary{font-size:0}
+  #teamPick:not(.on) summary::before{content:"球隊";font-size:.85rem}
+  #teamPick summary::after{font-size:.7rem}
+  .ctrl .seg{flex:none}
+  .ctrl .seg button{height:30px;padding:0 10px}
+  .ctrl input[type=search]{flex:1;min-width:0;width:auto;font-size:.85rem}
+  #posSeg{display:none}
+  .ctrl.popen #posSeg{display:flex;position:absolute;left:0;top:calc(100% + 6px);z-index:20;box-shadow:0 12px 32px rgba(0,0,0,.55)}
+  .ctrl.popen #posSeg button{height:38px;padding:0 13px}
+}
 """
 
 # [主色, 副色, 卡片底色, 背號字色]。主色、副色是官方配色（表格色標、卡片底帶）；
@@ -200,6 +224,28 @@ function impactChips(p) {
     chip('淨影響', m.o + m.d, '2025-26 RAPM 淨值＝進攻＋防守')}${
     chip('在場增益', m.onoff, '2025-26 他在場減不在場的球隊每 100 回合淨效率（扣掉球隊本身強弱；會受替補好壞影響）' + (m.on == null ? '' : '；在場時球隊淨效率 ' + sg(m.on)))}</div>`;
 }
+// 手機位置下拉：按鈕顯示目前位置，點了才展開位置列（#posSeg 每次 render 重建，用 observer 同步）
+(() => {
+  const seg = document.getElementById('posSeg'), ctrl = seg && seg.closest('.ctrl');
+  if (!ctrl) return;
+  const btn = document.createElement('button');
+  btn.type = 'button'; btn.className = 'pbtn'; btn.setAttribute('aria-label', '選擇位置');
+  seg.before(btn);
+  const sync = () => {
+    const b = seg.querySelector('[aria-pressed="true"]'), all = !b || b === seg.firstElementChild;
+    btn.textContent = all ? '位置' : b.textContent;
+    btn.classList.toggle('on', !all);
+  };
+  sync();
+  new MutationObserver(sync).observe(seg, { childList: true, subtree: true, attributes: true });
+  const close = () => { ctrl.classList.remove('popen'); btn.setAttribute('aria-expanded', 'false'); };
+  btn.onclick = () => { const o = ctrl.classList.toggle('popen'); btn.setAttribute('aria-expanded', String(o)); };
+  seg.addEventListener('click', e => { if (e.target.closest('button')) close(); });
+  document.addEventListener('click', e => { if (!btn.contains(e.target) && !seg.contains(e.target)) close(); });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape' && ctrl.classList.contains('popen')) { close(); btn.focus(); } });
+  const q = document.getElementById('q');
+  if (q && matchMedia('(max-width:640px)').matches) q.placeholder = '搜尋';
+})();
 """
 
 BEGIN, END = '<!-- real-stats:begin -->', '<!-- real-stats:end -->'

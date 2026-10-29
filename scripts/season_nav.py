@@ -60,11 +60,13 @@ COMMON_REPLACEMENTS = [
     # 表格自己捲（使用者 2026-10-29：看低排名時頭像卡仍在畫面上）。高度＝卡片下方剩餘視窗，只在載入／縮放時算，
     # 點球員不改高度；換排序、篩選、頁才捲回頂。手機卡片太高放不下兩者，給 60% 視窗，捲到底交還頁面。
     ('.tbox{overflow-x:auto;', '.tbox{overflow:auto;max-height:70vh;overscroll-behavior:contain;'),
-    ('@media (prefers-reduced-motion', '''#tbl thead{position:sticky;top:0;z-index:3}
+    # top:-1px：border-collapse 的半像素邊框會在表頭上緣留一條縫，捲過的列從縫裡露出來
+    ('@media (prefers-reduced-motion', '''#tbl thead{position:sticky;top:-1px;z-index:3}
 @media (max-width:640px){.tbox{overscroll-behavior:auto}}
 @media (prefers-reduced-motion'''),
     ('  card(P.find(p => p.name === st.sel) || P[0]);', '''  const lk = [st.sort, st.asc, st.pos, st.team, st.q, st.page].join('|');
   if (lk !== listKey) { listKey = lk; document.querySelector('.tbox').scrollTop = 0; }
+  tboxEdges();
   card(P.find(p => p.name === st.sel) || P[0]);'''),
     ("document.getElementById('q').oninput", '''let listKey = '';
 function fitTable() {
@@ -72,7 +74,15 @@ function fitTable() {
   const t = document.querySelector('.tbox'), above = t.getBoundingClientRect().top - document.getElementById('card').getBoundingClientRect().top;
   const h = innerWidth <= 640 ? innerHeight * 0.6 : Math.max(300, innerHeight - above - 12);
   t.style.maxHeight = Math.round(h) + 'px';
+  tboxEdges();
 }
+// 捲過表頭才浮出陰影；下面還有列時底部淡出
+function tboxEdges() {
+  const t = document.querySelector('.tbox');
+  t.classList.toggle('scrolled', t.scrollTop > 0);
+  t.classList.toggle('below', t.scrollTop + t.clientHeight < t.scrollHeight - 2);
+}
+document.querySelector('.tbox').addEventListener('scroll', tboxEdges, { passive: true });
 addEventListener('resize', fitTable);
 addEventListener('load', fitTable);
 document.fonts && document.fonts.ready.then(fitTable);
@@ -88,6 +98,24 @@ document.getElementById('q').oninput'''),
   .card .who>.facts{grid-column:1;grid-row:2;gap:2px 14px}
   .card .ring{grid-column:2;grid-row:1/3;padding:0;align-self:start}
 }
+@media (prefers-reduced-motion'''),
+    # 表格捲軸（使用者 2026-10-29 要美化）：細、跟面板同色系、滑過才變亮。標準屬性 scrollbar-width／color
+    # 給 Firefox、Chrome 121+、Safari 18.2+；不支援的舊 WebKit 才用 ::-webkit-scrollbar（Chrome 有標準屬性時會忽略它）。
+    # 捲動提示照 Lea Verou／Roman Komarov 的捲動陰影：表頭捲過才有陰影、底部還有內容時淡出。
+    # 儲存格有底色，背景漸層那招會被蓋掉，所以用 sticky 偽元素疊在上面。
+    ('@media (prefers-reduced-motion', '''.tbox{scrollbar-width:thin;scrollbar-color:#3a4b60 transparent}
+.tbox:hover{scrollbar-color:#5d7089 transparent}
+@supports not (scrollbar-color:auto){
+  .tbox::-webkit-scrollbar{width:10px;height:10px}
+  .tbox::-webkit-scrollbar-track,.tbox::-webkit-scrollbar-corner{background:transparent}
+  .tbox::-webkit-scrollbar-thumb{background:#3a4b60;border-radius:10px;border:3px solid var(--panel)}
+  .tbox:hover::-webkit-scrollbar-thumb{background:#5d7089}
+}
+#tbl thead tr:last-child th{transition:box-shadow .15s}
+.tbox.scrolled #tbl thead tr:last-child th{box-shadow:0 9px 10px -7px rgba(0,0,0,.75)}
+.tbox::after{content:"";position:sticky;left:0;bottom:0;z-index:4;display:block;height:36px;margin-top:-36px;
+  background:linear-gradient(rgba(24,34,47,0),var(--panel));pointer-events:none;opacity:0;transition:opacity .15s}
+.tbox.below::after{opacity:1}
 @media (prefers-reduced-motion'''),
     # 顯示切換直接用範例當標籤（使用者 2026-10-29）
     ("seg('modeSeg', [['grade', '等第'], ['num', '數值']], 'mode');", "seg('modeSeg', [['grade', 'A+'], ['num', '99']], 'mode');"),

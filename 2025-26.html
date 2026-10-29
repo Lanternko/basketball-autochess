@@ -379,8 +379,11 @@ th.noh{cursor:default}
 .g5 .dn{color:var(--g-f)}
 .g5 .gcn{position:sticky;left:0;max-width:0;min-width:100%;box-sizing:border-box;padding:6px 10px 7px;border-top:1px solid var(--line);color:var(--muted);font-size:.74rem;line-height:1.5;white-space:normal}
 .g5 .gcn b{font:600 .86rem var(--f-disp);font-variant-numeric:tabular-nums;color:var(--fg)}
-.g5 .gcn b.up{color:var(--g-a)}
-.g5 .gcn b.dn{color:var(--g-f)}
+.g5 .c5a,.g5 .gcn b.c5a{color:var(--g-a)}
+.g5 .c5b,.g5 .gcn b.c5b{color:var(--g-b)}
+.g5 .c5c,.g5 .gcn b.c5c{color:#a3abb5}
+.g5 .c5d,.g5 .gcn b.c5d{color:#f09a8c}
+.g5 .c5f,.g5 .gcn b.c5f{color:var(--g-f)}
 @media (max-width:1099px){.g5 th,.g5 td{padding-inline:7px}}
 @media (max-width:640px){
   .g5 td{font-size:.84rem}
@@ -474,26 +477,28 @@ function toggleG5(b) {
 }
 // 貢獻值（使用者 2026-10-30 選 A）：box score 換算的每 36 分鐘淨影響（權重擬合 2025-26 RAPM），和 2025-26 整季比；
 // OVR 傾向＝把差值當成 pred 的變動，照 card 0.2.5 的錨點與分鐘權重 W(MPG) 換算（只顯示，不改 OVR）
+// 數字寫絕對值，顏色看和自己平均的差（使用者 2026-10-30：同樣 +3，替補是進步、SGA 是退步）：
+// 五色 深綠 ≥+2.4、淺綠 +1～+2.4、灰 ±1 內、淺紅 −1～−2.4、紅 ≤−2.4
 const sg1 = v => (v > 0 ? '+' : '') + v.toFixed(1);
+const gcCls = d => d >= 2.4 ? 'c5a' : d >= 1 ? 'c5b' : d > -1 ? 'c5c' : d > -2.4 ? 'c5d' : 'c5f';
 function gcCell(v, b) {
   if (v == null) return '<td>—</td>';
-  const c = b == null ? '' : v >= b + 1 ? 'up' : v <= b - 1 ? 'dn' : '';
-  return `<td><span class="${c}">${sg1(v)}</span></td>`;
+  return `<td><span class="${b == null ? '' : gcCls(v - b)}">${sg1(v)}</span></td>`;
 }
 function gcNote(r, p, n) {
   const c = r.gc;
   if (c.r == null) return '';
   if (c.b == null) return `<div class="gcn">貢獻值近 ${n} 場 <b>${sg1(c.r)}</b>／每 36 分鐘；沒有 2025-26 紀錄，無平均可比。</div>`;
-  const d = c.r - c.b, cls = d >= 1 ? 'up' : d <= -1 ? 'dn' : '';
+  const d = c.r - c.b, cls = gcCls(d);
   const [p1, p50, p99] = GC_ANC, w = (1 - Math.exp(-r.mpg / 15)) / (1 - Math.exp(-36 / 15));
   const toG = o => o <= 70 ? p1 + (o - 40) * (p50 - p1) / 30 : p50 + (o - 70) * (p99 - p50) / 29;
   const toO = g => g <= p50 ? 40 + 30 * (g - p1) / (p50 - p1) : 70 + 29 * (g - p50) / (p99 - p50);
   // 照 5 場水準直接換算的 OVR 會跳到 150 這種數字（5 場起伏太大），正文只講方向與強弱，換算值放 tooltip
-  const o2 = toO(toG(p.ovr) + d * w), big = Math.abs(d) >= 2.4;
-  const tip = `若整季都維持這個差距，OVR 約 ${o2.toFixed(0)}（目前 ${p.ovr.toFixed(1)}）；5 場樣本很小，不會真的差這麼多`;
-  const dir = cls === 'up' ? `<b class="up">${big ? '明顯升 ↑↑' : '升 ↑'}</b>` : cls === 'dn' ? `<b class="dn">${big ? '明顯降 ↓↓' : '降 ↓'}</b>` : '<b>持平</b>';
-  return `<div class="gcn" title="${tip}">貢獻值近 ${n} 場 <b class="${cls}">${sg1(c.r)}</b>，2025-26 平均 <b>${sg1(c.b)}</b>（${d >= 0 ? '高' : '低'} ${Math.abs(d).toFixed(1)}）→ OVR 傾向 ${dir}。` +
-    `${n} 場的正常起伏約 ±1.2：差不到 1 算持平，超過 2.4 算明顯。</div>`;
+  const o2 = toO(toG(p.ovr) + d * w);
+  const tip = `若整季都維持這個水準，OVR 約 ${o2.toFixed(0)}（目前 ${p.ovr.toFixed(1)}）；5 場樣本很小，不會真的差這麼多`;
+  const dir = {c5a: '明顯升 ↑↑', c5b: '升 ↑', c5c: '持平', c5d: '降 ↓', c5f: '明顯降 ↓↓'}[cls];
+  return `<div class="gcn" title="${tip}">貢獻值近 ${n} 場 <b class="${cls}">${sg1(c.r)}</b>，2025-26 平均 <b>${sg1(c.b)}</b> → OVR 傾向 <b class="${cls}">${dir}</b>。` +
+    `顏色是和自己平均比：深綠高 2.4 以上、淺綠高 1～2.4、灰差不到 1、淺紅低 1～2.4、紅低 2.4 以上。</div>`;
 }
 function gameLog(r, p) {
   const gs = r.g5;
@@ -506,7 +511,7 @@ function gameLog(r, p) {
   // 平均列的投籃／三分／罰球改顯示 N 場合計命中率（使用者 2026-10-30），滑過看合計進球-出手
   const pct = (m, a) => `<td title="合計 ${sum(m)}-${sum(a)}">${sum(a) ? (sum(m) / sum(a) * 100).toFixed(1) + '%' : '—'}</td>`;
   const head = ['日期', '對手', '勝負', '分鐘', '得分', '籃板', '助攻', '抄截', '阻攻', '失誤', '投籃', '三分', '罰球', '正負'];
-  const gcTip = 'box score 換算的每 36 分鐘淨影響（每 100 回合淨分，權重擬合 2025-26 RAPM）；綠／紅＝比 2025-26 平均高／低 1 以上';
+  const gcTip = 'box score 換算的每 36 分鐘淨影響（每 100 回合淨分，權重擬合 2025-26 RAPM）；顏色＝和自己 2025-26 平均比（五色，見表下說明）';
   return `<table><thead><tr>${head.map(h => `<th>${h}</th>`).join('')}<th title="${gcTip}">貢獻</th></tr></thead><tbody>${gs.map(g => `<tr>${row(g)}</tr>`).join('')}</tbody>` +
     `<tfoot><tr><td colspan="3">${n} 場平均</td>${[3, 4, 5, 6, 7, 8, 9].map(i => `<td>${avg(i)}</td>`).join('')}` +
     `${pct(10, 11)}${pct(12, 13)}${pct(14, 15)}<td>${pm(+avg(16))}</td>${gcCell(r.gc.r, r.gc.b)}</tr></tfoot></table>${gcNote(r, p, n)}`;

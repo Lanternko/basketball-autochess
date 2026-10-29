@@ -336,6 +336,16 @@ DELTA_NEW = ("<span class=\"f-d\" title=\"較上季卡 OVR ${p.last.toFixed(1)}\
              "<i class=\"lb\">${(p.dovr > 0 ? '+' : '') + p.dovr.toFixed(1)}</i>"
              "<i class=\"sm\">${Math.abs(p.dovr).toFixed(1)}</i></b>"
              "<i class=\"lb\">）</i></span>")
+# 桌機卡片（使用者 2026-10-29）：身高寫在名字旁；第一排不放球隊，改成分鐘、場次、得分／籃板／助攻；
+# 較上季比照手機掛在 OVR 圓環下（箭頭＋絕對值）；下方真實數據只留細項小字（版面在 enrich_roster_viewer.CSS）
+NAME_OLD = '<div class="nm"><span class="first">${esc(first)}</span>${esc(last)}</div>'
+NAME_NEW = '<div class="nm"><span class="first">${esc(first)}</span>${esc(last)}<span class="nht">${ht(p.ht)}</span></div>'
+BIG3 = ("${(r => r ? [['得分', r.pts], ['籃板', r.reb], ['助攻', r.ast]]"
+        ".map(([l, v]) => `<span class=\"f-b\">${l} <b>${v.toFixed(1)}</b></span>`).join('') : '')(REAL[p.name])}")
+RING_END = 'class="val">${p.ovr.toFixed(1)}</text></svg></div>'
+RING_DELTA = ("class=\"val\">${p.ovr.toFixed(1)}</text></svg>"
+              "<b class=\"rd ${p.dovr >= 1 ? 'up' : p.dovr <= -1 ? 'dn' : 'flat'}\" title=\"較上季卡 OVR ${p.last.toFixed(1)}\">"
+              "${p.dovr >= 0.05 ? '▲' : p.dovr <= -0.05 ? '▼' : '＝'}${Math.abs(p.dovr).toFixed(1)}</b></div>")
 
 
 def _compact_facts(s):
@@ -345,8 +355,22 @@ def _compact_facts(s):
     assert s.count(ring) == 1
     s = s.replace(ring, '<div class="ring" title="模型用能力值模擬的每 36 分鐘淨值 ${(p.imp > 0 ? \'+\' : \'\') + p.imp.toFixed(2)}'
                         '（OVR 由此換算；下方「影響」是真實比賽的 RAPM，兩者不同）"><svg')
+    # 圓環滿格＝當季最高 OVR（使用者 2026-10-29）；原本固定 99，OVR 破百的人全都滿圈
+    fill = '(p.ovr - 40) / (99 - 40)'
+    assert s.count(fill) == 1
+    s = s.replace(fill, '(p.ovr - 40) / (OVR_TOP - 40)')
+    top = 'const P = DATA.rows.map(r => Object.fromEntries(COLS.map((c, i) => [c, r[i]])));'
+    assert s.count(top) == 1
+    s = s.replace(top, top + '\nconst OVR_TOP = Math.max(...P.map(p => p.ovr));')
     for lab, c in FACT_LABELS.items():
         s = s.replace(f'<span>{lab}<b>', f'<span class="{c}"><i class="lb">{lab}</i><b>')
     s = s.replace('<span>防守加分 <b>', '<span class="f-x">防守加分 <b>')
+    assert s.count(NAME_OLD) == 1
+    s = s.replace(NAME_OLD, NAME_NEW)
+    s, n = re.subn(r'(<span class="f-gp">.*?</span>)', lambda m: m.group(1) + BIG3, s, count=1)
+    assert n == 1
     assert s.count(DELTA_OLD) <= 1
+    if DELTA_OLD in s:
+        assert s.count(RING_END) == 1
+        s = s.replace(RING_END, RING_DELTA)
     return s.replace(DELTA_OLD, DELTA_NEW)

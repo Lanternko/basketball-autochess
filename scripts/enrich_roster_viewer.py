@@ -114,7 +114,20 @@ CSS = """
   .strong .chip i{margin:2px 0 0;font:700 1.3rem var(--f-disp)}
   .strong .chip.dim{grid-column:1/-1}
   .card .ring{grid-column:4;grid-row:1/span 4}
+  /* 身高在名字旁；第一排＝分鐘、場次、得分／籃板／助攻；較上季掛圓環下；真實數據三大格移到第一排 */
+  .who .nm .nht{margin-left:12px;font-size:1.1rem;font-weight:600;color:var(--muted);text-transform:none;white-space:nowrap}
+  .facts .f-tm,.facts .f-ht,.facts .f-d{display:none}
+  .card .ring{flex-direction:column;gap:2px}
+  .ring .rd{font:700 1.25rem var(--f-disp);font-variant-numeric:tabular-nums}
+  .ring .rd.up{color:var(--g-a)}
+  .ring .rd.dn{color:var(--g-f)}
+  .ring .rd.flat{color:var(--muted)}
+  .rx .rmain{display:none}
+  .card .who>.real-h{align-self:end}
+  .card .who>.real{align-self:start}
 }
+.who .nm .nht,.ring .rd{display:none}
+@media (min-width:641px){.who .nm .nht,.ring .rd{display:inline}}
 @media (min-width:641px) and (max-width:1099px){
   .card{grid-template-columns:auto minmax(0,1fr) auto}
   .card .ring{grid-column:3;grid-row:1/span 2;padding:14px 18px 0}
@@ -171,8 +184,7 @@ function realBox(p) {
   // 主次分明（使用者 2026-10-29：十二格一樣大太雜）：得分／籃板／助攻大格，其餘分三行小字
   const main = [['得分', f1(r.pts)], ['籃板', f1(r.reb)], ['助攻', f1(r.ast)]];
   const sub = [[['命中率', pc(r.fg)], ['三分', pc(r.fg3)], ['罰球', pc(r.ft)], ['真實命中', pc(r.ts)]],
-    [['抄截', f1(r.stl)], ['阻攻', f1(r.blk)], ['失誤', f1(r.tov)]],
-    [['分鐘', f1(r.mpg)], ['正負值', pm(r.pm)]]];
+    [['抄截', f1(r.stl)], ['阻攻', f1(r.blk)], ['失誤', f1(r.tov)], ['正負值', pm(r.pm)]]];
   return `<div class="real-h">2025-26 例行賽真實數據 · 場均 · ${r.gp} 場${r.teams.length > 1 ? ' · ' + r.teams.join('/') : ''}</div>
       <div class="real rx"><div class="rmain">${main.map(([l, v]) => `<div class="st"><b>${v}</b><span>${l}</span></div>`).join('')}</div>
       <div class="rsub">${sub.map(g => `<div>${g.map(([l, v]) => `<span>${l}<b>${v}</b></span>`).join('')}</div>`).join('')}</div></div>`;

@@ -178,6 +178,13 @@ CSS = """
 @media (max-width:640px){
   .g5 td{font-size:.84rem}
   .g5 th,.g5 td{padding:5px 6px}
+  /* 手機 ▼ 放正負值格右上角（使用者 2026-10-30）：右上切一個斜角變五角形，▼ 放在切掉的位置，不另佔一列 */
+  .real.rx{position:relative}
+  .rx .rmain .st:last-child{position:relative;clip-path:polygon(0 0,calc(100% - 20px) 0,100% 20px,100% 100%,0 100%)}
+  .rx .rmain .st:last-child::after{content:'';position:absolute;top:-1px;right:-1px;width:20px;height:20px;pointer-events:none;
+    background:linear-gradient(to bottom left,transparent calc(50% - 1px),var(--line) calc(50% - 1px),var(--line) calc(50% + 1px),transparent calc(50% + 1px))}
+  .rx .g5t{position:absolute;top:-8px;right:-8px;width:30px;height:30px;padding:0;border:0;font-size:0;justify-content:center;color:var(--fg)}
+  .rx .g5t i{font-size:10px}
 }
 .tabbr{color:var(--tt);font-weight:600}
 /* impact chips：RAPM 攻守淨（對聯盟平均）、在場減不在場（每 100 回合） */
@@ -263,7 +270,7 @@ function realBox(p) {
   return `<div class="real-h">${r.gp} 場 · ${Math.round(r.mpg)} 分鐘${r.teams.length > 1 ? '<span class="rtm"> · ' + r.teams.join('/') + '</span>' : ''}</div>
       <div class="real rx"><div class="rmain">${main.map(([l, v]) => `<div class="st"><b>${v}</b><span>${l}</span></div>`).join('')}</div>
       <div class="rsub">${sub.map(g => `<div>${g.map(([l, v]) => `<span>${l}<b>${v}</b></span>`).join('')}</div>`).join('')}</div>
-      <button type="button" class="g5t" aria-expanded="${G5_OPEN}" onclick="toggleG5(this)"><i>▼</i>近 ${n} 場比賽</button></div>
+      <button type="button" class="g5t" aria-expanded="${G5_OPEN}" aria-label="近 ${n} 場比賽" title="近 ${n} 場比賽" onclick="toggleG5(this)"><i>▼</i>近 ${n} 場比賽</button></div>
       <div class="g5"${G5_OPEN ? '' : ' hidden'}>${gameLog(r.g5)}</div>`;
 }
 // 近 N 場逐場（新到舊）：[日期, 對手, 勝負, 分鐘, 得分, 籃板, 助攻, 抄截, 阻攻, 失誤, 投進, 出手, 三分進, 三分出手, 罰進, 罰球, 正負值]

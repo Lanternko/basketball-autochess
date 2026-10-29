@@ -12,11 +12,14 @@ import re
 import sys
 from pathlib import Path
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import rating_m2  # noqa: E402
+
 ROOT = Path(__file__).resolve().parent.parent
 SRC = ROOT / 'data' / 'season-source' / 'player-games.json'
 RAPM = ROOT / 'reports' / 'impact-rapm' / 'rapm-prior.csv'  # 2025-26 單季 box-prior RAPM（每 100 回合）
 ONOFF = ROOT / 'reports' / 'impact-rapm' / 'onoff.csv'
-GC = ROOT / 'reports' / 'game-contribution'  # 單場貢獻值：box → RAPM 權重與 2025-26 基準（scripts/fit_game_contribution.py）
+GC = ROOT / 'reports' / 'game-contribution' / 'm2'  # 評分 M2（R-066）：box＋hustle＋防守對位 → RAPM 權重、2025-26 基準、五色切點（scripts/fit_rating_m2.py）
 CARD_SUMMARY = ROOT / 'reports' / 'card-0.2.7' / 'summary.json'  # 正式卡 OVR 錨點（換算 OVR 傾向）
 # 新秀篩選（使用者 2026-10-30）：該季選秀年＝新秀；2027 頁的 2026 新秀沒有先驗卡、不在名單上，按鈕自動隱藏
 BIO = {'g5': (ROOT / 'data/defense-seventh/2026-27/bio.json', '2026'), 'season': (ROOT / 'data/benchmark-source/bio.json', '2025')}
@@ -305,21 +308,21 @@ function toggleG5(b) {
   document.querySelector('.card .g5').hidden = !G5_OPEN;
   if (typeof fitTable === 'function') fitTable();
 }
-// 貢獻值（使用者 2026-10-30 選 A）：box score 換算的每 36 分鐘淨影響（權重擬合 2025-26 RAPM），和 2025-26 整季比；
+// 貢獻值（使用者 2026-10-30 選 A）：box score＋hustle＋防守對位換算的每 36 分鐘淨影響（M2，R-066；權重擬合 2025-26 RAPM），和 2025-26 整季比；
 // OVR 傾向＝把差值當成 pred 的變動，照正式卡（card 0.2.7）的錨點與分鐘權重 W(MPG) 換算（只顯示，不改 OVR）
 // 數字寫絕對值，顏色看和自己平均的差（使用者 2026-10-30：同樣 +3，替補是進步、SGA 是退步）：
 // 五色切點＝2025-26 全部比賽「貢獻值 − 自己整季平均」絕對值的 20／60 百分位，各色約兩成（使用者 2026-10-30 選單場、5 場分開切）：
-// 單場（上場 ≥10 分鐘，SD 3.0）±0.7／±2.4；近 5 場合計（SD 1.3）±0.3／±1.1。顏色是排名，不代表顯著
-const GC_CUT1 = [0.7, 2.4], GC_CUT5 = [0.3, 1.1];
+// 單場（上場 ≥10 分鐘）與連續 5 場分開切；M2（R-066）重算為 ±0.8／±2.8、±0.4／±1.3（fit_rating_m2.py 注入 GC_CUT）。顏色是排名，不代表顯著
+const [GC_CUT1, GC_CUT5] = GC_CUT;
 const sg1 = v => (v > 0 ? '+' : '') + v.toFixed(1);
 // 顯示成 0 起跳的「評分」（使用者 2026-10-30：正負號配紅字看不清；名稱改評分，避免和影響力、正負值混在一起，像賽事的 0–10 評分）：分數＝0.75×(貢獻值＋7.5)，低於 0 記 0。
-// 2025-26 單場（≥10 分鐘）約 1% 到 0、約 4% 超過 10；聯盟平均 0 ≈ 5.6。顏色仍用原單位的差值切
+// M2（R-066）2025-26 單場（≥10 分鐘）約 2% 到 0、約 6% 超過 10；聯盟平均 ≈ 5.8。顏色仍用原單位的差值切
 const gcS = v => Math.max(0, 0.75 * (v + 7.5)).toFixed(1);
-const GC_DEF = '評分 0–10：box score 換算的每 36 分鐘淨影響（權重擬合 2025-26 RAPM），評分＝0.75×(每 100 回合淨分＋7.5)，低於 0 記 0：5.6＝聯盟平均，10 約是單場前 4%';
+const GC_DEF = '評分 0–10：box score＋hustle（撥球、干擾出手等）＋防守對位（比對手平常少讓幾分、逼出失誤）換算的每 36 分鐘淨影響（權重擬合 2025-26 RAPM），評分＝0.75×(每 100 回合淨分＋7.5)，低於 0 記 0：5.8＝聯盟平均，10 約是單場前 6%';
 const gcCls = (d, [a, b]) => d >= b ? 'c5a' : d >= a ? 'c5b' : d > -a ? 'c5c' : d > -b ? 'c5d' : 'c5f';
-function gcCell(v, b, cut) {
+function gcCell(v, b, cut, fb) {
   if (v == null) return '<td>—</td>';
-  return `<td><span class="${b == null ? '' : gcCls(v - b, cut)}">${gcS(v)}</span></td>`;
+  return `<td${fb ? ' title="這場抓不到防守對位資料，只用 box score 算"' : ''}><span class="${b == null ? '' : gcCls(v - b, cut)}">${gcS(v)}${fb ? '*' : ''}</span></td>`;
 }
 function gcNote(r, p, n) {
   const c = r.gc;
@@ -341,7 +344,7 @@ function gameLog(r, p) {
   const pm = v => `<span class="${v > 0 ? 'up' : v < 0 ? 'dn' : ''}">${v > 0 ? '+' : ''}${v}</span>`;
   const ma = (m, a) => `${m}-${a}`;
   const row = g => `<td>${g[0]}</td><td>${g[1]}</td><td><span class="${g[2] === 'W' ? 'w' : 'l'}">${g[2] === 'W' ? '勝' : '負'}</span></td>` +
-    gcCell(g[17], r.gc.b, GC_CUT1) + [4, 5, 6, 7, 8, 9].map(i => `<td>${g[i]}</td>`).join('') +
+    gcCell(g[17], r.gc.b, GC_CUT1, g[18]) + [4, 5, 6, 7, 8, 9].map(i => `<td>${g[i]}</td>`).join('') +
     `<td>${ma(g[10], g[11])}</td><td>${ma(g[12], g[13])}</td><td>${ma(g[14], g[15])}</td><td>${pm(g[16])}</td><td>${g[3]}</td>`;
   const n = gs.length, sum = i => gs.reduce((s, g) => s + g[i], 0), avg = i => (sum(i) / n).toFixed(1);
   // 平均列的投籃／三分／罰球改顯示 N 場合計命中率（使用者 2026-10-30），滑過看合計進球-出手
@@ -445,6 +448,7 @@ function impactChips(p) {
 })();
 """
 
+GCW = json.loads((GC / 'weights.json').read_text(encoding='utf-8'))
 BEGIN, END = '<!-- real-stats:begin -->', '<!-- real-stats:end -->'
 
 
@@ -464,9 +468,10 @@ def aggregate():
         for k in a:
             if k.isupper():
                 a[k] += row[h[k]] or 0
-    gc = json.loads((GC / 'weights.json').read_text(encoding='utf-8'))
     base = json.loads((GC / 'baseline-2025-26.json').read_text(encoding='utf-8'))
-    box = lambda r: gc['intercept'] + sum(b * (r[h[k]] or 0) for k, b in gc['per36'].items()) * 36 / r[h['MIN']]
+    # SRC 指哪季（build_inseason_viewer 會換成 season-source-2026-27），對位資料就讀哪季；某場沒對位資料 → 該場用 M0
+    rater = rating_m2.Rater('2025-26' if SRC.parent.name == 'season-source' else SRC.parent.name.removeprefix('season-source-'))
+    box = lambda r: rater.value(r, h)
     out = {}
     for name, a in acc.items():
         n = a['gp']
@@ -482,8 +487,9 @@ def aggregate():
             'tov': round(a['TOV'] / n, 2), 'pm': round(a['PLUS_MINUS'] / n, 2),
             'fg': pct(a['FGM'], a['FGA']), 'fg3': pct(a['FG3M'], a['FG3A']), 'ft': pct(a['FTM'], a['FTA']),
             'ts': pct(a['PTS'], tsa),
-            # 每列最後一格＝該場貢獻值（每 36 分鐘，沒上場為 null）
-            'g5': [game_row(r, h, log_keys) + [round(box(r), 2) if r[h['MIN']] else None] for r in last],
+            # 每列最後兩格＝該場貢獻值（每 36 分鐘，沒上場為 null）、1＝該場沒有對位資料改用 M0
+            'g5': [game_row(r, h, log_keys) + ([round(box(r), 2), int(rater.fallback(r, h))] if r[h['MIN']] else [None, 0])
+                   for r in last],
             # 貢獻值：r＝近 N 場合計換算每 36 分鐘，b＝2025-26 整季（沒有 2025-26 紀錄＝null）
             'gc': {'r': round(sum(box(r) * r[h['MIN']] for r in last if r[h['MIN']]) / rm, 2) if rm else None,
                    'b': b['box36'] if b else None},
@@ -551,7 +557,7 @@ def inject(path, real, view='g5'):
     a = json.loads(CARD_SUMMARY.read_text(encoding='utf-8'))['anchors']
     block = (f'{BEGIN}\n<style>{CSS}</style>\n<script>const REAL={js_json(sub)};\nconst REAL_VIEW={js_json(view)};\n'
              f'const ROOKIES=new Set({js_json([n for n in rookies(view) if n in roster])});\nconst IMPACT={js_json(imp)};\n'
-             f'const GC_ANC={js_json([a["PR1"], a["PR50"], a["PR99"]])};\n'
+             f'const GC_ANC={js_json([a["PR1"], a["PR50"], a["PR99"]])};\nconst GC_CUT={js_json([GCW["cut1"], GCW["cut5"]])};\n'
              f'const TEAM_COLORS={js_json(TEAM_COLORS)};\nconst TEAM_IDS={js_json(team_ids())};{JS}</script>\n{END}\n')
     assert s.count('<script>const DATA=') == 1
     s = s.replace('<script>const DATA=', block + '<script>const DATA=', 1)

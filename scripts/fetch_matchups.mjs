@@ -1,9 +1,12 @@
 import fs from 'node:fs/promises';
 
-// E-110：抓 2025-26 每場的防守對位（boxscorematchupsv3）與 hustle（boxscorehustlev2），只存用得到的欄位。
-// 用法：node scripts/fetch_matchups_2025_26.mjs；已存在的場次跳過，可中斷續抓。
-const src = new URL('../data/season-source/player-games.json', import.meta.url);
-const dir = new URL('../data/matchup-source/2025-26/', import.meta.url);
+// E-110／R-066：抓每場的防守對位（boxscorematchupsv3）與 hustle（boxscorehustlev2），只存用得到的欄位。
+// 用法：node scripts/fetch_matchups.mjs [2025-26|2026-27]（預設 2025-26）；已存在的場次跳過，可中斷續抓。
+// 場次取自該季 player-games；每日發布（daily_inseason_update.py）會順便跑新賽季。
+const season = process.argv[2] || '2025-26';
+const src = new URL(season === '2025-26' ? '../data/season-source/player-games.json'
+  : `../data/season-source-${season}/player-games.json`, import.meta.url);
+const dir = new URL(`../data/matchup-source/${season}/`, import.meta.url);
 await fs.mkdir(dir, {recursive:true});
 const set = JSON.parse(await fs.readFile(src, 'utf8')).data.resultSets[0];
 const gi = set.headers.indexOf('GAME_ID');

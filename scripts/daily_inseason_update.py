@@ -43,7 +43,7 @@ VIEWER = ROOT / 'scripts/build_inseason_viewer.py'
 CARD_VIEWER = ROOT / 'scripts/build_card_viewer.py'
 CREATE_NO_WINDOW = getattr(subprocess, 'CREATE_NO_WINDOW', 0)
 
-TIMEOUTS = {'games': 900, 'inseason': 3600, 'c4': 3600, 'viewer': 600, 'git': 180}
+TIMEOUTS = {'games': 900, 'matchups': 1800, 'inseason': 3600, 'c4': 3600, 'viewer': 600, 'git': 180}
 CO_AUTHOR = 'Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>'
 
 log = logging.getLogger('daily_inseason')
@@ -167,6 +167,20 @@ class LockBusy(RuntimeError):
 # ----------------------------------------------------------------- 四步
 def step_fetch_games() -> None:
     checked([node_exe(), 'scripts/fetch_season_games.js', SEASON], ROOT, TIMEOUTS['games'])
+
+
+def step_fetch_matchups() -> None:
+    """評分 M2（R-066）要的防守對位＋hustle；失敗不擋發布，抓不到的場次評分退回 M0（tooltip 註明）。"""
+    try:
+        r = run([node_exe(), 'scripts/fetch_matchups.mjs', SEASON], ROOT, TIMEOUTS['matchups'])
+    except subprocess.TimeoutExpired:
+        log.warning('fetch_matchups 逾時；沒抓到的場次評分退回 M0')
+        return
+    tail = (r.stdout or '').strip().splitlines()[-1:] or ['']
+    if r.returncode != 0:
+        log.warning('fetch_matchups exit=%s：%s', r.returncode, (r.stderr or r.stdout).strip()[-300:])
+    else:
+        log.info('fetch_matchups：%s', tail[0])
 
 
 def step_fetch_inseason() -> dict:
@@ -336,6 +350,7 @@ def main(argv=None) -> int:
 def _run(args) -> int:
     state = load_json(STATE_PATH)
     step_fetch_games()
+    step_fetch_matchups()
     step_fetch_inseason()
     data_sha = sha256_file(PLAYER_GAMES)
     pbp_count = len(list(PBP_DIR.glob('*.json'))) if PBP_DIR.exists() else 0

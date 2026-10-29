@@ -55,9 +55,9 @@ CSS = """<style>
 .pn-item li b{color:var(--fg);font-weight:700}
 .pn-item .kw{font-weight:700}
 .pn-item .kw-ovr{color:var(--gold)}
-.pn-item .kw-off{color:#6fd08c}
-.pn-item .kw-def{color:#a493ff}
-.pn-item .kw-etc{color:#7fc4e6}
+.pn-item .kw-off{color:#ff7a45}
+.pn-item .kw-def{color:#4fa8ff}
+.pn-item .kw-etc{color:#c39bff}
 .pn-item .kw-num{color:var(--fg);font-weight:700;font-variant-numeric:tabular-nums}
 .pn-foot{margin:12px 0 0;color:var(--muted);font-size:.72rem;line-height:1.5}
 </style>
@@ -65,7 +65,7 @@ CSS = """<style>
 
 
 # 更新說明：每版一格，新的在上（使用者 2026-10-29）。track：card 正式卡、inseason 新賽季。
-# 只寫公式改動（使用者 2026-10-30）：新賽季跟上某版正式卡就在那格加 'inseason' 標籤，不另開一格、不寫「已跟上／沒跟上」；
+# 只寫公式改動（使用者 2026-10-30）：新賽季目前用的那版正式卡加 'inseason' 標籤（只留最新一格），不另開一格、不寫「已跟上／沒跟上」；
 # 只更新比賽資料、網頁 UI、欄位顯示都不寫（R-063）；同一基底的字母小版本併進同一格（R-064）。
 # 每條寫成「目標：做了什麼」（冒號前會加粗），用球迷看得懂的話，不寫 E／R 編號；代價一句帶過。
 TRACK = {'card': '正式卡', 'inseason': '新賽季'}
@@ -78,25 +78,25 @@ PATCH_NOTES = [
         '修正中距離被補籃墊高：補籃、補扣改算近距離（Kessler 中距離 99 → 61）。',
         '能力值改和最近四季一起比：偏弱的一季可以沒人到 99。',
         'OVR 重新擬合：近距離份量變重、中距離變輕，Giannis 11 → 5 名，Curry 23 → 32 名。']),
-    (('card', 'inseason'), '0.2.5', '2026-10-29', [
+    (('card',), '0.2.5', '2026-10-29', [
         '分鐘權重改成遞減：上場少但效率高的人不再被埋沒（Caruso 103 → 39 名）。']),
-    (('card', 'inseason'), '0.2.4', '2026-10-29', [
+    (('card',), '0.2.4', '2026-10-29', [
         '修正年輕球員被低估：教練用人（上場時間）改為只對照 2025-26 單季 RAPM。']),
     (('card',), '0.2.3', '2026-10-29', [
         '讓 OVR 反映教練實際怎麼用人：能力估計納入上場分鐘、出賽率、年齡、是否下放發展聯盟。',
         '輪休不算被冷凍：教練不用（DNP）和輪休分開計算。']),
-    (('card', 'inseason'), '0.2.2', '2026-10-29', [
+    (('card',), '0.2.2', '2026-10-29', [
         '常站上罰球線的人分數更高：製造犯規（FD）改以量為主，每 36 分鐘罰球數佔 75%、罰球率佔 25%。']),
     (('card',), '0.2.1', '2026-10-29', [
         '降低壓迫（PRES）的雜訊：改用球員自己逼出的對手失誤、扣掉犯規，不再從 RAPM 拆出來。']),
-    (('card', 'inseason'), '0.2.0', '2026-10-29', [
+    (('card',), '0.2.0', '2026-10-29', [
         'OVR 反映每場實際貢獻：改成每場價值，含上場時間、以替補水準為基準；每分鐘表現相同時，打得多的人 OVR 較高。']),
-    (('card', 'inseason'), '0.1.2', '2026-10-28', [
+    (('card',), '0.1.2', '2026-10-28', [
         '修正位置標錯造成的防守誤判（例：Wembanyama 被標 F 卻守中鋒）：對位防守改算「被針對」，依對手實際的出手習慣算預期出手。']),
     (('card',), '0.1.1', '2026-10-28', [
         '分開衝框和造犯規兩種能力：「切入」拆成切入與製造犯規兩項。',
         '修正低分鐘球員虛胖：比率型能力值往本人上季拉回，沒有歷史才往聯盟平均。']),
-    (('card', 'inseason'), '0.1.0', '', [
+    (('card',), '0.1.0', '', [
         '起點：正式卡沿用 v58 模型；新賽季用 C4 模型（上季卡當先驗、隨本季數據更新）。']),
 ]
 
@@ -120,12 +120,13 @@ def _now_facts(now_text, current):
 
 
 # 內文裡的數值名稱上色、數字加粗（使用者 2026-10-29，參考 arammeta 海克斯說明）。
-# 只分四色：OVR、進攻＋投籃、防守、其他（RAPM、上場時間等）；新名稱出現在說明裡就加進對應組。
+# 只分四色：OVR 金、進攻＋投籃橘紅、防守藍、其他紫（使用者 2026-10-30 換色）；粗體目標裡的也上色；新名稱出現在說明裡就加進對應組。
 NOTE_TERMS = {
     'ovr': ['OVR'],
-    'off': ['三分價值', '3PT', '3P準', '罰球數', '罰球率', '罰球線', 'FD 製造犯規', '製造犯規（FD）', '製造犯規', '切入'],
-    'def': ['壓迫（PRES）', '壓迫', '對位防守'],
-    'etc': ['RAPM', '上場時間', '上場分鐘', '出賽率', '預測 MPG', '每場價值'],
+    'off': ['三分價值', '3PT', '3P準', '罰球數', '罰球率', '罰球線', 'FD 製造犯規', '製造犯規（FD）', '製造犯規', '造犯規',
+            '切入', '衝框', '中距離', '近距離', '補籃', '補扣', '進攻型球員'],
+    'def': ['壓迫（PRES）', '壓迫', '對位防守', '防守加分', '防守數據', '防守'],
+    'etc': ['RAPM', '上場時間', '上場分鐘', '出賽率', '預測 MPG', '每場價值', '分鐘權重', '教練用人', '替補水準', '輪休'],
 }
 _TERM_CLASS = {t: c for c, ts in NOTE_TERMS.items() for t in ts}
 _NOTE_TOKEN = re.compile('|'.join(map(re.escape, sorted(_TERM_CLASS, key=len, reverse=True)))
@@ -394,7 +395,9 @@ def _compact_facts(s):
     s = s.replace(top, top + '\nconst OVR_TOP = Math.max(...P.map(p => p.ovr));')
     for lab, c in FACT_LABELS.items():
         s = s.replace(f'<span>{lab}<b>', f'<span class="{c}"><i class="lb">{lab}</i><b>')
-    s = s.replace('<span>防守加分 <b>', '<span class="f-x">防守加分 <b>')
+    # 防守加分改叫防守意識（使用者 2026-10-30）：真實防守 RAPM 高於同位置平均的部分，補能力值量不到的輪轉、站位
+    s = s.replace('<span>防守加分 <b>', '<span class="f-x" title="真實比賽的防守影響力高於同位置平均的部分（防守 RAPM），'
+                  '補能力值量不到的輪轉、站位、補位；只有正值，會加進 OVR">防守意識 <b>')
     assert s.count(NAME_OLD) == 1
     s = s.replace(NAME_OLD, NAME_NEW)
     s, n = re.subn(r'(<span class="f-gp">.*?</span>)', lambda m: m.group(1) + BIG3, s, count=1)

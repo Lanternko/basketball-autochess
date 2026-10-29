@@ -34,6 +34,11 @@ COMMON_REPLACEMENTS = [
     ("['tovSkill', 'HDL', '護球']", "['tovSkill', 'TO', '少失誤']"),
     # help 只量籃下 6 呎內命中差、只管禁區，實際是護框（使用者 2026-10-29）；欄位名 help 等 E-080 後再改
     ("['help', 'HELP', '協防']", "['help', 'RIM', '護框']"),
+    # 樣板原本是 artifact（外層代加 viewport），單獨放上 gh-pages 後手機會用 980px 排版再縮放，
+    # 切換球員時資訊列行數一變就整頁重算縮放、看起來被拉長抖動（使用者 2026-10-29，Amen Thompson）
+    ('<meta charset="utf-8">', '<meta charset="utf-8">\n<meta name="viewport" content="width=device-width,initial-scale=1">'),
+    # 資訊列每一項整塊換行，不要把「防守加分 +1.77」斷在中間
+    ('.facts b{', '.facts>span{white-space:nowrap}\n.facts b{'),
 ]
 
 

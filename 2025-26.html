@@ -233,6 +233,17 @@ th.noh{cursor:default}
 .rx .rsub{display:grid;gap:4px;font-size:.74rem;color:var(--muted)}
 .rx .rsub>div{display:flex;flex-wrap:wrap;gap:2px 14px}
 .rx .rsub b{margin-left:5px;font:600 .92rem var(--f-disp);font-variant-numeric:tabular-nums;color:var(--fg)}
+/* 球員卡資訊列：手機藏標籤、較上季差值三色（season_nav._compact_facts） */
+.facts i{font-style:normal}
+.facts .sm{display:none}
+.facts b.up{color:var(--g-a)}
+.facts b.dn{color:var(--g-f)}
+.facts b.flat{color:var(--muted)}
+@media (max-width:640px){
+  .facts{gap:2px 12px}
+  .facts .lb{display:none}
+  .facts .sm{display:inline}
+}
 /* 手機表格（使用者 2026-10-29：很難用）：名字欄變窄可換行、列變矮；OVR 往右滑時釘在名字旁邊，長按不選字 */
 @media (max-width:640px){
   #tbl td{padding:5px 3px;font-size:.92rem}
@@ -403,15 +414,14 @@ function card(p) {
     <div class="who">
       <div class="nm"><span class="first">${esc(first)}</span>${esc(last)}</div>
       <div class="facts">
-        <span>球隊 <b>${p.team}</b></span><span>身高 <b>${ht(p.ht)}</b></span>
-        <span>場均 <b>${p.min.toFixed(1)}</b> 分鐘</span><span>出賽 <b>${p.gp}</b> 場</span>
-        <span>每 36 分鐘影響力 <b>${p.imp > 0 ? '+' : ''}${p.imp.toFixed(2)}</b></span>
+        <span><i class="lb">球隊 </i><b>${p.team}</b></span><span><i class="lb">身高 </i><b>${ht(p.ht)}</b></span>
+        <span><i class="lb">場均 </i><b>${p.min.toFixed(1)}</b> 分鐘</span><span><i class="lb">出賽 </i><b>${p.gp}</b> 場</span>
         ${p.dbon > 0 ? `<span>防守加分 <b>+${p.dbon.toFixed(2)}</b></span>` : ''}
       </div>
       ${impactChips(p)}
       ${realBox(p)}
     </div>
-    <div class="ring"><svg viewBox="0 0 120 120" role="img" aria-label="OVR ${p.ovr}">
+    <div class="ring" title="模型用能力值模擬的每 36 分鐘淨值 ${(p.imp > 0 ? '+' : '') + p.imp.toFixed(2)}（OVR 由此換算；下方「影響」是真實比賽的 RAPM，兩者不同）"><svg viewBox="0 0 120 120" role="img" aria-label="OVR ${p.ovr}">
       <circle cx="60" cy="60" r="48" fill="#0b1119" stroke="#2c3a4c" stroke-width="7"/>
       <circle cx="60" cy="60" r="48" fill="none" stroke="${col}" stroke-width="7" stroke-linecap="round" stroke-dasharray="${C * f} ${C}" transform="rotate(-90 60 60)"/>
       <text x="60" y="44" text-anchor="middle" class="lab">OVR</text>

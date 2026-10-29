@@ -50,6 +50,27 @@ COMMON_REPLACEMENTS = [
     # 兩個 builder 已先把門檻改成場均 10／20／30 分鐘
     ("  seg('minSeg', [[0, '全部'], [10, '≥10'], [20, '≥20'], [30, '≥30']], 'min');\n", '  teamPick();\n'),
     ('放寬位置或上場分鐘試試', '放寬位置或球隊試試'),
+    # 表格自己捲（使用者 2026-10-29：看低排名時頭像卡仍在畫面上）。高度＝卡片下方剩餘視窗，只在載入／縮放時算，
+    # 點球員不改高度；換排序、篩選、頁才捲回頂。手機卡片太高放不下兩者，給 60% 視窗，捲到底交還頁面。
+    ('.tbox{overflow-x:auto;', '.tbox{overflow:auto;max-height:70vh;overscroll-behavior:contain;'),
+    ('@media (prefers-reduced-motion', '''#tbl thead{position:sticky;top:0;z-index:3}
+@media (max-width:640px){.tbox{overscroll-behavior:auto}}
+@media (prefers-reduced-motion'''),
+    ('  card(P.find(p => p.name === st.sel) || P[0]);', '''  const lk = [st.sort, st.asc, st.pos, st.team, st.q, st.page].join('|');
+  if (lk !== listKey) { listKey = lk; document.querySelector('.tbox').scrollTop = 0; }
+  card(P.find(p => p.name === st.sel) || P[0]);'''),
+    ("document.getElementById('q').oninput", '''let listKey = '';
+function fitTable() {
+  // 以「卡片頂端貼齊視窗頂」為準：卡片＋篩選列以下的空間都給表格
+  const t = document.querySelector('.tbox'), above = t.getBoundingClientRect().top - document.getElementById('card').getBoundingClientRect().top;
+  const h = innerWidth <= 640 ? innerHeight * 0.6 : Math.max(300, innerHeight - above - 12);
+  t.style.maxHeight = Math.round(h) + 'px';
+}
+addEventListener('resize', fitTable);
+addEventListener('load', fitTable);
+document.fonts && document.fonts.ready.then(fitTable);
+
+document.getElementById('q').oninput'''),
     # 顯示切換直接用範例當標籤（使用者 2026-10-29）
     ("seg('modeSeg', [['grade', '等第'], ['num', '數值']], 'mode');", "seg('modeSeg', [['grade', 'A+'], ['num', '99']], 'mode');"),
     ('function render() {', '''function teamPick() {

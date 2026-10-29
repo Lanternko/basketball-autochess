@@ -69,6 +69,7 @@
 - 使用者要求：卡片「前三強項＋弱項」改成影響力。`scripts/enrich_roster_viewer.py` 新增 `impactChips`：進攻／防守／淨影響＝2025-26 單季 box-prior RAPM（`reports/impact-rapm/rapm-prior.csv` lastSeasonO/D，每 100 回合），團隊在場＝`onoff.csv` 2025-26 在場淨效率（交易球員依 onPoss 加權，tooltip 附在場減不在場）。賽中頁也用 2025-26 值（2026-27 無 RAPM）。已發布（gh-pages 30942278）。
 - 新增 deploy-shell：`python -I scripts/daily_inseason_update.py --shell`，只改頁面（UI／顯示）時用，沿用最後發布那天的 live 資料重建兩頁並發布，不抓資料、不跑 C4、版號與 dataSha256 不動。改公式會動到數字，仍走完整流程並改版號（G2）。網站顯示改動 push 後就跑它，不等每日排程。
 - 2026-10-29 每日完整發布曾停擺：E-080 未 commit 的 `CURVE_DEF_RIM = RIMD_SCURVE ? [...] : [...]` 讓 `ovr_common.py` 解析失敗（L-048）。41cf2bd 讓解析器照 JS 規則讀旗標（關閉取後一組，與 HEAD 及 node 載入值逐位元相同），已發 inseason 0.2.1e（數據至 2026-10-28，gh-pages 52bd2eb），排程恢復正常。另：共用 checkout 時 commit 一律帶路徑（L-047；a8440d1 混入 card 0.2.4 的 memory 改動）。
+- 2026-10-29 新增收工提醒 Stop hook（腳本已 commit；設定檔 `.claude/settings.local.json` 只在本機）：`.claude/hooks/handoff_reminder.py`，註冊在本機 `.claude/settings.local.json`（pythonw 絕對路徑，只在這台機器生效）。session 改了 memory/ 以外的 repo 檔、跑了 scripts／reports 腳本或派工，之後沒更新 handoff.md 時，在工作告一段落的回合（App 是有 wrap_up 的回合）提醒一次；同一份工作不重複提醒，派工子 session 不檢查。
 - E-067 長人偏袒量尺凍結並跑基準線（2026-10-29）：卡片（fit 卡）沒有偏袒；模擬 WinImp 主版、位置版都偏袒長人（S +82～95／+38～50），位置版還低估 PG。下一步轉回模擬引擎，驗收照 E-067 §3（b1–b3）。
 - Hauser HDL 99：HDL 是 tovSkill（TOV/(FGA+.44FTA+AST+TOV)），在模擬裡是每次觸球的失誤率；v41 驗證中他的模擬 TOV/36 是 0.89，實際 0.65，模擬已經高估他的失誤，所以數值不用改。問題在顯示名稱「護球」，建議改名，待使用者決定。
 

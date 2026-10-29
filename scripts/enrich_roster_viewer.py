@@ -31,6 +31,17 @@ CSS = """
 .rx .rsub{display:grid;gap:4px;font-size:.74rem;color:var(--muted)}
 .rx .rsub>div{display:flex;flex-wrap:wrap;gap:2px 14px}
 .rx .rsub b{margin-left:5px;font:600 .92rem var(--f-disp);font-variant-numeric:tabular-nums;color:var(--fg)}
+/* 球員卡資訊列：手機藏標籤、較上季差值三色（season_nav._compact_facts） */
+.facts i{font-style:normal}
+.facts .sm{display:none}
+.facts b.up{color:var(--g-a)}
+.facts b.dn{color:var(--g-f)}
+.facts b.flat{color:var(--muted)}
+@media (max-width:640px){
+  .facts{gap:2px 12px}
+  .facts .lb{display:none}
+  .facts .sm{display:inline}
+}
 /* 手機表格（使用者 2026-10-29：很難用）：名字欄變窄可換行、列變矮；OVR 往右滑時釘在名字旁邊，長按不選字 */
 @media (max-width:640px){
   #tbl td{padding:5px 3px;font-size:.92rem}

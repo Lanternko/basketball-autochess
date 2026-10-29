@@ -178,13 +178,15 @@ CSS = """
 @media (max-width:640px){
   .g5 td{font-size:.84rem}
   .g5 th,.g5 td{padding:5px 6px}
-  /* 手機 ▼ 放正負值格右上角（使用者 2026-10-30）：右上切一個斜角變五角形，▼ 放在切掉的位置，不另佔一列 */
+  /* 手機 ▼ 放正負值格右上角（使用者 2026-10-30）：右上切一個斜角變五角形，▼ 放在切掉的位置，不另佔一列
+     ▼ 用 45° 等腰直角三角形，左斜邊和缺角斜線平行、留 5px 不碰框；展開時不翻轉，改變金色 */
   .real.rx{position:relative}
-  .rx .rmain .st:last-child{position:relative;clip-path:polygon(0 0,calc(100% - 20px) 0,100% 20px,100% 100%,0 100%)}
-  .rx .rmain .st:last-child::after{content:'';position:absolute;top:-1px;right:-1px;width:20px;height:20px;pointer-events:none;
+  .rx .rmain .st:last-child{position:relative;clip-path:polygon(0 0,calc(100% - 24px) 0,100% 24px,100% 100%,0 100%)}
+  .rx .rmain .st:last-child::after{content:'';position:absolute;top:-1px;right:-1px;width:24px;height:24px;pointer-events:none;
     background:linear-gradient(to bottom left,transparent calc(50% - 1px),var(--line) calc(50% - 1px),var(--line) calc(50% + 1px),transparent calc(50% + 1px))}
-  .rx .g5t{position:absolute;top:-8px;right:-8px;width:30px;height:30px;padding:0;border:0;font-size:0;justify-content:center;color:var(--fg)}
-  .rx .g5t i{font-size:10px}
+  .rx .g5t{position:absolute;top:-9px;right:-10px;width:30px;height:30px;padding:0;border:0;font-size:0;justify-content:center}
+  .rx .g5t i,.rx .g5t[aria-expanded="true"] i{display:block;width:12px;height:6px;background:var(--muted);clip-path:polygon(0 0,100% 0,50% 100%);transform:none;transition:background .15s}
+  .rx .g5t[aria-expanded="true"] i{background:var(--gold)}
 }
 .tabbr{color:var(--tt);font-weight:600}
 /* impact chips：RAPM 攻守淨（對聯盟平均）、在場減不在場（每 100 回合） */

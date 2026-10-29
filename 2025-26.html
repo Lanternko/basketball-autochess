@@ -254,7 +254,7 @@ th.noh{cursor:default}
 #tbl td.nm{background:var(--panel);color:var(--fg);box-shadow:inset -1px 0 0 var(--line)}
 #tbl tbody tr:hover td.nm{background:var(--panel-2)}
 #tbl tbody tr.sel td.nm{background:var(--gold);color:var(--gold-ink)}
-/* 手機表格（使用者 2026-10-29）：拿掉 OVR 左邊的位置／球隊／身高；表格手勢由 JS 鎖方向（偏垂直就整段只上下捲，手抖不左右晃），名字／OVR 欄只能上下捲 */
+/* 手機表格（使用者 2026-10-29）：拿掉 OVR 左邊的位置／球隊／身高；表格手勢由 JS 鎖方向（偏垂直就整段只上下捲，手抖不左右晃）；表頭與名字／OVR 欄的手勢捲整頁（2026-10-30） */
 @media (max-width:640px){
   #tbl thead tr:last-child th:is([data-k=pos],[data-k=team],[data-k=ht]),#tbl tbody td:is(:nth-child(3),:nth-child(4),:nth-child(5)):not([colspan]),#tbl th.gx{display:none}
   .tbox{touch-action:none}
@@ -513,7 +513,8 @@ function impactChips(p) {
   if (q && matchMedia('(max-width:640px)').matches) q.placeholder = '搜尋';
 })();
 // 手機表格手勢鎖方向（使用者 2026-10-29：往上滑時手會左右偏，表格跟著晃）：先移動 10px 才判方向，
-// 水平量要大於垂直 1.5 倍才算左右捲，判定後整段手勢只動那一軸；從名字／OVR 欄開始的只能上下捲。放手後照速度慣性滑行。
+// 水平量要大於垂直 1.5 倍才算左右捲，判定後整段手勢只動那一軸。放手後照速度慣性滑行。
+// 表格自己捲只從數值格啟動（使用者 2026-10-30）：從表頭或 #／名字／OVR 欄開始的手勢上下捲整頁，不捲表格。
 (() => {
   const box = document.querySelector('.tbox'); if (!box) return;
   const mq = matchMedia('(max-width:640px)'), LOCK = 10, RATIO = 1.5;
@@ -522,17 +523,18 @@ function impactChips(p) {
     cancelAnimationFrame(raf); raf = 0; s = null;
     if (!mq.matches || e.touches.length > 1) return;
     const t = e.touches[0];
-    s = {x: t.clientX, y: t.clientY, l: box.scrollLeft, tp: box.scrollTop, axis: null, hist: [],
-         noX: !!e.target.closest('td.no,td.nm,td.ovr,th.noh,th.nm,th[data-k="ovr"]')};
+    const page = !!e.target.closest('thead,td.no,td.nm,td.ovr');
+    s = {x: t.clientX, y: t.clientY, el: page ? document.scrollingElement : box, axis: page ? 'y' : null, hist: []};
+    s.l = s.el.scrollLeft; s.tp = s.el.scrollTop;
   }, {passive: true});
   box.addEventListener('touchmove', e => {
     if (!s || e.touches.length > 1) return;
     const t = e.touches[0], dx = t.clientX - s.x, dy = t.clientY - s.y;
     if (!s.axis) {
       if (Math.hypot(dx, dy) < LOCK) return;
-      s.axis = !s.noX && Math.abs(dx) > Math.abs(dy) * RATIO ? 'x' : 'y';
+      s.axis = Math.abs(dx) > Math.abs(dy) * RATIO ? 'x' : 'y';
     }
-    if (s.axis === 'x') box.scrollLeft = s.l - dx; else box.scrollTop = s.tp - dy;
+    if (s.axis === 'x') s.el.scrollLeft = s.l - dx; else s.el.scrollTop = s.tp - dy;
     const now = performance.now();
     s.hist.push([now, s.axis === 'x' ? t.clientX : t.clientY]);
     while (s.hist.length > 2 && now - s.hist[0][0] > 100) s.hist.shift();
@@ -545,7 +547,7 @@ function impactChips(p) {
     const step = now => {
       const d = now - last; last = now; v *= Math.pow(0.996, d);
       if (Math.abs(v) < 0.03) { raf = 0; return; }
-      if (g.axis === 'x') box.scrollLeft += v * d; else box.scrollTop += v * d;
+      if (g.axis === 'x') g.el.scrollLeft += v * d; else g.el.scrollTop += v * d;
       raf = requestAnimationFrame(step);
     };
     if (Math.abs(v) > 0.1) raf = requestAnimationFrame(step);

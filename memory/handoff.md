@@ -2,7 +2,7 @@
 
 只記「目前狀態」，每次收工整份覆寫。歷史在 findings／experiments／rulings／lessons。
 
-- **更新**：2026-10-29，Claude Code App（lead；分支 claude/project-thread-63h2fz，已 push）
+- **更新**：2026-10-29 18:40，Claude Code App（lead；分支 claude/project-thread-63h2fz，已 push 到 41cf2bd）
 
 ## 進行中的工作
 - 版本號改制（R-018）：正式卡片 = `card 0.1.0`；下列實驗都掛在它上面。
@@ -29,6 +29,7 @@
     - B：E-083 凍結（d=0.75，等 2026-27 季末），目前無事可做。
     - C：E-081 判定年輕被低估（當季量尺 S −0.202）。E-084（用人回歸目標改成單季 RAPM）的機械判定只差 (c3)；使用者依機會成本裁定**通過（R-042）**。role-audit（Opus）重算成立（`reports/card-0.2.3+E084-current-target/audit/`）。G5 通過，**已發成 card 0.2.4（PATCH，R-044）**，狀態板與 2025-26 名單頁改指 0.2.4。退步項列為下一輪目標：四季量尺降、分鐘權重改成遞減（R-043；Caruso 型低分鐘高效率吃虧、Dyson 型上場時間撐起名次；曲線待使用者定）、老將（五位是當季 RAPM 真的低）、p_B 間接路徑、p 上限截斷、mpg-A／B 出賽數不一致。
     - 達成條件勘誤：lead 原本寫的「有顯著偏差才修、修正要全閘過」違反 R-040；改成「偏差修到、沒弄壞、利大於弊」即可（R-042、L-045）。
+    - **收工狀態（2026-10-29 18:40）**：A、C 完成；B 只能等 2026-27 季末。這個目標的 App 對話已收工。下一輪換新對話，從 R-043 分鐘曲線開始：使用者在飽和 1−e^(−m/15) 和 log(1+m) 之間選（lead 建議飽和，較貼近「15→20 嚴重、30→35 還好」；以 36 分鐘＝1，5／20 分鐘權重飽和 0.31／0.81、log 0.50／0.84，log 對深板凳寬鬆很多），15 這個尺度要在預註冊寫死。選定後寫預註冊，基準 card 0.2.4；現有量尺對分鐘線性，不能拿來選曲線（R-043）。
 - E-079（2026-10-29）：RAPM 近期加權取代四季等權合併，**完成、不採用**：P 未過（d* 0.25，2025-26 Δ +0.229 [−1.344, +1.799]），沒做卡片層，card 0.2.3 不變；d=0.75 事後看會過，不作判準，要用需新預註冊＋沒看過的季（`reports/card-0.2.3+E079-recency-rapm/report.md`）。起因：使用者覺得 Banchero（#205）、Jalen Williams、Jalen Johnson 偏低；lead 診斷是模擬與合併 RAPM 都不看好、2K 看好，另疑合併 RAPM 偏袒老將。Jalen Williams 被標 PF（聯盟名單是 SG）另案未查。
 - E-073：使用者接受為 card 0.3.0 候選（R-038）；role-audit 重算成立（2026-10-29，`reports/card-0.2.0+E073-usage-evidence/audit/`）。使用者選「等 0.2.2 再重跑」；0.2.2 已發布，E-075（`reports/card-0.2.2+E073-usage-evidence/`，預註冊 sha256 faec88da…bcd5）結果「語意版」：只有 c4 沒過（下界 −0.0002），R1 現在也成立（Sandfort 53.6 < Drummond 57.7）。使用者依機會成本接受（R-040）；role-audit 已派（App 內 sonnet 子代理），版號使用者定為 card 0.2.3；role-audit 重算成立（2026-10-29）；G5 通過（使用者「不錯」）；**card 0.2.3 已發布**（2026-10-29，gh-pages b053b26，`reports/card-0.2.3/` ranking.csv sha256 933797d8…；狀態板改 0.2.3）。賽中先驗仍是 card 0.2.2（inseason 0.2.1），要不要換另案。App（lead）等使用者決定 3PT 定義（拆「準度／投射威脅」兩欄或只留準度）與 card 0.1.1 何時發版。
 
@@ -67,6 +68,7 @@
 ## 2026-10-29 名單卡片影響力
 - 使用者要求：卡片「前三強項＋弱項」改成影響力。`scripts/enrich_roster_viewer.py` 新增 `impactChips`：進攻／防守／淨影響＝2025-26 單季 box-prior RAPM（`reports/impact-rapm/rapm-prior.csv` lastSeasonO/D，每 100 回合），團隊在場＝`onoff.csv` 2025-26 在場淨效率（交易球員依 onPoss 加權，tooltip 附在場減不在場）。賽中頁也用 2025-26 值（2026-27 無 RAPM）。已發布（gh-pages 30942278）。
 - 新增 deploy-shell：`python -I scripts/daily_inseason_update.py --shell`，只改頁面（UI／顯示）時用，沿用最後發布那天的 live 資料重建兩頁並發布，不抓資料、不跑 C4、版號與 dataSha256 不動。改公式會動到數字，仍走完整流程並改版號（G2）。網站顯示改動 push 後就跑它，不等每日排程。
+- 2026-10-29 每日完整發布曾停擺：E-080 未 commit 的 `CURVE_DEF_RIM = RIMD_SCURVE ? [...] : [...]` 讓 `ovr_common.py` 解析失敗（L-048）。41cf2bd 讓解析器照 JS 規則讀旗標（關閉取後一組，與 HEAD 及 node 載入值逐位元相同），已發 inseason 0.2.1e（數據至 2026-10-28，gh-pages 52bd2eb），排程恢復正常。另：共用 checkout 時 commit 一律帶路徑（L-047；a8440d1 混入 card 0.2.4 的 memory 改動）。
 - E-067 長人偏袒量尺凍結並跑基準線（2026-10-29）：卡片（fit 卡）沒有偏袒；模擬 WinImp 主版、位置版都偏袒長人（S +82～95／+38～50），位置版還低估 PG。下一步轉回模擬引擎，驗收照 E-067 §3（b1–b3）。
 - Hauser HDL 99：HDL 是 tovSkill（TOV/(FGA+.44FTA+AST+TOV)），在模擬裡是每次觸球的失誤率；v41 驗證中他的模擬 TOV/36 是 0.89，實際 0.65，模擬已經高估他的失誤，所以數值不用改。問題在顯示名稱「護球」，建議改名，待使用者決定。
 

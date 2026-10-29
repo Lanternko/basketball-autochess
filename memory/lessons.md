@@ -346,3 +346,22 @@
 - 對應測試或關卡：lead 寫預註冊時（判定表每一列都要寫參考來源）
 - 重犯：這次違反了 L-041 和 R-040（機會成本），寫判定前沒有先對照 R-040。同一份預註冊裡，(b) 年齡偏差這個「要修的目標」明顯修到了，lead 卻讓一道舊參考的護欄單獨否決它。之後寫判定表時，要逐列標明這一列是「要修的目標」、「沒弄壞」還是「權衡」（R-042）。
 - 來源：使用者 2026-10-29 質問「寫死的規則是什麼 誰教你這麼寫的」
+
+### L-047
+- 日期：2026-10-29
+- 錯誤：兩個 session 共用同一個 checkout（分支 claude/project-thread-63h2fz）。lead 已 stage 好 card 0.2.4 的 memory／狀態板／名單頁改動，另一個 session（名單頁 viewport）這時用沒帶路徑的 `git commit`，把 lead 的 index 整包提交成 a8440d1。訊息和內容對不上，它自己的 `scripts/season_nav.py` 反而沒進去（事後補成 2859113）。已 push，不改寫歷史。
+- 規則：
+  - 共用 checkout 時一律 `git commit -- <路徑>`，只提交自己的檔案，不要 `git add` 後再裸跑 `git commit`。
+  - commit 前看 `git diff --cached --stat`，出現不是自己的檔案就停下。
+  - 同一檔案裡有別人沒 commit 的段落（memory/ 常見）時，用「HEAD 版＋自己的段落」產生 blob，再 `git update-index --cacheinfo` 只 stage 自己的部分，不要整檔 add。
+- 對應測試或關卡：每次 commit 前（所有角色）
+- 來源：2026-10-29 lead 發 card 0.2.4 時發現
+
+### L-048
+- 日期：2026-10-29
+- 錯誤：E-080 在工作樹把 `src/constants.js` 的 `CURVE_DEF_RIM` 改成旗標條件式 `RIMD_SCURVE ? [...] : [...]`，沒 commit。JS 照常跑、`npm test` 也過，但每日發布的 Python 解析器（`reports/ovr-inseason-2026-27/tools/ovr_common.py` `load_constants`）只認 `= [`，報「Missing curve」，完整發布整個停掉。排程跑的是工作樹，所以研究中的改動會直接打到線上發布。
+- 規則：
+  - 改 `src/constants.js` 的**寫法**（不只數值）之後，先跑 `python -I scripts/daily_inseason_update.py --dry-run`，過了才算沒弄壞。
+  - 實驗旗標一律寫成 `export const FLAG = globalThis.process?.env?.FLAG === '1';` 加上 `NAME = FLAG ? [...] : [...]`；41cf2bd 的解析器只認這個格式，旗標關閉取後一組。
+- 對應測試或關卡：`python -I scripts/daily_inseason_update.py --dry-run`
+- 來源：2026-10-29 lead 發 card 0.2.4 時完整發布失敗；41cf2bd 修好，已發 inseason 0.2.1e（gh-pages 52bd2eb）

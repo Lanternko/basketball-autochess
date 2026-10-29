@@ -71,6 +71,16 @@ CSS = """
 .tag .rk{position:relative;z-index:1;color:var(--ink,#fff);text-shadow:0 0 8px var(--card,#000)}
 .tag .logo{position:absolute;right:30px;top:50%;transform:translateY(-50%);height:150px;width:150px;object-fit:contain;opacity:.9;pointer-events:none}
 .tag .shot{position:absolute;right:26px;bottom:7px;height:132px;width:auto;pointer-events:none}
+/* 手機卡片（使用者 2026-10-29：沒有頭像和隊徽）：版型在手機把整個隊色區藏掉；改成卡片頂端整寬橫幅，名字、OVR 往下一列 */
+@media (max-width:640px){
+  .card .tag{display:flex;grid-column:1/-1;grid-row:1;margin:-12px -14px 0;min-width:0;height:104px;clip-path:none;padding:10px 14px 14px}
+  .tag .rk{font-size:2.6rem}
+  .tag .logo{right:96px;height:96px;width:96px;opacity:.55}
+  .tag .shot{right:10px;height:97px}
+  .card .who>.nm{grid-row:2}
+  .card .who>.facts{grid-row:3}
+  .card .ring{grid-row:2/4}
+}
 .tabbr{color:var(--tt);font-weight:600}
 tbody tr.sel .tabbr{color:inherit}
 /* impact chips：RAPM 攻守淨（對聯盟平均）、在場減不在場（每 100 回合） */

@@ -196,7 +196,7 @@ COMMON_REPLACEMENTS = [
     ("  seg('minSeg', [[0, '全部'], [10, '≥10'], [20, '≥20'], [30, '≥30']], 'min');\n", '  teamPick();\n'),
     ('放寬位置或上場分鐘試試', '放寬位置或球隊試試'),
     # 表格自己捲（使用者 2026-10-29：看低排名時頭像卡仍在畫面上）。高度＝卡片下方剩餘視窗，只在載入／縮放時算，
-    # 點球員不改高度；換排序、篩選、頁才捲回頂。手機卡片太高放不下兩者，給 60% 視窗，捲到底交還頁面。
+    # 點球員不改高度；換排序、篩選、頁才捲回頂。手機卡片太高放不下兩者，表格給幾乎整個視窗（原 60% 太擠，使用者 2026-10-29），捲到底交還頁面。
     ('.tbox{overflow-x:auto;', '.tbox{overflow:auto;max-height:70vh;overscroll-behavior:contain;'),
     # top:-1px：border-collapse 的半像素邊框會在表頭上緣留一條縫，捲過的列從縫裡露出來
     ('@media (prefers-reduced-motion', '''#tbl thead{position:sticky;top:-1px;z-index:3}
@@ -210,7 +210,7 @@ COMMON_REPLACEMENTS = [
 function fitTable() {
   // 以「卡片頂端貼齊視窗頂」為準：卡片＋篩選列以下的空間都給表格
   const t = document.querySelector('.tbox'), above = t.getBoundingClientRect().top - document.getElementById('card').getBoundingClientRect().top;
-  const h = innerWidth <= 640 ? innerHeight * 0.6 : Math.max(300, innerHeight - above - 12);
+  const h = innerWidth <= 640 ? innerHeight - 24 : Math.max(300, innerHeight - above - 12);
   t.style.maxHeight = Math.round(h) + 'px';
   tboxEdges();
 }

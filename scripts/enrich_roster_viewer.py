@@ -31,6 +31,20 @@ CSS = """
 .rx .rsub{display:grid;gap:4px;font-size:.74rem;color:var(--muted)}
 .rx .rsub>div{display:flex;flex-wrap:wrap;gap:2px 14px}
 .rx .rsub b{margin-left:5px;font:600 .92rem var(--f-disp);font-variant-numeric:tabular-nums;color:var(--fg)}
+/* 手機表格（使用者 2026-10-29：很難用）：名字欄變窄可換行、列變矮；OVR 往右滑時釘在名字旁邊，長按不選字 */
+@media (max-width:640px){
+  #tbl td{padding:5px 3px;font-size:.92rem}
+  #tbl th.nm,#tbl td.nm{width:112px;min-width:112px;max-width:112px;box-sizing:border-box;padding-left:8px}
+  #tbl td.nm{white-space:normal;overflow-wrap:anywhere;line-height:1.1;font-size:.86rem}
+  #tbl td.no{width:28px;font-size:.78rem}
+  #tbl th[data-k="ovr"],#tbl td.ovr{position:sticky;left:112px;z-index:1;box-shadow:6px 0 6px -5px rgba(0,0,0,.7)}
+  #tbl th[data-k="ovr"]{z-index:2}
+  #tbl tbody td.ovr{background:var(--panel);font-size:1rem}
+  #tbl tbody td.ovr.sortcol{background:linear-gradient(rgba(242,194,48,.07),rgba(242,194,48,.07)) var(--panel)}
+  #tbl tbody tr:hover td.ovr{background:var(--panel-2)}
+  #tbl tbody tr.sel td.ovr{background:var(--gold)}
+  #tbl tbody{-webkit-user-select:none;user-select:none;-webkit-touch-callout:none}
+}
 /* team colors + headshot */
 .card .tag{background:var(--card,var(--red));box-shadow:inset 0 -7px 0 var(--tc,transparent);position:relative;min-width:230px}
 .tag .pos{background:var(--tc,#fff);color:#fff;position:relative;z-index:1}

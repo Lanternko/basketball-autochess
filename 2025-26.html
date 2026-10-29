@@ -273,15 +273,35 @@ th.noh{cursor:default}
 .tag .rk{position:relative;z-index:1;color:var(--ink,#fff);text-shadow:0 0 8px var(--card,#000)}
 .tag .logo{position:absolute;right:30px;top:50%;transform:translateY(-50%);height:150px;width:150px;object-fit:contain;opacity:.9;pointer-events:none}
 .tag .shot{position:absolute;right:26px;bottom:7px;height:132px;width:auto;pointer-events:none}
-/* 手機卡片（使用者 2026-10-29：沒有頭像和隊徽）：版型在手機把整個隊色區藏掉；改成卡片頂端整寬橫幅，名字、OVR 往下一列 */
+/* 手機卡片（使用者 2026-10-29：沒有頭像和隊徽；名字和頭像放一起；字太多，用減法）
+   隊色橫幅放位置、排名、名字（.tnm 只在手機顯示）和頭像；下面一列 OVR 圓環配較上季；
+   影響力四格一排；資訊列只留身高、場均分鐘；真實數據只留得分／籃板／助攻三大格 */
+.tag .tnm{display:none}
 @media (max-width:640px){
-  .card .tag{display:flex;grid-column:1/-1;grid-row:1;margin:-12px -14px 0;min-width:0;height:104px;clip-path:none;padding:10px 14px 14px}
-  .tag .rk{font-size:2.6rem}
-  .tag .logo{right:96px;height:96px;width:96px;opacity:.55}
-  .tag .shot{right:10px;height:97px}
-  .card .who>.nm{grid-row:2}
-  .card .who>.facts{grid-row:3}
-  .card .ring{grid-row:2/4}
+  .card{grid-template-columns:auto 1fr;gap:10px 12px}
+  .card .tag{display:flex;flex-direction:row;align-items:center;justify-content:flex-start;gap:8px;grid-column:1/-1;grid-row:1;margin:-12px -14px 0;min-width:0;height:128px;clip-path:none;padding:10px 14px}
+  .tag .rk{font-size:1.5rem;align-self:flex-start;line-height:1.1}
+  .tag .pos{align-self:flex-start}
+  .tag .rk small{font-size:.9rem}
+  .tag .logo{right:14px;height:110px;width:110px;opacity:.9}
+  .tag .shot{right:6px;height:121px}
+  .tag .tnm{display:block;position:absolute;left:14px;right:136px;bottom:15px;z-index:1;font:800 1.55rem/.95 var(--f-disp);text-transform:uppercase;color:var(--ink,#fff);text-shadow:0 0 8px var(--card,#000);overflow-wrap:anywhere}
+  .tag .tnm span{display:block;font-size:.9rem;font-weight:600;opacity:.85;margin-bottom:3px}
+  .card .who>.nm{display:none}
+  .card .ring{grid-column:1;grid-row:2;align-self:center}
+  .card .ring svg{width:76px;height:76px}
+  .card .who>.facts{grid-column:2;grid-row:2;align-self:center;display:flex;flex-wrap:wrap;gap:2px 12px;color:var(--muted);font-size:.85rem}
+  .facts .f-tm,.facts .f-gp,.facts .f-x{display:none}
+  .facts .f-d{order:-1;flex-basis:100%;font-size:1rem;color:var(--fg)}
+  .facts .f-d b{font-size:1.25rem}
+  .card .who>.strong{display:grid;grid-template-columns:repeat(4,1fr);gap:4px}
+  .strong .chip{display:flex;flex-direction:column;align-items:center;padding:4px 2px;font-size:.72rem;color:var(--muted);letter-spacing:0}
+  .strong .chip i{margin:0;font:700 1.1rem var(--f-disp)}
+  .strong .chip.dim{grid-column:1/-1}
+  .rx .rmain{flex:1}
+  .rx .rmain .st{flex:1}
+  .rx .rsub{display:none}
+}
 }
 .tabbr{color:var(--tt);font-weight:600}
 tbody tr.sel .tabbr{color:inherit}
@@ -429,13 +449,13 @@ function card(p) {
   const col = p.ovr >= 90 ? 'var(--g-a)' : p.ovr >= 80 ? 'var(--g-b)' : p.ovr >= 70 ? 'var(--g-c)' : p.ovr >= 60 ? 'var(--g-d)' : 'var(--g-f)';
   const chip = (lab, v, dim) => `<span class="chip${dim ? ' dim' : ''}">${lab}<i class="${gcls(grade(v))}">${grade(v)} ${v}</i></span>`;
   document.getElementById('card').innerHTML = `
-    <div class="tag" style="${teamVars(p.team)}">${headshot(p)}<span class="pos">${p.pos}</span><span class="rk"><small>#</small>${p.rank}</span></div>
+    <div class="tag" style="${teamVars(p.team)}">${headshot(p)}<div class="tnm"><span>${esc(first)}</span>${esc(last)}</div><span class="pos">${p.pos}</span><span class="rk"><small>#</small>${p.rank}</span></div>
     <div class="who">
       <div class="nm"><span class="first">${esc(first)}</span>${esc(last)}</div>
       <div class="facts">
-        <span><i class="lb">球隊 </i><b>${p.team}</b></span><span><i class="lb">身高 </i><b>${ht(p.ht)}</b></span>
-        <span><i class="lb">場均 </i><b>${p.min.toFixed(1)}</b> 分鐘</span><span><i class="lb">出賽 </i><b>${p.gp}</b> 場</span>
-        ${p.dbon > 0 ? `<span>防守加分 <b>+${p.dbon.toFixed(2)}</b></span>` : ''}
+        <span class="f-tm"><i class="lb">球隊 </i><b>${p.team}</b></span><span class="f-ht"><i class="lb">身高 </i><b>${ht(p.ht)}</b></span>
+        <span class="f-min"><i class="lb">場均 </i><b>${p.min.toFixed(1)}</b> 分鐘</span><span class="f-gp"><i class="lb">出賽 </i><b>${p.gp}</b> 場</span>
+        ${p.dbon > 0 ? `<span class="f-x">防守加分 <b>+${p.dbon.toFixed(2)}</b></span>` : ''}
       </div>
       ${impactChips(p)}
       ${realBox(p)}

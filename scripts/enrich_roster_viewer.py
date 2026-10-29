@@ -55,6 +55,9 @@ CSS = """
 @media (max-width:640px){
   #tbl thead tr:last-child th:is([data-k=pos],[data-k=team],[data-k=ht]),#tbl tbody td:is(:nth-child(3),:nth-child(4),:nth-child(5)):not([colspan]),#tbl th.gx{display:none}
   .tbox{touch-action:none}
+  /* 左右捲時群組標題（投籃…）的左框不滑到 OVR 上方：最左那格群組標題釘住，# 欄 28px 捲走後右緣剛好停在 OVR 右側 */
+  #tbl th.noh,#tbl td.no{width:28px;min-width:28px;max-width:28px;box-sizing:border-box}
+  #tbl tr.grp th:first-child{position:sticky;left:-28px;z-index:3;box-shadow:6px 0 6px -5px rgba(0,0,0,.7)}
 }
 /* 手機名字欄縮寫（使用者 2026-10-29：全名佔四成寬）：Stephen Curry → S. Curry，太長的截成 … */
 #tbl td.nm .ns{display:none}

@@ -2,7 +2,9 @@
 
 賽中 C4（E-033，c=1 凍結）用 2026-27 已打場次逐球員更新能力值與 OVR。先驗＝v5 先驗卡 2025-26（card 0.1.0）。
 
-**現行（inseason 0.2.1，E-074）**：先驗＝card 0.2.2（`prior-2025-26-card022.json`，`build_prior_022.py` 由 `reports/card-0.2.2/ranking.csv` 轉成）；凍結迴歸係數／每場錨點取 `reports/card-0.2.2/cards/P1/primary/{summary,pergame-summary}.json`；pressure＝逼失誤（賽中凍結）；foulDraw 賽中更新用 E-070 公式（常數凍結在先驗 JSON 的 `foulDrawFreeze`）。環境變數 `CARD_MODE=022`（預設）；`CARD_MODE=020` 逐位元重現 inseason 0.2.0c（先驗 `prior-2025-26-card012.json`）。輸出資料夾名要給絕對路徑才不會落在 live/ 底下。
+**現行（inseason 0.2.2，E-091）**：先驗換成 card 0.2.4（R-044）。能力值欄與 card 0.2.2 逐欄相同，所以仍讀 `prior-2025-26-card022.json`（pressure／foulDraw／屬性欄不變）；差別只在 OVR 那層：p（屬性迴歸每 36 預測，C4 照常更新）→ predNew = b0 + b1·p + b2·L + b3·a + b4·y + b5·v + b6·y·L + b7·v·L + b8·y·d·L（用人回歸，R-040；L、a、y、v、d 凍結在 2025-26 全季，由 `build_usage_024.py` 呼叫 `reports/card-0.2.3+E084-current-target/e084.py` 重算，輸出 `usage-2025-26-card024.json`；has=False → predNew = p）→ g = (predNew − r_repl)·MPGhat/36 → 兩段式映射。係數、r_repl、錨點取 E-084 `results.json`（`coefficients.card`、`card.r_repl`、`card.anchors`）；MPG0 改用 card 0.2.4 `ranking.csv` 的 mpg 欄（mpgAvail，依姓名對，卡內沒有的人退回 MIN/GP），MPG_win 仍是 2026-27 MIN/GP。ranking.csv 新增 `predNew` 欄（`predictedPer36` 仍是 p）。環境變數 `CARD_MODE=024`（預設）；`CARD_MODE=022` 逐位元重現 inseason 0.2.1e（已用 2026-10-28 資料驗證）；`CARD_MODE=020` 重現 0.2.0c。報告：`../e089-card024/report.md`。
+
+**前一版（inseason 0.2.1，E-074）**：先驗＝card 0.2.2（`prior-2025-26-card022.json`，`build_prior_022.py` 由 `reports/card-0.2.2/ranking.csv` 轉成）；凍結迴歸係數／每場錨點取 `reports/card-0.2.2/cards/P1/primary/{summary,pergame-summary}.json`；pressure＝逼失誤（賽中凍結）；foulDraw 賽中更新用 E-070 公式（常數凍結在先驗 JSON 的 `foulDrawFreeze`）。（0.2.1 時 `CARD_MODE=022` 為預設；`CARD_MODE=020` 逐位元重現 inseason 0.2.0c（先驗 `prior-2025-26-card012.json`）。輸出資料夾名要給絕對路徑才不會落在 live/ 底下）。
 
 ## 怎麼跑
 1. `node scripts/fetch_season_games.js 2026-27`（使用者已跑）→ `data/season-source-2026-27/`。

@@ -375,3 +375,14 @@
   - 實驗旗標一律寫成 `export const FLAG = globalThis.process?.env?.FLAG === '1';` 加上 `NAME = FLAG ? [...] : [...]`；41cf2bd 的解析器只認這個格式，旗標關閉取後一組。
 - 對應測試或關卡：`python -I scripts/daily_inseason_update.py --dry-run`
 - 來源：2026-10-29 lead 發 card 0.2.4 時完整發布失敗；41cf2bd 修好，已發 inseason 0.2.1e（gh-pages 52bd2eb）
+
+### L-050
+- 日期：2026-10-29
+- 錯誤：E-091 spec 的 (c3) 要求「grep 產出 HTML 含字面 card 0.2.4」，但 `scripts/season_nav.py` 的 `add_season_nav` 會整段重寫 `<div class="src">`，只抽出版本號顯示成「先驗 正式卡 0.2.4」，字面字串永遠找不到；spec 又寫 E-089，派工時這號已被別的 session 占走（E-089、E-090），子代理改記 E-091。另：Windows 上 `python -I` 會忽略 PYTHONIOENCODING／PYTHONUTF8，印中文要 `python -I -X utf8`。
+- 規則：
+  - 頁面驗收看 season_nav 產出的版本欄（「版本」「先驗」），不要 grep 自己寫進來源說明的字串。
+  - 共用 checkout 有多個 session 同時開實驗時，spec 寫完、派工前再 grep 一次 experiments.md 的最大 E 號；撞號由執行者往後順延，並在 spec 開頭註明實際編號。
+  - 需要印中文的 Python 一律 `python -I -X utf8`。
+- 對應測試或關卡：lead 寫 spec 的驗收段；派工前 grep `^### E-`
+- 相關：L-047、E-091
+- 來源：E-091 子代理回報（2026-10-29）

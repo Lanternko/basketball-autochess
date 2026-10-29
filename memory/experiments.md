@@ -864,3 +864,12 @@
 - 狀態：2026-10-29 停在 p0、未跑（L-046）。WinImp 與 v41 路徑 `shotSelection` 都是 `volume`，第一觸球走 `opportunityPlan` 實測率，`handlingWeights` 呼叫 0 次；換 handlingScore 對結果沒有任何作用。證據 `p0.json`。
 - 附帶診斷（同季，不算證據）：`diag-allocation/report.md`。模擬分球對真實前場觸球 ρ 0.60，後衛 1.14、中鋒 0.77；持球後衛給太多（SGA 1.96、Dončić 1.73），長人給太少（Gobert 0.66），Hauser 0.75。分球沒有「把不持球的人當持球者」。lead 追查：每人 usage、助攻各組誤差 ±2%，觸球差距是定義不同（模擬只算有結果的觸球），不是分球偏差；列 loop.md H8，排除。失誤「分工」新預註冊沒寫：活鏈失誤已是兩段實測率（傳球段 passStolen、終結段 terminalRisk），前提不成立（L-046 重犯）。
 - 相關：E-069、E-067、E-065、R-032、L-046
+
+### E-091
+- 日期：2026-10-29
+- 假設：賽中 OVR（2026-27）改用 card 0.2.4 當先驗（inseason 0.2.1e → 0.2.2）：predNew（用人回歸）取代 p 進 g，MPG0 改 card 0.2.4 的 mpg 欄，r_repl／錨點改 E-084 results.json；用人特徵凍結在 2025-26，不擬合任何新參數。（spec 原編號 E-089，因 E-089／E-090 已被占用，改記 E-091。）
+- 做法：`reports/ovr-inseason-2026-27/e089-card024/spec.md`；`live/run_c4_live.py` 新增 CARD_MODE=024（預設）；`live/build_usage_024.py` 呼叫 e084.py 重算凍結特徵 → `live/usage-2025-26-card024.json`。資料 cutoff 2026-10-28（sha256 606333d0…80be，67 PBP）。
+- 結果：(c0) CARD_MODE=022 ranking.csv 188c8bed…、no-prior.csv e061bff3… 與 live/2026-10-28 逐位元相同；(c1) npm test 57/57；(c2) 368 人有限、t1 0.0444、lastOVR 對 card 0.2.4 ovr Spearman 0.999994、最大差 0.1；(c3) probe_base_version = inseason 0.2.2，但 HTML 不含字面「card 0.2.4」（season_nav.py 重寫來源文字，頁面顯示「先驗 正式卡 0.2.4」，禁改檔，待 lead 決定）；(c4) 582 人 ovr／mpg／gRepl 逐格重現、r_repl 與錨點差 0.0。0.2.1e→0.2.2：|ΔOVR| 中位數 2.80、最大 15.8、>10 分 15 人，最大 10 人幾乎全是用人項（Banchero +15.8、Keyonte George −15.6、Wells −15.0）；年輕 ≤23 中位數 +1.10、老將 ≥31 −0.60；前 20 進 Harper、出 Markkanen。MPG0 口徑差 >3 者 81 人（卡內 205）。r_repl −1.7593→−1.2724；錨點 PR1/50/99 −0.756/1.050/4.744 → −0.542/0.885/3.178。
+- 狀態：完成，已採用並發布（2026-10-29 lead 審過：c0 兩檔 sha256、c2 lastOVR 對 card 0.2.4 最大差 0.1 自行重算，diff 已讀，npm test 自跑 57/57；(c3) 字面字串不過屬驗收寫法問題，頁面版本欄正確，接受）。完整發布 inseason 0.2.2a（gh-pages b39f4a3）；更新說明加「新賽季 0.2.2」一格後 --shell 重發（a9681d6）。注意：重抓後同截止日 2026-10-28 的資料 sha256 變成 31170cdc…（原 606333d0…），同 handoff 已記的「同截止日 sha 不同」問題，未查。
+- 相關：R-044、E-074、E-084、R-019、R-031、L-026、L-050
+- 來源：使用者 2026-10-29「將新賽季也跟上0.2.4」

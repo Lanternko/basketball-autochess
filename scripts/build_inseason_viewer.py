@@ -1,4 +1,4 @@
-"""賽中 OVR 名單頁：以正式卡名單頁為版型，換成 inseason 0.2.1（C4，先驗 card 0.2.2；OVR 為每場，R-028）的 OVR、現任球隊與 2026-27 場均真實數據。
+"""賽中 OVR 名單頁：以正式卡名單頁為版型，換成 inseason 0.2.2（C4，先驗 card 0.2.4＝用人回歸＋當季 RAPM 目標；OVR 為每場，R-028；舊版 0.2.1 為 card 0.2.2 先驗）的 OVR、現任球隊與 2026-27 場均真實數據。
 
 輸入：reports/ovr-inseason-2026-27/live/<日期>/{ranking.csv,meta.json}、data/season-source-2026-27/player-games.json。
 版型：reports/ovr-v58-card-2025-26/roster-viewer.html（只讀）。
@@ -52,7 +52,7 @@ def main():
     s = s.replace('<title>OVR 名單檢視</title>', '<title>新賽季 OVR 名單</title>', 1)
     s = s.replace('<h1>2025-26 <span>OVR</span> 名單</h1>', '<h1>2026-27 <span>OVR</span> 名單</h1>', 1)
     s = re.sub(r'<div class="src">.*?</div>',
-               f'<div class="src">OVR：賽中 C4（{meta["version"]}），先驗 {meta["priorCard"]}；數據截至 {meta["dataCutoff"]}；'
+               f'<div class="src">OVR：賽中 C4（{meta["version"]}），先驗 {meta["priorCard"]}{"（用人回歸＋當季 RAPM 目標）" if "predNew" in rows[0] else ""}；數據截至 {meta["dataCutoff"]}；'
                f'{"PRES＝逼失誤扣犯規（2025-26，賽中凍結）· " if has_pd else ""}N=已打場數 · {len(rows)} 人（另 {nopr} 人無先驗卡，未列入）· 樣本很小，只看趨勢</div>', s, count=1, flags=re.S)
     new_data = json.dumps({'cols': cols, 'rows': data_rows}, ensure_ascii=False, separators=(',', ':'))
     s = re.sub(r'const DATA=\{.*?\};\nconst COLS', lambda m: f'const DATA={new_data};\nconst COLS', s, count=1, flags=re.S)

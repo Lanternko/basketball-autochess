@@ -215,7 +215,7 @@ th.noh{cursor:default}
     <span>點欄位標題排序，再點一次反向</span>
     <span>點任一列看球員卡</span>
     <span>等第：<b class="gA">A</b> ≥82 · <b class="gB">B</b> ≥68 · <b class="gC">C</b> ≥56 · <b class="gD">D</b> ≥44 · <b class="gF">F</b> &lt;44</span>
-    <span>OVR 為每場（含上場時間，相對替補水準）；ΔOVR 綠＝比上季卡高、紅＝低、灰＝持平；OVR 同分多半是 2K27 名次封頂造成的 · 本頁 MPG 是 2026-27 場均分鐘</span>
+    <span>OVR 為每場（含上場時間，相對替補水準）；ΔOVR 深綠≥+4、淺綠+1～+4、灰±1 內、橘−1～−4、紅≤−4；OVR 同分多半是 2K27 名次封頂造成的 · 本頁 MPG 是 2026-27 場均分鐘</span>
   </div>
 </div>
 <!-- real-stats:begin -->
@@ -244,6 +244,10 @@ th.noh{cursor:default}
   .facts .lb{display:none}
   .facts .sm{display:inline}
 }
+/* 能力值欄一樣寬（使用者 2026-10-29）：原本被中文副標長短撐開 35–67px；副標縮小讓四字（製造犯規）也放得下一行 */
+#tbl thead tr:last-child th[data-k]:not([data-k=name],[data-k=pos],[data-k=team],[data-k=ht],[data-k=ovr],[data-k=min],[data-k=gp],[data-k=dovr]){
+  width:48px;min-width:48px;box-sizing:border-box}
+#tbl thead tr:last-child th[data-k]:not([data-k=name],[data-k=pos],[data-k=team],[data-k=ht],[data-k=ovr],[data-k=min],[data-k=gp],[data-k=dovr]) .zh{font-size:.62rem}
 /* 手機表格（使用者 2026-10-29：很難用）：名字欄變窄可換行、列變矮；OVR 往右滑時釘在名字旁邊，長按不選字 */
 @media (max-width:640px){
   #tbl td{padding:5px 3px;font-size:.92rem}
@@ -497,7 +501,7 @@ function render() {
       ${GROUPS.map(g => g[1].map(([k], j) => cell(k, p[k], j === 0, k === 'pressure' ? `逼失誤 ${p.force}｜犯規紀律 ${p.foulDisc}（2025-26）` : null)).join('')).join('')}
       <td class="sub gl${sc('min')}">${p.min.toFixed(1)}</td>
       <td class="sub${sc('gp')}">${p.gp}</td>
-      <td class="sub${sc('dovr')}" style="color:${(v => v >= 0 ? `color-mix(in oklab, var(--g-a) ${Math.round(Math.min(1, v / 11.210) * 100)}%, var(--muted))` : `color-mix(in oklab, var(--g-f) ${Math.round(Math.min(1, -v / 10.880) * 100)}%, var(--muted))`)(p.dovr)}">${(v => (v > 0 ? '+' : '') + v.toFixed(1))(Math.abs(p.dovr) < 0.05 ? 0 : p.dovr)}</td>
+      <td class="sub${sc('dovr')}" style="color:${(v => v >= 4 ? 'var(--g-a)' : v >= 1 ? 'var(--g-b)' : v > -1 ? 'var(--muted)' : v > -4 ? 'var(--g-d)' : 'var(--g-f)')(p.dovr)}">${(v => (v > 0 ? '+' : '') + v.toFixed(1))(Math.abs(p.dovr) < 0.05 ? 0 : p.dovr)}</td>
     </tr>`).join('') || '<tr><td colspan="25" class="empty">沒有符合條件的球員。放寬位置或球隊試試。</td></tr>';
   document.querySelectorAll('#tbl tbody tr[data-n]').forEach(tr => {
     tr.onclick = () => { st.sel = decodeURIComponent(tr.dataset.n); render(); };

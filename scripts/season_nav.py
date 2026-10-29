@@ -5,7 +5,8 @@ import re
 # 標籤用年份（使用者 2026-10-29）：2027 beta＝2026-27 賽中，2026＝2025-26 正式卡
 PAGES = [('inseason', '2027 beta', 'index.html'), ('card', '2026', '2025-26.html')]
 CSS = """<style>
-.snav{position:relative;z-index:5;display:flex;flex-wrap:wrap;align-items:center;gap:6px 10px;margin:6px 0 4px}
+.top{position:relative;z-index:5}
+.snav{display:flex;flex-wrap:wrap;align-items:center;gap:6px 10px;margin:6px 0 4px}
 .snav .seg a{display:block;background:var(--panel);color:var(--muted);border-right:1px solid var(--line);font:600 .9rem var(--f-disp);letter-spacing:.04em;padding:6px 11px;text-decoration:none;white-space:nowrap}
 .snav .seg a:last-child{border-right:0}
 .snav .seg a[aria-current="page"]{background:var(--gold);color:var(--gold-ink)}
@@ -23,6 +24,9 @@ CSS = """<style>
 .pn h2 span{color:var(--gold)}
 .pn-now{background:var(--panel-2);border:1px solid var(--line);border-radius:5px;padding:9px 12px;margin-bottom:12px;color:var(--muted);font-size:.78rem;line-height:1.6}
 .pn-now b{display:block;color:var(--gold);font:700 .72rem var(--f-disp);letter-spacing:.12em;margin-bottom:2px}
+.pn-now dl{display:flex;flex-wrap:wrap;gap:6px 24px;margin:4px 0 0}
+.pn-now dt{color:var(--muted);font-size:.7rem}
+.pn-now dd{margin:0;color:var(--fg);font:700 .95rem var(--f-disp);font-variant-numeric:tabular-nums}
 .pn-list{list-style:none;margin:0;padding:0;display:grid;gap:8px}
 .pn-item{--acc:#5b6b7f;background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--acc);border-radius:5px;padding:9px 12px 10px}
 .pn-item.tk-card{--acc:var(--gold)}
@@ -37,56 +41,72 @@ CSS = """<style>
 .pn-item time{margin-left:auto;color:var(--muted);font:500 .75rem var(--f-disp);font-variant-numeric:tabular-nums}
 .pn-item ul{margin:6px 0 0;padding-left:1.15em;color:#c9d3df;font-size:.82rem;line-height:1.6}
 .pn-item li::marker{color:var(--acc)}
+.pn-item li b{color:var(--fg);font-weight:700}
 .pn-foot{margin:12px 0 0;color:var(--muted);font-size:.72rem;line-height:1.5}
-@media (max-width:640px){.pn{width:calc(100vw - 40px)}}
 </style>
 """
 
 
-# 更新說明：每版一格，新的在上（使用者 2026-10-29）。track：card 正式卡、inseason 賽中、site 網頁；
-# 版號一換就在最上面加一格，只更新比賽資料（字母後綴）不加。內容寫成球迷看得懂的話，不寫 E／R 編號。
-TRACK = {'card': '正式卡', 'inseason': '賽中', 'site': '網頁'}
+# 更新說明：每版一格，新的在上（使用者 2026-10-29）。track：card 正式卡、inseason 賽中。
+# 版號一換就在最上面加一格；只更新比賽資料（字母後綴）不加；網頁 UI 改動不寫。
+# 每條寫成「目標：做了什麼」（冒號前會加粗），用球迷看得懂的話，不寫 E／R 編號。
+TRACK = {'card': '正式卡', 'inseason': '賽中'}
 PATCH_NOTES = [
     (('card',), '0.2.4', '2026-10-29', [
-        '教練用人證據的回歸目標，改成只看 2025-26 單季 RAPM（原本四季合併），修正年輕球員被低估。']),
-    (('site',), '', '2026-10-29', [
-        '加球隊篩選（隊徽格），拿掉上場時間篩選。',
-        '表格自己捲動、表頭固定，看低排名時卡片仍在畫面上；捲軸改細、加捲動陰影。',
-        '手機版：卡片改成 OVR 在右上、數據佔滿整寬；修點球員時畫面拉長抖動。',
-        '顯示切換改成 A+／99；賽季切換改成 2027 beta／2026；說明收進「更新說明」。']),
+        '修正年輕球員被低估：教練用人（上場時間）原本對照四季合併的 RAPM，改為只看 2025-26 單季 RAPM。']),
     (('card',), '0.2.3', '2026-10-29', [
-        'OVR 能力估計納入教練用人證據：上場分鐘、出賽率、年齡、是否下放發展聯盟。',
-        '教練不用（DNP）和輪休分開看，輪休不當成被冷凍。']),
+        '讓 OVR 反映教練實際怎麼用人：能力估計納入上場分鐘、出賽率、年齡、是否下放發展聯盟。',
+        '輪休不算被冷凍：教練不用（DNP）和輪休分開計算。']),
     (('inseason',), '0.2.1', '2026-10-29', [
-        '賽中先驗改用 card 0.2.2。',
-        '製造犯規照新公式（以量為主）隨本季數據更新；壓迫沿用上季值，賽中凍結。']),
+        '賽中數字跟上正式卡新公式：先驗改用正式卡 0.2.2，製造犯規照新公式隨本季數據更新。',
+        '開季壓迫數據太少、會亂跳：壓迫沿用上季值，賽中先凍結。']),
     (('card',), '0.2.2', '2026-10-29', [
-        '製造犯規（FD）改以量為主：每 36 分鐘罰球數佔 75%、罰球率佔 25%。']),
+        '常站上罰球線的人分數更高：製造犯規（FD）改以量為主，每 36 分鐘罰球數佔 75%、罰球率佔 25%。']),
     (('card',), '0.2.1', '2026-10-29', [
-        '壓迫（PRES）改用球員自己逼出的對手失誤、扣掉犯規；原本是從 RAPM 拆出來的數字，雜訊大。']),
+        '降低壓迫（PRES）的雜訊：改用球員自己逼出的對手失誤、扣掉犯規，不再從 RAPM 拆出來。']),
     (('card', 'inseason'), '0.2.0', '2026-10-29', [
-        'OVR 改成每場價值：含上場時間，以替補水準為基準。每分鐘表現相同時，打得多的人 OVR 較高。',
-        '賽中頁加「預測 MPG」欄。']),
+        'OVR 反映每場實際貢獻：改成每場價值，含上場時間、以替補水準為基準；每分鐘表現相同時，打得多的人 OVR 較高。',
+        '看得到上場時間的影響：賽中頁加「預測 MPG」欄。']),
     (('inseason',), '0.1.2', '2026-10-28', [
-        '賽中先驗換成 card 0.1.2。',
-        '拿掉「3P準」欄，加「FD 製造犯規」欄。']),
-    (('site',), '', '2026-10-28', [
-        '加賽季切換：賽中頁與正式卡頁。',
-        '卡片加球員頭像、隊徽與隊色，下方顯示真實場均數據。']),
+        '賽中數字跟上正式卡：先驗換成正式卡 0.1.2。',
+        '欄位跟上新能力：拿掉「3P準」欄，加「FD 製造犯規」欄。']),
     (('card',), '0.1.2', '2026-10-28', [
-        '對位防守改算「被針對」：依對手實際的出手習慣算預期出手，不再因位置標錯而誤判（例：Wembanyama 被標 F 卻守中鋒）。']),
+        '修正位置標錯造成的防守誤判（例：Wembanyama 被標 F 卻守中鋒）：對位防守改算「被針對」，依對手實際的出手習慣算預期出手。']),
     (('inseason',), '0.1.1', '2026-10-28', [
-        '兩頁的 3PT 欄改顯示三分價值（準度加出手量），OVR 不變。']),
+        '三分不只看命中率：兩頁的 3PT 欄改顯示三分價值（準度加出手量），OVR 不變。']),
     (('card',), '0.1.1', '2026-10-28', [
-        '「切入」拆成切入與製造犯規兩項。',
-        '低分鐘球員不再虛胖：比率型能力值往本人上季拉回，沒有歷史才往聯盟平均。']),
+        '分開衝框和造犯規兩種能力：「切入」拆成切入與製造犯規兩項。',
+        '修正低分鐘球員虛胖：比率型能力值往本人上季拉回，沒有歷史才往聯盟平均。']),
     (('card', 'inseason'), '0.1.0', '', [
-        '起點：正式卡沿用 v58 模型，賽中用 C4 模型（上季卡當先驗、隨本季數據更新）。']),
+        '起點：正式卡沿用 v58 模型；賽中用 C4 模型（上季卡當先驗、隨本季數據更新）。']),
 ]
 
 
+def _now_facts(now_text, current):
+    """從原本的長說明抽出幾個重點（使用者 2026-10-29：原文太長不適合人讀）；抽不到的欄位就不顯示。"""
+    pick = lambda pat: (m.group(1) if (m := re.search(pat, now_text)) else None)
+    if current == 'card':
+        facts = [('版本', pick(r'card (\d+\.\d+\.\d+\w*)')), ('資料', pick(r'（(\d{4}-\d{2}) 整季')),
+                 ('球員', pick(r'(\d+) 人'))]
+    else:
+        cutoff = pick(r'數據截至 (\d{4}-\d{2}-\d{2})')
+        facts = [('版本', pick(r'inseason (\d+\.\d+\.\d+\w*)')), ('先驗', pick(r'先驗 card (\d+\.\d+\.\d+\w*)')),
+                 ('數據截至', cutoff and cutoff[5:].replace('-', '/')), ('球員', pick(r'· (\d+) 人'))]
+        if facts[1][1]:
+            facts[1] = ('先驗', '正式卡 ' + facts[1][1])
+    facts = [(k, v + ' 人' if k == '球員' else v) for k, v in facts if v]
+    if not facts:
+        return html.escape(now_text)
+    return '<dl>' + ''.join(f'<div><dt>{k}</dt><dd>{html.escape(v)}</dd></div>' for k, v in facts) + '</dl>'
+
+
+def _note_line(x):
+    goal, sep, rest = x.partition('：')
+    return f'<li><b>{html.escape(goal)}</b>：{html.escape(rest)}</li>' if sep else f'<li>{html.escape(x)}</li>'
+
+
 def patch_notes_html(now_text, current):
-    """now_text：原本 <div class="src"> 的版本說明，放最上面當「目前版本」；只標本頁那條線的版號（賽中頁說明裡的先驗 card 版號不算）。"""
+    """now_text：原本 <div class="src"> 的版本說明，抽重點放最上面當「目前版本」；只標本頁那條線的版號（賽中頁說明裡的先驗 card 版號不算）。"""
     cur = {(current, v) for v in re.findall(rf'\b{current} (\d+\.\d+\.\d+)', now_text)}
     items = []
     for tracks, ver, date, lines in PATCH_NOTES:
@@ -94,13 +114,13 @@ def patch_notes_html(now_text, current):
         items.append(
             f'<li class="pn-item tk-{tracks[0]}{" cur" if is_cur else ""}"><header>'
             + ''.join(f'<span class="pn-tag tk-{t}">{TRACK[t]}</span>' for t in tracks)
-            + (f'<b class="pn-ver">{ver}</b>' if ver else '')
+            + f'<b class="pn-ver">{ver}</b>'
             + ('<span class="pn-cur">目前</span>' if is_cur else '')
             + (f'<time datetime="{date}">{date[5:].replace("-", "/")}</time>' if date else '')
-            + '</header><ul>' + ''.join(f'<li>{html.escape(x)}</li>' for x in lines) + '</ul></li>')
+            + '</header><ul>' + ''.join(_note_line(x) for x in lines) + '</ul></li>')
     return ('<details class="pnote"><summary>更新說明</summary><div class="pn" role="region" aria-label="更新說明">'
             '<h2>Patch <span>Notes</span></h2>'
-            f'<div class="pn-now"><b>目前版本</b>{now_text}</div>'
+            f'<div class="pn-now"><b>目前版本</b>{_now_facts(now_text, current)}</div>'
             f'<ol class="pn-list">{"".join(items)}</ol>'
             '<p class="pn-foot">版號後面的字母（例如 0.2.1e）代表只更新比賽資料，模型沒動。</p></div></details>'
             # 點面板外或按 Esc 關掉

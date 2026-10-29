@@ -18,6 +18,17 @@ CSS = """<style>
 .pnote summary:hover{color:var(--fg);border-color:var(--muted)}
 .pnote summary:focus-visible{outline:2px solid var(--gold);outline-offset:1px}
 .pnote[open] summary{color:var(--gold);border-color:var(--gold)}
+.sright{display:flex;align-items:center;gap:8px}
+/* 手機：A+／99 搬到更新說明旁邊、兩個一起靠右，搜尋欄變長（使用者 2026-10-30） */
+@media (max-width:640px){
+  .snav{display:grid;grid-template-columns:1fr auto;gap:6px 10px}
+  .snav .seg{justify-self:start}
+  .snav.has-note .seg{grid-column:1/-1}
+  .snav .note{line-height:1.4}
+  .snav .pnote summary{height:32px;box-sizing:border-box;padding:0 10px}
+  .snav #modeSeg{flex:none}
+  .snav #modeSeg button{height:30px;padding:0 10px;font:600 .85rem var(--f-disp);letter-spacing:.04em}
+}
 .pn{position:absolute;left:0;top:calc(100% + 6px);width:min(560px,100%);max-height:min(72vh,680px);overflow:auto;overscroll-behavior:contain;box-sizing:border-box;
   background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:14px;box-shadow:0 16px 40px rgba(0,0,0,.6);scrollbar-width:thin;scrollbar-color:#38424f transparent}
 .pn h2{font:800 1.05rem var(--f-disp);letter-spacing:.06em;margin:0 0 10px;text-transform:uppercase}
@@ -179,11 +190,15 @@ def add_season_nav(html_str, current):
     links = ''.join(f'<a href="{href}"' + (' aria-current="page"' if key == current else '') + f'>{label}</a>'
                     for key, label, href in PAGES)
     note = '<span class="note">開季樣本少，數字大多來自 2026 卡</span>' if current == 'inseason' else ''
-    block = lambda m: (f'\n<nav class="snav" aria-label="賽季切換"><div class="seg">{links}</div>{note}'
-                       f'{patch_notes_html(m.group(1), current)}</nav>')
+    # 手機寬度把 #modeSeg 從控制列搬進 .sright，桌機搬回搜尋欄前面
+    mover = ("<script>addEventListener('DOMContentLoaded',()=>{const m=document.getElementById('modeSeg'),"
+             "r=document.querySelector('.sright'),q=document.getElementById('q'),mq=matchMedia('(max-width:640px)');"
+             "if(!m||!r||!q)return;const f=()=>mq.matches?r.append(m):q.before(m);f();mq.addEventListener('change',f)})</script>")
+    block = lambda m: (f'\n<nav class="snav{" has-note" if note else ""}" aria-label="賽季切換"><div class="seg">{links}</div>{note}'
+                       f'<span class="sright">{patch_notes_html(m.group(1), current)}</span>{mover}</nav>')
     s, n = re.subn(r'<div class="src">(.*?)</div>', block, html_str, count=1, flags=re.S)
     assert n == 1, 'src div not found'
-    return s.replace('<nav class="snav"', CSS + '<nav class="snav"', 1) if CSS not in s else s
+    return s.replace('<nav class="snav', CSS + '<nav class="snav', 1) if CSS not in s else s
 
 
 # 兩個頁面共用的樣板修補：數值模式的格子也要帶等第顏色（文字仍顯示數字）。
@@ -287,6 +302,10 @@ document.getElementById('q').oninput'''),
 @media (prefers-reduced-motion'''),
     # 顯示切換直接用範例當標籤（使用者 2026-10-29）
     ("seg('modeSeg', [['grade', '等第'], ['num', '數值']], 'mode');", "seg('modeSeg', [['grade', 'A+'], ['num', '99']], 'mode');"),
+    # A+／99 是網站設定：選了就存在瀏覽器（localStorage，同網域兩個賽季頁共用），切換賽季頁不變（使用者 2026-10-30）
+    ("mode: 'grade',", "mode: (() => { try { return localStorage.getItem('bbac.mode') === 'num' ? 'num' : 'grade'; } catch (e) { return 'grade'; } })(),"),
+    ("b.onclick = () => { st[key] = v;",
+     "b.onclick = () => { st[key] = v; if (key === 'mode') try { localStorage.setItem('bbac.mode', v); } catch (e) {}"),
     ('function render() {', '''function teamPick() {
   const d = document.getElementById('teamPick'), grid = document.getElementById('teamGrid');
   const logo = t => `<img alt="" src="https://cdn.nba.com/logos/nba/${TEAM_IDS[t]}/global/D/logo.svg" onerror="this.style.visibility='hidden'">`;

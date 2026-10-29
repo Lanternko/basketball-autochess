@@ -347,6 +347,16 @@
 - 重犯：這次違反了 L-041 和 R-040（機會成本），寫判定前沒有先對照 R-040。同一份預註冊裡，(b) 年齡偏差這個「要修的目標」明顯修到了，lead 卻讓一道舊參考的護欄單獨否決它。之後寫判定表時，要逐列標明這一列是「要修的目標」、「沒弄壞」還是「權衡」（R-042）。
 - 來源：使用者 2026-10-29 質問「寫死的規則是什麼 誰教你這麼寫的」
 
+### L-046
+- 日期：2026-10-29
+- 錯誤：lead 寫 E-087 預註冊時，以為 WinImp 和 v41 用 `shotSelection:'legacy'`，所以第一觸球由 `handlingWeights` 決定。依據只是 `src/*_game.js` 的預設值。實際上輸入檔（`ovrInput('both').options`、v41 `loadInput`）都設 `'volume'`，走的是 `creationPlan.weights`（v11 `opportunityPlan`，實測率），`handlingScore` 一次都沒被呼叫。整個預註冊是空操作。p0 前置檢查攔下了，沒浪費 5090。
+- 規則：
+  - 判斷「模擬走哪條分支」不能只看 src 預設值，要看實際跑的輸入合併後的 options，最好直接在路徑上數呼叫次數。
+  - 預註冊的前提如果是「某段程式會被執行」，一律加 p0 計數閘，數到 0 就停下。
+- 對應測試或關卡：lead 寫 sim 預註冊時；role-model 的 p0
+- 來源：E-087 role-model（Opus）p0 回報，`reports/sim-0.1.0+E087-handle-share/p0.json`
+- 重犯（同日，lead 自查）：要寫「失誤分工」新預註冊前查 v41 `loadInput` options，發現 `measuredTouchTurnovers:true`、`turnoverCategories:true`：活鏈的失誤早就分成兩段實測率，傳球段用 `passStolenPerMinute`（×passTurnoverScale 1.67），觸球終結用 `terminalRiskMeasurement`（逐人 PBP 每次機會的 dead／live 失誤率，共同先驗收縮），不是 tovSkill 一個綜合值。E-069 的「現況」描述也是錯的：它換掉的是實測率，不是 tovSkill。這次在寫之前查到，沒有凍結。
+
 ### L-047
 - 日期：2026-10-29
 - 錯誤：兩個 session 共用同一個 checkout（分支 claude/project-thread-63h2fz）。lead 已 stage 好 card 0.2.4 的 memory／狀態板／名單頁改動，另一個 session（名單頁 viewport）這時用沒帶路徑的 `git commit`，把 lead 的 index 整包提交成 a8440d1。訊息和內容對不上，它自己的 `scripts/season_nav.py` 反而沒進去（事後補成 2859113）。已 push，不改寫歷史。

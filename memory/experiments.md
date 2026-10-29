@@ -698,7 +698,12 @@
     - 中：−0.003 → +0.018；
     - 高：+0.058 → +0.002。
   - 校準：kCtl 0.004377（每持球秒），kPass 0.08706（每次傳球）。
-  - (m3) 未完成：5090 VPN 05:12 斷線，WinImp 只跑完 70／379 人；遠端 nohup 可能仍在跑，checkpoint 在 `~/side_projects/basketball-e069-20261029/`。
+  - (m3) 不過（VPN 斷線後遠端 nohup 續跑完成，379 人，E-065 同 seed，lead 自算 `bias-check-e069.json`）：
+    - 主版：仍偏袒長人，S AB 81.8→106.1、BA 95.2→118.1，ρ 平均 0.382→0.333（b1、b2、b3 都不過）；
+    - 位置版：翻成偏袒後衛，S AB 37.5→−50.8、BA 50.1→−38.2，ρ 0.304→0.278（b1、b2 過，b3 −0.026 不過）；
+    - 2K27 ρ：主版 0.484→0.451，位置版 0.297→0.389；
+    - G5 名次（主版）：Brunson 61→24、Caruso 163→359、White 29→90。
+  - 報告：`reports/handle-E069/sim/report.md`、`results.json`。
   - 附帶發現（不算證據）：
     - v41 驗證路徑本來就繞過 `src` 的失誤公式，拆分寫在 `reports/handle-E069/sim/engine.mjs`；
     - E069 開關會讓 v53 死球壓迫乘數對失誤失效。
@@ -851,3 +856,11 @@
   - 稽核列出的下一輪目標：(i) pred 分散度壓縮讓低分鐘高效率的人吃虧（Caruso 型）；(ii) 沿用 E-075 的設計，coef_AB 訓練特徵含 p_B，p_B 用評估半 rapm-B 擬合，是間接路徑，影響沒量；(iii) card 0.2.2 的 p 被上限截住，9 人同為 1.894；(iv) mpg-A／B 出賽數與 player-games 依奇偶重算的結果有 35 人不同。E-082 不通過，所以 §5 的合併版不跑。退步項列為下一輪目標，見 R-042。
 - 相關：E-081、E-075、E-082、R-019、R-042、R-043、R-044、L-026、L-037
 - 來源：同 E-081
+
+### E-087
+- 日期：2026-10-29
+- 假設：E-069 失敗是因為把失誤綁到持球秒數。只把實測 handle 用在「誰拿球」（`handlingScore` 的 handle 從 70 換成 `handle.csv`），失誤公式、create、assistBoost 都不動、不重新校準，個人失誤不會變差，長人偏袒會減輕。
+- 做法：`reports/sim-0.1.0+E087-handle-share/preregistration.md`（sha256 f0814db3…f4d5）。閘：m0 開關關閉逐位元、m1 npm test、m2 tov36 MAE 非劣性（90% 上界 < +0.02）、m3 E-067 b1–b3 主版與位置版。前置 p0：確認 WinImp 與 v41 路徑真的呼叫 handlingWeights。
+- 狀態：2026-10-29 停在 p0、未跑（L-046）。WinImp 與 v41 路徑 `shotSelection` 都是 `volume`，第一觸球走 `opportunityPlan` 實測率，`handlingWeights` 呼叫 0 次；換 handlingScore 對結果沒有任何作用。證據 `p0.json`。
+- 附帶診斷（同季，不算證據）：`diag-allocation/report.md`。模擬分球對真實前場觸球 ρ 0.60，後衛 1.14、中鋒 0.77；持球後衛給太多（SGA 1.96、Dončić 1.73），長人給太少（Gobert 0.66），Hauser 0.75。分球沒有「把不持球的人當持球者」。lead 追查：每人 usage、助攻各組誤差 ±2%，觸球差距是定義不同（模擬只算有結果的觸球），不是分球偏差；列 loop.md H8，排除。失誤「分工」新預註冊沒寫：活鏈失誤已是兩段實測率（傳球段 passStolen、終結段 terminalRisk），前提不成立（L-046 重犯）。
+- 相關：E-069、E-067、E-065、R-032、L-046

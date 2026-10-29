@@ -30,6 +30,10 @@ def add_season_nav(html_str, current):
 COMMON_REPLACEMENTS = [
     ("""  if (st.mode === 'num') return `<td class="${cls.join(' ')}">${v}</td>`;""",
      """  if (st.mode === 'num') { cls.push(gcls(grade(v))); return `<td class="${cls.join(' ')}">${v}</td>`; }"""),
+    # tovSkill 是每次使用球權的失誤率，不是運球能力（使用者 2026-10-29：HDL 改成 TO）
+    ("['tovSkill', 'HDL', '護球']", "['tovSkill', 'TO', '少失誤']"),
+    # help 只量籃下 6 呎內命中差、只管禁區，實際是護框（使用者 2026-10-29）；欄位名 help 等 E-080 後再改
+    ("['help', 'HELP', '協防']", "['help', 'RIM', '護框']"),
 ]
 
 

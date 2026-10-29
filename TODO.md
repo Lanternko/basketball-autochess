@@ -44,3 +44,11 @@
 - 驗收：用歷史季做樣本外檢查。找某季上場很少、下一季上場很多的人，看哪個目標最接近他下一季的整季卡或 RAPM。G5 用 Topić、McCain、Carlson、Barnhizer 抽查（R-029）。
 - 不准：看過 Topić、McCain 個案後才挑目標或權重（L-026）。
 - 和「整季能力值依近期／交易後加權」可以合併成一份預註冊，兩題都是「能力值觀測怎麼加權」。
+
+## 卡片：護框／協防拆分與 S 型校準（2026-10-29，使用者看 Isaiah Stewart）
+- 背景：現行 `help` 只量籃下 6 呎內對手命中差（`scripts/build_season_league.js:121`），引擎裡也只管籃下命中、往籃下出手意願、補籃（`src/probability_model.js:202-352`）。Stewart 收縮後 −12.8 pp，手刻曲線外推約 123（GP≥30 池內 +4.8 SD），被 99 截斷。
+- 已做（2026-10-29，使用者決定）：顯示名稱 協防 → 護框（名單頁 `scripts/season_nav.py` 改成 RIM／護框；README、docs、calculator、gen_note／gen_teams、teams.js 註記）。程式欄位 `help`、`helpDefense`、`CURVE_DEF_RIM` 不動：E-080 預註冊明寫 `card.help`，等 E-080 判定後，和待做 B 一起改成 `rimD`，讓「help」只換一次意思。
+- 待做 A（護框 rimD）：改成 S 型校準（參考 Baseball_algo `src/js/ovr_calculator.js`：PR1/50/99 → 40/70/99，「120+ 世紀級」）。錨點用多季合併池；99 以上用飽和尾巴，只留給歷史級。收縮改往同位置平均拉，k 用規則（長人池內信度）決定。注意同一條 CURVE_DEF_RIM 也決定模擬籃下命中，校準要和引擎一起改。
+- 待做 B（新 HELP）：輪轉補位、外線封堵代價、從罰球線掃過來的非對位禁區補防。見 F-030 的資料盤點；引擎要新增「協防差 → 對手外線／切入變好」的效果（role-model）。
+- 待做 C（替補效應）：Stewart 多打替補，對手陣容較弱；預期命中率只扣出手者本人，沒扣陣容。公開資料沒有依對手陣容拆的護框，暫不處理。
+- 不准：看過 Stewart 後才挑 k、錨點、尾巴參數或 HELP 分量權重（L-026）。

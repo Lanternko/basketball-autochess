@@ -92,12 +92,18 @@ CSS = """
   .card .who>.facts{grid-column:1;grid-row:3;align-self:start;justify-content:center;display:flex;margin-top:-4px}
   .facts>span:not(.f-d){display:none}
   .facts .f-d b{font:700 1.15rem var(--f-disp)}
-  .card .who>.strong{grid-column:2;grid-row:2/4;align-self:center;display:grid;grid-template-columns:repeat(2,1fr);gap:4px}
+  .card .who>.strong{grid-column:2;grid-row:2/5;align-self:center;display:grid;grid-template-columns:repeat(2,1fr);gap:4px}
   .strong .chip{display:flex;flex-direction:column;align-items:center;padding:4px 2px;font-size:.72rem;color:var(--muted);letter-spacing:0}
   .strong .chip i{margin:0;font:700 1.1rem var(--f-disp)}
   .strong .chip.dim{grid-column:1/-1}
   .rx .rmain{flex:1}
   .rx .rmain .st{flex:1}
+  /* 場數／分鐘併到 OVR 圓環下方，三大項縮小並補正負值（使用者 2026-10-29：省空間）；交易隊名手機不顯示 */
+  .card .who>.real-h{grid-column:1;grid-row:4;justify-self:center;margin-top:-6px;white-space:nowrap;font-size:.7rem;letter-spacing:.02em}
+  .real-h .rtm{display:none}
+  .rx .rmain .st{min-width:0;padding:3px 4px}
+  .rx .rmain .st b{font-size:1.2rem}
+  .rx .rmain .st span{font-size:.64rem}
   .rx .rsub{display:none}
 }
 /* 桌機卡片：影響力四格改 2×2，和 OVR 圓環放同一側（使用者 2026-10-29：省空間）
@@ -206,11 +212,11 @@ function realBox(p) {
   const f1 = v => v.toFixed(1), pc = v => (v == null ? '—' : (v * 100).toFixed(1) + '%');
   const pm = v => (v > 0 ? '+' : '') + v.toFixed(1);
   // 主次分明（使用者 2026-10-29：十二格一樣大太雜）：得分／籃板／助攻大格，其餘分三行小字
-  const main = [['得分', f1(r.pts)], ['籃板', f1(r.reb)], ['助攻', f1(r.ast)]];
+  const main = [['得分', f1(r.pts)], ['籃板', f1(r.reb)], ['助攻', f1(r.ast)], ['正負值', pm(r.pm)]];
   const sub = [[['命中率', pc(r.fg)], ['三分', pc(r.fg3)], ['罰球', pc(r.ft)], ['真實命中', pc(r.ts)]],
     [['抄截', f1(r.stl)], ['阻攻', f1(r.blk)], ['失誤', f1(r.tov)], ['正負值', pm(r.pm)]]];
   // 標題只留場數和場均分鐘（使用者 2026-10-29：「例行賽真實數據」字太多）
-  return `<div class="real-h">${r.gp} 場 · ${Math.round(r.mpg)} 分鐘${r.teams.length > 1 ? ' · ' + r.teams.join('/') : ''}</div>
+  return `<div class="real-h">${r.gp} 場 · ${Math.round(r.mpg)} 分鐘${r.teams.length > 1 ? '<span class="rtm"> · ' + r.teams.join('/') + '</span>' : ''}</div>
       <div class="real rx"><div class="rmain">${main.map(([l, v]) => `<div class="st"><b>${v}</b><span>${l}</span></div>`).join('')}</div>
       <div class="rsub">${sub.map(g => `<div>${g.map(([l, v]) => `<span>${l}<b>${v}</b></span>`).join('')}</div>`).join('')}</div></div>`;
 }

@@ -22,37 +22,24 @@ def git(cwd, *a):
     return r.stdout.strip()
 
 
-class Letters(unittest.TestCase):
-    def test_next(self):
-        self.assertEqual(D.letter_next(''), 'a')
-        self.assertEqual(D.letter_next('a'), 'b')
-        self.assertEqual(D.letter_next('y'), 'z')
-        self.assertEqual(D.letter_next('z'), 'aa')
-        self.assertEqual(D.letter_next('az'), 'ba')
-        self.assertEqual(D.letter_next('zz'), 'aaa')
-
+class Versions(unittest.TestCase):
     def test_decide(self):
         base = 'inseason 0.1.1'
-        # 第一次：無 state -> a
+        # 第一次：無 state -> 發布
         d = D.decide({}, base, 'h1', 5, False)
-        self.assertTrue(d['publish']); self.assertEqual(d['letter'], 'a')
-        st = {'base': base, 'letter': 'a', 'dataSha256': 'h1', 'pbpCount': 5}
+        self.assertTrue(d['publish']); self.assertNotIn('letter', d)
+        st = {'base': base, 'dataSha256': 'h1', 'pbpCount': 5}
         # 資料沒變不發布
-        d = D.decide(st, base, 'h1', 5, False)
-        self.assertFalse(d['publish']); self.assertEqual(d['letter'], 'a')
-        # 資料變 -> b
-        d = D.decide(st, base, 'h2', 5, False)
-        self.assertTrue(d['publish']); self.assertEqual(d['letter'], 'b')
+        self.assertFalse(D.decide(st, base, 'h1', 5, False)['publish'])
+        # 資料變 -> 發布，版號不變（R-063：只更新資料不加字母）
+        self.assertTrue(D.decide(st, base, 'h2', 5, False)['publish'])
         # 只有 PBP 檔數變也算
-        self.assertEqual(D.decide(st, base, 'h1', 6, False)['letter'], 'b')
-        # force：沿用同一字母
-        d = D.decide(st, base, 'h1', 5, True)
-        self.assertTrue(d['publish']); self.assertEqual(d['letter'], 'a')
-        # 基底版號變 -> 字母歸 a（即使資料沒變）
-        st_z = {**st, 'letter': 'z'}
-        d = D.decide(st_z, 'inseason 0.1.2', 'h1', 5, False)
-        self.assertTrue(d['publish']); self.assertEqual(d['letter'], 'a')
-        self.assertEqual(D.display_version('inseason 0.1.2', d['letter']), 'inseason 0.1.2a')
+        self.assertTrue(D.decide(st, base, 'h1', 6, False)['publish'])
+        # force：資料沒變也發布
+        self.assertTrue(D.decide(st, base, 'h1', 5, True)['publish'])
+        # 版號變（含 hotfix 字母）-> 發布，即使資料沒變
+        self.assertTrue(D.decide(st, 'inseason 0.1.1a', 'h1', 5, False)['publish'])
+        self.assertFalse(hasattr(D, 'letter_next'))
 
     def test_commit_message(self):
         m = D.commit_message('inseason 0.1.1a', '2026-10-28')

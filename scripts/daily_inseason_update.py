@@ -1,13 +1,11 @@
 """賽中名單每日自動更新並發布到 GitHub Pages（gh-pages 分支的 index.html＝2026-27 賽中頁、2025-26.html＝2025-26 正式卡頁）。
 
-流程：抓比賽 → 抓 PBP/bio → run_c4_live → 依資料 sha256 決定是否發布 → 字母版號 → build viewer
+流程：抓比賽 → 抓 PBP/bio → run_c4_live → 依資料 sha256 決定是否發布 → build viewer
       → 在可丟棄的 git worktree 中把 roster-viewer.html 提交成 gh-pages 的 index.html 並 push。
 
-規則（memory/rulings.md R-023、R-024）：
-- 只有比賽資料變、模型沒動：版號加字母 inseason 0.1.1 -> 0.1.1a -> 0.1.1b ... z -> aa。
-- 基底版號（meta.json 的 version，由 run_c4_live.py 產生）一變，字母從 a 重來。
-- 含字母的版號寫回該日 meta.json 的 `version`（原基底另存 `baseVersion`），build_inseason_viewer.py
-  讀 meta["version"] 顯示在 HTML 標題列，所以不需要改它或對 HTML 做字串替換。
+規則（memory/rulings.md R-063、R-024）：
+- 只有比賽資料變、模型沒動：版號不變，只換 meta.json 的 `dataCutoff`（頁面標題列顯示「數據截至」）。
+- 版號照 meta.json 的 `version`（由 run_c4_live.py 產生）原樣顯示；字母後綴是小版本（R-064），由那邊寫進版號。
 
 用法（工作目錄不限，會自動切到 repo 根）：
   pythonw scripts/daily_inseason_update.py [--dry-run] [--force]
@@ -52,37 +50,17 @@ log = logging.getLogger('daily_inseason')
 
 
 # ----------------------------------------------------------------- 版號
-def letter_next(letter: str) -> str:
-    """'' -> 'a'，'a' -> 'b'，'z' -> 'aa'，'az' -> 'ba'（Excel 欄名式）。"""
-    if not letter:
-        return 'a'
-    chars = list(letter)
-    i = len(chars) - 1
-    while i >= 0:
-        if chars[i] != 'z':
-            chars[i] = chr(ord(chars[i]) + 1)
-            return ''.join(chars)
-        chars[i] = 'a'
-        i -= 1
-    return 'a' + ''.join(chars)
-
-
 def decide(state: dict, base: str, data_sha: str, pbp_count: int, force: bool) -> dict:
-    """回傳 {publish, letter, reason}。letter 是這次要用的字母（不發布時為目前字母）。"""
+    """回傳 {publish, reason}。版號一律用 base，只更新資料不改版號（R-063）。"""
     prev_base = state.get('base')
-    prev_letter = state.get('letter', '')
     if prev_base != base:
-        return {'publish': True, 'letter': 'a', 'reason': f'基底版號 {prev_base!r} -> {base!r}，字母重來'}
+        return {'publish': True, 'reason': f'版號 {prev_base!r} -> {base!r}'}
     changed = state.get('dataSha256') != data_sha or state.get('pbpCount') != pbp_count
     if changed:
-        return {'publish': True, 'letter': letter_next(prev_letter), 'reason': '資料有變（player-games sha256 或 PBP 檔數）'}
+        return {'publish': True, 'reason': '資料有變（player-games sha256 或 PBP 檔數）'}
     if force:
-        return {'publish': True, 'letter': prev_letter or 'a', 'reason': '--force，資料沒變，沿用同一字母'}
-    return {'publish': False, 'letter': prev_letter, 'reason': '資料沒有變化，不發布'}
-
-
-def display_version(base: str, letter: str) -> str:
-    return base + letter
+        return {'publish': True, 'reason': '--force，資料沒變'}
+    return {'publish': False, 'reason': '資料沒有變化，不發布'}
 
 
 # ----------------------------------------------------------------- 工具
@@ -366,7 +344,7 @@ def _run(args) -> int:
     unchanged = state.get('dataSha256') == data_sha and state.get('pbpCount') == pbp_count
     probe = probe_base_version()
     if unchanged and not args.force and probe is not None and probe == state.get('base'):
-        log.info('沒有新比賽資料且基底版號未動（%s%s），不發布', state.get('base'), state.get('letter', ''))
+        log.info('沒有新比賽資料且版號未動（%s），不發布', state.get('base'))
         return 0
 
     # run_c4_live 的 rel() 要求輸出夾在 repo 內；data/ 已被 .gitignore
@@ -376,13 +354,10 @@ def _run(args) -> int:
         meta = step_c4(work)
         base = meta['version']
         d = decide(state, base, data_sha, pbp_count, args.force)
-        letter = d['letter']
-        log.info('決定：publish=%s 版號=%s（%s）', d['publish'], display_version(base, letter), d['reason'])
+        log.info('決定：publish=%s 版號=%s（%s）', d['publish'], base, d['reason'])
         if not d['publish']:
             return 0
-        shown = display_version(base, letter)
-        meta['baseVersion'] = base
-        meta['version'] = shown
+        shown = base
         meta['dataSha256'] = data_sha
         save_json(work / 'meta.json', meta)
         html = step_viewer(work)
@@ -399,7 +374,8 @@ def _run(args) -> int:
         sha = publish_html(ROOT, {'index.html': final / 'roster-viewer.html', '2025-26.html': final / card_html.name},
                            commit_message(shown, cutoff),
                            remote=args.remote, branch=args.branch)
-        state.update({'base': base, 'letter': letter, 'displayVersion': shown, 'dataSha256': data_sha,
+        state.pop('letter', None)
+        state.update({'base': base, 'displayVersion': shown, 'dataSha256': data_sha,
                       'pbpCount': pbp_count, 'dataCutoff': cutoff,
                       'lastPublished': dt.datetime.now().astimezone().isoformat(timespec='seconds')})
         if sha:

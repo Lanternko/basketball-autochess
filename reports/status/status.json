@@ -1,23 +1,23 @@
 {
- "generatedAt": "2026-10-29T11:55:50+00:00",
+ "generatedAt": "2026-10-29T17:35:57+00:00",
  "simVersion": "v54",
  "evalPoss": 5000,
  "rapmPool": 415,
  "kpi": [
   {
-   "label": "正式卡片 card 0.2.5 樣本外 ρ（淨值）",
+   "label": "正式卡片 card 0.2.6 樣本外 ρ（淨值）",
    "value": "未量測",
-   "sub": "A/B 半 RAPM 樣本外尚未量測；樣本內 0.779（循環）；前正式版 v58 H1-m0 為 0.563（不同卡片，僅供參考）"
+   "sub": "A/B 半 RAPM 樣本外尚未量測；樣本內 0.780（循環）；前正式版 v58 H1-m0 為 0.563（不同卡片，僅供參考）"
   },
   {
-   "label": "正式卡片 card 0.2.5 樣本外 ρ（防守）",
+   "label": "正式卡片 card 0.2.6 樣本外 ρ（防守）",
    "value": "未量測",
    "sub": "尚未量測；v58 H1-m0 為 0.391（僅供參考）"
   },
   {
-   "label": "正式卡片 card 0.2.5 對 2K27 ρ（外部基準）",
-   "value": "0.738",
-   "sub": "v58 H1-m0 0.537；來源 reports/card-0.2.4+E089-minutes-saturation/evaluation.json（E089 候選，每場含上場時間）；card 0.2.4 為 .748、card 0.2.3 為 .740、card 0.2.2 為 .681、card 0.2.0 為 .695、card 0.1.2（每 36 分鐘）為 .518；2K27 不參與擬合"
+   "label": "正式卡片 card 0.2.6 對 2K27 ρ（外部基準）",
+   "value": "0.737",
+   "sub": "v58 H1-m0 0.537；來源 reports/card-0.2.5+E101-crossera/evaluation.json（E101 候選，每場含上場時間）；card 0.2.5 為 .738、card 0.2.4 為 .748、card 0.2.3 為 .740、card 0.2.2 為 .681、card 0.2.0 為 .695、card 0.1.2（每 36 分鐘）為 .518；2K27 不參與擬合"
   }
  ],
  "teamNote": "卡片版本（v55–v58）只改顯示用 OVR，不影響模擬 winsMAE；卡片的球隊指標另列於 team_card.json",
@@ -63,8 +63,18 @@
    "note": "已收束；球隊層 2025-26 勝場 MAE 變差，未切換對局資料，卡片板仍為 v53 校準；不讀 RAPM，樣本內即樣本外：同一份分數直接對 A 半、B 半 RAPM 各算一次 ρ 再平均（reports/ovr-metrics-backfill-2025-26）"
   },
   {
-   "layer": "卡片 OVR（正式卡片板，card 0.2.5）",
-   "description": "card 0.2.4 + E-089：卡片 g 的分鐘權重由 mpg/36 改成飽和 W(m)=(1−e^(−m/15))/(1−e^(−36/15))，上場少但效率高的人不再被埋沒（2026-10-29 使用者裁定 R-047、R-048）（遊戲本體不讀取任何 OVR）",
+   "layer": "卡片 OVR（正式卡片板，card 0.2.6）",
+   "description": "card 0.2.5 + E-101：PBP 補籃、補扣改歸近距離，能力值百分位與 99 錨點改對 2022-23～2025-26 四季合併池，頂端差距尺只壓縮不放大（2026-10-30 使用者裁定 R-055、R-056，G5 通過）（遊戲本體不讀取任何 OVR）",
+   "players": 414,
+   "rhoNet": 0.78,
+   "rhoDefense": 0.537,
+   "holdoutRho": "未量測",
+   "rho2k": 0.737,
+   "note": "ρRAPM 樣本內（align/封頂用 RAPM）；每場 OVR；card 0.2.6 = card 0.2.5 + E-101；對 card 0.2.5 的樣本外 Δρ_N -0.0027 [-0.0069, +0.0015]、Δρ_Q -0.0032 [-0.0067, +0.0004]（只證明不變差，PATCH）；對 2K27 ρ 取 card-0.2.5+E101-crossera/evaluation.json 的 E101 每場值；來源 card-0.2.6"
+  },
+  {
+   "layer": "卡片 OVR card 0.2.5（前正式版）",
+   "description": "card 0.2.4 + E-089：卡片 g 的分鐘權重由 mpg/36 改成飽和 W(m)=(1−e^(−m/15))/(1−e^(−36/15))，上場少但效率高的人不再被埋沒（2026-10-29 使用者裁定 R-047、R-048）；2026-10-30 由 card 0.2.6 取代（遊戲本體不讀取任何 OVR）",
    "players": 414,
    "rhoNet": 0.779,
    "rhoDefense": 0.538,
@@ -475,7 +485,7 @@
    "rank": 1,
    "name": "Shai Gilgeous-Alexander",
    "pos": "PG",
-   "ovr": 110.3,
+   "ovr": 107.3,
    "minutes": 2259,
    "threeValue": 86.4,
    "simRank": 1,
@@ -486,7 +496,7 @@
    "rank": 2,
    "name": "Nikola Jokić",
    "pos": "C",
-   "ovr": 102.6,
+   "ovr": 103.8,
    "minutes": 2265,
    "threeValue": 78.6,
    "simRank": 6,
@@ -495,20 +505,9 @@
   },
   {
    "rank": 3,
-   "name": "Luka Dončić",
-   "pos": "PG",
-   "ovr": 102.1,
-   "minutes": 2289,
-   "threeValue": 97.5,
-   "simRank": 7,
-   "rapmRank": 16,
-   "flags": "—"
-  },
-  {
-   "rank": 4,
    "name": "Victor Wembanyama",
    "pos": "C",
-   "ovr": 101.2,
+   "ovr": 101.7,
    "minutes": 1866,
    "threeValue": 74.1,
    "simRank": 5,
@@ -516,76 +515,21 @@
    "flags": "長人"
   },
   {
+   "rank": 4,
+   "name": "Luka Dončić",
+   "pos": "PG",
+   "ovr": 100.8,
+   "minutes": 2289,
+   "threeValue": 97.5,
+   "simRank": 7,
+   "rapmRank": 16,
+   "flags": "—"
+  },
+  {
    "rank": 5,
-   "name": "Franz Wagner",
-   "pos": "SF",
-   "ovr": 99.0,
-   "minutes": 1019,
-   "threeValue": 70.3,
-   "simRank": 33,
-   "rapmRank": 7,
-   "flags": "—"
-  },
-  {
-   "rank": 6,
-   "name": "Chet Holmgren",
-   "pos": "PF",
-   "ovr": 97.6,
-   "minutes": 1997,
-   "threeValue": 66.3,
-   "simRank": 21,
-   "rapmRank": 8,
-   "flags": "長人"
-  },
-  {
-   "rank": 7,
-   "name": "Derrick White",
-   "pos": "PG",
-   "ovr": 97.2,
-   "minutes": 2625,
-   "threeValue": 64.3,
-   "simRank": 76,
-   "rapmRank": 6,
-   "flags": "—"
-  },
-  {
-   "rank": 8,
-   "name": "Kawhi Leonard",
-   "pos": "SF",
-   "ovr": 96.7,
-   "minutes": 2085,
-   "threeValue": 94.0,
-   "simRank": 2,
-   "rapmRank": 4,
-   "flags": "—"
-  },
-  {
-   "rank": 9,
-   "name": "Lauri Markkanen",
-   "pos": "PF",
-   "ovr": 95.7,
-   "minutes": 1443,
-   "threeValue": 77.8,
-   "simRank": 24,
-   "rapmRank": 11,
-   "flags": "長人"
-  },
-  {
-   "rank": 10,
-   "name": "Amen Thompson",
-   "pos": "PG",
-   "ovr": 95.2,
-   "minutes": 2953,
-   "threeValue": 40.6,
-   "simRank": 73,
-   "rapmRank": 36,
-   "flags": "—"
-  },
-  {
-   "rank": 11,
    "name": "Giannis Antetokounmpo",
    "pos": "PF",
-   "ovr": 95.2,
+   "ovr": 99.0,
    "minutes": 1039,
    "threeValue": 56.4,
    "simRank": 3,
@@ -593,62 +537,73 @@
    "flags": "長人"
   },
   {
-   "rank": 12,
-   "name": "Herbert Jones",
-   "pos": "SG",
-   "ovr": 91.9,
-   "minutes": 1588,
-   "threeValue": 45.8,
-   "simRank": 325,
-   "rapmRank": 14,
+   "rank": 6,
+   "name": "Kawhi Leonard",
+   "pos": "SF",
+   "ovr": 97.9,
+   "minutes": 2085,
+   "threeValue": 94.0,
+   "simRank": 2,
+   "rapmRank": 4,
    "flags": "—"
   },
   {
-   "rank": 13,
-   "name": "Joel Embiid",
-   "pos": "C",
-   "ovr": 91.6,
-   "minutes": 1201,
-   "threeValue": 62.7,
-   "simRank": 254,
-   "rapmRank": 10,
+   "rank": 7,
+   "name": "Franz Wagner",
+   "pos": "SF",
+   "ovr": 97.7,
+   "minutes": 1019,
+   "threeValue": 70.3,
+   "simRank": 33,
+   "rapmRank": 7,
+   "flags": "—"
+  },
+  {
+   "rank": 8,
+   "name": "Derrick White",
+   "pos": "PG",
+   "ovr": 96.5,
+   "minutes": 2625,
+   "threeValue": 64.3,
+   "simRank": 76,
+   "rapmRank": 6,
+   "flags": "—"
+  },
+  {
+   "rank": 9,
+   "name": "Chet Holmgren",
+   "pos": "PF",
+   "ovr": 95.3,
+   "minutes": 1997,
+   "threeValue": 66.3,
+   "simRank": 21,
+   "rapmRank": 8,
    "flags": "長人"
   },
   {
-   "rank": 14,
-   "name": "Kevin Durant",
-   "pos": "SF",
-   "ovr": 91.6,
-   "minutes": 2840,
-   "threeValue": 93.0,
-   "simRank": 56,
-   "rapmRank": 35,
+   "rank": 10,
+   "name": "Lauri Markkanen",
+   "pos": "PF",
+   "ovr": 93.8,
+   "minutes": 1443,
+   "threeValue": 77.8,
+   "simRank": 24,
+   "rapmRank": 11,
+   "flags": "長人"
+  },
+  {
+   "rank": 11,
+   "name": "Amen Thompson",
+   "pos": "PG",
+   "ovr": 92.2,
+   "minutes": 2953,
+   "threeValue": 40.6,
+   "simRank": 73,
+   "rapmRank": 36,
    "flags": "—"
   },
   {
-   "rank": 15,
-   "name": "Donovan Mitchell",
-   "pos": "SG",
-   "ovr": 91.5,
-   "minutes": 2342,
-   "threeValue": 93.7,
-   "simRank": 70,
-   "rapmRank": 17,
-   "flags": "—"
-  },
-  {
-   "rank": 16,
-   "name": "Kon Knueppel",
-   "pos": "SF",
-   "ovr": 91.1,
-   "minutes": 2551,
-   "threeValue": 99.0,
-   "simRank": 87,
-   "rapmRank": 42,
-   "flags": "—"
-  },
-  {
-   "rank": 17,
+   "rank": 12,
    "name": "Cade Cunningham",
    "pos": "PG",
    "ovr": 90.9,
@@ -659,10 +614,32 @@
    "flags": "—"
   },
   {
-   "rank": 18,
-   "name": "Dyson Daniels",
+   "rank": 13,
+   "name": "Herbert Jones",
    "pos": "SG",
    "ovr": 90.8,
+   "minutes": 1588,
+   "threeValue": 45.8,
+   "simRank": 325,
+   "rapmRank": 14,
+   "flags": "—"
+  },
+  {
+   "rank": 14,
+   "name": "Donovan Mitchell",
+   "pos": "SG",
+   "ovr": 90.8,
+   "minutes": 2342,
+   "threeValue": 93.7,
+   "simRank": 70,
+   "rapmRank": 17,
+   "flags": "—"
+  },
+  {
+   "rank": 15,
+   "name": "Dyson Daniels",
+   "pos": "SG",
+   "ovr": 90.2,
    "minutes": 2520,
    "threeValue": 40.0,
    "simRank": 80,
@@ -670,26 +647,59 @@
    "flags": "—"
   },
   {
-   "rank": 19,
-   "name": "Jamal Murray",
-   "pos": "PG",
-   "ovr": 90.3,
-   "minutes": 2652,
+   "rank": 16,
+   "name": "Kon Knueppel",
+   "pos": "SF",
+   "ovr": 89.7,
+   "minutes": 2551,
    "threeValue": 99.0,
-   "simRank": 130,
-   "rapmRank": 211,
-   "flags": "RAPM 差距大"
+   "simRank": 87,
+   "rapmRank": 42,
+   "flags": "—"
+  },
+  {
+   "rank": 17,
+   "name": "Joel Embiid",
+   "pos": "C",
+   "ovr": 89.6,
+   "minutes": 1201,
+   "threeValue": 62.7,
+   "simRank": 254,
+   "rapmRank": 10,
+   "flags": "長人"
+  },
+  {
+   "rank": 18,
+   "name": "Jimmy Butler III",
+   "pos": "SF",
+   "ovr": 88.9,
+   "minutes": 1182,
+   "threeValue": 63.5,
+   "simRank": 23,
+   "rapmRank": 12,
+   "flags": "—"
+  },
+  {
+   "rank": 19,
+   "name": "Ausar Thompson",
+   "pos": "SF",
+   "ovr": 88.8,
+   "minutes": 1896,
+   "threeValue": 45.9,
+   "simRank": 72,
+   "rapmRank": 28,
+   "flags": "—"
   },
   {
    "rank": 20,
-   "name": "Ryan Rollins",
-   "pos": "PG",
-   "ovr": 90.3,
-   "minutes": 2375,
-   "threeValue": 95.5,
-   "simRank": 26,
-   "rapmRank": 155,
-   "flags": "RAPM 差距大"
+   "name": "OG Anunoby",
+   "pos": "SF",
+   "ovr": 88.8,
+   "minutes": 2224,
+   "threeValue": 87.3,
+   "simRank": 39,
+   "rapmRank": 31,
+   "flags": "—"
   }
  ],
  "v55fix": [
@@ -941,8 +951,17 @@
    "rho2k": 0.738
   },
   {
-   "version": "B12",
+   "version": "card 0.2.6",
    "order": 15,
+   "adopted": true,
+   "rhoNetIn": 0.78,
+   "rhoNetOut": null,
+   "rhoDefOut": null,
+   "rho2k": 0.737
+  },
+  {
+   "version": "B12",
+   "order": 16,
    "adopted": false,
    "rhoNetIn": 0.53,
    "rhoNetOut": 0.455,
@@ -951,7 +970,7 @@
   },
   {
    "version": "C1",
-   "order": 16,
+   "order": 17,
    "adopted": false,
    "rhoNetIn": 0.531,
    "rhoNetOut": 0.455,
@@ -960,7 +979,7 @@
   },
   {
    "version": "D1",
-   "order": 17,
+   "order": 18,
    "adopted": false,
    "rhoNetIn": 0.531,
    "rhoNetOut": 0.458,
@@ -1025,7 +1044,7 @@
   },
   {
    "version": "B12",
-   "order": 15,
+   "order": 16,
    "adopted": false,
    "teams": 30,
    "pearsonR": 0.869,
@@ -1034,7 +1053,7 @@
   },
   {
    "version": "C1",
-   "order": 16,
+   "order": 17,
    "adopted": false,
    "teams": 30,
    "pearsonR": 0.872,
@@ -1043,7 +1062,7 @@
   },
   {
    "version": "D1",
-   "order": 17,
+   "order": 18,
    "adopted": false,
    "teams": 30,
    "pearsonR": 0.865,

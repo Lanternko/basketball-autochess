@@ -284,3 +284,25 @@
 - 狀態：成立（單人反事實屬樣本內診斷，R-007）
 - 相關：E-082、E-079
 - 來源：使用者 2026-10-29「PF 好怪」→「查位置標籤」
+
+### F-042
+- 日期：2026-10-29
+- 說法：逐球紀錄（PBP actions）2pt 的 `area` 欄把補籃、補扣標成 'Mid-Range'。這些出手 shotDistance 0、areaDetail '8-16 Left'、descriptor 是 tip／putback，看起來是缺座標時的預設值。每季 2,210–3,297 次，命中 .675–.715。真正的中距離（shotDistance ≥ 8 呎）命中 .417–.421，和 shots.json 的 .417 一致。Kessler 2022-23 的 PBP「中距離」63 次出手，57 次是這種補籃，真正的跳投只有 6 次；2025-26 PBP 記 5 投 5 中，shots.json 是 0 投。
+- 影響範圍：
+  - V61 `extract_pbp.py` → `history/pbp-zones-*.csv.gz`（2022-23～2025-26），也就是 build_attrs 的 mid／short 歷史；
+  - E-090 h1 的 mid／short、E-096 h1v、E-097；
+  - `scripts/.seventh-*`、防守 stint zones 若用同一套 area 規則也會受影響（未查）。
+  - 卡片當季的 mid（shots.json）不受影響。
+- 證據：`reports/card-0.2.5+E097-topscale/diag/area-count.txt`、`area-check-kessler-2022-23.txt`（腳本在同目錄）
+- 狀態：成立
+- 相關：E-097、E-096、E-090、E-055、L-058
+- 來源：lead 2026-10-29
+
+### F-046
+- 日期：2026-10-30
+- 發現：卡片屬性 foulDraw、drive、onBall 的原始值是每季標準化的 z 分數（每季平均 0），不是原始比率。跨季合併池（E-101）對這三項只會比分布形狀，看不出哪季偏強；其他屬性（命中率、box 比率、追蹤值）是原始尺度，跨季比較有意義。
+- 證據：`reports/card-0.2.5+E101-crossera/deviations.json` #9；`report-data.json` season99。
+- 含意：要照 R-056 做真正的跨時代比較，這三項要先改成未標準化的原始值。
+- 狀態：成立
+- 相關：E-101、R-056
+- 來源：E-101 子代理 2026-10-30，lead 核對

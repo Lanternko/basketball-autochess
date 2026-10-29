@@ -17,7 +17,7 @@ SRC = ROOT / 'data' / 'season-source' / 'player-games.json'
 RAPM = ROOT / 'reports' / 'impact-rapm' / 'rapm-prior.csv'  # 2025-26 單季 box-prior RAPM（每 100 回合）
 ONOFF = ROOT / 'reports' / 'impact-rapm' / 'onoff.csv'
 GC = ROOT / 'reports' / 'game-contribution'  # 單場貢獻值：box → RAPM 權重與 2025-26 基準（scripts/fit_game_contribution.py）
-E089 = ROOT / 'reports' / 'card-0.2.4+E089-minutes-saturation' / 'results.json'  # card 0.2.5 的 OVR 錨點（換算 OVR 傾向）
+CARD_SUMMARY = ROOT / 'reports' / 'card-0.2.6' / 'summary.json'  # 正式卡 OVR 錨點（換算 OVR 傾向）
 
 CSS = """
 /* real box score */
@@ -293,7 +293,7 @@ function toggleG5(b) {
   if (typeof fitTable === 'function') fitTable();
 }
 // 貢獻值（使用者 2026-10-30 選 A）：box score 換算的每 36 分鐘淨影響（權重擬合 2025-26 RAPM），和 2025-26 整季比；
-// OVR 傾向＝把差值當成 pred 的變動，照 card 0.2.5 的錨點與分鐘權重 W(MPG) 換算（只顯示，不改 OVR）
+// OVR 傾向＝把差值當成 pred 的變動，照正式卡（card 0.2.6）的錨點與分鐘權重 W(MPG) 換算（只顯示，不改 OVR）
 // 數字寫絕對值，顏色看和自己平均的差（使用者 2026-10-30：同樣 +3，替補是進步、SGA 是退步）：
 // 五色 深綠 ≥+2.4、淺綠 +1～+2.4、灰 ±1 內、淺紅 −1～−2.4、紅 ≤−2.4
 const sg1 = v => (v > 0 ? '+' : '') + v.toFixed(1);
@@ -500,7 +500,7 @@ def inject(path, real):
     ids = {v['id'] for v in sub.values()}
     imp = {pid: v for pid, v in impact().items() if pid in ids}
     js_json = lambda o: json.dumps(o, ensure_ascii=False, separators=(',', ':'))
-    a = json.loads(E089.read_text(encoding='utf-8'))['report_only']['card']['new']['anchors']
+    a = json.loads(CARD_SUMMARY.read_text(encoding='utf-8'))['anchors']
     block = (f'{BEGIN}\n<style>{CSS}</style>\n<script>const REAL={js_json(sub)};\nconst IMPACT={js_json(imp)};\n'
              f'const GC_ANC={js_json([a["PR1"], a["PR50"], a["PR99"]])};\n'
              f'const TEAM_COLORS={js_json(TEAM_COLORS)};\nconst TEAM_IDS={js_json(team_ids())};{JS}</script>\n{END}\n')

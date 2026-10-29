@@ -317,9 +317,10 @@ def apply_common(s):
 
 # 球員卡資訊列（使用者 2026-10-29：字太多；模擬每 36 分鐘淨值和下方 RAPM「淨影響」看起來同一件事卻不同數字）。
 # 模擬值拿掉、改放 OVR 圓環的滑鼠提示；手機藏掉「球隊／身高」這類標籤；新賽季頁較上季差值用綠／灰／紅三色（不漸變）。
-FACT_LABELS = ['球隊 ', '身高 ', '場均 ', '已打 N=', '出賽 ']
+# 每格帶 class，手機版只留身高、場均分鐘與較上季（使用者 2026-10-29：手機用減法）
+FACT_LABELS = {'球隊 ': 'f-tm', '身高 ': 'f-ht', '場均 ': 'f-min', '已打 N=': 'f-gp', '出賽 ': 'f-gp'}
 DELTA_OLD = "<span>上季卡 OVR <b>${p.last.toFixed(1)}</b>（<b>${(p.dovr > 0 ? '+' : '') + p.dovr.toFixed(2)}</b>）</span>"
-DELTA_NEW = ("<span><i class=\"lb\">上季卡 OVR <b>${p.last.toFixed(1)}</b>（</i><i class=\"sm\">較上季 </i>"
+DELTA_NEW = ("<span class=\"f-d\"><i class=\"lb\">上季卡 OVR <b>${p.last.toFixed(1)}</b>（</i><i class=\"sm\">較上季 </i>"
              "<b class=\"${p.dovr >= 1 ? 'up' : p.dovr <= -1 ? 'dn' : 'flat'}\">${(p.dovr > 0 ? '+' : '') + p.dovr.toFixed(1)}</b>"
              "<i class=\"lb\">）</i></span>")
 
@@ -331,7 +332,8 @@ def _compact_facts(s):
     assert s.count(ring) == 1
     s = s.replace(ring, '<div class="ring" title="模型用能力值模擬的每 36 分鐘淨值 ${(p.imp > 0 ? \'+\' : \'\') + p.imp.toFixed(2)}'
                         '（OVR 由此換算；下方「影響」是真實比賽的 RAPM，兩者不同）"><svg')
-    for lab in FACT_LABELS:
-        s = s.replace(f'<span>{lab}<b>', f'<span><i class="lb">{lab}</i><b>')
+    for lab, c in FACT_LABELS.items():
+        s = s.replace(f'<span>{lab}<b>', f'<span class="{c}"><i class="lb">{lab}</i><b>')
+    s = s.replace('<span>防守加分 <b>', '<span class="f-x">防守加分 <b>')
     assert s.count(DELTA_OLD) <= 1
     return s.replace(DELTA_OLD, DELTA_NEW)

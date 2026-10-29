@@ -118,37 +118,66 @@ CSS = """
   .rx .rsub{display:none}
 }
 /* 桌機卡片：影響力四格改 2×2，和 OVR 圓環放同一側（使用者 2026-10-29：省空間）
-   .who 拆開讓子元素直接排進 .card 格線：寬螢幕 2×2 在圓環左邊；窄一點（<1100px）疊在圓環下面，讓中間欄夠寬 */
+   .who 拆開讓子元素直接排進 .card 格線：寬螢幕 2×2 在圓環左邊；窄一點（<1100px）疊在圓環下面，讓中間欄夠寬
+   比照手機（使用者 2026-10-30）：資訊列拿掉，得分／籃板／助攻／正負值改大格、細項小字在旁；場數·分鐘掛在 OVR 圓環下 */
 @media (min-width:641px){
-  .card{grid-template-columns:auto minmax(0,1fr) auto auto;row-gap:8px}
-  .card .tag{grid-column:1;grid-row:1/span 4}
+  .card{grid-template-columns:auto minmax(0,1fr) auto auto;row-gap:10px}
+  .card .tag{grid-column:1;grid-row:1/span 3}
   .card .who{display:contents}
   .card .who>*{grid-column:2;margin-inline:18px}
-  .card .who>.nm{margin-top:14px}
-  .card .who>:last-child{margin-bottom:14px}
-  .card .who>.strong{grid-column:3;grid-row:1/span 4;align-self:center;margin:14px 0;display:grid;grid-template-columns:repeat(2,1fr);gap:6px}
+  .card .who>.nm{grid-row:1;margin-top:14px;align-self:end}
+  .card .who>.facts{display:none}
+  .card .who>.real{grid-row:2/span 2;align-self:start;margin-bottom:14px}
+  .card .who>.strong{grid-column:3;grid-row:1/span 3;align-self:center;margin:14px 0;display:grid;grid-template-columns:repeat(2,1fr);gap:6px}
   .strong .chip{display:flex;flex-direction:column;align-items:center;min-width:84px;padding:6px 8px;font-size:.74rem;color:var(--muted);letter-spacing:0}
   .strong .chip i{margin:2px 0 0;font:700 1.3rem var(--f-disp)}
   .strong .chip.dim{grid-column:1/-1}
-  .card .ring{grid-column:4;grid-row:1/span 4}
-  /* 身高在名字旁；第一排＝分鐘、場次、得分／籃板／助攻；較上季掛圓環下；真實數據三大格移到第一排 */
+  .card .ring{grid-column:4;grid-row:1/span 2;align-self:end;padding:14px 22px 0}
+  .card .who>.real-h{grid-column:4;grid-row:3;align-self:start;justify-self:center;margin:-4px 18px 14px;white-space:nowrap;letter-spacing:.02em}
+  .real-h .rtm{display:none}
+  /* 身高在名字旁；較上季掛圓環下 */
   .who .nm .nht{margin-left:12px;font-size:1.1rem;font-weight:600;color:var(--muted);text-transform:none;white-space:nowrap}
-  .facts .f-tm,.facts .f-ht,.facts .f-d{display:none}
   .card .ring{flex-direction:column;gap:2px}
   .ring .rd{font:700 1.25rem var(--f-disp);font-variant-numeric:tabular-nums}
   .ring .rd.up{color:var(--g-a)}
   .ring .rd.dn{color:var(--g-f)}
   .ring .rd.flat{color:var(--muted)}
-  .rx .rmain{display:none}
-  .card .who>.real-h{align-self:end}
-  .card .who>.real{align-self:start}
+  .rx .rmain .st{min-width:74px}
+  .card .who>.g5{grid-column:1/-1;grid-row:4;margin:0 18px 14px}
 }
 .who .nm .nht,.ring .rd{display:none}
 @media (min-width:641px){.who .nm .nht,.ring .rd{display:inline}}
 @media (min-width:641px) and (max-width:1099px){
   .card{grid-template-columns:auto minmax(0,1fr) auto}
-  .card .ring{grid-column:3;grid-row:1/span 2;padding:14px 18px 0}
-  .card .who>.strong{grid-column:3;grid-row:3/span 2;align-self:start;margin:0 18px 14px}
+  .card .ring{grid-column:3;grid-row:1;padding:14px 18px 0}
+  .card .who>.real-h{grid-column:3;grid-row:2;margin:-4px 18px 0}
+  .card .who>.strong{grid-column:3;grid-row:3;align-self:start;margin:0 18px 14px}
+  /* 中間欄窄：四大格平分寬度、字縮小，不壓到右邊影響力 */
+  .rx .rmain{flex:1 1 100%}
+  .rx .rmain .st{flex:1 1 0;min-width:0;padding:4px 6px}
+  .rx .rmain .st b{font-size:1.4rem}
+}
+/* 近 N 場逐場數據（使用者 2026-10-30：數據旁的 ▼ 展開，像 NBA box score） */
+.rx .g5t{flex-basis:100%;display:flex;align-items:center;gap:6px;background:none;border:0;border-top:1px solid var(--line);padding:6px 0 0;
+  color:var(--muted);font:600 .8rem var(--f-disp);letter-spacing:.04em;cursor:pointer;text-align:left}
+.rx .g5t:hover{color:var(--fg)}
+.rx .g5t i{display:inline-block;font-style:normal;font-size:.75em;transition:transform .15s}
+.rx .g5t[aria-expanded="true"] i{transform:rotate(180deg)}
+.card .g5{justify-self:start;min-width:0;max-width:100%;box-sizing:border-box;overflow-x:auto;border:1px solid var(--line);border-radius:3px;background:var(--panel-2);scrollbar-width:thin;scrollbar-color:#38424f transparent}
+.g5 table{min-width:0;border-collapse:collapse;font-variant-numeric:tabular-nums;white-space:nowrap}
+.g5 th{background:none;cursor:default;color:var(--muted);font:600 .7rem var(--f-disp);letter-spacing:.04em;text-align:right;padding:6px 10px;border-bottom:1px solid var(--line)}
+.g5 td{text-align:right;padding:5px 10px;border-bottom:1px solid var(--line);color:var(--fg);font:500 .9rem var(--f-disp);letter-spacing:.02em}
+.g5 :is(th,td):is(:nth-child(1),:nth-child(2)){text-align:left}
+.g5 td:nth-child(5){font-weight:700}
+.g5 td .w{color:var(--g-a);font-weight:700}
+.g5 td .l{color:var(--g-f);font-weight:700}
+.g5 tfoot td{color:var(--muted);border-bottom:0}
+.g5 .up{color:var(--g-a)}
+.g5 .dn{color:var(--g-f)}
+@media (max-width:1099px){.g5 th,.g5 td{padding-inline:7px}}
+@media (max-width:640px){
+  .g5 td{font-size:.84rem}
+  .g5 th,.g5 td{padding:5px 6px}
 }
 .tabbr{color:var(--tt);font-weight:600}
 /* impact chips：RAPM 攻守淨（對聯盟平均）、在場減不在場（每 100 回合） */
@@ -156,11 +185,12 @@ CSS = """
 .chip i.dn{color:var(--g-f)}
 .chip i.flat{color:var(--muted)}
 /* 手機篩選列（使用者 2026-10-29：卡片和表格要能同時看到，篩選擋在中間）：整排移到卡片上方，擠成一排、一樣高；
-   位置改成點了才展開的下拉（.pbtn），球隊沒選時顯示「球隊」 */
+   位置改成點了才展開的下拉（.pbtn），球隊沒選時顯示「球隊」。桌機也把篩選列移到卡片上方（使用者 2026-10-30） */
 .pbtn{display:none}
+.wrap>.top{order:-2}
+.wrap>.ctrl{order:-1}
 @media (max-width:640px){
-  .wrap>.top{order:-2}
-  .wrap>.ctrl{order:-1;position:relative;flex-wrap:nowrap;gap:6px}
+  .wrap>.ctrl{position:relative;flex-wrap:nowrap;gap:6px}
   .ctrl .lbl{display:none}
   .ctrl .tgrp{display:contents}
   .ctrl .pbtn,.ctrl .tpick summary,.ctrl input[type=search]{height:32px;box-sizing:border-box;padding:0 10px}
@@ -227,11 +257,34 @@ function realBox(p) {
   // 主次分明（使用者 2026-10-29：十二格一樣大太雜）：得分／籃板／助攻大格，其餘分三行小字
   const main = [['得分', f1(r.pts)], ['籃板', f1(r.reb)], ['助攻', f1(r.ast)], ['正負值', pm(r.pm)]];
   const sub = [[['命中率', pc(r.fg)], ['三分', pc(r.fg3)], ['罰球', pc(r.ft)], ['真實命中', pc(r.ts)]],
-    [['抄截', f1(r.stl)], ['阻攻', f1(r.blk)], ['失誤', f1(r.tov)], ['正負值', pm(r.pm)]]];
+    [['抄截', f1(r.stl)], ['阻攻', f1(r.blk)], ['失誤', f1(r.tov)]]];
   // 標題只留場數和場均分鐘（使用者 2026-10-29：「例行賽真實數據」字太多）
+  const n = r.g5.length;
   return `<div class="real-h">${r.gp} 場 · ${Math.round(r.mpg)} 分鐘${r.teams.length > 1 ? '<span class="rtm"> · ' + r.teams.join('/') + '</span>' : ''}</div>
       <div class="real rx"><div class="rmain">${main.map(([l, v]) => `<div class="st"><b>${v}</b><span>${l}</span></div>`).join('')}</div>
-      <div class="rsub">${sub.map(g => `<div>${g.map(([l, v]) => `<span>${l}<b>${v}</b></span>`).join('')}</div>`).join('')}</div></div>`;
+      <div class="rsub">${sub.map(g => `<div>${g.map(([l, v]) => `<span>${l}<b>${v}</b></span>`).join('')}</div>`).join('')}</div>
+      <button type="button" class="g5t" aria-expanded="${G5_OPEN}" onclick="toggleG5(this)"><i>▼</i>近 ${n} 場比賽</button></div>
+      <div class="g5"${G5_OPEN ? '' : ' hidden'}>${gameLog(r.g5)}</div>`;
+}
+// 近 N 場逐場（新到舊）：[日期, 對手, 勝負, 分鐘, 得分, 籃板, 助攻, 抄截, 阻攻, 失誤, 投進, 出手, 三分進, 三分出手, 罰進, 罰球, 正負值]
+let G5_OPEN = false;
+function toggleG5(b) {
+  G5_OPEN = !G5_OPEN;
+  b.setAttribute('aria-expanded', String(G5_OPEN));
+  document.querySelector('.card .g5').hidden = !G5_OPEN;
+  if (typeof fitTable === 'function') fitTable();
+}
+function gameLog(gs) {
+  const pm = v => `<span class="${v > 0 ? 'up' : v < 0 ? 'dn' : ''}">${v > 0 ? '+' : ''}${v}</span>`;
+  const ma = (m, a) => `${m}-${a}`;
+  const row = g => `<td>${g[0]}</td><td>${g[1]}</td><td><span class="${g[2] === 'W' ? 'w' : 'l'}">${g[2] === 'W' ? '勝' : '負'}</span></td>` +
+    [3, 4, 5, 6, 7, 8, 9].map(i => `<td>${g[i]}</td>`).join('') +
+    `<td>${ma(g[10], g[11])}</td><td>${ma(g[12], g[13])}</td><td>${ma(g[14], g[15])}</td><td>${pm(g[16])}</td>`;
+  const n = gs.length, avg = i => (gs.reduce((s, g) => s + g[i], 0) / n).toFixed(1);
+  const head = ['日期', '對手', '勝負', '分鐘', '得分', '籃板', '助攻', '抄截', '阻攻', '失誤', '投籃', '三分', '罰球', '正負'];
+  return `<table><thead><tr>${head.map(h => `<th>${h}</th>`).join('')}</tr></thead><tbody>${gs.map(g => `<tr>${row(g)}</tr>`).join('')}</tbody>` +
+    `<tfoot><tr><td colspan="3">${n} 場平均</td>${[3, 4, 5, 6, 7, 8, 9].map(i => `<td>${avg(i)}</td>`).join('')}` +
+    `<td>${avg(10)}-${avg(11)}</td><td>${avg(12)}-${avg(13)}</td><td>${avg(14)}-${avg(15)}</td><td>${pm(+avg(16))}</td></tr></tfoot></table>`;
 }
 function impactChips(p) {
   const r = REAL[p.name], m = r && IMPACT[r.id];
@@ -315,12 +368,13 @@ BEGIN, END = '<!-- real-stats:begin -->', '<!-- real-stats:end -->'
 def aggregate():
     rs = json.loads(SRC.read_text(encoding='utf-8'))['data']['resultSets'][0]
     h = {k: i for i, k in enumerate(rs['headers'])}
-    acc = {}
+    acc, games = {}, {}
+    log_keys = ['MIN', 'PTS', 'REB', 'AST', 'STL', 'BLK', 'TOV', 'FGM', 'FGA', 'FG3M', 'FG3A', 'FTM', 'FTA', 'PLUS_MINUS']
     for row in rs['rowSet']:
         name = row[h['PLAYER_NAME']]
-        a = acc.setdefault(name, {'id': row[h['PLAYER_ID']], 'gp': 0, 'teams': [], **{k: 0 for k in
-            ['MIN', 'PTS', 'REB', 'AST', 'STL', 'BLK', 'TOV', 'FGM', 'FGA', 'FG3M', 'FG3A', 'FTM', 'FTA', 'PLUS_MINUS']}})
+        a = acc.setdefault(name, {'id': row[h['PLAYER_ID']], 'gp': 0, 'teams': [], **{k: 0 for k in log_keys}})
         a['gp'] += 1
+        games.setdefault(name, []).append(row)
         team = row[h['TEAM_ABBREVIATION']]
         if team not in a['teams']:
             a['teams'].append(team)
@@ -339,8 +393,17 @@ def aggregate():
             'tov': round(a['TOV'] / n, 2), 'pm': round(a['PLUS_MINUS'] / n, 2),
             'fg': pct(a['FGM'], a['FGA']), 'fg3': pct(a['FG3M'], a['FG3A']), 'ft': pct(a['FTM'], a['FTA']),
             'ts': pct(a['PTS'], tsa),
+            'g5': [game_row(r, h, log_keys) for r in sorted(games[name], key=lambda r: (r[h['GAME_DATE']], r[h['GAME_ID']]),
+                                                             reverse=True)[:5]],
         }
     return out
+
+
+def game_row(r, h, keys):
+    """一場 → [M/D, 'vs BOS'／'@ BOS', W/L, 分鐘…正負值]（給卡片的近 5 場表）。"""
+    _, m, d = r[h['GAME_DATE']][:10].split('-')
+    mu = r[h['MATCHUP']].split()
+    return [f'{int(m)}/{int(d)}', ('@ ' if mu[1] == '@' else 'vs ') + mu[-1], r[h['WL']]] + [r[h[k]] or 0 for k in keys]
 
 
 def impact():

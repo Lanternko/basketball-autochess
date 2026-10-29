@@ -44,7 +44,9 @@ def main():
         # E-116 新秀先驗列沒有 threeValue／presDisplay／foulDisc（無上季卡）：3PT 退回 long、PRES 退回 pressure、犯規紀律留空
         alt = {'threeValue': 'long', 'presDisplay': 'pressure'}
         opt = lambda k: num(k) if r[k] != '' else (num(alt[k]) if k in alt else None)
-        data_rows.append([int(r['rank']), num('ovr'), r['name'], r['pos'], r['team'], ht.get(r['name'], 0),
+        # 舊版型沒有的人（E-116 新秀）身高改取 ranking.csv 的 heightInches（bio）
+        h = ht.get(r['name']) or (round(num('heightInches')) if r.get('heightInches') else 0)
+        data_rows.append([int(r['rank']), num('ovr'), r['name'], r['pos'], r['team'], h,
                           round(num('MIN26') / int(r['N']), 1), int(r['N']), num('predictedPer36'), num('defenseBonus'),
                           *[opt('presDisplay') if (a == 'pressure' and has_pd) else opt(a) for a in cols[10:25]],
                           num('lastOVR'), num('dOVR'), *([num('pressure'), opt('foulDisc')] if has_pd else [])])

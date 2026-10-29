@@ -27,3 +27,7 @@
 | 逐點管線 pr／T | 固定為開季先驗卡 | ΔOVR 為「同一把尺」下的差 |
 
 資料覆蓋：2026-10-20..2026-10-27、56 場、417 名球員、每人 1–4 場；樣本極小，OVR 變動多半是少數低 k 屬性（pass／creation／rebound／tovSkill／ft）的收縮結果，只看趨勢。
+
+## 新秀起點（E-116 → E-121，2026-10-30）
+- `build_rookie_prior.py` 產 E-116 起點；`reports/E121-rookie-scale/build_2k_start.py` 再把 x0 齊頭平移到「2K 順位曲線換本站尺度 −5」（R-073），覆寫 `rookie-prior-2026.json`。E-116 原版留在 `rookie-prior-2026-e116.json`。
+- 重跑 `build_rookie_prior.py` 之後一定要接著重跑 `build_2k_start.py`（它讀的是 e116 備份，先刪備份才會改用新產的 E-116 版）。

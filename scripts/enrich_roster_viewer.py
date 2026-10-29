@@ -295,27 +295,29 @@ function toggleG5(b) {
 // 貢獻值（使用者 2026-10-30 選 A）：box score 換算的每 36 分鐘淨影響（權重擬合 2025-26 RAPM），和 2025-26 整季比；
 // OVR 傾向＝把差值當成 pred 的變動，照正式卡（card 0.2.6）的錨點與分鐘權重 W(MPG) 換算（只顯示，不改 OVR）
 // 數字寫絕對值，顏色看和自己平均的差（使用者 2026-10-30：同樣 +3，替補是進步、SGA 是退步）：
-// 五色 深綠 ≥+2.4、淺綠 +1～+2.4、灰 ±1 內、淺紅 −1～−2.4、紅 ≤−2.4
+// 五色切點＝2025-26 全部比賽「貢獻值 − 自己整季平均」絕對值的 20／60 百分位，各色約兩成（使用者 2026-10-30 選單場、5 場分開切）：
+// 單場（上場 ≥10 分鐘，SD 3.0）±0.7／±2.4；近 5 場合計（SD 1.3）±0.3／±1.1。顏色是排名，不代表顯著
+const GC_CUT1 = [0.7, 2.4], GC_CUT5 = [0.3, 1.1];
 const sg1 = v => (v > 0 ? '+' : '') + v.toFixed(1);
-const gcCls = d => d >= 2.4 ? 'c5a' : d >= 1 ? 'c5b' : d > -1 ? 'c5c' : d > -2.4 ? 'c5d' : 'c5f';
-function gcCell(v, b) {
+const gcCls = (d, [a, b]) => d >= b ? 'c5a' : d >= a ? 'c5b' : d > -a ? 'c5c' : d > -b ? 'c5d' : 'c5f';
+function gcCell(v, b, cut) {
   if (v == null) return '<td>—</td>';
-  return `<td><span class="${b == null ? '' : gcCls(v - b)}">${sg1(v)}</span></td>`;
+  return `<td><span class="${b == null ? '' : gcCls(v - b, cut)}">${sg1(v)}</span></td>`;
 }
 function gcNote(r, p, n) {
   const c = r.gc;
   if (c.r == null) return '';
   if (c.b == null) return `<div class="gcn">貢獻值近 ${n} 場 <b>${sg1(c.r)}</b>／每 36 分鐘；沒有 2025-26 紀錄，無平均可比。</div>`;
-  const d = c.r - c.b, cls = gcCls(d);
+  const d = c.r - c.b, cls = gcCls(d, GC_CUT5);
   const [p1, p50, p99] = GC_ANC, w = (1 - Math.exp(-r.mpg / 15)) / (1 - Math.exp(-36 / 15));
   const toG = o => o <= 70 ? p1 + (o - 40) * (p50 - p1) / 30 : p50 + (o - 70) * (p99 - p50) / 29;
   const toO = g => g <= p50 ? 40 + 30 * (g - p1) / (p50 - p1) : 70 + 29 * (g - p50) / (p99 - p50);
-  // 照 5 場水準直接換算的 OVR 會跳到 150 這種數字（5 場起伏太大），正文只講方向與強弱，換算值放 tooltip
+  // 照 5 場水準直接換算的 OVR 會跳到 150 這種數字（5 場起伏太大），正文只講排在哪一段，換算值放 tooltip
   const o2 = toO(toG(p.ovr) + d * w);
   const tip = `若整季都維持這個水準，OVR 約 ${o2.toFixed(0)}（目前 ${p.ovr.toFixed(1)}）；5 場樣本很小，不會真的差這麼多`;
-  const dir = {c5a: '明顯升 ↑↑', c5b: '升 ↑', c5c: '持平', c5d: '降 ↓', c5f: '明顯降 ↓↓'}[cls];
-  return `<div class="gcn" title="${tip}">貢獻值近 ${n} 場 <b class="${cls}">${sg1(c.r)}</b>，2025-26 平均 <b>${sg1(c.b)}</b> → OVR 傾向 <b class="${cls}">${dir}</b>。` +
-    `顏色是和自己平均比：深綠高 2.4 以上、淺綠高 1～2.4、灰差不到 1、淺紅低 1～2.4、紅低 2.4 以上。</div>`;
+  const dir = {c5a: '比平常好很多（前 20%）', c5b: '比平常好', c5c: '和平常差不多', c5d: '比平常差', c5f: '比平常差很多（後 20%）'}[cls];
+  return `<div class="gcn" title="${tip}">貢獻值近 ${n} 場 <b class="${cls}">${sg1(c.r)}</b>，2025-26 平均 <b>${sg1(c.b)}</b> → <b class="${cls}">${dir}</b>。` +
+    `顏色是和自己平均比，照 2025-26 所有人的起伏切成五等分，各色約兩成：單場 ±0.7／±2.4，近 5 場 ±0.3／±1.1。5 場起伏約 ±1.3，深綠或紅也可能只是手感。</div>`;
 }
 function gameLog(r, p) {
   const gs = r.g5;
@@ -323,15 +325,15 @@ function gameLog(r, p) {
   const ma = (m, a) => `${m}-${a}`;
   const row = g => `<td>${g[0]}</td><td>${g[1]}</td><td><span class="${g[2] === 'W' ? 'w' : 'l'}">${g[2] === 'W' ? '勝' : '負'}</span></td>` +
     [3, 4, 5, 6, 7, 8, 9].map(i => `<td>${g[i]}</td>`).join('') +
-    `<td>${ma(g[10], g[11])}</td><td>${ma(g[12], g[13])}</td><td>${ma(g[14], g[15])}</td><td>${pm(g[16])}</td>${gcCell(g[17], r.gc.b)}`;
+    `<td>${ma(g[10], g[11])}</td><td>${ma(g[12], g[13])}</td><td>${ma(g[14], g[15])}</td><td>${pm(g[16])}</td>${gcCell(g[17], r.gc.b, GC_CUT1)}`;
   const n = gs.length, sum = i => gs.reduce((s, g) => s + g[i], 0), avg = i => (sum(i) / n).toFixed(1);
   // 平均列的投籃／三分／罰球改顯示 N 場合計命中率（使用者 2026-10-30），滑過看合計進球-出手
   const pct = (m, a) => `<td title="合計 ${sum(m)}-${sum(a)}">${sum(a) ? (sum(m) / sum(a) * 100).toFixed(1) + '%' : '—'}</td>`;
   const head = ['日期', '對手', '勝負', '分鐘', '得分', '籃板', '助攻', '抄截', '阻攻', '失誤', '投籃', '三分', '罰球', '正負'];
-  const gcTip = 'box score 換算的每 36 分鐘淨影響（每 100 回合淨分，權重擬合 2025-26 RAPM）；顏色＝和自己 2025-26 平均比（五色，見表下說明）';
+  const gcTip = 'box score 換算的每 36 分鐘淨影響（每 100 回合淨分，權重擬合 2025-26 RAPM）；顏色＝和自己 2025-26 平均比，五等分（單場 ±0.7／±2.4，5 場平均 ±0.3／±1.1）';
   return `<table><thead><tr>${head.map(h => `<th>${h}</th>`).join('')}<th title="${gcTip}">貢獻</th></tr></thead><tbody>${gs.map(g => `<tr>${row(g)}</tr>`).join('')}</tbody>` +
     `<tfoot><tr><td colspan="3">${n} 場平均</td>${[3, 4, 5, 6, 7, 8, 9].map(i => `<td>${avg(i)}</td>`).join('')}` +
-    `${pct(10, 11)}${pct(12, 13)}${pct(14, 15)}<td>${pm(+avg(16))}</td>${gcCell(r.gc.r, r.gc.b)}</tr></tfoot></table>${gcNote(r, p, n)}`;
+    `${pct(10, 11)}${pct(12, 13)}${pct(14, 15)}<td>${pm(+avg(16))}</td>${gcCell(r.gc.r, r.gc.b, GC_CUT5)}</tr></tfoot></table>${gcNote(r, p, n)}`;
 }
 function impactChips(p) {
   const r = REAL[p.name], m = r && IMPACT[r.id];

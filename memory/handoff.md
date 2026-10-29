@@ -93,4 +93,4 @@
 
 ## 2026-10-30 名單卡片近 5 場與貢獻值
 - 手機版近 5 場：正負值格切 60° 缺角放正三角形 ▼，展開變金色不翻轉；表格只從數值格啟動內部捲動；平均列的投籃／三分／罰球顯示合計命中率。都已發布。
-- E-105 單場貢獻值已上線：近 5 場表多「貢獻」欄（box score 換算每 36 分鐘淨影響，權重擬合 2025-26 RAPM A 半，B 半樣本外 r 0.44），表下一行寫近 5 場和 2025-26 平均差多少、OVR 傾向升／降／持平。只顯示，不進 OVR。要重擬權重跑 `python -I scripts/fit_game_contribution.py`（`reports/game-contribution/`，要 `git add -f`）。
+- E-105 單場貢獻值已上線：近 5 場表多「貢獻」欄（box score 換算每 36 分鐘淨影響，權重擬合 2025-26 RAPM A 半，B 半樣本外 r 0.44），數字寫絕對值，顏色和自己 2025-26 平均比、五色五等分（使用者 2026-10-30 裁定：同樣 +3 替補是進步、SGA 是退步）。切點＝2025-26 全部比賽差值絕對值的 20／60 百分位：單場 ±0.7／±2.4、近 5 場 ±0.3／±1.1（分布圖 `reports/game-contribution/gc-delta-dist.png`）；表下寫「比平常好很多（前 20%）…比平常差很多（後 20%）」，換算 OVR 只放 tooltip。顏色是排名不是顯著。只顯示，不進 OVR。要重擬權重跑 `python -I scripts/fit_game_contribution.py`（`reports/game-contribution/`，要 `git add -f`）。

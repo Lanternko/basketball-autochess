@@ -248,6 +248,11 @@ th.noh{cursor:default}
 #tbl thead tr:last-child th[data-k]:not([data-k=name],[data-k=pos],[data-k=team],[data-k=ht],[data-k=ovr],[data-k=min],[data-k=gp],[data-k=dovr]){
   width:48px;min-width:48px;box-sizing:border-box}
 #tbl thead tr:last-child th[data-k]:not([data-k=name],[data-k=pos],[data-k=team],[data-k=ht],[data-k=ovr],[data-k=min],[data-k=gp],[data-k=dovr]) .zh{font-size:.62rem}
+/* 名字欄不再整條金底（使用者 2026-10-29：醜、被列線切得斷裂）；改深色底，只有選中列金色 */
+#tbl th.nm{background:#0b1119;color:var(--muted)}
+#tbl td.nm{background:var(--panel);color:var(--fg);box-shadow:inset -1px 0 0 var(--line)}
+#tbl tbody tr:hover td.nm{background:var(--panel-2)}
+#tbl tbody tr.sel td.nm{background:var(--gold);color:var(--gold-ink)}
 /* 手機表格（使用者 2026-10-29：很難用）：名字欄變窄可換行、列變矮；OVR 往右滑時釘在名字旁邊，長按不選字 */
 @media (max-width:640px){
   #tbl td{padding:5px 3px;font-size:.92rem}

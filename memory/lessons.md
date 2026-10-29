@@ -430,3 +430,9 @@
 - 對應測試或關卡：lead 寫 report.md；role-audit 對照表加「基準」欄。
 - 相關：E-101、L-020
 - 來源：role-audit 2026-10-30（E-101 稽核）
+
+### L-070
+- 日期：2026-10-30
+- 錯誤：在共用 checkout 用 `git add` 把自己的檔放進 index，commit 被 pre-commit hook 擋下的空檔，別的 session 剛好 commit，把我整個 index（24 檔、E-116 上線）帶進它的 commit 00c4a7d，訊息卻是「防守加分改名防守意識」。內容沒錯，但歷史對不上、那個 session 自己的改動也不在那次 commit。
+- 規則：共用 checkout 一律用私有 index commit：`GIT_INDEX_FILE=<scratch>/idx git read-tree HEAD` → 只 `update-index`／`add` 自己的檔 → 同一個 index commit，不碰共用 `.git/index`；hook 擋下就先清掉私有 index 再處理，不把東西留在共用 index。
+- 相關：L-047、L-048

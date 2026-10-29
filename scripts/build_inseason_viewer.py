@@ -45,11 +45,9 @@ def main():
                           round(num('MIN26') / int(r['N']), 1), int(r['N']), num('predictedPer36'), num('defenseBonus'),
                           *[num('presDisplay') if (a == 'pressure' and has_pd) else num(a) for a in cols[10:25]],
                           num('lastOVR'), num('dOVR'), *([num('pressure'), num('foulDisc')] if has_pd else [])])
-    # ΔOVR 顏色：0 灰、正往綠、負往紅，兩端各以本頁最大／最小值為滿色
-    dpos = max(max(float(r['dOVR']) for r in rows), 1e-9)
-    dneg = max(-min(float(r['dOVR']) for r in rows), 1e-9)
-    mix = lambda c, t: f'color-mix(in oklab, var({c}) ${{Math.round(Math.min(1, {t}) * 100)}}%, var(--muted))'
-    dcol = f"(v => v >= 0 ? `{mix('--g-a', f'v / {dpos:.3f}')}` : `{mix('--g-f', f'-v / {dneg:.3f}')}`)(p.dovr)"
+    # ΔOVR 五色：≥+4 深綠、+1～+4 淺綠、±1 內灰、−1～−4 橘、≤−4 紅（沿用等第色）
+    dcol = ("(v => v >= 4 ? 'var(--g-a)' : v >= 1 ? 'var(--g-b)' : v > -1 ? 'var(--muted)'"
+            " : v > -4 ? 'var(--g-d)' : 'var(--g-f)')(p.dovr)")
     s = base
     s = s.replace('<title>OVR 名單檢視</title>', '<title>新賽季 OVR 名單</title>', 1)
     s = s.replace('<h1>2025-26 <span>OVR</span> 名單</h1>', '<h1>2026-27 <span>OVR</span> 名單</h1>', 1)
@@ -78,7 +76,7 @@ def main():
          "<span>上季卡 OVR <b>${p.last.toFixed(1)}</b>（<b>${(p.dovr > 0 ? '+' : '') + p.dovr.toFixed(2)}</b>）</span>"),
         ('模擬每 36 分鐘淨值', '新賽季預測每 36 分鐘淨值'),
         ('OVR 同分多半是 2K27 名次封頂造成的',
-         'OVR 為每場（含上場時間，相對替補水準）；ΔOVR 綠＝比上季卡高、紅＝低、灰＝持平；'
+         'OVR 為每場（含上場時間，相對替補水準）；ΔOVR 深綠≥+4、淺綠+1～+4、灰±1 內、橘−1～−4、紅≤−4；'
          'OVR 同分多半是 2K27 名次封頂造成的 · 本頁 MPG 是 2026-27 場均分鐘'),
     ]:
         assert s.count(a) >= 1, a

@@ -53,7 +53,7 @@ h1 span{color:var(--gold)}
 .ctrl .lbl{color:var(--muted);font-size:.75rem;text-transform:uppercase;letter-spacing:.08em}
 button:focus-visible,input:focus-visible,th:focus-visible{outline:2px solid var(--gold);outline-offset:1px}
 /* table */
-.tbox{overflow-x:auto;border:1px solid var(--line);border-radius:4px;background:var(--panel)}
+.tbox{overflow:auto;max-height:70vh;overscroll-behavior:contain;border:1px solid var(--line);border-radius:4px;background:var(--panel)}
 table{border-collapse:collapse;width:100%;min-width:1060px;font-variant-numeric:tabular-nums}
 thead th{background:#0b1119;color:var(--muted);font:600 .82rem var(--f-disp);letter-spacing:.04em;padding:6px 4px 7px;text-align:center;cursor:pointer;user-select:none;white-space:nowrap;border-bottom:1px solid var(--line);position:relative}
 thead th .zh{display:block;font:500 .68rem var(--f-body);letter-spacing:0;opacity:.75;margin-top:1px}
@@ -93,6 +93,8 @@ td.sortcol{background:rgba(242,194,48,.07)}
   .ring{padding:10px 12px}.ring svg{width:92px;height:92px}
   h1{font-size:1.6rem}
 }
+#tbl thead{position:sticky;top:0;z-index:3}
+@media (max-width:640px){.tbox{overscroll-behavior:auto}}
 .tgrp{display:flex;gap:10px;align-items:center}
 .tpick{position:relative}
 .tpick summary{list-style:none;display:flex;align-items:center;gap:6px;background:var(--panel);color:var(--muted);border:1px solid var(--line);border-radius:3px;font:600 .9rem var(--f-disp);letter-spacing:.04em;padding:6px 11px;cursor:pointer;user-select:none}
@@ -406,6 +408,8 @@ function render() {
   document.querySelectorAll('#tbl tbody tr[data-n]').forEach(tr => {
     tr.onclick = () => { st.sel = decodeURIComponent(tr.dataset.n); render(); };
   });
+  const lk = [st.sort, st.asc, st.pos, st.team, st.q, st.page].join('|');
+  if (lk !== listKey) { listKey = lk; document.querySelector('.tbox').scrollTop = 0; }
   card(P.find(p => p.name === st.sel) || P[0]);
   pages(a.length);
   document.getElementById('count').textContent = a.length ? `第 ${start + 1}–${end} 位，共 ${a.length} 人` : '0 人';
@@ -413,6 +417,17 @@ function render() {
   m.hidden = end >= a.length;
   m.onclick = () => { st.extra++; render(); };
 }
+
+let listKey = '';
+function fitTable() {
+  // 以「卡片頂端貼齊視窗頂」為準：卡片＋篩選列以下的空間都給表格
+  const t = document.querySelector('.tbox'), above = t.getBoundingClientRect().top - document.getElementById('card').getBoundingClientRect().top;
+  const h = innerWidth <= 640 ? innerHeight * 0.6 : Math.max(300, innerHeight - above - 12);
+  t.style.maxHeight = Math.round(h) + 'px';
+}
+addEventListener('resize', fitTable);
+addEventListener('load', fitTable);
+document.fonts && document.fonts.ready.then(fitTable);
 
 document.getElementById('q').oninput = e => { st.q = e.target.value; st.page = 0; st.extra = 0; render(); };
 render();

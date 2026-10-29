@@ -1,4 +1,4 @@
-"""inseason 0.2.2（v5 Path A C4，E-033；先驗卡 x0＝card 0.2.4 能力值＝card 0.2.2 能力值；OVR 為每場，R-028 / E-064 G1；E-074、E-091）的 2026-27 即時版：逐球員用自己的已打場數 N 更新能力值與 OVR。
+"""inseason 0.2.4（原名 0.2.2；R-050 起新賽季版號＝先驗正式卡版號；v5 Path A C4，E-033；先驗卡 x0＝card 0.2.4 能力值＝card 0.2.2 能力值；OVR 為每場，R-028 / E-064 G1；E-074、E-091）的 2026-27 即時版：逐球員用自己的已打場數 N 更新能力值與 OVR。
 
 E-091（CARD_MODE=024，預設）：OVR 那一層換成 card 0.2.4（R-044）= card 0.2.2 屬性 p → 用人回歸 predNew（E-075/E-084）→ g = (predNew − r_repl)·mpg/36 → 兩段映射。
   用人特徵（L、a、y、v、d、has）凍結在 2025-26（live/usage-2025-26-card024.json，build_usage_024.py 呼叫 e084.py 產生），賽中只有 p 隨 C4 更新；
@@ -60,7 +60,7 @@ if E064_MODE == 'G1':
     SA.SEASON_MIN_SAMPLE['stamina'] = 1
 if NEW_PRIOR and E064_MODE != 'G1':
     raise SystemExit('CARD_MODE=022／024 只支援 E064_MODE=G1（錨點是每場副版）')
-VERSION = 'inseason 0.2.2'  # 第一個字面值會被 daily_inseason_update.probe_base_version 以正規式讀取，勿改成括號／條件式開頭
+VERSION = 'inseason 0.2.4'  # R-050：跟先驗 card 0.2.4 同號（原名 inseason 0.2.2）； 第一個字面值會被 daily_inseason_update.probe_base_version 以正規式讀取，勿改成括號／條件式開頭
 if CARD_MODE == '022':
     VERSION = 'inseason 0.2.1'  # E-074 行為（逐位元重現用）
 if CARD_MODE == '020':

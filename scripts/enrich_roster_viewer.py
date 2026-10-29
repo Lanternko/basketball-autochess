@@ -51,6 +51,11 @@ CSS = """
 #tbl td.nm{background:var(--panel);color:var(--fg);box-shadow:inset -1px 0 0 var(--line)}
 #tbl tbody tr:hover td.nm{background:var(--panel-2)}
 #tbl tbody tr.sel td.nm{background:var(--gold);color:var(--gold-ink)}
+/* 手機表格（使用者 2026-10-29）：拿掉 OVR 左邊的位置／球隊／身高；表格手勢由 JS 鎖方向（偏垂直就整段只上下捲，手抖不左右晃），名字／OVR 欄只能上下捲 */
+@media (max-width:640px){
+  #tbl thead tr:last-child th:is([data-k=pos],[data-k=team],[data-k=ht]),#tbl tbody td:is(:nth-child(3),:nth-child(4),:nth-child(5)):not([colspan]),#tbl th.gx{display:none}
+  .tbox{touch-action:none}
+}
 /* 手機名字欄縮寫（使用者 2026-10-29：全名佔四成寬）：Stephen Curry → S. Curry，太長的截成 … */
 #tbl td.nm .ns{display:none}
 @media (max-width:640px){#tbl td.nm .nf{display:none}#tbl td.nm .ns{display:inline}}
@@ -258,6 +263,47 @@ function impactChips(p) {
   const q = document.getElementById('q');
   if (q && matchMedia('(max-width:640px)').matches) q.placeholder = '搜尋';
 })();
+// 手機表格手勢鎖方向（使用者 2026-10-29：往上滑時手會左右偏，表格跟著晃）：先移動 10px 才判方向，
+// 水平量要大於垂直 1.5 倍才算左右捲，判定後整段手勢只動那一軸；從名字／OVR 欄開始的只能上下捲。放手後照速度慣性滑行。
+(() => {
+  const box = document.querySelector('.tbox'); if (!box) return;
+  const mq = matchMedia('(max-width:640px)'), LOCK = 10, RATIO = 1.5;
+  let s = null, raf = 0;
+  box.addEventListener('touchstart', e => {
+    cancelAnimationFrame(raf); raf = 0; s = null;
+    if (!mq.matches || e.touches.length > 1) return;
+    const t = e.touches[0];
+    s = {x: t.clientX, y: t.clientY, l: box.scrollLeft, tp: box.scrollTop, axis: null, hist: [],
+         noX: !!e.target.closest('td.no,td.nm,td.ovr,th.noh,th.nm,th[data-k="ovr"]')};
+  }, {passive: true});
+  box.addEventListener('touchmove', e => {
+    if (!s || e.touches.length > 1) return;
+    const t = e.touches[0], dx = t.clientX - s.x, dy = t.clientY - s.y;
+    if (!s.axis) {
+      if (Math.hypot(dx, dy) < LOCK) return;
+      s.axis = !s.noX && Math.abs(dx) > Math.abs(dy) * RATIO ? 'x' : 'y';
+    }
+    if (s.axis === 'x') box.scrollLeft = s.l - dx; else box.scrollTop = s.tp - dy;
+    const now = performance.now();
+    s.hist.push([now, s.axis === 'x' ? t.clientX : t.clientY]);
+    while (s.hist.length > 2 && now - s.hist[0][0] > 100) s.hist.shift();
+  }, {passive: true});
+  const end = () => {
+    const g = s; s = null;
+    if (!g || !g.axis || g.hist.length < 2) return;
+    const a = g.hist[0], b = g.hist[g.hist.length - 1], dt = b[0] - a[0];
+    let v = dt > 0 && performance.now() - b[0] < 80 ? -(b[1] - a[1]) / dt : 0, last = performance.now();
+    const step = now => {
+      const d = now - last; last = now; v *= Math.pow(0.996, d);
+      if (Math.abs(v) < 0.03) { raf = 0; return; }
+      if (g.axis === 'x') box.scrollLeft += v * d; else box.scrollTop += v * d;
+      raf = requestAnimationFrame(step);
+    };
+    if (Math.abs(v) > 0.1) raf = requestAnimationFrame(step);
+  };
+  box.addEventListener('touchend', end);
+  box.addEventListener('touchcancel', () => { s = null; });
+})();
 """
 
 BEGIN, END = '<!-- real-stats:begin -->', '<!-- real-stats:end -->'
@@ -343,6 +389,7 @@ def inject(path, real):
         (hook, '${impactChips(p)}\n      ${realBox(p)}'),
         ('<div class="tag"><span class="pos">', '<div class="tag" style="${teamVars(p.team)}">${headshot(p)}<div class="tnm"><span>${esc(first)}</span>${esc(last)}</div><span class="tht">${ht(p.ht)}</span><span class="pos">'),
         ("<td class=\"sub${sc('team')}\">${p.team}</td>", "<td class=\"sub${sc('team')}\">${teamCell(p.team)}</td>"),
+        ('<tr class="grp"><th colspan="6"></th>', '<tr class="grp"><th colspan="3"></th><th class="gx" colspan="3"></th>'),
         ('<td class="nm" title="${esc(p.name)}">${esc(p.name)}</td>',
          '<td class="nm" title="${esc(p.name)}"><span class="nf">${esc(p.name)}</span><span class="ns">${esc(shortName(p.name))}</span></td>'),
     ]:

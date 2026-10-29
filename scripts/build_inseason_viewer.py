@@ -1,4 +1,4 @@
-"""賽中 OVR 名單頁：以正式卡名單頁為版型，換成 inseason 0.2.2（C4，先驗 card 0.2.4＝用人回歸＋當季 RAPM 目標；OVR 為每場，R-028；舊版 0.2.1 為 card 0.2.2 先驗）的 OVR、現任球隊與 2026-27 場均真實數據。
+"""賽中 OVR 名單頁：以正式卡名單頁為版型，換成 inseason 0.2.4（原名 0.2.2，R-050 起跟先驗正式卡同號；C4，先驗 card 0.2.4＝用人回歸＋當季 RAPM 目標；OVR 為每場，R-028；舊版 0.2.1 為 card 0.2.2 先驗）的 OVR、現任球隊與 2026-27 場均真實數據。
 
 輸入：reports/ovr-inseason-2026-27/live/<日期>/{ranking.csv,meta.json}、data/season-source-2026-27/player-games.json。
 版型：reports/ovr-v58-card-2025-26/roster-viewer.html（只讀）。

@@ -40,8 +40,18 @@
   "note": "已收束；球隊層 2025-26 勝場 MAE 變差，未切換對局資料，卡片板仍為 v53 校準；不讀 RAPM，樣本內即樣本外：同一份分數直接對 A 半、B 半 RAPM 各算一次 ρ 再平均（reports/ovr-metrics-backfill-2025-26）"
  },
  {
-  "layer": "卡片 OVR（正式卡片板，card 0.2.3）",
-  "description": "card 0.2.2 + E-075：教練用人當能力證據（分鐘、出賽率、年齡、練兵隊；DNP 與輪休分開）進入 OVR 的能力估計（2026-10-29 使用者裁定 R-040）（遊戲本體不讀取任何 OVR）",
+  "layer": "卡片 OVR（正式卡片板，card 0.2.4）",
+  "description": "card 0.2.3 + E-084：用人回歸的訓練目標由四季合併 RAPM 改成 2025-26 單季 RAPM，修正年輕被低估、老將被高估（2026-10-29 使用者裁定 R-042、R-044）（遊戲本體不讀取任何 OVR）",
+  "players": 414,
+  "rhoNet": 0.746,
+  "rhoDefense": 0.488,
+  "holdoutRho": "未量測",
+  "rho2k": 0.748,
+  "note": "ρRAPM 樣本內（align/封頂用 RAPM）；每場 OVR；card 0.2.4 = card 0.2.3 + E-084；當季量尺（另一半 2025-26 單季 RAPM × MPG）ρ 對 card 0.2.3 差 +0.025 [+0.009, +0.039]；四季量尺差 -0.017 [-0.030, -0.004]；年齡偏差 S -0.202 → -0.075；對 2K27 ρ 取 card-0.2.3+E084-current-target/evaluation.json 的 E084 每場值；來源 card-0.2.4"
+ },
+ {
+  "layer": "卡片 OVR card 0.2.3（前正式版）",
+  "description": "card 0.2.2 + E-075：教練用人當能力證據（分鐘、出賽率、年齡、練兵隊；DNP 與輪休分開）進入 OVR 的能力估計（2026-10-29 使用者裁定 R-040）；2026-10-29 由 card 0.2.4 取代（遊戲本體不讀取任何 OVR）",
   "players": 414,
   "rhoNet": 0.775,
   "rhoDefense": 0.49,

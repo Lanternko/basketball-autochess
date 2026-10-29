@@ -276,3 +276,11 @@
 - 狀態：待驗
 - 相關：F-031
 - 來源：2026-10-29 對話（使用者問 PHYS）
+
+### F-033
+- 日期：2026-10-29
+- 說法：卡片的位置標籤不是名單上的位置，是 2025-26 官方 box score 裡先發秒數最多的位置；先發 < 5 次才退回身高帶。Banchero、Jalen Johnson、Jalen Williams 標成 PF 都符合這條規則：在五位置齊全的 box 中，三人分別是 PF 66 場、PF 67 場、PF 19／SF 14 場。名單上的 pos 是身高帶（Williams 77 吋 → SG），兩者不同。硬標籤對邊界球員影響不小：只在校準端改標 SF，Williams pred +0.239（每場名次 70→61）、Johnson +0.251（74→61）、Banchero +0.496（326→233）。主因是 PF 的防守加成置中值較高，Banchero 則是位置交互項。在 330 名先發 ≥ 5 次的球員中，71 人最常打的位置佔不到 60%。
+- 證據：`reports/ovr-2025-26-positional/protocol.mjs:25-53`（投票）、`reports/player-impact-v29/worker.mjs:45`、`reports/card-0.2.0+E071-pressure/calibrate-wing.py:75,143,248,299`（三處用到 pos）、`reports/diag-position-labels/`（反事實；v0 逐位元重現 card 0.2.2 P1 primary）。
+- 狀態：成立（單人反事實屬樣本內診斷，R-007）
+- 相關：E-082、E-079
+- 來源：使用者 2026-10-29「PF 好怪」→「查位置標籤」

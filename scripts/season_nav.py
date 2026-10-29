@@ -65,7 +65,8 @@ CSS = """<style>
 
 
 # 更新說明：每版一格，新的在上（使用者 2026-10-29）。track：card 正式卡、inseason 新賽季。
-# 新賽季版號＝它用的正式卡版號（R-050）。版號一換就在最上面加一格；只更新比賽資料（字母後綴）不加；網頁 UI 改動不寫。
+# 新賽季版號＝它用的正式卡版號（R-050）。版號一換就在最上面加一格；只更新比賽資料不改版號也不加（R-063）；
+# 同一基底的字母小版本（0.2.7a、0.2.7b…）併進同一格（R-064）；網頁 UI 改動不寫。
 # 每條寫成「目標：做了什麼」（冒號前會加粗），用球迷看得懂的話，不寫 E／R 編號。
 TRACK = {'card': '正式卡', 'inseason': '新賽季'}
 PATCH_NOTES = [
@@ -76,6 +77,11 @@ PATCH_NOTES = [
         '版號跟正式卡同號：新賽季 0.2.4 就是用正式卡 0.2.4 當起點（原名 0.2.2）。',
         '新賽季數字跟上正式卡 0.2.4：OVR 也納入教練用人（上季分鐘、出賽率、年齡），開季前的分數與正式卡相同。',
         '用人資訊先固定在上季：本季只有能力值和預測上場時間隨比賽更新。']),
+    (('card',), '0.2.7', '2026-10-30', [
+        '防守好的人分數不再被打折：原本能力值最頂端的人拿不到防守加分，改成防守越好加越多，Wembanyama 3 → 2 名、Derrick White 8 → 4 名。',
+        '防守改看近期：越近的比賽份量越重，上場少的人也比較容易有防守數據。',
+        '代價：防守普通的進攻型球員往下，Luka 4 → 9 名、Durant 21 → 27 名；頂端分數整體收斂，SGA 107.3 → 104.0。',
+        '新賽季仍用 0.2.5，之後另外驗證再跟上。']),
     (('card',), '0.2.6', '2026-10-30', [
         '修正中距離被補籃墊高：補籃、補扣原本被記成中距離，改算近距離，整季沒投中距離的中鋒不再拿 99（Kessler 99 → 61）。',
         '能力值改和最近四季一起比：偏弱的一季可以沒人到 99，最頂端的人分數收斂，沒有能力值超過 140。',
@@ -233,9 +239,10 @@ COMMON_REPLACEMENTS = [
     ('''    <span class="lbl">上場</span>
     <div class="seg" id="minSeg"></div>''',
      '''    <span class="tgrp"><span class="lbl">球隊</span>
-    <details class="tpick" id="teamPick"><summary aria-label="選擇球隊"></summary><div class="tpop"><div class="tgrid" id="teamGrid"></div></div></details></span>'''),
-    ("pos: 'ALL', min: 0,", "pos: 'ALL', team: 'ALL',"),
-    ('p.min >= st.min', "(st.team === 'ALL' || p.team.split('/').pop() === st.team)"),
+    <details class="tpick" id="teamPick"><summary aria-label="選擇球隊"></summary><div class="tpop"><div class="tgrid" id="teamGrid"></div></div></details>
+    <button type="button" class="rkbtn" id="rkBtn" aria-pressed="false">新秀</button></span>'''),
+    ("pos: 'ALL', min: 0,", "pos: 'ALL', team: 'ALL', rk: false,"),
+    ('p.min >= st.min', "(st.team === 'ALL' || p.team.split('/').pop() === st.team) && (!st.rk || ROOKIES.has(p.name))"),
     # 兩個 builder 已先把門檻改成場均 10／20／30 分鐘
     ("  seg('minSeg', [[0, '全部'], [10, '≥10'], [20, '≥20'], [30, '≥30']], 'min');\n", '  teamPick();\n'),
     ('放寬位置或上場分鐘試試', '放寬位置或球隊試試'),
@@ -247,7 +254,7 @@ COMMON_REPLACEMENTS = [
     ('@media (prefers-reduced-motion', '''#tbl thead{position:sticky;top:-1px;z-index:3}
 @media (max-width:640px){.tbox{overscroll-behavior:none}}
 @media (prefers-reduced-motion'''),
-    ('  card(P.find(p => p.name === st.sel) || P[0]);', '''  const lk = [st.sort, st.asc, st.pos, st.team, st.q, st.page].join('|');
+    ('  card(P.find(p => p.name === st.sel) || P[0]);', '''  const lk = [st.sort, st.asc, st.pos, st.team, st.rk, st.q, st.page].join('|');
   if (lk !== listKey) { listKey = lk; document.querySelector('.tbox').scrollTop = 0; }
   tboxEdges();
   card(P.find(p => p.name === st.sel) || P[0]);'''),
@@ -332,11 +339,20 @@ document.getElementById('q').oninput'''),
   d.querySelector('summary').innerHTML = st.team === 'ALL' ? '全部' : logo(st.team) + st.team;
   d.classList.toggle('on', st.team !== 'ALL');
   grid.querySelectorAll('button').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.t === st.team)));
+  // 新秀：跟球隊並排的開關（使用者 2026-10-30），可和球隊一起篩
+  const rk = document.getElementById('rkBtn');
+  rk.hidden = !ROOKIES.size;
+  rk.setAttribute('aria-pressed', String(st.rk));
+  rk.onclick = () => { st.rk = !st.rk; st.page = 0; st.extra = 0; render(); };
 }
 
 function render() {'''),
     ('@media (prefers-reduced-motion', '''.tgrp{display:flex;gap:10px;align-items:center}
 .tpick{position:relative}
+.rkbtn{background:var(--panel);color:var(--muted);border:1px solid var(--line);border-radius:3px;font:600 .9rem var(--f-disp);letter-spacing:.04em;padding:6px 11px;cursor:pointer}
+.rkbtn:hover{color:var(--fg)}
+.rkbtn[aria-pressed="true"]{background:var(--gold);color:var(--gold-ink);border-color:var(--gold)}
+.rkbtn:focus-visible{outline:2px solid var(--gold);outline-offset:1px}
 .tpick summary{list-style:none;display:flex;align-items:center;gap:6px;background:var(--panel);color:var(--muted);border:1px solid var(--line);border-radius:3px;font:600 .9rem var(--f-disp);letter-spacing:.04em;padding:6px 11px;cursor:pointer;user-select:none}
 .tpick summary::-webkit-details-marker{display:none}
 .tpick summary::after{content:"▾";font-size:.8em;opacity:.8}

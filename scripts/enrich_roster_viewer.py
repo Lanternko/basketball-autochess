@@ -17,7 +17,9 @@ SRC = ROOT / 'data' / 'season-source' / 'player-games.json'
 RAPM = ROOT / 'reports' / 'impact-rapm' / 'rapm-prior.csv'  # 2025-26 單季 box-prior RAPM（每 100 回合）
 ONOFF = ROOT / 'reports' / 'impact-rapm' / 'onoff.csv'
 GC = ROOT / 'reports' / 'game-contribution'  # 單場貢獻值：box → RAPM 權重與 2025-26 基準（scripts/fit_game_contribution.py）
-CARD_SUMMARY = ROOT / 'reports' / 'card-0.2.6' / 'summary.json'  # 正式卡 OVR 錨點（換算 OVR 傾向）
+CARD_SUMMARY = ROOT / 'reports' / 'card-0.2.7' / 'summary.json'  # 正式卡 OVR 錨點（換算 OVR 傾向）
+# 新秀篩選（使用者 2026-10-30）：該季選秀年＝新秀；2027 頁的 2026 新秀沒有先驗卡、不在名單上，按鈕自動隱藏
+BIO = {'g5': (ROOT / 'data/defense-seventh/2026-27/bio.json', '2026'), 'season': (ROOT / 'data/benchmark-source/bio.json', '2025')}
 
 CSS = """
 /* real box score */
@@ -299,7 +301,7 @@ function toggleG5(b) {
   if (typeof fitTable === 'function') fitTable();
 }
 // 貢獻值（使用者 2026-10-30 選 A）：box score 換算的每 36 分鐘淨影響（權重擬合 2025-26 RAPM），和 2025-26 整季比；
-// OVR 傾向＝把差值當成 pred 的變動，照正式卡（card 0.2.6）的錨點與分鐘權重 W(MPG) 換算（只顯示，不改 OVR）
+// OVR 傾向＝把差值當成 pred 的變動，照正式卡（card 0.2.7）的錨點與分鐘權重 W(MPG) 換算（只顯示，不改 OVR）
 // 數字寫絕對值，顏色看和自己平均的差（使用者 2026-10-30：同樣 +3，替補是進步、SGA 是退步）：
 // 五色切點＝2025-26 全部比賽「貢獻值 − 自己整季平均」絕對值的 20／60 百分位，各色約兩成（使用者 2026-10-30 選單場、5 場分開切）：
 // 單場（上場 ≥10 分鐘，SD 3.0）±0.7／±2.4；近 5 場合計（SD 1.3）±0.3／±1.1。顏色是排名，不代表顯著
@@ -514,6 +516,16 @@ def impact():
     return out
 
 
+def rookies(view):
+    path, year = BIO[view]
+    if not path.exists():
+        return []
+    d = json.loads(path.read_text(encoding='utf-8'))['data']['resultSets']
+    rs = d[0] if isinstance(d, list) else d
+    h = {k: i for i, k in enumerate(rs['headers'])}
+    return sorted(r[h['PLAYER_NAME']] for r in rs['rowSet'] if str(r[h['DRAFT_YEAR']]) == year)
+
+
 def team_ids():
     rs = json.loads(SRC.read_text(encoding='utf-8'))['data']['resultSets'][0]
     h = {k: i for i, k in enumerate(rs['headers'])}
@@ -532,7 +544,8 @@ def inject(path, real, view='g5'):
     imp = {pid: v for pid, v in impact().items() if pid in ids}
     js_json = lambda o: json.dumps(o, ensure_ascii=False, separators=(',', ':'))
     a = json.loads(CARD_SUMMARY.read_text(encoding='utf-8'))['anchors']
-    block = (f'{BEGIN}\n<style>{CSS}</style>\n<script>const REAL={js_json(sub)};\nconst REAL_VIEW={js_json(view)};\nconst IMPACT={js_json(imp)};\n'
+    block = (f'{BEGIN}\n<style>{CSS}</style>\n<script>const REAL={js_json(sub)};\nconst REAL_VIEW={js_json(view)};
+const ROOKIES=new Set({js_json([n for n in rookies(view) if n in roster])});\nconst IMPACT={js_json(imp)};\n'
              f'const GC_ANC={js_json([a["PR1"], a["PR50"], a["PR99"]])};\n'
              f'const TEAM_COLORS={js_json(TEAM_COLORS)};\nconst TEAM_IDS={js_json(team_ids())};{JS}</script>\n{END}\n')
     assert s.count('<script>const DATA=') == 1

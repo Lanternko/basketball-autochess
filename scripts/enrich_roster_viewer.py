@@ -49,6 +49,11 @@ CSS = """
 /* 能力值欄一樣寬（使用者 2026-10-29）：原本被中文副標長短撐開 35–67px；副標縮小讓四字（製造犯規）也放得下一行 */
 #tbl thead tr:last-child th[data-k]:not([data-k=name],[data-k=pos],[data-k=team],[data-k=ht],[data-k=ovr],[data-k=min],[data-k=gp],[data-k=dovr]){
   width:48px;min-width:48px;box-sizing:border-box}
+/* 分鐘／場數／較上季也固定寬（使用者 2026-10-30：表格 min-width 1060 多出來的寬度原本都分給這幾欄） */
+#tbl thead tr:last-child th:is([data-k=min],[data-k=gp]){width:46px;box-sizing:border-box}
+#tbl thead tr:last-child th[data-k=dovr]{width:54px;box-sizing:border-box}
+/* 手機表格本來就左右捲，不用撐到 1060px，每欄照內容寬 */
+@media (max-width:640px){#tbl{min-width:0;width:max-content}}
 #tbl thead tr:last-child th[data-k]:not([data-k=name],[data-k=pos],[data-k=team],[data-k=ht],[data-k=ovr],[data-k=min],[data-k=gp],[data-k=dovr]) .zh{font-size:.62rem}
 /* 名字欄不再整條金底（使用者 2026-10-29：醜、被列線切得斷裂）；改深色底，只有選中列金色 */
 #tbl th.nm{background:#0a0d10;color:var(--muted)}
@@ -544,8 +549,8 @@ def inject(path, real, view='g5'):
     imp = {pid: v for pid, v in impact().items() if pid in ids}
     js_json = lambda o: json.dumps(o, ensure_ascii=False, separators=(',', ':'))
     a = json.loads(CARD_SUMMARY.read_text(encoding='utf-8'))['anchors']
-    block = (f'{BEGIN}\n<style>{CSS}</style>\n<script>const REAL={js_json(sub)};\nconst REAL_VIEW={js_json(view)};
-const ROOKIES=new Set({js_json([n for n in rookies(view) if n in roster])});\nconst IMPACT={js_json(imp)};\n'
+    block = (f'{BEGIN}\n<style>{CSS}</style>\n<script>const REAL={js_json(sub)};\nconst REAL_VIEW={js_json(view)};\n'
+             f'const ROOKIES=new Set({js_json([n for n in rookies(view) if n in roster])});\nconst IMPACT={js_json(imp)};\n'
              f'const GC_ANC={js_json([a["PR1"], a["PR50"], a["PR99"]])};\n'
              f'const TEAM_COLORS={js_json(TEAM_COLORS)};\nconst TEAM_IDS={js_json(team_ids())};{JS}</script>\n{END}\n')
     assert s.count('<script>const DATA=') == 1

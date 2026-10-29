@@ -19,7 +19,7 @@ CSS = """<style>
 .pnote summary:focus-visible{outline:2px solid var(--gold);outline-offset:1px}
 .pnote[open] summary{color:var(--gold);border-color:var(--gold)}
 .pn{position:absolute;left:0;top:calc(100% + 6px);width:min(560px,100%);max-height:min(72vh,680px);overflow:auto;overscroll-behavior:contain;box-sizing:border-box;
-  background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:14px;box-shadow:0 16px 40px rgba(0,0,0,.6);scrollbar-width:thin;scrollbar-color:#3a4b60 transparent}
+  background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:14px;box-shadow:0 16px 40px rgba(0,0,0,.6);scrollbar-width:thin;scrollbar-color:#38424f transparent}
 .pn h2{font:800 1.05rem var(--f-disp);letter-spacing:.06em;margin:0 0 10px;text-transform:uppercase}
 .pn h2 span{color:var(--gold)}
 .pn-now{background:var(--panel-2);border:1px solid var(--line);border-radius:5px;padding:9px 12px;margin-bottom:12px;color:var(--muted);font-size:.78rem;line-height:1.6}
@@ -194,8 +194,16 @@ COMMON_REPLACEMENTS = [
     # 改成每格保留原本顏色，選中列整列提亮成藍灰（名字格仍是金色，見 enrich_roster_viewer）。
     # 不用半透明金底：金疊深藍會混成橄欖綠，使用者 2026-10-29 嫌髒、廉價，demo 比較後選藍灰（A）
     ('tbody tr.sel td{background:var(--gold);color:var(--gold-ink)!important}',
-     'tbody tr.sel td:not(.nm){background:#273649}\n'
-     'tbody tr.sel:hover td:not(.nm){background:#2d3e53}'),
+     'tbody tr.sel td:not(.nm){background:#253040}\n'
+     'tbody tr.sel:hover td:not(.nm){background:#2b3748}'),
+    # 背景改冷炭：拿掉右上角藍色光暈，底色降彩度（使用者 2026-10-29 嫌雜色，demo 七個炭灰方向選 F）。
+    # 排序欄金色淡底疊深色也會偏橄欖綠，改中性淡白
+    ('  --bg:#0f1622; --panel:#18222f; --panel-2:#1f2b3a; --line:#2c3a4c;',
+     '  --bg:#0d1014; --panel:#151a20; --panel-2:#1c222a; --line:#29313b;'),
+    ('background-image:radial-gradient(1200px 500px at 85% -10%,#22324a 0%,transparent 60%);', ''),
+    ('thead th{background:#0b1119;', 'thead th{background:#0a0d10;'),
+    ('td.sortcol{background:rgba(242,194,48,.07)}', 'td.sortcol{background:rgba(255,255,255,.035)}'),
+    ('fill="#0b1119" stroke="#2c3a4c"', 'fill="#0a0d10" stroke="#29313b"'),
 ] + [
     # 上場篩選拿掉（手機太擠，門檻也還是整季總分鐘），換成球隊篩選：仿 arammeta 的彈出格子（使用者 2026-10-29）
     ('''    <span class="lbl">上場</span>
@@ -253,18 +261,18 @@ document.getElementById('q').oninput'''),
     # 給 Firefox、Chrome 121+、Safari 18.2+；不支援的舊 WebKit 才用 ::-webkit-scrollbar（Chrome 有標準屬性時會忽略它）。
     # 捲動提示照 Lea Verou／Roman Komarov 的捲動陰影：表頭捲過才有陰影、底部還有內容時淡出。
     # 儲存格有底色，背景漸層那招會被蓋掉，所以用 sticky 偽元素疊在上面。
-    ('@media (prefers-reduced-motion', '''.tbox{scrollbar-width:thin;scrollbar-color:#3a4b60 transparent}
-.tbox:hover{scrollbar-color:#5d7089 transparent}
+    ('@media (prefers-reduced-motion', '''.tbox{scrollbar-width:thin;scrollbar-color:#38424f transparent}
+.tbox:hover{scrollbar-color:#56616f transparent}
 @supports not (scrollbar-color:auto){
   .tbox::-webkit-scrollbar{width:10px;height:10px}
   .tbox::-webkit-scrollbar-track,.tbox::-webkit-scrollbar-corner{background:transparent}
-  .tbox::-webkit-scrollbar-thumb{background:#3a4b60;border-radius:10px;border:3px solid var(--panel)}
-  .tbox:hover::-webkit-scrollbar-thumb{background:#5d7089}
+  .tbox::-webkit-scrollbar-thumb{background:#38424f;border-radius:10px;border:3px solid var(--panel)}
+  .tbox:hover::-webkit-scrollbar-thumb{background:#56616f}
 }
 #tbl thead tr:last-child th{transition:box-shadow .15s}
 .tbox.scrolled #tbl thead tr:last-child th{box-shadow:0 9px 10px -7px rgba(0,0,0,.75)}
 .tbox::after{content:"";position:sticky;left:0;bottom:0;z-index:4;display:block;height:36px;margin-top:-36px;
-  background:linear-gradient(rgba(24,34,47,0),var(--panel));pointer-events:none;opacity:0;transition:opacity .15s}
+  background:linear-gradient(rgba(21,26,32,0),var(--panel));pointer-events:none;opacity:0;transition:opacity .15s}
 .tbox.below::after{opacity:1}
 @media (prefers-reduced-motion'''),
     # 顯示切換直接用範例當標籤（使用者 2026-10-29）

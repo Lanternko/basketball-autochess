@@ -72,17 +72,16 @@ CSS = """
 .tag .logo{position:absolute;right:30px;top:50%;transform:translateY(-50%);height:150px;width:150px;object-fit:contain;opacity:.9;pointer-events:none}
 .tag .shot{position:absolute;right:26px;bottom:7px;height:132px;width:auto;pointer-events:none}
 /* 手機卡片（使用者 2026-10-29：沒有頭像和隊徽；名字和頭像放一起；字太多，用減法）
-   隊色橫幅放位置、身高、排名、名字（.tnm/.tht 只在手機顯示）和頭像；下面 OVR 圓環下方掛較上季箭頭，右邊影響力 2×2；
+   隊色橫幅左上放位置＋身高，右上角放排名（和位置同款隊色小標），名字（.tnm/.tht 只在手機顯示）和頭像；下面 OVR 圓環下方掛較上季箭頭，右邊影響力 2×2；
    資訊列其餘（球隊、分鐘、場數、防守加分）不顯示；真實數據只留得分／籃板／助攻三大格 */
 .tag .tnm,.tag .tht{display:none}
 @media (max-width:640px){
   .card{grid-template-columns:auto 1fr;gap:10px 12px}
   .card .tag{display:flex;flex-direction:row;align-items:center;justify-content:flex-start;gap:8px;grid-column:1/-1;grid-row:1;margin:-12px -14px 0;min-width:0;height:128px;clip-path:none;padding:10px 14px}
-  .tag .rk{font-size:1.5rem;align-self:flex-start;line-height:1.1}
-  .tag .pos{align-self:flex-start}
-  .tag .tht{display:block;order:1;align-self:flex-start;font:700 1.05rem/1.5 var(--f-disp);color:var(--ink,#fff);position:relative;z-index:1}
-  .tag .rk{order:2}
-  .tag .rk small{font-size:.9rem}
+  .tag .pos{align-self:flex-start;line-height:19px}
+  .tag .tht{display:block;order:1;align-self:flex-start;font:700 1.05rem/21px var(--f-disp);color:var(--ink,#fff);position:relative;z-index:1}
+  .tag .rk{position:absolute;top:10px;right:14px;z-index:3;font:700 1rem/19px var(--f-disp);text-shadow:none;background:var(--tc,#fff);color:#fff;padding:1px 8px;border-radius:3px}
+  .tag .rk small{font-size:1em;opacity:1;margin:0}
   .tag .logo{right:14px;height:110px;width:110px;opacity:.9}
   .tag .shot{right:6px;height:121px}
   .tag .tnm{display:block;position:absolute;left:14px;right:136px;bottom:15px;z-index:1;font:800 1.55rem/.95 var(--f-disp);text-transform:uppercase;color:var(--ink,#fff);text-shadow:0 0 8px var(--card,#000);overflow-wrap:anywhere}

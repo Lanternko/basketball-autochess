@@ -101,6 +101,26 @@ CSS = """
   .rx .rmain .st{flex:1}
   .rx .rsub{display:none}
 }
+/* 桌機卡片：影響力四格改 2×2，和 OVR 圓環放同一側（使用者 2026-10-29：省空間）
+   .who 拆開讓子元素直接排進 .card 格線：寬螢幕 2×2 在圓環左邊；窄一點（<1100px）疊在圓環下面，讓中間欄夠寬 */
+@media (min-width:641px){
+  .card{grid-template-columns:auto minmax(0,1fr) auto auto;row-gap:8px}
+  .card .tag{grid-column:1;grid-row:1/span 4}
+  .card .who{display:contents}
+  .card .who>*{grid-column:2;margin-inline:18px}
+  .card .who>.nm{margin-top:14px}
+  .card .who>:last-child{margin-bottom:14px}
+  .card .who>.strong{grid-column:3;grid-row:1/span 4;align-self:center;margin:14px 0;display:grid;grid-template-columns:repeat(2,1fr);gap:6px}
+  .strong .chip{display:flex;flex-direction:column;align-items:center;min-width:84px;padding:6px 8px;font-size:.74rem;color:var(--muted);letter-spacing:0}
+  .strong .chip i{margin:2px 0 0;font:700 1.3rem var(--f-disp)}
+  .strong .chip.dim{grid-column:1/-1}
+  .card .ring{grid-column:4;grid-row:1/span 4}
+}
+@media (min-width:641px) and (max-width:1099px){
+  .card{grid-template-columns:auto minmax(0,1fr) auto}
+  .card .ring{grid-column:3;grid-row:1/span 2;padding:14px 18px 0}
+  .card .who>.strong{grid-column:3;grid-row:3/span 2;align-self:start;margin:0 18px 14px}
+}
 .tabbr{color:var(--tt);font-weight:600}
 /* impact chips：RAPM 攻守淨（對聯盟平均）、在場減不在場（每 100 回合） */
 .chip i.up{color:var(--g-a)}

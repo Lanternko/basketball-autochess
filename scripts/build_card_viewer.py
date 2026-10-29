@@ -96,7 +96,7 @@ def main(out=None):
     s = add_season_nav(s, 'card')
     out.parent.mkdir(parents=True, exist_ok=True)
     out.write_text(s, encoding='utf-8')
-    er.inject(out, er.aggregate())
+    er.inject(out, er.aggregate(), view='season')
     print('wrote', out, len(rows), 'players; missing from template:', len(missing), missing[:10],
           '; no threeValue:', len(no_tv), no_tv[:10])
     return out

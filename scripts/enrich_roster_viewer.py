@@ -178,6 +178,12 @@ CSS = """
 .g5 .dn{color:var(--g-f)}
 .g5 .gcn{position:sticky;left:0;max-width:0;min-width:100%;box-sizing:border-box;padding:6px 10px 7px;border-top:1px solid var(--line);color:var(--muted);font-size:.74rem;line-height:1.5;white-space:normal}
 .g5 .gcn b{font:600 .86rem var(--f-disp);font-variant-numeric:tabular-nums;color:var(--fg)}
+.g5.sd .sdw{display:flex;flex-wrap:wrap;align-items:flex-start}
+.g5.sd table{width:auto}
+.g5.sd table+table{border-left:1px solid var(--line)}
+.g5.sd :is(th,td):nth-child(2){text-align:right}
+.g5.sd td:first-child{color:var(--muted)}
+@media (max-width:640px){.g5.sd table{width:100%}.g5.sd table+table{border-left:0;border-top:1px solid var(--line)}}
 .g5 .c5a,.g5 .gcn b.c5a{color:var(--g-a)}
 .g5 .c5b,.g5 .gcn b.c5b{color:var(--g-b)}
 .g5 .c5c,.g5 .gcn b.c5c{color:#a3abb5}
@@ -277,12 +283,12 @@ function realBox(p) {
   const sub = [[['命中率', pc(r.fg)], ['三分', pc(r.fg3)], ['罰球', pc(r.ft)], ['真實命中', pc(r.ts)]],
     [['抄截', f1(r.stl)], ['阻攻', f1(r.blk)], ['失誤', f1(r.tov)]]];
   // 標題只留場數和場均分鐘（使用者 2026-10-29：「例行賽真實數據」字太多）
-  const n = r.g5.length;
+  const n = r.g5.length, sv = REAL_VIEW === 'season', lab = sv ? '整季細項' : `近 ${n} 場比賽`;
   return `<div class="real-h">${r.gp} 場 · ${Math.round(r.mpg)} 分鐘${r.teams.length > 1 ? '<span class="rtm"> · ' + r.teams.join('/') + '</span>' : ''}</div>
       <div class="real rx"><div class="rmain">${main.map(([l, v]) => `<div class="st"><b>${v}</b><span>${l}</span></div>`).join('')}</div>
       <div class="rsub">${sub.map(g => `<div>${g.map(([l, v]) => `<span>${l}<b>${v}</b></span>`).join('')}</div>`).join('')}</div>
-      <button type="button" class="g5t" aria-expanded="${G5_OPEN}" aria-label="近 ${n} 場比賽" title="近 ${n} 場比賽" onclick="toggleG5(this)"><i>▼</i>近 ${n} 場比賽</button></div>
-      <div class="g5"${G5_OPEN ? '' : ' hidden'}>${gameLog(r, p)}</div>`;
+      <button type="button" class="g5t" aria-expanded="${G5_OPEN}" aria-label="${lab}" title="${lab}" onclick="toggleG5(this)"><i>▼</i>${lab}</button></div>
+      <div class="g5${sv ? ' sd' : ''}"${G5_OPEN ? '' : ' hidden'}>${sv ? seasonLog(r) : gameLog(r, p)}</div>`;
 }
 // 近 N 場逐場（新到舊）：[日期, 對手, 勝負, 分鐘, 得分, 籃板, 助攻, 抄截, 阻攻, 失誤, 投進, 出手, 三分進, 三分出手, 罰進, 罰球, 正負值, 貢獻值]
 let G5_OPEN = false;
@@ -299,16 +305,20 @@ function toggleG5(b) {
 // 單場（上場 ≥10 分鐘，SD 3.0）±0.7／±2.4；近 5 場合計（SD 1.3）±0.3／±1.1。顏色是排名，不代表顯著
 const GC_CUT1 = [0.7, 2.4], GC_CUT5 = [0.3, 1.1];
 const sg1 = v => (v > 0 ? '+' : '') + v.toFixed(1);
+// 顯示成 0 起跳的「評分」（使用者 2026-10-30：正負號配紅字看不清；名稱改評分，避免和影響力、正負值混在一起，像賽事的 0–10 評分）：分數＝0.75×(貢獻值＋7.5)，低於 0 記 0。
+// 2025-26 單場（≥10 分鐘）約 1% 到 0、約 4% 超過 10；聯盟平均 0 ≈ 5.6。顏色仍用原單位的差值切
+const gcS = v => Math.max(0, 0.75 * (v + 7.5)).toFixed(1);
+const GC_DEF = '評分 0–10：box score 換算的每 36 分鐘淨影響（權重擬合 2025-26 RAPM），評分＝0.75×(每 100 回合淨分＋7.5)，低於 0 記 0：5.6＝聯盟平均，10 約是單場前 4%';
 const gcCls = (d, [a, b]) => d >= b ? 'c5a' : d >= a ? 'c5b' : d > -a ? 'c5c' : d > -b ? 'c5d' : 'c5f';
 function gcCell(v, b, cut) {
   if (v == null) return '<td>—</td>';
-  return `<td><span class="${b == null ? '' : gcCls(v - b, cut)}">${sg1(v)}</span></td>`;
+  return `<td><span class="${b == null ? '' : gcCls(v - b, cut)}">${gcS(v)}</span></td>`;
 }
 function gcNote(r, p, n) {
   const c = r.gc;
   if (c.r == null) return '';
   // 說明只寫兩個數字（使用者 2026-10-30：太長）；五色怎麼切、換算 OVR 放 tooltip
-  if (c.b == null) return `<div class="gcn">${n} 場平均貢獻 <b>${sg1(c.r)}</b>　上季 —</div>`;
+  if (c.b == null) return `<div class="gcn" title="${GC_DEF}">${n} 場平均評分 <b>${gcS(c.r)}</b>　上季 —</div>`;
   const d = c.r - c.b, cls = gcCls(d, GC_CUT5);
   const [p1, p50, p99] = GC_ANC, w = (1 - Math.exp(-r.mpg / 15)) / (1 - Math.exp(-36 / 15));
   const toG = o => o <= 70 ? p1 + (o - 40) * (p50 - p1) / 30 : p50 + (o - 70) * (p99 - p50) / 29;
@@ -316,8 +326,8 @@ function gcNote(r, p, n) {
   // 照 5 場水準直接換算的 OVR 會跳到 150 這種數字（5 場起伏太大），正文只講排在哪一段，換算值放 tooltip
   const o2 = toO(toG(p.ovr) + d * w);
   const tip = `若整季都維持這個水準，OVR 約 ${o2.toFixed(0)}（目前 ${p.ovr.toFixed(1)}）；5 場樣本很小，不會真的差這麼多`;
-  return `<div class="gcn" title="顏色＝和自己 2025-26 平均比，照所有人的起伏五等分（單場 ±0.7／±2.4，5 場 ±0.3／±1.1）；${tip}">` +
-    `${n} 場平均貢獻 <b class="${cls}">${sg1(c.r)}</b>　上季 <b>${sg1(c.b)}</b></div>`;
+  return `<div class="gcn" title="${GC_DEF}。顏色＝和自己 2025-26 平均比，照所有人的起伏五等分；${tip}">` +
+    `${n} 場平均評分 <b class="${cls}">${gcS(c.r)}</b>　上季 <b>${gcS(c.b)}</b></div>`;
 }
 function gameLog(r, p) {
   const gs = r.g5;
@@ -330,11 +340,25 @@ function gameLog(r, p) {
   // 平均列的投籃／三分／罰球改顯示 N 場合計命中率（使用者 2026-10-30），滑過看合計進球-出手
   const pct = (m, a) => `<td title="合計 ${sum(m)}-${sum(a)}">${sum(a) ? (sum(m) / sum(a) * 100).toFixed(1) + '%' : '—'}</td>`;
   // 貢獻值放在勝負後面、分鐘移到最右（使用者 2026-10-30）
-  const head = ['日期', '對手', '勝負', '貢獻', '得分', '籃板', '助攻', '抄截', '阻攻', '失誤', '投籃', '三分', '罰球', '正負', '分鐘'];
-  const gcTip = 'box score 換算的每 36 分鐘淨影響（每 100 回合淨分，權重擬合 2025-26 RAPM）；顏色＝和自己 2025-26 平均比，五等分（單場 ±0.7／±2.4，5 場平均 ±0.3／±1.1）';
-  return `<table><thead><tr>${head.map(h => `<th${h === '貢獻' ? ` title="${gcTip}"` : ''}>${h}</th>`).join('')}</tr></thead><tbody>${gs.map(g => `<tr>${row(g)}</tr>`).join('')}</tbody>` +
+  const head = ['日期', '對手', '勝負', '評分', '得分', '籃板', '助攻', '抄截', '阻攻', '失誤', '投籃', '三分', '罰球', '正負', '分鐘'];
+  const gcTip = GC_DEF + '；顏色＝和自己 2025-26 平均比，照所有人的起伏五等分';
+  return `<table><thead><tr>${head.map(h => `<th${h === '評分' ? ` title="${gcTip}"` : ''}>${h}</th>`).join('')}</tr></thead><tbody>${gs.map(g => `<tr>${row(g)}</tr>`).join('')}</tbody>` +
     `<tfoot><tr><td colspan="3">${n} 場平均</td>${gcCell(r.gc.r, r.gc.b, GC_CUT5)}${[4, 5, 6, 7, 8, 9].map(i => `<td>${avg(i)}</td>`).join('')}` +
     `${pct(10, 11)}${pct(12, 13)}${pct(14, 15)}<td>${pm(+avg(16))}</td><td>${avg(3)}</td></tr></tfoot></table>${gcNote(r, p, n)}`;
+}
+// 2026 頁下拉看整季細項（使用者 2026-10-30）：卡片上已有場均得分／命中率，這裡補進球-出手、前後場籃板、犯規與每 36 分鐘
+function seasonLog(r) {
+  const d = r.sd, k = 36 / r.mpg, f1 = v => v.toFixed(1), pc = v => (v == null ? '—' : (v * 100).toFixed(1) + '%');
+  const rows = [['得分', r.pts], ['籃板', r.reb], ['進攻籃板', d.oreb], ['防守籃板', d.dreb], ['助攻', r.ast],
+    ['抄截', r.stl], ['阻攻', r.blk], ['失誤', r.tov], ['犯規', d.pf]];
+  const shots = [['投籃', d.fgm, d.fga, r.fg], ['三分', d.fg3m, d.fg3a, r.fg3], ['罰球', d.ftm, d.fta, r.ft]];
+  const a = `<table><thead><tr><th></th><th>場均</th><th>每 36 分鐘</th></tr></thead><tbody>` +
+    rows.map(([l, v]) => `<tr><td>${l}</td><td>${f1(v)}</td><td>${f1(v * k)}</td></tr>`).join('') + '</tbody></table>';
+  const b = `<table><thead><tr><th></th><th>進-出手</th><th>命中率</th></tr></thead><tbody>` +
+    shots.map(([l, m, t, p]) => `<tr><td>${l}</td><td>${f1(m)}-${f1(t)}</td><td>${pc(p)}</td></tr>`).join('') +
+    `<tr><td>真實命中</td><td></td><td>${pc(r.ts)}</td></tr></tbody></table>`;
+  const gc = d.gc == null ? '' : `<div class="gcn" title="${GC_DEF}">整季評分 <b>${gcS(d.gc)}</b>　場均 ${Math.round(r.mpg)} 分鐘</div>`;
+  return `<div class="sdw">${a}${b}</div>${gc}`;
 }
 function impactChips(p) {
   const r = REAL[p.name], m = r && IMPACT[r.id];
@@ -424,7 +448,7 @@ def aggregate():
     log_keys = ['MIN', 'PTS', 'REB', 'AST', 'STL', 'BLK', 'TOV', 'FGM', 'FGA', 'FG3M', 'FG3A', 'FTM', 'FTA', 'PLUS_MINUS']
     for row in rs['rowSet']:
         name = row[h['PLAYER_NAME']]
-        a = acc.setdefault(name, {'id': row[h['PLAYER_ID']], 'gp': 0, 'teams': [], **{k: 0 for k in log_keys}})
+        a = acc.setdefault(name, {'id': row[h['PLAYER_ID']], 'gp': 0, 'teams': [], **{k: 0 for k in log_keys + ['OREB', 'DREB', 'PF']}})
         a['gp'] += 1
         games.setdefault(name, []).append(row)
         team = row[h['TEAM_ABBREVIATION']]
@@ -456,6 +480,9 @@ def aggregate():
             # 貢獻值：r＝近 N 場合計換算每 36 分鐘，b＝2025-26 整季（沒有 2025-26 紀錄＝null）
             'gc': {'r': round(sum(box(r) * r[h['MIN']] for r in last if r[h['MIN']]) / rm, 2) if rm else None,
                    'b': b['box36'] if b else None},
+            # 整季細項（2026 頁下拉，使用者 2026-10-30）：場均進球／出手、前後場籃板、犯規，與整季貢獻值（分鐘加權）
+            'sd': {k.lower(): round(a[k] / n, 2) for k in ['FGM', 'FGA', 'FG3M', 'FG3A', 'FTM', 'FTA', 'OREB', 'DREB', 'PF']}
+                  | {'gc': round(sum(box(r) * r[h['MIN']] for r in games[name] if r[h['MIN']]) / a['MIN'], 2) if a['MIN'] else None},
         }
     return out
 
@@ -493,7 +520,8 @@ def team_ids():
     return {row[h['TEAM_ABBREVIATION']]: row[h['TEAM_ID']] for row in rs['rowSet']}
 
 
-def inject(path, real):
+def inject(path, real, view='g5'):
+    """view：卡片下拉看什麼，'g5'＝近 5 場逐場（2027 頁），'season'＝整季細項（2026 頁）。"""
     s = path.read_text(encoding='utf-8')
     s = re.sub(re.escape(BEGIN) + r'.*?' + re.escape(END) + r'\n?', '', s, flags=re.S)
     names = json.loads(re.search(r'const DATA=(\{.*?\});\nconst COLS', s, re.S).group(1))
@@ -504,7 +532,7 @@ def inject(path, real):
     imp = {pid: v for pid, v in impact().items() if pid in ids}
     js_json = lambda o: json.dumps(o, ensure_ascii=False, separators=(',', ':'))
     a = json.loads(CARD_SUMMARY.read_text(encoding='utf-8'))['anchors']
-    block = (f'{BEGIN}\n<style>{CSS}</style>\n<script>const REAL={js_json(sub)};\nconst IMPACT={js_json(imp)};\n'
+    block = (f'{BEGIN}\n<style>{CSS}</style>\n<script>const REAL={js_json(sub)};\nconst REAL_VIEW={js_json(view)};\nconst IMPACT={js_json(imp)};\n'
              f'const GC_ANC={js_json([a["PR1"], a["PR50"], a["PR99"]])};\n'
              f'const TEAM_COLORS={js_json(TEAM_COLORS)};\nconst TEAM_IDS={js_json(team_ids())};{JS}</script>\n{END}\n')
     assert s.count('<script>const DATA=') == 1

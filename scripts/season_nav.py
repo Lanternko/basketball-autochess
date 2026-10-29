@@ -309,4 +309,7 @@ def apply_common(s):
     for a, b in COMMON_REPLACEMENTS:
         assert s.count(a) == 1, a
         s = s.replace(a, b)
+    # 球員卡「模擬每 36 分鐘淨值」改叫影響力（使用者 2026-10-29）；新賽季頁的 builder 已先改成「新賽季預測…」
+    s = s.replace('新賽季預測每 36 分鐘淨值', '預測每 36 分鐘影響力').replace('模擬每 36 分鐘淨值', '每 36 分鐘影響力')
+    assert s.count('每 36 分鐘影響力 <b>') == 1
     return s

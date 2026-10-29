@@ -6,7 +6,7 @@
 <style>
 /* Layout: game-menu roster screen. Featured player card on top, sortable grade table below, pager at the foot. Deliberate single dark look. */
 :root{
-  --bg:#0f1622; --panel:#18222f; --panel-2:#1f2b3a; --line:#2c3a4c; --fg:#e8edf3; --muted:#8d9bad;
+  --bg:#0d1014; --panel:#151a20; --panel-2:#1c222a; --line:#29313b; --fg:#e8edf3; --muted:#8d9bad;
   --gold:#f2c230; --gold-ink:#1a1405; --red:#d8343c;
   --g-a:#5ad37f; --g-b:#b5d65a; --g-c:#e8c45a; --g-d:#e8904f; --g-f:#e0585a;
   --f-disp:"Barlow Condensed","Noto Sans TC","Arial Narrow",sans-serif;
@@ -15,7 +15,7 @@
 }
 *{box-sizing:border-box}
 body{background:var(--bg);color:var(--fg);font-family:var(--f-body);font-size:14px;
-  background-image:radial-gradient(1200px 500px at 85% -10%,#22324a 0%,transparent 60%);}
+  }
 .wrap{max-width:1280px;margin:0 auto;padding-block:20px 40px;
   padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));
   display:flex;flex-direction:column;gap:14px}
@@ -55,7 +55,7 @@ button:focus-visible,input:focus-visible,th:focus-visible{outline:2px solid var(
 /* table */
 .tbox{overflow:auto;max-height:70vh;overscroll-behavior:contain;border:1px solid var(--line);border-radius:4px;background:var(--panel)}
 table{border-collapse:collapse;width:100%;min-width:1060px;font-variant-numeric:tabular-nums}
-thead th{background:#0b1119;color:var(--muted);font:600 .82rem var(--f-disp);letter-spacing:.04em;padding:6px 4px 7px;text-align:center;cursor:pointer;user-select:none;white-space:nowrap;border-bottom:1px solid var(--line);position:relative}
+thead th{background:#0a0d10;color:var(--muted);font:600 .82rem var(--f-disp);letter-spacing:.04em;padding:6px 4px 7px;text-align:center;cursor:pointer;user-select:none;white-space:nowrap;border-bottom:1px solid var(--line);position:relative}
 thead th .zh{display:block;font:500 .68rem var(--f-body);letter-spacing:0;opacity:.75;margin-top:1px}
 thead tr.grp th{cursor:default;font-size:.7rem;padding:4px;color:#6b7a8d;border-bottom:0;letter-spacing:.12em}
 thead tr.grp th.g{border-left:1px solid var(--line)}
@@ -72,11 +72,11 @@ td.ovr{font-size:1.15rem;font-weight:800}
 td.sub{color:var(--muted);font-weight:500;font-size:.92rem}
 tbody tr{cursor:pointer}
 tbody tr:hover td:not(.nm){background:var(--panel-2)}
-tbody tr.sel td:not(.nm){background:#273649}
-tbody tr.sel:hover td:not(.nm){background:#2d3e53}
+tbody tr.sel td:not(.nm){background:#253040}
+tbody tr.sel:hover td:not(.nm){background:#2b3748}
 tbody tr.sel td.nm{background:#ffd54a}
 .gA{color:var(--g-a)}.gB{color:var(--g-b)}.gC{color:var(--g-c)}.gD{color:var(--g-d)}.gF{color:var(--g-f)}
-td.sortcol{background:rgba(242,194,48,.07)}
+td.sortcol{background:rgba(255,255,255,.035)}
 /* pager */
 .pager{display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between}
 .pages{display:flex;flex-wrap:wrap;gap:4px}
@@ -104,18 +104,18 @@ td.sortcol{background:rgba(242,194,48,.07)}
   .card .who>.facts{grid-column:1;grid-row:2;gap:2px 14px}
   .card .ring{grid-column:2;grid-row:1/3;padding:0;align-self:start}
 }
-.tbox{scrollbar-width:thin;scrollbar-color:#3a4b60 transparent}
-.tbox:hover{scrollbar-color:#5d7089 transparent}
+.tbox{scrollbar-width:thin;scrollbar-color:#38424f transparent}
+.tbox:hover{scrollbar-color:#56616f transparent}
 @supports not (scrollbar-color:auto){
   .tbox::-webkit-scrollbar{width:10px;height:10px}
   .tbox::-webkit-scrollbar-track,.tbox::-webkit-scrollbar-corner{background:transparent}
-  .tbox::-webkit-scrollbar-thumb{background:#3a4b60;border-radius:10px;border:3px solid var(--panel)}
-  .tbox:hover::-webkit-scrollbar-thumb{background:#5d7089}
+  .tbox::-webkit-scrollbar-thumb{background:#38424f;border-radius:10px;border:3px solid var(--panel)}
+  .tbox:hover::-webkit-scrollbar-thumb{background:#56616f}
 }
 #tbl thead tr:last-child th{transition:box-shadow .15s}
 .tbox.scrolled #tbl thead tr:last-child th{box-shadow:0 9px 10px -7px rgba(0,0,0,.75)}
 .tbox::after{content:"";position:sticky;left:0;bottom:0;z-index:4;display:block;height:36px;margin-top:-36px;
-  background:linear-gradient(rgba(24,34,47,0),var(--panel));pointer-events:none;opacity:0;transition:opacity .15s}
+  background:linear-gradient(rgba(21,26,32,0),var(--panel));pointer-events:none;opacity:0;transition:opacity .15s}
 .tbox.below::after{opacity:1}
 .tgrp{display:flex;gap:10px;align-items:center}
 .tpick{position:relative}
@@ -157,7 +157,7 @@ th.noh{cursor:default}
 .pnote summary:focus-visible{outline:2px solid var(--gold);outline-offset:1px}
 .pnote[open] summary{color:var(--gold);border-color:var(--gold)}
 .pn{position:absolute;left:0;top:calc(100% + 6px);width:min(560px,100%);max-height:min(72vh,680px);overflow:auto;overscroll-behavior:contain;box-sizing:border-box;
-  background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:14px;box-shadow:0 16px 40px rgba(0,0,0,.6);scrollbar-width:thin;scrollbar-color:#3a4b60 transparent}
+  background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:14px;box-shadow:0 16px 40px rgba(0,0,0,.6);scrollbar-width:thin;scrollbar-color:#38424f transparent}
 .pn h2{font:800 1.05rem var(--f-disp);letter-spacing:.06em;margin:0 0 10px;text-transform:uppercase}
 .pn h2 span{color:var(--gold)}
 .pn-now{background:var(--panel-2);border:1px solid var(--line);border-radius:5px;padding:9px 12px;margin-bottom:12px;color:var(--muted);font-size:.78rem;line-height:1.6}
@@ -250,7 +250,7 @@ th.noh{cursor:default}
   width:48px;min-width:48px;box-sizing:border-box}
 #tbl thead tr:last-child th[data-k]:not([data-k=name],[data-k=pos],[data-k=team],[data-k=ht],[data-k=ovr],[data-k=min],[data-k=gp],[data-k=dovr]) .zh{font-size:.62rem}
 /* 名字欄不再整條金底（使用者 2026-10-29：醜、被列線切得斷裂）；改深色底，只有選中列金色 */
-#tbl th.nm{background:#0b1119;color:var(--muted)}
+#tbl th.nm{background:#0a0d10;color:var(--muted)}
 #tbl td.nm{background:var(--panel);color:var(--fg);box-shadow:inset -1px 0 0 var(--line)}
 #tbl tbody tr:hover td.nm{background:var(--panel-2)}
 #tbl tbody tr.sel td.nm{background:var(--gold);color:var(--gold-ink)}
@@ -263,9 +263,9 @@ th.noh{cursor:default}
   #tbl th[data-k="ovr"],#tbl td.ovr{position:sticky;left:112px;z-index:1;box-shadow:6px 0 6px -5px rgba(0,0,0,.7)}
   #tbl th[data-k="ovr"]{z-index:2}
   #tbl tbody td.ovr{background:var(--panel);font-size:1rem}
-  #tbl tbody td.ovr.sortcol{background:linear-gradient(rgba(242,194,48,.07),rgba(242,194,48,.07)) var(--panel)}
+  #tbl tbody td.ovr.sortcol{background:linear-gradient(rgba(255,255,255,.035),rgba(255,255,255,.035)) var(--panel)}
   #tbl tbody tr:hover td.ovr{background:var(--panel-2)}
-  #tbl tbody tr.sel td.ovr{background:#273649}
+  #tbl tbody tr.sel td.ovr{background:#253040}
   #tbl tbody{-webkit-user-select:none;user-select:none;-webkit-touch-callout:none}
 }
 /* team colors + headshot */
@@ -493,7 +493,7 @@ function card(p) {
       ${realBox(p)}
     </div>
     <div class="ring" title="模型用能力值模擬的每 36 分鐘淨值 ${(p.imp > 0 ? '+' : '') + p.imp.toFixed(2)}（OVR 由此換算；下方「影響」是真實比賽的 RAPM，兩者不同）"><svg viewBox="0 0 120 120" role="img" aria-label="OVR ${p.ovr}">
-      <circle cx="60" cy="60" r="48" fill="#0b1119" stroke="#2c3a4c" stroke-width="7"/>
+      <circle cx="60" cy="60" r="48" fill="#0a0d10" stroke="#29313b" stroke-width="7"/>
       <circle cx="60" cy="60" r="48" fill="none" stroke="${col}" stroke-width="7" stroke-linecap="round" stroke-dasharray="${C * f} ${C}" transform="rotate(-90 60 60)"/>
       <text x="60" y="44" text-anchor="middle" class="lab">OVR</text>
       <text x="60" y="80" text-anchor="middle" class="val">${p.ovr.toFixed(1)}</text></svg><b class="rd ${p.dovr >= 1 ? 'up' : p.dovr <= -1 ? 'dn' : 'flat'}" title="較上季卡 OVR ${p.last.toFixed(1)}">${p.dovr >= 0.05 ? '▲' : p.dovr <= -0.05 ? '▼' : '＝'}${Math.abs(p.dovr).toFixed(1)}</b></div>`;

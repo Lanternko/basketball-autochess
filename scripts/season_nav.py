@@ -42,7 +42,11 @@ CSS = """<style>
 .pn-item ul{margin:6px 0 0;padding-left:1.15em;color:#c9d3df;font-size:.82rem;line-height:1.6}
 .pn-item li::marker{color:var(--acc)}
 .pn-item li b{color:var(--fg);font-weight:700}
-.pn-item .kw{color:#6fd08c;font-weight:700}
+.pn-item .kw{font-weight:700}
+.pn-item .kw-ovr{color:var(--gold)}
+.pn-item .kw-off{color:#6fd08c}
+.pn-item .kw-def{color:#a493ff}
+.pn-item .kw-etc{color:#7fc4e6}
 .pn-item .kw-num{color:var(--fg);font-weight:700;font-variant-numeric:tabular-nums}
 .pn-foot{margin:12px 0 0;color:var(--muted);font-size:.72rem;line-height:1.5}
 </style>
@@ -102,19 +106,24 @@ def _now_facts(now_text, current):
     return '<dl>' + ''.join(f'<div><dt>{k}</dt><dd>{html.escape(v)}</dd></div>' for k, v in facts) + '</dl>'
 
 
-# 內文裡的能力值名稱用同一個醒目色、數字加粗（使用者 2026-10-29，參考 arammeta 海克斯說明；
-# 不要每種能力各一色）。只標卡片上的能力值與 OVR；新能力出現在說明裡就加進來。
-NOTE_TERMS = ['OVR', '三分價值', '3PT', '3P準', '罰球數', '罰球率', '罰球線',
-              'FD 製造犯規', '製造犯規（FD）', '製造犯規', '切入', '壓迫（PRES）', '壓迫', '對位防守']
-_NOTE_TOKEN = re.compile('|'.join(map(re.escape, sorted(NOTE_TERMS, key=len, reverse=True)))
+# 內文裡的數值名稱上色、數字加粗（使用者 2026-10-29，參考 arammeta 海克斯說明）。
+# 只分四色：OVR、進攻＋投籃、防守、其他（RAPM、上場時間等）；新名稱出現在說明裡就加進對應組。
+NOTE_TERMS = {
+    'ovr': ['OVR'],
+    'off': ['三分價值', '3PT', '3P準', '罰球數', '罰球率', '罰球線', 'FD 製造犯規', '製造犯規（FD）', '製造犯規', '切入'],
+    'def': ['壓迫（PRES）', '壓迫', '對位防守'],
+    'etc': ['RAPM', '上場時間', '上場分鐘', '出賽率', '預測 MPG', '每場價值'],
+}
+_TERM_CLASS = {t: c for c, ts in NOTE_TERMS.items() for t in ts}
+_NOTE_TOKEN = re.compile('|'.join(map(re.escape, sorted(_TERM_CLASS, key=len, reverse=True)))
                          + r'|(?<![A-Za-z\d.])\d+(?:\.\d+)*(?:-\d{2})?%?')
 
 
 def _note_fmt(text):
     out, at = '', 0
     for m in _NOTE_TOKEN.finditer(text):
-        tok = html.escape(m.group(0))
-        out += html.escape(text[at:m.start()]) + (f'<span class="kw">{tok}</span>' if m.group(0) in NOTE_TERMS
+        tok, cls = html.escape(m.group(0)), _TERM_CLASS.get(m.group(0))
+        out += html.escape(text[at:m.start()]) + (f'<span class="kw kw-{cls}">{tok}</span>' if cls
                                                    else f'<strong class="kw-num">{tok}</strong>')
         at = m.end()
     return out + html.escape(text[at:])

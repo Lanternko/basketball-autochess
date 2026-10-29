@@ -1,4 +1,5 @@
 """名單頁的賽季切換列（靜態相對連結，沿用頁面既有 CSS 變數，不需 JS）。"""
+import html
 import re
 
 # 標籤用年份（使用者 2026-10-29）：2027 beta＝2026-27 賽中，2026＝2025-26 正式卡
@@ -10,13 +11,102 @@ CSS = """<style>
 .snav .seg a[aria-current="page"]{background:var(--gold);color:var(--gold-ink)}
 .snav .seg a:focus-visible{outline:2px solid var(--gold);outline-offset:1px}
 .snav .note{color:var(--muted);font-size:.8rem}
-.pnote summary{list-style:none;cursor:pointer;color:var(--muted);font-size:.8rem;border-bottom:1px dotted var(--muted)}
+.pnote summary{list-style:none;cursor:pointer;display:inline-flex;align-items:center;gap:6px;background:var(--panel);color:var(--muted);border:1px solid var(--line);border-radius:3px;font:600 .85rem var(--f-disp);letter-spacing:.04em;padding:5px 10px;user-select:none}
 .pnote summary::-webkit-details-marker{display:none}
-.pnote summary:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
-.pnote[open] summary{color:var(--fg)}
-.pnote p{position:absolute;left:0;top:calc(100% + 6px);margin:0;width:min(440px,100%);box-sizing:border-box;background:var(--panel-2);border:1px solid var(--line);border-radius:6px;padding:10px 12px;color:var(--muted);font-size:.8rem;line-height:1.55;box-shadow:0 12px 32px rgba(0,0,0,.55)}
+.pnote summary::after{content:"▾";font-size:.8em;opacity:.8}
+.pnote summary:hover{color:var(--fg);border-color:var(--muted)}
+.pnote summary:focus-visible{outline:2px solid var(--gold);outline-offset:1px}
+.pnote[open] summary{color:var(--gold);border-color:var(--gold)}
+.pn{position:absolute;left:0;top:calc(100% + 6px);width:min(560px,100%);max-height:min(72vh,680px);overflow:auto;overscroll-behavior:contain;box-sizing:border-box;
+  background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:14px;box-shadow:0 16px 40px rgba(0,0,0,.6);scrollbar-width:thin;scrollbar-color:#3a4b60 transparent}
+.pn h2{font:800 1.05rem var(--f-disp);letter-spacing:.06em;margin:0 0 10px;text-transform:uppercase}
+.pn h2 span{color:var(--gold)}
+.pn-now{background:var(--panel-2);border:1px solid var(--line);border-radius:5px;padding:9px 12px;margin-bottom:12px;color:var(--muted);font-size:.78rem;line-height:1.6}
+.pn-now b{display:block;color:var(--gold);font:700 .72rem var(--f-disp);letter-spacing:.12em;margin-bottom:2px}
+.pn-list{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.pn-item{--acc:#5b6b7f;background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--acc);border-radius:5px;padding:9px 12px 10px}
+.pn-item.tk-card{--acc:var(--gold)}
+.pn-item.tk-inseason{--acc:#5aa9e6}
+.pn-item.cur{border-color:var(--acc);box-shadow:0 0 0 1px var(--acc) inset}
+.pn-item header{display:flex;flex-wrap:wrap;align-items:center;gap:6px 8px}
+.pn-ver{font:800 1.2rem var(--f-disp);color:var(--fg);font-variant-numeric:tabular-nums;letter-spacing:.02em}
+.pn-tag{font:700 .68rem var(--f-disp);letter-spacing:.08em;padding:2px 6px;border-radius:3px;background:var(--panel-2);color:var(--muted)}
+.pn-tag.tk-card{background:#3a3110;color:var(--gold)}
+.pn-tag.tk-inseason{background:#12304a;color:#8cc8ff}
+.pn-cur{font:700 .68rem var(--f-disp);letter-spacing:.08em;padding:2px 6px;border-radius:3px;background:var(--gold);color:var(--gold-ink)}
+.pn-item time{margin-left:auto;color:var(--muted);font:500 .75rem var(--f-disp);font-variant-numeric:tabular-nums}
+.pn-item ul{margin:6px 0 0;padding-left:1.15em;color:#c9d3df;font-size:.82rem;line-height:1.6}
+.pn-item li::marker{color:var(--acc)}
+.pn-foot{margin:12px 0 0;color:var(--muted);font-size:.72rem;line-height:1.5}
+@media (max-width:640px){.pn{width:calc(100vw - 40px)}}
 </style>
 """
+
+
+# 更新說明：每版一格，新的在上（使用者 2026-10-29）。track：card 正式卡、inseason 賽中、site 網頁；
+# 版號一換就在最上面加一格，只更新比賽資料（字母後綴）不加。內容寫成球迷看得懂的話，不寫 E／R 編號。
+TRACK = {'card': '正式卡', 'inseason': '賽中', 'site': '網頁'}
+PATCH_NOTES = [
+    (('card',), '0.2.4', '2026-10-29', [
+        '教練用人證據的回歸目標，改成只看 2025-26 單季 RAPM（原本四季合併），修正年輕球員被低估。']),
+    (('site',), '', '2026-10-29', [
+        '加球隊篩選（隊徽格），拿掉上場時間篩選。',
+        '表格自己捲動、表頭固定，看低排名時卡片仍在畫面上；捲軸改細、加捲動陰影。',
+        '手機版：卡片改成 OVR 在右上、數據佔滿整寬；修點球員時畫面拉長抖動。',
+        '顯示切換改成 A+／99；賽季切換改成 2027 beta／2026；說明收進「更新說明」。']),
+    (('card',), '0.2.3', '2026-10-29', [
+        'OVR 能力估計納入教練用人證據：上場分鐘、出賽率、年齡、是否下放發展聯盟。',
+        '教練不用（DNP）和輪休分開看，輪休不當成被冷凍。']),
+    (('inseason',), '0.2.1', '2026-10-29', [
+        '賽中先驗改用 card 0.2.2。',
+        '製造犯規照新公式（以量為主）隨本季數據更新；壓迫沿用上季值，賽中凍結。']),
+    (('card',), '0.2.2', '2026-10-29', [
+        '製造犯規（FD）改以量為主：每 36 分鐘罰球數佔 75%、罰球率佔 25%。']),
+    (('card',), '0.2.1', '2026-10-29', [
+        '壓迫（PRES）改用球員自己逼出的對手失誤、扣掉犯規；原本是從 RAPM 拆出來的數字，雜訊大。']),
+    (('card', 'inseason'), '0.2.0', '2026-10-29', [
+        'OVR 改成每場價值：含上場時間，以替補水準為基準。每分鐘表現相同時，打得多的人 OVR 較高。',
+        '賽中頁加「預測 MPG」欄。']),
+    (('inseason',), '0.1.2', '2026-10-28', [
+        '賽中先驗換成 card 0.1.2。',
+        '拿掉「3P準」欄，加「FD 製造犯規」欄。']),
+    (('site',), '', '2026-10-28', [
+        '加賽季切換：賽中頁與正式卡頁。',
+        '卡片加球員頭像、隊徽與隊色，下方顯示真實場均數據。']),
+    (('card',), '0.1.2', '2026-10-28', [
+        '對位防守改算「被針對」：依對手實際的出手習慣算預期出手，不再因位置標錯而誤判（例：Wembanyama 被標 F 卻守中鋒）。']),
+    (('inseason',), '0.1.1', '2026-10-28', [
+        '兩頁的 3PT 欄改顯示三分價值（準度加出手量），OVR 不變。']),
+    (('card',), '0.1.1', '2026-10-28', [
+        '「切入」拆成切入與製造犯規兩項。',
+        '低分鐘球員不再虛胖：比率型能力值往本人上季拉回，沒有歷史才往聯盟平均。']),
+    (('card', 'inseason'), '0.1.0', '', [
+        '起點：正式卡沿用 v58 模型，賽中用 C4 模型（上季卡當先驗、隨本季數據更新）。']),
+]
+
+
+def patch_notes_html(now_text, current):
+    """now_text：原本 <div class="src"> 的版本說明，放最上面當「目前版本」；只標本頁那條線的版號（賽中頁說明裡的先驗 card 版號不算）。"""
+    cur = {(current, v) for v in re.findall(rf'\b{current} (\d+\.\d+\.\d+)', now_text)}
+    items = []
+    for tracks, ver, date, lines in PATCH_NOTES:
+        is_cur = any((t, ver) in cur for t in tracks)
+        items.append(
+            f'<li class="pn-item tk-{tracks[0]}{" cur" if is_cur else ""}"><header>'
+            + ''.join(f'<span class="pn-tag tk-{t}">{TRACK[t]}</span>' for t in tracks)
+            + (f'<b class="pn-ver">{ver}</b>' if ver else '')
+            + ('<span class="pn-cur">目前</span>' if is_cur else '')
+            + (f'<time datetime="{date}">{date[5:].replace("-", "/")}</time>' if date else '')
+            + '</header><ul>' + ''.join(f'<li>{html.escape(x)}</li>' for x in lines) + '</ul></li>')
+    return ('<details class="pnote"><summary>更新說明</summary><div class="pn" role="region" aria-label="更新說明">'
+            '<h2>Patch <span>Notes</span></h2>'
+            f'<div class="pn-now"><b>目前版本</b>{now_text}</div>'
+            f'<ol class="pn-list">{"".join(items)}</ol>'
+            '<p class="pn-foot">版號後面的字母（例如 0.2.1e）代表只更新比賽資料，模型沒動。</p></div></details>'
+            # 點面板外或按 Esc 關掉
+            "<script>(()=>{const d=document.querySelector('.pnote');"
+            "document.addEventListener('click',e=>{if(d.open&&!d.contains(e.target))d.open=false});"
+            "d.addEventListener('keydown',e=>{if(e.key==='Escape'){d.open=false;d.querySelector('summary').focus()}})})();</script>")
 
 
 def add_season_nav(html_str, current):
@@ -26,10 +116,9 @@ def add_season_nav(html_str, current):
                     for key, label, href in PAGES)
     note = '<span class="note">開季樣本少，數字大多來自 2026 卡</span>' if current == 'inseason' else ''
     block = lambda m: (f'\n<nav class="snav" aria-label="賽季切換"><div class="seg">{links}</div>{note}'
-                       f'<details class="pnote"><summary>更新說明</summary><p>{m.group(1)}</p></details></nav>')
+                       f'{patch_notes_html(m.group(1), current)}</nav>')
     s, n = re.subn(r'<div class="src">(.*?)</div>', block, html_str, count=1, flags=re.S)
     assert n == 1, 'src div not found'
-    assert '</head>' in s or True
     return s.replace('<nav class="snav"', CSS + '<nav class="snav"', 1) if CSS not in s else s
 
 

@@ -100,8 +100,7 @@ def main():
     out.write_text(s, encoding='utf-8')
     # 注入隊色／頭像／2026-27 場均（換資料來源與年份文字）
     er.SRC = SRC26
-    er.JS = er.JS.replace('2025-26 例行賽真實數據 · 場均', '2026-27 賽季至今真實數據 · 場均').replace(
-        '2025-26 例行賽紀錄', '2026-27 賽季紀錄')
+    er.JS = er.JS.replace('2025-26 例行賽紀錄', '2026-27 賽季紀錄')
     er.inject(out, er.aggregate())
     print('wrote', out, len(rows), 'players')
 

@@ -382,13 +382,13 @@ th.noh{cursor:default}
   .g5 td{font-size:.84rem}
   .g5 th,.g5 td{padding:5px 6px}
   /* 手機 ▼ 放正負值格右上角（使用者 2026-10-30）：右上切一個斜角變五角形，▼ 放在切掉的位置，不另佔一列
-     ▼ 用 45° 等腰直角三角形，左斜邊和缺角斜線平行、留 5px 不碰框；展開時不翻轉，改變金色 */
+     ▼ 用正三角形（60°），缺角也切 60°（橫 16px、直 27.7px），▼ 左斜邊和缺角平行、留 3px 不碰框；展開時不翻轉，改變金色 */
   .real.rx{position:relative}
-  .rx .rmain .st:last-child{position:relative;clip-path:polygon(0 0,calc(100% - 24px) 0,100% 24px,100% 100%,0 100%)}
-  .rx .rmain .st:last-child::after{content:'';position:absolute;top:-1px;right:-1px;width:24px;height:24px;pointer-events:none;
+  .rx .rmain .st:last-child{position:relative;clip-path:polygon(0 0,calc(100% - 16px) 0,100% 27.7px,100% 100%,0 100%)}
+  .rx .rmain .st:last-child::after{content:'';position:absolute;top:-1px;right:-1px;width:16px;height:27.7px;pointer-events:none;
     background:linear-gradient(to bottom left,transparent calc(50% - 1px),var(--line) calc(50% - 1px),var(--line) calc(50% + 1px),transparent calc(50% + 1px))}
-  .rx .g5t{position:absolute;top:-9px;right:-10px;width:30px;height:30px;padding:0;border:0;font-size:0;justify-content:center}
-  .rx .g5t i,.rx .g5t[aria-expanded="true"] i{display:block;width:12px;height:6px;background:var(--muted);clip-path:polygon(0 0,100% 0,50% 100%);transform:none;transition:background .15s}
+  .rx .g5t{position:absolute;top:-8.6px;right:-11.4px;width:30px;height:30px;padding:0;border:0;font-size:0;justify-content:center}
+  .rx .g5t i,.rx .g5t[aria-expanded="true"] i{display:block;width:9px;height:7.8px;background:var(--muted);clip-path:polygon(0 0,100% 0,50% 100%);transform:none;transition:background .15s}
   .rx .g5t[aria-expanded="true"] i{background:var(--gold)}
 }
 .tabbr{color:var(--tt);font-weight:600}

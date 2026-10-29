@@ -239,8 +239,7 @@ COMMON_REPLACEMENTS = [
     ('''    <span class="lbl">上場</span>
     <div class="seg" id="minSeg"></div>''',
      '''    <span class="tgrp"><span class="lbl">球隊</span>
-    <details class="tpick" id="teamPick"><summary aria-label="選擇球隊"></summary><div class="tpop"><div class="tgrid" id="teamGrid"></div></div></details>
-    <button type="button" class="rkbtn" id="rkBtn" aria-pressed="false">新秀</button></span>'''),
+    <details class="tpick" id="teamPick"><summary aria-label="選擇球隊"></summary><div class="tpop"><div class="tgrid" id="teamGrid"></div></div></details></span>'''),
     ("pos: 'ALL', min: 0,", "pos: 'ALL', team: 'ALL', rk: false,"),
     ('p.min >= st.min', "(st.team === 'ALL' || p.team.split('/').pop() === st.team) && (!st.rk || ROOKIES.has(p.name))"),
     # 兩個 builder 已先把門檻改成場均 10／20／30 分鐘
@@ -318,12 +317,14 @@ document.getElementById('q').oninput'''),
   const logo = t => `<img alt="" src="https://cdn.nba.com/logos/nba/${TEAM_IDS[t]}/global/D/logo.svg" onerror="this.style.visibility='hidden'">`;
   if (!grid.childElementCount) {
     const teams = [...new Set(P.map(p => p.team.split('/').pop()))].filter(t => TEAM_IDS[t]).sort();
-    grid.innerHTML = '<button type="button" class="all" data-t="ALL">全部球隊</button>' +
+    // 新秀放在球隊面板裡、跟「全部球隊」並排（使用者 2026-10-30）；2027 頁沒有新秀時「全部球隊」佔整排
+    grid.innerHTML = `<button type="button" class="all${ROOKIES.size ? ' half' : ''}" data-t="ALL">全部球隊</button>` +
+      (ROOKIES.size ? '<button type="button" class="all half" data-t="ROOKIE">新秀</button>' : '') +
       teams.map(t => `<button type="button" data-t="${t}" title="${t}">${logo(t)}<span>${t}</span></button>`).join('');
     grid.onclick = e => {
       const b = e.target.closest('button[data-t]');
       if (!b) return;
-      st.team = b.dataset.t; st.page = 0; st.extra = 0; d.open = false; render();
+      st.rk = b.dataset.t === 'ROOKIE'; st.team = st.rk ? 'ALL' : b.dataset.t; st.page = 0; st.extra = 0; d.open = false; render();
     };
     // 面板靠左展開，超出螢幕右緣就往左推
     d.addEventListener('toggle', () => {
@@ -336,23 +337,15 @@ document.getElementById('q').oninput'''),
     document.addEventListener('click', e => { if (d.open && !d.contains(e.target)) d.open = false; });
     d.addEventListener('keydown', e => { if (e.key === 'Escape') { d.open = false; d.querySelector('summary').focus(); } });
   }
-  d.querySelector('summary').innerHTML = st.team === 'ALL' ? '全部' : logo(st.team) + st.team;
-  d.classList.toggle('on', st.team !== 'ALL');
-  grid.querySelectorAll('button').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.t === st.team)));
-  // 新秀：跟球隊並排的開關（使用者 2026-10-30），可和球隊一起篩
-  const rk = document.getElementById('rkBtn');
-  rk.hidden = !ROOKIES.size;
-  rk.setAttribute('aria-pressed', String(st.rk));
-  rk.onclick = () => { st.rk = !st.rk; st.page = 0; st.extra = 0; render(); };
+  const cur = st.rk ? 'ROOKIE' : st.team;
+  d.querySelector('summary').innerHTML = cur === 'ALL' ? '全部' : cur === 'ROOKIE' ? '新秀' : logo(cur) + cur;
+  d.classList.toggle('on', cur !== 'ALL');
+  grid.querySelectorAll('button').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.t === cur)));
 }
 
 function render() {'''),
     ('@media (prefers-reduced-motion', '''.tgrp{display:flex;gap:10px;align-items:center}
 .tpick{position:relative}
-.rkbtn{background:var(--panel);color:var(--muted);border:1px solid var(--line);border-radius:3px;font:600 .9rem var(--f-disp);letter-spacing:.04em;padding:6px 11px;cursor:pointer}
-.rkbtn:hover{color:var(--fg)}
-.rkbtn[aria-pressed="true"]{background:var(--gold);color:var(--gold-ink);border-color:var(--gold)}
-.rkbtn:focus-visible{outline:2px solid var(--gold);outline-offset:1px}
 .tpick summary{list-style:none;display:flex;align-items:center;gap:6px;background:var(--panel);color:var(--muted);border:1px solid var(--line);border-radius:3px;font:600 .9rem var(--f-disp);letter-spacing:.04em;padding:6px 11px;cursor:pointer;user-select:none}
 .tpick summary::-webkit-details-marker{display:none}
 .tpick summary::after{content:"▾";font-size:.8em;opacity:.8}
@@ -364,6 +357,7 @@ function render() {'''),
 .tgrid button{display:flex;flex-direction:column;align-items:center;gap:2px;background:var(--panel);border:1px solid var(--line);border-radius:4px;padding:5px 2px 3px;cursor:pointer;color:var(--muted);font:600 .72rem var(--f-disp);letter-spacing:.04em}
 .tgrid button img{width:30px;height:30px;object-fit:contain}
 .tgrid button.all{grid-column:1/-1;font-size:.9rem;padding:7px}
+.tgrid button.all.half{grid-column:span 3}
 .tgrid button:hover{border-color:var(--muted);color:var(--fg)}
 .tgrid button[aria-pressed="true"]{border-color:var(--gold);color:var(--gold);background:#2a2410}
 @media (prefers-reduced-motion'''),

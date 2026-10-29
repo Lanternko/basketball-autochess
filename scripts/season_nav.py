@@ -50,6 +50,8 @@ COMMON_REPLACEMENTS = [
     # 兩個 builder 已先把門檻改成場均 10／20／30 分鐘
     ("  seg('minSeg', [[0, '全部'], [10, '≥10'], [20, '≥20'], [30, '≥30']], 'min');\n", '  teamPick();\n'),
     ('放寬位置或上場分鐘試試', '放寬位置或球隊試試'),
+    # 顯示切換直接用範例當標籤（使用者 2026-10-29）
+    ("seg('modeSeg', [['grade', '等第'], ['num', '數值']], 'mode');", "seg('modeSeg', [['grade', 'A+'], ['num', '99']], 'mode');"),
     ('function render() {', '''function teamPick() {
   const d = document.getElementById('teamPick'), grid = document.getElementById('teamGrid');
   const logo = t => `<img alt="" src="https://cdn.nba.com/logos/nba/${TEAM_IDS[t]}/global/D/logo.svg" onerror="this.style.visibility='hidden'">`;

@@ -317,11 +317,15 @@ def apply_common(s):
 
 # 球員卡資訊列（使用者 2026-10-29：字太多；模擬每 36 分鐘淨值和下方 RAPM「淨影響」看起來同一件事卻不同數字）。
 # 模擬值拿掉、改放 OVR 圓環的滑鼠提示；手機藏掉「球隊／身高」這類標籤；新賽季頁較上季差值用綠／灰／紅三色（不漸變）。
-# 每格帶 class，手機版只留身高、場均分鐘與較上季（使用者 2026-10-29：手機用減法）
+# 每格帶 class；手機版只留較上季（箭頭），身高移到隊色橫幅（使用者 2026-10-29：手機用減法）
 FACT_LABELS = {'球隊 ': 'f-tm', '身高 ': 'f-ht', '場均 ': 'f-min', '已打 N=': 'f-gp', '出賽 ': 'f-gp'}
 DELTA_OLD = "<span>上季卡 OVR <b>${p.last.toFixed(1)}</b>（<b>${(p.dovr > 0 ? '+' : '') + p.dovr.toFixed(2)}</b>）</span>"
-DELTA_NEW = ("<span class=\"f-d\"><i class=\"lb\">上季卡 OVR <b>${p.last.toFixed(1)}</b>（</i><i class=\"sm\">較上季 </i>"
-             "<b class=\"${p.dovr >= 1 ? 'up' : p.dovr <= -1 ? 'dn' : 'flat'}\">${(p.dovr > 0 ? '+' : '') + p.dovr.toFixed(1)}</b>"
+# 手機版（.sm）只顯示箭頭＋絕對值，例如紅色 ▼4.3（使用者 2026-10-29）；桌機（.lb）照舊帶正負號
+DELTA_NEW = ("<span class=\"f-d\" title=\"較上季卡 OVR ${p.last.toFixed(1)}\"><i class=\"lb\">上季卡 OVR <b>${p.last.toFixed(1)}</b>（</i>"
+             "<b class=\"${p.dovr >= 1 ? 'up' : p.dovr <= -1 ? 'dn' : 'flat'}\">"
+             "<i class=\"sm\">${p.dovr >= 0.05 ? '▲' : p.dovr <= -0.05 ? '▼' : '＝'}</i>"
+             "<i class=\"lb\">${(p.dovr > 0 ? '+' : '') + p.dovr.toFixed(1)}</i>"
+             "<i class=\"sm\">${Math.abs(p.dovr).toFixed(1)}</i></b>"
              "<i class=\"lb\">）</i></span>")
 
 

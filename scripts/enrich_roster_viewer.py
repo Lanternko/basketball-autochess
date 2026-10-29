@@ -62,7 +62,7 @@ CSS = """
   #tbl tbody td.ovr{background:var(--panel);font-size:1rem}
   #tbl tbody td.ovr.sortcol{background:linear-gradient(rgba(242,194,48,.07),rgba(242,194,48,.07)) var(--panel)}
   #tbl tbody tr:hover td.ovr{background:var(--panel-2)}
-  #tbl tbody tr.sel td.ovr{background:var(--gold)}
+  #tbl tbody tr.sel td.ovr{background:linear-gradient(rgba(242,194,48,.2),rgba(242,194,48,.2)) var(--panel)}
   #tbl tbody{-webkit-user-select:none;user-select:none;-webkit-touch-callout:none}
 }
 /* team colors + headshot */
@@ -72,27 +72,28 @@ CSS = """
 .tag .logo{position:absolute;right:30px;top:50%;transform:translateY(-50%);height:150px;width:150px;object-fit:contain;opacity:.9;pointer-events:none}
 .tag .shot{position:absolute;right:26px;bottom:7px;height:132px;width:auto;pointer-events:none}
 /* 手機卡片（使用者 2026-10-29：沒有頭像和隊徽；名字和頭像放一起；字太多，用減法）
-   隊色橫幅放位置、排名、名字（.tnm 只在手機顯示）和頭像；下面一列 OVR 圓環配較上季；
-   影響力四格一排；資訊列只留身高、場均分鐘；真實數據只留得分／籃板／助攻三大格 */
-.tag .tnm{display:none}
+   隊色橫幅放位置、身高、排名、名字（.tnm/.tht 只在手機顯示）和頭像；下面 OVR 圓環下方掛較上季箭頭，右邊影響力 2×2；
+   資訊列其餘（球隊、分鐘、場數、防守加分）不顯示；真實數據只留得分／籃板／助攻三大格 */
+.tag .tnm,.tag .tht{display:none}
 @media (max-width:640px){
   .card{grid-template-columns:auto 1fr;gap:10px 12px}
   .card .tag{display:flex;flex-direction:row;align-items:center;justify-content:flex-start;gap:8px;grid-column:1/-1;grid-row:1;margin:-12px -14px 0;min-width:0;height:128px;clip-path:none;padding:10px 14px}
   .tag .rk{font-size:1.5rem;align-self:flex-start;line-height:1.1}
   .tag .pos{align-self:flex-start}
+  .tag .tht{display:block;order:1;align-self:flex-start;font:700 1.05rem/1.5 var(--f-disp);color:var(--ink,#fff);position:relative;z-index:1}
+  .tag .rk{order:2}
   .tag .rk small{font-size:.9rem}
   .tag .logo{right:14px;height:110px;width:110px;opacity:.9}
   .tag .shot{right:6px;height:121px}
   .tag .tnm{display:block;position:absolute;left:14px;right:136px;bottom:15px;z-index:1;font:800 1.55rem/.95 var(--f-disp);text-transform:uppercase;color:var(--ink,#fff);text-shadow:0 0 8px var(--card,#000);overflow-wrap:anywhere}
   .tag .tnm span{display:block;font-size:.9rem;font-weight:600;opacity:.85;margin-bottom:3px}
   .card .who>.nm{display:none}
-  .card .ring{grid-column:1;grid-row:2;align-self:center}
+  .card .ring{grid-column:1;grid-row:2;align-self:end}
   .card .ring svg{width:76px;height:76px}
-  .card .who>.facts{grid-column:2;grid-row:2;align-self:center;display:flex;flex-wrap:wrap;gap:2px 12px;color:var(--muted);font-size:.85rem}
-  .facts .f-tm,.facts .f-gp,.facts .f-x{display:none}
-  .facts .f-d{order:-1;flex-basis:100%;font-size:1rem;color:var(--fg)}
-  .facts .f-d b{font-size:1.25rem}
-  .card .who>.strong{display:grid;grid-template-columns:repeat(4,1fr);gap:4px}
+  .card .who>.facts{grid-column:1;grid-row:3;align-self:start;justify-content:center;display:flex;margin-top:-4px}
+  .facts>span:not(.f-d){display:none}
+  .facts .f-d b{font:700 1.15rem var(--f-disp)}
+  .card .who>.strong{grid-column:2;grid-row:2/4;align-self:center;display:grid;grid-template-columns:repeat(2,1fr);gap:4px}
   .strong .chip{display:flex;flex-direction:column;align-items:center;padding:4px 2px;font-size:.72rem;color:var(--muted);letter-spacing:0}
   .strong .chip i{margin:0;font:700 1.1rem var(--f-disp)}
   .strong .chip.dim{grid-column:1/-1}
@@ -100,9 +101,7 @@ CSS = """
   .rx .rmain .st{flex:1}
   .rx .rsub{display:none}
 }
-}
 .tabbr{color:var(--tt);font-weight:600}
-tbody tr.sel .tabbr{color:inherit}
 /* impact chips：RAPM 攻守淨（對聯盟平均）、在場減不在場（每 100 回合） */
 .chip i.up{color:var(--g-a)}
 .chip i.dn{color:var(--g-f)}
@@ -248,12 +247,12 @@ def inject(path, real):
     s = s.replace('<script>const DATA=', block + '<script>const DATA=', 1)
     hook = '<div class="strong">${tops.map(t => chip(t[0], t[1])).join(\'\')}${chip(\'弱項 \' + low[0], low[1], true)}</div>'
     s = s.replace('${teamDot(p.team)}${p.team}', '${p.team}')  # 舊版注入
-    s = s.replace('${headshot(p)}<span class="pos">', '${headshot(p)}<div class="tnm"><span>${esc(first)}</span>${esc(last)}</div><span class="pos">')  # 舊版注入（橫幅名字前）
+    s = s.replace('${headshot(p)}<span class="pos">', '${headshot(p)}<div class="tnm"><span>${esc(first)}</span>${esc(last)}</div><span class="tht">${ht(p.ht)}</span><span class="pos">')  # 舊版注入（橫幅名字前）
     # 能力值前三／弱項改成影響力（使用者 2026-10-29）；樣板可能已含 realBox
     s = s.replace(hook + '\n      ${realBox(p)}', hook)
     for old, new in [
         (hook, '${impactChips(p)}\n      ${realBox(p)}'),
-        ('<div class="tag"><span class="pos">', '<div class="tag" style="${teamVars(p.team)}">${headshot(p)}<div class="tnm"><span>${esc(first)}</span>${esc(last)}</div><span class="pos">'),
+        ('<div class="tag"><span class="pos">', '<div class="tag" style="${teamVars(p.team)}">${headshot(p)}<div class="tnm"><span>${esc(first)}</span>${esc(last)}</div><span class="tht">${ht(p.ht)}</span><span class="pos">'),
         ("<td class=\"sub${sc('team')}\">${p.team}</td>", "<td class=\"sub${sc('team')}\">${teamCell(p.team)}</td>"),
     ]:
         if new not in s:

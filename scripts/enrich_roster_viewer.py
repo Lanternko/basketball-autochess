@@ -289,11 +289,13 @@ function gameLog(gs) {
   const row = g => `<td>${g[0]}</td><td>${g[1]}</td><td><span class="${g[2] === 'W' ? 'w' : 'l'}">${g[2] === 'W' ? '勝' : '負'}</span></td>` +
     [3, 4, 5, 6, 7, 8, 9].map(i => `<td>${g[i]}</td>`).join('') +
     `<td>${ma(g[10], g[11])}</td><td>${ma(g[12], g[13])}</td><td>${ma(g[14], g[15])}</td><td>${pm(g[16])}</td>`;
-  const n = gs.length, avg = i => (gs.reduce((s, g) => s + g[i], 0) / n).toFixed(1);
+  const n = gs.length, sum = i => gs.reduce((s, g) => s + g[i], 0), avg = i => (sum(i) / n).toFixed(1);
+  // 平均列的投籃／三分／罰球改顯示 N 場合計命中率（使用者 2026-10-30），滑過看合計進球-出手
+  const pct = (m, a) => `<td title="合計 ${sum(m)}-${sum(a)}">${sum(a) ? (sum(m) / sum(a) * 100).toFixed(1) + '%' : '—'}</td>`;
   const head = ['日期', '對手', '勝負', '分鐘', '得分', '籃板', '助攻', '抄截', '阻攻', '失誤', '投籃', '三分', '罰球', '正負'];
   return `<table><thead><tr>${head.map(h => `<th>${h}</th>`).join('')}</tr></thead><tbody>${gs.map(g => `<tr>${row(g)}</tr>`).join('')}</tbody>` +
     `<tfoot><tr><td colspan="3">${n} 場平均</td>${[3, 4, 5, 6, 7, 8, 9].map(i => `<td>${avg(i)}</td>`).join('')}` +
-    `<td>${avg(10)}-${avg(11)}</td><td>${avg(12)}-${avg(13)}</td><td>${avg(14)}-${avg(15)}</td><td>${pm(+avg(16))}</td></tr></tfoot></table>`;
+    `${pct(10, 11)}${pct(12, 13)}${pct(14, 15)}<td>${pm(+avg(16))}</td></tr></tfoot></table>`;
 }
 function impactChips(p) {
   const r = REAL[p.name], m = r && IMPACT[r.id];

@@ -704,11 +704,11 @@ function head() {
   const th = (k, en, zh, cls = '') =>
     `<th tabindex="0" data-k="${k}" class="${cls}${st.sort === k ? ' sorted' + (st.asc ? ' asc' : '') : ''}" title="依${zh}排序">${en}<span class="zh">${zh}</span></th>`;
   let g = '<tr class="grp"><th colspan="3"></th><th class="gx" colspan="3"></th>' +
-    GROUPS.map(x => `<th class="g" colspan="${x[1].length}">${x[0]}</th>`).join('') +
+    GROUPS.map(x => `<th class="g" colspan="${x[1].length + (x[0] === '防守' ? 1 : 0)}">${x[0]}</th>`).join('') +
     '<th class="g" colspan="2">出場</th></tr>';
   let h = '<tr><th class="noh">#</th>' + th('name', 'NAME', '球員', 'nm') + th('pos', 'POS', '位置') + th('team', 'TEAM', '球隊') +
     th('ht', 'HT', '身高') + th('ovr', 'OVR', '總評');
-  for (const x of GROUPS) x[1].forEach(([k, en, zh], i) => { h += th(k, en, zh, i === 0 ? 'gl' : ''); });
+  for (const x of GROUPS) x[1].forEach(([k, en, zh], i) => { h += th(k, en, zh, i === 0 ? 'gl' : ''); if (k === 'pressure') h += th('dbon', 'DIQ', '防守意識'); });
   h += th('min', 'MPG', '分鐘', 'gl') + th('gp', 'GP', '場數') + '</tr>';
   const t = document.querySelector('#tbl thead');
   t.innerHTML = g + h;
@@ -725,6 +725,7 @@ function head() {
   });
 }
 
+const diq = p => `<td class="${p.dbon >= 2 ? 'gA' : p.dbon >= 1 ? 'gB' : p.dbon > 0 ? 'gC' : ''}${st.sort === 'dbon' ? ' sortcol' : ''}"${p.dbon > 0 ? '' : ' style="color:var(--muted)"'} title="防守意識：真實比賽防守 RAPM 高於同位置平均的部分，補能力值量不到的輪轉、站位、補位；只有正值，會加進 OVR">${p.dbon > 0 ? '+' + p.dbon.toFixed(2) : '—'}</td>`;
 function cell(k, v, first, tip) {
   const cls = [];
   if (first) cls.push('gl');
@@ -832,10 +833,10 @@ function render() {
       <td class="sub${sc('team')}">${teamCell(p.team)}</td>
       <td class="sub${sc('ht')}">${ht(p.ht)}</td>
       <td class="ovr${sc('ovr')}">${p.ovr.toFixed(1)}</td>
-      ${GROUPS.map(g => g[1].map(([k], j) => cell(k, p[k], j === 0, k === 'pressure' ? `逼失誤 ${p.force}｜犯規紀律 ${p.foulDisc}` : null)).join('')).join('')}
+      ${GROUPS.map(g => g[1].map(([k], j) => cell(k, p[k], j === 0, k === 'pressure' ? `逼失誤 ${p.force}｜犯規紀律 ${p.foulDisc}` : null)).join('')).join('')}${diq(p)}
       <td class="sub gl${sc('min')}">${p.min.toFixed(1)}</td>
       <td class="sub${sc('gp')}">${p.gp}</td>
-    </tr>`).join('') || '<tr><td colspan="23" class="empty">沒有符合條件的球員。放寬位置或球隊試試。</td></tr>';
+    </tr>`).join('') || '<tr><td colspan="24" class="empty">沒有符合條件的球員。放寬位置或球隊試試。</td></tr>';
   document.querySelectorAll('#tbl tbody tr[data-n]').forEach(tr => {
     tr.onclick = () => { st.sel = decodeURIComponent(tr.dataset.n); render(); };
   });

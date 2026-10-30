@@ -12,12 +12,10 @@ FAVICON = ('<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,'
               + BALL.format(w=4) + '</svg>').replace('"', "'").replace('#', '%23').replace('<', '%3C').replace('>', '%3E') + '">')
 LOGO = ('<svg class="logo" viewBox="0 0 64 64" aria-hidden="true"><rect x="1" y="1" width="62" height="62" rx="14" '
         'fill="var(--panel)" stroke="var(--line)" stroke-width="2"/>' + BALL.format(w=3.5) + '</svg>')
-KICKER = {'inseason': 'NBA · 每日更新', 'card': 'NBA · 正式卡'}
 CSS = """<style>
 .top{position:relative;z-index:5}
 .brand{display:flex;align-items:center;gap:10px}
 .brand .logo{width:44px;height:44px;flex:none}
-.brand .kick{font:600 .72rem var(--f-disp);letter-spacing:.18em;color:var(--muted);margin-bottom:-2px}
 @media (max-width:640px){.brand .logo{width:36px;height:36px}}
 .snav{display:flex;flex-wrap:wrap;align-items:center;gap:6px 10px;margin:6px 0 4px}
 .snav .seg a{display:block;background:var(--panel);color:var(--muted);border-right:1px solid var(--line);font:600 .9rem var(--f-disp);letter-spacing:.04em;padding:6px 11px;text-decoration:none;white-space:nowrap}
@@ -201,9 +199,8 @@ def add_season_nav(html_str, current):
                        f'<span class="sright">{patch_notes_html(m.group(1), current)}</span>{mover}</nav>')
     s, n = re.subn(r'<div class="src">(.*?)</div>', block, html_str, count=1, flags=re.S)
     assert n == 1, 'src div not found'
-    # 版標：icon＋小字＋原標題；favicon 放 <head>
-    s, n = re.subn(r'<h1>(.*?)</h1>', lambda m: f'<div class="brand">{LOGO}<div><div class="kick">{KICKER[current]}</div>'
-                   f'<h1>{m.group(1)}</h1></div></div>', s, count=1)
+    # 版標：icon＋原標題（標題上方小字使用者 2026-10-30 要拿掉）；favicon 放 <head>
+    s, n = re.subn(r'<h1>(.*?)</h1>', lambda m: f'<div class="brand">{LOGO}<h1>{m.group(1)}</h1></div>', s, count=1)
     assert n == 1, 'h1 not found'
     assert s.count('<meta charset="utf-8">') == 1
     s = s.replace('<meta charset="utf-8">', '<meta charset="utf-8">\n' + FAVICON, 1)

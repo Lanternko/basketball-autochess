@@ -14,6 +14,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import rating_m2  # noqa: E402
+import headshot_eyeline  # noqa: E402
 
 ROOT = Path(__file__).resolve().parent.parent
 SRC = ROOT / 'data' / 'season-source' / 'player-games.json'
@@ -286,7 +287,10 @@ function teamCell(t) {
 function headshot(p) {
   const r = REAL[p.name], tid = TEAM_IDS[p.team.split('/').pop()];
   const logo = tid ? `<img class="logo" alt="" src="https://cdn.nba.com/logos/nba/${tid}/global/L/logo.svg" onerror="this.remove()">` : '';
-  return logo + (r && r.id ? `<img class="shot" alt="" loading="lazy" src="https://cdn.nba.com/headshots/nba/latest/260x190/${r.id}.png" onerror="this.remove()">` : '');
+  // 眼線對齊（使用者 2026-10-30）：照片眼睛 y（0–190）往下移到 EYE_Y，底部同量裁掉；比 EYE_Y 還低的不動
+  const d = r && r.ey ? (Math.max(0, EYE_Y - r.ey) / 190 * 100).toFixed(1) : 0;
+  const fit = d > 0 ? ` style="transform:translateY(${d}%);clip-path:inset(0 0 ${d}% 0)"` : '';
+  return logo + (r && r.id ? `<img class="shot" alt="" loading="lazy" src="https://cdn.nba.com/headshots/nba/latest/260x190/${r.id}.png"${fit} onerror="this.remove()">` : '');
 }
 function realBox(p) {
   const r = REAL[p.name];
@@ -557,13 +561,15 @@ def inject(path, real, view='g5'):
     roster = [r[col] for r in names['rows']]
     sub = {n: real[n] for n in roster if n in real}
     ids = {v['id'] for v in sub.values()}
+    eye = headshot_eyeline.ensure(ids)
+    sub = {n: {**v, 'ey': eye.get(str(v['id']))} for n, v in sub.items()}
     imp = {pid: v for pid, v in impact().items() if pid in ids}
     js_json = lambda o: json.dumps(o, ensure_ascii=False, separators=(',', ':'))
     a = json.loads(CARD_SUMMARY.read_text(encoding='utf-8'))['anchors']
     block = (f'{BEGIN}\n<style>{CSS}</style>\n<script>const REAL={js_json(sub)};\nconst REAL_VIEW={js_json(view)};\n'
              f'const ROOKIES=new Set({js_json([n for n in rookies(view) if n in roster])});\nconst IMPACT={js_json(imp)};\n'
              f'const GC_ANC={js_json([a["PR1"], a["PR50"], a["PR99"]])};\nconst GC_CUT={js_json([GCW["cut1"], GCW["cut5"]])};\n'
-             f'const TEAM_COLORS={js_json(TEAM_COLORS)};\nconst TEAM_IDS={js_json(team_ids())};{JS}</script>\n{END}\n')
+             f'const TEAM_COLORS={js_json(TEAM_COLORS)};\nconst TEAM_IDS={js_json(team_ids())};\nconst EYE_Y={headshot_eyeline.TARGET};{JS}</script>\n{END}\n')
     assert s.count('<script>const DATA=') == 1
     s = s.replace('<script>const DATA=', block + '<script>const DATA=', 1)
     hook = '<div class="strong">${tops.map(t => chip(t[0], t[1])).join(\'\')}${chip(\'弱項 \' + low[0], low[1], true)}</div>'

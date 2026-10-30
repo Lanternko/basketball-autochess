@@ -10,6 +10,7 @@ import csv
 import json
 import re
 import sys
+import unicodedata
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
@@ -549,6 +550,10 @@ def rookies(view):
     return sorted(r[h['PLAYER_NAME']] for r in rs['rowSet'] if str(r[h['DRAFT_YEAR']]) == year)
 
 
+def fold(name):
+    return unicodedata.normalize('NFKD', name).encode('ascii', 'ignore').decode().casefold()
+
+
 def team_ids():
     rs = json.loads(SRC.read_text(encoding='utf-8'))['data']['resultSets'][0]
     h = {k: i for i, k in enumerate(rs['headers'])}
@@ -562,7 +567,10 @@ def inject(path, real, view='g5'):
     names = json.loads(re.search(r'const DATA=(\{.*?\});\nconst COLS', s, re.S).group(1))
     col = names['cols'].index('name')
     roster = [r[col] for r in names['rows']]
-    sub = {n: real[n] for n in roster if n in real}
+    # 名單名字和 NBA 原始資料的重音可能不同（2026-27 源資料是 Moussa Cissé、卡片是 Moussa Cisse）：比對時忽略重音
+    by_fold = {fold(n): n for n in real}
+    by_roster = {fold(n): n for n in roster}
+    sub = {n: real[by_fold[fold(n)]] for n in roster if fold(n) in by_fold}
     ids = {v['id'] for v in sub.values()}
     eye = headshot_eyeline.ensure(ids)
     sub = {n: {**v, 'ey': eye.get(str(v['id']))} for n, v in sub.items()}
@@ -570,7 +578,7 @@ def inject(path, real, view='g5'):
     js_json = lambda o: json.dumps(o, ensure_ascii=False, separators=(',', ':'))
     a = json.loads(CARD_SUMMARY.read_text(encoding='utf-8'))['anchors']
     block = (f'{BEGIN}\n<style>{CSS}</style>\n<script>const REAL={js_json(sub)};\nconst REAL_VIEW={js_json(view)};\n'
-             f'const ROOKIES=new Set({js_json([n for n in rookies(view) if n in roster])});\nconst IMPACT={js_json(imp)};\n'
+             f'const ROOKIES=new Set({js_json([by_roster[fold(n)] for n in rookies(view) if fold(n) in by_roster])});\nconst IMPACT={js_json(imp)};\n'
              f'const GC_ANC={js_json([a["PR1"], a["PR50"], a["PR99"]])};\nconst GC_CUT={js_json([GCW["cut1"], GCW["cut5"]])};\n'
              f'const TEAM_COLORS={js_json(TEAM_COLORS)};\nconst TEAM_IDS={js_json(team_ids())};\nconst EYE_Y={headshot_eyeline.TARGET};{JS}</script>\n{END}\n')
     assert s.count('<script>const DATA=') == 1
@@ -592,7 +600,7 @@ def inject(path, real, view='g5'):
             assert s.count(old) == 1, old
             s = s.replace(old, new, 1)
     path.write_text(s, encoding='utf-8')
-    missing = [n for n in roster if n not in real]
+    missing = [n for n in roster if n not in sub]
     print(f'{path}: {len(sub)}/{len(roster)} 人有真實數據；缺 {len(missing)}: {missing[:10]}')
 
 

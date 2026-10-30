@@ -16,8 +16,8 @@
 - **薪水相關分析**（F-072，`reports/salary-corr/`）：已 commit，探索分析不進版本。2K 最貼近薪水（0.71–0.87），card OVR 0.58–0.67，RAPM 單季 0.2–0.3；以前賽季用替代 OVR（bref 進階數據學 0.2.7c，樣本外 ρ 0.80–0.86）。真 OVR 重建以前賽季要約 8 層實驗檔逐季重跑，使用者未要求。
 - **E-132 卡片改讀自製先驗 RAPM（L2）**：完成；階段 A 取消、階段 B 待 **2027-02** 回來算。等使用者：errata、要不要另立「連 defenseBonus 一起換」。
 - **E-134 舊季滾動回測先驗 RAPM 卡**：預註冊草稿 `reports/card-0.2.7c+E134-rolling-prior/`，等使用者選範圍並凍結；defenseBonus 這次一起換（補 L-079）。
-- **E-133 分項目遺忘率**（2026-10-30）：完成 1/5「沒有改善」，W*＝B0，不跑測試（F-071、L-080）。報告 `reports/ovr-inseason-2026-27/e133-attr-decay/report.md`。
-- **E-129 賽中權重曲線**：完成 2/5「沒有改善」（F-070），lead 建議不採用，等 G5。
+- **E-133 分項目遺忘率**（2026-10-30）：完成 1/5「沒有改善」，使用者不採用（R-090，F-071、L-080）。
+- **E-129 賽中權重曲線**：完成 2/5「沒有改善」，使用者不採用（R-090，F-070）。賽中更新速度這條線先停，等 2026-27 季後再說。
 - **E-122 回合時長 D1**：凍結、A1 修正（L-077）後執行中。
 - **E-117 模擬關體力描述量測**：完成（2026-10-30）。球隊賽季誤差略差但在雜訊內，主版 WinImp 幾乎不動（Spearman 0.91），位置版長人偏袒 S 從 +37 翻成 −37。正式流程維持開體力。報告 `reports/sim-0.1.0+E117-fatigue-off/report.md`。
 - **sim 0.1.1 刪體力**（R-088，2026-10-30）：使用者「合」，已從 worktree `.claude/worktrees/agent-ab18991181a92d44a` 合回主 checkout 並 commit（19 檔；E-122 在 defense_fourth_game.js 的未 commit 改動沒進 commit、仍在工作樹）。主 checkout 重驗：npm test 52 過、c0 120 場 sha 604439d5…412a 和舊引擎相同。傳 `fatigue:true` 會報錯；v14–v41 memoized 舊鏈會壞（舊研究腳本）。2026-10-30 依 R-089 再拿掉 doubleThreat 體格項（主 checkout 3 檔，已 commit；和改動前＋E-086 ch1 hook 逐位元相同，timed_game 鎖定雜湊改 edec4342…，npm test 52 過，`dblthreat-phys.diff`）。待修：得分偏高 119.1 vs 115.5（TODO）。報告 `reports/sim-0.1.1-no-fatigue/report.md`。
@@ -38,7 +38,7 @@
 - 共用 checkout：`scripts/season_nav.py`、memory 條目檔常混有別的 session 的改動，只挑自己的段落 commit；`reports/` 被 gitignore，要 `git add -f`。
 
 ## 下一步
-- 等使用者裁 E-129、E-132 errata、E-130 結案；之後新賽季頁跟上 0.2.7c。
+- 等使用者裁 E-132 errata、E-130 結案；之後新賽季頁跟上 0.2.7c。
 - DeepSeek 餘額不足（402），auto_review 失效，等使用者儲值。
 
 ## 開放問題

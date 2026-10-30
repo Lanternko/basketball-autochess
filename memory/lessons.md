@@ -454,3 +454,9 @@
 - 錯誤：E-090 的 h1 以「force 只有 2024-25、2025-26，相鄰季 1 組 < 2」把 pressure 排除在開尾巴之外，但 `reports/defense-tenth/step4-t2/raw/2022-23/`、`2023-24/` 早就有 `0-hustle.json`（DEFLECTIONS、CHARGES_DRAWN）和 `0-matchups.json`（逐對 MATCHUP_TOV）。排除理由不成立，pressure 99 並列 7 人一直沒人修（E-123 才發現）。
 - 規則：以「資料不夠」排除某項之前，先在 `reports/` 底下 grep 該端點或欄名（例如 `DEFLECTIONS`、`MATCHUP_TOV`），列出所有季的現成檔；報告寫明搜過哪些路徑。找不到才排除。
 - 相關：E-090、E-123
+
+### L-076
+- 日期：2026-10-30
+- 錯誤：共用 checkout 用私有 index 只提交自己的 hunk 後，跑 `git reset -- <檔>` 清共用 index，把另一個 session 已 stage、還沒 commit 的 hunk 一起 unstage 了（同三個 scripts 檔）。當下發現，worktree 只剩對方的改動，再 `git add` 才還原。
+- 規則：用私有 index 提交前先看 `git diff --cached`；共用 index 裡有別人已 stage 的東西時，提交後不要 reset 那些檔，或提交後確認 `git diff --cached` 和提交前一樣。另外 `daily_inseason_update.py --shell` 是從 worktree 建頁，worktree 有別人沒 commit 的名單頁改動時，等對方 commit 再發布。
+- 相關：L-047、L-070

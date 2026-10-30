@@ -460,3 +460,15 @@
 - 錯誤：共用 checkout 用私有 index 只提交自己的 hunk 後，跑 `git reset -- <檔>` 清共用 index，把另一個 session 已 stage、還沒 commit 的 hunk 一起 unstage 了（同三個 scripts 檔）。當下發現，worktree 只剩對方的改動，再 `git add` 才還原。
 - 規則：用私有 index 提交前先看 `git diff --cached`；共用 index 裡有別人已 stage 的東西時，提交後不要 reset 那些檔，或提交後確認 `git diff --cached` 和提交前一樣。另外 `daily_inseason_update.py --shell` 是從 worktree 建頁，worktree 有別人沒 commit 的名單頁改動時，等對方 commit 再發布。
 - 相關：L-047、L-070
+
+### L-077
+- 日期：2026-10-30
+- 錯誤：E-120 預註冊 t2 用「30 隊淨分差 MAE 不差 0.1」當門檻，跑 8 seed。lead 凍結前沒算雜訊底：改動會讓隨機數路徑分岔，開關前後不再配對，每隊淨分差抽樣誤差約 0.9 分，只靠雜訊就能讓 MAE 動 0.1 以上。t2 不過大多是雜訊（F-067）。
+- 規則：寫「球隊層不變差」這類門檻前，先用現行版本跑兩組不同 seed，量 MAE 本身的雜訊（或 bootstrap 的 SD）；門檻要明顯大於雜訊，不然就加 seed，或改用不受路徑分岔影響的比較（固定每個事件的隨機數，或用期望值帳本）。預註冊要寫出雜訊底的數字。
+- 相關：E-120、F-067、E-122、L-026
+
+### L-082
+- 日期：2026-10-30
+- 錯誤：E-122 c1 作業 11:10 在 5090 崩潰（worker 讀不到 id），子代理的等待指令只等完成標記，沒看到崩潰，空等 7 小時；lead 也只等子代理回報，沒有自己的檢查。18:23 使用者問「done?」才發現。
+- 規則：遠端長作業一律用「結束碼檔」包起來：`nohup sh -c 'echo $$ > job.pid; timeout <上限> <指令> > job.log 2>&1; echo $? > job.exit' </dev/null &`。檢查一次 ssh 就分出五種狀態：有 job.exit 且 0＝完成；非 0＝崩潰（124 逾時、137 被 kill／OOM）；沒有 job.exit 但 pid 不在＝被中斷（重開機、被殺，查 dmesg）；pid 在但 log 超過 20 分鐘沒更新＝卡住；其他＝還在跑。等待迴圈遇到「還在跑」以外任何一種就退出；ssh 連續失敗 3 次也退出回報「連不上」。lead 派出長作業後自己也開一個同樣的背景檢查，不只靠子代理。共用腳本 `scripts/rjob.sh`（2026-10-30 在 5090 實測五種狀態）：`start <dir> <name> <上限> -- <指令>` 開跑；`wait <dir> <name> [秒]` 用 run_in_background 跑，退出碼 10 完成／11 崩潰／12 被中斷／13 卡住／20 連不上。派工 spec 要求子代理用它，lead 自己也用 `wait` 盯同一個作業。
+- 相關：E-122、L-077

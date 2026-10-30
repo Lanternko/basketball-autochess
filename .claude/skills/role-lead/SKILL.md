@@ -32,7 +32,7 @@ description: basketball-autochess 研究主管：讀 memory/handoff.md 挑下一
 
 | 角色 | kind | 說明 |
 |---|---|---|
-| role-model | implement | 改 `src/` 模擬；重度模擬在 5090 |
+| role-model | implement | 改 `src/` 模擬；重度模擬在 5090（長作業用 `scripts/rjob.sh` 開跑與等待，L-082） |
 | role-card | implement；照預註冊跑回測用 routine | 卡片、賽中 OVR |
 | role-audit | routine（重跑腳本）；判讀回主管 | 必須和產出者不同 session |
 

@@ -1,4 +1,5 @@
 <meta charset="utf-8">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230d1014'/%3E%3Ccircle cx='32' cy='32' r='22' fill='%23f2c230'/%3E%3Cg fill='none' stroke='%231a1405' stroke-width='4'%3E%3Cpath d='M10 32h44M32 10v44M17 16c8 8 8 24 0 32M47 16c-8 8-8 24 0 32'/%3E%3C/g%3E%3C/svg%3E">
 <meta name="viewport" content="width=device-width,initial-scale=1"><title>新賽季 OVR 名單</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -141,10 +142,14 @@ th.noh{cursor:default}
 </style>
 <div class="wrap">
   <div class="top">
-    <h1>2026-27 <span>OVR</span> 名單</h1>
+    <div class="brand"><svg class="logo" viewBox="0 0 64 64" aria-hidden="true"><rect x="1" y="1" width="62" height="62" rx="14" fill="var(--panel)" stroke="var(--line)" stroke-width="2"/><circle cx="32" cy="32" r="22" fill="#f2c230"/><g fill="none" stroke="#1a1405" stroke-width="3.5"><path d="M10 32h44M32 10v44M17 16c8 8 8 24 0 32M47 16c-8 8-8 24 0 32"/></g></svg><div><div class="kick">NBA · 每日更新</div><h1>2026-27 <span>OVR</span> 名單</h1></div></div>
     
 <style>
 .top{position:relative;z-index:5}
+.brand{display:flex;align-items:center;gap:10px}
+.brand .logo{width:44px;height:44px;flex:none}
+.brand .kick{font:600 .72rem var(--f-disp);letter-spacing:.18em;color:var(--muted);margin-bottom:-2px}
+@media (max-width:640px){.brand .logo{width:36px;height:36px}}
 .snav{display:flex;flex-wrap:wrap;align-items:center;gap:6px 10px;margin:6px 0 4px}
 .snav .seg a{display:block;background:var(--panel);color:var(--muted);border-right:1px solid var(--line);font:600 .9rem var(--f-disp);letter-spacing:.04em;padding:6px 11px;text-decoration:none;white-space:nowrap}
 .snav .seg a:last-child{border-right:0}

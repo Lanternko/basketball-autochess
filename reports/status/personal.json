@@ -40,8 +40,18 @@
   "note": "已收束；球隊層 2025-26 勝場 MAE 變差，未切換對局資料，卡片板仍為 v53 校準；不讀 RAPM，樣本內即樣本外：同一份分數直接對 A 半、B 半 RAPM 各算一次 ρ 再平均（reports/ovr-metrics-backfill-2025-26）"
  },
  {
-  "layer": "卡片 OVR（正式卡片板，card 0.2.7）",
-  "description": "card 0.2.6 + E-107 防守 UL：防守加成不打折 max(0, centeredD)，防守 D 改用逐場線性遞減、回合門檻 × 1/2（2026-10-30 使用者裁定 R-061、R-065）（遊戲本體不讀取任何 OVR）",
+  "layer": "卡片 OVR（正式卡片板，card 0.2.7a）",
+  "description": "card 0.2.7 + E-125：傳球 pass 改成量率各半 0.5·z(AST/36)＋0.5·z(AST%)，四季池與錨點照 E-101 重算（2026-10-30 使用者裁定 R-074、R-077）（遊戲本體不讀取任何 OVR）",
+  "players": 414,
+  "rhoNet": 0.779,
+  "rhoDefense": 0.532,
+  "holdoutRho": "未量測",
+  "rho2k": 0.737,
+  "note": "ρRAPM 樣本內（align/封頂用 RAPM）；每場 OVR；card 0.2.7a = card 0.2.7 + E-125；對 card 0.2.7 的 Δρ_{N_W} +0.0004 [-0.0004, +0.0013]、Δρ_{Q_W} +0.0007 [-0.0002, +0.0017]、線性量尺 +0.0004 [-0.0005, +0.0013]（看過 Giannis 才選，不算盲測，只證明不變差，字母小版本）；evaluate 18/19；對 2K27 ρ 取 card-0.2.7+E125-pass-volume/evaluation.json 的 E125-P50 每場值；來源 card-0.2.7a"
+ },
+ {
+  "layer": "卡片 OVR card 0.2.7（前正式版）",
+  "description": "card 0.2.6 + E-107 防守 UL：防守加成不打折 max(0, centeredD)，防守 D 改用逐場線性遞減、回合門檻 × 1/2（2026-10-30 使用者裁定 R-061、R-065）；2026-10-30 由 card 0.2.7a 取代（遊戲本體不讀取任何 OVR）",
   "players": 414,
   "rhoNet": 0.779,
   "rhoDefense": 0.532,

@@ -982,3 +982,13 @@
 - 狀態更新：上線（2026-10-30，R-073 路線 D 簡化版）：起點＝2K 順位曲線換本站尺度−5，x0 齊頭平移（`reports/E121-rookie-scale/report.md`）；老將 0 列變動、npm test 57/0。2025 屆回看 N=10 MAE 11.33（E-116 10.61），看過答案只報告；準確度等 2026-12-31 前瞻
 - 相關：E-116、F-060、R-071、R-073、F-063
 - 來源：使用者 2026-10-30 選 E-116 報告的選項 1
+
+### E-125
+- 日期：2026-10-30
+- 假設：pass 從只看 AST%（AST/astCh）改成 0.5·zs(AST/36，E-055 (c) 收縮)＋0.5·zs(AST%)（R-074，寫法照 foulDraw w075），四季池與 S 錨點照 E-101 重算，樣本外 m1–m3 不明顯變差（門檻同 E-107）。
+- 做法：`reports/card-0.2.7+E125-pass-volume/preregistration.md`（草稿）。基準 card 0.2.7（aebcadf1…c6b6）；P0（w_vol=0）要逐位元重現 attributes-e101.csv 與 card 0.2.7；凍結前只准跑 P0 與 vol 擬合。
+- 已揭露：card 0.2.7 全部欄位；2025-26 常規池官方 AST_PCT 前 15 名與 AST/36（Giannis AST% 第 9、AST/36 6.8）。沒看過任何 comp、新 pass、OVR 或 Δρ。
+- 結果（`reports/card-0.2.7+E125-pass-volume/`，role-card Sonnet 子代理；lead 從 attributes／results.json 重算 c0a、c0、改動欄、具名 pass 值與 m1–m3、p1、npm test 成立）：c0a 逐位元（395e86a0…）、c0 逐位元（aebcadf1…）、c1 57/57、u1 只有 pass 欄變（575/582 列）。m1 +0.0004 [−0.0004, +0.0013]、m2 +0.0007 [−0.0002, +0.0017]、m3 +0.0004 [−0.0005, +0.0013]，三項全過；p1 相鄰季 0.927／0.931／0.896（P0 0.922／0.929／0.889）。evaluate 18/19＝基準；2K27 ρ 0.7359→0.7369。astvol k=5.66、λ=0.5、kh=8。pass 名次（582 人）：Giannis 10→25（值 97.7→96.2，頂端壓縮所以分數只降 1.4）、SGA 14→26、Embiid 96→121、Trae 3→2、Draymond 45→38、Kawhi 121→157。OVR 前 20 只換第 19 名（Knueppel 進、Ausar Thompson 出），動 ≥10 名只有 4 人。simulatedPer36 P0／P50 逐人相同：這條鏈的 cards 沿用既有模擬 per36，新 pass 只進 OVR 迴歸，沒進模擬（R-074 說也進模擬，要另走模擬重跑）。偏離：2025-26 pass 實際入口是 E-090 `a0.py`／`a0-raw.json`（預註冊寫 a0_e101.py），w=0 已逐位元重現。
+- 狀態：完成、判定全過；已發 card 0.2.7a（2026-10-30，使用者「0,2,7a」，R-077；`reports/card-0.2.7a/`）
+- 相關：R-074、R-034、E-070、E-101、E-107、L-026、L-063
+- 來源：使用者 2026-10-30「giannis only has 5 assist, why he is leading in pass」→「same as 3pt, we need to mix ast and ast%」

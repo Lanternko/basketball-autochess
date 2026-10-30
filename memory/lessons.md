@@ -436,3 +436,9 @@
 - 錯誤：在共用 checkout 用 `git add` 把自己的檔放進 index，commit 被 pre-commit hook 擋下的空檔，別的 session 剛好 commit，把我整個 index（24 檔、E-116 上線）帶進它的 commit 00c4a7d，訊息卻是「防守加分改名防守意識」。內容沒錯，但歷史對不上、那個 session 自己的改動也不在那次 commit。
 - 規則：共用 checkout 一律用私有 index commit：`GIT_INDEX_FILE=<scratch>/idx git read-tree HEAD` → 只 `update-index`／`add` 自己的檔 → 同一個 index commit，不碰共用 `.git/index`；hook 擋下就先清掉私有 index 再處理，不把東西留在共用 index。
 - 相關：L-047、L-048
+
+### L-074
+- 日期：2026-10-30
+- 錯誤：E-125 預註冊與收尾都寫「採用時版號 PATCH（card 0.2.8）」，沒拿結果對 R-064 的「影響小」三條件（前 20 換 ≤ 2、前 300 移動 ≥ 10 名 ≤ 30、evaluate 不減）。實際前 20 換 1、移動 4 人、18/19 不減，應是字母；使用者改成「0,2,7a」（R-077）。
+- 規則：預註冊不先定版號，只寫「依 R-064 由結果判字母或 PATCH」；收尾提版號前先把三條件的實際數字列出來再判。
+- 相關：R-064、R-077、E-125

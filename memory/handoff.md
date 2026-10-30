@@ -5,6 +5,7 @@
 - **更新**：2026-10-29 18:40，Claude Code App（lead；分支 claude/project-thread-63h2fz，已 push 到 41cf2bd）
 
 ## 進行中的工作
+- **card 0.2.7a 已發**（2026-10-30，R-074、R-077）：card 0.2.7 + E-125 pass 量率各半，`reports/card-0.2.7a/`（= E-125 work/P50，sha256 04a9c266…165f）。名單頁 2025-26、OVR 傾向錨點、狀態板已改指 0.2.7a。Giannis pass 名次 10→25（值 97.7→96.2），OVR 前 20 只換 1 人（Knueppel 進、Ausar 出）。待辦：新 pass 只進 OVR，模擬沒重跑，要進模擬另立實驗；新賽季頁仍用 0.2.7 公式，要跟上另走 inseason（R-050）。
 - 版本號改制（R-018）：正式卡片 = `card 0.1.0`；下列實驗都掛在它上面。
 - v62 3PT 難度與出手量（E-056，`card 0.1.0+E056`）：完成（被 max_turns 截斷但報告齊全）。直覺驗收未過，等使用者決定 3PT 定義。
 - E-057 三分價值（量為主、同量比準，R-020）：完成，`reports/card-0.1.1+E057-three-value/`。取代版 2K27 ρ 0.4956、Mobley 進前十，主驗收未過，不採用進 OVR；並列版 0.5175 但屬事後挑選（L-026）。待使用者選：threeValue 只當顯示用（PATCH），或另行預註冊並列版樣本外檢驗。2K27 三分參考（R-021，`reports/ref-2k27-3pt/`）：2K 前 100 名中對上 82 人，與 2K 三分的 Spearman 在現行 long 是 0.17，在 threeValue 是 0.49。2K 比 threeValue 更看重少量但很準的射手（Kennard、Durant、Cam Johnson），也比較看好高難度的持球射手（Brunson、Tatum、Markkanen）。

@@ -646,7 +646,7 @@ def three_value_columns(prior_ids):
     a_all = sum(v[2] for d in (s25, s26) for v in d.values())
     mu = m_all / a_all
     rep = mu - THREE_REP_GAP
-    # E-128 errata-4：027b 的 threeValue 照 027 現行算法（兩季即時池、abilityC 先驗、99 封頂）
+    # E-128 errata-4：027b 的 threeValue 照 027 現行算法（兩季即時池、abilityC 先驗；頂端尾巴見下方，2026-10-30 起不封 99）
     prior = {int(k): v['abilityC'] for k, v in load_json(THREE_PRIOR).items()}
 
     def pct(x, arr):
@@ -667,10 +667,20 @@ def three_value_columns(prior_ids):
             c.update(acc=acc, vol=vol, value=vol * (acc - rep))
         cols[pid] = c
     pool = [c['value'] for c in cols.values() if c['ok'] and c['minAll'] >= THREE_POOL_MIN]
+    # 2026-10-30 使用者「3PT 不要封 99」：027b 頂端改走 E-101 百分位尾巴（同卡片 threeValue：top 開、bot 關），
+    # 錨點取本季即時池（m26_anchors），不用 pool-027b 的凍結錨點（那是 E-123 難度調整值，量尺不同）
+    an = m26_anchors(pool) if M27B_MODE and pool else None
+
+    def attr_open(x):
+        p = pct(x, pool)
+        if an is not None and p >= 99:
+            return m26_top_tail(x - an['r99'], an['S'])
+        return attr(p)
+
     for c in cols.values():
-        c['threeValue'] = attr(pct(c['value'], pool)) if c['ok'] else None
+        c['threeValue'] = attr_open(c['value']) if c['ok'] else None
     return cols, {'mu': mu, 'rep': rep, 'k': THREE_K, 'poolMin': THREE_POOL_MIN, 'poolSize': len(pool),
-                  'leagueFG3M': m_all, 'leagueFG3A': a_all}
+                  'leagueFG3M': m_all, 'leagueFG3A': a_all, 'topTail': an}
 
 
 # ------------------------------------------------------------------ foulDraw（E-070 公式，CARD_MODE=022）
@@ -1117,7 +1127,7 @@ def main():
                                           'priorShotSampleFilled': [mp['priorShotSampleFilled'], mp['priorCards']]},
         'sanity': sanity,
         'threeValue': {**tv_info, 'formula': 'vol*(acc-rep); vol=合併(2025-26+2026-27)3PA/MIN*36; acc=(k*abilityC_2025-26+FG3M_2026-27)/(k+FG3A_2026-27)'
-                       '（本季無出手難度資料，用原始命中）; rep=合併聯盟3P%-0.03; 池=合併MIN>=500且有先驗卡; 百分位→attr() 40-99',
+                       '（本季無出手難度資料，用原始命中）; rep=合併聯盟3P%-0.03; 池=合併MIN>=500且有先驗卡; 百分位→attr() 40-99，027b 下 PR≥99 走頂端尾巴（錨點＝即時池 r99、S）',
                        'note': '顯示用，不進 OVR（R-024）；long 欄仍留在 ranking.csv 並進 OVR，但表格不顯示'},
     }
     (out_dir / 'meta.json').write_text(json.dumps(meta, ensure_ascii=False, indent=2), encoding='utf-8')

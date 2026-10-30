@@ -1,0 +1,16 @@
+{
+  "sim": "0.1.1",
+  "startCommit": "7a2d0b0556b0bc7869f0493adf2d3ffb9b95979d",
+  "worktree": "D:/Projects/CODING/basketball-autochess/.claude/worktrees/agent-ab18991181a92d44a",
+  "branch": "worktree-agent-ab18991181a92d44a",
+  "g1": {"pass": true, "note": "npm test all pass (52 tests); strength_benchmark and replay_accounting test files could not run in the worktree because untracked data is missing (environmental, unrelated to this change)"},
+  "c0": {"pass": true,
+    "budget_60_games_and_heuristic_60_games": {"old_fatigue_false_sha256": "604439d500669cf177f8e9e3056b3fcde44a137dbb62dcd2f572b6a6ddfe412a", "new_sha256": "604439d500669cf177f8e9e3056b3fcde44a137dbb62dcd2f572b6a6ddfe412a", "perGameHashesIdentical": true, "files": ["out/c0-old.json", "out/c0-new.json"]},
+    "strength_benchmark_20_games": {"old": "0b5af77a695253fc7a39833caf92c855dbb9415545bea604ec4b51c575c0625b", "new": "0b5af77a695253fc7a39833caf92c855dbb9415545bea604ec4b51c575c0625b", "identical": true},
+    "per36_report_20_games": {"old": "2908a3395067e2a144e8b2a59ce9464466cf5b191f52d855d0867aa8b67838b6", "new": "2908a3395067e2a144e8b2a59ce9464466cf5b191f52d855d0867aa8b67838b6", "identical": true}},
+  "c1": {"pass": true, "oldFatigueFalse": "108-122", "new": "108-122", "player": "Nikola Jokic", "seed": 20261028},
+  "c2": {"pass": true, "seed": 20261031, "games": 30, "mismatches": [], "file": "out/c2-new.json"},
+  "c3": {"pass": true, "players": 10, "winsPer82EqualToWinimpOffCsv_5dp": true, "checkpointJsonIdenticalToE117CheckpointOff": true, "seconds": 372, "file": "out/c3-new.json"},
+  "d1": {"pass": true, "remaining": "8 hits in src/, all the string label rotation:'energy-target-minutes-position-heuristic' (defense_a/clock/fifth/fourth/game/third_clock_audit/third _game, timed_game)", "reason": "label is part of every game result; changing it would break bit-identity (per-game result sha256)"},
+  "memoizedChainRegression": {"new": "impactEngine('rotation-space',{game:true,memoized:true}) throws Impact source anchor drift (v14..v41 anchor on the deleted opt.fatigue?M.applyStamina lineups line)", "old": "OK"}
+}

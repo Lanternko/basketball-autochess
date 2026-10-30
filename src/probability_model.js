@@ -565,23 +565,3 @@ export function creationScore(p) {
     + w.drive * p.drive + w.pass * (p.pass ?? C.ATTR_MIDPOINT)
     - C.CREATE_OFFBALL_PENALTY * (p.offBall - C.ATTR_MIDPOINT);
 }
-
-/** 體力：削弱屬性而非加減機率（照 Nine_innings 的 pitcherEffectiveness）。 */
-export function applyStamina(player, fatigue) {
-  const eff = C.STAMINA_MAX_EFF
-    - (C.STAMINA_MAX_EFF - C.STAMINA_MIN_EFF) * Math.max(0, Math.min(1, fatigue));
-  return {
-    ...player,
-    long: player.long * eff,
-    mid: player.mid * eff,
-    short: player.short * eff,
-    drive: player.drive * eff,
-    _eff: eff,
-  };
-}
-
-/** 一名球員在該 possession 消耗的體力，體力屬性越高消耗越慢。 */
-export function fatigueRate(player, possessions) {
-  const resist = 0.6 + tanhEff(player.stamina, 45) * 0.4;
-  return possessions / (150 * resist);
-}

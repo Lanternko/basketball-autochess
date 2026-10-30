@@ -17,7 +17,7 @@ export function opponentTeam(x, opponent, cap, phase=0){
   schedule:workloadRotation(loads,phase)};
 }
 export function options(x, seed, schedules){
- return {...x.options,quarterSeconds:720,sourcePeriods:4,maxOvertimes:0,fatigue:true,substitutions:true,
+ return {...x.options,quarterSeconds:720,sourcePeriods:4,maxOvertimes:0,substitutions:true,
   minuteMode:'budget',foulOut:99,sourceRotations:schedules,seed,creationPolicy:'rotation-space',contextLongScale:1,
   spaceCenter:read('reports/player-impact-v20/2025-26-synthetic-center.json').fullCenter};
 }

@@ -455,10 +455,6 @@ export function weightedTop(values, weights) {
   return head + (rest.reduce((s, x) => s + x, 0) / rest.length) * restW;
 }
 
-// --- 體力 ---------------------------------------------------------------
-export const STAMINA_MIN_EFF = 0.70;
-export const STAMINA_MAX_EFF = 1.00;
-
 // --- 夾值 ---------------------------------------------------------------
 export const CLAMP = {
   makeLong: [0.05, 0.62],

@@ -14,6 +14,7 @@ LOGO = ('<svg class="logo" viewBox="0 0 64 64" aria-hidden="true"><rect x="1" y=
         'fill="var(--panel)" stroke="var(--line)" stroke-width="2"/>' + BALL.format(w=3.5) + '</svg>')
 CSS = """<style>
 .top{position:relative;z-index:5}
+.top{align-items:center}
 .brand{display:flex;align-items:center;gap:10px}
 .brand .logo{width:44px;height:44px;flex:none}
 @media (max-width:640px){.brand .logo{width:36px;height:36px}}

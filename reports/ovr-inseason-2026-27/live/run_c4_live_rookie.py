@@ -26,12 +26,17 @@ DEF_ATTRS = ('onBall', 'help')                   # 2026-10-30 使用者：新秀
 
 OLD_LINE = "    C.write_csv(out_dir / 'ranking.csv', [{k: r[k] for k in head} for r in rows], head)\n"
 NEW_LINE = "    _E116.write_outputs(globals(), locals(), out_dir, rows, head, nopr)\n"
+# 2026-10-30 使用者：老將防守解凍，「用 TUL 類似的做法」→ onBall／help 改四季窗口逐場線性遞減（rookie_defense.veteran）
+OLD_DEF = "    attrs = live_predict(delta2, rel_, undefined, frozen, diag=diag)\n"
+NEW_DEF = OLD_DEF + "    _E116.vet_defense(sd26, attrs, prior_cards)\n"
+GAMES_PER_SEASON = 1230
 
 
 def load_ns():
     src = ORIG.read_text(encoding='utf-8')
     assert src.count(OLD_LINE) == 1, 'run_c4_live.py 的 ranking.csv 寫入行對不上'
-    src = src.replace(OLD_LINE, NEW_LINE)
+    assert src.count(OLD_DEF) == 1, 'run_c4_live.py 的 live_predict 呼叫行對不上'
+    src = src.replace(OLD_LINE, NEW_LINE).replace(OLD_DEF, NEW_DEF)
     ns = {'__name__': 'run_c4_live_exec', '__file__': str(ORIG), '_E116': sys.modules[__name__]}
     exec(compile(src, str(ORIG), 'exec'), ns)
     return ns
@@ -111,6 +116,28 @@ def rookie_windows(ns, sd, mapping, rookies, n):
 
 
 # ------------------------------------------------------------------ main() 內呼叫
+VET_DEF_INFO = {}
+
+
+def vet_defense(sd26, attrs, prior_cards):
+    """老將 onBall／help：四季窗口逐場線性遞減（rookie_defense.veteran）。c＝聯盟已賽場數／1230·82 格；算不出的人維持先驗卡。
+    只改 attrs（之後 pw.predict 用）；lastOVR／檢查 (a) 仍用先驗卡，所以 dOVR 含「單季卡 → 四季窗口」的換算差。"""
+    games = {r['GAME_ID'] for b in sd26['box'].values() for r in b['rows']}
+    c = len(games) / GAMES_PER_SEASON * G_GAMES
+    vd, ww = RD.veteran(c, '2026-27', {p: {'PG': 'G', 'SG': 'G', 'SF': 'F', 'PF': 'F', 'C': 'C'}.get(pc.get('pos')) for p, pc in prior_cards.items()})
+    n = 0
+    for pid, x in attrs.items():
+        v = vd.get(pid)
+        if not v:
+            continue
+        for a in DEF_ATTRS:
+            if v.get(a) is not None:
+                x[a] = v[a]
+        n += 1
+    VET_DEF_INFO.update(games=len(games), c=c, weights=ww, players=n)
+    print(f'老將防守四季窗口：聯盟 {len(games)} 場（c={c:.2f} 格），權重 {ww}，更新 {n} 人', file=sys.stderr)
+
+
 def write_outputs(g, loc, out_dir, rows, head, nopr):
     C, ATTRS = g['C'], g['ATTRS']
     doc = json.load(open(ROOKIE_JSON, encoding='utf-8'))

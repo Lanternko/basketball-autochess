@@ -51,9 +51,8 @@ def frozen_stats():
     return json.load(open(E060 / 'stability.json', encoding='utf-8'))['stats']['2025-26']
 
 
-def onball_r(tabs, st, pos_fallback=None):
-    """E-060 components.compute 的單一球員部分，組平均／z 用凍結的 st。回傳 {pid: r}（缺任何一個分量就不給）。"""
-    pos_fallback = pos_fallback or {}
+def onball_acc(tabs):
+    """E-060 components.compute 的原始累計量（可加權相加）：{pid: {c3, min, ppu, load, pp, tx0, tx1, pos}}。"""
     adv = {}
     for r in tabs['advanced']:
         u = r.get('USG_PCT')
@@ -62,15 +61,18 @@ def onball_r(tabs, st, pos_fallback=None):
     pos = {}
     for r in tabs['three']:
         pos.setdefault(r['CLOSE_DEF_PERSON_ID'], (r['PLAYER_POSITION'] or '').split('-')[0])
-    hus = {}
+    out = {}
+
+    def get(pid):
+        return out.setdefault(pid, dict(c3=0.0, min=0.0, ppu=0.0, load=0.0, pp=0.0, tx0=0.0, tx1=0.0, pos=pos.get(pid)))
     for r in tabs['hustle']:
         if r['CONTESTED_SHOTS_3PT'] is None or not r['MIN']:
             continue
-        h = hus.setdefault(r['PLAYER_ID'], [0.0, 0.0])
-        h[0] += r['CONTESTED_SHOTS_3PT']; h[1] += r['MIN']
-    acc, pair = {}, {}
+        h = get(r['PLAYER_ID'])
+        h['c3'] += r['CONTESTED_SHOTS_3PT']; h['min'] += r['MIN']
+    pair = {}
     for r in tabs['matchups']:
-        d = r['DEF_PLAYER_ID']; a = acc.setdefault(d, dict(pp=0.0, ppu=0.0, load=0.0))
+        d = r['DEF_PLAYER_ID']; a = get(d)
         a['pp'] += r['PARTIAL_POSS'] or 0
         u = adv.get(r['OFF_PLAYER_ID'])
         if u is not None:
@@ -80,26 +82,50 @@ def onball_r(tabs, st, pos_fallback=None):
     tot = {}
     for (d, o), (f_, p_) in pair.items():
         t = tot.setdefault(o, [0.0, 0.0]); t[0] += f_; t[1] += p_
-    tx = {}
     for (d, o), (f_, p_) in pair.items():
         if p_ <= 0:
             continue
         F, P = tot[o]
         if P - p_ <= 0:
             continue
-        x = tx.setdefault(d, [0.0, 0.0]); x[0] += f_; x[1] += p_ * (F - f_) / (P - p_)
+        x = out[d]; x['tx0'] += f_; x['tx1'] += p_ * (F - f_) / (P - p_)
+        x['tx'] = True
+    for pid in out:
+        out[pid]['adv'] = pid in adv
+    return out
+
+
+def acc_sum(parts):
+    """[(權重, onball_acc 結果)] → 加權相加；pos 取最新（列表最後）有值的那季，adv／tx 任一季有就算有。"""
+    out = {}
+    for w, acc in parts:
+        for pid, a in acc.items():
+            o = out.setdefault(pid, dict(c3=0.0, min=0.0, ppu=0.0, load=0.0, pp=0.0, tx0=0.0, tx1=0.0, pos=None, adv=False, tx=False))
+            for k in ('c3', 'min', 'ppu', 'load', 'pp', 'tx0', 'tx1'):
+                o[k] += w * a[k]
+            o['pos'] = a['pos'] or o['pos']
+            o['adv'] = o['adv'] or a['adv']; o['tx'] = o['tx'] or a.get('tx', False)
+    return out
+
+
+def r_of_acc(acc, st, pos_fallback=None):
+    """累計量 → E-060 r（組平均／z 用凍結的 st）。回傳 {pid: r}（缺任何一個分量就不給）。"""
+    pos_fallback = pos_fallback or {}
     gm, zc, zb, zt, lmb = st['groupMeanC3'], st['zC3'], st['zB'], st['zT'], st['leagueMeanB']
     out = {}
-    for pid in adv:
-        g = pos.get(pid) or pos_fallback.get(pid)
-        c3, m = hus.get(pid), acc.get(pid)
-        if g not in gm or not c3 or not m or m['ppu'] <= 0 or m['pp'] <= 0 or pid not in tx:
+    for pid, m in acc.items():
+        g = m['pos'] or pos_fallback.get(pid)
+        if not m['adv'] or g not in gm or m['min'] <= 0 or m['ppu'] <= 0 or m['pp'] <= 0 or not m.get('tx'):
             continue
-        C3 = (c3[1] * (36 * c3[0] / c3[1]) + K_C3 * gm[g]) / (c3[1] + K_C3)
+        C3 = (m['min'] * (36 * m['c3'] / m['min']) + K_C3 * gm[g]) / (m['min'] + K_C3)
         B = (m['ppu'] * (m['load'] / m['ppu']) + K_B * lmb) / (m['ppu'] + K_B)
-        T = (m['pp'] / (m['pp'] + K_T)) * (100 * (tx[pid][0] - tx[pid][1]) / m['pp'])
+        T = (m['pp'] / (m['pp'] + K_T)) * (100 * (m['tx0'] - m['tx1']) / m['pp'])
         out[pid] = (C3 - zc[g][0]) / zc[g][1] + (B - zb[0]) / zb[1] - (T - zt[0]) / zt[1]
     return out
+
+
+def onball_r(tabs, st, pos_fallback=None):
+    return r_of_acc(onball_acc(tabs), st, pos_fallback)
 
 
 class OnBallScale:
@@ -147,6 +173,71 @@ def inseason(season='2026-27', pos_fallback=None):
         if r['CLOSE_DEF_PERSON_ID'] in out:
             out[r['CLOSE_DEF_PERSON_ID']]['n3'] = r.get('FG3A')
     return out
+
+
+PAST_RAW = ROOT / 'reports/defense-tenth/step4-t2/raw'
+PAST = ('2022-23', '2023-24', '2024-25', '2025-26')     # 由舊到新
+KINDS = ('rim', 'three', 'hustle', 'advanced', 'matchups')
+SLOTS, WIN = 82, 4 * 82
+
+
+def window_weights(c):
+    """E-104 TL 的逐場線性遞減搬到季總計（2026-10-30 使用者：老將防守「用 TUL 類似的做法」，四季窗口）。
+    聯盟時間每季 82 格、窗口 328 格，最近一格 u≈1、窗口最舊 u≈0；本季已過 c 格（聯盟已賽場數／1230·82），整個窗口往後推 c 格，
+    最舊那季被推出窗口的部分權重 0。追蹤表只有季總計，所以每季的量乘上「該季那段的平均 u」（假設比賽在季內平均分布）。
+    再除以整個窗口的權重總和（328 格平均 u＝0.5 → 2 季）。回傳 {季: 權重}。
+    實際用時還要再照每人自己有資料的季數正規化（veteran 的 season_units），見 veteran。"""
+    w = {}
+    if c > 0:
+        w['2026-27'] = (WIN - c / 2) / WIN
+    for k, s in enumerate(reversed(PAST), 1):
+        b = WIN - c - SLOTS * (k - 1)
+        a = b - SLOTS
+        w[s] = (max(b, 0) ** 2 - max(a, 0) ** 2) / (2 * WIN * SLOTS)
+    return {s: v / 2.0 for s, v in w.items()}
+
+
+def veteran(c, season='2026-27', pos_fallback=None):
+    """老將四季窗口加權的 onBall／help：{pid: {'onBall', 'help'}}（缺分量的不給）；另回傳權重。本季表沒抓到就只用往年四季。"""
+    parts = []
+    for s in PAST:
+        parts.append((s, {k: table(PAST_RAW / s / f'0-{k}.json') for k in KINDS}))
+    d = ROOT / 'data/defense-seventh' / season / 'tracking'
+    if c > 0 and all((d / f'{k}.json').exists() for k in KINDS):
+        parts.append((season, {k: table(d / f'{k}.json') for k in KINDS}))
+    ww = window_weights(c)
+    ww = {s: ww[s] for s, _ in parts if s in ww}
+    # 2026-10-30 使用者選 2：有效樣本照每人實際有資料的季數算，不整體 ÷2（只打過一兩季的人不多收縮）。
+    # 每人除以自己有資料那幾季的權重和（本季只算已過的 c/82 季）→ 各季量的加權平均；只有 2025-26 的人＝卡片原值。
+    # 除數下限＝他各季權重的最大值：只有本季幾場的人不會被放大成超過實際樣本（等於新秀 R-075 的 w=1 本季值）。
+    units = {s: ww[s] * (c / SLOTS if s == season else 1.0) for s in ww}
+    rim, rim_f = {}, {}
+    for s, tabs in parts:
+        for r in tabs['rim']:
+            n, dd = r.get('FGA_LT_06'), r.get('PLUSMINUS')
+            if n and n > 0 and dd is not None:
+                pid = r['CLOSE_DEF_PERSON_ID']
+                x = rim.setdefault(pid, [0.0, 0.0])
+                x[0] += ww[s] * n; x[1] += ww[s] * n * dd
+                f = rim_f.setdefault(pid, [0.0, 0.0]); f[0] += units[s]; f[1] = max(f[1], ww[s])
+    out = {}
+    for pid, (n, nd) in rim.items():
+        if n > 0:
+            n_eff = n / max(rim_f[pid])
+            out.setdefault(pid, {})['help'] = inverse((nd / n) * n_eff / (n_eff + K_HELP), CURVE_DEF_RIM)
+    accs = [(s, onball_acc(tabs)) for s, tabs in parts]
+    acc = acc_sum([(ww[s], a) for s, a in accs])
+    ob_f = {}
+    for s, a in accs:
+        for pid in a:
+            f = ob_f.setdefault(pid, [0.0, 0.0]); f[0] += units[s]; f[1] = max(f[1], ww[s])
+    for pid, m in acc.items():
+        for k in ('c3', 'min', 'ppu', 'load', 'pp', 'tx0', 'tx1'):
+            m[k] /= max(ob_f[pid])
+    scale = OnBallScale()
+    for pid, r in r_of_acc(acc, frozen_stats(), pos_fallback).items():
+        out.setdefault(pid, {})['onBall'] = scale(r)
+    return out, ww
 
 
 def check():

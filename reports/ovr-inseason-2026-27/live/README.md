@@ -36,3 +36,10 @@
 - `scripts/fetch_defense_tracking.mjs 2026-27` 每天重抓整季累計的防守追蹤表（rim、three、hustle、advanced、matchups）→ `data/defense-seventh/2026-27/tracking/`；daily 的 `step_fetch_tracking`，失敗沿用上次的表。
 - `rookie_defense.py`：照 card 0.2.7 同一套公式算 onBall（E-060 r＝zC3＋zB−zT，組平均與 z 凍結在 2025-26；r→屬性用 2025-26 對照內插＋E-101 尾巴）與 help（inverse(PLUSMINUS·n/(n+200), CURVE_DEF_RIM)）。`--check` 拿 2025-26 原始表重算：onBall 575 人最大差 1.8e-13，help 576 人最大差 0.15（卡片四捨五入 0.1）。
 - `run_c4_live_rookie.py`：新秀只要出賽（N>0）且表裡有值，onBall／help 直接換成當季值（w=1，不另收縮；公式本身已含樣本量收縮，零樣本的人約落在 onBall 66、help 71）。老將仍凍結在先驗卡；新秀 defenseBonus 仍是 0。
+
+## 老將賽中防守（2026-10-30，使用者：「用 TUL 類似的做法」、四季窗口）
+- `rookie_defense.veteran(c)`：onBall／help 改用四季窗口逐場線性遞減（E-104 TL 的權重搬到季總計）。窗口 328 格（每季 82 格），最近一格 u≈1、最舊 u≈0；本季已過 c＝聯盟已賽場數／1230·82 格，窗口跟著往後推，2022-23 慢慢滑出。追蹤表只有季總計，每季的原始量（守禁區出手、PLUSMINUS·n、三分干擾、MIN、matchup 回合等）乘上該季那段的平均 u 再相加，再除以「他自己有資料那幾季的權重和」（本季只算已過的 c/82 季；下限＝他各季權重的最大值），等於各季量的加權平均：全勤四季的人有效樣本約一季，只有 2025-26 的人＝卡片原值，只有本季幾場的人＝本季原始量（同新秀 R-075）。公式、z 凍結值、r→屬性對照同新秀。
+- 開季（c=0）權重：2022-23 0.0625、2023-24 0.1875、2024-25 0.3125、2025-26 0.4375；2026-10-28 資料（68 場，c=4.5）本季 0.497。
+- 往年原始表：`reports/defense-tenth/step4-t2/raw/<季>/0-*.json`；本季：`data/defense-seventh/2026-27/tracking/`。
+- `run_c4_live_rookie.py` 在 main() 的 `live_predict` 之後插 `vet_defense`（記憶體替換，不改 run_c4_live.py）；算不出的人維持先驗卡。lastOVR 仍是先驗卡算的，所以 dOVR 含「單季卡 → 四季窗口」的換算差。新秀仍照 R-075（w=1 本季值）；defenseBonus 仍凍結。
+- 第一版整體 ÷2 會讓只打過一兩季的人多收縮（Maluach help 94.2 → 82.4），使用者選改成每人照實際季數正規化（R-076）；現在 Maluach 只受本季比賽影響（94.2 → 89.6）。

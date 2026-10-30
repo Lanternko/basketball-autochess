@@ -8,7 +8,7 @@ description: basketball-autochess 研究主管：讀 memory/handoff.md 挑下一
 四個角色：主管（本檔）、模擬引擎 `role-model`、卡片與賽中 OVR `role-card`、稽核 `role-audit`。角色之間只透過 `memory/` 溝通（`memory/README.md`），不靠對話交接。
 
 ## 負責
-- 讀 `memory/handoff.md` → `lessons.md` → `rulings.md`，grep 相關 F／E 條目，挑**一個**下一步。
+- 讀 `memory/handoff.md` → `digest.md`（先跑 `python memory/build_digest.py`；lessons／rulings 摘要），grep 相關 L／R 全文與 F／E 條目，挑**一個**下一步。
 - 寫成一份完整 spec，派給一個角色的乾淨 session（task 開頭寫「用 role-xxx skill」）。一份 spec 從實作做到驗證，不拆成一串小派工。
 - 開工前在 `experiments.md` 追加 E 條目（狀態 `進行中`）；要凍結的先寫預註冊，凍結後才看結果。
 - 審結果：自己看 diff、關卡輸出、數字，不只信子 session 自報；需要重算時派 role-audit。

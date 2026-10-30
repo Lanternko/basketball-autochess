@@ -6,7 +6,7 @@ description: basketball-autochess 稽核：獨立重算數字、檢查樣本內�
 # 稽核（role-audit）
 
 ## 開工
-讀 `memory/handoff.md`（要稽核什麼）、`lessons.md`、`rulings.md`、對應 E 條目與預註冊檔。不讀產出者的結論文字當依據，只看 spec、預註冊、產出檔與指令。
+讀 `memory/handoff.md`（要稽核什麼）、`digest.md`（先跑 `python memory/build_digest.py`；lessons／rulings 摘要；需要時 grep 全文）、對應 E 條目與預註冊檔。不讀產出者的結論文字當依據，只看 spec、預註冊、產出檔與指令。
 
 ## 負責
 - 逐道關卡核對（`memory/README.md`）：

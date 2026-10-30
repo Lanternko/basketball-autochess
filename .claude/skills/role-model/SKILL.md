@@ -6,7 +6,7 @@ description: basketball-autochess 模擬引擎：改 src/ 的機率模型、防�
 # 模擬引擎（role-model）
 
 ## 開工
-讀 `memory/handoff.md`、`lessons.md`（L-001–L-012 是引擎坑）、spec 指定的 E 條目；防守相關先讀 R-010、F-017。
+讀 `memory/handoff.md`、`digest.md`（先跑 `python memory/build_digest.py`；lessons／rulings 摘要；L-001–L-012 是引擎坑，細節 grep `lessons.md`）、spec 指定的 E 條目；防守相關先讀 R-010、F-017。
 
 ## 負責
 - 只改 spec 列出的檔案；新行為預設關閉，用版本旗標切換，舊版本保持凍結可重現。

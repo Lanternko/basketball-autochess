@@ -10,17 +10,18 @@
 | 檔案 | 用途 | ID |
 | --- | --- | --- |
 | [handoff.md](handoff.md) | 交接說明：**只有「目前狀態」一份**（不是日誌）。進行中的工作、誰在做、未 commit 的改動、下一步、開放問題。每次收工覆寫。 | 無 |
-| [lessons.md](lessons.md) | 經驗教訓：發生什麼、以後一律怎麼做、對應的測試或關卡。 | `L-001`… |
-| [rulings.md](rulings.md) | 裁決：使用者對球員評價與驗收方式的裁定、籃球規則、硬規則。 | `R-001`… |
+| digest.md | **開工讀這份**：lessons／rulings 一行一條摘要表。不進 git，開工跑 `python memory/build_digest.py` 重產，不手改。 | 無 |
+| [lessons.md](lessons.md) | 經驗教訓全文：發生什麼、以後一律怎麼做、對應的測試或關卡。只用 grep 查。 | `L-001`… |
+| [rulings.md](rulings.md) | 裁決全文：使用者對球員評價與驗收方式的裁定、籃球規則、硬規則。只用 grep 查。 | `R-001`… |
 | [findings.md](findings.md) | 發現帳本：關於模型、資料、球員、程式的事實，附證據與狀態（已證實／被推翻／待驗）。已知限制與還沒修的也在這裡（狀態「待驗」）。 | `F-001`… |
 | [experiments.md](experiments.md) | 實驗登記：模擬版本、卡片版本、預註冊、回測、量測。 | `E-001`… |
 | [references.md](references.md) | 外部參考：論文、外部 repo、資料來源；寫借了什麼、用在哪個檔或條目。不必讀，要實踐先蒸餾成 README 流程或 R／L 條目。 | `S-001`… |
+| [archive/](archive/) | 從 handoff 移出的舊日期段落等歸檔，原文不改。開工不讀，只用 grep 查。 | 無 |
 
 ## 開工必讀順序
 
 1. `handoff.md`（現在在做什麼、下一步）
-2. `lessons.md`（不要再犯的錯）
-3. `rulings.md`（使用者的裁定，卡片與驗收不得違反）
+2. `digest.md`（先跑 `python memory/build_digest.py`；lessons 不要再犯的錯＋rulings 使用者裁定的摘要；要看發生什麼、理由，`grep -n '^### L-012' lessons.md` 查全文）
 4. 其餘按需查：`grep -n "關鍵字" memory/findings.md memory/experiments.md memory/references.md`
 
 ## 寫入規則

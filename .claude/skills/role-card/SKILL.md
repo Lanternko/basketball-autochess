@@ -6,7 +6,7 @@ description: basketball-autochess 卡片：卡片 OVR、賽中 OVR、RAPM 校準
 # 卡片與賽中 OVR（role-card）
 
 ## 開工
-讀 `memory/handoff.md`、`lessons.md`、`rulings.md`（R-001–R-007 是球員評價與驗收裁定）；正式卡見 R-012，賽中 OVR 見 E-033、R-008。
+讀 `memory/handoff.md`、`digest.md`（先跑 `python memory/build_digest.py`；lessons／rulings 摘要；R-001–R-007 是球員評價與驗收裁定，細節 grep `rulings.md`）；正式卡見 R-012，賽中 OVR 見 E-033、R-008。
 
 ## 負責
 - 有預註冊就照凍結內容做：不改門檻、不換參數；發現預註冊有錯先停下，寫 errata 給使用者核可。

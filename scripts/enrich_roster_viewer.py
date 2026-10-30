@@ -299,7 +299,8 @@ function headshot(p) {
 function realBox(p) {
   const r = REAL[p.name];
   if (!r) return '<div class="real-h">真實數據：找不到這位球員的 2025-26 例行賽紀錄</div>';
-  const f1 = v => v.toFixed(1), pc = v => (v == null ? '—' : (v * 100).toFixed(1) + '%');
+  // 100% 以上（小樣本，如 1 場 TS 133%）不顯示小數，細項才不會比別人長、多換一行讓卡片變高
+  const f1 = v => v.toFixed(1), pc = v => (v == null ? '—' : (v * 100).toFixed(v >= 1 ? 0 : 1) + '%');
   const pm = v => (v > 0 ? '+' : '') + v.toFixed(1);
   // 主次分明（使用者 2026-10-29：十二格一樣大太雜）：得分／籃板／助攻大格，其餘分三行小字
   const main = [['得分', f1(r.pts)], ['籃板', f1(r.reb)], ['助攻', f1(r.ast)], ['正負值', pm(r.pm)]];
@@ -385,7 +386,9 @@ function seasonLog(r) {
 }
 function impactChips(p) {
   const r = REAL[p.name], m = r && IMPACT[r.id];
-  if (!m) return '<div class="strong"><span class="chip dim">影響力<i class="flat">無 2025-26 RAPM</i></span></div>';
+  // 沒有 RAPM（新秀等）也排滿四格「—」，卡片高度才和別人一樣（使用者 2026-10-30）
+  if (!m) return `<div class="strong">${['進攻影響', '防守影響', '淨影響', '在場增益'].map(lab =>
+    `<span class="chip" title="無 2025-26 RAPM">${lab}<i class="flat">—</i></span>`).join('')}</div>`;
   const sg = v => (v > 0 ? '+' : '') + v.toFixed(1);
   const cls = v => (v >= 0.5 ? 'up' : v <= -0.5 ? 'dn' : 'flat');
   const chip = (lab, v, tip) => v == null ? '' : `<span class="chip" title="${tip}">${lab}<i class="${cls(v)}">${sg(v)}</i></span>`;

@@ -40,8 +40,18 @@
   "note": "已收束；球隊層 2025-26 勝場 MAE 變差，未切換對局資料，卡片板仍為 v53 校準；不讀 RAPM，樣本內即樣本外：同一份分數直接對 A 半、B 半 RAPM 各算一次 ρ 再平均（reports/ovr-metrics-backfill-2025-26）"
  },
  {
-  "layer": "卡片 OVR（正式卡片板，card 0.2.7b）",
-  "description": "card 0.2.7a + E-123：threeValue、help（只看護框實績，不看位置）、pressure／presDisplay 照 E-101 四季池開 99 以上的頂端，底端 h1 沒過的維持 40（2026-10-30 使用者裁定 R-072、R-078）（遊戲本體不讀取任何 OVR）",
+  "layer": "卡片 OVR（正式卡片板，card 0.2.7c）",
+  "description": "card 0.2.7b + E-131：OVR 迴歸拿掉 physique（身高＋體重），身高 heightInches 保留，能力值不動（2026-10-30 使用者裁定 R-084）（遊戲本體不讀取任何 OVR）",
+  "players": 414,
+  "rhoNet": 0.78,
+  "rhoDefense": 0.534,
+  "holdoutRho": "未量測",
+  "rho2k": 0.733,
+  "note": "ρRAPM 樣本內（align/封頂用 RAPM）；每場 OVR；card 0.2.7c = card 0.2.7b + E-131；對 card 0.2.7b 的 Δρ_{N_W} +0.0015 [-0.0014, +0.0044]、Δρ_{Q_W} -0.0014 [-0.0040, +0.0011]、線性量尺 +0.0013 [-0.0016, +0.0042]（預註冊 E-131，看過係數才選，不算盲測，只證明不變差；前 300 名 36 人移動 ≥ 10 名，使用者裁定字母小版本）；evaluate 18/19；對 2K27 ρ 取 card-0.2.7b+E131-no-physique/evaluation.json 的 K1 每場值；來源 card-0.2.7c"
+ },
+ {
+  "layer": "卡片 OVR card 0.2.7b（前正式版）",
+  "description": "card 0.2.7a + E-123：threeValue、help（只看護框實績，不看位置）、pressure／presDisplay 照 E-101 四季池開 99 以上的頂端，底端 h1 沒過的維持 40（2026-10-30 使用者裁定 R-072、R-078）；2026-10-30 由 card 0.2.7c 取代（遊戲本體不讀取任何 OVR）",
   "players": 414,
   "rhoNet": 0.779,
   "rhoDefense": 0.532,

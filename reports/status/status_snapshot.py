@@ -26,7 +26,9 @@ TEAM_NOTE = '卡片版本（v55–v58）只改顯示用 OVR，不影響模擬 wi
 EVAL_POSS = 5000
 LOW_MIN, RAPM_FAR, BIGS = 1000, 100, {'C', 'PF'}
 LATEST_SIM = 'v54'  # latest sim board measured
-OFFICIAL_CARD = 'reports/card-0.2.7b/ranking.csv'  # 2026-10-30 起正式卡片 = card 0.2.7b（= card 0.2.7a + E-123 3PT／RIM／PRES 頂端開尾；R-072、R-078）
+OFFICIAL_CARD = 'reports/card-0.2.7c/ranking.csv'  # 2026-10-30 起正式卡片 = card 0.2.7c（= card 0.2.7b + E-131 OVR 迴歸拿掉 physique；R-084）
+C027C_EVAL = 'reports/card-0.2.7b+E131-no-physique/evaluation.json'  # E-131 evaluation：候選 K1 對 2K27 每場 ρ
+C027B_CARD = 'reports/card-0.2.7b/ranking.csv'  # card 0.2.7b（= card 0.2.7a + E-123 3PT／RIM／PRES 頂端開尾；R-072、R-078），2026-10-30 由 0.2.7c 取代
 C027B_EVAL = 'reports/card-0.2.7+E123-tail-3pt-rim-pres/rebase-027a/evaluation.json'  # E-123 疊在 0.2.7a 上的 evaluation：候選 e123a 對 2K27 每場 ρ
 C027A_CARD = 'reports/card-0.2.7a/ranking.csv'  # card 0.2.7a（= card 0.2.7 + E-125 pass 量率各半；R-074、R-077），2026-10-30 由 0.2.7b 取代
 C027A_EVAL = 'reports/card-0.2.7+E125-pass-volume/evaluation.json'  # E-125 evaluation：候選 E125-P50 對 2K27 每場 ρ
@@ -49,7 +51,7 @@ C012_CARD = 'reports/card-0.1.1+E060-onball-targeting/primary/ranking.csv'  # ca
 E064_VERDICT = 'reports/card-0.1.2+E064-pergame/verdict.json'  # E-064 結果：副版（repl）對 2K27 ρ、A/B 半樣本外 ρ
 C011_CARD = 'reports/ovr-v61-shrink-history-2025-26/ranking.csv'  # card 0.1.1（E-054+E-055），未曾正式發版
 V58_CARD = 'reports/ovr-v58-card-2025-26/card-H1-m0/ranking.csv'  # 2026-10-21 ~ 10-28 正式卡片 = v58 H1-m0
-THREE_VALUE = 'reports/card-0.2.7b/three-value.csv'  # E-057 threeValue＋E-123 頂端開尾（R-024：3PT 顯示欄；OVR 與模擬仍用 long）
+THREE_VALUE = 'reports/card-0.2.7c/three-value.csv'  # E-057 threeValue＋E-123 頂端開尾（R-024：3PT 顯示欄；OVR 與模擬仍用 long）
 CARD_EVAL = 'reports/card-0.1.1+E060-onball-targeting/evaluation.json'  # 0.1.1（label v61-shrink）與 0.1.2（label E060）的對 2K27 ρ
 E2_CARD = 'reports/ovr-v55-card-E-2025-26/card-E2-lam0.4/ranking.csv'  # 2026-10-20 ~ 10-21 正式卡片
 V53_CARD = 'reports/ovr-calibrated-2025-26/ranking.csv'
@@ -183,9 +185,12 @@ def personal(rapm_by_id, rapm_by_name, holdout, backfill):
     c022_2k, c022_d, c022_ci, e071_2k = c022_rho()
     c023_k = eval_2k(C023_EVAL, 'E075')
     c024_k = eval_2k(C024_EVAL, 'E084')
-    add('卡片 OVR（正式卡片板，card 0.2.7b）', 'card 0.2.7a + E-123：threeValue、help（只看護框實績，不看位置）、pressure／presDisplay 照 E-101 四季池開 99 以上的頂端，底端 h1 沒過的維持 40（2026-10-30 使用者裁定 R-072、R-078）（遊戲本體不讀取任何 OVR）',
+    add('卡片 OVR（正式卡片板，card 0.2.7c）', 'card 0.2.7b + E-131：OVR 迴歸拿掉 physique（身高＋體重），身高 heightInches 保留，能力值不動（2026-10-30 使用者裁定 R-084）（遊戲本體不讀取任何 OVR）',
         [(float(r['ovr']), rapm_by_name.get(r['name'])) for r in rows(OFFICIAL_CARD)],
-        f'{CIRC}；每場 OVR；card 0.2.7b = card 0.2.7a + E-123；對 card 0.2.7a 的 Δρ_{{N_W}} -0.0008 [-0.0025, +0.0007]、Δρ_{{Q_W}} +0.0001 [-0.0011, +0.0012]、線性量尺 -0.0007 [-0.0024, +0.0008]（預註冊 E-123，只證明不變差，字母小版本）；evaluate 18/19；對 2K27 ρ 取 card-0.2.7+E123-tail-3pt-rim-pres/rebase-027a/evaluation.json 的 e123a 每場值；來源 card-0.2.7b', src=OFFICIAL_CARD, k2=eval_2k(C027B_EVAL, 'e123a'))
+        f'{CIRC}；每場 OVR；card 0.2.7c = card 0.2.7b + E-131；對 card 0.2.7b 的 Δρ_{{N_W}} +0.0015 [-0.0014, +0.0044]、Δρ_{{Q_W}} -0.0014 [-0.0040, +0.0011]、線性量尺 +0.0013 [-0.0016, +0.0042]（預註冊 E-131，看過係數才選，不算盲測，只證明不變差；前 300 名 36 人移動 ≥ 10 名，使用者裁定字母小版本）；evaluate 18/19；對 2K27 ρ 取 card-0.2.7b+E131-no-physique/evaluation.json 的 K1 每場值；來源 card-0.2.7c', src=OFFICIAL_CARD, k2=eval_2k(C027C_EVAL, 'K1'))
+    add('卡片 OVR card 0.2.7b（前正式版）', 'card 0.2.7a + E-123：threeValue、help（只看護框實績，不看位置）、pressure／presDisplay 照 E-101 四季池開 99 以上的頂端，底端 h1 沒過的維持 40（2026-10-30 使用者裁定 R-072、R-078）；2026-10-30 由 card 0.2.7c 取代（遊戲本體不讀取任何 OVR）',
+        [(float(r['ovr']), rapm_by_name.get(r['name'])) for r in rows(C027B_CARD)],
+        f'{CIRC}；每場 OVR；card 0.2.7b = card 0.2.7a + E-123；對 card 0.2.7a 的 Δρ_{{N_W}} -0.0008 [-0.0025, +0.0007]、Δρ_{{Q_W}} +0.0001 [-0.0011, +0.0012]、線性量尺 -0.0007 [-0.0024, +0.0008]（預註冊 E-123，只證明不變差，字母小版本）；evaluate 18/19；對 2K27 ρ 取 card-0.2.7+E123-tail-3pt-rim-pres/rebase-027a/evaluation.json 的 e123a 每場值；來源 card-0.2.7b', src=C027B_CARD, k2=eval_2k(C027B_EVAL, 'e123a'))
     add('卡片 OVR card 0.2.7a（前正式版）', 'card 0.2.7 + E-125：傳球 pass 改成量率各半 0.5·z(AST/36)＋0.5·z(AST%)，四季池與錨點照 E-101 重算（2026-10-30 使用者裁定 R-074、R-077）；2026-10-30 由 card 0.2.7b 取代（遊戲本體不讀取任何 OVR）',
         [(float(r['ovr']), rapm_by_name.get(r['name'])) for r in rows(C027A_CARD)],
         f'{CIRC}；每場 OVR；card 0.2.7a = card 0.2.7 + E-125；對 card 0.2.7 的 Δρ_{{N_W}} +0.0004 [-0.0004, +0.0013]、Δρ_{{Q_W}} +0.0007 [-0.0002, +0.0017]、線性量尺 +0.0004 [-0.0005, +0.0013]（看過 Giannis 才選，不算盲測，只證明不變差，字母小版本）；evaluate 18/19；對 2K27 ρ 取 card-0.2.7+E125-pass-volume/evaluation.json 的 E125-P50 每場值；來源 card-0.2.7a', src=C027A_CARD, k2=eval_2k(C027A_EVAL, 'E125-P50'))
@@ -291,9 +296,9 @@ def team():
 
 TREND = [('舊版 sim-only', 'legacy', 1, True), ('v53', 'v53', 2, True), ('E2 (v55)', 'E2', 3, True), ('F2 (v56)', 'F2', 4, True),
          ('G3 (v57)', 'G3', 5, True), ('H1 (v58)', 'H1', 6, True), ('card 0.1.1', 'c011', 7, False), ('card 0.1.2', 'c012', 8, True),
-         ('card 0.2.0', 'c020', 9, True), ('card 0.2.1', 'c021', 10, True), ('card 0.2.2', 'c022', 11, True), ('card 0.2.3', 'c023', 12, True), ('card 0.2.4', 'c024', 13, True), ('card 0.2.5', 'c025', 14, True), ('card 0.2.6', 'c026', 15, True), ('card 0.2.7', 'c027', 16, True), ('card 0.2.7a', 'c027a', 17, True), ('card 0.2.7b', 'c027b', 18, True), ('B12', 'B12', 19, False), ('C1', 'C1', 20, False), ('D1', 'D1', 21, False)]
+         ('card 0.2.0', 'c020', 9, True), ('card 0.2.1', 'c021', 10, True), ('card 0.2.2', 'c022', 11, True), ('card 0.2.3', 'c023', 12, True), ('card 0.2.4', 'c024', 13, True), ('card 0.2.5', 'c025', 14, True), ('card 0.2.6', 'c026', 15, True), ('card 0.2.7', 'c027', 16, True), ('card 0.2.7a', 'c027a', 17, True), ('card 0.2.7b', 'c027b', 18, True), ('card 0.2.7c', 'c027c', 19, True), ('B12', 'B12', 20, False), ('C1', 'C1', 21, False), ('D1', 'D1', 22, False)]
 TREND_LAYER = {'legacy': '卡片 OVR（舊版，sim-only）', 'v53': '卡片 OVR v53（前正式版）', 'E2': '卡片 OVR v55 E2（前正式版）',
-               'F2': '卡片 OVR v56 F2（PF/C 防守加分 γ=0.5）', 'G3': '卡片 OVR v57 G3（γ=1.0、δ=0.25）', 'H1': '卡片 OVR v58 H1-m0（前正式版）', 'c011': '卡片 OVR card 0.1.1（v61 收縮歷史）', 'c012': '卡片 OVR card 0.1.2（前正式版，每 36 分鐘）', 'c020': '卡片 OVR card 0.2.0（前正式版）', 'c021': '卡片 OVR card 0.2.1（前正式版', 'c022': '卡片 OVR card 0.2.2（前正式版）', 'c023': '卡片 OVR card 0.2.3（前正式版）', 'c024': '卡片 OVR card 0.2.4（前正式版）', 'c025': '卡片 OVR card 0.2.5（前正式版）', 'c026': '卡片 OVR card 0.2.6（前正式版）', 'c027': '卡片 OVR card 0.2.7（前正式版）', 'c027a': '卡片 OVR card 0.2.7a（前正式版）', 'c027b': '卡片 OVR（正式卡片板，card 0.2.7b）',
+               'F2': '卡片 OVR v56 F2（PF/C 防守加分 γ=0.5）', 'G3': '卡片 OVR v57 G3（γ=1.0、δ=0.25）', 'H1': '卡片 OVR v58 H1-m0（前正式版）', 'c011': '卡片 OVR card 0.1.1（v61 收縮歷史）', 'c012': '卡片 OVR card 0.1.2（前正式版，每 36 分鐘）', 'c020': '卡片 OVR card 0.2.0（前正式版）', 'c021': '卡片 OVR card 0.2.1（前正式版', 'c022': '卡片 OVR card 0.2.2（前正式版）', 'c023': '卡片 OVR card 0.2.3（前正式版）', 'c024': '卡片 OVR card 0.2.4（前正式版）', 'c025': '卡片 OVR card 0.2.5（前正式版）', 'c026': '卡片 OVR card 0.2.6（前正式版）', 'c027': '卡片 OVR card 0.2.7（前正式版）', 'c027a': '卡片 OVR card 0.2.7a（前正式版）', 'c027b': '卡片 OVR card 0.2.7b（前正式版）', 'c027c': '卡片 OVR（正式卡片板，card 0.2.7c）',
                'B12': '卡片 OVR 實驗 B12（未採用）', 'C1': '卡片 OVR 實驗 C1（未採用）', 'D1': '卡片 OVR 實驗 D1（未採用）'}
 
 
@@ -351,7 +356,7 @@ def top20(rapm_by_name):
 
 
 def kpi(holdout, personal_rows):
-    """頂部 KPI；正式卡片 = card 0.2.7b。樣本外 ρ 尚未量測（顯示未量測，不拿 v58 代替）。遊戲本體不讀 OVR，所以標籤是「正式卡片」而非「遊戲現用」。"""
+    """頂部 KPI；正式卡片 = card 0.2.7c。樣本外 ρ 尚未量測（顯示未量測，不拿 v58 代替）。遊戲本體不讀 OVR，所以標籤是「正式卡片」而非「遊戲現用」。"""
     def cell(key, field):
         try:
             return holdout['cards'][key]['holdout_scale0.5']['avg'][field]
@@ -359,15 +364,15 @@ def kpi(holdout, personal_rows):
             return None
     fmt = lambda v: NA if v is None else f'{v:.3f}'
     row = lambda name: next((r for r in personal_rows if name in r['layer']), {})
-    inS = f"{row('正式卡片板，card 0.2.7b')['rhoNet']:.3f}" if row('正式卡片板，card 0.2.7b') else NA
-    k2 = row('正式卡片板，card 0.2.7b').get('rho2k', NA)
+    inS = f"{row('正式卡片板，card 0.2.7c')['rhoNet']:.3f}" if row('正式卡片板，card 0.2.7c') else NA
+    k2 = row('正式卡片板，card 0.2.7c').get('rho2k', NA)
     k2 = fmt(k2) if not isinstance(k2, str) else k2
     k2old = row('v58 H1-m0（前').get('rho2k', NA)
-    return [{'label': '正式卡片 card 0.2.7b 樣本外 ρ（淨值）', 'value': NA,
+    return [{'label': '正式卡片 card 0.2.7c 樣本外 ρ（淨值）', 'value': NA,
              'sub': f'A/B 半 RAPM 樣本外尚未量測；樣本內 {inS}（循環）；前正式版 v58 H1-m0 為 {fmt(cell("H1", "net"))}（不同卡片，僅供參考）'},
-            {'label': '正式卡片 card 0.2.7b 樣本外 ρ（防守）', 'value': NA, 'sub': f'尚未量測；v58 H1-m0 為 {fmt(cell("H1", "def"))}（僅供參考）'},
-            {'label': '正式卡片 card 0.2.7b 對 2K27 ρ（外部基準）', 'value': k2,
-             'sub': f"v58 H1-m0 {k2old if isinstance(k2old, str) else fmt(k2old)}；來源 {C027B_EVAL}（e123a 候選，每場含上場時間）；card 0.2.7a 為 .737、card 0.2.7 為 .736、card 0.2.6 為 .737、card 0.2.5 為 .738、card 0.2.4 為 .748、card 0.2.3 為 .740、card 0.2.2 為 .681、card 0.2.0 為 .695、card 0.1.2（每 36 分鐘）為 .518；2K27 不參與擬合"}]
+            {'label': '正式卡片 card 0.2.7c 樣本外 ρ（防守）', 'value': NA, 'sub': f'尚未量測；v58 H1-m0 為 {fmt(cell("H1", "def"))}（僅供參考）'},
+            {'label': '正式卡片 card 0.2.7c 對 2K27 ρ（外部基準）', 'value': k2,
+             'sub': f"v58 H1-m0 {k2old if isinstance(k2old, str) else fmt(k2old)}；來源 {C027C_EVAL}（K1 候選，每場含上場時間）；card 0.2.7b 為 .738、card 0.2.7a 為 .737、card 0.2.7 為 .736、card 0.2.6 為 .737、card 0.2.5 為 .738、card 0.2.4 為 .748、card 0.2.3 為 .740、card 0.2.2 為 .681、card 0.2.0 為 .695、card 0.1.2（每 36 分鐘）為 .518；2K27 不參與擬合"}]
 
 
 def md(snap):

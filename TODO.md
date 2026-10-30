@@ -64,3 +64,8 @@
 - 背景：E-123 開了三欄的尾巴，但 3PT（threeValue）和 PRES（pressure／presDisplay）的底端沒過跨季穩定檢驗 h1（3PT 斜率 +0.09 [−0.61, +0.65]、PRES +0.20 [−0.15, +0.55]），照預註冊維持在 40。RIM 兩端都過。
 - 待做：另寫預註冊再試；這次已看過 E-123 結果，不能用同一批資料挑門檻再叫盲測（L-026）。候選：等 2026-27 季後當新的一組相鄰季、或改看底端的定義（例如 3PT 底端是投得少還是投得差）。
 - 檔案：`reports/card-0.2.7+E123-tail-3pt-rim-pres/`（h1-results.json、report.md）。
+
+## 新賽季頁跟上 card 0.2.7c（拿掉 physique ＋ 重分組）（R-084，2026-10-30）
+- 背景：2025-26 頁已改用 card 0.2.7c（OVR 不看 physique），表格拿掉 PHYS、分成 投籃／進攻／球權（REB TO PRES）／防守（PER D RIM DIQ）。新賽季頁仍是 0.2.7 公式、舊分組。
+- 待做：OVR 公式要另寫 inseason 預註冊（R-050）；分組只是顯示，使用者點頭就能在 `season_nav.apply_common` 或 `build_inseason_viewer.py` 照 `build_card_viewer.py` 的改法跟上。
+- 另案：模擬端 physEdge、reboundContest 還在用 physique；stamina 在 OVR 裡（+0.146／10 分）但網站不顯示，要不要顯示沒裁定。

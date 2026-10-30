@@ -87,7 +87,8 @@ PATCH_NOTES = [
         '防守改看近期：越近的比賽份量越重。',
         '代價：防守普通的進攻型球員往下，Luka 4 → 9 名。',
         '0.2.7a 傳球看量也看率：每 36 分鐘助攻和助攻率各佔一半，Giannis 傳球 97.7 → 96.2、Trae Young 104.4 → 109.5；OVR 前 20 名只換一人。',
-        '0.2.7b 3PT、RIM、PRES 頂端不再封在 99：Curry 3PT 105、Stewart RIM 113.5、Thybulle PRES 127；OVR 前 20 名只換一人（Ausar Thompson 進、Anunoby 出），Mobley 22 → 28 名。']),
+        '0.2.7b 3PT、RIM、PRES 頂端不再封在 99：Curry 3PT 105、Stewart RIM 113.5、Thybulle PRES 127；OVR 前 20 名只換一人（Ausar Thompson 進、Anunoby 出），Mobley 22 → 28 名。',
+        '0.2.7c OVR 不看身材：身高體重不再直接加分，只看場上做了什麼；Zion 43 → 65 名、Mobley 28 → 23 名、Zubac 98 → 89 名；OVR 前 20 名只換一人（Anunoby 進、Ausar Thompson 出）。']),
     (('card',), '0.2.6', '2026-10-30', [
         '修正中距離被補籃墊高：補籃、補扣改算近距離（Kessler 中距離 99 → 61）。',
         '能力值改和最近四季一起比：偏弱的一季可以沒人到 99。',

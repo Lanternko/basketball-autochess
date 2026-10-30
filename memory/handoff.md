@@ -5,6 +5,7 @@
 - **更新**：2026-10-29 18:40，Claude Code App（lead；分支 claude/project-thread-63h2fz，已 push 到 41cf2bd）
 
 ## 進行中的工作
+- **card 0.2.7c 已採用（E-131，R-084）：卡片 OVR 迴歸拿掉 physique**（2026-10-30，`reports/card-0.2.7c/`，`build_card_027c.py`；ranking sha 99466f36…1655）。前 20 只換 1 人（Ausar 出、Anunoby 進），Zion 43→65、Mobley 28→23、Zubac 98→89；R-064 前 300 名 36 人移動 ≥ 10 名本該 PATCH，使用者裁定 0.2.7c（未 commit、未部署）。名單頁 2025-26 拿掉 PHYS、重分組成 投籃／進攻（DRV FD PASS CRT）／球權（REB TO PRES）／防守（PER D RIM DIQ），`build_card_viewer.py` 在 apply_common 之後改 GROUPS（只改 2025-26 頁）；status_snapshot、enrich 錨點（GC_ANC）、patch note（併進 0.2.7 那格）都指 0.2.7c。審查板 artifact Qk3xTJ… 這個帳號打不開，沒更新。待做：新賽季頁仍用 0.2.7 公式、仍顯示 PHYS 與舊分組（跟上要另走 inseason 實驗，R-050）；E-132 草稿基準寫 0.2.7b，凍結前要改成 0.2.7c；模擬端 physique 另案；stamina 要不要顯示沒裁定。
 - **名單頁 DIQ 欄已上線，含負分**（2026-10-30，R-080，220a8a6／78244c3，gh-pages 31ddb54 線上確認）：防守意識是表格防守組 PRES 右邊一欄，顯示 0.75·D − 同位置平均（負＝低於平均，例 Edwards −0.60）；OVR 仍只加正的部分。賽中頁的 D 每天重擬合，`season_nav.defense_centered` 逐人核對對不上就退回只顯示正值。未處理的使用者提問：TO（tovSkill，OVR 係數 +0.34／SD，偏袒低持球射手）要不要刪或照 R-032 改持球時間分母；INS 要不要拆近框（自己打到籃下）＋終結（命中率），要先查和 DRV 重疊。兩者都動 OVR，要另立實驗。
 - **名單頁能力值顯示四捨五入**（2026-10-30，928d151，gh-pages 線上確認）：表格數值模式、提示、卡片前三／最弱、PRES 提示（逼失誤／犯規紀律）改整數；等第仍用原值算。OVR、得分、DIQ、影響力等其他數字保留小數。先前「小數縮小變細」版（1d7362d）使用者不要，已撤回。
 - **card 0.2.7a 已發**（2026-10-30，R-074、R-077）：card 0.2.7 + E-125 pass 量率各半，`reports/card-0.2.7a/`（= E-125 work/P50，sha256 04a9c266…165f）。名單頁 2025-26、OVR 傾向錨點、狀態板已改指 0.2.7a。Giannis pass 名次 10→25（值 97.7→96.2），OVR 前 20 只換 1 人（Knueppel 進、Ausar 出）。待辦：新 pass 只進 OVR，模擬沒重跑，要進模擬另立實驗；新賽季頁仍用 0.2.7 公式，要跟上另走 inseason（R-050）。

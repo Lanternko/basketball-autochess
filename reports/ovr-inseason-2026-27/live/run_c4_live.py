@@ -45,13 +45,14 @@ if 'foulDraw' not in ATTRS:
     ATTRS.insert(ATTRS.index('drive') + 1, 'foulDraw')
 import e062_switch as _E062  # noqa: E402
 # E-074：賽中先驗換成 card 0.2.2（022）；E-091：OVR 層再換成 card 0.2.4（024，預設）；020＝inseason 0.2.0c 行為（先驗屬性 card 0.1.2、係數／錨點 card 0.1.2／0.2.0 階段）。
-CARD_MODE = os.environ.get('CARD_MODE', '027')   # 027（預設，E-111 採用，R-069）| 025（inseason 0.2.5a，E-095）| 026 | 024 | 022 | 020
-if CARD_MODE not in ('025', '024', '022', '020', '026', '027'):
-    raise SystemExit('CARD_MODE 只接受 025、024、022、020、026 或 027')
-M27_MODE = CARD_MODE == '027'                    # E-111（2026-10-30 採用，預設）：card 0.2.7 先驗＋UL6 OVR 層＋合併池映射（026 機制＋errata）
-M26_MODE = CARD_MODE in ('026', '027')           # E-107（實驗中，預設不開）：card 0.2.6 先驗＋E-101 OVR 層＋0.2.6 量尺的賽中映射；027 沿用其合併池機制
-USAGE_MODE = CARD_MODE in ('024', '025', '026', '027')         # 用人回歸層（E-091）
-NEW_PRIOR = CARD_MODE in ('022', '024', '025', '026', '027')          # card 0.2.2 能力值先驗（foulDraw E-070 公式、presDisplay／foulDisc 顯示）
+CARD_MODE = os.environ.get('CARD_MODE', '027b')  # 027b（預設，E-128 使用者破例採用，R-085）| 027（inseason 0.2.7，E-111）| 025（inseason 0.2.5a，E-095）| 026 | 024 | 022 | 020
+if CARD_MODE not in ('025', '024', '022', '020', '026', '027', '027b'):
+    raise SystemExit('CARD_MODE 只接受 025、024、022、020、026、027 或 027b')
+M27B_MODE = CARD_MODE == '027b'                  # E-128（2026-10-30 使用者破例採用，預設，R-085）：card 0.2.7b 先驗＋pass 量×率＋help／threeValue 尾巴；OVR 層沿用 027 的 UL 機制
+M27_MODE = CARD_MODE in ('027', '027b')                    # E-111（2026-10-30 採用；027b 沿用）：card 0.2.7 先驗＋UL6 OVR 層＋合併池映射（026 機制＋errata）
+M26_MODE = CARD_MODE in ('026', '027', '027b')           # E-107（實驗中，預設不開）：card 0.2.6 先驗＋E-101 OVR 層＋0.2.6 量尺的賽中映射；027 沿用其合併池機制
+USAGE_MODE = CARD_MODE in ('024', '025', '026', '027', '027b')         # 用人回歸層（E-091）
+NEW_PRIOR = CARD_MODE in ('022', '024', '025', '026', '027', '027b')          # card 0.2.2 能力值先驗（foulDraw E-070 公式、presDisplay／foulDisc 顯示）
 E062_MODE = os.environ.get('E062_MODE', 'off')   # off | C4s | C4r（E-062，預設關）
 _E062.install(E062_MODE)
 
@@ -65,7 +66,9 @@ if E064_MODE == 'G1':
     SA.SEASON_MIN_SAMPLE['stamina'] = 1
 if NEW_PRIOR and E064_MODE != 'G1':
     raise SystemExit('CARD_MODE=022／024 只支援 E064_MODE=G1（錨點是每場副版）')
-VERSION = 'inseason 0.2.7'  # R-050／R-069：跟先驗 card 0.2.7 同號（E-111 採用）； 第一個字面值會被 daily_inseason_update.probe_base_version 以正規式讀取，勿改成括號／條件式開頭
+VERSION = 'inseason 0.2.7b'  # R-050／R-085：跟先驗 card 0.2.7b 同號（E-128 使用者破例採用）； 第一個字面值會被 daily_inseason_update.probe_base_version 以正規式讀取，勿改成括號／條件式開頭
+if CARD_MODE == '027':
+    VERSION = 'inseason 0.2.7'  # E-111 行為（逐位元重現 inseason 0.2.7）
 if CARD_MODE == '026':
     VERSION = 'inseason 0.2.6'  # E-107（實驗中）：第一個字面值採用時才改
 if CARD_MODE == '025':
@@ -77,8 +80,8 @@ if CARD_MODE == '022':
 if CARD_MODE == '020':
     VERSION = 'inseason 0.2.0' if E064_MODE == 'G1' else 'inseason 0.1.2'  # 020：重現 0.2.0c；off／G0：重現舊頁用
 VERSION += ('' if E062_MODE == 'off' else '+E062-' + E062_MODE) + ('+E064-G0' if E064_MODE == 'G0' else '')
-CARD_VERSION = ({'025': 'card 0.2.5', '024': 'card 0.2.4', '026': 'card 0.2.6', '027': 'card 0.2.7'}.get(CARD_MODE, 'card 0.2.2')) if NEW_PRIOR else ('card 0.2.0' if E064_MODE == 'G1' else 'card 0.1.2')
-SAT = CARD_MODE in ('025', '026', '027')      # 026／027 沿用 W（scale 15）
+CARD_VERSION = ({'025': 'card 0.2.5', '024': 'card 0.2.4', '026': 'card 0.2.6', '027': 'card 0.2.7', '027b': 'card 0.2.7b'}.get(CARD_MODE, 'card 0.2.2')) if NEW_PRIOR else ('card 0.2.0' if E064_MODE == 'G1' else 'card 0.1.2')
+SAT = CARD_MODE in ('025', '026', '027', '027b')      # 026／027 沿用 W（scale 15）
 PRIOR = '2025-26'
 TARGET = '2026-27'
 G_GAMES = 82
@@ -130,6 +133,20 @@ if M27_MODE:
     E084_RESULTS = USAGE_FILE                        # 027 沒有 e084 results.json；錨點／r_repl 取 usage 檔並對 phase2.json UL6 核對
     E064_ANCHORS_FILE = USAGE_FILE
     POOL026 = HERE / 'pool-027.json'                  # e111-card027/build_pool_027.py 產出
+# E-128（CARD_MODE=027b，預註冊 e128-card027b/preregistration.md §1＋errata-1/2）：覆寫 027 的路徑；UL 防守加成層（m27_*）沿用 027
+E128_RB = ROOT / 'reports/card-0.2.7+E123-tail-3pt-rim-pres/rebase-027a'
+E128_CARD_SUMMARY = ROOT / 'reports/card-0.2.7b/summary.json'
+E128_THREE_CSV = ROOT / 'reports/card-0.2.7b/three-value.csv'      # errata-2：threeValue 的 acc 先驗（acc 欄）
+if M27B_MODE:
+    PRIOR_CARD = HERE / 'prior-2025-26-card027b.json'  # build_prior_027b.py 產出（x0＝card 0.2.7b 產生器未四捨五入值）
+    CARD_DIR = E128_RB / 'cards/e123a/primary'         # 屬性迴歸＝rebase-027a e123a primary summary.json
+    CARD_SUMMARY = CARD_DIR / 'summary.json'
+    FORMAL_RANKING = ROOT / 'reports/card-0.2.7b/ranking.csv'
+    CARD024_SUMMARY = E128_CARD_SUMMARY
+    USAGE_FILE = HERE / 'usage-2025-26-card027b.json'  # build_usage_027b.py 產出
+    E084_RESULTS = USAGE_FILE
+    E064_ANCHORS_FILE = USAGE_FILE
+    POOL026 = HERE / 'pool-027b.json'                  # e128-card027b/build_pool_027b.py 產出
 # E-064（預註冊 §2、§4、§5）：每場 g = pred × MPG_hat / 36，兩段式映射錨點＝V2.FROZEN_SUMMARY（此處＝card 0.1.2 摘要）
 # 原本算 scaleAnchorsPer36 的 MIN>=500 池，改用 g 重算的 PR1/PR50/PR99（card-0.1.2+E064-pergame/primary/pergame-summary.json
 # 的 anchors.main，與 summary.json 同一個 card 0.1.2 管線與池）。算一次、凍結。
@@ -285,6 +302,16 @@ def m26_load_pool(path):
     return doc
 
 
+def m26_pass_027b(s, ast_pct100, pf, ent):
+    """E-128 errata-1：視窗 pass＝百分位型映射(0.5·z(AST/MIN·36)+0.5·z(AST/astCh))；視窗不收縮；z 常數＝pool 的 passFreeze。
+    pb['pass'] 是 AST%×100，÷100 回到 AST/astCh。"""
+    y_vol = s['AST'] / s['MIN'] * 36.0 if s['MIN'] > 0 else 0.0
+    y_rate = ast_pct100 / 100.0
+    z = (pf['wVol'] * (y_vol - pf['vol']['mean']) / pf['vol']['std']
+         + pf['wRate'] * (y_rate - pf['rate']['mean']) / pf['rate']['std'])
+    return m26_pct_attr(z, ent)
+
+
 def m26_window_cards(sd, n, mapping, prior_cards, received, season_min_sample=None):
     """IC.window_cards 的 026 版：原始值、樣本、u_proxy 逐字照抄；映射改成 pool-026 合併池＋E-101 尾巴；另帶 foulDraw 觀測值。
     命中率型的收縮先驗仍用 mapping['priors']（先驗季聯盟命中率，同 IC）；drive 照舊（凍結屬性，不進更新）。"""
@@ -323,7 +350,8 @@ def m26_window_cards(sd, n, mapping, prior_cards, received, season_min_sample=No
             'ft': m26_curve_attr(m26_shrunk(s['FTM'], s['FTA'], pr['ft']), P['ft'], CV['CURVE_FT']),
             'drive': IC.attr(IC.percentile(SA.safe(s['FTA'], s['FGA']), mapping['pools']['drive'])),
             'tovSkill': m26_pct_attr(-SA.safe(s['TOV'], s['possDen']), P['tovSkill']),
-            'pass': m26_pct_attr(pb['pass'][pid], P['pass']),
+            'pass': (m26_pass_027b(s, pb['pass'][pid], M26['passFreeze'], P['pass']) if 'passFreeze' in M26
+                     else m26_pct_attr(pb['pass'][pid], P['pass'])),
             'rebound': m26_pct_attr(pb['rebound'][pid], P['rebound']),
             'stamina': (m26_pct_attr(s['MPG'], P['stamina']) if 'stamina' in P      # 027（E-111 §1.3）：池裡沒有 stamina
                         else IC.attr(IC.percentile(s['MPG'], mapping['pools']['stamina']))),   # → 照 IC.window_cards 單季映射
@@ -618,6 +646,7 @@ def three_value_columns(prior_ids):
     a_all = sum(v[2] for d in (s25, s26) for v in d.values())
     mu = m_all / a_all
     rep = mu - THREE_REP_GAP
+    # E-128 errata-4：027b 的 threeValue 照 027 現行算法（兩季即時池、abilityC 先驗、99 封頂）
     prior = {int(k): v['abilityC'] for k, v in load_json(THREE_PRIOR).items()}
 
     def pct(x, arr):
@@ -773,7 +802,8 @@ def load_usage():
     if hashlib.sha256(FORMAL_RANKING.read_bytes()).hexdigest() != summ['ranking_csv_sha256']:
         raise SystemExit(f'{CARD_VERSION} ranking.csv sha256 與 summary.json 不符')
     if M27_MODE:     # E-111：錨點對 phase2.json reportOnly.anchors.UL6（差 ≤ 1e-9）；r_repl／錨點是 build_usage_027 重跑 UL6 pipeline 的值
-        p2 = load_json(UL_PHASE2)['reportOnly']['anchors']['UL6']
+        p2 = (load_json(E128_RB / 'work/cards-result.json')['anchors'] if M27B_MODE
+              else load_json(UL_PHASE2)['reportOnly']['anchors']['UL6'])
         if max(abs(doc['anchors'][k] - p2[k]) for k in ('PR1', 'PR50', 'PR99')) > 1e-9:
             raise SystemExit('usage-2025-26-card027.json 的錨點與 phase2.json UL6 不一致')
         return {int(k): v for k, v in doc['players'].items()}, doc['coef'], doc['payloadSha256']
@@ -1027,8 +1057,8 @@ def main():
         upd = [a for a in M26['attrs'] if a in C.UPD or a == 'foulDraw']
         out_of_range = [(prior_cards[p]['name'], a, attrs[p][a]) for p in attrs for a in upd
                         if not (m26_range(a)[0] - 1e-9 <= attrs[p][a] <= m26_range(a)[1] + 1e-9)]
-        m26_info = {('pool027' if M27_MODE else 'pool026'): {'file': rel(POOL026), 'payloadSha256': M26['payloadSha256']},
-                    ('L1_refVsCard027' if M27_MODE else 'L1_refVsCard026'): {
+        m26_info = {('pool027b' if M27B_MODE else 'pool027' if M27_MODE else 'pool026'): {'file': rel(POOL026), 'payloadSha256': M26['payloadSha256']},
+                    ('L1_refVsCard027b' if M27B_MODE else 'L1_refVsCard027' if M27_MODE else 'L1_refVsCard026'): {
                         'n': len(l1), 'maxAbs': max(abs(v) for v in l1.values()),
                         'worst': sorted(l1.items(), key=lambda kv: -abs(kv[1]))[:5]},
                     'rangeCheck': {'attrs': upd, 'outOfRange': out_of_range[:20], 'nOutOfRange': len(out_of_range)},
@@ -1055,9 +1085,11 @@ def main():
         **({'usage features (E-091)': USAGE_FILE, 'e084 results (coef/r_repl/anchors)': E084_RESULTS, (CARD_VERSION + ' summary' if SAT else 'card 0.2.4 summary'): CARD024_SUMMARY,
            **({'e089 results (card 0.2.5 anchors)': E089_RESULTS} if CARD_MODE == '025' else {})}
            if USAGE_MODE else {}),
-        **({('pool-027 (E-111)' if M27_MODE else 'pool-026 (E-107)'): POOL026} if M26_MODE else {}),
+        **({('pool-027b (E-128)' if M27B_MODE else 'pool-027 (E-111)' if M27_MODE else 'pool-026 (E-107)'): POOL026} if M26_MODE else {}),
         **({'card 0.2.7 OVR summary (UL6 primary)': CARD_SUMMARY, 'def-L primary (UL bonus)': DEF_L_PRIMARY,
-            'phase2.json (UL6 anchors)': UL_PHASE2} if M27_MODE else {}),
+            'phase2.json (UL6 anchors)': UL_PHASE2} if M27_MODE and not M27B_MODE else {}),
+        **({'card 0.2.7b OVR summary (rebase-027a e123a primary)': CARD_SUMMARY, 'def-L primary (UL bonus)': DEF_L_PRIMARY,
+            'rebase-027a cards-result.json (anchors)': E128_RB / 'work/cards-result.json'} if M27B_MODE else {}),
         'reliability': V2.RELIABILITY if hasattr(V2, 'RELIABILITY') else None,
     }
     sha = {k: {'path': rel(v), 'sha256': C.sha256_file(v)} for k, v in inputs.items() if v}
@@ -1079,7 +1111,7 @@ def main():
                       'mpg0FromCard': sum(1 for pid, c in prior_cards.items() if c['name'] in mpg_card),
                       'mpg0Fallback': sum(1 for pid, c in prior_cards.items() if c['name'] not in mpg_card)}}
            if USAGE_MODE else {}),
-        **({('e111' if M27_MODE else 'e107'): m26_info} if M26_MODE else {}),
+        **({('e128' if M27B_MODE else 'e111' if M27_MODE else 'e107'): m26_info} if M26_MODE else {}),
         'inputs': sha, 'mapping2025_26': {'priors': mp['priors'], 'poolSize': mp['poolSize'],
                                           'boxPlayersDroppedNoBio': mp['boxPlayersDroppedNoBio'],
                                           'priorShotSampleFilled': [mp['priorShotSampleFilled'], mp['priorCards']]},
@@ -1127,13 +1159,19 @@ def main():
                      "99 以上與 40 以下照 E-101 尾巴；分區照 E-101（有 area 欄的季 area 缺值的出手跳過、Mid-Range 且 shotDistance<8 → short）；"
                      "foulDraw 合併池用各季自己的 z、賽中視窗仍用 2025-26 凍結的 z；stamina 照單季映射（不換尺）；"
                      "drive、onBall、pressure、help、physique、heightInches 凍結；防守加成＝card 0.2.7 的 UL 值（凍結）。")
+    if M27B_MODE:
+        ATTR_NOTE = ("- E-128（CARD_MODE=027b，預設）：先驗 x0＝card 0.2.7b 產生器的未四捨五入能力值（尾巴原樣、不夾 99）；屬性迴歸＝rebase-027a e123a primary 的 summary.json；"
+                     "賽中觀測值對 live/pool-027b.json 的合併池映射（pass 換 E-125 量×率合成值＋合併池，視窗不收縮、z 常數凍結自 2025-26 卡片端；其餘 8 欄同 pool-027），"
+                     "99 以上與 40 以下照 E-101 尾巴；help 照 E-123 D1 尾巴（不夾 99）；drive、onBall、pressure、presDisplay、physique、heightInches 凍結；防守加成＝UL 值（同 027）。")
     if USAGE_MODE:
         OVR_NOTE += (f"\n- card 0.2.4 用人層（E-091，R-044 = 用人回歸＋當季 RAPM 目標）：p＝上面屬性迴歸的每 36 預測（`predictedPer36`，C4 照常更新），"
                      f"predNew＝b0 + b1·p + b2·L + b3·a + b4·y + b5·v + b6·y·L + b7·v·L + b8·y·d·L（`predNew` 欄）；"
                      f"L、a、y、v、d 與 has 旗標凍結在 2025-26 全季（`{USAGE_FILE.name}`，payload sha256 {usage_sha[:12]}…，年齡不加一歲），has=False 或不在卡內者 predNew＝p；"
                      f"係數 b0={ucoef['b0']:.4f}、b1={ucoef['b1_p']:.4f}（E-084 results.json）。MPG0＝card 0.2.4 ranking.csv 的 mpg 欄（mpgAvail，依名字配對），卡裡沒有的人退回 MIN／GP。"
                      + ("\n- E-095（CARD_MODE=025）：分鐘權重 mpg/36 改為飽和 W(mpg)=(1−e^(−mpg/15))/(1−e^(−36/15))（card 0.2.5，R-047），錨點／r_repl 取 E-089 results.json report_only.card.new。" if SAT else ''))
-    if M27_MODE:
+    if M27B_MODE:
+        OVR_NOTE += f"\n- E-128：用人層係數、r_repl、錨點取 {rel(USAGE_FILE)}（rebase-027a e123a pipeline 重跑，錨點對 rebase-027a/work/cards-result.json 核對）；分鐘權重 W 同 card 0.2.5。"
+    elif M27_MODE:
         OVR_NOTE += f"\n- E-111：用人層係數、r_repl、錨點取 {rel(USAGE_FILE)}（UL6 pipeline 重跑，錨點對 phase2.json UL6 核對）；分鐘權重 W 同 card 0.2.5。"
     elif M26_MODE:
         OVR_NOTE += f"\n- E-107：用人層係數、r_repl、錨點取 {rel(E084_RESULTS)} 的 card 段；分鐘權重 W 同 card 0.2.5。"

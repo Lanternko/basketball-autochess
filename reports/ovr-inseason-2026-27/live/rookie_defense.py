@@ -12,6 +12,7 @@ import bisect
 import csv
 import json
 import math
+import os
 import sys
 from pathlib import Path
 
@@ -19,10 +20,43 @@ HERE = Path(__file__).resolve().parent
 ROOT = HERE.parents[2]
 E060 = ROOT / 'reports/card-0.1.1+E060-onball-targeting'
 TAIL = ROOT / 'reports/card-0.2.5+E101-crossera/tail-summary.json'
-PRIOR_CARD = HERE / 'prior-2025-26-card027.json'
+M27B = os.environ.get('CARD_MODE', '027b') == '027b'  # E-128：help 改 E-123 D1 尾巴（027b＝預設，R-085；其他模式逐位元不變）
+PRIOR_CARD = HERE / ('prior-2025-26-card027b.json' if M27B else 'prior-2025-26-card027.json')
 K_C3, K_B, K_T, K_HELP = 500.0, 1000.0, 1000.0, 200.0
 CURVE_DEF_RIM = [(0, 0.150), (40, 0.105), (55, 0.050), (70, 0.004), (85, -0.048), (99, -0.095), (120, -0.125), (150, -0.150)]
 CEIL, K_SD = 150.0, 1.96
+
+
+# E-128 §1.3：help 照 E-123 的 D1 換算（reports/card-0.2.7+E123-tail-3pt-rim-pres/work/build_tails.py 的 inverse_open、MIRROR、A99、sH 逐行複製；
+# 參數取自該目錄 tail-summary.json 的 e123.help：S=0.050102046475693295、a99=0.095、lo=0.0），凍結使用，不重擬合。
+E123_S_HELP = 0.050102046475693295
+MIRROR = [(float(a), -float(y)) for a, y in CURVE_DEF_RIM]   # (attr, x)；x = −shrunk
+
+
+def inverse_open(p, curve, lo, hi):
+    for i in range(1, len(curve)):
+        x0, y0 = curve[i - 1]
+        x1, y1 = curve[i]
+        if min(y0, y1) <= p <= max(y0, y1):
+            return max(lo, min(hi, x0 + (p - y0) / (y1 - y0) * (x1 - x0)))
+    x = curve[0][0] if abs(p - curve[0][1]) < abs(p - curve[-1][1]) else curve[-1][0]
+    return max(lo, min(hi, x))
+
+
+A99 = inverse_open(99, [(y, a) for a, y in MIRROR], -1e9, 1e9)
+SH = K_SD * E123_S_HELP
+
+
+def help_e123(shrunk):
+    """shrunk＝PLUSMINUS·n/(n+200)；x＝−shrunk。x>a99 走頂端尾巴（上限 150、不夾 99），否則反查曲線（下限 0.0）。"""
+    x = -shrunk
+    if x > A99:
+        return 99 + (CEIL - 99) * (1 - math.exp(-(x - A99) / SH))
+    return inverse_open(x, MIRROR, 0.0, 99.0)
+
+
+def help_map(shrunk):
+    return help_e123(shrunk) if M27B else inverse(shrunk, CURVE_DEF_RIM)
 
 
 def table(path):
@@ -43,7 +77,7 @@ def help_of(rim_rows):
     for r in rim_rows:
         n, d = r.get('FGA_LT_06'), r.get('PLUSMINUS')
         if n and n > 0 and d is not None:
-            out[r['CLOSE_DEF_PERSON_ID']] = inverse(d * n / (n + K_HELP), CURVE_DEF_RIM)
+            out[r['CLOSE_DEF_PERSON_ID']] = help_map(d * n / (n + K_HELP))
     return out
 
 
@@ -224,7 +258,7 @@ def veteran(c, season='2026-27', pos_fallback=None):
     for pid, (n, nd) in rim.items():
         if n > 0:
             n_eff = n / max(rim_f[pid])
-            out.setdefault(pid, {})['help'] = inverse((nd / n) * n_eff / (n_eff + K_HELP), CURVE_DEF_RIM)
+            out.setdefault(pid, {})['help'] = help_map((nd / n) * n_eff / (n_eff + K_HELP))
     accs = [(s, onball_acc(tabs)) for s, tabs in parts]
     acc = acc_sum([(ww[s], a) for s, a in accs])
     ob_f = {}

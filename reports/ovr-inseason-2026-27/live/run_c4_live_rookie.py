@@ -13,12 +13,16 @@ from pathlib import Path
 
 import numpy as np
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import rookie_defense as RD  # noqa: E402
+
 HERE = Path(__file__).resolve().parent
 ORIG = HERE / 'run_c4_live.py'
 ROOKIE_JSON = HERE / 'rookie-prior-2026.json'
 G_GAMES = 82
 DPOS = {'G': 'SG', 'F': 'SF', 'C': 'C'}          # D5：G／F／C → 設計矩陣用的 SG／SF／C（回測與上線同一張表）
 SKIP = ('pressure', 'drive')                     # live 凍結的兩項（同老將）
+DEF_ATTRS = ('onBall', 'help')                   # 2026-10-30 使用者：新秀防守一有數據就換成當季值（w=1，rookie_defense.py）
 
 OLD_LINE = "    C.write_csv(out_dir / 'ranking.csv', [{k: r[k] for k in head} for r in rows], head)\n"
 NEW_LINE = "    _E116.write_outputs(globals(), locals(), out_dir, rows, head, nopr)\n"
@@ -34,10 +38,15 @@ def load_ns():
 
 
 # ------------------------------------------------------------------ 新秀計算
-def xhat_of(ns, x0, k, rec, arm, rel):
-    """回傳 (xhat {15 項}, w {項: w}, 取樣 n {項: n})。arm：e116（k=σ²/τ²）、frozen（k=50·nRef）、own（w=1）。"""
+def xhat_of(ns, x0, k, rec, arm, rel, dfn=None):
+    """回傳 (xhat {15 項}, w {項: w}, 取樣 n {項: n})。arm：e116（k=σ²/τ²）、frozen（k=50·nRef）、own（w=1）。
+    dfn：rookie_defense.inseason() 的這個人（{'onBall','help','n3','nRim'}）；有值就直接取代 onBall／help（w=1）。"""
     C, F, IC, SA = ns['C'], ns['F'], ns['IC'], ns['SA']
     out, ws, ns_ = dict(x0), {}, {}
+    for a in DEF_ATTRS:
+        if dfn and dfn.get(a) is not None:
+            out[a] = C.clip(dfn[a])
+            ws[a], ns_[a] = 1.0, dfn.get('n3' if a == 'onBall' else 'nRim')
     if rec is None:
         return out, ws, ns_
     f = min(rec['GP'] / G_GAMES, 1.0)
@@ -78,9 +87,9 @@ def ovr_of(ns, pw, anc, r_repl, x, pos, mpg_hat, height):
     return pred0, g, ns['e064_map'](g, anc)
 
 
-def eval_rookie(ns, pw, anc, r_repl, rk, rec, arm, rel):
+def eval_rookie(ns, pw, anc, r_repl, rk, rec, arm, rel, dfn=None):
     """rk：x0、k、pos、mpg0。回傳 dict（xhat、w、pred0、mpgHat、ovr）。"""
-    x, ws, _ = xhat_of(ns, rk['x0'], rk['k'], rec, arm, rel)
+    x, ws, _ = xhat_of(ns, rk['x0'], rk['k'], rec, arm, rel, dfn)
     m0 = rk['mpg0']
     if 'stamina' in ws and rec is not None and rec['GP'] > 0:
         mh = m0 + ws['stamina'] * (rec['MIN'] / rec['GP'] - m0)
@@ -112,6 +121,7 @@ def write_outputs(g, loc, out_dir, rows, head, nopr):
     prior_pids = set(loc['prior_cards'])
     rookies = [r for r in rookies if r['playerId'] not in prior_pids]       # 保險：有卡的不當新秀
     wins = rookie_windows(g, sd26, C.mapping_for(g['PRIOR']), rookies, g['ALL_N'])
+    dfns = RD.inseason('2026-27', {r['playerId']: r['pos'] for r in rookies})
     rk_rows = []
     for rk in rookies:
         pid = rk['playerId']
@@ -119,7 +129,7 @@ def write_outputs(g, loc, out_dir, rows, head, nopr):
         gp = len(b['rows']) if b else 0
         mins = sum(r['MIN'] for r in b['rows']) if b else 0.0
         rec = wins.get(pid)
-        cur = eval_rookie(g, pw, anc, r_repl, rk, rec, 'e116', rel)
+        cur = eval_rookie(g, pw, anc, r_repl, rk, rec, 'e116', rel, dfns.get(pid) if gp > 0 else None)
         base = eval_rookie(g, pw, anc, r_repl, rk, None, 'e116', rel)
         row = {k: '' for k in head}
         row.update({'ovr': g['r1'](cur['ovr']), 'name': rk['name'], 'pos': rk['pos'], 'MIN': 0,

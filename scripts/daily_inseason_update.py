@@ -44,7 +44,7 @@ VIEWER = ROOT / 'scripts/build_inseason_viewer.py'
 CARD_VIEWER = ROOT / 'scripts/build_card_viewer.py'
 CREATE_NO_WINDOW = getattr(subprocess, 'CREATE_NO_WINDOW', 0)
 
-TIMEOUTS = {'games': 900, 'matchups': 1800, 'inseason': 3600, 'c4': 3600, 'viewer': 600, 'git': 180}
+TIMEOUTS = {'games': 900, 'matchups': 1800, 'inseason': 3600, 'tracking': 600, 'c4': 3600, 'viewer': 600, 'git': 180}
 CO_AUTHOR = 'Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>'
 
 log = logging.getLogger('daily_inseason')
@@ -182,6 +182,19 @@ def step_fetch_matchups() -> None:
         log.warning('fetch_matchups exit=%s：%s', r.returncode, (r.stderr or r.stdout).strip()[-300:])
     else:
         log.info('fetch_matchups：%s', tail[0])
+
+
+def step_fetch_tracking() -> None:
+    """新秀賽中防守（2026-10-30）：整季累計的防守追蹤表；失敗不擋發布，沿用上次抓到的檔（新秀防守停在那天）。"""
+    try:
+        r = run([node_exe(), 'scripts/fetch_defense_tracking.mjs', SEASON], ROOT, TIMEOUTS['tracking'])
+    except subprocess.TimeoutExpired:
+        log.warning('fetch_defense_tracking 逾時；新秀防守沿用上次的表')
+        return
+    if r.returncode != 0:
+        log.warning('fetch_defense_tracking exit=%s：%s', r.returncode, (r.stderr or r.stdout).strip()[-300:])
+    else:
+        log.info('fetch_defense_tracking：%s', ((r.stdout or '').strip().splitlines()[-1:] or [''])[0])
 
 
 def step_fetch_inseason() -> dict:
@@ -353,6 +366,7 @@ def _run(args) -> int:
     step_fetch_games()
     step_fetch_matchups()
     step_fetch_inseason()
+    step_fetch_tracking()
     data_sha = sha256_file(PLAYER_GAMES)
     pbp_count = len(list(PBP_DIR.glob('*.json'))) if PBP_DIR.exists() else 0
     log.info('player-games sha256=%s…  pbp=%d', data_sha[:12], pbp_count)

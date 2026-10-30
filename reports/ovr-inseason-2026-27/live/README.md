@@ -31,3 +31,8 @@
 ## 新秀起點（E-116 → E-121，2026-10-30）
 - `build_rookie_prior.py` 產 E-116 起點；`reports/E121-rookie-scale/build_2k_start.py` 再把 x0 齊頭平移到「2K 順位曲線換本站尺度 −5」（R-073），覆寫 `rookie-prior-2026.json`。E-116 原版留在 `rookie-prior-2026-e116.json`。
 - 重跑 `build_rookie_prior.py` 之後一定要接著重跑 `build_2k_start.py`（它讀的是 e116 備份，先刪備份才會改用新產的 E-116 版）。
+
+## 新秀賽中防守（2026-10-30，使用者：一有數據就更新）
+- `scripts/fetch_defense_tracking.mjs 2026-27` 每天重抓整季累計的防守追蹤表（rim、three、hustle、advanced、matchups）→ `data/defense-seventh/2026-27/tracking/`；daily 的 `step_fetch_tracking`，失敗沿用上次的表。
+- `rookie_defense.py`：照 card 0.2.7 同一套公式算 onBall（E-060 r＝zC3＋zB−zT，組平均與 z 凍結在 2025-26；r→屬性用 2025-26 對照內插＋E-101 尾巴）與 help（inverse(PLUSMINUS·n/(n+200), CURVE_DEF_RIM)）。`--check` 拿 2025-26 原始表重算：onBall 575 人最大差 1.8e-13，help 576 人最大差 0.15（卡片四捨五入 0.1）。
+- `run_c4_live_rookie.py`：新秀只要出賽（N>0）且表裡有值，onBall／help 直接換成當季值（w=1，不另收縮；公式本身已含樣本量收縮，零樣本的人約落在 onBall 66、help 71）。老將仍凍結在先驗卡；新秀 defenseBonus 仍是 0。

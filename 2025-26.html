@@ -382,6 +382,16 @@ th.noh{cursor:default}
   .rx .rmain .st{flex:1 1 0;min-width:0;padding:4px 6px}
   .rx .rmain .st b{font-size:1.4rem}
 }
+/* 641–899px 中間欄只剩 125–330px，名字／細項換行數因人而異、卡片高低不一（使用者 2026-10-30）：
+   環、場數、影響力移到隊徽下面一列，中間欄拿到整寬 */
+@media (min-width:641px) and (max-width:899px){
+  .card{grid-template-columns:auto minmax(0,1fr)}
+  .card .tag{min-width:0}
+  .card .ring{grid-column:1;grid-row:4;justify-self:center;padding:0 18px}
+  .card .who>.real-h{grid-column:1;grid-row:5;margin:-4px 18px 14px}
+  .card .who>.strong{grid-column:2;grid-row:4/span 2;align-self:center;margin:0 18px 14px}
+  .card .who>.g5{grid-row:6}
+}
 /* 近 N 場逐場數據（使用者 2026-10-30：數據旁的 ▼ 展開，像 NBA box score） */
 .rx .g5t{flex-basis:100%;display:flex;align-items:center;gap:6px;background:none;border:0;border-top:1px solid var(--line);padding:6px 0 0;
   color:var(--muted);font:600 .8rem var(--f-disp);letter-spacing:.04em;cursor:pointer;text-align:left}

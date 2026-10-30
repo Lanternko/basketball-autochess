@@ -17,6 +17,8 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 import enrich_roster_viewer as er  # noqa: E402
 from season_nav import add_season_nav, apply_common  # noqa: E402
 import season_nav as sn  # noqa: E402
+sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'reports/impact-epm-2026-27'))
+import epm_live  # noqa: E402
 
 ROOT = er.ROOT
 BASE = ROOT / 'reports/ovr-v58-card-2025-26/roster-viewer.html'
@@ -114,6 +116,24 @@ def main():
     # 注入隊色／頭像／2026-27 場均（換資料來源與年份文字）
     er.SRC = SRC26
     er.JS = er.JS.replace('2025-26 例行賽紀錄', '2026-27 賽季紀錄')
+    # 影響力四格改用 2026-27 自製 EPM 式（當季 box 先驗＋生涯 RAPM 先驗＋當季 RAPM；只顯示，不進 OVR）
+    epm_rows, _ = epm_live.run()
+    # 第四格改放當季 box 估計（boxO＋boxD）：開季在場減不在場雜訊太大（Wembanyama +53.5），使用者 2026-10-30 選換掉
+    epm_imp = {r['playerId']: {k: v for k, v in (('o', r['O']), ('d', r['D']),
+                                                 ('onoff', None if r['boxO'] is None else r['boxO'] + r['boxD'])) if v is not None}
+               for r in epm_rows}
+    er.IMPACT_LOADER = lambda: {pid: {k: round(v, 2) for k, v in d.items()} for pid, d in epm_imp.items()}
+    for a, b in [
+        ('title="無 2025-26 RAPM"', 'title="本季未上場"'),
+        ('2025-26 RAPM 進攻：', '2026-27 自製 EPM 式（當季 box 先驗＋生涯 RAPM 先驗＋當季 RAPM）進攻：'),
+        ('2025-26 RAPM 防守：', '2026-27 自製 EPM 式（當季 box 先驗＋生涯 RAPM 先驗＋當季 RAPM）防守：'),
+        ('2025-26 RAPM 淨值＝進攻＋防守', '2026-27 自製 EPM 式淨值＝進攻＋防守（當季 box 先驗＋生涯 RAPM 先驗＋當季 RAPM）'),
+        ('2025-26 他在場減不在場的球隊每 100 回合淨效率（扣掉球隊本身強弱；會受替補好壞影響）',
+         '2026-27 只看本季數據表（得分、出手、助攻、籃板、抄阻、失誤等）估的每 100 回合淨影響，不看比分；打得越少越被拉向同上場時間的平均'),
+        ("'在場增益'", "'本季數據估計'"),
+    ]:
+        assert er.JS.count(a) >= 1, a
+        er.JS = er.JS.replace(a, b)
     er.inject(out, er.aggregate())
     print('wrote', out, len(rows), 'players')
 

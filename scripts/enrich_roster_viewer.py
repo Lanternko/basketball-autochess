@@ -21,6 +21,7 @@ ROOT = Path(__file__).resolve().parent.parent
 SRC = ROOT / 'data' / 'season-source' / 'player-games.json'
 RAPM = ROOT / 'reports' / 'impact-rapm' / 'rapm-prior.csv'  # 2025-26 單季 box-prior RAPM（每 100 回合）
 ONOFF = ROOT / 'reports' / 'impact-rapm' / 'onoff.csv'
+IMPACT_LOADER = None  # 賽中頁（build_inseason_viewer.py）換成自己的載入函式；None＝沿用下面的 2025-26 資料
 GC = ROOT / 'reports' / 'game-contribution' / 'm2'  # 評分 M2（R-066）：box＋hustle＋防守對位 → RAPM 權重、2025-26 基準、五色切點（scripts/fit_rating_m2.py）
 CARD_SUMMARY = ROOT / 'reports' / 'card-0.2.7c' / 'summary.json'  # 正式卡 OVR 錨點（換算 OVR 傾向）
 # 新秀篩選（使用者 2026-10-30）：該季選秀年＝新秀；2027 頁的 2026 新秀沒有先驗卡、不在名單上，按鈕自動隱藏
@@ -535,6 +536,8 @@ def game_row(r, h, keys):
 
 def impact():
     """playerId → {o, d, on, onoff}：2025-26 單季 box-prior RAPM 攻守，與在場淨效率、在場減不在場（交易球員依在場回合加權）。"""
+    if IMPACT_LOADER:
+        return IMPACT_LOADER()
     out = {}
     for r in csv.DictReader(RAPM.open(encoding='utf-8')):
         out[int(r['playerId'])] = {'o': float(r['lastSeasonO']), 'd': float(r['lastSeasonD'])}

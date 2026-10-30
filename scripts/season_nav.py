@@ -60,7 +60,6 @@ CSS = """<style>
 .pn-item .kw-etc{color:#c39bff}
 .pn-item .kw-num{color:var(--fg);font-weight:700;font-variant-numeric:tabular-nums}
 .pn-foot{margin:12px 0 0;color:var(--muted);font-size:.72rem;line-height:1.5}
-.dec{font-size:.7em;font-weight:400;opacity:.7}
 </style>
 """
 
@@ -185,18 +184,6 @@ def add_season_nav(html_str, current):
     mover = ("<script>addEventListener('DOMContentLoaded',()=>{const m=document.getElementById('modeSeg'),"
              "r=document.querySelector('.sright'),q=document.getElementById('q'),mq=matchMedia('(max-width:640px)');"
              "if(!m||!r||!q)return;const f=()=>mq.matches?r.append(m):q.before(m);f();mq.addEventListener('change',f)})</script>")
-    # 小數部分縮小變細（使用者 2026-10-30：DIQ 以外）；保留精度不四捨五入，免得 OVR 同分。畫面是 JS 重繪的，所以用 MutationObserver
-    # 統一處理，DIQ 格子標 data-nodec 跳過；版號（0.2.7b）、切換列與更新說明不動；SVG 圓環裡用 tspan。
-    mover += (r"<script>(()=>{const R=/(?<![.\d])(\d+)(\.\d+)(?![\d.A-Za-z])/,"
-              "K=/^(SCRIPT|STYLE|TEXTAREA|INPUT|SELECT|OPTION|TITLE)$/,"
-              "X='[data-nodec],.dec,.snav';"
-              "const sp=t=>{const m=R.exec(t.data);if(!m)return;const a=t.splitText(m.index+m[1].length),r=a.splitText(m[2].length),"
-              "w=document.createElementNS(t.parentNode.namespaceURI,t.parentNode.namespaceURI.endsWith('svg')?'tspan':'span');"
-              "w.setAttribute('class','dec');a.before(w);w.append(a);sp(r)};"
-              "const wk=n=>{if(n.nodeType===3){const p=n.parentElement;if(p&&!K.test(p.nodeName)&&!p.closest(X))sp(n);return}"
-              "if(n.nodeType!==1||K.test(n.nodeName)||n.closest(X))return;[...n.childNodes].forEach(wk)};"
-              "addEventListener('DOMContentLoaded',()=>{wk(document.body);new MutationObserver(ms=>ms.forEach(m=>m.addedNodes.forEach(wk)))"
-              ".observe(document.body,{childList:true,subtree:true})})})()</script>")
     block = lambda m: (f'\n<nav class="snav{" has-note" if note else ""}" aria-label="賽季切換"><div class="seg">{links}</div>{note}'
                        f'<span class="sright">{patch_notes_html(m.group(1), current)}</span>{mover}</nav>')
     s, n = re.subn(r'<div class="src">(.*?)</div>', block, html_str, count=1, flags=re.S)
@@ -372,7 +359,7 @@ def apply_common(s):
 
 # 防守意識是能力值，放表格防守組 PRES 右邊（使用者 2026-10-30），不放卡片資訊列（那列桌機整列藏掉）。
 # 單位是防守 RAPM 分（不是 0–99），所以不換等第、直接顯示 +x.xx；0 顯示「—」。不進 ATTR，免得卡片前三／最弱排序被它佔掉。
-DIQ_TD = ("const diq = p => `<td data-nodec class=\"${p.dbon >= 2 ? 'gA' : p.dbon >= 1 ? 'gB' : p.dbon > 0 ? 'gC' : ''}"
+DIQ_TD = ("const diq = p => `<td class=\"${p.dbon >= 2 ? 'gA' : p.dbon >= 1 ? 'gB' : p.dbon > 0 ? 'gC' : ''}"
           "${st.sort === 'dbon' ? ' sortcol' : ''}\"${p.dbon > 0 ? '' : ' style=\"color:var(--muted)\"'}"
           " title=\"防守意識：真實比賽防守 RAPM 高於同位置平均的部分，補能力值量不到的輪轉、站位、補位；只有正值，會加進 OVR\">"
           "${p.dbon > 0 ? '+' + p.dbon.toFixed(2) : '—'}</td>`;\n")
@@ -435,7 +422,7 @@ def _compact_facts(s):
     for lab, c in FACT_LABELS.items():
         s = s.replace(f'<span>{lab}<b>', f'<span class="{c}"><i class="lb">{lab}</i><b>')
     # 防守加分改叫防守意識（使用者 2026-10-30）：真實防守 RAPM 高於同位置平均的部分，補能力值量不到的輪轉、站位
-    s = s.replace('<span>防守加分 <b>', '<span class="f-x" data-nodec title="真實比賽的防守影響力高於同位置平均的部分（防守 RAPM），'
+    s = s.replace('<span>防守加分 <b>', '<span class="f-x" title="真實比賽的防守影響力高於同位置平均的部分（防守 RAPM），'
                   '補能力值量不到的輪轉、站位、補位；只有正值，會加進 OVR">防守意識 <b>')
     assert s.count(NAME_OLD) == 1
     s = s.replace(NAME_OLD, NAME_NEW)

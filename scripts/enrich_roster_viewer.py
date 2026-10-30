@@ -30,7 +30,7 @@ CSS = """
 .real{display:grid;grid-template-columns:repeat(auto-fill,minmax(64px,1fr));gap:4px;margin-top:2px}
 .real .st{background:var(--panel-2);border:1px solid var(--line);border-radius:3px;padding:3px 6px;text-align:center}
 .real .st b{display:block;font:700 1.15rem var(--f-disp);font-variant-numeric:tabular-nums;color:var(--fg)}
-.real .st > span{display:block;font-size:.68rem;color:var(--muted)}
+.real .st span{display:block;font-size:.68rem;color:var(--muted)}
 .real-h{color:var(--muted);font-size:.72rem;letter-spacing:.08em}
 .real.rx{display:flex;flex-wrap:wrap;align-items:center;gap:8px 18px}
 .rx .rmain{display:flex;gap:4px}
@@ -129,7 +129,7 @@ CSS = """
   .real-h .rtm{display:none}
   .rx .rmain .st{min-width:0;padding:3px 4px}
   .rx .rmain .st b{font-size:1.2rem}
-  .rx .rmain .st > span{font-size:.64rem}
+  .rx .rmain .st span{font-size:.64rem}
   .rx .rsub{display:none}
 }
 /* 桌機卡片：影響力四格改 2×2，和 OVR 圓環放同一側（使用者 2026-10-29：省空間）
@@ -158,6 +158,9 @@ CSS = """
   .ring .rd.dn{color:var(--g-f)}
   .ring .rd.flat{color:var(--muted)}
   .rx .rmain .st{min-width:74px}
+  /* 細項一律排在大格下面（使用者 2026-10-30：寬螢幕上細項短的人（三分「—」）塞得進大格右邊、卡片變矮，
+     換人時卡片高度跳、貼底的頭像眼線也跟著偏） */
+  .rx .rsub{flex-basis:100%}
   .card .who>.g5{grid-column:1/-1;grid-row:4;margin:0 18px 14px}
 }
 .who .nm .nht,.ring .rd{display:none}

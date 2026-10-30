@@ -353,7 +353,31 @@ def apply_common(s):
     for a, b in COMMON_REPLACEMENTS:
         assert s.count(a) == 1, a
         s = s.replace(a, b)
-    return _compact_facts(s)
+    return _defense_iq_column(_compact_facts(s))
+
+
+# 防守意識是能力值，放表格防守組 PRES 右邊（使用者 2026-10-30），不放卡片資訊列（那列桌機整列藏掉）。
+# 單位是防守 RAPM 分（不是 0–99），所以不換等第、直接顯示 +x.xx；0 顯示「—」。不進 ATTR，免得卡片前三／最弱排序被它佔掉。
+DIQ_TD = ("const diq = p => `<td class=\"${p.dbon >= 2 ? 'gA' : p.dbon >= 1 ? 'gB' : p.dbon > 0 ? 'gC' : ''}"
+          "${st.sort === 'dbon' ? ' sortcol' : ''}\"${p.dbon > 0 ? '' : ' style=\"color:var(--muted)\"'}"
+          " title=\"防守意識：真實比賽防守 RAPM 高於同位置平均的部分，補能力值量不到的輪轉、站位、補位；只有正值，會加進 OVR\">"
+          "${p.dbon > 0 ? '+' + p.dbon.toFixed(2) : '—'}</td>`;\n")
+
+
+def _defense_iq_column(s):
+    for a, b in [
+        ('colspan="${x[1].length}">${x[0]}</th>', 'colspan="${x[1].length + (x[0] === \'防守\' ? 1 : 0)}">${x[0]}</th>'),
+        ("h += th(k, en, zh, i === 0 ? 'gl' : ''); });",
+         "h += th(k, en, zh, i === 0 ? 'gl' : ''); if (k === 'pressure') h += th('dbon', 'DIQ', '防守意識'); });"),
+        ('function cell(k, v, first', DIQ_TD + 'function cell(k, v, first'),
+        (".join('')).join('')}\n      <td class=\"sub gl${sc('min')}\">",
+         ".join('')).join('')}${diq(p)}\n      <td class=\"sub gl${sc('min')}\">"),
+    ]:
+        assert s.count(a) == 1, a
+        s = s.replace(a, b)
+    s, n = re.subn(r'colspan="(\d+)" class="empty"', lambda m: f'colspan="{int(m.group(1)) + 1}" class="empty"', s)
+    assert n == 1
+    return s
 
 
 # 球員卡資訊列（使用者 2026-10-29：字太多；模擬每 36 分鐘淨值和下方 RAPM「淨影響」看起來同一件事卻不同數字）。

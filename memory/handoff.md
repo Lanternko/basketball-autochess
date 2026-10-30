@@ -12,6 +12,7 @@
 - 模擬 sim 0.1.1（R-088，2026-10-30 刪體力，和 0.1.0 `fatigue:false` 逐位元相同；已合回主 checkout 並 commit）；防守 `nba-defense-v3`（R-010）；賽中 OVR C4（E-033）；長人偏袒量尺照 E-099／E-102。
 
 ## 進行中／等使用者
+- **rulings 整併**（2026-10-30，使用者要求）：`memory/rulings.md` 88 條依主題併成 20 條、刪過時的；舊 ID 查檔尾「舊 ID 對照」表，pre-commit 把表裡的 ID 算保留（README 寫入規則例外）。新裁決若同主題，改寫該條並在「合併」欄記新 ID；下一個 ID R-089。
 - **薪水相關分析**（F-072，`reports/salary-corr/`）：已 commit，探索分析不進版本。2K 最貼近薪水（0.71–0.87），card OVR 0.58–0.67，RAPM 單季 0.2–0.3；以前賽季用替代 OVR（bref 進階數據學 0.2.7c，樣本外 ρ 0.80–0.86）。真 OVR 重建以前賽季要約 8 層實驗檔逐季重跑，使用者未要求。
 - **E-132 卡片改讀自製先驗 RAPM（L2）**：完成；階段 A 取消、階段 B 待 **2027-02** 回來算。等使用者：errata、要不要另立「連 defenseBonus 一起換」。
 - **E-134 舊季滾動回測先驗 RAPM 卡**：預註冊草稿 `reports/card-0.2.7c+E134-rolling-prior/`，等使用者選範圍並凍結；defenseBonus 這次一起換（補 L-079）。

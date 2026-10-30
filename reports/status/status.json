@@ -1,23 +1,23 @@
 {
- "generatedAt": "2026-10-30T00:53:08+00:00",
+ "generatedAt": "2026-10-30T01:05:24+00:00",
  "simVersion": "v54",
  "evalPoss": 5000,
  "rapmPool": 415,
  "kpi": [
   {
-   "label": "正式卡片 card 0.2.7a 樣本外 ρ（淨值）",
+   "label": "正式卡片 card 0.2.7b 樣本外 ρ（淨值）",
    "value": "未量測",
    "sub": "A/B 半 RAPM 樣本外尚未量測；樣本內 0.779（循環）；前正式版 v58 H1-m0 為 0.563（不同卡片，僅供參考）"
   },
   {
-   "label": "正式卡片 card 0.2.7a 樣本外 ρ（防守）",
+   "label": "正式卡片 card 0.2.7b 樣本外 ρ（防守）",
    "value": "未量測",
    "sub": "尚未量測；v58 H1-m0 為 0.391（僅供參考）"
   },
   {
-   "label": "正式卡片 card 0.2.7a 對 2K27 ρ（外部基準）",
-   "value": "0.737",
-   "sub": "v58 H1-m0 0.537；來源 reports/card-0.2.7+E125-pass-volume/evaluation.json（E125-P50 候選，每場含上場時間）；card 0.2.7 為 .736、card 0.2.6 為 .737、card 0.2.5 為 .738、card 0.2.4 為 .748、card 0.2.3 為 .740、card 0.2.2 為 .681、card 0.2.0 為 .695、card 0.1.2（每 36 分鐘）為 .518；2K27 不參與擬合"
+   "label": "正式卡片 card 0.2.7b 對 2K27 ρ（外部基準）",
+   "value": "0.738",
+   "sub": "v58 H1-m0 0.537；來源 reports/card-0.2.7+E123-tail-3pt-rim-pres/rebase-027a/evaluation.json（e123a 候選，每場含上場時間）；card 0.2.7a 為 .737、card 0.2.7 為 .736、card 0.2.6 為 .737、card 0.2.5 為 .738、card 0.2.4 為 .748、card 0.2.3 為 .740、card 0.2.2 為 .681、card 0.2.0 為 .695、card 0.1.2（每 36 分鐘）為 .518；2K27 不參與擬合"
   }
  ],
  "teamNote": "卡片版本（v55–v58）只改顯示用 OVR，不影響模擬 winsMAE；卡片的球隊指標另列於 team_card.json",
@@ -63,8 +63,18 @@
    "note": "已收束；球隊層 2025-26 勝場 MAE 變差，未切換對局資料，卡片板仍為 v53 校準；不讀 RAPM，樣本內即樣本外：同一份分數直接對 A 半、B 半 RAPM 各算一次 ρ 再平均（reports/ovr-metrics-backfill-2025-26）"
   },
   {
-   "layer": "卡片 OVR（正式卡片板，card 0.2.7a）",
-   "description": "card 0.2.7 + E-125：傳球 pass 改成量率各半 0.5·z(AST/36)＋0.5·z(AST%)，四季池與錨點照 E-101 重算（2026-10-30 使用者裁定 R-074、R-077）（遊戲本體不讀取任何 OVR）",
+   "layer": "卡片 OVR（正式卡片板，card 0.2.7b）",
+   "description": "card 0.2.7a + E-123：threeValue、help（只看護框實績，不看位置）、pressure／presDisplay 照 E-101 四季池開 99 以上的頂端，底端 h1 沒過的維持 40（2026-10-30 使用者裁定 R-072、R-078）（遊戲本體不讀取任何 OVR）",
+   "players": 414,
+   "rhoNet": 0.779,
+   "rhoDefense": 0.532,
+   "holdoutRho": "未量測",
+   "rho2k": 0.738,
+   "note": "ρRAPM 樣本內（align/封頂用 RAPM）；每場 OVR；card 0.2.7b = card 0.2.7a + E-123；對 card 0.2.7a 的 Δρ_{N_W} -0.0008 [-0.0025, +0.0007]、Δρ_{Q_W} +0.0001 [-0.0011, +0.0012]、線性量尺 -0.0007 [-0.0024, +0.0008]（預註冊 E-123，只證明不變差，字母小版本）；evaluate 18/19；對 2K27 ρ 取 card-0.2.7+E123-tail-3pt-rim-pres/rebase-027a/evaluation.json 的 e123a 每場值；來源 card-0.2.7b"
+  },
+  {
+   "layer": "卡片 OVR card 0.2.7a（前正式版）",
+   "description": "card 0.2.7 + E-125：傳球 pass 改成量率各半 0.5·z(AST/36)＋0.5·z(AST%)，四季池與錨點照 E-101 重算（2026-10-30 使用者裁定 R-074、R-077）；2026-10-30 由 card 0.2.7b 取代（遊戲本體不讀取任何 OVR）",
    "players": 414,
    "rhoNet": 0.779,
    "rhoDefense": 0.532,
@@ -505,9 +515,9 @@
    "rank": 1,
    "name": "Shai Gilgeous-Alexander",
    "pos": "PG",
-   "ovr": 104.8,
+   "ovr": 105.0,
    "minutes": 2259,
-   "threeValue": 86.4,
+   "threeValue": 86.7,
    "simRank": 1,
    "rapmRank": 2,
    "flags": "—"
@@ -516,9 +526,9 @@
    "rank": 2,
    "name": "Victor Wembanyama",
    "pos": "C",
-   "ovr": 103.7,
+   "ovr": 103.9,
    "minutes": 1866,
-   "threeValue": 74.1,
+   "threeValue": 75.0,
    "simRank": 5,
    "rapmRank": 5,
    "flags": "長人"
@@ -527,9 +537,9 @@
    "rank": 3,
    "name": "Nikola Jokić",
    "pos": "C",
-   "ovr": 101.7,
+   "ovr": 101.9,
    "minutes": 2265,
-   "threeValue": 78.6,
+   "threeValue": 79.5,
    "simRank": 6,
    "rapmRank": 1,
    "flags": "長人"
@@ -540,7 +550,7 @@
    "pos": "PG",
    "ovr": 99.7,
    "minutes": 2625,
-   "threeValue": 64.3,
+   "threeValue": 66.1,
    "simRank": 76,
    "rapmRank": 6,
    "flags": "—"
@@ -551,7 +561,7 @@
    "pos": "SF",
    "ovr": 99.0,
    "minutes": 2085,
-   "threeValue": 94.0,
+   "threeValue": 95.1,
    "simRank": 2,
    "rapmRank": 4,
    "flags": "—"
@@ -562,7 +572,7 @@
    "pos": "PF",
    "ovr": 97.6,
    "minutes": 1039,
-   "threeValue": 56.4,
+   "threeValue": 56.8,
    "simRank": 3,
    "rapmRank": 3,
    "flags": "長人"
@@ -571,9 +581,9 @@
    "rank": 7,
    "name": "Franz Wagner",
    "pos": "SF",
-   "ovr": 97.2,
+   "ovr": 97.6,
    "minutes": 1019,
-   "threeValue": 70.3,
+   "threeValue": 71.8,
    "simRank": 33,
    "rapmRank": 7,
    "flags": "—"
@@ -582,9 +592,9 @@
    "rank": 8,
    "name": "Chet Holmgren",
    "pos": "PF",
-   "ovr": 96.6,
+   "ovr": 97.0,
    "minutes": 1997,
-   "threeValue": 66.3,
+   "threeValue": 67.6,
    "simRank": 21,
    "rapmRank": 8,
    "flags": "長人"
@@ -593,9 +603,9 @@
    "rank": 9,
    "name": "Luka Dončić",
    "pos": "PG",
-   "ovr": 95.1,
+   "ovr": 95.6,
    "minutes": 2289,
-   "threeValue": 97.5,
+   "threeValue": 97.9,
    "simRank": 7,
    "rapmRank": 16,
    "flags": "—"
@@ -604,9 +614,9 @@
    "rank": 10,
    "name": "Lauri Markkanen",
    "pos": "PF",
-   "ovr": 91.6,
+   "ovr": 91.7,
    "minutes": 1443,
-   "threeValue": 77.8,
+   "threeValue": 78.8,
    "simRank": 24,
    "rapmRank": 11,
    "flags": "長人"
@@ -615,7 +625,7 @@
    "rank": 11,
    "name": "Amen Thompson",
    "pos": "PG",
-   "ovr": 88.0,
+   "ovr": 88.3,
    "minutes": 2953,
    "threeValue": 40.6,
    "simRank": 73,
@@ -628,32 +638,32 @@
    "pos": "SG",
    "ovr": 88.0,
    "minutes": 2342,
-   "threeValue": 93.7,
+   "threeValue": 94.3,
    "simRank": 70,
    "rapmRank": 17,
    "flags": "—"
   },
   {
    "rank": 13,
-   "name": "Neemias Queta",
-   "pos": "C",
-   "ovr": 87.5,
-   "minutes": 1926,
-   "threeValue": 44.2,
-   "simRank": 36,
-   "rapmRank": 13,
-   "flags": "長人"
-  },
-  {
-   "rank": 14,
    "name": "Cade Cunningham",
    "pos": "PG",
-   "ovr": 87.4,
+   "ovr": 87.7,
    "minutes": 2172,
-   "threeValue": 74.2,
+   "threeValue": 75.4,
    "simRank": 78,
    "rapmRank": 54,
    "flags": "—"
+  },
+  {
+   "rank": 14,
+   "name": "Neemias Queta",
+   "pos": "C",
+   "ovr": 87.7,
+   "minutes": 1926,
+   "threeValue": 44.5,
+   "simRank": 36,
+   "rapmRank": 13,
+   "flags": "長人"
   },
   {
    "rank": 15,
@@ -661,7 +671,7 @@
    "pos": "SF",
    "ovr": 87.0,
    "minutes": 1182,
-   "threeValue": 63.5,
+   "threeValue": 64.8,
    "simRank": 23,
    "rapmRank": 12,
    "flags": "—"
@@ -670,9 +680,9 @@
    "rank": 16,
    "name": "Herbert Jones",
    "pos": "SG",
-   "ovr": 86.1,
+   "ovr": 86.3,
    "minutes": 1588,
-   "threeValue": 45.8,
+   "threeValue": 45.7,
    "simRank": 325,
    "rapmRank": 14,
    "flags": "—"
@@ -681,9 +691,9 @@
    "rank": 17,
    "name": "Dyson Daniels",
    "pos": "SG",
-   "ovr": 86.0,
+   "ovr": 86.2,
    "minutes": 2520,
-   "threeValue": 40.0,
+   "threeValue": 40.1,
    "simRank": 80,
    "rapmRank": 44,
    "flags": "—"
@@ -692,9 +702,9 @@
    "rank": 18,
    "name": "Ryan Rollins",
    "pos": "PG",
-   "ovr": 85.7,
+   "ovr": 85.9,
    "minutes": 2375,
-   "threeValue": 95.5,
+   "threeValue": 95.9,
    "simRank": 26,
    "rapmRank": 155,
    "flags": "RAPM 差距大"
@@ -703,22 +713,22 @@
    "rank": 19,
    "name": "Kon Knueppel",
    "pos": "SF",
-   "ovr": 85.4,
+   "ovr": 85.6,
    "minutes": 2551,
-   "threeValue": 99.0,
+   "threeValue": 102.0,
    "simRank": 87,
    "rapmRank": 42,
    "flags": "—"
   },
   {
    "rank": 20,
-   "name": "OG Anunoby",
+   "name": "Ausar Thompson",
    "pos": "SF",
-   "ovr": 85.4,
-   "minutes": 2224,
-   "threeValue": 87.3,
-   "simRank": 39,
-   "rapmRank": 31,
+   "ovr": 85.3,
+   "minutes": 1896,
+   "threeValue": 45.9,
+   "simRank": 72,
+   "rapmRank": 28,
    "flags": "—"
   }
  ],
@@ -998,8 +1008,17 @@
    "rho2k": 0.737
   },
   {
-   "version": "B12",
+   "version": "card 0.2.7b",
    "order": 18,
+   "adopted": true,
+   "rhoNetIn": 0.779,
+   "rhoNetOut": null,
+   "rhoDefOut": null,
+   "rho2k": 0.738
+  },
+  {
+   "version": "B12",
+   "order": 19,
    "adopted": false,
    "rhoNetIn": 0.53,
    "rhoNetOut": 0.455,
@@ -1008,7 +1027,7 @@
   },
   {
    "version": "C1",
-   "order": 19,
+   "order": 20,
    "adopted": false,
    "rhoNetIn": 0.531,
    "rhoNetOut": 0.455,
@@ -1017,7 +1036,7 @@
   },
   {
    "version": "D1",
-   "order": 20,
+   "order": 21,
    "adopted": false,
    "rhoNetIn": 0.531,
    "rhoNetOut": 0.458,
@@ -1082,7 +1101,7 @@
   },
   {
    "version": "B12",
-   "order": 18,
+   "order": 19,
    "adopted": false,
    "teams": 30,
    "pearsonR": 0.869,
@@ -1091,7 +1110,7 @@
   },
   {
    "version": "C1",
-   "order": 19,
+   "order": 20,
    "adopted": false,
    "teams": 30,
    "pearsonR": 0.872,
@@ -1100,7 +1119,7 @@
   },
   {
    "version": "D1",
-   "order": 20,
+   "order": 21,
    "adopted": false,
    "teams": 30,
    "pearsonR": 0.865,

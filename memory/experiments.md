@@ -992,3 +992,13 @@
 - 狀態：完成、判定全過；已發 card 0.2.7a（2026-10-30，使用者「0,2,7a」，R-077；`reports/card-0.2.7a/`）
 - 相關：R-074、R-034、E-070、E-101、E-107、L-026、L-063
 - 來源：使用者 2026-10-30「giannis only has 5 assist, why he is leading in pass」→「same as 3pt, we need to mix ast and ast%」
+
+### E-123
+- 日期：2026-10-30
+- 假設：3PT（threeValue）、RIM（help）、PRES（pressure／presDisplay）照 E-101 框架（四季合併池、差距尺＋只壓縮保險、h1 過的那端才開）開 99 以上與 40 以下尾巴後，剛好 99 的並列（4／4／7／6 人）散開，卡片層不變差（m1–m3、c3 ≥ 18/19、c4 > 140 ≤ 2 個）。
+- 做法：`reports/card-0.2.7+E123-tail-3pt-rim-pres/preregistration.md`（草稿）。基準 card 0.2.7。T（threeValue，只顯示）補抓 2022-23 追蹤投籃，抓不齊改三季池；H（help）沿用現行收縮、不用 E-080 位置收縮，f-eng 查引擎讀不讀 > 99；P（pressure）用 defense-tenth 現成的 2022-23、2023-24 hustle／matchups 重建 force，a0P 要逐人重現 E-071 force。變體 e123（主）、e123h、e123p（只報告）。
+- 已揭露：三欄 2025-26 頂端名單與 99 並列人數、E-080／F-030（Stewart 原值 123、z 4.82）、E-071、E-057 全部結果；lead 手算 Stewart 可能 125–136。
+- 狀態：已凍結（2026-10-30，使用者「Freeze and run」；sha256 bbaace39…2374，見 `reports/card-0.2.7+E123-tail-3pt-rim-pres/preregistration.sha256`）；2026-10-30 跑完，判定全過，總評 4/5；使用者採用（R-078），疊到 card 0.2.7a 重建（`rebase-027a/`：c0 只放 E-125 = 0.2.7a 逐位元，m1–m3 過，c3 18/19，c4 0，三欄和 e123 逐人相同；R-064 影響小：前 20 換 1 人、前 300 移動 ≥ 10 名 2 人），發為 **card 0.2.7b**（2026-10-30）
+- 結果（`reports/card-0.2.7+E123-tail-3pt-rim-pres/report.md`，lead 已重算核對三欄 99 並列與 > 140）：剛好 99 的人 3PT 4→0（Curry 105.0）、RIM 4→0（Stewart 113.5、Wembanyama 108.7）、PRES 7→0（Thybulle 127.0）、presDisplay 6→0；> 140 為 0；c0 逐位元、m1–m3 ±0.001、c3 18/19。h1：T、P 底端沒過（維持 40），H 兩端過。副作用：Mobley 從第 22 名到第 29 名，Knueppel 進前 20、Anunoby 出。偏差 D1–D8；a0T 第一次 0.31 沒過，修重現 bug（3PA＝0 取聯盟先驗，D8）後才過，照字面違反 §3「不改規則重試」，交使用者裁定。
+- 相關：E-090、E-096、E-101、E-080、E-071、E-057、R-024、R-055、R-056、R-072、F-046、L-072
+- 來源：使用者 2026-10-30「為何 rim pres 3PT 的錨點沒修，最強的很多人都在 99 整」→「寫預註冊」

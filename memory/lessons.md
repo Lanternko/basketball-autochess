@@ -448,3 +448,9 @@
 - 錯誤：使用者問「防守意識上線了嗎」，我只 grep gh-pages 的原始碼、看到字串和資料就回「上線了」。其實那段 span 在 `.facts` 列裡，桌機版 CSS `.facts>span:not(.f-d){display:none}` 整列藏掉，畫面上根本看不到，被使用者截圖抓到。
 - 規則：回答網站上「有沒有上線／看不看得到」之前，要在瀏覽器打開線上頁面，用 `getComputedStyle(el).display` 或截圖確認元素真的有顯示，不能只看原始碼或資料。GitHub Pages 剛 push 時要等 build 變 built，並加 `?v=` 避開快取再看。
 - 相關：R-080
+
+### L-072
+- 日期：2026-10-30
+- 錯誤：E-090 的 h1 以「force 只有 2024-25、2025-26，相鄰季 1 組 < 2」把 pressure 排除在開尾巴之外，但 `reports/defense-tenth/step4-t2/raw/2022-23/`、`2023-24/` 早就有 `0-hustle.json`（DEFLECTIONS、CHARGES_DRAWN）和 `0-matchups.json`（逐對 MATCHUP_TOV）。排除理由不成立，pressure 99 並列 7 人一直沒人修（E-123 才發現）。
+- 規則：以「資料不夠」排除某項之前，先在 `reports/` 底下 grep 該端點或欄名（例如 `DEFLECTIONS`、`MATCHUP_TOV`），列出所有季的現成檔；報告寫明搜過哪些路徑。找不到才排除。
+- 相關：E-090、E-123

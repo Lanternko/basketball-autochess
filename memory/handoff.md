@@ -7,6 +7,7 @@
 ## 進行中的工作
 - **名單頁 DIQ 欄已上線**（2026-10-30，R-080，220a8a6，gh-pages 5a29983 已在線上確認）：防守意識改成表格防守組 PRES 右邊一欄。未處理的使用者提問：TO（tovSkill，OVR 係數 +0.34／SD，偏袒低持球射手）要不要刪或照 R-032 改持球時間分母；INS 要不要拆近框（自己打到籃下）＋終結（命中率），要先查和 DRV 重疊。兩者都動 OVR，要另立實驗。
 - **card 0.2.7a 已發**（2026-10-30，R-074、R-077）：card 0.2.7 + E-125 pass 量率各半，`reports/card-0.2.7a/`（= E-125 work/P50，sha256 04a9c266…165f）。名單頁 2025-26、OVR 傾向錨點、狀態板已改指 0.2.7a。Giannis pass 名次 10→25（值 97.7→96.2），OVR 前 20 只換 1 人（Knueppel 進、Ausar 出）。待辦：新 pass 只進 OVR，模擬沒重跑，要進模擬另立實驗；新賽季頁仍用 0.2.7 公式，要跟上另走 inseason（R-050）。
+- **E-123 已採用，發為 card 0.2.7b**（2026-10-30，R-072、R-078）：card 0.2.7a + E-123（threeValue、help、pressure／presDisplay 頂端開尾），`reports/card-0.2.7b/`（sha256 361bcac6…1105；重建與閘門在 `reports/card-0.2.7+E123-tail-3pt-rim-pres/rebase-027a/`）。名單頁 2025-26（3PT 改讀 `card-0.2.7b/three-value.csv`）、OVR 傾向錨點、狀態板已改指 0.2.7b。前 20 只換 1 人（Ausar 進、Anunoby 出），Mobley 22→28。待辦：3PT、PRES 低分端（TODO.md）；卡片 99 以上模擬沒用到；新賽季頁仍用舊公式，要跟上另走 inseason（R-050）；未做 role-audit。
 - 版本號改制（R-018）：正式卡片 = `card 0.1.0`；下列實驗都掛在它上面。
 - v62 3PT 難度與出手量（E-056，`card 0.1.0+E056`）：完成（被 max_turns 截斷但報告齊全）。直覺驗收未過，等使用者決定 3PT 定義。
 - E-057 三分價值（量為主、同量比準，R-020）：完成，`reports/card-0.1.1+E057-three-value/`。取代版 2K27 ρ 0.4956、Mobley 進前十，主驗收未過，不採用進 OVR；並列版 0.5175 但屬事後挑選（L-026）。待使用者選：threeValue 只當顯示用（PATCH），或另行預註冊並列版樣本外檢驗。2K27 三分參考（R-021，`reports/ref-2k27-3pt/`）：2K 前 100 名中對上 82 人，與 2K 三分的 Spearman 在現行 long 是 0.17，在 threeValue 是 0.49。2K 比 threeValue 更看重少量但很準的射手（Kennard、Durant、Cam Johnson），也比較看好高難度的持球射手（Brunson、Tatum、Markkanen）。

@@ -21,7 +21,7 @@ SRC = ROOT / 'data' / 'season-source' / 'player-games.json'
 RAPM = ROOT / 'reports' / 'impact-rapm' / 'rapm-prior.csv'  # 2025-26 單季 box-prior RAPM（每 100 回合）
 ONOFF = ROOT / 'reports' / 'impact-rapm' / 'onoff.csv'
 GC = ROOT / 'reports' / 'game-contribution' / 'm2'  # 評分 M2（R-066）：box＋hustle＋防守對位 → RAPM 權重、2025-26 基準、五色切點（scripts/fit_rating_m2.py）
-CARD_SUMMARY = ROOT / 'reports' / 'card-0.2.7a' / 'summary.json'  # 正式卡 OVR 錨點（換算 OVR 傾向）
+CARD_SUMMARY = ROOT / 'reports' / 'card-0.2.7b' / 'summary.json'  # 正式卡 OVR 錨點（換算 OVR 傾向）
 # 新秀篩選（使用者 2026-10-30）：該季選秀年＝新秀；2027 頁的 2026 新秀沒有先驗卡、不在名單上，按鈕自動隱藏
 BIO = {'g5': (ROOT / 'data/defense-seventh/2026-27/bio.json', '2026'), 'season': (ROOT / 'data/benchmark-source/bio.json', '2025')}
 
@@ -318,7 +318,7 @@ function toggleG5(b) {
   if (typeof fitTable === 'function') fitTable();
 }
 // 貢獻值（使用者 2026-10-30 選 A）：box score＋hustle＋防守對位換算的每 36 分鐘淨影響（M2，R-066；權重擬合 2025-26 RAPM），和 2025-26 整季比；
-// OVR 傾向＝把差值當成 pred 的變動，照正式卡（card 0.2.7a）的錨點與分鐘權重 W(MPG) 換算（只顯示，不改 OVR）
+// OVR 傾向＝把差值當成 pred 的變動，照正式卡（card 0.2.7b）的錨點與分鐘權重 W(MPG) 換算（只顯示，不改 OVR）
 // 數字寫絕對值，顏色看和自己平均的差（使用者 2026-10-30：同樣 +3，替補是進步、SGA 是退步）：
 // 五色切點＝2025-26 全部比賽「貢獻值 − 自己整季平均」絕對值的 20／60 百分位，各色約兩成（使用者 2026-10-30 選單場、5 場分開切）：
 // 單場（上場 ≥10 分鐘）與連續 5 場分開切；M2（R-066）重算為 ±0.8／±2.8、±0.4／±1.3（fit_rating_m2.py 注入 GC_CUT）。顏色是排名，不代表顯著

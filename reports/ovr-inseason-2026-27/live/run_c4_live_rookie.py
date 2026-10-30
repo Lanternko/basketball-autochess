@@ -15,6 +15,7 @@ import numpy as np
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import rookie_defense as RD  # noqa: E402
+import defense_bonus as DB  # noqa: E402
 
 HERE = Path(__file__).resolve().parent
 ORIG = HERE / 'run_c4_live.py'
@@ -28,7 +29,10 @@ OLD_LINE = "    C.write_csv(out_dir / 'ranking.csv', [{k: r[k] for k in head} fo
 NEW_LINE = "    _E116.write_outputs(globals(), locals(), out_dir, rows, head, nopr)\n"
 # 2026-10-30 使用者：老將防守解凍，「用 TUL 類似的做法」→ onBall／help 改四季窗口逐場線性遞減（rookie_defense.veteran）
 OLD_DEF = "    attrs = live_predict(delta2, rel_, undefined, frozen, diag=diag)\n"
-NEW_DEF = OLD_DEF + "    _E116.vet_defense(sd26, attrs, prior_cards)\n"
+NEW_DEF = OLD_DEF + "    _E116.vet_defense(sd26, attrs, prior_cards, pw)\n"
+# 檢查 (a)（f=0 → 先驗卡 OVR）比的是屬性更新機制，用凍結的防守加成；live 加成只進正式輸出
+OLD_A = "    o1 = pw.predict(a1)\n"
+NEW_A = "    _E116.swap_bonus(pw, 'frozen')\n" + OLD_A + "    _E116.swap_bonus(pw, 'live')\n"
 GAMES_PER_SEASON = 1230
 
 
@@ -36,9 +40,11 @@ def load_ns():
     src = ORIG.read_text(encoding='utf-8')
     assert src.count(OLD_LINE) == 1, 'run_c4_live.py 的 ranking.csv 寫入行對不上'
     assert src.count(OLD_DEF) == 1, 'run_c4_live.py 的 live_predict 呼叫行對不上'
-    src = src.replace(OLD_LINE, NEW_LINE).replace(OLD_DEF, NEW_DEF)
+    assert src.count(OLD_A) == 1, 'run_c4_live.py 的檢查 (a) 預測行對不上'
+    src = src.replace(OLD_LINE, NEW_LINE).replace(OLD_DEF, NEW_DEF).replace(OLD_A, NEW_A)
     ns = {'__name__': 'run_c4_live_exec', '__file__': str(ORIG), '_E116': sys.modules[__name__]}
     exec(compile(src, str(ORIG), 'exec'), ns)
+    NS.update(ns=ns)
     return ns
 
 
@@ -117,9 +123,12 @@ def rookie_windows(ns, sd, mapping, rookies, n):
 
 # ------------------------------------------------------------------ main() 內呼叫
 VET_DEF_INFO = {}
+NS = {}
+BONUS = {}
+DEF_L_LIVE = DB.ROOT / 'data/_inseason_build/def-L-live.csv'
 
 
-def vet_defense(sd26, attrs, prior_cards):
+def vet_defense(sd26, attrs, prior_cards, pw):
     """老將 onBall／help：四季窗口逐場線性遞減（rookie_defense.veteran）。c＝聯盟已賽場數／1230·82 格；算不出的人維持先驗卡。
     只改 attrs（之後 pw.predict 用）；lastOVR／檢查 (a) 仍用先驗卡，所以 dOVR 含「單季卡 → 四季窗口」的換算差。"""
     games = {r['GAME_ID'] for b in sd26['box'].values() for r in b['rows']}
@@ -136,6 +145,33 @@ def vet_defense(sd26, attrs, prior_cards):
         n += 1
     VET_DEF_INFO.update(games=len(games), c=c, weights=ww, players=n)
     print(f'老將防守四季窗口：聯盟 {len(games)} 場（c={c:.2f} 格），權重 {ww}，更新 {n} 人', file=sys.stderr)
+    live_bonus(pw, c)
+
+
+def live_bonus(pw, c):
+    """defenseBonus 解凍（2026-10-30 使用者）：E-104 D 每天重擬合，窗口 [c, 328+c]（defense_bonus.py），
+    換掉 M27_DEF 對應的 def-L 檔後重算 pw.pipe 的 UL 加成；posMeanD、門檻（possW≥500／2500）、0.75 照 card 0.2.7。"""
+    g = NS['ns']
+    DEF_L_LIVE.parent.mkdir(exist_ok=True)
+    DB.write_csv(DB.fit(DB.load_data(), c), DEF_L_LIVE)
+    key = str(g['RAPM_STAR'].resolve())
+    assert key in g['M27_DEF'], key
+    P = pw.pipe
+    old = list(g['m27_bonus_of'](P))          # 凍結的 def-L-primary 版（檢查 (a) 用）
+    P._m27_posMeanD_frozen = P._m27_posMeanD
+    g['M27_DEF'][key] = DEF_L_LIVE
+    if hasattr(P, '_m27_bonus'):
+        del P._m27_bonus
+    new = g['m27_bonus_of'](P)
+    BONUS.update(frozen=(old, P._m27_posMeanD_frozen), live=(new, P._m27_posMeanD))
+    moved = sum(abs(a - b) > 1e-12 for a, b in zip(old, new))
+    VET_DEF_INFO.update(defL=str(DEF_L_LIVE.relative_to(DB.ROOT)), bonusChanged=moved,
+                        posMeanD={k: float(v) for k, v in P._m27_posMeanD.items()})
+    print(f'防守加成重擬合：c={c:.2f}，{moved} 人加成改變，posMeanD {VET_DEF_INFO["posMeanD"]}', file=sys.stderr)
+
+
+def swap_bonus(pw, which):
+    pw.pipe._m27_bonus, pw.pipe._m27_posMeanD = BONUS[which]
 
 
 def write_outputs(g, loc, out_dir, rows, head, nopr):

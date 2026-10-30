@@ -44,7 +44,7 @@ VIEWER = ROOT / 'scripts/build_inseason_viewer.py'
 CARD_VIEWER = ROOT / 'scripts/build_card_viewer.py'
 CREATE_NO_WINDOW = getattr(subprocess, 'CREATE_NO_WINDOW', 0)
 
-TIMEOUTS = {'games': 900, 'matchups': 1800, 'inseason': 3600, 'tracking': 600, 'c4': 3600, 'viewer': 600, 'git': 180}
+TIMEOUTS = {'games': 900, 'matchups': 1800, 'inseason': 3600, 'tracking': 600, 'stints': 1800, 'c4': 3600, 'viewer': 600, 'git': 180}
 CO_AUTHOR = 'Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>'
 
 log = logging.getLogger('daily_inseason')
@@ -195,6 +195,20 @@ def step_fetch_tracking() -> None:
         log.warning('fetch_defense_tracking exit=%s：%s', r.returncode, (r.stderr or r.stdout).strip()[-300:])
     else:
         log.info('fetch_defense_tracking：%s', ((r.stdout or '').strip().splitlines()[-1:] or [''])[0])
+
+
+def step_build_stints() -> None:
+    """賽中 defenseBonus（2026-10-30）：本季已賽場次做成 stints（box 補抓、pbp 用快取），live 每天重擬合 E-104 D。
+    失敗不擋發布，沿用上次的 stints（防守加成停在那天）。要在 fetch_inseason 之後（讀它寫的 team-games／pbp）。"""
+    try:
+        r = run([node_exe(), 'scripts/build_inseason_stints.js', SEASON], ROOT, TIMEOUTS['stints'])
+    except subprocess.TimeoutExpired:
+        log.warning('build_inseason_stints 逾時；防守加成沿用上次的 stints')
+        return
+    if r.returncode != 0:
+        log.warning('build_inseason_stints exit=%s：%s', r.returncode, (r.stderr or r.stdout).strip()[-300:])
+    else:
+        log.info('build_inseason_stints：%s', ((r.stdout or '').strip().splitlines()[-1:] or [''])[0])
 
 
 def step_fetch_inseason() -> dict:
@@ -366,6 +380,7 @@ def _run(args) -> int:
     step_fetch_games()
     step_fetch_matchups()
     step_fetch_inseason()
+    step_build_stints()
     step_fetch_tracking()
     data_sha = sha256_file(PLAYER_GAMES)
     pbp_count = len(list(PBP_DIR.glob('*.json'))) if PBP_DIR.exists() else 0

@@ -41,5 +41,12 @@
 - `rookie_defense.veteran(c)`：onBall／help 改用四季窗口逐場線性遞減（E-104 TL 的權重搬到季總計）。窗口 328 格（每季 82 格），最近一格 u≈1、最舊 u≈0；本季已過 c＝聯盟已賽場數／1230·82 格，窗口跟著往後推，2022-23 慢慢滑出。追蹤表只有季總計，每季的原始量（守禁區出手、PLUSMINUS·n、三分干擾、MIN、matchup 回合等）乘上該季那段的平均 u 再相加，再除以「他自己有資料那幾季的權重和」（本季只算已過的 c/82 季；下限＝他各季權重的最大值），等於各季量的加權平均：全勤四季的人有效樣本約一季，只有 2025-26 的人＝卡片原值，只有本季幾場的人＝本季原始量（同新秀 R-075）。公式、z 凍結值、r→屬性對照同新秀。
 - 開季（c=0）權重：2022-23 0.0625、2023-24 0.1875、2024-25 0.3125、2025-26 0.4375；2026-10-28 資料（68 場，c=4.5）本季 0.497。
 - 往年原始表：`reports/defense-tenth/step4-t2/raw/<季>/0-*.json`；本季：`data/defense-seventh/2026-27/tracking/`。
-- `run_c4_live_rookie.py` 在 main() 的 `live_predict` 之後插 `vet_defense`（記憶體替換，不改 run_c4_live.py）；算不出的人維持先驗卡。lastOVR 仍是先驗卡算的，所以 dOVR 含「單季卡 → 四季窗口」的換算差。新秀仍照 R-075（w=1 本季值）；defenseBonus 仍凍結。
+- `run_c4_live_rookie.py` 在 main() 的 `live_predict` 之後插 `vet_defense`（記憶體替換，不改 run_c4_live.py）；算不出的人維持先驗卡。lastOVR 仍是先驗卡算的，所以 dOVR 含「單季卡 → 四季窗口」的換算差。新秀仍照 R-075（w=1 本季值）。
 - 第一版整體 ÷2 會讓只打過一兩季的人多收縮（Maluach help 94.2 → 82.4），使用者選改成每人照實際季數正規化（R-076）；現在 Maluach 只受本季比賽影響（94.2 → 89.6）。
+
+## 防守加成賽中重擬合（2026-10-30）
+- 使用者要 defenseBonus 也解凍。daily 先跑 `scripts/build_inseason_stints.js`：沿用稽核過的整季程式 `fetch_defense_seventh_season.js`（只拿掉 1230 場檢查；box 補抓、pbp 用快取）與 `prepare_defense_b1.js`，產生 `reports/defense-seventh/2026-27/stints/stints.jsonl`（不跑整季驗證與 stint-zones）。失敗不擋發布，沿用上次的 stints。
+- `defense_bonus.py`：E-104 L 形逐場線性擬合（λ 3000）只換時間軸。窗口是最近 328 格 [c, 328+c]，本季場次位置是 gameId 序號/1230·82，滑出窗口的 stint 權重 0。`--check`：c=0 時和 `def-L-primary.csv` 877 人 D、possW 完全相同。
+- `run_c4_live_rookie.py` 的 `live_bonus` 把擬合結果寫到 `data/_inseason_build/def-L-live.csv`，換掉 M27_DEF 對應檔後重算 UL 加成。posMeanD、possW 門檻（≥500 算平均、≥2500 才有加成）、0.75 都照 card 0.2.7。檢查 (a)（f=0 → 先驗卡 OVR）用凍結加成，lastOVR 也仍是凍結加成，所以 dOVR 含加成變化。
+- 新秀沒有先驗卡、不在 pipe 裡，加成仍是 0。possW 要到 2500 才有加成；開季第 5 場時新秀最多約 650。
+- 10-28 資料（68 場，c≈4.53）：D 的變化幾乎都來自本季 4–5 場（只滑窗口時平均 |ΔD| 0.014，加上本季後是 0.14）。

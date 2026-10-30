@@ -20,9 +20,10 @@
 - **E-129 賽中權重曲線**：完成 2/5「沒有改善」（F-070），lead 建議不採用，等 G5。
 - **E-122 回合時長 D1**：凍結、A1 修正（L-077）後執行中。
 - **E-117 模擬關體力描述量測**：完成（2026-10-30）。球隊賽季誤差略差但在雜訊內，主版 WinImp 幾乎不動（Spearman 0.91），位置版長人偏袒 S 從 +37 翻成 −37。正式流程維持開體力。報告 `reports/sim-0.1.0+E117-fatigue-off/report.md`。
-- **sim 0.1.1 刪體力**（R-088，2026-10-30）：使用者「合」，已從 worktree `.claude/worktrees/agent-ab18991181a92d44a` 合回主 checkout 並 commit（19 檔；E-122 在 defense_fourth_game.js 的未 commit 改動沒進 commit、仍在工作樹）。主 checkout 重驗：npm test 52 過、c0 120 場 sha 604439d5…412a 和舊引擎相同。傳 `fatigue:true` 會報錯；v14–v41 memoized 舊鏈會壞（舊研究腳本）。待修：得分偏高 119.1 vs 115.5（TODO）。報告 `reports/sim-0.1.1-no-fatigue/report.md`。
+- **sim 0.1.1 刪體力**（R-088，2026-10-30）：使用者「合」，已從 worktree `.claude/worktrees/agent-ab18991181a92d44a` 合回主 checkout 並 commit（19 檔；E-122 在 defense_fourth_game.js 的未 commit 改動沒進 commit、仍在工作樹）。主 checkout 重驗：npm test 52 過、c0 120 場 sha 604439d5…412a 和舊引擎相同。傳 `fatigue:true` 會報錯；v14–v41 memoized 舊鏈會壞（舊研究腳本）。2026-10-30 依 R-089 再拿掉 doubleThreat 體格項（主 checkout 3 檔，已 commit；和改動前＋E-086 ch1 hook 逐位元相同，timed_game 鎖定雜湊改 edec4342…，npm test 52 過，`dblthreat-phys.diff`）。待修：得分偏高 119.1 vs 115.5（TODO）。報告 `reports/sim-0.1.1-no-fatigue/report.md`。
 - **E-130 DIQ 拿掉 2500 回合門檻**：1/5 不採用（R-083），程式在 worktree `D:/Projects/CODING/ba-e130`（未 commit）。等使用者：結案，或另議新秀 DIQ 只顯示不進 OVR。
 - **新賽季頁影響力四格改自製 EPM 式**（R-086）：已 commit、上線；只顯示不進 OVR。待觀察：開季 Kawhi（116 回合）排第 4 這類小樣本靠生涯值撐的名次；生涯噪音 c 偏保守。
+- **E-135 包夾威脅拿掉體格項**（loop H10）：完成 1/5「失敗」（2026-10-30）。樣本外 S 61.1→60.8，區間含 0；頂端長人名次不動。原因：真實球員 doubleThreat 被量測錨點抵銷（F-073、L-081）。報告 `reports/sim-0.1.0+E135-dblthreat-phys/report.txt`。使用者依奧坎剃刀裁定刪掉體格項（R-089），已改進 sim 0.1.1 並 commit。等使用者：下一步方向（查量測錨點 m.self／籃板二次進攻／停長人線）。
 - **E-114 助攻算進對位**：草稿，等核可。
 - **E-100 防守 D 傷停降權**：第一階段 3/5；等使用者要不要第二階段、2019-20 原因碼補法。
 - E-090 屬性尾巴：experiments 仍登記「派工中」，實際已被 E-096→E-101（card 0.2.6）取代，狀態欄待收掉。

@@ -339,3 +339,10 @@
 - 意義：薪水跟名氣和長期表現走，單季 RAPM 幾乎不進開價；OVR 介於中間。被我們 OVR 看高但便宜的多是底薪約（Queta、Rollins），看低但貴的多是老將（Klay、Middleton、LaVine）。
 - 證據：`reports/salary-corr/report.md`、`signings.csv`、`*-output.txt`；資料來源與 sha256 在 `sources.json`。
 - 狀態：成立（探索分析；以前賽季用的是替代 OVR，不是真 card 流程）
+
+### F-073
+- 日期：2026-10-30
+- 事實：現行引擎（sim 0.1.0）裡，真實球員的 doubleThreat 只經 `measuredScoringThreat = m.self + doubleThreat(p) − m.sourceDouble`（`src/measured_creation_context.js:29`）使用，sourceDouble 在 attach 時用同一公式算，所以改 doubleThreat 公式對有量測的球員抵銷，只影響沒量測的聯盟平均隊友與替補。E-135 拿掉體格項：樣本外長人偏袒 S 61.1→60.8（ΔS 0.30，聯合 90% [−1.29, 1.92]），頂端長人名次不動，球員名次 Spearman 0.9996。
+- 意義：頂端長人被高估不是「自己的體格灌高包夾威脅」造成；若要從創造力這條線找，要看量測值 m.self 本身。改任何會被錨點抵銷的公式前先追到最終使用處。
+- 證據：`reports/sim-0.1.0+E135-dblthreat-phys/report.txt`、`rescore135.json`、`amendment-A.md`、`m1-season.json`
+- 狀態：成立

@@ -61,3 +61,15 @@
   - c0 的聯盟檔改用追蹤中的 `data/season-league.json`。
   - c3 第一次背景啟動失敗，原樣重跑後通過。
   - `strength_benchmark`、`replay_accounting` 兩個測試檔在 worktree 缺未追蹤的資料，沒跑。
+
+---
+
+## 補充（2026-10-30）：doubleThreat 拿掉體格項併進 0.1.1（R-089）
+
+- 依據 E-135（拿掉體格項量不出效果，F-073），使用者裁定依奧坎剃刀刪掉，併進本版。
+- 改動：`src/constants.js` 的 `DOUBLE_THREAT_W` 拿掉 `phys`；`src/probability_model.js` doubleThreat 的得分項改成三項除以權重和（寫法同 E-086 ch1）。
+- 驗收 p1（`p1.mjs`，`gates.json` 的 p1_doubleThreatPhysRemoved）：參考組＝改動前的 0.1.1＋E-086 ch1 hook。582 名球員的 doubleThreat、60 場循環賽、3 人×30 對手×2 樣本的 WinImp 180 格，新舊逐位元相同。
+- 對照：改動前不加 hook 時，doubleThreat 值不同，但 60 場與 180 格都一樣，表示正式 WinImp 鏈在這些格子對這一項沒反應。
+- `test/timed_game.js` 鎖住的原始引擎雜湊 e87f8dce… 改成 edec4342…；改動前的程式加 ch1 hook 跑同一測試，得到的就是 edec4342…。`npm test` 52 項通過。
+- 主 checkout（0.1.1 已由別的 session 在 83ceb63 commit）同樣重做一次：改動前＋hook 與改動後的三組雜湊和 worktree 相同（`out/p1-main-*.json`），主 checkout `npm test` 52 項通過。改動見 `dblthreat-phys.diff`（3 檔）。worktree 裡也留有同樣改動（舊分支，不再使用）。
+- 未 commit。

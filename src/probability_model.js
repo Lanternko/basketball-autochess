@@ -79,10 +79,8 @@ export function teammateContext(lineup, handlerIdx) {
  */
 export function doubleThreat(p) {
   const M = C.ATTR_MIDPOINT, w = C.DOUBLE_THREAT_W, c = C.DOUBLE_CREATE_W;
-  // 肉體直接進得分項：包夾是空間決策，夾的是「離籃框最近又擋不住」的那個人。
-  // 投射效率percentile 分不出 Shaq 與 Rick Fox，體格可以。
-  const score = w.long * p.long + w.mid * p.mid + w.short * p.short
-    + w.phys * p.physique;
+  // 體格項已拿掉（sim 0.1.1，R-089）；寫法同 E-086 ch1，逐位元相同。
+  const score = (w.long * p.long + w.mid * p.mid + w.short * p.short) / (w.long + w.mid + w.short);
   const create = c.handle * (p.handle ?? M) + c.drive * p.drive;
   return C.DOUBLE_THREAT_MIX * score + (1 - C.DOUBLE_THREAT_MIX) * create;
 }

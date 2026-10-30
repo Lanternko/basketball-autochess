@@ -188,6 +188,11 @@ def add_season_nav(html_str, current):
                        f'<span class="sright">{patch_notes_html(m.group(1), current)}</span>{mover}</nav>')
     s, n = re.subn(r'<div class="src">(.*?)</div>', block, html_str, count=1, flags=re.S)
     assert n == 1, 'src div not found'
+    # 能力值顯示四捨五入成整數（使用者 2026-10-30）；等第仍用原值算，OVR、得分、DIQ 等其他數字保留小數
+    for a, b in [('>${v}</td>`; }', '>${Math.round(v)}</td>`; }'), ('${grade(v)} ${v}</i>', '${grade(v)} ${Math.round(v)}</i>'),
+                 ('title="${tip || v}"', 'title="${tip || Math.round(v)}"'), ('逼失誤 ${p.force}', '逼失誤 ${Math.round(p.force)}')]:
+        assert s.count(a) == 1, a
+        s = s.replace(a, b)
     return s.replace('<nav class="snav', CSS + '<nav class="snav', 1) if CSS not in s else s
 
 

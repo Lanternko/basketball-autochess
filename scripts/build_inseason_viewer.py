@@ -101,7 +101,7 @@ def main():
             ('function cell(k, v, first) {', 'function cell(k, v, first, tip) {'),
             ("""return `<td class="${cls.join(' ')}" title="${v}">${g}</td>`;""",
              """return `<td class="${cls.join(' ')}" title="${tip || v}">${g}</td>`;"""),
-            ("cell(k, p[k], j === 0)", "cell(k, p[k], j === 0, k === 'pressure' ? `逼失誤 ${p.force}｜犯規紀律 ${p.foulDisc ?? '—'}（2025-26）` : null)"),
+            ("cell(k, p[k], j === 0)", "cell(k, p[k], j === 0, k === 'pressure' ? `逼失誤 ${p.force}｜犯規紀律 ${p.foulDisc == null ? '—' : Math.round(p.foulDisc)}（2025-26）` : null)"),
             # 數值模式的格子（apply_common 改過那行）也帶 PRES tooltip
             ("""cls.push(gcls(grade(v))); return `<td class="${cls.join(' ')}">${v}</td>`; }""",
              """cls.push(gcls(grade(v))); return `<td class="${cls.join(' ')}"${tip ? ` title="${tip}"` : ''}>${v}</td>`; }"""),

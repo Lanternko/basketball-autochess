@@ -80,7 +80,7 @@ def main(out=None):
         ('function cell(k, v, first) {', 'function cell(k, v, first, tip) {'),
         ("""return `<td class="${cls.join(' ')}" title="${v}">${g}</td>`;""",
          """return `<td class="${cls.join(' ')}" title="${tip || v}">${g}</td>`;"""),
-        ("cell(k, p[k], j === 0)", "cell(k, p[k], j === 0, k === 'pressure' ? `逼失誤 ${p.force}｜犯規紀律 ${p.foulDisc}` : null)"),
+        ("cell(k, p[k], j === 0)", "cell(k, p[k], j === 0, k === 'pressure' ? `逼失誤 ${p.force}｜犯規紀律 ${Math.round(p.foulDisc)}` : null)"),
         # 分鐘改顯示場均（使用者 2026-10-29），篩選門檻改成場均分鐘
         ("th('min', 'MIN', '分鐘', 'gl')", "th('min', 'MPG', '分鐘', 'gl')"),
         ("[[0, '全部'], [500, '≥500'], [1000, '≥1000'], [1500, '≥1500']]",

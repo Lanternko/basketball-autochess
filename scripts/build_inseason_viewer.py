@@ -16,6 +16,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import enrich_roster_viewer as er  # noqa: E402
 from season_nav import add_season_nav, apply_common  # noqa: E402
+import season_nav as sn  # noqa: E402
 
 ROOT = er.ROOT
 BASE = ROOT / 'reports/ovr-v58-card-2025-26/roster-viewer.html'
@@ -38,6 +39,12 @@ def main():
     base = BASE.read_text(encoding='utf-8')
     old = json.loads(re.search(r'const DATA=(\{.*?\});\nconst COLS', base, re.S).group(1))
     ht = {r[old['cols'].index('name')]: r[old['cols'].index('ht')] for r in old['rows']}
+    # DIQ 顯示負分：先試 meta 記的 def-L 檔＋posMeanD，再試今天重擬合的 def-L-live.csv；都對不上就只顯示正值
+    ul = next((v['ulBonus'] for v in meta.values() if isinstance(v, dict) and 'ulBonus' in v), None)
+    dcen = sn.defense_centered(rows, 'playerId', ([(ROOT / ul['defL'], ul['posMeanD'])] if ul else [])
+                               + [(ROOT / 'data/_inseason_build/def-L-live.csv', None)])
+    if dcen is None:
+        print('DIQ 負分：找不到對得上的 D 檔，只顯示正值', file=sys.stderr)
     data_rows = []
     for r in rows:
         num = lambda k: float(r[k])
@@ -47,7 +54,8 @@ def main():
         # 舊版型沒有的人（E-116 新秀）身高改取 ranking.csv 的 heightInches（bio）
         h = ht.get(r['name']) or (round(num('heightInches')) if r.get('heightInches') else 0)
         data_rows.append([int(r['rank']), num('ovr'), r['name'], r['pos'], r['team'], h,
-                          round(num('MIN26') / int(r['N']), 1), int(r['N']), num('predictedPer36'), num('defenseBonus'),
+                          round(num('MIN26') / int(r['N']), 1), int(r['N']), num('predictedPer36'),
+                          dcen[r['playerId']] if dcen else (num('defenseBonus') or None),
                           *[opt('presDisplay') if (a == 'pressure' and has_pd) else opt(a) for a in cols[10:25]],
                           num('lastOVR'), num('dOVR'), *([num('pressure'), opt('foulDisc')] if has_pd else [])])
     # ΔOVR 五色：≥+4 深綠、+1～+4 淺綠、±1 內灰、−1～−4 橘、≤−4 紅（沿用等第色）

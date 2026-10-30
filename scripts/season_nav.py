@@ -359,10 +359,38 @@ def apply_common(s):
 
 # 防守意識是能力值，放表格防守組 PRES 右邊（使用者 2026-10-30），不放卡片資訊列（那列桌機整列藏掉）。
 # 單位是防守 RAPM 分（不是 0–99），所以不換等第、直接顯示 +x.xx；0 顯示「—」。不進 ATTR，免得卡片前三／最弱排序被它佔掉。
-DIQ_TD = ("const diq = p => `<td class=\"${p.dbon >= 2 ? 'gA' : p.dbon >= 1 ? 'gB' : p.dbon > 0 ? 'gC' : ''}"
+DIQ_TD = ("const diq = p => `<td data-nodec class=\"${p.dbon >= 2 ? 'gA' : p.dbon >= 1 ? 'gB' : p.dbon > 0 ? 'gC' : ''}"
           "${st.sort === 'dbon' ? ' sortcol' : ''}\"${p.dbon > 0 ? '' : ' style=\"color:var(--muted)\"'}"
-          " title=\"防守意識：真實比賽防守 RAPM 高於同位置平均的部分，補能力值量不到的輪轉、站位、補位；只有正值，會加進 OVR\">"
-          "${p.dbon > 0 ? '+' + p.dbon.toFixed(2) : '—'}</td>`;\n")
+          " title=\"防守意識：真實比賽防守 RAPM 和同位置平均的差（負＝低於平均），補能力值量不到的輪轉、站位、補位；只有正的部分會加進 OVR\">"
+          "${p.dbon == null ? '—' : (p.dbon > 0 ? '+' : p.dbon < 0 ? '−' : '') + Math.abs(p.dbon).toFixed(2)}</td>`;\n")
+
+
+def defense_centered(rows, key, candidates):
+    """DIQ 欄顯示負分（使用者 2026-10-30）：centered＝0.75·D − posMeanD(pos)，possW ≥ 2500 才有值（同 run_c4_live.m27_ul_bonus）。
+    candidates＝[(def-L 檔, posMeanD 或 None)]；None 就從 defenseBonus > 0 的人反推 posMeanD＝median(0.75·D − bonus)
+    （pipeline 平均的人群和 ranking.csv 不完全一樣，從 rows 重算會差一點）；該位置沒人有正加成才照 m27_ul_bonus 用 MIN 加權平均。
+    第一個讓每個人 max(0, centered) 都等於 ranking.csv defenseBonus（±0.002）的候選勝出，回 {rows[key]: centered 或 None}；
+    都對不上（例如 def-L-live.csv 已被隔天重擬合覆寫）回 None，頁面退回只顯示正值。"""
+    import csv
+    for path, pos_mean in candidates:
+        if not path.exists():
+            continue
+        src = {r[key]: r for r in csv.DictReader(path.open(encoding='utf-8'))}
+        d = {r[key]: (float(src[r[key]]['D']), float(src[r[key]]['poss'])) for r in rows if r[key] in src}
+        mean = dict(pos_mean or {})
+        for pos in {r['pos'] for r in rows} - set(mean):
+            back = sorted(0.75 * d[r[key]][0] - float(r['defenseBonus']) for r in rows
+                          if r['pos'] == pos and r[key] in d and float(r['defenseBonus']) > 0)
+            if back:
+                mean[pos] = back[len(back) // 2]
+                continue
+            idx = [r for r in rows if r['pos'] == pos and r[key] in d and d[r[key]][1] >= 500]
+            w = sum(float(r['MIN']) for r in idx)
+            mean[pos] = sum(float(r['MIN']) * 0.75 * d[r[key]][0] for r in idx) / w if w else 0.0
+        out = {r[key]: 0.75 * d[r[key]][0] - mean[r['pos']] if r[key] in d and d[r[key]][1] >= 2500 else None for r in rows}
+        if all(abs(max(0.0, out[r[key]] or 0.0) - float(r['defenseBonus'])) <= 0.002 for r in rows):
+            return out
+    return None
 
 
 def _defense_iq_column(s):

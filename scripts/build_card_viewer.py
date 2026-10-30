@@ -18,6 +18,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import enrich_roster_viewer as er  # noqa: E402
 from season_nav import add_season_nav, apply_common  # noqa: E402
+import season_nav as sn  # noqa: E402
 
 ROOT = er.ROOT
 BASE = ROOT / 'reports/ovr-v58-card-2025-26/roster-viewer.html'
@@ -43,6 +44,9 @@ def main(out=None):
         gp_src[row[h['PLAYER_NAME']]] = gp_src.get(row[h['PLAYER_NAME']], 0) + 1
     cols = ['rank', 'ovr', 'name', 'pos', 'team', 'ht', 'min', 'gp', 'imp', 'dbon', 'threeValue', 'mid', 'short', 'ft',
             'drive', 'foulDraw', 'pass', 'tovSkill', 'creation', 'rebound', 'physique', 'stamina', 'onBall', 'help', 'pressure', 'force', 'foulDisc']
+    # DIQ 顯示負分：card 0.2.7b 的 defenseBonus 用 def-L-primary，posMeanD 從同一批人算（max(0, ·) 逐人核對）
+    dcen = sn.defense_centered(rows, 'name', [(ROOT / 'reports/card-0.2.5+E104-defense-pergame-decay/def-L-primary.csv', None)])
+    assert dcen, 'DIQ 負分：def-L-primary 算回來的 defenseBonus 對不上 card 0.2.7b'
     data_rows, missing, no_tv = [], [], []
     for r in rows:
         num = lambda k: float(r[k])
@@ -58,7 +62,7 @@ def main(out=None):
             no_tv.append(r['name'])
             three = num('long')
         data_rows.append([int(r['rank']), num('ovr'), r['name'], r['pos'], team, ht, round(num('MIN') / gp, 1) if gp else 0.0, gp,
-                          num('predictedPer36'), num('defenseBonus'), three, *[num(a) for a in cols[11:24]],
+                          num('predictedPer36'), dcen[r['name']], three, *[num(a) for a in cols[11:24]],
                           num('presDisplay'), num('pressure'), num('foulDisc')])
     s = base
     s = s.replace('<title>OVR 名單檢視</title>', '<title>2025-26 OVR 名單</title>', 1)

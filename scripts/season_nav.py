@@ -383,7 +383,7 @@ def apply_common(s):
 
 # 重分組（使用者 2026-10-30「採用並重分組」，R-084）：PHYS 不顯示（E-131 後 OVR 也不用）；REB、TO、PRES 併成「球權」
 # （搶回球權／不丟球權／逼對手丟球權）；DIQ 改接在 RIM 後面，防守組＝PER D、RIM、DIQ。
-# 新賽季頁原本照舊；使用者 2026-10-31 要兩頁屬性一致，新賽季頁也套用（inseason 0.2.7b 的 OVR 仍用 physique，只是不顯示）
+# 新賽季頁原本照舊；使用者 2026-10-31 要兩頁屬性一致，新賽季頁也套用（inseason 0.2.7d 起 OVR 也不用 physique）
 REGROUP = [
     ("['pass', 'PASS', '傳球'], ['tovSkill', 'TO', '少失誤'], ['creation', 'CRT', '自主創造']]],",
      "['pass', 'PASS', '傳球'], ['creation', 'CRT', '自主創造']]],"),

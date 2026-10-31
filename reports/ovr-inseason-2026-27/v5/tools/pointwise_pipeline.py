@@ -33,7 +33,7 @@ class PointwisePipeline:
 
     def predict(self, attrs_by_pid):
         P = self.pipe
-        raw = np.array([[attrs_by_pid[p][a] for a in ATTRS] for p in P.pids], float)
+        raw = np.array([[attrs_by_pid[p][a] for a in getattr(P, 'attrs', ATTRS)] for p in P.pids], float)
         pred0 = P.design(raw)
         pr = self.pr0
         taper = np.clip((PR_HI - pr) / (PR_HI - PR_LO), 0.0, 1.0)

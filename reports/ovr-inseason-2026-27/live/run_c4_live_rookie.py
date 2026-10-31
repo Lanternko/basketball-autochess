@@ -95,7 +95,7 @@ def ovr_of(ns, pw, anc, r_repl, x, pos, mpg_hat, height):
     P = copy.copy(pw.pipe)
     P.pos = [DPOS[pos]]
     xx = dict(x, heightInches=float(height))      # 身高凍結（bio）
-    raw = np.array([[xx[a] for a in ns['ATTRS']]], float)
+    raw = np.array([[xx[a] for a in getattr(P, 'attrs', ns['ATTRS'])]], float)
     pred0 = float(P.design(raw)[0])
     g = (pred0 - r_repl) * ns['sat_w'](mpg_hat)
     return pred0, g, ns['e064_map'](g, anc)

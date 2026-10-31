@@ -60,8 +60,10 @@ def cap_total_lift(pred, pred0, lift, allowed):
 class OVRPipeline:
     def __init__(self, summary_path, rapm_path, prior_cards):
         s = json.loads(open(summary_path, encoding='utf-8').read())
-        self.mean = np.array([s['formula']['attributeMean'][a] for a in ATTRS], float)
-        self.sd = np.array([s['formula']['attributeSD'][a] for a in ATTRS], float)
+        # card 0.2.7c 起迴歸拿掉 physique：只用 summary 有的屬性（舊 summary 全有 → 與原本逐位元相同）
+        self.attrs = [a for a in ATTRS if a in s['formula']['attributeMean']]
+        self.mean = np.array([s['formula']['attributeMean'][a] for a in self.attrs], float)
+        self.sd = np.array([s['formula']['attributeSD'][a] for a in self.attrs], float)
         self.b = np.array([s['formula']['intercept']] + s['formula']['coefficientsOnStandardized'], float)
         self.anchors = (s['scaleAnchorsPer36']['PR1'], s['scaleAnchorsPer36']['PR50'],
                         s['scaleAnchorsPer36']['PR99'])
@@ -104,12 +106,12 @@ class OVRPipeline:
         pos_arr = np.array(self.pos)
         for p in POS[:-1]:
             d = (pos_arr == p).astype(float)[:, None]
-            cols.append(d * z[:, [ATTRS.index(a) for a in INTERACT]])
+            cols.append(d * z[:, [self.attrs.index(a) for a in INTERACT]])
         X = np.hstack(cols)
         return np.c_[np.ones(len(X)), X] @ self.b
 
     def predict(self, attrs_by_pid):
-        raw = np.array([[attrs_by_pid[p][a] for a in ATTRS] for p in self.pids], float)
+        raw = np.array([[attrs_by_pid[p][a] for a in self.attrs] for p in self.pids], float)
         pred0 = self.design(raw)
         pr_pool = sorted(pred0[i] for i in range(len(pred0)) if self.pr_mask[i])
         pr = np.array([percentile_rank(v, pr_pool) for v in pred0])

@@ -20,7 +20,7 @@ HERE = Path(__file__).resolve().parent
 ROOT = HERE.parents[2]
 E060 = ROOT / 'reports/card-0.1.1+E060-onball-targeting'
 TAIL = ROOT / 'reports/card-0.2.5+E101-crossera/tail-summary.json'
-M27B = os.environ.get('CARD_MODE', '027b') == '027b'  # E-128：help 改 E-123 D1 尾巴（027b＝預設，R-085；其他模式逐位元不變）
+M27B = os.environ.get('CARD_MODE', '027d') in ('027b', '027d')  # 027d 能力值同 027b  # E-128：help 改 E-123 D1 尾巴（027b＝預設，R-085；其他模式逐位元不變）
 PRIOR_CARD = HERE / ('prior-2025-26-card027b.json' if M27B else 'prior-2025-26-card027.json')
 K_C3, K_B, K_T, K_HELP = 500.0, 1000.0, 1000.0, 200.0
 CURVE_DEF_RIM = [(0, 0.150), (40, 0.105), (55, 0.050), (70, 0.004), (85, -0.048), (99, -0.095), (120, -0.125), (150, -0.150)]

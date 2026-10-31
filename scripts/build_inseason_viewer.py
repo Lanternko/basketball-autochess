@@ -127,10 +127,14 @@ def main():
     base = BASE.read_text(encoding='utf-8')
     old = json.loads(re.search(r'const DATA=(\{.*?\});\nconst COLS', base, re.S).group(1))
     ht = {r[old['cols'].index('name')]: r[old['cols'].index('ht')] for r in old['rows']}
-    # DIQ 顯示負分：先試 meta 記的 def-L 檔＋posMeanD，再試今天重擬合的 def-L-live.csv；都對不上就只顯示正值
+    # DIQ 顯示負分：先試今天的 def-L-live.csv／meta 記的 def-L 檔配 meta 的 posMeanD（老將 live 加成就是前者），
+    # 再試 def-L-live.csv 反推 posMeanD；都對不上就只顯示正值。新秀走卡鏈，加成 × min(1, possW/2500)（taper）
     ul = next((v['ulBonus'] for v in meta.values() if isinstance(v, dict) and 'ulBonus' in v), None)
-    dcen = sn.defense_centered(rows, 'playerId', ([(ROOT / ul['defL'], ul['posMeanD'])] if ul else [])
-                               + [(ROOT / 'data/_inseason_build/def-L-live.csv', None)])
+    live_d = ROOT / 'data/_inseason_build/def-L-live.csv'
+    rk = live / 'rookies-detail.json'
+    taper = {str(x['playerId']) for x in json.loads(rk.read_text(encoding='utf-8'))} if rk.exists() else ()
+    dcen = sn.defense_centered(rows, 'playerId', ([(live_d, ul['posMeanD']), (ROOT / ul['defL'], ul['posMeanD'])] if ul else [])
+                               + [(live_d, None)], taper)
     if dcen is None:
         print('DIQ 負分：找不到對得上的 D 檔，只顯示正值', file=sys.stderr)
     data_rows = []

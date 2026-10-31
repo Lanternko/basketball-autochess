@@ -408,29 +408,35 @@ DIQ_TD = ("const diq = p => `<td data-nodec class=\"${p.dbon >= 2 ? 'gA' : p.dbo
           "${p.dbon == null ? '—' : (p.dbon > 0 ? '+' : p.dbon < 0 ? '−' : '') + Math.abs(p.dbon).toFixed(2)}</td>`;\n")
 
 
-def defense_centered(rows, key, candidates):
+def defense_centered(rows, key, candidates, taper=()):
     """DIQ 欄顯示負分（使用者 2026-10-30）：centered＝0.75·D − posMeanD(pos)，possW ≥ 2500 才有值（同 run_c4_live.m27_ul_bonus）。
+    taper＝走卡鏈的新秀 key（run_c4_live_rookie.chain_rookie，2026-10-31）：加成是 max(0, centered)·min(1, possW/2500)、
+    possW > 0 就有值，顯示也乘同一個係數（正的部分＝實際加進 OVR 的量）。
     candidates＝[(def-L 檔, posMeanD 或 None)]；None 就從 defenseBonus > 0 的人反推 posMeanD＝median(0.75·D − bonus)
     （pipeline 平均的人群和 ranking.csv 不完全一樣，從 rows 重算會差一點）；該位置沒人有正加成才照 m27_ul_bonus 用 MIN 加權平均。
     第一個讓每個人 max(0, centered) 都等於 ranking.csv defenseBonus（±0.002）的候選勝出，回 {rows[key]: centered 或 None}；
     都對不上（例如 def-L-live.csv 已被隔天重擬合覆寫）回 None，頁面退回只顯示正值。"""
     import csv
+    taper = set(taper)
+    pos = lambda r: {'G': 'SG', 'F': 'SF'}.get(r['pos'], r['pos'])   # 新秀 G／F／C 照 run_c4_live_rookie.DPOS 查 posMeanD
     for path, pos_mean in candidates:
         if not path.exists():
             continue
         src = {r[key]: r for r in csv.DictReader(path.open(encoding='utf-8'))}
         d = {r[key]: (float(src[r[key]]['D']), float(src[r[key]]['poss'])) for r in rows if r[key] in src}
         mean = dict(pos_mean or {})
-        for pos in {r['pos'] for r in rows} - set(mean):
+        for ps in {pos(r) for r in rows} - set(mean):
             back = sorted(0.75 * d[r[key]][0] - float(r['defenseBonus']) for r in rows
-                          if r['pos'] == pos and r[key] in d and float(r['defenseBonus']) > 0)
+                          if pos(r) == ps and r[key] in d and r[key] not in taper and float(r['defenseBonus']) > 0)
             if back:
-                mean[pos] = back[len(back) // 2]
+                mean[ps] = back[len(back) // 2]
                 continue
-            idx = [r for r in rows if r['pos'] == pos and r[key] in d and d[r[key]][1] >= 500]
+            idx = [r for r in rows if pos(r) == ps and r[key] in d and d[r[key]][1] >= 500]
             w = sum(float(r['MIN']) for r in idx)
-            mean[pos] = sum(float(r['MIN']) * 0.75 * d[r[key]][0] for r in idx) / w if w else 0.0
-        out = {r[key]: 0.75 * d[r[key]][0] - mean[r['pos']] if r[key] in d and d[r[key]][1] >= 2500 else None for r in rows}
+            mean[ps] = sum(float(r['MIN']) * 0.75 * d[r[key]][0] for r in idx) / w if w else 0.0
+        out = {r[key]: (0.75 * d[r[key]][0] - mean[pos(r)]) * min(1.0, d[r[key]][1] / 2500) if r[key] in taper
+               and r[key] in d and d[r[key]][1] > 0 else 0.75 * d[r[key]][0] - mean[pos(r)]
+               if r[key] in d and d[r[key]][1] >= 2500 else None for r in rows}
         if all(abs(max(0.0, out[r[key]] or 0.0) - float(r['defenseBonus'])) <= 0.002 for r in rows):
             return out
     return None

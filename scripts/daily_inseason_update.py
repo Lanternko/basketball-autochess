@@ -41,10 +41,11 @@ BUILD_ROOT = ROOT / 'data/_inseason_build'
 RUN_C4 = LIVE / 'run_c4_live.py'
 RUN_LIVE = LIVE / 'run_c4_live_rookie.py'   # E-116：包 run_c4_live，補上沒有先驗卡的當季新秀（版號仍讀 RUN_C4）
 VIEWER = ROOT / 'scripts/build_inseason_viewer.py'
+HISTORY = LIVE / 'ovr_history.py'               # 名單頁 OVR 折線：逐日截斷重算
 CARD_VIEWER = ROOT / 'scripts/build_card_viewer.py'
 CREATE_NO_WINDOW = getattr(subprocess, 'CREATE_NO_WINDOW', 0)
 
-TIMEOUTS = {'games': 900, 'matchups': 1800, 'inseason': 3600, 'tracking': 600, 'stints': 1800, 'c4': 3600, 'viewer': 600, 'git': 180}
+TIMEOUTS = {'games': 900, 'matchups': 1800, 'inseason': 3600, 'tracking': 600, 'stints': 1800, 'c4': 3600, 'viewer': 600, 'history': 3600, 'git': 180}
 CO_AUTHOR = 'Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>'
 
 log = logging.getLogger('daily_inseason')
@@ -253,6 +254,18 @@ def step_c4(out_dir: Path) -> dict:
     return meta
 
 
+def step_history(out_dir: Path) -> None:
+    """名單頁 OVR 折線（2026-10-31）：資料截到每個比賽日重算 OVR → ovr-history.json（同版號、同資料的日子走快取）。
+    失敗不擋發布，名單頁就不畫折線。"""
+    try:
+        r = run([py_exe(), '-I', str(HISTORY), str(out_dir)], ROOT, TIMEOUTS['history'])
+    except subprocess.TimeoutExpired:
+        log.warning('ovr_history 逾時；這次不畫 OVR 折線')
+        return
+    if r.returncode != 0:
+        log.warning('ovr_history exit=%s：%s', r.returncode, (r.stderr or r.stdout).strip()[-300:])
+
+
 def step_viewer(out_dir: Path) -> Path:
     checked([py_exe(), '-I', str(VIEWER), str(out_dir)], ROOT, TIMEOUTS['viewer'])
     html = out_dir / 'roster-viewer.html'
@@ -405,6 +418,7 @@ def _run(args) -> int:
         shown = base
         meta['dataSha256'] = data_sha
         save_json(work / 'meta.json', meta)
+        step_history(work)
         html = step_viewer(work)
         card_html = step_card_viewer(work)
         cutoff = meta['dataCutoff']

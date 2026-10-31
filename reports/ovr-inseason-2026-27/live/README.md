@@ -50,3 +50,8 @@
 - `run_c4_live_rookie.py` 的 `live_bonus` 把擬合結果寫到 `data/_inseason_build/def-L-live.csv`，換掉 M27_DEF 對應檔後重算 UL 加成。posMeanD、possW 門檻（≥500 算平均、≥2500 才有加成）、0.75 都照 card 0.2.7。檢查 (a)（f=0 → 先驗卡 OVR）用凍結加成，lastOVR 也仍是凍結加成，所以 dOVR 含加成變化。
 - 新秀沒有先驗卡、不在 pipe 裡，加成仍是 0。possW 要到 2500 才有加成；開季第 5 場時新秀最多約 650。
 - 10-28 資料（68 場，c≈4.53）：D 的變化幾乎都來自本季 4–5 場（只滑窗口時平均 |ΔD| 0.014，加上本季後是 0.14）。
+
+## 名單頁 OVR 折線（2026-10-31）
+- `ovr_history.py <今日輸出夾>`：用現行模型把 2026-27 資料截到每個比賽日（GAME_DATE ≤ d）逐日重算，寫 `ovr-history.json`（每人 start＝lastOVR、pts＝自己出賽日的 OVR），名單頁畫在近 5 場右邊。最後一天直接用當天 ranking.csv。
+- 不串每日快照：各天版號不同、新秀起點改過，串起來會有假跳動。防守追蹤表只有季累計，過去的點沿用最新那份（只影響防守兩項）。
+- 快取 `ovr-history-cache.json`（gitignore）：鍵＝版號＋本資料夾 *.py／*-2026.json 雜湊＋截斷資料 sha；全重算約 3–4 分（每日 10 天），命中約 3 秒。每日更新失敗只記警告、不擋發布。

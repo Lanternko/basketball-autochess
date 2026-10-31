@@ -468,7 +468,7 @@ DELTA_NEW = ("<span class=\"f-d\" title=\"較開季卡 OVR ${p.last.toFixed(1)}\
 # 較開季比照手機掛在 OVR 圓環下（箭頭＋絕對值）；下方真實數據只留細項小字（版面在 enrich_roster_viewer.CSS）
 NAME_OLD = '<div class="nm"><span class="first">${esc(first)}</span>${esc(last)}</div>'
 NAME_NEW = '<div class="nm"><span class="first">${esc(first)}</span>${esc(last)}<span class="nht">${ht(p.ht)}</span></div>'
-BIG3 = ("${(r => r ? [['得分', r.pts], ['籃板', r.reb], ['助攻', r.ast]]"
+BIG3 = ("${(r => r && r.gp ? [['得分', r.pts], ['籃板', r.reb], ['助攻', r.ast]]"
         ".map(([l, v]) => `<span class=\"f-b\">${l} <b>${v.toFixed(1)}</b></span>`).join('') : '')(REAL[p.name])}")
 RING_END = 'class="val">${p.ovr.toFixed(1)}</text></svg></div>'
 RING_DELTA = ("class=\"val\">${p.ovr.toFixed(1)}</text></svg>"

@@ -310,6 +310,14 @@ function headshot(p) {
 function realBox(p) {
   const r = REAL[p.name];
   if (!r) return '<div class="real-h">真實數據：找不到這位球員的 2025-26 例行賽紀錄</div>';
+  // 在名單上但還沒出賽（傷兵等，gp 0）：照常排出各格、數字寫「—」，卡片高度才和別人一樣（使用者 2026-10-31）
+  if (!r.gp) {
+    const cell = l => `<span>${l}<b>—</b></span>`;
+    return `<div class="real-h">本季尚未出賽（傷停或未獲上場）</div>
+      <div class="real rx"><div class="rmain">${['得分', '籃板', '助攻', '正負值'].map(l => `<div class="st"><b>—</b><span>${l}</span></div>`).join('')}</div>
+      <div class="rsub"><div>${['命中率', '三分', '罰球', '真實命中'].map(cell).join('')}</div><div>${['抄截', '阻攻', '失誤'].map(cell).join('')}</div></div>
+      <button type="button" class="g5t" style="visibility:hidden" tabindex="-1" aria-hidden="true"><i>▼</i>近 0 場比賽</button></div>`;
+  }
   // 100% 以上（小樣本，如 1 場 TS 133%）不顯示小數，細項才不會比別人長、多換一行讓卡片變高
   const f1 = v => v.toFixed(1), pc = v => (v == null ? '—' : (v * 100).toFixed(v >= 1 ? 0 : 1) + '%');
   const pm = v => (v > 0 ? '+' : '') + v.toFixed(1);
@@ -402,7 +410,8 @@ function impactChips(p) {
     `<span class="chip" title="無 2025-26 RAPM">${lab}<i class="flat">—</i></span>`).join('')}</div>`;
   const sg = v => (v > 0 ? '+' : '') + v.toFixed(1);
   const cls = v => (v >= 0.5 ? 'up' : v <= -0.5 ? 'dn' : 'flat');
-  const chip = (lab, v, tip) => v == null ? '' : `<span class="chip" title="${tip}">${lab}<i class="${cls(v)}">${sg(v)}</i></span>`;
+  // 缺值也排一格「—」（還沒出賽的人沒有本季數據估計），四格才排滿
+  const chip = (lab, v, tip) => v == null ? `<span class="chip" title="${tip}">${lab}<i class="flat">—</i></span>` : `<span class="chip" title="${tip}">${lab}<i class="${cls(v)}">${sg(v)}</i></span>`;
   return `<div class="strong">${chip('進攻影響', m.o, '2025-26 RAPM 進攻：在場時球隊每 100 回合多得幾分（控制隊友與對手，對聯盟平均）')}${
     chip('防守影響', m.d, '2025-26 RAPM 防守：在場時對手每 100 回合少得幾分（正值＝少失分）')}${
     chip('淨影響', m.o + m.d, '2025-26 RAPM 淨值＝進攻＋防守')}${

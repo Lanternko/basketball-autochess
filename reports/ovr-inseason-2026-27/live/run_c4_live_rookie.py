@@ -34,6 +34,9 @@ NEW_DEF = OLD_DEF + "    _E116.vet_defense(sd26, attrs, prior_cards, pw)\n"
 OLD_A = "    o1 = pw.predict(a1)\n"
 NEW_A = "    _E116.swap_bonus(pw, 'frozen')\n" + OLD_A + "    _E116.swap_bonus(pw, 'live')\n"
 GAMES_PER_SEASON = 1230
+# v2（formula-gap，2026-10-31 使用者「先上線」）：新秀補卡鏈，三段都漸進放入，避免門檻一過就跳
+BONUS_POSS = 2500      # 防守加成 × min(1, possW/2500)
+USAGE_N = 10           # usage 層 × min(N/10, 1)
 
 
 def load_ns():
@@ -96,6 +99,43 @@ def ovr_of(ns, pw, anc, r_repl, x, pos, mpg_hat, height):
     pred0 = float(P.design(raw)[0])
     g = (pred0 - r_repl) * ns['sat_w'](mpg_hat)
     return pred0, g, ns['e064_map'](g, anc)
+
+
+def team_badness(sd26):
+    """爛隊程度 d（2026-10-31 使用者：用當下球隊的 +/- 混一點勝負，不看上季）。{TEAM_ID: {...}}。
+    nr＝累計得失分差／(GP+10)、wp＝(W+5)／(GP+10)、s＝0.7·(0.5+0.033·nr)+0.3·wp、d＝clip((0.40−s)/0.10, 0, 1)。"""
+    acc = {}
+    for r in sd26['teamRows']:
+        a = acc.setdefault(r['TEAM_ID'], [0, 0, 0.0])
+        a[0] += 1
+        a[1] += r['WL'] == 'W'
+        a[2] += float(r['PLUS_MINUS'])
+    out = {}
+    for t, (gp, w, pm) in acc.items():
+        nr, wp = pm / (gp + 10), (w + 5) / (gp + 10)
+        s = 0.7 * (0.5 + 0.033 * nr) + 0.3 * wp
+        out[t] = {'d': min(1.0, max(0.0, (0.40 - s) / 0.10)), 'teamGP': gp, 'nr': nr, 'wp': wp, 's': s}
+    return out
+
+
+def chain_rookie(ns, pw, anc, r_repl, cur, pos, n_games, dl, coef, d):
+    """新秀走卡鏈（formula-gap v2）：pred0 → 防守加成（× min(1, possW/2500)）→ usage 層（× min(N/10, 1)）→ g → 錨點。
+    D、possW 讀當天 def-L-live.csv，posMeanD 與老將 live 加成同一份。align／H1 上限：池化 RAPM 開季凍結（老將同），
+    新秀不在池內 → poss=0 → 漸進係數 0。usage 特徵 L=log1p(MPGhat)、a=1、y=1、v=0、d＝team_badness。"""
+    pred0, mh = cur['pred0'], cur['mpgHat']
+    row = dl.get(cur['pid'])
+    possW = float(row['poss']) if row else 0.0
+    bonus = 0.0
+    if possW > 0:
+        mean = pw.pipe._m27_posMeanD[DPOS[pos]]
+        bonus = max(0.0, 0.75 * float(row['D']) - mean) * min(1.0, possW / BONUS_POSS)
+    p = pred0 + bonus
+    L = float(np.log1p(mh))
+    full = (coef['b0'] + coef['b1_p'] * p + coef['b2_L'] * L + coef['b3_a'] + coef['b4_y']
+            + coef['b6_yL'] * L + coef['b8_ydL'] * d * L)
+    pn = p + min(n_games / USAGE_N, 1.0) * (full - p)
+    g = (pn - r_repl) * ns['sat_w'](mh)
+    return {'bonus': bonus, 'possW': possW, 'pred': p, 'predNew': pn, 'g': g, 'ovr': ns['e064_map'](g, anc)}
 
 
 def eval_rookie(ns, pw, anc, r_repl, rk, rec, arm, rel, dfn=None):
@@ -185,6 +225,9 @@ def write_outputs(g, loc, out_dir, rows, head, nopr):
     rookies = [r for r in rookies if r['playerId'] not in prior_pids]       # 保險：有卡的不當新秀
     wins = rookie_windows(g, sd26, C.mapping_for(g['PRIOR']), rookies, g['ALL_N'])
     dfns = RD.inseason('2026-27', {r['playerId']: r['pos'] for r in rookies})
+    _, coef, _ = g['load_usage']()
+    dl = {int(r['playerId']): r for r in csv.DictReader(open(DEF_L_LIVE, encoding='utf-8'))}
+    bad = team_badness(sd26)
     rk_rows = []
     for rk in rookies:
         pid = rk['playerId']
@@ -194,14 +237,17 @@ def write_outputs(g, loc, out_dir, rows, head, nopr):
         rec = wins.get(pid)
         cur = eval_rookie(g, pw, anc, r_repl, rk, rec, 'e116', rel, dfns.get(pid) if gp > 0 else None)
         base = eval_rookie(g, pw, anc, r_repl, rk, None, 'e116', rel)
+        tb = bad.get(max(b['rows'], key=lambda r: r['GAME_DATE'])['TEAM_ID']) if gp > 0 else None
+        ch = chain_rookie(g, pw, anc, r_repl, dict(cur, pid=pid), rk['pos'], gp, dl, coef, tb['d'] if tb else 0.0)
+        cur.update(pred=ch['pred'], g=ch['g'], ovr=ch['ovr'])
         row = {k: '' for k in head}
         row.update({'ovr': g['r1'](cur['ovr']), 'name': rk['name'], 'pos': rk['pos'], 'MIN': 0,
-                    'predictedPer36': round(cur['pred0'], 3), 'defenseBonus': 0.0, 'align': 0.0,
+                    'predictedPer36': round(ch['pred'], 3), 'defenseBonus': round(ch['bonus'], 3), 'align': 0.0,
                     'pred0': round(cur['pred0'], 3), 'playerId': pid, 'N': gp, 'team': team.get(pid, rk['team']),
                     'MIN26': round(mins, 1), 'lastOVR': g['r1'](base['ovr']),
                     'dOVR': round(cur['ovr'] - base['ovr'], 2), 'MPG0': round(rk['mpg0'], 2),
                     'MPGhat': round(cur['mpgHat'], 2), 'g': round(cur['g'], 3), 'ovrPer36': '',
-                    'predNew': round(cur['pred0'], 4)})
+                    'predNew': round(ch['predNew'], 4)})
         if rec is not None and rec['GP'] > 0:
             row['MPGwin'] = round(rec['MIN'] / rec['GP'], 2)
             if 'stamina' in cur['w']:
@@ -209,7 +255,7 @@ def write_outputs(g, loc, out_dir, rows, head, nopr):
         for a in ATTRS:
             row[a] = g['r1'](cur['x'][a] if a != 'heightInches' else rk['heightInches'])
         row['_ovr'] = cur['ovr']
-        row['_cur'], row['_base'], row['_pick'] = cur, base, rk['pick']
+        row['_cur'], row['_base'], row['_pick'], row['_chain'] = cur, base, rk['pick'], dict(ch, d=tb['d'] if tb else None)
         rk_rows.append(row)
     loc_rookies = {r['playerId'] for r in rk_rows}
     nopr[:] = [r for r in nopr if r['playerId'] not in loc_rookies]
@@ -225,7 +271,8 @@ def write_outputs(g, loc, out_dir, rows, head, nopr):
         slim.append({'playerId': r['playerId'], 'name': r['name'], 'team': r['team'], 'pick': r['_pick'],
                      'pos': r['pos'], 'N': r['N'], 'ovr': r['ovr'], 'lastOVR': r['lastOVR'],
                      'rank': next(m['rank'] for m in merged if m['playerId'] == r['playerId']),
-                     'x0': r['_base']['x'], 'xhat': r['_cur']['x'], 'w': r['_cur']['w']})
+                     'x0': r['_base']['x'], 'xhat': r['_cur']['x'], 'w': r['_cur']['w'],
+                     'chain': {k: r['_chain'][k] for k in ('possW', 'bonus', 'pred', 'predNew', 'd')}})
     json.dump(slim, open(out_dir / 'rookies-detail.json', 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
 
 

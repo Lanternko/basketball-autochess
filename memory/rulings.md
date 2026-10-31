@@ -111,7 +111,7 @@
     | 0.2.7b | ＋E-123 3PT／RIM／PRES 開 99 以上尾巴（R-056），在 0.2.7a 上重建 | |
     | 0.2.7c | ＋E-131 卡片 OVR 迴歸拿掉 physique；名單頁拿掉 PHYS 並重分組 | 現行 |
 
-  - 名單頁 2025-26 分組（0.2.7c）：投籃（3PT、MID、INS、FT）／進攻（DRV、FD、PASS、CRT）／球權（REB、TO、PRES）／防守（PER D、RIM、DIQ）。
+  - 名單頁 2025-26 分組（0.2.7c）：投籃（3PT、MID、INS、FT）／進攻（DRV、FD、PASS、CRT）／球權（REB、TO、PRES）／防守（PER D、RIM、DIQ）。2026-10-31 使用者要兩頁屬性一致：新賽季頁也用這套分組、不顯示 PHYS（只改顯示；inseason 0.2.7b 的 OVR 仍用 physique），共用 `season_nav.regroup_attrs`。
   - inseason：
     - 0.1.0：v5 Path A C4。C4R 不再跑；除非使用者主動重開，不提議下載 NocturneBear box 重跑。
     - 0.1.1：3PT 顯示欄改 threeValue（R-020）。

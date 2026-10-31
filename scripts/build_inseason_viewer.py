@@ -26,6 +26,7 @@ SRC26 = ROOT / 'data/season-source-2026-27/player-games.json'
 
 
 def main():
+    sys.stdout.reconfigure(encoding='utf-8')    # -I 不吃 PYTHONIOENCODING；名字有 ņ 等字時 cp950 印不出來
     day = sys.argv[1] if len(sys.argv) > 1 else '2026-10-27'
     live = ROOT / 'reports/ovr-inseason-2026-27/live' / day
     meta = json.loads((live / 'meta.json').read_text(encoding='utf-8'))

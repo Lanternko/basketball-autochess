@@ -845,6 +845,36 @@ def apply_usage(entries, usage, coef):
     return out
 
 
+def team_badness(team_rows):
+    """爛隊程度 d（R-097／R-098，同 run_c4_live_rookie.py:team_badness、卡 E-147）。{TEAM_ID: d}。
+    nr＝累計得失分差／(GP+10)、wp＝(W+5)／(GP+10)、s＝0.7·(0.5+0.033·nr)+0.3·wp、d＝clip((0.40−s)/0.10, 0, 1)。"""
+    acc = {}
+    for r in team_rows:
+        a = acc.setdefault(r['TEAM_ID'], [0, 0, 0.0])
+        a[0] += 1
+        a[1] += r['WL'] == 'W'
+        a[2] += float(r['PLUS_MINUS'])
+    out = {}
+    for t, (gp, w, pm) in acc.items():
+        s = 0.7 * (0.5 + 0.033 * pm / (gp + 10)) + 0.3 * (w + 5) / (gp + 10)
+        out[t] = min(1.0, max(0.0, (0.40 - s) / 0.10))
+    return out
+
+
+def live_usage(usage, sd26):
+    """R-098（2026-10-31 使用者「AB先上線」）：本季出賽過的人 d 換成最近一場所屬球隊的 team_badness；沒出賽的人照卡（N=0 → OVR＝先驗）。"""
+    bad = team_badness(sd26['teamRows'])
+    out = dict(usage)
+    for pid, b in sd26['box'].items():
+        u = usage.get(pid)
+        if u is None or not b['rows']:
+            continue
+        t = max(b['rows'], key=lambda r: r['GAME_DATE'])['TEAM_ID']
+        if t in bad:
+            out[pid] = {**u, 'd': bad[t], 'dCard': u['d']}
+    return out
+
+
 def e064_convert(entries, mpg_by_pid, anc, r_repl=0.0, sat=False):
     """entries＝{pid: pw.predict 輸出}；回傳同結構但 ovr 改為每場 OVR（ovrPer36 保留原值）。
     g = (pred − r_repl)·MPG/36（G0：r_repl＝0 即 pred·MPG/36）；sat（CARD_MODE=025）：MPG/36 換成 W(MPG)。"""
@@ -948,7 +978,7 @@ def main():
                     mpg_hat[pid] = m0
                     mpg_nodata.append(pid)
         if USAGE_MODE:
-            res = apply_usage(res, usage, ucoef)
+            res = apply_usage(res, live_usage(usage, sd26), ucoef)   # R-098：d 用當下球隊；ref／o1 仍用卡的 d
             ref = apply_usage(ref, usage, ucoef)
         res = e064_convert(res, mpg_hat, anc064, r_repl064, SAT)
         ref = e064_convert(ref, mpg0, anc064, r_repl064, SAT)

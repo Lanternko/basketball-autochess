@@ -1,9 +1,9 @@
-"""2025-26 正式卡名單頁（card 0.2.7c）：以正式卡名單頁為版型，換成 card 0.2.7c 的 OVR／能力值（OVR 為每場、含上場時間、相對替補水準，R-028；能力值同 0.1.2），3PT 顯示 threeValue（R-024）。
+"""2025-26 正式卡名單頁（card 0.2.7d）：以正式卡名單頁為版型，換成 card 0.2.7d 的 OVR／能力值（OVR 為每場、含上場時間、相對替補水準，R-028；能力值同 0.1.2），3PT 顯示 threeValue（R-024）。
 OVR 能力估計納入教練用人證據（分鐘、出賽率、年齡、練兵隊），DNP 與輪休分開（E-075）；用人回歸的訓練目標是 2025-26 單季 RAPM（E-084）；分鐘權重為飽和曲線 W(m)（E-089）；補籃改歸近距離、能力值錨點對四季合併池、頂端只壓縮（E-101）；OVR 迴歸不用 physique（E-131），網站不顯示 PHYS。
 PRES 顯示 presDisplay（逼失誤 − 0.25·犯規，E-071），tooltip 列逼失誤（卡片 pressure）與犯規紀律（foulDisc）。
 
-輸入：reports/card-0.2.7c/ranking.csv（card 0.2.7c）、
-      reports/card-0.2.7c/three-value.csv（以姓名對 tv_main；E-123 頂端開尾）、data/season-source/player-games.json。
+輸入：reports/card-0.2.7d/ranking.csv（card 0.2.7d）、
+      reports/card-0.2.7d/three-value.csv（以姓名對 tv_main；E-123 頂端開尾）、data/season-source/player-games.json。
 版型：reports/ovr-v58-card-2025-26/roster-viewer.html（只讀；team／ht／gp 依姓名取自它）。
 輸出：reports/card-0.1.2-2025-26/roster-viewer.html（或 argv[1] 指定路徑）
 
@@ -22,8 +22,8 @@ import season_nav as sn  # noqa: E402
 
 ROOT = er.ROOT
 BASE = ROOT / 'reports/ovr-v58-card-2025-26/roster-viewer.html'
-CARD = ROOT / 'reports/card-0.2.7c/ranking.csv'
-THREE_VALUE = ROOT / 'reports/card-0.2.7c/three-value.csv'
+CARD = ROOT / 'reports/card-0.2.7d/ranking.csv'
+THREE_VALUE = ROOT / 'reports/card-0.2.7d/three-value.csv'
 DEFAULT_OUT = ROOT / 'reports/card-0.1.2-2025-26/roster-viewer.html'
 
 
@@ -44,9 +44,9 @@ def main(out=None):
         gp_src[row[h['PLAYER_NAME']]] = gp_src.get(row[h['PLAYER_NAME']], 0) + 1
     cols = ['rank', 'ovr', 'name', 'pos', 'team', 'ht', 'min', 'gp', 'imp', 'dbon', 'threeValue', 'mid', 'short', 'ft',
             'drive', 'foulDraw', 'pass', 'tovSkill', 'creation', 'rebound', 'physique', 'stamina', 'onBall', 'help', 'pressure', 'force', 'foulDisc']
-    # DIQ 顯示負分：card 0.2.7c 的 defenseBonus（同 0.2.7b） 用 def-L-primary，posMeanD 從同一批人算（max(0, ·) 逐人核對）
+    # DIQ 顯示負分：card 0.2.7d 的 defenseBonus（同 0.2.7b） 用 def-L-primary，posMeanD 從同一批人算（max(0, ·) 逐人核對）
     dcen = sn.defense_centered(rows, 'name', [(ROOT / 'reports/card-0.2.5+E104-defense-pergame-decay/def-L-primary.csv', None)])
-    assert dcen, 'DIQ 負分：def-L-primary 算回來的 defenseBonus 對不上 card 0.2.7c'
+    assert dcen, 'DIQ 負分：def-L-primary 算回來的 defenseBonus 對不上 card 0.2.7d'
     data_rows, missing, no_tv = [], [], []
     for r in rows:
         num = lambda k: float(r[k])
@@ -67,7 +67,7 @@ def main(out=None):
     s = base
     s = s.replace('<title>OVR 名單檢視</title>', '<title>2025-26 OVR 名單</title>', 1)
     s = re.sub(r'<div class="src">.*?</div>',
-               f'<div class="src">OVR：正式卡 card 0.2.7c（2025-26 整季；OVR 為每場，含上場時間，相對替補水準；FD 以量為主；PRES＝逼失誤扣犯規；OVR 能力估計納入教練用人證據，DNP 與輪休分開，用人回歸對齊當季 RAPM；分鐘權重遞減；能力值對 2022-23～2025-26 四季比較；防守加成不打折、近期加權；傳球看量也看率；3PT、RIM、PRES 頂端不封在 99；OVR 不看身高體重）；3PT 顯示 threeValue；{len(rows)} 人</div>',
+               f'<div class="src">OVR：正式卡 card 0.2.7d（2025-26 整季；OVR 為每場，含上場時間，相對替補水準；FD 以量為主；PRES＝逼失誤扣犯規；OVR 能力估計納入教練用人證據，DNP 與輪休分開，用人回歸對齊當季 RAPM；分鐘權重遞減；能力值對 2022-23～2025-26 四季比較；防守加成不打折、近期加權；年輕人在爛隊的折扣看球隊淨勝分混勝負；傳球看量也看率；3PT、RIM、PRES 頂端不封在 99；OVR 不看身高體重）；3PT 顯示 threeValue；{len(rows)} 人</div>',
                s, count=1, flags=re.S)
     new_data = json.dumps({'cols': cols, 'rows': data_rows}, ensure_ascii=False, separators=(',', ':'))
     s = re.sub(r'const DATA=\{.*?\};\nconst COLS', lambda m: f'const DATA={new_data};\nconst COLS', s, count=1, flags=re.S)

@@ -21,7 +21,7 @@ R = HERE.parents[1]
 PW = HERE / 'phase1-work'
 CANDS = ['T0', 'T1', 'T4', 'T5', 'T6']
 SEASONS = ['2022-23', '2023-24', '2024-25', '2025-26']
-TRAIN, TEST = '2022-23', ['2023-24', '2024-25']
+FOLDS = ['2022-23', '2023-24', '2024-25']   # errata-3 三折輪流
 EDITION = {'2022-23': '2K24', '2023-24': '2K25', '2024-25': '2K26', '2025-26': '2K27'}
 NEXT = {'2022-23': '2023-24', '2023-24': '2024-25', '2024-25': '2025-26'}
 W_BASE = {'sal': 0.4, 'twok': 0.3, 'rapm': 0.15, 'sim': 0.15}
@@ -281,50 +281,61 @@ def main():
         return out
 
     res = {'per_season': {t: {c: metrics(t, c) for c in CANDS} for t in SEASONS}}
-    train = {c: res['per_season'][TRAIN][c]['C'] for c in CANDS if c != 'T0'}
-    tstar = sorted(train, key=lambda c: (-train[c], c))[0]
-    res['train'] = {'season': TRAIN, 'C': train, 'C_T0': res['per_season'][TRAIN]['T0']['C'], 'Tstar': tstar}
+    ps = res['per_season']
 
-    def pooled(c, key):
+    def pick(seasons):
+        cc = {c: sum(ps[t][c]['n'] * ps[t][c]['C'] for t in seasons) / sum(ps[t][c]['n'] for t in seasons) for c in CANDS if c != 'T0'}
+        return sorted(cc, key=lambda c: (-cc[c], c))[0], cc
+    # errata-3：三折輪流，第 k 折用另外兩季選 T*_k、在第 k 季測試
+    folds = {}
+    for t in FOLDS:
+        ts, cc = pick([s for s in FOLDS if s != t])
+        folds[t] = {'train': [s for s in FOLDS if s != t], 'trainC': cc, 'Tstar': ts}
+    tstar, ccall = pick(FOLDS)
+    res['folds'], res['final'] = folds, {'Tstar': tstar, 'C_allFolds': ccall}
+
+    def pooled_diff(key):
         num = den = 0.0
-        for t in TEST:
-            m = res['per_season'][t][c]
-            if m.get(key) is None:
+        for t, f in folds.items():
+            a, b0 = ps[t][f['Tstar']], ps[t]['T0']
+            if a.get(key) is None or b0.get(key) is None:
                 continue
-            nn = m['n'] if key == 'C' else m['n_' + key]
-            num += nn * m[key]
+            nn = a['n'] if key == 'C' else a['n_' + key]
+            num += nn * (a[key] - b0[key])
             den += nn
         return num / den if den else None
-    res['test_pooled'] = {c: {k: pooled(c, k) for k in ('C', 'sal', 'twok', 'rapm')} for c in CANDS}
+    res['oof_diff'] = {k: pooled_diff(k) for k in ('C', 'sal', 'twok', 'rapm')}
     rng = np.random.default_rng(SEED)
-    allids = sorted(set(data[TEST[0]]['ids']) | set(data[TEST[1]]['ids']))
-    pos = {t: {p: i for i, p in enumerate(data[t]['ids'])} for t in TEST}
+    allids = sorted(set().union(*[data[t]['ids'] for t in FOLDS]))
+    pos = {t: {p: i for i, p in enumerate(data[t]['ids'])} for t in FOLDS}
     diffs = np.empty(B)
     for b in range(B):
         mult = np.bincount(rng.integers(0, len(allids), len(allids)), minlength=len(allids))
         num = den = 0.0
-        for t in TEST:
-            idx = np.repeat(np.array([pos[t][allids[j]] for j in range(len(allids)) if mult[j] and allids[j] in pos[t]]),
-                            np.array([mult[j] for j in range(len(allids)) if mult[j] and allids[j] in pos[t]]))
+        for t in FOLDS:
+            sel = [j for j in range(len(allids)) if mult[j] and allids[j] in pos[t]]
+            idx = np.repeat(np.array([pos[t][allids[j]] for j in sel]), np.array([mult[j] for j in sel]))
             d = data[t]
-            cs = spearman(d['ovr'][tstar][idx], d['ref'][idx]) - spearman(d['ovr']['T0'][idx], d['ref'][idx])
+            cs = spearman(d['ovr'][folds[t]['Tstar']][idx], d['ref'][idx]) - spearman(d['ovr']['T0'][idx], d['ref'][idx])
             num += len(idx) * cs
             den += len(idx)
         diffs[b] = num / den
     lo = float(np.percentile(diffs, 5))
-    pt = res['test_pooled']
+    od = res['oof_diff']
     j1 = lo > 0
-    j2 = pt[tstar]['sal'] - pt['T0']['sal'] >= -TOL['sal']
-    j22 = pt[tstar]['twok'] - pt['T0']['twok'] >= -TOL['twok']
-    j3 = pt[tstar]['rapm'] - pt['T0']['rapm'] >= -TOL['rapm']
-    res['bootstrap'] = {'diffC_point': pt[tstar]['C'] - pt['T0']['C'], 'lower90': lo, 'upper90': float(np.percentile(diffs, 95)), 'draws': B, 'seed': SEED}
+    j2 = od['sal'] >= -TOL['sal']
+    j22 = od['twok'] >= -TOL['twok']
+    j3 = od['rapm'] >= -TOL['rapm']
+    res['bootstrap'] = {'diffC_point': od['C'], 'lower90': lo, 'upper90': float(np.percentile(diffs, 95)), 'draws': B, 'seed': SEED}
+    prov = suf != ''
     res['judgement'] = {'1': bool(j1), '2_sal': bool(j2), '2-2_2k': bool(j22), '3_rapm': bool(j3),
-                        'verdict': 'adopt' if (j1 and j2 and j22 and j3) else ('side_effect' if j1 else 'no_improvement'), 'PROVISIONAL': True}
-    res['note'] = '暫時版：2K 用 F-072 舊檔（不含已退休／離隊者）、模擬項缺席；不可作判定或結論（errata-2 §4）。'
+                        'verdict': 'adopt' if (j1 and j2 and j22 and j3) else ('side_effect' if j1 else 'no_improvement'), 'PROVISIONAL': prov}
+    res['note'] = ('暫時版：不可作判定或結論（errata-2 §4）。' if prov else '正式版（errata-3 三折）') + f" 2K={a.twok}；sim={a.sim}"
     (outd / f'phase1{suf}.json').write_text(json.dumps(res, ensure_ascii=False, indent=1), encoding='utf-8')
     (outd / f'phase1-checks{suf}.json').write_text(json.dumps(chk, ensure_ascii=False, indent=1), encoding='utf-8')
     f4 = lambda v: 'NA' if v is None else f'{v:.4f}'
-    L = [f'# E-142 第 1 階段報告（暫時版 {suf}）', '', '**暫時版：2K 為舊檔（缺已退休／離隊球員）、模擬項缺席；以下數字不得當判定或結論。**', '',
+    L = ([f'# E-142 第 1 階段報告（暫時版 {suf}）', '', '**暫時版：以下數字不得當判定或結論（errata-2 §4）。**', '']
+         if prov else ['# E-142 第 1 階段報告（正式版，errata-3 三折）', '']) + [f'- 2K：`{a.twok}`；模擬：`{a.sim}`', '',
          '## 口徑', '- 候選目標＝t 季單季值（T0 窗口含 2021-22，該季無候選資料，故候選一律只用 t 季；這是對 pooled 的解讀）。',
          '- T6：T4、T5 的 O、D 各自季內 z 分數平均後轉回每百回合單位，net＝O＋D（見 phase1_build.py t6）。',
          '- 薪水以同季內百分位進 ref，與佔帽 % 同序，所以不需帽值。',
@@ -336,14 +347,14 @@ def main():
             m = res['per_season'][t][c]
             L.append(f"| {c} | {m['n']} | {f4(m['C'])} | {f4(m['sal'])} (n={m['n_sal']}) | {f4(m['twok'])} (n={m['n_twok']}) | {f4(m['rapm'])} (n={m['n_rapm']}) |")
         L.append('')
-    L += [f'## T* ＝ {tstar}（訓練季 {TRAIN}）', f"訓練季 C：{json.dumps({k: round(v, 4) for k, v in train.items()})}，T0＝{res['train']['C_T0']:.4f}", '',
-          '## 測試季合併', '| 候選 | C | M_sal | M_2k | M_rapm |', '|---|---|---|---|---|']
-    for c in CANDS:
-        v = pt[c]
-        L.append(f"| {c} | {f4(v['C'])} | {f4(v['sal'])} | {f4(v['twok'])} | {f4(v['rapm'])} |")
-    L += ['', f"① C(T*)−C(T0)＝{res['bootstrap']['diffC_point']:.4f}，90% 下界＝{lo:.4f} → {'過' if j1 else '不過'}",
+    L += ['## 三折（errata-3）', '| 測試季 | 訓練季 | T*_k | 訓練 C |', '|---|---|---|---|']
+    for t, f in folds.items():
+        L.append(f"| {t} | {'、'.join(f['train'])} | {f['Tstar']} | {json.dumps({k: round(v, 4) for k, v in f['trainC'].items()})} |")
+    L += ['', f"上線候選 T*（三季合併選）＝{tstar}：{json.dumps({k: round(v, 4) for k, v in ccall.items()})}", '',
+          '## 樣本外差值（T*_k − T0，三折依人數加權）', f"C {f4(od['C'])}｜M_sal {f4(od['sal'])}｜M_2k {f4(od['twok'])}｜M_rapm {f4(od['rapm'])}",
+          '', f"① 90% 下界＝{lo:.4f} → {'過' if j1 else '不過'}",
           f"② 薪水 {'過' if j2 else '不過'}；②之二 2K {'過' if j22 else '不過'}；③ RAPM {'過' if j3 else '不過'}",
-          f"暫時判定：{res['judgement']['verdict']}（無效，僅供管線驗證）"]
+          f"判定：{res['judgement']['verdict']}" + ('（暫時版，無效）' if prov else '')]
     (outd / f'report{suf}.md').write_text('\n'.join(L) + '\n', encoding='utf-8')
     print('done', tstar)
 

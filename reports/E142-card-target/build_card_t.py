@@ -6,7 +6,7 @@
   hist <t> 歷史原點 T0（K0 arm，與 E-134 同法），t in 2022-23 2023-24 2024-25
   pipe <tag>  （內部）
 """
-import csv, importlib.util, json, shutil, sys, time
+import csv, importlib.util, json, os, shutil, sys, time
 from pathlib import Path
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parents[1]
@@ -14,7 +14,8 @@ S1 = ROOT / 'reports/card-0.2.7c+E134-rolling-prior/stage1'
 sys.path.insert(0, str(S1))
 import run_t as RT   # noqa: E402
 SW = S1 / 'work'
-W = HERE / 'work'
+W = Path(os.environ['E142_WORK']) if os.environ.get('E142_WORK') else HERE / 'work'   # phase 1：每個候選一個獨立工作目錄
+BJ = W if os.environ.get('E142_WORK') else HERE   # build-*.json 位置（預設維持第 0 階段的位置）
 HDR = ['playerId', 'name', 'pooledNet', 'pooledO', 'pooledD', 'pooledPoss']
 
 
@@ -90,7 +91,7 @@ def c0(cand=None, name='c0'):
     res = {'origin': '2025-26', 'swap': 'T0' if cand is None else 'custom', 'splitRows': sp, 'part_card_sha256': cards_sha,
            'part_equal_E131_K1': {p: cards_sha[p] == e131[p] for p in pa}, 'ranking_sha256': got, 'want': RT.K1_SHA,
            'pass': got == RT.K1_SHA, 'seconds': round(time.time() - t0, 1)}
-    RT.jw(HERE / f'build-{name}.json', res)
+    RT.jw(BJ / f'build-{name}.json', res)
     print(json.dumps(res, ensure_ascii=False))
     return 0 if res['pass'] else 1
 
@@ -126,7 +127,7 @@ def hist(t, cand=None):
     res = {'origin': t, 'swap': 'T0' if cand is None else 'custom', 'swapRows': sw, 'part_card_sha256': cards_sha,
            'ranking_sha256': got, 'stage1_ranking_sha256': ref['ranking_sha256'], 'equals_stage1': got == ref['ranking_sha256'],
            'part_equals_stage1': {p: cards_sha[p] == ref['card_sha256'][p] for p in cards_sha}, 'seconds': round(time.time() - t0, 1)}
-    RT.jw(HERE / f'build-{t}.json', res)
+    RT.jw(BJ / f'build-{t}.json', res)
     print(json.dumps(res, ensure_ascii=False))
     return 0
 
@@ -141,4 +142,8 @@ if __name__ == '__main__':
     if m == 'pipe':
         pipe(sys.argv[2])
         sys.exit(0)
+    if m == 'cand':    # cand <pickle路徑> <原點>：候選 {playerId:(net,O,D)} 由 phase1_cands.py 產生；T0 傳 none
+        import pickle
+        cand = None if sys.argv[2] == 'none' else pickle.load(open(sys.argv[2], 'rb'))
+        sys.exit(c0(cand, 'c0') if sys.argv[3] == '2025-26' else hist(sys.argv[3], cand))
     raise SystemExit('unknown')

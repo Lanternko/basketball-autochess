@@ -15,6 +15,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import rating_m2  # noqa: E402
+import rating_m4  # noqa: E402
 import headshot_eyeline  # noqa: E402
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -350,8 +351,8 @@ const [GC_CUT1, GC_CUT5] = GC_CUT;
 const sg1 = v => (v > 0 ? '+' : '') + v.toFixed(1);
 // 顯示成 0 起跳的「評分」（使用者 2026-10-30：正負號配紅字看不清；名稱改評分，避免和影響力、正負值混在一起，像賽事的 0–10 評分）：分數＝0.75×(貢獻值＋7.5)，低於 0 記 0。
 // M2（R-066）2025-26 單場（≥10 分鐘）約 2% 到 0、約 6% 超過 10；聯盟平均 ≈ 5.8。顏色仍用原單位的差值切
-const gcS = v => Math.max(0, 0.75 * (v + 7.5)).toFixed(1);
-const GC_DEF = '評分 0–10：box score＋hustle（撥球、干擾出手等）＋防守對位（比對手平常少讓幾分、逼出失誤）換算的每 36 分鐘淨影響（權重擬合 2025-26 RAPM），評分＝0.75×(每 100 回合淨分＋7.5)，低於 0 記 0：5.8＝聯盟平均，10 約是單場前 6%';
+const gcS = v => Math.max(0, v).toFixed(1); // M4（E-146）：資料端已是 0–10 評分
+const GC_DEF = '評分 0–10（M4）：整場貢獻：box score＋防守對位＋在場正負值；上場越久影響越大；上場很短時往聯盟平均拉回。5.8＝聯盟平均單場，10 約是單場前 6%。正負值會沾到隊友與對手的運氣';
 const gcCls = (d, [a, b]) => d >= b ? 'c5a' : d >= a ? 'c5b' : d > -a ? 'c5c' : d > -b ? 'c5d' : 'c5f';
 function gcCell(v, b, cut, fb) {
   if (v == null) return '<td>—</td>';
@@ -363,13 +364,7 @@ function gcNote(r, p, n) {
   // 說明只寫兩個數字（使用者 2026-10-30：太長）；五色怎麼切、換算 OVR 放 tooltip
   if (c.b == null) return `<div class="gcn" title="${GC_DEF}">${n} 場平均評分 <b>${gcS(c.r)}</b>　上季 —</div>`;
   const d = c.r - c.b, cls = gcCls(d, GC_CUT5);
-  const [p1, p50, p99] = GC_ANC, w = (1 - Math.exp(-r.mpg / 15)) / (1 - Math.exp(-36 / 15));
-  const toG = o => o <= 70 ? p1 + (o - 40) * (p50 - p1) / 30 : p50 + (o - 70) * (p99 - p50) / 29;
-  const toO = g => g <= p50 ? 40 + 30 * (g - p1) / (p50 - p1) : 70 + 29 * (g - p50) / (p99 - p50);
-  // 照 5 場水準直接換算的 OVR 會跳到 150 這種數字（5 場起伏太大），正文只講排在哪一段，換算值放 tooltip
-  const o2 = toO(toG(p.ovr) + d * w);
-  const tip = `若整季都維持這個水準，OVR 約 ${o2.toFixed(0)}（目前 ${p.ovr.toFixed(1)}）；5 場樣本很小，不會真的差這麼多`;
-  return `<div class="gcn" title="${GC_DEF}。顏色＝和自己 2025-26 平均比，照所有人的起伏五等分；${tip}">` +
+  return `<div class="gcn" title="${GC_DEF}。顏色＝和自己 2025-26 平均比，照所有人的起伏五等分">` +
     `${n} 場平均評分 <b class="${cls}">${gcS(c.r)}</b>　上季 <b>${gcS(c.b)}</b></div>`;
 }
 function gameLog(r, p) {
@@ -485,6 +480,8 @@ function impactChips(p) {
 """
 
 GCW = json.loads((GC / 'weights.json').read_text(encoding='utf-8'))
+M4C = json.loads((ROOT / 'reports/rating-m4/params.json').read_text(encoding='utf-8'))['prod']
+
 BEGIN, END = '<!-- real-stats:begin -->', '<!-- real-stats:end -->'
 
 
@@ -504,10 +501,18 @@ def aggregate():
         for k in a:
             if k.isupper():
                 a[k] += row[h[k]] or 0
-    base = json.loads((GC / 'baseline-2025-26.json').read_text(encoding='utf-8'))
+    # 「上季」＝2025-26 各球員單場評分簡單平均（M4，上線參數）
+    s25 = rating_m4.Scorer('2025-26')
+    acc25 = {}
+    for pid_, mn_, sc_ in zip(s25.tab.pid, s25.tab.mn, s25.S):
+        if mn_ > 0:
+            acc25.setdefault(str(pid_), []).append(float(sc_))
+    base = {k: {'m4': round(sum(v) / len(v), 3)} for k, v in acc25.items()}
     # SRC 指哪季（build_inseason_viewer 會換成 season-source-2026-27），對位資料就讀哪季；某場沒對位資料 → 該場用 M0
+    season_ = '2025-26' if SRC.parent.name == 'season-source' else SRC.parent.name.removeprefix('season-source-')
+    m4 = rating_m4.Scorer(season_)
     rater = rating_m2.Rater('2025-26' if SRC.parent.name == 'season-source' else SRC.parent.name.removeprefix('season-source-'))
-    box = lambda r: rater.value(r, h)
+    box = lambda r: m4.score(r[h['GAME_ID']], r[h['PLAYER_ID']])  # M4 單場評分（0–10 尺度）
     out = {}
     for name, a in acc.items():
         n = a['gp']
@@ -524,14 +529,14 @@ def aggregate():
             'fg': pct(a['FGM'], a['FGA']), 'fg3': pct(a['FG3M'], a['FG3A']), 'ft': pct(a['FTM'], a['FTA']),
             'ts': pct(a['PTS'], tsa),
             # 每列最後兩格＝該場貢獻值（每 36 分鐘，沒上場為 null）、1＝該場沒有對位資料改用 M0
-            'g5': [game_row(r, h, log_keys) + ([round(box(r), 2), int(rater.fallback(r, h))] if r[h['MIN']] else [None, 0])
+            'g5': [game_row(r, h, log_keys) + ([round(box(r), 2), m4.fallback(r[h['GAME_ID']], r[h['PLAYER_ID']])] if r[h['MIN']] else [None, 0])
                    for r in last],
             # 貢獻值：r＝近 N 場合計換算每 36 分鐘，b＝2025-26 整季（沒有 2025-26 紀錄＝null）
-            'gc': {'r': round(sum(box(r) * r[h['MIN']] for r in last if r[h['MIN']]) / rm, 2) if rm else None,
-                   'b': b['box36'] if b else None},
+            'gc': {'r': round(sum(box(r) for r in last if r[h['MIN']]) / sum(1 for r in last if r[h['MIN']]), 2) if rm else None,
+                   'b': b['m4'] if b else None},
             # 整季細項（2026 頁下拉，使用者 2026-10-30）：場均進球／出手、前後場籃板、犯規，與整季貢獻值（分鐘加權）
             'sd': {k.lower(): round(a[k] / n, 2) for k in ['FGM', 'FGA', 'FG3M', 'FG3A', 'FTM', 'FTA', 'OREB', 'DREB', 'PF']}
-                  | {'gc': round(sum(box(r) * r[h['MIN']] for r in games[name] if r[h['MIN']]) / a['MIN'], 2) if a['MIN'] else None},
+                  | {'gc': round(sum(box(r) for r in games[name] if r[h['MIN']]) / sum(1 for r in games[name] if r[h['MIN']]), 2) if a['MIN'] else None},
         }
     return out
 
@@ -604,7 +609,7 @@ def inject(path, real, view='g5'):
     a = json.loads(CARD_SUMMARY.read_text(encoding='utf-8'))['anchors']
     block = (f'{BEGIN}\n<style>{CSS}</style>\n<script>const REAL={js_json(sub)};\nconst REAL_VIEW={js_json(view)};\n'
              f'const ROOKIES=new Set({js_json([by_roster[fold(n)] for n in rookies(view) if fold(n) in by_roster])});\nconst IMPACT={js_json(imp)};\n'
-             f'const GC_ANC={js_json([a["PR1"], a["PR50"], a["PR99"]])};\nconst GC_CUT={js_json([GCW["cut1"], GCW["cut5"]])};\n'
+             f'const GC_ANC={js_json([a["PR1"], a["PR50"], a["PR99"]])};\nconst GC_CUT={js_json([M4C["cut1"], M4C["cut5"]])};\n'
              f'const TEAM_COLORS={js_json(TEAM_COLORS)};\nconst TEAM_IDS={js_json(team_ids())};\nconst EYE_Y={headshot_eyeline.TARGET};{JS}</script>\n{END}\n')
     assert s.count('<script>const DATA=') == 1
     s = s.replace('<script>const DATA=', block + '<script>const DATA=', 1)

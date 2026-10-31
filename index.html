@@ -251,7 +251,7 @@ th.noh{cursor:default}
 .rx .rsub{display:grid;gap:4px;font-size:.74rem;color:var(--muted)}
 .rx .rsub>div{display:flex;flex-wrap:wrap;gap:2px 14px}
 .rx .rsub b{margin-left:5px;font:600 .92rem var(--f-disp);font-variant-numeric:tabular-nums;color:var(--fg)}
-/* 球員卡資訊列：手機藏標籤、較上季差值三色（season_nav._compact_facts） */
+/* 球員卡資訊列：手機藏標籤、較開季差值三色（season_nav._compact_facts） */
 .facts i{font-style:normal}
 .facts .sm{display:none}
 .facts b.up{color:var(--g-a)}
@@ -265,7 +265,7 @@ th.noh{cursor:default}
 /* 能力值欄一樣寬（使用者 2026-10-29）：原本被中文副標長短撐開 35–67px；副標縮小讓四字（製造犯規）也放得下一行 */
 #tbl thead tr:last-child th[data-k]:not([data-k=name],[data-k=pos],[data-k=team],[data-k=ht],[data-k=ovr],[data-k=min],[data-k=gp],[data-k=dovr]){
   width:48px;min-width:48px;box-sizing:border-box}
-/* 分鐘／場數／較上季也固定寬（使用者 2026-10-30：表格 min-width 1060 多出來的寬度原本都分給這幾欄） */
+/* 分鐘／場數／較開季也固定寬（使用者 2026-10-30：表格 min-width 1060 多出來的寬度原本都分給這幾欄） */
 #tbl thead tr:last-child th:is([data-k=min],[data-k=gp]){width:46px;box-sizing:border-box}
 #tbl thead tr:last-child th[data-k=dovr]{width:54px;box-sizing:border-box}
 /* 手機表格本來就左右捲，不用撐到 1060px，每欄照內容寬 */
@@ -310,7 +310,7 @@ th.noh{cursor:default}
 .tag .logo{position:absolute;right:30px;top:50%;transform:translateY(-50%);height:150px;width:150px;object-fit:contain;opacity:.9;pointer-events:none}
 .tag .shot{position:absolute;right:26px;bottom:7px;height:132px;width:auto;pointer-events:none}
 /* 手機卡片（使用者 2026-10-29：沒有頭像和隊徽；名字和頭像放一起；字太多，用減法）
-   隊色橫幅左上放位置＋身高，右上角放排名（和位置同款隊色小標），名字（.tnm/.tht 只在手機顯示）和頭像；下面 OVR 圓環下方掛較上季箭頭，右邊影響力 2×2；
+   隊色橫幅左上放位置＋身高，右上角放排名（和位置同款隊色小標），名字（.tnm/.tht 只在手機顯示）和頭像；下面 OVR 圓環下方掛較開季箭頭，右邊影響力 2×2；
    資訊列其餘（球隊、分鐘、場數、防守加分）不顯示；真實數據只留得分／籃板／助攻三大格 */
 .tag .tnm,.tag .tht{display:none}
 @media (max-width:640px){
@@ -362,7 +362,7 @@ th.noh{cursor:default}
   .card .ring{grid-column:4;grid-row:1/span 2;align-self:end;padding:14px 22px 0}
   .card .who>.real-h{grid-column:4;grid-row:3;align-self:start;justify-self:center;margin:-4px 18px 14px;white-space:nowrap;letter-spacing:.02em}
   .real-h .rtm{display:none}
-  /* 身高在名字旁；較上季掛圓環下 */
+  /* 身高在名字旁；較開季掛圓環下 */
   .who .nm .nht{margin-left:12px;font-size:1.1rem;font-weight:600;color:var(--muted);text-transform:none;white-space:nowrap}
   .card .ring{flex-direction:column;gap:2px}
   .ring .rd{font:700 1.25rem var(--f-disp);font-variant-numeric:tabular-nums}
@@ -730,7 +730,7 @@ function head() {
   let h = '<tr><th class="noh">#</th>' + th('name', 'NAME', '球員', 'nm') + th('pos', 'POS', '位置') + th('team', 'TEAM', '球隊') +
     th('ht', 'HT', '身高') + th('ovr', 'OVR', '總評');
   for (const x of GROUPS) x[1].forEach(([k, en, zh], i) => { h += th(k, en, zh, i === 0 ? 'gl' : ''); if (k === 'pressure') h += th('dbon', 'DIQ', '防守意識'); });
-  h += th('min', 'MPG', '分鐘', 'gl') + th('gp', 'N', '場數') + th('dovr', 'ΔOVR', '較上季') + '</tr>';
+  h += th('min', 'MPG', '分鐘', 'gl') + th('gp', 'N', '場數') + th('dovr', 'ΔOVR', '較開季') + '</tr>';
   const t = document.querySelector('#tbl thead');
   t.innerHTML = g + h;
   t.querySelectorAll('th[data-k]').forEach(el => {
@@ -772,7 +772,7 @@ function card(p) {
       <div class="nm"><span class="first">${esc(first)}</span>${esc(last)}<span class="nht">${ht(p.ht)}</span></div>
       <div class="facts">
         <span class="f-tm"><i class="lb">球隊 </i><b>${p.team}</b></span><span class="f-ht"><i class="lb">身高 </i><b>${ht(p.ht)}</b></span>
-        <span class="f-min"><i class="lb">場均 </i><b>${p.min.toFixed(1)}</b> 分鐘</span><span class="f-gp"><i class="lb">已打 N=</i><b>${p.gp}</b> 場</span>${(r => r ? [['得分', r.pts], ['籃板', r.reb], ['助攻', r.ast]].map(([l, v]) => `<span class="f-b">${l} <b>${v.toFixed(1)}</b></span>`).join('') : '')(REAL[p.name])}<span class="f-d" title="較上季卡 OVR ${p.last.toFixed(1)}"><i class="lb">上季卡 OVR <b>${p.last.toFixed(1)}</b>（</i><b class="${p.dovr >= 1 ? 'up' : p.dovr <= -1 ? 'dn' : 'flat'}"><i class="sm">${p.dovr >= 0.05 ? '▲' : p.dovr <= -0.05 ? '▼' : '＝'}</i><i class="lb">${(p.dovr > 0 ? '+' : '') + p.dovr.toFixed(1)}</i><i class="sm">${Math.abs(p.dovr).toFixed(1)}</i></b><i class="lb">）</i></span>
+        <span class="f-min"><i class="lb">場均 </i><b>${p.min.toFixed(1)}</b> 分鐘</span><span class="f-gp"><i class="lb">已打 N=</i><b>${p.gp}</b> 場</span>${(r => r ? [['得分', r.pts], ['籃板', r.reb], ['助攻', r.ast]].map(([l, v]) => `<span class="f-b">${l} <b>${v.toFixed(1)}</b></span>`).join('') : '')(REAL[p.name])}<span class="f-d" title="較開季卡 OVR ${p.last.toFixed(1)}"><i class="lb">開季卡 OVR <b>${p.last.toFixed(1)}</b>（</i><b class="${p.dovr >= 1 ? 'up' : p.dovr <= -1 ? 'dn' : 'flat'}"><i class="sm">${p.dovr >= 0.05 ? '▲' : p.dovr <= -0.05 ? '▼' : '＝'}</i><i class="lb">${(p.dovr > 0 ? '+' : '') + p.dovr.toFixed(1)}</i><i class="sm">${Math.abs(p.dovr).toFixed(1)}</i></b><i class="lb">）</i></span>
         ${p.dbon > 0 ? `<span class="f-x" title="真實比賽的防守影響力高於同位置平均的部分（防守 RAPM），補能力值量不到的輪轉、站位、補位；只有正值，會加進 OVR">防守意識 <b>+${p.dbon.toFixed(2)}</b></span>` : ''}
       </div>
       ${impactChips(p)}
@@ -782,7 +782,7 @@ function card(p) {
       <circle cx="60" cy="60" r="48" fill="#0a0d10" stroke="#29313b" stroke-width="7"/>
       <circle cx="60" cy="60" r="48" fill="none" stroke="${col}" stroke-width="7" stroke-linecap="round" stroke-dasharray="${C * f} ${C}" transform="rotate(-90 60 60)"/>
       <text x="60" y="44" text-anchor="middle" class="lab">OVR</text>
-      <text x="60" y="80" text-anchor="middle" class="val">${p.ovr.toFixed(1)}</text></svg><b class="rd ${p.dovr >= 1 ? 'up' : p.dovr <= -1 ? 'dn' : 'flat'}" title="較上季卡 OVR ${p.last.toFixed(1)}">${p.dovr >= 0.05 ? '▲' : p.dovr <= -0.05 ? '▼' : '＝'}${Math.abs(p.dovr).toFixed(1)}</b></div>`;
+      <text x="60" y="80" text-anchor="middle" class="val">${p.ovr.toFixed(1)}</text></svg><b class="rd ${p.dovr >= 1 ? 'up' : p.dovr <= -1 ? 'dn' : 'flat'}" title="較開季卡 OVR ${p.last.toFixed(1)}">${p.dovr >= 0.05 ? '▲' : p.dovr <= -0.05 ? '▼' : '＝'}${Math.abs(p.dovr).toFixed(1)}</b></div>`;
 }
 
 function pages(n) {

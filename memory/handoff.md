@@ -20,7 +20,7 @@
 - **E-134 舊季滾動回測先驗 RAPM 卡**：預註冊草稿 `reports/card-0.2.7c+E134-rolling-prior/`，等使用者選範圍並凍結；defenseBonus 這次一起換（補 L-079）。
 - **E-133 分項目遺忘率**（2026-10-30）：完成 1/5「沒有改善」，使用者不採用（R-090，F-071、L-080）。
 - **E-129 賽中權重曲線**：完成 2/5「沒有改善」，使用者不採用（R-090，F-070）。賽中更新速度這條線先停，等 2026-27 季後再說。
-- **E-122 回合時長 D1**：凍結、A1 修正（L-077）後執行中。
+- **E-122 回合時長 D1**：完成（F-079）：c1、c2 過但 c2 改善在雜訊內、和 β 無關；WinImp 主版長人偏袒降、位置版升。`src/defense_fourth_game.js` E-120／E-122 兩個預設關選項未 commit。2026-10-31 使用者裁定犯規要開、聯盟犯規率與節奏重校（R-094），執行 E-140 完成（F-096）：c=−0.03125、pace×0.99875，聯盟總量不變；長人偏袒不變，Holiday／Caruso／Smart 降。使用者採用 → sim 0.1.2：`benchmark.mjs` 的 `options()` 預設開（870 場與 rr-on 逐場相同）。之後所有 WinImp／互打都是犯規開版本，舊 sim 0.1.1 數字不能直接比（G3）。D1 未表態。另：遠端長作業共用腳本 `scripts/rjob.sh`（L-082，已 commit）。
 - **E-117 模擬關體力描述量測**：完成（2026-10-30）。球隊賽季誤差略差但在雜訊內，主版 WinImp 幾乎不動（Spearman 0.91），位置版長人偏袒 S 從 +37 翻成 −37。正式流程維持開體力。報告 `reports/sim-0.1.0+E117-fatigue-off/report.md`。
 - **sim 0.1.1 刪體力**（R-088，2026-10-30）：使用者「合」，已從 worktree `.claude/worktrees/agent-ab18991181a92d44a` 合回主 checkout 並 commit（19 檔；E-122 在 defense_fourth_game.js 的未 commit 改動沒進 commit、仍在工作樹）。主 checkout 重驗：npm test 52 過、c0 120 場 sha 604439d5…412a 和舊引擎相同。傳 `fatigue:true` 會報錯；v14–v41 memoized 舊鏈會壞（舊研究腳本）。2026-10-30 依 R-089 再拿掉 doubleThreat 體格項（主 checkout 3 檔，已 commit；和改動前＋E-086 ch1 hook 逐位元相同，timed_game 鎖定雜湊改 edec4342…，npm test 52 過，`dblthreat-phys.diff`）。待修：得分偏高 119.1 vs 115.5（TODO）。報告 `reports/sim-0.1.1-no-fatigue/report.md`。
 - **E-130 DIQ 拿掉 2500 回合門檻**：1/5 不採用（R-083），程式在 worktree `D:/Projects/CODING/ba-e130`（未 commit）。等使用者：結案，或另議新秀 DIQ 只顯示不進 OVR。

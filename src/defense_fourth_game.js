@@ -57,6 +57,7 @@ export function simulateDefenseFourthGame(teamA, teamB, options = {}) {
   for (const k of ['nonShootingFoulRate','andOneRate']) if (!Number.isFinite(opt[k]) || opt[k]<0 || opt[k]>1) throw new RangeError(`Invalid ${k}`);
   for (const k of ['contextScale','turnoverScale']) if (!Number.isFinite(opt[k]) || opt[k]<0) throw new RangeError(`Invalid ${k}`);
   for (const k of ['substitutions','blocks','replay']) if (typeof opt[k] !== 'boolean') throw new TypeError(`Invalid ${k}`);
+  if (opt.foulBaseShift !== undefined && !Number.isFinite(opt.foulBaseShift)) throw new RangeError('Invalid foulBaseShift');
   if (opt.fatigue !== undefined) { if (typeof opt.fatigue !== 'boolean') throw new TypeError('Invalid fatigue'); if (opt.fatigue) throw new Error('fatigue removed in sim 0.1.1'); }
   if (!Number.isSafeInteger(opt.seed)) throw new RangeError('Invalid seed');
   const attrs = ['long','mid','short','drive','tovSkill','pass','ft','rebound','onBall','help','stamina','physique','offBall','screen'];
@@ -83,7 +84,9 @@ export function simulateDefenseFourthGame(teamA, teamB, options = {}) {
     const limit=Math.min(shotClock/10-.1,clock/10-.1)*opt.pace;
     let lo=0,hi=a.length;while(lo<hi){const mid=(lo+hi)>>1;if(a[mid]<=limit)lo=mid+1;else hi=mid;}
     const seconds=opt.continuousTiming?continuousDuration(a,limit,empiricalRng)/opt.pace:lo?a[Math.floor(empiricalRng()*lo)]/opt.pace:Math.max(.1,Math.min(clock,shotClock)/10-.1);
-    return Math.max(1,Math.min(seconds*10,shotClock-1,clock-1));
+    // E-122 (default off): additive defender clock effect (seconds) on full-clock segments only.
+    let adj=0;if(opt.defenderClockBeta&&origin!=='retained'&&clock>=300){const D=sides[1-off];for(const i of D.lineup)adj+=opt.defenderClockBeta[D.roster[i].playerId]??0;}
+    return Math.max(1,Math.min((seconds+adj)*10,shotClock-1,clock-1));
   };
   const events = [];
   let period=0, clock=0, shotClock=240, off=0, elapsed=0, possessions=0;
@@ -342,7 +345,8 @@ export function simulateDefenseFourthGame(teamA, teamB, options = {}) {
     let shootingFoul,made,andOne;
     if(opt.foulOutcomes){
       made=rng()<foulInputs[zone].raw;
-      shootingFoul=rng()<(made?foulInputs[zone].qMake:foulInputs[zone].qMiss);andOne=false;
+      const fq=made?foulInputs[zone].qMake:foulInputs[zone].qMiss,fb=opt.defenderFoulBeta?ls[1-off].reduce((t,q)=>t+(opt.defenderFoulBeta[q.playerId]??0),0):0;
+      const fe=fb-(opt.foulBaseShift||0);shootingFoul=rng()<(fe?fq/(fq+(1-fq)*Math.exp(-fe)):fq);andOne=false;
       if(shootingFoul)record(off,shooter,made?'madeFoul':'missFoul');
     }else{
       shootingFoul=rng()<shootingFoulChance;

@@ -433,26 +433,26 @@ def _defense_iq_column(s):
 
 
 # 球員卡資訊列（使用者 2026-10-29：字太多；模擬每 36 分鐘淨值和下方 RAPM「淨影響」看起來同一件事卻不同數字）。
-# 模擬值拿掉、改放 OVR 圓環的滑鼠提示；手機藏掉「球隊／身高」這類標籤；新賽季頁較上季差值用綠／灰／紅三色（不漸變）。
-# 每格帶 class；手機版只留較上季（箭頭），身高移到隊色橫幅（使用者 2026-10-29：手機用減法）
+# 模擬值拿掉、改放 OVR 圓環的滑鼠提示；手機藏掉「球隊／身高」這類標籤；新賽季頁較開季差值用綠／灰／紅三色（不漸變）。
+# 每格帶 class；手機版只留較開季（箭頭），身高移到隊色橫幅（使用者 2026-10-29：手機用減法）
 FACT_LABELS = {'球隊 ': 'f-tm', '身高 ': 'f-ht', '場均 ': 'f-min', '已打 N=': 'f-gp', '出賽 ': 'f-gp'}
-DELTA_OLD = "<span>上季卡 OVR <b>${p.last.toFixed(1)}</b>（<b>${(p.dovr > 0 ? '+' : '') + p.dovr.toFixed(2)}</b>）</span>"
+DELTA_OLD = "<span>開季卡 OVR <b>${p.last.toFixed(1)}</b>（<b>${(p.dovr > 0 ? '+' : '') + p.dovr.toFixed(2)}</b>）</span>"
 # 手機版（.sm）只顯示箭頭＋絕對值，例如紅色 ▼4.3（使用者 2026-10-29）；桌機（.lb）照舊帶正負號
-DELTA_NEW = ("<span class=\"f-d\" title=\"較上季卡 OVR ${p.last.toFixed(1)}\"><i class=\"lb\">上季卡 OVR <b>${p.last.toFixed(1)}</b>（</i>"
+DELTA_NEW = ("<span class=\"f-d\" title=\"較開季卡 OVR ${p.last.toFixed(1)}\"><i class=\"lb\">開季卡 OVR <b>${p.last.toFixed(1)}</b>（</i>"
              "<b class=\"${p.dovr >= 1 ? 'up' : p.dovr <= -1 ? 'dn' : 'flat'}\">"
              "<i class=\"sm\">${p.dovr >= 0.05 ? '▲' : p.dovr <= -0.05 ? '▼' : '＝'}</i>"
              "<i class=\"lb\">${(p.dovr > 0 ? '+' : '') + p.dovr.toFixed(1)}</i>"
              "<i class=\"sm\">${Math.abs(p.dovr).toFixed(1)}</i></b>"
              "<i class=\"lb\">）</i></span>")
 # 桌機卡片（使用者 2026-10-29）：身高寫在名字旁；第一排不放球隊，改成分鐘、場次、得分／籃板／助攻；
-# 較上季比照手機掛在 OVR 圓環下（箭頭＋絕對值）；下方真實數據只留細項小字（版面在 enrich_roster_viewer.CSS）
+# 較開季比照手機掛在 OVR 圓環下（箭頭＋絕對值）；下方真實數據只留細項小字（版面在 enrich_roster_viewer.CSS）
 NAME_OLD = '<div class="nm"><span class="first">${esc(first)}</span>${esc(last)}</div>'
 NAME_NEW = '<div class="nm"><span class="first">${esc(first)}</span>${esc(last)}<span class="nht">${ht(p.ht)}</span></div>'
 BIG3 = ("${(r => r ? [['得分', r.pts], ['籃板', r.reb], ['助攻', r.ast]]"
         ".map(([l, v]) => `<span class=\"f-b\">${l} <b>${v.toFixed(1)}</b></span>`).join('') : '')(REAL[p.name])}")
 RING_END = 'class="val">${p.ovr.toFixed(1)}</text></svg></div>'
 RING_DELTA = ("class=\"val\">${p.ovr.toFixed(1)}</text></svg>"
-              "<b class=\"rd ${p.dovr >= 1 ? 'up' : p.dovr <= -1 ? 'dn' : 'flat'}\" title=\"較上季卡 OVR ${p.last.toFixed(1)}\">"
+              "<b class=\"rd ${p.dovr >= 1 ? 'up' : p.dovr <= -1 ? 'dn' : 'flat'}\" title=\"較開季卡 OVR ${p.last.toFixed(1)}\">"
               "${p.dovr >= 0.05 ? '▲' : p.dovr <= -0.05 ? '▼' : '＝'}${Math.abs(p.dovr).toFixed(1)}</b></div>")
 
 

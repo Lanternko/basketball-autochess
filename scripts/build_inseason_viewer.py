@@ -77,7 +77,7 @@ def main():
         ('<th class="g" colspan="2">出場</th>', '<th class="g" colspan="3">出場</th>'),
         ('colspan="22"', 'colspan="25"'),
         ("th('min', 'MIN', '分鐘', 'gl') + th('gp', 'GP', '場數')",
-         "th('min', 'MPG', '分鐘', 'gl') + th('gp', 'N', '場數') + th('dovr', 'ΔOVR', '較上季')"),
+         "th('min', 'MPG', '分鐘', 'gl') + th('gp', 'N', '場數') + th('dovr', 'ΔOVR', '較開季')"),
         ("[[0, '全部'], [500, '≥500'], [1000, '≥1000'], [1500, '≥1500']]",
          "[[0, '全部'], [10, '≥10'], [20, '≥20'], [30, '≥30']]"),
         ('<td class="sub${sc(\'gp\')}">${p.gp}</td>',
@@ -88,7 +88,7 @@ def main():
          '<td class="sub gl${sc(\'min\')}">${p.min.toFixed(1)}</td>'),
         ('<span>上場 <b>${p.min.toLocaleString()}</b> 分鐘</span><span>出賽 <b>${p.gp}</b> 場</span>',
          '<span>場均 <b>${p.min.toFixed(1)}</b> 分鐘</span><span>已打 N=<b>${p.gp}</b> 場</span>'
-         "<span>上季卡 OVR <b>${p.last.toFixed(1)}</b>（<b>${(p.dovr > 0 ? '+' : '') + p.dovr.toFixed(2)}</b>）</span>"),
+         "<span>開季卡 OVR <b>${p.last.toFixed(1)}</b>（<b>${(p.dovr > 0 ? '+' : '') + p.dovr.toFixed(2)}</b>）</span>"),
         ('模擬每 36 分鐘淨值', '新賽季預測每 36 分鐘淨值'),
         ('OVR 同分多半是 2K27 名次封頂造成的',
          'OVR 為每場（含上場時間，相對替補水準）；ΔOVR 深綠≥+4、淺綠+1～+4、灰±1 內、橘−1～−4、紅≤−4；'

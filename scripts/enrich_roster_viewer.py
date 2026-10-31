@@ -41,7 +41,7 @@ CSS = """
 .rx .rsub{display:grid;gap:4px;font-size:.74rem;color:var(--muted)}
 .rx .rsub>div{display:flex;flex-wrap:wrap;gap:2px 14px}
 .rx .rsub b{margin-left:5px;font:600 .92rem var(--f-disp);font-variant-numeric:tabular-nums;color:var(--fg)}
-/* 球員卡資訊列：手機藏標籤、較上季差值三色（season_nav._compact_facts） */
+/* 球員卡資訊列：手機藏標籤、較開季差值三色（season_nav._compact_facts） */
 .facts i{font-style:normal}
 .facts .sm{display:none}
 .facts b.up{color:var(--g-a)}
@@ -55,7 +55,7 @@ CSS = """
 /* 能力值欄一樣寬（使用者 2026-10-29）：原本被中文副標長短撐開 35–67px；副標縮小讓四字（製造犯規）也放得下一行 */
 #tbl thead tr:last-child th[data-k]:not([data-k=name],[data-k=pos],[data-k=team],[data-k=ht],[data-k=ovr],[data-k=min],[data-k=gp],[data-k=dovr]){
   width:48px;min-width:48px;box-sizing:border-box}
-/* 分鐘／場數／較上季也固定寬（使用者 2026-10-30：表格 min-width 1060 多出來的寬度原本都分給這幾欄） */
+/* 分鐘／場數／較開季也固定寬（使用者 2026-10-30：表格 min-width 1060 多出來的寬度原本都分給這幾欄） */
 #tbl thead tr:last-child th:is([data-k=min],[data-k=gp]){width:46px;box-sizing:border-box}
 #tbl thead tr:last-child th[data-k=dovr]{width:54px;box-sizing:border-box}
 /* 手機表格本來就左右捲，不用撐到 1060px，每欄照內容寬 */
@@ -100,7 +100,7 @@ CSS = """
 .tag .logo{position:absolute;right:30px;top:50%;transform:translateY(-50%);height:150px;width:150px;object-fit:contain;opacity:.9;pointer-events:none}
 .tag .shot{position:absolute;right:26px;bottom:7px;height:132px;width:auto;pointer-events:none}
 /* 手機卡片（使用者 2026-10-29：沒有頭像和隊徽；名字和頭像放一起；字太多，用減法）
-   隊色橫幅左上放位置＋身高，右上角放排名（和位置同款隊色小標），名字（.tnm/.tht 只在手機顯示）和頭像；下面 OVR 圓環下方掛較上季箭頭，右邊影響力 2×2；
+   隊色橫幅左上放位置＋身高，右上角放排名（和位置同款隊色小標），名字（.tnm/.tht 只在手機顯示）和頭像；下面 OVR 圓環下方掛較開季箭頭，右邊影響力 2×2；
    資訊列其餘（球隊、分鐘、場數、防守加分）不顯示；真實數據只留得分／籃板／助攻三大格 */
 .tag .tnm,.tag .tht{display:none}
 @media (max-width:640px){
@@ -152,7 +152,7 @@ CSS = """
   .card .ring{grid-column:4;grid-row:1/span 2;align-self:end;padding:14px 22px 0}
   .card .who>.real-h{grid-column:4;grid-row:3;align-self:start;justify-self:center;margin:-4px 18px 14px;white-space:nowrap;letter-spacing:.02em}
   .real-h .rtm{display:none}
-  /* 身高在名字旁；較上季掛圓環下 */
+  /* 身高在名字旁；較開季掛圓環下 */
   .who .nm .nht{margin-left:12px;font-size:1.1rem;font-weight:600;color:var(--muted);text-transform:none;white-space:nowrap}
   .card .ring{flex-direction:column;gap:2px}
   .ring .rd{font:700 1.25rem var(--f-disp);font-variant-numeric:tabular-nums}

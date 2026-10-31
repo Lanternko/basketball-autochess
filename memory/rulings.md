@@ -199,11 +199,11 @@
 
 ### R-032
 - 日期：2026-10-29
-- 裁決：handle 目前還不是屬性，現行屬性是 TO（tovSkill）；使用者希望 handle 盡快回來，定義是控球（球留不留得住、扛多少持球量），不是單打（單打歸 CRT）。
+- 裁決：handle＝控球（球留不留得住、扛多少持球量），不是單打（單打歸 CRT）；只當卡片屬性，模擬不用。
 - 細節：
-  - 要做成屬性時照這個定義：控球失誤（被抄、走步、兩次運球、出界、回場、帶球撞人）歸 handle，傳球失誤歸 PASS；分母用持球時間（TIME_OF_POSS）；持球量本身算能力。量法草案 `reports/handle-E069/handle.csv`。
-  - 模擬端暫不用：分球與失誤已是實測率（opportunityPlan、passStolen、terminalRisk），handle 沒有空位（E-087、L-046）。
-- 狀態：有效（2026-10-30：確認 handle 還不是屬性、TO 是現行屬性；恢復 handle 列為待辦）
+  - 控球失誤（被抄、走步、兩次運球、出界、回場、帶球撞人）歸 handle，傳球失誤歸 PASS。分母用持球時間（TIME_OF_POSS）；持球量本身算能力。量法見 `reports/handle-E069/handle.csv`。
+  - 模擬擱置：分球與失誤已是實測率（opportunityPlan、passStolen、terminalRisk），handle 沒有空位（E-087、L-046）。
+- 狀態：有效
 - 合併：R-046
 - 相關：R-025、E-067、E-069、E-087、L-046
 - 來源：使用者 2026-10-29
@@ -288,16 +288,12 @@
 
 ### R-029
 - 日期：2026-10-29（2026-10-30 整併）
-- 裁決：G5 觀察名單：Franz Wagner、Cooper Flagg、Alex Caruso、Ty Jerome、Victor Wembanyama。
+- 裁決：G5 抽查用的使用者球員評價。
 - 細節：
-  - Wagner：不能排在 Wembanyama 前面（要求）；贏 Cade、Tatum 只報告；贏 Banchero 可以。
-  - Wembanyama：前十長人之一（R-001）；吃餅折扣的例外（站在籃下就改變防守）。
-  - Flagg：2026-27 賽中先驗照「爛隊年輕人」打折，不例外，靠賽中資料拉上來（R-033）。
-  - Caruso：先發中游，進攻普通、防守頂尖，有限上場時間下很強，但不是能打滿 48 分鐘的人，不到超巨。
-  - Ty Jerome：賽中 OVR 要反映上場時間與得分量（R-025 的反例：開季 4 場 4 勝、場均 29.8 分，OVR 80.9→80.0）。
-  - 修正要預註冊，不能看完這幾個人再調參數（L-026）。
-  - McCain（原本在名單上）2026-10-30 移出觀察名單。
-- 狀態：有效（2026-10-30 使用者更新觀察名單）
+  - Franz Wagner：不能排在 Wembanyama 前面（要求）；贏 Cade、Tatum 只報告；贏 Banchero 可以。修正要預註冊，不能看完這幾個人再調參數（L-026）。
+  - Jared McCain：2026 雷霆排第 8，落後 Cason Wallace、領先 Isaiah Joe；費城時期也不會比 Nikola Topić 弱；和末端替補（Carlson、Barnhizer）有天壤之別。雷霆板凳最強得分手，只看進攻是先發等級。
+  - Alex Caruso：先發中游，進攻普通、防守頂尖，有限上場時間下很強，但不是能打滿 48 分鐘的人，不到超巨。
+- 狀態：有效
 - 合併：R-027（Caruso）、R-049、R-058、R-061（Wagner 部分）
 - 相關：R-001、R-007、R-030、E-055、E-064、E-079、E-104、E-106、F-049
 - 來源：使用者 2026-10-29、2026-10-30

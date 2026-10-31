@@ -44,9 +44,11 @@ cmd_status() {
 }
 
 cmd_wait() {
-  local dir=$1 name=$2 every=${3:-300} stall=${4:-20} fails=0 rc
+  local dir=$1 name=$2 every=${3:-300} stall=${4:-20} fails=0 rc out
   while :; do
-    cmd_status "$dir" "$name" "$stall"; rc=$?
+    # Only the final state is printed, so the background output stays a few lines.
+    out=$(cmd_status "$dir" "$name" "$stall"); rc=$?
+    [ $rc -ne 0 ] && echo "$(date +%H:%M) $out"
     if [ $rc -eq 20 ]; then fails=$((fails+1)); [ $fails -ge 3 ] && { echo "UNREACHABLE 3 times in a row"; exit 20; }
     else fails=0; [ $rc -ne 0 ] && exit $rc; fi
     sleep "$every"

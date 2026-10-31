@@ -637,7 +637,7 @@ def _gamelog_sums(path):
     return out
 
 
-def three_value_columns(prior_ids):
+def three_value_columns(prior_ids, extra_ids=()):
     """回傳 ({pid: dict}, info)。vol＝合併 3PA/MIN×36；acc＝k 收縮（上季 abilityC 當 k 個出手的先驗＋本季原始 3PM/3PA；
     本季沒有出手難度資料，用原始命中）；rep＝合併聯盟 3P%−0.03；value＝vol×(acc−rep)；池內（合併 MIN>=500 且有先驗卡）百分位→attr()。"""
     s25 = _gamelog_sums(IC.TARGET_BOX)          # 2025-26
@@ -656,7 +656,7 @@ def three_value_columns(prior_ids):
         return max(40, min(99, 40 + (p - 1) * 30 / 49 if p < 50 else 70 + (p - 50) * 29 / 49))
 
     cols = {}
-    for pid in prior_ids:
+    for pid in [*prior_ids, *extra_ids]:
         mn25, m25, a25 = s25.get(pid, (0.0, 0.0, 0.0))
         mn26, m26, a26 = s26.get(pid, (0.0, 0.0, 0.0))
         mn, a = mn25 + mn26, a25 + a26
@@ -666,7 +666,8 @@ def three_value_columns(prior_ids):
             vol = a / mn * 36
             c.update(acc=acc, vol=vol, value=vol * (acc - rep))
         cols[pid] = c
-    pool = [c['value'] for c in cols.values() if c['ok'] and c['minAll'] >= THREE_POOL_MIN]
+    # extra_ids（名單上還沒出賽的人）只給值、不進池，已出賽者的百分位不受影響
+    pool = [c['value'] for pid, c in cols.items() if pid in prior_ids and c['ok'] and c['minAll'] >= THREE_POOL_MIN]
     # 2026-10-30 使用者「3PT 不要封 99」：027b 頂端改走 E-101 百分位尾巴（同卡片 threeValue：top 開、bot 關），
     # 錨點取本季即時池（m26_anchors），不用 pool-027b 的凍結錨點（那是 E-123 難度調整值，量尺不同）
     an = m26_anchors(pool) if M27B_MODE and pool else None
@@ -860,6 +861,15 @@ def e064_convert(entries, mpg_by_pid, anc, r_repl=0.0, sat=False):
     return out
 
 
+def load_roster():
+    """data/.../roster.json（commonallplayers 本季現役）→ {pid: 隊}；檔案不在就回空（退回只列已出賽）。"""
+    path = DATA26 / 'roster.json'
+    if not path.exists():
+        print('沒有 roster.json：還沒出賽的球員不列入', file=sys.stderr)
+        return {}
+    return {int(r['PERSON_ID']): r['TEAM_ABBREVIATION'] for r in SA.result_set(path) if r['TEAM_ABBREVIATION']}
+
+
 def latest_team(path):
     out = {}
     for r in sorted(SA.result_set(path), key=lambda r: (r['GAME_DATE'], r['GAME_ID'])):
@@ -971,13 +981,18 @@ def main():
 
     # ---- 排名
     team = latest_team(DATA26 / 'player-games.json')
+    roster = load_roster()
+    team.update(roster)     # 現役名單優先（交易後還沒出賽也對）
     formal_rows = C.load_csv(FORMAL_RANKING)
     formal = {}
     for r in formal_rows:
         formal.setdefault(r['name'], float(r['ovr']))
-    tv_cols, tv_info = three_value_columns([pid for pid in sd26['box'] if prior_cards.get(pid) is not None])
+    # 有先驗卡、在現役名單上但還沒出賽（傷兵等）：N=0，OVR＝先驗（f=0、無視窗資料）
+    unplayed = [pid for pid in prior_cards if pid not in sd26['box'] and pid in roster and pid in res]
+    tv_cols, tv_info = three_value_columns([pid for pid in sd26['box'] if prior_cards.get(pid) is not None], unplayed)
     rows, nopr = [], []
-    for pid, b in sd26['box'].items():
+    boxes = list(sd26['box'].items()) + [(pid, {'name': prior_cards[pid]['name'], 'rows': []}) for pid in unplayed]
+    for pid, b in boxes:
         pc = prior_cards.get(pid)
         gp = len(b['rows'])
         mins = sum(r['MIN'] for r in b['rows'])
@@ -1043,7 +1058,7 @@ def main():
             changed_attrs[d['attr']] += 1
     big = [r for r in rows if abs(r['_d']) >= 1.0]
     prior_game_pids = {r['playerId'] for r in rows}
-    not_played = [p for p in prior_cards if p not in prior_game_pids]
+    not_played = [p for p in prior_cards if p not in prior_game_pids]   # 不在現役名單上（離隊、退休等）
     formal_diff = [abs(r['_lastCmp'] - r['formalOVR']) for r in rows if r['formalOVR'] != '']
     n_dist = {}
     for r in rows:
@@ -1113,7 +1128,8 @@ def main():
         'gitHead': git_head(), 'start': 'S*', 'prior': PRIOR, 'target': TARGET, 'c': C_PARAM, 'G': G_GAMES,
         'frozenAttrs': frozen + list(IC.FROZEN_ATTRS), 'updatableAttrs': list(C.UPD) + ['foulDraw'],
         'delta2Undefined': undefined, 'delta2': delta2,
-        'players': {'ranked': len(rows), 'noPrior': len(nopr), 'priorCardNotPlayed': len(not_played)},
+        'players': {'ranked': len(rows), 'noPrior': len(nopr), 'priorCardNotPlayed': len(not_played),
+                    'rosterUnplayed': len(unplayed), 'rosterFile': bool(roster)},
         'foulDrawFreeze': ({k: v for k, v in load_json(PRIOR_CARD)['foulDrawFreeze'].items() if k != 'poolComposite'}
                            if NEW_PRIOR else None),
         **({'usage': {'file': rel(USAGE_FILE), 'payloadSha256': usage_sha, 'frozenAt': PRIOR, 'coef': ucoef,
@@ -1190,7 +1206,7 @@ def main():
 - OVR：賽中 C4（{VERSION}），先驗 {CARD_VERSION}（live/{PRIOR_CARD.name}）；N = 該球員 2026-27 已打場數。
 - 資料：{meta['dataFirstDate']}..{cutoff}、{len(games)} 場、{len(pbp_files)} 份 PBP；缺 PBP：{', '.join(meta['missingPbp']) or '無'}。
 - git HEAD：`{meta['gitHead'][:12]}`；c={C_PARAM}（凍結）、G={G_GAMES}、f = min(N/{G_GAMES}, 1)。
-- 排名 {len(rows)} 人（有先驗卡且已出賽）；沒有先驗卡 {len(nopr)} 人（`no-prior.csv`，不給 OVR）；有先驗卡但 2026-27 還沒出賽 {len(not_played)} 人（不列入）。
+- 排名 {len(rows)} 人（有先驗卡且已出賽，加上在現役名單上但還沒出賽的 {len(unplayed)} 人，N=0、OVR＝先驗）；沒有先驗卡 {len(nopr)} 人（`no-prior.csv`，不給 OVR）；有先驗卡、沒出賽也不在現役名單 {len(not_played)} 人（不列入）。
 - N 分布：{', '.join(f'N={n}: {c} 人' for n, c in sorted(n_dist.items()))}。
 - 3PT 欄 = threeValue（R-024，顯示用、不進 OVR）：vol＝合併（2025-26＋2026-27）3PA/MIN×36；acc＝(k·上季 abilityC＋本季 3PM)/(k＋本季 3PA)，k={THREE_K}（本季沒有出手難度資料，用原始命中）；rep＝合併聯盟 3P%（{tv_info['mu']:.4f}）−0.03；value＝vol×(acc−rep)，在合併 MIN≥500 且有先驗卡的 {tv_info['poolSize']} 人池內取百分位並套 attr()。`long` 欄仍在 ranking.csv 並進 OVR 計算，只是表格不顯示。
 {ATTR_NOTE}

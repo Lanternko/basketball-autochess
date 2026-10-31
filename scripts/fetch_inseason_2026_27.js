@@ -16,6 +16,11 @@ const burl='https://stats.nba.com/stats/leaguedashplayerbiostats?'+tq;
 const bdata=await getJson(burl,x=>(x.resultSets?.[0]??x.resultSets)?.rowSet?.length>0);
 fs.writeFileSync(root+'/bio.json',JSON.stringify({url:burl,season,fetchedAt:new Date().toISOString(),data:bdata})+'\n');
 console.log('bio',rows(bdata).length);
+// 現役名單（含傷兵、還沒出賽的人；bio 只有已出賽）。抓不到不擋流程，run_c4_live 退回只列已出賽
+const rurl='https://stats.nba.com/stats/commonallplayers?'+new URLSearchParams({LeagueID:'00',Season:season,IsOnlyCurrentSeason:'1'});
+try{const rdata=await getJson(rurl,x=>(x.resultSets?.[0]??x.resultSets)?.rowSet?.length>300);
+ fs.writeFileSync(root+'/roster.json',JSON.stringify({url:rurl,season,fetchedAt:new Date().toISOString(),data:rdata})+'\n');
+ console.log('roster',rows(rdata).length);}catch(e){console.log('roster failed',String(e));}
 // pbp
 const games=[...new Set(rows(JSON.parse(fs.readFileSync(`${root}/team-games.json`)).data).map(r=>r.GAME_ID))].sort();
 const homeAway=new Map();for(const r of rows(JSON.parse(fs.readFileSync(`${root}/team-games.json`)).data)){homeAway.set(r.GAME_ID,[...(homeAway.get(r.GAME_ID)??[]),r.PTS]);}

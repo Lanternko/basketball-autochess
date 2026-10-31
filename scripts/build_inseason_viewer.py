@@ -56,7 +56,7 @@ def main():
         # 舊版型沒有的人（E-116 新秀）身高改取 ranking.csv 的 heightInches（bio）
         h = ht.get(r['name']) or (round(num('heightInches')) if r.get('heightInches') else 0)
         data_rows.append([int(r['rank']), num('ovr'), r['name'], r['pos'], r['team'], h,
-                          round(num('MIN26') / int(r['N']), 1), int(r['N']), num('predictedPer36'),
+                          round(num('MIN26') / int(r['N']), 1) if int(r['N']) else 0.0, int(r['N']), num('predictedPer36'),
                           dcen[r['playerId']] if dcen else (num('defenseBonus') or None),
                           *[opt('presDisplay') if (a == 'pressure' and has_pd) else opt(a) for a in cols[10:25]],
                           num('lastOVR'), num('dOVR'), *([num('pressure'), opt('foulDisc')] if has_pd else [])])

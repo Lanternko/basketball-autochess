@@ -1,6 +1,8 @@
 """E-121 路線 D 簡化版（R-073）：新秀開季起點＝2K 同順位新秀評分曲線換成本站尺度，再齊頭扣 SHIFT。
+R-096（2026-10-31）起，目標改為使用者指定的 T(順位) = CURVE_A − CURVE_B·ln 順位（狀元 73、第 60 順位約 48.8，
+「略為高估、靠賽中數據往下修」），不再用 2K 曲線 − SHIFT；2K 曲線值仍算出來記在 e121.twoK 供對照。
 
-起點 OVR 目標：T(順位) = Q(a + b·ln 順位) − SHIFT
+舊起點 OVR 目標（R-073）：T(順位) = Q(a + b·ln 順位) − SHIFT
   a、b：reports/rookie-growth/twok-by-pick.json 的 fitRecent3（2023–25 三屆 2K 新秀評分，落選不納入擬合；落選＝第 61 順位照代入）
   Q：2K26 → card 0.2.7 OVR 的分位數對應（同季 572 人；經驗分布中點分位、線性內插），只用老將和 2K 的關係
 能力值：保留 E-116 的順位／位置形狀，15 項一起平移 δ（夾 [0,150]），二分法解 δ 使「沒有數據時的 OVR」= T。k、mpg0 不變。
@@ -28,7 +30,8 @@ sys.path.insert(0, str(LIVE))
 import build_rookie_prior as BR            # noqa: E402
 import run_c4_live_rookie as RW            # noqa: E402
 
-SHIFT = 5.0                                # R-073「稍微齊頭式拉低」
+SHIFT = 5.0                                # R-073「稍微齊頭式拉低」（R-096 起不用）
+CURVE_A, CURVE_B = 73.0, 5.9               # R-096：T(順位) = 73 − 5.9·ln 順位
 LO, HI = 0.0, 150.0
 NS = (5, 10, 20)
 
@@ -85,7 +88,7 @@ def main():
 
     def target(pick):
         v = fit2k['a'] + fit2k['b_lnPick'] * math.log(pick)
-        return v, q(v) - SHIFT
+        return v, CURVE_A - CURVE_B * math.log(pick)
 
     ns = RW.load_ns()
     C, F, IC, SA, V2 = ns['C'], ns['F'], ns['IC'], ns['SA'], ns['V2']
@@ -108,8 +111,9 @@ def main():
         rk['e121'] = {'twoK': round(v2k, 2), 'target': round(t, 2), 'delta': round(d, 3), 'ovrE116': round(base, 2)}
         rows.append({'name': rk['name'], 'pick': rk['pick'], 'pos': rk['pos'], 'twoK': round(v2k, 1),
                      'startE121': round(got, 1), 'startE116': round(base, 1), 'delta': round(d, 2)})
-    doc.update({'experiment': 'E-121', 'shift': SHIFT, 'twoKFit': fit2k, 'quantilePairs': nq,
-                'note': doc.get('note', '') + '；E-121（R-073）：x0 依 2K 順位曲線−5 齊頭平移，形狀沿用 E-116'})
+    doc.update({'experiment': 'E-121', 'shift': None, 'targetCurve': {'a': CURVE_A, 'b_lnPick': -CURVE_B, 'ruling': 'R-096'},
+                'twoKFit': fit2k, 'quantilePairs': nq,
+                'note': doc.get('note', '') + '；R-096：x0 齊頭平移到 73 − 5.9·ln 順位，形狀沿用 E-116'})
     json.dump(doc, open(LIVE / 'rookie-prior-2026.json', 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
     with open(HERE / 'start.csv', 'w', encoding='utf-8', newline='') as f:
         w = csv.DictWriter(f, list(rows[0]))
@@ -156,7 +160,7 @@ def main():
               'mpg0': fit['medians']['mpg0'], 'usg0': 0.0, 'x0': x0, 'k': k, 'ans': float(key[b['PLAYER_NAME']]['ovr'])}
         d, _ = solve(ns, pw, anc, r_repl, rel, rk, target(pick)[1])
         pop.append((rk, dict(rk, x0=shifted(x0, d))))
-    res = {'shift': SHIFT, 'nPlayers': len(pop), 'note': '看過答案的回看（R-007），只報告不判定；判定看 §3.4 前瞻檢查', 'mae': {}}
+    res = {'targetCurve': [CURVE_A, -CURVE_B], 'nPlayers': len(pop), 'note': '看過答案的回看（R-007），只報告不判定；判定看 §3.4 前瞻檢查', 'mae': {}}
     for tag, idx in (('E116', 0), ('E121', 1)):
         st = [abs(RW.eval_rookie(ns, pw, anc, r_repl, p[idx], None, 'e116', rel)['ovr'] - p[0]['ans']) for p in pop]
         res['mae'].setdefault('start', {})[tag] = round(statistics.fmean(st), 2)

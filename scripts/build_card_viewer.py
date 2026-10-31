@@ -17,7 +17,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import enrich_roster_viewer as er  # noqa: E402
-from season_nav import add_season_nav, apply_common  # noqa: E402
+from season_nav import add_season_nav, apply_common, regroup_attrs  # noqa: E402
 import season_nav as sn  # noqa: E402
 
 ROOT = er.ROOT
@@ -92,19 +92,7 @@ def main(out=None):
     ]:
         assert s.count(a) >= 1, a
         s = s.replace(a, b)
-    s = apply_common(s)
-    # 重分組（使用者 2026-10-30「採用並重分組」，R-084）：PHYS 不顯示（E-131 後 OVR 也不用）；REB、TO、PRES 併成「球權」
-    # （搶回球權／不丟球權／逼對手丟球權）；DIQ 改接在 RIM 後面，防守組＝PER D、RIM、DIQ。只改 2025-26 頁，新賽季頁照舊（R-050）
-    for a, b in [
-        ("['pass', 'PASS', '傳球'], ['tovSkill', 'TO', '少失誤'], ['creation', 'CRT', '自主創造']]],",
-         "['pass', 'PASS', '傳球'], ['creation', 'CRT', '自主創造']]],"),
-        ("['身體', [['rebound', 'REB', '籃板'], ['physique', 'PHYS', '身體']]],",
-         "['球權', [['rebound', 'REB', '籃板'], ['tovSkill', 'TO', '少失誤'], ['pressure', 'PRES', '壓迫']]],"),
-        ("['help', 'RIM', '護框'], ['pressure', 'PRES', '壓迫']]],", "['help', 'RIM', '護框']]],"),
-        ("if (k === 'pressure') h += th('dbon', 'DIQ', '防守意識');", "if (k === 'help') h += th('dbon', 'DIQ', '防守意識');"),
-    ]:
-        assert s.count(a) == 1, a
-        s = s.replace(a, b)
+    s = regroup_attrs(apply_common(s))
     # 數值模式的格子（apply_common 改過那行）也帶 PRES tooltip
     a = """cls.push(gcls(grade(v))); return `<td class="${cls.join(' ')}">${v}</td>`; }"""
     assert s.count(a) == 1, a

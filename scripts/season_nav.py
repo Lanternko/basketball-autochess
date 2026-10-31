@@ -380,6 +380,26 @@ def apply_common(s):
     return _defense_iq_column(_compact_facts(s))
 
 
+# 重分組（使用者 2026-10-30「採用並重分組」，R-084）：PHYS 不顯示（E-131 後 OVR 也不用）；REB、TO、PRES 併成「球權」
+# （搶回球權／不丟球權／逼對手丟球權）；DIQ 改接在 RIM 後面，防守組＝PER D、RIM、DIQ。
+# 新賽季頁原本照舊；使用者 2026-10-31 要兩頁屬性一致，新賽季頁也套用（inseason 0.2.7b 的 OVR 仍用 physique，只是不顯示）
+REGROUP = [
+    ("['pass', 'PASS', '傳球'], ['tovSkill', 'TO', '少失誤'], ['creation', 'CRT', '自主創造']]],",
+     "['pass', 'PASS', '傳球'], ['creation', 'CRT', '自主創造']]],"),
+    ("['身體', [['rebound', 'REB', '籃板'], ['physique', 'PHYS', '身體']]],",
+     "['球權', [['rebound', 'REB', '籃板'], ['tovSkill', 'TO', '少失誤'], ['pressure', 'PRES', '壓迫']]],"),
+    ("['help', 'RIM', '護框'], ['pressure', 'PRES', '壓迫']]],", "['help', 'RIM', '護框']]],"),
+    ("if (k === 'pressure') h += th('dbon', 'DIQ', '防守意識');", "if (k === 'help') h += th('dbon', 'DIQ', '防守意識');"),
+]
+
+
+def regroup_attrs(s):
+    for a, b in REGROUP:
+        assert s.count(a) == 1, a
+        s = s.replace(a, b)
+    return s
+
+
 # 防守意識是能力值，放表格防守組 PRES 右邊（使用者 2026-10-30），不放卡片資訊列（那列桌機整列藏掉）。
 # 單位是防守 RAPM 分（不是 0–99），所以不換等第、直接顯示 +x.xx；0 顯示「—」。不進 ATTR，免得卡片前三／最弱排序被它佔掉。
 DIQ_TD = ("const diq = p => `<td data-nodec class=\"${p.dbon >= 2 ? 'gA' : p.dbon >= 1 ? 'gB' : p.dbon > 0 ? 'gC' : ''}"

@@ -15,7 +15,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import enrich_roster_viewer as er  # noqa: E402
-from season_nav import add_season_nav, apply_common  # noqa: E402
+from season_nav import add_season_nav, apply_common, regroup_attrs  # noqa: E402
 import season_nav as sn  # noqa: E402
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'reports/impact-epm-2026-27'))
 import epm_live  # noqa: E402
@@ -110,6 +110,7 @@ def main():
         ]:
             assert s.count(a) == 1, a
             s = s.replace(a, b)
+    s = regroup_attrs(s)  # 和 2025-26 頁同分組；要在上面 PRES 改名之後
     s = add_season_nav(s, 'inseason')
     out = live / 'roster-viewer.html'
     out.write_text(s, encoding='utf-8')
